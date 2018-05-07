@@ -1,35 +1,21 @@
 ---
 title: Controlli
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 66c6cc58423a2af8d0fd6de93b8884918888fb48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c9c2cdd9e485fb87f5d8ead7790ded0428f7dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls"></a>Controlli
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]viene fornito con molti dei componenti dell'interfaccia utente comuni che vengono utilizzati in quasi tutte le applicazioni di Windows, ad esempio <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, e <xref:System.Windows.Controls.ListBox>. In passato, questi oggetti sono stati indicati come controlli. Mentre il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK viene utilizzato il termine "controllo" per indicare qualsiasi classe che rappresenta un oggetto visibile in un'applicazione, è importante notare che non necessita di una classe da cui ereditare la <xref:System.Windows.Controls.Control> classe disponga di una presenza visibile. Le classi che ereditano dal <xref:System.Windows.Controls.Control> classe contiene un <xref:System.Windows.Controls.ControlTemplate>, che consente al consumer di un controllo di modificarne radicalmente l'aspetto del controllo senza dover creare una nuova sottoclasse.  Questo argomento viene illustrato come controlli (quelli che ereditano dal <xref:System.Windows.Controls.Control> classe e quelli che non) vengono comunemente utilizzate [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] viene fornito con molti dei componenti dell'interfaccia utente comuni utilizzabili in quasi tutte le applicazioni di Windows, ad esempio <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, e <xref:System.Windows.Controls.ListBox>. In passato, questi oggetti sono stati indicati come controlli. Mentre il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK viene utilizzato il termine "controllo" per indicare qualsiasi classe che rappresenta un oggetto visibile in un'applicazione, è importante notare che non necessita di una classe da cui ereditare la <xref:System.Windows.Controls.Control> classe disponga di una presenza visibile. Le classi che ereditano dal <xref:System.Windows.Controls.Control> classe contiene un <xref:System.Windows.Controls.ControlTemplate>, che consente al consumer di un controllo di modificarne radicalmente l'aspetto del controllo senza dover creare una nuova sottoclasse.  Questo argomento viene illustrato come controlli (quelli che ereditano dal <xref:System.Windows.Controls.Control> classe e quelli che non) vengono comunemente utilizzate [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="creating_an_instance_of_a_control"></a>   
 ## <a name="creating-an-instance-of-a-control"></a>Creazione dell'istanza di un controllo  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[ControlsOverview#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
- Nell'esempio seguente viene creata la stessa applicazione nel codice. Per ragioni di brevità, la creazione del <xref:System.Windows.Controls.Grid>, `grid1`, è stata esclusa dall'esempio. `grid1`presenta le stesse definizioni di colonna e riga, come illustrato nel passaggio precedente [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] esempio.  
+ Nell'esempio seguente viene creata la stessa applicazione nel codice. Per ragioni di brevità, la creazione del <xref:System.Windows.Controls.Grid>, `grid1`, è stata esclusa dall'esempio. `grid1` ha le stesse definizioni di colonna e riga, come illustrato nel passaggio precedente [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] esempio.  
   
  [!code-csharp[ControlsOverview#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)]
  [!code-vb[ControlsOverview#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
@@ -63,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[ControlsOverview#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
   
 ### <a name="creating-a-style-for-a-control"></a>Creazione di uno stile per un controllo  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]offre la possibilità di specificare l'aspetto dei controlli a livello globale, anziché impostare le proprietà di ogni istanza dell'applicazione, creando un <xref:System.Windows.Style>. Nell'esempio seguente viene creato un <xref:System.Windows.Style> che viene applicata a ogni <xref:System.Windows.Controls.Button> nell'applicazione. <xref:System.Windows.Style>le definizioni sono in genere definite [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] in un <xref:System.Windows.ResourceDictionary>, ad esempio il <xref:System.Windows.FrameworkElement.Resources%2A> proprietà del <xref:System.Windows.FrameworkElement>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre la possibilità di specificare l'aspetto dei controlli a livello globale, anziché impostare le proprietà di ogni istanza dell'applicazione, tramite la creazione di un <xref:System.Windows.Style>. Nell'esempio seguente viene creato un <xref:System.Windows.Style> che viene applicata a ogni <xref:System.Windows.Controls.Button> nell'applicazione. <xref:System.Windows.Style> le definizioni sono in genere definite [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] in un <xref:System.Windows.ResourceDictionary>, ad esempio il <xref:System.Windows.FrameworkElement.Resources%2A> proprietà del <xref:System.Windows.FrameworkElement>.  
   
  [!code-xaml[ControlsOverview#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
@@ -100,13 +86,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="rich-content-in-controls"></a>Contenuto avanzato dei controlli  
  La maggior parte delle classi che ereditano dalla <xref:System.Windows.Controls.Control> classe dispone di capacità sufficiente per contenere contenuto dettagliato. Ad esempio, un <xref:System.Windows.Controls.Label> può contenere qualsiasi oggetto, ad esempio una stringa, un <xref:System.Windows.Controls.Image>, o un <xref:System.Windows.Controls.Panel>.  Le classi seguenti forniscono il supporto per contenuto dettagliato e agire come classi di base per la maggior parte dei controlli in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   <xref:System.Windows.Controls.ContentControl>-- Alcuni esempi di classi che ereditano da questa classe sono <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, e <xref:System.Windows.Controls.ToolTip>.  
+-   <xref:System.Windows.Controls.ContentControl>-- Alcuni esempi di classi che ereditano da questa classe vengono <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, e <xref:System.Windows.Controls.ToolTip>.  
   
--   <xref:System.Windows.Controls.ItemsControl>-- Alcuni esempi di classi che ereditano da questa classe sono <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, e <xref:System.Windows.Controls.Primitives.StatusBar>.  
+-   <xref:System.Windows.Controls.ItemsControl>-- Alcuni esempi di classi che ereditano da questa classe vengono <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, e <xref:System.Windows.Controls.Primitives.StatusBar>.  
   
--   <xref:System.Windows.Controls.HeaderedContentControl>-- Alcuni esempi di classi che ereditano da questa classe sono <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>, e <xref:System.Windows.Controls.Expander>.  
+-   <xref:System.Windows.Controls.HeaderedContentControl>-- Alcuni esempi di classi che ereditano da questa classe vengono <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>, e <xref:System.Windows.Controls.Expander>.  
   
--   <xref:System.Windows.Controls.HeaderedItemsControl>-- Alcuni esempi di classi che ereditano da questa classe sono <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, e <xref:System.Windows.Controls.ToolBar>.  
+-   <xref:System.Windows.Controls.HeaderedItemsControl>-- Alcuni esempi di classi che ereditano da questa classe vengono <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, e <xref:System.Windows.Controls.ToolBar>.  
   
 -  
   

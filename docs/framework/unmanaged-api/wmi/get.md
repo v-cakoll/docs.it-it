@@ -2,10 +2,6 @@
 title: Get (funzione) (riferimenti alle API non gestite)
 description: La funzione Get recupera il valore della proprietà specificato.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Get
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69312030689ab1b87e3aadd040395f06e1c94ac8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-function"></a>Get (funzione)
 Recupera il valore della proprietà specificata, se presente.
@@ -59,13 +52,13 @@ HRESULT Get (
 `wszName`  
 [in] Il nome della proprietà.
 
-`lFlags`[in] Riservato. Questo parametro deve essere 0.
+`lFlags` [in] Riservato. Questo parametro deve essere 0.
 
-`pVal`[out] Se la funzione restituisce correttamente, contiene il valore di `wszName` proprietà. Il `pval` argomento è assegnato il tipo corretto e il valore per il qualificatore.
+`pVal` [out] Se la funzione restituisce correttamente, contiene il valore di `wszName` proprietà. Il `pval` argomento è assegnato il tipo corretto e il valore per il qualificatore.
 
-`pvtType`[out] Se la funzione restituisce correttamente, contiene un [costante di tipo CIM](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) che indica il tipo di proprietà. Il valore può anche essere `null`. 
+`pvtType` [out] Se la funzione restituisce correttamente, contiene un [costante di tipo CIM](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) che indica il tipo della proprietà. Il valore può anche essere `null`. 
 
-`plFlavor`[out] Se la funzione restituisce correttamente, riceve informazioni relative all'origine della proprietà. Il valore può essere `null`, o una delle seguenti costanti WBEM_FLAVOR_TYPE definite nel *WbemCli.h* file di intestazione: 
+`plFlavor` [out] Se la funzione restituisce correttamente, riceve informazioni relative all'origine della proprietà. Il valore può essere `null`, o una delle seguenti costanti WBEM_FLAVOR_TYPE definite nel *WbemCli.h* file di intestazione: 
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
@@ -98,7 +91,7 @@ Il `pVal` argomento è assegnato il tipo corretto e il valore per il qualificato
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

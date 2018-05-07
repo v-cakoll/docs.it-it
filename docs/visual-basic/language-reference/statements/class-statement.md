@@ -1,12 +1,6 @@
 ---
 title: Istruzione Class (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Class
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: df86ef0eec67d96f2f997dc5dac7ee2357c6362b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2346823e7b774c21171bd81023cc5b920d34d19a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-statement-visual-basic"></a>Istruzione Class (Visual Basic)
 Dichiara il nome di una classe e introduce la definizione di variabili, proprietà, eventi ed procedure che comprende la classe.  
@@ -46,20 +37,20 @@ End Class
   
 |Termine|Definizione|  
 |---|---|  
-|`attributelist`|Parametro facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Parametro facoltativo. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Parametro facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Parametro facoltativo. Vedere [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Parametro facoltativo. Vedere [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`Partial`|Parametro facoltativo. Indica una definizione parziale della classe. Vedere [parziale](../../../visual-basic/language-reference/modifiers/partial.md).|  
+|`attributelist`|Facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Facoltativo. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`MustInherit`|Facoltativo. Vedere [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|Facoltativo. Vedere [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
+|`Partial`|Facoltativo. Indica una definizione parziale della classe. Vedere [parziale](../../../visual-basic/language-reference/modifiers/partial.md).|  
 |`name`|Obbligatorio. Nome di questa classe. Vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Parametro facoltativo. Specifica che si tratta di una classe generica.|  
+|`Of`|Facoltativo. Specifica che si tratta di una classe generica.|  
 |`typelist`|Obbligatorio se si usa il [di](../../../visual-basic/language-reference/statements/of-clause.md) (parola chiave). Elenco di parametri di tipo per questa classe. Vedere [digitare elenco](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Parametro facoltativo. Indica che questa classe eredita i membri di un'altra classe. Vedere [istruzione Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`Inherits`|Facoltativo. Indica che questa classe eredita i membri di un'altra classe. Vedere [istruzione Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`classname`|Obbligatorio se si usa il `Inherits` istruzione. Il nome della classe da cui deriva questa classe.|  
-|`Implements`|Parametro facoltativo. Indica che questa classe implementa i membri di una o più interfacce. Vedere [implementa istruzione](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Facoltativo. Indica che questa classe implementa i membri di una o più interfacce. Vedere [implementa istruzione](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Obbligatorio se si usa il `Implements` istruzione. I nomi delle interfacce di che questa classe implementa.|  
-|`statements`|Parametro facoltativo. Istruzioni che definiscono i membri di questa classe.|  
+|`statements`|Facoltativo. Istruzioni che definiscono i membri di questa classe.|  
 |`End Class`|Obbligatorio. Termina il `Class` definizione.|  
   
 ## <a name="remarks"></a>Note  

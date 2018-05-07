@@ -1,11 +1,6 @@
 ---
 title: Clausola From (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryFrom
 - vb.QueryFromIn
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0ecdc8b70fb1ae164a6c78998ce11db9938fbb56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f113444efae83de7d299db330593937c7800bb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="from-clause-visual-basic"></a>Clausola From (Visual Basic)
 Specifica uno o più variabili di intervallo e una raccolta di query.  
@@ -39,7 +31,7 @@ From element [ As type ] In collection [ _ ]
 |Termine|Definizione|  
 |---|---|  
 |`element`|Obbligatorio. Oggetto *variabile di intervallo* utilizzato per scorrere gli elementi della raccolta. Una variabile di intervallo viene utilizzata per fare riferimento a ogni membro del `collection` quando la query scorre il `collection`. Deve essere un tipo enumerabile.|  
-|`type`|Parametro facoltativo. Tipo di `element`. Se non `type` è specificato, il tipo di `element` viene dedotto dal `collection`.|  
+|`type`|Facoltativo. Tipo di `element`. Se non `type` è specificato, il tipo di `element` viene dedotto dal `collection`.|  
 |`collection`|Obbligatorio. Fa riferimento alla raccolta per eseguire una query. Deve essere un tipo enumerabile.|  
   
 ## <a name="remarks"></a>Note  

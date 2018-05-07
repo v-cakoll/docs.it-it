@@ -1,11 +1,6 @@
 ---
 title: Istruzione Imports (tipo e spazio dei nomi .NET)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Imports
 - imports
@@ -21,14 +16,11 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-caps.latest.revision: "40"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 46cc78c2fd039fb56fd4d1b797f2d09cbe95d317
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef569b0ed6428d24d019e00c500e4d4b91c83d49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Istruzione Imports (tipo e spazio dei nomi .NET)
 Consente di digitare i nomi di riferimento senza qualifica dello spazio dei nomi.  
@@ -45,9 +37,9 @@ Imports [ aliasname = ] namespace.element
   
 |Termine|Definizione|  
 |---|---|  
-|`aliasname`|Parametro facoltativo. Un *alias di importazione* o il nome mediante il quale il codice può fare riferimento a `namespace` anziché la stringa di qualificazione completo. Vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`aliasname`|Facoltativo. Un *alias di importazione* o il nome mediante il quale il codice può fare riferimento a `namespace` anziché la stringa di qualificazione completo. Vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`namespace`|Obbligatorio. Il nome completo dello spazio dei nomi importati. Può essere una stringa di spazi dei nomi annidata a qualsiasi livello.|  
-|`element`|Parametro facoltativo. Il nome di un elemento di programmazione dichiarato nello spazio dei nomi. Può essere qualsiasi elemento del contenitore.|  
+|`element`|Facoltativo. Il nome di un elemento di programmazione dichiarato nello spazio dei nomi. Può essere qualsiasi elemento del contenitore.|  
   
 ## <a name="remarks"></a>Note  
  Il `Imports` istruzione consente i tipi che sono contenuti in un determinato spazio dei nomi per fare riferimento direttamente.  

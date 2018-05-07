@@ -1,12 +1,6 @@
 ---
 title: Operatore Xor (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Xor
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b14f11f2df2df9c29e88e9188390cfe245d2cb58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34d317da5d85127e371c2df7229e0f0873972f50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xor-operator-visual-basic"></a>Operatore Xor (Visual Basic)
 Esegue un'esclusione logica su due `Boolean` espressioni oppure un'esclusione bit per bit su due espressioni numeriche.  
@@ -75,7 +66,7 @@ result = expression1 Xor expression2
   
  Ad esempio 5 `Xor` 3 è 6. Per comprendere meglio in tal caso, convertire in rappresentazioni binarie, 101 e 011 5 e 3. Utilizzare quindi la tabella precedente per determinare che 101 Xor 011 è 110, ovvero la rappresentazione binaria del numero decimale 6.  
   
-## <a name="data-types"></a>Riepilogo dei tipi di dati  
+## <a name="data-types"></a>Tipi di dati  
  Se gli operandi sono costituiti da uno `Boolean` espressione e un'espressione numerica, Visual Basic converte il `Boolean` espressione in un valore numerico (– 1 per `True` e 0 per `False`) ed esegue un'operazione bit per bit.  
   
  Per un `Boolean` è il tipo di dati del risultato del confronto, `Boolean`. Per un confronto bit per bit, il tipo di dati del risultato è un tipo numerico appropriato per i tipi di dati di `expression1` e `expression2`. Vedere la tabella "Confronti relazionali e bit per bit" in [tipi di dati di risultati di operatore](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  

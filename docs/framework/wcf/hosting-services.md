@@ -1,31 +1,17 @@
 ---
 title: Servizi host
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-caps.latest.revision: 31
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac7de48b801036ac186ffe92117269ae86d14a10
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6b7e94bdbec483f32fa41bb60032cca56c5e1593
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-services"></a>Servizi host
-Per diventare attivo, un servizio deve essere ospitato all'interno di un ambiente di runtime che lo crea e ne controlla il contesto e la durata. I servizi[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] sono progettati per essere eseguiti in qualsiasi processo di Windows che supporta codice gestito.  
+Per diventare attivo, un servizio deve essere ospitato all'interno di un ambiente di runtime che lo crea e ne controlla il contesto e la durata. Servizi Windows Communication Foundation (WCF) sono progettati per l'esecuzione in qualsiasi processo di Windows che supporta codice gestito.  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fornisce un modello di programmazione unificato per la compilazione di applicazioni orientate ai servizi. Questo modello di programmazione rimane coerente ed è indipendente dall'ambiente di runtime nel quale viene distribuito il servizio. In pratica, ciò significa che il codice per i servizi interessati rimane praticamente invariato a prescindere dall'opzione di hosting.  
   

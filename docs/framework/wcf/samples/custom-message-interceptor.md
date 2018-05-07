@@ -1,24 +1,12 @@
 ---
 title: Intercettore dei messaggi personalizzati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: acac4baa5be68d042dd1b0a11d7acfe609169e10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-message-interceptor"></a>Intercettore dei messaggi personalizzati
 In questo esempio viene illustrato l'utilizzo del modello di estensibilità del canale. In particolare, viene illustrato come implementare un elemento di associazione personalizzato che crea channel factory e listener del canale per intercettare tutti i messaggi in ingresso e in uscita in un particolare punto nello stack di runtime. L'esempio include anche un client e un server che illustrano l'utilizzo di queste factory personalizzate.  
@@ -33,11 +21,11 @@ In questo esempio viene illustrato l'utilizzo del modello di estensibilità del 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- L'esempio descrive la procedura consigliata per la creazione di un canale su più livelli personalizzato in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], utilizzando il framework del canale e le procedure consigliate di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seguenti. I passaggi per creare un canale su più livelli personalizzato sono i seguenti.  
+ L'esempio descrive la procedura consigliata per la creazione di un canale su più livelli personalizzato in Windows Communication Foundation (WCF), utilizzando il framework del canale e seguendo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] procedure consigliate. I passaggi per creare un canale su più livelli personalizzato sono i seguenti.  
   
 1.  Decidere quali forme del canale saranno supportate dalla channel factory e dal listener del canale.  
   
@@ -63,7 +51,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Aggiunta di un elemento di associazione.  
- L'esempio definisce un elemento di associazione personalizzato: `InterceptingBindingElement`. `InterceptingBindingElement`accetta un `ChannelMessageInterceptor` come input e utilizza tale `ChannelMessageInterceptor` per manipolare i messaggi che passano attraverso di esso. Si tratta della sola classe che deve essere pubblica. La factory, il listener e i canali possono tutti essere implementazioni interne delle interfacce di runtime pubbliche.  
+ L'esempio definisce un elemento di associazione personalizzato: `InterceptingBindingElement`. `InterceptingBindingElement` accetta una `ChannelMessageInterceptor` come input e utilizza tale `ChannelMessageInterceptor` per manipolare i messaggi che passano attraverso di esso. Si tratta della sola classe che deve essere pubblica. La factory, il listener e i canali possono tutti essere implementazioni interne delle interfacce di runtime pubbliche.  
   
 ```  
 public class InterceptingBindingElement : BindingElement  

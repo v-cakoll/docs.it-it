@@ -1,29 +1,15 @@
 ---
 title: Traccia
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 75870850a7df01d255d3512dde2a550e2a6c205a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a0c3e5591280247cab97b6597a42ca496c9654d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing"></a>Traccia
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] fornisce strumenti applicativi e dati diagnostici per il monitoraggio e l'analisi degli errori. Al posto di un debugger, è possibile utilizzare la traccia per capire il comportamento o le cause di errori di un'applicazione. È anche possibile correlare errori e processi attraverso i componenti per fornire un'esperienza end-to-end.  
+Windows Communication Foundation (WCF) fornisce strumenti applicativi e dati di diagnostica per l'analisi e monitoraggio degli errori. Al posto di un debugger, è possibile utilizzare la traccia per capire il comportamento o le cause di errori di un'applicazione. È anche possibile correlare errori e processi attraverso i componenti per fornire un'esperienza end-to-end.  
   
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] restituisce i dati seguenti per la traccia diagnostica:  
   

@@ -1,20 +1,12 @@
 ---
 title: Formattazione di HTTP Web WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab18e739b061ac6d28877eaac23c258a79f07a2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abbfc74f33ddb676c8ac85eb712757615a2972ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-formatting"></a>Formattazione di HTTP Web WCF
 Il modello di programmazione HTTP Web WCF consente di determinare in modo dinamico il formato migliore in cui un'operazione di servizio debba restituire la risposta. Vengono supportati due metodi per determinare un formato appropriato: automatico ed esplicito.  
@@ -30,7 +22,7 @@ Il modello di programmazione HTTP Web WCF consente di determinare in modo dinami
   
 4.  l'impostazione del formato predefinita in WebHttpBehavior.  
   
- Se il messaggio di richiesta contiene un'intestazione Accept, l'infrastruttura di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cerca un tipo supportato. Se l'intestazione `Accept` specifica le priorità per i propri tipi di supporto, queste vengono rispettate. Se non viene individuato alcun formato adatto nell'intestazione `Accept`, viene usato il valore content-type del messaggio di richiesta. Se non viene specificato alcun valore content-type adatto, viene usata l'impostazione del formato predefinita per l'operazione. Il formato predefinito viene impostato con il parametro `ResponseFormat` degli attributi <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>. Se non viene specificato alcun formato predefinito nell'operazione, viene usato il valore della proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. La formattazione automatica si basa sulla proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Se tale proprietà è impostata su `true`, l'infrastruttura di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] determina il formato migliore da usare. La selezione automatica del formato è disabilitata per impostazione predefinita per la compatibilità con le versioni precedenti. La selezione automatica del formato automatica può essere abilitata a livello di codice o tramite la configurazione. Nell'esempio seguente viene mostrato come abilitare la selezione automatica del formato nel codice.  
+ Se il messaggio di richiesta contiene un'intestazione Accept per un tipo che supporta Cerca l'infrastruttura di Windows Communication Foundation (WCF). Se l'intestazione `Accept` specifica le priorità per i propri tipi di supporto, queste vengono rispettate. Se non viene individuato alcun formato adatto nell'intestazione `Accept`, viene usato il valore content-type del messaggio di richiesta. Se non viene specificato alcun valore content-type adatto, viene usata l'impostazione del formato predefinita per l'operazione. Il formato predefinito viene impostato con il parametro `ResponseFormat` degli attributi <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>. Se non viene specificato alcun formato predefinito nell'operazione, viene usato il valore della proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. La formattazione automatica si basa sulla proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Quando questa proprietà è impostata su `true`, l'infrastruttura di WCF determina il formato migliore da usare. La selezione automatica del formato è disabilitata per impostazione predefinita per la compatibilità con le versioni precedenti. La selezione automatica del formato automatica può essere abilitata a livello di codice o tramite la configurazione. Nell'esempio seguente viene mostrato come abilitare la selezione automatica del formato nel codice.  
   
 ```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract     

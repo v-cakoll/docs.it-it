@@ -1,17 +1,12 @@
 ---
 title: Celle di riferimento (F#)
 description: 'Informazioni su come le celle di riferimento di F # sono percorsi di archiviazione che consentono di creare valori modificabili con semantica di riferimento.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: e017adb2a031dff996892e2bb6585fc95f644ff9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d68726619bdfce5a9ed9bd94d6434427644cd9f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reference-cells"></a>Celle di riferimento
 

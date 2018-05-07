@@ -1,23 +1,12 @@
 ---
 title: Aggiornamento dinamico
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee6b228d729958e9e5f14cadb1e378a2944c4f85
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfd10e4b93351c607ef270487a12bec19ded4ca8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-update"></a>Aggiornamento dinamico
 L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso di lavoro un meccanismo per aggiornare la definizione del flusso di lavoro di un'istanza persistente del flusso di lavoro. Può servire a implementare una correzione di bug, nuovi requisiti o per implementare modifiche impreviste. In questo argomento viene fornita una panoramica sulla funzionalità di aggiornamento dinamico introdotta in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -27,7 +16,7 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
   
 1.  [Preparare la definizione del flusso di lavoro per l'aggiornamento dinamico](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)  
   
-2.  [Aggiornare la definizione del flusso di lavoro in modo da riflettere le modifiche desiderate](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)  
+2.  [Aggiorna la definizione del flusso di lavoro in modo da riflettere le modifiche desiderate](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)  
   
 3.  [Creare la mappa di aggiornamento](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Create)  
   
@@ -38,7 +27,7 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
   
  In questo argomento viene fornita una panoramica sul processo di aggiornamento dinamico per l'aggiunta di una nuova attività a un'istanza persistente di un flusso di lavoro XAML compilato.  
   
-###  <a name="Prepare"></a>Preparare la definizione del flusso di lavoro per l'aggiornamento dinamico  
+###  <a name="Prepare"></a> Preparare la definizione del flusso di lavoro per l'aggiornamento dinamico  
  Il primo passaggio nel processo di aggiornamento dinamico consiste nel preparare all'aggiornamento la definizione del flusso di lavoro desiderata. Questa operazione viene eseguita chiamando il metodo <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> e passando la definizione del flusso di lavoro per la modifica. Questo metodo convalida e successivamente analizza l'albero del flusso di lavoro per identificare tutti gli oggetti, quali le variabili e le attività pubbliche che devono essere contrassegnate in modo da poter essere confrontate in un secondo momento con la definizione del flusso di lavoro modificata. Al termine, l'albero del flusso di lavoro viene duplicato e collegato alla definizione del flusso di lavoro originale. Quando viene creata la mappa di aggiornamento, la versione aggiornata della definizione del flusso di lavoro viene confrontata con la definizione del flusso di lavoro originale. Sulla base delle differenze viene generata la mappa di aggiornamento.  
   
  Ai fini della preparazione per l'aggiornamento dinamico, un flusso di lavoro XAML può essere caricato in un oggetto <xref:System.Activities.ActivityBuilder>. L'oggetto <xref:System.Activities.ActivityBuilder> verrà quindi passato a <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.  
@@ -69,7 +58,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 > [!NOTE]
 >  Per scaricare il codice di esempio che accompagna questo argomento, vedere [il codice di esempio di aggiornamento dinamico](http://go.microsoft.com/fwlink/?LinkId=227905).  
   
-###  <a name="Update"></a>Aggiornare la definizione del flusso di lavoro in modo da riflettere le modifiche desiderate  
+###  <a name="Update"></a> Aggiorna la definizione del flusso di lavoro in modo da riflettere le modifiche desiderate  
  Una volta che la definizione del flusso di lavoro è stata preparata per l'aggiornamento, è possibile apportare le modifiche desiderate. È possibile aggiungere o rimuovere attività, aggiungere, spostare o eliminare variabili pubbliche, aggiungere o rimuovere argomenti e apportare modifiche alla firma dei delegati dell'attività. Non è possibile rimuovere un'attività in esecuzione o modificare la firma di un delegato in esecuzione. Tali modifiche possono essere eseguite usando il codice o in una finestra di progettazione del flusso di lavoro rieseguita nell'host. Nell'esempio riportato di seguito viene aggiunta un'attività `VerifyAppraisal` personalizzata alla sequenza che costituisce il corpo dell'oggetto `MortgageWorkflow` usato nell'esempio precedente.  
   
 ```csharp  
@@ -87,7 +76,7 @@ Sequence s = ab.Implementation as Sequence;
 s.Activities.Insert(2, va);  
 ```  
   
-###  <a name="Create"></a>Creare la mappa di aggiornamento  
+###  <a name="Create"></a> Creare la mappa di aggiornamento  
  Una volta che la definizione del flusso di lavoro preparata per l'aggiornamento è stata modificata, è possibile creare la mappa di aggiornamento. Per creare una mappa di aggiornamento dinamico, viene richiamato il metodo <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>. Il metodo restituisce un oggetto <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> contenente le informazioni necessarie al runtime per modificare un'istanza persistente del flusso di lavoro in modo che possa essere caricata e ripresa con la nuova definizione del flusso di lavoro. Nell'esempio riportato di seguito, viene creata una mappa di aggiornamento per la definizione di `MortgageWorkflow` modificata usata nell'esempio precedente.  
   
 ```csharp  
@@ -116,7 +105,7 @@ XamlServices.Save(xw, ab);
 sw.Close();  
 ```  
   
-###  <a name="Apply"></a>Applicare la mappa di aggiornamento alle istanze del flusso di lavoro persistente desiderato  
+###  <a name="Apply"></a> Applicare la mappa di aggiornamento alle istanze del flusso di lavoro persistente desiderato  
  Una volta creata, la mappa di aggiornamento può essere applicata in qualsiasi momento. Può essere applicata subito usando l'istanza <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> restituita dal metodo <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> oppure in secondo momento usando una copia salvata. Per aggiornare un'istanza del flusso di lavoro, caricarla in <xref:System.Activities.WorkflowApplicationInstance> usando <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType>. Creare quindi un elemento <xref:System.Activities.WorkflowApplication> usando la definizione aggiornata del flusso di lavoro, quindi l'elemento <xref:System.Activities.WorkflowIdentity> desiderato. Questo oggetto <xref:System.Activities.WorkflowIdentity> può essere diverso da quello usato per rendere persistente il flusso di lavoro originale e in genere è diverso in modo da indicare che l'istanza persistente è stata modificata. Una volta creato l'oggetto <xref:System.Activities.WorkflowApplication>, viene caricato usando l'overload di <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType> che accetta un oggetto <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> quindi viene scaricato tramite una chiamata a <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType>. In questo modo viene applicato l'aggiornamento dinamico e resa persistente l'istanza aggiornata del flusso di lavoro.  
   
 ```csharp  

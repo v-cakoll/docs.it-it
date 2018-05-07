@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: creare una raccolta di caratteri privata'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c0107b1ef1d5259835c6fb1666519d3fc06f4e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 824d42c40b07e8662395e7a1286b9a5a6112c415
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Procedura: creare una raccolta di caratteri privata
 Il <xref:System.Drawing.Text.PrivateFontCollection> classe eredita la <xref:System.Drawing.Text.FontCollection> classe base astratta. È possibile utilizzare un <xref:System.Drawing.Text.PrivateFontCollection> oggetto per mantenere un set di caratteri specifico per l'applicazione. Un insieme di caratteri privata può includere i caratteri di sistema installati, nonché i tipi di carattere che non sono stati installati nel computer. Per aggiungere un file di caratteri a un insieme di caratteri privata, chiamare il <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> metodo di un <xref:System.Drawing.Text.PrivateFontCollection> oggetto.  
@@ -50,9 +38,9 @@ Il <xref:System.Drawing.Text.PrivateFontCollection> classe eredita la <xref:Syst
   
  L'output del codice seguente è simile a quello illustrato nella figura seguente.  
   
- ![Tipi di carattere testo](../../../../docs/framework/winforms/advanced/media/csfontstext7.png "csfontstext7")  
+ ![Testo caratteri](../../../../docs/framework/winforms/advanced/media/csfontstext7.png "csfontstext7")  
   
- Tff (aggiunto alla raccolta di tipo di carattere privato nell'esempio di codice seguente) è il file di tipo di carattere per lo stile normale Arial. Si noti tuttavia che l'output del programma mostra alcuni stili disponibili diverso da normale, per la famiglia. Ciò accade perché [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possibile simulare il grassetto, corsivo e grassetto, corsivo dallo stile normale. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]può inoltre generare barrati e dallo stile normale.  
+ Tff (aggiunto alla raccolta di tipo di carattere privato nell'esempio di codice seguente) è il file di tipo di carattere per lo stile normale Arial. Si noti tuttavia che l'output del programma mostra alcuni stili disponibili diverso da normale, per la famiglia. Ciò accade perché [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possibile simulare il grassetto, corsivo e grassetto, corsivo dallo stile normale. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] può inoltre generare barrati e dallo stile normale.  
   
  Analogamente, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possibile simulare lo stile grassetto corsivo lo stile grassetto o corsivo. L'output del programma indica che lo stile grassetto corsivo è disponibile per la famiglia di volte in cui anche se tff (Times New Roman, grassetto) è l'unico file volte nella raccolta.  
   

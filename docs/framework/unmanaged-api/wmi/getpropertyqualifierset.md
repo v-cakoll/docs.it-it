@@ -1,11 +1,7 @@
 ---
 title: Funzione GetPropertyQualifierSet (riferimenti alle API non gestite)
-description: "La funzione GetPropertyQualifierSet recupera il qualificatore di impostazione per una proprietà."
+description: La funzione GetPropertyQualifierSet recupera il qualificatore di impostazione per una proprietà.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetPropertyQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7ca2981c8833abaafd5d206b66d6e91f34e2c91d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2951733211737f06cd737b20bd1537277be1be1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet (funzione)
 Recupera il qualificatore impostato per una particolare proprietà.
@@ -54,7 +47,7 @@ HRESULT GetPropertyQualifierSet (
 [in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
 
 `wszMethod`  
-[in] Il nome della proprietà. `wszProperty`deve puntare a un oggetto valido `LPCWSTR`. 
+[in] Il nome della proprietà. `wszProperty` deve puntare a un valore valido `LPCWSTR`. 
 
 `ppQualSet`  
 [out] Riceve il puntatore a interfaccia che consente l'accesso per i qualificatori della proprietà. Il parametro `ppQualSet` non può essere `null`. Se si verifica un errore, non viene restituito un nuovo oggetto e il puntatore è impostato in modo che punti a `null`. 
@@ -87,7 +80,7 @@ Poiché le proprietà di sistema non dispongono di alcun qualificatori, la funzi
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

@@ -1,11 +1,6 @@
 ---
 title: Like (operatore) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Like
 - vb.Like
@@ -27,14 +22,11 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad5729515362bfd52b0c3b401f218a49f569726e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a9c672a397510c69c9ee67358689feff80d8831a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="like-operator-visual-basic"></a>Like (operatore) (Visual Basic)
 Confronta una stringa con un modello.  
@@ -64,13 +56,13 @@ result = string Like pattern
 ## <a name="pattern-options"></a>Opzioni del modello  
  Criteri di ricerca incorporati offre uno strumento versatile per confronti tra stringhe. Le funzionalità di criteri di ricerca consentono di associare ogni carattere `string` da un carattere specifico, un carattere jolly, un elenco di caratteri o un intervallo di caratteri. La tabella seguente mostra i caratteri consentiti in `pattern` e le relative corrispondenze.  
   
-|Caratteri`pattern`|Corrispondenze in`string`|  
+|Caratteri `pattern`|Corrispondenze in `string`|  
 |-----------------------------|-------------------------|  
 |`?`|Qualsiasi carattere singolo|  
 |`*`|Zero o più caratteri|  
 |`#`|Qualsiasi cifra (0-9)|  
-|`[charlist]`|Qualsiasi carattere singolo`charlist`|  
-|`[!charlist]`|Qualsiasi carattere singolo non incluso`charlist`|  
+|`[charlist]`|Qualsiasi carattere singolo `charlist`|  
+|`[!charlist]`|Qualsiasi carattere singolo non incluso `charlist`|  
   
 ## <a name="character-lists"></a>Elenchi di caratteri  
  Un gruppo di uno o più caratteri (`charlist`) racchiusi tra parentesi quadre (`[ ]`) può essere usato per corrispondi a qualsiasi carattere singolo in `string` e possono includere qualsiasi codice di carattere, comprese le cifre.  

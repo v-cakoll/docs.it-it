@@ -1,21 +1,12 @@
 ---
 title: Iteratori (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f02249f7f30d2cd6b43aa75530ace099286c7d7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ecc48ad5bbddc82457a8d6cc8e60ee419fb593fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iterators-visual-basic"></a>Iteratori (Visual Basic)
 Un *iteratore* può essere usato per scorrere le raccolte come gli elenchi e le matrici.  
@@ -221,7 +212,7 @@ Public Class Zoo
 End Class  
 ```  
   
-##  <a name="BKMK_TryBlocks"></a>Blocchi try  
+##  <a name="BKMK_TryBlocks"></a> Blocchi try  
  Visual Basic consente un `Yield` istruzione il `Try` blocco di un [provare... Catch... Istruzione finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Oggetto `Try` blocco che ha un `Yield` istruzione possono essere presenti `Catch` blocchi e può avere un `Finally` blocco.  
   
  L'esempio seguente include `Try`, `Catch`, e `Finally` blocchi in una funzione iteratore. Il `Finally` blocco nella funzione iteratore esegue prima il `For Each` al termine dell'iterazione.  
@@ -261,7 +252,7 @@ End Function
   
  Se il `For Each` corpo (anziché il metodo iteratore) genera un'eccezione, un `Catch` blocco nella funzione iteratore non viene eseguita, ma un `Finally` blocco nella funzione iteratore viene eseguito. Oggetto `Catch` blocco all'interno di una funzione iterator intercetta solo le eccezioni che si verificano all'interno della funzione iteratore.  
   
-##  <a name="BKMK_AnonymousMethods"></a>Metodi anonimi  
+##  <a name="BKMK_AnonymousMethods"></a> Metodi anonimi  
  In Visual Basic, una funzione anonima può essere una funzione iteratore. Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  

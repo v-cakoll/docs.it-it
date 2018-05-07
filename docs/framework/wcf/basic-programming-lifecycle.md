@@ -1,31 +1,17 @@
 ---
 title: Ciclo di vita della programmazione di base
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ff735a8caf1fbaff636f94eee366b20c33d8f331
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: df86b0750a0fb8760d77fa36ec0806a1c5a9c0a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-programming-lifecycle"></a>Ciclo di vita della programmazione di base
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consente alle applicazioni di comunicare nello stesso computer, in Internet o tra piattaforme di applicazione diverse. In questo argomento vengono delineate le attività necessarie per compilare un'applicazione [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Per un'applicazione di esempio funzionante, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md).  
+Windows Communication Foundation (WCF) consente alle applicazioni di comunicare se si trovino nello stesso computer, in Internet o su diverse piattaforme applicative. In questo argomento vengono delineate le attività necessarie per compilare un'applicazione [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Per un'applicazione di esempio funzionante, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md).  
   
 ## <a name="the-basic-tasks"></a>Attività di base  
  Le attività di base da eseguire sono descritte di seguito, in ordine progressivo:  

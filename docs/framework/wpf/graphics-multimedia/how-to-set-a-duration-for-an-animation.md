@@ -1,28 +1,16 @@
 ---
-title: 'Procedura: impostare una durata per un''animazione'
-ms.custom: 
+title: "Procedura: impostare una durata per un'animazione"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], duration
 - Timelines [WPF], description
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e8d15a1b8432b3dae5bee73396bdec9fc9d50f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: df9e12e1bd3a365c3013d0f75df663bd46186ee2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Procedura: impostare una durata per un'animazione
 Oggetto <xref:System.Windows.Media.Animation.Timeline> rappresenta un intervallo di tempo e la lunghezza del segmento varia a seconda della sequenza temporale <xref:System.Windows.Duration>. Quando un <xref:System.Windows.Media.Animation.Timeline> raggiunge la fine della durata, la riproduzione viene interrotta. Se il <xref:System.Windows.Media.Animation.Timeline> ha sequenze temporali figlio, la relativa riproduzione anche interrotta. Nel caso di un'animazione, la <xref:System.Windows.Duration> specifica il tempo impiegato dall'animazione per la transizione dal valore iniziale al valore finale.  

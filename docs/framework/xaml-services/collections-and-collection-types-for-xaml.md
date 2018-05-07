@@ -1,24 +1,12 @@
 ---
 title: Raccolte e tipi di raccolte per XAML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58f8e7c6-9a41-4f25-8551-c042f1315baa
-caps.latest.revision: "2"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b67fec476c95d82b769494d53e50550cad0c719b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5605c97b13503e18e2f698f2a19f715663052b08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>Raccolte e tipi di raccolte per XAML
 In questo argomento viene descritto come definire le proprietà dei tipi che servono per supportare una raccolta e per supportare la sintassi XAML per creare un'istanza di elementi della raccolta come elementi figlio di un elemento oggetto padre o un elemento di proprietà.  
@@ -34,7 +22,7 @@ In questo argomento viene descritto come definire le proprietà dei tipi che ser
   
 2.  Il <xref:System.Collections.IDictionary> interfaccia indica un insieme di dicionary.  
   
-3.  <xref:System.Array>rappresenta una matrice e una matrice supporta <xref:System.Collections.IList> metodi.  
+3.  <xref:System.Array> rappresenta una matrice e una matrice supporta <xref:System.Collections.IList> metodi.  
   
  In ognuno di questi concetti di raccolta, un processore XAML dei servizi XAML di .NET Framework prevede di chiamare il `Add` metodo in un'istanza specifica del tipo della proprietà di raccolta. In alternativa, in uno scenario di serializzazione, un processore XAML produce istanze di tipo XAML discrete per ogni elemento nell'elenco, dizionario o della matrice basata sul concetto di specifiche di ogni raccolta di "Elementi". Questi sono: <xref:System.Collections.IList.Item%2A>; <xref:System.Collections.IDictionary.Item%2A>; esplicita <xref:System.Array.System%23Collections%23IList%23Item%2A> per <xref:System.Array>.  
   
@@ -49,8 +37,8 @@ In questo argomento viene descritto come definire le proprietà dei tipi che ser
 ## <a name="xaml-type-system-support-and-collections"></a>Raccolte e supporto di sistema di tipo XAML  
  Oltre il meccanismo di base per l'analisi XAML e la compilazione o la serializzazione delle proprietà della raccolta, il sistema di tipi XAML implementati nei servizi XAML di .NET Framework include diverse funzionalità di progettazione relativi alle raccolte in XAML.  
   
-1.  <xref:System.Xaml.XamlType.IsCollection%2A>Restituisce true se il tipo XAML è supportato da un tipo che fornisce supporto delle raccolte XAML.  
+1.  <xref:System.Xaml.XamlType.IsCollection%2A> Restituisce true se il tipo XAML viene eseguito da un tipo che fornisce supporto delle raccolte XAML.  
   
-2.  <xref:System.Xaml.XamlType.IsDictionary%2A>e <xref:System.Xaml.XamlType.IsArray%2A> può identificare ulteriormente la modalità di raccolta supporta il tipo XAML. Per XAML personalizzato processori che si basano su servizi XAML di .NET Framework e il codice XAML, sistema di tipi ma non basato su esistente <xref:System.Xaml.XamlWriter> implementazioni di conoscere la modalità di raccolta utilizzata potrebbe essere necessario per sapere quale metodo da richiamare per elaborazione della raccolta.  
+2.  <xref:System.Xaml.XamlType.IsDictionary%2A> e <xref:System.Xaml.XamlType.IsArray%2A> può identificare ulteriormente la modalità di raccolta supporta il tipo XAML. Per XAML personalizzato processori che si basano su servizi XAML di .NET Framework e il codice XAML, sistema di tipi ma non basato su esistente <xref:System.Xaml.XamlWriter> implementazioni di conoscere la modalità di raccolta utilizzata potrebbe essere necessario per sapere quale metodo da richiamare per elaborazione della raccolta.  
   
 3.  Ognuno dei valori di proprietà precedente sono potenzialmente influenzate dalle sostituzioni di <xref:System.Xaml.XamlType.LookupCollectionKind%2A> su un tipo XAML.

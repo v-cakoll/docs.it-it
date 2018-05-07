@@ -1,24 +1,12 @@
 ---
 title: Propagazione di transazioni all'interno e all'esterno di servizi flusso di lavoro
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a38c0c224c93941efa767d142aa7738296a62f15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b3d3e85b626d033c9ab50e93e3ceb3b86058a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Propagazione di transazioni all'interno e all'esterno di servizi flusso di lavoro
 Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Affinché un'operazione del servizio diventi parte di una transazione di ambiente, posizionare un'attività <xref:System.ServiceModel.Activities.Receive> all'interno di un'attività <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Qualsiasi chiamata effettuata da un'attività <xref:System.ServiceModel.Activities.Send> o un'attività <xref:System.ServiceModel.Activities.SendReply> all'interno di <xref:System.ServiceModel.Activities.TransactedReceiveScope> verrà effettuata anche all'interno della transazione di ambiente. Un'applicazione client del flusso di lavoro può creare una transazione di ambiente tramite l'attività <xref:System.Activities.Statements.TransactionScope> e chiamare operazioni del servizio utilizzando la transazione di ambiente. In questo argomento viene illustrato il processo di creazione di un servizio flusso di lavoro e di un client flusso di lavoro che partecipano a transazioni.  
@@ -87,7 +75,7 @@ Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Aff
   
 ### <a name="implement-the-workflow-service"></a>Implementare il servizio di flusso di lavoro  
   
-1.  Aggiungere un nuovo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio flusso di lavoro, denominato `WorkflowService` per il `Common` progetto. Per eseguire questa operazione destra il `Common` progetto, selezionare **Aggiungi**, **nuovo elemento...** Selezionare **flusso di lavoro** in **modelli installati** e selezionare **servizio flusso di lavoro WCF**.  
+1.  Aggiungere un nuovo servizio di flusso di lavoro WCF, denominato `WorkflowService` per il `Common` progetto. Per eseguire questa operazione destra il `Common` progetto, selezionare **Aggiungi**, **nuovo elemento...** Selezionare **flusso di lavoro** in **modelli installati** e selezionare **servizio flusso di lavoro WCF**.  
   
      ![Aggiunta di un servizio flusso di lavoro](../../../../docs/framework/wcf/feature-details/media/addwfservice.JPG "AddWFService")  
   
@@ -118,7 +106,7 @@ Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Aff
   
      Il flusso di lavoro dovrebbe risultare analogo al seguente:  
   
-     ![Aggiunta di un'attività di ricezione](../../../../docs/framework/wcf/feature-details/media/serviceaddreceive.JPG "ServiceAddReceive")  
+     ![Aggiunta di un'attività Receive](../../../../docs/framework/wcf/feature-details/media/serviceaddreceive.JPG "ServiceAddReceive")  
   
 7.  Fare clic su di **definire...**  collegare il <xref:System.ServiceModel.Activities.Receive> attività e configurare le impostazioni seguenti:  
   
@@ -154,7 +142,7 @@ Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Aff
   
 12. Fare clic destro la <xref:System.ServiceModel.Activities.Receive> attività e selezionare **crea SendReply** e incollarla dopo l'ultimo <xref:System.Activities.Statements.WriteLine> attività. Fare clic su di **definire...**  collegare il `SendReplyToReceive` attività e configurare le impostazioni seguenti.  
   
-     ![Le impostazioni dei messaggi di risposta](../../../../docs/framework/wcf/feature-details/media/replymessagesettings.JPG "ReplyMessageSettings")  
+     ![Impostazioni del messaggio di risposta](../../../../docs/framework/wcf/feature-details/media/replymessagesettings.JPG "ReplyMessageSettings")  
   
 13. Trascinare e rilasciare un <xref:System.Activities.Statements.WriteLine> attività dopo il `SendReplyToReceive` attività e impostare ha <xref:System.Activities.Statements.WriteLine.Text%2A> proprietà per "servizio: Reply sent."  
   
@@ -162,7 +150,7 @@ Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Aff
   
      Il flusso di lavoro del servizio completato dovrebbe risultare analogo al seguente:  
   
-     ![Completamento del servizio flusso di lavoro](../../../../docs/framework/wcf/feature-details/media/servicecomplete.jpg "ServiceComplete")  
+     ![Completamento del flusso di lavoro di servizio](../../../../docs/framework/wcf/feature-details/media/servicecomplete.jpg "ServiceComplete")  
   
 ### <a name="implement-the-workflow-client"></a>Implementare il client flusso di lavoro  
   
@@ -208,7 +196,7 @@ Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Aff
   
 11. Fare clic sul collegamento Definisci nell'attività ReceiveReplyForSend e configurare le impostazioni seguenti:  
   
-     ![Impostazione delle impostazioni del messaggio ReceiveForSend](../../../../docs/framework/wcf/feature-details/media/clientreplymessagesettings.JPG "ClientReplyMessageSettings")  
+     ![L'impostazione di impostazioni del messaggio ReceiveForSend](../../../../docs/framework/wcf/feature-details/media/clientreplymessagesettings.JPG "ClientReplyMessageSettings")  
   
 12. Trascinare un'attività <xref:System.Activities.Statements.WriteLine> tra le attività <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.ReceiveReply> e impostarne la proprietà <xref:System.Activities.Statements.WriteLine.Text%2A> su "Client: Send complete".  
   
@@ -218,7 +206,7 @@ Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Aff
   
 15. Trascinare un'attività <xref:System.Activities.Statements.WriteLine> alla fine del flusso di lavoro e impostarne la proprietà <xref:System.Activities.Statements.WriteLine.Text%2A> su "Client workflow ends". Il flusso di lavoro client completato viene visualizzato come illustrato del diagramma seguente.  
   
-     ![Il workfliow client completato](../../../../docs/framework/wcf/feature-details/media/clientcompleteworkflow.jpg "ClientCompleteWorkflow")  
+     ![Il workfliow client completate](../../../../docs/framework/wcf/feature-details/media/clientcompleteworkflow.jpg "ClientCompleteWorkflow")  
   
 16. Compilare la soluzione.  
   

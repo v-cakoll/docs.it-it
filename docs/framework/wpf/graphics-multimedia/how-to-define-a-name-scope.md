@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: definire un ambito del nome'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - Storyboards [WPF], animating in procedural code
 - animation [WPF], Storyboards [WPF], in procedural code
 ms.assetid: 4f361925-6a08-40dc-8231-a61111c6b28b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3007088f849f40e4e9b4f1846c19c98c33e95c17
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 689c8187fcf17ef48a73bc5a6fc4928f3be1a078
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-a-name-scope"></a>Procedura: definire un ambito del nome
 Per aggiungere un'animazione con <xref:System.Windows.Media.Animation.Storyboard> nel codice, è necessario creare un <xref:System.Windows.NameScope> e registrare i nomi degli oggetti di destinazione con l'elemento che possiede tale ambito dei nomi. Nell'esempio seguente, un <xref:System.Windows.NameScope> viene creato per `myMainPanel`. Due pulsanti, `button1` e `button2`, vengono aggiunti al pannello e i relativi nomi registrati. Numerose animazioni e <xref:System.Windows.Media.Animation.Storyboard> vengono creati. Lo storyboard <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> metodo viene utilizzato per avviare le animazioni.  

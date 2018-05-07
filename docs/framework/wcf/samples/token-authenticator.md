@@ -1,27 +1,15 @@
 ---
 title: Autenticatore token
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76f3913f5cf6166793cb6f95ef3658c24e2453b4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 35bba0b6a81ff11164636e906440db7e9b2ca25b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="token-authenticator"></a>Autenticatore token
-In questo esempio viene illustrato come implementare un autenticatore di token personalizzato. Gli autenticatori di token sono utilizzati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per la convalida del token utilizzato con il messaggio, la verifica della sua coerenza, e l'autenticazione dell'identità associata al token.  
+In questo esempio viene illustrato come implementare un autenticatore di token personalizzato. Un autenticatore del token di Windows Communication Foundation (WCF) viene utilizzato per la convalida del token utilizzato con il messaggio, verificando che è coerente e l'autenticazione dell'identità associata al token.  
   
  Gli autenticatori di token personalizzati sono utili in molti casi, ad esempio:  
   

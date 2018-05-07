@@ -1,21 +1,14 @@
 ---
 title: 'Procedura: creare e utilizzare assembly dalla riga di comando (Visual Basic)'
-ms.custom: ''
 ms.date: 03/14/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39648107697cdbaa8856705f44df605efda11fa
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: c02f694da4e03b666fa88ea6db8ddb2db4c9637d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Procedura: creare e utilizzare assembly dalla riga di comando (Visual Basic)
 Un assembly, o libreria a collegamento dinamico (DLL), viene collegato al programma in fase di esecuzione. Per illustrare la creazione e l'uso di una DLL, si consideri lo scenario seguente:  

@@ -1,37 +1,27 @@
 ---
 title: Protezione dei messaggi con un client Windows
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c480706fee27e7023eae5b493b0ca007b4757e97
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 185edce5bd8a4772545ec966a6b3f74b204aa2b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-windows-client"></a>Protezione dei messaggi con un client Windows
-In questo scenario vengono illustrati un client e un server [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protetti dalla modalità di sicurezza dei messaggi. Il client e il servizio vengono autenticati utilizzando le credenziali di Windows.  
+Questo scenario vengono illustrati un client Windows Communication Foundation (WCF) e i server protetti dalla modalità di sicurezza dei messaggi. Il client e il servizio vengono autenticati utilizzando le credenziali di Windows.  
   
- ![Messaggio di sicurezza con un client Windows](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Messaggio di sicurezza con un client di Windows](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Modalità di sicurezza|Messaggio|  
-|Interoperabilità|Solo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
+|Interoperabilità|Solo WCF|  
 |Autenticazione (server)|Autenticazione reciproca del server e del client|  
 |Autenticazione (client)|Autenticazione reciproca del server e del client|  
 |Integrità|Sì, usando un contesto di sicurezza condiviso|  

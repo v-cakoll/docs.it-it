@@ -1,24 +1,12 @@
 ---
 title: Esempio relativo all'individuazione di ambiti
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aa762df1dbfe92102f8cd719613099b23986ed0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee6fdb69f6417e6c43d671c7c76bda8af067d5a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-with-scopes-sample"></a>Esempio relativo all'individuazione di ambiti
 In questo esempio viene illustrato come utilizzare gli ambiti per suddividere in categorie gli endpoint individuabili e come utilizzare <xref:System.ServiceModel.Discovery.DiscoveryClient> per eseguire una ricerca asincrona per gli endpoint. Nel servizio questo esempio mostra come personalizzare l'individuazione per ogni endpoint aggiungendo un comportamento di individuazione dell'endpoint e utilizzandolo per aggiungere un ambito all'endpoint. Viene inoltre illustrato come controllare l'individuabilità dell'endpoint. Nel client l'esempio illustra come i client possono creare un <xref:System.ServiceModel.Discovery.DiscoveryClient> e ottimizzare i parametri di ricerca per includere gli ambiti aggiungendo ambiti a <xref:System.ServiceModel.Discovery.FindCriteria>. Questo esempio mostra anche come i client possono limitare le risposte aggiungendo un criterio di chiusura.  
@@ -44,7 +32,7 @@ In questo esempio viene illustrato come utilizzare gli ambiti per suddividere in
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
   

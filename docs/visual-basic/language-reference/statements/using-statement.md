@@ -1,12 +1,6 @@
 ---
 title: Istruzione Using (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.using
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ed9cc0d04c89eac1fe342a0924dd89bb1e258a11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 725eeb42dc5462022ac1a021c537d701929398ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-statement-visual-basic"></a>Istruzione Using (Visual Basic)
 Dichiara l'inizio di un `Using` blocco e facoltativamente acquisisce le risorse di sistema che controlla il blocco.  
@@ -41,14 +32,14 @@ End Using
 |---|---|  
 |`resourcelist`|Obbligatoria se non viene fornito `resourceexpression`. Elenco di uno o più risorse di sistema da questo `Using` blocco dei controlli, separati da virgole.|  
 |`resourceexpression`|Obbligatoria se non viene fornito `resourcelist`. Variabile di riferimento o un'espressione che fa riferimento a una risorsa di sistema per essere controllato da questo `Using` blocco.|  
-|`statements`|Parametro facoltativo. Blocco di istruzioni che il `Using` bloccare l'esecuzione.|  
+|`statements`|Facoltativo. Blocco di istruzioni che il `Using` bloccare l'esecuzione.|  
 |`End Using`|Obbligatorio. Termina la definizione del `Using` blocco ed Elimina tutte le risorse da essa controllati.|  
   
  Ogni risorsa di `resourcelist` parte con la sintassi e le parti seguenti:  
   
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
   
- -oppure-  
+ oppure  
   
  `resourcename As resourcetype = resourceexpression`  
   
@@ -59,7 +50,7 @@ End Using
 |`resourcename`|Obbligatorio. Variabile di riferimento che fa riferimento a una risorsa di sistema che il `Using` blocco dei controlli.|  
 |`New`|Obbligatorio se il `Using` istruzione acquisisce la risorsa. Se la risorsa è già stata acquisita, utilizzare la seconda alternativa di sintassi.|  
 |`resourcetype`|Obbligatorio. La classe della risorsa. La classe deve implementare il <xref:System.IDisposable> interfaccia.|  
-|`arglist`|Parametro facoltativo. Elenco di argomenti passati al costruttore per creare un'istanza di `resourcetype`. Vedere [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`arglist`|Facoltativo. Elenco di argomenti passati al costruttore per creare un'istanza di `resourcetype`. Vedere [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`resourceexpression`|Obbligatorio. Variabile o espressione che fa riferimento a una risorsa di sistema che soddisfano i requisiti di `resourcetype`. Se si utilizza la seconda alternativa di sintassi, è necessario acquisire la risorsa prima di passare il controllo per il `Using` istruzione.|  
   
 ## <a name="remarks"></a>Note  
@@ -71,9 +62,9 @@ End Using
   
 -   *Acquisizione* implica la creazione di una variabile e inizializzarlo per fare riferimento alla risorsa di sistema. Il `Using` istruzione può acquisire una o più risorse, o è possibile acquisire esattamente una risorsa prima di immettere il blocco e per fornire il `Using` istruzione. Se si fornisce `resourceexpression`, è necessario acquisire la risorsa prima di passare il controllo per il `Using` istruzione.  
   
--   *Utilizzo* si intende l'accesso alle risorse e di eseguire operazioni su tali. Le istruzioni comprese tra `Using` e `End Using` rappresentano l'utilizzo delle risorse.  
+-   *Utilizzo* si intende accedere alle risorse e di eseguire operazioni su tali. Le istruzioni comprese tra `Using` e `End Using` rappresentano l'utilizzo delle risorse.  
   
--   *Eliminazione* indica la chiamata di <xref:System.IDisposable.Dispose%2A> metodo sull'oggetto in `resourcename`. In questo modo l'oggetto di terminare correttamente le risorse. Il `End Using` istruzione elimina le risorse sotto il `Using` controllo del blocco.  
+-   *Disposizione* indica la chiamata di <xref:System.IDisposable.Dispose%2A> metodo sull'oggetto in `resourcename`. In questo modo l'oggetto di terminare correttamente le risorse. Il `End Using` istruzione elimina le risorse sotto il `Using` controllo del blocco.  
   
 ## <a name="behavior"></a>Comportamento  
  Oggetto `Using` blocco si comporta come un `Try`... `Finally` costruzione in cui il `Try` blocco utilizza le risorse e `Finally` blocco le Elimina. Per questo motivo, il `Using` blocco garantisce l'eliminazione delle risorse, indipendentemente da come si esce dal blocco. Questo vale anche nel caso di un'eccezione non gestita, ad eccezione di un <xref:System.StackOverflowException>.  

@@ -1,12 +1,6 @@
 ---
 title: Parametri e argomenti delle routine (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
 - procedures [Visual Basic], argument lists
@@ -24,14 +18,11 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 726667950cfb227a0359bd6238c202883561749c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b0ab186945b456d7fb4dde3f52724b08a99e2827
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Parametri e argomenti delle routine (Visual Basic)
 Nella maggior parte dei casi, una stored procedure richiede alcune informazioni sulle circostanze in cui è stato chiamato. Una routine che esegue attività ripetute o condivise utilizza informazioni diverse per ogni chiamata. Queste informazioni è costituito da variabili, costanti ed espressioni che viene passato alla routine quando viene chiamato.  
@@ -44,7 +35,7 @@ Nella maggior parte dei casi, una stored procedure richiede alcune informazioni 
   
  La figura seguente illustra la procedura di chiamata del codice `safeSquareRoot` da due posizioni diverse. La prima chiamata passa il valore della variabile `x` (4.0) per il parametro `number`e il valore restituito in `root` (2.0) viene assegnato alla variabile `y`. La seconda chiamata passa il valore letterale 9.0 per `number`e assegna il valore restituito (3.0) variabile `z`.  
   
- ![Diagramma grafico del passaggio di argomento al parametro](./media/parametersargue.gif "ParametersArgue")  
+ ![Diagramma grafico del passaggio argomento al parametro](./media/parametersargue.gif "ParametersArgue")  
 Passa un argomento a un parametro  
   
  Per ulteriori informazioni, vedere [le differenze tra parametri e argomenti](./differences-between-parameters-and-arguments.md).  

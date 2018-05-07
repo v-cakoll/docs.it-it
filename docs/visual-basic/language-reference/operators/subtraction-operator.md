@@ -1,12 +1,6 @@
 ---
 title: '- Operatore (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Negate
 - vb.-
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ffb7c96fe95e73dc857a15608df94ed8468f9df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4df8eb3844ed20fd24ca375f77cea46b9c6cee37
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="--operator-visual-basic"></a>Operatore - (Visual Basic)
 Restituisce la differenza tra due espressioni numeriche o il valore negativo di un'espressione numerica.  
@@ -76,7 +67,7 @@ Restituisce la differenza tra due espressioni numeriche o il valore negativo di 
  Dopo l'esecuzione di queste istruzioni, `binaryResult` contiene il valore 124,45 e `unaryResult` 334,90.  
   
 ## <a name="see-also"></a>Vedere anche  
- [-= Operatore (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md) [operatori aritmetici](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [-= Operatore (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md) [aritmetici (operatori)](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [Operatori aritmetici in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

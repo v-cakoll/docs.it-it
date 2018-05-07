@@ -1,25 +1,16 @@
 ---
-title: "Procedura: dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo (Visual Basic)"
-ms.custom: 
+title: 'Procedura: dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - inferring property names [Visual Basic]
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 66b9f8c0346f74ff631969bda122de7913a551c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 80127c05d56162397cfa421122ddd9698750b376
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Procedura: dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo (Visual Basic)
 I tipi anonimi non offrono alcun meccanismo per specificare direttamente i tipi di dati delle proprietà. I tipi di tutte le proprietà vengono dedotti. Nell'esempio seguente, i tipi di `Name` e `Price` vengono dedotti direttamente dai valori usati per inizializzarli.  

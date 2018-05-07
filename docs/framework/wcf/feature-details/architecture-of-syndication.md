@@ -1,26 +1,12 @@
 ---
 title: Architettura di diffusione
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f0a6b288860c343157f31f74d5a461fad1784e0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="architecture-of-syndication"></a>Architettura di diffusione
 L'API di diffusione è progettata per fornire un modello di programmazione indipendente dal formato, che consente di scrivere in rete contenuto diffuso in molteplici formati. Il modello di dati astratto è costituito dalle classi seguenti:  
@@ -37,16 +23,16 @@ L'API di diffusione è progettata per fornire un modello di programmazione indip
   
  Queste classi eseguono il mapping in modo rigoroso ai costrutti definiti nella specifica Atom 1.0, anche se alcuni dei nomi sono diversi.  
   
- In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], i feed di diffusione sono modellati come un altro tipo di operazione del servizio, quello in cui il tipo restituito è una delle classi derivate di <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Il recupero di un feed è modellato come uno scambio di messaggi richiesta-risposta. Un client invia una richiesta al servizio e il servizio risponde. Il messaggio di richiesta viene impostato in un protocollo dell'infrastruttura, ad esempio il protocollo HTTP non elaborato, e il messaggio di risposta contiene un payload costituito da un formato di diffusione noto (RSS 2.0 o Atom 1.0). I servizi che implementano questi scambi di messaggi sono denominati servizi di diffusione.  
+ In Windows Communication Foundation (WCF), feed di diffusione sono modellati come un altro tipo di operazione del servizio, uno in cui il tipo restituito è una delle classi derivate di <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Il recupero di un feed è modellato come uno scambio di messaggi richiesta-risposta. Un client invia una richiesta al servizio e il servizio risponde. Il messaggio di richiesta viene impostato in un protocollo dell'infrastruttura, ad esempio il protocollo HTTP non elaborato, e il messaggio di risposta contiene un payload costituito da un formato di diffusione noto (RSS 2.0 o Atom 1.0). I servizi che implementano questi scambi di messaggi sono denominati servizi di diffusione.  
   
  Il contratto di un servizio di diffusione è costituito da un set di operazioni che restituisce un'istanza della classe <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Nell'esempio seguente viene illustrata una dichiarazione di interfaccia per un servizio di diffusione.  
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Il supporto della diffusione è basato sul modello di programmazione REST di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che definisce l'associazione <xref:System.ServiceModel.WebHttpBinding>, usata insieme a <xref:System.ServiceModel.Description.WebHttpBehavior> per rendere disponibili i feed come servizi. Per ulteriori informazioni sul [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modello di programmazione REST, vedere [HTTP Web WCF Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Supporto della diffusione viene compilato il resto modello di programmazione WCF che definisce il <xref:System.ServiceModel.WebHttpBinding> binding, che viene utilizzato in combinazione con <xref:System.ServiceModel.Description.WebHttpBehavior> per rendere i feed disponibile come servizi. Per ulteriori informazioni sul modello di programmazione REST WCF, vedere [Panoramica del modello di programmazione a WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
->  La specifica Atom 1.0 consente di specificare secondi frazionari in uno qualsiasi dei costrutti data. I secondi frazionari verranno ignorati dall'implementazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] durante la fase di serializzazione e deserializzazione.  
+>  La specifica Atom 1.0 consente di specificare secondi frazionari in uno qualsiasi dei costrutti data. Durante la serializzazione e deserializzazione l'implementazione WCF ignora i secondi frazionari.  
   
 ## <a name="object-model"></a>Modello a oggetti  
  Il modello a oggetti per la diffusione è costituito dai gruppi di classi riportati nelle tabelle seguenti.  
@@ -88,7 +74,7 @@ L'API di diffusione è progettata per fornire un modello di programmazione indip
   
 ## <a name="extensibility"></a>Estendibilità  
   
--   Una funzionalità chiave dei protocolli di diffusione è l'estensibilità. Sia Atom 1.0 che RSS 2.0 consentono di aggiungere ai feed di diffusione attributi ed elementi che non sono definiti nelle specifiche. Il modello di programmazione della diffusione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prevede due modalità di utilizzo di attributi ed estensioni personalizzati: derivazione di una nuova classe e accesso non fortemente tipizzato. Per altre informazioni, vedere [estendibilità della diffusione](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+-   Una funzionalità chiave dei protocolli di diffusione è l'estensibilità. Sia Atom 1.0 che RSS 2.0 consentono di aggiungere ai feed di diffusione attributi ed elementi che non sono definiti nelle specifiche. Il modello di programmazione diffusione WCF fornisce due modalità di utilizzo con attributi ed estensioni personalizzati: derivazione di una nuova classe e l'accesso non fortemente tipizzato. Per altre informazioni, vedere [estendibilità della diffusione](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica della diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  

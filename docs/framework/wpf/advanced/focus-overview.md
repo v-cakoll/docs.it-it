@@ -1,13 +1,6 @@
 ---
 title: Cenni preliminari sullo stato attivo
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d35b65f88452085e601569b9dcfc62a541a1655f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 620839a0060469604d0affa6637c3cafac0f62c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="focus-overview"></a>Cenni preliminari sullo stato attivo
 In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lo stato attivo è basato su due concetti principali, lo stato attivo della tastiera e lo stato attivo logico.  Lo stato attivo della tastiera fa riferimento all'elemento che riceve l'input della tastiera, mentre lo stato attivo logico fa riferimento all'elemento di un ambito che ha ricevuto lo stato attivo.  In questa panoramica verranno illustrati in dettaglio questi concetti.  Comprendere le differenze esistenti tra questi concetti è fondamentale per la creazione di applicazioni complesse costituite da più aree in cui è possibile ottenere lo stato attivo.  
@@ -69,11 +57,11 @@ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
  [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
  [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
   
- <xref:System.Windows.Input.FocusManager.GetFocusScope%2A>Restituisce l'ambito lo stato attivo per l'elemento specificato.  
+ <xref:System.Windows.Input.FocusManager.GetFocusScope%2A> Restituisce l'ambito lo stato attivo per l'elemento specificato.  
   
  Le classi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] quali sono gli ambiti lo stato attivo per impostazione predefinita è <xref:System.Windows.Window>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.ToolBar>, e <xref:System.Windows.Controls.ContextMenu>.  
   
- <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>Ottiene l'elemento con lo stato attivo per l'ambito specificato.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>Imposta l'elemento con lo stato attivo nell'ambito specificato lo stato attivo.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>in genere utilizzato per impostare l'elemento con lo stato attivo iniziale.  
+ <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A> Ottiene l'elemento con lo stato attivo per l'ambito specificato.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> Imposta l'elemento con lo stato attivo nell'ambito specificato lo stato attivo.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> in genere utilizzato per impostare l'elemento con lo stato attivo iniziale.  
   
  L'esempio seguente illustra come impostare e ottenere l'elemento con lo stato attivo in un ambito di stato attivo.  
   
@@ -97,20 +85,20 @@ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
 ## <a name="navigating-focus-programmatically"></a>Spostamento dello stato attivo a livello di codice  
  Ulteriori [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] per funzionare con stato attivo sono <xref:System.Windows.UIElement.MoveFocus%2A> e <xref:System.Windows.UIElement.PredictFocus%2A>.  
   
- <xref:System.Windows.FrameworkElement.MoveFocus%2A>Sposta lo stato attivo sull'elemento successivo nell'applicazione.  Oggetto <xref:System.Windows.Input.TraversalRequest> viene utilizzato per specificare la direzione.   Il <xref:System.Windows.Input.FocusNavigationDirection> passato a <xref:System.Windows.UIElement.MoveFocus%2A> specifica lo stato attivo direzioni diverse può essere spostato, ad esempio <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> e <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
+ <xref:System.Windows.FrameworkElement.MoveFocus%2A> Sposta lo stato attivo sull'elemento successivo nell'applicazione.  Oggetto <xref:System.Windows.Input.TraversalRequest> viene utilizzato per specificare la direzione.   Il <xref:System.Windows.Input.FocusNavigationDirection> passato a <xref:System.Windows.UIElement.MoveFocus%2A> specifica lo stato attivo direzioni diverse può essere spostato, ad esempio <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> e <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
   
  L'esempio seguente usa <xref:System.Windows.FrameworkElement.MoveFocus%2A> per modificare l'elemento.  
   
  [!code-csharp[focussample#FocusSampleMoveFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
  [!code-vb[focussample#FocusSampleMoveFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
   
- <xref:System.Windows.FrameworkElement.PredictFocus%2A>Restituisce l'oggetto che riceve lo stato attivo se venisse modificato lo stato attivo.  Attualmente, solo <xref:System.Windows.Input.FocusNavigationDirection.Up>, <xref:System.Windows.Input.FocusNavigationDirection.Down>, <xref:System.Windows.Input.FocusNavigationDirection.Left>, e <xref:System.Windows.Input.FocusNavigationDirection.Right> sono supportati da <xref:System.Windows.FrameworkElement.PredictFocus%2A>.  
+ <xref:System.Windows.FrameworkElement.PredictFocus%2A> Restituisce l'oggetto che riceve lo stato attivo se venisse modificato lo stato attivo.  Attualmente, solo <xref:System.Windows.Input.FocusNavigationDirection.Up>, <xref:System.Windows.Input.FocusNavigationDirection.Down>, <xref:System.Windows.Input.FocusNavigationDirection.Left>, e <xref:System.Windows.Input.FocusNavigationDirection.Right> sono supportati da <xref:System.Windows.FrameworkElement.PredictFocus%2A>.  
   
 <a name="Focus_Events"></a>   
 ## <a name="focus-events"></a>Eventi di stato attivo  
  Gli eventi correlati allo stato attivo della tastiera sono <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>, <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> e <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>, <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>.  Gli eventi sono definiti come eventi associati nella <xref:System.Windows.Input.Keyboard> classe, ma sono maggiormente accessibili come eventi indirizzati equivalenti per le classi di elemento di base.  Per altre informazioni sugli eventi, vedere [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
- <xref:System.Windows.Input.Keyboard.GotKeyboardFocus>viene generato quando l'elemento ottiene lo stato attivo.  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>viene generato quando l'elemento perde lo stato attivo.  Se il <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> evento o <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent> viene gestito l'evento e <xref:System.Windows.RoutedEventArgs.Handled%2A> è impostato su `true`, quindi non modificherà lo stato attivo.  
+ <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> viene generato quando l'elemento otterrà lo stato attivo della tastiera.  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus> viene generato quando l'elemento perde lo stato attivo della tastiera.  Se il <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> evento o <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent> viene gestito l'evento e <xref:System.Windows.RoutedEventArgs.Handled%2A> è impostato su `true`, quindi non modificherà lo stato attivo.  
   
  L'esempio seguente viene collegato <xref:System.Windows.UIElement.GotKeyboardFocus> e <xref:System.Windows.UIElement.LostKeyboardFocus> gestori eventi per un <xref:System.Windows.Controls.TextBox>.  
   
@@ -126,7 +114,7 @@ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
  [!code-csharp[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplelostfocus)]
  [!code-vb[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplelostfocus)]  
   
- Gli eventi correlati allo stato attivo logico sono <xref:System.Windows.UIElement.GotFocus> e <xref:System.Windows.UIElement.LostFocus>.  Questi eventi sono definiti sul <xref:System.Windows.Input.FocusManager> come eventi associati, ma la <xref:System.Windows.Input.FocusManager> non espone wrapper di eventi CLR.  <xref:System.Windows.UIElement>e <xref:System.Windows.ContentElement> espongono questi eventi in modo più semplice.  
+ Gli eventi correlati allo stato attivo logico sono <xref:System.Windows.UIElement.GotFocus> e <xref:System.Windows.UIElement.LostFocus>.  Questi eventi sono definiti sul <xref:System.Windows.Input.FocusManager> come eventi associati, ma la <xref:System.Windows.Input.FocusManager> non espone wrapper di eventi CLR.  <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement> espongono questi eventi in modo più semplice.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Input.FocusManager>  

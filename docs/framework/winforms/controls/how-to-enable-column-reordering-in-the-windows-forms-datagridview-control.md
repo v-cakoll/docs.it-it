@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: abilitare il riordinamento delle colonne nel controllo DataGridView di Windows Form'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - data grids [Windows Forms], reordering columns
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7a64e0ae0a04d5bb3c04a02af573ccc6442d6f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbcafae2cb4e4cc320c31794269355d6312b95b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Procedura: abilitare il riordinamento delle colonne nel controllo DataGridView di Windows Form
 Quando si abilita il riordinamento delle colonne nel controllo <xref:System.Windows.Forms.DataGridView>, gli utenti possono spostare una colonna in una nuova posizione trascinandone l'intestazione con il mouse. Nel controllo <xref:System.Windows.Forms.DataGridView> il valore della proprietà <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> determina se gli utenti possono spostare le colonne in posizioni diverse.  
   
- Questa attività è supportata in Visual Studio.  Vedere anche [procedura: abilitare riordinamento delle colonne in cui il controllo Windows Form DataGridView usando la finestra di progettazione](http://msdn.microsoft.com/library/8xwtyc86\(v=vs.110\))  
+ Questa attività è supportata in Visual Studio.  Vedere anche [procedura: abilitare riordinamento delle colonne nel Windows Form DataGridView controllo usando la finestra di progettazione](http://msdn.microsoft.com/library/8xwtyc86\(v=vs.110\))  
   
 ### <a name="to-enable-column-reordering-programmatically"></a>Per abilitare il riordinamento delle colonne a livello di codice  
   

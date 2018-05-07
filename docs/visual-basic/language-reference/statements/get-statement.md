@@ -1,12 +1,6 @@
 ---
 title: Istruzione Get
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Get
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c1ff062a5e3bf41794bd5b4c90f1e188d6d97480
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6a6fdfd191de76871619dea3bd1794b487698aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-statement"></a>Istruzione Get
 Dichiara un `Get` routine della proprietà utilizzata per recuperare il valore di una proprietà.  
@@ -41,9 +32,9 @@ End Get
   
 |Termine|Definizione|  
 |---|---|  
-|`attributelist`|Parametro facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`attributelist`|Facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
 |`accessmodifier`|Facoltativo per al massimo una del `Get` e `Set` istruzioni in questa proprietà. Può essere uno dei seguenti:<br /><br /> -   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`statements`|Parametro facoltativo. Uno o più istruzioni che vengono eseguite quando il `Get` viene chiamata una routine della proprietà.|  
+|`statements`|Facoltativo. Uno o più istruzioni che vengono eseguite quando il `Get` viene chiamata una routine della proprietà.|  
 |`End Get`|Obbligatorio. Termina la definizione del `Get` routine della proprietà.|  
   
 ## <a name="remarks"></a>Note  
@@ -69,7 +60,7 @@ End Get
   
 -   **Restituzione da una stored Procedure.** Quando il `Get` routine restituisce al codice chiamante, l'esecuzione continua all'interno dell'istruzione che ha richiesto il valore della proprietà.  
   
-     `Get`le routine della proprietà possono restituire un valore utilizzando il [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md) o assegnando il valore restituito per il nome della proprietà. Per ulteriori informazioni, vedere "Valore restituito" in [istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` le routine della proprietà possono restituire un valore utilizzando il [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md) o assegnando il valore restituito per il nome della proprietà. Per ulteriori informazioni, vedere "Valore restituito" in [istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md).  
   
      Il `Exit Property` e `Return` istruzioni di uscire immediatamente da una routine di proprietà. Un numero qualsiasi di `Exit Property` e `Return` istruzioni possono trovarsi in qualsiasi punto della procedura, ed è possibile combinare `Exit Property` e `Return` istruzioni.  
   

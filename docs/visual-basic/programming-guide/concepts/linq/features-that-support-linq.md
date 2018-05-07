@@ -1,25 +1,15 @@
 ---
-title: "Funzionalità di Visual Basic che supportano LINQ"
-ms.custom: 
+title: Funzionalità di Visual Basic che supportano LINQ
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 42465dbb168b7961792aec6b3c2bb7ae8f0a3355
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Funzionalità di Visual Basic che supportano LINQ
 Il nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] si riferisce alla tecnologia in Visual Basic che supporta la sintassi della query e altri costrutti linguaggio direttamente nel linguaggio. Con [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], non è necessario imparare un nuovo linguaggio di query su un'origine dati esterna. È possibile eseguire query sui dati in database relazionali, archivi XML o gli oggetti utilizzando Visual Basic. Questa integrazione delle funzionalità di query nel linguaggio consente di controllo in fase di compilazione per gli errori di sintassi e indipendenza dai tipi. Questa integrazione garantisce inoltre che si conosce già la maggior parte delle informazioni necessarie per poter scrivere query complesse in Visual Basic.  

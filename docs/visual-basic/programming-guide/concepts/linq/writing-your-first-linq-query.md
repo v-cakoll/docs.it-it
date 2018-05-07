@@ -1,34 +1,24 @@
 ---
 title: Scrittura della prima query LINQ (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-caps.latest.revision: "56"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c16bb28189d5525654328da2dc80d868bbe61bf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f426aac5358837563081d2bf9783f6d4fe04d853
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Scrittura della prima query LINQ (Visual Basic)
 Una *query* è un'espressione che recupera dati da un'origine dati. Le query sono espresse in un linguaggio di query dedicato. Nel corso del tempo, sono stati sviluppati diversi linguaggi per diversi tipi di origini dati, ad esempio SQL per i database relazionali e XQuery per XML. Ciò rende necessario per lo sviluppatore dell'applicazione per informazioni su un nuovo linguaggio di query per ogni tipo di origine dati o formato dati supportato.  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]semplifica la situazione offrendo un modello coerente per l'utilizzo di dati in diversi tipi di origini dati e formati. In una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] vengono sempre usati gli oggetti. Utilizzare gli stessi modelli di codifica di base per eseguire query e trasformare i dati nei documenti XML, database SQL, set di dati ADO.NET ed entità, le raccolte di .NET Framework e qualsiasi altro origine o formato per il quale un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider è disponibile. Questo documento vengono descritte le tre fasi della creazione e utilizzo di basic [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query.  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] semplifica la situazione offrendo un modello coerente per l'utilizzo di dati in diversi tipi di origini dati e formati. In una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] vengono sempre usati gli oggetti. Utilizzare gli stessi modelli di codifica di base per eseguire query e trasformare i dati nei documenti XML, database SQL, set di dati ADO.NET ed entità, le raccolte di .NET Framework e qualsiasi altro origine o formato per il quale un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider è disponibile. Questo documento vengono descritte le tre fasi della creazione e utilizzo di basic [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Tre fasi di un'operazione di Query  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]operazioni di query sono costituiti da tre azioni:  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operazioni di query sono costituiti da tre azioni:  
   
 1.  Ottenere l'origine dati o origini.  
   

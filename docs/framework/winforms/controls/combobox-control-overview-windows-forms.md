@@ -1,14 +1,6 @@
 ---
 title: Cenni preliminari sul controllo ComboBox (Windows Form)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ComboBox
 helpviewer_keywords:
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 801ebb97c6ee52ce52bbb8f96a07d55e68ca6f1d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c8cd0430e9abaed0ee58e971edf6a9c871da37c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="combobox-control-overview-windows-forms"></a>Cenni preliminari sul controllo ComboBox (Windows Form)
 Windows Form <xref:System.Windows.Forms.ComboBox> controllo viene utilizzato per visualizzare i dati in una casella combinata a discesa. Per impostazione predefinita, il <xref:System.Windows.Forms.ComboBox> verrà visualizzato un controllo in due parti: la parte superiore è una casella di testo che consente all'utente di digitare una voce di elenco. La seconda parte è una casella di riepilogo che consente di visualizzare un elenco di elementi da cui l'utente può selezionare uno. Per ulteriori informazioni sugli altri stili casella combinata, vedere [quando utilizzare un Windows Form ComboBox anziché un controllo ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md).  

@@ -2,10 +2,6 @@
 title: Funzione GetMethodQualifierSet (riferimenti alle API non gestite)
 description: La funzione GetMethodQualifierSet recupera set di qualificatore di un metodo.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetMethodQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2999bef31576cf2bc025868260c2b1782a9b69f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b1f73e999738fbb59342aeab391132ac454c8dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet (funzione)
 Recupera il qualificatore impostato per un metodo specifico.
@@ -54,7 +47,7 @@ HRESULT GetMethodQualifierSet (
 [in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
 
 `wszMethod`  
-[in] Il nome del metodo. `wszMethod`deve puntare a un oggetto valido `LPCWSTR`. 
+[in] Il nome del metodo. `wszMethod` deve puntare a un valore valido `LPCWSTR`. 
 
 `ppQualSet`  
 [out] Riceve il puntatore a interfaccia che consente l'accesso per i qualificatori del metodo. Il parametro `ppQualSet` non può essere `null`. Se si verifica un errore, non viene restituito un nuovo oggetto e il puntatore è impostato in modo che punti a `null`. 
@@ -82,7 +75,7 @@ Poiché ogni metodo può avere un proprio qualificatori, il [IWbemQualifierSet p
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

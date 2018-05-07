@@ -1,13 +1,6 @@
 ---
-title: "Procedura: determinare quale tasto di modifica è stato premuto"
-ms.custom: 
+title: 'Procedura: determinare quale tasto di modifica è stato premuto'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -31,16 +24,11 @@ helpviewer_keywords:
 - Keys.Alt enumeration member
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5f749d22c09d166e81ea08068f760f24960ec83
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1c89149fc07f89028b21fa513fd84dee4e890968
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>Procedura: determinare quale tasto di modifica è stato premuto
 Quando si crea un'applicazione che accetta le sequenze di tasti dell'utente, si potrebbe anche decidere di monitorare i tasti di modifica, ad esempio i tasti MAIUSC, ALT e CTRL. Quando viene premuto un tasto di modifica in combinazione con altre chiavi, o con clic del mouse, l'applicazione può rispondere in modo appropriato. Ad esempio, se si preme la lettera S, ciò può comportare semplicemente una "s" venga visualizzato sullo schermo, ma se vengono premuti i tasti CTRL + S, può essere salvato il documento corrente. Se si gestisce il <xref:System.Windows.Forms.Control.KeyDown> evento, il <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> proprietà del <xref:System.Windows.Forms.KeyEventArgs> ricevuto dall'evento gestore specifica vengono premuti i tasti di modifica. In alternativa, il <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> proprietà <xref:System.Windows.Forms.KeyEventArgs> specifica il carattere che è stato premuto anche come tasti di modifica combinati con un OR bit per bit. Tuttavia, se si sta gestendo il <xref:System.Windows.Forms.Control.KeyPress> evento o un mouse, il gestore dell'evento non riceve le informazioni. In questo caso, è necessario utilizzare il <xref:System.Windows.Forms.Control.ModifierKeys%2A> proprietà la <xref:System.Windows.Forms.Control> classe. In entrambi i casi, è necessario eseguire un'operazione con AND bit per bit dei <xref:System.Windows.Forms.Keys> valore e il valore di cui si sta testando. Il <xref:System.Windows.Forms.Keys> enumerazione offre variazioni di ogni chiave di modificatore, pertanto è importante eseguire bit per bit e con il valore corretto. Ad esempio, il tasto MAIUSC è rappresentato da <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> e <xref:System.Windows.Forms.Keys.LShiftKey> il valore corretto per eseguire il test MAIUSC come un tasto di modifica è <xref:System.Windows.Forms.Keys.Shift>. Analogamente, per verificare CTRL e ALT come modificatori è necessario utilizzare il <xref:System.Windows.Forms.Keys.Control> e <xref:System.Windows.Forms.Keys.Alt> rispettivamente i valori.  

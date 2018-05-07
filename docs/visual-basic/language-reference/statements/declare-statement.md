@@ -1,11 +1,6 @@
 ---
 title: Declare Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Declare
 - vb.Lib
@@ -32,14 +27,11 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc6949c7b52e87b7b39dd2690cac915a5f0d15aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declare-statement"></a>Declare Statement
 Dichiara un riferimento a una routine implementata in un file esterno.  
@@ -60,17 +52,17 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 |Termine|Definizione|  
 |---|---|  
-|`attributelist`|Parametro facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Parametro facoltativo. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Parametro facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`charsetmodifier`|Parametro facoltativo. Specifica di set di caratteri e i file di informazioni di ricerca. Può essere uno dei seguenti:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (impostazione predefinita)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Automatico](../../../visual-basic/language-reference/modifiers/auto.md)|  
+|`attributelist`|Facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Facoltativo. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`charsetmodifier`|Facoltativo. Specifica di set di caratteri e i file di informazioni di ricerca. Può essere uno dei seguenti:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (impostazione predefinita)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Automatico](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|Parametro facoltativo, ma uno `Sub` o `Function` devono essere visualizzati. Indica che la routine esterna non restituisce un valore.|  
 |`Function`|Parametro facoltativo, ma uno `Sub` o `Function` devono essere visualizzati. Indica che la routine esterna restituisce un valore.|  
 |`name`|Obbligatorio. Nome del riferimento esterno. Per ulteriori informazioni, vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Lib`|Obbligatorio. Introduce un `Lib` clausola che identifica il file esterno (DLL o risorsa codice) contenente una routine esterna.|  
 |`libname`|Obbligatorio. Nome del file che contiene la routine dichiarata.|  
-|`Alias`|Parametro facoltativo. Indica che la routine viene dichiarata non può essere identificata all'interno del file con il nome specificato `name`. Specificarne l'identificazione in `aliasname`.|  
-|`aliasname`|Obbligatorio se si usa il `Alias` (parola chiave). Stringa che identifica la procedura descritta in uno dei due modi:<br /><br /> Il nome del punto di ingresso della routine all'interno del file, all'interno di virgolette doppie (`""`)<br /><br /> -oppure-<br /><br /> Un simbolo di cancelletto (`#`) seguito da un numero intero che specifica il numero ordinale del punto di ingresso della routine all'interno del file|  
+|`Alias`|Facoltativo. Indica che la routine viene dichiarata non può essere identificata all'interno del file con il nome specificato `name`. Specificarne l'identificazione in `aliasname`.|  
+|`aliasname`|Obbligatorio se si usa il `Alias` (parola chiave). Stringa che identifica la procedura descritta in uno dei due modi:<br /><br /> Il nome del punto di ingresso della routine all'interno del file, all'interno di virgolette doppie (`""`)<br /><br /> oppure<br /><br /> Un simbolo di cancelletto (`#`) seguito da un numero intero che specifica il numero ordinale del punto di ingresso della routine all'interno del file|  
 |`parameterlist`|Obbligatorio se la procedura accetta parametri. Vedere [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`returntype`|Obbligatorio se `Function` specificato e `Option Strict` è `On`. Tipo di dati del valore restituito dalla routine.|  
   
@@ -125,7 +117,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 -   **Set di caratteri.** È possibile specificare in `charsetmodifier` come Visual Basic deve effettuare il marshalling delle stringhe quando chiama la routine esterna. Il `Ansi` modificatore indica di effettuare il marshalling di tutte le stringhe in valori ANSI e `Unicode` modificatore indirizza per effettuare il marshalling di tutte le stringhe in valori Unicode. Il `Auto` indirizza il modificatore di Visual Basic per il marshalling di stringhe in base a .NET Framework delle regole in base al riferimento esterno `name`, o `aliasname` se specificato. Il valore predefinito è `Ansi`.  
   
-     `charsetmodifier`Specifica inoltre come Visual Basic deve cercare la routine esterna all'interno del file esterno. `Ansi`e `Unicode` indicano di eseguire una ricerca senza modificarne il nome durante la ricerca. `Auto`indica a Visual Basic per determinare il set di caratteri di base della piattaforma in fase di esecuzione ed eventualmente modificare il nome della routine esterna, come indicato di seguito:  
+     `charsetmodifier` Specifica inoltre come Visual Basic deve cercare la routine esterna all'interno del file esterno. `Ansi` e `Unicode` entrambi indirizzare Visual Basic per cercare senza modificarne il nome durante la ricerca. `Auto` indirizza Visual Basic per determinare il set di caratteri di base della piattaforma in fase di esecuzione ed eventualmente modificare il nome della routine esterna, come indicato di seguito:  
   
     -   In una piattaforma ANSI, ad esempio Windows 95, Windows 98 o Windows Millennium Edition, cercare innanzitutto la routine esterna senza modificarne il nome. Se il problema persiste, aggiungere "A" alla fine del nome della routine esterna e cercare nuovamente.  
   

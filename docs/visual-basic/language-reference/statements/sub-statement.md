@@ -1,12 +1,6 @@
 ---
 title: Istruzione Sub (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Sub
 helpviewer_keywords:
@@ -35,14 +29,11 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0a2d0d5ffdca857a3a5ca58cd38b0930f254526f
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 9a806f2ec979699f7ccf4012c6477bee11301b0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-statement-visual-basic"></a>Istruzione Sub (Visual Basic)
 Dichiara il nome, parametri e il codice che definiscono un `Sub` stored procedure.  
@@ -62,15 +53,15 @@ End Sub
   
 -   `attributelist`  
   
-     Parametro facoltativo. Vedere [elenco attributi](attribute-list.md).  
+     Facoltativo. Vedere [elenco attributi](attribute-list.md).  
   
 -   `Partial`  
   
-     Parametro facoltativo. Indica la definizione di un metodo parziale. Vedere [metodi parziali](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).  
+     Facoltativo. Indica la definizione di un metodo parziale. Vedere [metodi parziali](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).  
   
 -   `accessmodifier`  
   
-     Parametro facoltativo. Può essere uno dei seguenti:  
+     Facoltativo. Può essere uno dei seguenti:  
   
     -   [Public](../modifiers/public.md)  
   
@@ -86,7 +77,7 @@ End Sub
   
 -   `proceduremodifiers`  
   
-     Parametro facoltativo. Può essere uno dei seguenti:  
+     Facoltativo. Può essere uno dei seguenti:  
   
     -   [Overload](../modifiers/overloads.md)  
   
@@ -104,15 +95,15 @@ End Sub
   
 -   `Shared`  
   
-     Parametro facoltativo. Vedere [condiviso](../modifiers/shared.md).  
+     Facoltativo. Vedere [condiviso](../modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Parametro facoltativo. Vedere [Shadows](../modifiers/shadows.md).  
+     Facoltativo. Vedere [Shadows](../modifiers/shadows.md).  
   
 -   `Async`  
   
-     Parametro facoltativo. Vedere [Async](../modifiers/async.md).  
+     Facoltativo. Vedere [Async](../modifiers/async.md).  
   
 -   `name`  
   
@@ -120,15 +111,15 @@ End Sub
   
 -   `typeparamlist`  
   
-     Parametro facoltativo. Elenco di parametri di tipo per una routine generica. Vedere [digitare elenco](type-list.md).  
+     Facoltativo. Elenco di parametri di tipo per una routine generica. Vedere [digitare elenco](type-list.md).  
   
 -   `parameterlist`  
   
-     Parametro facoltativo. Elenco di nomi di variabili locali che rappresentano i parametri di questa procedura. Vedere [elenco parametri](parameter-list.md).  
+     Facoltativo. Elenco di nomi di variabili locali che rappresentano i parametri di questa procedura. Vedere [elenco parametri](parameter-list.md).  
   
 -   `Implements`  
   
-     Parametro facoltativo. Indica che questa procedura consente di implementare una o più `Sub` procedure, ciascuno definito in un'interfaccia implementata dalla classe o struttura che contiene questa procedura. Vedere [implementa istruzione](implements-statement.md).  
+     Facoltativo. Indica che questa procedura consente di implementare una o più `Sub` procedure, ciascuno definito in un'interfaccia implementata dalla classe o struttura che contiene questa procedura. Vedere [implementa istruzione](implements-statement.md).  
   
 -   `implementslist`  
   
@@ -147,7 +138,7 @@ End Sub
   
 -   `Handles`  
   
-     Parametro facoltativo. Indica che questa procedura è possibile gestire uno o più eventi specifici. Vedere [gestisce](handles-clause.md).  
+     Facoltativo. Indica che questa procedura è possibile gestire uno o più eventi specifici. Vedere [gestisce](handles-clause.md).  
   
 -   `eventlist`  
   
@@ -166,7 +157,7 @@ End Sub
   
 -   `statements`  
   
-     Parametro facoltativo. Blocco di istruzioni da eseguire all'interno di questa procedura.  
+     Facoltativo. Blocco di istruzioni da eseguire all'interno di questa procedura.  
   
 -   `End Sub`  
   
@@ -178,7 +169,7 @@ End Sub
 ## <a name="defining-a-sub-procedure"></a>Definizione di una routine Sub  
  È possibile definire un `Sub` procedura solo a livello di modulo. Il contesto della dichiarazione per una routine sub, pertanto, deve essere una classe, una struttura, un modulo o un'interfaccia e non può essere un file di origine, uno spazio dei nomi, una routine o un blocco. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](declaration-contexts-and-default-access-levels.md).  
   
- `Sub`procedure per impostazione predefinita l'accesso pubblico. È possibile regolare i livelli di accesso tramite i modificatori di accesso.  
+ `Sub` procedure per impostazione predefinita l'accesso pubblico. È possibile regolare i livelli di accesso tramite i modificatori di accesso.  
   
  Se la routine utilizza il `Implements` (parola chiave), classe o struttura deve avere un `Implements` istruzione che segue immediatamente il `Class` o `Structure` istruzione. Il `Implements` istruzione deve includere ogni interfaccia specificata in `implementslist`. Tuttavia, il nome con cui si definisce un'interfaccia di `Sub` (in `definedname`) non deve corrispondere al nome di questa procedura (in `name`).  
   
@@ -214,7 +205,7 @@ End Sub
   
  È inoltre possibile contrassegnare un [istruzione Function](function-statement.md) con il `Async` modificatore. Un `Async` funzione può avere un tipo restituito di <xref:System.Threading.Tasks.Task%601> o <xref:System.Threading.Tasks.Task>. Un esempio più avanti in questo argomento viene illustrato un `Async` funzione che dispone di un tipo restituito di <xref:System.Threading.Tasks.Task%601>.  
   
- `Async``Sub` procedure vengono utilizzate principalmente per i gestori eventi, in cui non è possibile restituire un valore. Un `Async``Sub` procedura non può essere atteso e il chiamante di un `Async``Sub` procedura non può intercettare le eccezioni che il `Sub` genera stored procedure.  
+ `Async` `Sub` le procedure vengono utilizzate principalmente per i gestori eventi, in cui non è possibile restituire un valore. Un `Async``Sub` procedura non può essere atteso e il chiamante di un `Async``Sub` procedura non può intercettare le eccezioni che il `Sub` genera stored procedure.  
   
  Un `Async` procedura non può dichiarare [ByRef](../modifiers/byref.md) parametri.  
   

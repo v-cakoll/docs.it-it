@@ -1,13 +1,6 @@
 ---
 title: 'Procedura dettagliata: aggiunta di dati di un database di SQL Server in un controllo DataGrid'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0397206a05ef47a7fc9b130fbd13fa19a0d766fa
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 230d2c6843f9ae80126d9d0a2c949982aae24c76
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Procedura dettagliata: aggiunta di dati di un database di SQL Server in un controllo DataGrid
 In questa procedura dettagliata, si recuperano dati da un database di SQL Server e visualizzarli in un <xref:System.Windows.Controls.DataGrid> controllo. Utilizzare ADO.NET Entity Framework per creare le classi di entità che rappresentano i dati e utilizzano LINQ per scrivere una query che recupera i dati specificati da una classe di entità.  
@@ -46,7 +34,7 @@ In questa procedura dettagliata, si recuperano dati da un database di SQL Server
   
 3.  Nel riquadro dei modelli installati, selezionare **dati** e nell'elenco dei modelli, selezionare **ADO.NET Entity Data Model**l.  
   
-     ![Select ADO.NET Entity Data Model](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step1.png "DataGrid_SQL_EF_Step1")  
+     ![Selezionare ADO.NET Entity Data Model](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step1.png "DataGrid_SQL_EF_Step1")  
   
 4.  Nome del file `AdventureWorksModel.edmx` e quindi fare clic su **Aggiungi**.  
   
@@ -72,7 +60,7 @@ In questa procedura dettagliata, si recuperano dati da un database di SQL Server
   
      Le entità Product e ProductCategory vengono visualizzate in Entity Designer.  
   
-     ![I modelli di entità Product e ProductCategory](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step5.png "DataGrid_SQL_EF_Step5")  
+     ![Modelli di entità Product e ProductCategory](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step5.png "DataGrid_SQL_EF_Step5")  
   
 ### <a name="to-retrieve-and-present-the-data"></a>Per recuperare e presentare i dati  
   
@@ -108,10 +96,10 @@ In questa procedura dettagliata, si recuperano dati da un database di SQL Server
   
      Verrà visualizzato un <xref:System.Windows.Controls.DataGrid> che visualizza i dati.  
   
-     ![DataGrid con dati da database SQL](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")  
+     ![DataGrid con dati del database SQL](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Controls.DataGrid>  
- [Come ricerca per categorie: Introduzione a Entity Framework nelle applicazioni WPF?](http://go.microsoft.com/fwlink/?LinkId=159868)
+ [Come iniziare a ricerca per categorie: con Entity Framework nelle applicazioni WPF?](http://go.microsoft.com/fwlink/?LinkId=159868)

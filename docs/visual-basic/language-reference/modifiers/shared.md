@@ -1,11 +1,6 @@
 ---
 title: Shared (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Shared
 helpviewer_keywords:
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fce13c308a449e63eacc2bc4c94c274c7e25506a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b15dd08d69f372317b9140001e8072eeb66d44ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 Specifica che uno o più elementi di programmazione dichiarati sono associati una classe o una struttura e non con una specifica istanza della classe o struttura.  
@@ -51,11 +43,11 @@ Specifica che uno o più elementi di programmazione dichiarati sono associati un
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Spazio di archiviazione.** Una variabile condivisa o un evento viene archiviato in memoria una sola volta, indipendentemente dal numero di istanze create della relativa classe o struttura. Analogamente, una routine condivisa o la proprietà contiene un solo set di variabili locali.  
+-   **spazio di archiviazione.** Una variabile condivisa o un evento viene archiviato in memoria una sola volta, indipendentemente dal numero di istanze create della relativa classe o struttura. Analogamente, una routine condivisa o la proprietà contiene un solo set di variabili locali.  
   
--   **Accesso tramite una variabile di istanza.** È possibile accedere a un elemento condiviso qualificandola con il nome di una variabile che contiene un'istanza specifica della relativa classe o struttura. Sebbene questo in genere funziona come previsto, il compilatore genera un messaggio di avviso ed effettua l'accesso tramite il nome di classe o struttura anziché la variabile.  
+-   **L'accesso tramite una variabile di istanza.** È possibile accedere a un elemento condiviso qualificandola con il nome di una variabile che contiene un'istanza specifica della relativa classe o struttura. Sebbene questo in genere funziona come previsto, il compilatore genera un messaggio di avviso ed effettua l'accesso tramite il nome di classe o struttura anziché la variabile.  
   
--   **Accesso tramite un'espressione di istanza.** Se si accede a un elemento condiviso tramite un'espressione che restituisce un'istanza della classe o struttura, il compilatore effettua l'accesso tramite il nome di classe o struttura invece di valutare l'espressione. Questo produce risultati imprevisti se si prevede l'espressione per eseguire altre operazioni, nonché a restituire l'istanza. Questa condizione è illustrata nell'esempio seguente.  
+-   **L'accesso tramite un'espressione di istanza.** Se si accede a un elemento condiviso tramite un'espressione che restituisce un'istanza della classe o struttura, il compilatore effettua l'accesso tramite il nome di classe o struttura invece di valutare l'espressione. Questo produce risultati imprevisti se si prevede l'espressione per eseguire altre operazioni, nonché a restituire l'istanza. Questa condizione è illustrata nell'esempio seguente.  
   
     ```  
     Sub main()  

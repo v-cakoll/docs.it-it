@@ -1,13 +1,6 @@
 ---
 title: Estensione del markup x:Static
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - StaticExtension
 - xStatic
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-caps.latest.revision: "25"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 647bfed7b321a949090f6da047f9b8105d335101
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 980bf6a1bdb19afd5c8d3c798d31037ab8cd7086
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xstatic-markup-extension"></a>Estensione del markup x:Static
 Fa riferimento a qualsiasi entità del codice statico in base al valore definito in un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]: modalità conforme. Per fornire il valore di una proprietà in XAML, è possibile utilizzare la proprietà statica a cui fa riferimento.  
@@ -41,7 +29,7 @@ Fa riferimento a qualsiasi entità del codice statico in base al valore definito
   
 |||  
 |-|-|  
-|`prefix`|Facoltativo. Un prefisso che fa riferimento a uno spazio dei nomi XAML con mapping non predefinito. `prefix`viene visualizzato in modo esplicito nell'utilizzo perché è raramente fare riferimento a proprietà statiche che provengono da uno spazio dei nomi XAML predefinito. Vedere la sezione Osservazioni.|  
+|`prefix`|Facoltativo. Un prefisso che fa riferimento a uno spazio dei nomi XAML con mapping non predefinito. `prefix` viene visualizzato in modo esplicito nell'utilizzo perché è raramente fare riferimento a proprietà statiche che provengono da uno spazio dei nomi XAML predefinito. Vedere la sezione Osservazioni.|  
 |`typeName`|Obbligatorio. Il nome del tipo che definisce il membro statico desiderato.|  
 |`staticMemberName`|Obbligatorio. Il nome del membro valore statico desiderato (una costante, una proprietà statica, un campo o un valore di enumerazione).|  
   
@@ -68,9 +56,9 @@ Fa riferimento a qualsiasi entità del codice statico in base al valore definito
   
  Esistono due altri utilizzi XAML che sono tecnicamente possibili. Tuttavia, questi utilizzi sono meno comuni perché sono inutilmente dettagliati:  
   
- **La sintassi dell'elemento dell'oggetto:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName``" .../>`  
+ **Sintassi dell'elemento oggetto:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName` `" .../>`  
   
- **Sintassi degli attributi con le proprietà membro esplicito per la stringa di inizializzazione:** `<` `object`  ``  `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName``}" .../>`  
+ **Sintassi degli attributi con le proprietà membro esplicito per la stringa di inizializzazione:** `<` `object` `` `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName` `}" .../>`  
   
  Nell'implementazione dei servizi XAML di .NET Framework, la gestione di questa estensione di markup viene definita per la <xref:System.Windows.Markup.StaticExtension> classe.  
   

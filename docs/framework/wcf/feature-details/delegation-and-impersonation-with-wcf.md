@@ -1,14 +1,6 @@
 ---
 title: Delega e rappresentazione con WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-caps.latest.revision: 40
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8fc08c442813991b425b2bed3a0047fc5efa0d83
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 811ab308b881b5209d44612b29fb51d1c79e8bf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delega e rappresentazione con WCF
 La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l'accesso dei client alle risorse del dominio del servizio. Tali risorse possono essere risorse del computer, ad esempio file locali (rappresentazione), o risorse in un'altro computer, ad esempio una condivisione file (delega). Per un'applicazione di esempio, vedere [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Per un esempio di come usare la rappresentazione, vedere [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -40,12 +26,12 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
  Sia la rappresentazione che la delega richiedono che il client abbia una identità di Windows. Se un client non possiede un'identità di Windows, l'unica opzione disponibile è propagare l'identità del client al secondo servizio.  
   
 ## <a name="impersonation-basics"></a>Nozioni fondamentali sulla rappresentazione  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supporta la rappresentazione per varie credenziali client. In questo argomento viene descritto il supporto del modello di servizio per la rappresentazione del chiamante durante l'implementazione di un metodo del servizio. Vengono inoltre descritti gli scenari di distribuzione più frequenti che riguardando la rappresentazione e la sicurezza SOAP, nonché le opzioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in tali scenari.  
+ Windows Communication Foundation (WCF) supporta la rappresentazione per un'ampia gamma di credenziali client. In questo argomento viene descritto il supporto del modello di servizio per la rappresentazione del chiamante durante l'implementazione di un metodo del servizio. Vengono inoltre descritti scenari di distribuzione comuni che interessano la rappresentazione e la sicurezza SOAP e le opzioni di WCF in questi scenari.  
   
- Questo argomento si incentra sulla rappresentazione e la delega in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in caso di utilizzo della sicurezza SOAP. È possibile usare la rappresentazione e la delega con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] anche quando si usa la sicurezza del trasporto, come descritto in [Using Impersonation with Transport Security](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md).  
+ Questo argomento si incentra sulla rappresentazione e delega in WCF quando si utilizza la sicurezza SOAP. È possibile anche utilizzare la delega e rappresentazione con WCF quando si utilizza la sicurezza di trasporto, come descritto in [mediante la rappresentazione con la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md).  
   
 ## <a name="two-methods"></a>Due metodi  
- La sicurezza SOAP in[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prevede due metodi distinti per eseguire la rappresentazione. Il metodo utilizzato dipende dall'associazione. Il primo consiste nella rappresentazione da un token di Windows ottenuto dall'autenticazione Security Support Provider Interface (SSPI) o Kerberos, che viene quindi memorizzato nella cache del servizio. Il secondo consiste nella rappresentazione da un token di Windows ottenuto dalle estensioni Kerberos, collettivamente denominate *Service-for-User* (S4U).  
+ La sicurezza SOAP WCF prevede due metodi distinti per eseguire la rappresentazione. Il metodo utilizzato dipende dall'associazione. Il primo consiste nella rappresentazione da un token di Windows ottenuto dall'autenticazione Security Support Provider Interface (SSPI) o Kerberos, che viene quindi memorizzato nella cache del servizio. Il secondo consiste nella rappresentazione da un token di Windows ottenuto dalle estensioni Kerberos, collettivamente denominate *Service-for-User* (S4U).  
   
 ### <a name="cached-token-impersonation"></a>Rappresentazione con un token memorizzato nella cache  
  È possibile eseguire la rappresentazione con un token memorizzato nella cache con gli elementi seguenti:  
@@ -73,7 +59,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
 >  Quando il client e il servizio sono in esecuzione nello stesso computer e il client è in esecuzione con un account del sistema (ad esempio `Local System` o `Network Service`), il client non può essere rappresentato quando viene stabilita una sessione protetta con token del contesto di sicurezza con stato. Un'applicazione Windows Form o console viene in genere eseguita con l'account attualmente connesso e quindi l'account può essere rappresentato per impostazione predefinita. Tuttavia, quando il client è una pagina [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ospitata in [!INCLUDE[iis601](../../../../includes/iis601-md.md)] o [!INCLUDE[iisver](../../../../includes/iisver-md.md)], il client viene eseguito con l'account `Network Service` per impostazione predefinita. Tutte le associazioni fornite dal sistema che supportano le sessioni protette utilizzano un token del contesto di sicurezza (SCT) senza stato per impostazione predefinita. Tuttavia, se il client è una pagina [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e si utilizzano sessioni protette con token SCT con stato, non è possibile eseguire la rappresentazione del client. Per ulteriori informazioni sull'utilizzo di token SCT con stato in una sessione protetta, vedere [procedura: creare un Token di contesto di sicurezza per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>Rappresentazione in un metodo del servizio: modello dichiarativo  
- La maggior parte degli scenari di rappresentazione implicano l'esecuzione del metodo del servizio nel contesto del chiamante. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce una funzionalità di rappresentazione che semplifica questa operazione consentendo all'utente di specificare il requisito di rappresentazione nell'attributo <xref:System.ServiceModel.OperationBehaviorAttribute> . Ad esempio, nel codice seguente, l'infrastruttura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rappresenta il chiamante prima di eseguire il metodo `Hello` . Qualsiasi tentativo di accedere a risorse native nel metodo `Hello` ha esito positivo solo se l'elenco di controllo di accesso (ACL) della risorsa consente al chiamante i privilegi di accesso. Per attivare la rappresentazione, impostare la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> su uno dei valori dell'enumerazione <xref:System.ServiceModel.ImpersonationOption>, ovvero <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> o <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, come illustrato nell'esempio seguente.  
+ La maggior parte degli scenari di rappresentazione implicano l'esecuzione del metodo del servizio nel contesto del chiamante. WCF fornisce una funzionalità di rappresentazione che semplifica questa operazione consentendo all'utente di specificare il requisito di rappresentazione nel <xref:System.ServiceModel.OperationBehaviorAttribute> attributo. Ad esempio, nel codice seguente, l'infrastruttura WCF rappresenta il chiamante prima di eseguire il `Hello` metodo. Qualsiasi tentativo di accedere a risorse native nel metodo `Hello` ha esito positivo solo se l'elenco di controllo di accesso (ACL) della risorsa consente al chiamante i privilegi di accesso. Per attivare la rappresentazione, impostare la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> su uno dei valori dell'enumerazione <xref:System.ServiceModel.ImpersonationOption>, ovvero <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> o <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, come illustrato nell'esempio seguente.  
   
 > [!NOTE]
 >  Quando un servizio dispone di credenziali più elevate del client remoto, vengono utilizzate le credenziali del servizio se la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> è impostata su <xref:System.ServiceModel.ImpersonationOption.Allowed>. In altri termini, se un utente con privilegi di basso livello fornisce le sue credenziali, un servizio con privilegi di livello più elevato esegue il metodo con le credenziali del servizio e può utilizzare risorse che l'utente con privilegi di basso livello non sarebbe altrimenti in grado di utilizzare.  
@@ -81,7 +67,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
  [!code-csharp[c_ImpersonationAndDelegation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#1)]
  [!code-vb[c_ImpersonationAndDelegation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#1)]  
   
- L'infrastruttura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può rappresentare il chiamante solo se il chiamante viene autenticato con credenziali di cui è possibile eseguire il mapping a un account utente di Windows. Se il servizio è configurato per l'autenticazione con una credenziale di cui non è possibile eseguire il mapping a un account di Windows, il metodo del servizio non viene eseguito.  
+ L'infrastruttura WCF può rappresentare il chiamante solo se il chiamante viene autenticato con credenziali che possono essere mappate a un account utente di Windows. Se il servizio è configurato per l'autenticazione con una credenziale di cui non è possibile eseguire il mapping a un account di Windows, il metodo del servizio non viene eseguito.  
   
 > [!NOTE]
 >  In [!INCLUDE[wxp](../../../../includes/wxp-md.md)], se viene creato un token SCT con stato, la rappresentazione ha esito negativo, generando <xref:System.InvalidOperationException>. Per altre informazioni, vedere [scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
@@ -101,14 +87,14 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
  [!code-csharp[c_ImpersonationAndDelegation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#3)]
  [!code-vb[c_ImpersonationAndDelegation#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#3)]  
   
- Nella tabella seguente viene descritto il comportamento di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per tutte le possibili combinazioni di `ImpersonationOption` e `ImpersonateCallerForAllServiceOperations`.  
+ La tabella seguente descrive il comportamento WCF per tutte le possibili combinazioni di `ImpersonationOption` e `ImpersonateCallerForAllServiceOperations`.  
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|Comportamento|  
 |---------------------------|------------------------------------------------|--------------|  
-|Obbligatorio|N/D|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rappresenta il chiamante|  
-|Allowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non rappresenta il chiamante|  
-|Allowed|true|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rappresenta il chiamante|  
-|NotAllowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non rappresenta il chiamante|  
+|Obbligatorio|N/D|WCF rappresenta il chiamante|  
+|Allowed|False|WCF non rappresenta il chiamante|  
+|Allowed|true|WCF rappresenta il chiamante|  
+|NotAllowed|False|WCF non rappresenta il chiamante|  
 |NotAllowed|true|Non consentita (verrà generata un'eccezione <xref:System.InvalidOperationException> ).|  
   
 ## <a name="impersonation-level-obtained-from-windows-credentials-and-cached-token-impersonation"></a>Livello di rappresentazione ottenuto dalla rappresentazione con credenziali di Windows e con un token memorizzato nella cache  
@@ -136,7 +122,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
 |Delegation|No|N/D|Identification|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Livello di rappresentazione ottenuto dalla rappresentazione con credenziali basate sul nome utente e con un token memorizzato nella cache  
- Passando al servizio il nome utente e la password, un client consente a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di accedere come tale utente, il che equivale a impostare la proprietà `AllowedImpersonationLevel` su <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> (la proprietà `AllowedImpersonationLevel` è disponibile sulle classi <xref:System.ServiceModel.Security.WindowsClientCredential> e <xref:System.ServiceModel.Security.HttpDigestClientCredential>). Nella tabella seguente viene indicato il livello di rappresentazione ottenuto quando il servizio riceve credenziali basate sul nome utente.  
+ Passando al servizio il nome utente e la password, un client consente a WCF per l'accesso come tale utente, che equivale a impostare il `AllowedImpersonationLevel` proprietà <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. (la proprietà `AllowedImpersonationLevel` è disponibile sulle classi <xref:System.ServiceModel.Security.WindowsClientCredential> e <xref:System.ServiceModel.Security.HttpDigestClientCredential>). Nella tabella seguente viene indicato il livello di rappresentazione ottenuto quando il servizio riceve credenziali basate sul nome utente.  
   
 |`AllowedImpersonationLevel`|Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega|`ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  

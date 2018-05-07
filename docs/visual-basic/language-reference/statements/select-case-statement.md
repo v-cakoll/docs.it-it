@@ -1,11 +1,6 @@
 ---
 title: Istruzione Select...Case (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Select
 - vb.Case
@@ -26,14 +21,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a7527763a05ec32af88c6ba66ef717d839c33154
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d24b455d92cbd00b268df26283aab082b7703a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selectcase-statement-visual-basic"></a>Istruzione Select...Case (Visual Basic)
 Esegue uno dei diversi gruppi di istruzioni, a seconda del valore di un'espressione.  
@@ -55,8 +47,8 @@ End Select
 |---|---|  
 |`testexpression`|Obbligatorio. Espressione. Deve restituire uno dei tipi di dati elementari (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, e `UShort`).|  
 |`expressionlist`|Obbligatorio in un `Case` istruzione. Elenco di clausole di espressione che rappresenta i valori di corrispondenza per `testexpression`. Più clausole di espressione sono separate da virgole. Ogni clausola può assumere uno dei formati seguenti:<br /><br /> -   *expression1* `To` *expression2*<br />-[ `Is` ] *comparisonoperator* *espressione*<br />-   *espressione*<br /><br /> Utilizzare il `To` (parola chiave) per specificare i limiti di un intervallo di corrispondenza valori per `testexpression`. Il valore di `expression1` deve essere minore o uguale al valore di `expression2`.<br /><br /> Utilizzare il `Is` (parola chiave) con un operatore di confronto (`=`, `<>`, `<`, `<=`, `>`, o `>=`) per specificare una limitazione in relazione ai valori per `testexpression`. Se il `Is` parola chiave non viene specificato, verrà automaticamente inserita prima *comparisonoperator*.<br /><br /> Form specifica solo `expression` viene considerato come un caso speciale del `Is` modulo where *comparisonoperator* è il segno di uguale (`=`). Questo modulo viene valutato come `testexpression`  =  `expression`.<br /><br /> Le espressioni in `expressionlist` può essere di qualsiasi tipo di dati, purché siano convertibile in modo implicito nel tipo di `testexpression` e appropriata `comparisonoperator` è valido per i due tipi viene utilizzato con.|  
-|`statements`|Parametro facoltativo. Uno o più istruzioni che seguono `Case` che vengono eseguite se `testexpression` corrisponde a qualsiasi clausola `expressionlist`.|  
-|`elsestatements`|Parametro facoltativo. Uno o più istruzioni che seguono `Case Else` che vengono eseguite se `testexpression` non corrisponde a qualsiasi clausola il `expressionlist` del `Case` istruzioni.|  
+|`statements`|Facoltativo. Uno o più istruzioni che seguono `Case` che vengono eseguite se `testexpression` corrisponde a qualsiasi clausola `expressionlist`.|  
+|`elsestatements`|Facoltativo. Uno o più istruzioni che seguono `Case Else` che vengono eseguite se `testexpression` non corrisponde a qualsiasi clausola il `expressionlist` del `Case` istruzioni.|  
 |`End Select`|Termina la definizione di `Select`... `Case` costruzione.|  
   
 ## <a name="remarks"></a>Note  
@@ -82,7 +74,7 @@ End Select
   
  Se il codice all'interno di un `Case` o `Case Else` blocco di istruzioni non deve più eseguire alcuna delle istruzioni nel blocco, può abbandonare il blocco utilizzando la `Exit Select` istruzione. Il controllo viene trasferito immediatamente all'istruzione che segue `End Select`.  
   
- `Select Case`costruzioni possono essere nidificate. Ogni annidati `Select Case` costruzione deve avere un corrispondente `End Select` istruzione e deve essere contenuto completamente in un singolo `Case` o `Case Else` blocco di istruzioni di esterna `Select Case` costruzione entro il quale è nidificata.  
+ `Select Case` costruzioni possono essere nidificate. Ogni annidati `Select Case` costruzione deve avere un corrispondente `End Select` istruzione e deve essere contenuto completamente in un singolo `Case` o `Case Else` blocco di istruzioni di esterna `Select Case` costruzione entro il quale è nidificata.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene utilizzato un `Select Case` costruzione per scrivere una riga corrispondente al valore della variabile `number`. Il secondo `Case` istruzione contiene il valore che corrisponde al valore corrente di `number`, pertanto l'istruzione che scrive "compreso tra 6 e 8, inclusive" viene eseguito.  

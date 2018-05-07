@@ -1,24 +1,12 @@
 ---
-title: "Procedura: creare un servizio flusso di lavoro con attività di messaggistica"
-ms.custom: 
+title: 'Procedura: creare un servizio flusso di lavoro con attività di messaggistica'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24456bbbefe305a3e9620e5396c8d300163e00d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b646d1e242d570ec758865b48ab3720033ea9302
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procedura: creare un servizio flusso di lavoro con attività di messaggistica
 In questo argomento viene illustrato come creare un semplice servizio flusso di lavoro usando le attività di messaggistica. L'argomento è incentrato sui meccanismi di creazione di un servizio flusso di lavoro in cui il servizio è costituito esclusivamente da attività di messaggistica. In servizi reali i flussi di lavoro contengono molte altre attività. Il servizio implementa un'operazione denominata Echo che acquisisce una stringa e la restituisce al chiamante. Questo è il primo di una serie di due argomenti. L'argomento successivo [procedura: accedere a un servizio da un flusso di lavoro applicazione](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) viene illustrato come creare un'applicazione flusso di lavoro che è possibile chiamare il servizio creato in questo argomento.  
@@ -63,7 +51,7 @@ In questo argomento viene illustrato come creare un semplice servizio flusso di 
   
      Fare clic su di **variabili** pulsante per chiudere l'editor delle variabili.  
   
-6.  Fare clic su di **definire...** collegare il **contenuto** casella di testo nel <xref:System.ServiceModel.Activities.Receive> attività per visualizzare il **definizione contenuto** finestra di dialogo. Selezionare il **parametri** pulsante di opzione, fare clic su di **aggiungere nuovo parametro** collegare, digitare `inMsg` nel **nome** casella di testo, seleziona **stringa**nel **tipo** elenco a discesa, casella di riepilogo e tipo `msg` nel **assegna a** casella di testo, come illustrato nella figura seguente.  
+6.  Fare clic sul **definire...** collegare il **contenuto** casella di testo nel <xref:System.ServiceModel.Activities.Receive> attività per visualizzare il **definizione contenuto** finestra di dialogo. Selezionare il **parametri** pulsante di opzione, fare clic su di **aggiungere nuovo parametro** collegare, digitare `inMsg` nel **nome** casella di testo, seleziona **stringa**nel **tipo** elenco a discesa, casella di riepilogo e tipo `msg` nel **assegna a** casella di testo, come illustrato nella figura seguente.  
   
      ![Aggiunta del contenuto dei parametri](../../../../docs/framework/wcf/feature-details/media/parameterscontent.jpg "ParametersContent")  
   
@@ -92,7 +80,7 @@ In questo argomento viene illustrato come creare un semplice servizio flusso di 
   
 3.  Premere CTRL+F5 per avviare il servizio. L'icona del server di sviluppo ASP.NET verrà visualizzata nel lato inferiore destro del desktop, come illustrato nella figura seguente.  
   
-     ![L'icona del Server di sviluppo ASP.NET](../../../../docs/framework/wcf/feature-details/media/aspnetdevservericon.JPG "ASPNETDEVServerIcon")  
+     ![L'icona di Server di sviluppo ASP.NET](../../../../docs/framework/wcf/feature-details/media/aspnetdevservericon.JPG "ASPNETDEVServerIcon")  
   
      In Internet Explorer verrà inoltre visualizzata la pagina della Guida del servizio WCF relativa al servizio.  
   

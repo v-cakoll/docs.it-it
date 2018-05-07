@@ -1,25 +1,16 @@
 ---
 title: Convenzioni di codifica di Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-caps.latest.revision: "48"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: afea862fb8783da3e69fd9828e0ded67fb81b00e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: b686747b46529b53b0802a7deb38b5b4949f4d5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-coding-conventions"></a>Convenzioni di codifica di Visual Basic
 Microsoft consente di sviluppare gli esempi e documentazione che seguire le istruzioni in questo argomento. Se si seguono le stesse convenzioni di codifica, si potrebbero ottenere i vantaggi seguenti:  
@@ -165,7 +156,7 @@ Microsoft consente di sviluppare gli esempi e documentazione che seguire le istr
   
      [!code-vb[VbVbalrGuidelines#26](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_18.vb)]  
   
--   Verifica se un evento è `Nothing` (null) prima di chiamare il `RaiseEvent` metodo. `RaiseEvent`verifica la presenza di `Nothing` prima che venga generato l'evento.  
+-   Verifica se un evento è `Nothing` (null) prima di chiamare il `RaiseEvent` metodo. `RaiseEvent` verifica la presenza di `Nothing` prima che venga generato l'evento.  
   
 ### <a name="using-shared-members"></a>Utilizzo di membri condivisi  
  Chiamare `Shared` membri tramite il nome della classe, non una variabile di istanza.  

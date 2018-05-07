@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc782ba262527a319cbb05cc6d36ca568afc55c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6e11e364af5dc361a24cdd88d72432d6ba4d4058
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>Procedura: ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli
 Il doppio buffer usa un buffer di memoria per risolvere i problemi di sfarfallio associati a più operazioni di disegno. Quando il doppio buffer è abilitato, tutte le operazioni di disegno vengono prima sottoposte a rendering in un buffer di memoria invece che nella superficie di disegno visualizzata. Dopo che tutte le operazioni di disegno sono state completate, il buffer di memoria viene copiato direttamente nella superficie di disegno associata. Poiché solo una grafica operazione sullo schermo, viene eliminato lo sfarfallio dell'immagine associata a operazioni di disegno complesse. Per la maggior parte delle applicazioni, il doppio buffering predefinito fornito dal [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fornirà i migliori risultati. Controlli Windows Form standard sono a doppio buffering per impostazione predefinita. È possibile abilitare l'impostazione predefinita il doppio buffer nei moduli e nei controlli modificati in due modi. È possibile impostare il <xref:System.Windows.Forms.Control.DoubleBuffered%2A> proprietà `true`, oppure è possibile chiamare il <xref:System.Windows.Forms.Control.SetStyle%2A> per impostare il <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag `true`. Entrambi i metodi consentirà buffering doppio predefinito per un form o controllo e fornire il rendering di grafica sfarfallio. La chiamata di <xref:System.Windows.Forms.Control.SetStyle%2A> metodo è consigliato solo per i controlli personalizzati per cui è stato scritto il codice di rendering.  

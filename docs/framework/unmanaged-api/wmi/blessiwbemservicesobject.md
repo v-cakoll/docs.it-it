@@ -2,10 +2,6 @@
 title: Funzione BlessIWbemServicesObject (riferimenti alle API non gestite)
 description: La funzione BlessIWbemServicesObject indica se le credenziali utente consentono l'accesso a un oggetto IWbemServices
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BlessIWbemServicesObject
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2430358e5ea21468c2e975c2a26f20fe801ee546
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d1bc31a4f074891149783dec647a592683564ba0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject (funzione)
 Indica se le credenziali utente di consentono l'accesso a un oggetto specificato [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) oggetto.   
@@ -58,11 +51,11 @@ HRESULT BlessIWbemServicesObject (
 `strPassword`  
 [in] La password associata a `strUser`.
 
-`strAuthority`[in] Il nome di dominio dell'utente. Vedere il [ConnectServerWmi](connectserverwmi.md) funzione per ulteriori informazioni.
+`strAuthority` [in] Il nome di dominio dell'utente. Vedere il [ConnectServerWmi](connectserverwmi.md) funzione per ulteriori informazioni.
 
-`impLevel`[in] Il livello di rappresentazione.
+`impLevel` [in] Il livello di rappresentazione.
 
-`authnLevel`[in] Il livello di autorizzazione.
+`authnLevel` [in] Il livello di autorizzazione.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -81,7 +74,7 @@ I seguenti valori restituiti da questa funzione sono definiti nel *Winerror* fil
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

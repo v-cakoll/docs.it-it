@@ -1,11 +1,6 @@
 ---
 title: Elenco dei parametri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - parameters [Visual Basic], Visual Basic
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2c7190b618aa98c91b826ca7c065660d3b19c31a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 147a2501219db9f1f1c10f9cf1a81aa395b5ec2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameter-list-visual-basic"></a>Elenco dei parametri (Visual Basic)
 Specifica i parametri di che una procedura prevista quando viene chiamato. Più parametri sono separati da virgole. Di seguito è la sintassi per un parametro.  
@@ -36,19 +28,19 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="parts"></a>Parti  
  `attributelist`  
- Parametro facoltativo. Elenco di attributi che si applicano a questo parametro. È necessario racchiudere il [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi quadre ("`<`"e"`>`").  
+ Facoltativo. Elenco di attributi che si applicano a questo parametro. È necessario racchiudere il [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi quadre ("`<`"e"`>`").  
   
  `Optional`  
- Parametro facoltativo. Specifica che questo parametro non è obbligatorio quando viene chiamata la procedura.  
+ Facoltativo. Specifica che questo parametro non è obbligatorio quando viene chiamata la procedura.  
   
  `ByVal`  
- Parametro facoltativo. Specifica che la routine non è possibile sostituire o riassegnare l'elemento variabile sottostante all'argomento corrispondente nel codice chiamante.  
+ Facoltativo. Specifica che la routine non è possibile sostituire o riassegnare l'elemento variabile sottostante all'argomento corrispondente nel codice chiamante.  
   
  `ByRef`  
- Parametro facoltativo. Specifica che la routine può modificare l'elemento variabile sottostante nel codice chiamante allo stesso modo che il codice.  
+ Facoltativo. Specifica che la routine può modificare l'elemento variabile sottostante nel codice chiamante allo stesso modo che il codice.  
   
  `ParamArray`  
- Parametro facoltativo. Specifica che l'ultimo parametro nell'elenco di parametri è una matrice facoltativa di elementi del tipo di dati specificato. In questo modo il codice chiamante può passare un numero arbitrario di argomenti per la procedura.  
+ Facoltativo. Specifica che l'ultimo parametro nell'elenco di parametri è una matrice facoltativa di elementi del tipo di dati specificato. In questo modo il codice chiamante può passare un numero arbitrario di argomenti per la procedura.  
   
  `parametername`  
  Obbligatorio. Nome della variabile locale che rappresenta il parametro.  

@@ -1,11 +1,6 @@
 ---
 title: Clausola Of (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Of
 - vb.Of
@@ -22,14 +17,11 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ef3ac4ac88727b1dcae50fa14abde03f29a16fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9ace0ad55d9eb1618dbdafb0d49d1ff4b169a877
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="of-clause-visual-basic"></a>Clausola Of (Visual Basic)
 Introduce un `Of` clausola che identifica un *parametro di tipo* su un *generico* classe, struttura, interfaccia, delegato o stored procedure. Per informazioni sui tipi generici, vedere [tipi generici in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
@@ -51,7 +43,7 @@ End Class
   
  Se si completa la precedente definizione di classe, è possibile costruire un'ampia gamma di `dictionary` classi da esso. I tipi che si forniscono alla `entryType` e `keyType` determinare il tipo di voce la classe contiene e il tipo di chiave associa ogni voce. A causa del vincolo, è necessario fornire al `keyType` un tipo che implementa <xref:System.IComparable>.  
   
- Esempio di codice seguente crea un oggetto che contiene `String` voci e lo associa un `Integer` chiave con ciascuno di essi. `Integer`implementa <xref:System.IComparable> e pertanto soddisfa il vincolo in `keyType`.  
+ Esempio di codice seguente crea un oggetto che contiene `String` voci e lo associa un `Integer` chiave con ciascuno di essi. `Integer` implementa <xref:System.IComparable> e pertanto soddisfa il vincolo in `keyType`.  
   
 ```  
 Dim d As New dictionary(Of String, Integer)  

@@ -2,10 +2,6 @@
 title: Funzione FormatFromRawValue (riferimenti alle API non gestite)
 description: La funzione FormatFromRawValue converte i dati sulle prestazioni non elaborati in un formato specificato.
 ms.date: 11/21/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - FormatFromRawValue
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3daa89ec0b40bb9c08898ecd682f05f0f0ce09a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue (funzione)
 Converte un valore di dati delle prestazioni non elaborati nel formato specificato o due valori di tali dati se la conversione di formato è basato sul tempo.   
@@ -50,7 +43,7 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parametri
 
 `dwCounterType`  
-[in] Il tipo di contatore. Per un elenco di tipi di contatori, vedere [tipi di contatori delle prestazioni WMI](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType`può essere qualsiasi tipo di contatore, ad eccezione di `PERF_LARGE_RAW_FRACTION` e `PERF_LARGE_RAW_BASE`. 
+[in] Il tipo di contatore. Per un elenco di tipi di contatori, vedere [tipi di contatori delle prestazioni WMI](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType` può essere qualsiasi tipo di contatore, ad eccezione di `PERF_LARGE_RAW_FRACTION` e `PERF_LARGE_RAW_BASE`. 
 
 `dwFormat`  
 [in] Il formato nel quale convertire i dati sulle prestazioni non elaborati. Può essere uno dei valori seguenti:
@@ -71,11 +64,11 @@ Può essere uno dei valori precedenti dall'operatore OR con uno dei flag di scal
 `pTimeBase`  
 [in] Puntatore alla base di tempo, se necessario per la conversione di formato. Se le informazioni di base di ora non sono necessarie per la conversione di formato, il valore di questo parametro viene ignorato.
 
-`pRawValue1`[in] Un puntatore a un [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) struttura che rappresenta un valore non elaborato delle prestazioni.
+`pRawValue1` [in] Un puntatore a un [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) struttura che rappresenta un valore delle prestazioni raw.
 
-`pRawValue2`[in] Un puntatore a un [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) struttura che rappresenta un secondo valore sulle prestazioni non elaborati. Se un tale valore non è necessario, questo parametro deve essere `null`.
+`pRawValue2` [in] Un puntatore a un [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) struttura che rappresenta un secondo valore delle prestazioni raw. Se un tale valore non è necessario, questo parametro deve essere `null`.
 
-`pFmtValue`[out] Un puntatore a un [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) struttura che riceve il valore formattato delle prestazioni.
+`pFmtValue` [out] Un puntatore a un [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) struttura che riceve il valore formattato delle prestazioni.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -96,7 +89,7 @@ Questa funzione esegue il wrapping di una chiamata al [FormatFromRawValue](https
   
  **Libreria:** PerfCounter  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

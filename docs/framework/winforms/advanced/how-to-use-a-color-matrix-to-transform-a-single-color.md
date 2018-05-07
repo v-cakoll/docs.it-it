@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: Usare una matrice di colori per trasformare un singolo colore'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,23 +8,18 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d6c9273102dc8e8f0fe6be3e31d0f0b6e570c7af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 741259fcf853c82dfd13b43edc92e50d8767887b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Procedura: Usare una matrice di colori per trasformare un singolo colore
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]fornisce il <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classi per l'archiviazione e la modifica di immagini. <xref:System.Drawing.Image>e <xref:System.Drawing.Bitmap> oggetti archiviano il colore di ciascun pixel come numero a 32 bit: 8 bit ogni per rosso, verde, blu e alfa. Ognuno dei quattro componenti è un numero compreso tra 0 e 255, dove 0 rappresenta nessun intensità e 255 che rappresenta intensità completo. Il componente alfa specifica la trasparenza del colore: 0 è completamente trasparente e 255 è completamente opaco.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce la <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classi per l'archiviazione e la modifica di immagini. <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> oggetti archiviano il colore di ciascun pixel come numero a 32 bit: 8 bit ogni per rosso, verde, blu e alfa. Ognuno dei quattro componenti è un numero compreso tra 0 e 255, dove 0 rappresenta nessun intensità e 255 che rappresenta intensità completo. Il componente alfa specifica la trasparenza del colore: 0 è completamente trasparente e 255 è completamente opaco.  
   
  Un vettore di colore è una tupla con 4 del modulo (rosso, verde, blu e alfa). Ad esempio, il vettore (0, 255, 0, 255) di colore rappresenta un colore opaco che non ha rosso o blu, ma è verde intensità completo.  
   
- Un'altra convenzione per la rappresentazione di colori utilizza il numero 1 per intensità completo. Utilizzando questa convenzione, il colore descritto nel paragrafo precedente viene rappresentato tramite il vettore (0, 1, 0, 1). [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]utilizza la convenzione di 1 come intensità completo quando si eseguono trasformazioni di colore.  
+ Un'altra convenzione per la rappresentazione di colori utilizza il numero 1 per intensità completo. Utilizzando questa convenzione, il colore descritto nel paragrafo precedente viene rappresentato tramite il vettore (0, 1, 0, 1). [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] utilizza la convenzione di 1 come intensità completo quando si eseguono trasformazioni di colore.  
   
  È possibile applicare trasformazioni lineari (rotazione, ridimensionamento e così via) a vettori di colore moltiplicando i vettori di colore per una matrice 4x4. Tuttavia, è possibile utilizzare una matrice 4x4 per eseguire una conversione (non lineare). Se si aggiunge una quinta coordinata finta (ad esempio, il numero 1) per ognuno dei vettori di colore, è possibile utilizzare una matrice di 5 × 5 per applicare qualsiasi combinazione di trasformazioni lineari e traduzioni. Una trasformazione costituita da una trasformazione lineare seguita da una traduzione è definita una trasformazione affine.  
   

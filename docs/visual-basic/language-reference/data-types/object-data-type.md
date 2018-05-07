@@ -1,10 +1,6 @@
 ---
 title: Object Data Type
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Object
 - vb.Variant
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 847f2b50296ad1a1ba6f0009d1d6afced27f9abe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9b1da5a88c12e0d883c3afe63be98c3fa3e9173
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-data-type"></a>Object Data Type
 Contiene gli indirizzi che fanno riferimento a oggetti. È possibile assegnare qualsiasi tipo riferimento (stringa, matrice, classe o interfaccia) a un `Object` variabile. Un `Object` variabile può inoltre fare riferimento ai dati di qualsiasi tipo di valore (numerico, `Boolean`, `Char`, `Date`, struttura o enumerazione).  
@@ -31,7 +24,7 @@ Contiene gli indirizzi che fanno riferimento a oggetti. È possibile assegnare q
   
  Il valore predefinito di `Object` è `Nothing` (un riferimento null).  
   
-## <a name="data-types"></a>Riepilogo dei tipi di dati  
+## <a name="data-types"></a>Tipi di dati  
  È possibile assegnare una variabile, costante o espressione di qualsiasi tipo di dati per un `Object` variabile. Per determinare il tipo di dati un `Object` variabile fa attualmente riferimento a, è possibile utilizzare il <xref:System.Type.GetTypeCode%2A> metodo la <xref:System.Type?displayProperty=nameWithType> classe. Questa condizione è illustrata nell'esempio seguente.  
   
 ```  
@@ -58,7 +51,7 @@ datTyp = Type.GetTypeCode(myObject.GetType())
   
      Tuttavia, se è la conversione tra tipi di valore e `Object`, Visual Basic esegue le operazioni di *boxing* e *unboxing*, che rendono l'esecuzione più lenta.  
   
--   **Caratteri tipo.** `Object`non dispone di alcun carattere di tipo letterale o un carattere di tipo identificatore.  
+-   **Caratteri tipo.** `Object` non dispone di alcun carattere di tipo letterale o un carattere di tipo identificatore.  
   
 -   **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la <xref:System.Object?displayProperty=nameWithType> classe.  
   

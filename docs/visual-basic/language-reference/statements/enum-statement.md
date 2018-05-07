@@ -1,12 +1,6 @@
 ---
 title: Istruzione Enum (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Enum
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-caps.latest.revision: 44
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7a8244318e0be8e50f3384b56cf63e59182b6cda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Istruzione Enum (Visual Basic)
 Dichiara un'enumerazione e definisce i valori dei relativi membri.  
@@ -42,13 +33,13 @@ End Enum
   
 -   `attributelist`  
   
-     Parametro facoltativo. Elenco di attributi che si applicano a questa enumerazione. È necessario racchiudere il [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi quadre ("`<`"e"`>`").  
+     Facoltativo. Elenco di attributi che si applicano a questa enumerazione. È necessario racchiudere il [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi quadre ("`<`"e"`>`").  
   
      Il <xref:System.FlagsAttribute> attributo indica che il valore di un'istanza dell'enumerazione può includere più membri di enumerazione e che ogni membro rappresenta un campo di bit nel valore di enumerazione.  
   
 -   `accessmodifier`  
   
-     Parametro facoltativo. Specifica il codice può accedere a questa enumerazione. Può essere uno dei seguenti:  
+     Facoltativo. Specifica il codice può accedere a questa enumerazione. Può essere uno dei seguenti:  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -62,7 +53,7 @@ End Enum
   
 -   `Shadows`  
   
-     Parametro facoltativo. Specifica che questa enumerazione ridichiara e nasconde un elemento di programmazione omonimo o un set di elementi in overload di una classe di base. È possibile specificare [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) solo sull'enumerazione, non sui relativi membri.  
+     Facoltativo. Specifica che questa enumerazione ridichiara e nasconde un elemento di programmazione omonimo o un set di elementi in overload di una classe di base. È possibile specificare [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) solo sull'enumerazione, non sui relativi membri.  
   
 -   `enumerationname`  
   
@@ -70,18 +61,18 @@ End Enum
   
 -   `datatype`  
   
-     Parametro facoltativo. Tipo di dati di enumerazione e tutti i relativi membri.  
+     Facoltativo. Tipo di dati di enumerazione e tutti i relativi membri.  
   
 -   `memberlist`  
   
      Obbligatorio. Elenco di costanti di membro dichiarate in questa istruzione. Più membri vengono visualizzati in righe di codice sorgente singoli.  
   
-     Ogni `member` ha la sintassi e le parti seguenti:`[<attribute list>] member name [ = initializer ]`  
+     Ogni `member` presenta la sintassi e le parti seguenti: `[<attribute list>] member name [ = initializer ]`  
   
     |Parte|Descrizione|  
     |---|---|  
     |`membername`|Obbligatorio. Nome del membro.|  
-    |`initializer`|Parametro facoltativo. Espressione che viene valutata in fase di compilazione e assegnata al membro.|  
+    |`initializer`|Facoltativo. Espressione che viene valutata in fase di compilazione e assegnata al membro.|  
   
 -   `End` `Enum`  
   

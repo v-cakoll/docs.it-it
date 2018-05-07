@@ -1,24 +1,12 @@
 ---
 title: Uso di metadati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa545e812de8c87191d6bba7df5cc5a5a494af3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c2fd0fc54c868c72903d5ea5ad847725d813f2da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-metadata"></a>Uso di metadati
 I metadati del servizio contengono una descrizione leggibile dal computer del servizio. In essi sono incluse le descrizioni degli endpoint del servizio, delle associazioni, dei contratti, delle operazioni e dei messaggi. Possono essere utilizzati per vari scopi, tra cui la generazione automatica di un client per l'utilizzo del servizio, l'implementazione della descrizione del servizio e l'aggiornamento dinamico dell'associazione per un client.  
@@ -31,7 +19,7 @@ I metadati del servizio contengono una descrizione leggibile dal computer del se
  Viene illustrato come recuperare i metadati utilizzando Svcutil.exe e implementare un servizio conforme.  
   
  [Generazione di un client WCF dai metadati del servizio](../../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)  
- Viene illustrato come recuperare i metadati utilizzando Svcutil.exe e generare un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Viene illustrato come recuperare i metadati utilizzando Svcutil.exe e generare un client Windows Communication Foundation (WCF).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metadati](../../../../docs/framework/wcf/feature-details/metadata.md)

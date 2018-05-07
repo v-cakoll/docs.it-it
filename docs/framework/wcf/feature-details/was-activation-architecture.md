@@ -1,24 +1,12 @@
 ---
 title: Architettura di attivazione WAS
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7563510fdd44336cb5f8c50705edefd732082347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="was-activation-architecture"></a>Architettura di attivazione WAS
 In questo argomento vengono definiti e illustrati i componenti del servizio di attivazione dei processi di Windows (noto anche come WAS).  
@@ -38,17 +26,17 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
   
  Quando WAS attiva un'istanza del processo di lavoro, carica i gestori del protocollo del processo necessari nel processo di lavoro e utilizza il gestore applicazioni per creare un dominio applicazione per ospitare l'applicazione. Il dominio applicazione carica il codice dell'applicazione e i gestori del protocollo AppDomain richiesti dai protocolli di rete utilizzati dall'applicazione.  
   
- ![ARCHITETTURA di](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
+ ![Architettura WAS](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
 ### <a name="listener-adapters"></a>Adattatori listener  
- Gli adattatori listener sono servizi di Windows singoli che implementano la logica di comunicazione di rete utilizzata per ricevere i messaggi tramite il protocollo di rete sul quale ascoltano. Nella tabella seguente sono elencati gli adattatori listener per i protocolli [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Gli adattatori listener sono servizi di Windows singoli che implementano la logica di comunicazione di rete utilizzata per ricevere i messaggi tramite il protocollo di rete sul quale ascoltano. Nella tabella seguente sono elencati gli adattatori listener per i protocolli di Windows Communication Foundation (WCF).  
   
 |Nome del servizio dell’adattatore listener|Protocollo|Note|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|Componente comune che fornisce l’attivazione HTTP per IIS 7.0 e per [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
+|W3SVC|http|Componente comune che fornisce l'attivazione HTTP per IIS 7.0 e WCF.|  
 |NetTcpActivator|net.tcp|Dipende dal servizio NetTcpPortSharing.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|Per utilizzo con applicazioni di accodamento messaggi basate su [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
+|NetMsmqActivator|net.msmq|Per l'uso con applicazioni di Accodamento messaggi basate su WCF.|  
 |NetMsmqActivator|msmq.formatname|Fornisce la compatibilità delle applicazioni di accodamento messaggi esistenti con le versioni precedenti.|  
   
  Gli adattatori listener per protocolli specifici vengono registrati durante l'installazione nel file applicationHost.config, come illustrato nell'esempio XML seguente.  

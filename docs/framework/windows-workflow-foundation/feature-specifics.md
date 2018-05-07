@@ -1,29 +1,18 @@
 ---
-title: "Specifiche delle funzionalità di Windows Workflow Foundation"
-ms.custom: 
+title: Specifiche delle funzionalità di Windows Workflow Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6943a7eaeaecf8f11de7c10237979067c83c24d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc3ff5669d23e57685c89937f7c2171053f938ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Specifiche delle funzionalità di Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] aggiunge una serie di funzionalità a Windows Workflow Foundation. Questo documento descrive alcune delle nuove funzionalità e fornisce informazioni dettagliate sugli scenari nei quali potrebbero essere utili.  
   
 ## <a name="messaging-activities"></a>Attività di messaggistica  
- Le attività di messaggistica (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) vengono utilizzati per inviare e ricevere [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] messaggi dal flusso di lavoro.  <xref:System.ServiceModel.Activities.Receive>e <xref:System.ServiceModel.Activities.SendReply> le attività vengono usate per costituire un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] operazione esposta tramite WSDL esattamente come standard del servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizi web.  <xref:System.ServiceModel.Activities.Send>e <xref:System.ServiceModel.Activities.ReceiveReply> consentono di utilizzare un servizio web simile a WCF <xref:System.ServiceModel.ChannelFactory>; **Aggiungi riferimento al servizio** esperienza è disponibile anche per Workflow Foundation che genera attività preconfigurate.  
+ Le attività di messaggistica (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) vengono utilizzati per inviare e ricevere [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] messaggi dal flusso di lavoro.  <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply> attività vengono utilizzate in modo da formare un'operazione del servizio Windows Communication Foundation (WCF) che viene esposta tramite WSDL esattamente come standard [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizi web.  <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.ReceiveReply> consentono di utilizzare un servizio web simile a WCF <xref:System.ServiceModel.ChannelFactory>; un **Aggiungi riferimento al servizio** esperienza è disponibile anche per Workflow Foundation che genera attività preconfigurate.  
   
 ### <a name="getting-started-with-messaging-activities"></a>Introduzione alle attività di messaggistica  
   
@@ -39,7 +28,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Documentazione concettuale](http://go.microsoft.com/fwlink/?LinkId=204801)  
   
--   [Documentazione per progettisti di attività di messaggistica](http://go.microsoft.com/fwlink/?LinkId=204802)  
+-   [Documentazione della finestra di progettazione di attività di messaggistica](http://go.microsoft.com/fwlink/?LinkId=204802)  
   
 ### <a name="messaging-activities-example-scenario"></a>Scenario di esempio relativo alle attività di messaggistica  
  Oggetto `BestPriceFinder` servizio chiama più servizi airline per individuare il prezzo del ticket migliore per una route specifica.  Implementazione di questo scenario caso è necessario usare le attività di messaggio per ricevere la richiesta di prezzo, recuperare i prezzi dei servizi back-end e rispondere alla richiesta di prezzo con il prezzo migliore.  È possibile utilizzare altre attività out-of-box per creare la logica di business per il calcolo del prezzo migliore anche richiederà.  
@@ -115,13 +104,13 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="getting-started"></a>Introduzione  
   
--   [Guida per gli sviluppatori di WCF 4.0](http://go.microsoft.com/fwlink/?LinkId=204940)  
+-   [Guida per sviluppatori di WCF 4.0](http://go.microsoft.com/fwlink/?LinkId=204940)  
   
 -   [Configurazione di una channel factory](http://go.microsoft.com/fwlink/?LinkId=204941)  
   
 -   [Elemento Endpoint standard](http://go.microsoft.com/fwlink/?LinkId=204942)  
   
--   [Servizio di miglioramenti della configurazione in .net Framework 4](http://go.microsoft.com/fwlink/?LinkId=204943)  
+-   [Servizio miglioramenti della configurazione di .net Framework 4](http://go.microsoft.com/fwlink/?LinkId=204943)  
   
 -   [Errore comune dell'utente in .NET 4: errata digitazione il nome di configurazione del servizio WF/WCF](http://go.microsoft.com/fwlink/?LinkId=204944)  
   
@@ -146,7 +135,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Documentazione dell'API di Resolver di contratto dati](http://go.microsoft.com/fwlink/?LinkId=204946)  
   
--   [Introdurre il Resolver del contratto dati](http://go.microsoft.com/fwlink/?LinkId=204947)  
+-   [Introduzione al Resolver del contratto dati](http://go.microsoft.com/fwlink/?LinkId=204947)  
   
 -   Esempi:  
   
@@ -223,11 +212,11 @@ ms.lasthandoff: 12/22/2017
   
     -   [Activity Designer Parallel](/visualstudio/workflow-designer/parallel-activity-designer)  
   
-    -   [ParallelForEach\<T > ActivityDesigner](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)  
+    -   [Attività ParallelForEach\<T > ActivityDesigner](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)  
   
 ### <a name="procedural-activity-scenarios"></a>Scenari relativi alle attività procedurali  
   
--   <xref:System.Activities.Statements.Parallel>: Un sistema di gestione di documenti intranet dispone di un flusso di lavoro di approvazione di documento. Prima di poter essere pubblicati nella rete Intranet, i documenti devono essere approvati dai responsabili dei diversi reparti. Non è un ordine prestabilito per le approvazioni; possono verificarsi in qualsiasi momento mentre il documento è nella fase di "approvazione in sospeso". Quando un utente manda in revisione un documento, deve essere approvato dal suo responsabile diretto, dall'amministratore della rete Intranet e dal responsabile delle comunicazioni interne.  
+-   <xref:System.Activities.Statements.Parallel>: Un sistema di gestione intranet documento dispone di un flusso di lavoro di approvazione di documento. Prima di poter essere pubblicati nella rete Intranet, i documenti devono essere approvati dai responsabili dei diversi reparti. Non è un ordine prestabilito per le approvazioni; possono verificarsi in qualsiasi momento mentre il documento è nella fase di "approvazione in sospeso". Quando un utente manda in revisione un documento, deve essere approvato dal suo responsabile diretto, dall'amministratore della rete Intranet e dal responsabile delle comunicazioni interne.  
   
 -   <xref:System.Activities.Statements.ParallelForEach%601>: Un'applicazione WF gestisce gli acquisti di una grande società. In base a quanto definito nei regolamenti aziendali, prima di pianificare qualsiasi operazione di acquisto è necessario valutare tre fornitori diversi. Un dipendente dell'ufficio acquisti seleziona tre fornitori dall'elenco fornitori della società. Una volta selezionati e informati i fornitori, la società attenderà le proposte economiche. Le proposte possono pervenire in qualsiasi ordine. Per implementare questo scenario in WF, viene usato <xref:System.Activities.Statements.ParallelForEach%601> per scorrere l'elenco dei fornitori e richiedere le proposte economiche. Una volta raccolte tutte le offerte, viene scelta e visualizzata la migliore.  
   
@@ -242,7 +231,7 @@ ms.lasthandoff: 12/22/2017
   
     -   [InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
   
--   Documentazione della finestra di progettazione: [ActivityDesigner InvokeMethod](/visualstudio/workflow-designer/invokemethod-activity-designer)  
+-   Documentazione di progettazione: [ActivityDesigner InvokeMethod](/visualstudio/workflow-designer/invokemethod-activity-designer)  
   
 ### <a name="invokemethod-scenarios"></a>Scenari relativi a InvokeMethod  
   
@@ -263,7 +252,7 @@ ms.lasthandoff: 12/22/2017
   
     2.  [Uso di attività procedurali](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
   
--   Documentazione della finestra di progettazione: [ActivityDesigner gestione errori](/visualstudio/workflow-designer/error-handling-activity-designers)  
+-   Documentazione di progettazione: [ActivityDesigner gestione errori](/visualstudio/workflow-designer/error-handling-activity-designers)  
   
 ### <a name="error-handling-scenarios"></a>Scenari relativi alla gestione degli errori  
  È necessario eseguire un set di attività e, quando si verifica un errore, è necessario eseguire una logica specifica. Se durante l'esecuzione della logica di gestione degli errori si scopre che l'errore non è risolvibile, viene rigenerata l'eccezione e il problema viene gestito dall'attività padre (o dall'host).  
@@ -305,7 +294,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Documentazione: [Routing](../../../docs/framework/wcf/feature-details/routing.md)  
   
-2.  Esempi: [Routing Services &#91; Esempi di WCF &#93;](../../../docs/framework/wcf/samples/routing-services.md)  
+2.  Esempi: [servizi di Routing &#91;esempi WCF&#93;](../../../docs/framework/wcf/samples/routing-services.md)  
   
 3.  Blog: [regole di Routing.](http://go.microsoft.com/fwlink/?LinkId=204956)  
   

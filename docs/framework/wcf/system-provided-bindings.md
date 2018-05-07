@@ -1,28 +1,14 @@
 ---
 title: Associazioni fornite dal sistema
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 60
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-provided-bindings"></a>Associazioni fornite dal sistema
 Le associazioni specificano il meccanismo di comunicazione da utilizzare durante la comunicazione con un endpoint e indicano come collegarsi a un endpoint. Un'associazione contiene gli elementi seguenti:  
@@ -33,7 +19,7 @@ Le associazioni specificano il meccanismo di comunicazione da utilizzare durante
   
 -   La codifica determina la codifica di trasmissione da utilizzare per i messaggi inviati all'endpoint, ad esempio, testo/XML, binaria o MTOM (Message Transmission Optimization Mechanism).  
   
- In questo argomento vengono illustrate tutte le associazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] fornite dal sistema. Se nessuna di queste soddisfa i criteri esatti per l'applicazione, è possibile creare un'associazione personalizzata. Per ulteriori informazioni sulla creazione di associazioni personalizzate, vedere [associazioni personalizzate](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ In questo argomento vengono presentate tutte le associazioni fornite dal sistema di Windows Communication Foundation (WCF). Se nessuna di queste soddisfa i criteri esatti per l'applicazione, è possibile creare un'associazione personalizzata. Per ulteriori informazioni sulla creazione di associazioni personalizzate, vedere [associazioni personalizzate](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Un'associazione protetta e interoperabile che supporta il protocollo WS-Federation consente alle organizzazioni di una federazione di autenticare e autorizzare gli utenti in modo efficiente.  
   

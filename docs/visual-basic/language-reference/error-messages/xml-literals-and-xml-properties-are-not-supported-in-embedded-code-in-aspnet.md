@@ -1,26 +1,17 @@
 ---
-title: "I valori letterali XML e le proprietà XML all'interno del codice incorporato non sono supportati in ASP.NET."
+title: I valori letterali XML e le proprietà XML all'interno del codice incorporato non sono supportati in ASP.NET.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc31200
 - bc31200
 helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 932c36778720718d777412f958c16b4a650e3b5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 559889587b30418dc2fe2860cfbf90f91605c668
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>I valori letterali XML e le proprietà XML all'interno del codice incorporato non sono supportati in ASP.NET.
 Valori letterali XML e le proprietà XML non sono supportate nel codice incorporato all'interno di ASP.NET. Per utilizzare le funzionalità XML, spostare il codice a code-behind.  

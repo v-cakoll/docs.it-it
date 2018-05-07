@@ -1,27 +1,15 @@
 ---
 title: Considerazioni sulla sicurezza in XAML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-caps.latest.revision: "7"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b58719f36cd911497c5cd892610330688221e7ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef47e7e370082a2050406710edcb62d0967df8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-security-considerations"></a>Considerazioni sulla sicurezza in XAML
 Questo argomento descrive le procedure consigliate per la protezione delle applicazioni quando si usa XAML e API dei servizi XAML di .NET Framework.  
@@ -29,7 +17,7 @@ Questo argomento descrive le procedure consigliate per la protezione delle appli
 ## <a name="untrusted-xaml-in-applications"></a>XAML non attendibili nelle applicazioni  
  In senso più generale, XAML non attendibili è qualsiasi origine XAML che l'applicazione non specificamente includono o generare.  
   
- Il codice XAML viene compilato o archiviato come un `resx`-tipo di risorsa all'interno di un assembly attendibile e firmato non è considerato non attendibile. È possibile considerare attendibile il codice XAML in quanto si ritiene attendibile l'assembly nel suo complesso. Nella maggior parte dei casi, si teme solo con gli aspetti di attendibilità di XAML separato, ovvero un'origine XAML che è stato caricato da un flusso o un altro IO. XAML separato non è un componente specifico o una funzionalità di un modello di applicazione con una distribuzione e l'infrastruttura di creazione del pacchetto. Tuttavia, un assembly può implementare un comportamento che prevede il caricamento di XAML separato.  
+ Il codice XAML viene compilato o archiviato come un `resx`-tipo di risorsa all'interno di un assembly attendibile e firmato non è considerato non attendibile. È possibile considerare attendibile il codice XAML in quanto si ritiene attendibile l'assembly nel suo complesso. Nella maggior parte dei casi, si desidera utilizzare solo in questione con gli aspetti di attendibilità di XAML separato, ovvero un'origine XAML che è stato caricato da un flusso o un altro / o. XAML separato non è un componente specifico o una funzionalità di un modello di applicazione con una distribuzione e l'infrastruttura di creazione del pacchetto. Tuttavia, un assembly può implementare un comportamento che prevede il caricamento di XAML separato.  
   
  Per XAML non attendibili, devi considerarlo in genere lo stesso come se fosse codice non attendibile. Utilizzare il sandboxing o altre metafore per impedire l'accesso al codice attendibile XAML probabilmente non attendibile.  
   

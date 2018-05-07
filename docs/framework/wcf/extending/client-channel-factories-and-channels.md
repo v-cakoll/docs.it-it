@@ -1,24 +1,12 @@
 ---
 title: 'Client: channel factory e canali'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82e42a3dd4fbb29970b8e1a17333b66d85d2887b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c7890f5fafb4e53053c4c393a7c8af584bd7a520
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-channel-factories-and-channels"></a>Client: channel factory e canali
 In questo argomento viene illustrata la creazione di channel factory e canali.  
@@ -26,7 +14,7 @@ In questo argomento viene illustrata la creazione di channel factory e canali.
 ## <a name="channel-factories-and-channels"></a>Channel factory e canali  
  Le channel factory sono responsabili della creazione di canali. I canali creati da channel factory vengono usati per l'invio di messaggi. Questi canali ottengono il messaggio dal livello superiore, eseguono l'elaborazione necessaria, quindi inviano il messaggio al livello inferiore. Nel grafico seguente viene illustrato questo processo.  
   
- ![Factory client e i canali](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure2highlevelfactgoriesc.gif "wcfc_WCFChannelsigure2HIghLevelFactgoriesc")  
+ ![Factory client e canali](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure2highlevelfactgoriesc.gif "wcfc_WCFChannelsigure2HIghLevelFactgoriesc")  
 Una channel factory crea canali.  
   
  Quando sono chiuse, le channel factory sono responsabili della chiusura di tutti i canali creati non ancora chiusi. Il modello rappresentato è asimmetrico perché quando un listener del canale viene chiuso, smette solo di accettare nuovi canali, mentre lascia aperti i canali esistenti affinché possano continuare a ricevere messaggi.  

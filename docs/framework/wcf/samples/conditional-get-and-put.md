@@ -1,24 +1,12 @@
 ---
 title: Verifica Get e Put condizionale
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3d22067f-57b8-4e0f-a571-a694512187ae
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08efa127ed06ffc8cff3c7bb83af7be929329794
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f2d170da80de1186aa41b4821da52d58a0bb0e0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="conditional-get-and-put"></a>Verifica Get e Put condizionale
 In questo esempio viene descritto come utilizzare le nuove API di aggiornamento e recupero condizionali per il modello di programmazione WCF REST. Poiché sono più appropriati per recuperare condizionale e aggiornare orientato alle risorse e i servizi REST, in questo esempio estende la [servizio risorse di base](../../../../docs/framework/wcf/samples/basic-resource-service.md) esempio. Questo esempio si concentra sull'aggiunta di supporto per recupero condizionali e l'aggiornamento per il [servizio risorse di base](../../../../docs/framework/wcf/samples/basic-resource-service.md) di esempio utilizzando le nuove API introdotta in [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  
@@ -54,6 +42,6 @@ In questo esempio viene descritto come utilizzare le nuove API di aggiornamento 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\ConditionalGetAndPut`

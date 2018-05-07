@@ -1,11 +1,6 @@
 ---
 title: Clausola Group Join (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryGroupJoinIn
 - vb.QueryGroupJoinOn
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c43b41336393b40684aee79f88c1e6999ebda674
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 094281b0afb34451ae8539e4eb967043b21d379c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-join-clause-visual-basic"></a>Clausola Group Join (Visual Basic)
 Combina due raccolte in un'unica raccolta gerarchica. L'operazione di join è basata su chiavi corrispondenti.  
@@ -41,7 +33,7 @@ Group Join element [As type] In collection _
 |Termine|Definizione|  
 |---|---|  
 |`element`|Obbligatorio. La variabile di controllo per la raccolta da unire in join.|  
-|`type`|Parametro facoltativo. Tipo di `element`. Se non `type` è specificato, il tipo di `element` viene dedotto dal `collection`.|  
+|`type`|Facoltativo. Tipo di `element`. Se non `type` è specificato, il tipo di `element` viene dedotto dal `collection`.|  
 |`collection`|Obbligatorio. La raccolta da combinare con la raccolta che si trova sul lato sinistro del `Group Join` operatore. Oggetto `Group Join` clausola può essere annidata una `Join` clausola o in un altro `Group Join` clausola.|  
 |`key1` `Equals` `key2`|Obbligatorio. Identifica le chiavi per le raccolte da unire in join. È necessario utilizzare il `Equals` operatore per confrontare le chiavi dalle raccolte da unire in join. È possibile combinare le condizioni di join utilizzando il `And` operatore per identificare più chiavi. Il `key1` parametro deve essere dall'insieme sul lato sinistro del `Join` operatore. Il `key2` parametro deve essere dall'insieme sul lato destro del `Join` operatore.<br /><br /> Le chiavi usate nella condizione di join possono essere espressioni che includono più di un elemento dalla raccolta. Tuttavia, ogni espressione chiave può contenere solo gli elementi del rispettivo insieme.|  
 |`expressionList`|Obbligatorio. Una o più espressioni che identificano come vengono aggregati i gruppi di elementi dalla raccolta. Per identificare un nome di membro per i risultati raggruppati, utilizzare il `Group` (parola chiave) (`<alias> = Group`). È anche possibile includere funzioni di aggregazione da applicare al gruppo.|  

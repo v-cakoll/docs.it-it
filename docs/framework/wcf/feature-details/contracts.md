@@ -1,38 +1,24 @@
 ---
 title: Contratti
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], contracts
 - contracts [WCF]
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: adfa43e411a3b4b71edcac8938851b3abfcda2f8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8522ae89ca69ec594f62e272f8479b607609f064
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contracts"></a>Contratti
-Questa sezione illustra come definire e implementare contratti [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Un contratto di servizio specifica quale endpoint comunica con il mondo esterno. A un livello più concreto, è un'istruzione su un set di messaggi specifici organizzati in modelli di scambio di messaggi di base (MEP, Message Exchange Pattern) quali, ad esempio, request/reply, unidirezionale e duplex. Se un contratto di servizio è un set logicamente correlato di scambi di messaggi, un'operazione di servizio è un singolo scambio di messaggi. Un'operazione `Hello` deve, ad esempio, accettare un messaggio (quindi il chiamante può annunciare il saluto) e può o non può restituire un messaggio (a seconda del livello di cortesia dell'operazione).  
+In questa sezione viene illustrato come definire e implementare contratti di Windows Communication Foundation (WCF). Un contratto di servizio specifica quale endpoint comunica con il mondo esterno. A un livello più concreto, è un'istruzione su un set di messaggi specifici organizzati in modelli di scambio di messaggi di base (MEP, Message Exchange Pattern) quali, ad esempio, request/reply, unidirezionale e duplex. Se un contratto di servizio è un set logicamente correlato di scambi di messaggi, un'operazione di servizio è un singolo scambio di messaggi. Un'operazione `Hello` deve, ad esempio, accettare un messaggio (quindi il chiamante può annunciare il saluto) e può o non può restituire un messaggio (a seconda del livello di cortesia dell'operazione).  
   
- Per ulteriori informazioni sui contratti e altri componenti di base [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] concetti, vedere [concetti fondamentali di Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md). Questo argomento si incentra sulla comprensione dei contratti di servizio. Per ulteriori informazioni sulla compilazione di client che utilizzano contratti di servizio per connettersi ai servizi, vedere [panoramica dei Client WCF](../../../../docs/framework/wcf/wcf-client-overview.md). Per ulteriori informazioni sui canali client, l'architettura client e altri problemi del client, vedere [client](../../../../docs/framework/wcf/feature-details/clients.md).  
+ Per ulteriori informazioni sui contratti e altri concetti WCF, vedere [concetti fondamentali di Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md). Questo argomento si incentra sulla comprensione dei contratti di servizio. Per ulteriori informazioni sulla compilazione di client che utilizzano contratti di servizio per connettersi ai servizi, vedere [panoramica dei Client WCF](../../../../docs/framework/wcf/wcf-client-overview.md). Per ulteriori informazioni sui canali client, l'architettura client e altri problemi del client, vedere [client](../../../../docs/framework/wcf/feature-details/clients.md).  
   
 ## <a name="overview"></a>Panoramica  
- In questo argomento viene fornito un orientamento concettuale di alto livello alla progettazione e all'implementazione di servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Negli argomenti correlati vengono fornite informazioni più dettagliate sulle specifiche di progettazione e implementazione. Prima di progettare e implementare l'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è consigliabile:  
+ In questo argomento fornisce un orientamento concettuale di alto livello alla progettazione e implementazione di servizi WCF. Negli argomenti correlati vengono fornite informazioni più dettagliate sulle specifiche di progettazione e implementazione. Prima di progettare e implementare l'applicazione WCF, è consigliabile che si:  
   
 -   Comprendere cosa siano i contratti di servizio, come funzionino e come sia possibile crearne uno.  
   
@@ -61,22 +47,22 @@ Questa sezione illustra come definire e implementare contratti [!INCLUDE[indigo1
   
 -   Istruzioni categoriali sull'infrastruttura di comunicazione necessaria per elaborare correttamente i messaggi. Questi dettagli includono, ad esempio, indicazioni sulla necessità della protezione, e sui tipi di sicurezza eventualmente necessari, per stabilire una corretta comunicazione.  
   
- Per comunicare questo tipo di informazioni alle applicazioni su altre piattaforme (incluse piattaforme non Microsoft), i contratti di servizio XML vengono pubblicamente espressi in formati XML standard, ad esempio [Web Services Description Language (WSDL)](http://go.microsoft.com/fwlink/?LinkId=87004) e [XML Schema (XSD)](http://go.microsoft.com/fwlink/?LinkId=87005), tra gli altri. Gli sviluppatori operanti su molte piattaforme possono usare queste informazioni pubbliche sui contratti per creare applicazioni che possano comunicare con il servizio, perché comprendono il linguaggio della specifica e perché tali linguaggi sono progettati per consentire l'interoperabilità descrivendo i tipi, i formati e i protocolli pubblici supportati dal servizio. Per ulteriori informazioni su come [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] handle di questo tipo di informazioni, vedere [metadati](../../../../docs/framework/wcf/feature-details/metadata.md).  
+ Per comunicare questo tipo di informazioni alle applicazioni su altre piattaforme (incluse piattaforme non Microsoft), i contratti di servizio XML vengono pubblicamente espressi in formati XML standard, ad esempio [Web Services Description Language (WSDL)](http://go.microsoft.com/fwlink/?LinkId=87004) e [XML Schema (XSD)](http://go.microsoft.com/fwlink/?LinkId=87005), tra gli altri. Gli sviluppatori operanti su molte piattaforme possono usare queste informazioni pubbliche sui contratti per creare applicazioni che possano comunicare con il servizio, perché comprendono il linguaggio della specifica e perché tali linguaggi sono progettati per consentire l'interoperabilità descrivendo i tipi, i formati e i protocolli pubblici supportati dal servizio. Per ulteriori informazioni sul modo in cui WCF gestisce questo tipo di informazioni, vedere [metadati](../../../../docs/framework/wcf/feature-details/metadata.md).  
   
- I contratti possono essere però espressi in molti modi e, sebbene WSDL e XSD siano linguaggi eccellenti per descrivere i servizi in maniera accessibile, sono però difficili da usare in modo diretto e sono, in ogni caso, semplici descrizioni di un servizio, che non riguardano le implementazioni del contratto di servizio. Pertanto, le applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usano interfacce, classi e attributi gestiti sia per definire la struttura di un servizio sia per implementare il servizio in questione.  
+ I contratti possono essere però espressi in molti modi e, sebbene WSDL e XSD siano linguaggi eccellenti per descrivere i servizi in maniera accessibile, sono però difficili da usare in modo diretto e sono, in ogni caso, semplici descrizioni di un servizio, che non riguardano le implementazioni del contratto di servizio. Pertanto, le applicazioni WCF utilizzano interfacce, classi e attributi gestiti sia a definire la struttura di implementare un servizio.  
   
- Il contratto risultante definito nei tipi gestiti può essere convertito (detto anche *esportato*) come metadati, WSDL e XSD, quando richiesto da client o altri implementatori del servizio, specialmente su altre piattaforme. Il risultato è un modello di programmazione semplice, che può essere descritto usando metadati pubblici per qualsiasi applicazione client. I dettagli dei messaggi SOAP sottostanti, quali ad esempio le informazioni sul trasporto e sulla protezione, possono essere gestiti da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], che esegue automaticamente le conversioni necessarie tra il sistema dei tipi di contratto di servizio e il sistema dei tipi XML.  
+ Il contratto risultante definito nei tipi gestiti può essere convertito (detto anche *esportato*) come metadati, WSDL e XSD, quando richiesto da client o altri implementatori del servizio, specialmente su altre piattaforme. Il risultato è un modello di programmazione semplice, che può essere descritto usando metadati pubblici per qualsiasi applicazione client. I dettagli dei messaggi SOAP sottostanti, ad esempio il trasporto e le informazioni correlate alla sicurezza possono essere gestiti da WCF, che esegue automaticamente le conversioni necessarie da e verso il sistema di tipi di contratto di servizio per il sistema di tipi XML.  
   
  Per ulteriori informazioni sulla progettazione di contratti, vedere [progettazione contratti di servizio](../../../../docs/framework/wcf/designing-service-contracts.md). Per ulteriori informazioni sull'implementazione dei contratti, vedere [contratti di servizio che implementa](../../../../docs/framework/wcf/implementing-service-contracts.md).  
   
- Inoltre, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consente di sviluppare contratti di servizio interamente a livello di messaggio. Per ulteriori informazioni sullo sviluppo di contratti di servizio a livello di messaggio, vedere [utilizzando i contratti di messaggio](../../../../docs/framework/wcf/feature-details/using-message-contracts.md). Per ulteriori informazioni sullo sviluppo di servizi in XML non SOAP, vedere [interoperabilità con applicazioni POX](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
+ Inoltre, WCF fornisce inoltre la possibilità di sviluppare contratti di servizio interamente a livello di messaggio. Per ulteriori informazioni sullo sviluppo di contratti di servizio a livello di messaggio, vedere [utilizzando i contratti di messaggio](../../../../docs/framework/wcf/feature-details/using-message-contracts.md). Per ulteriori informazioni sullo sviluppo di servizi in XML non SOAP, vedere [interoperabilità con applicazioni POX](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
   
 ### <a name="understanding-the-hierarchy-of-requirements"></a>Informazioni sulla gerarchia di requisiti  
  Un contratto di servizio raggruppa le operazioni, specifica il MEP, i tipi di messaggio e i tipi di dati contenuti nei messaggi e indica le categorie di comportamento di runtime che un'implementazione deve avere per supportare il contratto (se, ad esempio, è necessario che i messaggi siano crittografati e firmati). Il contratto di servizio stesso non specifica, tuttavia, con precisione in che modo questi requisiti siano soddisfatti, indica solo che devono essere soddisfatti. Il tipo di crittografia e la modalità di firma di un messaggio dipendono dall'implementazione e dalla configurazione di un servizio conforme.  
   
  Si noti il modo in cui il contratto richiede certe caratteristiche dell'implementazione del contratto di servizio e della configurazione di runtime per l'aggiunta di un comportamento. Il set dei requisiti che devono essere soddisfatti per esporre un servizio affinché possa essere usato si basa sul set di requisiti precedente. Se un contratto prevede requisiti per l'implementazione, un'implementazione può richiedere ancora più caratteristiche di configurazione e associazioni che consentono l'esecuzione del servizio. Infine, anche l'applicazione host deve supportare tutti i requisiti aggiunti dalla configurazione e dalle associazioni del servizio.  
   
- Questo processo relativo ai requisiti aggiuntivi è importante da tener presente quando si progetta, implementa, configura e ospita l'applicazione del servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Il contratto può, ad esempio, specificare che deve essere supportata una sessione. In questo caso sarà quindi necessario configurare le associazioni per supportare il requisito contrattuale o l'implementazione del servizio non funzionerà. Se il servizio richiede invece l'Autenticazione integrata di Windows ed è ospitato in Internet Information Services (IIS), nell'applicazione Web in cui risiede il servizio deve essere attivata l'Autenticazione integrata di Windows e disattivato il supporto di utenti anonimi. Per ulteriori informazioni sulle funzionalità e impatto dei tipi di applicazione host del servizio diversi, vedere [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
+ Questo processo relativo ai requisiti aggiuntivi è importante tenere presente durante la progettazione, implementazione, la configurazione e che ospita l'applicazione di servizio Windows Communication Foundation (WCF). Il contratto può, ad esempio, specificare che deve essere supportata una sessione. In questo caso sarà quindi necessario configurare le associazioni per supportare il requisito contrattuale o l'implementazione del servizio non funzionerà. Se il servizio richiede invece l'Autenticazione integrata di Windows ed è ospitato in Internet Information Services (IIS), nell'applicazione Web in cui risiede il servizio deve essere attivata l'Autenticazione integrata di Windows e disattivato il supporto di utenti anonimi. Per ulteriori informazioni sulle funzionalità e impatto dei tipi di applicazione host del servizio diversi, vedere [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Endpoint: indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  

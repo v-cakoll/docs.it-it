@@ -1,13 +1,6 @@
 ---
 title: Livelli di rendering della grafica
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], performance
 - rendering graphics [WPF]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-caps.latest.revision: "44"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 457b7e76b16e42c71d1e2d1986d58b2708396e22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f9de7736851027c9f6b851984953e37b96d456a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-rendering-tiers"></a>Livelli di rendering della grafica
 Un livello di rendering definisce un livello di prestazioni e funzionalità hardware grafiche per un dispositivo che esegue un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -98,8 +86,8 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 |Funzionalità|Note|  
 |-------------|-----------|  
 |Contenuti stampati|Il rendering di tutto il contenuto stampato viene eseguito con la pipeline software [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
-|Contenuto rasterizzato che utilizza<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Qualsiasi contenuto sottoposto a rendering utilizzando il <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> metodo <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
-|Contenuto affiancato che utilizza<xref:System.Windows.Media.TileBrush>|Qualsiasi contenuto affiancato in cui il <xref:System.Windows.Media.TileBrush.TileMode%2A> proprietà del <xref:System.Windows.Media.TileBrush> è impostato su <xref:System.Windows.Media.TileMode.Tile>.|  
+|Contenuto rasterizzato che utilizza <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Qualsiasi contenuto sottoposto a rendering utilizzando il <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> metodo <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
+|Contenuto affiancato che utilizza <xref:System.Windows.Media.TileBrush>|Qualsiasi contenuto affiancato in cui il <xref:System.Windows.Media.TileBrush.TileMode%2A> proprietà del <xref:System.Windows.Media.TileBrush> è impostato su <xref:System.Windows.Media.TileMode.Tile>.|  
 |Superfici che superano le dimensioni massime della trama dell'hardware grafico|Per la maggior parte dell'hardware grafico, le superfici di grandi dimensioni sono pari a 2048x2048 o 4096x4096 pixel.|  
 |Qualsiasi operazione il cui requisito per la RAM video supera la memoria dell'hardware grafico|È possibile monitorare l'utilizzo della RAM video dell'applicazione usando lo strumento Perforator incluso nella [famiglia di prodotti per l'analisi delle prestazioni WPF](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) in Windows SDK.|  
 |Finestre a livelli|Le finestre a livelli consentono alle applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di eseguire il rendering del contenuto sullo schermo in una finestra non rettangolare. Nei sistemi operativi che supportano Windows Display Driver Model (WDDM), ad esempio [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] e [!INCLUDE[win7](../../../../includes/win7-md.md)], le finestre a livelli sono con accelerazione hardware. Negli altri sistemi, ad esempio [!INCLUDE[winxp](../../../../includes/winxp-md.md)], il rendering delle finestre a livelli viene eseguito dal software senza accelerazione hardware.<br /><br /> È possibile abilitare le finestre sovrapposte in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] impostando gli elementi seguenti <xref:System.Windows.Window> proprietà:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  

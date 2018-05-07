@@ -1,24 +1,12 @@
 ---
 title: 133 - ActionItemScheduled
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a226aeea-69f4-438c-909b-05bd68b99220
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ff2f857fe9cfe6db2d6a0af84f61852f54c0d1f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e2a59056bdef8e4f5d2a7afeda4696f4c8762ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="133---actionitemscheduled"></a>133 - ActionItemScheduled
 ## <a name="properties"></a>Proprietà  
@@ -31,9 +19,9 @@ ms.lasthandoff: 12/22/2017
 |Canale|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descrizione  
- Questo evento viene generato quando il richiamo di callback dell'utilità di pianificazione thread di I/O inizia.  
+ Questo evento viene generato quando viene avviato il Thread dei / o richiamo di callback dell'utilità di pianificazione.  
   
 ## <a name="message"></a>Messaggio  
- Callback utilità di pianificazione thread di IO richiamato.  
+ Callback utilità di pianificazione Thread dei / o richiamato.  
   
 ## <a name="details"></a>Dettagli

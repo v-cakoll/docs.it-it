@@ -1,39 +1,25 @@
 ---
 title: 'Procedura: implementare ICommandSource'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d82a211f59fbdecdc932b7e57b242274e91cd5b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9308bfbbb7fff86ca5e93c1155cc29e4ee0d05f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-icommandsource"></a>Procedura: implementare ICommandSource
-In questo esempio viene illustrato come creare un comando di origine mediante l'implementazione <xref:System.Windows.Input.ICommandSource>.  Un comando di origine è un oggetto che sa come richiamare un comando.  Il <xref:System.Windows.Input.ICommandSource> interfaccia espone tre membri: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, e <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A>è il comando che verrà richiamato. Il <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> è un tipo di dati definito dall'utente che viene passato dall'origine del comando per il metodo che gestisce il comando. Il <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> è l'oggetto che viene eseguito il comando.  
+In questo esempio viene illustrato come creare un comando di origine mediante l'implementazione <xref:System.Windows.Input.ICommandSource>.  Un comando di origine è un oggetto che sa come richiamare un comando.  Il <xref:System.Windows.Input.ICommandSource> interfaccia espone tre membri: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, e <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> è il comando che verrà richiamato. Il <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> è un tipo di dati definito dall'utente che viene passato dall'origine del comando per il metodo che gestisce il comando. Il <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> è l'oggetto che viene eseguito il comando.  
   
  In questo esempio viene creata una classe che crea una sottoclasse di <xref:System.Windows.Controls.Slider> controllo e implementa <xref:System.Windows.Input.ICommandSource>.  
   
 ## <a name="example"></a>Esempio  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fornisce una serie di classi che implementano <xref:System.Windows.Input.ICommandSource>, ad esempio <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, e <xref:System.Windows.Controls.ListBoxItem>.  Un comando di origine definisce come richiama un comando.   <xref:System.Windows.Controls.Button>e <xref:System.Windows.Controls.MenuItem> richiamare un comando quando vengono selezionati.  Oggetto <xref:System.Windows.Controls.ListBoxItem> richiama un comando quando doppio clic. Queste classi diventano solo un comando di origine quando i relativi <xref:System.Windows.Input.ICommandSource.Command%2A> proprietà è impostata.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce una serie di classi che implementano <xref:System.Windows.Input.ICommandSource>, ad esempio <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, e <xref:System.Windows.Controls.ListBoxItem>.  Un comando di origine definisce come richiama un comando.   <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.MenuItem> richiamare un comando quando vengono selezionati.  Oggetto <xref:System.Windows.Controls.ListBoxItem> richiama un comando quando doppio clic. Queste classi diventano solo un comando di origine quando i relativi <xref:System.Windows.Input.ICommandSource.Command%2A> proprietà è impostata.  
   
  Per questo esempio, il comando viene richiamato quando il dispositivo di scorrimento viene spostato, o più precisamente, quando il <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> proprietà viene modificata.  
   

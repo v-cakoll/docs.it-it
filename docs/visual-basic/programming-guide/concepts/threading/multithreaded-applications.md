@@ -1,22 +1,12 @@
 ---
 title: Applicazioni multithreading (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 02b0444b-2e68-4f2c-bc28-28c046004017
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 19a4fe40e27a9edf8515e2734914aaf02d5e48b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab4b8d1c77ae75aee6f2cf459258766f88d86abe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multithreaded-applications-visual-basic"></a>Applicazioni multithreading (Visual Basic)
 Con Visual Basic, è possibile scrivere applicazioni che eseguono più attività contemporaneamente. Le attività potenzialmente in grado di compromettere altre attività possono essere eseguite su thread separati, un processo noto con il nome di *multithreading* o *threading Free*.  
@@ -50,7 +40,7 @@ newThread.Abort()
 ### <a name="thread-methods"></a>Metodi di thread  
  La tabella seguente descrive alcuni metodi che è possibile usare per controllare i singoli thread.  
   
-|Metodo|Azione|  
+|Metodo|Operazione|  
 |------------|------------|  
 |<xref:System.Threading.Thread.Start%2A>|Avvia l'esecuzione di un thread.|  
 |<xref:System.Threading.Thread.Sleep%2A>|Sospende un thread per un determinato periodo.|  

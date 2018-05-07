@@ -1,27 +1,15 @@
 ---
 title: Procedure consigliate in ambienti parzialmente attendibili
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817f7aeeb7adece1c375bb8b0cc455a17fb54185
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fca975ff4216384b970535273511eb07cd6ded68
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-trust-best-practices"></a>Procedure consigliate in ambienti parzialmente attendibili
-In questo argomento vengono illustrate le procedure consigliate durante l'esecuzione di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in un ambiente parzialmente attendibile.  
+In questo argomento descrive le procedure consigliate durante l'esecuzione di Windows Communication Foundation (WCF) in un ambiente parzialmente attendibile.  
   
 ## <a name="serialization"></a>Serializzazione  
  Applicare le procedure seguenti quando si utilizza <xref:System.Runtime.Serialization.DataContractSerializer> in un'applicazione parzialmente attendibile.  
@@ -56,23 +44,23 @@ In questo argomento vengono illustrate le procedure consigliate durante l'esecuz
 -   I metodi di istanza che implementano l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> devono essere `public`.  
   
 ## <a name="using-wcf-from-fully-trusted-platform-code-that-allows-calls-from-partially-trusted-callers"></a>Utilizzo di WCF da codice della piattaforma completamente attendibile che consente chiamate da chiamanti parzialmente attendibili  
- Nel modello di sicurezza parzialmente attendibile di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si presuppone che qualsiasi chiamante di una proprietà o un metodo pubblico di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sia in esecuzione nel contesto di sicurezza dall'accesso di codice (CAS, Code Access Security) dell'applicazione host. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si presuppone inoltre che esista un solo contesto di sicurezza dell'applicazione per ogni <xref:System.AppDomain> e che questo contesto sia stabilito al momento della creazione di <xref:System.AppDomain> da un host attendibile (ad esempio, da una chiamata a <xref:System.AppDomain.CreateDomain%2A> o da Gestione applicazioni ASP.NET).  
+ Il modello di sicurezza parzialmente attendibile WCF si presuppone che qualsiasi chiamante di un metodo pubblico di WCF o una proprietà sia in esecuzione nel contesto di sicurezza dall'accesso del codice dell'applicazione host. WCF si presuppone inoltre tale contesto di sicurezza di un'unica applicazione disponibile per ogni <xref:System.AppDomain>, e che questo contesto sia stabilito al <xref:System.AppDomain> ora di creazione da un host attendibile (ad esempio, da una chiamata a <xref:System.AppDomain.CreateDomain%2A> o da Gestione applicazioni ASP.NET).  
   
- Questo modello di sicurezza si applica alle applicazioni scritte dall'utente che non possono richiedere autorizzazioni CAS aggiuntive, ad esempio codice utente in esecuzione in un'applicazione ASP.NET con un livello di attendibilità medio. Tuttavia, per il codice della piattaforma completamente attendibile, ad esempio un assembly di terze parti installato nella Global Assembly Cache che accetta chiamate da codice parzialmente attendibile, occorre fare esplicitamente attenzione in caso di chiamata a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per conto di un'applicazione parzialmente attendibile al fine di evitare eventuali vulnerabilità della sicurezza a livello di applicazione.  
+ Questo modello di sicurezza si applica alle applicazioni scritte dall'utente che non possono richiedere autorizzazioni CAS aggiuntive, ad esempio codice utente in esecuzione in un'applicazione ASP.NET con un livello di attendibilità medio. Tuttavia, il codice di piattaforma completamente attendibile (ad esempio, un assembly di terze parti che viene installato nella global assembly cache e accetta le chiamate da codice parzialmente attendibile) occorre fare esplicitamente attenzione quando si chiama su WCF per conto di un'applicazione parzialmente attendibile evitare di introdurre vulnerabilità della sicurezza a livello di applicazione.  
   
- Il codice di attendibilità totale deve evitare di modificare l'autorizzazione CAS impostata del thread corrente (chiamando <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A> o <xref:System.Security.PermissionSet.Deny%2A>) prima di chiamare API [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per conto di codice parzialmente attendibile. L'asserzione, la negazione o la creazione di un contesto di autorizzazione specifico del thread che è indipendente dal contesto di sicurezza a livello di applicazione possono dare luogo a un comportamento imprevisto. A seconda dell'applicazione, questo comportamento può comportare vulnerabilità di sicurezza a livello di applicazione.  
+ Codice di attendibilità totale deve evitare di modificare l'autorizzazione CAS impostata del thread corrente (chiamando <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A>, o <xref:System.Security.PermissionSet.Deny%2A>) prima di chiamare le API WCF per conto di codice parzialmente attendibile. L'asserzione, la negazione o la creazione di un contesto di autorizzazione specifico del thread che è indipendente dal contesto di sicurezza a livello di applicazione possono dare luogo a un comportamento imprevisto. A seconda dell'applicazione, questo comportamento può comportare vulnerabilità di sicurezza a livello di applicazione.  
   
- Il codice che effettua chiamate a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizzando un contesto di autorizzazione specifico del thread deve essere preparato a gestire le situazioni seguenti che possono presentarsi:  
+ Codice che chiama in WCF usando un contesto di autorizzazione specifico del thread deve essere preparato a gestire le situazioni seguenti che possono verificarsi:  
   
 -   Il contesto di sicurezza specifico del thread potrebbe non essere mantenuto per la durata dell'operazione, il che comporta potenziali eccezioni di sicurezza.  
   
--   Il codice interno di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] così come qualsiasi callback fornito dall'utente potrebbero venire eseguiti in un contesto di sicurezza diverso da quello in cui è iniziata originariamente la chiamata. Questi contesti includono:  
+-   Codice WCF interno, così come qualsiasi callback fornito dall'utente possono essere eseguite in un contesto di sicurezza diverso da quello in cui è iniziata originariamente la chiamata. Questi contesti includono:  
   
     -   Il contesto di autorizzazione dell'applicazione.  
   
-    -   Qualsiasi contesto di autorizzazione specifico del thread creato in precedenza da altri thread dell'utente utilizzato per eseguire chiamate a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nel corso della durata di <xref:System.AppDomain> attualmente in esecuzione.  
+    -   Qualsiasi contesto di autorizzazione specifico del thread creato in precedenza da altri thread dell'utente utilizzato per effettuare chiamate nel WCF tutta la durata dell'esecuzione <xref:System.AppDomain>.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] garantisce che il codice parzialmente attendibile non possa ottenere autorizzazioni di attendibilità totale a meno che tali autorizzazioni non vengano asserite da un componente completamente attendibile prima di chiamare le API pubbliche di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Non garantisce, tuttavia, che gli effetti dell'asserzione di attendibilità totale siano isolati in un thread, operazione o azione dell'utente specifico.  
+ WCF garantisce che codice parzialmente attendibile non è possibile ottenere le autorizzazioni di attendibilità, a meno che tali autorizzazioni vengano asserite da un componente completamente attendibile prima di chiamare nelle API pubbliche di WCF. Non garantisce, tuttavia, che gli effetti dell'asserzione di attendibilità totale siano isolati in un thread, operazione o azione dell'utente specifico.  
   
  Come procedura consigliata, evitare di creare un contesto di autorizzazione specifico del thread chiamando <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A> o <xref:System.Security.PermissionSet.Deny%2A>. In alternativa, concedere o negare il privilegio all'applicazione stessa, così che non sia necessario <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.Deny%2A> o <xref:System.Security.PermissionSet.PermitOnly%2A>.  
   

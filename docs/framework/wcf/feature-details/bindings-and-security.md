@@ -1,45 +1,33 @@
 ---
 title: Associazioni e protezione
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
 - WCF security
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-security"></a>Associazioni e protezione
-Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offrono un modo rapido per programmare applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Tutte le associazioni, tranne una, dispongono di uno schema di sicurezza predefinito attivo. In questo argomento viene illustrato come selezionare l'associazione corretta per la sicurezza desiderata.  
+Le associazioni fornite dal sistema incluse con Windows Communication Foundation (WCF) offrono un modo rapido per programmare le applicazioni WCF. Tutte le associazioni, tranne una, dispongono di uno schema di sicurezza predefinito attivo. In questo argomento viene illustrato come selezionare l'associazione corretta per la sicurezza desiderata.  
   
- Per una panoramica di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sicurezza, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). Per ulteriori informazioni sulla programmazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uso di associazioni, vedere [programmazione sicurezza WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Per una panoramica della sicurezza WCF, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). Per ulteriori informazioni sulla programmazione usando le associazioni WCF, vedere [programmazione sicurezza WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Se è già stata selezionata un'associazione, è possibile trovare ulteriori informazioni sui comportamenti in fase di esecuzione associati di sicurezza in [comportamenti di sicurezza](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Alcune funzionalità di sicurezza non sono programmabili tramite le associazioni fornite dal sistema. Per un maggiore controllo utilizzando un'associazione personalizzata, vedere [funzionalità di sicurezza con associazioni personalizzate](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Funzionalità di sicurezza delle associazioni  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include numerose associazioni fornite dal sistema che soddisfano la maggior parte delle necessità. È inoltre possibile creare un'associazione personalizzata se una determinata associazione non è sufficiente. Per un elenco di associazioni fornite dal sistema, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md). Per ulteriori informazioni sulle associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ WCF include numerose associazioni fornite dal sistema che soddisfano la maggior parte delle proprie esigenze. È inoltre possibile creare un'associazione personalizzata se una determinata associazione non è sufficiente. Per un elenco di associazioni fornite dal sistema, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md). Per ulteriori informazioni sulle associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- Ogni associazione in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si presenta in due forme: come API e come elemento XML utilizzato in un file di configurazione. Ad esempio, il `WSHttpBinding` (API) ha una controparte nel [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+ Ogni associazione in WCF presenta due forme: come API e come elemento XML utilizzato in un file di configurazione. Ad esempio, il `WSHttpBinding` (API) ha una controparte nel [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  Nella sezione seguente vengono elencate entrambe le forme per ogni associazione e vengono riepilogate le funzionalità di sicurezza.  
   
@@ -149,7 +137,7 @@ Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../in
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  Nel codice, utilizzare il <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe; in configurazione, utilizzare il [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
   
- Questa associazione è ottimizzata per la creazione di client e servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che interagiscono con endpoint Accodamento messaggi Microsoft (MSMQ) non [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Questa associazione è ottimizzata per la creazione di client WCF e servizi che interagiscono con endpoint non - WCF Microsoft Message Queuing MSMQ.  
   
  Per impostazione predefinita, questa associazione utilizza la sicurezza del trasporto e fornisce le caratteristiche di sicurezza seguenti:  
   
@@ -162,7 +150,7 @@ Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../in
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  Nel codice, utilizzare il <xref:System.ServiceModel.NetMsmqBinding> classe; in configurazione, utilizzare il [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
   
- Questa associazione viene utilizzata per la creazione di servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che richiedono il supporto di messaggi in coda MSMQ.  
+ Questa associazione viene utilizzata per l'utilizzo durante la creazione di servizi WCF che richiedono MSMQ supporto di messaggi in coda.  
   
  Per impostazione predefinita, questa associazione utilizza la sicurezza del trasporto e fornisce le caratteristiche di sicurezza seguenti:  
   
@@ -232,7 +220,7 @@ Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../in
 |----------|-----------------|  
 |Nessuno|Consente al servizio di interagire con client anonimi.|  
 |WINDOWS|Consente gli scambi di messaggi SOAP nel contesto autenticato di una credenziale di Windows.|  
-|UserName|Consente al servizio di richiedere che l'autenticazione del client sia eseguita tramite una credenziale UserName. Si noti che quando la modalità di sicurezza è impostata su `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta l'invio di un digest delle password, né la derivazione delle chiavi basata su password e neppure l'utilizzo di tali chiavi per implementare la modalità di sicurezza dei messaggi. Di conseguenza, quando si utilizzano credenziali di tipo nome utente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede che il trasporto sia protetto.|  
+|UserName|Consente al servizio di richiedere che l'autenticazione del client sia eseguita tramite una credenziale UserName. Si noti che quando la modalità di sicurezza è impostata su `TransportWithMessageCredential`, WCF non supporta l'invio di una password digest né la derivazione delle chiavi usando la password e l'uso di tali chiavi per la protezione della modalità messaggio. Di conseguenza, WCF richiede che il trasporto sia protetto quando si usano credenziali nome utente.|  
 |Certificato|Consente al servizio di richiedere che l'autenticazione del client si basi su un certificato.|  
 |IssuedToken|Consente al servizio di utilizzare un servizio token di sicurezza per fornire un token personalizzato.|  
   

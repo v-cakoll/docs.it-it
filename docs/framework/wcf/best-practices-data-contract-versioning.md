@@ -1,37 +1,23 @@
 ---
 title: 'Procedure consigliate: controllo delle versioni del contratto dati'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts
 - service contracts
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedure consigliate: controllo delle versioni del contratto dati
 In questo argomento vengono elencate le procedure consigliate per la creazione di contratti dati che possono evolvere facilmente nel tempo. Per ulteriori informazioni sui contratti dati, vedere gli argomenti in [utilizzando i contratti dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Note sulla convalida dello schema  
- Nella valutazione del controllo delle versioni per il contratto dati, è importante notare che lo schema del contratto dati esportato da [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] non supporta il controllo delle versioni se non per il fatto che gli elementi vengono contrassegnati come facoltativi per impostazione predefinita.  
+ Nella valutazione del controllo delle versioni del contratto dati, è importante notare che lo schema di contratto dati esportato da Windows Communication Foundation (WCF) non supporta il controllo delle versioni, il fatto che gli elementi sono contrassegnati come facoltativi per impostazione predefinita.  
   
  Di conseguenza, anche lo scenario di controllo delle versioni più comune, quale l'aggiunta di un nuovo membro dati, non può essere implementato agevolmente rispetto a un schema specificato. Le versioni più recenti di un contratto dati (ad esempio con un nuovo membro dati) non vengono convalidate usando lo schema obsoleto.  
   

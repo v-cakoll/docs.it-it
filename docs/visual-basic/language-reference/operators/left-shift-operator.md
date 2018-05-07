@@ -1,12 +1,6 @@
 ---
-title: '&lt;&lt;Operatore (Visual Basic)'
+title: '&lt;&lt; Operatore (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<<
 helpviewer_keywords:
@@ -14,16 +8,13 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 56cfb227f7e5c68de802c1f2cfb842a770f65ae0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bdec015309526aeac2499bc7b459b6ccab6f1e4d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="ltlt-operator-visual-basic"></a>&lt;&lt;Operatore (Visual Basic)
+# <a name="ltlt-operator-visual-basic"></a>&lt;&lt; Operatore (Visual Basic)
 Esegue uno spostamento a sinistra aritmetico in uno schema di bit.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -47,12 +38,12 @@ result = pattern << amount
   
  Per evitare lo spostamento di un bit più che il risultato può contenere, Visual Basic nasconde il valore di `amount` con una maschera di dimensioni che corrisponde al tipo di dati di `pattern`. L'operazione di AND binaria di questi valori viene utilizzato per l'entità dello spostamento. Di seguito sono riportate le maschere di dimensioni:  
   
-|Tipo di dati`pattern`|Maschera di dimensioni (decimale)|Maschera di dimensioni (esadecimale)|  
+|Tipo di dati `pattern`|Maschera di dimensioni (decimale)|Maschera di dimensioni (esadecimale)|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`, `Byte`|7|& H00000007|  
-|`Short`, `UShort`|15|& H0000000F|  
-|`Integer`, `UInteger`|31|& H0000001F|  
-|`Long`, `ULong`|63|& H0000003F|  
+|`SByte`, `Byte`|7|&AMP; H00000007|  
+|`Short`, `UShort`|15|&AMP; H0000000F|  
+|`Integer`, `UInteger`|31|&AMP; H0000001F|  
+|`Long`, `ULong`|63|&AMP; H0000003F|  
   
  Se `amount` è zero, il valore di `result` è identico al valore di `pattern`. Se `amount` è negativo, verrà considerato come un valore senza segno e nascosto con la maschera di dimensioni appropriate.  
   
@@ -68,15 +59,15 @@ result = pattern << amount
   
  I risultati dell'esempio precedente sono come segue:  
   
--   `result1`è 192 (0000 0000 1100 0000).  
+-   `result1` è 192 (0000 0000 1100 0000).  
   
--   `result2`è 3072 (0000 1100 0000 0000).  
+-   `result2` è 3072 (0000 1100 0000 0000).  
   
--   `result3`è compreso tra -32768 (1000 0000 0000 0000).  
+-   `result3` è compreso tra -32768 (1000 0000 0000 0000).  
   
--   `result4`è 384 (0000 0001 1000 0000).  
+-   `result4` è 384 (0000 0001 1000 0000).  
   
--   `result5`è 0 (spostato 15 posizioni a sinistra).  
+-   `result5` è 0 (spostati 15 cifre a sinistra).  
   
  L'entità dello spostamento per `result4` viene calcolata come 17 e 15, pari a 1.  
   

@@ -1,26 +1,15 @@
 ---
-title: "Procedura: Creare un modello di attività personalizzato"
-ms.custom: 
+title: 'Procedura: Creare un modello di attività personalizzato'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 772ad2a7ea56001bf3ecba089e62d6bc0f59e5ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b455f8a763859d31405380e25cd7516856e8da2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Procedura: Creare un modello di attività personalizzato
-I modelli di attività personalizzati vengono usati per personalizzare la configurazione delle attività, incluse CompositeActivity personalizzate, in modo che gli utenti non debbano creare individualmente ciascuna attività e configurare manualmente le relative proprietà e altre impostazioni. Questi modelli personalizzati possono essere resi disponibili nel **della casella degli strumenti** sul [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] o da una finestra di progettazione ospitata nuovamente, da cui gli utenti possono trascinarli nell'area di progettazione preconfigurata. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]viene fornito con ottimi esempi di tali modelli: il [Progettazione modelli SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) e [progettazione del modello ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) nel [progettazioni delle attività di messaggistica](/visualstudio/workflow-designer/messaging-activity-designers) categoria.  
+I modelli di attività personalizzati vengono usati per personalizzare la configurazione delle attività, incluse CompositeActivity personalizzate, in modo che gli utenti non debbano creare individualmente ciascuna attività e configurare manualmente le relative proprietà e altre impostazioni. Questi modelli personalizzati possono essere resi disponibili nel **della casella degli strumenti** sul [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] o da una finestra di progettazione ospitata nuovamente, da cui gli utenti possono trascinarli nell'area di progettazione preconfigurata. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] viene fornito con ottimi esempi di tali modelli: il [Progettazione modelli SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) e il [progettazione del modello ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) nel [messaggistica gli ActivityDesigner](/visualstudio/workflow-designer/messaging-activity-designers) categoria.  
   
  La prima procedura in questo argomento viene descritto come creare un modello di attività personalizzata per un **ritardo** attività mentre la seconda procedura viene descritto brevemente come renderlo disponibile in un [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] per verificare che il modello personalizzato funzioni.  
   
@@ -30,7 +19,7 @@ I modelli di attività personalizzati vengono usati per personalizzare la config
   
 1.  Avviare [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  Nel **File** dal menu **New**, quindi selezionare **progetto**.  
+2.  Nel menu **File** scegliere **Nuovo** e quindi selezionare **Progetto**.  
   
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   

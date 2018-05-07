@@ -1,28 +1,19 @@
 ---
-title: Il tipo di variabile &#39; &lt;variablename&gt;&#39; non riuscita perché è associato a un campo in un ambito contenitore
+title: Tipo per la variabile &#39; &lt;variablename&gt; &#39; non riuscita perché è associato a un campo in un ambito contenitore
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42110
 - bc42110
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 39968407f4de5436df324320c99dede4d72e2808
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb423e8dcced6956eb86d484607915030c91412b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Il tipo di variabile &#39; &lt;variablename&gt;&#39; non riuscita perché è associato a un campo in un ambito contenitore
+# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Tipo per la variabile &#39; &lt;variablename&gt; &#39; non riuscita perché è associato a un campo in un ambito contenitore
 Il tipo di variabile '\<variablename >' non verrà dedotto perché associato a un campo in un ambito contenitore. Modificare il nome di '\<variablename >', oppure utilizzare il nome completo (ad esempio, 'Variablename' o 'MyBase').  
   
  Una variabile di controllo del ciclo nel codice ha lo stesso nome di un campo della classe o altro ambito di inclusione. Poiché la variabile di controllo viene utilizzata senza un `As` clausola, è associato al campo nell'ambito di inclusione e il compilatore non crea una nuova variabile per tale né dedurre il tipo.  

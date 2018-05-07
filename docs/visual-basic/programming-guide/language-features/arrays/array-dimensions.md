@@ -1,12 +1,6 @@
 ---
 title: Dimensioni di matrice in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - dimensions, arrays
 - arrays [Visual Basic], dimensions
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21e170ca5942862a26e05428fffaea7d1e875e19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf295288dd034d744dceb71b5c58278be5cc2a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensioni di matrice in Visual Basic
 Oggetto *dimensione* indica una direzione in cui è possibile variare la specifica di elementi della matrice. Matrice contenente le vendite totali per ogni giorno del mese ha una dimensione (giorno del mese). Matrice contenente le vendite totali per reparto per ogni giorno del mese ha due dimensioni (il numero di reparto e il giorno del mese). Il numero di dimensioni è una matrice viene chiamato il relativo *rank*.  
@@ -35,13 +26,13 @@ Oggetto *dimensione* indica una direzione in cui è possibile variare la specifi
   
  Le illustrazioni seguenti mostrano la struttura concettuale di matrici con intervalli diversi. Ogni elemento illustrato nelle figure vengono illustrati i valori di indice di diritti di accesso. Ad esempio, si può accedere al primo elemento della seconda riga della matrice bidimensionale specificando gli indici `(1, 0)`.  
   
- ![Diagramma grafico di una finestra di &#45; matrice dimensionale](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
+ ![Diagramma grafico di una&#45;una matrice unidimensionale](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
 Matrice unidimensionale  
   
- ![Diagramma grafico di due &#45; matrice dimensionale](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
+ ![Diagramma grafico di due&#45;una matrice unidimensionale](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
 matrice bidimensionale  
   
- ![Diagramma grafico di tre &#45; matrice dimensionale](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
+ ![Diagramma grafico di tre&#45;una matrice unidimensionale](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
 Matrice tridimensionale  
   
 ### <a name="one-dimension"></a>Una dimensione  

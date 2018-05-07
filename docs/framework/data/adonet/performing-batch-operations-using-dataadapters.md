@@ -1,27 +1,15 @@
 ---
 title: Esecuzione di operazioni batch tramite oggetti DataAdapter
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e5c584bcd825e390b24da6c95ecb159a8280c639
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e585d8a3c21f4a256a2e706389fc9f8adc7900da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Esecuzione di operazioni batch tramite oggetti DataAdapter
 Il supporto batch in ADO.NET consente a un tipo <xref:System.Data.Common.DataAdapter> di raggruppare le operazioni INSERT, UPDATE e DELETE da un tipo <xref:System.Data.DataSet> o <xref:System.Data.DataTable> e di inviarle al server in batch, anziché inviare una singola operazione alla volta. La riduzione nel numero di percorsi di andata e ritorno al server determina in genere un notevole miglioramento delle prestazioni. Gli aggiornamenti batch sono supportati per i provider di dati .NET di SQL Server (<xref:System.Data.SqlClient>) e Oracle (<xref:System.Data.OracleClient>).  
@@ -137,7 +125,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>Gestione di eventi ed errori relativi all'aggiornamento batch  
- Il **DataAdapter** dispone di due eventi relativi all'aggiornamento: **RowUpdating** e **RowUpdated**. In versioni precedenti di ADO.NET quando l'elaborazione batch è disabilitata, ciascuno di questi eventi viene generato una volta per ogni riga elaborata. **RowUpdating** viene generata prima che si verifica l'aggiornamento, e **RowUpdated** viene generato dopo aver completato l'aggiornamento del database.  
+ Il **DataAdapter** dispone di due eventi relativi all'aggiornamento: **RowUpdating** e **RowUpdated**. In versioni precedenti di ADO.NET quando l'elaborazione batch è disabilitata, ciascuno di questi eventi viene generato una volta per ogni riga elaborata. **RowUpdating** viene generata prima che si verifica l'aggiornamento, e **RowUpdated** viene generato dopo l'aggiornamento del database è stata completata.  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>Modifiche al comportamento degli eventi con aggiornamenti batch  
  Quando l'elaborazione batch è abilitata, in un'unica operazione di database vengono aggiornate più righe. Pertanto, si verifica un solo evento `RowUpdated` per ogni batch, mentre l'evento `RowUpdating` si verifica per ogni riga elaborata. Quando l'elaborazione batch è disabilitata, i due eventi vengono generati con interfoliazione uno-a-uno, dove un evento `RowUpdating` e un evento `RowUpdated` vengono generati per una riga e un evento `RowUpdating` e un evento `RowUpdated` per la riga successiva, fino all'elaborazione di tutte le righe.  

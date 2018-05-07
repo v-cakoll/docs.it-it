@@ -1,29 +1,17 @@
 ---
 title: Riepilogo della tecnologia ToolStrip
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], technology summary
 - status bars [Windows Forms], technology summary
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4777a6cb30f641faf2305bc6d8bca55d243c94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c4f7b13590457623bbdfd6e4c07317f3a0285fd0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrip-technology-summary"></a>Riepilogo della tecnologia ToolStrip
 Questo argomento riepiloga le informazioni relative al controllo `ToolStrip` e alle classi che ne supportano l'uso.  
@@ -89,9 +77,9 @@ Questo argomento riepiloga le informazioni relative al controllo `ToolStrip` e a
   
 -   [Editor raccolta Items di MenuStrip](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
   
--   [Editor raccolta Items di StatusStrip](http://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
+-   [Editor della raccolta Items StatusStrip](http://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
   
--   [Editor raccolta Items di ContextMenuStrip](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
+-   [Editor della raccolta Items ContextMenuStrip](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
   
 -   [Editor raccolta Items di ToolStrip](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
   
@@ -115,11 +103,11 @@ Questo argomento riepiloga le informazioni relative al controllo `ToolStrip` e a
 ## <a name="rafting-and-docking"></a>Raggruppamento e ancoraggio  
  È possibile raggruppare, ancorare o posizionare in modo assoluto i controlli <xref:System.Windows.Forms.ToolStrip>. Gli elementi <xref:System.Windows.Forms.ToolStrip> vengono disposti in base alla proprietà <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> del contenitore.  
   
- *Raggruppamento verticale/orizzontale* è la possibilità di barre degli strumenti di condividere lo spazio orizzontale o verticale. Un Windows Form può contenere un oggetto <xref:System.Windows.Forms.ToolStripContainer> che a sua volta contiene dei pannelli sui lati sinistro, destro, superiore e inferiore del form per posizionare e raggruppare i controlli <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.StatusStrip>. Più controlli <xref:System.Windows.Forms.ToolStrip> vengono raggruppati verticalmente se li si inserisce nell'oggetto <xref:System.Windows.Forms.ToolStripContainer> di sinistra o di destra. Vengono raggruppati orizzontalmente se li si inserisce nell'oggetto <xref:System.Windows.Forms.ToolStripContainer> in alto o in basso. È possibile usare l'oggetto <xref:System.Windows.Forms.ToolStripContentPanel> centrale di <xref:System.Windows.Forms.ToolStripContainer> per posizionare i tradizionali controlli sul form.  
+ *Raggruppamento verticale/orizzontale* è la capacità delle barre degli strumenti di condividere lo spazio orizzontale o verticale. Un Windows Form può contenere un oggetto <xref:System.Windows.Forms.ToolStripContainer> che a sua volta contiene dei pannelli sui lati sinistro, destro, superiore e inferiore del form per posizionare e raggruppare i controlli <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.StatusStrip>. Più controlli <xref:System.Windows.Forms.ToolStrip> vengono raggruppati verticalmente se li si inserisce nell'oggetto <xref:System.Windows.Forms.ToolStripContainer> di sinistra o di destra. Vengono raggruppati orizzontalmente se li si inserisce nell'oggetto <xref:System.Windows.Forms.ToolStripContainer> in alto o in basso. È possibile usare l'oggetto <xref:System.Windows.Forms.ToolStripContentPanel> centrale di <xref:System.Windows.Forms.ToolStripContainer> per posizionare i tradizionali controlli sul form.  
   
  Alcuni o tutti i controlli <xref:System.Windows.Forms.ToolStripContainer> sono direttamente selezionabili in fase di progettazione e possono essere eliminati. <xref:System.Windows.Forms.ToolStripContainer> è estendibile e comprimibile e viene ridimensionato con i controlli in esso contenuti.  
   
- *Ancoraggio* è la specifica di semplice percorso un controllo sinistra, destra, top o sul lato inferiore del form.  
+ *Ancoraggio* è la specifica di semplice percorso un controllo sinistra, destra, top o lato inferiore del form.  
   
  Il vantaggio del raggruppamento rispetto all'ancoraggio è che i controlli <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.StatusStrip> possono condividere lo spazio orizzontale o verticale con altri controlli.  
   

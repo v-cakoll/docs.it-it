@@ -1,32 +1,20 @@
 ---
 title: Protezione del trasporto con un client anonimo
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b52a32db1f1ac02f9204198a4cda5d4cb157486
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ad22abe84289cac8f57bebb564ee129bcc2334c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Protezione del trasporto con un client anonimo
-In questo scenario [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzata la protezione del trasporto (HTTPS) per garantirne la riservatezza e l'integrità. È necessario che il server sia autenticato con un certificato SSL (Secure Sockets Layer) e che il client ritenga attendibile il certificato del server. Il client non viene autenticato da alcun meccanismo ed è pertanto anonimo.  
+Questo scenario Windows Communication Foundation (WCF) utilizza la sicurezza del trasporto (HTTPS) per garantire la riservatezza e integrità. È necessario che il server sia autenticato con un certificato SSL (Secure Sockets Layer) e che il client ritenga attendibile il certificato del server. Il client non viene autenticato da alcun meccanismo ed è pertanto anonimo.  
   
  Per un'applicazione di esempio, vedere [la sicurezza del trasporto WS](../../../../docs/framework/wcf/samples/ws-transport-security.md). Per ulteriori informazioni sulla sicurezza del trasporto, vedere [Cenni preliminari sulla sicurezza di trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
@@ -38,7 +26,7 @@ In questo scenario [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene
 |--------------------|-----------------|  
 |Modalità di sicurezza|Trasporto|  
 |Interoperabilità|Con i servizi Web e i client esistenti|  
-|Autenticazione (server)<br /><br /> Autenticazione (client)|Yes<br /><br /> A livello di applicazione (nessun supporto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] )|  
+|Autenticazione (server)<br /><br /> Autenticazione (client)|Yes<br /><br /> Livello di applicazione (Nessun supporto WCF)|  
 |Integrità|Sì|  
 |Riservatezza|Sì|  
 |Trasporto|HTTPS|  

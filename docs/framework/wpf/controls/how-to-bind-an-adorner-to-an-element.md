@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: associare uno strumento decorativo visuale a un elemento'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - UIElements [WPF], binding adorners to
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3c657cde9da19f8ebc6b6d4d05077ed027781b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb419ee5a57e81e7e3bc72ae04fd200703b80cd3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>Procedura: associare uno strumento decorativo visuale a un elemento
 In questo esempio viene illustrato come associare a livello di codice uno strumento decorativo di un oggetto <xref:System.Windows.UIElement>.  
@@ -32,7 +20,7 @@ In questo esempio viene illustrato come associare a livello di codice uno strume
 ## <a name="example"></a>Esempio  
  Per associare un adorner a un particolare <xref:System.Windows.UIElement>, seguire questi passaggi:  
   
-1.  Chiamare il `static` metodo <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> per ottenere un <xref:System.Windows.Documents.AdornerLayer> dell'oggetto per il <xref:System.Windows.UIElement> da decorare. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>descrive la struttura ad albero visuale, inizia in corrispondenza **UIElement**e restituisce il primo livello dello strumento decorativo visuale trovato. (se non viene trovato alcun livello dello strumento decorativo, il metodo restituisce null).  
+1.  Chiamare il `static` metodo <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> per ottenere un <xref:System.Windows.Documents.AdornerLayer> dell'oggetto per il <xref:System.Windows.UIElement> da decorare. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> risale la struttura ad albero visuale, inizia in corrispondenza **UIElement**e restituisce il primo livello dell'adorner trova. (se non viene trovato alcun livello dello strumento decorativo, il metodo restituisce null).  
   
 2.  Chiamare il <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodo per associare lo strumento decorativo di destinazione **UIElement**.  
   

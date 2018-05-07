@@ -1,12 +1,6 @@
 ---
 title: Caratteristiche di elementi dichiarati (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], lifetime
 - access levels, declared elements
@@ -19,19 +13,16 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 26ee27d3a1d085c6ab45ae850dbdac700aa208a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26c9ec247a0b848d46df063bc7b85ceec30d81c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Caratteristiche di elementi dichiarati (Visual Basic)
 Oggetto *caratteristica* di un elemento dichiarato è un aspetto di tale elemento che influisce sulla modalità di interazione con il codice. Ogni elemento dichiarato con uno o più delle seguenti caratteristiche associate:  
   
--   *Tipo di dati* : i valori che può contenere l'elemento e la modalità di archiviazione. Per ulteriori informazioni, vedere [tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+-   *Tipo di dati* , ovvero i valori che può contenere l'elemento, e come archivia tali valori. Per ulteriori informazioni, vedere [tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
 -   *Durata* , ovvero il periodo di tempo di esecuzione durante il quale l'elemento è disponibile per l'utilizzo. Per ulteriori informazioni, vedere [durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
@@ -44,20 +35,20 @@ Oggetto *caratteristica* di un elemento dichiarato è un aspetto di tale element
   
 |Elemento|Tipo di dati|Durata|Ambito <sup>1</sup>|Livello di accesso|  
 |-------------|---------------|--------------|------------------------|------------------|  
-|Variabile|Sì|Sì|Sì|Sì|  
-|Costante|Sì|No|Sì|Sì|  
-|Enumerazione|Sì|No|Sì|Sì|  
-|Struttura|No|No|Sì|Sì|  
-|Proprietà|Sì|Sì|Sì|Sì|  
-|Metodo|No|Sì|Sì|Sì|  
-|Procedure (`Sub` o `Function`)|No|Sì|Sì|Sì|  
-|Parametro di routine|Sì|Sì|Sì|No|  
-|Valore restituito di funzione|Sì|Sì|Sì|No|  
-|Operatore|Sì|No|Sì|Sì|  
-|Interfaccia|No|No|Sì|Sì|  
-|Classe|No|No|Sì|Sì|  
-|Evento|No|No|Sì|Sì|  
-|Delegato|No|No|Sì|Sì|  
+|Variabile|Yes|Sì|Sì|Yes|  
+|Costante|Yes|No|Sì|Yes|  
+|Enumerazione|Yes|No|Sì|Yes|  
+|Struttura|No|No|Sì|Yes|  
+|Proprietà|Yes|Sì|Sì|Yes|  
+|Metodo|No|Sì|Sì|Yes|  
+|Procedure (`Sub` o `Function`)|No|Sì|Sì|Yes|  
+|Parametro di routine|Yes|Sì|Sì|No|  
+|Valore restituito di funzione|Yes|Sì|Sì|No|  
+|Operatore|Yes|No|Sì|Yes|  
+|Interfaccia|No|No|Sì|Yes|  
+|Classe|No|No|Sì|Yes|  
+|event|No|No|Sì|Yes|  
+|delegato|No|No|Sì|Yes|  
   
  <sup>1</sup> ambito è talvolta detta *visibilità*.  
   

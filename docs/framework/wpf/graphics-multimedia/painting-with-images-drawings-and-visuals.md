@@ -1,13 +1,6 @@
 ---
 title: Disegnare con oggetti Image, Drawing e Visual
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abb5733ed54ea430ba161db5ea2dcb33e99298ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Disegnare con oggetti Image, Drawing e Visual
 In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, e <xref:System.Windows.Media.VisualBrush> oggetti per disegnare un'area con un'immagine, un <xref:System.Windows.Media.Drawing>, o un <xref:System.Windows.Media.Visual>.  
@@ -69,15 +57,15 @@ Oggetti disegnati con un oggetto DrawingBrush
   
  Oggetto <xref:System.Windows.Media.DrawingBrush> disegna un'area con un <xref:System.Windows.Media.Drawing> oggetto. Oggetto <xref:System.Windows.Media.Drawing> descrive il contenuto visibile, ad esempio una forma, bitmap, video o una riga di testo. Tipi diversi di disegni descrivono tipi diversi di contenuto. L'elenco seguente contiene i vari tipi di oggetti Drawing.  
   
--   <xref:System.Windows.Media.GeometryDrawing>-Consente di disegnare una forma.  
+-   <xref:System.Windows.Media.GeometryDrawing> – Disegna una forma.  
   
--   <xref:System.Windows.Media.ImageDrawing>-Consente di disegnare un'immagine.  
+-   <xref:System.Windows.Media.ImageDrawing> -Consente di disegnare un'immagine.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>-Consente di disegnare il testo.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> – Disegna un testo.  
   
--   <xref:System.Windows.Media.VideoDrawing>-Consente di riprodurre un file audio o video.  
+-   <xref:System.Windows.Media.VideoDrawing> -Consente di riprodurre un file audio o video.  
   
--   <xref:System.Windows.Media.DrawingGroup>: Consente di eseguire altri disegni. Usare un gruppo di disegni per combinare altri disegni in un unico disegno composto.  
+-   <xref:System.Windows.Media.DrawingGroup> : Consente di eseguire altri disegni. Usare un gruppo di disegni per combinare altri disegni in un unico disegno composto.  
   
  Per ulteriori informazioni su <xref:System.Windows.Media.Drawing> degli oggetti, vedere il [panoramica sugli oggetti disegno](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
@@ -122,7 +110,7 @@ Oggetti disegnati con un oggetto DrawingBrush
 ## <a name="example-create-a-reflection"></a>Esempio: creare una reflection  
  Nell'esempio precedente è stato illustrato come creare un nuovo <xref:System.Windows.Media.Visual> da utilizzare come sfondo. È inoltre possibile utilizzare un <xref:System.Windows.Media.VisualBrush> per visualizzare un elemento visivo esistente; questa funzionalità consente di produrre effetti visivi interessanti, ad esempio reflection e ingrandimento. Nell'esempio seguente viene utilizzato un <xref:System.Windows.Media.VisualBrush> per creare un riflesso di un <xref:System.Windows.Controls.Border> che contiene diversi elementi. L'immagine seguente illustra l'output generato dall'esempio.  
   
- ![Un oggetto visivo di riflesse](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
+ ![Oggetto riflesse oggetto visivo](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
 Oggetto Visual riflesso  
   
  [!code-csharp[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/visualbrush_markup_snip/CSharp/ReflectionExample.cs#graphicsmmvisualbrushreflectionexamplewholepage)]
@@ -133,7 +121,7 @@ Oggetto Visual riflesso
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>Funzionalità degli oggetti TileBrush  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, e <xref:System.Windows.Media.VisualBrush> sono tipi di <xref:System.Windows.Media.TileBrush> oggetti. <xref:System.Windows.Media.TileBrush>gli oggetti forniscono un elevato livello di controllo sulla modalità di disegno di un'area con un'immagine, disegno o di visual. Anziché ad esempio disegnare un'area con una sola immagine estesa, è possibile usare una serie di immagini affiancate che creano un modello.  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, e <xref:System.Windows.Media.VisualBrush> sono tipi di <xref:System.Windows.Media.TileBrush> oggetti. <xref:System.Windows.Media.TileBrush> gli oggetti forniscono un elevato livello di controllo sulla modalità di disegno di un'area con un'immagine, disegno o di visual. Anziché ad esempio disegnare un'area con una sola immagine estesa, è possibile usare una serie di immagini affiancate che creano un modello.  
   
  Oggetto <xref:System.Windows.Media.TileBrush> costituito da tre componenti principali: il contenuto, sezioni e l'area di output.  
   
@@ -156,5 +144,5 @@ Componenti di un oggetto TileBrush con più tessere
  [Cenni preliminari sugli oggetti Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
  [Panoramica sulle maschere di opacità](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
  [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Esempio di ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005)  
+ [Esempio ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [Esempio VisualBrush](http://go.microsoft.com/fwlink/?LinkID=160049)

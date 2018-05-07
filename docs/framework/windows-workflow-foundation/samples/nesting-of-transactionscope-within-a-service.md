@@ -1,23 +1,12 @@
 ---
 title: Annidamento di TransactionScope all'interno di un servizio
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e7e1ba64-1384-4eba-add8-415636e2d6d0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c4e51f65df010f466f43c2018d9b1eec6e4ca58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c556df417548ab348d1dd5bc642928ae68d8878
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>Annidamento di TransactionScope all'interno di un servizio
 Questo esempio è costituito da due scenari che vengono eseguiti per illustrare come gestire le istanze dell'attività <xref:System.Activities.Statements.TransactionScope> all'interno di un servizio. Innanzitutto viene iniziata la transazione usando l'attività <xref:System.Activities.Statements.TransactionScope> per creare una nuova transazione nel client e l'attività <xref:System.ServiceModel.Activities.TransactedReceiveScope> per ricevere e definire l'ambito della durata della transazione sul server. Il primo scenario all'interno del servizio esegue un'attività <xref:System.Activities.Statements.TransactionScope> secondaria per dimostrare l'annidamento delle attività <xref:System.Activities.Statements.TransactionScope> all'interno del servizio. Nel secondo scenario viene illustrato il rispetto dei timeout all'interno delle attività <xref:System.Activities.Statements.TransactionScope> annidate.  
@@ -43,6 +32,6 @@ Questo esempio è costituito da due scenari che vengono eseguiti per illustrare 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\TRSComposability`

@@ -1,22 +1,12 @@
 ---
-title: "Procedura: effettuare più richieste Web in parallelo tramite Async e Await (Visual Basic)"
-ms.custom: 
+title: 'Procedura: effettuare più richieste Web in parallelo tramite Async e Await (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9b96e8acf9f5453ac035769ea7b279c4fedadfb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1b98a0f29409fa49af1c9c8f7c91f2170981f7cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Procedura: effettuare più richieste Web in parallelo tramite Async e Await (Visual Basic)
 In un metodo asincrono le attività vengono avviate al momento della creazione. Il [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operatore viene applicato all'attività in corrispondenza del punto nel metodo in cui è Impossibile continuare l'elaborazione fino al completamento dell'attività. Spesso un'attività viene messa in attesa al momento della creazione, come illustrato nell'esempio seguente.  

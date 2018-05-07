@@ -1,12 +1,6 @@
 ---
-title: "Differenze tra proprietà e variabili in Visual Basic"
-ms.custom: 
+title: Differenze tra proprietà e variabili in Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
 - variables [Visual Basic]
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cb30972e2b49a7005749f57c0223b9fa493cde52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 126e4baa2752ba7ccb5e8ff7b06a44839c1d0af2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Differenze tra proprietà e variabili in Visual Basic
 Le variabili e le proprietà rappresentano valori che è possibile accedere. Tuttavia, esistono differenze nell'archiviazione e di implementazione.  
@@ -46,11 +37,11 @@ Le variabili e le proprietà rappresentano valori che è possibile accedere. Tut
 |Dichiarazione|Singola istruzione di dichiarazione|Serie di istruzioni in un blocco di codice|  
 |Implementazione|Percorso di archiviazione singolo|Codice eseguibile (routine delle proprietà)|  
 |Archiviazione|Direttamente associati con il valore della variabile|In genere la memoria interna non è disponibile all'esterno di classe o il modulo contenente la proprietà<br /><br /> Valore della proprietà potrebbe o meno esistere come elemento memorizzato <sup>1</sup>|  
-|Codice eseguibile|None|Deve avere almeno una delle procedure|  
+|Codice eseguibile|Nessuno|Deve avere almeno una delle procedure|  
 |Accesso in lettura e scrittura|Lettura/scrittura o sola lettura|Lettura/scrittura, sola lettura, lettura o scrittura|  
 |Azioni personalizzate (oltre che accetta o restituendo valore)|Non è possibile|Possono essere eseguiti come parte dell'impostazione o il recupero del valore di proprietà|  
   
- <sup>1</sup> a differenza di una variabile, il valore di una proprietà potrebbe non corrispondere direttamente a un singolo elemento di archiviazione. Lo spazio di archiviazione potrebbe essere suddivisa in parti per motivi di praticità o protezione o il valore potrebbe essere archiviato in formato crittografato. In questi casi il `Get` routine assemblare le parti o decrittografare il valore archiviato e `Set` procedura consente di crittografare il nuovo valore o suddividerlo nello spazio di archiviazione che lo costituiscono. Valore della proprietà potrebbe essere temporaneo, come l'ora del giorno, nel qual caso il `Get` procedura sarebbe calcolarla in tempo reale ogni volta che si accede alla proprietà.  
+ <sup>1</sup> diversamente da una variabile, il valore di una proprietà potrebbe non corrispondere direttamente a un singolo elemento di archiviazione. Lo spazio di archiviazione potrebbe essere suddivisa in parti per motivi di praticità o protezione o il valore potrebbe essere archiviato in formato crittografato. In questi casi il `Get` routine assemblare le parti o decrittografare il valore archiviato e `Set` procedura consente di crittografare il nuovo valore o suddividerlo nello spazio di archiviazione che lo costituiscono. Valore della proprietà potrebbe essere temporaneo, come l'ora del giorno, nel qual caso il `Get` procedura sarebbe calcolarla in tempo reale ogni volta che si accede alla proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Routine Property](./property-procedures.md)  

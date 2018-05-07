@@ -1,30 +1,20 @@
 ---
 title: Protezione dei messaggi tramite client con tipo di credenziale UserName
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: "15"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dfda34c6bf165ebcecfd6d9a3710e785586d6cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bda1bc18e2b5af1365c799c6f2be9d8d220e9ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-user-name-client"></a>Protezione dei messaggi tramite client con tipo di credenziale UserName
-Nella figura seguente sono illustrati un servizio e un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protetti tramite protezione a livello di messaggio. Il servizio viene autenticato con un certificato X.509. Il client esegue l'autenticazione utilizzando un nome utente e una password.  
+Nella figura seguente viene illustrato un servizio Windows Communication Foundation (WCF) e un client protetto tramite sicurezza a livello di messaggio. Il servizio viene autenticato con un certificato X.509. Il client esegue l'autenticazione utilizzando un nome utente e una password.  
   
  Per un'applicazione di esempio, vedere [nome utente di sicurezza messaggio](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
   
@@ -33,7 +23,7 @@ Nella figura seguente sono illustrati un servizio e un client [!INCLUDE[indigo1]
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Modalità di sicurezza|Messaggio|  
-|Interoperabilità|Solo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]|  
+|Interoperabilità|Windows Communication Foundation (WCF) solo|  
 |Autenticazione (server)|La negoziazione iniziale richiede l'autenticazione server|  
 |Autenticazione (client)|Nome utente/password|  
 |Integrità|Sì, usando un contesto di sicurezza condiviso|  

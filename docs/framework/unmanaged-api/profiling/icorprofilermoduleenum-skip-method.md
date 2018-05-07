@@ -1,14 +1,6 @@
 ---
 title: Metodo ICorProfilerModuleEnum::Skip
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerModuleEnum.Skip Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8dc29c6a-e2ba-41d8-a1e0-0fdd21421e0b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cb6d12af329b214c78866ea352d1817afe0fa718
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 35256a25ed793ffee6ddc1b26088e0988fea5af2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilermoduleenumskip-method"></a>Metodo ICorProfilerModuleEnum::Skip
 Sposta in avanti il cursore dell'enumeratore dalla posizione corrente, in modo che venga ignorato il numero specificato di elementi.  
@@ -53,7 +41,7 @@ HRESULT Skip([in] ULONG celt);
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`celt`gli elementi sono stati ignorati.|  
+|S_OK|`celt` gli elementi sono stati ignorati.|  
 |S_FALSE|Meno di `celt` elementi ignorati, a indicare che non sono presenti più elementi.|  
   
 ## <a name="remarks"></a>Note  
@@ -64,9 +52,9 @@ HRESULT Skip([in] ULONG celt);
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)  

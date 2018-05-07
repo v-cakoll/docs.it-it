@@ -1,26 +1,17 @@
 ---
 title: 'Procedura: inizializzare una variabile di matrice in Visual Basic'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], initializing
 - arrays [Visual Basic], variables
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3ccdbed601d3fa87acb0833bc153c199b17a4eba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ee8cb91fd2fae9637a0d0e33fca63a4cdb9d2fce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Procedura: inizializzare una variabile di matrice in Visual Basic
 Inizializzare una variabile di matrice includendo una matrice di valori letterale in una `New` clausola e specificando i valori iniziali della matrice. È possibile specificare il tipo o consentire che possa essere dedotto dai valori nel valore letterale di matrice. Per ulteriori informazioni su come viene dedotto il tipo, vedere "Compilazione di una matrice con i valori iniziali" in [matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
@@ -41,7 +32,7 @@ Inizializzare una variabile di matrice includendo una matrice di valori letteral
   
      [!code-vb[VbVbalrArrays#17](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_2.vb)]  
   
--   In modo esplicito, è possibile specificare i limiti della matrice o lasciarli e che il compilatore di dedurre il tipo di matrice in base ai valori nel valore letterale di matrice. Se si fornisce i valori e i limiti superiori, è necessario includere un valore per ogni elemento dall'indice 0 al limite superiore di ogni dimensione. L'esempio seguente mostra i diversi modi per dichiarare, creare e inizializzare una variabile per contenere una matrice bidimensionale con elementi di tipo`Short`  
+-   In modo esplicito, è possibile specificare i limiti della matrice o lasciarli e che il compilatore di dedurre il tipo di matrice in base ai valori nel valore letterale di matrice. Se si fornisce i valori e i limiti superiori, è necessario includere un valore per ogni elemento dall'indice 0 al limite superiore di ogni dimensione. Nell'esempio seguente vengono illustrati vari modi per dichiarare, creare e inizializzare una variabile per contenere una matrice bidimensionale con elementi di tipo `Short`  
   
      [!code-vb[VbVbalrArrays#18](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_3.vb)]  
   

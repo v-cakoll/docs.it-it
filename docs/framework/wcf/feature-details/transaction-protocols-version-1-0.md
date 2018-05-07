@@ -1,29 +1,15 @@
 ---
 title: Protocolli di transazione versione 1.0
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 60867daa7b8519f745c37371604807c51aa1cbb9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d510a74560369a132822e980e7812ca4deff55a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-protocols-version-10"></a>Protocolli di transazione versione 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] versione 1 implementa la versione 1.0 dei protocolli WS-Atomic Transaction e WS-Coordination. Per ulteriori informazioni sulla versione 1.1, vedere [protocolli di transazione](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+Windows Communication Foundation (WCF) versione 1 implementa la versione 1.0 dei protocolli WS-Atomic Transaction e WS-Coordination. Per ulteriori informazioni sulla versione 1.1, vedere [protocolli di transazione](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
   
 |Specifica/documento|Collegamento|  
 |-----------------------------|----------|  
@@ -66,7 +52,7 @@ ms.lasthandoff: 04/30/2018
   
 -   Messaggi dell'applicazione.  
   
- Le prime tre classi di messaggi sono considerate messaggi del gestore transazioni e la loro configurazione dell'associazione viene descritta in "Scambio di messaggi dell'applicazione", più avanti in questo argomento. La quarta classe di messaggi riguarda i messaggi da applicazione ad applicazione e viene descritta nella sezione "Esempi di messaggi", più avanti in questo argomento. Contenuto della sezione vengono illustrati i binding del protocollo utilizzati per ognuna di queste classi da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Le prime tre classi di messaggi sono considerate messaggi del gestore transazioni e la loro configurazione dell'associazione viene descritta in "Scambio di messaggi dell'applicazione", più avanti in questo argomento. La quarta classe di messaggi riguarda i messaggi da applicazione ad applicazione e viene descritta nella sezione "Esempi di messaggi", più avanti in questo argomento. Questa sezione vengono descritte le associazioni del protocollo usate per ognuna di queste classi da WCF.  
   
  In questo documento vengono utilizzati gli spazi dei nomi XML e i relativi prefissi associati seguenti.  
   
@@ -96,12 +82,12 @@ ms.lasthandoff: 04/30/2018
 -   B1112: perché i controlli del nome soggetto X.509 abbiano esito positivo, il DNS deve essere funzionale tra ogni coppia mittente-destinatario nel sistema.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Attivazione e configurazione dell'associazione di registrazione  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede un'associazione duplex request/reply con correlazione su HTTPS. Per ulteriori informazioni sulla correlazione e descrizioni dei modelli di scambio dei messaggi request/reply, vedere WS-Atomic Transaction, Sezione 8.  
+ WCF richiede un'associazione duplex request/reply con correlazione su HTTPS. Per ulteriori informazioni sulla correlazione e descrizioni dei modelli di scambio dei messaggi request/reply, vedere WS-Atomic Transaction, Sezione 8.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Configurazione dell'associazione del protocollo 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta messaggi unidirezionali (datagramma) su HTTPS. La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
+ WCF supporta messaggi unidirezionali (datagramma) su HTTPS. La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
   
- B2131: Le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]del messaggi 2PC.  
+ B2131: Le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione dei messaggi 2PC di WCF.  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>Associazione di sicurezza mista del gestore transazioni  
  Si tratta di un'associazione che utilizza la protezione del trasporto associata al modello del Token emesso WS-Coordination allo scopo di identità alternativa (modalità mista).  L'attivazione e la registrazione sono gli unici elementi che differiscono tra le due associazioni.  
@@ -112,7 +98,7 @@ ms.lasthandoff: 04/30/2018
 #### <a name="activation-message-binding-configuration"></a>Configurazione dell'associazione dei messaggi di attivazione  
  I messaggi di attivazione in genere non partecipano all'interoperabilità perché si verificano normalmente tra un'applicazione e il suo gestore transazioni locale.  
   
- B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'associazione HTTPS duplex (descritto in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) per i messaggi di attivazione. I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08.  
+ B1221: WCF utilizza un'associazione HTTPS duplex (descritto in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) per i messaggi di attivazione. I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08.  
   
  Nella specifica WS-Atomic Transaction, Sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio dei messaggi.  
   
@@ -123,7 +109,7 @@ ms.lasthandoff: 04/30/2018
  Un nuovo `t:IssuedTokens` intestazione deve essere generata per associazione a in uscita `wscoor:CreateCoordinationContextResponse` messaggio.  
   
 #### <a name="registration-message-binding-configuration"></a>Configurazione dell'associazione dei messaggi di registrazione  
- B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'associazione HTTPS duplex (descritto in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08.  
+ B1231: WCF utilizza un'associazione HTTPS duplex (descritto in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08.  
   
  In WS-AtomicTransaction, Sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio dei messaggi.  
   
@@ -131,10 +117,10 @@ ms.lasthandoff: 04/30/2018
   
  Il `wsse:Timestamp` elemento deve essere firmato utilizzando il `SecurityContextToken``STx` rilasciato. Questa firma è una prova del possesso del token associato a una particolare transazione ed è utilizzata per autenticare l'inserimento di un partecipante nella transazione. Il messaggio RegistrationResponse viene inviato su HTTPS.  
   
-#### <a name="2pc-protocol-binding-configuration"></a>Configurazione del binding del protocollo 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta messaggi unidirezionali (datagramma) su HTTPS. La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
+#### <a name="2pc-protocol-binding-configuration"></a>Configurazione dell'associazione del protocollo 2PC  
+ WCF supporta messaggi unidirezionali (datagramma) su HTTPS. La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
   
- B2131: Le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]del messaggi 2PC.  
+ B2131: Le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione dei messaggi 2PC di WCF.  
   
 ## <a name="application-message-exchange"></a>Scambio di messaggi dell'applicazione  
  Le applicazioni possono utilizzare qualsiasi particolare associazione per i messaggi da applicazione ad applicazione, a condizione che l'associazione soddisfi i requisiti di sicurezza seguenti:  
@@ -143,9 +129,9 @@ ms.lasthandoff: 04/30/2018
   
 -   R2002: è necessario fornire l'integrità e la riservatezza di `t:IssuedToken`.  
   
- L'intestazione `CoordinationContext` contiene `wscoor:Identifier`. Mentre la definizione di `xsd:AnyURI` consente di utilizzare URI sia assoluti che relativi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta solo `wscoor:Identifiers` che sono URI assoluti.  
+ L'intestazione `CoordinationContext` contiene `wscoor:Identifier`. Mentre la definizione di `xsd:AnyURI` consente l'uso di URI assoluto e relativo, WCF supporta solo `wscoor:Identifiers`, che sono URI assoluti.  
   
- Se `wscoor:Identifier` del `wscoor:CoordinationContext` è un URI relativo, i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transazionali restituiranno degli errori.  
+ Se il `wscoor:Identifier` del `wscoor:CoordinationContext` è un URI relativo, verranno restituiti errori dai servizi WCF transazionali.  
   
 ## <a name="message-examples"></a>Esempi di messaggi  
   

@@ -1,13 +1,6 @@
 ---
 title: Controlli creati dall'utente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +9,20 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9e486058850616c2304ce0032c35baa855fdf2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26b4f062c120bf543a5e597fc8c734e8cc336bd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-drawn-controls"></a>Controlli creati dall'utente
 .NET Framework offre la possibilità di sviluppare facilmente controlli personalizzati. È possibile creare un controllo utente, che è un set standard di controlli di raggruppati dal codice, oppure è possibile progettare un controllo personalizzato da zero backup. È anche possibile utilizzare l'ereditarietà per creare un controllo che eredita da un controllo esistente e aggiungere estenderne le funzionalità intrinseche. Il meccanismo adottato, .NET Framework fornisce la funzionalità per creare un'interfaccia grafica personalizzata per qualsiasi controllo creato.  
   
  Il disegno di un controllo viene realizzato mediante l'esecuzione di codice del controllo <xref:System.Windows.Forms.Control.OnPaint%2A> metodo. L'unico argomento del <xref:System.Windows.Forms.Control.OnPaint%2A> metodo è un <xref:System.Windows.Forms.PaintEventArgs> oggetto che fornisce tutte le informazioni e le funzionalità necessarie per il rendering del controllo. Il <xref:System.Windows.Forms.PaintEventArgs> fornisce come proprietà due oggetti principali che verranno utilizzati per il rendering del controllo:  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>oggetto, il rettangolo che rappresenta la parte del controllo che verrà disegnato. Può trattarsi dell'intero controllo, o parte del controllo a seconda di come viene disegnato il controllo.  
+-   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> oggetto, il rettangolo che rappresenta la parte del controllo che verrà disegnato. Può trattarsi dell'intero controllo, o parte del controllo a seconda di come viene disegnato il controllo.  
   
--   <xref:System.Drawing.Graphics>oggetto - incapsula diversi gli oggetti orientati alla grafica e i metodi che forniscono le funzionalità necessarie per disegnare il controllo.  
+-   <xref:System.Drawing.Graphics> oggetto - incapsula diversi metodi che forniscono le funzionalità necessarie per disegnare il controllo e gli oggetti orientati alla grafica.  
   
  Per ulteriori informazioni sul <xref:System.Drawing.Graphics> oggetto e come usarlo, vedere [procedura: creare oggetti di grafica per il disegno](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
   

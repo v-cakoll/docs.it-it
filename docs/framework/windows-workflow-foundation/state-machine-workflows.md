@@ -1,23 +1,12 @@
 ---
 title: Flussi di lavoro macchina a stati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f28c0c4956c5e32dac204a99967ddd4b6352484
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6dedffda6654cb0acb7ab507129cba9f0bdb7f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="state-machine-workflows"></a>Flussi di lavoro macchina a stati
 Una macchina a stati è un paradigma noto per lo sviluppo di programmi. L'attività <xref:System.Activities.Statements.StateMachine> può essere usata insieme all'oggetto <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition> e ad altre attività per compilare programmi del flusso di lavoro macchina a stati. In questo argomento viene fornita una panoramica sulla creazione dei flussi di lavoro macchina a stati.  
@@ -40,7 +29,7 @@ Una macchina a stati è un paradigma noto per lo sviluppo di programmi. L'attivi
 ## <a name="creating-and-configuring-states"></a>Creazione e configurazione degli stati  
  Un oggetto <xref:System.Activities.Statements.State> rappresenta uno stato in cui può trovarsi una macchina a stati. Per aggiungere un <xref:System.Activities.Statements.State> a un flusso di lavoro, trascinare il **stato** ActivityDesigner dal **macchina a stati** sezione del **della casella degli strumenti** e rilasciarlo su un <xref:System.Activities.Statements.StateMachine> attività di [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] area.  
   
- ![WF4 Stato attività macchina](../../../docs/framework/windows-workflow-foundation/media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![WF4 Stato attività macchine](../../../docs/framework/windows-workflow-foundation/media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
   
  Per configurare uno stato come il **stato iniziale**, lo stato di mouse e selezionare **imposta come stato iniziale**. Inoltre, se è presente alcun stato iniziale corrente, lo stato iniziale è possibile impostare trascinando una riga dal **avviare** nodo all'inizio del flusso di lavoro nello stato desiderato. Quando un <xref:System.Activities.Statements.StateMachine> attività viene rilasciata nella finestra di progettazione del flusso di lavoro, essa viene preconfigurata con uno stato iniziale denominato **State1**. In un flusso di lavoro macchina a stati deve essere disponibile un unico stato iniziale.  
   

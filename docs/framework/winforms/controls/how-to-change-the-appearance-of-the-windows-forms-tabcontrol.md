@@ -1,13 +1,6 @@
 ---
-title: 'Procedura: modificare l''aspetto del controllo TabControl Windows Form'
-ms.custom: 
+title: "Procedura: modificare l'aspetto del controllo TabControl Windows Form"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 61fb11b79459da14384af974dbc403024faa377f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ea2208229d790f69e517d55e2de5ee042bdfb03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Procedura: modificare l'aspetto del controllo TabControl Windows Form
 È possibile modificare l'aspetto delle schede in Windows Form utilizzando le proprietà del <xref:System.Windows.Forms.TabControl> e <xref:System.Windows.Forms.TabPage> gli oggetti che costituiscono le singole schede del controllo. L'impostazione di queste proprietà è possibile visualizzare immagini sulle schede, visualizzare le schede in verticale anziché in orizzontale, la visualizzazione di più righe di schede e abilitare o disabilitare le schede a livello di codice.  

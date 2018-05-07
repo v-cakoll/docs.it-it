@@ -1,14 +1,6 @@
 ---
 title: Convertitori di tipi ed estensioni di markup per XAML
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converter services
 - XAML [XAML Services], value converters
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a6ab52105785dc1efbffe093cdafb12cdf8eac4d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0c9cb7e87416860dda98df0da967ffbc070bc270
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Convertitori di tipi ed estensioni di markup per XAML
 I convertitori di tipi e le estensioni di markup sono due tecniche usate dai sistemi di tipi XAML e writer XAML per generare componenti dell'oggetto grafico. Anche se condividono alcune caratteristiche, i convertitori di tipi e le estensioni di markup sono rappresentati in modo diverso in un flusso del nodo XAML. In questo set di documentazione, i convertitori di tipi, le estensioni di markup e costrutti simili talvolta vengono detti collettivamente convertitori di valori.  
@@ -45,7 +31,7 @@ I convertitori di tipi e le estensioni di markup sono due tecniche usate dai sis
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Convertitori di tipi  
- Nella definizione di servizi XAML di .NET Framework i convertitori di tipi sono classi che derivano dalla classe <xref:System.ComponentModel.TypeConverter> CLR. <xref:System.ComponentModel.TypeConverter> è una classe che era presente [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] prima dell'introduzione di XAML. Lo scopo originale consisteva nel supporto di finestre delle proprietà e di analoghe metafore di modifica basate sul testo per le proprietà [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] . L'introduzione di XAML a .NET Framework usa <xref:System.ComponentModel.TypeConverter> per convertire una sintassi del testo, come individuata in un valore di attributo o in un nodo di valori XAML, in un oggetto. <xref:System.ComponentModel.TypeConverter> può anche essere usato per serializzare un valore oggetto alla sintassi del testo. <xref:System.ComponentModel.TypeConverter> è stato usato anche in implementazioni di XAML precedenti specifiche del framework in Windows Presentation Foundation (WPF) e Windows Communication Foundation (WCF). Per altre informazioni su <xref:System.ComponentModel.TypeConverter> in XAML, vedere [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
+ Nella definizione di servizi XAML di .NET Framework i convertitori di tipi sono classi che derivano dalla classe <xref:System.ComponentModel.TypeConverter> CLR. <xref:System.ComponentModel.TypeConverter> è una classe che era in Microsoft .NET Framework prima dell'introduzione di XAML. Lo scopo originale consisteva nel supporto di finestre delle proprietà e di analoghe metafore di modifica basate sul testo per le proprietà [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] . L'introduzione di XAML a .NET Framework usa <xref:System.ComponentModel.TypeConverter> per convertire una sintassi del testo, come individuata in un valore di attributo o in un nodo di valori XAML, in un oggetto. <xref:System.ComponentModel.TypeConverter> può anche essere usato per serializzare un valore oggetto alla sintassi del testo. <xref:System.ComponentModel.TypeConverter> è stato usato anche in implementazioni di XAML precedenti specifiche del framework in Windows Presentation Foundation (WPF) e Windows Communication Foundation (WCF). Per altre informazioni su <xref:System.ComponentModel.TypeConverter> in XAML, vedere [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>Estensioni di markup  

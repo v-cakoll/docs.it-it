@@ -1,13 +1,6 @@
 ---
 title: Direttiva x:TypeArguments
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:TypeArguments
 - xTypeArguments
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-caps.latest.revision: "18"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e601fb5895460e52aa21836c542d0b1367527f09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94f09bdd3b6ee0b180e30bab0993f0b4e41730ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xtypearguments-directive"></a>Direttiva x:TypeArguments
 Passa vincoli di tipo generico per il costruttore del tipo generico.  
@@ -62,13 +50,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ```  
   
 ### <a name="liststring"></a>Elenco\<stringa >  
- `<scg:List x:TypeArguments="sys:String" ...>`Crea un nuovo <xref:System.Collections.Generic.List%601> con un <xref:System.String> argomento di tipo.  
+ `<scg:List x:TypeArguments="sys:String" ...>` Crea un'istanza di un nuovo <xref:System.Collections.Generic.List%601> con un <xref:System.String> argomento di tipo.  
   
 ### <a name="dictionarystringstring"></a>Dizionario\<String, String >  
- `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`Crea un nuovo <xref:System.Collections.Generic.Dictionary%602> con due <xref:System.String> gli argomenti di tipo.  
+ `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` Crea un'istanza di un nuovo <xref:System.Collections.Generic.Dictionary%602> con due simboli di <xref:System.String> gli argomenti di tipo.  
   
 ### <a name="queuekeyvaluepairstringstring"></a>Coda < KeyValuePair\<String, String >>  
- `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`Crea un nuovo <xref:System.Collections.Generic.Queue%601> che dispone di un vincolo di <xref:System.Collections.Generic.KeyValuePair%602> con gli argomenti di tipo di vincolo interna <xref:System.String> e <xref:System.String>.  
+ `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` Crea un'istanza di un nuovo <xref:System.Collections.Generic.Queue%601> che ha un vincolo <xref:System.Collections.Generic.KeyValuePair%602> con gli argomenti di tipo di vincolo interna <xref:System.String> e <xref:System.String>.  
   
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>Utilizzi XAML generico di XAML 2006 e WPF  
  Per l'utilizzo di XAML 2006 e XAML che viene utilizzato per le applicazioni WPF, le limitazioni seguenti per `x:TypeArguments` e dei relativi utilizzi di tipo generico da XAML in generale:  
@@ -79,7 +67,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
 -   L'elemento oggetto XAML elemento radice per il tipo generico è inoltre necessario dichiarare una classe parziale utilizzando `x:Class`. Questo vale anche se la definizione di un controllo WPF di azione di compilazione.  
   
--   `x:TypeArguments`non è possibile fare riferimento a vincoli generici annidati.  
+-   `x:TypeArguments` non è possibile fare riferimento a vincoli generici annidati.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 o XAML 2006 senza WPF 3.0 o 3.5 WPF dipendenza  
  Nei servizi XAML di .NET Framework per XAML 2006 o XAML 2009, le restrizioni relative a WPF sull'utilizzo di XAML generico sono flessibili. È possibile creare un'istanza di un elemento oggetto generico in qualsiasi posizione nel markup XAML in grado di supportare il modello di sistema e l'oggetto di tipo sottostante.  

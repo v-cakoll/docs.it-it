@@ -1,29 +1,15 @@
 ---
 title: Modelli di Visual Studio WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: 31
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fceb0f2ab7caa2bf3ab34ff957e3ed5f300e557c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 873e728b72529fb5153913c44cac0abd77f1f7c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Modelli di Visual Studio WCF
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Modelli di Visual Studio sono modelli di progetto e di elemento predefiniti è possibile utilizzare in Visual Studio per compilare rapidamente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizi e le relative applicazioni.  
+Modelli di Visual Studio di Windows Communication Foundation (WCF) sono modelli di progetto e di elemento predefiniti è possibile utilizzare in Visual Studio per compilare rapidamente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizi e le relative applicazioni.  
   
 ## <a name="using-the-wcf-templates"></a>Utilizzo dei modelli di WCF  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Modelli di Visual Studio forniscono una struttura di classe base per lo sviluppo del servizio. In particolare, questi modelli forniscono le definizioni di base per il contratto di servizio, contratto dati, implementazione del servizio e configurazione. È possibile utilizzare questi modelli per creare un semplice servizio con interazione di codice minima e come blocco predefinito per servizi più avanzati.  

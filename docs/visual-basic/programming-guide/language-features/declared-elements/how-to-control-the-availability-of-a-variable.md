@@ -1,12 +1,6 @@
 ---
-title: "Procedura: controllare la disponibilità di una variabile (Visual Basic)"
-ms.custom: 
+title: 'Procedura: controllare la disponibilità di una variabile (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - access levels, declared elements
 - Private keyword [Visual Basic], accessing variables
@@ -17,21 +11,18 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 004fb101661fadeaee084e1f9374ca8332ac7234
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27ee5d3405ea24c0754cffa85e9b89b2ac561e42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Procedura: controllare la disponibilità di una variabile (Visual Basic)
 È possibile controllare la disponibilità di una variabile specificando il relativo *livello di accesso*. Il livello di accesso determina il codice dispone dell'autorizzazione di lettura o scrittura per la variabile.  
   
--   *Variabili membro* (definito a livello di modulo e all'esterno di qualsiasi routine) predefinito per l'accesso pubblico, ovvero qualsiasi codice che è possibile visualizzarli possa accedervi. È possibile modificare questo specificando un modificatore di accesso.  
+-   *Variabili membro* (definito a livello di modulo e all'esterno di qualsiasi routine) predefinito per l'accesso pubblico, che significa che qualsiasi codice che possano essere visualizzate può accedervi. È possibile modificare questo specificando un modificatore di accesso.  
   
--   *Le variabili locali* (definito all'interno di una stored procedure) nominalmente hanno accesso pubblico, sebbene può accedervi solo codice all'interno della routine. Non è possibile modificare il livello di accesso di una variabile locale, ma è possibile modificare il livello di accesso della routine che lo contiene.  
+-   *Le variabili locali* (definito all'interno di una stored procedure) nominalmente avere accesso pubblico, sebbene sia possibile accedervi solo codice all'interno della routine. Non è possibile modificare il livello di accesso di una variabile locale, ma è possibile modificare il livello di accesso della routine che lo contiene.  
   
  Per ulteriori informazioni, vedere [accedere livelli in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -53,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
      È possibile leggere o scrivere nella variabile da qualsiasi codice che interagisce con l'assembly.  
   
- -oppure-  
+ oppure  
   
 1.  Per una variabile locale, inserire il `Dim` istruzione per la variabile all'interno di una stored procedure.  
   

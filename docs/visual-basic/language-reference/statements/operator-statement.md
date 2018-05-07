@@ -1,12 +1,6 @@
 ---
 title: Operator Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.operator
 helpviewer_keywords:
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1b6be45fd0a606f43c14d57f3f8ae0955f256ba6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb7fe7929e4b6e61ca3b39be5615e09182f2fe0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-statement"></a>Operator Statement
 Dichiara il simbolo di operatore, gli operandi e il codice che definiscono una routine di operatore in una classe o struttura.  
@@ -49,19 +40,19 @@ End Operator
   
 ## <a name="parts"></a>Parti  
  `attrlist`  
- Parametro facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `Public`  
  Obbligatorio. Indica che la routine di operatore esiste [pubblica](../../../visual-basic/language-reference/modifiers/public.md) accesso.  
   
  `Overloads`  
- Parametro facoltativo. Vedere [overload](../../../visual-basic/language-reference/modifiers/overloads.md).  
+ Facoltativo. Vedere [overload](../../../visual-basic/language-reference/modifiers/overloads.md).  
   
  `Shared`  
  Obbligatorio. Indica che la routine di operatore è un [Shared](../../../visual-basic/language-reference/modifiers/shared.md) stored procedure.  
   
  `Shadows`  
- Parametro facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ Facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `Widening`  
  Obbligatorio per un operatore di conversione, a meno che non si specifica `Narrowing`. Indica che questa routine di operatore definisce un [Widening](../../../visual-basic/language-reference/modifiers/widening.md) conversione. In questa pagina della Guida, vedere "Ampliamento e restrizione conversioni".  
@@ -78,7 +69,7 @@ End Operator
  `operand2`  
  Obbligatorio per gli operatori binari. Nome e il tipo dell'operando di destra di un operatore binario.  
   
- `operand1`e `operand2` hanno la sintassi e le parti seguenti:  
+ `operand1` e `operand2` hanno la sintassi e le parti seguenti:  
   
  `[ ByVal ] operandname [ As operandtype ]`  
   
@@ -92,7 +83,7 @@ End Operator
  Facoltativo, a meno che `Option Strict` è `On`. Restituisce il tipo di dati del valore di routine di operatore.  
   
  `statements`  
- Parametro facoltativo. Blocco di istruzioni che esegue la routine di operatore.  
+ Facoltativo. Blocco di istruzioni che esegue la routine di operatore.  
   
  `returnvalue`  
  Obbligatorio. Il valore che la routine di operatore restituisce al codice chiamante.  
@@ -174,7 +165,7 @@ End Operator
  Se vi è una possibilità che una routine di conversione potrebbe avere esito negativo o che potrebbe causare un'eccezione non gestita, è necessario dichiararla come `Narrowing`.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio di codice viene illustrato come utilizzare il `Operator` istruzione per definire la struttura di una struttura che include routine di operatore per il `And`, `Or`, `IsFalse`, e `IsTrue` operatori. `And`e `Or` accettano due operandi di tipo `abc` e il tipo restituito `abc`. `IsFalse`e `IsTrue` ognuna delle quali accetta un singolo operando di tipo `abc` e restituire `Boolean`. Queste definizioni consentono al codice chiamante di usare `And`, `AndAlso`, `Or`, e `OrElse` con gli operandi di tipo `abc`.  
+ Nell'esempio di codice viene illustrato come utilizzare il `Operator` istruzione per definire la struttura di una struttura che include routine di operatore per il `And`, `Or`, `IsFalse`, e `IsTrue` operatori. `And` e `Or` accettano due operandi di tipo `abc` e il tipo restituito `abc`. `IsFalse` e `IsTrue` ognuna delle quali accetta un singolo operando di tipo `abc` e restituire `Boolean`. Queste definizioni consentono al codice chiamante di usare `And`, `AndAlso`, `Or`, e `OrElse` con gli operandi di tipo `abc`.  
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   

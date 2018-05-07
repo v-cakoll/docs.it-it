@@ -1,23 +1,12 @@
 ---
-title: "Utilizzo dell'attività Switch con tipi personalizzati"
-ms.custom: 
+title: Utilizzo dell'attività Switch con tipi personalizzati
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 61485a59ae3af17bef58c0fccbe062c8b9171a34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b6f3109324064cb5e746de9c61e5a70c4c4d60b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>Utilizzo dell'attività Switch con tipi personalizzati
 In questo esempio viene descritto come consentire a un'attività <xref:System.Activities.Statements.Switch%601> di valutare un tipo complesso definito dall'utente in fase di esecuzione. Nei linguaggi di programmazione procedurali più tradizionali, un [passare](http://go.microsoft.com/fwlink/?LinkId=180521) istruzione seleziona una logica di esecuzione in base alla valutazione condizionale di una variabile. Tradizionalmente, un'istruzione `switch` agisce su un'espressione che può essere valutata staticamente. Ad esempio, in C# ciò significa che sono supportati solo tipi primitivi, quali <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, e tipi di enumerazione.  
@@ -115,9 +104,9 @@ In questo esempio viene descritto come consentire a un'attività <xref:System.Ac
   
  In questo esempio sono inclusi i file seguenti:  
   
--   **Person**: definisce la `Person` classe.  
+-   **Person.cs**: definisce la `Person` classe.  
   
--   **Personconverter**: il convertitore di tipi per la `Person` classe.  
+-   **PersonConverter.cs**: il convertitore di tipi per il `Person` classe.  
   
 -   **Sequence**: un flusso di lavoro che passa il `Person` tipo.  
   
@@ -136,7 +125,7 @@ In questo esempio viene descritto come consentire a un'attività <xref:System.Ac
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Switch`  
   

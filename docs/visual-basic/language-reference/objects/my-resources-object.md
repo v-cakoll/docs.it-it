@@ -1,11 +1,6 @@
 ---
 title: Oggetto My.Resources
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.Resources
 - My.Resources.MyResources.ResourceManager
@@ -13,14 +8,11 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96e5b909d9945ed631cebe07e4cfc7d5dc2e019f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 9fd23cb119ff9148a45d32ec70ccc4dad08ab876
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="myresources-object"></a>Oggetto My.Resources
 Fornisce proprietà e le classi per accedere alle risorse dell'applicazione.  
@@ -51,7 +43,7 @@ Fornisce proprietà e le classi per accedere alle risorse dell'applicazione.
 |**Immagini**|<xref:System.Drawing.Bitmap>|  
 |**Icone**|<xref:System.Drawing.Icon>|  
 |**Audio**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> Il <xref:System.IO.UnmanagedMemoryStream> deriva dalla classe di <xref:System.IO.Stream> classe può essere utilizzato con metodi che accettano flussi, ad esempio il <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> (metodo).|  
-|**File**|-   [Stringa](../../../visual-basic/language-reference/data-types/string-data-type.md) per file di testo.<br />-   <xref:System.Drawing.Bitmap>file di immagine.<br />-   <xref:System.Drawing.Icon>per i file di icona.<br />-   <xref:System.IO.UnmanagedMemoryStream>per i file audio.|  
+|**File**|-   [Stringa](../../../visual-basic/language-reference/data-types/string-data-type.md) per file di testo.<br />-   <xref:System.Drawing.Bitmap> file di immagine.<br />-   <xref:System.Drawing.Icon> per i file di icona.<br />-   <xref:System.IO.UnmanagedMemoryStream> per i file audio.|  
 |**Altro**|Determinata dalle informazioni nella finestra di progettazione **tipo** colonna.|  
   
 ## <a name="classes"></a>Classi  

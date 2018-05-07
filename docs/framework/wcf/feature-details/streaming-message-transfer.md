@@ -1,29 +1,15 @@
 ---
 title: Trasferimento dei messaggi di flusso
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 340c903e2cb34373514ea2f739cab57dc620df5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-message-transfer"></a>Trasferimento dei messaggi di flusso
-I trasporti di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supportano due modalità di trasferimento dei messaggi:  
+Windows Communication Foundation (WCF) trasporti supportano due modalità di trasferimento dei messaggi:  
   
 -   Trasferimento con memorizzazione nel buffer: in questa modalità, l'intero messaggio viene memorizzato in un buffer fino al completamento del trasferimento. Un messaggio memorizzato nel buffer deve essere completamente recapitato prima che un destinatario sia in grado di leggerlo.  
   
@@ -52,7 +38,7 @@ I trasporti di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supportan
   
  Le operazioni che si verificano in un trasporto con flusso possono presentare un contratto avente al massimo un solo parametro di input oppure un solo parametro output. Questo parametro corrisponde al corpo intero del messaggio e deve essere un messaggio <xref:System.ServiceModel.Channels.Message>, un tipo derivato dal flusso <xref:System.IO.Stream> oppure un'implementazione dell'interfaccia <xref:System.Xml.Serialization.IXmlSerializable>. Definire un valore restituito di un'operazione equivale a definire un parametro di output.  
   
- Alcune funzionalità di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio la messaggistica affidabile, le transazioni e la protezione a livello di messaggio SOAP, utilizzano la modalità di trasferimento con memorizzazione nel buffer. L'utilizzo di queste funzionalità può ridurre o eliminare del tutto i vantaggi in termini di prestazioni ottenuti mediante i flussi. Per proteggere un trasporto con flusso, utilizzare soltanto la protezione a livello di trasporto oppure utilizzare la protezione a livello di trasporto insieme a una protezione a livello di messaggio di sola autenticazione.  
+ Alcune funzionalità WCF, ad esempio la messaggistica affidabile, transazioni e la protezione a livello di messaggio SOAP, utilizzano memorizzazione nel buffer i messaggi per le trasmissioni. L'utilizzo di queste funzionalità può ridurre o eliminare del tutto i vantaggi in termini di prestazioni ottenuti mediante i flussi. Per proteggere un trasporto con flusso, utilizzare soltanto la protezione a livello di trasporto oppure utilizzare la protezione a livello di trasporto insieme a una protezione a livello di messaggio di sola autenticazione.  
   
  Le intestazioni SOAP vengono sempre memorizzate nel buffer, anche quando si utilizza la modalità di trasferimento con flusso. Le intestazioni di un messaggio non devono superare la quota di trasporto indicata da `MaxBufferSize`. Per ulteriori informazioni su questa impostazione, vedere [le quote dei trasporti](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   

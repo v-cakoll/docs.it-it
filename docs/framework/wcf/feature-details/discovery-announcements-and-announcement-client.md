@@ -1,27 +1,15 @@
 ---
 title: Annunci di individuazione e client annunci
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67eab6a5b35e29fe3df09ab286090433d25e8ca3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Annunci di individuazione e client annunci
-La funzionalità di individuazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consente ai componenti di annunciare la propria disponibilità. Se viene configurato a tale scopo, un servizio invia annunci Hello e Bye. I client o altri componenti possono attendere tali messaggi dell'annuncio ed eseguire azioni su di loro. In questo modo viene fornito un metodo alternativo che consente ai client di essere consapevoli della presenza di servizi. La funzionalità degli annunci può essere utilizzata per vari scopi. Se ad esempio i servizi entrano ed escono periodicamente da una rete, gli annunci possono costituire un'alternativa migliore rispetto alla ricerca di servizi. Con questo approccio, il traffico di rete è ridotto e il client è in grado di sapere se un servizio è presente o assente contestualmente alla ricezione degli annunci.  
+La funzionalità di individuazione WCF consente ai componenti di annunciare la propria disponibilità. Se viene configurato a tale scopo, un servizio invia annunci Hello e Bye. I client o altri componenti possono attendere tali messaggi dell'annuncio ed eseguire azioni su di loro. In questo modo viene fornito un metodo alternativo che consente ai client di essere consapevoli della presenza di servizi. La funzionalità degli annunci può essere utilizzata per vari scopi. Se ad esempio i servizi entrano ed escono periodicamente da una rete, gli annunci possono costituire un'alternativa migliore rispetto alla ricerca di servizi. Con questo approccio, il traffico di rete è ridotto e il client è in grado di sapere se un servizio è presente o assente contestualmente alla ricezione degli annunci.  
   
 ## <a name="discovery-announcements"></a>Annunci di individuazione  
  Se un servizio configurato per gli annunci si unisce a una rete e diviene individuabile, invia un messaggio Hello che annuncia la propria disponibilità ai client in ascolto. Il messaggio contiene le informazioni relative all'individuazione sul servizio, ad esempio il contratto, l'indirizzo endpoint e gli ambiti associati. È possibile specificare la destinazione dell'invio del messaggio di annuncio con la classe <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>. Se l'endpoint annunci è un elemento <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, Hello e Bye sono multicast, mentre se l'endpoint annunci è unicast, i messaggi vengono inviati direttamente all'endpoint specificato.  

@@ -1,13 +1,6 @@
 ---
 title: Caricamento di contenuto posticipato (WCF Data Services)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11b796b5b2abaff00c6d0f20894056f5863942b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ab4dea9e4f687f9548bb2b46a8f6baf428e29af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Caricamento di contenuto posticipato (WCF Data Services)
 Per impostazione predefinita, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita la quantità di dati restituiti da una query. Se necessario, dal servizio dati è tuttavia possibile caricare in modo esplicito dati aggiuntivi, tra cui entità correlate, dati di risposta di paging e flussi di dati binari. In questo argomento viene descritto come caricare questo tipo di contenuto posticipato nell'applicazione.  
@@ -33,14 +21,14 @@ Per impostazione predefinita, [!INCLUDE[ssAstoria](../../../../includes/ssastori
 ## <a name="related-entities"></a>Entità correlate  
  Quando si esegue una query, vengono restituite solo le entità incluse nel set di entità indirizzato. Ad esempio, quando una query eseguita sul servizio dati Northwind restituisce le entità `Customers`, per impostazione predefinita non vengono restituite le entità `Orders` correlate, anche se esiste una relazione tra `Customers` e `Orders`. Inoltre, quando nel servizio dati è abilitato il paging, è necessario caricare in modo esplicito le pagine di dati successive dal servizio. Per caricare le entità correlate è possibile usare due modi:  
   
--   **Caricamento eager**: È possibile utilizzare il `$expand` opzione di query per richiedere che la query restituisca le entità correlate da un'associazione per l'entità che imposta la query richiesta. Usare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> su <xref:System.Data.Services.Client.DataServiceQuery%601> per aggiungere l'opzione `$expand` alla query inviata al servizio dati. È possibile richiedere più set di entità correlati separandoli con una virgola, come illustrato nell'esempio seguente. Tutte le entità richieste dalla query vengono restituite in un'unica risposta. Nell'esempio seguente vengono restituiti `Order_Details` e `Customers` insieme al set di entità `Orders`:  
+-   **Caricamento eager**: È possibile utilizzare il `$expand` opzione di query per richiedere che la query restituisca le entità correlate da un'associazione per l'entità impostare che la query richiesta. Usare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> su <xref:System.Data.Services.Client.DataServiceQuery%601> per aggiungere l'opzione `$expand` alla query inviata al servizio dati. È possibile richiedere più set di entità correlati separandoli con una virgola, come illustrato nell'esempio seguente. Tutte le entità richieste dalla query vengono restituite in un'unica risposta. Nell'esempio seguente vengono restituiti `Order_Details` e `Customers` insieme al set di entità `Orders`:  
   
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetailsspecific)]  
   
      In [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] il numero di set di entità che possono essere inclusi in una sola query è limitato a 12 tramite l'opzione query `$expand`.  
   
--   **Caricamento esplicito**: È possibile chiamare il <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> metodo il <xref:System.Data.Services.Client.DataServiceContext> istanza da caricare in modo esplicito le entità correlate. Ogni chiamata del metodo <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> determina la creazione di una richiesta distinta al servizio dati. Nell'esempio seguente viene caricato in modo esplicito `Order_Details` per un'entità `Orders`.  
+-   **Caricamento esplicito**: È possibile chiamare il <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> metodo sul <xref:System.Data.Services.Client.DataServiceContext> istanza da caricare in modo esplicito le entità correlate. Ogni chiamata del metodo <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> determina la creazione di una richiesta distinta al servizio dati. Nell'esempio seguente viene caricato in modo esplicito `Order_Details` per un'entità `Orders`.  
   
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#loadrelatedorderdetailsspecific)]  

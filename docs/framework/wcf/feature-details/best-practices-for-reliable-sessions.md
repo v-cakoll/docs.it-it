@@ -1,24 +1,12 @@
 ---
 title: Procedure consigliate per le sessioni affidabili
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c022db62103826aa89e9035fd36c050d1f7c0f84
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d9671e7e3124d535b66de8cd8468f76dcb32b10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-reliable-sessions"></a>Procedure consigliate per le sessioni affidabili
 
@@ -26,7 +14,7 @@ In questo argomento illustra le procedure consigliate per le sessioni affidabili
 
 ## <a name="setting-maxtransferwindowsize"></a>Impostazione di MaxTransferWindowSize
 
-Le sessioni affidabili in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usano una finestra di trasferimento per contenere i messaggi nel client e nel servizio. La proprietà configurabile <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indica quanti messaggi può contenere la finestra di trasferimento.
+Le sessioni affidabili in Windows Communication Foundation (WCF) utilizzano una finestra di trasferimento per contenere i messaggi sul client e il servizio. La proprietà configurabile <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indica quanti messaggi può contenere la finestra di trasferimento.
 
 Sul lato mittente, questo indica quanti messaggi può contenere la finestra di trasferimento mentre attende gli acknowledgement; sul ricevitore, indica il numero di messaggi da memorizzare nel buffer per il servizio.
 
@@ -54,9 +42,9 @@ Si consiglia di utilizzare lo stesso `MaxTransferWindowSize` sul mittente e dest
 
 ### <a name="enabling-flow-control"></a>Abilitazione del controllo di flusso
 
-*Controllo di flusso* è un meccanismo che assicura che il mittente e il destinatario stiano reciprocamente, vale a dire i messaggi vengono utilizzati e intervenire stessa velocità con cui sta generati. La dimensione della finestra di trasferimento sul client e sul servizio assicura che tra il mittente e il destinatario ci sia un intervallo di sincronizzazione accettabile.
+*Controllo di flusso* è un meccanismo che assicura che il mittente e ricevitore tra loro, vale a dire, i messaggi vengono utilizzati e intervenire stessa velocità con cui sta generati. La dimensione della finestra di trasferimento sul client e sul servizio assicura che tra il mittente e il destinatario ci sia un intervallo di sincronizzazione accettabile.
 
-È consigliabile impostare la proprietà <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> a `true` quando si utilizza una sessione affidabile tra un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client e un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio.
+È consigliabile impostare la proprietà <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> a `true` quando si utilizza una sessione affidabile tra un client WCF e un servizio WCF.
 
 ## <a name="setting-maxpendingchannels"></a>Impostazione di MaxPendingChannels
 

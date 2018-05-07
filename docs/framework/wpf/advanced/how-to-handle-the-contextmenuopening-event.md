@@ -1,28 +1,14 @@
 ---
-title: 'Procedura: gestire l''evento ContextMenuOpening'
-ms.custom: 
+title: "Procedura: gestire l'evento ContextMenuOpening"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5eec8646a48f94fb9ffdcad14849416732618a06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab4c4867981cd318738b7404d76f2f5932bb9059
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Procedura: gestire l'evento ContextMenuOpening
 Il <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento può essere gestito in un'applicazione per modificare un contesto menu esistente prima di visualizzare o eliminare il menu che sarebbe altrimenti visualizzato impostando il <xref:System.Windows.RoutedEventArgs.Handled%2A> proprietà `true` nei dati dell'evento. La ragione più comune per l'impostazione <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true` dati dell'evento consiste nella sostituzione menu interamente con un nuovo <xref:System.Windows.Controls.ContextMenu> dell'oggetto, che talvolta richiede l'annullamento dell'operazione e avviare una nuova apertura. Se si scrivono i gestori per il <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento, è necessario essere consapevoli dei problemi di temporizzazione tra un <xref:System.Windows.Controls.ContextMenu> controllo e il servizio è responsabile dell'apertura e la posizione del menu di scelta rapida per i controlli in generale. In questo argomento vengono illustrate alcune delle tecniche di codice per diversi menu di scelta rapida aprire scenari e viene illustrato un caso in cui il problema di temporizzazione entra in gioco.  

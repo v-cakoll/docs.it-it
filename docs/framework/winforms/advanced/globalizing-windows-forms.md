@@ -1,13 +1,6 @@
 ---
 title: Globalizzazione di Windows Form
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, globalization
 - localization [Windows Forms]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - world-ready applications
 - global applications [Windows Forms], creating Windows Forms
 ms.assetid: 72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa21433979d955603c67bc2822676f56e855d098
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 936042d54e23a87a4901d7e5d22226d85f0e528b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="globalizing-windows-forms"></a>Globalizzazione di Windows Form
 *Globalizzazione* è il processo di progettazione e sviluppo di un prodotto software che funziona per più impostazioni cultura.  
@@ -45,7 +33,7 @@ ms.lasthandoff: 01/19/2018
   
 -   [Procedura dettagliata: download di assembly satellite su richiesta con l'API della distribuzione ClickOnce](http://msdn.microsoft.com/library/ms404269\(v=vs.110\))  
   
--   [Procedura: impostare le impostazioni cultura e le impostazioni cultura dell'interfaccia utente per la globalizzazione di Windows Form](http://msdn.microsoft.com/library/b28bx3bh\(v=vs.110\))  
+-   [Procedura: impostare la lingua e delle impostazioni cultura dell'interfaccia utente per la globalizzazione di Windows Form](http://msdn.microsoft.com/library/b28bx3bh\(v=vs.110\))  
   
 -   [Procedura: creare con mirroring di Windows Form e controlli](http://msdn.microsoft.com/library/xwbz5ws0\(v=vs.110\))  
   
@@ -55,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
 -   [Procedura dettagliata: Creazione di un Layout dalle proporzioni adattabili per la localizzazione](http://msdn.microsoft.com/library/7k9fa71y\(v=vs.110\))  
   
--   [Procedura: creare finestre di messaggio per bidirezionale Windows Form](http://msdn.microsoft.com/library/k1689bxh\(v=vs.110\))  
+-   [Procedura: creare finestre di messaggio per bidirezionali Windows Form](http://msdn.microsoft.com/library/k1689bxh\(v=vs.110\))  
   
 -   [Procedura dettagliata: download di assembly satellite su richiesta con l'API della distribuzione ClickOnce tramite la finestra di progettazione](http://msdn.microsoft.com/library/ms366788\(v=vs.120\))  
   

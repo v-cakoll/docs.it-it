@@ -1,12 +1,6 @@
 ---
 title: Confronto di valori (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], comparing values
 - Visual Basic code, operators
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c11f12bbaf261c0853e96802f03322c5e7fdc706
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6e1eda09784814d139ef94b6720b538aef30e5e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-comparisons-visual-basic"></a>Confronto di valori (Visual Basic)
 Gli operatori di confronto consente di creare espressioni che confrontano i valori di variabili numeriche. Queste espressioni restituiscono un `Boolean` valore a seconda che il confronto sia true o false. Esempi di un'espressione di questo tipo sono i seguenti.  

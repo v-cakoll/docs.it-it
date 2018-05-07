@@ -1,13 +1,6 @@
 ---
 title: Risoluzione dei problemi relativi ad applicazioni ibride
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - overlapping controls [WPF]
 - Windows Forms [WPF], interoperability with
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a23f439b9b14d16a5440fa3b757b972304fdfa3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 878761c030d4950e53ee24b76f7e29101584143a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Risoluzione dei problemi relativi ad applicazioni ibride
 <a name="introduction"></a> Questo argomento illustra alcuni problemi comuni che possono verificarsi durante la creazione di applicazioni che usano tecnologie sia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], sia [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/19/2018
   
  Un controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ospitato in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene sempre visualizzato sopra il contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]il contenuto ospitato un <xref:System.Windows.Forms.Integration.ElementHost> verrà visualizzato un controllo in corrispondenza dell'ordine z del <xref:System.Windows.Forms.Integration.ElementHost> controllo. È possibile sovrapporre <xref:System.Windows.Forms.Integration.ElementHost> controlli, ma l'hosting [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenuto non combinare o interagire.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] il contenuto ospitato un <xref:System.Windows.Forms.Integration.ElementHost> verrà visualizzato un controllo nell'ordine z del <xref:System.Windows.Forms.Integration.ElementHost> controllo. È possibile sovrapporre <xref:System.Windows.Forms.Integration.ElementHost> controlli, ma l'hosting [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenuto non combinare o interagire.  
   
 <a name="child_property"></a>   
 ## <a name="child-property"></a>Child Property  
@@ -95,7 +83,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="dispose"></a>   
 ## <a name="dispose"></a>Dispose  
- L'eliminazione non corretta delle classi può determinare una perdita di risorse. Nelle applicazioni ibride, assicurarsi che il <xref:System.Windows.Forms.Integration.WindowsFormsHost> e <xref:System.Windows.Forms.Integration.ElementHost> classi vengono eliminate o potrebbero verificarsi perdite di risorse. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Elimina <xref:System.Windows.Forms.Integration.ElementHost> controlli quando non modale <xref:System.Windows.Forms.Form> padre verrà chiuso. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Elimina <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementi quando l'applicazione viene arrestato. È possibile visualizzare un <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento in un <xref:System.Windows.Window> in un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ciclo di messaggi. In questo caso, è possibile che il codice non riceva notifica della chiusura dell'applicazione.  
+ L'eliminazione non corretta delle classi può determinare una perdita di risorse. Nelle applicazioni ibride, assicurarsi che il <xref:System.Windows.Forms.Integration.WindowsFormsHost> e <xref:System.Windows.Forms.Integration.ElementHost> classi vengono eliminate o potrebbero verificarsi perdite di risorse. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Elimina <xref:System.Windows.Forms.Integration.ElementHost> controlli quando non modale <xref:System.Windows.Forms.Form> padre chiuso. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elimina <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementi quando l'applicazione viene arrestato. È possibile visualizzare un <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento in un <xref:System.Windows.Window> in un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ciclo di messaggi. In questo caso, è possibile che il codice non riceva notifica della chiusura dell'applicazione.  
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Abilitazione degli stili di visualizzazione  

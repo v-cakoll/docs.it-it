@@ -1,23 +1,14 @@
 ---
 title: Modalità file non valida
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a540135727eb97f4df5027e2ded7271e21bb4648
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bccbbbeb79f38790a4664b0152ca3378fb55448d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bad-file-mode"></a>Modalità file non valida
 Le istruzioni utilizzate nella modifica dei contenuti del file devono essere appropriate per la modalità in cui è stato aperto il file. Fra le cause possibili vi sono le seguenti:  
@@ -26,7 +17,7 @@ Le istruzioni utilizzate nella modifica dei contenuti del file devono essere app
   
 -   Oggetto `Print` istruzione specifica un file aperto in modalità di accesso diverso da `Output` o `Append`.  
   
--   Un `Input` istruzione specifica un file aperto in modalità di accesso diverso da`Input`  
+-   Un `Input` istruzione specifica un file aperto in modalità di accesso diverso da `Input`  
   
 -   Tentativo di scrivere in un file di sola lettura.  
   

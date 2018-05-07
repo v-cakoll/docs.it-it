@@ -1,13 +1,6 @@
 ---
-title: "Architettura di input per l'interoperabilità tra Windows Form e WPF"
-ms.custom: 
+title: Architettura di input per l'interoperabilità tra Windows Form e WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - input architecture [WPF interoperability]
 - messages [WPF]
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a246a3297d212eabc31bf2ac9d000aeb56329d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 250f34e3e5420a613bc7b1035c62af90665e71ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Architettura di input per l'interoperabilità tra Windows Form e WPF
 Interazione tra il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] richiede che entrambe le tecnologie dispongano dell'elaborazione dell'input di tastiera appropriato. In questo argomento viene descritto come queste tecnologie implementano tastiera e l'elaborazione dei messaggi per consentire l'interoperabilità nelle applicazioni ibride.  
@@ -99,13 +87,13 @@ Interazione tra il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharpt
 ## <a name="elementhost-keyboard-and-message-processing"></a>Tastiera ElementHost ed elaborazione dei messaggi  
  Quando sono ospitati da un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tastiera e il messaggio di elaborazione è costituita da quanto segue:  
   
--   <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink>, e <xref:System.Windows.Interop.IKeyboardInputSite> implementazioni di interfaccia.  
+-   <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink>, e <xref:System.Windows.Interop.IKeyboardInputSite> implementazioni di interfacce.  
   
 -   Tasti freccia e TAB.  
   
 -   Tasti di comando e finestre di dialogo.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]elaborazione di tasti di scelta rapida.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] elaborazione di tasti di scelta rapida.  
   
  Le sezioni seguenti descrivono queste parti in modo più dettagliato.  
   
@@ -131,7 +119,7 @@ Interazione tra il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharpt
   
 -   Il <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> viene eseguito l'override di metodo per garantire che tutti i messaggi WM_CHAR vengono inoltrati agli elementi ospitati.  
   
--   Se viene premuto il tasto ALT, il messaggio è WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]non elabora il messaggio tramite il <xref:System.Windows.Forms.Control.IsInputChar%2A> metodo. Pertanto, il <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> metodo sottoposto a override a query il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> per un acceleratore registrato. Se viene trovato un acceleratore registrato, <xref:System.Windows.Input.AccessKeyManager> elabora.  
+-   Se viene premuto il tasto ALT, il messaggio è WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] non elabora il messaggio tramite la <xref:System.Windows.Forms.Control.IsInputChar%2A> metodo. Pertanto, il <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> metodo sottoposto a override a query il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> per un acceleratore registrato. Se viene trovato un acceleratore registrato, <xref:System.Windows.Input.AccessKeyManager> elabora.  
   
 -   Se non viene premuto il tasto ALT, il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> classe elabora l'input non gestito. Se l'input è un acceleratore, il <xref:System.Windows.Input.AccessKeyManager> elabora. Il <xref:System.Windows.Input.InputManager.PostProcessInput> per i messaggi che sono stati elaborati non WM_CHAR viene gestito l'evento.  
   

@@ -1,10 +1,6 @@
 ---
 title: Riepilogo dei tipi di dati (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Boolean data type [Visual Basic], supported types in Visual Basic
 - storage [Visual Basic], order of storage
@@ -41,14 +37,11 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f69a112718eed7bb7baaff9bdffd110865c21081
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-type-summary-visual-basic"></a>Riepilogo dei tipi di dati (Visual Basic)
 La tabella seguente illustra i tipi di dati Visual Basic, i tipi in common language runtime di supporto, l'allocazione di memoria nominale e i relativi intervalli di valori.  
@@ -62,12 +55,12 @@ La tabella seguente illustra i tipi di dati Visual Basic, i tipi in common langu
 |[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16 byte|da 0 a + /-79.228.162.514.264.337.593.543.950.335 (+ /-7,9... E + 28) <sup>†</sup> senza alcun separatore decimale, tra 0 e + /-7,9228162514264337593543950335 con 28 posizioni a destra del separatore decimale;<br /><br /> il numero più piccolo diverso da zero è + /-0,0000000000000000000000000001 (+ /-1E-28) <sup>†</sup>|  
 |[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (a virgola mobile a precisione doppia)|<xref:System.Double>|8 byte|-1.79769313486231570 e + 308 e - 4, 94065645841246544E-324 <sup>†</sup> per valori negativi.<br /><br /> 4, 94065645841246544E-324 e 1.79769313486231570 e + 308 <sup>†</sup> per i valori positivi|  
 |[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 byte|-2.147.483.648 e 2.147.483.647 (con segno)|  
-|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (long integer)|<xref:System.Int64>|8 byte|-9.223.372.036.854.775.808 e 9.223.372.036.854.775.807 (9.2 … E + 18 <sup>†</sup>) (con segno)|  
-|[Oggetto](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object>(classe)|4 byte in una piattaforma a 32 bit<br /><br /> 8 byte in una piattaforma a 64 bit|Qualsiasi tipo può essere archiviato in una variabile di tipo`Object`|  
+|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (valore long integer)|<xref:System.Int64>|8 byte|-9.223.372.036.854.775.808 e 9.223.372.036.854.775.807 (9.2 … E + 18 <sup>†</sup>) (con segno)|  
+|[Oggetto](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (classe)|4 byte in una piattaforma a 32 bit<br /><br /> 8 byte in una piattaforma a 64 bit|Qualsiasi tipo può essere archiviato in una variabile di tipo `Object`|  
 |[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 byte|-128 e 127 (con segno)|  
 |[Breve](../../../visual-basic/language-reference/data-types/short-data-type.md) (valore short integer)|<xref:System.Int16>|2 byte|da -32.768 e 32.767 (con segno)|  
 |[Singolo](../../../visual-basic/language-reference/data-types/single-data-type.md) (a virgola mobile a precisione singola)|<xref:System.Single>|4 byte|-3, 4028235E + 38 a - 1, 401298E-45 <sup>†</sup> per valori negativi.<br /><br /> 1, 401298E-45 a 3, 4028235E + 38 <sup>†</sup> per i valori positivi|  
-|[Stringa](../../../visual-basic/language-reference/data-types/string-data-type.md) (a lunghezza variabile)|<xref:System.String>(classe)|Dipende dall'implementazione della piattaforma|da 0 a circa 2 miliardi di caratteri Unicode|  
+|[Stringa](../../../visual-basic/language-reference/data-types/string-data-type.md) (a lunghezza variabile)|<xref:System.String> (classe)|Dipende dall'implementazione della piattaforma|da 0 a circa 2 miliardi di caratteri Unicode|  
 |[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 byte|da 0 a 4.294.967.295 (senza segno)|  
 |[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 byte|da 0 a 18.446.744.073.709.551.615 (1,8... E + 19 <sup>†</sup>) (senza segno)|  
 |[Definite dall'utente](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (struttura)|(eredita da <xref:System.ValueType>)|Dipende dall'implementazione della piattaforma|Ogni membro della struttura è un intervallo determinato dal tipo di dati e indipendente dagli intervalli degli altri membri|  

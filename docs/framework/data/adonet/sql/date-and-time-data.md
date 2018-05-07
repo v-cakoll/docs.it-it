@@ -1,29 +1,15 @@
 ---
 title: Dati relativi a data e ora
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 2130c79ba79ce7e327a2a1b3adccd92e52153d85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="date-and-time-data"></a>Dati relativi a data e ora
 In SQL Server 2008 vengono introdotti nuovi tipi di dati per la gestione di informazioni relative a data e ora. I nuovi tipi di dati includono tipi separati per data e ora e tipi di dati espansi che offrono miglioramenti in termini di intervallo, precisione e gestione del fuso orario. A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), il provider di dati .NET Framework per SQL Server (<xref:System.Data.SqlClient>) fornisce supporto completo per tutte le nuove funzionalità del Motore di database di SQL Server 2008. Per usare queste nuove funzionalità con SqlClient, è necessario installare .NET Framework 3.5 SP1 (o versione successiva).  
@@ -44,7 +30,7 @@ In SQL Server 2008 vengono introdotti nuovi tipi di dati per la gestione di info
 |`date`|Il tipo di dati `date` include un intervallo compreso tra l'1 gennaio 01 e il 31 dicembre 9999 con un'accuratezza di 1 giorno. Il valore predefinito è 1 gennaio 1900. Le dimensioni di archiviazione sono di 3 byte.|  
 |`time`|Il tipo di dati `time` consente di archiviare solo i valori relativi all'ora, in base a un formato a 24 ore. Il tipo di dati `time` include un intervallo compreso tra 00.00.00.0000000 e 23.59.59.9999999 con un'accuratezza di 100 nanosecondi. Il valore predefinito è 00.00.00.0000000 (mezzanotte). Il tipo di dati `time` supporta la precisione in secondi frazionari definita dall'utente e le dimensioni di archiviazione variano da 3 a 6 byte, in base alla precisione specificata.|  
 |`datetime2`|Il tipo di dati `datetime2` combina l'intervallo e la precisione dei tipi di dati `date` e `time` in un unico tipo di dati.<br /><br /> I valori predefiniti e i formati dei valori letterali stringa sono identici a quelli definiti nei tipi di dati `date` e `time`.|  
-|`datetimeoffset`|Il tipo di dati `datetimeoffset` offre tutte le funzionalità di `datetime2`, con l'aggiunta di un offset di fusi orari. Differenza di fuso orario viene rappresentata come [+ &#124;-] hh: mm. HH è un numero a 2 cifre compreso tra 00 e 14 che rappresenta il numero di ore nell'offset di fusi orari. MM è un numero a 2 cifre compreso tra 00 e 59 che rappresenta il numero di minuti aggiuntivi nell'offset di fusi orari. I formati di ora sono supportati fino a 100 nanosecondi. Il segno + o - obbligatorio indica se l'offset di fusi orari deve essere aggiunto o sottratto dall'ora UTC (Universal Time Coordinate o ora di Greenwich) per ottenere l'ora locale.|  
+|`datetimeoffset`|Il tipo di dati `datetimeoffset` offre tutte le funzionalità di `datetime2`, con l'aggiunta di un offset di fusi orari. La differenza di fuso orario viene rappresentata come [+&#124;-] hh: mm. HH è un numero a 2 cifre compreso tra 00 e 14 che rappresenta il numero di ore nell'offset di fusi orari. MM è un numero a 2 cifre compreso tra 00 e 59 che rappresenta il numero di minuti aggiuntivi nell'offset di fusi orari. I formati di ora sono supportati fino a 100 nanosecondi. Il segno + o - obbligatorio indica se l'offset di fusi orari deve essere aggiunto o sottratto dall'ora UTC (Universal Time Coordinate o ora di Greenwich) per ottenere l'ora locale.|  
   
 > [!NOTE]
 >  Per altre informazioni sull'uso della parola chiave `Type System Version`, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  

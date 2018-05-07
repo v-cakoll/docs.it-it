@@ -1,26 +1,17 @@
 ---
 title: Valore checksum non valido. Cifre esadecimali non presenti o in numero dispari
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc42033
 - vbc42033
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1158742c8eaa51bcbb5607795f16ae6c2b570db4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5c01e918e1f607febc10be89c3d27c50870c401a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Valore checksum non valido. Cifre esadecimali non presenti o in numero dispari
 Un valore di checksum include cifre esadecimali non valide o un numero di cifre dispari.  
@@ -41,4 +32,4 @@ Un valore di checksum include cifre esadecimali non valide o un numero di cifre 
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di ASP.NET](https://msdn.microsoft.com/library/4w3ex9c2.aspx)  
- [Comunicazioni con Microsoft](/visualstudio/ide/talk-to-us)
+ [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)

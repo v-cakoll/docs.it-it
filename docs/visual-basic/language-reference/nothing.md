@@ -1,9 +1,6 @@
 ---
 title: Nothing (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Nothing
 - vb.Nothing
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6932fee01ec6f39f67fb1a26a9a5b5cbd47d9767
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fb1af7d748faac78b26177af453a0e858f9e97c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Rappresenta il valore predefinito di qualsiasi tipo di dati. Per i tipi di riferimento, il valore predefinito è il `null` riferimento. Per i tipi di valore, il valore predefinito varia a seconda se il tipo di valore è nullable.  
@@ -27,7 +21,7 @@ Rappresenta il valore predefinito di qualsiasi tipo di dati. Per i tipi di rifer
 >  Per i tipi di valore non nullable, `Nothing` in Visual Basic è diverso da `null` in c#. In Visual Basic, se si imposta una variabile di un tipo di valore non nullable `Nothing`, la variabile è impostata sul valore predefinito per il relativo tipo dichiarato. In c#, se si assegna una variabile di un tipo di valore non nullable `null`, si verifica un errore in fase di compilazione.  
   
 ## <a name="remarks"></a>Note  
- `Nothing`rappresenta il valore predefinito di un tipo di dati. Il valore predefinito dipende se la variabile è un tipo di valore o di un tipo di riferimento.  
+ `Nothing` rappresenta il valore predefinito di un tipo di dati. Il valore predefinito dipende se la variabile è un tipo di valore o di un tipo di riferimento.  
   
  Una variabile di un *tipo di valore* contiene direttamente il relativo valore. Tipi di valore includono tutti i tipi di dati numerici, `Boolean`, `Char`, `Date`, tutte le strutture e tutte le enumerazioni. Una variabile di un *tipo di riferimento* archivia un riferimento a un'istanza dell'oggetto in memoria. Tipi di riferimento includono matrici, delegati, classi e le stringhe. Per altre informazioni, vedere [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
@@ -53,7 +47,7 @@ Rappresenta il valore predefinito di qualsiasi tipo di dati. Per i tipi di rifer
   
  Quando si assegna `Nothing` a una variabile oggetto non fa riferimento a un'istanza dell'oggetto. Se la variabile ha già fatto riferimento a un'istanza, se è impostato su `Nothing` non termina l'istanza stessa. L'istanza viene terminata, e vengono rilasciate le risorse di memoria e di sistema è associate, solo dopo che il garbage collector (GC) rileva che non sono presenti riferimenti attivi.  
   
- `Nothing`è diverso dal <xref:System.DBNull> oggetto che rappresenta una variante non inizializzata o una colonna del database inesistente.  
+ `Nothing` è diverso dal <xref:System.DBNull> oggetto, che rappresenta un valore variant non inizializzato o una colonna del database inesistente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione Dim](../../visual-basic/language-reference/statements/dim-statement.md)  

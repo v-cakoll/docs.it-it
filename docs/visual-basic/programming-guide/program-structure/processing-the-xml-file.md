@@ -1,24 +1,14 @@
 ---
 title: Elaborazione del file XML (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 86dae99f2d17a506a27cf491a76083df618ba27b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6be7597f1c03d8aa044eba70ef6287cfc07d9b84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Elaborazione del file XML (Visual Basic)
 Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. (Per informazioni su come contrassegnare il codice, vedere [tag di commento XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md).) La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML è possono utilizzare la stringa di ID per identificare il corrispondente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] elemento metadati/reflection.  

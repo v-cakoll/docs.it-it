@@ -1,24 +1,12 @@
 ---
 title: Aggiornamenti flusso personalizzati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73359c293f7d29c16702e826ed6caa61149935bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-stream-upgrades"></a>Aggiornamenti flusso personalizzati
 I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso continuo di byte tra il client e il server. Questo flusso viene realizzato da un oggetto <xref:System.IO.Stream>. In un aggiornamento flusso, il client desidera aggiungere un livello di protocollo facoltativo allo stack di canali e chiede all'altra estremità del canale di comunicazione di farlo. L'aggiornamento flusso consiste nel sostituire l'oggetto <xref:System.IO.Stream> originale con un oggetto aggiornato.  
@@ -41,7 +29,7 @@ I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso co
  Si noti che, nel caso di più aggiornamenti, iniziatore e acceptor incapsulano macchine a stati da imporre, le cui transizioni di aggiornamento sono valide per ogni avvio.  
   
 ## <a name="how-to-implement-a-stream-upgrade"></a>Come implementare un aggiornamento flusso  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce quattro classi `abstract` che è possibile implementare:  
+ Windows Communication Foundation (WCF) offre quattro `abstract` classi che è possibile implementare:  
   
 -   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   

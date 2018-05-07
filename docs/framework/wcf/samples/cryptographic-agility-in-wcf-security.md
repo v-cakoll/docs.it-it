@@ -1,27 +1,17 @@
 ---
-title: "Agilità di crittografia nella sicurezza WCF"
-ms.custom: 
+title: Agilità di crittografia nella sicurezza WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7d99ada67255d0ced8bbabc2ab6fc645e6ba9e35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5fa4c3cf45eb17822effaa9284864274923b2504
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>Agilità di crittografia nella sicurezza WCF
-In questo esempio viene illustrato come specificare un algoritmo standard/personalizzato per offrire un'implementazione di crittografia Agile in un servizio e in un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. L'esempio è costituito dai progetti seguenti:  
+In questo esempio viene illustrato come specificare un algoritmo standard/personalizzato per fornire un'implementazione di crittografia agile in un client Windows Communication Foundation (WCF) e il servizio. L'esempio è costituito dai progetti seguenti:  
   
  Service  
  Si tratta di un self-hosted [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio che implementa il `ICalculator` l'interfaccia e protegge l'endpoint usando il <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> con sessione protetta e sessione affidabile disabilitate. Il servizio definisce una classe `SecurityAlgorithmSuite` personalizzata per specificare gli algoritmi di crittografia da usare per la sicurezza dei messaggi.  
@@ -44,7 +34,7 @@ In questo esempio viene illustrato come specificare un algoritmo standard/person
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Security\CryptoAgility`  
   

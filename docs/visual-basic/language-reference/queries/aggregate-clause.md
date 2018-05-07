@@ -1,11 +1,6 @@
 ---
 title: Clausola Aggregate (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryAggregateIn
 - vb.QueryAggregate
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47017414a92bfbca0df4ce6e2b70398a01762d37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1db4b7fdcf9c8a38c2c49eca9d874eccea90ab1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aggregate-clause-visual-basic"></a>Clausola Aggregate (Visual Basic)
 Applica uno o più funzioni di aggregazione a una raccolta.  
@@ -41,9 +33,9 @@ Aggregate element [As type] In collection _
 |Termine|Definizione|  
 |---|---|  
 |`element`|Obbligatorio. Variabile utilizzata per scorrere gli elementi della raccolta.|  
-|`type`|Parametro facoltativo. Tipo di `element`. Se viene specificato alcun tipo, il tipo di `element` viene dedotto dal `collection`.|  
+|`type`|Facoltativo. Tipo di `element`. Se viene specificato alcun tipo, il tipo di `element` viene dedotto dal `collection`.|  
 |`collection`|Obbligatorio. Fa riferimento alla raccolta su cui operare.|  
-|`clause`|Parametro facoltativo. Uno o più clausole di query, ad esempio un `Where` clausola per perfezionare il risultato della query per applicare la clausola di aggregazione o le clausole di.|  
+|`clause`|Facoltativo. Uno o più clausole di query, ad esempio un `Where` clausola per perfezionare il risultato della query per applicare la clausola di aggregazione o le clausole di.|  
 |`expressionList`|Obbligatorio. Uno o più delimitato da virgole espressioni che identificano una funzione di aggregazione da applicare alla raccolta. È possibile applicare un alias a una funzione di aggregazione per specificare un nome di membro per il risultato della query. Se non viene specificato alcun alias, viene utilizzato il nome della funzione di aggregazione. Per esempi, vedere la sezione sulle funzioni di aggregazione più avanti in questo argomento.|  
   
 ## <a name="remarks"></a>Note  

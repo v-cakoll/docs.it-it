@@ -1,28 +1,19 @@
 ---
 title: Supporto per valori DPI elevato in Windows Form
-ms.custom: 
 ms.date: 05/16/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - High DPI in Windows Forms
 - Dynamic rescaling in Windows Forms
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a68c9278d4e8092be5c744109e56f7cb52498095
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a085658579c8cd3ba43fd07a7816581e03c3d64a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Supporto per valori DPI elevato in Windows Form
 
@@ -98,9 +89,9 @@ Per un elenco di singole chiavi e i relativi valori, vedere [elemento configuraz
 
 A partire dal 4.7 di .NET Framework, tre nuovi eventi consentono di gestire a livello di programmazione le modifiche dinamiche DPI:
 
-- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, che viene generato quando l'impostazione DPI per un controllo viene modificato a livello di codice dopo un evento di modifica DPI per il controllo padre o modulo che si è verificato.
-- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, che viene generato quando l'impostazione DPI per un controllo viene modificato a livello di codice prima di un evento di modifica DPI per relativo controllo padre o modulo che si è verificato.
-- <xref:System.Windows.Forms.Form.DpiChanged>, che viene generato quando viene modificata l'impostazione DPI sul dispositivo di visualizzazione in cui il modulo è attualmente visualizzato.
+- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, che viene generato quando l'impostazione DPI per un controllo viene modificato a livello di codice dopo un evento di modifica DPI, DOTS per il relativo controllo padre o si è verificato un modulo.
+- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, che viene generato quando l'impostazione DPI per un controllo viene modificato a livello di codice prima di un evento di modifica DPI, DOTS per relativo controllo padre o si è verificato un modulo.
+- <xref:System.Windows.Forms.Form.DpiChanged>, che viene attivato quando viene modificato l'impostazione DPI sul dispositivo di visualizzazione in cui il modulo è attualmente visualizzato.
 
 ## <a name="new-helper-methods-and-properties"></a>Le proprietà e nuovi metodi di supporto
 
@@ -108,9 +99,9 @@ Il 4.7 di .NET Framework aggiunge anche il numero di nuovi metodi di supporto e 
 
 - <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>, che consente di convertire un valore da coordinate logiche ai pixel del dispositivo.
 
-- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>, che ridimensiona un'immagine bitmap in DPI per un dispositivo logico.
+- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>, che ridimensiona un'immagine bitmap in DPI logico per un dispositivo.
 
-- <xref:System.Windows.Forms.Control.DeviceDpi%2A>, che restituisce il valore DPI per il dispositivo corrente.
+- <xref:System.Windows.Forms.Control.DeviceDpi%2A>, che restituisce il valore di DPI per il dispositivo corrente.
 
 ## <a name="versioning-considerations"></a>Considerazioni sulla gestione delle versioni
 
