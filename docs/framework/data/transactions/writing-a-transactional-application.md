@@ -1,23 +1,12 @@
 ---
 title: Scrittura di un'applicazione transazionale
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d891f2-6fc8-4395-93c6-6819492406e0
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9fab355da61ea7445e429cfc4e336a14b588e30c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 048df434ff0ada2ab5f8c7473913f6c34c05d1a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-a-transactional-application"></a>Scrittura di un'applicazione transazionale
 I programmatori di applicazioni transazionali possono utilizzare i due modelli di programmazione forniti dallo spazio dei nomi <xref:System.Transactions> per creare una transazione. È possibile utilizzare il modello di programmazione esplicito utilizzando il <xref:System.Transactions.Transaction> , classe o il modello di programmazione implicito in cui le transazioni vengono gestite automaticamente dall'infrastruttura, utilizzando la <xref:System.Transactions.TransactionScope> classe. È consigliabile utilizzare il modello di esecuzione implicita delle transazioni per lo sviluppo. È possibile trovare ulteriori informazioni sull'utilizzo di un ambito di transazione nel [implementazione di una transazione implicita con ambito di transazione](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) argomento.  
@@ -47,7 +36,7 @@ I programmatori di applicazioni transazionali possono utilizzare i due modelli d
  L'argomento [interoperabilità con servizi aziendali e le transazioni COM+](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md) viene illustrato come effettuare le transazioni distribuite interagire con le transazioni COM+.  
   
 ### <a name="diagnostics"></a>Diagnostica  
- [Le tracce di diagnostica](../../../../docs/framework/data/transactions/diagnostic-traces.md) descrive come è possibile utilizzare i codici di traccia generati dal <xref:System.Transactions> infrastruttura per risolvere gli errori nelle applicazioni.  
+ [Le tracce diagnostiche](../../../../docs/framework/data/transactions/diagnostic-traces.md) descrive come è possibile utilizzare i codici di traccia generati dal <xref:System.Transactions> infrastruttura per risolvere gli errori nelle applicazioni.  
   
 ### <a name="working-within-aspnet"></a>Utilizzo delle funzionalità all'interno di ASP.NET  
  Il [utilizzando System. Transactions in ASP.NET](../../../../docs/framework/data/transactions/using-system-transactions-in-aspnet.md) argomento viene descritto come è possibile utilizzare correttamente <xref:System.Transactions> all'interno di un'applicazione ASP.NET.

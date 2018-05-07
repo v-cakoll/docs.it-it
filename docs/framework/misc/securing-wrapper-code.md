@@ -1,29 +1,19 @@
 ---
 title: Protezione del codice wrapper
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [.NET Framework], wrapper code
 - wrapper code, securing
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e29a2bdd0bfa338d0266c0841e11aa2ac366529
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac278a4a3b06e0611e1cf57d079516a1dccf606b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-wrapper-code"></a>Protezione del codice wrapper
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -80,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
  La sicurezza dichiarativa offre i controlli di sicurezza seguenti:  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand> specifica il percorso di chiamate nello stack di sicurezza dall'accesso al codice. Tutti i chiamanti nello stack devono disporre dell'identità o dell'autorizzazione specificata per poter passare. **Richiesta** si verifica a ogni chiamata perché lo stack potrebbe contenere chiamanti diversi. Se si chiama un metodo più volte, questo controllo di sicurezza viene eseguito ogni volta. **Richiesta** è una valida protezione contro gli attacchi luring verrà rilevato codice non autorizzato tenta di ottenere attraverso di esso.  
+-   <xref:System.Security.Permissions.SecurityAction.Demand> specifica il percorso di chiamate nello stack di sicurezza dall'accesso al codice. Tutti i chiamanti nello stack devono disporre dell'identità o dell'autorizzazione specificata per poter passare. **Richiesta** si verifica a ogni chiamata perché lo stack potrebbe contenere chiamanti diversi. Se si chiama un metodo più volte, questo controllo di sicurezza viene eseguito ogni volta. **Richiesta** è una valida protezione contro gli attacchi subdoli; non autorizzata del codice durante il recupero tramite quest'ultimo verrà rilevata.  
   
 -   [LinkDemand](../../../docs/framework/misc/link-demands.md) viene eseguito in fase di compilazione just-in-time (JIT) e controlla solo il chiamante immediato. Questo controllo di sicurezza non verifica il chiamante del chiamante. Una volta passato questo controllo, non ne vengono eseguiti altri, indipendentemente dal numero di chiamate effettuate dal chiamante. Tuttavia, non esiste nemmeno alcuna protezione contro gli attacchi luring. Con **LinkDemand**, qualsiasi codice che supera il test e può fare riferimento al codice può potenzialmente problemi di sicurezza consentendo al codice dannoso di chiamare usando il codice autorizzato. Pertanto, non usare **LinkDemand** a meno che non possono evitare completamente tutti i possibili punti di debolezza.  
   

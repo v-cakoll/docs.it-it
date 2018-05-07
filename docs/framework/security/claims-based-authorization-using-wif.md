@@ -1,24 +1,14 @@
 ---
 title: Autorizzazione basata su attestazioni con WIF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bc6a9d828f1ab666ddda687931785f3853b74374
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d2972ccef6829a2b7a052ba30258086443bd833
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorizzazione basata su attestazioni con WIF
 Tramite l'autorizzazione di un'applicazione relying party vengono determinate le risorse di un'identità autenticata a cui è consentito l'accesso e le operazioni eseguibili in queste risorse. Un'autorizzazione non corretta o debole comporta la diffusione di informazioni e l'alterazione dei dati. In questo argomento vengono descritti gli approcci disponibili per implementare l'autorizzazione per i servizi e le applicazioni Web ASP.NET in grado di riconoscere attestazioni mediante WIF (Windows Identity Foundation) e un servizio token di sicurezza (STS), ad esempio il Servizio di controllo di accesso (ACS) di Microsoft Azure.  
@@ -52,7 +42,7 @@ Tramite l'autorizzazione di un'applicazione relying party vengono determinate le
   
 -   **Durante il rilascio del token**. Quando un utente viene autenticato, l'attestazione del ruolo può essere emessa dal servizio token di sicurezza del provider di identità o da un provider di federazioni, ad esempio il Servizio di controllo di accesso di Microsoft Azure.  
   
--   **Trasformando le attestazioni arbitrarie in tipi di attestazioni del ruolo tramite ClaimsAuthenticationManager**. ClaimsAuthenticationManager è un componente fornito come parte di WIF. Consente l'intercettazione delle richieste quando tramite esse viene avviata un'applicazione, esaminando i token e trasformandoli con l'aggiunta, la modifica o la rimozione di attestazioni. Per altre informazioni sull'utilizzo di ClaimsAuthenticationManager per la trasformazione delle attestazioni, vedere [Procedura: Implementare mediante WIF e ACS il controllo di accesso basato sui ruoli (RBAC) in un'applicazione ASP.NET in grado di riconoscere attestazioni](http://go.microsoft.com/fwlink/?LinkID=247445) (http://go.microsoft.com/fwlink/?LinkID=247444).  
+-   **Trasformando le attestazioni arbitrarie in tipi di attestazioni del ruolo tramite ClaimsAuthenticationManager**. ClaimsAuthenticationManager è un componente fornito come parte di WIF. Consente l'intercettazione delle richieste quando tramite esse viene avviata un'applicazione, esaminando i token e trasformandoli con l'aggiunta, la modifica o la rimozione di attestazioni. Per ulteriori informazioni su come usare ClaimsAuthenticationManager per trasformare le attestazioni, vedere [How To: Implement basato sui ruoli accesso controllo (RBAC) in delle attestazioni compatibile con ASP.NET dell'applicazione mediante WIF e ACS](http://go.microsoft.com/fwlink/?LinkID=247445) (http://go.microsoft.com/fwlink/?LinkID=247444).  
   
 -   **Eseguendo il mapping di attestazioni arbitrarie a un tipo di ruolo tramite la sezione di configurazione samlSecurityTokenRequirement**. Si tratta di un approccio dichiarativo in cui la trasformazione delle attestazioni viene eseguita usando solo la configurazione, senza intervenire sul codice.  
   

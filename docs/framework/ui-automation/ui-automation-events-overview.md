@@ -1,13 +1,6 @@
 ---
 title: Cenni preliminari sugli eventi di automazione interfaccia utente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, providers
 - UI Automation, events
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8b28d6aafc0e9680123859ee0e9a28dd71a2249c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2190e404479a940e638d6ee8b9fd7135d8fc0109
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-events-overview"></a>Cenni preliminari sugli eventi di automazione interfaccia utente
 > [!NOTE]
@@ -39,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="types-of-events"></a>Tipi di eventi  
  Gli eventi di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sono suddivisi nelle categorie seguenti.  
   
-|Evento|Descrizione|  
+|event|Descrizione|  
 |-----------|-----------------|  
 |Modifica proprietà|Generato quando una proprietà di un elemento o di un pattern di controllo di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] viene modificata. Ad esempio, se un client deve monitorare una casella di controllo di un'applicazione, può registrarsi per l'attesa di un evento di modifica per la proprietà <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> . Quando il controllo casella di controllo viene selezionato o deselezionato, il provider genera l'evento e il client può agire secondo necessità.|  
 |Azione elemento|Generato quando l' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] viene modificata dall'utente finale o da attività a livello di codice, ad esempio quando si fa clic su un pulsante o quest'ultimo viene richiamato tramite <xref:System.Windows.Automation.InvokePattern>.|  

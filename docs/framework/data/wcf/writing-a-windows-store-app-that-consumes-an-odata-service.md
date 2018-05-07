@@ -1,28 +1,14 @@
 ---
 title: Scrittura di un'app di Windows Store che utilizza un servizio OData
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 ms.assetid: 9917a0e9-ec93-49e5-a366-fd39b892eb8b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3a2eb79e8bf8a5c683c9d48a0a69e4d7f5d270eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 105e7c06c6ca5253b931c1a8e60c6eee28e92cf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-a-windows-store-app-that-consumes-an-odata-service"></a>Scrittura di un'app di Windows Store che utilizza un servizio OData
 Windows 8 è stato introdotto un nuovo tipo di applicazione: l'applicazione Windows Store. Le app Windows Store hanno un aspetto nuovissimo, vengono eseguite su vari dispositivi e vengono rese disponibili in Windows Store. In questo argomento viene descritto come scrivere un'app Windows Store che usa un servizio OData, in particolare il servizio NetFlix Catalog OData. Per ulteriori informazioni sulle app di Windows Store, leggere [Introduzione alle app di Windows Store](http://msdn.microsoft.com/library/windows/apps/br211386.aspx).  
@@ -97,11 +83,11 @@ Windows 8 è stato introdotto un nuovo tipo di applicazione: l'applicazione Wind
   
 1.  Prima di poter eseguire tutte le chiamate al servizio Netflix OData, è necessario aggiungere un riferimento al servizio. Fare clic con il pulsante destro del mouse sul progetto in Esplora soluzioni e scegliere Aggiungi riferimento al servizio.  
   
-     ![Finestra di dialogo riferimento servizio Aggiungi](../../../../docs/framework/data/wcf/media/addservicereferenceodata.png "AddServiceReferenceOData")  
+     ![Finestra di dialogo riferimento servizio aggiunta](../../../../docs/framework/data/wcf/media/addservicereferenceodata.png "AddServiceReferenceOData")  
   
 2.  Immettere l'URL per il servizio Netflix OData nella barra degli indirizzi e fare clic su Vai. Impostare lo spazio dei nomi di riferimento al servizio su Netflix e fare clic su OK.  
   
-     ![Errore di riferimento del servizio aggiungere](../../../../docs/framework/data/wcf/media/addservicereferenceerror.png "AddServiceReferenceError")  
+     ![Aggiungi errore di riferimento del servizio](../../../../docs/framework/data/wcf/media/addservicereferenceerror.png "AddServiceReferenceError")  
   
     > [!NOTE]
     >  Se non è ancora installato [WCF Data Services strumenti per App di Windows Store](http://go.microsoft.com/fwlink/p/?LinkId=266652), verrà visualizzato un messaggio simile a quello precedente. Sarà necessario scaricare e installare gli strumenti indicati nel collegamento per continuare.  
@@ -180,7 +166,7 @@ Windows 8 è stato introdotto un nuovo tipo di applicazione: l'applicazione Wind
   
 1.  Aggiungere un contratto di ricerca all'applicazione. Ciò consente all'applicazione di integrarsi con l'esperienza di ricerca di Windows 8. Denominare il contratto di ricerca SearchResultsPage.xaml  
   
-     ![Aggiungere un contratto ricerca](../../../../docs/framework/data/wcf/media/addsearchcontract.png "AddSearchContract")  
+     ![Aggiungere un contratto di ricerca](../../../../docs/framework/data/wcf/media/addsearchcontract.png "AddSearchContract")  
   
 2.  Modificare la riga 58 di SearchResultsPage.xaml.cs rimuovendo le virgolette incorporate in queryText.  
   

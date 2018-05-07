@@ -2,14 +2,14 @@
 title: '&lt;add&gt; di &lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: b9559a6921bdededf760f54f58abadb46612b174
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 4552cc030a88841d4fb80c097ba089d1c6a0066c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;add&gt; di &lt;protocolMapping&gt;
-Rappresenta un mapping del protocollo predefinito tra una combinazione di protocollo di trasporto (ad esempio, http, NET. TCP, NET. pipe, e così via) e un'associazione Windows Communication Foundation (WCF). Durante la creazione di endpoint predefiniti in fase di esecuzione, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] analizza i mapping configurati e determina l'associazione da usare per un particolare indirizzo di base.  
+Rappresenta un mapping del protocollo predefinito tra una combinazione di protocollo di trasporto (ad esempio, http, NET. TCP, NET. pipe, e così via) e un'associazione Windows Communication Foundation (WCF). Quando si creano endpoint predefiniti in fase di esecuzione, WCF analizza i mapping configurati e determina l'associazione da usare per un particolare indirizzo di base.  
   
  \<system.serviceModel>  
 \<protocolMapping >  

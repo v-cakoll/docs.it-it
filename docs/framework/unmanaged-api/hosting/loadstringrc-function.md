@@ -1,14 +1,6 @@
 ---
 title: Funzione LoadStringRC
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - LoadStringRC
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2fd42a576e1315ea029f98b94d8dc84d2b92b5e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 463bcf451574700d02f933d024ea5c24cedd259d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loadstringrc-function"></a>Funzione LoadStringRC
 Converte un valore HRESULT in un messaggio di errore utilizzando le impostazioni cultura predefinite del thread corrente.  
@@ -69,7 +57,7 @@ HRESULT LoadStringRC (
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|E_INVALIDARG|`szBuffer`è null o `iMax` è zero (0).|  
+|E_INVALIDARG|`szBuffer` è null o `iMax` è zero (0).|  
   
 ## <a name="remarks"></a>Note  
  Se il metodo non viene completata correttamente, `szBuffer` contiene una stringa vuota.  
@@ -79,9 +67,9 @@ HRESULT LoadStringRC (
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** MSCorEE.dll e Mscorwks.dll. Utilizzare MSCorEE.dll anziché Mscorwks.dll per assicurarsi che la versione corretta di .NET Framework di destinazione.  
+ **Libreria:** Mscoree. dll e mscorwks. dll. Utilizzare MSCorEE.dll anziché Mscorwks.dll per assicurarsi che la versione corretta di .NET Framework di destinazione.  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzione LoadStringRCEx](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  

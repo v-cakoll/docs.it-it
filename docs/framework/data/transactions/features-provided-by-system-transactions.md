@@ -1,23 +1,12 @@
 ---
-title: "Funzionalità offerte da System.Transactions"
-ms.custom: 
+title: Funzionalità offerte da System.Transactions
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1170adc2fb2ede41e9e111e9d7dd6612f06676a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6fc20f8249f37f69689fb3fc6b3144792badad3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="features-provided-by-systemtransactions"></a>Funzionalità offerte da System.Transactions
 Questa sezione descrive come utilizzare le funzionalità fornite dallo spazio dei nomi <xref:System.Transactions> per scrivere applicazioni transazionali e gestori di risorse personalizzati. In particolare, questa sezione descrive come creare una transazione (locale o distribuita) e come integrarvi una o più risorse.  
@@ -38,9 +27,9 @@ Questa sezione descrive come utilizzare le funzionalità fornite dallo spazio de
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
 ### <a name="writing-a-transactional-application"></a>Scrittura di un'applicazione transazionale  
- Lo spazio dei nomi <xref:System.Transactions> offre due modelli per creare le applicazioni di transazione. [Implementazione di una transazione implicita con ambito di transazione](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) viene descritto come <xref:System.Transactions> dello spazio dei nomi supporta la creazione di transazioni implicite utilizzando la <xref:System.Transactions.TransactionScope> classe.  
+ Lo spazio dei nomi <xref:System.Transactions> offre due modelli per creare le applicazioni di transazione. [Implementazione di una transazione implicita con ambito di transazione](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) descrive il modo in cui <xref:System.Transactions> dello spazio dei nomi supporta la creazione di transazioni implicite utilizzando il <xref:System.Transactions.TransactionScope> classe.  
   
- [Implementazione di una transazione esplicita utilizzando CommittableTransaction](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md) viene descritto come <xref:System.Transactions> dello spazio dei nomi supporta la creazione di transazioni esplicite utilizzando la <xref:System.Transactions.CommittableTransaction> classe.  
+ [Implementazione di una transazione esplicita usando CommittableTransaction](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md) descrive il modo in cui <xref:System.Transactions> dello spazio dei nomi supporta la creazione di transazioni esplicite tramite il <xref:System.Transactions.CommittableTransaction> classe.  
   
  Per argomenti aggiuntivi che illustrano la scrittura di un'applicazione transazionale, vedere [la scrittura di un'applicazione transazionale](../../../../docs/framework/data/transactions/writing-a-transactional-application.md).  
   

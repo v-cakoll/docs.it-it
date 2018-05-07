@@ -1,27 +1,15 @@
 ---
 title: Stati di oggetti e rilevamento di modifiche
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f7eb1a8afe87caece18432c66a8d8a268ce9fbd2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 482299f90a92acec9307649ec04a89f8ce6be414
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-states-and-change-tracking"></a>Stati di oggetti e rilevamento di modifiche
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]oggetti sempre associato uno *stato*. Ad esempio, quando in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene creato un nuovo oggetto, lo stato dell'oggetto è `Unchanged`. Un nuovo oggetto creato dall'utente è noto il <xref:System.Data.Linq.DataContext> e `Untracked` dello stato. Dopo la corretta esecuzione di <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, tutti gli oggetti riconosciuti da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sono nello stato `Unchanged`. La sola eccezione è rappresentata dagli oggetti eliminati dal database che sono nello stato `Deleted` e di conseguenza inutilizzabili in quell'istanza di <xref:System.Data.Linq.DataContext>.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oggetti sempre associato uno *stato*. Ad esempio, quando in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene creato un nuovo oggetto, lo stato dell'oggetto è `Unchanged`. Un nuovo oggetto creato dall'utente è noto il <xref:System.Data.Linq.DataContext> e `Untracked` dello stato. Dopo la corretta esecuzione di <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, tutti gli oggetti riconosciuti da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sono nello stato `Unchanged`. La sola eccezione è rappresentata dagli oggetti eliminati dal database che sono nello stato `Deleted` e di conseguenza inutilizzabili in quell'istanza di <xref:System.Data.Linq.DataContext>.  
   
 ## <a name="object-states"></a>Stati degli oggetti  
  Nella tabella riportata di seguito sono elencati gli stati possibili per gli oggetti [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -45,9 +33,9 @@ ms.lasthandoff: 01/17/2018
 >  Un oggetto aggiunto a un oggetto `Table` non si trova nella cache delle identità, che riflette solo gli oggetti recuperati dal database. Dopo una chiamata a <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>, l'entità aggiunta non viene visualizzata nelle query eseguite sul database finché non si completerà <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
   
 ## <a name="deleting-objects"></a>Eliminazione di oggetti  
- Per contrassegnare per l'eliminazione un oggetto `o` rilevato, chiamare <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o) sull'oggetto <xref:System.Data.Linq.Table%601> appropriato. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]la rimozione di un oggetto da un <xref:System.Data.Linq.EntitySet%601> come aggiornamento operazione e il valore di chiave esterna corrispondente viene impostato su null. La destinazione dell'operazione (`o`) non viene eliminata dalla relativa tabella. Ad esempio, `cust.Orders.DeleteOnSubmit(ord)` indica un aggiornamento in cui la relazione tra `cust` e `ord` viene interrotta mediante l'impostazione della chiave esterna `ord.CustomerID` su null. Non causa l'eliminazione della riga che corrisponde a `ord`.  
+ Per contrassegnare per l'eliminazione un oggetto `o` rilevato, chiamare <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o) sull'oggetto <xref:System.Data.Linq.Table%601> appropriato. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prende in considerazione la rimozione di un oggetto da un <xref:System.Data.Linq.EntitySet%601> come aggiornamento operazione e il valore di chiave esterna corrispondente viene impostato su null. La destinazione dell'operazione (`o`) non viene eliminata dalla relativa tabella. Ad esempio, `cust.Orders.DeleteOnSubmit(ord)` indica un aggiornamento in cui la relazione tra `cust` e `ord` viene interrotta mediante l'impostazione della chiave esterna `ord.CustomerID` su null. Non causa l'eliminazione della riga che corrisponde a `ord`.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]esegue l'elaborazione seguente quando viene eliminato un oggetto (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) rispetto alla relativa tabella:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esegue l'elaborazione seguente quando viene eliminato un oggetto (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) rispetto alla relativa tabella:  
   
 -   Quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, per quell'oggetto viene eseguita un'operazione `DELETE`.  
   

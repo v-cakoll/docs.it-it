@@ -2,11 +2,11 @@
 title: '&lt;soapProcessing&gt;'
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 780c0e9a1d88c9f00883753091b102fbe9d41aa5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: cc720c9e3a8ab934ffa8d3cb0c6eceb47a708fb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -48,7 +48,7 @@ Nessuno
 
 L'elaborazione SOAP è il processo in cui i messaggi vengono convertiti tra le versioni dei messaggi.
 
-Il servizio di Routing di Windows Communication Foundation (WCF) è possibile convertire i messaggi da un protocollo a altro. Se le versioni del messaggio in ingresso e in uscita sono diverse, viene creato un nuovo messaggio della versione corretta. L'elaborazione di messaggi da una <!--zz <xref:System.ServiceModel.Channel.MessageVersion> --> `MessageVersion` a un altro viene eseguita creando un nuovo [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] messaggio che contiene la parte corpo e intestazioni pertinenti in ingresso [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] messaggio. Le intestazioni specifiche dell'indirizzamento o quelle riconosciute al livello del router non vengono usate durante la costruzione del nuovo messaggio WCF, poiché queste intestazioni presentano una versione diversa (nel caso delle intestazioni di indirizzamento) o sono state elaborate come parte della comunicazione tra il client e il router.
+Il servizio di Routing di Windows Communication Foundation (WCF) è possibile convertire i messaggi da un protocollo a altro. Se le versioni del messaggio in ingresso e in uscita sono diverse, viene creato un nuovo messaggio della versione corretta. L'elaborazione dei messaggi da una <!--zz <xref:System.ServiceModel.Channel.MessageVersion> --> `MessageVersion` a un altro viene eseguita costruendo un nuovo messaggio WCF contenente la parte corpo e le relative intestazioni dal messaggio WCF in arrivo. Le intestazioni specifiche dell'indirizzamento o quelle riconosciute al livello del router non vengono usate durante la costruzione del nuovo messaggio WCF, poiché queste intestazioni presentano una versione diversa (nel caso delle intestazioni di indirizzamento) o sono state elaborate come parte della comunicazione tra il client e il router.
 
 Il posizionamento di un'intestazione nel messaggio in uscita viene determinato dal fatto che essa venga contrassegnata o meno come riconosciuta quando è passata attraverso il livello del canale in ingresso. Le intestazioni non riconosciute (ad esempio le intestazioni personalizzate) non vengono rimosse e passano pertanto attraverso il servizio di routing mediante copia nel messaggio in uscita. Il corpo del messaggio viene copiato nel messaggio in uscita. Il messaggio viene quindi inviato al canale di uscita al quale puntano tutte le intestazioni e verranno creati e aggiunti gli altri dati di envelope specifici di tale protocollo/trasporto di comunicazione.
 

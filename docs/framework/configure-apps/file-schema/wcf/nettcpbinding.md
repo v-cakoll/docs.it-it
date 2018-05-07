@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: f6cbdbb7c5569851055102cfe5d413e0b94376f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 0be428ef3b37222e1e8472591d2b54d950bef59f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Specifica un'associazione protetta, affidabile e ottimizzata adatta per le comunicazioni fra computer. Per impostazione predefinita, genera uno stack di comunicazione in fase di runtime con Windows per la sicurezza per garantire la sicurezza e l'autenticazione dei messaggi, TCP per il recapito dei messaggi e la codifica binaria dei messaggi.  
@@ -92,7 +92,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 ## <a name="remarks"></a>Note  
  Per impostazione predefinita, questa associazione genera uno stack di comunicazione runtime che, oltre a implementare la codifica binaria dei messaggi, usa la sicurezza del trasporto e il protocollo TCP per il recapito dei messaggi. Questa associazione è un'appropriato scelta fornita dal sistema di Windows Communication Foundation (WCF) di per la comunicazione su una rete Intranet.  
   
- La configurazione predefinita per `netTcpBinding` è più veloce rispetto a quella fornita da `wsHttpBinding`, ma è destinata solo alle comunicazioni tra [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] e [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Il comportamento di sicurezza può essere configurato usando l'attributo `securityMode` facoltativo. L'utilizzo del protocollo WS-ReliableMessaging può essere configurato usando l'attributo facoltativo `reliableSessionEnabled`. La messaggistica affidabile è tuttavia disattivata per impostazione predefinita. Più in generale, le associazioni HTTP fornite dal sistema, ad esempio `wsHttpBinding` e `basicHttpBinding`, sono configurate in modo da attivare modalità di supporto per impostazione predefinita, mentre l'associazione `netTcpBinding` le disattiva per impostazione predefinita e pertanto è necessario fornire un consenso esplicito per ottenere il supporto, ad esempio, per una delle specifiche WS-*. Ciò significa che la configurazione predefinita per le associazioni TCP è più veloce nello scambio dei messaggi tra endpoint rispetto a quelle predefinite per le associazioni HTTP.  
+ La configurazione predefinita per il `netTcpBinding` è più veloce rispetto alla configurazione fornita dal `wsHttpBinding`, ma serve solo per le comunicazioni di WCF. Il comportamento di sicurezza può essere configurato usando l'attributo `securityMode` facoltativo. L'utilizzo del protocollo WS-ReliableMessaging può essere configurato usando l'attributo facoltativo `reliableSessionEnabled`. La messaggistica affidabile è tuttavia disattivata per impostazione predefinita. Più in generale, le associazioni HTTP fornite dal sistema, ad esempio `wsHttpBinding` e `basicHttpBinding`, sono configurate in modo da attivare modalità di supporto per impostazione predefinita, mentre l'associazione `netTcpBinding` le disattiva per impostazione predefinita e pertanto è necessario fornire un consenso esplicito per ottenere il supporto, ad esempio, per una delle specifiche WS-*. Ciò significa che la configurazione predefinita per le associazioni TCP è più veloce nello scambio dei messaggi tra endpoint rispetto a quelle predefinite per le associazioni HTTP.  
   
 ## <a name="example"></a>Esempio  
  L'associazione è specificata nei file di configurazione per il client e il servizio. Il tipo di associazione è specificato nell'attributo `binding` dell'elemento `<endpoint>`. Se si desidera configurare l'associazione netTcpBinding e modificare alcune delle relative impostazioni, è necessario definire una configurazione di associazione. L'endpoint deve fare riferimento alla configurazione di associazione con un attributo `bindingConfiguration`. Nell'esempio seguente viene modificata una configurazione di associazione.  

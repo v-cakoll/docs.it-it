@@ -1,33 +1,21 @@
 ---
 title: Ordinare elementi in una sequenza
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f296565beb284095dce2520cd545f8af61dc6b48
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 00c7a7a62890aced4c480e2653084c0b7cfe7f45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sort-elements-in-a-sequence"></a>Ordinare elementi in una sequenza
 Usare l'operatore <xref:System.Linq.Enumerable.OrderBy%2A> per ordinare una sequenza in base a una o più chiavi.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]è progettato per supportare l'ordinamento in base a semplici tipi primitivi, ad esempio `string`, `int`e così via. Non supporta invece l'ordinamento per classi multivalore complesse, ad esempio i tipi anonimi. Non supporta inoltre i tipi di dati `byte`.  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è progettato per supportare l'ordinamento in base a semplici tipi primitivi, ad esempio `string`, `int`e così via. Non supporta invece l'ordinamento per classi multivalore complesse, ad esempio i tipi anonimi. Non supporta inoltre i tipi di dati `byte`.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono ordinati `Employees` in base alla data di assunzione.  

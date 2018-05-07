@@ -1,11 +1,7 @@
 ---
 title: Funzione GetNames (riferimenti alle API non gestite)
-description: "La funzione GetNames recupera i nomi delle proprietà di un oggetto."
+description: La funzione GetNames recupera i nomi delle proprietà di un oggetto.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetNames
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80284900c318a3776168b781ce2e0e5e4a68f96d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getnames-function"></a>GetNames (funzione)
 Recupera un subset o tutti i nomi delle proprietà di un oggetto. 
@@ -91,7 +84,7 @@ I flag che possono essere passati come i `lEnumFlags` argomento sono campi di bi
 
 | Flag di gruppo 1 |Valore  |Descrizione  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | Restituisce i nomi delle proprietà. `strQualifierName`e `pQualifierVal` inutilizzati. |
+| `WBEM_FLAG_ALWAYS` | 0 | Restituisce i nomi delle proprietà. `strQualifierName` e `pQualifierVal` inutilizzate. |
 | `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Restituire solo le proprietà che hanno un qualificatore del nome specificato per il `strQualifierName` parametro. Se questo flag viene utilizzato, è necessario specificare `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Restituire solo le proprietà che non dispongono di un qualificatore del nome specificato per il `strQualifierName` parametro. Se questo flag viene utilizzato, è necessario specificare `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Restituire solo le proprietà che dispongono di un qualificatore del nome specificato per il `wszQualifierName` parametro e avere un valore identico a quello specificato dal `pQualifierVal` struttura. Se questo flag viene utilizzato, è necessario specificare sia un `wszQualifierName` e `pQualifierValue`. |
@@ -115,7 +108,7 @@ La funzione alloca sempre un nuovo `SAFEARRAY` se restituisce `WBEM_S_NO_ERROR`,
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

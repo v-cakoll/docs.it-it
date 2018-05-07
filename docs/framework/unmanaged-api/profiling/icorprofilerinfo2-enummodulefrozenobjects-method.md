@@ -1,14 +1,6 @@
 ---
 title: Metodo ICorProfilerInfo2::EnumModuleFrozenObjects
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo2.EnumModuleFrozenObjects
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 920b6483-7064-4d64-8613-fcc38ccf9b1e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3866d91d28258eaee78e6025175628796a369f88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 77b07dae5b53db58b3628f677be1714e66ac18ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a>Metodo ICorProfilerInfo2::EnumModuleFrozenObjects
 Ottiene un enumeratore che consente di scorrere gli oggetti bloccati nel modulo specificato. Questo metodo è obsoleto.  
@@ -58,7 +46,7 @@ HRESULT EnumModuleFrozenObjects(
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
  **Versioni di .NET framework:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0  
   

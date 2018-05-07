@@ -1,14 +1,6 @@
 ---
 title: Metodo SetAssemblyFile2
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink2.SetAssemblyFile2
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: eedb9125-1ef1-4000-abfc-7de86e5a1f17
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 671fb857015a5babd388366066d282cb87462c18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ade568889d1c0203115f160d855de8c598798196
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setassemblyfile2-method"></a>Metodo SetAssemblyFile2
 Imposta il nome e le opzioni per un nuovo assembly. Non chiamare questo metodo quando si creano moduli non associati.  
@@ -53,7 +41,7 @@ HRESULT SetAssemblyFile2(
  Nome del file manifesto.  
   
  `pEmitter`  
- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interfaccia per il file.  
+ [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interfaccia per questo file.  
   
  `afFlags`  
  Opzioni rappresentate da [enumerazione AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).  

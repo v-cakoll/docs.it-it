@@ -1,27 +1,15 @@
 ---
 title: Abilitazione di MARS (Multiple Active Result Set)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b2b1e3ccfe162b6d4903aaf162673ba476296d8b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ab866356e979ec6c041d12620cfb6abfc8928668
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Abilitazione di MARS (Multiple Active Result Set)
 MARS (Multiple Active Result Set) è un servizio che funziona in combinazione con SQL Server per consentire l'esecuzione di più batch in un'unica connessione. Quando MARS è abilitato per l'uso con SQL Server, ciascun oggetto comando usato aggiunge una sessione alla connessione.  
@@ -79,7 +67,7 @@ string connectionString = "Data Source=MSSQL1;" +
  Le operazioni MARS non sono thread-safe.  
   
 ### <a name="connection-pooling"></a>Pool di connessioni  
- Le connessioni con MARS abilitato sono in pool come qualsiasi altra connessione. Se un'applicazione apre due connessioni, una con MARS abilitato e un'altra con MARS disabilitato, le due connessioni risulteranno in pool diversi. Per ulteriori informazioni, vedere [SQL Server Connection Pooling (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Le connessioni con MARS abilitato sono in pool come qualsiasi altra connessione. Se un'applicazione apre due connessioni, una con MARS abilitato e un'altra con MARS disabilitato, le due connessioni risulteranno in pool diversi. Per altre informazioni, vedere [Pool di connessioni SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ### <a name="sql-server-batch-execution-environment"></a>Ambiente di esecuzione in batch di SQL Server  
  Quando si apre una connessione, viene definito un ambiente predefinito che viene quindi copiato in una sessione MARS logica.  

@@ -1,24 +1,12 @@
 ---
 title: Mapping del tipo SQL-CLR
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: cc6a3d38b8534c9727562cb3fb82f96fa60db7ec
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-clr-type-mapping"></a>Mapping del tipo SQL-CLR
 In LINQ to SQL viene eseguito il mapping del modello di dati di un database relazionale a un modello a oggetti espresso nel linguaggio di programmazione desiderato. Quando viene eseguita l'applicazione, LINQ to SQL converte in SQL le query LINQ (Language Integrated Query) nel modello a oggetti e le invia al database per l'esecuzione. Quando il database restituisce i risultati, questi vengono nuovamente convertiti da LINQ to SQL in oggetti che è possibile usare nel linguaggio di programmazione desiderato.  
@@ -31,7 +19,7 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
   
 -   [Tipo di matrice del comportamento in fase di esecuzione del Mapping](#BehaviorMatrix)  
   
--   [Differenze di comportamento tra CLR e l'esecuzione di SQL](#BehaviorDiffs)  
+-   [Differenze di comportamento tra CLR e l'esecuzione SQL](#BehaviorDiffs)  
   
 -   [Mapping dei tipi enum](#EnumMapping)  
   
@@ -39,7 +27,7 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
   
 -   [Testo e Mapping XML](#TextMapping)  
   
--   [Data e ora di Mapping](#DateMapping)  
+-   [Data e ora Mapping](#DateMapping)  
   
 -   [Mapping dei tipi binari](#BinaryMapping)  
   
@@ -206,7 +194,7 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
 >  I tipi di dati `DATETIME2`, `DATETIMEOFFSET`, `DATE` e `TIME` di SQL Server sono disponibili a partire da Microsoft SQL Server 2008. LINQ to SQL supporta il mapping a questi nuovi tipi a partire da .NET Framework versione 3.5 SP1.  
   
 ### <a name="systemdatetime"></a>System.Datetime  
- L'intervallo e la precisione del tipo <xref:System.DateTime?displayProperty=nameWithType> CLR sono maggiori dell'intervallo e della precisione del tipo `DATETIME` di SQL Server, che rappresenta il mapping dei tipi predefiniti per il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>. Per evitare eccezioni relative a date non incluse nell'intervallo di `DATETIME`, usare `DATETIME2`, disponibile a partire da Microsoft SQL Server 2008. `DATETIME2`può corrispondere all'intervallo e la precisione del tipo <xref:System.DateTime?displayProperty=nameWithType>.  
+ L'intervallo e la precisione del tipo <xref:System.DateTime?displayProperty=nameWithType> CLR sono maggiori dell'intervallo e della precisione del tipo `DATETIME` di SQL Server, che rappresenta il mapping dei tipi predefiniti per il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>. Per evitare eccezioni relative a date non incluse nell'intervallo di `DATETIME`, usare `DATETIME2`, disponibile a partire da Microsoft SQL Server 2008. `DATETIME2` può corrispondere all'intervallo e precisione di CLR <xref:System.DateTime?displayProperty=nameWithType>.  
   
  Le date di SQL Server non includono alcun concetto di <xref:System.TimeZone>, una funzionalità ampiamente supportata in CLR. I valori di <xref:System.TimeZone> vengono salvati così come sono nel database senza conversione <xref:System.TimeZone>, indipendentemente dalle informazioni <xref:System.DateTimeKind> originali. Quando i valori di <xref:System.DateTime> vengono recuperati dal database, il relativo valore viene caricato così com'è in un oggetto <xref:System.DateTime> con un valore <xref:System.DateTimeKind> corrispondente a <xref:System.DateTimeKind.Unspecified>. Per ulteriori informazioni su supportato <xref:System.DateTime?displayProperty=nameWithType> metodi, vedere [metodi System. DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
   
@@ -224,7 +212,7 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
 |`BINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(MAX)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
-|`VARBINARY(MAX)`con il `FILESTREAM` attributo|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
+|`VARBINARY(MAX)` con il `FILESTREAM` attributo|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`IMAGE`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`TIMESTAMP`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
   

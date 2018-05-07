@@ -1,29 +1,15 @@
 ---
 title: Specifica di valori XML come parametri
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: dace7c3adc1b7a55c8c945e82399828ce16f1bb0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c963b3e08eba7776a0ed579017f1e84828794379
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Specifica di valori XML come parametri
 Se una query richiede un parametro il cui valore è una stringa XML, è possibile fornire tale valore utilizzando un'istanza di **SqlXml** tipo di dati. Non esistono effettivamente alcun trucchi; Colonne XML in SQL Server accettano i valori dei parametri nel esattamente come altri tipi di dati.  

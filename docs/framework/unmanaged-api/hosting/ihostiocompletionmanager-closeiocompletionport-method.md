@@ -1,14 +1,6 @@
 ---
 title: Metodo IHostIoCompletionManager::CloseIoCompletionPort
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostIoCompletionManager.CloseIoCompletionPort
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e86ad7be-3758-498a-a972-5522d69dfbb3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e74803cad610d5550ce8b52ce04295247617d907
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 761e3b22014bdd628ffc6763615a285a16a86309
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostiocompletionmanagercloseiocompletionport-method"></a>Metodo IHostIoCompletionManager::CloseIoCompletionPort
 Richiede che l'host chiuda una porta che è stato aperto tramite una chiamata precedente a [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).  
@@ -54,7 +42,7 @@ HRESULT CloseIoCompletionPort (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`CloseIoCompletionPort`stato restituito correttamente.|  
+|S_OK|`CloseIoCompletionPort` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
@@ -63,16 +51,16 @@ HRESULT CloseIoCompletionPort (
 |E_INVALIDARG|È stato passato un handle di porta non valido.|  
   
 ## <a name="remarks"></a>Note  
- `hPort`deve essere un handle a una porta che è stato creato da una precedente chiamata a `CreateIoCompletionPort`.  
+ `hPort` deve essere un handle a una porta che è stato creato da una chiamata precedente a `CreateIoCompletionPort`.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)  

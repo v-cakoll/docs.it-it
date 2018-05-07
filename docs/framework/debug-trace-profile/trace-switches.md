@@ -1,13 +1,6 @@
 ---
 title: Opzioni di traccia
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4df092afd4d60811683b4187df78f27ad971cf89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b8ee0d04644cf504354767c296f504a937055d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trace-switches"></a>Opzioni di traccia
 Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia. Si tratta di oggetti presenti nel codice che possono essere configurati esternamente tramite il file CONFIG. Esistono tre tipi di opzioni di traccia in .NET Framework, ossia le classi <xref:System.Diagnostics.BooleanSwitch> , <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> . La classe <xref:System.Diagnostics.BooleanSwitch> funge da opzione di attivazione o disabilitazione per diverse istruzioni di traccia. Le classi <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> consentono di attivare un'opzione per un particolare livello di tracciatura, in modo che vengano visualizzati i messaggi di traccia <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.TraceSource> specificati per quel livello e per tutti i livelli inferiori. Se si disabilita l'opzione, i messaggi di traccia non verranno visualizzati. Tutte queste classi derivano dalla classe**Switch**( **MustInherit**) astratta, come avviene per ogni opzione sviluppata dall'utente.  

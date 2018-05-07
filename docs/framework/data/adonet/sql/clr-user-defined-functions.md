@@ -1,24 +1,12 @@
 ---
 title: Funzioni definite dall'utente CLR
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c59d9d3-6ff9-411b-8b29-b1494d80fdf1
-caps.latest.revision: "8"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e7e1703dc8b9ae3c98bcc1d73e15b09cf3e66878
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d17ff3ccb53ebca95e7ea580263149b47ffb242f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-user-defined-functions"></a>Funzioni definite dall'utente CLR
 Le funzioni definite dall'utente sono routine che possono accettare parametri, eseguire calcoli o altre azioni e restituire un risultato. È possibile scrivere funzioni definite dall'utente in qualsiasi linguaggio di programmazione Microsoft .NET Framework, ad esempio Microsoft Visual Basic .NET o Microsoft Visual C#.  

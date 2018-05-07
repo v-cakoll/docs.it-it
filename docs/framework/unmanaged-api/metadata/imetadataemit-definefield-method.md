@@ -1,14 +1,6 @@
 ---
 title: Metodo IMetaDataEmit::DefineField
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.DefineField
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2c4b5604c3daec78744eb8902a30750571b9f82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitdefinefield-method"></a>Metodo IMetaDataEmit::DefineField
 Crea una definizione per un campo con la firma dei metadati specificati e ottiene un token per tale definizione.  
@@ -71,7 +59,7 @@ HRESULT DefineField (
  [in] Il numero di byte in `pvSigBlob`.  
   
  `dwCPlusTypeFlage`  
- [in] Il `ELEMENT_TYPE_`  *\**  per il valore costante. Si tratta di un `CorElementType` valore. Se non si definisce un valore costante per il campo, utilizzare `ELEMENT_TYPE_END`.  
+ [in] Il `ELEMENT_TYPE_` *\** per il valore costante. Si tratta di un `CorElementType` valore. Se non si definisce un valore costante per il campo, utilizzare `ELEMENT_TYPE_END`.  
   
  `pValue`  
  [in] Il valore costante per il campo.  
@@ -87,9 +75,9 @@ HRESULT DefineField (
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in MSCorEE.dll  
+ **Libreria:** usata come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

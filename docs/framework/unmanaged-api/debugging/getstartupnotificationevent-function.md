@@ -1,14 +1,6 @@
 ---
 title: Funzione GetStartupNotificationEvent
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: reference
 api_name:
 - GetStartupNotificationEvent
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: c94b1b61-045a-4695-bacd-0f18c5acc246
 topic_type:
 - apiref
-caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 809f34d265e0a1677d8b7fc78515b20df7353968
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3692471e0652a1a812b1d0cbed9e38cc32112ef4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getstartupnotificationevent-function"></a>Funzione GetStartupNotificationEvent
 Crea o apre un handle dell'evento che verrà segnalato da qualsiasi CLR (Common Language Runtime) caricato nel processo di destinazione specificato.  
@@ -76,6 +64,6 @@ HRESULT GetStartupNotificationEvent
   
  **Intestazione:** dbgshim. h  
   
- **Libreria:** dbgshim.dll  
+ **Libreria:** dbgshim. dll  
   
  **Versioni di .NET framework:** 3.5 SP1

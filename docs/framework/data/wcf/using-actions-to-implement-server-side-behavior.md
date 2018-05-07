@@ -1,30 +1,18 @@
 ---
 title: Utilizzo di azioni per implementare il comportamento lato server
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d8ca19a5a49815130103672f43452ebbfedfae3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4be2aa42c667460232f6aa3cd8dc707805750e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Utilizzo di azioni per implementare il comportamento lato server
 Le azioni OData consentono di implementare un comportamento che agisce su una risorsa recuperata da un servizio OData.  Ad esempio, se si considera come risorsa un filmato digitale, sono diverse le operazioni che è possibile eseguire, ad esempio l'estrazione, la valutazione, l'aggiunta di commenti o l'archiviazione. Sono tutti esempi di azioni che possono essere implementate da un servizio di WCF Data Services che gestisce i filmati digitali. Le azioni vengono descritte in una risposta OData che contiene una risorsa in cui l'azione può essere richiamata. Quando un utente richiede una risorsa che rappresenta un filmato digitale, la risposta restituita da un servizio di WCF Data Services contiene le informazioni sulle azioni disponibili per tale risorsa. La disponibilità di un'azione può dipendere dallo stato del servizio dati o della risorsa. Ad esempio, una volta estratto, un filmato digitale non può essere estratto da un altro utente. I client possono richiamare un'azione semplicemente specificando un URL. Ad esempio http://MyServer/MovieService.svc/Movies(6) identifica un filmato digitale specifico e http://MyServer/MovieService.svc/Movies(6)/Checkout richiama l'azione sul filmato specifico. Le azioni consentono di esporre il modello di servizio senza esporre il modello di dati. Continuando con l'esempio del servizio del filmato, è possibile che si desideri consentire a un utente di valutare un filmato ma non di esporre direttamente i dati della valutazione come risorsa. È possibile implementare un'azione Rate per consentire all'utente di valutare un filmato ma non di accedere direttamente ai dati della valutazione come risorsa.  
   
 ## <a name="implementing-an-action"></a>Implementazione di un'azione  
- Per implementare un'azione di servizio è necessario implementare la <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), e [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) interfacce. <xref:System.IServiceProvider>consente a WCF Data Services ottenere l'implementazione di [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) consente a WCF Data Services creare, trovare, descrivere e richiamare le azioni di servizio. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) consente di richiamare il codice che implementa il comportamento di azioni di servizio e ottenere i risultati, se presente. Tenere presente che WCF Data Services contiene servizi WCF "per chiamata", ovvero ogni volta che viene chiamato il servizio, verrà creata una nuova istanza del servizio.  Assicurarsi che non vengano eseguite operazioni non necessarie quando viene creato il servizio.  
+ Per implementare un'azione di servizio è necessario implementare la <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), e [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) interfacce. <xref:System.IServiceProvider> consente a WCF Data Services ottenere l'implementazione di [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) consente a WCF Data Services creare, trovare, descrivere e richiamare le azioni di servizio. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) consente di richiamare il codice che implementa il comportamento di azioni di servizio e ottenere i risultati, se presente. Tenere presente che WCF Data Services contiene servizi WCF "per chiamata", ovvero ogni volta che viene chiamato il servizio, verrà creata una nuova istanza del servizio.  Assicurarsi che non vengano eseguite operazioni non necessarie quando viene creato il servizio.  
   
 ### <a name="iserviceprovider"></a>IServiceProvider  
  <xref:System.IServiceProvider> contiene un metodo denominato <xref:System.IServiceProvider.GetService%2A>. Questo metodo viene chiamato da WCF Data Services per recuperare diversi provider di servizi, tra cui provider di servizi di metadati e provider di azioni di servizio dati. Quando viene richiesto un provider di azioni di servizio dati, restituire il [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) implementazione.  

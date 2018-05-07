@@ -1,25 +1,18 @@
 ---
 title: Introduzione a .NET Framework
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3295d17b0ef4650c38f264dfc785eee7a452be86
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d62ae73c9a2789087785e1fba6b227245ee08a10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-the-net-framework"></a>Introduzione a .NET Framework
 
@@ -60,7 +53,7 @@ In generale, le versioni di .NET Framework installate nel computer non devono es
 
 - Se un'app in uso dipende da una specifica versione di .NET Framework che viene rimossa, l'app potrebbe smettere di funzionare.
 
-- Alcune versioni di .NET Framework sono aggiornamenti sul posto di versioni precedenti. Ad esempio, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] è un aggiornamento sul posto alla versione 2.0 e .NET Framework 4.7.1 è un aggiornamento sul posto alle versioni 4, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 e 4.7. Per altre informazioni, vedere [Versioni e dipendenze di .NET Framework](../../../docs/framework/migration-guide/versions-and-dependencies.md).
+- Alcune versioni di .NET Framework sono aggiornamenti sul posto di versioni precedenti. Ad esempio, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] è un aggiornamento sul posto alla versione 2.0 e .NET Framework 4.7.2 è un aggiornamento sul posto alle versioni da 4 a 4.7.1. Per altre informazioni, vedere [Versioni e dipendenze di .NET Framework](../../../docs/framework/migration-guide/versions-and-dependencies.md).
 
 Nelle versioni di Windows precedenti a Windows 8, se si sceglie di rimuovere .NET Framework, per la disinstallazione usare sempre **Programmi e funzionalità** dal Pannello di controllo. Non rimuovere mai manualmente una versione di .NET Framework. In Windows 8 e versioni successive, .NET Framework è un componente del sistema operativo e non può essere disinstallato in modo indipendente.
 
@@ -73,7 +66,7 @@ Uno sviluppatore può scegliere qualsiasi linguaggio di programmazione che suppo
 
 Per sviluppare app o componenti .NET Framework, eseguire le operazioni seguenti:
 
-1. Se non è già preinstallata nel sistema operativo, installare la versione di .NET Framework che verrà usata dall'app. La versione di produzione più recente è .NET Framework 4.7.1, preinstallata in Windows 10 Falll Creators Update e disponibile per il download nelle versioni precedenti del sistema operativo Windows. Per i requisiti di sistema di .NET Framework, vedere [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md). Per informazioni sull'installazione di .NET Framework, vedere [Guida all'installazione](../../../docs/framework/install/guide-for-developers.md). Pacchetti aggiuntivi di .NET Framework vengono rilasciati fuori programma, ovvero all'occorrenza al di fuori di qualsiasi ciclo di rilascio regolare o pianificato. Per informazioni su questi pacchetti, vedere [.NET Framework e rilascio fuori programma](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+1. Se non è già preinstallata nel sistema operativo, installare la versione di .NET Framework che verrà usata dall'app. La versione di produzione più recente è .NET Framework 4.7.2, preinstallata in Windows 10 April 2018 Update e disponibile per il download nelle versioni precedenti del sistema operativo Windows. Per i requisiti di sistema di .NET Framework, vedere [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md). Per informazioni sull'installazione di .NET Framework, vedere [Guida all'installazione](../../../docs/framework/install/guide-for-developers.md). Pacchetti aggiuntivi di .NET Framework vengono rilasciati fuori programma, ovvero all'occorrenza al di fuori di qualsiasi ciclo di rilascio regolare o pianificato. Per informazioni su questi pacchetti, vedere [.NET Framework e rilascio fuori programma](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
 2. Selezionare uno o più linguaggi supportati da .NET Framework che si intende usare per lo sviluppo delle app. Sono disponibili numerosi linguaggi, tra cui [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e C++/CLI di Microsoft. Un linguaggio di programmazione che consente di sviluppare app per .NET Framework è conforme alla [specifica CLI (Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkId=199862).
 

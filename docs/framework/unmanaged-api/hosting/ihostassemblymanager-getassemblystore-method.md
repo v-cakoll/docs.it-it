@@ -1,14 +1,6 @@
 ---
 title: Metodo IHostAssemblyManager::GetAssemblyStore
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyManager.GetAssemblyStore
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d0f74593-9bb1-4a11-8096-e29734b20698
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 347947622601475147663b8838bef5f36a1f7e32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: efad3c6e566ab35a8ba4fbbacf09931e844ce8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblymanagergetassemblystore-method"></a>Metodo IHostAssemblyManager::GetAssemblyStore
 Ottiene un puntatore a interfaccia a un [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md) che rappresenta l'elenco degli assembly caricati dall'host.  
@@ -54,7 +42,7 @@ HRESULT GetAssemblyStore (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`GetAssemblyStore`stato restituito correttamente.|  
+|S_OK|`GetAssemblyStore` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
@@ -63,7 +51,7 @@ HRESULT GetAssemblyStore (
 |E_NOINTERFACE|L'host non fornisce un'implementazione di `IHostAssemblyStore`.|  
   
 ## <a name="remarks"></a>Note  
- `IHostAssemblyStore`fornisce metodi che consentono a un host per l'associazione di assembly e moduli in modo indipendente da CLR. Gli host in genere forniscono archivi di assembly per consentire agli assembly devono essere caricati da formati diversi da file system.  
+ `IHostAssemblyStore` fornisce metodi che consentono a un host da associare al moduli in modo indipendente da CLR e assembly. Gli host in genere forniscono archivi di assembly per consentire agli assembly devono essere caricati da formati diversi da file system.  
   
 > [!NOTE]
 >  Se l'host non implementa `IHostAssemblyStore`, `GetAssemblyStore` deve restituire un valore HRESULT di tipo E_NOINTERFACE e deve impostare `ppAssemblyStore` su null.  
@@ -73,9 +61,9 @@ HRESULT GetAssemblyStore (
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  

@@ -1,13 +1,6 @@
 ---
-title: "Procedure consigliate per l'ottimizzazione dell'affidabilità"
-ms.custom: 
+title: Procedure consigliate per l'ottimizzazione dell'affidabilità
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - marking locks
 - rebooting databases
@@ -45,16 +38,13 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6f29d15297fc7faff6bb3bb07ee535647c2bb7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliability-best-practices"></a>Procedure consigliate per l'ottimizzazione dell'affidabilità
 Le regole seguenti relative all'affidabilità riguardano specificamente SQL Server, ma sono valide anche per qualsiasi applicazione server basata su host. È molto importante che nei server, ad esempio SQL Server, non si verifichino problemi di perdita di risorse e arresto.  Non è tuttavia possibile ottenere questo risultato scrivendo codice di annullamento per ogni metodo che modifica lo stato di un oggetto.  L'obiettivo da raggiungere non è quello di scrivere codice gestito completamente affidabile, in grado di eseguire il ripristino da qualsiasi errore in qualunque posizione tramite codice di annullamento.  Sarebbe un'attività estremamente impegnativa con scarse probabilità di successo.  Common Language Runtime (CLR) non è sempre in grado di offrire garanzie sufficienti per il codice gestito per consentire di scrivere codice perfetto.  Inoltre, a differenza di ASP.NET, SQL Server usa un solo processo che non può essere riciclato senza disattivare il database per un periodo di tempo eccessivamente lungo.  
@@ -258,7 +248,7 @@ public static MyClass SingletonProperty
  Prendere in considerazione l'opportunità di modificare tutti i punti in cui vengono intercettate le eccezioni in modo da intercettare un tipo specifico di eccezione che si prevede venga generato, ad esempio un'eccezione <xref:System.FormatException> dai metodi di formattazione delle stringhe.  In questo modo è possibile impedire l'esecuzione del blocco catch in caso di eccezioni impreviste e garantire che il codice non nasconda bug intercettando eccezioni di questo tipo.  Come regola generale, evitare sempre di gestire un'eccezione nel codice di libreria (il codice che richiede di intercettare un'eccezione può indicare la presenza di un difetto di progettazione nel codice chiamato).  In alcuni casi è opportuno intercettare un'eccezione e generarne un'altra di tipo diverso per fornire più dati.  A tale scopo, usare eccezioni annidate, archiviando la causa effettiva dell'errore nella proprietà <xref:System.Exception.InnerException%2A> della nuova eccezione.  
   
 #### <a name="code-analysis-rule"></a>Regola per l'analisi del codice  
- Esaminare tutti i blocchi catch nel codice gestito che intercettano tutti gli oggetti o tutte le eccezioni.  In C# questo significa contrassegnare sia `catch` {} che `catch(Exception)` {}.  Prendere in considerazione l'opportunità di rendere molto specifico il tipo di eccezione oppure esaminare il codice per assicurarsi che non si verifichino comportamenti non corretti qualora venga intercettata un'eccezione di tipo imprevisto.  
+ Esaminare tutti i blocchi catch nel codice gestito che intercettano tutti gli oggetti o tutte le eccezioni.  Nel linguaggio c#, questo significa contrassegnare entrambi `catch` {} e `catch(Exception)` {}.  Prendere in considerazione l'opportunità di rendere molto specifico il tipo di eccezione oppure esaminare il codice per assicurarsi che non si verifichino comportamenti non corretti qualora venga intercettata un'eccezione di tipo imprevisto.  
   
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>Non presupporre che un thread gestito sia un thread Win32: è un fiber  
  È possibile usare l'archiviazione thread-local gestita, ma non quella non gestita, né è possibile presupporre che il codice verrà eseguito di nuovo nel thread del sistema operativo corrente.  Non modificare impostazioni quali le impostazioni locali dei thread.  Non chiamare `InitializeCriticalSection` o `CreateMutex` tramite platform invoke perché questi metodi richiedono che un thread del sistema operativo che attiva un blocco possa anche disattivarlo.  Poiché con i fiber questo non si verifica, non è possibile usare mutex e sezioni critiche Win32 direttamente in SQL.  Si noti che la classe gestita <xref:System.Threading.Mutex> non gestisce questi problemi di affinità di thread.  

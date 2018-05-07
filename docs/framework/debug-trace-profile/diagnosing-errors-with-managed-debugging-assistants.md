@@ -1,14 +1,6 @@
 ---
 title: Diagnostica degli errori tramite gli assistenti al debug gestito
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - EHMDA
 helpviewer_keywords:
@@ -37,17 +29,13 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 12a96068412f05d48b8b006385c66f3efbbf9870
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16a039a5edb0e1023551f97deefbf7874a19638b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Diagnostica degli errori tramite gli assistenti al debug gestito
 Gli assistenti al debug gestito sono strumenti per il debug da usare insieme a CLR (Common Language Runtime) per fornire informazioni sullo stato del runtime. Gli assistenti generano messaggi informativi su eventi di runtime che non possono essere intercettati in altro modo. È possibile usare gli assistenti al debug gestito per isolare bug di applicazione difficili da individuare, che si verificano durante la transizione tra codice gestito e non gestito. È possibile abilitare o disabilitare tutti gli assistenti al debug gestito aggiungendo una chiave al Registro di sistema di Windows oppure impostando una variabile di ambiente. Le impostazioni di configurazione dell'applicazione permettono di abilitare assistenti al debug gestito specifici. È possibile definire impostazioni di configurazione aggiuntive per alcuni singoli assistenti al debug gestito nel file di configurazione dell'applicazione. Poiché questi file di configurazione sono analizzati durante il caricamento del runtime, è necessario abilitare l'assistente al debug gestito prima dell'avvio dell'applicazione gestita. Non è possibile abilitarlo per applicazioni già avviate.  

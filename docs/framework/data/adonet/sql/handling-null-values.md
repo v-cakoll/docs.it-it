@@ -1,27 +1,15 @@
 ---
 title: Gestione dei valori null
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 23a502cc3a286ed5cb47c7bbe21253f312722409
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9c0b6d250dcedc9b5996c50ccdb2f183707e54e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-null-values"></a>Gestione dei valori null
 Un valore null in un database relazionale viene usato quando il valore in una colonna è sconosciuto o mancante. Un valore null non è né una stringa vuota (per tipi di dati carattere o data-ora) né un valore zero (per tipi di dati numerici). Nella specifica ANSI SQL-92 si afferma che un valore null deve essere uguale per tutti i tipi di dati, in modo da gestire coerentemente tutti i valori null. Lo spazio dei nomi <xref:System.Data.SqlTypes> offre una semantica di tipo null tramite l'implementazione dell'interfaccia <xref:System.Data.SqlTypes.INullable>. Ciascun tipo di dati nello spazio dei nomi <xref:System.Data.SqlTypes> dispone di una proprietà `IsNull` e di un valore `Null` che può essere assegnato a un'istanza di quel tipo di dati.  
@@ -43,7 +31,7 @@ Un valore null in un database relazionale viene usato quando il valore in una co
 ## <a name="nulls-and-sqlboolean"></a>Valori null e SqlBoolean  
  Un confronto tra qualsiasi spazio dei nomi <xref:System.Data.SqlTypes> restituirà un tipo <xref:System.Data.SqlTypes.SqlBoolean>. La funzione `IsNull` per ogni `SqlType` restituisce un tipo <xref:System.Data.SqlTypes.SqlBoolean> e può essere usata per controllare eventuali valori null. Nelle seguenti tabelle reali viene mostrato come funzionano gli operatori AND, OR e NOT in presenza di un valore null. (T=true, F=false e U=sconosciuto [unknown] o null.)  
   
- ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
+ ![Tabella Truth](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>Nozioni di base sull'opzione ANSI_NULLS  
  Lo spazio dei nomi <xref:System.Data.SqlTypes> offre la stessa semantica dell'opzione ANSI_NULLS quando è attivata in SQL Server. Tutti gli operatori aritmetici (+, -, *, /, %), operatori bit per bit (~ &, &#124;), e la maggior parte delle funzioni restituiscono null se uno degli operandi o argomenti è null, ad eccezione della proprietà `IsNull`.  

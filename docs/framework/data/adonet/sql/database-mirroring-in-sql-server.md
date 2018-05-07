@@ -1,27 +1,15 @@
 ---
 title: Mirroring del database in SQL Server
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8a955f62aa1e7b2f025a621840753e2213fcefe7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cbb4b729475c8f77c204c3a9250d48d4b0cd3bc5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="database-mirroring-in-sql-server"></a>Mirroring del database in SQL Server
 Il mirroring del database in SQL Server consente di mantenere una copia, o mirror, di un database di SQL Server in un server di standby. Il mirroring assicura che siano sempre disponibili due copie separate dei dati per assicurare un'elevata disponibilità e una ridondanza completa dei dati. Il provider di dati .NET per SQL Server fornisce il supporto implicito per il mirroring del database. Pertanto, una volta configurato il provider per un database SQL Server, lo sviluppatore non dovrà eseguire alcuna operazione né scrivere codice. L'oggetto <xref:System.Data.SqlClient.SqlConnection> supporta inoltre una modalità di connessione esplicita che consente di specificare il nome di un server partner di failover in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -72,7 +60,7 @@ string activeServer = connection.DataSource;
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Il mirroring del database](http://msdn.microsoft.com/library/bb934127.aspx) nella documentazione Online di SQL Server|Viene descritto come impostare e configurare il mirroring in SQL Server.|  
+|[Mirroring del database](http://msdn.microsoft.com/library/bb934127.aspx) nella documentazione Online di SQL Server|Viene descritto come impostare e configurare il mirroring in SQL Server.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

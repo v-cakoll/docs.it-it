@@ -1,14 +1,6 @@
 ---
 title: Struttura COR_HEAPINFO
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_HEAPINFO
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 991e018c3967693f5b87b71c77cdbadcd4ae0cfe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fb1ae367c30bb038bfe25961e91f02f172f486c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corheapinfo-structure"></a>Struttura COR_HEAPINFO
 Fornisce informazioni generali sull'heap di Garbage Collection, specificando anche se è enumerabile.  
@@ -53,10 +41,10 @@ typedef struct _COR_HEAPINFO {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true`Se strutture di garbage collection sono valide e possono essere enumerati heap; in caso contrario, `false`.|  
+|`areGCStructuresValid`|`true` Se le strutture di garbage collection sono valide e possono essere enumerati heap; in caso contrario, `false`.|  
 |`pointerSize`|Le dimensioni in byte, dei puntatori sull'architettura di destinazione.|  
 |`numHeaps`|Il numero di logica di garbage collection heap nel processo.|  
-|`concurrent`|`TRUE`Se simultanea (in background) garbage collection è abilitata; in caso contrario, `FALSE`.|  
+|`concurrent`|`TRUE` Se simultanea (in background) garbage collection è abilitata; in caso contrario, `FALSE`.|  
 |`gcType`|Membro di [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) enumerazione che indica se il garbage collector è in esecuzione in una workstation o un server.|  
   
 ## <a name="remarks"></a>Note  
@@ -67,11 +55,11 @@ typedef struct _COR_HEAPINFO {
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, Cordebug. H  
+ **Intestazione:** Cordebug. idl, Cordebug. H  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

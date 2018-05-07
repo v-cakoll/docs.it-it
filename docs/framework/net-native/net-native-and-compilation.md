@@ -1,24 +1,14 @@
 ---
 title: Compilazione e .NET Native
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86d8a740aa0597a21c6665ee722f4a601dec9bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 046b71a8f1d948a785a15cfc148b93292bf673f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-native-and-compilation"></a>Compilazione e .NET Native
 Le applicazioni Windows 8.1 e Windows Desktop destinate a .NET Framework vengono per lo più scritte in un determinato linguaggio di programmazione e compilate in linguaggio intermedio (IL). In fase di esecuzione, un compilatore JIT è responsabile della compilazione del linguaggio intermedio in codice nativo per il computer locale prima che un metodo venga eseguito per la prima volta. Al contrario, la catena di strumenti .NET Native converte il codice sorgente in codice nativo in fase di compilazione. Questo argomento confronta .NET Native con altre tecnologie di compilazione disponibili per le app .NET Framework e fornisce una panoramica pratica del modo in cui .NET Native produce codice nativo, utile a comprendere il motivo per cui le eccezioni che si verificano nel codice compilato con .NET Native non si verificano nel codice con compilazione JIT.  
@@ -111,6 +101,6 @@ Le applicazioni Windows 8.1 e Windows Desktop destinate a .NET Framework vengono
   
 ## <a name="see-also"></a>Vedere anche  
  [Metadati e componenti auto-descrittivi](../../../docs/standard/metadata-and-self-describing-components.md)  
- [All'interno .NET Native (Video di Channel 9)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
+ [Interno .NET Native (Video di Channel 9)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
  [Reflection e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [Risoluzione dei problemi generale per .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

@@ -1,34 +1,22 @@
 ---
-title: "Recupero di dati e operazioni CUD in applicazioni a più livelli (LINQ to SQL)"
-ms.custom: 
+title: Recupero di dati e operazioni CUD in applicazioni a più livelli (LINQ to SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6cdf1a859595c82b8eea60311c3c96353849e3dc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ea27d6406ed588f2046dc938f5167a6c0200329e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Recupero di dati e operazioni CUD in applicazioni a più livelli (LINQ to SQL)
 Quando si serializzano oggetti entità, ad esempio Customers o Orders, in un client di una rete, tali entità vengono disconnesse dal relativo contesto dati. Il contesto dati non rileva più le modifiche o le associazioni con gli altri oggetti, il che non rappresenta un problema se i client leggono solo i dati. È inoltre relativamente semplice consentire ai client di aggiungere nuove righe in un database. Tuttavia, se l'applicazione richiede che i client siano in grado di aggiornare o eliminare i dati, sarà necessario associare le entità a un nuovo contesto dati prima di chiamare <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Inoltre, se si usa un controllo della concorrenza ottimistica con i valori originali, sarà necessario anche un modo per fornire al database l'entità originale e l'entità come modificata. I metodi `Attach` vengono forniti per consentire l'inserimento delle entità in un nuovo contesto dati dopo essere stati disconnessi.  
   
  Anche se si serializzano oggetti proxy anziché il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] entità, è comunque necessario costruire un'entità nel livello di accesso ai dati (DAL) e quindi collegarlo a un nuovo <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>per inviare i dati al database.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]è completamente requisiti indifferenti sulla modalità di serializzazione delle entità. Per ulteriori informazioni sull'utilizzo di [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] e strumenti SQLMetal per generare le classi serializzabili tramite Windows Communication Foundation (WCF), vedere [procedura: rendere serializzabili le entità](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è completamente requisiti indifferenti sulla modalità di serializzazione delle entità. Per ulteriori informazioni sull'utilizzo di [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] e strumenti SQLMetal per generare le classi serializzabili tramite Windows Communication Foundation (WCF), vedere [procedura: rendere serializzabili le entità](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
   
 > [!NOTE]
 >  Chiamare i metodi `Attach` solo sulle entità nuove o deserializzate. L'unico modo per disconnettere un'entità dal contesto dati originali è serializzarla. Se si tenta di associare un'entità disconnessa a un nuovo contesto dati e tale entità dispone ancora di caricatori posticipati dal contesto dati precedente, in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verrà generata un'eccezione. Un'entità con caricatori posticipati da due contesti dati diversi può causare risultati imprevisti quando si esegue l'inserimento, aggiornamento e le operazioni di eliminazione su tale entità. Per ulteriori informazioni sui caricatori posticipati, vedere [posticipata e il caricamento immediato](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  

@@ -2,11 +2,11 @@
 title: '&lt;messageSenderAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: ea62fc06-55fb-42e0-aa2b-8867bdf4b415
-ms.openlocfilehash: 656543ee1908c8fa332e373863aa4dc7ddecaba7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 9588ba191ef9f52cb81e52c0b8cf0b423fcaf1fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagesenderauthenticationgt"></a>&lt;messageSenderAuthentication&gt;
 Specifica impostazioni di autenticazione per certificato peer usato dal mittente di un messaggio.  
@@ -40,7 +40,7 @@ Specifica impostazioni di autenticazione per certificato peer usato dal mittente
 |`certificateValidationMode`|Enumerazione facoltativa. Specifica una delle cinque modalità usate per convalidare credenziali. L'attributo è di tipo <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Se impostato su `Custom`, è necessario fornire anche un `customCertificateValidator`.|  
 |`customCertificateValidatorType`|Stringa facoltativa. Specifica un tipo e un assembly usati per convalidare un tipo personalizzato. Questo attributo deve essere impostato quando `certificateValidationMode` è impostato su `Custom`. L'attributo è di tipo <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Windows Communication Foundation (WCF) fornisce un peer predefinita validator del certificato che verifica il certificato peer a fronte dell'archivio persone attendibili. Verifica inoltre che il certificato sia concatenato a una radice valida. È possibile implementare una convalida personalizzata per specificare un comportamento diverso e usare questo attributo per puntare alla convalida personalizzata.|  
 |`revocationMode`|Enumerazione facoltativa. Specifica la modalità di revoca dei certificati. L'attributo è di tipo <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>. Il sistema verifica che il certificato peer non sia stato revocato cercandolo nell'elenco dei certificati revocati. Questo controllo può essere eseguito controllando in linea o in un elenco di revoche memorizzato nella cache. È possibile disattivare il controllo di revoca impostando l'attributo su NoCheck.|  
-|`trustedStoreLocation`|Enumerazione facoltativa. Specifica il percorso dell'archivio dati attendibile in cui il certificato peer viene convalidato dal sistema di sicurezza [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. L'attributo è di tipo <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
+|`trustedStoreLocation`|Enumerazione facoltativa. Specifica il percorso di archivio dati attendibile dove il certificato peer viene convalidato dal sistema di sicurezza WCF. L'attributo è di tipo <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  

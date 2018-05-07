@@ -1,20 +1,17 @@
 ---
 title: Vincoli (F#)
 description: 'Informazioni sui vincoli di F # che si applicano ai parametri di tipo generico per specificare i requisiti per un argomento di tipo in una funzione o un tipo generico.'
-keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 2f232a3a-9486-48fb-9759-f23404ed4b52
-ms.openlocfilehash: 91854fd2f692688e0f1c27aba1422eff64156048
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: MT
+ms.openlocfilehash: 65f648d39cf7c3dedf5e558c2ed35337a12efe4a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="constraints"></a>Vincoli
 
@@ -35,11 +32,11 @@ Sono disponibili diversi vincoli che è possibile applicare per limitare i tipi 
 |Vincolo di tipo|*parametro di tipo* :&gt; *tipo*|Il tipo fornito deve essere uguale o derivare dal tipo specificato o se il tipo è un'interfaccia, il tipo fornito deve implementare l'interfaccia.|
 |Vincolo Null|*parametro di tipo* : null|Il tipo fornito deve supportare il valore letterale null. Sono inclusi tutti i tipi di oggetti .NET ma non F # elenco, tupla, funzione, classe, record o i tipi di unione.|
 |Vincolo di membro esplicito|[()]*parametro di tipo* [or... o *parametro di tipo*)]: (* membro firma *)|Almeno uno degli argomenti di tipo forniti deve avere un membro con la firma specificata. non può essere usata più comune. I membri devono essere in modo esplicito definiti nel tipo o parte di un'estensione di tipo implicito per essere destinazioni valide per un vincolo di membro esplicito.|
-|Vincolo del costruttore|*parametro di tipo* : (new: unità -&gt; ' un)|Il tipo specificato deve avere un costruttore predefinito.|
+|Vincolo del costruttore|*parametro di tipo* : (nuovo: unità -&gt; ' un)|Il tipo specificato deve avere un costruttore predefinito.|
 |Vincolo di tipo valore|: struct|Il tipo fornito deve essere un tipo di valore .NET.|
 |Vincolo di tipo riferimento|: non struct|Il tipo fornito deve essere un tipo di riferimento di .NET.|
-|Vincolo di tipo di enumerazione|: enumerazione&lt;*tipo sottostante*&gt;|Il tipo fornito deve essere un tipo enumerato che ha il tipo sottostante specificato. non può essere usata più comune.|
-|Vincolo di delegato|: delegare&lt;*-tipo di parametro tupla*, *il tipo restituito*&gt;|Il tipo fornito deve essere un tipo delegato che contiene gli argomenti specificati e restituire value; non può essere usata più comune.|
+|Vincolo di tipo di enumerazione|: enum&lt;*tipo sottostante*&gt;|Il tipo fornito deve essere un tipo enumerato che ha il tipo sottostante specificato. non può essere usata più comune.|
+|Vincolo di delegato|: delegare&lt;*tipo di parametro tupla*, *tipo restituito*&gt;|Il tipo fornito deve essere un tipo delegato che contiene gli argomenti specificati e restituire value; non può essere usata più comune.|
 |Vincolo di confronto|: confronto|Il tipo fornito deve supportare il confronto.|
 |Vincolo di uguaglianza|: uguaglianza|Il tipo fornito deve supportare l'uguaglianza.|
 |Vincolo non gestito|: non gestito|Il tipo fornito deve essere un tipo non gestito. Tipi non gestiti sono determinati tipi primitivi (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, o `decimal`), i tipi di enumerazione, `nativeptr&lt;_&gt;`, o una struttura non generica i cui campi sono tutti i tipi non gestiti.|

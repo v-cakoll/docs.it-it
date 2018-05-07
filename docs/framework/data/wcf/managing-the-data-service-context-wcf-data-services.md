@@ -1,24 +1,12 @@
 ---
 title: Gestione del contesto del servizio dati (WCF Data Services)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c993a4f09a7187b45331f6beb71a9637da87d20f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b2b0bb709081ca7b0b2a1367f10e1f7a08c98c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>Gestione del contesto del servizio dati (WCF Data Services)
 La classe <xref:System.Data.Services.Client.DataServiceContext> incapsula operazioni supportate su un servizio dati specificato. Sebbene i servizi [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] siano senza stato, non lo è il contesto. Pertanto, è possibile utilizzare la <xref:System.Data.Services.Client.DataServiceContext> classe per mantenere lo stato nel client tra le interazioni con il servizio dati per supportare funzionalità quali la gestione dei cambiamenti. Questa classe consente inoltre di gestire le identità e di rilevare le modifiche.  
@@ -29,7 +17,7 @@ La classe <xref:System.Data.Services.Client.DataServiceContext> incapsula operaz
  Per impostazione predefinita, il client materializza una sola voce del feed di risposta in un oggetto delle entità non ancora rilevate da <xref:System.Data.Services.Client.DataServiceContext>. In altre parole, non vengono sovrascritte le modifiche agli oggetti già presenti nella cache. Questo comportamento viene controllato specificando un valore <xref:System.Data.Services.Client.MergeOption> per le query e le operazioni di caricamento. Questa opzione viene specificata impostando la proprietà <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> su <xref:System.Data.Services.Client.DataServiceContext>. Il valore dell'opzione di unione predefinita è <xref:System.Data.Services.Client.MergeOption.AppendOnly>. Questo valore consente di materializzare gli oggetti delle entità non ancora rilevate. Ciò significa che gli oggetti esistenti non vengono sovrascritti. Un'altra modalità per impedire che gli oggetti sul client vengano sovrascritti dagli aggiornamenti del servizio dati consiste nello specificare <xref:System.Data.Services.Client.MergeOption.PreserveChanges>. Quando si specifica <xref:System.Data.Services.Client.MergeOption.OverwriteChanges>, i valori degli oggetti nel client vengono sostituiti dai valori più recenti delle voci presenti nel feed di risposta, anche se a tali oggetti sono già state apportate modifiche. Quando viene usata un'opzione di unione <xref:System.Data.Services.Client.MergeOption.NoTracking>, <xref:System.Data.Services.Client.DataServiceContext> non può inviare al servizio dati le modifiche apportate agli oggetti del client. Con questa opzione le modifiche vengono sempre sovrascritte dai valori del servizio dati.  
   
 ## <a name="managing-concurrency"></a>Gestione della concorrenza  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]supporta la concorrenza ottimistica che consente al servizio dati rilevare i conflitti di aggiornamento. È possibile configurare il provider del servizio dati in modo che il servizio dati verifichi le modifiche alle entità tramite un token di concorrenza. Il token è costituito da una o più proprietà di un tipo di entità che vengono convalidate dal servizio dati per determinare se una risorsa è stata modificata. I token di concorrenza, che include l'intestazione eTag delle richieste di e le risposte dal servizio dati, vengono gestiti automaticamente dal [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client. Per ulteriori informazioni, vedere [l'aggiornamento del servizio dati](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] supporta la concorrenza ottimistica che consente al servizio dati rilevare i conflitti di aggiornamento. È possibile configurare il provider del servizio dati in modo che il servizio dati verifichi le modifiche alle entità tramite un token di concorrenza. Il token è costituito da una o più proprietà di un tipo di entità che vengono convalidate dal servizio dati per determinare se una risorsa è stata modificata. I token di concorrenza, che include l'intestazione eTag delle richieste di e le risposte dal servizio dati, vengono gestiti automaticamente dal [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client. Per ulteriori informazioni, vedere [l'aggiornamento del servizio dati](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
  <xref:System.Data.Services.Client.DataServiceContext> rileva le modifiche apportate agli oggetti segnalati manualmente tramite <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> e <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> o tramite un oggetto <xref:System.Data.Services.Client.DataServiceCollection%601>. Quando si chiama il metodo <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>, il client restituisce le modifiche al servizio dati. Quando le modifiche del client sono in conflitto con quelle del servizio dati, è possibile che l'esecuzione del metodo <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> non riesca. Quando si verifica ciò, è necessario eseguire una nuova query per la risorsa dell'entità per ricevere i dati dell'aggiornamento. Per sovrascrivere le modifiche nel servizio dati, eseguire la query usando l'opzione di unione <xref:System.Data.Services.Client.MergeOption.PreserveChanges>. Quando si chiama nuovamente <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>, le modifiche salvate sul client vengono salvate in modo permanente nel servizio dati e rimangono in tale posizione fino a quando le altre modifiche non vengono apportate alla risorsa nel servizio dati.  
   

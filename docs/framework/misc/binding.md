@@ -1,25 +1,15 @@
 ---
-title: '&lt;associazione&gt;'
-ms.custom: 
+title: '&lt;Associazione&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 666183d6-4d1f-45c7-ac64-bdf93ee8f36f
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b9e0c7e077a9f47de6df31b00f4df320b845150
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d72b3a34e0696df944b2338c89f167c8bfa06400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="ltbindinggt"></a>&lt;associazione&gt;
+# <a name="ltbindinggt"></a>&lt;Associazione&gt;
 È possibile usare l'elemento di `binding` per configurare differenti tipi di associazione predefiniti forniti da Windows Communication Foundation (WCF).  
   
 ## <a name="system-provided-binding"></a>Binding fornito dal sistema  
@@ -52,4 +42,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Channels.BindingElement>  
  [Associazioni](../../../docs/framework/wcf/bindings.md)  
  [Associazioni personalizzate](../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

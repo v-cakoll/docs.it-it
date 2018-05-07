@@ -1,14 +1,6 @@
 ---
 title: Marshalling dei dati con platform invoke
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -16,17 +8,13 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 24ae6da0b32cf15ee9104bd10ba5fe6bb03a9763
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshalling dei dati con platform invoke
 Per chiamare le funzioni esportate da una libreria non gestita, un'applicazione .NET Framework richiede un prototipo di funzione nel codice gestito che rappresenta la funzione non gestita. Per creare un prototipo che abiliti PInvoke per effettuare il marshalling dei dati in modo corretto, è necessario eseguire le operazioni seguenti:  

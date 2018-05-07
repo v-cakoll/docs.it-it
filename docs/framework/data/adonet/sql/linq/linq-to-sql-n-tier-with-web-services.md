@@ -1,27 +1,15 @@
 ---
-title: "Più livelli di LINQ to SQL con Servizi Web"
-ms.custom: 
+title: Più livelli di LINQ to SQL con Servizi Web
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 79b9b1270f99720dec6b6369706f8a2f601d249e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 94b00c5b9a433aa53fecef10d865db76d5577c84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>Più livelli di LINQ to SQL con Servizi Web
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]è progettato specificamente per l'utilizzo nel livello intermedio in un livello di accesso di dati ad accoppiamento debole (DAL), ad esempio un servizio Web. Se il livello di presentazione è una pagina Web ASP.NET, verrà usato il controllo server Web <xref:System.Web.UI.WebControls.LinqDataSource> per gestire il trasferimento dei dati tra l'interfaccia utente e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nel livello intermedio. Se il livello di presentazione non è una pagina ASP.NET, sarà necessario eseguire operazioni aggiuntive nel livello intermedio e nel livello di presentazione in modo da gestire la serializzazione e deserializzazione dei dati.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è progettato soprattutto per l'utilizzo nel livello intermedio in un livello di accesso ai dati regime (DAL), ad esempio un servizio Web. Se il livello di presentazione è una pagina Web ASP.NET, verrà usato il controllo server Web <xref:System.Web.UI.WebControls.LinqDataSource> per gestire il trasferimento dei dati tra l'interfaccia utente e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nel livello intermedio. Se il livello di presentazione non è una pagina ASP.NET, sarà necessario eseguire operazioni aggiuntive nel livello intermedio e nel livello di presentazione in modo da gestire la serializzazione e deserializzazione dei dati.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>Configurazione di LINQ to SQL nel livello intermedio  
  In un servizio Web o in un'applicazione a più livelli, il livello intermedio contiene il contesto dati e le classi di entità. È possibile creare manualmente queste classi oppure usando SQLMetal.exe o la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] come descritto in un altro punto della documentazione. In fase di progettazione è possibile rendere le classi di entità serializzabili. Per ulteriori informazioni, vedere [procedura: rendere serializzabili le entità](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Un'altra opzione è creare un set separato di classi che incapsulano i dati da serializzare e quindi proiettare in tali tipi serializzabili quando si restituiscono i dati nelle query [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -49,4 +37,4 @@ ms.lasthandoff: 01/19/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni a più livelli e remote con LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [NIB: Panoramica del controllo Server Web LinqDataSource](http://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)
+ [NIB: Cenni preliminari sul controllo Server Web LinqDataSource](http://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)

@@ -1,14 +1,6 @@
 ---
 title: Metodo ICLRDebugging::OpenVirtualProcess
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugging.OpenVirtualProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f1f71f42f10c3d25714998d1697b20a5ee13e055
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51b5a9ecd85f0d40ac2fe2826cbbe7a56a6228d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>Metodo ICLRDebugging::OpenVirtualProcess
 Ottiene l'interfaccia ICorDebugProcess che corrisponde a un modulo common language runtime (CLR) caricato nel processo.  
@@ -87,7 +75,7 @@ HRESULT OpenVirtualProcess(
 |S_OK|Metodo completato correttamente.|  
 |E_POINTER|`pDataTarget` è `null`.|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|Il [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) callback restituisce un errore o non fornisce un handle valido.|  
-|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget`non implementa le interfacce di destinazione di dati necessari per questa versione del runtime.|  
+|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` non implementa le interfacce di destinazione i dati necessari per questa versione del runtime.|  
 |CORDBG_E_NOT_CLR|Il modulo indicato non è un modulo CLR. Questo valore di HRESULT viene restituito anche quando un modulo CLR non può essere rilevato perché la memoria è stata danneggiata, il modulo non è disponibile o la versione CLR è successiva alla versione di shim.|  
 |CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Questa versione di runtime non supporta il modello di debug. Attualmente, il modello di debug non è supportato dalle versioni precedenti CLR il [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Il `pwszVersion` parametro di output è ancora impostato sul valore corretto dopo questo errore.|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|La versione di CLR è maggiore della versione che per il supporto di attestazioni questo debugger. Il `pwszVersion` parametro di output è ancora impostato sul valore corretto dopo questo errore.|  
@@ -101,11 +89,11 @@ HRESULT OpenVirtualProcess(
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, Cordebug. H  
+ **Intestazione:** Cordebug. idl, Cordebug. H  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

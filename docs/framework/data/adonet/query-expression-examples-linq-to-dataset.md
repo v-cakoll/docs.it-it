@@ -1,24 +1,12 @@
 ---
 title: Esempi di espressione di query (LINQ to DataSet)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 01b31debeb71180f4b1c86e6c9e0dfb1251bf807
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7e095d946f3284bae72290c65e7d35aedd4c386b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Esempi di espressione di query (LINQ to DataSet)
 Contenuto della sezione vengono forniti esempi di programmazione di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] nella sintassi delle espressioni di query in cui vengono usati gli operatori di query standard. Il <xref:System.Data.DataSet> usato in questi esempi viene popolato usando il `FillDataSet` metodo, che viene specificato in [durante il caricamento dei dati in un set di dati](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Per ulteriori informazioni, vedere [Cenni preliminari sugli operatori di Query Standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  

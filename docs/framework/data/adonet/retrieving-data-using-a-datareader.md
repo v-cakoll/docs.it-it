@@ -1,27 +1,15 @@
 ---
 title: Recupero di dati tramite un oggetto DataReader
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 60328d766a931abd7a1a3e9dc08c68928e01f2d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0c78db5ce7a6a988e40718daca1d828096a734d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Recupero di dati tramite un oggetto DataReader
 Recupero di dati mediante un **DataReader** comporta la creazione di un'istanza del **comando** oggetto e quindi creando un **DataReader** chiamando  **Command. ExecuteReader** per recuperare righe da un'origine dati. Nell'esempio seguente viene illustrato l'utilizzo un **DataReader** in `reader` rappresenta un DataReader valido e `command` rappresenta un oggetto Command valido.  
@@ -59,7 +47,7 @@ reader = command.ExecuteReader();
  [!code-vb[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/VB/source.vb#1)]  
   
 ## <a name="getting-schema-information-from-the-datareader"></a>Recupero di informazioni sullo schema dall'oggetto DataReader  
- Mentre un **DataReader** è aperto, è possibile recuperare informazioni sullo schema relative corrente insieme di risultati utilizzando il **GetSchemaTable** metodo. **GetSchemaTable** restituisce un <xref:System.Data.DataTable> oggetto compilato con righe e colonne che contengono informazioni sullo schema per il set di risultati corrente. Il **DataTable** contiene una riga per ogni colonna del set di risultati. Esegue il mapping di ogni colonna della riga della tabella dello schema a una proprietà della colonna restituita nel set di risultati, in cui il **ColumnName** è il nome della proprietà e il valore della colonna è il valore della proprietà. Esempio di codice seguente scrive le informazioni sullo schema per **DataReader**.  
+ Mentre un **DataReader** è aperto, è possibile recuperare informazioni sullo schema relative corrente insieme di risultati utilizzando il **GetSchemaTable** metodo. **GetSchemaTable** restituisce un <xref:System.Data.DataTable> oggetto compilato con righe e colonne che contengono le informazioni sullo schema per il set di risultati corrente. Il **DataTable** contiene una riga per ogni colonna del set di risultati. Esegue il mapping di ogni colonna della riga della tabella dello schema a una proprietà della colonna restituita nel set di risultati, in cui il **ColumnName** è il nome della proprietà e il valore della colonna è il valore della proprietà. Esempio di codice seguente scrive le informazioni sullo schema per **DataReader**.  
   
  [!code-csharp[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/VB/source.vb#1)]  

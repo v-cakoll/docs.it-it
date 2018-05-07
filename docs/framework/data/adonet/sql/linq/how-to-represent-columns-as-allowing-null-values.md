@@ -1,24 +1,12 @@
 ---
-title: 'Procedura: rappresentare colonne per l''accettazione di valori Null'
-ms.custom: 
+title: "Procedura: rappresentare colonne per l'accettazione di valori Null"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ebb71a37-1f4c-4fa7-b2d2-d903f13c4af1
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 509c0554c6ce2bd02f1294fe19b1138241864ca9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6700ee5d4de53dd82da29d48ca7c42785d52afc1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-represent-columns-as-allowing-null-values"></a>Procedura: rappresentare colonne per l'accettazione di valori Null
 Utilizzare il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> proprietà il <xref:System.Data.Linq.Mapping.ColumnAttribute> attributo per specificare che la colonna di database associata può contenere valori null.  

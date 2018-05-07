@@ -1,24 +1,12 @@
 ---
 title: Applicazioni client sicure
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 100def5fdf531527705fb0c1aebdc20674e0ce60
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ac4f1c3debacd89a0763aa8f30de3c5463c5d24d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="secure-client-applications"></a>Applicazioni client sicure
 Le applicazioni sono costituite in genere da molte parti che è necessario proteggere da vulnerabilità che potrebbero causare la perdita di dati o compromettere in altro modo il sistema. La creazione di interfacce utente protette consente di impedire molti problemi bloccando gli utenti non autorizzati prima che accedano ai dati o alle risorse del sistema.  
@@ -62,7 +50,7 @@ Le applicazioni sono costituite in genere da molte parti che è necessario prote
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[NIB: Protezione ASP.NET](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|Viene illustrato come proteggere le applicazioni ASP.NET.|  
+|[NIB: ASP.NET sicurezza](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|Viene illustrato come proteggere le applicazioni ASP.NET.|  
 |[Protezione dei servizi Web XML creati tramite ASP.NET](http://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)|Viene illustrato come implementare la sicurezza per un servizio Web ASP.NET.|  
 |[Panoramica di attacchi tramite script](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Viene descritto come salvaguardarsi da attacchi tramite script, in cui si tenta di inserire caratteri dannosi in una pagina Web.|  
 |[NIB: base procedure consigliate per le applicazioni Web ASP.NET](http://msdn.microsoft.com/library/94a52ab8-731d-417e-b997-721baf43df38)|Informazioni generali sulla sicurezza e collegamenti ad ulteriori argomenti.|  
@@ -78,7 +66,7 @@ Le applicazioni sono costituite in genere da molte parti che è necessario prote
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Indicazioni per strategie di accesso ai dati](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [Consigli per strategie di accesso ai dati](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [Protezione delle applicazioni](/visualstudio/ide/securing-applications)  
  [Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

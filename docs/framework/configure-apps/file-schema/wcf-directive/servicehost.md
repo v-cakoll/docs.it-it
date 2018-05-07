@@ -2,11 +2,11 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: f81c71746b6b59a51ee825b44c9e6d9f93eb5fbd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 5498c300ab126bbc4e08cd228e3e7b48e905932e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicehost"></a>@ServiceHost
 Associa la factory usata per creare l'host del servizio al servizio da ospitare e agli altri aspetti di programmazione necessari per accedere al codice host fornito nel file .svc o per compilarlo.  
@@ -31,7 +31,7 @@ CodeBehind = "CodeBehind"%>
  Nome del tipo CLR della factory dell'host del servizio usato per creare un'istanza dell'host del servizio. L'attributo è facoltativo. Se non viene specificato, viene usata la factory <xref:System.ServiceModel.Activation.ServiceHostFactory> predefinita, che restituisce un'istanza dell'host <xref:System.ServiceModel.ServiceHost>.  
   
 #### <a name="debug"></a>Debug  
- Indica se il servizio Windows Communication Foundation (WCF) deve essere compilato con simboli di debug. `true` se il servizio [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] deve essere compilato con simboli di debug; in caso contrario, `false`.  
+ Indica se il servizio Windows Communication Foundation (WCF) deve essere compilato con simboli di debug. `true` Se il servizio WCF deve essere compilato con simboli di debug. in caso contrario, `false`.  
   
 #### <a name="language"></a>Linguaggio  
  Specifica il linguaggio usato per la compilazione di tutto il codice inline contenuto nel file con estensione svc. I valori possono rappresentare qualsiasi linguaggio supportato da .NET, inclusi C#, VB e JS, che fanno riferimento, rispettivamente, a C#, Visual Basic .NET e JScript .NET. L'attributo è facoltativo.  

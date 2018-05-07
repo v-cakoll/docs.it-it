@@ -2,14 +2,14 @@
 title: '&lt;announcementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: 3ce141d70e17c14facd6aa8560c7b3424a8d9ae8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 15d60cd277b77fd52b2b77bfcdf4d0da1de7167a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
-Questo elemento di configurazione definisce un endpoint standard con un contratto di annuncio fisso. Un servizio può annunciare la propria disponibilità inviando un messaggio di annuncio online oppure offline rispettivamente quando viene aperto o chiuso. Un servizio Windows Communication Foundation (WCF) consente di specificare gli endpoint dell'annuncio di [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) elemento e viene utilizzato il AnnouncementClient per eseguire gli annunci. Un client che desidera eseguire l'ascolto per l'annuncio da altro servizio effettivamente funge da un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] servizio; pertanto è necessario configurare gli endpoint di annuncio per quel client nel [ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) sezione.  
+Questo elemento di configurazione definisce un endpoint standard con un contratto di annuncio fisso. Un servizio può annunciare la propria disponibilità inviando un messaggio di annuncio online oppure offline rispettivamente quando viene aperto o chiuso. Un servizio Windows Communication Foundation (WCF) consente di specificare gli endpoint dell'annuncio di [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) elemento e viene utilizzato il AnnouncementClient per eseguire gli annunci. Un client di restare in ascolto per l'annuncio da altro servizio effettivamente funge da un servizio WCF. pertanto è necessario configurare gli endpoint dell'annuncio per quel client nel [ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) sezione.  
   
 \<system.ServiceModel>  
 \<standardEndpoints >  

@@ -1,27 +1,18 @@
 ---
 title: Procedure consigliate per l'accesso facilitato
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-caps.latest.revision: "16"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 61f9ca1e8a79942b04afd8628282ceeb1e1b4b51
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: cf3d9aafa428b82b9e8817bcd31b9a6bd2cfeba4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessibility-best-practices"></a>Procedure consigliate per l'accesso facilitato
 > [!NOTE]
@@ -143,5 +134,5 @@ ms.lasthandoff: 01/19/2018
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Automation.Peers>  
- [Controllo personalizzato NumericUpDown con esempio di supporto di automazione interfaccia utente e il tema](http://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
+ [Controllo personalizzato NumericUpDown con esempio supporto di automazione interfaccia utente e del tema](http://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
  [Linee guida per la progettazione dell'interfaccia utente](http://msdn2.microsoft.com/library/ms971323.aspx)

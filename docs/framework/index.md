@@ -1,10 +1,6 @@
 ---
 title: .NET Framework 4.7, 4.6 e 4.5
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
 - f61f02f2-2f20-483d-8f56-a9c8f3a54986
@@ -14,19 +10,16 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 34402e74bb0cb560d213760c38ce4b936d712eb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 85bb386f2adbf02a8fde891c65c78b8e8d4537b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-guide"></a>Guida a .NET Framework
 
 > [!NOTE]
-> Questo set di contenuti .NET Framework include informazioni per le versioni di 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 e 4.7.1. Per scaricare .NET Framework, vedere [Installazione di .NET Framework](../../docs/framework/install/guide-for-developers.md). Per un elenco delle nuove funzionalità e delle modifiche in .NET Framework 4.5, in [!INCLUDE[net_v46](../../includes/net-v46-md.md)], nelle versioni intermedie e in .NET Framework 4.7 e 4.7.1, vedere [Novità di .NET Framework](../../docs/framework/whats-new/index.md). Per un elenco delle piattaforme supportate, vedere [Requisiti di sistema di .NET Framework](../../docs/framework/get-started/system-requirements.md). 
+> Questo set di contenuti .NET Framework include informazioni per le versioni di .NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 e 4.7.2. Per scaricare .NET Framework, vedere [Installazione di .NET Framework](../../docs/framework/install/guide-for-developers.md). Per un elenco delle nuove funzionalità e delle modifiche in .NET Framework 4.5, in [!INCLUDE[net_v46](../../includes/net-v46-md.md)], nelle versioni intermedie e in .NET Framework 4.7, 4.7.1 e 4.7.2, vedere [Novità di .NET Framework](../../docs/framework/whats-new/index.md). Per un elenco delle piattaforme supportate, vedere [Requisiti di sistema di .NET Framework](../../docs/framework/get-started/system-requirements.md). 
 
 .NET Framework è una piattaforma di sviluppo per compilare app Web e app per Windows, Windows Phone, Windows Server e Microsoft Azure. Consiste del Common Language Runtime (CLR) e della libreria di classi .NET Framework, che include un'ampia gamma di funzionalità e supporto per numerosi standard di settore.
 
@@ -61,7 +54,7 @@ Viene fornita una guida per tutte le aree e attività principali per lo sviluppo
 [Strumenti](../../docs/framework/tools/index.md)  
 Vengono descritti gli strumenti che consentono di sviluppare, configurare e distribuire applicazioni tramite le tecnologie .NET Framework.  
   
-[Libreria di classi .NET Framework](/dotnet/api/?view=netframework-4.7.1)   
+[Libreria di classi .NET Framework](/dotnet/api/?view=netframework-4.7.2)   
 Vengono fornite sintassi, esempi di codice e informazioni correlate per ogni classe contenuta negli spazi dei nomi .NET Framework.  
   
 [Librerie di classi e API aggiuntive](../../docs/framework/additional-apis/index.md)  
