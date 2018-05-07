@@ -1,12 +1,6 @@
 ---
 title: Operatori logici e bit per bit in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - short-circuiting
 - Boolean expressions
@@ -27,14 +21,11 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ba48f722a11e93f82ae99aa407c3096a964e5ddd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 371d28629b39fb2808ca018ea69da3306a31f50c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Operatori logici e bit per bit in Visual Basic
 Gli operatori logici confrontano `Boolean` espressioni e restituire un `Boolean` risultato. Il `And`, `Or`, `AndAlso`, `OrElse`, e `Xor` gli operatori sono *binario* perché accettano due operandi, mentre il `Not` operatore *unario* poiché accetta un singolo operando. Alcuni di questi operatori possono inoltre eseguire operazioni logiche bit per bit su valori integrali.  
@@ -96,7 +87,7 @@ Gli operatori logici confrontano `Boolean` espressioni e restituire un `Boolean`
   
 -   Il risultato viene considerato come separatore decimale. Il valore 001 è la rappresentazione binaria di 1, in modo `x` = 1.  
   
- Bit per bit `Or` operazione è simile, ad eccezione del fatto che se uno o entrambi i bit confrontati è 1, 1 viene assegnato al bit del risultato. `Xor`Assegna un 1 al bit del risultato, se uno dei bit confrontati (non entrambi) è 1. `Not`accetta un singolo operando e inverte tutti i bit, incluso il bit di segno e assegna tale valore al risultato. Ciò significa che per i numeri positivi firmati, `Not` restituisce sempre un valore negativo e per i numeri negativi `Not` restituisce sempre un valore positivo o zero.  
+ Bit per bit `Or` operazione è simile, ad eccezione del fatto che se uno o entrambi i bit confrontati è 1, 1 viene assegnato al bit del risultato. `Xor` Assegna un 1 per il bit di risultato se uno dei bit confrontati (non entrambi) è 1. `Not` accetta un singolo operando e inverte tutti i bit, incluso il bit di segno e assegna tale valore al risultato. Ciò significa che per i numeri positivi firmati, `Not` restituisce sempre un valore negativo e per i numeri negativi `Not` restituisce sempre un valore positivo o zero.  
   
  Il `AndAlso` e `OrElse` operatori non supportano operazioni bit per bit.  
   

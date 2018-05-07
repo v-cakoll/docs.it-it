@@ -1,12 +1,6 @@
 ---
 title: + Operatore (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.+
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb0d66db2d777c046ccec69acc1f2069d21baf6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ccf79c700cf852c0febb9c3f3464cbacdd39296e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>Operatore + (Visual Basic)
 Somma due numeri o restituisce il valore positivo di un'espressione numerica. Può essere utilizzato anche per concatenare due espressioni stringa.  
@@ -63,26 +54,26 @@ Somma due numeri o restituisce il valore positivo di un'espressione numerica. Pu
 |Tipi di dati delle espressioni|Azione dal compilatore|  
 |---|---|  
 |Entrambe le espressioni sono tipi di dati numerici (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, o `Double`)|Aggiungere. Il tipo di dati del risultato è un tipo numerico appropriato per i tipi di dati di `expression1` e `expression2`. Vedere le tabelle "Calcoli di interi" in [tipi di dati di risultati di operatore](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Entrambe le espressioni sono di tipo`String`|Concatenare.|  
+|Entrambe le espressioni sono di tipo `String`|Concatenare.|  
 |Un'espressione è un tipo di dati numerici e l'altro è una stringa|Se `Option Strict` è `On`, quindi generare un errore del compilatore.<br /><br /> Se `Option Strict` è `Off`, convertire in modo implicito il `String` a `Double` e aggiungere.<br /><br /> Se il `String` non può essere convertito in `Double`, quindi generare un <xref:System.InvalidCastException> eccezione.|  
 |Un'espressione è un tipo di dati numerici e l'altro è [Nothing](../../../visual-basic/language-reference/nothing.md)|Aggiungere, con `Nothing` con valori pari a zero.|  
-|Un'espressione è una stringa e l'altro è`Nothing`|Concatenazione, con `Nothing` valutata come "".|  
+|Un'espressione è una stringa e l'altra `Nothing`|Concatenazione, con `Nothing` valutata come "".|  
   
  Se un'espressione è un `Object` espressione Visual Basic esegue le azioni seguenti.  
   
 |Tipi di dati delle espressioni|Azione dal compilatore|  
 |---|---|  
-|`Object`l'espressione contiene un valore numerico e l'altro è un tipo di dati numerici|Se `Option Strict` è `On`, quindi generare un errore del compilatore.<br /><br /> Se `Option Strict` è `Off`, quindi aggiungere.|  
-|`Object`l'espressione contiene un valore numerico e l'altro è di tipo`String`|Se `Option Strict` è `On`, quindi generare un errore del compilatore.<br /><br /> Se `Option Strict` è `Off`, convertire in modo implicito il `String` a `Double` e aggiungere.<br /><br /> Se il `String` non può essere convertito in `Double`, quindi generare un <xref:System.InvalidCastException> eccezione.|  
-|`Object`l'espressione contiene una stringa e l'altro è un tipo di dati numerici|Se `Option Strict` è `On`, quindi generare un errore del compilatore.<br /><br /> Se `Option Strict` è `Off`, quindi convertire in modo implicito la stringa `Object` a `Double` e aggiungere.<br /><br /> Se la stringa `Object` non può essere convertito in `Double`, quindi generare un <xref:System.InvalidCastException> eccezione.|  
-|`Object`l'espressione contiene una stringa e l'altro è di tipo`String`|Se `Option Strict` è `On`, quindi generare un errore del compilatore.<br /><br /> Se `Option Strict` è `Off`, convertire in modo implicito `Object` a `String` e concatenati.|  
+|`Object` l'espressione contiene un valore numerico e l'altro è un tipo di dati numerici|Se `Option Strict` è `On`, quindi generare un errore del compilatore.<br /><br /> Se `Option Strict` è `Off`, quindi aggiungere.|  
+|`Object` l'espressione contiene un valore numerico e l'altro è di tipo `String`|Se `Option Strict` è `On`, quindi generare un errore del compilatore.<br /><br /> Se `Option Strict` è `Off`, convertire in modo implicito il `String` a `Double` e aggiungere.<br /><br /> Se il `String` non può essere convertito in `Double`, quindi generare un <xref:System.InvalidCastException> eccezione.|  
+|`Object` l'espressione contiene una stringa e l'altro è un tipo di dati numerici|Se `Option Strict` è `On`, quindi generare un errore del compilatore.<br /><br /> Se `Option Strict` è `Off`, quindi convertire in modo implicito la stringa `Object` a `Double` e aggiungere.<br /><br /> Se la stringa `Object` non può essere convertito in `Double`, quindi generare un <xref:System.InvalidCastException> eccezione.|  
+|`Object` l'espressione contiene una stringa e l'altro è di tipo `String`|Se `Option Strict` è `On`, quindi generare un errore del compilatore.<br /><br /> Se `Option Strict` è `Off`, convertire in modo implicito `Object` a `String` e concatenati.|  
   
  Se entrambe le espressioni sono `Object` espressioni Visual Basic esegue le azioni seguenti (`Option Strict Off` solo).  
   
 |Tipi di dati delle espressioni|Azione dal compilatore|  
 |---|---|  
 |Entrambi `Object` espressioni contengono valori numerici|Aggiungere.|  
-|Entrambi `Object` le espressioni sono di tipo`String`|Concatenare.|  
+|Entrambi `Object` le espressioni sono di tipo `String`|Concatenare.|  
 |Uno `Object` l'espressione contiene un valore numerico e l'altra contiene una stringa|Convertire in modo implicito la stringa `Object` a `Double` e aggiungere.<br /><br /> Se la stringa `Object` non può essere convertito in un valore numerico, verrà generata una <xref:System.InvalidCastException> eccezione.|  
   
  Se il valore `Object` espressione viene valutata [nulla](../../../visual-basic/language-reference/nothing.md) o <xref:System.DBNull>, `+` operatore lo considera come un `String` con un valore di "".  

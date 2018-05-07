@@ -1,12 +1,6 @@
 ---
 title: Istruzione Function (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Function
 helpviewer_keywords:
@@ -34,14 +28,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b4a0c33d6d466975ca5dde1bd20ad2e1a9f560e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-statement-visual-basic"></a>Istruzione Function (Visual Basic)
 Dichiara il nome, parametri e il codice che definiscono un `Function` stored procedure.  
@@ -183,7 +174,7 @@ End Function
 ## <a name="defining-a-function"></a>Definizione di una funzione  
  È possibile definire un `Function` procedura solo a livello di modulo. Pertanto, il contesto della dichiarazione per una funzione deve essere una classe, una struttura, un modulo o un'interfaccia e non può essere un file di origine, uno spazio dei nomi, una routine o un blocco. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](declaration-contexts-and-default-access-levels.md).  
   
- `Function`procedure per impostazione predefinita l'accesso pubblico. È possibile regolare i livelli di accesso con i modificatori di accesso.  
+ `Function` procedure per impostazione predefinita l'accesso pubblico. È possibile regolare i livelli di accesso con i modificatori di accesso.  
   
  Oggetto `Function` routine consente di dichiarare il tipo di dati del valore che restituisce la procedura. È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione, una struttura, una classe o un'interfaccia. Se non si specifica il `returntype` , la procedura restituisce `Object`.  
   

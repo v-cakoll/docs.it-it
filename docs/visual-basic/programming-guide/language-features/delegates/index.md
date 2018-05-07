@@ -1,25 +1,15 @@
 ---
 title: Delegati (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6c83667534dcf69ea0ec1106bb3a02d2c9accd87
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 99fe0eee194fae21615652c9426bf6027fbf4354
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegates-visual-basic"></a>Delegati (Visual Basic)
 I delegati sono oggetti che fanno riferimento ai metodi. Vengono a volte descritti come *puntatori a funzione indipendenti dai tipi* poiché sono simili ai puntatori a funzione usati in altri linguaggi di programmazione. Ma a differenza dei puntatori a funzione, Visual Basic i delegati sono un tipo di riferimento in base alla classe <xref:System.Delegate?displayProperty=nameWithType>. I delegati possono fare riferimento sia a metodi condivisi, ovvero metodi che è possibile chiamare senza una specifica istanza di una classe, sia a metodi di istanza.  

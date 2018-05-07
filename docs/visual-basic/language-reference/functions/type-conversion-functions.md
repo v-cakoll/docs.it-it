@@ -1,10 +1,6 @@
 ---
 title: Funzioni di conversione del tipo (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CUShort
 - vb.csng
@@ -85,14 +81,11 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 117cd4ce038a533715bbc86558545f0f223dd149
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c9222bdb31f4fd7c792d5a50c100067e29e9d537
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funzioni di conversione del tipo (Visual Basic)
 Queste funzioni vengono compilate inline, ovvero che la conversione di codice fa parte del codice che valuta l'espressione. A volte non sussiste alcuna chiamata a una stored procedure per eseguire la conversione, che migliora le prestazioni. Ogni funzione forza un'espressione al tipo di dati specifico.  
@@ -137,12 +130,12 @@ CUShort(expression)
 |`CLng`|[Tipo di dati Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807; parti frazionarie vengono arrotondate. <sup>1</sup>|  
 |`CObj`|[Tipo di dati Object](../../../visual-basic/language-reference/data-types/object-data-type.md)|Qualsiasi espressione valida.|  
 |`CSByte`|[Tipo di dati SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|-128 e 127; parti frazionarie vengono arrotondate. <sup>1</sup>|  
-|`CShort`|[Tipo di dati Short](../../../visual-basic/language-reference/data-types/short-data-type.md)|tra -32.768 e 32.767. parti frazionarie vengono arrotondate. <sup>1</sup>|  
+|`CShort`|[Tipo di dati Short](../../../visual-basic/language-reference/data-types/short-data-type.md)|da -32.768 e 32.767; parti frazionarie vengono arrotondate. <sup>1</sup>|  
 |`CSng`|[Tipo di dati Single](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3, 402823E + 38 a - 1, 401298E-45 per valori negativi. 1, 401298E-45 a 3, 402823E + 38 per i valori positivi.|  
 |`CStr`|[Tipo di dati String](../../../visual-basic/language-reference/data-types/string-data-type.md)|Restituisce per `CStr` dipendono il `expression` argomento. Vedere [valori restituiti dalla funzione CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
 |`CUInt`|[Tipo di dati UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|da 0 a 4.294.967.295 (senza segno). parti frazionarie vengono arrotondate. <sup>1</sup>|  
 |`CULng`|[Tipo di dati ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|da 0 a 18.446.744.073.709.551.615 (senza segno). parti frazionarie vengono arrotondate. <sup>1</sup>|  
-|`CUShort`|[Tipo di dati UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|tra 0 e 65.535 (senza segno). parti frazionarie vengono arrotondate. <sup>1</sup>|  
+|`CUShort`|[Tipo di dati UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|da 0 a 65.535 (senza segno). parti frazionarie vengono arrotondate. <sup>1</sup>|  
   
  <sup>1</sup> parti frazionarie possono essere soggetta a un tipo speciale di arrotondamento chiamato *arrotondamento*. Per ulteriori informazioni, vedere "la sezione Osservazioni".  
   
@@ -159,9 +152,9 @@ CUShort(expression)
   
      Se la parte frazionaria è esattamente 0,5, arrotondano le funzioni di conversione di valori integer per l'intero pari più vicino. Ad esempio 0,5 verrà arrotondato a 0 e 1,5 e 2,5 che entrambi arrotondato a 2. Talvolta chiamato *arrotondamento*, e il suo scopo consiste nel compensare la distorsione che potrebbero accumularsi quando aggiungono molti tali numeri.  
   
-     `CInt`e `CLng` diversi dal <xref:Microsoft.VisualBasic.Conversion.Int%2A> e <xref:Microsoft.VisualBasic.Conversion.Fix%2A> funzioni, che, anziché arrotondare troncano, la parte frazionaria di un numero. Inoltre, `Fix` e `Int` restituiscono sempre un valore dello stesso tipo di dati di quello passato.  
+     `CInt` e `CLng` diversi dai <xref:Microsoft.VisualBasic.Conversion.Int%2A> e <xref:Microsoft.VisualBasic.Conversion.Fix%2A> funzioni, che, anziché troncano l'arrotondamento, la parte frazionaria di un numero. Inoltre, `Fix` e `Int` restituiscono sempre un valore dello stesso tipo di dati di quello passato.  
   
--   **Conversioni di data e ora.** Utilizzare il <xref:Microsoft.VisualBasic.Information.IsDate%2A> funzione per determinare se un valore può essere convertito in una data e ora. `CDate`riconosce i valori letterali di data e ora, ma i valori non numerici. Per convertire un Visual Basic 6.0 `Date` valore un `Date` valore in Visual Basic 2005 o versioni successive, è possibile utilizzare il <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> metodo.  
+-   **Conversioni di data/ora.** Utilizzare il <xref:Microsoft.VisualBasic.Information.IsDate%2A> funzione per determinare se un valore può essere convertito in una data e ora. `CDate` riconosce i valori letterali data e ora, ma i valori non numerici. Per convertire un Visual Basic 6.0 `Date` valore un `Date` valore in Visual Basic 2005 o versioni successive, è possibile utilizzare il <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> metodo.  
   
 -   **Neutro valori data/ora.** Il [tipo di dati Date](../../../visual-basic/language-reference/data-types/date-data-type.md) contiene sempre le informazioni sia data e ora. Ai fini della conversione del tipo, Visual Basic considera 1/1/0001 (1 ° gennaio dell'anno 1) da un *valore neutro* per la data e 00:00:00 (mezzanotte) come valore neutro per l'ora. Se si converte un `Date` , una stringa a valore `CStr` non include valori neutri nella stringa risultante. Ad esempio, se si converte `#January 1, 0001 9:30:00#` in una stringa, il risultato è "9:30:00 AM"; le informazioni sulla data viene eliminate. Tuttavia, le informazioni sulla data è ancora presente nell'originale `Date` valore e possono essere recuperate con funzioni, ad esempio <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> (funzione).  
   
@@ -194,7 +187,7 @@ CUShort(expression)
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
 ## <a name="cdate-example"></a>Esempio di CDate  
- L'esempio seguente usa il `CDate` funzione per convertire le stringhe in `Date` valori. In generale, non è consigliabile impostare come hardcoded date e ore come stringhe (come illustrato in questo esempio). Utilizzare valori letterali di data e ora, ad esempio #Feb 12, &#1969; e # 4:45:23 PM # invece.  
+ L'esempio seguente usa il `CDate` funzione per convertire le stringhe in `Date` valori. In generale, non è consigliabile impostare come hardcoded date e ore come stringhe (come illustrato in questo esempio). Utilizzare valori letterali di data e ora, ad esempio #Feb 12, 1969 # e # 4:45:23 PM # invece.  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
@@ -245,7 +238,7 @@ CUShort(expression)
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- `CStr`Visualizza sempre un `Date` valore nel formato breve standard per le impostazioni locali correnti, ad esempio, "6/15/2003 4:35:47 PM". Tuttavia, `CStr` Sopprime il *valori neutri* di 1/1/0001 per la data e 00:00:00 per il periodo di tempo.  
+ `CStr` Visualizza sempre un `Date` valore nel formato breve standard per le impostazioni locali correnti, ad esempio, "6/15/2003 4:35:47 PM". Tuttavia, `CStr` Sopprime il *valori neutri* di 1/1/0001 per la data e 00:00:00 per il periodo di tempo.  
   
  Per informazioni dettagliate sui valori restituiti da `CStr`, vedere [valori restituiti dalla funzione CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
   

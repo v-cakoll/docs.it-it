@@ -1,11 +1,6 @@
 ---
 title: Clausola Join (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryJoinIn
 - vb.QueryJoin
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2bb25c9dac8994e7f975539c1d036f0f0d9d239e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2186954ab6536988271629c4feba0a40563bfc3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-clause-visual-basic"></a>Clausola Join (Visual Basic)
 Combina due raccolte in un'unica raccolta. L'operazione di join è basata su chiavi corrispondenti e utilizza il `Equals` operatore.  
@@ -44,13 +36,13 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  Obbligatorio. La raccolta da combinare con l'insieme identificato sul lato sinistro del `Join` operatore. Oggetto `Join` clausola può essere annidata in un'altra `Join` clausola, o in un `Group Join` clausola.  
   
  `joinClause`  
- Parametro facoltativo. Uno o più ulteriori `Join` clausole per perfezionare la query.  
+ Facoltativo. Uno o più ulteriori `Join` clausole per perfezionare la query.  
   
  `groupJoinClause`  
- Parametro facoltativo. Uno o più ulteriori `Group Join` clausole per perfezionare la query.  
+ Facoltativo. Uno o più ulteriori `Group Join` clausole per perfezionare la query.  
   
  `key1` `Equals` `key2`  
- Obbligatorio. Identifica le chiavi per le raccolte da unire in join. È necessario utilizzare il `Equals` operatore per confrontare le chiavi dalle raccolte da unire in join. È possibile combinare le condizioni di join utilizzando il `And` operatore per identificare più chiavi. `key1`deve essere dall'insieme sul lato sinistro del `Join` operatore. `key2`deve essere dall'insieme sul lato destro del `Join` operatore.  
+ Obbligatorio. Identifica le chiavi per le raccolte da unire in join. È necessario utilizzare il `Equals` operatore per confrontare le chiavi dalle raccolte da unire in join. È possibile combinare le condizioni di join utilizzando il `And` operatore per identificare più chiavi. `key1` devono essere comprese tra la raccolta a sinistra del `Join` operatore. `key2` devono essere comprese tra la raccolta sul lato destro del `Join` operatore.  
   
  Le chiavi usate nella condizione di join possono essere espressioni che includono più di un elemento dalla raccolta. Tuttavia, ogni espressione chiave può contenere solo gli elementi del rispettivo insieme.  
   

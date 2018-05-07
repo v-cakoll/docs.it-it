@@ -1,11 +1,6 @@
 ---
 title: Funzione CType (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CType
 helpviewer_keywords:
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d804ce75929592675068fdc434a1ba7429fa5373
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7b1c7ae2a0126bf7cd487df4e9a7364c98e1c695
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctype-function-visual-basic"></a>Funzione CType (Visual Basic)
 Restituisce il risultato della conversione esplicita di un'espressione in un tipo di dati specificato, oggetto, struttura, classe o interfaccia.  
@@ -45,9 +37,9 @@ CType(expression, typename)
 >  È inoltre possibile utilizzare le funzioni seguenti per eseguire una conversione del tipo:  
 >   
 >  -   Digitare ad esempio le funzioni di conversione `CByte`, `CDbl`, e `CInt` che eseguono una conversione in un tipo di dati specifico. Per ulteriori informazioni, vedere [funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
-> -   [Operatore DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md) o [operatore TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md). Questi operatori richiedono che un tipo di ereditare da o implementare l'altro tipo. Possono fornire prestazioni migliori rispetto a `CType` durante la conversione da e verso il `Object` tipo di dati.  
+> -   [Operatore DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md) oppure [operatore TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md). Questi operatori richiedono che un tipo di ereditare da o implementare l'altro tipo. Possono fornire prestazioni migliori rispetto a `CType` durante la conversione da e verso il `Object` tipo di dati.  
   
- `CType`viene compilata inline, il che significa che il codice di conversione fa parte del codice che valuta l'espressione. In alcuni casi, il codice viene eseguito più velocemente poiché nessuna procedure vengono chiamata per eseguire la conversione.  
+ `CType` viene compilata inline, il che significa che il codice di conversione fa parte del codice che valuta l'espressione. In alcuni casi, il codice viene eseguito più velocemente poiché nessuna procedure vengono chiamata per eseguire la conversione.  
   
  Se è definita alcuna conversione da `expression` a `typename` (ad esempio, da `Integer` a `Date`), Visual Basic viene visualizzato un messaggio di errore in fase di compilazione.  
   

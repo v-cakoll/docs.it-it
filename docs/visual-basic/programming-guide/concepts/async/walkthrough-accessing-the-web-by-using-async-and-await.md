@@ -1,22 +1,12 @@
 ---
 title: 'Procedura dettagliata: accesso al Web con Async e Await (Visual Basic)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: de1219de72be5ddc022d898c904663bf92ca5ab6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7154ea12f2660074e3ad8251b9baaa3eeb3d453c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Procedura dettagliata: accesso al Web con Async e Await (Visual Basic)
 È possibile scrivere programmi asincroni in modo più semplice e intuitivo usando le funzionalità async/await. È possibile scrivere codice asincrono simile al codice sincrono e consentire al compilatore di gestire le complesse funzioni di callback e continuazione tipiche del codice asincrono.  
@@ -117,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 6.  Scegliere il pulsante **OK** per chiudere la finestra di dialogo.  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a>Per aggiungere istruzioni Imports necessarie  
+###  <a name="ImportsState"></a> Per aggiungere istruzioni Imports necessarie  
   
 1.  In **Esplora**, aprire il menu di scelta rapida per file e quindi scegliere **Visualizza codice**.  
   
@@ -683,11 +673,11 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio asincrono: Accesso la procedura dettagliata Web (c# e Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)  
+ [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191) (Esempio asincrono: accesso alla procedura dettagliata Web (C# e Visual Basic)  
  [Operatore Await](../../../../visual-basic/language-reference/operators/await-operator.md)  
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
  [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [Tipi restituiti asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [Programmazione asincrona basata su attività (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [Programmazione asincrona basata su attività](http://go.microsoft.com/fwlink/?LinkId=204847)  
  [Procedura: Estendere la procedura dettagliata asincrona tramite Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
  [Procedura: Eseguire più richieste Web in parallelo tramite async e await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

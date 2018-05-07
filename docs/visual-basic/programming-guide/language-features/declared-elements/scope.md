@@ -1,12 +1,6 @@
 ---
 title: Ambito in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module scope [Visual Basic]
 - scope [Visual Basic], levels
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6692379626d787b728d6e92bd447c4a96e6680e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scope-in-visual-basic"></a>Ambito in Visual Basic
 Il *ambito* di un elemento dichiarato è il set di tutto il codice che è possibile farvi riferimento senza qualificarne il nome o renderlo disponibile tramite un [istruzione Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Ambito di un elemento può essere uno dei seguenti livelli:  
@@ -61,7 +52,7 @@ Il *ambito* di un elemento dichiarato è il set di tutto il codice che è possib
   
 -   `Do` e `Loop`  
   
--   `For`[`Each`] e`Next`  
+-   `For` [`Each`] e `Next`  
   
 -   `If` e `End If`  
   
@@ -127,7 +118,7 @@ Public strMsg As String
   
  Ambito Namespace include spazi dei nomi annidati. Un elemento disponibile dall'interno di uno spazio dei nomi è anche disponibile dall'interno di qualsiasi spazio dei nomi annidato all'interno di tale spazio dei nomi.  
   
- Se il progetto non contiene alcuna [istruzione Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, ogni elemento del progetto è dello stesso spazio dei nomi. In questo caso, ambito dello spazio dei nomi possono essere considerato come ambito del progetto. `Public`gli elementi in un modulo, classe o struttura sono anche disponibili per qualsiasi progetto che fa riferimento il progetto.  
+ Se il progetto non contiene alcuna [istruzione Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, ogni elemento del progetto è dello stesso spazio dei nomi. In questo caso, ambito dello spazio dei nomi possono essere considerato come ambito del progetto. `Public` sono disponibili a qualsiasi progetto che fa riferimento a progetto anche gli elementi in un modulo, classe o struttura.  
   
 ## <a name="choice-of-scope"></a>Scelta dell'ambito  
  Quando si dichiara una variabile, è necessario tenere presente i seguenti punti quando si sceglie il relativo ambito.  
@@ -137,7 +128,7 @@ Public strMsg As String
   
 -   **Prevenzione dei conflitti di nome.** Nomi delle variabili locali non sono soggetti a conflitti. Ad esempio, è possibile creare varie procedure diverse contenenti una variabile denominata `intTemp`. Purché ogni `intTemp` è dichiarato come una variabile locale, ogni routine riconosce solo la propria versione di `intTemp`. Ogni singola routine può modificare il valore nella propria locale `intTemp` senza influire sul `intTemp` variabili nelle altre routine.  
   
--   **Utilizzo di memoria.** Le variabili locali occupano memoria solo durante l'esecuzione di procedure. La memoria viene rilasciata quando viene restituito al codice chiamante. Al contrario, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) e [statico](../../../../visual-basic/language-reference/modifiers/static.md) variabili utilizzano risorse di memoria fino a quando l'esecuzione dell'applicazione, quindi utilizzarle solo se necessario. *Le variabili di istanza* occupano memoria finché l'istanza continua a esistere, pertanto sono meno efficienti rispetto alle variabili locali, ma potenzialmente più efficienti `Shared` o `Static` variabili.  
+-   **Utilizzo di memoria.** Le variabili locali occupano memoria solo durante l'esecuzione di procedure. La memoria viene rilasciata quando viene restituito al codice chiamante. Al contrario, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) e [statico](../../../../visual-basic/language-reference/modifiers/static.md) variabili utilizzano risorse di memoria fino a quando l'esecuzione dell'applicazione, quindi utilizzarle solo se necessario. *Le variabili di istanze* occupano memoria finché l'istanza continua a esistere, che li rende meno efficienti rispetto alle variabili locali, ma potenzialmente più efficienti `Shared` o `Static` variabili.  
   
 ### <a name="minimizing-scope"></a>Riduzione dell'ambito  
  In generale, quando si dichiara una variabile o una costante, è buona norma di programmazione rendere l'ambito più brevi possibile (è ristretto ambito blocco). Questo consente di conservare la memoria e riduce al minimo la probabilità del codice erroneamente che fa riferimento alla variabile non corretta. Allo stesso modo, è necessario dichiarare una variabile [statico](../../../../visual-basic/language-reference/modifiers/static.md) solo quando è necessario mantenere il valore tra le chiamate di procedura.  

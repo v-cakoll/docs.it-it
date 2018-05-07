@@ -1,12 +1,6 @@
 ---
-title: "Procedura: dichiarare una proprietà con livelli di accesso misti (Visual Basic)"
-ms.custom: 
+title: 'Procedura: dichiarare una proprietà con livelli di accesso misti (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - access levels [Visual Basic], properties
 - procedures [Visual Basic], defining
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90fe20303f6f2ed692e54e44ee8cc65897531543
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8d25086fe6f8b5f5300006466ef49782cb065edf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Procedura: dichiarare una proprietà con livelli di accesso misti (Visual Basic)
 Se si desidera il `Get` e `Set` procedure su una proprietà di diversi livelli di accesso, è possibile utilizzare il livello più permissivo di `Property` istruzione e il livello più restrittivo in uno il `Get` o `Set` istruzione. Utilizzare i livelli di accesso misti su una proprietà quando si desidera che determinate parti del codice in grado di ottenere il valore della proprietà e altre parti del codice in grado di modificare il valore.  

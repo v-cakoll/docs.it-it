@@ -1,12 +1,6 @@
 ---
 title: Overload della routine (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - signatures
 - Overloads keyword [Visual Basic]
@@ -23,17 +17,14 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 65fd5a6763752c616f13891bfa5acabff6115d7c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0d1f2c4d8c88922659b3d91ed41d5e760e6e5233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="procedure-overloading-visual-basic"></a>Overload della routine (Visual Basic)
-*L'overload* una routine significa definirla in più versioni, utilizzando lo stesso nome ma elenchi di parametri diversi. Lo scopo dell'overload consiste nel definire più versioni strettamente correlate di una stored procedure senza la necessità di distinguere per nome. Questo caso variando l'elenco di parametri.  
+*L'overload* significa che una stored procedure che sia necessario definirlo in più versioni, utilizzando lo stesso nome ma gli elenchi di parametri diversi. Lo scopo dell'overload consiste nel definire più versioni strettamente correlate di una stored procedure senza la necessità di distinguere per nome. Questo caso variando l'elenco di parametri.  
   
 ## <a name="overloading-rules"></a>Regole di overload  
  Quando si esegue l'overload di una stored procedure, si applicano le regole seguenti:  
@@ -56,13 +47,13 @@ ms.lasthandoff: 11/21/2017
   
 -   **Elementi che non fanno parte della firma**. È possibile eseguire l'overload di una stored procedure senza modificare la firma. In particolare, è possibile eseguire l'overload di una routine modificando solo uno o più dei seguenti elementi:  
   
-    -   Parole chiave di modificatore di routine, ad esempio `Public`, `Shared`, e`Static`  
+    -   Parole chiave di modificatore di routine, ad esempio `Public`, `Shared`, e `Static`  
   
     -   Nomi dei parametri di parametro o tipo  
   
     -   Vincoli del parametro di tipo (per una routine generica)  
   
-    -   Parole chiave di modificatori di parametro, ad esempio `ByRef` e`Optional`  
+    -   Parole chiave di modificatori di parametro, ad esempio `ByRef` e `Optional`  
   
     -   Se viene restituito un valore  
   

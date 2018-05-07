@@ -1,22 +1,12 @@
 ---
 title: Multithreading con il componente BackgroundWorker (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07700aa526866729f1ba1a8d846f22ce333c356d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>Procedura dettagliata: Multithreading con il componente BackgroundWorker (Visual Basic)
 Questa procedura dettagliata spiega come creare un'applicazione Windows Form multithreading che cerca le occorrenze di una parola in un file di testo. Illustra quanto segue:  
@@ -48,7 +38,7 @@ Questa procedura dettagliata spiega come creare un'applicazione Windows Form mul
   
 4.  Aggiungere un'etichetta accanto a ogni casella di testo. Impostare la proprietà `Text` per ogni etichetta come illustrato nella tabella seguente.  
   
-    |Oggetto|Proprietà|Impostazione|  
+    |Object|Proprietà|Impostazione|  
     |------------|--------------|-------------|  
     |Prima etichetta|`Text`|File di origine|  
     |Seconda etichetta|`Text`|Stringa di confronto|  
@@ -278,5 +268,5 @@ Questa procedura dettagliata spiega come creare un'applicazione Windows Form mul
   
 ## <a name="see-also"></a>Vedere anche  
  [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
- [Procedura dettagliata: Creazione di un componente semplice multithreading con Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)  
+ [Procedura dettagliata: Creazione di un componente con multithreading semplice con Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)  
  [Procedura: Eseguire e annullare la sottoscrizione a eventi](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)

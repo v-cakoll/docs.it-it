@@ -1,31 +1,21 @@
 ---
 title: Modifica di XML in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], manipulating XML
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 061617524659ac2f8793e2030f26a2d6b2724a64
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4be24afe17e60c6c849530f1b892651a1f78399c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Modifica di XML in Visual Basic
 È possibile utilizzare *valori letterali XML* caricare XML da un'origine esterna, ad esempio una stringa, un file o un flusso. È quindi possibile utilizzare [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per modificare il codice XML e utilizzare [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] per eseguire query in XML.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Caricare XML da un file, da una stringa o da un flusso](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
  Di seguito viene illustrato come caricare XML in un <xref:System.Xml.Linq.XDocument> o <xref:System.Xml.Linq.XElement> oggetto da un file di testo, una stringa o un flusso.  
   
