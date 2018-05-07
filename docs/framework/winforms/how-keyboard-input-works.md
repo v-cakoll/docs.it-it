@@ -1,28 +1,16 @@
 ---
 title: Funzionamento dell'input da tastiera
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - keyboard input [Windows Forms], about keyboard input
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43b92051b6524a730735fea98d64ee64578b4e06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a0b814a18f4a8b25fba9fa0b36da44954590f056
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-keyboard-input-works"></a>Funzionamento dell'input da tastiera
 Windows Forms elabora gli input della tastiera generando eventi di tastiera in risposta ai messaggi di Windows. La maggioranza delle applicazioni Windows Forms elabora gli input della tastiera tramite la gestione dei relativi eventi. Tuttavia è necessario conoscere il funzionano dei messaggi della tastiera per poter implementare scenari più avanzati di input dalla tastiera, ad esempio l'intercettazione dei tasti prima che raggiungano un controllo. Questo argomento descrive i tipi di dati di tasti che Windows Forms riconosce e fornisce una panoramica del modo in cui vengono instradati i messaggi della tastiera. Per informazioni sugli eventi della tastiera, vedere [Utilizzo degli eventi di tastiera](../../../docs/framework/winforms/using-keyboard-events.md).  
@@ -48,8 +36,8 @@ Windows Forms elabora gli input della tastiera generando eventi di tastiera in r
   
 |Operazione|Metodo correlato|Note|  
 |------------|--------------------|-----------|  
-|Cercare un tasto di comando, ad esempio un tasto acceleratore o un tasto di menu di scelta rapida.|<xref:System.Windows.Forms.Control.ProcessCmdKey%2A>|Questo metodo elabora un tasto di comando, che ha la precedenza sui tasti normali. Se questo metodo restituisce `true`, il messaggio del tasto non viene inviato e non si verifica alcun evento del tasto. Se restituisce `false`, <xref:System.Windows.Forms.Control.IsInputKey%2A> viene chiamato`.`|  
-|Verificare la presenza di un tasto speciale che richiede pre-elaborazione o un tasto carattere normale che deve generare un <xref:System.Windows.Forms.Control.KeyDown> evento ed essere inviato a un controllo.|<xref:System.Windows.Forms.Control.IsInputKey%2A>|Se il metodo restituisce `true`, significa che il controllo è un carattere normale e un <xref:System.Windows.Forms.Control.KeyDown> viene generato l'evento. Se `false`, <xref:System.Windows.Forms.Control.ProcessDialogKey%2A> viene chiamato. **Nota:** per garantire un controllo ottiene una chiave o una combinazione di chiavi, è possibile gestire il <xref:System.Windows.Forms.Control.PreviewKeyDown> evento e set <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> del <xref:System.Windows.Forms.PreviewKeyDownEventArgs> per `true` per uno o più tasti desiderata.|  
+|Cercare un tasto di comando, ad esempio un tasto acceleratore o un tasto di menu di scelta rapida.|<xref:System.Windows.Forms.Control.ProcessCmdKey%2A>|Questo metodo elabora un tasto di comando, che ha la precedenza sui tasti normali. Se questo metodo restituisce `true`, il messaggio del tasto non viene inviato e non si verifica alcun evento del tasto. Se viene restituito `false`, <xref:System.Windows.Forms.Control.IsInputKey%2A> viene chiamato`.`|  
+|Verificare la presenza di un tasto speciale che richiede pre-elaborazione o un tasto carattere normale che deve generare un <xref:System.Windows.Forms.Control.KeyDown> evento ed essere inviato a un controllo.|<xref:System.Windows.Forms.Control.IsInputKey%2A>|Se il metodo restituisce `true`, significa che il controllo è un carattere normale e un <xref:System.Windows.Forms.Control.KeyDown> viene generato l'evento. Se `false`, <xref:System.Windows.Forms.Control.ProcessDialogKey%2A> viene chiamato. **Nota:** per garantire un controllo ottiene una chiave o una combinazione di chiavi, è possibile gestire i <xref:System.Windows.Forms.Control.PreviewKeyDown> evento e set <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> del <xref:System.Windows.Forms.PreviewKeyDownEventArgs> a `true` per la chiave o le chiavi da.|  
 |Cercare un tasto di spostamento (ESC, TAB, INVIO o tasti di direzione).|<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|Questo metodo elabora un tasto fisico che impiega funzionalità speciali all'interno del controllo, ad esempio spostando lo stato attivo tra il controllo e il relativo elemento padre. Se il controllo diretto non gestisce la chiave, il <xref:System.Windows.Forms.Control.ProcessDialogKey%2A> viene chiamato sul controllo padre e così via per il controllo di livello più alto nella gerarchia. Se questo metodo restituisce `true`, la pre-elaborazione è completa e non viene generato alcun evento di tasto. Se restituisce `false`, <xref:System.Windows.Forms.Control.KeyDown> si verifica l'evento.|  
   
 ### <a name="preprocessing-for-a-keypress-event"></a>Pre-elaborazione per un evento KeyPress  
@@ -73,7 +61,7 @@ Windows Forms elabora gli input della tastiera generando eventi di tastiera in r
   
 |Attività|Metodo|  
 |----------|------------|  
-|Una chiave di navigazione di intercettare e generare un <xref:System.Windows.Forms.Control.KeyDown> evento. Ad esempio si desidera che TAB e INVIO siano gestiti in una casella di testo.|Eseguire l'override di <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Nota:** in alternativa, è possibile gestire il <xref:System.Windows.Forms.Control.PreviewKeyDown> evento e set <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> del <xref:System.Windows.Forms.PreviewKeyDownEventArgs> per `true` per uno o più tasti desiderata.|  
+|Una chiave di navigazione di intercettare e generare un <xref:System.Windows.Forms.Control.KeyDown> evento. Ad esempio si desidera che TAB e INVIO siano gestiti in una casella di testo.|Eseguire l'override di <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Nota:** in alternativa, è possibile gestire i <xref:System.Windows.Forms.Control.PreviewKeyDown> evento e set <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> del <xref:System.Windows.Forms.PreviewKeyDownEventArgs> a `true` per la chiave o le chiavi da.|  
 |Eseguire la gestione di input speciali o dello spostamento su un controllo. Ad esempio si desidera che l'uso dei tasti di direzione nel controllo elenco cambi la voce selezionata.|Eseguire l'override di <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>.|  
 |Una chiave di navigazione di intercettare e generare un <xref:System.Windows.Forms.Control.KeyPress> evento. Ad esempio in un controllo casella di selezione si desidera che più pressioni di un tasto di direzione accelerino lo spostamento tra le voci.|Eseguire l'override di <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
 |Eseguire la gestione speciale di input o di navigazione durante un <xref:System.Windows.Forms.Control.KeyPress> evento. Ad esempio, in un controllo elenco, tenendo premuto il tasto "r" si passa fra le voci che iniziano con la lettera r.|Eseguire l'override di <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>.|  

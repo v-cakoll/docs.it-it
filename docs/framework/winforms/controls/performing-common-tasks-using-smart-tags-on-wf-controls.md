@@ -1,28 +1,16 @@
 ---
-title: "Procedura dettagliata: esecuzione di attività comuni utilizzando gli smart tag nei controlli Windows Form"
-ms.custom: 
+title: 'Procedura dettagliata: esecuzione di attività comuni utilizzando gli smart tag nei controlli Windows Form'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DesignerAction object model
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2fb4e8bf710e55be0a817a4154dfbce114db191
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a558f6d274f260fc91fd140e9dae2c740b1ae00d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Procedura dettagliata: esecuzione di attività comuni utilizzando gli smart tag nei controlli Windows Form
 Come si creano i form e controlli per l'applicazione Windows Form, sono disponibili numerose attività che verranno eseguite più volte. Queste sono alcune delle attività comunemente svolte che si verificheranno:  
@@ -81,4 +69,4 @@ Come si creano i form e controlli per l'applicazione Windows Form, sono disponib
  <xref:System.Windows.Forms.TabControl>  
  <xref:System.Windows.Forms.SplitContainer>  
  <xref:System.ComponentModel.Design.DesignerActionList>  
- [Procedura dettagliata: Aggiunta di Smart tag in un componente di Windows Form](http://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)
+ [Procedura dettagliata: Aggiunta di Smart tag per un componente di Windows Form](http://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)

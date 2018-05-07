@@ -1,13 +1,6 @@
 ---
-title: 'Procedura: selezionare l''input penna da un controllo personalizzato'
-ms.custom: 
+title: "Procedura: selezionare l'input penna da un controllo personalizzato"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - ink [WPF], selecting from custom control
 - custom controls [WPF], ink selection
 ms.assetid: 5f3a45c6-6d40-4017-9b47-933f134ceba3
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 972ece6964d1f3cc42c6221c3b18336e3353bc18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c85855cda4f74d557539ed7aea3f725550512e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>Procedura: selezionare l'input penna da un controllo personalizzato
 Aggiungendo un <xref:System.Windows.Ink.IncrementalLassoHitTester> al controllo personalizzato, è possibile abilitare il controllo in modo che un utente può selezionare input penna con lo strumento, analogamente al modo in cui il <xref:System.Windows.Controls.InkCanvas> seleziona input penna con un lazo.  

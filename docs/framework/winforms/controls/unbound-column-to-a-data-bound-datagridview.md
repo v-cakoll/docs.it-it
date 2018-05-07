@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: aggiungere una colonna non associata a un controllo DataGridView di Windows Form associato ai dati'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,23 +9,18 @@ helpviewer_keywords:
 - data grids [Windows Forms], adding unbound columns
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2861db5434e58bd14bf82604252fc0060d9b38d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ba06457371bab5b81e18a307960a833d1d54199
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>Procedura: aggiungere una colonna non associata a un controllo DataGridView di Windows Form associato ai dati
 I dati visualizzati nel controllo <xref:System.Windows.Forms.DataGridView> in genere provengono da un'origine dati di qualche tipo, ma è possibile visualizzare una colonna di dati di origine diversa. Questo tipo di colonna è detto colonna non associata. Le colonne non associate possono assumere molte forme. Spesso vengono usate per fornire accesso ai dettagli di una riga di dati.  
   
  Esempio di codice riportato di seguito viene illustrato come creare una colonna non associata di **dettagli** pulsanti da visualizzare una tabella figlio correlata a una determinata riga in una tabella padre quando si implementa uno scenario master-details. Per rispondere alle selezioni dei pulsanti, implementare un gestore dell'evento <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> che visualizzi un form contenente la tabella figlio.  
   
- Questa attività è supportata in Visual Studio.  Vedere anche [procedura: aggiungere e rimuovere colonne in cui il controllo Windows Form DataGridView usando la finestra di progettazione](http://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))  
+ Questa attività è supportata in Visual Studio.  Vedere anche [procedura: aggiungere e rimuovere colonne nel Windows Form DataGridView controllo usando la finestra di progettazione](http://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#010](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#010)]

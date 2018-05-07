@@ -1,14 +1,6 @@
 ---
 title: Cenni preliminari sulla sicurezza in Windows Form
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
 - permissions [Windows Forms], Windows Forms
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 57f46620e7b98bb1a4c120684075dbe065db9714
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ef90daa9700a60e3d88f75439bf8511b67a71dda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-in-windows-forms-overview"></a>Cenni preliminari sulla sicurezza in Windows Form
 Prima del rilascio di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], qualsiasi codice in esecuzione sul computer di un utente aveva gli stessi diritti o le stesse autorizzazioni di accesso alle risorse che aveva un utente del computer. Se ad esempio all'utente era consentito l'accesso al file system o a un database, anche il codice aveva accesso al file system o al database. Anche se ciò può essere accettabile per il codice contenuto negli eseguibili installati esplicitamente dall'utente nel computer locale, non è altrettanto accettabile per quanto riguarda il codice potenzialmente dannoso proveniente da Internet o da una Intranet locale. A questo tipo di codice, infatti, non deve essere consentito l'accesso alle risorse del computer dell'utente senza autorizzazione esplicita.  

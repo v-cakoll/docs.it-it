@@ -1,22 +1,14 @@
 ---
 title: Oggetto My.Computer.Mouse
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Computer.Mouse object
 ms.assetid: da473357-2120-47dd-bd42-c63d695157eb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5dc61972799dc81605c85b208fe1e14d5928714d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 899caca985bfdb4deaf148b2d434f62428e2952a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mycomputermouse-object"></a>Oggetto My.Computer.Mouse
 Fornisce proprietà per ottenere informazioni sul formato e configurazione del mouse installato nel computer locale.  
@@ -27,11 +19,11 @@ Fornisce proprietà per ottenere informazioni sul formato e configurazione del m
  Per ulteriori informazioni, vedere [accesso al Mouse](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Namespace:**<xref:Microsoft.VisualBasic.Devices>  
+ **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Classe:**<xref:Microsoft.VisualBasic.Devices.Mouse>  
+ **Classe:** <xref:Microsoft.VisualBasic.Devices.Mouse>  
   
- **Assembly:** libreria di Runtime di Visual Basic (in Microsoft.VisualBasic.dll)  
+ **Assembly:** libreria di Runtime di Visual Basic (in VisualBasic)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)

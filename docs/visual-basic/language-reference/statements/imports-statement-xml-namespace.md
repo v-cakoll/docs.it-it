@@ -1,12 +1,6 @@
 ---
 title: Istruzione Imports (spazio dei nomi XML)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ImportsXmlns
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a0fe6d37c58ead94f2c03736318209abb67cd6dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ba7475416d8a4e2eb3c892d457c03eeb695045eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imports-statement-xml-namespace"></a>Istruzione Imports (spazio dei nomi XML)
 Importa i prefissi dello spazio dei nomi XML per l'utilizzo in valori letterali XML e proprietà axis XML.  
@@ -35,7 +26,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="parts"></a>Parti  
  `xmlNamespacePrefix`  
- Parametro facoltativo. La stringa da cui XML elementi e attributi possono fare riferimento a `xmlNamespaceName`. Se non `xmlNamespacePrefix` viene fornito, spazio dei nomi XML importato è lo spazio dei nomi XML predefinito. Deve essere un identificatore XML valido. Per ulteriori informazioni, vedere [attributi e i nomi di elementi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
+ Facoltativo. La stringa da cui XML elementi e attributi possono fare riferimento a `xmlNamespaceName`. Se non `xmlNamespacePrefix` viene fornito, spazio dei nomi XML importato è lo spazio dei nomi XML predefinito. Deve essere un identificatore XML valido. Per ulteriori informazioni, vedere [attributi e i nomi di elementi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
   
  `xmlNamespaceName`  
  Obbligatorio. Stringa che identifica lo spazio dei nomi XML importato.  

@@ -1,31 +1,17 @@
 ---
 title: Importanza dell'ordine delle trasformazioni
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 943bfa73b54a1ac5d68d21d2bb6e271133db595a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="why-transformation-order-is-significant"></a>Importanza dell'ordine delle trasformazioni
 Un singolo <xref:System.Drawing.Drawing2D.Matrix> oggetto è possibile archiviare una singola trasformazione o una sequenza di trasformazioni. Quest'ultimo viene chiamato una trasformazione composta. La matrice di una trasformazione composta viene ottenuta moltiplicando le matrici delle trasformazioni singoli.  
@@ -35,7 +21,7 @@ Un singolo <xref:System.Drawing.Drawing2D.Matrix> oggetto è possibile archiviar
   
  Uno dei motivi ordine è significativo è che le trasformazioni come rotazione e la scalabilità vengono effettuate rispetto all'origine del sistema di coordinate. Ridimensionamento di un oggetto che viene centrato all'origine produce un risultato diverso dal ridimensionamento di un oggetto che è stato spostato rispetto all'origine. Analogamente, la rotazione di un oggetto che viene centrato all'origine produce un risultato diverso da ruotare un oggetto che è stato spostato rispetto all'origine.  
   
- L'esempio seguente unisce il ridimensionamento, rotazione e conversione (in tale ordine) per formare una trasformazione composta. L'argomento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passato per il <xref:System.Drawing.Graphics.RotateTransform%2A> metodo indica che la rotazione seguirà il ridimensionamento. Analogamente, l'argomento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passato per il <xref:System.Drawing.Graphics.TranslateTransform%2A> metodo indica che la traduzione seguirà la rotazione. <xref:System.Drawing.Drawing2D.MatrixOrder.Append>e <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> sono membri del <xref:System.Drawing.Drawing2D.MatrixOrder> enumerazione.  
+ L'esempio seguente unisce il ridimensionamento, rotazione e conversione (in tale ordine) per formare una trasformazione composta. L'argomento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passato per il <xref:System.Drawing.Graphics.RotateTransform%2A> metodo indica che la rotazione seguirà il ridimensionamento. Analogamente, l'argomento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passato per il <xref:System.Drawing.Graphics.TranslateTransform%2A> metodo indica che la traduzione seguirà la rotazione. <xref:System.Drawing.Drawing2D.MatrixOrder.Append> e <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> sono membri del <xref:System.Drawing.Drawing2D.MatrixOrder> enumerazione.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  

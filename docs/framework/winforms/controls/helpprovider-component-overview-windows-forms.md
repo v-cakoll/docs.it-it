@@ -1,14 +1,6 @@
 ---
 title: Cenni preliminari sul componente HelpProvider (Windows Form)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - HelpProvider
 helpviewer_keywords:
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 23a9db5f7c5286eaab50f2499845f7294af878ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ad74b862c09734f3490210cb6898945a3c787fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>Cenni preliminari sul componente HelpProvider (Windows Form)
 Windows Form [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) componente viene utilizzato per associare un file di Guida HTML Help 1. x (un file. chm creato con HTML Help Workshop o un file con estensione htm) con l'applicazione di Windows. È possibile fornire la Guida in diversi modi:  

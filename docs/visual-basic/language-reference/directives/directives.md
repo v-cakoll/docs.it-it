@@ -1,33 +1,26 @@
 ---
 title: Direttive (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - directives, Visual Basic compiler
 - Visual Basic code, directives
 - directives
 ms.assetid: 20d5fe65-490a-4c23-88c2-ee4f490ed762
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8219f17f1b8093b4d02b370c7b008101923b1873
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 38d54feae5cf7bf41a825d1f6000811e2b56f319
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="directives-visual-basic"></a>Direttive (Visual Basic)
 Gli argomenti in questa sezione descrivono le direttive del compilatore del codice sorgente di Visual Basic.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [#Const (direttiva)](../../../visual-basic/language-reference/directives/const-directive.md) : definire una costante del compilatore  
   
- [Direttiva #ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md) -indica un mapping tra righe di codice sorgente e testo esterno per l'origine  
+ [Direttiva #ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md) -indica un mapping tra le righe di origine e testo esterno per l'origine  
   
- [#If... ... Then direttive #Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -compilare i blocchi di codice selezionati  
+ [#If... ... Then direttive #Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -compilare blocchi di codice selezionati  
   
  [Direttiva #Region](../../../visual-basic/language-reference/directives/region-directive.md) - comprime e nasconde sezioni di codice nell'editor di Visual Studio  
   

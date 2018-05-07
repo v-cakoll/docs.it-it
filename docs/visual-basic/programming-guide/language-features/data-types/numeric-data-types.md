@@ -1,13 +1,6 @@
 ---
 title: Tipi di dati numerici (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - integral types [Visual Basic], Visual Basic
 - Short data type [Visual Basic], numeric data types
@@ -30,14 +23,11 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c5e7a5340f9b0d103acc14350f30f17d8d709de3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8fa88172c9914a071e1b24e959c9030e6d219a30
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="numeric-data-types-visual-basic"></a>Tipi di dati numerici (Visual Basic)
 Visual Basic fornisce diversi *tipi di dati numerici* per gestire i numeri in diverse rappresentazioni. *Integrale* tipi rappresentano solo numeri interi (positivi, negativi e zero), e *non integrali* tipi rappresentano numeri con entrambi numero intero e frazione.  

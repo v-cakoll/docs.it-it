@@ -1,13 +1,6 @@
 ---
 title: 'Procedura dettagliata: creazione di un controllo DataGridView Windows Form non associato'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d737959ee0ecab4c611cebf996741516fc7be031
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26c2241f4b0a3b23255de15b3d0c9f8bdd15de02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Procedura dettagliata: creazione di un controllo DataGridView Windows Form non associato
 È spesso può essere utile visualizzare dati in formato tabulare che non provengono da un database. Potrebbe ad esempio, si desidera visualizzare il contenuto di una matrice bidimensionale di stringhe. La <xref:System.Windows.Forms.DataGridView> classe fornisce un modo semplice e personalizzabile per visualizzare i dati senza associazione a un'origine dati. Questa procedura dettagliata viene illustrato come popolare un <xref:System.Windows.Forms.DataGridView> controllare e gestire l'aggiunta e l'eliminazione di righe in modalità "associata". Per impostazione predefinita, l'utente può aggiungere nuove righe. Per impedire l'aggiunta delle righe, impostare il <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> proprietà `false`.  

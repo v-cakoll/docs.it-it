@@ -1,28 +1,16 @@
 ---
 title: Cenni preliminari sulla classe SoundPlayer
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - playing sounds [Windows Forms], SoundPlayer class
 - SoundPlayer class [Windows Forms], about SoundPlayer class
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3dc355fbe0d8262cb24779b99375d6075f758bbc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31ce87303b7b96cfd14d4daf07fd21c9de91a548
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="soundplayer-class-overview"></a>Cenni preliminari sulla classe SoundPlayer
 La classe <xref:System.Media.SoundPlayer> consente di includere facilmente suoni nelle applicazioni.  
@@ -43,7 +31,7 @@ La classe <xref:System.Media.SoundPlayer> consente di includere facilmente suoni
 |Metodo <xref:System.Media.SoundPlayer.Play%2A>|Riproduce il suono specificato nella <xref:System.Media.SoundPlayer.SoundLocation%2A> o <xref:System.Media.SoundPlayer.Stream%2A> in un nuovo thread.|  
 |Metodo <xref:System.Media.SoundPlayer.PlaySync%2A>|Riproduce il suono specificato nella <xref:System.Media.SoundPlayer.SoundLocation%2A> o <xref:System.Media.SoundPlayer.Stream%2A> nel thread corrente.|  
 |Metodo <xref:System.Media.SoundPlayer.Stop%2A>|Arresta un suono.|  
-|<xref:System.Media.SoundPlayer.LoadCompleted>evento|Generato dopo il tentativo di caricamento di un suono.|  
+|<xref:System.Media.SoundPlayer.LoadCompleted> Evento|Generato dopo il tentativo di caricamento di un suono.|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Media.SoundPlayer>  

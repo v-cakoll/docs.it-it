@@ -1,22 +1,16 @@
 ---
 title: Opzioni del compilatore Visual Basic in ordine alfabetico
 ms.date: 04/12/2018
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6e95c52c708128267ab6dc79a1b37d21b30bac2
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: dc25ff282772cc82b8ebe5d59e729a6a48afa8f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opzioni del compilatore Visual Basic elencate in ordine alfabetico
 Il compilatore della riga di comando di Visual Basic viene fornito come alternativa alla compilazione dei programmi dall'ambiente di sviluppo integrato (IDE) di Visual Studio. Di seguito è un elenco delle opzioni della riga di comando del compilatore Visual Basic in ordine alfabetico.  
@@ -37,7 +31,7 @@ Il compilatore della riga di comando di Visual Basic viene fornito come alternat
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Crea informazioni di debug.|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Definisce simboli per la compilazione condizionale.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Specifica se l'assembly avrà firma completa o parziale.|  
-|[-deterministica](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Fa sì che il compilatore di generare un assembly il cui contenuto binario è identico per le compilazioni se gli input sono identici.|
+|[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Fa sì che l'output del compilatore sia un assembly il cui contenuto binario è identico in tutte le compilazioni se gli input sono identici.|
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Elabora commenti sulla documentazione in un file XML.|  
 |[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Specifica la modalità di segnalazione errori interni del compilatore il compilatore Visual Basic.|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Specifica la posizione di allineamento per le sezioni del file di output.|  

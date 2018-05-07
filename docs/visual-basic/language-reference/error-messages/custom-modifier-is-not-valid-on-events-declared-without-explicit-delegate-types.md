@@ -1,28 +1,19 @@
 ---
-title: '&#39; Custom &#39; modificatore non è valido negli eventi dichiarati senza tipi delegati espliciti'
+title: '&#39;Personalizzato&#39; modificatore non valido negli eventi dichiarati senza tipi delegati espliciti'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc31122
 - bc31122
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 844bd033ea05e373b04a04f80777af77179c1263
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f08bbbbbac4a01dfbac8d15cf9285c01262618a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39; Custom &#39; modificatore non è valido negli eventi dichiarati senza tipi delegati espliciti
+# <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39;Personalizzato&#39; modificatore non valido negli eventi dichiarati senza tipi delegati espliciti
 A differenza di un evento non personalizzato, un `Custom Event` dichiarazione richiede un `As` clausola dopo il nome di evento che specifica in modo esplicito il tipo di delegato per l'evento.  
   
  Gli eventi non personalizzati possono essere definiti con un `As` clausola esplicita tipo delegato e con un parametro elenco immediatamente dopo il nome dell'evento.  

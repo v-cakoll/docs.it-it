@@ -1,23 +1,12 @@
 ---
 title: Assembly e Global Assembly Cache (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 893d869b1abaf9caa6f4705f40750912081d7df2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 6d1692d6b62e1f1f3a8f979d3de242003f034ed5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Assembly e Global Assembly Cache (Visual Basic)
 Gli assembly costituiscono l'unità fondamentale della distribuzione, del controllo delle versioni, del riutilizzo, dell'ambito di attivazione e delle autorizzazioni di sicurezza per un'applicazione basata su .NET. Gli assembly hanno il formato di un file eseguibile (con estensione exe) o di libreria a collegamento dinamico (con estensione dll) e costituiscono i blocchi predefiniti di .NET Framework. Gli assembly forniscono al Common Language Runtime le informazioni necessarie per riconoscere le implementazioni dei tipi. Un assembly può essere considerato come una raccolta di tipi e risorse che formano un'unità logica di funzionalità e che sono creati per interagire.  

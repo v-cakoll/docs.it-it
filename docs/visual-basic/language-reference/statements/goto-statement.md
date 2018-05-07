@@ -1,12 +1,6 @@
 ---
 title: Istruzione GoTo
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.GoTo
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 22a6315e69cd6c797d462d0835e85bb1dde67dcc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27ebc677bab8b7f61a02408fddb30a6ec21c43cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="goto-statement"></a>Istruzione GoTo
 Branch in modo non condizionale in una riga specificata in una stored procedure.  
@@ -45,7 +36,7 @@ GoTo line
  Il `GoTo` istruzione di diramazione solo righe della routine in cui è presente. La riga deve avere un'etichetta che una riga `GoTo` può fare riferimento a. Per ulteriori informazioni, vedere [come: etichetta istruzioni](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
->  `GoTo`istruzioni possono ostacolare la lettura e la gestione del codice. Se possibile, è possibile utilizzare una struttura di controllo. Per ulteriori informazioni, vedere [flusso di controllo](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+>  `GoTo` le istruzioni possono rendere difficile da leggere e gestire codice. Se possibile, è possibile utilizzare una struttura di controllo. Per ulteriori informazioni, vedere [flusso di controllo](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
  Non è possibile utilizzare un `GoTo` istruzione branch all'esterno di un `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With`, o `Using`... `End Using` in un'etichetta all'interno.  
   
@@ -54,11 +45,11 @@ GoTo line
   
 |Blocco o area geografica|Branching dall'esterno|Branching all'esterno|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try`blocco|Solo da un `Catch` blocco della stessa costruzione <sup>1</sup>|Solo di fuori dell'intera costruzione|  
-|`Catch`blocco|Non è consentito|Solo di fuori dell'intera costruzione oppure il `Try` blocco della stessa costruzione <sup>1</sup>|  
-|`Finally`blocco|Non è consentito|Non è consentito|  
+|`Try` Blocco|Solo da un `Catch` blocco della stessa costruzione <sup>1</sup>|Solo di fuori dell'intera costruzione|  
+|`Catch` Blocco|Non è consentito|Solo all'esterno dell'intera costruzione o per il `Try` blocco della stessa costruzione <sup>1</sup>|  
+|`Finally` Blocco|Non è consentito|Non è consentito|  
   
- <sup>1</sup> eventuale `Try`... `Catch`... `Finally` costruzione viene nidificata all'interno di un altro, un `Catch` può creare un ramo in blocco il `Try` blocco al proprio livello di nidificazione, ma non in qualsiasi altro `Try` blocco. Nidificate `Try`... `Catch`... `Finally` costruzione deve essere completamente contenuta in un `Try` o `Catch` blocco di costruzione entro il quale è annidata.  
+ <sup>1</sup> eventuale `Try`... `Catch`... `Finally` costruzione viene nidificata all'interno di un altro, una `Catch` blocco può creare rami nel `Try` blocco al proprio livello di nidificazione, ma non in qualsiasi altro `Try` blocco. Nidificate `Try`... `Catch`... `Finally` costruzione deve essere completamente contenuta in un `Try` o `Catch` blocco di costruzione entro il quale è annidata.  
   
  La figura seguente mostra uno `Try` costruzione annidati all'interno di un altro. Vari rami tra i blocchi delle due costruzioni vengono indicati come validi o non valido.  
   

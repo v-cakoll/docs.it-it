@@ -1,27 +1,15 @@
 ---
-title: "Linee guida per la progettazione di controlli a cui è possibile applicare degli stili"
-ms.custom: 
+title: Linee guida per la progettazione di controlli a cui è possibile applicare degli stili
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6707a434f64838467033966c9093e1e415b1fb31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Linee guida per la progettazione di controlli a cui è possibile applicare degli stili
 Questo documento offre un riepilogo di una serie di procedure consigliate per la progettazione di un controllo a cui siano facilmente applicabili stili e modelli. Questo è il risultato di molti tentativi ed errori durante l’elaborazione degli stili dei controlli dei temi per il set di controlli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incorporato. La corretta applicazione degli stili è una funzione che non dipende solo dalla corretta progettazione del modello a oggetti ma anche dallo stile stesso. I destinatari di questo documento sono gli autori dei controlli, non gli autori degli stili.  

@@ -1,28 +1,19 @@
 ---
-title: '&#39; &lt;interfacename&gt;.&lt; MemberName&gt;&#39; è già implementata dalla classe di base &#39;&lt; nomeclassebase&gt;&#39;. Prevista nuova implementazione di &lt;tipo&gt; presuppone'
+title: '&#39;&lt;InterfaceName&gt;.&lt; MemberName&gt; &#39; è già implementata dalla classe di base &#39; &lt;nomeclassebase&gt;&#39;. Prevista nuova implementazione di &lt;tipo&gt; presuppone'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42015
 - bc42015
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 69884ed567e0046da5cf5c51b3e83e57e890d49f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9054c293ede9db4637f23579407f2f76db29f2ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>&#39; &lt;interfacename&gt;.&lt; MemberName&gt;&#39; è già implementata dalla classe di base &#39;&lt; nomeclassebase&gt;&#39;. Prevista nuova implementazione di &lt;tipo&gt; presuppone
+# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>&#39;&lt;InterfaceName&gt;.&lt; MemberName&gt; &#39; è già implementata dalla classe di base &#39; &lt;nomeclassebase&gt;&#39;. Prevista nuova implementazione di &lt;tipo&gt; presuppone
 Una proprietà, routine o evento in una classe derivata utilizza un `Implements` clausola che specifica un membro di interfaccia che è già implementato nella classe base.  
   
  Una classe derivata può reimplementare un membro di interfaccia implementato dalla sua classe base. Questo non equivale a eseguire l'override dell'implementazione della classe base. Per ulteriori informazioni, vedere [implementa](../../../visual-basic/language-reference/statements/implements-clause.md).  

@@ -1,13 +1,6 @@
 ---
-title: 'Procedura: modificare le dimensioni o la posizione di un''immagine in fase di esecuzione (Windows Form)'
-ms.custom: 
+title: "Procedura: modificare le dimensioni o la posizione di un'immagine in fase di esecuzione (Windows Form)"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e02ea1cbcb1fdd86d182bfba23241acb91c4b54a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e6e114e0a9d7e5e9c17ba21ef941703cd108784
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Procedura: modificare le dimensioni o la posizione di un'immagine in fase di esecuzione (Windows Form)
 Se si utilizza Windows Form <xref:System.Windows.Forms.PictureBox> controllo in un form, è possibile impostare il <xref:System.Windows.Forms.PictureBox.SizeMode%2A> proprietà in modo da:  
@@ -44,7 +32,7 @@ Se si utilizza Windows Form <xref:System.Windows.Forms.PictureBox> controllo in 
   
 ### <a name="to-set-the-sizemode-property-at-run-time"></a>Per impostare la proprietà in fase di esecuzione  
   
-1.  Impostare <xref:System.Windows.Forms.PictureBox.SizeMode%2A> a <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (impostazione predefinita), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, o <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal>indica che l'immagine viene posizionata nell'angolo superiore sinistro del controllo. Se l'immagine è più grande del controllo, vengono tagliati relativi bordi inferiori e destro. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>indica che l'immagine viene centrata all'interno del controllo; Se l'immagine è più grande del controllo, vengono tagliati bordi esterni dell'immagine. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>significa che le dimensioni del controllo vengano regolata per le dimensioni dell'immagine. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>è l'opposto e significa che le dimensioni dell'immagine vengono adattate alle dimensioni del controllo.  
+1.  Impostare <xref:System.Windows.Forms.PictureBox.SizeMode%2A> a <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (impostazione predefinita), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, o <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> significa che l'immagine viene posizionata nell'angolo superiore sinistro del controllo; Se l'immagine è più grande del controllo, vengono tagliati relativi bordi inferiori e destro. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> significa che l'immagine viene centrato all'interno del controllo; Se l'immagine è più grande del controllo, vengono tagliati bordi esterni dell'immagine. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> significa che le dimensioni del controllo vengano regolata per le dimensioni dell'immagine. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> è l'opposto e significa che le dimensioni dell'immagine sono regolata per le dimensioni del controllo.  
   
      Nell'esempio seguente, il percorso impostato per la posizione dell'immagine è la cartella documenti. Ciò accade in quanto è possibile presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows includerà questa directory. Ciò consente inoltre agli utenti del sistema con livelli di accesso minimo di eseguire l'applicazione senza problemi. Nell'esempio seguente si presuppone un form con un <xref:System.Windows.Forms.PictureBox> controllo già aggiunto.  
   

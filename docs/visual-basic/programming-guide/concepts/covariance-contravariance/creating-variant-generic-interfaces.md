@@ -1,22 +1,12 @@
 ---
 title: Creazione di interfacce generiche Variant (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 380af3b29172b1fa13d42d33e574201607cb804b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e79183cd75e3e222cfa82c6b8ca651eb99ffc02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>Creazione di interfacce generiche Variant (Visual Basic)
 È possibile dichiarare parametri di tipo generico nelle interfacce come covarianti o controvarianti. La *covarianza* consente ai metodi di interfaccia di avere tipi restituiti più derivati rispetto a quelli definiti dai parametri di tipo generico. La *controvarianza* consente ai metodi di interfaccia di avere tipi di argomenti meno derivati rispetto a quelli specificati dai parametri generici. Un'interfaccia generica che ha parametri di tipo generico varianti e covarianti è definita *variante*.  
@@ -28,7 +18,7 @@ ms.lasthandoff: 11/21/2017
  È possibile dichiarare le interfacce generiche varianti usando le parole chiave `in` e `out` per i parametri di tipo generico.  
   
 > [!IMPORTANT]
->  `ByRef`in Visual Basic non possono essere variant. Anche i tipi di valore non supportano la varianza.  
+>  `ByRef` in Visual Basic non possono essere variant. Anche i tipi di valore non supportano la varianza.  
   
  È possibile dichiarare un parametro di tipo generico covariante usando la parola chiave `out`. Il tipo covariante deve soddisfare le condizioni seguenti:  
   

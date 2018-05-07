@@ -1,22 +1,12 @@
 ---
-title: "Procedura: ordinare elementi su più chiavi (Visual Basic)"
-ms.custom: 
+title: 'Procedura: ordinare elementi su più chiavi (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 145d50aa4515327636b7a649617188a5e24ef556
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 69509eb0bbc28045b71ad44c178d042367f3c03e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Procedura: ordinare elementi su più chiavi (Visual Basic)
 In questo argomento viene illustrato come ordinare elementi su più chiavi.  
@@ -24,7 +14,7 @@ In questo argomento viene illustrato come ordinare elementi su più chiavi.
 ## <a name="example"></a>Esempio  
  In questo esempio i risultati vengono ordinati dapprima in base al codice postale di spedizione e quindi in base alla data dell'ordine.  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: clienti e ordini (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  

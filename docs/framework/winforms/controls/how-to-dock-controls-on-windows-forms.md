@@ -1,28 +1,16 @@
 ---
 title: 'Procedura: ancorare i controlli in Windows Form'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], docking
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc7227ee46f127070b44771a56a89b82bd0930ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6cb4c982cb4c9e2df8d0335738ca087733209bdc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Procedura: ancorare i controlli in Windows Form
 È possibile ancorare i controlli ai bordi dei form o inserire il contenitore del controllo (un form o un controllo contenitore). Ad esempio, Esplora ancora relativo <xref:System.Windows.Forms.TreeView> controllo sul lato sinistro della finestra e il relativo <xref:System.Windows.Forms.ListView> controllo sul lato destro della finestra. Utilizzare il <xref:System.Windows.Forms.Control.Dock%2A> proprietà per tutti i controlli Windows Form visibili definire la modalità di ancoraggio.  

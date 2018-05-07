@@ -1,13 +1,7 @@
 ---
 title: 'Procedura: crittografare gli elementi XML con chiavi asimmetriche'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,21 +17,16 @@ helpviewer_keywords:
 - Rijndael
 - encryption [.NET Framework], asymmetric keys
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cadd6e5af8ed95da34091bc3a9f3ac8d5af4e9cb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b6840a9005aaca4805252298e1ceaf7e51f38971
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Procedura: crittografare gli elementi XML con chiavi asimmetriche
-È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare un elemento all'interno di un documento XML.  La crittografia XML consente di scambiare o archiviare dati XML crittografati in modo standard, garantendo un'adeguata protezione dei dati da letture non autorizzate.  Per altre informazioni sullo standard di crittografia XML, vedere la specifica World Wide Web Consortium (W3C) per la crittografia XML disponibile all'indirizzo http://www.w3.org/TR/xmldsig-core/.  
+È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare un elemento all'interno di un documento XML.  La crittografia XML consente di scambiare o archiviare dati XML crittografati in modo standard, garantendo un'adeguata protezione dei dati da letture non autorizzate.  Per ulteriori informazioni sullo standard di crittografia XML, vedere la specifica World Wide Web Consortium (W3C) per la crittografia XML disponibile all'indirizzo http://www.w3.org/TR/xmldsig-core/.  
   
  È possibile usare la crittografia XML per sostituire qualsiasi elemento o documento XML con un elemento <`EncryptedData`> contenente i dati XML crittografati.  Nell'elemento <`EncryptedData`> possono essere inclusi anche sottoelementi in cui sono incluse informazioni sulle chiavi e sui processi usati durante la crittografia.  La crittografia XML consente a un documento di contenere più elementi crittografati e consente a un elemento di essere crittografato più volte.  Nell'esempio di codice relativo a questa procedura viene illustrato come creare un elemento <`EncryptedData`> insieme a diversi altri sottoelementi utilizzabili in un secondo momento durante la decrittografia.  
   

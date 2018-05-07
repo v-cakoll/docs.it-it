@@ -1,13 +1,7 @@
 ---
 title: Utilizzo della libreria di classi portabile con MVVM (Model-View-View Model)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cc12a90025a1862fc6c588fe4425f3f8341da313
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: aa8423c5c9453a9edb1058f0d5bdf4c494ece088
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Utilizzo della libreria di classi portabile con MVVM (Model-View-View Model)
 È possibile utilizzare .NET Framework [libreria di classi portabile](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) per implementare il modello Model-View-View MVVM (Model) e condividere gli assembly in più piattaforme.  

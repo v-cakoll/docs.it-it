@@ -1,27 +1,15 @@
 ---
 title: Cenni preliminari sui comportamenti temporali
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9305b69927a1ed0ad4f154ab972316f3dee951e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31a6b7d3b92e886d9c90fc39d69f31cf72b99666
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="timing-behaviors-overview"></a>Cenni preliminari sui comportamenti temporali
 In questo argomento vengono descritti i comportamenti temporali delle animazioni e di altri <xref:System.Windows.Media.Animation.Timeline> oggetti.  
@@ -34,7 +22,7 @@ In questo argomento vengono descritti i comportamenti temporali delle animazioni
 ## <a name="timeline-types"></a>Tipi di sequenza temporale  
  Oggetto <xref:System.Windows.Media.Animation.Timeline> rappresenta un segmento di tempo. Offre proprietà che consentono di specificare la lunghezza di tale intervallo, il momento di inizio, il numero di ripetizioni, la velocità di avanzamento dell'intervallo e così via.  
   
- Le classi che ereditano dalla classe della sequenza temporale offrono funzionalità aggiuntive, ad esempio la riproduzione di animazioni e file multimediali. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fornisce le seguenti <xref:System.Windows.Media.Animation.Timeline> tipi.  
+ Le classi che ereditano dalla classe della sequenza temporale offrono funzionalità aggiuntive, ad esempio la riproduzione di animazioni e file multimediali. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce le seguenti <xref:System.Windows.Media.Animation.Timeline> tipi.  
   
 |Tipo di sequenza temporale|Descrizione|  
 |-------------------|-----------------|  
@@ -127,11 +115,11 @@ In questo argomento vengono descritti i comportamenti temporali delle animazioni
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>Proprietà che controllano la velocità di una sequenza temporale  
  La <xref:System.Windows.Media.Animation.Timeline> classe fornisce tre proprietà per specificare la velocità:  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>: Specifica la velocità, rispetto al padre, l'avanzamento del tempo un <xref:System.Windows.Media.Animation.Timeline>. I valori maggiori di uno di aumentare la velocità del <xref:System.Windows.Media.Animation.Timeline> e del relativo figlio <xref:System.Windows.Media.Animation.Timeline> oggetti, i valori compresi tra zero e uno subire rallentamenti. Il valore 1 indica che <xref:System.Windows.Media.Animation.Timeline> avanza alla stessa velocità del relativo oggetto padre. Il <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> di una sequenza temporale contenitore avrà effetto su tutti del relativo figlio <xref:System.Windows.Media.Animation.Timeline> anche gli oggetti.  
+-   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> : Specifica la velocità, rispetto al relativo elemento padre, in corrispondenza del quale avanzamento del tempo un <xref:System.Windows.Media.Animation.Timeline>. I valori maggiori di uno di aumentare la velocità del <xref:System.Windows.Media.Animation.Timeline> e del relativo figlio <xref:System.Windows.Media.Animation.Timeline> oggetti, i valori compresi tra zero e uno subire rallentamenti. Il valore 1 indica che <xref:System.Windows.Media.Animation.Timeline> avanza alla stessa velocità del relativo oggetto padre. Il <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> di una sequenza temporale contenitore avrà effetto su tutti del relativo figlio <xref:System.Windows.Media.Animation.Timeline> anche gli oggetti.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A>-Specifica la percentuale del <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di una sequenza temporale trascorsa. Per un esempio, vedere [procedura: velocizzare o rallentare un'animazione](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> -Specifica la percentuale del <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di una sequenza temporale trascorsa accelerando. Per un esempio, vedere [procedura: velocizzare o rallentare un'animazione](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>-Specifica la percentuale di <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di una sequenza temporale trascorsa. Per un esempio, vedere [procedura: velocizzare o rallentare un'animazione](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Specifica la percentuale del <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di una sequenza temporale trascorsa decelerando. Per un esempio, vedere [procedura: velocizzare o rallentare un'animazione](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  

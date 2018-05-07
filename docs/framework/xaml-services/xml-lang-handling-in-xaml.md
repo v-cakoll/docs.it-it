@@ -1,29 +1,17 @@
 ---
 title: Gestione di xml:lang in XAML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], xml:lang attribute
 - xml:lang attribute [XAML Services]
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-caps.latest.revision: "16"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3dad1600d93f53198d7ca7842148612b7755fc10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 886f4063fa8c793fdce93431a29219cf86078593
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xmllang-handling-in-xaml"></a>Gestione di xml:lang in XAML
 L'attributo `xml:lang` è un attributo definito da [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]che dichiara le informazioni relative a lingua e cultura per un elemento in XML. Il significato dell'attributo rimane persistente in XAML. Tuttavia, sono valide alcune considerazioni aggiuntive.  

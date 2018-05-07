@@ -1,11 +1,6 @@
 ---
 title: Matrici in Visual Basic
-ms.custom: ''
 ms.date: 12/06/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Array
 helpviewer_keywords:
@@ -14,12 +9,11 @@ helpviewer_keywords:
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 author: rpetrusha
 ms.author: ronpet
-ms.manager: wpickett
-ms.openlocfilehash: d223ca8b0ff59a13c31fa777e5cb6a97918421c6
-ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
+ms.openlocfilehash: 3b6c1db0131f2a150dc1b00dd5e6dafc3a418f05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arrays-in-visual-basic"></a>Matrici in Visual Basic
 Una matrice è un set di valori, che vengono definite *elementi*, che sono logicamente correlati tra loro. Ad esempio, una matrice può essere costituito il numero degli studenti iscritti a ciascun anno scolastico di una scuola elementare; ogni elemento della matrice è il numero degli studenti iscritti a un singolo livello. Analogamente, una matrice può essere costituito voti uno studente per una classe. ogni elemento della matrice è un singolo livello.    
@@ -73,7 +67,7 @@ Dim sales()() As Double = New Double(11)() {}
 - [Il tipo di matrice](#the-array-type)  
   
 - [Matrici come valori restituiti e parametri](#arrays-as-return-values-and-parameters)  
-- [Le matrici di matrici](#jagged-arrays)  
+- [Matrici di matrici](#jagged-arrays)  
   
 - [Matrici di lunghezza zero](#zero-length-arrays)  
 
@@ -165,7 +159,7 @@ Come per le matrici unidimensionali, è possibile basarsi sull'inferenza del tip
   
  [!code-vb[iterate-one-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]  
   
- Nell'esempio seguente viene eseguito lo scorrimento di una matrice multidimensionale usando un [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) istruzione. Il metodo <xref:System.Array.GetUpperBound%2A> ha un parametro che specifica la dimensione. `GetUpperBound(0)`Restituisce l'indice più alto della prima dimensione, e `GetUpperBound(1)` restituisce l'indice più alto della seconda dimensione.
+ Nell'esempio seguente viene eseguito lo scorrimento di una matrice multidimensionale usando un [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) istruzione. Il metodo <xref:System.Array.GetUpperBound%2A> ha un parametro che specifica la dimensione. `GetUpperBound(0)` Restituisce l'indice più alto della prima dimensione, e `GetUpperBound(1)` restituisce l'indice più alto della seconda dimensione.
   
  [!code-vb[iterate-two-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]  
   

@@ -1,32 +1,22 @@
 ---
 title: Scrittura di query in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ [Visual Basic], walkthroughs
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-caps.latest.revision: "70"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e78d93895a86ad9b2456e5ac7c05db83ebf0379d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: beb192f6b136455cb1adcb6cf2616578b63fcebf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Procedura dettagliata: Scrittura delle query in Visual Basic
 Questa procedura dettagliata illustra come è possibile utilizzare le funzionalità del linguaggio Visual Basic per scrivere [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] espressioni di query. La procedura dettagliata illustra come creare query in un elenco di oggetti Student, come eseguire le query e come modificarli. Le query incorporano diverse funzionalità tra i tipi anonimi, inferenza dei tipi locali e gli inizializzatori di oggetto.  
   
- Dopo aver completato questa procedura dettagliata, sarà possibile passare agli esempi e documentazione per la specifica [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider si è interessati. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]provider includono [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+ Dopo aver completato questa procedura dettagliata, sarà possibile passare agli esempi e documentazione per la specifica [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider si è interessati. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] vengono elencati i provider [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="create-a-project"></a>Creare un progetto  
   

@@ -1,17 +1,12 @@
 ---
 title: Spazi dei nomi (F#)
 description: 'Informazioni su come uno spazio dei nomi in F # consente di organizzare il codice in aree di funzionalità correlate, consentendo di collegare un nome a un raggruppamento di elementi del programma.'
-author: cartermp
-ms.author: phcart
 ms.date: 04/24/2017
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 695de3b58b8567da60c8ef86900f8e78ea563e0e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 81d1648dbdc111984ddeb77d11b2bd81cbca57cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespaces"></a>Spazi dei nomi
 

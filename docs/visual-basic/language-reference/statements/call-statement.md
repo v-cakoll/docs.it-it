@@ -1,12 +1,6 @@
 ---
 title: Istruzione Call (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Call
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c72450fd6f931f36f640d3e384a6fd38d57a7a23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2074f44aedf59f1570e73c898a9bf64e57034923
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="call-statement-visual-basic"></a>Istruzione Call (Visual Basic)
 Trasferisce il controllo a un `Function`, `Sub`, o una routine di libreria a collegamento dinamico (DLL).  
@@ -37,7 +28,7 @@ Trasferisce il controllo a un `Function`, `Sub`, o una routine di libreria a col
  Obbligatorio. Nome della routine da chiamare.  
   
  `argumentList`  
- Parametro facoltativo. Elenco di variabili o espressioni che rappresentano gli argomenti passati alla procedura quando viene chiamato. Più argomenti sono separati da virgole. Se si includono `argumentList`, è necessario racchiuderlo tra parentesi.  
+ Facoltativo. Elenco di variabili o espressioni che rappresentano gli argomenti passati alla procedura quando viene chiamato. Più argomenti sono separati da virgole. Se si includono `argumentList`, è necessario racchiuderlo tra parentesi.  
   
 ## <a name="remarks"></a>Note  
  È possibile utilizzare il `Call` parola chiave quando si chiama una routine. Per la maggior parte delle chiamate di procedura, non è necessario utilizzare questa parola chiave.  

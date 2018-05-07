@@ -1,27 +1,17 @@
 ---
 title: Metodi di estensione (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ExtensionMethods
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-caps.latest.revision: 41
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3db3bc2b213b78ef2dceebcf56c9d5fbfa3016e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1cc2ccef09dd027c6f1e82f60ed4ac5f50db6ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extension-methods-visual-basic"></a>Metodi di estensione (Visual Basic)
 Metodi di estensione consentono agli sviluppatori di aggiungere funzionalità personalizzate ai tipi di dati che sono già definiti senza creare un nuovo tipo derivato. Metodi di estensione consentono di scrivere un metodo che può essere chiamato come se fosse un metodo di istanza del tipo esistente.  
@@ -38,7 +28,7 @@ Metodi di estensione consentono agli sviluppatori di aggiungere funzionalità pe
   
  [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
   
- Si noti che la definizione di metodo di estensione è contrassegnata con l'attributo di estensione `<Extension()>`. Contrassegnare il modulo in cui è definito il metodo è facoltativo, ma ogni metodo di estensione deve essere contrassegnato. <xref:System.Runtime.CompilerServices>deve essere importato per accedere all'attributo di estensione.  
+ Si noti che la definizione di metodo di estensione è contrassegnata con l'attributo di estensione `<Extension()>`. Contrassegnare il modulo in cui è definito il metodo è facoltativo, ma ogni metodo di estensione deve essere contrassegnato. <xref:System.Runtime.CompilerServices> deve essere importato per poter accedere all'attributo di estensione.  
   
  Metodi di estensione possono essere dichiarati solo all'interno di moduli. Il modulo in cui è definito un metodo di estensione non è in genere, il modulo stesso di quello in cui viene chiamato. Al contrario, viene importato il modulo che contiene il metodo di estensione, se necessario, in modo che sia nell'ambito. Dopo il modulo che contiene `Print` è nell'ambito, il metodo può essere chiamato come se fosse un metodo di istanza comune che non accetta argomenti, ad esempio `ToUpper`:  
   
@@ -48,9 +38,9 @@ Metodi di estensione consentono agli sviluppatori di aggiungere funzionalità pe
   
  [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
   
- Il metodo viene chiamato tramite l'invio di un argomento di stringa per `punc`:`example.PrintAndPunctuate(".")`  
+ Il metodo viene chiamato mediante l'invio di un argomento di stringa per `punc`: `example.PrintAndPunctuate(".")`  
   
- Nell'esempio seguente `Print` e `PrintAndPunctuate` definito e chiamato. <xref:System.Runtime.CompilerServices>viene importato nel modulo di definizione per consentire l'accesso all'attributo di estensione.  
+ Nell'esempio seguente `Print` e `PrintAndPunctuate` definito e chiamato. <xref:System.Runtime.CompilerServices> viene importato nel modulo di definizione per consentire l'accesso all'attributo di estensione.  
   
 ### <a name="code"></a>Codice  
   

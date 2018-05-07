@@ -1,17 +1,13 @@
 ---
 title: Stringhe interpolate (Visual Basic)
 ms.date: 10/31/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Stringhe interpolate (riferimenti di Visual Basic)
 
@@ -61,7 +57,7 @@ Da una stringa interpolata vengono effettuate tre conversioni di tipo implicito:
 
    Questo è il risultato finale di un'interpretazione della stringa. Tutte le occorrenze delle parentesi graffe doppie ("{{" e "}}") vengono convertite in parentesi graffe singole. 
 
-2. Conversione di una stringa interpolata in una variabile <xref:System.IFormattable> che consente di creare più stringhe risultato con contenuto specifico delle impostazioni cultura da una singola istanza di <xref:System.IFormattable>. Ciò è utile per includere elementi quali i formati numerici e di data corretti per singole impostazioni cultura.  Tutte le occorrenze di parentesi graffe doppie ("{{" e "}}") rimangono tali finché la stringa non viene formattata in modo implicito o esplicito chiamando il metodo <xref:System.Object.ToString>.  Tutte le espressioni di interpolazione contenute vengono convertite in {0}, \{1\} e così via.  
+2. Conversione di una stringa interpolata in una variabile <xref:System.IFormattable> che consente di creare più stringhe risultato con contenuto specifico delle impostazioni cultura da una singola istanza di <xref:System.IFormattable>. Ciò è utile per includere elementi quali i formati numerici e di data corretti per singole impostazioni cultura.  Tutte le occorrenze di parentesi graffe doppie ("{{" e "}}") rimangono tali finché la stringa non viene formattata in modo implicito o esplicito chiamando il metodo <xref:System.Object.ToString>.  Tutte le espressioni di interpolazione contenute vengono convertite in {0}, {1}e così via.  
 
    Nell'esempio seguente viene usata la reflection per visualizzare i membri, nonché i valori di campi e le proprietà di una variabile <xref:System.IFormattable> creata da una stringa interpolata. Viene anche passata la variabile <xref:System.IFormattable> al metodo <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>.
 
@@ -71,13 +67,13 @@ Da una stringa interpolata vengono effettuate tre conversioni di tipo implicito:
 
 3. Conversione di una stringa interpolata a un <xref:System.FormattableString> variabile che rappresenta una stringa di formato composita. Grazie all'esame della stringa di formato composito e del modo in cui viene eseguito il rendering come stringa di risultato, è ad esempio possibile attuare misure di protezione contro attacchi di tipo injection durante la creazione di una query. Oggetto <xref:System.FormattableString> include anche:
 
-      - Oggetto <xref:System.FormattableString.ToString> overload che produce una stringa per il <xref:System.Globalization.CultureInfo.CurrentCulture>.
+      - Un overload <xref:System.FormattableString.ToString> che produce una stringa risultato per <xref:System.Globalization.CultureInfo.CurrentCulture>.
       
       - Oggetto <xref:System.FormattableString.Invariant%2A> metodo che genera una stringa per il <xref:System.Globalization.CultureInfo.InvariantCulture>.
       
-      - Oggetto <xref:System.FormattableString.ToString(System.IFormatProvider)> metodo che genera una stringa di risultato per impostazioni cultura specificate. 
+      - Un metodo <xref:System.FormattableString.ToString(System.IFormatProvider)> che produce una stringa risultato per impostazioni cultura specifiche. 
   
-    Tutte le occorrenze di parentesi graffe doppie ("{{" e "}}") rimangono invariate tra parentesi graffe doppie finché non viene formattata.  Tutte le espressioni di interpolazione contenute vengono convertite in {0}, \{1\} e così via.  
+    Tutte le occorrenze di parentesi graffe doppie ("{{" e "}}") rimangono invariate tra parentesi graffe doppie finché non viene formattata.  Tutte le espressioni di interpolazione contenute vengono convertite in {0}, {1}e così via.  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 

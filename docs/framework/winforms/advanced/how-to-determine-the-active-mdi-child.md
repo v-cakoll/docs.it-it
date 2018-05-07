@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: determinare il figlio MDI attivo'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c026df631c2ac033594ea86887bb8440a6aa240a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b084d204361764af1b36b154acfc5b360fc977e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Procedura: determinare il figlio MDI attivo
 In alcuni casi, è necessario fornire un comando che viene eseguito sul controllo che ha lo stato attivo del form figlio attivo. Si supponga, ad esempio, che si desidera copiare negli Appunti il testo selezionato dalla casella di testo del form figlio. È necessario creare una routine che copia il testo selezionato negli Appunti mediante il <xref:System.Windows.Forms.Control.Click> evento della voce di menu copia dal menu di modifica standard.  

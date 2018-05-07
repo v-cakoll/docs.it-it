@@ -1,28 +1,16 @@
 ---
 title: Esempio di pacchetto di tipi di carattere OpenType
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - OpenType font pack [WPF]
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7390c8c84caa17b984d5a16b7ac6b9704b8f3c6e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bec890f7937965c314ccf16b4142905c52ceff49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sample-opentype-font-pack"></a>Esempio di pacchetto di tipi di carattere OpenType
 Questo argomento offre una panoramica dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio distribuiti con [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. I tipi di carattere di esempio supportano funzionalità [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] estese che possono essere usate dalle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -45,7 +33,7 @@ Questo argomento offre una panoramica dei tipi di carattere [!INCLUDE[TLA#tla_op
   
  La figura seguente illustra l'aspetto dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
   
- ![Elenco dei tipi di carattere nel pacchetto di esempio caratteri](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")  
+ ![Elenco di nomi di carattere nel pacchetto di esempio del tipo di carattere](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")  
 Tipi di carattere nel pacchetto di caratteri OpenType  
   
  I tipi di carattere di esempio sono concessi in licenza da Ascender Corporation. Ascender è un provider di tipi di carattere avanzati. Per ottenere in licenza versioni estese o personalizzate dei tipi di carattere di esempio, vedere il [sito Web di Ascender Corporation](http://go.microsoft.com/fwlink/?LinkId=182627).  
@@ -57,7 +45,7 @@ Tipi di carattere nel pacchetto di caratteri OpenType
 ## <a name="installing-the-fonts"></a>Installazione dei tipi di carattere  
  È possibile installare i tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio nella directory dei tipi di carattere di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] predefinita, ovvero **\WINDOWS\Fonts**. Per l'installazione, usare il pannello di controllo Tipi di carattere. Dopo l'installazione nel computer, questi tipi di carattere saranno accessibili a tutte le applicazioni che fanno riferimento ai tipi di carattere predefiniti di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. È possibile visualizzare un set di caratteri rappresentativo in diverse dimensioni facendo doppio clic sul file del tipo di carattere. La screenshot seguente mostra il file del tipo di carattere Lindsey, ovvero Linds.ttf.  
   
- ![Tipo di carattere Lindsey &#40; OpenType &#41; ] (../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Tipo di carattere Lindsey &#40;OpenType&#41;](../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")  
 Visualizzazione del tipo di carattere Lindsey  
   
 <a name="using_the_fonts"></a>   

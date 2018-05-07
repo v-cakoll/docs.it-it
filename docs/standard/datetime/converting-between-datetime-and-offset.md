@@ -1,13 +1,7 @@
 ---
 title: Conversione tra DateTime e DateTimeOffset
-ms.custom: 
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,25 +16,20 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2055df26618664ee130be417599f4ec46e439444
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dec0e5138ecf08783f11d21cd28d7291d27ea68d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>Conversione tra DateTime e DateTimeOffset
 
 Sebbene il <xref:System.DateTimeOffset> struttura offre un maggiore livello di compatibilità del fuso orario rispetto al <xref:System.DateTime> struttura <xref:System.DateTime> parametri vengono utilizzati più comunemente nelle chiamate al metodo. Per questo motivo, la capacità di conversione <xref:System.DateTimeOffset> valori <xref:System.DateTime> valori e viceversa è particolarmente importante. In questo argomento viene illustrato come eseguire queste conversioni in modo che mantiene le informazioni di fuso orario possibili.
 
 > [!NOTE]
-> Sia il <xref:System.DateTime> e <xref:System.DateTimeOffset> tipi presentano alcune limitazioni per la rappresentazione in fusi orari. Con il relativo <xref:System.DateTime.Kind%2A> proprietà <xref:System.DateTime> è in grado di riflettere solo Coordinated Universal Time (UTC) e fuso orario locale del sistema. <xref:System.DateTimeOffset>riflette l'offset dall'ora UTC di un'ora, ma non riflette il fuso orario effettivo che offset che appartiene. Per informazioni dettagliate sul supporto per i fusi orari e i valori di ora, vedere [scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md).
+> Sia il <xref:System.DateTime> e <xref:System.DateTimeOffset> tipi presentano alcune limitazioni per la rappresentazione in fusi orari. Con il relativo <xref:System.DateTime.Kind%2A> proprietà <xref:System.DateTime> è in grado di riflettere solo Coordinated Universal Time (UTC) e fuso orario locale del sistema. <xref:System.DateTimeOffset> riflette l'offset di un'ora rispetto a UTC, ma non riflette il fuso orario effettivo che offset che appartiene. Per informazioni dettagliate sul supporto per i fusi orari e i valori di ora, vedere [scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md).
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>Conversioni da DateTime a DateTimeOffset
 

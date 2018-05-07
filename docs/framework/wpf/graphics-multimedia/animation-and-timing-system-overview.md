@@ -1,27 +1,15 @@
 ---
 title: Cenni preliminari sull'animazione e sul sistema di temporizzazione
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87e3b1b63c8582a322f74659f03803d1dbb19621
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bfb9a337a604fe8d86d208344d4371748e28f285
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="animation-and-timing-system-overview"></a>Cenni preliminari sull'animazione e sul sistema di temporizzazione
 Questo argomento viene descritto l'utilizzo di animazione, il sistema di temporizzazione <xref:System.Windows.Media.Animation.Timeline>, e <xref:System.Windows.Media.Animation.Clock> classi per l'animazione di proprietà.  
@@ -57,7 +45,7 @@ Questo argomento viene descritto l'utilizzo di animazione, il sistema di tempori
   
  Nella figura seguente viene illustrata la relazione tra il gestore del tempo e <xref:System.Windows.Media.Animation.AnimationClock>e una proprietà di dipendenza animata.  
   
- ![I componenti di sistema di intervallo](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
+ ![Componenti del sistema di intervallo](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
 Animazione di una proprietà  
   
  Tick, viene aggiornata l'ora di ogni <xref:System.Windows.Media.Animation.ClockState.Active> <xref:System.Windows.Media.Animation.Clock> nell'applicazione. Se il <xref:System.Windows.Media.Animation.Clock> è un <xref:System.Windows.Media.Animation.AnimationClock>, Usa il <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> metodo il <xref:System.Windows.Media.Animation.AnimationTimeline> da cui è stato creato per calcolare il corrente valore di output. Il <xref:System.Windows.Media.Animation.AnimationClock> fornisce il <xref:System.Windows.Media.Animation.AnimationTimeline> con l'ora locale corrente, un valore di input è in genere il valore della proprietà di base e un valore di destinazione predefinito. Quando si recupera il valore di un oggetto animato utilizzando proprietà di <xref:System.Windows.DependencyObject.GetValue%2A> metodo o la funzione di accesso CLR, si otterrà l'output del relativo <xref:System.Windows.Media.Animation.AnimationClock>.  
@@ -65,13 +53,13 @@ Animazione di una proprietà
 #### <a name="clock-groups"></a>Gruppi di orologi  
  Nella sezione precedente descritto esistono diversi tipi di <xref:System.Windows.Media.Animation.Clock> oggetti per i diversi tipi di sequenze temporali. Nella figura seguente viene illustrata la relazione tra il gestore del tempo, un <xref:System.Windows.Media.Animation.ClockGroup>, <xref:System.Windows.Media.Animation.AnimationClock>e una proprietà di dipendenza animata. Oggetto <xref:System.Windows.Media.Animation.ClockGroup> viene creato per le sequenze temporali che raggruppano altre sequenze, ad esempio il <xref:System.Windows.Media.Animation.Storyboard> (classe), che raggruppa animazioni e altre sequenze temporali.  
   
- ![I componenti di sistema di intervallo](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
+ ![Componenti del sistema di intervallo](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
 Gruppo di orologi  
   
 #### <a name="composition"></a>Composizione  
  È possibile associare più orologi a una singola proprietà e in tal caso ogni orologio usa il valore di output dell'orologio precedente come valore di base. La figura seguente mostra tre <xref:System.Windows.Media.Animation.AnimationClock> oggetti applicata alla stessa proprietà. L'orologio1 usa il valore di base della proprietà animata come input e lo usa per generare l'output. L'orologio2 accetta l'output dall'orologio1 come input e lo usa per generare l'output. L'orologio3 accetta l'output dall'orologio2 come input e lo usa per generare l'output. Quando più orologi interessano contemporaneamente una stessa proprietà, formano una catena di composizione.  
   
- ![I componenti di sistema di intervallo](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
+ ![Componenti del sistema di intervallo](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
 Catena di composizione  
   
  Si noti che anche se viene creata una relazione tra l'input e output del <xref:System.Windows.Media.Animation.AnimationClock> oggetti nella catena di composizione, i comportamenti di temporizzazione non sono interessati; <xref:System.Windows.Media.Animation.Clock> oggetti (inclusi <xref:System.Windows.Media.Animation.AnimationClock> oggetti) presentano una dipendenza gerarchica padre <xref:System.Windows.Media.Animation.Clock> oggetti.  

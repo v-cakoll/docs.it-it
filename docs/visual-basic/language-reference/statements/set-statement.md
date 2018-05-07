@@ -1,12 +1,6 @@
 ---
 title: Istruzione Set (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Set
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3b18e6c858e64e78d7ab85fdaafd70e510f7a02f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dbc48d14bac54809e4ddd12c87429bf407169950
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-statement-visual-basic"></a>Istruzione Set (Visual Basic)
 Dichiara un `Set` routine della proprietà utilizzata per assegnare un valore a una proprietà.  
@@ -38,7 +29,7 @@ End Set
   
 ## <a name="parts"></a>Parti  
  `attributelist`  
- Parametro facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
  Facoltativo per al massimo una del `Get` e `Set` istruzioni in questa proprietà. Può essere uno dei seguenti:  
@@ -60,7 +51,7 @@ End Set
  Obbligatorio se `Option Strict` è `On`. Tipo di dati di `value` parametro. Tipo di dati specificato deve essere lo stesso come il tipo di dati della proprietà in cui questo `Set` istruzione viene dichiarata.  
   
  `statements`  
- Parametro facoltativo. Uno o più istruzioni che vengono eseguite quando il `Set` viene chiamata una routine della proprietà.  
+ Facoltativo. Uno o più istruzioni che vengono eseguite quando il `Set` viene chiamata una routine della proprietà.  
   
  `End Set`  
  Obbligatorio. Termina la definizione del `Set` routine della proprietà.  
@@ -86,7 +77,7 @@ End Set
   
 -   **Restituzione da una routine di proprietà.** Quando il `Set` routine restituisce al codice chiamante, l'esecuzione continua dopo l'istruzione che ha fornito il valore da archiviare.  
   
-     `Set`le routine della proprietà possono restituire utilizzando il [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md) o [istruzione Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` le routine della proprietà possono restituire utilizzando il [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md) o il [istruzione Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
   
      Il `Exit Property` e `Return` istruzioni di uscire immediatamente da una routine di proprietà. Un numero qualsiasi di `Exit Property` e `Return` istruzioni possono trovarsi in qualsiasi punto della procedura, ed è possibile combinare `Exit Property` e `Return` istruzioni.  
   

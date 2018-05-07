@@ -1,11 +1,6 @@
 ---
 title: Istruzione Structure
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Structure
 - Structure
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43211bb10793acf3bfe0c1d7a35791114170ee7d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a3626706b226b0be253fd35fa60b33a71b86007
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-statement"></a>Istruzione Structure
 Dichiara il nome di una struttura e introduce la definizione di variabili, proprietà, eventi ed procedure che comprende la struttura.  
@@ -44,17 +36,17 @@ End Structure
   
 |Termine|Definizione|  
 |---|---|  
-|`attributelist`|Parametro facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Parametro facoltativo. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Parametro facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`Partial`|Parametro facoltativo. Indica una definizione parziale della struttura. Vedere [parziale](../../../visual-basic/language-reference/modifiers/partial.md).|  
+|`attributelist`|Facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Facoltativo. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`Partial`|Facoltativo. Indica una definizione parziale della struttura. Vedere [parziale](../../../visual-basic/language-reference/modifiers/partial.md).|  
 |`name`|Obbligatorio. Nome della struttura. Vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Parametro facoltativo. Specifica che si tratta di una struttura generica.|  
+|`Of`|Facoltativo. Specifica che si tratta di una struttura generica.|  
 |`typelist`|Obbligatorio se si usa il [di](../../../visual-basic/language-reference/statements/of-clause.md) (parola chiave). Elenco di parametri di tipo per questa struttura. Vedere [digitare elenco](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Implements`|Parametro facoltativo. Indica che questa struttura implementa i membri di una o più interfacce. Vedere [implementa istruzione](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Facoltativo. Indica che questa struttura implementa i membri di una o più interfacce. Vedere [implementa istruzione](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Obbligatorio se si usa il `Implements` istruzione. I nomi delle interfacce implementate questa struttura.|  
 |`datamemberdeclarations`|Obbligatorio. Zero o più `Const`, `Dim`, `Enum`, o `Event` istruzioni di dichiarazione *membri dati* della struttura.|  
-|`methodmemberdeclarations`|Parametro facoltativo. Zero o più dichiarazioni di `Function`, `Operator`, `Property`, o `Sub` procedure che fungono da *membri metodo* della struttura.|  
+|`methodmemberdeclarations`|Facoltativo. Zero o più dichiarazioni di `Function`, `Operator`, `Property`, o `Sub` procedure che fungono da *membri metodo* della struttura.|  
 |`End Structure`|Obbligatorio. Termina il `Structure` definizione.|  
   
 ## <a name="remarks"></a>Note  
@@ -74,7 +66,7 @@ End Structure
   
      È possibile dichiarare zero o più variabili non condivise oppure eventi non condivisi o non personalizzati in una struttura. È possibile avere solo costanti, proprietà e routine, anche se alcuni di essi sono non condivisi.  
   
--   **Inizializzazione.** Non è possibile inizializzare il valore di un membro dati non condivisi di una struttura come parte della relativa dichiarazione. È necessario inizializzare un membro di dati tramite un costruttore con parametri in base alla struttura o assegnare un valore per il membro dopo aver creato un'istanza della struttura.  
+-   **inizializzazione.** Non è possibile inizializzare il valore di un membro dati non condivisi di una struttura come parte della relativa dichiarazione. È necessario inizializzare un membro di dati tramite un costruttore con parametri in base alla struttura o assegnare un valore per il membro dopo aver creato un'istanza della struttura.  
   
 -   **Ereditarietà.** Una struttura non può ereditare da qualsiasi tipo diverso da <xref:System.ValueType>, dalla quale ereditano tutte le strutture. In particolare, una struttura non può ereditare da un altro.  
   

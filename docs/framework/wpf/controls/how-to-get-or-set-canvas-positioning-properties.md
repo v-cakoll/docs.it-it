@@ -1,31 +1,17 @@
 ---
-title: "Procedura: ottenere o impostare le proprietà di posizionamento delle aree di disegno"
-ms.custom: 
+title: 'Procedura: ottenere o impostare le proprietà di posizionamento delle aree di disegno'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - Canvas control [WPF], setting positioning properties
 ms.assetid: 1636b950-2b5a-4507-8a10-c5034cc58b1c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d2b01657088c388ad09037716278dc0788de2abb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 294b49d427a67da849ce930cf29a48f1735bf135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>Procedura: ottenere o impostare le proprietà di posizionamento delle aree di disegno
 In questo esempio viene illustrato come utilizzare i metodi di posizionamento di <xref:System.Windows.Controls.Canvas> elemento per posizionare il contenuto figlio. Questo esempio viene utilizzato il contenuto in un <xref:System.Windows.Controls.ListBoxItem> per rappresentare i valori di posizionamento e converte i valori in istanze di <xref:System.Double>, che è un argomento obbligatorio per il posizionamento. I valori vengono convertiti in stringhe e visualizzati come testo in un <xref:System.Windows.Controls.TextBlock> elemento utilizzando il <xref:System.Windows.Controls.Canvas.GetLeft%2A> metodo.  

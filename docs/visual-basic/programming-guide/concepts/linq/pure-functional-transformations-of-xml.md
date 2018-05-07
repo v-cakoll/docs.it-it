@@ -1,22 +1,12 @@
 ---
 title: Trasformazioni funzionali pure di XML (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 01ad228d91037de1585d1e66292fddb80c785ada
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 25719fc53235424b6a1e2b779ab4e6bdfbe6b4d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pure-functional-transformations-of-xml-visual-basic"></a>Trasformazioni funzionali pure di XML (Visual Basic)
 Contenuto della sezione viene fornita un'esercitazione sulle trasformazioni funzionali per XML. Vengono illustrati i principali concetti e costrutti di linguaggio che è necessario comprendere per usare le trasformazioni funzionali e vengono presentati alcuni esempi di utilizzo delle trasformazioni funzionali per la modifica di documenti XML. Anche se nell'esercitazione sono riportati esempi di codice LINQ to XML, tutti i concetti sottostanti sono validi anche per altre tecnologie LINQ.  
@@ -27,7 +17,7 @@ Contenuto della sezione viene fornita un'esercitazione sulle trasformazioni funz
   
  È inoltre necessaria una conoscenza operativa dei concetti di base dell'informatica e degli ambienti XML, compresi gli spazi dei nomi XML.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  

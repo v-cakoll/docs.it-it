@@ -1,23 +1,12 @@
 ---
 title: 'Procedura: Creare un ActivityDesigner personalizzato'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 10fc7461c077d73fedb1e326f88156e4a816cdee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4aab60a598be2d6df5546ab1c98a289b4aef04a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Procedura: Creare un ActivityDesigner personalizzato
 Gli ActivityDesigner personalizzati vengono in genere implementati in modo che le attività associate siano componibili con altre attività le cui finestre di progettazione possono essere rilasciate sull'area di progettazione insieme ad esse. Questa funzionalità richiede che un ActivityDesigner personalizzato fornisca un' "area di rilascio" in cui è possibile posizionare un'attività arbitraria, nonché i mezzi per gestire la raccolta di elementi nell'area di progettazione risultante. In questo argomento viene descritto come creare un ActivityDesigner personalizzato contenente tale area di rilascio e come creare un ActivityDesigner personalizzato che fornisca la funzionalità di modifica necessaria per gestire la raccolta di elementi della finestra di progettazione.  
@@ -56,7 +45,7 @@ Gli ActivityDesigner personalizzati vengono in genere implementati in modo che l
   
 9. Il file MainWindows nel **Esplora**selezionare **eliminare** e confermare **OK** nel **Microsoft Visual Studio**finestra di dialogo.  
   
-10. Pulsante destro del mouse sul progetto UsingWorkflowItemPresenter in **Esplora**selezionare **Aggiungi**, quindi **nuovo elemento...** Per visualizzare il **Aggiungi nuovo elemento** finestra di dialogo e selezionare il **WPF** categoria di **modelli installati** sezione a sinistra.  
+10. Pulsante destro del mouse sul progetto UsingWorkflowItemPresenter in **Esplora soluzioni**, selezionare **Add**, quindi **nuovo elemento...** Per visualizzare il **Aggiungi nuovo elemento** finestra di dialogo e selezionare il **WPF** categoria di **modelli installati** sezione a sinistra.  
   
 11. Selezionare il **finestra (WPF)** modello, il nome `RehostingWFDesigner`, fare clic su **Aggiungi**.  
   
@@ -163,7 +152,7 @@ Gli ActivityDesigner personalizzati vengono in genere implementati in modo che l
     }  
     ```  
   
-14. Fare clic sulla directory riferimenti in Esplora soluzioni e selezionare **Aggiungi riferimento...** Per visualizzare il **Aggiungi riferimento** finestra di dialogo.  
+14. La directory dei riferimenti in Esplora soluzioni e scegliere **Aggiungi riferimento...** Per visualizzare il **Aggiungi riferimento** finestra di dialogo.  
   
 15. Fare clic su di **.NET** , individuare l'assembly denominato **System.Activities.Core.Presentation**, selezionarlo e fare clic su **OK**.  
   
@@ -177,7 +166,7 @@ Gli ActivityDesigner personalizzati vengono in genere implementati in modo che l
   
 17. Aprire il file app. XAML e impostare il valore di StartUpUri su "Rehostingwfdesigner".  
   
-18. Pulsante destro del mouse sul progetto UsingWorkflowItemPresenter in **Esplora**selezionare **Aggiungi**, quindi **nuovo elemento...** Per visualizzare il **Aggiungi nuovo elemento** finestra di dialogo e selezionare il **flusso di lavoro** categoria di **modelli installati** sezione a sinistra.  
+18. Pulsante destro del mouse sul progetto UsingWorkflowItemPresenter in **Esplora soluzioni**, selezionare **Add**, quindi **nuovo elemento...** Per visualizzare il **Aggiungi nuovo elemento** finestra di dialogo e selezionare il **flusso di lavoro** categoria di **modelli installati** sezione a sinistra.  
   
 19. Selezionare il **ActivityDesigner** modello, il nome `SimpleNativeDesigner`, fare clic su **Aggiungi**.  
   
@@ -220,7 +209,7 @@ Gli ActivityDesigner personalizzati vengono in genere implementati in modo che l
     </sap:ActivityDesigner>  
     ```  
   
-21. Pulsante destro del mouse sul progetto UsingWorkflowItemPresenter in **Esplora**selezionare **Aggiungi**, quindi **nuovo elemento...** Per visualizzare il **Aggiungi nuovo elemento** finestra di dialogo e selezionare il **flusso di lavoro** categoria di **modelli installati** sezione a sinistra.  
+21. Pulsante destro del mouse sul progetto UsingWorkflowItemPresenter in **Esplora soluzioni**, selezionare **Add**, quindi **nuovo elemento...** Per visualizzare il **Aggiungi nuovo elemento** finestra di dialogo e selezionare il **flusso di lavoro** categoria di **modelli installati** sezione a sinistra.  
   
 22. Selezionare il **attività codice** modello, il nome `SimpleNativeActivity`, fare clic su **Aggiungi**.  
   

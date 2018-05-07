@@ -1,13 +1,6 @@
 ---
 title: Cenni preliminari sulle trasformazioni tridimensionali
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b45c2c12393f296f916eaf8ea3f912958b54b09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0fb859905327b30c0ea509e5d07072b81dcf30e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="3-d-transformations-overview"></a>Cenni preliminari sulle trasformazioni tridimensionali
 Questo argomento descrive come applicare trasformazioni a modelli tridimensionali nel sistema grafico di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Le trasformazioni consentono allo sviluppatore di riposizionare, ridimensionare e orientare nuovamente i modelli senza modificare i valori di base che li definiscono.  
@@ -49,7 +37,7 @@ Confronto tra sistemi di coordinate
 ## <a name="translation-transformations"></a>Trasformazioni di traslazione  
  Le trasformazioni 3D ereditano dalla classe base astratta <xref:System.Windows.Media.Media3D.Transform3D>; tra le classi di trasformazione affine <xref:System.Windows.Media.Media3D.TranslateTransform3D>, <xref:System.Windows.Media.Media3D.ScaleTransform3D>, e <xref:System.Windows.Media.Media3D.RotateTransform3D>. Il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D sistema fornisce inoltre un <xref:System.Windows.Media.Media3D.MatrixTransform3D> classe che consente di specificare le stesse trasformazioni in più concise operazioni della matrice.  
   
- <xref:System.Windows.Media.Media3D.TranslateTransform3D>Sposta tutti i punti in Model3D nella direzione del vettore offset è specificato con il <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>, <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>, e <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A> proprietà. Dato un vertice di un cubo a (2,2,2), ad esempio, un vettore offset di (0,1.6,1) sposta tale vertice da (2,2,2) a (2,3.6,3). Il vertice del cubo è ancora (2,2,2) nello spazio modello ma, dal momento che è stata modificata la relazione tra tale spazio e lo spazio globale, risulta che (2,2,2) nello spazio modello diventa (2,3.6,3) nello spazio globale.  
+ <xref:System.Windows.Media.Media3D.TranslateTransform3D> Sposta tutti i punti in Model3D nella direzione del vettore offset specificato con il <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>, <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>, e <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A> proprietà. Dato un vertice di un cubo a (2,2,2), ad esempio, un vettore offset di (0,1.6,1) sposta tale vertice da (2,2,2) a (2,3.6,3). Il vertice del cubo è ancora (2,2,2) nello spazio modello ma, dal momento che è stata modificata la relazione tra tale spazio e lo spazio globale, risulta che (2,2,2) nello spazio modello diventa (2,3.6,3) nello spazio globale.  
   
  ![Traslazione](../../../../docs/framework/wpf/graphics-multimedia/media/transforms-translate.png "tradurre le trasformazioni")  
 Traslazione con offset  
@@ -59,7 +47,7 @@ Traslazione con offset
  [!code-xaml[animation3dgallery_snip#Translation3DAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationexamplewholepage)]  
   
 ## <a name="scale-transformations"></a>Trasformazioni di scala  
- <xref:System.Windows.Media.Media3D.ScaleTransform3D>modifica la scala del modello in un vettore di scala specificato riferimento a un punto centrale. Specificare una scala uniforme, che adatti il modello in base allo stesso valore sugli assi X, Y e Z, in modo da modificare la dimensione del modello proporzionalmente. Ad esempio, l'impostazione della trasformazione <xref:System.Windows.Media.ScaleTransform.ScaleX%2A>, <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>, e <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> su 0,5 dimezzato le dimensioni del modello; impostando le stesse proprietà 2 raddoppia la scala in tutti e tre gli assi.  
+ <xref:System.Windows.Media.Media3D.ScaleTransform3D> modifica la scala del modello da un vettore di scala specificato riferimento a un punto centrale. Specificare una scala uniforme, che adatti il modello in base allo stesso valore sugli assi X, Y e Z, in modo da modificare la dimensione del modello proporzionalmente. Ad esempio, l'impostazione della trasformazione <xref:System.Windows.Media.ScaleTransform.ScaleX%2A>, <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>, e <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> su 0,5 dimezzato le dimensioni del modello; impostando le stesse proprietà 2 raddoppia la scala in tutti e tre gli assi.  
   
  ![ScaleTransform3D uniforme](../../../../docs/framework/wpf/graphics-multimedia/media/threecubes-uniformscale-1.png "threecubes_uniformscale_1")  
 Esempio di ScaleVector  
@@ -87,7 +75,7 @@ Rotazione con nuovo centro specificato
   
  Per ruotare il modello sul posto, specificare il centro effettivo del modello come centro di rotazione. Poiché la geometria si basa in genere sull'origine, molto spesso è possibile ottenere il risultato previsto di un set di trasformazioni adattando il modello (ridimensionandolo), quindi impostando l'orientamento (ruotandolo) e infine spostandolo nella posizione desiderata (traslandolo).  
   
- ![Rotazione di 60 gradi x &#45; e y &#45; assi](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
+ ![Rotazione di 60 gradi x&#45; e y&#45;gli assi](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
 Esempio di rotazione  
   
  Le rotazioni asse-angolo sono particolarmente utili per le trasformazioni statiche e per alcune animazioni. È consigliabile tuttavia ruotare il modello di un cubo di 60 gradi rispetto all'asse X, quindi di 45 gradi rispetto all'asse Z. È possibile descrivere questa trasformazione come due distinte trasformazioni analoghe o come una matrice. Potrebbe risultare difficile, tuttavia, animare correttamente una rotazione definita in questo modo. Sebbene le posizioni iniziale e finale del modello calcolate da uno dei due approcci siano le stesse, le posizioni intermedie assunte dal modello non sono definite dal punto di vista del calcolo. I quaternioni costituiscono un modo alternativo di calcolare l'interpolazione tra l'inizio e la fine di una rotazione.  

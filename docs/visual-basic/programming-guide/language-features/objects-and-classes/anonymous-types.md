@@ -1,13 +1,6 @@
 ---
 title: Tipi anonimi (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AnonymousType
 helpviewer_keywords:
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 530e21e1595f9bbc3436280418287413e2a48111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 451fe45c9b5efbeb64b1066d6ba8e5f9b27300c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-types-visual-basic"></a>Tipi anonimi (Visual Basic)
 Visual Basic supporta i tipi anonimi che consentono di creare oggetti senza scrivere una definizione di classe per il tipo di dati. La classe viene generata direttamente dal compilatore. La classe ha un nome utilizzabile, eredita direttamente da <xref:System.Object>e contiene le proprietà specificate nella dichiarazione dell'oggetto. Poiché il nome del tipo di dati non è specificato, viene considerato un *tipo anonimo*.  
@@ -95,11 +85,11 @@ Visual Basic supporta i tipi anonimi che consentono di creare oggetti senza scri
 ## <a name="anonymous-types-from-query-expressions"></a>Tipi anonimi da espressioni di Query  
  Le espressioni di query non richiedono sempre la creazione di tipi anonimi. Quando possibile, utilizzano un tipo esistente per contenere i dati della colonna. Questo errore si verifica quando la query restituisce record interi dall'origine dei dati, o un solo campo di ogni record. Negli esempi di codice seguente, `customers` è una raccolta di oggetti di un `Customer` classe. La classe dispone di molte proprietà e il risultato della query, in qualsiasi ordine, è possibile includere uno o più di esse. Nei primi due esempi, i tipi anonimi non sono necessari poiché le query selezionano gli elementi di tipi denominati:  
   
--   `custs1`contiene una raccolta di stringhe, poiché `cust.Name` è una stringa.  
+-   `custs1` contiene una raccolta di stringhe, poiché `cust.Name` è una stringa.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
   
--   `custs2`contiene una raccolta di `Customer` oggetti, perché ogni elemento di `customers` è un `Customer` oggetto e l'intero elemento è selezionato dalla query.  
+-   `custs2` contiene una raccolta di `Customer` oggetti, perché ogni elemento della `customers` è un `Customer` oggetto, mentre l'elemento intero è selezionata per la query.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
   

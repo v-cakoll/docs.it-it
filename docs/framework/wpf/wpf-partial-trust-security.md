@@ -1,14 +1,6 @@
 ---
 title: Sicurezza con attendibilità parziale in WPF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,17 +15,11 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-caps.latest.revision: 40
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 023de9e20206411f7dd6774553ae39eefaa508a0
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 27934f782d6c1efde69794c73d653b57b287341f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-partial-trust-security"></a>Sicurezza con attendibilità parziale in WPF
 <a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e linguaggi di scripting sul lato client non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser di Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a un insieme simile di restrizioni. Per attivare queste limitazioni, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa su [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] e [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (vedere [strategia di sicurezza di WPF - sicurezza della piattaforma](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono l'area Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] set di autorizzazioni, indipendentemente dal fatto che vengano avviate da Internet, intranet locale o dal computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  

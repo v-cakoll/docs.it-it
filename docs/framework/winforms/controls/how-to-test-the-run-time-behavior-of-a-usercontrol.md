@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: eseguire il test del comportamento in fase di esecuzione di UserControl'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
 - user controls [Windows Forms], testing
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 48b7c47a14f27439c60280a5c4202e9f4af76397
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ac846840f7d420da63f6bfe3db3772d7bf6cc730
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Procedura: eseguire il test del comportamento in fase di esecuzione di UserControl
 Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario testare il comportamento in fase di esecuzione. È possibile creare un progetto di applicazione separata basati su Windows e inserire il controllo in un form di test, ma questa procedura non è pratica. Un modo più veloce e più semplice consiste nell'usare il **UserControl Test Container** fornite da Visual Studio. Questo contenitore di test viene avviata direttamente dal progetto libreria di controllo di Windows.  

@@ -1,22 +1,12 @@
 ---
 title: 'Procedura: trovare elementi correlati (XPath-LINQ to XML) (Visual Basic)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6153db1e77b957d35160d1de75f18e163817ba6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 24a8f252d0c703cc7883ae1408120b8cae018331
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare elementi correlati (XPath-LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come ottenere un elemento selezionando un attributo cui viene fatto riferimento dal valore di un altro elemento.  
@@ -30,7 +20,7 @@ In questo argomento viene illustrato come ottenere un elemento selezionando un a
   
  Notare che in .NET l'indicizzazione in un elenco è basata su 'zero'. L'indicizzazione in una raccolta di nodi di un predicato XPath è basata su 'uno'. L'esempio rispecchia questa differenza.  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: clienti e ordini (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  

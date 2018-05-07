@@ -1,28 +1,16 @@
 ---
 title: Nozioni fondamentali sullo sviluppo di controlli Windows Form
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom controls [Windows Forms], derivation types
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf06f4dc0d8c70ae85d5add5a2fee078238d5e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b455912468376d2f5de0ac1f30b4fcab5bb93309
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-control-development-basics"></a>Nozioni fondamentali sullo sviluppo di controlli Windows Form
 Un controllo Windows Form è una classe che deriva direttamente o indirettamente da <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Nell'elenco seguente vengono descritti scenari comuni per lo sviluppo di controlli Windows Form:  
@@ -39,7 +27,7 @@ Un controllo Windows Form è una classe che deriva direttamente o indirettamente
   
      In questo scenario, è necessario derivare il controllo dalla classe di base <xref:System.Windows.Forms.Control>. È possibile aggiungere, nonché eseguire l'override di proprietà, metodi ed eventi della classe di base. Per iniziare, vedere [procedura: sviluppare un controllo Windows Form semplice](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
   
- La classe base per controlli Windows Form, <xref:System.Windows.Forms.Control>, fornisce l'infrastruttura necessaria per la visualizzazione nelle applicazioni client basate su Windows. <xref:System.Windows.Forms.Control>fornisce un handle di finestra, gestisce il routing dei messaggi e fornisce gli eventi di tastiera e mouse, così come molti altri utente gli eventi di interfaccia. Fornisce un layout avanzato e dispone di proprietà specifiche per la visualizzazione, ad esempio <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>e molti altri. Inoltre, offre sicurezza, il supporto del threading e interoperabilità con i controlli ActiveX. Poiché gran parte dell'infrastruttura viene definita dalla classe di base, è relativamente semplice sviluppare i propri controlli Windows Form.  
+ La classe base per controlli Windows Form, <xref:System.Windows.Forms.Control>, fornisce l'infrastruttura necessaria per la visualizzazione nelle applicazioni client basate su Windows. <xref:System.Windows.Forms.Control> fornisce un handle di finestra, gestisce il routing dei messaggi e fornisce gli eventi del mouse e tastiera, nonché molte altre utente gli eventi di interfaccia. Fornisce un layout avanzato e dispone di proprietà specifiche per la visualizzazione, ad esempio <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>e molti altri. Inoltre, offre sicurezza, il supporto del threading e interoperabilità con i controlli ActiveX. Poiché gran parte dell'infrastruttura viene definita dalla classe di base, è relativamente semplice sviluppare i propri controlli Windows Form.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura: Sviluppare un controllo di Windows Form semplice](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  

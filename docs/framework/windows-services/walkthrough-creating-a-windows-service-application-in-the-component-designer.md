@@ -1,9 +1,6 @@
 ---
-title: 'Procedura dettagliata: creazione di un''applicazione di servizio Windows in Progettazione componenti'
+title: "Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -11,16 +8,13 @@ helpviewer_keywords:
 - Windows Service applications, walkthroughs
 - Windows Service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
-caps.latest.revision: "57"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 42fc5f27f1c78e243ff1d3a705c61a20ff459937
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti
 Questo articolo illustra come creare una semplice applicazione del servizio Windows in Visual Studio che scrive messaggi in un log eventi. I passaggi di base da eseguire per la creazione e l'uso del servizio includono:  
@@ -64,7 +58,7 @@ Questo articolo illustra come creare una semplice applicazione del servizio Wind
   
 3.  Nel menu **Modifica** scegliere **Trova e sostituisci**, **Cerca nei file** (scelta rapida da tastiera: CTRL+MAIUSC+F). Modificare tutte le occorrenze di `Service1` in `MyNewService`. Sono presenti istanze in Service1.cs, Program.cs e Service1.Designer.cs (o nei relativi equivalenti in VB).  
   
-4.  Nella finestra **Proprietà** per **Service1.cs [Design]** o **Service1.vb [Design]**impostare la proprietà <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> e **(Name)** per `Service1` su **MyNewService**, se non è già impostata.  
+4.  Nella finestra **Proprietà** per **Service1.cs [Design]** o **Service1.vb [Design]** impostare la proprietà <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> e **(Name)** per `Service1` su **MyNewService**, se non è già impostata.  
   
 5.  In Esplora soluzioni rinominare **Service1.cs** in **MyNewService.cs**o **Service1.vb** in **MyNewService.vb**.  
   
@@ -302,7 +296,7 @@ Questo articolo illustra come creare una semplice applicazione del servizio Wind
   
 8.  Impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> su <xref:System.ServiceProcess.ServiceStartMode.Automatic>.  
   
-     ![Proprietà di installazione per un servizio Windows](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")  
+     ![Proprietà di programma di installazione per un servizio Windows](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")  
   
 9. Nella finestra di progettazione scegliere **serviceProcessInstaller1** per un progetto Visual C# o **ServiceProcessInstaller1** per un progetto Visual Basic. Impostare la proprietà <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> su <xref:System.ServiceProcess.ServiceAccount.LocalSystem>. In questo modo il servizio verrà installato ed eseguito su un account del servizio locale.  
   

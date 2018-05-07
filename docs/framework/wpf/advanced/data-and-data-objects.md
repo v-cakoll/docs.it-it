@@ -1,13 +1,6 @@
 ---
 title: Dati e oggetti dati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb2354b61a0433981675ba55978f31937212cabc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff596dc7428c9d105a27999f216d33e735e35a22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-and-data-objects"></a>Dati e oggetti dati
 I dati trasferiti come parte di un'operazione di trascinamento e rilascio viene archiviati in un oggetto dati.  Concettualmente, un oggetto dati è costituito da uno o più delle seguenti coppie di:  
@@ -47,7 +35,7 @@ I dati trasferiti come parte di un'operazione di trascinamento e rilascio viene 
 |<xref:System.Windows.IDataObject.GetFormats%2A>|Restituisce un elenco di formati di dati nell'oggetto dati viene archiviati in, o possono essere convertiti in.|  
 |<xref:System.Windows.IDataObject.SetData%2A>|Archivia i dati specificati nell'oggetto dati.|  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fornisce un'implementazione di base <xref:System.Windows.IDataObject> nel <xref:System.Windows.DataObject> classe. L'azione <xref:System.Windows.DataObject> classe è sufficiente per molti scenari comuni di trasferimento dei dati.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce un'implementazione di base di <xref:System.Windows.IDataObject> nella <xref:System.Windows.DataObject> classe. L'azione <xref:System.Windows.DataObject> classe è sufficiente per molti scenari comuni di trasferimento dei dati.  
   
  Esistono vari formati predefiniti, quali bitmap, CSV, file, HTML, RTF, stringa, testo e audio. Per informazioni sui formati di dati predefiniti forniti con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere il <xref:System.Windows.DataFormats> argomento di riferimento di classe.  
   
@@ -86,7 +74,7 @@ I dati trasferiti come parte di un'operazione di trascinamento e rilascio viene 
  Per ulteriori esempi di codice che esegue una query di un oggetto dati per i formati dati disponibili, vedere [sono elencati i formati di dati in un oggetto dati](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md).  Per esempi di query su un oggetto dati per la presenza di un particolare formato dati, vedere [determinare se un formato di dati è presente in un oggetto dati](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md).  
   
 ### <a name="retrieving-data-from-a-data-object"></a>Il recupero dei dati da un oggetto dati  
- Il recupero dei dati da un oggetto dati in un determinato formato richiede semplicemente la chiamata a uno del <xref:System.Windows.DataObject.GetData%2A> metodi e specificare il formato di dati desiderato.  Uno del <xref:System.Windows.DataObject.GetDataPresent%2A> metodi possono essere usati per verificare la presenza di un particolare formato dati.  <xref:System.Windows.DataObject.GetData%2A>Restituisce i dati in un <xref:System.Object>; a seconda del formato di dati, questo oggetto può essere convertito in un contenitore specifico del tipo.  
+ Il recupero dei dati da un oggetto dati in un determinato formato richiede semplicemente la chiamata a uno del <xref:System.Windows.DataObject.GetData%2A> metodi e specificare il formato di dati desiderato.  Uno del <xref:System.Windows.DataObject.GetDataPresent%2A> metodi possono essere usati per verificare la presenza di un particolare formato dati.  <xref:System.Windows.DataObject.GetData%2A> Restituisce i dati in un <xref:System.Object>; a seconda del formato di dati, questo oggetto può essere convertito in un contenitore specifico del tipo.  
   
  Il codice di esempio seguente usa il <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> overload per controllare se un formato dati specificato è disponibile (nativa o mediante conversione automatica). Se il formato specificato non è disponibile, l'esempio recupera i dati utilizzando il <xref:System.Windows.DataObject.GetData%28System.String%29> metodo.  
   

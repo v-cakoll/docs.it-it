@@ -1,13 +1,6 @@
 ---
 title: Eventi mouse in Windows Form
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MouseLeave event [Windows Forms]
 - events [Windows Forms], mouse
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5bde1c1045849fe5507081171711d5a00e99b0b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cd5f87b1c1e2d32a6e7fa94dfce977c7432f7f86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mouse-events-in-windows-forms"></a>Eventi mouse in Windows Form
 Quando si gestisce l'input del mouse, in genere si vogliono conoscere la posizione del puntatore del mouse e lo stato dei pulsanti. Questo argomento descrive in dettaglio come reperire tali informazioni da eventi del mouse e illustra l'ordine in cui gli eventi Click del mouse vengono generati nei controlli Windows Form. Per un elenco e una descrizione di tutti gli eventi del mouse, vedere [Mouse funzionamento dell'Input in Windows Form](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Vedere anche [panoramica dei gestori eventi (Windows Form)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Cenni preliminari sugli eventi (Windows Form)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  

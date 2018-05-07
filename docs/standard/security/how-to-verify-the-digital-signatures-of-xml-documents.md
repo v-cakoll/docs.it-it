@@ -1,13 +1,7 @@
 ---
 title: 'Procedura: verificare le firme digitali dei documenti XML'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,21 +14,16 @@ helpviewer_keywords:
 - XML digital signatures
 - digital signatures, verifying
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c45ffbffd5eae812dbd9703ffde4423c94581234
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6b2cb61f2cc7129153a71398c6fb219c4e3990a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Procedura: verificare le firme digitali dei documenti XML
-È possibile usare le classi nello spazio dei nomi <xref:System.Security.Cryptography.Xml> per verificare i dati XML firmati con una firma digitale.  Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma.  Per altre informazioni sullo standard XMLDSIG, vedere la specifica World Wide Web Consortium (W3C) all'indirizzo http://www.w3.org/TR/xmldsig-core/.  
+È possibile usare le classi nello spazio dei nomi <xref:System.Security.Cryptography.Xml> per verificare i dati XML firmati con una firma digitale.  Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma.  Per ulteriori informazioni sullo standard XMLDSIG, vedere la specifica World Wide Web Consortium (W3C) al http://www.w3.org/TR/xmldsig-core/.  
   
  L'esempio di codice nella procedura mostra come verificare una firma digitale XML contenuta in un elemento <`Signature`>.  L'esempio recupera una chiave pubblica RSA da un contenitore di chiavi, quindi usa la chiave per verificare la firma.  
   

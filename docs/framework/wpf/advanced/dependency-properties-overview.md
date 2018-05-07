@@ -1,10 +1,7 @@
 ---
-title: "Cenni preliminari sulle proprietà di dipendenza"
-description: "Una proprietà supportata dal sistema di proprietà WPF è noto come proprietà di dipendenza. Questa panoramica descrive il sistema di proprietà WPF e le funzionalità di una proprietà di dipendenza."
+title: Cenni preliminari sulle proprietà di dipendenza
+description: Una proprietà supportata dal sistema di proprietà WPF è noto come proprietà di dipendenza. Questa panoramica descrive il sistema di proprietà WPF e le funzionalità di una proprietà di dipendenza.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +14,11 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d90e47c400f24eb10f2d262f9cb0e757ff472f0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 196e858c52c06c96d652209e86039bfcc81a785a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-properties-overview"></a>Cenni preliminari sulle proprietà di dipendenza
 
@@ -43,7 +35,7 @@ Lo scopo delle proprietà di dipendenza consiste nel fornire un modo per calcola
 Nel riferimento SDK, è possibile identificare la proprietà di dipendenza grazie alla sezione Informazioni sulle proprietà di dipendenza, presente nella pagina di riferimento gestita per quella proprietà. La sezione informazioni sulle proprietà di dipendenza include un collegamento per il <xref:System.Windows.DependencyProperty> identificatore di campo per la proprietà di dipendenza e include anche un elenco di opzioni dei metadati impostati per tale proprietà, informazioni sull'override di classi e altri dettagli.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Le proprietà di dipendenza supportano le proprietà CLR
-Le proprietà di dipendenza e il sistema di proprietà [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estendono le funzionalità della proprietà fornendo un tipo che supporta una proprietà, come implementazione alternativa al modello standard di supporto della proprietà con un campo privato. Il nome di questo tipo è <xref:System.Windows.DependencyProperty>. L'altro tipo importante che definisce il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di proprietà <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject>definisce la classe di base che consente di registrare e proprietari di una proprietà di dipendenza.
+Le proprietà di dipendenza e il sistema di proprietà [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estendono le funzionalità della proprietà fornendo un tipo che supporta una proprietà, come implementazione alternativa al modello standard di supporto della proprietà con un campo privato. Il nome di questo tipo è <xref:System.Windows.DependencyProperty>. L'altro tipo importante che definisce il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di proprietà <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> definisce la classe base che consente di registrare e proprietari di una proprietà di dipendenza.
 
 Di seguito viene riportato un riepilogo della terminologia usata in questa documentazione [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] per la descrizione delle proprietà di dipendenza:
 
