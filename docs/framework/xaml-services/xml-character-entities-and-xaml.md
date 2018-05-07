@@ -1,13 +1,6 @@
 ---
-title: "Entità carattere XML e XAML"
-ms.custom: 
+title: Entità carattere XML e XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - '&'
 - '&amp'
@@ -27,16 +20,11 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-caps.latest.revision: "23"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b325c931579606f6d1d90eb821766a4110acfd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entità carattere XML e XAML
 XAML usa entità carattere definite in XML per i caratteri speciali. Questo argomento descrive alcune entità carattere specifiche e fornisce considerazioni generali sugli altri concetti XML in XAML.  
@@ -47,7 +35,7 @@ XAML usa entità carattere definite in XML per i caratteri speciali. Questo argo
   
  L'eccezione principale è costituita dalle parentesi graffe ({ e }), che in XAML sono significative in quanto indicano a un processore XAML di interpretare come estensione di markup una sequenza di caratteri racchiusa tra parentesi graffe. Per ulteriori informazioni sulle estensioni di markup, vedere [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
- È comunque ancora possibile visualizzare le parentesi come caratteri letterali usando una sequenza di escape caratteristica di XAML, anziché di XML. Per ulteriori informazioni, vedere [{} sequenza di Escape - estensione di Markup](escape-sequence-markup-extension.md).  
+ È comunque ancora possibile visualizzare le parentesi come caratteri letterali usando una sequenza di escape caratteristica di XAML, anziché di XML. Per altre informazioni, vedere [ {} sequenza di Escape - estensione di Markup](escape-sequence-markup-extension.md).  
   
  Si noti che una barra rovesciata (\\) non richiede una sequenza di escape quando viene gestita come una stringa.  
   
@@ -62,7 +50,7 @@ XAML usa entità carattere definite in XML per i caratteri speciali. Questo argo
 |< (carattere minore di)|\&lt;|Deve essere utilizzato per un valore di attributo, ma \< è accettabile come contenuto di un elemento, purché > non è conforme.|  
 |'' (virgolette)|\&quot;|Deve essere usato per un valore di attributo, ma le virgolette (") sono accettabili come contenuto di un elemento. Si noti che gli stessi valori di attributo possono essere racchiusi tra virgolette singole (') o doppie ("); il carattere usato per primo definisce quale tipo di virgolette racchiude il valore di attributo e le altre virgolette potranno quindi essere usate come valore letterale all'interno del valore.|  
 |' (virgoletta singola)|\&apos;|Deve essere usato per un valore di attributo, ma la virgoletta singola (') è accettabile come contenuto di un elemento. Si noti che gli stessi valori di attributo possono essere racchiusi tra virgolette singole (') o doppie ("); il carattere usato per primo definisce quale tipo di virgolette racchiude il valore di attributo e le altre virgolette potranno quindi essere usate come valore letterale all'interno del valore.|  
-|(mapping dei caratteri numerici)|&#*[intero]* ; o & #x*[esadecimale]*;|XAML supporta i mapping dei caratteri numerici nella codifica attiva.|  
+|(mapping dei caratteri numerici)|&#*[intero]* ; o & #x10 *[esadecimale]*;|XAML supporta i mapping dei caratteri numerici nella codifica attiva.|  
 |(spazio unificatore)|&\#160; (presupponendo che la codifica UTF-8)|Per elementi di documenti dinamici o elementi che accettano testo, come ad esempio gli oggetti <xref:System.Windows.Controls.TextBox> di WPF, gli spazi unificatori non vengono normalizzati all'esterno del markup e questo vale anche per `xml:space="default"`. (Per ulteriori informazioni, vedere [elaborazione degli spazi vuoti in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
   
 <a name="xml_comment_format"></a>   

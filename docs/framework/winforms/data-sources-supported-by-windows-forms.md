@@ -1,13 +1,6 @@
 ---
 title: Origini dati supportate da Windows Form
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - collections [Windows Forms], binding to
 - OLE DB providers [Windows Forms], Windows Forms
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4705c8a7153e94fa1cd23cf6c2f622d5cd66ec77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Origini dati supportate da Windows Form
 In genere, l'associazione dati è stato utilizzato all'interno delle applicazioni di sfruttare i dati archiviati nei database. Con l'associazione di dati di Windows Form, è possibile accedere ai dati dal database, nonché i dati in altre strutture, ad esempio matrici e raccolte, purché siano stati soddisfatti determinati requisiti minimi.  
@@ -50,13 +38,13 @@ In genere, l'associazione dati è stato utilizzato all'interno delle applicazion
  matrice o raccolta  
  Per funzionare come un'origine dati, è necessario implementare un elenco di <xref:System.Collections.IList> interfaccia, una esempio sarebbe una matrice che rappresenta un'istanza del <xref:System.Array> classe. Per ulteriori informazioni sulle matrici, vedere [procedura: creare una matrice di oggetti (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
- In generale, è necessario utilizzare <xref:System.ComponentModel.BindingList%601> quando si crea l'elenco di oggetti per l'associazione dati. <xref:System.ComponentModel.BindingList%601>è una versione generica del <xref:System.ComponentModel.IBindingList> interfaccia. Il <xref:System.ComponentModel.IBindingList> interfaccia estende il <xref:System.Collections.IList> interfaccia tramite l'aggiunta di proprietà, metodi ed eventi necessari per l'associazione dati bidirezionale.  
+ In generale, è necessario utilizzare <xref:System.ComponentModel.BindingList%601> quando si crea l'elenco di oggetti per l'associazione dati. <xref:System.ComponentModel.BindingList%601> è una versione generica del <xref:System.ComponentModel.IBindingList> interfaccia. Il <xref:System.ComponentModel.IBindingList> interfaccia estende il <xref:System.Collections.IList> interfaccia tramite l'aggiunta di proprietà, metodi ed eventi necessari per l'associazione dati bidirezionale.  
   
  <xref:System.Collections.IEnumerable>  
  Controlli Windows Form possono essere associati a origini dati che supportano solo il <xref:System.Collections.IEnumerable> interfaccia se vengono associati tramite una <xref:System.Windows.Forms.BindingSource> componente.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]oggetti dati  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]fornisce una serie di strutture di dati appropriate per l'associazione. Ogni varia la complessità e la complessità.  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] oggetti dati  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] fornisce una serie di strutture di dati adatte per l'associazione. Ogni varia la complessità e la complessità.  
   
 -   <xref:System.Data.DataColumn>. Oggetto <xref:System.Data.DataColumn> è il blocco predefinito fondamentale di un <xref:System.Data.DataTable>, in quanto un numero di colonne costituita una tabella. Ogni <xref:System.Data.DataColumn> ha un <xref:System.Data.DataColumn.DataType%2A> proprietà che determina il tipo di dati contenuti nelle colonne (ad esempio, il di un'automobile in una tabella che descrive un'automobile). È possibile semplice associare un controllo (ad esempio un <xref:System.Windows.Forms.TextBox> del controllo <xref:System.Windows.Forms.Control.Text%2A> proprietà) a una colonna all'interno di una tabella di dati.  
   

@@ -1,27 +1,15 @@
 ---
 title: 'Procedura: chiamare le operazioni in modo asincrono tramite una channel factory'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 216c0d529a15004ea9f7d6f087aeee4bf4f10e56
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 95279f90fbf87d64d96a1ed036449b72416e4f44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Procedura: chiamare le operazioni in modo asincrono tramite una channel factory
 In questo argomento viene illustrato in che modo un client può accedere a un'operazione del servizio in modalità asincrona quando si usa un'applicazione client basata su <xref:System.ServiceModel.ChannelFactory%601>. Quando si usa un oggetto <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> per richiamare un servizio, è possibile usare il modello di chiamata asincrono basato su eventi. Per ulteriori informazioni, vedere [procedura: chiamare servizio operazioni in modo asincrono](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Per ulteriori informazioni sul modello di chiamata asincrono basato su eventi, vedere [la programmazione multithreading con il modello asincrono basato su eventi](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md).)  
@@ -53,10 +41,10 @@ In questo argomento viene illustrato in che modo un client può accedere a un'op
      Quando la funzione di callback viene eseguita, il client chiama `End<operation>``EndAdd` (ad esempio, ) per recuperare il risultato.  
   
 ## <a name="example"></a>Esempio  
- Il servizio usato con il codice client della procedura precedente implementa l'interfaccia `ICalculator` come illustrato nel codice seguente. Sul lato del servizio, le operazioni `Add` e `Subtract` del contratto vengono richiamate in modo sincrono dal runtime [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], anche se i passaggi client precedenti vengono richiamati in modo asincrono sul client. Le operazioni `Multiply` e `Divide` vengono usate per richiamare il servizio in modo asincrono sul lato del servizio, anche se il client le richiama in modo sincrono. In questo esempio la proprietà <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> viene impostata su `true`. Tale impostazione della proprietà, in combinazione con l'implementazione del modello asincrono di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], consente al runtime di richiamare in modo asincrono l'operazione.  
+ Il servizio usato con il codice client della procedura precedente implementa l'interfaccia `ICalculator` come illustrato nel codice seguente. Sul lato del servizio, il `Add` e `Subtract` operazioni del contratto vengono richiamate in modo sincrono da Windows Communication Foundation (WCF) fase di esecuzione, anche se i passaggi client precedenti vengono richiamati in modo asincrono sul client. Le operazioni `Multiply` e `Divide` vengono usate per richiamare il servizio in modo asincrono sul lato del servizio, anche se il client le richiama in modo sincrono. In questo esempio la proprietà <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> viene impostata su `true`. Tale impostazione della proprietà, in combinazione con l'implementazione del modello asincrono di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], consente al runtime di richiamare in modo asincrono l'operazione.  
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [: Contratto di servizio esempio asincrono](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)
+ [Contratto di servizio: Esempio asincrono](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)

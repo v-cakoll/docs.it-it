@@ -1,32 +1,18 @@
 ---
 title: Panoramica sull'integrazione con applicazioni COM+
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 155365c72fd3f5915db12104f45a500f3176f67b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>Panoramica sull'integrazione con applicazioni COM+
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce un ambiente completo per la creazione di applicazioni distribuite. Se si sta già usando la logica dell'applicazione basata su componenti ospitata in COM+, è possibile usare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per estendere la logica esistente senza doverla riscrivere. Uno degli scenari più comuni si verifica quando si desidera esporre la regola business COM+ o Enterprise Services esistente tramite servizi Web.  
+Windows Communication Foundation (WCF) fornisce un ambiente completo per la creazione di applicazioni distribuite. Se si usa già logica dell'applicazione basata su componenti ospitata in COM+, è possibile utilizzare WCF per estendere la logica esistente anziché riscriverla. Uno degli scenari più comuni si verifica quando si desidera esporre la regola business COM+ o Enterprise Services esistente tramite servizi Web.  
   
  Quando un'interfaccia su un componente COM+ viene esposta come servizio Web, la specifica e il contratto di questi servizi vengono determinati da un mapping automatico eseguito in fase di inizializzazione dell'applicazione. Nell'elenco seguente viene mostrato il modello concettuale di questo mapping:  
   
@@ -84,7 +70,7 @@ ms.lasthandoff: 04/30/2018
  All'interno di un'applicazione client, i metodi sull'oggetto <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> possono essere usati per passare un oggetto a un servizio e, analogamente, per recuperare un oggetto.  
   
 > [!NOTE]
->  A causa della natura personalizzata e specifica della piattaforma dell'approccio alla serializzazione, la serializzazione è più adatta ad essere usata tra i client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+>  A causa della natura personalizzata e specifico della piattaforma dell'approccio della serializzazione, questo è più adatto ad essere usata tra i client WCF e servizi WCF.  
   
 ## <a name="selecting-the-hosting-mode"></a>Selezione della modalità di host  
  COM+ espone i servizi Web in una delle modalità di host seguenti:  
@@ -95,18 +81,18 @@ ms.lasthandoff: 04/30/2018
   
 -   Host Web  
   
-     Il servizio Web viene ospitato all'interno di un processo di lavoro del server Web. Questa modalità non richiede che COM+ sia attivo quando viene ricevuta la richiesta iniziale. Se l'applicazione non è attiva quando viene ricevuta questa richiesta, viene attivata automaticamente prima dell'elaborazione della richiesta. Questa modalità assicura al servizio Web e a DCOM l'accesso all'applicazione server, ma provoca un hop del processo per le richieste del servizio Web. Viene in genere richiesto il client per abilitare la rappresentazione. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], questo risultato può essere ottenuto con la proprietà <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> della classe <xref:System.ServiceModel.Security.WindowsClientCredential>, accessibile come proprietà della classe generica <xref:System.ServiceModel.ChannelFactory%601>, e il valore dell'enumerazione <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
+     Il servizio Web viene ospitato all'interno di un processo di lavoro del server Web. Questa modalità non richiede che COM+ sia attivo quando viene ricevuta la richiesta iniziale. Se l'applicazione non è attiva quando viene ricevuta questa richiesta, viene attivata automaticamente prima dell'elaborazione della richiesta. Questa modalità assicura al servizio Web e a DCOM l'accesso all'applicazione server, ma provoca un hop del processo per le richieste del servizio Web. Viene in genere richiesto il client per abilitare la rappresentazione. In WCF, questa operazione può essere eseguita con il <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> proprietà del <xref:System.ServiceModel.Security.WindowsClientCredential> (classe), che è accessibile come proprietà dell'oggetto generico <xref:System.ServiceModel.ChannelFactory%601> (classe), nonché il <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> valore di enumerazione.  
   
 -   Host Web in corso  
   
      Il servizio Web e la logica dell'applicazione COM+ vengono ospitate all'interno del processo di lavoro del server Web. Questo assicura l'attivazione automatica della modalità di host Web senza provocare un hop del processo per le richieste del servizio Web. Lo svantaggio è che non è possibile accedere all'applicazione server tramite DCOM.  
   
 ### <a name="security-considerations"></a>Considerazioni sulla sicurezza  
- Come per gli altri servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le impostazioni di sicurezza per il servizio esposto vengono amministrate tramite impostazioni di configurazione per il canale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Le tradizionali impostazioni di sicurezza DCOM, quali le impostazioni delle autorizzazioni DCOM a livello di computer, non vengono applicate. Per imporre i ruoli dell'applicazione COM+, è necessario che venga attivata l'autorizzazione ai "controlli di accesso a livello di componente" per il componente.  
+ Analogamente ad altri servizi WCF, le impostazioni di sicurezza per il servizio esposto vengono amministrate tramite impostazioni di configurazione per il canale WCF. Le tradizionali impostazioni di sicurezza DCOM, quali le impostazioni delle autorizzazioni DCOM a livello di computer, non vengono applicate. Per imporre i ruoli dell'applicazione COM+, è necessario che venga attivata l'autorizzazione ai "controlli di accesso a livello di componente" per il componente.  
   
  L'uso di un'associazione non protetta può lasciare la comunicazione soggetta a manomissioni o divulgazione di informazioni. Per impedire ciò, è consigliabile usare un'associazione protetta.  
   
- Per le modalità di host COM+ e Web, le applicazioni client devono permettere al processo server di rappresentare l'utente client. Per ottenere questo risultato nei client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], impostare il livello di rappresentazione su <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
+ Per le modalità di host COM+ e Web, le applicazioni client devono permettere al processo server di rappresentare l'utente client. Ciò è possibile in client WCF impostando la rappresentazione a livello di <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
   
  Se Internet Information Services (IIS) o Windows Process Activation Service (WAS) usa il trasporto HTTP, lo strumento Httpcfg.exe può essere usato per riservare un indirizzo dell'endpoint di trasporto. In altre configurazioni, è importante proteggersi dai servizi non autorizzati che si comportano come il servizio desiderato. Per impedire l'avvio di un servizio non autorizzato nell'endpoint desiderato, è possibile configurare il servizio legittimo perché venga eseguito come servizio NT. Questo consente al servizio legittimo di attestare l'indirizzo dell'endpoint prima di qualsiasi servizio non autorizzato.  
   

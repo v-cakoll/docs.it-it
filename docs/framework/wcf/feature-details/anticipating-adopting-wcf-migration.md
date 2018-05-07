@@ -1,27 +1,15 @@
 ---
-title: 'Preparazione all''adozione di Windows Communication Foundation: facilitazione dell''integrazione futura'
-ms.custom: 
+title: "Preparazione all'adozione di Windows Communication Foundation: facilitazione dell'integrazione futura"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76770eff76a7a641ee853f314b5d2c14a56737c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aeafc164d16d9dc60ad0b3012da292e9b0bb38b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Preparazione all'adozione di Windows Communication Foundation: facilitazione dell'integrazione futura
-Per garantire una più facile migrazione futura di nuove applicazioni ASP.NET a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], seguire i consigli forniti sopra nonché quelli forniti di seguito.  
+Per garantire una più facile migrazione futura di nuove applicazioni ASP.NET a WCF, seguire i consigli forniti sopra nonché le indicazioni seguenti.  
   
 ## <a name="protocols"></a>Protocolli  
  Disattivare il supporto di ASP.NET 2.0 per SOAP 1.2:  
@@ -38,12 +26,12 @@ Per garantire una più facile migrazione futura di nuove applicazioni ASP.NET a 
 </configuration>  
 ```  
   
- È consigliabile eseguire questa operazione in quanto in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i messaggi conformi a protocolli diversi, ad esempio SOAP 1.1 e SOAP 1.2, devono essere passati usando endpoint diversi. Se un servizio Web di ASP.NET 2.0 è configurato per il supporto di entrambi i protocolli SOAP 1.1 e SOAP 1.2 (configurazione predefinita), non è possibile eseguirne la migrazione in avanti a un singolo endpoint [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nell'indirizzo originale che sarebbe certamente compatibile con tutti i client esistenti del servizio Web ASP.NET. La scelta di SOAP 1.2 anziché la versione 1.1 restringerà inoltre sensibilmente il numero di clienti del servizio.  
+ In questo modo è consigliabile, poiché WCF richiede i messaggi conformi a protocolli diversi, ad esempio SOAP 1.1 e SOAP 1.2, passati usando endpoint diversi. Se Web ASP.NET 2.0 servizio è configurato per supportare SOAP 1.1 e SOAP 1.2, ovvero la configurazione predefinita, quindi non può essere eseguita la migrazione diretta a un singolo endpoint WCF all'indirizzo originale che sarebbe certamente essere compatibile con tutti i Web ASP.NET client esistenti del servizio. La scelta di SOAP 1.2 anziché la versione 1.1 restringerà inoltre sensibilmente il numero di clienti del servizio.  
   
 ## <a name="service-development"></a>Sviluppo del servizio  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consente di definire contratti di servizio applicando la classe <xref:System.ServiceModel.ServiceContractAttribute> a interfacce o classi. È consigliabile applicare l'attributo a un'interfaccia piuttosto che a una classe perché in questo modo viene creata una definizione di contratto che può essere implementata in vari modi da un numero qualsiasi di classi. ASP.NET supporta l'opzione relativa all'applicazione dell'attributo <xref:System.Web.Services.WebService> a interfacce e classi. Tuttavia, come già menzionato, ASP.NET 2.0 presenta un difetto a causa del quale il parametro Namespace dell'attributo <xref:System.Web.Services.WebService> non produce alcun effetto quando l'attributo viene applicato a un'interfaccia anziché a una classe. Poiché è generalmente consigliabile modificare lo spazio dei nomi di un servizio sostituendo il valore predefinito, http://tempuri.org, usando il parametro Namespace dell'attributo <xref:System.Web.Services.WebService>, è necessario continuare a definire servizi Web ASP.NET applicando l'attributo <xref:System.ServiceModel.ServiceContractAttribute> o a interfacce o a classi.  
+ WCF consente di definire contratti di servizio applicando la <xref:System.ServiceModel.ServiceContractAttribute> a interfacce o classi. È consigliabile applicare l'attributo a un'interfaccia piuttosto che a una classe perché in questo modo viene creata una definizione di contratto che può essere implementata in vari modi da un numero qualsiasi di classi. ASP.NET supporta l'opzione relativa all'applicazione dell'attributo <xref:System.Web.Services.WebService> a interfacce e classi. Tuttavia, come già menzionato, ASP.NET 2.0 presenta un difetto a causa del quale il parametro Namespace dell'attributo <xref:System.Web.Services.WebService> non produce alcun effetto quando l'attributo viene applicato a un'interfaccia anziché a una classe. Poiché si tratta in genere consigliabile modificare lo spazio dei nomi di un servizio da quello predefinito http://tempuri.org, mediante il parametro Namespace del <xref:System.Web.Services.WebService> attributo necessario continuare a definire servizi Web ASP.NET applicando il <xref:System.ServiceModel.ServiceContractAttribute> attributo alle interfacce o classi.  
   
--   Usare meno codice possibile nei metodi mediante i quali vengono definite queste interfacce. Fare in modo che deleghino il lavoro ad altre classi. Anche nuovi tipi di servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] potrebbero quindi delegare la maggior parte del lavoro a queste classi.  
+-   Usare meno codice possibile nei metodi mediante i quali vengono definite queste interfacce. Fare in modo che deleghino il lavoro ad altre classi. Nuovi tipi di servizio WCF quindi è stato inoltre deleghino il lavoro effettivo per tali classi.  
   
 -   Fornire nomi espliciti per le operazioni di un servizio usando il parametro `MessageName` di <xref:System.Web.Services.WebMethodAttribute>.  
   
@@ -52,9 +40,9 @@ Per garantire una più facile migrazione futura di nuove applicazioni ASP.NET a 
     string Echo(string input);  
     ```  
   
-     È importante eseguire questa operazione perché i nomi predefiniti assegnati alle operazioni in ASP.NET sono diversi dai nomi predefiniti forniti da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Fornendo nomi espliciti non è necessario basarsi su quelli predefiniti.  
+     In questo modo è importante, perché i nomi predefiniti per le operazioni in ASP.NET sono diversi da quelli predefiniti forniti da WCF. Fornendo nomi espliciti non è necessario basarsi su quelli predefiniti.  
   
--   Non implementare operazioni di servizi Web ASP.NET con metodi polimorfici in quanto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta questo tipo di implementazione.  
+-   Non implementare le operazioni del servizio Web ASP.NET con metodi polimorfici, poiché WCF non supporta operazioni di implementazione con metodi polimorfici.  
   
 -   Usare <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> per fornire valori espliciti per le intestazioni HTTP SOAPAction mediante le quali le richieste HTTP verranno indirizzate ai metodi.  
   
@@ -64,12 +52,12 @@ Per garantire una più facile migrazione futura di nuove applicazioni ASP.NET a 
     string Echo(string input);  
     ```  
   
-     In questo modo i valori SOAPAction predefiniti usati da ASP.NET e quelli usati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non dovranno essere necessariamente gli stessi.  
+     Questo approccio dovranno essere necessariamente l'impostazione predefinita i valori di SOAPAction utilizzati da ASP.NET e WCF in corso lo stesso.  
   
--   Evitare l'uso di estensioni SOAP. Se le estensioni SOAP sono obbligatorie, determinare se lo scopo per il quale vengono considerate è una funzionalità già fornita da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. In tal caso, riconsiderare la scelta di non adottare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   Evitare l'uso di estensioni SOAP. Se le estensioni SOAP sono obbligatorie, determinare se lo scopo per il quale vengono considerate è una funzionalità già fornita da WCF. Se è effettivamente il caso, riconsiderare la scelta di non adottare WCF sin da subito.  
   
 ## <a name="state-management"></a>Gestione dello stato  
- Evitare di dover gestire lo stato nei servizi. Non solo la gestione dello stato tende a compromettere la scalabilità di un'applicazione, ma i meccanismi di gestione dello stato di ASP.NET e di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono molto diversi, sebbene [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporti i meccanismi ASP.NET nella modalità compatibilità ASP.NET.  
+ Evitare di dover gestire lo stato nei servizi. Non solo gestione dello stato tende a compromettere la scalabilità di un'applicazione, ma i meccanismi di gestione dello stato di ASP.NET e WCF sono molto diversi, anche se WCF di supportare i meccanismi ASP.NET nella modalità di compatibilità ASP.NET.  
   
 ## <a name="exception-handling"></a>Gestione delle eccezioni  
  Nella progettazione delle strutture dei tipi di dati da inviare e ricevere da un servizio, progettare anche strutture che rappresentino i vari tipi di eccezioni che potrebbero verificarsi all'interno di un servizio che si desidera trasmettere a un client.  
@@ -124,14 +112,14 @@ throw new SoapException(
      exception.ToXML());  
 ```  
   
- Queste classi di eccezione potranno essere riutilizzate immediatamente con la classe [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di <xref:System.ServiceModel.FaultException%601> per generare una nuova eccezione `FaultException<AnticipatedException>(anticipatedException);`.  
+ Queste classi di eccezione potranno essere riutilizzate con WCF<xref:System.ServiceModel.FaultException%601> per generare una nuova classe `FaultException<AnticipatedException>(anticipatedException);`  
   
 ## <a name="security"></a>Sicurezza  
  Di seguito sono riportati alcuni consigli sulla protezione.  
   
--   Evitare di usare profili di ASP.NET 2.0 poiché determinerebbe una limitazione dell'utilizzo della modalità di integrazione ASP.NET qualora venisse effettuata la migrazione del servizio a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   Evitare usando profili di ASP.NET 2.0 poiché determinerebbe una limitazione dell'uso della modalità di integrazione ASP.NET se il servizio è stata eseguita la migrazione a WCF.  
   
--   Evitare di usare elenchi di controllo di accesso (ACL) per controllare l'accesso ai servizi. I servizi Web ASP.NET supportano infatti gli ACL usando Internet Information Services (IIS), mentre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no. I servizi Web ASP.NET dipendono da IIS per l'hosting, mentre WCF non deve essere necessariamente ospitato in IIS.  
+-   Evitare di utilizzare gli elenchi ACL per controllare l'accesso ai servizi, come ASP.NET Web services supporta gli ACL usando Internet Information Services (IIS), WCF non lo è, in quanto i servizi Web ASP.NET dipendono da IIS per l'hosting e WCF non deve necessariamente essere ospitato in IIS.  
   
 -   Prendere in considerazione l'uso dei provider di ruoli di ASP.NET 2.0 per l'autorizzazione dell'accesso alle risorse di un servizio.  
   

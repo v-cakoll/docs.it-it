@@ -1,28 +1,14 @@
 ---
 title: Definizione di tipi personalizzati da utilizzare con i servizi XAML di .NET Framework
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9edc7baa1a540a71997cf5b1ed010ad5c7960d17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definizione di tipi personalizzati da utilizzare con i servizi XAML di .NET Framework
 Quando si definiscono i tipi personalizzati che sono oggetti business o tipi che non dispongono di una dipendenza su Framework specifici, esistono alcune procedure consigliate per XAML è possibile seguire. Se si seguono queste procedure, servizi XAML di .NET Framework e i relativi reader XAML e writer XAML possono individuare le caratteristiche XAML del tipo e assegnargli una rappresentazione appropriata in un flusso del nodo XAML tramite il sistema di tipi XAML. In questo argomento vengono descritte le procedure consigliate per le definizioni dei tipi, le definizioni dei membri e assegnazione di attributi CLR di tipi o membri.  
@@ -103,7 +89,7 @@ Quando si definiscono i tipi personalizzati che sono oggetti business o tipi che
  Tenere presente che il valore di questo metodo è l'input proveniente dall'utilizzo in XAML, in genere in forma di attributo. Da una forma di attributo deve essere supporto del convertitore di tipi di valore per una sintassi del testo e attributo di `Get` *PropertyName* della funzione di accesso.  
   
 ### <a name="attachable-member-stores"></a>Archivi dei membri associabili  
- I metodi della funzione di accesso non sono in genere sufficiente per fornire un modo per inserire i valori del membro associabile in un oggetto grafico, o per recuperare i valori non compresi nell'oggetto grafico e serializzarli nel modo appropriato. Per fornire questa funzionalità, il `target` gli oggetti nelle firme della funzione di accesso precedente devono essere in grado di archiviare i valori. Il meccanismo di archiviazione deve essere coerenza con il principio del membro associabile che il membro è associabile a destinazioni in cui il membro associabile non è nell'elenco dei membri. Servizi XAML di .NET framework fornisce una tecnica di implementazione per il membro collegabile archivia tramite le API <xref:System.Xaml.IAttachedPropertyStore> e <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore>viene utilizzato dai writer XAML per individuare l'implementazione dell'archivio e deve essere implementata nel tipo che è la `target` delle funzioni di accesso. Il metodo statico <xref:System.Xaml.AttachablePropertyServices> API vengono utilizzate all'interno del corpo delle funzioni di accesso e fare riferimento al membro associabile dal relativo <xref:System.Xaml.AttachableMemberIdentifier>.  
+ I metodi della funzione di accesso non sono in genere sufficiente per fornire un modo per inserire i valori del membro associabile in un oggetto grafico, o per recuperare i valori non compresi nell'oggetto grafico e serializzarli nel modo appropriato. Per fornire questa funzionalità, il `target` gli oggetti nelle firme della funzione di accesso precedente devono essere in grado di archiviare i valori. Il meccanismo di archiviazione deve essere coerenza con il principio del membro associabile che il membro è associabile a destinazioni in cui il membro associabile non è nell'elenco dei membri. Servizi XAML di .NET framework fornisce una tecnica di implementazione per il membro collegabile archivia tramite le API <xref:System.Xaml.IAttachedPropertyStore> e <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore> viene utilizzato dai writer XAML per individuare l'implementazione dell'archivio e deve essere implementato nel tipo che è la `target` delle funzioni di accesso. Il metodo statico <xref:System.Xaml.AttachablePropertyServices> API vengono utilizzate all'interno del corpo delle funzioni di accesso e fare riferimento al membro associabile dal relativo <xref:System.Xaml.AttachableMemberIdentifier>.  
   
 ## <a name="xaml-related-clr-attributes"></a>Attributi CLR correlati a XAML  
  Assegnazione di attributi correttamente i tipi, membri e gli assembly è importante ai report di informazioni sul sistema di tipi XAML ai servizi XAML di .NET Framework. È rilevante se si prevede di utilizzare con i sistemi XAML direttamente basate su XAML dei servizi XAML di .NET Framework reader e writer XAML i tipi, o se si definiscono o utilizza un framework che utilizzano XAML basato su tali reader XAML e writer XAML.  

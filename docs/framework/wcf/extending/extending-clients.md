@@ -1,33 +1,19 @@
 ---
 title: Estensione dei client
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7eea247602d24c545e0de5fa9df50e83aae8ed7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-clients"></a>Estensione dei client
 In un'applicazione chiamante, il livello del modello di servizio è responsabile della conversione delle chiamate ai metodi contenute nel codice dell'applicazione in messaggi in uscita, del loro inserimento nei canali sottostanti, della conversione dei risultati in valori restituiti e parametri out nel codice dell'applicazione e della restituzione dei risultati al chiamante. Le estensioni del modello di servizi modificano o implementano il comportamento e le funzionalità dell'esecuzione o della comunicazione relativamente a funzionalità del client o del dispatcher, comportamenti personalizzati, intercettazione di messaggi e parametri e altre funzionalità di estendibilità.  
   
- In questo argomento viene illustrato come utilizzare le classi <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.ClientOperation> in un'applicazione client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per modificare il comportamento di esecuzione predefinito di un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o per intercettare o modificare messaggi, parametri o valori restituiti prima o dopo il loro invio o recupero dal livello del canale. Per ulteriori informazioni sull'estensione di runtime del servizio, vedere [estensione dispatcher](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Per ulteriori informazioni sui comportamenti che modificano e inserire oggetti di personalizzazione in fase di esecuzione il client, vedere [la configurazione e l'estensione del Runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ In questo argomento viene descritto come utilizzare il <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.ClientOperation> classi in un'applicazione client Windows Communication Foundation (WCF) per modificare il comportamento di esecuzione predefinito di un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client o per intercettare o modificare messaggi, parametri, o valori restituiti prima o dopo il loro invio o recupero dal livello del canale. Per ulteriori informazioni sull'estensione di runtime del servizio, vedere [estensione dispatcher](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Per ulteriori informazioni sui comportamenti che modificano e inserire oggetti di personalizzazione in fase di esecuzione il client, vedere [la configurazione e l'estensione del Runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="clients"></a>Client  
  In un client, un oggetto o un canale client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] converte le chiamate ai metodi in messaggi in uscita e i messaggi in ingresso in risultati di operazioni che vengono restituiti all'applicazione chiamante. (Per ulteriori informazioni sui tipi di client, vedere [architettura Client WCF](../../../../docs/framework/wcf/feature-details/client-architecture.md).)  

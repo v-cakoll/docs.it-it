@@ -1,13 +1,6 @@
 ---
 title: Utilizzo di contenitori di grafica annidati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 512c8903611f025364a1af2cb6cbaaffc8d759eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba6bba84100a0ddcc87894710a6d3099ab0ccff5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nested-graphics-containers"></a>Utilizzo di contenitori di grafica annidati
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]sono disponibili contenitori che è possibile utilizzare per sostituire temporaneamente o per migliorare parte dello stato in un <xref:System.Drawing.Graphics> oggetto. Per creare un contenitore, chiamare il <xref:System.Drawing.Graphics.BeginContainer%2A> metodo di un <xref:System.Drawing.Graphics> oggetto. È possibile chiamare <xref:System.Drawing.Graphics.BeginContainer%2A> ripetutamente per creare contenitori annidati. Ogni chiamata a <xref:System.Drawing.Graphics.BeginContainer%2A> deve essere abbinato a una chiamata a <xref:System.Drawing.Graphics.EndContainer%2A>.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce contenitori che è possibile utilizzare per sostituire temporaneamente o per migliorare parte dello stato in un <xref:System.Drawing.Graphics> oggetto. Per creare un contenitore, chiamare il <xref:System.Drawing.Graphics.BeginContainer%2A> metodo di un <xref:System.Drawing.Graphics> oggetto. È possibile chiamare <xref:System.Drawing.Graphics.BeginContainer%2A> ripetutamente per creare contenitori annidati. Ogni chiamata a <xref:System.Drawing.Graphics.BeginContainer%2A> deve essere abbinato a una chiamata a <xref:System.Drawing.Graphics.EndContainer%2A>.  
   
 ## <a name="transformations-in-nested-containers"></a>Trasformazioni in contenitori annidati  
  Nell'esempio seguente viene creato un <xref:System.Drawing.Graphics> oggetto e un contenitore all'interno che <xref:System.Drawing.Graphics> oggetto. La trasformazione globale del <xref:System.Drawing.Graphics> oggetto è un'unità di conversione 100 nella direzione x e di 80 nella direzione y. La trasformazione globale del contenitore è una rotazione di 30 gradi. Il codice viene eseguita la chiamata `DrawRectangle(pen, -60, -30, 120, 60)` due volte. La prima chiamata a <xref:System.Drawing.Graphics.DrawRectangle%2A> si trova all'interno del contenitore; la chiamata è tra le chiamate a <xref:System.Drawing.Graphics.BeginContainer%2A> e <xref:System.Drawing.Graphics.EndContainer%2A>. La seconda chiamata a <xref:System.Drawing.Graphics.DrawRectangle%2A> dopo la chiamata a <xref:System.Drawing.Graphics.EndContainer%2A>.  

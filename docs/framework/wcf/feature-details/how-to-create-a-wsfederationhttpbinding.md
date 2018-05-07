@@ -1,14 +1,6 @@
 ---
 title: 'Procedura: creare una classe WSFederationHttpBinding'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 41fa1e7c0430f4723123b03f04d4fc74f9bfc589
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Procedura: creare una classe WSFederationHttpBinding
-In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> classe ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) nella configurazione) fornisce un meccanismo per l'esposizione di un servizio federato. ovvero un servizio che richiede ai client di autenticarsi usando un token di sicurezza rilasciato da un servizio token di sicurezza. In questo argomento viene illustrato come impostare una classe <xref:System.ServiceModel.WSFederationHttpBinding> nel codice e nella configurazione. Una volta creata l'associazione, è possibile impostare un endpoint per usarla.  
+In Windows Communication Foundation (WCF), il <xref:System.ServiceModel.WSFederationHttpBinding> classe ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) nella configurazione) fornisce un meccanismo per l'esposizione di un servizio federato. ovvero un servizio che richiede ai client di autenticarsi usando un token di sicurezza rilasciato da un servizio token di sicurezza. In questo argomento viene illustrato come impostare una classe <xref:System.ServiceModel.WSFederationHttpBinding> nel codice e nella configurazione. Una volta creata l'associazione, è possibile impostare un endpoint per usarla.  
   
  I passaggi di base sono elencati di seguito:  
   
@@ -38,7 +24,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.Service
     > [!NOTE]
     >  La classe <xref:System.ServiceModel.WSFederationHttpBinding> supporta anche `None` come modalità di sicurezza. Questa modalità non è protetta e viene fornita solo a scopo di debug. Se un endpoint del servizio viene distribuito con un <xref:System.ServiceModel.WSFederationHttpBinding> con la modalità di sicurezza impostata su `None`, l'associazione del client risultante (generati dal [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)) è un <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> con la modalità di sicurezza `None`.  
   
-     Diversamente da altre associazioni fornite dal sistema, non è necessario selezionare un tipo di credenziale client quando si usa `WSFederationHttpBinding`, poiché il tipo di credenziale client è sempre un token rilasciato. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] acquisisce un token da un'emittente specificato e lo presenta al servizio per autenticare il client.  
+     Diversamente da altre associazioni fornite dal sistema, non è necessario selezionare un tipo di credenziale client quando si usa `WSFederationHttpBinding`, poiché il tipo di credenziale client è sempre un token rilasciato. WCF acquisisce un token da un'emittente specificato e lo presenta al servizio per autenticare il client.  
   
 2.  Sui client federati, impostare la proprietà <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> sull'URL del servizio token di sicurezza. Impostare la proprietà <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> sull'associazione da usare per comunicare con il servizio token di sicurezza.  
   
@@ -65,7 +51,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.Service
   
 4.  Impostare il <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> proprietà da <xref:System.IdentityModel.Tokens.SecurityKeyType> `SymmetricKey` o.`AsymmetricKey` in base alle necessità.  
   
-5.  Impostare la proprietà <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> sul valore appropriato. Se è impostato alcun valore, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] valore predefinito è "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1", che indica token SAML 1.1.  
+5.  Impostare la proprietà <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> sul valore appropriato. Se è impostato alcun valore, WCF valore predefinito è "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1", che indica token SAML 1.1.  
   
 6.  Obbligatorio sul client se non viene specificata alcuna emittente locale; facoltativo sul servizio. Creare una classe <xref:System.ServiceModel.EndpointAddress> che contenga le informazioni sull'indirizzo e l'identità del servizio token di sicurezza e assegnare l'istanza di <xref:System.ServiceModel.EndpointAddress> alla proprietà <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A>.  
   

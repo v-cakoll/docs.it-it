@@ -1,27 +1,15 @@
 ---
-title: 'Procedura: implementare un''applicazione client che usa il proxy di individuazione per cercare un servizio'
-ms.custom: 
+title: "Procedura: implementare un'applicazione client che usa il proxy di individuazione per cercare un servizio"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82b38d684d6a8de66d569c6fe09813f8ee1bea6a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Procedura: implementare un'applicazione client che usa il proxy di individuazione per cercare un servizio
-Quello che segue è il terzo di tre argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [procedura: implementare un servizio individuabile che esegue la registrazione con il Proxy di individuazione](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), è implementato un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio che effettua la registrazione con il proxy di individuazione. In questo argomento verrà creato un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che utilizza il proxy di individuazione per cercare il servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Quello che segue è il terzo di tre argomenti incentrato sull'implementazione di un proxy di individuazione. Nella sezione precedente [procedura: implementare un servizio individuabile che esegue la registrazione al Proxy di individuazione](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), è implementato un servizio WCF che effettua la registrazione con il proxy di individuazione. In questo argomento è creare un client WCF che usa il proxy di individuazione per trovare il servizio WCF.  
   
 ### <a name="implement-the-client"></a>Implementare il client  
   

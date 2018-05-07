@@ -1,27 +1,17 @@
 ---
 title: 'Procedura: creare servizi Windows'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-caps.latest.revision: "18"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 7d93f8543b9e6e370827f5a666315d562e28ee76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719af9393bee816665040d6e4ced191419d0855
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-windows-services"></a>Procedura: creare servizi Windows
 Quando si crea un servizio, è possibile utilizzare un modello di progetto di Visual Studio denominato **servizio Windows**. Questo modello esegue automaticamente una buona parte del lavoro facendo riferimento alle classi e agli spazi dei nomi appropriati, impostando l'ereditarietà dalla classe di base per i servizi ed eseguendo l'override di molti metodi, quando occorre.  
@@ -58,8 +48,8 @@ Quando si crea un servizio, è possibile utilizzare un modello di progetto di Vi
     |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` per indicare che il servizio accetta le richieste di interruzione dell'esecuzione; `false` per impedire l'interruzione del servizio.|  
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` per indicare che il servizio richiede una notifica alla chiusura del computer su cui viene eseguito, consentendo la chiamata alla routine <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>.|  
     |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` per indicare che il servizio accetta le richieste di sospensione o di ripresa dell'esecuzione; `false` per impedire la sospensione e la ripresa del servizio.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True`per indicare che il servizio può gestire la notifica delle modifiche allo stato di alimentazione del computer; `false` per impedire che il servizio viene inviata una notifica di queste modifiche.|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` per scrivere informazioni nel log eventi dell'applicazione quando il servizio esegue un'operazione; `false` per disabilitare questa funzionalità. Per ulteriori informazioni, vedere [come: informazioni sui servizi del Log](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Nota:** per impostazione predefinita, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> è impostato su `true`.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` per indicare che il servizio può gestire la notifica delle modifiche allo stato di alimentazione del computer; `false` per impedire che il servizio viene inviata una notifica di queste modifiche.|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` per scrivere informazioni nel log eventi dell'applicazione quando il servizio esegue un'operazione; `false` per disabilitare questa funzionalità. Per ulteriori informazioni, vedere [come: informazioni sui servizi del Log](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Nota:** per impostazione predefinita <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> è impostata su `true`.|  
   
     > [!NOTE]
     >  Quando <xref:System.ServiceProcess.ServiceBase.CanStop%2A> o <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> sono impostate su `false`, **Gestione controllo servizi** disabiliterà le opzioni di menu corrispondente per arrestare, sospendere o riprendere il servizio.  

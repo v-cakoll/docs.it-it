@@ -1,30 +1,18 @@
 ---
-title: "Modalità di ordinamento delle colonne nel controllo DataGridView di Windows Form"
-ms.custom: 
+title: Modalità di ordinamento delle colonne nel controllo DataGridView di Windows Form
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 088d9f1f76e88d8be838cbf7050601835eff216a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ebcfc435fcc7d2b0dfbfe3004d958c73dd1347c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Modalità di ordinamento delle colonne nel controllo DataGridView di Windows Form
-<xref:System.Windows.Forms.DataGridView>colonne di sono disponibili tre modalità di ordinamento. La modalità di ordinamento per ogni colonna viene specificata tramite il <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> proprietà della colonna, che può essere impostata su uno dei seguenti <xref:System.Windows.Forms.DataGridViewColumnSortMode> valori di enumerazione.  
+<xref:System.Windows.Forms.DataGridView> le colonne sono disponibili tre modalità di ordinamento. La modalità di ordinamento per ogni colonna viene specificata tramite il <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> proprietà della colonna, che può essere impostata su uno dei seguenti <xref:System.Windows.Forms.DataGridViewColumnSortMode> valori di enumerazione.  
   
 |Valore di `DataGridViewColumnSortMode`|Descrizione|  
 |----------------------------------------|-----------------|  

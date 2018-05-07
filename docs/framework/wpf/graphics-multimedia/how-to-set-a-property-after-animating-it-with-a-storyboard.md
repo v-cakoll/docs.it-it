@@ -1,31 +1,17 @@
 ---
-title: "Procedura: impostare una proprietà dopo averla animata con uno storyboard"
-ms.custom: 
+title: 'Procedura: impostare una proprietà dopo averla animata con uno storyboard'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ffc534549f5b114a07f09326be72c1968d178a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b8e9c08075b13f8d6f701d5ac6ae4f8ea8949184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Procedura: impostare una proprietà dopo averla animata con uno storyboard
 In alcuni casi, potrebbe sembrare che non è possibile modificare il valore di una proprietà dopo che è stato animato.  
@@ -43,7 +29,7 @@ In alcuni casi, potrebbe sembrare che non è possibile modificare il valore di u
   
  Il codice precedente non sembra eseguire alcuna azione: il pennello rimane giallo, che corrisponde al valore fornito per il <xref:System.Windows.Media.Animation.ColorAnimation> che animato il pennello. Il valore della proprietà sottostante (il valore di base) viene effettivamente modificato in blu. Tuttavia, il valore effettivo o corrente rimane giallo perché il <xref:System.Windows.Media.Animation.ColorAnimation> sta ancora eseguendo l'override del valore di base. Se si desidera il valore di base per diventare di nuovo il valore effettivo, è necessario interrompere l'animazione dall'influenzare la proprietà. Esistono tre modi per eseguire questa operazione con le animazioni storyboard:  
   
--   Impostare l'animazione <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> proprietà<xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+-   Impostare l'animazione <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> proprietà <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
 -   Rimuovere l'intero Storyboard.  
   

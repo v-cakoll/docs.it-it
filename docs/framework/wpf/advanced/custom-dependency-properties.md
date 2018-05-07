@@ -1,13 +1,6 @@
 ---
-title: "Proprietà di dipendenza personalizzate"
-ms.custom: 
+title: Proprietà di dipendenza personalizzate
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 588ab00d61a701dc43e2af5978a6023a93f367f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2623f34418aad7a0b29c52d1310fdc79afced790
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-dependency-properties"></a>Proprietà di dipendenza personalizzate
 Questo argomento descrive le ragioni per cui sviluppatori di applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e autori di componenti potrebbero decidere di creare una proprietà di dipendenza personalizzata e illustra i passaggi dell'implementazione oltre ad alcune opzioni di implementazione in grado di migliorare le prestazioni, l'usabilità o la versatilità della proprietà.  
@@ -134,11 +122,11 @@ Questo argomento descrive le ragioni per cui sviluppatori di applicazioni [!INCL
   
 -   Se la proprietà (o le modifiche al relativo valore) interessa i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], e in particolare sul modo in cui il sistema di layout deve ridimensionare o eseguire il rendering dell'elemento in una pagina, impostare uno o più dei flag seguenti: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>indica che una modifica a questa proprietà richiede una modifica a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] per il rendering in cui l'oggetto contenitore potrebbe richiedere più o meno spazio nel controllo padre. Ad esempio, è necessario impostare questo flag per una proprietà "Width".  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> indica che una modifica a questa proprietà richiede una modifica a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] per il rendering in cui l'oggetto contenitore potrebbe richiedere più o meno spazio nel controllo padre. Ad esempio, è necessario impostare questo flag per una proprietà "Width".  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>indica che una modifica a questa proprietà richiede una modifica a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] il rendering, che in genere non richiedono una modifica nello spazio dedicato, ma indica che il posizionamento all'interno dello spazio è stato modificato. Ad esempio, è necessario impostare questo flag per una proprietà "Alignment".  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> indica che una modifica a questa proprietà richiede una modifica a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] il rendering, che in genere non richiedono una modifica nello spazio dedicato, ma indica che il posizionamento all'interno dello spazio è stato modificato. Ad esempio, è necessario impostare questo flag per una proprietà "Alignment".  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>indica che un'altra modifica si è verificato che non influiranno sul layout e la misura, ma richiede un altro rendering. Un esempio potrebbe essere una proprietà che modifica un colore di un elemento esistente, ad esempio "Background".  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> indica che un'altra modifica si è verificato che non influisce sul layout e la misura, ma richiede un altro rendering. Un esempio potrebbe essere una proprietà che modifica un colore di un elemento esistente, ad esempio "Background".  
   
     -   Questi flag vengono spesso usati come protocollo nei metadati per le implementazioni di override del sistema di proprietà o per i callback del layout. Ad esempio, potrebbe essere un <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> callback che verrà chiamato <xref:System.Windows.UIElement.InvalidateArrange%2A> se qualsiasi proprietà dell'istanza segnala una modifica del valore e <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> come `true` nei relativi metadati.  
   
@@ -148,7 +136,7 @@ Questo argomento descrive le ragioni per cui sviluppatori di applicazioni [!INCL
   
 -   Per impostazione predefinita, l'associazione dati <xref:System.Windows.Data.Binding.Mode%2A> per i valori predefiniti delle proprietà di dipendenza a <xref:System.Windows.Data.BindingMode.OneWay>. È sempre possibile modificare il binding sarà <xref:System.Windows.Data.BindingMode.TwoWay> per ogni istanza dell'associazione; per informazioni dettagliate, vedere [specificare la direzione dell'associazione](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md). Ma come l'autore di proprietà di dipendenza, è possibile scegliere di utilizzare la proprietà <xref:System.Windows.Data.BindingMode.TwoWay> modalità di associazione per impostazione predefinita. Un esempio di una proprietà di dipendenza esistente è <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>; lo scenario per questa proprietà è che il <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> impostazione logica e la composizione di <xref:System.Windows.Controls.MenuItem> interagire con lo stile del tema predefinito. Il <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> logica della proprietà utilizza l'associazione dati in modo nativo per mantenere lo stato della proprietà in conformità alle altre proprietà di stato e chiamate al metodo. Un altro esempio di proprietà che associa <xref:System.Windows.Data.BindingMode.TwoWay> per impostazione predefinita è <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>.  
   
--   È inoltre possibile abilitare ereditarietà della proprietà in una proprietà di dipendenza personalizzata impostando il <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> flag. L'ereditarietà della proprietà è utile per uno scenario in cui gli elementi padre e gli elementi figlio hanno una proprietà in comune e avrebbe senso per gli elementi figlio avere quel particolare valore di proprietà impostato sullo stesso valore impostato dall'elemento padre. È una proprietà ereditabile di esempio <xref:System.Windows.FrameworkElement.DataContext%2A>, che viene usato per operazioni per abilitare lo scenario master-dettagli importanti per la presentazione dei dati di associazione. Rendendo <xref:System.Windows.FrameworkElement.DataContext%2A> ereditabile, tutti gli elementi figlio ereditano il contesto dei dati anche. A causa dell'ereditarietà del valore della proprietà, è possibile specificare un contesto dati alla radice della pagina o dell'applicazione e non è necessario specificarlo di nuovo per i binding in tutti i possibili elementi figlio. <xref:System.Windows.FrameworkElement.DataContext%2A>è anche un buon esempio per illustrare che l'ereditarietà sostituisce il valore predefinito, ma può sempre essere impostata localmente su qualsiasi elemento figlio; Per informazioni dettagliate, vedere [utilizzare il modello Master-Details con dati gerarchici](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). L'ereditarietà del valore della proprietà può incidere negativamente sulle prestazioni e pertanto deve essere usata sporadicamente. Per informazioni dettagliate, vedere [Ereditarietà del valore della proprietà](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
+-   È inoltre possibile abilitare ereditarietà della proprietà in una proprietà di dipendenza personalizzata impostando il <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> flag. L'ereditarietà della proprietà è utile per uno scenario in cui gli elementi padre e gli elementi figlio hanno una proprietà in comune e avrebbe senso per gli elementi figlio avere quel particolare valore di proprietà impostato sullo stesso valore impostato dall'elemento padre. È una proprietà ereditabile di esempio <xref:System.Windows.FrameworkElement.DataContext%2A>, che viene usato per operazioni per abilitare lo scenario master-dettagli importanti per la presentazione dei dati di associazione. Rendendo <xref:System.Windows.FrameworkElement.DataContext%2A> ereditabile, tutti gli elementi figlio ereditano il contesto dei dati anche. A causa dell'ereditarietà del valore della proprietà, è possibile specificare un contesto dati alla radice della pagina o dell'applicazione e non è necessario specificarlo di nuovo per i binding in tutti i possibili elementi figlio. <xref:System.Windows.FrameworkElement.DataContext%2A> è anche un buon esempio per illustrare che ereditarietà sostituisce il valore predefinito, ma può sempre essere impostata localmente in uno specifico elemento figlio; Per informazioni dettagliate, vedere [utilizzare il modello Master-Details con dati gerarchici](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). L'ereditarietà del valore della proprietà può incidere negativamente sulle prestazioni e pertanto deve essere usata sporadicamente. Per informazioni dettagliate, vedere [Ereditarietà del valore della proprietà](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
   
 -   Impostare il <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> flag per indicare se la proprietà di dipendenza deve essere rilevata o utilizzata dai servizi di inserimento nel diario di navigazione. Un esempio è la <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> proprietà; qualsiasi elemento selezionato in una selezione controllo deve essere mantenuto quando ci si sposta la cronologia di inserimento nel journal.  
   

@@ -1,13 +1,6 @@
 ---
 title: Cenni preliminari sul rendering della grafica WPF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cfb9a546ca33b848fbbcbd114951eddc5b000663
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 305af1025abb98950d90f46e75a9f261704a8ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Cenni preliminari sul rendering della grafica WPF
 Questo argomento offre una panoramica del livello visivo di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Viene analizzato il ruolo del <xref:System.Windows.Media.Visual> classe per il rendering di supporto nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modello.  
@@ -58,9 +46,9 @@ Questo argomento offre una panoramica del livello visivo di [!INCLUDE[TLA2#tla_w
   
 -   Globalizzazione  
   
- <xref:System.Windows.Media.Visual>viene esposto come classe astratta da cui devono essere derivate classi figlie pubblica. La figura seguente illustra la gerarchia degli oggetti visivi esposti in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ <xref:System.Windows.Media.Visual> viene esposto come classe pubblica astratta da cui devono essere derivate classi figlie. La figura seguente illustra la gerarchia degli oggetti visivi esposti in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- ![Diagramma delle classi derivate dall'oggetto Visual](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
+ ![Diagramma delle classi derivate dall'oggetto visivo](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
 Gerarchia delle classi visive  
   
 ### <a name="drawingvisual-class"></a>Classe DrawingVisual  
@@ -86,7 +74,7 @@ Gerarchia delle classi visive
   
  Quando si crea un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di controllo, ad esempio un <xref:System.Windows.Controls.Button>, il controllo genera in modo implicito i dati di rendering per il disegno stesso. Ad esempio, impostando il <xref:System.Windows.Controls.ContentControl.Content%2A> proprietà del <xref:System.Windows.Controls.Button> , il controllo archiviare una rappresentazione per il rendering di un glifo.  
   
- Oggetto <xref:System.Windows.Media.Visual> descrive il proprio contenuto come uno o più <xref:System.Windows.Media.Drawing> gli oggetti contenuti all'interno di un <xref:System.Windows.Media.DrawingGroup>. Oggetto <xref:System.Windows.Media.DrawingGroup> descrive inoltre le maschere di opacità, trasformazioni, gli effetti bitmap e altre operazioni che vengono applicate al relativo contenuto. <xref:System.Windows.Media.DrawingGroup>le operazioni vengono applicate nell'ordine seguente quando viene eseguito il rendering di contenuto: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>e quindi <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ Oggetto <xref:System.Windows.Media.Visual> descrive il proprio contenuto come uno o più <xref:System.Windows.Media.Drawing> gli oggetti contenuti all'interno di un <xref:System.Windows.Media.DrawingGroup>. Oggetto <xref:System.Windows.Media.DrawingGroup> descrive inoltre le maschere di opacità, trasformazioni, gli effetti bitmap e altre operazioni che vengono applicate al relativo contenuto. <xref:System.Windows.Media.DrawingGroup> le operazioni vengono applicate nell'ordine seguente quando viene eseguito rendering del contenuto: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, quindi <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
   
  Nella figura seguente viene illustrato l'ordine in cui <xref:System.Windows.Media.DrawingGroup> le operazioni vengono applicate durante la sequenza di rendering.  
   
@@ -135,7 +123,7 @@ Diagramma della gerarchia di una struttura ad albero visuale
   
  Se si esegue l'enumerazione degli oggetti visivi e vettoriale elenchi di istruzioni di grafica che costituiscono il <xref:System.Windows.Controls.Button> controllo, si otterrebbe la gerarchia di oggetti illustrata di seguito:  
   
- ![Diagramma della struttura ad albero visuale e dati di rendering](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview04.png "VisualLayerOverview04")  
+ ![Diagramma della struttura ad albero visuale e ai dati di rendering](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview04.png "VisualLayerOverview04")  
 Diagramma della struttura ad albero e dei dati di rendering  
   
  Il <xref:System.Windows.Controls.Button> controllo contiene un <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> elemento, che a sua volta, contiene un <xref:System.Windows.Controls.ContentPresenter> elemento. Il <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> elemento è responsabile della creazione di tutti gli elementi grafici discreti che costituiscono il bordo e lo sfondo di un pulsante. Il <xref:System.Windows.Controls.ContentPresenter> è responsabile della visualizzazione del contenuto dell'elemento di <xref:System.Windows.Controls.Button>. In questo caso, poiché viene visualizzata un'immagine, il <xref:System.Windows.Controls.ContentPresenter> elemento contiene un <xref:System.Windows.Controls.Image> elemento.  
@@ -166,7 +154,7 @@ Diagramma della gerarchia di una struttura ad albero visuale
 ### <a name="rendering-order"></a>Ordine di rendering  
  La struttura ad albero visuale determina l'ordine di rendering degli oggetti visivi e di disegno di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. L'ordine di attraversamento inizia con l'oggetto visivo radice, ovvero il nodo superiore nella struttura ad albero visuale. Gli elementi figlio dell'oggetto visivo radice vengono quindi attraversati, da sinistra a destra. Se un oggetto visivo ha elementi figlio, questi ultimi vengono attraversati prima degli elementi di pari livello. Ciò significa che viene eseguito il rendering del contenuto di un oggetto visivo figlio prima del contenuto dell'oggetto visivo stesso.  
   
- ![Diagramma dell'ordine di rendering della struttura ad albero visuale](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview06.gif "VisualLayerOverview06")  
+ ![Diagramma dell'ordine di rendering di struttura ad albero visuale](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview06.gif "VisualLayerOverview06")  
 Diagramma dell'ordine di rendering della struttura ad albero visuale  
   
 ### <a name="root-visual"></a>Oggetto visivo radice  

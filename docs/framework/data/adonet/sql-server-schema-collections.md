@@ -1,24 +1,12 @@
 ---
 title: Raccolte di schemi SQL Server
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 248e5f4caf47f09742358240fa43f46169f0b1e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-schema-collections"></a>Raccolte di schemi SQL Server
 Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta di schemi comuni, supporta la raccolta di schemi aggiuntivi. Le raccolte di schemi variano leggermente in base alla versione di SQL Server usata. Per determinare l'elenco delle raccolte di schemi supportati, chiamare il **GetSchema** metodo senza argomenti oppure con il nome di raccolta di schemi "MetaDataCollections". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco delle raccolte di schemi supportati, il numero delle restrizioni supportate da ciascuna raccolta e il numero di parti identificatore usate.  
@@ -62,7 +50,7 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
-|type_desc|String|I valori del tipo di indice sono i seguenti:<br /><br /> -   HEAP<br />-CLUSTER<br />-NON CLUSTER<br />-   XML<br />-SPAZIALI|  
+|type_desc|String|I valori del tipo di indice sono i seguenti:<br /><br /> -HEAP<br />-CLUSTER<br />-NON CLUSTER<br />-   XML<br />-SPAZIALI|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -223,7 +211,7 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
 |uid|Int16|Identificatore utente univoco nel database. 1 corrisponde al proprietario del database.|  
-|user_name|Stringa|Il nome utente o il nome del gruppo, univoco nel database.|  
+|USER_NAME|Stringa|Il nome utente o il nome del gruppo, univoco nel database.|  
 |createdate|DateTime|La data in cui è stato aggiunto l'account.|  
 |updatedate|DateTime|Data dell'ultima modifica dell'account.|  
   

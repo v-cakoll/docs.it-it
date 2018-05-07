@@ -1,14 +1,6 @@
 ---
 title: I profiler CLR e applicazioni Windows Store
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 applies_to:
@@ -20,17 +12,13 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>I profiler CLR e applicazioni Windows Store
 Questo argomento illustra ciò che è necessario considerare quando strumenti di diagnostica di scrittura per l'analisi del codice in esecuzione all'interno di un'applicazione Windows Store gestito.  Vengono inoltre fornite indicazioni per modificare gli strumenti di sviluppo esistenti in modo che possa continuare a funzionare quando vengono eseguiti in applicazioni Windows Store.  Per comprendere queste informazioni, è consigliabile che se si ha familiarità con l'API profilatura di Common Language Runtime, questa API è già stata usata in uno strumento di diagnostica che viene eseguita correttamente, applicazioni desktop di Windows e si sta ora interessato lo strumento di modifica Per eseguire correttamente le applicazioni Windows Store.  
@@ -154,7 +142,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
  **Scelta di un'applicazione Windows Store al profilo**  
  In primo luogo, è opportuno chiedere all'utente di profiler per avviare le app di Windows Store.  Per le app desktop, ad esempio permetterebbe di visualizzare una finestra di dialogo Sfoglia file e l'utente potrebbe individuare e selezionare un file .exe.  Ma le applicazioni Windows Store sono diverse e utilizzando una finestra di ricerca non ha senso.  In alternativa, è preferibile indicare all'utente un elenco delle applicazioni Windows Store installate per l'utente può scegliere.  
   
- È possibile utilizzare il [PackageManager classe](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) per generare questo elenco.  `PackageManager`è una classe di Windows Runtime che è disponibile per applicazioni desktop, ed è in realtà *solo* disponibili per le app desktop.  
+ È possibile utilizzare il [PackageManager classe](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) per generare questo elenco.  `PackageManager` è una classe di Windows Runtime che è disponibile per le app desktop, ed è in realtà *solo* disponibili nelle App desktop.  
   
  Nell'esempio seguente viene ode un ipotetico Profiler nell'interfaccia utente scritto come un'app desktop in c# yses il `PackageManager` per generare un elenco di App di Windows:  
   
@@ -178,9 +166,9 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
   
  Esistono un paio di elementi che è necessario predisporre correttamente:  
   
--   `packageFullName`può essere determinato durante l'iterazione sui pacchetti e selezionandola `package.Id.FullName`.  
+-   `packageFullName` può essere determinato quando si esegue l'iterazione in pacchetti e cattura `package.Id.FullName`.  
   
--   `debuggerCommandLine`è un po' più interessante.  Per passare il blocco di ambiente personalizzato per l'applicazione Windows Store, è necessario scrivere il propria, debugger fittizio semplicistico.  Genera Windows app di Windows Store è sospeso e quindi collega il debugger dall'avvio del debugger con una riga di comando, ad esempio in questo esempio:  
+-   `debuggerCommandLine` è un po' più interessante.  Per passare il blocco di ambiente personalizzato per l'applicazione Windows Store, è necessario scrivere il propria, debugger fittizio semplicistico.  Genera Windows app di Windows Store è sospeso e quindi collega il debugger dall'avvio del debugger con una riga di comando, ad esempio in questo esempio:  
   
     ```Output  
     MyDummyDebugger.exe -p 1336 -tid 1424  
@@ -341,7 +329,7 @@ CreateEventEx(
   
  `AppContainerNamedObjects\<acSid>\MyNamedEvent`  
   
- `<acSid>`è il SID di AppContainer dell'app Windows Store.  Una sezione precedente di questo argomento viene illustrato come scorrere i pacchetti installati per l'utente corrente.  Da tale codice di esempio, è possibile ottenere il valore di packageId.  E da packageId, è possibile ottenere il `<acSid>` con un codice simile al seguente:  
+ `<acSid>` è il SID di AppContainer dell'app Windows Store.  Una sezione precedente di questo argomento viene illustrato come scorrere i pacchetti installati per l'utente corrente.  Da tale codice di esempio, è possibile ottenere il valore di packageId.  E da packageId, è possibile ottenere il `<acSid>` con un codice simile al seguente:  
   
 ```csharp  
 IntPtr acPSID;  
@@ -431,7 +419,7 @@ GetAppContainerFolderPath(acSid, out acDir);
  [.NET Framework Support for Windows Store Apps and Windows Runtime](../../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) (Supporto di .NET Framework per le app di Windows Store e Windows Runtime)  
   
  **App di Windows Store**  
- -   [Accesso ai file e autorizzazioni (app di Windows Runtime](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)  
+ -   [L'accesso ai file e autorizzazioni (app di Windows Runtime](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)  
   
 -   [Ottenere una licenza per sviluppatori](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)  
   

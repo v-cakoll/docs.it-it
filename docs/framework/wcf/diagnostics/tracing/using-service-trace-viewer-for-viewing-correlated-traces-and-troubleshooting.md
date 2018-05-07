@@ -1,30 +1,18 @@
 ---
 title: Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13c862c8191a9bc312de743fc3ed99396c600f8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi
 In questo argomento viene illustrato il formato dei dati di traccia, come visualizzarlo e gli approcci che usano Service Trace Viewer per risolvere i problemi dell'applicazione.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Uso dello strumento Visualizzatore di tracce dei servizi  
- Lo strumento Service Trace Viewer di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] aiuta a correlare le tracce di diagnostica prodotte dai listener [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] per individuare la causa principale di un errore. Questo strumento consente di visualizzare, raggruppare e filtrare facilmente le tracce per diagnosticare, riparare e verificare i problemi dei servizi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+ Lo strumento Visualizzatore di tracce dei servizi Windows Communication Foundation (WCF) consente di correlare le tracce di diagnostica prodotte dai [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] causare listener per individuare la radice di un errore. Questo strumento consente di visualizzare, raggruppare e filtrare facilmente le tracce per diagnosticare, riparare e verificare i problemi dei servizi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
  In questo argomento è riportate le schermate di tracce generate eseguendo il [traccia e registrazione dei messaggi](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) di esempio, quando viene visualizzato utilizzando il [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). In questo argomento viene dimostrato come capire il contenuto della traccia, le attività e la loro correlazione e come analizzare moltissime tracce in caso di risoluzione dei problemi.  
   

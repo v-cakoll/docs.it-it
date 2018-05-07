@@ -1,31 +1,19 @@
 ---
 title: Cenni preliminari su GridView
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GridView view mode [WPF]
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 776897d490b2748e240cf7b9a4ea21364284c4c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gridview-overview"></a>Cenni preliminari su GridView
-<xref:System.Windows.Controls.GridView>modalità di visualizzazione è una delle modalità di visualizzazione per un <xref:System.Windows.Controls.ListView> controllo. La <xref:System.Windows.Controls.GridView> classe e le relative classi di supporto consentono agli utenti di visualizzare raccolte di elementi in una tabella che utilizza in genere i pulsanti come intestazioni di colonna interattive. Questo argomento vengono presentate le <xref:System.Windows.Controls.GridView> classe e viene illustrato l'utilizzo.  
+<xref:System.Windows.Controls.GridView> modalità di visualizzazione è una delle modalità di visualizzazione per un <xref:System.Windows.Controls.ListView> controllo. La <xref:System.Windows.Controls.GridView> classe e le relative classi di supporto consentono agli utenti di visualizzare raccolte di elementi in una tabella che utilizza in genere i pulsanti come intestazioni di colonna interattive. Questo argomento vengono presentate le <xref:System.Windows.Controls.GridView> classe e viene illustrato l'utilizzo.  
   
   
   
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  ![ListView con stile](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
   
- <xref:System.Windows.Controls.GridView>le colonne sono rappresentate da <xref:System.Windows.Controls.GridViewColumn> oggetti, che è possono ridimensionare automaticamente in base al contenuto. Facoltativamente, è possibile impostare in modo esplicito un <xref:System.Windows.Controls.GridViewColumn> alla larghezza. È possibile ridimensionare le colonne trascinando la barra gripper tra le intestazioni di colonna. È inoltre in modo dinamico aggiungere, rimuovere, sostituire e riordinare le colonne, poiché questa funzionalità è incorporata in <xref:System.Windows.Controls.GridView>. Tuttavia, <xref:System.Windows.Controls.GridView> non è possibile aggiornare direttamente i dati che vengono visualizzati.  
+ <xref:System.Windows.Controls.GridView> le colonne sono rappresentate da <xref:System.Windows.Controls.GridViewColumn> oggetti, che possono ridimensionare automaticamente in base al contenuto. Facoltativamente, è possibile impostare in modo esplicito un <xref:System.Windows.Controls.GridViewColumn> alla larghezza. È possibile ridimensionare le colonne trascinando la barra gripper tra le intestazioni di colonna. È inoltre in modo dinamico aggiungere, rimuovere, sostituire e riordinare le colonne, poiché questa funzionalità è incorporata in <xref:System.Windows.Controls.GridView>. Tuttavia, <xref:System.Windows.Controls.GridView> non è possibile aggiornare direttamente i dati che vengono visualizzati.  
   
  Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.GridView> che consente di visualizzare i dati dei dipendenti. In questo esempio, <xref:System.Windows.Controls.ListView> definisce il `EmployeeInfoDataSource` come il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Le definizioni delle proprietà <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> associare <xref:System.Windows.Controls.GridViewColumn> contenuto `EmployeeInfoDataSource` categorie di dati.  
   

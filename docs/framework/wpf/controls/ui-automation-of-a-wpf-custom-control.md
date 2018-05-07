@@ -1,13 +1,6 @@
 ---
 title: Automazione interfaccia utente di un controllo personalizzato WPF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d17408d6fa03b267c2a22890d2e17c0441389
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbd19591c260b0ad160339b45fd762e7a87bbc74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>Automazione interfaccia utente di un controllo personalizzato WPF
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] fornisce una singola interfaccia generalizzata che i client di automazione possono usare per esaminare o gestire le interfacce utente di una varietà di piattaforme e framework. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] consente sia al codice di controllo di qualità (test) sia alle applicazioni di accessibilità, ad esempio le utilità per la lettura dello schermo, di esaminare gli elementi dell'interfaccia utente e simulare l'interazione dell'utente da altro codice. Per informazioni su [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] in tutte le piattaforme, vedere Accessibilità.  
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  Eseguire l'override di <xref:System.Windows.UIElement.OnCreateAutomationPeer%2A> metodo per il controllo personalizzato in modo che restituisca l'oggetto provider deve derivare direttamente o indirettamente da <xref:System.Windows.Automation.Peers.AutomationPeer>.  
   
 ### <a name="override-getpattern"></a>Override di GetPattern  
- I peer di automazione semplificano alcuni aspetti dell'implementazione di provider [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] sul lato server, tuttavia i peer di automazione di controlli personalizzati devono comunque gestire le interfacce dei criteri. Ad esempio il provider non WPF, peer supportano i pattern di controllo fornendo implementazioni delle interfacce nel <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> dello spazio dei nomi, ad esempio <xref:System.Windows.Automation.Provider.IInvokeProvider>. Le interfacce dei criteri di controllo possono essere implementate dal peer stesso o da un altro oggetto. Implementazione del peer <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> restituisce l'oggetto che supporta il pattern specificato. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]codice chiama il <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> (metodo) e specifica un <xref:System.Windows.Automation.Peers.PatternInterface> valore di enumerazione. L'override del <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> deve restituire l'oggetto che implementa il pattern specificato. Se il controllo non ha un'implementazione personalizzata di un modello, è possibile chiamare l'implementazione del tipo di base di <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> per recuperare la relativa implementazione o null se il pattern non è supportato per questo tipo di controllo. Ad esempio, è possibile impostare un controllo personalizzato NumericUpDown su un valore all'interno di un intervallo, in modo relativo [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] peer implementi il <xref:System.Windows.Automation.Provider.IRangeValueProvider> interfaccia. L'esempio seguente viene illustrato come il peer <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> viene eseguito l'override di metodo per rispondere a un <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> valore.  
+ I peer di automazione semplificano alcuni aspetti dell'implementazione di provider [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] sul lato server, tuttavia i peer di automazione di controlli personalizzati devono comunque gestire le interfacce dei criteri. Ad esempio il provider non WPF, peer supportano i pattern di controllo fornendo implementazioni delle interfacce nel <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> dello spazio dei nomi, ad esempio <xref:System.Windows.Automation.Provider.IInvokeProvider>. Le interfacce dei criteri di controllo possono essere implementate dal peer stesso o da un altro oggetto. Implementazione del peer <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> restituisce l'oggetto che supporta il pattern specificato. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] codice chiama il <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> (metodo) e specifica un <xref:System.Windows.Automation.Peers.PatternInterface> valore di enumerazione. L'override del <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> deve restituire l'oggetto che implementa il pattern specificato. Se il controllo non ha un'implementazione personalizzata di un modello, è possibile chiamare l'implementazione del tipo di base di <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> per recuperare la relativa implementazione o null se il pattern non è supportato per questo tipo di controllo. Ad esempio, è possibile impostare un controllo personalizzato NumericUpDown su un valore all'interno di un intervallo, in modo relativo [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] peer implementi il <xref:System.Windows.Automation.Provider.IRangeValueProvider> interfaccia. L'esempio seguente viene illustrato come il peer <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> viene eseguito l'override di metodo per rispondere a un <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> valore.  
   
  [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
  [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  
@@ -167,5 +155,5 @@ End Class
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di automazione interfaccia utente](../../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [Controllo personalizzato NumericUpDown con esempio di supporto di automazione interfaccia utente e il tema](http://go.microsoft.com/fwlink/?LinkID=160025)  
+ [Controllo personalizzato NumericUpDown con esempio supporto di automazione interfaccia utente e del tema](http://go.microsoft.com/fwlink/?LinkID=160025)  
  [Implementazione del provider di automazione interfaccia utente lato server](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

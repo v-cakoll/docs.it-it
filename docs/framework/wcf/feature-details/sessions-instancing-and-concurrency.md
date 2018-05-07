@@ -1,26 +1,12 @@
 ---
 title: Sessioni, istanze e concorrenza
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6dd96ea552bb92dd90c1c47abac744c55e2e67e5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a3f56a08c695b4d92529d2c1bec625e9e8c6b6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessioni, istanze e concorrenza
 Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint. La*creazione di istanze* fa riferimento al controllo della durata di oggetti servizio definiti dall'utente e di oggetti <xref:System.ServiceModel.InstanceContext> correlati. La*concorrenza* è il termine dato al controllo del numero di thread in esecuzione contemporaneamente in un <xref:System.ServiceModel.InstanceContext> .  
@@ -30,7 +16,7 @@ Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint.
 ## <a name="sessions"></a>Sessions  
  Quando la proprietà <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> viene impostata da un contratto di servizio su <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>, tutte le chiamate, ovvero gli scambi di messaggi sottostanti che supportano le chiamate, devono essere parte della stessa conversazione. Se un contratto consente sessioni ma non ne richiede, i client possono connettersi e possono stabilire o meno una sessione. Se, al termine della sessione, un messaggio viene inviato sullo stesso canale basato sulla sessione, viene generata un'eccezione.  
   
- Le principali caratteristiche delle sessioni[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono le seguenti:  
+ Le sessioni WCF hanno i seguente principali caratteristiche:  
   
 -   Vengono avviate e terminate esplicitamente dall'applicazione chiamante.  
   
@@ -38,11 +24,11 @@ Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint.
   
 -   Le sessioni consentono di correlare un gruppo di messaggi in una conversazione. Il significato di tale correlazione è un'astrazione. Un canale basato sulla sessione, ad esempio, è in grado di correlare messaggi basati su una connessione di rete condivisa mentre un altro canale basato sulla sessione è in grado di correlare messaggi basati su un tag condiviso nel corpo del messaggio. Le funzionalità che possono derivare dalla sessione dipendono dalla natura della correlazione.  
   
--   Non esiste alcun archivio dati generale associato a una sessione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+-   Non vi è alcun archivio dati generale associato a una sessione WCF.  
   
- Se si ha familiarità con la classe <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> in applicazioni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e con la funzionalità fornita, è possibile notare le differenze seguenti tra quel tipo di sessioni e le sessioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Se si ha familiarità con la <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> classe [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applicazioni e la funzionalità fornita, è possibile notare le differenze seguenti tra quel tipo di sessioni e le sessioni WCF:  
   
--   Le sessioni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sono sempre avviate dal server.  
+-   Le sessioni[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sono sempre avviate dal server.  
   
 -   Le sessioni[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sono implicitamente non ordinate.  
   
@@ -78,7 +64,7 @@ public class CalculatorService : ICalculatorInstance
   
  Utilizzare il costruttore <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> per creare tale servizio. Fornisce un'alternativa all'implementazione di un'interfaccia <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> personalizzata quando si desidera fornire un'istanza specifica dell'oggetto utilizzabile da un servizio singleton. Questo overload può risultare utile quando il tipo di implementazione del servizio è di difficile costruzione, ad esempio se non implementa alcun costruttore pubblico predefinito privo di parametri.  
   
- Si noti che quando un oggetto viene fornito a questo costruttore, alcune funzionalità relative al comportamento di creazione delle istanze [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] operano in modo diverso. La chiamata, ad esempio, di <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> non ha effetto quando viene fornita l'istanza di un oggetto Singleton. Analogamente, qualsiasi altro meccanismo di rilascio delle istanze viene ignorato. L'host <xref:System.ServiceModel.ServiceHost> si comporta sempre come se la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> fosse impostata su <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> per tutte le operazioni.  
+ Si noti che quando un oggetto viene fornito a questo costruttore, alcune funzionalità correlate a Windows Communication Foundation (WCF) comportamento di istanza funziona in modo diverso. La chiamata, ad esempio, di <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> non ha effetto quando viene fornita l'istanza di un oggetto Singleton. Analogamente, qualsiasi altro meccanismo di rilascio delle istanze viene ignorato. L'host <xref:System.ServiceModel.ServiceHost> si comporta sempre come se la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> fosse impostata su <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> per tutte le operazioni.  
   
 ### <a name="sharing-instancecontext-objects"></a>Condivisione di oggetti InstanceContext  
  È inoltre possibile controllare l'associazione tra canali o chiamate con sessione e oggetti <xref:System.ServiceModel.InstanceContext> eseguendo quell'associazione.  
@@ -92,7 +78,7 @@ public class CalculatorService : ICalculatorInstance
   
 -   <xref:System.ServiceModel.ConcurrencyMode.Multiple>: ogni istanza del servizio può avere contemporaneamente più thread per l'elaborazione messaggi. Per essere in grado di usare questa modalità di concorrenza, l'implementazione del servizio deve essere thread-safe.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: ogni istanza del servizio elabora un messaggio alla volta ma accetta chiamate di operazioni rientranti. Il servizio accetta queste chiamate solo quando è in corso una chiamata in uscita tramite un oggetto client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+-   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: ogni istanza del servizio elabora un messaggio alla volta ma accetta chiamate di operazioni rientranti. Il servizio accetta queste chiamate solo quando esegue chiamate in uscita tramite un oggetto client WCF.  
   
 > [!NOTE]
 >  Può essere difficile comprendere, scrivere correttamente e sviluppare codice che utilizza in modo sicuro più di un thread. Prima di utilizzare valori <xref:System.ServiceModel.ConcurrencyMode.Multiple> o <xref:System.ServiceModel.ConcurrencyMode.Reentrant> , verificare che il servizio sia progettato correttamente per queste modalità. Per altre informazioni, vedere <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  

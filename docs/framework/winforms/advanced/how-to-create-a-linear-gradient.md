@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: creare una sfumatura lineare'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33979decf37e9adb29d94a6602a43f992d93aaa1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9eeedf1ef92bdf6e5e2724eeca5060765b0778f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Procedura: creare una sfumatura lineare
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]fornisce orizzontali, verticali e diagonali gradienti lineari. Per impostazione predefinita, il colore in una sfumatura lineare cambia in modo uniforme. Tuttavia, è possibile personalizzare una sfumatura lineare in modo che il colore cambia in modo non uniformi.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce orizzontali, verticali e diagonali gradienti lineari. Per impostazione predefinita, il colore in una sfumatura lineare cambia in modo uniforme. Tuttavia, è possibile personalizzare una sfumatura lineare in modo che il colore cambia in modo non uniformi.  
   
  Nell'esempio seguente inserisce una riga di un'ellisse e un rettangolo con un pennello sfumato lineare orizzontale.  
   
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  Nell'esempio precedente, i componenti di colore modificare in modo lineare si sposta da una coordinata orizzontale pari a 0 per una coordinata orizzontale 200. Ad esempio, un punto in cui la coordinata è compreso tra 0 e 200 disporrà di un componente blu che si trova a metà tra 0 e 255.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Consente di modificare il modo in cui che un colore varia da un bordo di una sfumatura a altro. Si supponga di che voler creare un pennello sfumato cambia da nero in rosso in base alla tabella seguente.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Consente di regolare il modo in cui che un colore varia da un bordo di una sfumatura a altro. Si supponga di che voler creare un pennello sfumato cambia da nero in rosso in base alla tabella seguente.  
   
 |Coordinata orizzontale|Componenti RGB|  
 |---------------------------|--------------------|  

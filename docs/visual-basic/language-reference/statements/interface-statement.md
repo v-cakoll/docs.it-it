@@ -1,24 +1,17 @@
 ---
 title: Istruzione Interface (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Interface
 helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9418dc86ac6947ae951cb8fb757aed6e092a6668
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4282778db2d95f701cadb8bb98ec8ca982ba663
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-statement-visual-basic"></a>Istruzione Interface (Visual Basic)
 Dichiara il nome di un'interfaccia e introduce le definizioni dei membri che comprende l'interfaccia.  
@@ -43,22 +36,22 @@ End Interface
   
 |Termine|Definizione|  
 |---|---|  
-|`attributelist`|Parametro facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Parametro facoltativo. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Parametro facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`attributelist`|Facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Facoltativo. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`name`|Obbligatorio. Nome di questa interfaccia. Vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Parametro facoltativo. Specifica che si tratta di un'interfaccia generica.|  
+|`Of`|Facoltativo. Specifica che si tratta di un'interfaccia generica.|  
 |`typelist`|Obbligatorio se si usa il [di](../../../visual-basic/language-reference/statements/of-clause.md) (parola chiave). Elenco di parametri di tipo per questa interfaccia. Facoltativamente, ogni parametro di tipo può essere dichiarato variante mediante `In` e `Out` modificatori generici. Vedere [digitare elenco](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Parametro facoltativo. Indica che questa interfaccia eredita gli attributi e i membri di un altro o più interfacce. Vedere [istruzione Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`Inherits`|Facoltativo. Indica che questa interfaccia eredita gli attributi e i membri di un altro o più interfacce. Vedere [istruzione Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`interfacenames`|Obbligatorio se si usa il `Inherits` istruzione. I nomi delle interfacce da cui deriva questa interfaccia.|  
-|`modifiers`|Parametro facoltativo. Modificatori appropriati per il membro di interfaccia da definire.|  
-|`Property`|Parametro facoltativo. Definisce una proprietà che è un membro dell'interfaccia.|  
-|`Function`|Parametro facoltativo. Definisce un `Function` procedure che è un membro dell'interfaccia.|  
-|`Sub`|Parametro facoltativo. Definisce un `Sub` procedure che è un membro dell'interfaccia.|  
-|`Event`|Parametro facoltativo. Definisce un evento che è un membro dell'interfaccia.|  
-|`Interface`|Parametro facoltativo. Definisce un'interfaccia che viene nidificata all'interno di questa interfaccia. La definizione di interfaccia annidata deve terminare con un `End Interface` istruzione.|  
-|`Class`|Parametro facoltativo. Definisce una classe che è un membro dell'interfaccia. La definizione di classe di membro deve terminare con un `End Class` istruzione.|  
-|`Structure`|Parametro facoltativo. Definisce una struttura che è un membro dell'interfaccia. La definizione della struttura membro deve terminare con un `End Structure` istruzione.|  
+|`modifiers`|Facoltativo. Modificatori appropriati per il membro di interfaccia da definire.|  
+|`Property`|Facoltativo. Definisce una proprietà che è un membro dell'interfaccia.|  
+|`Function`|Facoltativo. Definisce un `Function` procedure che è un membro dell'interfaccia.|  
+|`Sub`|Facoltativo. Definisce un `Sub` procedure che è un membro dell'interfaccia.|  
+|`Event`|Facoltativo. Definisce un evento che è un membro dell'interfaccia.|  
+|`Interface`|Facoltativo. Definisce un'interfaccia che viene nidificata all'interno di questa interfaccia. La definizione di interfaccia annidata deve terminare con un `End Interface` istruzione.|  
+|`Class`|Facoltativo. Definisce una classe che è un membro dell'interfaccia. La definizione di classe di membro deve terminare con un `End Class` istruzione.|  
+|`Structure`|Facoltativo. Definisce una struttura che è un membro dell'interfaccia. La definizione della struttura membro deve terminare con un `End Structure` istruzione.|  
 |`membername`|Obbligatorio per ogni proprietà, procedure, eventi, interfaccia, classe o struttura definita come un membro dell'interfaccia. Nome del membro.|  
 |`End Interface`|Termina il `Interface` definizione.|  
   

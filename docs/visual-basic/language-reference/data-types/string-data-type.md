@@ -1,11 +1,6 @@
 ---
 title: Tipo di dati String (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.String
 helpviewer_keywords:
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90f126a5cca36969617446e81a8d13434e39df75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 894638bbe50dad2cae1f74a2f7b7fe006f029d1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-data-type-visual-basic"></a>Tipo di dati String (Visual Basic)
 Contiene le sequenze di punti di codice di (2 byte) senza segno a 16 bit tale intervallo compreso tra 0 e 65535. Ogni *punto di codice*, o codice di carattere, rappresenta un singolo carattere Unicode. Una stringa può contenere da 0 a due miliardi (2 ^ 31) caratteri Unicode.  
@@ -81,7 +73,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i caratteri di stringa hanno un'ampiezza dei dati diversa (8 bit) in altri ambienti. Se si passa un argomento stringa di caratteri a 8 bit a tale componente, dichiararla come `Byte()`, una matrice di `Byte` elementi, invece di `String` nel nuovo codice Visual Basic.  
   
--   **Caratteri tipo.** Aggiungendo il carattere di tipo identificatore `$` a qualsiasi identificatore indica al sistema di `String` tipo di dati. `String`non include alcun carattere di tipo di valore letterale. Il compilatore considera tuttavia i valori letterali racchiusi tra virgolette (`" "`) come `String`.  
+-   **Caratteri tipo.** Aggiungendo il carattere di tipo identificatore `$` a qualsiasi identificatore indica al sistema di `String` tipo di dati. `String` è presente alcun carattere di tipo di valore letterale. Il compilatore considera tuttavia i valori letterali racchiusi tra virgolette (`" "`) come `String`.  
   
 -   **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la <xref:System.String?displayProperty=nameWithType> classe.  
   

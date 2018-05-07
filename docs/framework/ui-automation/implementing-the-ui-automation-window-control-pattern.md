@@ -1,28 +1,19 @@
 ---
 title: Implementazione del pattern di controllo Window di automazione interfaccia utente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, Window
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3f1b44184f1a241943d9fa9d60a62a703dbaf0d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73a484ea6165b4e38901630730c7ba985a5608ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementazione del pattern di controllo Window di automazione interfaccia utente
 > [!NOTE]
@@ -52,17 +43,17 @@ ms.lasthandoff: 12/22/2017
   
 |Membro obbligatorio|Tipo di membro|Note|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Metodo|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Metodo|nessuno|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Metodo|nessuno|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|event|Nessuna|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|event|Nessuna|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Metodo|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Metodo|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Metodo|Nessuno|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|event|Nessuno|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|event|Nessuno|  
 |<xref:System.Windows.Automation.WindowInteractionState>|event|Non è garantito che sia <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   

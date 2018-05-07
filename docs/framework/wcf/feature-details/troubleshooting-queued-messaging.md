@@ -1,38 +1,24 @@
 ---
 title: Risoluzione dei problemi relativi ai messaggi in coda
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 45a3bf82662fcc01b732428d1ca351e4ae8ddca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Risoluzione dei problemi relativi ai messaggi in coda
-Contenuto della sezione sono contenute domande frequenti e informazioni per la risoluzione dei problemi relativi all'utilizzo delle code in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+In questa sezione contiene domande frequenti e risoluzione dei problemi per l'uso delle code in Windows Communication Foundation (WCF).  
   
 ## <a name="common-questions"></a>Domande frequenti  
- **Q:** utilizzato [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Beta 1 e viene installato l'hotfix MSMQ. È necessario rimuovere l'hotfix?  
+ **Q:** utilizzato WCF Beta 1 ed è stato installato l'hotfix MSMQ. È necessario rimuovere l'hotfix?  
   
- **R:** Sì. Questo hotfix non è più supportato. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ora funziona con MSMQ senza la necessità di hotfix.  
+ **R:** Sì. Questo hotfix non è più supportato. WCF ora funziona con MSMQ senza la necessità di hotfix.  
   
  **Q:** sono disponibili due associazioni per MSMQ: <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Quando è opportuno utilizzare l'una o l'altra?  
   
- **R:** usare il <xref:System.ServiceModel.NetMsmqBinding> quando si desidera utilizzare MSMQ come trasporto per la comunicazione in coda tra due [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applicazioni. Utilizzare <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> quando si desidera utilizzare le applicazioni MSMQ esistenti per comunicare con nuove applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ **R:** usare il <xref:System.ServiceModel.NetMsmqBinding> quando si desidera utilizzare MSMQ come trasporto per la comunicazione in coda tra due applicazioni WCF. Utilizzare il <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> quando si desidera utilizzare le applicazioni MSMQ esistenti per comunicare con le nuove applicazioni WCF.  
   
  **Q:** è necessario aggiornare MSMQ per utilizzare il <xref:System.ServiceModel.NetMsmqBinding> e `MsmqIntegration` associazioni?  
   
@@ -54,7 +40,7 @@ Contenuto della sezione sono contenute domande frequenti e informazioni per la r
   
  **R:** Sì.  
   
- **Q:** per integrare applicazioni MSMQ esistenti con nuovi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client o server. è necessario aggiornare entrambi i lati dell'infrastruttura MSMQ?  
+ **Q:** per integrare applicazioni MSMQ esistenti con i nuovi client WCF o server. è necessario aggiornare entrambi i lati dell'infrastruttura MSMQ?  
   
  **R:** No. Non è necessario eseguire l'aggiornamento a MSMQ 4.0 in entrambi i lati.  
   
@@ -145,9 +131,9 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **Q:** quando si utilizza un nome di formato pubblico o privato e aprire l'host del servizio nel [!INCLUDE[wv](../../../../includes/wv-md.md)], viene generato un errore. Perché?  
   
- **R:** il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canale di integrazione in [!INCLUDE[wv](../../../../includes/wv-md.md)] verifiche per controllare se una coda secondaria può essere aperto per la coda dell'applicazione principale per la gestione messaggi non elaborabili. Il nome della coda secondaria deriva da un URI msmq.formatname passato al listener. Il nome della coda secondaria in MSMQ può essere solo un nome in formato diretto. Per questo motivo viene generato l'errore. Modificare l'URI della coda in modo che il nome sia in un formato diretto.  
+ **R:** canale di integrazione di WCF in [!INCLUDE[wv](../../../../includes/wv-md.md)] verifiche per controllare se una coda secondaria può essere aperto per la coda dell'applicazione principale per la gestione messaggi non elaborabili. Il nome della coda secondaria deriva da un URI msmq.formatname passato al listener. Il nome della coda secondaria in MSMQ può essere solo un nome in formato diretto. Per questo motivo viene generato l'errore. Modificare l'URI della coda in modo che il nome sia in un formato diretto.  
   
- **Q:** quando si riceve un messaggio da un'applicazione MSMQ, il messaggio rimane nella coda e non è di lettura per la ricezione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dell'applicazione. Perché?  
+ **Q:** quando si riceve un messaggio da un'applicazione MSMQ, il messaggio rimane nella coda e non viene letto dall'applicazione di ricezione WCF. Perché?  
   
  **R:** per verificare se il messaggio ha un corpo. Se è privo di corpo viene ignorato dal canale di integrazione con MSMQ. Implementare `IErrorHandler` per ricevere notifica delle eccezioni e controllare le tracce.  
   
@@ -193,7 +179,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
  **R:** controllare la configurazione dell'associazione. Per l'associazione predefinita è attivata la protezione del trasporto MSMQ per la firma del messaggio. Disattivarla.  
   
 ### <a name="remote-transacted-receives"></a>Ricezioni transazionali remote  
- **Q:** quando si dispone di una coda sul computer A e un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio che legge i messaggi da una coda sul computer B (scenario di ricezione transazionale remota), i messaggi non vengono letti dalla coda. Le informazioni di analisi indica la ricezione non riuscito con il messaggio "delle transazioni non possono essere importati." Che cosa può fare per risolvere il problema?  
+ **Q:** quando si dispone di una coda sul computer A, e un servizio WCF che legge i messaggi da una coda sul computer B (scenario di ricezione transazionale remota), i messaggi non vengono letti dalla coda. Le informazioni di analisi indica la ricezione non riuscito con il messaggio "delle transazioni non possono essere importati." Che cosa può fare per risolvere il problema?  
   
  **R:** esistono tre possibili cause:  
   

@@ -1,36 +1,22 @@
 ---
 title: 'Procedura: ospitare un servizio WCF in WAS'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c4613587d829b082ee7182cc32e34d2d2d563241
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7050d866233b248c7c8f9f41337ce451b5510c30
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Procedura: ospitare un servizio WCF in WAS
-In questo argomento vengono delineati i passaggi di base necessari per creare un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ospitato nel servizio di attivazione dei processi di Windows, noto anche come WAS. WAS è il nuovo servizio di attivazione dei processi che rappresenta una generalizzazione delle funzionalità di Internet Information Services (IIS) utilizzabili con protocolli di trasporto non HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'interfaccia dell'adattatore listener per comunicare richieste di attivazione ricevute tramite i protocolli non HTTP supportati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio TCP, named pipe e Accodamento messaggi.  
+Questo argomento illustra i passaggi di base necessari per creare un servizio di attivazione processo Windows (anche noto come WAS) servizio di Windows Communication Foundation (WCF) ospitato. WAS è il nuovo servizio di attivazione dei processi che rappresenta una generalizzazione delle funzionalità di Internet Information Services (IIS) utilizzabili con protocolli di trasporto non HTTP. WCF utilizza l'interfaccia dell'adattatore listener per comunicare le richieste di attivazione ricevute su protocolli non HTTP supportati da WCF, ad esempio TCP, named pipe e Accodamento messaggi.  
   
  Questa opzione di hosting richiede che i componenti di attivazione WAS vengano installati e configurati correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. Per ulteriori informazioni sull'installazione e configurazione WAS, vedere [procedura: installare e configurare i componenti di attivazione WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 >  L'attivazione di WAS non è supportata se la pipeline di elaborazione delle richieste del server Web è impostata sulla modalità classica. Se è necessario utilizzare l'attivazione WAS, la pipeline di elaborazione delle richieste del server Web deve essere impostata sulla modalità integrata.  
   
- Quando un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene ospitato in WAS, vengono utilizzate le associazioni standard come di consueto. Tuttavia, quando si utilizzano <xref:System.ServiceModel.NetTcpBinding> e <xref:System.ServiceModel.NetNamedPipeBinding> per configurare un servizio ospitato in WAS, è necessario che sia rispettato un vincolo. Quando endpoint diversi utilizzano lo stesso trasporto, le impostazioni dell'associazione devono corrispondere sulle sette proprietà seguenti:  
+ Quando un servizio WCF viene ospitato in WAS, vengono utilizzate le associazioni standard come di consueto. Tuttavia, quando si utilizzano <xref:System.ServiceModel.NetTcpBinding> e <xref:System.ServiceModel.NetNamedPipeBinding> per configurare un servizio ospitato in WAS, è necessario che sia rispettato un vincolo. Quando endpoint diversi utilizzano lo stesso trasporto, le impostazioni dell'associazione devono corrispondere sulle sette proprietà seguenti:  
   
 -   ConnectionBufferSize  
   

@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: visualizzare la Guida rapida'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - pop-up Help
 - Help [Windows Forms], pop-up Help
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ec4401bb3465f72e4ef732e7554dc64603d700c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5751bcdb9fe7a16138680f34a4fcc1760f85a1d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-pop-up-help"></a>Procedura: visualizzare la Guida rapida
 È un modo per visualizzare la Guida in Windows Form tramite il **Guida** pulsante posizionate sul lato destro della barra del titolo, accessibile tramite la <xref:System.Windows.Forms.Form.HelpButton%2A> proprietà. Questo tipo di visualizzazione della Guida è ideale con le finestre di dialogo. Con le finestre di dialogo visualizzate come modali (con il metodo <xref:System.Windows.Forms.Form.ShowDialog%2A>) risulta difficile accedere a sistemi di Guida esterni, perché le finestre di dialogo modali devono venire chiuse prima che lo stato attivo possa passare a un'altra finestra. Inoltre, l'uso di **Guida** pulsante richiede che sia presente alcun **Riduci a icona** pulsante o **Ingrandisci** pulsante nella barra del titolo. Questa è una convenzione di dialogo standard, mentre i form dispongono in genere **Riduci a icona** e **Ingrandisci** pulsanti.  

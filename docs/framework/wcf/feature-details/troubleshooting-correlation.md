@@ -1,26 +1,12 @@
 ---
 title: Risoluzione dei problemi relativi alla correlazione
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2de3a8cac6e12d898173f8181b295c3e2e461cc7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c597012a5ff69ecb700c51e00ac7d1218962e9ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-correlation"></a>Risoluzione dei problemi relativi alla correlazione
 La correlazione viene utilizzata per correlare i messaggi del servizio flusso di lavoro l'uno all'altro e all'istanza del flusso di lavoro corretta, ma se non viene configurata correttamente, i messaggi non verranno ricevuti e le applicazioni non funzioneranno in modo appropriato. In questo argomento viene fornita una panoramica dei metodi che consentono di risolvere i problemi relativi alla correlazione e vengono inoltre descritti alcuni dei problemi comuni che possono verificarsi durante l'utilizzo della correlazione.  
@@ -146,7 +132,7 @@ supports the context protocol and has a valid context initialized.
  Per altre informazioni, vedere [lo scambio del contesto](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
 ## <a name="common-request-reply-correlation-issues"></a>Problemi comuni relativi alla correlazione request/reply  
- Correlazione request / reply viene usata con un <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> coppia per implementare un'operazione bidirezionale in un servizio flusso di lavoro e con un <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> coppia che richiama un'operazione bidirezionale in un altro Web servizio. Quando si richiama un'operazione bidirezionale in un servizio WCF, il servizio può essere un servizio imperativo tradizionale basato sul [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o un servizio flusso di lavoro. Per utilizzare la correlazione request/reply, è necessario utilizzare un'associazione bidirezionale, ad esempio <xref:System.ServiceModel.BasicHttpBinding>, e che le operazioni siano bidirezionali.  
+ Correlazione request / reply viene usata con un <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> coppia per implementare un'operazione bidirezionale in un servizio flusso di lavoro e con un <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> coppia che richiama un'operazione bidirezionale in un altro Web servizio. Quando si richiama un'operazione bidirezionale in un servizio WCF, il servizio può essere un tradizionale imperativo servizio WCF basato su codice oppure può essere un servizio flusso di lavoro. Per utilizzare la correlazione request/reply, è necessario utilizzare un'associazione bidirezionale, ad esempio <xref:System.ServiceModel.BasicHttpBinding>, e che le operazioni siano bidirezionali.  
   
  Se il servizio del flusso di lavoro presenta operazioni bidirezionali in parallelo o la sovrapposizione <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> o <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> gestione coppie, quindi la correlazione implicita fornita da <xref:System.ServiceModel.Activities.WorkflowServiceHost>potrebbe non essere sufficiente, specialmente negli scenari di carichi di lavoro elevati, e i messaggi non possono essere indirizzati correttamente. Per evitare che si verifichi questo problema, è consigliabile specificare sempre in modo esplicito un <xref:System.ServiceModel.Activities.CorrelationHandle> quando si utilizza la correlazione request/reply. Quando si utilizza il **SendAndReceiveReply** e **ReceiveAndSendReply** modelli dalla sezione della messaggistica il **della casella degli strumenti** nella finestra di progettazione del flusso di lavoro, un <xref:System.ServiceModel.Activities.CorrelationHandle> è configurato in modo esplicito per impostazione predefinita. Durante la compilazione di un flusso di lavoro tramite codice, l'oggetto <xref:System.ServiceModel.Activities.CorrelationHandle> viene specificato nella proprietà <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> della prima attività nella coppia. Nell'esempio seguente un'attività <xref:System.ServiceModel.Activities.Receive> viene configurata con una proprietà <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> esplicita specificata in <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>.  
   

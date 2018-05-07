@@ -1,24 +1,12 @@
 ---
 title: Configurazione del servizio di condivisione delle porte Net.TCP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 942b48ff6887e079beb7c0c24c6542a774eafe33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99585bb05364b6b0b3ee093823dc599519c8a12a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Configurazione del servizio di condivisione delle porte Net.TCP
 I servizi indipendenti che usano il trasporto Net.TCP possono controllare diverse impostazioni avanzate, quali esempio `ListenBacklog` e `MaxPendingAccepts`, che regolano il comportamento del socket TCP sottostante usato per la comunicazione di rete. Tuttavia, queste impostazioni per ogni socket si applicano solo al livello di associazione, se l'associazione del trasporto ha disattivato la condivisione delle porte, che è attivata per impostazione predefinita.  
@@ -75,4 +63,4 @@ I servizi indipendenti che usano il trasporto Net.TCP possono controllare divers
 >  Il file SMSvcHost.exe.config predefinito specifica un elemento `etwProviderId` personalizzato per impedire che la traccia di SMSvcHost.exe interferisca con le tracce del servizio.  
   
 ## <a name="see-also"></a>Vedere anche  
- [\<NET >](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)
+ [\<NET. TCP >](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)

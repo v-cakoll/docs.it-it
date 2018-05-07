@@ -1,26 +1,12 @@
 ---
 title: Invio del form
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 31d2ebbdb6f899390d7b3af485c1583fb80ae6dc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 005aba6ab8a8fcbe4f4e4f79055e04cff059f47d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="form-post"></a>Invio del form
 In questo esempio viene descritto come estendere il modello di programmazione WCF REST per supportare i nuovi formati delle richieste in entrata. Nell'esempio è inoltre inclusa l'implementazione di un formattatore in grado di deserializzare una richiesta da un invio di form HTML in un tipo di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Nell'esempio viene infine usato un modello T4 per la restituzione di una pagina HTML, il quale fornisce il form HTML che gli utenti possono usare per eseguire il postback al servizio WCF REST.  
@@ -65,6 +51,6 @@ In questo esempio viene descritto come estendere il modello di programmazione WC
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Web\FormPost`

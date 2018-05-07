@@ -1,13 +1,6 @@
 ---
 title: Modello di threading dell'input penna
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application user interface thread [WPF]
 - stylus plug-in
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c8eb0cf9f1cbb1be688f228b7bbd10a3a3ca6ed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc0ff8a2345bd945dd2fffdfda80f00e1ab99c67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-ink-threading-model"></a>Modello di threading dell'input penna
 Uno dei vantaggi dell'input penna di Tablet PC è che sensazione di scrittura con carta e penna regolare.  A tale scopo, la penna di Tablet PC raccoglie dati di input a una velocità maggiore rispetto a un mouse ed esegue il rendering dell'input penna mentre l'utente scrive.  Thread di interfaccia utente dell'applicazione non è sufficiente per la raccolta dei dati della penna e input penna di rendering, in quanto può essere bloccato.  Per risolvere il problema, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione utilizza due thread aggiuntivi quando un utente scrive input penna.  
@@ -72,11 +60,11 @@ Uno dei vantaggi dell'input penna di Tablet PC è che sensazione di scrittura co
   
  Nel diagramma precedente, il comportamento seguente viene eseguita:  
   
-1.  `StylusPlugin1`Modifica i valori per x e y.  
+1.  `StylusPlugin1` Modifica i valori per x e y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>riceve i punti dello stilo modificati e li esegue il rendering nel thread di rendering dinamico.  
+2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> riceve i punti dello stilo modificati e li esegue il rendering nel thread di rendering dinamico.  
   
-3.  `StylusPlugin2`riceve i punti dello stilo modificati e modifica ulteriormente i valori x e y.  
+3.  `StylusPlugin2` riceve i punti dello stilo modificati e un'ulteriore modifica i valori per x e y.  
   
 4.  L'applicazione raccoglie i punti dello stilo e, quando l'utente termina il tratto, in modo statico esegue il rendering del tratto.  
   
@@ -87,12 +75,12 @@ Uno dei vantaggi dell'input penna di Tablet PC è che sensazione di scrittura co
   
  Il diagramma seguente illustra la relazione tra il thread di penna e il thread dell'interfaccia utente rispetto agli eventi dello stilo di un <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  
   
- ![Modelli di Threading &#40; penna Interfaccia utente e penna &#41; ] (../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
+ ![Modelli di Threading dell'input penna &#40;dell'interfaccia utente e penna&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
   
 ## <a name="rendering-ink"></a>Il rendering di input penna  
  Come l'utente disegna un tratto, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> esegue il rendering dell'input penna in un thread separato in modo sembri "fluire" dalla penna anche quando il thread UI è occupato.  Il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> compila un struttura ad albero visuale del thread di rendering dinamico mentre raccoglie punti dello stilo.  Quando l'utente termina la traccia, il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> chiede di ricevere una notifica quando l'applicazione esegue il passaggio successivo per il rendering.  Dopo l'applicazione ha completato il passaggio di rendering successivo, il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> pulisce la struttura ad albero visuale.  Nel diagramma seguente viene illustrato questo processo.  
   
- ![Input penna threading diagramma](../../../../docs/framework/wpf/advanced/media/inkthreading-visualtree.png "InkThreading_VisualTree")  
+ ![Diagramma di threading dell'input penna](../../../../docs/framework/wpf/advanced/media/inkthreading-visualtree.png "InkThreading_VisualTree")  
   
 1.  L'utente inizia il tratto.  
   

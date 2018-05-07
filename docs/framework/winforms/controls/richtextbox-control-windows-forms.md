@@ -1,28 +1,16 @@
 ---
 title: Controllo RichTextBox (Windows Form)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - text boxes
 - RichTextBox control [Windows Forms]
 - rich edit controls
 ms.assetid: 3225f2ef-c6d9-4bd4-9d3e-2219e58edbf2
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4325fd3eb2e3d7179ddb5270d073c7ba5f0f383f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 00f28abeb616006e63a45dd7922f4d5b247e8dd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="richtextbox-control-windows-forms"></a>Controllo RichTextBox (Windows Form)
 Windows Form `RichTextBox` controllo viene utilizzato per la visualizzazione, l'immissione e la modifica del testo con formattazione. Il `RichTextBox` controllo esegue tutto il <xref:System.Windows.Forms.TextBox> dal controllo, ma può anche visualizzare i tipi di carattere, colori e collegamenti; caricare testo e immagini incorporate da un file; rollback e rollforward; operazioni di modifica e trovare i caratteri specificati. Il `RichTextBox` controllo viene in genere utilizzato per fornire funzionalità simili alle applicazioni di elaborazione di testi, ad esempio Microsoft Word di visualizzazione e modifica di testo. Come il <xref:System.Windows.Forms.TextBox> (controllo), il `RichTextBox` controllo può visualizzare le barre di scorrimento; ma a differenza di <xref:System.Windows.Forms.TextBox> (controllo), Visualizza le barre di scorrimento orizzontali e verticali per impostazione predefinita e quali fornisce impostazioni aggiuntive.  

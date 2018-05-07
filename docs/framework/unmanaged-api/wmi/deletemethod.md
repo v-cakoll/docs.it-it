@@ -2,10 +2,6 @@
 title: Funzione DeleteMethod (riferimenti alle API non gestite)
 description: La funzione DeleteMethod Elimina il metodo specificato da una definizione di classe CIM.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - DeleteMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 03b147d2fd76e34c6152a0b41ee14319811e9300
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd862910d0c9bb0274158c2c516211cef598a553
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deletemethod-function"></a>Funzione DeleteMethod
 Elimina il metodo specificato da una definizione di classe CIM.
@@ -53,7 +46,7 @@ HRESULT Delete (
 [in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
 
 `wszName`  
-[in] Il nome del metodo da rimuovere dalla tabella della classe. `wszName`deve essere un puntatore a un oggetto valido `LPCWSTR`.
+[in] Il nome del metodo da rimuovere dalla tabella della classe. `wszName` deve essere un puntatore a un valore valido `LPCWSTR`.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -76,7 +69,7 @@ L'eliminazione di metodo non è supportata per [IWbemClassObject](https://msdn.m
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

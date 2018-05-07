@@ -1,37 +1,23 @@
 ---
 title: "Procedura: aggiungere un endpoint ASP.NET AJAX con l'uso della configurazione"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 28051dbed626dc0073a38e72f2cdc21ea108a32e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f14b441ead7c701aa4f794370fc5f54ad3b4a4e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Procedura: aggiungere un endpoint ASP.NET AJAX con l'uso della configurazione
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consente di creare un servizio che rende disponibile un endpoint ASP.NET compatibile con AJAX che può essere chiamato da JavaScript su un sito Web client. Per creare tale endpoint è possibile utilizzare un file di configurazione, come con tutti gli altri endpoint [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], o un metodo che non richiede elementi di configurazione. In questo argomento viene illustrato l'approccio tramite configurazione.  
+Windows Communication Foundation (WCF) consente di creare un servizio che rende un endpoint disponibile che può essere chiamato da JavaScript su un sito Web client ASP.NET per AJAX. Per creare tale endpoint, è possibile utilizzare un file di configurazione, come con tutti gli altri endpoint di Windows Communication Foundation (WCF) o usare un metodo che non richiede elementi di configurazione. In questo argomento viene illustrato l'approccio tramite configurazione.  
   
- La parte della procedura che consente all'endpoint di servizio diventi ASP.NET per AJAX consiste nel configurare l'endpoint utilizzerà il <xref:System.ServiceModel.WebHttpBinding> e aggiungere il [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) il comportamento dell'endpoint. Dopo avere configurato l'endpoint, i passaggi per implementare e ospitare il servizio sono simili a quelli utilizzati da qualsiasi servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Per un esempio funzionante, vedere il [servizio AJAX con HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
+ La parte della procedura che consente all'endpoint di servizio diventi ASP.NET per AJAX consiste nel configurare l'endpoint utilizzerà il <xref:System.ServiceModel.WebHttpBinding> e aggiungere il [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) il comportamento dell'endpoint. Dopo aver configurato l'endpoint, i passaggi per implementare e ospitare il servizio sono simili a quelli utilizzati da qualsiasi servizio WCF. Per un esempio funzionante, vedere il [servizio AJAX con HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
  Per ulteriori informazioni su come configurare un endpoint ASP.NET AJAX senza configurazione, vedere [procedura: aggiungere ASP.NET AJAX senza utilizzando configurazione dell'Endpoint](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
 ### <a name="to-create-a-basic-wcf-service"></a>Per creare un servizio WFC di base  
   
-1.  Definire un contratto di servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di base con un'interfaccia contrassegnata con l'attributo <xref:System.ServiceModel.ServiceContractAttribute>. Contrassegnare ogni operazione con <xref:System.ServiceModel.OperationContractAttribute>. Assicurarsi di impostare la proprietà <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>.  
+1.  Definire un contratto di servizio WCF base con un'interfaccia contrassegnata con il <xref:System.ServiceModel.ServiceContractAttribute> attributo. Contrassegnare ogni operazione con <xref:System.ServiceModel.OperationContractAttribute>. Assicurarsi di impostare la proprietà <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>.  
   
     ```  
     [ServiceContract(Namespace = "MyService")]  

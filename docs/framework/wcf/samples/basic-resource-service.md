@@ -1,27 +1,15 @@
 ---
 title: Servizio risorse di base
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4360063e-cc8c-4648-846e-c05a5af51a7a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3ec743bbbb6d18d972701c3149179d6f615d1884
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-resource-service"></a>Servizio risorse di base
-Questo esempio illustra come implementare un servizio basato su HTTP utilizzando il modello di programmazione REST [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], che espone una raccolta di clienti che supporta operazioni di recupero, aggiunta, eliminazione e sostituzione. L'esempio è costituito da 2 componenti - un servizio HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] indipendente (Service.cs) e un'applicazione console (program.cs) che crea il servizio ed effettua chiamate verso il servizio.  
+In questo esempio viene illustrato come implementare un servizio basato su HTTP utilizzando il modello di programmazione REST di Windows Communication Foundation (WCF) che espone una raccolta di clienti che supporta il recupero, aggiungere, eliminare e sostituire operazioni. L'esempio è costituito da 2 componenti - un servizio HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] indipendente (Service.cs) e un'applicazione console (program.cs) che crea il servizio ed effettua chiamate verso il servizio.  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
  Il servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] presenta una raccolta di clienti in modo orientato alle risorse/REST. In breve, ciò significa disporre di URI univoci per la raccolta di clienti e per ogni cliente nella raccolta. Il servizio supporta l'invio di un HTTP `GET` all'URI della raccolta per recuperare l'intera raccolta e di HTTP `POST` all'URI della raccolta per aggiungere un nuovo cliente alla raccolta. Anche a livello di URI per singolo cliente, supporta `GET` HTTP per ottenere i dettagli del cliente, `PUT` HTTP per sostituire i dettagli del cliente e `DELETE` HTTP per rimuovere il cliente dalla raccolta. Quando un nuovo cliente viene aggiunto alla raccolta, il servizio gli assegna un URI univoco e lo archivia come parte dei dettagli del cliente. Inoltre, comunica l'URI al client utilizzando l'intestazione HTTP relativa al percorso della risposta.  
@@ -45,7 +33,7 @@ Questo esempio illustra come implementare un servizio basato su HTTP utilizzando
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   

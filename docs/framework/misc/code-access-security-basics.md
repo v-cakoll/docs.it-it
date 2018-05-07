@@ -1,31 +1,19 @@
 ---
-title: "Nozioni fondamentali sulla sicurezza per l’accesso al codice"
-ms.custom: 
+title: Nozioni fondamentali sulla sicurezza per l’accesso al codice
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [.NET Framework], code access security
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1fbeae8d01d9ef03c476679ea7fc59273b7a0a0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 77687934a91b92909bdbab1ede5075ace4326d4e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="code-access-security-basics"></a>Nozioni fondamentali sulla sicurezza per l’accesso al codice
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -36,9 +24,9 @@ ms.lasthandoff: 12/22/2017
   
  È necessario avere familiarità con i concetti attinenti alla sicurezza dall'accesso di codice, illustrati di seguito, per poter scrivere applicazioni efficienti basate su Common Language Runtime:  
   
--   **Codice indipendente dai tipi**: codice indipendente dai tipi è codice che accede ai tipi solo con modalità ben definite e consentite. Dato un riferimento a un oggetto valido, ad esempio, il codice indipendente dai tipi può accedere solo a offset fissi corrispondenti ai membri di campo effettivi. Se tuttavia il codice accede alla memoria a offset arbitrari esterni all'intervallo di memoria appartenente ai campi dell'oggetto esposti in modo pubblico, non sarà indipendente dai tipi. Per consentire al codice di usufruire dei vantaggi della sicurezza per l'accesso al codice, è necessario usare un compilatore che generi codice indipendente dai tipi verificabile. Per ulteriori informazioni, vedere il [scrivere codice indipendente dai tipi verificabile](#typesafe_code) sezione più avanti in questo argomento.  
+-   **Codice indipendente dai tipi**: codice indipendente dai tipi è codice che accede ai tipi solo in modalità ben definite e consentite. Dato un riferimento a un oggetto valido, ad esempio, il codice indipendente dai tipi può accedere solo a offset fissi corrispondenti ai membri di campo effettivi. Se tuttavia il codice accede alla memoria a offset arbitrari esterni all'intervallo di memoria appartenente ai campi dell'oggetto esposti in modo pubblico, non sarà indipendente dai tipi. Per consentire al codice di usufruire dei vantaggi della sicurezza per l'accesso al codice, è necessario usare un compilatore che generi codice indipendente dai tipi verificabile. Per ulteriori informazioni, vedere il [scrivere codice indipendente dai tipi verificabile](#typesafe_code) sezione più avanti in questo argomento.  
   
--   **La sintassi dichiarativa e imperativa**: codice destinato a common language runtime può interagire con il sistema di sicurezza richiedendo autorizzazioni, imponendo che i chiamanti dispongano di autorizzazioni specifiche e si esegue l'override di determinati (impostazioni di sicurezza ha privilegi sufficienti). Per interagire a livello di codice con il sistema di sicurezza di .NET Framework, è necessario usare due forme differenti di sintassi: la sintassi dichiarativa e la sintassi imperativa. Le chiamate dichiarative sono eseguite mediante l'impiego di attributi, le chiamate imperative mediante l'uso di nuove istanze di classi all'interno del codice. Alcune chiamate possono essere eseguite solo in modo imperativo, altre solo in modo dichiarativo e altre ancora in nessun modo.  
+-   **La sintassi dichiarativa e imperativa**: codice destinato a common language runtime può interagire con il sistema di sicurezza richiedendo autorizzazioni, imponendo che i chiamanti dispongano di autorizzazioni specifiche ed eseguendo l'override determinati (impostazioni di sicurezza ha privilegi sufficienti). Per interagire a livello di codice con il sistema di sicurezza di .NET Framework, è necessario usare due forme differenti di sintassi: la sintassi dichiarativa e la sintassi imperativa. Le chiamate dichiarative sono eseguite mediante l'impiego di attributi, le chiamate imperative mediante l'uso di nuove istanze di classi all'interno del codice. Alcune chiamate possono essere eseguite solo in modo imperativo, altre solo in modo dichiarativo e altre ancora in nessun modo.  
   
 -   **Librerie di classi sicure**: una libreria di classi protetta Usa richieste di sicurezza per garantire che i relativi chiamanti dispongano dell'autorizzazione per accedere alle risorse da essa esposte. Una libreria di classi protetta potrebbe ad esempio usare un metodo per la creazione di file mediante il quale si impone che i chiamanti dispongano di specifiche autorizzazioni per creare file. In .NET Framework sono disponibili librerie di classi protette. È necessario conoscere esattamente le autorizzazioni necessarie per l'accesso a ognuna delle librerie usate dal codice. Per ulteriori informazioni, vedere il [utilizzando librerie di classi protette](#secure_library) sezione più avanti in questo argomento.  
   

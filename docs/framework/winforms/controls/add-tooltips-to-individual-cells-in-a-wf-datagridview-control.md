@@ -1,14 +1,6 @@
 ---
 title: 'Procedura: aggiungere descrizioni comandi a singole celle in un controllo DataGridView di Windows Form'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding tooltips
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a533f4cbf5000489e774ba8661c3ab03cea4948a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 50eb02a8f6e9a987fad074c173ab6711fa91143f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Procedura: aggiungere descrizioni comandi a singole celle in un controllo DataGridView di Windows Form
 Per impostazione predefinita, le descrizioni comandi consentono di visualizzare i valori di <xref:System.Windows.Forms.DataGridView> celle che sono troppo piccole per visualizzare il contenuto intero. È possibile ignorare questo comportamento, tuttavia, per impostare i valori di testo della descrizione comando per le singole celle. Ciò è utile per visualizzare ulteriori informazioni su una cella o di fornire agli utenti una descrizione alternativa del contenuto della cella. Ad esempio, se si dispone di una riga che consente di visualizzare le icone di stato, è opportuno fornire descrizioni testuali tramite le descrizioni comandi.  

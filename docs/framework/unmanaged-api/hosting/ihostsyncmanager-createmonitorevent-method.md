@@ -1,14 +1,6 @@
 ---
 title: Metodo IHostSyncManager::CreateMonitorEvent
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateMonitorEvent
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 524c7fd3-9b5c-46e7-99ba-555fd2fe33f0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae12db71f4eae0f7d887fda26e05401f4f23ee5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d7cff23fc0b58d316ce19950a982249e84b79ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreatemonitorevent-method"></a>Metodo IHostSyncManager::CreateMonitorEvent
 Crea un oggetto evento di reimpostazione automatica monitorato.  
@@ -58,7 +46,7 @@ HRESULT CreateMonitorEvent (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`CreateMonitorEvent`stato restituito correttamente.|  
+|S_OK|`CreateMonitorEvent` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
@@ -67,7 +55,7 @@ HRESULT CreateMonitorEvent (
 |E_OUTOFMEMORY|È disponibile per creare l'oggetto evento richiesto non è sufficiente memoria.|  
   
 ## <a name="remarks"></a>Note  
- `CreateMonitorEvent`Restituisce un `IHostAutoEvent` usati da CLR nella sua implementazione di gestito <xref:System.Threading.Monitor?displayProperty=nameWithType> tipo. Questo metodo riflette Win32 `CreateEvent` funzione, con un valore di `false` specificato per il `bManualReset` parametro.  
+ `CreateMonitorEvent` Restituisce un `IHostAutoEvent` usati da CLR nella sua implementazione di gestito <xref:System.Threading.Monitor?displayProperty=nameWithType> tipo. Questo metodo riflette Win32 `CreateEvent` funzione, con un valore di `false` specificato per il `bManualReset` parametro.  
   
  L'host può utilizzare il cookie per determinare quale attività sono in attesa sul monitor chiamando il [ICLRSyncManager:: GetMonitorOwner](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md) metodo.  
   
@@ -76,9 +64,9 @@ HRESULT CreateMonitorEvent (
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

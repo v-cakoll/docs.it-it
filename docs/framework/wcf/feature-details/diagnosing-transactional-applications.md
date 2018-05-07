@@ -1,32 +1,18 @@
 ---
 title: Diagnostica di applicazioni transazionali
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4fa85fea0651d7a31c5a50bbc9c1226421b976b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnostica di applicazioni transazionali
-In questo argomento viene illustrato come utilizzare la funzionalità di gestione e di diagnostica di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per risolvere i problemi di un'applicazione transazionale.  
+In questo argomento viene descritto come utilizzare la funzionalità di diagnostica e gestione di Windows Communication Foundation (WCF) per risolvere i problemi di un'applicazione transazionale.  
   
-## <a name="performance-counters"></a>Contatori di prestazioni  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un set standard di contatori delle prestazioni per misurare le prestazioni delle applicazioni transazionali. Per altre informazioni, vedere [Contatori delle prestazioni](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+## <a name="performance-counters"></a>Contatori delle prestazioni  
+ WCF fornisce un set standard di contatori delle prestazioni per misurare le prestazioni dell'applicazione transazionale. Per altre informazioni, vedere [Contatori delle prestazioni](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
   
  I contatori delle prestazioni vengono definiti a tre diversi livelli: servizio, endpoint e operazione come descritto nelle tabelle seguenti.  
   
@@ -58,7 +44,7 @@ In questo argomento viene illustrato come utilizzare la funzionalità di gestion
 |Transazioni propagate al secondo|Numero di transazioni propagate alle operazioni in questo endpoint ogni secondo. Questo contatore viene incrementato ogni volta che è presente una transazione nel messaggio inviato all'endpoint.|  
   
 ## <a name="windows-management-instrumentation"></a>Strumentazione gestione Windows  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espone dati di ispezione di un servizio in fase di esecuzione tramite un provider WMI di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Per ulteriori informazioni sull'accesso ai dati WMI, vedere [tramite Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ WCF espone dati di ispezione di un servizio in fase di esecuzione tramite un provider di Strumentazione gestione Windows (WMI) di WCF. Per ulteriori informazioni sull'accesso ai dati WMI, vedere [tramite Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Un numero di proprietà WMI in sola lettura indica le impostazioni della transazione applicate per un servizio. Nella tabelle seguenti vengono elencate tutte queste impostazioni.  
   
@@ -100,13 +86,13 @@ In questo argomento viene illustrato come utilizzare la funzionalità di gestion
 ## <a name="tracing"></a>Traccia  
  Le tracce consentono di controllare e analizzare errori nelle applicazioni transazionali. È possibile attivare la traccia nei modi seguenti:  
   
--   Traccia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard  
+-   Traccia di WCF standard  
   
-     Questo tipo di traccia è equivalente alla traccia di qualsiasi applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Per altre informazioni, vedere [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Questo tipo di traccia è equivalente alla traccia di qualsiasi applicazione WCF. Per altre informazioni, vedere [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Traccia WS-AtomicTransaction  
   
-     Traccia WS-AtomicTransaction può essere abilitata utilizzando il [utilità configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Tale traccia consente di comprendere lo stato delle transazioni e di conoscere i partecipanti all'interno di un sistema. Per attivare anche la traccia del modello di servizi interna, è possibile impostare la chiave del Registro di sistema `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` su un valore valido dell'enumerazione <xref:System.Diagnostics.SourceLevels>. È possibile attivare la registrazione messaggi nella stessa modalità utilizzata per altre applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     Traccia WS-AtomicTransaction può essere abilitata utilizzando il [utilità configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Tale traccia consente di comprendere lo stato delle transazioni e di conoscere i partecipanti all'interno di un sistema. Per attivare anche la traccia del modello di servizi interna, è possibile impostare la chiave del Registro di sistema `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` su un valore valido dell'enumerazione <xref:System.Diagnostics.SourceLevels>. È possibile abilitare la registrazione nello stesso modo di altre applicazioni WCF dei messaggi.  
   
 -   Traccia `System.Transactions`  
   
@@ -131,7 +117,7 @@ In questo argomento viene illustrato come utilizzare la funzionalità di gestion
     </configuration>  
     ```  
   
-     In tal modo si attiva inoltre la traccia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], poiché anche [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'infrastruttura <xref:System.Transactions>.  
+     Ciò consente inoltre la traccia di WCF, come WCF utilizza anche il <xref:System.Transactions> dell'infrastruttura.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione e diagnostica](../../../../docs/framework/wcf/diagnostics/index.md)  

@@ -1,23 +1,15 @@
 ---
 title: Elenco degli attributi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: adfb980380bb787280715ca0185950657e174eb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 35d031722a5eddd6adce5e32df62b86c500d305b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attribute-list-visual-basic"></a>Elenco degli attributi (Visual Basic)
 Specifica gli attributi da applicare a un elemento di programmazione dichiarato. Gli attributi sono separati da una virgola. Di seguito è la sintassi per un attributo.  
@@ -36,10 +28,10 @@ Specifica gli attributi da applicare a un elemento di programmazione dichiarato.
  Obbligatorio. Nome dell'attributo.  
   
  `attributearguments`  
- Parametro facoltativo. Elenco di argomenti posizionali per questo attributo. Più argomenti sono separati da virgole.  
+ Facoltativo. Elenco di argomenti posizionali per questo attributo. Più argomenti sono separati da virgole.  
   
  `attributeinitializer`  
- Parametro facoltativo. Elenco di inizializzatori di variabile o proprietà per questo attributo. Gli inizializzatori sono separati da virgole.  
+ Facoltativo. Elenco di inizializzatori di variabile o proprietà per questo attributo. Gli inizializzatori sono separati da virgole.  
   
 ## <a name="remarks"></a>Note  
  È possibile applicare uno o più attributi a qualsiasi elemento di programmazione (tipi, procedure, le proprietà e così via). Gli attributi vengono visualizzati nei metadati dell'assembly e consentono di annotare il codice o specificare l'utilizzo di un particolare elemento di programmazione. È possibile applicare attributi definiti da Visual Basic e .NET Framework, ed è possibile definire attributi personalizzati.  
@@ -63,7 +55,7 @@ Specifica gli attributi da applicare a un elemento di programmazione dichiarato.
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute>indica che la routine con attributi rappresenta un punto di ingresso in una libreria di collegamento dinamico (DLL) non gestita. L'attributo fornisce il nome della DLL come un argomento posizionale e le altre informazioni come inizializzatori.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> indica che la routine con attributi rappresenta un punto di ingresso in una libreria di collegamento dinamico (DLL) non gestita. L'attributo fornisce il nome della DLL come un argomento posizionale e le altre informazioni come inizializzatori.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  

@@ -1,9 +1,6 @@
 ---
 title: Elenco dei tipi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - StructureConstraint
 - vb.StructureConstraint
@@ -27,14 +24,11 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 35e72414b236615dc230b654ccfeed290841fb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fbb07154fce27feb257b431c1726446b42fbfe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-list-visual-basic"></a>Elenco dei tipi (Visual Basic)
 Specifica il *parametri di tipo* per un *generico* elemento di programmazione. Più parametri sono separati da virgole. Di seguito è la sintassi per un parametro di tipo.  
@@ -49,9 +43,9 @@ Specifica il *parametri di tipo* per un *generico* elemento di programmazione. P
   
 |Termine|Definizione|  
 |---|---|  
-|`genericmodifier`|Parametro facoltativo. Può essere utilizzato solo nelle interfacce e delegati generici. È possibile dichiarare un tipo covariante utilizzando il [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) parola chiave o controvarianti utilizzando il [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) (parola chiave). Vedere [Covarianza e controvarianza](../../programming-guide/concepts/covariance-contravariance/index.md).|  
+|`genericmodifier`|Facoltativo. Può essere utilizzato solo nelle interfacce e delegati generici. È possibile dichiarare un tipo covariante utilizzando il [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) parola chiave o controvarianti utilizzando il [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) (parola chiave). Vedere [Covarianza e controvarianza](../../programming-guide/concepts/covariance-contravariance/index.md).|  
 |`typename`|Obbligatorio. Nome del parametro di tipo. Questo è un segnaposto, dovrà essere sostituito da un tipo definito specificato dall'argomento di tipo corrispondente.|  
-|`constraintlist`|Parametro facoltativo. Elenco di requisiti che vincolano il tipo di dati che può essere fornito per `typename`. Se si dispone di più vincoli, racchiuderli tra parentesi graffe (`{ }`) e separarle con virgole. È necessario introdurre l'elenco di vincoli con la [come](../../../visual-basic/language-reference/statements/as-clause.md) (parola chiave). Utilizzare `As` una sola volta, all'inizio dell'elenco.|  
+|`constraintlist`|Facoltativo. Elenco di requisiti che vincolano il tipo di dati che può essere fornito per `typename`. Se si dispone di più vincoli, racchiuderli tra parentesi graffe (`{ }`) e separarle con virgole. È necessario introdurre l'elenco di vincoli con la [come](../../../visual-basic/language-reference/statements/as-clause.md) (parola chiave). Utilizzare `As` una sola volta, all'inizio dell'elenco.|  
   
 ## <a name="remarks"></a>Note  
  Ogni elemento di programmazione generico deve prendere almeno un parametro di tipo. Un parametro di tipo è un segnaposto per un tipo specifico (un *elemento costruito*) che il codice client specifica quando crea un'istanza del tipo generico. È possibile definire una classe generica, struttura, interfaccia, routine o delegato.  

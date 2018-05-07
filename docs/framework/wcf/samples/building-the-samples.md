@@ -1,29 +1,15 @@
 ---
 title: Generazione degli esempi Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fcc57d28c109801cc5f995bebd31c49fcbdbe19c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 5493972306092fc3309b0993d595f22c74c8603a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Generazione degli esempi Windows Communication Foundation
-Il [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] esempi possono essere compilati utilizzando Visual Studio 2010 o tramite il **msbuild** comando dalla riga di comando. Entrambe le procedure sono descritte in questo argomento.  
+Gli esempi di Windows Communication Foundation (WCF) possono essere compilati utilizzando Visual Studio 2010 o tramite il **msbuild** comando dalla riga di comando. Entrambe le procedure sono descritte in questo argomento.  
   
 > [!NOTE]
 >  Prima di compilare o eseguire uno del [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] esempi, assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
@@ -52,7 +38,7 @@ Il [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] esempi possono essere
  I file batch Setup.exe e Cleanup.exe e gli script devono essere eseguiti da un prompt dei comandi di Visual Studio. Diversi file di installazione e pulizia eseguono attività che richiedono privilegi amministrativi e devono essere avviati con privilegi di questo tipo.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>Importanti informazioni di sicurezza sugli endpoint dei metadati  
- Per impedire la rivelazione non intenzionale di metadati del servizio potenzialmente riservati, la configurazione predefinita per i servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] disabilita la pubblicazione dei metadati. Questo comportamento è protetto per impostazione predefinita, ma significa inoltre che non è possibile usare uno strumento di importazione di metadati (ad esempio Svcutil.exe) per generare il codice client necessario per chiamare il servizio, a meno che il comportamento del servizio di pubblicazione dei metadati non venga abilitato in modo esplicito in fase di configurazione. Per rendere più semplice la sperimentazione con gli esempi, quasi tutti gli esempi espongono un endpoint di pubblicazione dei metadati non protetto. Tali endpoint sono potenzialmente disponibili per utenti anonimi non autenticati e bisogna fare attenzione prima di distribuirli per garantire che la pubblicazione dei metadati di un servizio sia appropriata. Per ulteriori informazioni sulla pubblicazione dei metadati di servizio, vedere la [comportamento della pubblicazione dei metadati](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) esempio. Vedere il [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) esempio per un esempio di protezione di un endpoint di metadati.  
+ Per evitare la diffusione accidentale di metadati del servizio potenzialmente riservati, la configurazione predefinita per i servizi Windows Communication Foundation (WCF) disabilita la pubblicazione dei metadati. Questo comportamento è protetto per impostazione predefinita, ma significa inoltre che non è possibile usare uno strumento di importazione di metadati (ad esempio Svcutil.exe) per generare il codice client necessario per chiamare il servizio, a meno che il comportamento del servizio di pubblicazione dei metadati non venga abilitato in modo esplicito in fase di configurazione. Per rendere più semplice la sperimentazione con gli esempi, quasi tutti gli esempi espongono un endpoint di pubblicazione dei metadati non protetto. Tali endpoint sono potenzialmente disponibili per utenti anonimi non autenticati e bisogna fare attenzione prima di distribuirli per garantire che la pubblicazione dei metadati di un servizio sia appropriata. Per ulteriori informazioni sulla pubblicazione dei metadati di servizio, vedere la [comportamento della pubblicazione dei metadati](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) esempio. Vedere il [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) esempio per un esempio di protezione di un endpoint di metadati.  
   
 ## <a name="exception-handling"></a>Gestione delle eccezioni  
  In genere questi esempi non includono la gestione delle eccezioni per focalizzare il codice sull'argomento dell'esempio. Per ulteriori informazioni sulla gestione delle eccezioni, vedere la [eccezioni previsto](../../../../docs/framework/wcf/samples/expected-exceptions.md) esempio.  

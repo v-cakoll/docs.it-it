@@ -1,13 +1,6 @@
 ---
 title: Procedure consigliate per ridimensionare il controllo DataGridView Windows Form
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], row sharing
 - data grids [Windows Forms], best practices
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd629bd38e08c8d6909ee4ad771f17b1554fc80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91153df539871de571375d7bf6d49d712a0c43b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Procedure consigliate per ridimensionare il controllo DataGridView Windows Form
 Il <xref:System.Windows.Forms.DataGridView> controllo è progettato per fornire la massima scalabilità. Se è necessario visualizzare grandi quantità di dati, è necessario seguire le linee guida descritte in questo argomento per evitare l'utilizzo di grandi quantità di memoria o diminuire la velocità di risposta dell'interfaccia utente (UI). In questo argomento vengono illustrati i problemi seguenti:  
@@ -124,7 +112,7 @@ Il <xref:System.Windows.Forms.DataGridView> controllo è progettato per fornire 
   
  Per impedire la rimozione della condivisione di righe, utilizzare le linee guida seguenti:  
   
--   Evitare l'indicizzazione di <xref:System.Windows.Forms.DataGridView.Rows%2A> raccolta o l'iterazione con un `foreach` ciclo. In genere non è necessario accedere direttamente alle righe. <xref:System.Windows.Forms.DataGridView>i metodi che operano sulle righe accettano gli argomenti di indice di riga invece istanze della riga. Inoltre, gestori di eventi relativi alle righe ricevono oggetti di argomento dell'evento con le proprietà di riga che è possibile utilizzare per modificare le righe senza che ne venga annullata.  
+-   Evitare l'indicizzazione di <xref:System.Windows.Forms.DataGridView.Rows%2A> raccolta o l'iterazione con un `foreach` ciclo. In genere non è necessario accedere direttamente alle righe. <xref:System.Windows.Forms.DataGridView> i metodi che operano sulle righe accettano gli argomenti di indice di riga invece istanze della riga. Inoltre, gestori di eventi relativi alle righe ricevono oggetti di argomento dell'evento con le proprietà di riga che è possibile utilizzare per modificare le righe senza che ne venga annullata.  
   
 -   Se è necessario accedere a un oggetto riga, utilizzare il <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> (metodo) e passare di indice effettivo la riga. Si noti tuttavia che la modifica di un oggetto riga condivisa recuperato mediante questo metodo modificare tutte le righe che condividono questo oggetto. La riga per nuovi record non è condivisa con altre righe, tuttavia, in modo che non sarà interessata quando si modifica qualsiasi altra riga. Si noti inoltre che il menu di scelta rapida diversi possono disporre di diverse righe rappresentata da una riga condivisa. Per recuperare il menu di scelta rapida corretto dall'istanza di una riga condivisa, utilizzare il <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A> (metodo) e passare di indice effettivo la riga. Se si accede della riga condivisa <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> proprietà, invece, verrà utilizzato l'indice di riga condivisa di -1 e non verrà recuperato il menu di scelta rapida corretto.  
   

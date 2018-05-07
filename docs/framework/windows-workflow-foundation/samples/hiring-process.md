@@ -1,29 +1,17 @@
 ---
 title: Processo di assunzione
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hiring-process"></a>Processo di assunzione
 In questo esempio viene illustrato come implementare un processo aziendale tramite attività di messaggistica e due flussi di lavoro ospitati come servizi flusso di lavoro e appartenenti all'infrastruttura IT di una società fittizia denominata Contoso, Inc.  
   
- Il processo del flusso di lavoro `HiringRequest`, implementato come un oggetto <xref:System.Activities.Statements.Flowchart>, chiede l'autorizzazione a diversi responsabili nell'organizzazione. Per raggiungere questo obiettivo, nel flusso di lavoro vengono usati altri servizi esistenti nell'organizzazione, in questo caso un servizio di posta in arrivo e un servizio dati organizzativo implementati come servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] normali.  
+ Il processo del flusso di lavoro `HiringRequest`, implementato come un oggetto <xref:System.Activities.Statements.Flowchart>, chiede l'autorizzazione a diversi responsabili nell'organizzazione. Per raggiungere questo obiettivo, il flusso di lavoro vengono usati altri servizi esistenti dell'organizzazione (in questo caso, un servizio di posta in arrivo e un servizio dati organizzativo implementati come servizi Windows Communication Foundation (WCF) semplice).  
   
  Il flusso di lavoro `ResumeRequest`, implementato come un oggetto <xref:System.Activities.Statements.Sequence>, pubblica un elenco di offerte di lavoro nel sito Web esterno delle carriere di Contoso e gestisce l'acquisizione dei curriculum. Tale elenco è disponibile nel sito Web esterno per un periodo fisso di tempo, ovvero fino alla scadenza di un timeout, o fino a quando un dipendente di Contoso non decide di rimuoverlo.  
   
@@ -64,7 +52,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -111,7 +99,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
 |ContosoHR|Contiene contratti dati, oggetti business e classi del repository.|  
 |HiringRequestService|Contiene la definizione del flusso di lavoro relativo al processo di richiesta di assunzione.<br /><br /> Il progetto viene implementato come un'applicazione console che ospita in modalità self-hosting il flusso di lavoro (file con estensione xaml) come un servizio.|  
 |ResumeRequestService|Servizio flusso di lavoro che raccoglie i curriculum dei candidati fino alla scadenza di un timeout o fino a quando qualcuno non decide che il processo deve essere arrestato.<br /><br /> Il progetto viene implementato come un servizio flusso di lavoro dichiarativo (file con estensione xamlx).|  
-|OrgService|Servizio che espone informazioni organizzative (dipendenti, posizioni, tipi di posizioni e reparti). Questo servizio può essere paragonato al modulo di organizzazione dell'azienda di una pianificazione ERP (Enterprise Resource Plan).<br /><br /> Il progetto viene implementato come un'applicazione console che espone un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].|  
+|OrgService|Servizio che espone informazioni organizzative (dipendenti, posizioni, tipi di posizioni e reparti). Questo servizio può essere paragonato al modulo di organizzazione dell'azienda di una pianificazione ERP (Enterprise Resource Plan).<br /><br /> Questo progetto viene implementato come un'applicazione console che espone un servizio Windows Communication Foundation (WCF).|  
 |InboxService|Casella di posta in arrivo che contiene attività in base alle quali i dipendenti intraprendono un'azione.<br /><br /> Il progetto viene implementato come un'applicazione console che espone un servizio WCF.|  
 |InternalClient|Applicazione Web per l'interazione con il processo. Gli utenti possono avviare e visualizzare i propri flussi di lavoro HiringProcess nonché parteciparvi. Grazie a questa applicazione, possono inoltre avviare e monitorare i processi ResumeRequest.<br /><br /> Questo sito viene implementato in modo che sia interno alla rete Intranet di Contoso, mentre il progetto viene implementato come un sito Web ASP.NET.|  
 |CareersWebSite|Sito Web esterno che espone le posizioni aperte in Contoso. Qualsiasi candidato potenziale può spostarsi in questo sito e inviare un curriculum.|  

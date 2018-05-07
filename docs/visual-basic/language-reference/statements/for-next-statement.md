@@ -1,11 +1,6 @@
 ---
 title: Istruzione For...Next (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Step
 - vb.Next
@@ -28,14 +23,11 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-caps.latest.revision: "64"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 8c54189499b7d5b52cf93b4a0ae6cc47356bf57e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fornext-statement-visual-basic"></a>Istruzione For...Next (Visual Basic)
 Ripete un gruppo di istruzioni di un numero di volte specificato.  
@@ -101,9 +93,9 @@ Next [ counter ]
   
  [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_4.vb)]  
   
- È possibile inserire un numero qualsiasi di `Exit For` le istruzioni in un `For`...`Next` Ciclo. Se utilizzato all'interno di cicli `For`...`Next` cicli, `Exit For` esce dal ciclo più interno e trasferisce il controllo del successivo livello superiore di annidamento.  
+ È possibile inserire un numero qualsiasi di `Exit For` istruzioni in un `For`...`Next` Ciclo. Quando utilizzato all'interno di cicli `For`...`Next` cicli, `Exit For` esce dal ciclo più interno e trasferisce il controllo del successivo livello superiore di annidamento.  
   
- `Exit For`viene spesso utilizzato dopo aver valutato alcune condizioni (ad esempio, in un `If`... `Then`... `Else` struttura). Si potrebbe voler usare `Exit For` per le condizioni seguenti:  
+ `Exit For` viene spesso utilizzato dopo aver valutato alcune condizioni (ad esempio, in un `If`... `Then`... `Else` struttura). Si potrebbe voler usare `Exit For` per le condizioni seguenti:  
   
 -   Continuare a eseguire l'iterazione è necessaria oppure è impossibile. Un valore errato o una richiesta di terminazione è possibile creare questa condizione.  
   
@@ -132,14 +124,14 @@ Next [ counter ]
   
  Il valore predefinito di `step` è 1.  
   
-###  <a name="BKMK_Counter"></a>Argomento contatore  
+###  <a name="BKMK_Counter"></a> Argomento contatore  
  Nella tabella seguente indica se `counter` definisce una nuova variabile locale con ambito limitato all'intero `For…Next` ciclo. Questo aspetto dipende dal fatto che `datatype` è presente e se `counter` è già definito.  
   
 |È `datatype` presente?|È `counter` già definito?|Risultato (se `counter` definisce una nuova variabile locale con ambito limitato all'intero `For...Next` ciclo)|  
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |No|Yes|No, in quanto `counter` è già definito. Se l'ambito di `counter` non è locale per la procedura, viene generato un avviso in fase di compilazione.|  
 |No|No|Sì. Il tipo di dati viene dedotto dal `start`, `end`, e `step` espressioni. Per informazioni sull'inferenza del tipo, vedere [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [locale l'inferenza del tipo](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|  
-|Yes|Sì|Sì, ma solo se l'oggetto esistente `counter` variabile viene definita all'esterno della routine. Tale variabile rimane separata. Se l'ambito dell'oggetto esistente `counter` variabile è locale per la procedura, si verifica un errore in fase di compilazione.|  
+|Yes|Yes|Sì, ma solo se l'oggetto esistente `counter` variabile viene definita all'esterno della routine. Tale variabile rimane separata. Se l'ambito dell'oggetto esistente `counter` variabile è locale per la procedura, si verifica un errore in fase di compilazione.|  
 |Yes|No|Sì.|  
   
  Il tipo di dati `counter` determina il tipo dell'iterazione, che deve essere uno dei seguenti tipi:  
