@@ -1,14 +1,6 @@
 ---
 title: Funzione CoEEShutDownCOM
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CoEEShutDownCOM
 api_location:
@@ -25,17 +17,13 @@ helpviewer_keywords:
 ms.assetid: b634cae2-632f-4737-9be4-92d0652844d7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0ae339310c2bfd186cae798ff603d69735abeefd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0b30cc2c499644ffc97a734e1554e4e352b34af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coeeshutdowncom-function"></a>Funzione CoEEShutDownCOM
 Impone a common language runtime (CLR) per rilasciare tutti i puntatori di interfaccia, contiene all'interno di runtime callable wrapper (RCW). Questo ha l'effetto di rilascio di tutte le cache RCW. Questa funzione globale è deprecata nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Utilizzare invece il punto di ingresso per una specifica del runtime.  
@@ -59,9 +47,9 @@ void CoEEShutDownCOM ();
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in MsCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni statiche globali dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

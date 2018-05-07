@@ -1,14 +1,6 @@
 ---
 title: Metodo ICLRRuntimeHost::GetCLRControl
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeHost.GetCLRControl
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e47e3655-efd5-4572-a1dc-50c69bf2a468
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc8cc80e24e3dd03d3c179d91fe16b8391502bf1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 86858d5fe5bf9ac07a91e810599c27a479141f4d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimehostgetclrcontrol-method"></a>Metodo ICLRRuntimeHost::GetCLRControl
 Ottiene un puntatore a interfaccia di tipo [interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) che gli host possono usare per personalizzare gli aspetti di common language runtime (CLR).  
@@ -54,7 +42,7 @@ HRESULT GetCLRControl(
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`GetCLRControl`stato restituito correttamente.|  
+|S_OK|`GetCLRControl` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
@@ -63,16 +51,16 @@ HRESULT GetCLRControl(
 |HOST_E_INVALIDOPERATION|CLR è già avviato.|  
   
 ## <a name="remarks"></a>Note  
- `ICLRControl`fornisce il [GetCLRManager (metodo)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) metodo, che consente all'host di ottenere un puntatore a interfaccia a uno dei tipi di gestore.  
+ `ICLRControl` fornisce la [GetCLRManager (metodo)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) (metodo), che consente all'host ottenere un puntatore a interfaccia a uno dei tipi di gestione.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  

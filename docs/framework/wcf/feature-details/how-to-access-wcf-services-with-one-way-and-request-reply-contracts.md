@@ -1,27 +1,15 @@
 ---
 title: 'Procedura: accedere a servizi WCF con un contratto unidirezionale o request/reply'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ae2153ef7246194774535fd399d03dd109a221a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Procedura: accedere a servizi WCF con un contratto unidirezionale o request/reply
-Le procedure seguenti descrivono come accedere a un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] che definisce un contratto unidirezionale o un contratto request/reply e in cui non viene utilizzato il modello di comunicazione duplex.  
+Le procedure seguenti descrivono come per accedere a un servizio Windows Communication Foundation (WCF) che definisce un contratto unidirezionale e un contratto request/reply e che non utilizza il modello di comunicazione duplex.  
   
 ### <a name="to-define-the-service"></a>Per definire il servizio  
   

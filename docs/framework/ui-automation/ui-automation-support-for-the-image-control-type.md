@@ -1,28 +1,19 @@
 ---
 title: Supporto per automazione interfaccia utente del tipo di controllo Image
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Image control type
 - control types, Image
 - Image control type
 ms.assetid: 4e0eeefb-e09b-46d2-b83b-0a7e35543ab8
-caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 1e151c846297d7876beb6938ad865c42b2b78321
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 19e9eba730891d5d066a1435b4f8abe7c8046dee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-image-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo Image
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 |Visualizzazione controlli|Visualizzazione contenuto|  
 |------------------|------------------|  
-|Immagine|Immagine (a seconda che l'immagine contenga informazioni (in base al valore della proprietà `IsContentElement` ))|  
+|Image|Immagine (a seconda che l'immagine contenga informazioni (in base al valore della proprietà `IsContentElement` ))|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Proprietà di automazione interfaccia utente obbligatorie  
@@ -69,7 +60,7 @@ ms.lasthandoff: 12/22/2017
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|A seconda dei casi|Se il controllo si trova all'interno di un contenitore della griglia, il controllo immagine supporta il pattern GridItem.|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider>|A seconda dei casi|Se il controllo si trova all'interno di un contenitore con controlli intestazione, il controllo immagine supporta il pattern TableItem.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Mai|Se il controllo immagine contiene un'immagine selezionabile, il controllo deve supportare un tipo di controllo che supporta il pattern Invoke, ad esempio il tipo di controllo Button.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Never|Se il controllo immagine contiene un'immagine selezionabile, il controllo deve supportare un tipo di controllo che supporta il pattern Invoke, ad esempio il tipo di controllo Button.|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Never|I controlli immagine non devono supportare il pattern SelectionItem.|  
   
 <a name="Required_UI_Automation_Events"></a>   
@@ -78,16 +69,16 @@ ms.lasthandoff: 12/22/2017
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Supporto|Note|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Mai|nessuno|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Mai|nessuno|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Mai|nessuno|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Mai|None|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> .|Obbligatorio|Nessuna|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|Nessuna|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|nessuno|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Never|Nessuno|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Never|Nessuno|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Never|Nessuno|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Never|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> .|Obbligatorio|Nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|Nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|Nessuno|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Automation.ControlType.Image>  

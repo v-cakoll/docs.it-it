@@ -1,14 +1,6 @@
 ---
 title: Metodo ICorDebugFrame::GetChain
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugFrame.GetChain
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e28e51d3-8f73-494f-bcd4-48bac239fbe1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 479ad2db4752f9e031783b430396286c6989b115
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 06c020b9f6c074be11e3433939ce6898586123cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugframegetchain-method"></a>Metodo ICorDebugFrame::GetChain
 Ottiene un puntatore alla catena di di che questo fotogramma fa parte.  
@@ -53,8 +41,8 @@ HRESULT GetChain (
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, Cordebug. H  
+ **Intestazione:** Cordebug. idl, Cordebug. H  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

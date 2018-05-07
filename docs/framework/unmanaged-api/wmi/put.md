@@ -1,11 +1,7 @@
 ---
 title: Funzione Put (riferimenti alle API non gestite)
-description: "La funzione Put assegna un nuovo valore a una proprietà denominata."
+description: La funzione Put assegna un nuovo valore a una proprietà denominata.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 09d3edc74b34688d5cc36e688f634850cfb60910
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f3ffe27bef6583b733fc04f2f25903d545daa74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="put-function"></a>Put (funzione)
 Imposta una proprietà denominata su un nuovo valore.
@@ -93,7 +86,7 @@ Un utente non è possibile creare proprietà con nomi che iniziano o terminano c
 
 Se la proprietà impostata per il `Put` funzione esiste nella classe padre, il valore predefinito della proprietà viene modificato, a meno che il tipo della proprietà corrisponde al tipo di classe padre. Se la proprietà non esiste e non è un tipo non corrispondente, la proprietà è creata.
 
-Utilizzare il `vtType` parametro solo durante la creazione di nuove proprietà in una definizione di classe CIM e `pVal` è `null` o faccia riferimento a un `VARIANT` di tipo `VT_NULL`. In questo caso, il `vType` parametro specifica il tipo CIM della proprietà. In ogni caso, `vtType` deve essere 0. `vtType`deve essere 0 se l'oggetto sottostante è un'istanza (anche se `Val` è `null`) perché il tipo della proprietà è fisso e non può essere modificato.   
+Utilizzare il `vtType` parametro solo durante la creazione di nuove proprietà in una definizione di classe CIM e `pVal` è `null` o faccia riferimento a un `VARIANT` di tipo `VT_NULL`. In questo caso, il `vType` parametro specifica il tipo CIM della proprietà. In ogni caso, `vtType` deve essere 0. `vtType` deve essere 0 se l'oggetto sottostante è un'istanza (anche se `Val` è `null`) perché il tipo della proprietà è fisso e non può essere modificato.   
 
 ## <a name="example"></a>Esempio
 
@@ -104,7 +97,7 @@ Per un esempio, vedere il [IWbemClassObject::Put](https://msdn.microsoft.com/lib
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

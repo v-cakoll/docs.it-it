@@ -1,14 +1,6 @@
 ---
 title: 'Procedura: usare certificati X.509 separati per la firma e la crittografia'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f6103dd8f680752581a51cba7ba61c83522decc2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: d171af8dbcbbdd51cc015986a2c69e0393fe56dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Procedura: usare certificati X.509 separati per la firma e la crittografia
-In questo argomento viene illustrato come configurare [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per utilizzare certificati diversi per la firma e la crittografia dei messaggi sul client e nel servizio.  
+In questo argomento viene illustrato come configurare Windows Communication Foundation (WCF) per l'utilizzo di certificati diversi per la firma dei messaggi e la crittografia nel client e servizio.  
   
  Per consentire l'utilizzo di certificati separati per la firma e la crittografia, è necessario creare credenziali personalizzate del client o del servizio (o di entrambi) poiché in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non viene fornita alcuna API per impostare più certificati client o del servizio. È inoltre necessario specificare un gestore del token di sicurezza per utilizzare le informazioni di più certificati e creare un provider di token di sicurezza appropriato per l'utilizzo della chiave specificata e la direzione del messaggio.  
   

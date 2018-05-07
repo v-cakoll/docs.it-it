@@ -1,14 +1,6 @@
 ---
 title: Interfaccia ICLRMetaHostPolicy
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRMetaHostPolicy
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1bdeccb6-0698-4c97-ad69-eae2b69e59f1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd9b8d6aef2289833a0bd192b838e6f70ea8c0ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9a70cf0812f84908630f109ef06aafa4b4f7525
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrmetahostpolicy-interface"></a>Interfaccia ICLRMetaHostPolicy
 Fornisce il [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) metodo, che restituisce un puntatore a un'interfaccia di runtime (CLR) di linguaggio comune in base a criteri di criteri, gestito al file di configurazione, versione e assembly.  
@@ -62,9 +50,9 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
   
  **Intestazione:** Metahost. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfacce di hosting CLR aggiunte in .NET Framework 4 e 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  

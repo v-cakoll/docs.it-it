@@ -1,27 +1,15 @@
 ---
 title: 'Procedura: importare asserzioni di criteri personalizzati'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 916f5b820ce9e1c30c13a9834548c83e32bc3579
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6155296e264bb3ae90aac2ee6b83797e632962e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Procedura: importare asserzioni di criteri personalizzati
 Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoint del servizio.  Le applicazioni client possono utilizzare asserzioni di criteri nei metadati del servizio per configurare l'associazione del client o per personalizzare il contratto di servizio per un endpoint del servizio.  
@@ -51,7 +39,7 @@ Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoin
   
 3.  Eseguire la personalizzazione dell'associazione o del contratto che supporta la funzionalità o il requisito specificato dall'asserzione del criterio. In genere, le asserzioni indicano che un'associazione richiede una particolare configurazione o uno specifico elemento di associazione. Apportare queste modifiche accedendo alla proprietà <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType>. Le altre asserzioni richiedono che si modifichi il contratto.  È possibile accedere e modificare il contratto utilizzando la proprietà <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType>.  Si noti che l'unità di importazione dei criteri può venire chiamata più volte per la stessa associazione e per lo stesso contratto, ma per alternative criteri diverse se l'importazione di un'alternativa criterio non riesce. Il codice deve adattarsi a questo comportamento.  
   
-4.  Rimuovere l'asserzione di criteri personalizzata dalla raccolta di asserzioni. Se l'asserzione non viene rimossa, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] presuppone che l'importazione del criterio non sia stata completata correttamente e non importa l'associazione associata. Se è stato utilizzato il metodo <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> per individuare l'asserzione di criteri personalizzata e rimuoverla dalla raccolta in un unico passaggio, non è necessario eseguire questa procedura.  
+4.  Rimuovere l'asserzione di criteri personalizzata dalla raccolta di asserzioni. Se non si rimuove l'asserzione di Windows Communication Foundation (WCF) presuppone che l'importazione dei criteri non è riuscita e non importa l'associazione associata. Se è stato utilizzato il metodo <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> per individuare l'asserzione di criteri personalizzata e rimuoverla dalla raccolta in un unico passaggio, non è necessario eseguire questa procedura.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Per inserire l'unità di importazione di criteri personalizzata nel sistema di metadati utilizzando un file di configurazione  
   

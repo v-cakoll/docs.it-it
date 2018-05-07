@@ -1,14 +1,6 @@
 ---
 title: Metodo IHostTaskManager::EnterRuntime
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.EnterRuntime
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1aa7a4b1-636a-4f5e-b834-b406d72f7120
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 70c9e83311fd7427895e1957d3511a45c47434e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a47f51ba32a9dfc16300a8de7c2d4b380a8ba988
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagerenterruntime-method"></a>Metodo IHostTaskManager::EnterRuntime
 Notifica all'host che una chiamata a un metodo non gestito, ad esempio un platform invoke (metodo), restituisce il controllo dell'esecuzione a common language runtime (CLR).  
@@ -48,7 +36,7 @@ HRESULT EnterRuntime ();
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`EnterRuntime`stato restituito correttamente.|  
+|S_OK|`EnterRuntime` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
@@ -57,7 +45,7 @@ HRESULT EnterRuntime ();
 |E_OUTOFMEMORY|Memoria insufficiente è disponibile per completare la richiesta di allocazione.|  
   
 ## <a name="remarks"></a>Note  
- `EnterRuntime`viene chiamato per notificare all'host che una funzione non gestita, per cui una chiamata precedente al [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md) metodo è stato effettuato, ha terminato l'esecuzione e sta restituendo il controllo al runtime.  
+ `EnterRuntime` viene chiamato per notificare all'host che una funzione non gestita, per cui una chiamata precedente ai [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md) metodo è stata effettuata, ha terminato l'esecuzione e sta restituendo il controllo al runtime.  
   
 > [!NOTE]
 >  [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md) viene chiamato per notificare all'host che una funzione non gestita, per cui una chiamata precedente a `LeaveRuntime` è stato effettuato, effettua una chiamata nel codice gestito.  
@@ -67,9 +55,9 @@ HRESULT EnterRuntime ();
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interoperabilità COM avanzata](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  

@@ -1,37 +1,27 @@
 ---
 title: Concetti sulla protezione
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-caps.latest.revision: "11"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1ac16afc6ee22665188d5df5e79288341072026e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2379c009cacf4cd2adac0aeebbade437e8483af4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concepts"></a>Concetti sulla protezione
-Contenuto della sezione vengono spiegati brevemente i concetti associati alla sicurezza in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+In questa sezione viene illustrato brevemente i concetti associati sicurezza Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Concetti relativi alla sicurezza in WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
  Panoramica dettagliata dei concetti utilizzati nelle implementazioni di sicurezza.  
   
  [Sicurezza delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- Panoramica della modalità con cui in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene fornita la sicurezza nella topografia di applicazioni distribuite.  
+ Panoramica del modo in cui WCF fornisce la sicurezza nella topografia di applicazioni distribuite.  
   
  [Terminologia della sicurezza](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
- Glossario dei termini utilizzati nella descrizione della sicurezza in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Un glossario dei termini utilizzati nella descrizione sicurezza WCF.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel>  

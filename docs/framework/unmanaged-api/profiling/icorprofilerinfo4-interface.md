@@ -1,14 +1,6 @@
 ---
 title: Interfaccia ICorProfilerInfo4
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo4
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 80a5308e-c22f-4201-ba89-31cc8562515b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 83629d0fc8288d118ec31c38473cb63335bb1d48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f452a3324365fb23e1affc11dbdb2ede15346010
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo4-interface"></a>Interfaccia ICorProfilerInfo4
 Fornisce metodi che code profiler possono usare per comunicare con il common language runtime (CLR) per controllare il monitoraggio degli eventi e informazioni sulla richiesta. . Il `ICorProfilerInfo4` interfaccia è un'estensione degli altri `ICorProfilerInfo` interfacce. Fornisce nuovi metodi per supportare la ricompilazione di just-in-time (JIT), aggiunta il [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
@@ -60,9 +48,9 @@ Fornisce metodi che code profiler possono usare per comunicare con il common lan
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  

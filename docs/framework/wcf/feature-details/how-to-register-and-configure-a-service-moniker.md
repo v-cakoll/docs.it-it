@@ -1,36 +1,22 @@
 ---
 title: 'Procedura: registrare e configurare un moniker servizio'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 52b3ec27560ca2dc47b7951cb209f33f307fa7ea
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1d245327c1e7d53de9a88c93ff0399d8e231a1df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Procedura: registrare e configurare un moniker servizio
-Per usare il moniker servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] all'interno di un'applicazione COM con un contratto tipizzato, è necessario registrare i tipi con attributi necessari con COM e configurare l'applicazione COM e il moniker con la configurazione dell'associazione necessaria.  
+Prima di usare il moniker del servizio Windows Communication Foundation (WCF) all'interno di un'applicazione COM con un contratto tipizzato, è necessario registrare i tipi con attributi necessari con COM e configurare l'applicazione COM e il moniker con il binding richiesto configurazione.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Per registrare i tipi con attributi necessari con COM  
   
-1.  Utilizzare il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) strumento per il contratto di metadati da recuperare il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio. Questo genera il codice sorgente per un assembly client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e un file di configurazione dell'applicazione client.  
+1.  Usare la [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) strumento per recuperare il contratto di metadati dal servizio WCF. Questo genera il codice sorgente per un assembly client WCF e un file di configurazione dell'applicazione client.  
   
 2.  Assicurarsi che i tipi nell'assembly siano contrassegnati come `ComVisible`. A tale scopo, aggiungere l'attributo seguente al file AssemblyInfo.cs nel progetto di Visual Studio.  
   
@@ -38,7 +24,7 @@ Per usare il moniker servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Compilare il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gestito come assembly con nome sicuro. Ciò richiede una firma con una coppia di chiavi di crittografia. Per altre informazioni, vedere [firma di un Assembly con un nome sicuro](http://go.microsoft.com/fwlink/?LinkId=94874) nella Guida per sviluppatori .NET.  
+3.  Compilare il client WCF gestito come un assembly con nome sicuro. Ciò richiede una firma con una coppia di chiavi di crittografia. Per altre informazioni, vedere [firma di un Assembly con un nome sicuro](http://go.microsoft.com/fwlink/?LinkId=94874) nella Guida per sviluppatori .NET.  
   
 4.  Usare lo strumento di registrazione degli assembly (Regasm.exe) con l'opzione `/tlb`, per registrare i tipi nell'assembly con COM.  
   
@@ -49,7 +35,7 @@ Per usare il moniker servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>Per configurare l'applicazione COM e il moniker con la configurazione dell'associazione necessaria  
   
--   Inserire le definizioni di associazione (generati dal [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) nel file di configurazione dell'applicazione client generato) nel file di configurazione dell'applicazione client. Ad esempio, per il file eseguibile di Visual Basic 6.0 denominato CallCenterClient.exe, la configurazione deve essere posizionata in un file denominato CallCenterConfig.exe.config all'interno della stessa directory del file eseguibile. L'applicazione client può ora usare il moniker. Si noti che la configurazione dell'associazione non è necessaria in caso di uso di uno dei tipi di associazione standard forniti da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   Inserire le definizioni di associazione (generati dal [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) nel file di configurazione dell'applicazione client generato) nel file di configurazione dell'applicazione client. Ad esempio, per il file eseguibile di Visual Basic 6.0 denominato CallCenterClient.exe, la configurazione deve essere posizionata in un file denominato CallCenterConfig.exe.config all'interno della stessa directory del file eseguibile. L'applicazione client può ora usare il moniker. Si noti che la configurazione dell'associazione non è necessario se si utilizza uno dei tipi forniti da WCF di associazione standard.  
   
      Viene registrato il tipo seguente.  
   

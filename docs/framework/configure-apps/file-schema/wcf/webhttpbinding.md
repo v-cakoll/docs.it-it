@@ -2,11 +2,11 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: abc08f81ac05aa42ff7247edf662f8dd4482fd4a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 3a5a0844da401607b2049069e7195fa996c62fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 Definisce un elemento di associazione utilizzato per configurare endpoint per servizi Web di Windows Communication Foundation (WCF) che rispondono alle richieste HTTP anziché a messaggi SOAP.  
@@ -86,9 +86,9 @@ Definisce un elemento di associazione utilizzato per configurare endpoint per se
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
- Il modello di programmazione Web di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] consente agli sviluppatori di esporre servizi Web [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] tramite richieste HTTP che usano messaggistica in stile POX (Plain Old XML) anziché messaggistica basata su SOAP. I client possano comunicare con un servizio mediante richieste HTTP, un endpoint del servizio deve essere configurato con il [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) che ha il \<WebHttpBehavior > associata.  
+ Il modello di programmazione Web WCF consente agli sviluppatori di esporre servizi Web WCF tramite richieste HTTP che usano "plain old XML") in stile POX (messaggistica anziché messaggistica basata su SOAP. I client possano comunicare con un servizio mediante richieste HTTP, un endpoint del servizio deve essere configurato con il [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) che ha il \<WebHttpBehavior > associata.  
   
- Il supporto della pubblicazione via RSS e dell'integrazione ASP.AJAX in [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] è integrato nel modello di programmazione Web. Per ulteriori informazioni sul modello, vedere [modello di programmazione HTTP Web WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
+ Il supporto in WCF RSS e ASP. Integrazione AJAX si basano entrambi sul modello di programmazione Web. Per ulteriori informazioni sul modello, vedere [modello di programmazione HTTP Web WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.WebHttpBinding>  

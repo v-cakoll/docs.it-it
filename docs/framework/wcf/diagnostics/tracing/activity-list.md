@@ -1,27 +1,15 @@
 ---
-title: "Elenco delle attività"
-ms.custom: 
+title: Elenco delle attività
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e7a371d43237b795536711cf1745030e14d6eca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc504c37b21a2d457f270331ab917747bafbb022
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-list"></a>Elenco delle attività
-In questo argomento sono elencate tutte le attività definite in [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+In questo argomento vengono elencate tutte le attività definite da Windows Communication Foundation (WCF).  
   
 > [!NOTE]
 >  È inoltre possibile definire attività a livello di programmazione allo scopo di raggruppare più tracce utente. Per ulteriori informazioni, vedere [la creazione di tracce di codice utente](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
@@ -33,8 +21,8 @@ In questo argomento sono elencate tutte le attività definite in [!INCLUDE[indig
 |-----------|-------------------|-------------------|-----------------|  
 |A, M|Attività di ambiente|N/D (non controllata da ServiceModel)|Attività il cui ID viene impostato in TLS prima che venga effettuata qualsiasi chiamata al codice di ServiceModel, sia esso lato client o lato server.<br /><br /> Esempio: un'attività in cui viene chiamata l'attività di apertura del client [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] oppure dove viene chiamata l'attività serviceHost.open.|  
 |B|Costrutto<br /><br /> ChannelFactory. ContractType : "[tipo]".|Costrutto||  
-|C|Apri<br /><br /> [ClientBase &#124; ChannelFactory]. ContractType : "[tipo]".|Apri||  
-|I|Chiusura [ClientBase &#124; ChannelFactory]. ContractType : "[tipo]".|Chiudi||  
+|C|Apri<br /><br /> [ClientBase&#124;ChannelFactory]. ContractType : "[tipo]".|Apri||  
+|I|Chiusura [ClientBase&#124;ChannelFactory]. ContractType : "[tipo]".|Chiudi||  
 |M|Costruzione ServiceHost. ServiceType: "[tipo]".|Costrutto||  
 |N|Apertura di ServiceHost. ServiceType: "[tipo]".|Apri||  
 |Z|Chiusura di ServiceHost. ServiceType: "[tipo]".|Chiudi||  

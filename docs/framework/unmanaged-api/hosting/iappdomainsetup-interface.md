@@ -1,14 +1,6 @@
 ---
 title: Interfaccia IAppDomainSetup
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAppDomainSetup
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1844da85-c031-40bf-bea4-1a3d12a36c8c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9db1b787015231b3d9053d4ed316cb70c5db96ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbcbc446eabcfcbc28c830f8860bde726c8eb6e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iappdomainsetup-interface"></a>Interfaccia IAppDomainSetup
 Fornisce proprietà che consentono all'host configurare un <xref:System.AppDomain?displayProperty=nameWithType> tipo prima di chiamare il [ICorRuntimeHost:: CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) metodo per la sua creazione.  
@@ -55,16 +43,16 @@ Fornisce proprietà che consentono all'host configurare un <xref:System.AppDomai
 ## <a name="remarks"></a>Note  
  Il `IAppDomainSetup` interfaccia corrisponde a quella gestita <xref:System.IAppDomainSetup> interfaccia, quale il <xref:System.AppDomainSetup> il tipo implementa. Vedere <xref:System.IAppDomainSetup?displayProperty=nameWithType> per una descrizione dettagliata delle relative proprietà.  
   
- `IAppDomainSetup`rappresenta le informazioni di associazione di assembly che possono essere aggiunti a un <xref:System.AppDomain> istanza prima della relativa creazione. Ad esempio, è possibile impostare un host di <xref:System.AppDomainSetup.ApplicationBase%2A> proprietà per definire una directory radice, common language runtime (CLR) viene eseguita la ricerca di assembly gestiti.  
+ `IAppDomainSetup` rappresenta le informazioni di associazione di assembly che possono essere aggiunti a un <xref:System.AppDomain> istanza prima la sua creazione. Ad esempio, è possibile impostare un host di <xref:System.AppDomainSetup.ApplicationBase%2A> proprietà per definire una directory radice, common language runtime (CLR) viene eseguita la ricerca di assembly gestiti.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.AppDomain>  

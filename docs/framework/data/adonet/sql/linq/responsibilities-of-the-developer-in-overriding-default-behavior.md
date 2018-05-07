@@ -1,33 +1,21 @@
 ---
-title: "Responsabilità dello sviluppatore nell'override del comportamento predefinito"
-ms.custom: 
+title: Responsabilità dello sviluppatore nell'override del comportamento predefinito
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7de5dbcad14ebfd253ba99f03a8d77e768f29941
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 90b8eedcc80c330a39efe97b6427beebeca913f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Responsabilità dello sviluppatore nell'override del comportamento predefinito
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]non impone i requisiti seguenti, ma il comportamento sarà indefinito se tali requisiti non vengono soddisfatti.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non impone i requisiti seguenti, tuttavia il comportamento sarà indefinito se tali requisiti non vengono soddisfatti.  
   
--   Il metodo di override non deve chiamare <xref:System.Data.Linq.DataContext.SubmitChanges%2A> o <xref:System.Data.Linq.Table%601.Attach%2A>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]genera un'eccezione se questi metodi vengono chiamati in un metodo di override.  
+-   Il metodo di override non deve chiamare <xref:System.Data.Linq.DataContext.SubmitChanges%2A> o <xref:System.Data.Linq.Table%601.Attach%2A>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genera un'eccezione se questi metodi vengono chiamati in un metodo di override.  
   
 -   Non è possibile usare i metodi di override per avviare, eseguire il commit o interrompere una transazione. L'operazione <xref:System.Data.Linq.DataContext.SubmitChanges%2A> viene eseguita in una transazione. Una transazione annidata interna può interferire con la transazione esterna. I metodi di override del caricamento possono avviare una transazione solo dopo avere determinano che l'operazione non viene eseguita in <xref:System.Transactions.Transaction>.  
   
--   È previsto che i metodi di override seguano il mapping di concorrenza ottimistica applicabile. Il metodo di override dovrebbe generare un'eccezione <xref:System.Data.Linq.ChangeConflictException> quando si verifica un conflitto di concorrenza ottimistica. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Questa eccezione in modo che è possibile elaborare correttamente il <xref:System.Data.Linq.DataContext.SubmitChanges%2A> opzione disponibile in <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
+-   È previsto che i metodi di override seguano il mapping di concorrenza ottimistica applicabile. Il metodo di override dovrebbe generare un'eccezione <xref:System.Data.Linq.ChangeConflictException> quando si verifica un conflitto di concorrenza ottimistica. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rileva questa eccezione in modo che è possibile elaborare correttamente le <xref:System.Data.Linq.DataContext.SubmitChanges%2A> opzione disponibile in <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
   
 -   I metodi di creazione (`Insert`) e di override `Update` dovrebbero trasferire di nuovo i valori per le colonne generate dal database ai corrispondenti membri dell'oggetto quando l'operazione viene completata correttamente.  
   

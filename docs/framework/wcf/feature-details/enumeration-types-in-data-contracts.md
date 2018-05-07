@@ -1,31 +1,17 @@
 ---
 title: Tipi di enumerazioni nei contratti dati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7989996f7ed64ba4b85ddc1ca01538ec05e99e1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Tipi di enumerazioni nei contratti dati
 Le enumerazioni possono essere espresse nel modello del contratto dati. In questo argomento vengono esaminati molti esempi che spiegano il modello di programmazione.  
@@ -43,7 +29,7 @@ Le enumerazioni possono essere espresse nel modello del contratto dati. In quest
  È possibile usare come al solito le proprietà <xref:System.Runtime.Serialization.DataContractAttribute> (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> e <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) per i contratti dati dell'enumerazione.  
   
 ### <a name="enumeration-member-values"></a>Valori membro dell'enumerazione  
- In genere il contratto dati include i nomi dei membri dell'enumerazione, non i valori numerici. Tuttavia, quando si usa il modello del contratto dati, se il lato ricevente è un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], lo schema esportato mantiene i valori numerici. Si noti che questo non è il caso quando si utilizza il [utilizzando la classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+ In genere il contratto dati include i nomi dei membri dell'enumerazione, non i valori numerici. Tuttavia, quando si utilizza il modello di contratto dati, se il lato ricevente è un client WCF, lo schema esportato mantiene i valori numerici. Si noti che questo non è il caso quando si utilizza il [utilizzando la classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
  Nell'esempio precedente, se `condition` è impostato su `Used` e i dati vengono serializzati in XML, il codice XML risultante è `<condition>Used</condition>``<condition>1</condition>` e non . Di conseguenza, il contratto dati seguente è equivalente al contratto dati di `CarConditionEnum`.  
   

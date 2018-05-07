@@ -1,14 +1,6 @@
 ---
 title: Funzione LoadTypeLibWithResolver
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - LoadTypeLibWithResolver
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f069d09f25575c39db097024384ad1bf14eaaf02
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 751794746e26bd8f0ec2cd6db2f62876e78674e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loadtypelibwithresolver-function"></a>Funzione LoadTypeLibWithResolver
 Carica una libreria dei tipi e utilizza il parametro fornito [interfaccia ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) per risolvere qualsiasi tipo riferimento internamente.  
@@ -54,9 +42,9 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in] Oggetto [enumerazione REGKIND](https://msdn.microsoft.com/library/windows/desktop/ms221159.aspx) flag che determina come viene registrata la libreria dei tipi. I valori possibili sono:  
   
--   `REGKIND_DEFAULT`: Il comportamento di registrazione predefinito da utilizzare.  
+-   `REGKIND_DEFAULT`: Viene usato il comportamento di registrazione predefinito.  
   
--   `REGKIND_REGISTER`: Registrare la libreria dei tipi.  
+-   `REGKIND_REGISTER`: Registrare questa libreria dei tipi.  
   
 -   `REGKIND_NONE`: Non registrare la libreria dei tipi.  
   

@@ -1,14 +1,6 @@
 ---
 title: Metodo ICLRRuntimeHost::ExecuteApplication
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeHost.ExecuteApplication
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5f28cc4e-7176-4e00-aa1f-58ae6ee52fe4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b765f020bd15fa94fb18a6fd7d81cf66c534639
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56a49b3d08b58da109924267e6c23c188efefe29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>Metodo ICLRRuntimeHost::ExecuteApplication
 Utilizzato in scenari di distribuzione basato su manifesto ClickOnce per specificare l'attivazione in un nuovo dominio dell'applicazione. Per ulteriori informazioni su questi scenari, vedere [protezione di applicazioni ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
@@ -74,7 +62,7 @@ HRESULT ExecuteApplication(
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication`stato restituito correttamente.|  
+|S_OK|`ExecuteApplication` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
@@ -82,7 +70,7 @@ HRESULT ExecuteApplication(
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- `ExecuteApplication`viene utilizzato per attivare applicazioni ClickOnce in un dominio applicazione appena creato.  
+ `ExecuteApplication` Consente di attivare applicazioni ClickOnce in un dominio applicazione appena creato.  
   
  Il `pReturnValue` parametro di output è impostato sul valore restituito dall'applicazione. Se si specifica un valore null per `pReturnValue`, `ExecuteApplication` ha esito positivo, ma non restituisce un valore.  
   
@@ -94,9 +82,9 @@ HRESULT ExecuteApplication(
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ActivationContext>  

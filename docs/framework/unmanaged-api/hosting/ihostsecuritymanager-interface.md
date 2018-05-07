@@ -1,14 +1,6 @@
 ---
 title: Interfaccia IHostSecurityManager
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 44f2272c0f4e1423c222a004559d7bbd58237d82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13f60730fedef4876f81f078f811104777050175
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanager-interface"></a>Interfaccia IHostSecurityManager
 Fornisce metodi che consentono l'accesso e controllo sul contesto di protezione del thread attualmente in esecuzione.  
@@ -49,7 +37,7 @@ Fornisce metodi che consentono l'accesso e controllo sul contesto di protezione 
 |[Metodo SetThreadToken](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setthreadtoken-method.md)|Imposta un handle per il thread attualmente in esecuzione.|  
   
 ## <a name="remarks"></a>Note  
- Un host può controllare l'accesso di codice ai token di thread dal common language runtime (CLR) e codice utente. Può inoltre garantire che la sicurezza completa le informazioni di contesto viene passate attraverso operazioni asincrone o punti di codice con accesso di codice con restrizioni. `IHostSecurityContext`incapsula queste informazioni di contesto di sicurezza, sono opache a CLR.  
+ Un host può controllare l'accesso di codice ai token di thread dal common language runtime (CLR) e codice utente. Può inoltre garantire che la sicurezza completa le informazioni di contesto viene passate attraverso operazioni asincrone o punti di codice con accesso di codice con restrizioni. `IHostSecurityContext` incapsula queste informazioni di contesto di sicurezza, che risulta opache al CLR.  
   
  Common Language Runtime gestisce il contesto di thread gestiti internamente. Viene eseguita una query specifica del processo `IHostSecurityManager` nelle situazioni seguenti:  
   
@@ -66,9 +54,9 @@ Fornisce metodi che consentono l'accesso e controllo sul contesto di protezione 
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  

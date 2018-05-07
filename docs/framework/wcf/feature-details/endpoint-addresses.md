@@ -1,33 +1,19 @@
 ---
 title: Indirizzi endpoint
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - addresses [WCF]
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 46278e35c6966e473f5a800f7e99814efd7b943c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-addresses"></a>Indirizzi endpoint
-A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e identificarlo. L'indirizzo è costituito principalmente da un URI (Uniform Resource Identifier) che specifica il percorso dell'endpoint. L'indirizzo endpoint è rappresentato nel modello di programmazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tramite la classe <xref:System.ServiceModel.EndpointAddress>. Questa contiene una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A> facoltativa che consente l'autenticazione dell'endpoint tramite altri endpoint che scambiano messaggi con esso e un set di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Tali proprietà definiscono qualsiasi altra intestazione SOAP richiesta per raggiungere il servizio. Le intestazioni facoltative forniscono dettagli aggiuntivi e più precisi sull'indirizzo per identificare o interagire con l'endpoint del servizio. L'indirizzo di un endpoint è rappresentato in transito come riferimento all'endpoint di WS-Addressing (EPR).  
+A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e identificarlo. L'indirizzo è costituito principalmente da un URI (Uniform Resource Identifier) che specifica il percorso dell'endpoint. L'indirizzo dell'endpoint è rappresentato nel modello di programmazione di Windows Communication Foundation (WCF) per il <xref:System.ServiceModel.EndpointAddress> classe, che contiene un parametro facoltativo <xref:System.ServiceModel.EndpointAddress.Identity%2A> proprietà che abilita l'autenticazione dell'endpoint da altri endpoint che scambio di messaggi con esso e un set di facoltativo <xref:System.ServiceModel.EndpointAddress.Headers%2A> proprietà definiscono qualsiasi altra intestazione SOAP richiesta per raggiungere il servizio. Le intestazioni facoltative forniscono dettagli aggiuntivi e più precisi sull'indirizzo per identificare o interagire con l'endpoint del servizio. L'indirizzo di un endpoint è rappresentato in transito come riferimento all'endpoint di WS-Addressing (EPR).  
   
 ## <a name="uri-structure-of-an-address"></a>Struttura URI di un indirizzo  
  L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti. Ad esempio, le quattro parti dell'URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint possono essere specificate come segue:  
@@ -63,7 +49,7 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
 -   Informazioni di associazione: indirizzo IP, porta, intestazione host  
   
- IIS può specificare più associazioni per ogni sito, il che comporta più indirizzi di base per ogni schema. Prima di [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non erano supportati più indirizzi per uno schema e, nel caso venissero specificati, veniva generata un'eccezione <xref:System.ArgumentException> durante l'attivazione.  
+ IIS può specificare più associazioni per ogni sito, il che comporta più indirizzi di base per ogni schema. Nelle versioni precedenti a [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF non supporta più indirizzi per uno schema e, se sono stati specificati, ha generato un <xref:System.ArgumentException> durante l'attivazione.  
   
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] consente ai provider di servizi Internet di ospitare più applicazioni con indirizzi di base diversi per lo stesso schema sullo stesso sito.  
   
@@ -111,7 +97,7 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
  Per informazioni dettagliate ed esempi, vedere [di supporto di più associazioni di sito IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) e <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
   
 ## <a name="extending-addressing-in-wcf-services"></a>Estensione dell'indirizzamento nei servizi WCF  
- Nel modello di indirizzamento predefinito dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene utilizzato l'indirizzo URI dell'endpoint per gli scopi seguenti:  
+ Il valore predefinito addressing modello dei servizi WCF utilizza l'indirizzo URI dell'endpoint per gli scopi seguenti:  
   
 -   Per specificare l'indirizzo di ascolto del servizio, il percorso su cui l'endpoint resta in ascolto dei messaggi.  
   

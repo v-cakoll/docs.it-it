@@ -1,14 +1,6 @@
 ---
 title: Importazione dello schema per generare classi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 338daa031ac2c1b31a121908643a15449c5401a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importazione dello schema per generare classi
-Per generare classi da schemi che possono essere usati con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], usare la classe <xref:System.Runtime.Serialization.XsdDataContractImporter>. In questo argomento viene descritto il processo e le relative varianti.  
+Per generare classi da schemi che possono essere usati con Windows Communication Foundation (WCF), utilizzare il <xref:System.Runtime.Serialization.XsdDataContractImporter> classe. In questo argomento viene descritto il processo e le relative varianti.  
   
 ## <a name="the-import-process"></a>Processo di importazione  
  Il processo di importazione dello schema ha inizio con una classe <xref:System.Xml.Schema.XmlSchemaSet> e produce una classe <xref:System.CodeDom.CodeCompileUnit>.  
@@ -114,7 +100,7 @@ Per generare classi da schemi che possono essere usati con [!INCLUDE[indigo1](..
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Qualsiasi associazione può essere considerata un elenco. Ad esempio, è possibile visualizzare l'associazione precedente come un elenco di oggetti `city` complessi che presentano due campi (un campo stringa e un campo numero intero). Entrambi i modelli sono rappresentati nello schema XSD. Non è possibile differenziare un elenco da un'associazione, pertanto tali modelli vengono sempre considerati come elenchi a meno che nello schema sia presente un'annotazione speciale, specifica di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. L'annotazione indica che un modello specifico rappresenta un'associazione. Per altre informazioni, vedere [riferimento dello Schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Qualsiasi associazione può essere considerata un elenco. Ad esempio, è possibile visualizzare l'associazione precedente come un elenco di oggetti `city` complessi che presentano due campi (un campo stringa e un campo numero intero). Entrambi i modelli sono rappresentati nello schema XSD. Non è possibile differenziare un elenco e un'associazione, pertanto tali modelli vengono sempre considerati come elenchi a meno che non è presente nello schema di un'annotazione speciale, specifica a WCF. L'annotazione indica che un modello specifico rappresenta un'associazione. Per altre informazioni, vedere [riferimento dello Schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  In genere, un elenco viene importato come un contratto dati della raccolta che deriva da un elenco generico o come una matrice [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], a seconda che lo schema segua o meno il modello di denominazione standard per le raccolte. Questo aspetto viene descritto in dettaglio in [tipi di raccolta nei contratti dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Le associazioni normalmente vengono importate come un tipo <xref:System.Collections.Generic.Dictionary%602> o un contratto dati della raccolta che deriva dall'oggetto dizionario. Si consideri ad esempio lo schema seguente.  
   

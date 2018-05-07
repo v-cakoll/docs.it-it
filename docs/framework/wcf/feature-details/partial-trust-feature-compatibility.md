@@ -1,38 +1,24 @@
 ---
 title: Compatibilità con la funzionalità di trust parziale
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: 75
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f8c63079161e6be16e2d36f721aeb98937f72097
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilità con la funzionalità di trust parziale
-Se eseguito in ambiente parzialmente attendibile,[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supporta un sottoinsieme limitato di funzionalità. Le funzionalità supportate in un contesto parzialmente attendibile sono progettate sulla base di uno specifico set di scenari, come descritto nell'argomento [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
+Windows Communication Foundation (WCF) supporta un sottoinsieme limitato delle funzionalità durante l'esecuzione in un ambiente parzialmente attendibile. Le funzionalità supportate in un contesto parzialmente attendibile sono progettate sulla base di uno specifico set di scenari, come descritto nell'argomento [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
   
 ## <a name="minimum-permission-requirements"></a>Requisiti di autorizzazione minimi  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta un sottoinsieme di funzionalità in applicazioni in esecuzione con uno dei set di autorizzazioni denominati standard seguenti:  
+ WCF supporta un sottoinsieme di funzionalità nelle applicazioni eseguite con uno dei set di autorizzazioni denominati standard seguenti:  
   
 -   Autorizzazioni Attendibilità media  
   
 -   Autorizzazioni Area Internet  
   
- Il tentativo di utilizzare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in applicazioni in ambiente parzialmente attendibile con autorizzazioni più restrittive può generare eccezioni di sicurezza in fase di esecuzione.  
+ Tentativo di utilizzare WCF in applicazioni parzialmente attendibili con le autorizzazioni più restrittive può generare eccezioni di sicurezza in fase di esecuzione.  
   
 ## <a name="contracts"></a>Contratti  
  Se eseguiti in ambiente parzialmente attendibile, i contratti sono soggetti alle restrizioni seguenti:  
@@ -66,7 +52,7 @@ Se eseguito in ambiente parzialmente attendibile,[!INCLUDE[indigo1](../../../../
  Non sono supportati codificatori MTOM (Message Transmission Optimization Mechanism).  
   
 ### <a name="security"></a>Sicurezza  
- Le applicazioni in ambiente parzialmente attendibile possono utilizzare le funzionalità di sicurezza a livello di trasporto di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]per proteggere la comunicazione. La sicurezza a livello di messaggio non è supportata. La configurazione di un'associazione per l'utilizzo della sicurezza a livello di messaggio genera un'eccezione in fase di esecuzione.  
+ Le applicazioni parzialmente attendibile possono utilizzare le funzionalità di sicurezza del trasporto WCF per proteggere la comunicazione. La sicurezza a livello di messaggio non è supportata. La configurazione di un'associazione per l'utilizzo della sicurezza a livello di messaggio genera un'eccezione in fase di esecuzione.  
   
 ### <a name="unsupported-bindings"></a>Associazioni non supportate  
  Le associazioni che utilizzano messaggistica affidabile, transazioni o sicurezza a livello di messaggio non sono supportate.  
@@ -76,7 +62,7 @@ Se eseguito in ambiente parzialmente attendibile,[!INCLUDE[indigo1](../../../../
   
 -   Tutti i tipi `[DataContract]` serializzabili devono essere `public`.  
   
--   Tutti i campi `[DataMember]` o le proprietà in un tipo `[DataContract]` devono essere pubblici e di lettura/scrittura. La serializzazione e la deserializzazione di campi [di sola lettura](http://go.microsoft.com/fwlink/?LinkID=98854) non sono supportate quando si esegue [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in un'applicazione in ambiente parzialmente attendibile.  
+-   Tutti i campi `[DataMember]` o le proprietà in un tipo `[DataContract]` devono essere pubblici e di lettura/scrittura. La serializzazione e deserializzazione di [readonly](http://go.microsoft.com/fwlink/?LinkID=98854) campi non è supportato durante l'esecuzione di WCF in un'applicazione parzialmente attendibile.  
   
 -   Il modello di programmazione `[Serializable]`/ISerializable non è supportato in ambiente parzialmente attendibile.  
   
@@ -89,7 +75,7 @@ Se eseguito in ambiente parzialmente attendibile,[!INCLUDE[indigo1](../../../../
 ### <a name="collection-types"></a>Tipi di raccolta  
  Alcuni tipi di raccolta implementano sia <xref:System.Collections.Generic.IEnumerable%601> che <xref:System.Collections.IEnumerable>. Gli esempi includono tipi che implementano <xref:System.Collections.Generic.ICollection%601>. Tali tipi possono implementare un'implementazione `public` di `GetEnumerator()`e un'implementazione esplicita di `GetEnumerator()`. In questo caso, <xref:System.Runtime.Serialization.DataContractSerializer> richiama l'implementazione `public` di `GetEnumerator()`e non l'implementazione esplicita di `GetEnumerator()`. Se nessuna delle implementazioni di `GetEnumerator()` è `public` e tutte sono implementazioni esplicite, <xref:System.Runtime.Serialization.DataContractSerializer> richiama `IEnumerable.GetEnumerator()`.  
   
- Per i tipi di raccolta quando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene eseguito in un ambiente di trust parziale, se nessuna delle implementazioni di `GetEnumerator()` è `public`né è un'implementazione esplicita dell'interfaccia, viene generata un'eccezione di sicurezza.  
+ Per i tipi di raccolta quando WCF è in esecuzione in un ambiente parzialmente attendibile, se nessuno del `GetEnumerator()` sono implementazioni `public`, o nessuno di essi sono implementazioni esplicite dell'interfaccia, quindi viene generata un'eccezione di sicurezza.  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
  Molti tipi di raccolte .NET Framework come <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ArrayList>, <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Hashtable> non sono supportati da <xref:System.Runtime.Serialization.NetDataContractSerializer> in ambiente parzialmente attendibile. Per questi tipi è impostato l'attributo `[Serializable]` e, come indicato in precedenza nella sezione sulla serializzazione, questo attributo non è supportato in ambiente parzialmente attendibile. <xref:System.Runtime.Serialization.DataContractSerializer> considera le raccolte in modo particolare ed è pertanto in grado di ignorare questa restrizione, al contrario di <xref:System.Runtime.Serialization.NetDataContractSerializer> che non dispone di un meccanismo di questo tipo.  
@@ -108,7 +94,7 @@ Se eseguito in ambiente parzialmente attendibile,[!INCLUDE[indigo1](../../../../
  Per un esempio di un comportamento comune, vedere [procedura: blocco all'endpoint nell'organizzazione](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Configurazione  
- Con una sola eccezione, il codice in ambiente parzialmente attendibile può caricare sezioni di configurazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] solo nel file `app.config` locale. Per caricare sezioni di configurazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che fanno riferimento a sezioni di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in machine.config o in un file web.config radice è necessario ConfigurationPermission(Unrestricted). Senza questa autorizzazione, i riferimenti a sezioni di configurazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (comportamenti, associazioni) esterni al file di configurazione locale generano un'eccezione al momento del caricamento della configurazione.  
+ Con un'unica eccezione, codice parzialmente attendibile può caricare solo le sezioni di configurazione WCF locale `app.config` file. Per caricare sezioni di configurazione WCF che fanno riferimento a sezioni WCF in Machine. config o in una radice del file Web. config è necessario ConfigurationPermission (Unrestricted). Senza questa autorizzazione, i riferimenti a WCF le sezioni di configurazione (comportamenti, associazioni) di fuori di file di configurazione locale generano un'eccezione quando viene caricata la configurazione.  
   
  L'unica eccezione è data dalla configurazione del tipo noto per la serializzazione, come descritto nella sezione sulla serializzazione di questo argomento.  
   
@@ -121,7 +107,7 @@ Se eseguito in ambiente parzialmente attendibile,[!INCLUDE[indigo1](../../../../
  In ambiente parzialmente attendibile la registrazione eventi limitata è supportata. Solo gli errori relativi all'attivazione del servizio e alla registrazione dei messaggi/traccia vengono registrati nel registro eventi. Per evitare che venga scritto un numero eccessivo di messaggi nel registro eventi, il numero massimo di eventi registrabili da un processo è stato impostato su 5.  
   
 ### <a name="message-logging"></a>Registrazione messaggi  
- La registrazione messaggi non funziona quando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene eseguito in un ambiente di trust parziale. In un trust parziale, l'attivazione del servizio ha esito positivo ma non viene registrato alcun messaggio.  
+ La registrazione dei messaggi non funziona quando WCF viene eseguito in un ambiente parzialmente attendibile. In un trust parziale, l'attivazione del servizio ha esito positivo ma non viene registrato alcun messaggio.  
   
 ### <a name="tracing"></a>Traccia  
  La funzionalità di traccia con restrizioni è disponibile quando l'applicazione viene eseguita in un ambiente di trust parziale. Nell'elemento <`listeners`> del file di configurazione, i soli tipi che è possibile aggiungere sono <xref:System.Diagnostics.TextWriterTraceListener> e il nuovo <xref:System.Diagnostics.EventSchemaTraceListener>. L'utilizzo della classe <xref:System.Diagnostics.XmlWriterTraceListener> standard può generare log incompleti o non corretti.  
@@ -151,13 +137,13 @@ Se eseguito in ambiente parzialmente attendibile,[!INCLUDE[indigo1](../../../../
  Quando si utilizza la traccia in un ambiente di trust parziale, assicurare che l'applicazione disponga di autorizzazioni sufficienti per archiviare l'output del listener di traccia. Ad esempio, quando si utilizza <xref:System.Diagnostics.TextWriterTraceListener> per scrivere output di traccia in un file di testo, assicurare che l'applicazione disponga dell'autorizzazione FileIOPermission necessaria per scrivere correttamente nel file di traccia.  
   
 > [!NOTE]
->  Per evitare il flooding dei file di traccia con errori duplicati, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] disabilita la traccia della risorsa o dell'azione dopo il primo errore di sicurezza. Viene generata una traccia di eccezione per ogni accesso alla risorsa non riuscito, la prima volta che viene eseguito il tentativo di accedere alla risorsa o eseguire l'azione.  
+>  Per non sovraccaricare i file di traccia con errori duplicati, WCF disabilita la traccia della risorsa o dell'azione dopo il primo errore di sicurezza. Viene generata una traccia di eccezione per ogni accesso alla risorsa non riuscito, la prima volta che viene eseguito il tentativo di accedere alla risorsa o eseguire l'azione.  
   
 ## <a name="wcf-service-host"></a>Host servizio WCF  
- L'host del servizio[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta l'attendibilità parziale. Se si desidera utilizzare un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] del servizio in attendibilità parziale, non utilizzare il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modello progetto libreria di servizi in Visual Studio per compilare il servizio. Al contrario, creare un nuovo sito Web in Visual Studio scegliendo il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sito Web modello di servizio che possa ospitare il servizio in un server Web in cui [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è supportato l'attendibilità parziale.  
+ Host servizio WCF non supporta l'attendibilità parziale. Se si desidera utilizzare un servizio WCF in attendibilità parziale, non utilizzare il modello di progetto libreria di servizi WCF in Visual Studio per compilare il servizio. Al contrario, creare un nuovo sito Web in Visual Studio scegliendo il modello di sito Web servizio WCF, che possa ospitare il servizio in un server Web in cui è supportato l'attendibilità parziale di WCF.  
   
 ## <a name="other-limitations"></a>Altre limitazioni  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è generalmente soggetto alle considerazioni di sicurezza imposte dall'applicazione host. Ad esempio, se [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è ospitato in un'applicazione browser XAML (XBAP, XAML Browser Application), è soggetto alle limitazioni XBAP, come descritto in [Sicurezza con attendibilità parziale in WPF](http://go.microsoft.com/fwlink/?LinkId=89138).  
+ WCF è generalmente soggetto alle considerazioni di sicurezza imposte dall'applicazione host. Ad esempio, se WCF è ospitato in un'applicazione Browser XAML (XBAP), è soggetto alle limitazioni XBAP, come descritto in [Windows Presentation Foundation Partial Trust Security](http://go.microsoft.com/fwlink/?LinkId=89138).  
   
  Se indigo2 viene eseguito in ambiente parzialmente attendibile, le funzionalità aggiuntive seguenti non vengono abilitate:  
   
@@ -167,10 +153,10 @@ Se eseguito in ambiente parzialmente attendibile,[!INCLUDE[indigo1](../../../../
   
 -   Contatori delle prestazioni  
   
- L'utilizzo di funzionalità [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono supportate in un ambiente di trust parziale può generare eccezioni in fase di esecuzione.  
+ Utilizzare le funzionalità di WCF che non sono supportati in un ambiente parzialmente attendibile può comportare eccezioni in fase di esecuzione.  
   
 ## <a name="unlisted-features"></a>Funzionalità non elencate  
- Il modo migliore per individuare se un'informazione non è disponibile in modalità di esecuzione in un ambiente di trust parziale è tentare di accedere alla risorsa o di eseguire l'azione all'interno di un blocco `try` e quindi eseguire il `catch` dell'errore. Per evitare il flooding dei file di traccia con errori duplicati, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] disabilita la traccia della risorsa o dell'azione dopo il primo errore di sicurezza. Viene generata una traccia di eccezione per ogni accesso alla risorsa non riuscito, la prima volta che viene eseguito il tentativo di accedere alla risorsa o eseguire l'azione.  
+ Il modo migliore per individuare se un'informazione non è disponibile in modalità di esecuzione in un ambiente di trust parziale è tentare di accedere alla risorsa o di eseguire l'azione all'interno di un blocco `try` e quindi eseguire il `catch` dell'errore. Per non sovraccaricare i file di traccia con errori duplicati, WCF disabilita la traccia della risorsa o dell'azione dopo il primo errore di sicurezza. Viene generata una traccia di eccezione per ogni accesso alla risorsa non riuscito, la prima volta che viene eseguito il tentativo di accedere alla risorsa o eseguire l'azione.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  

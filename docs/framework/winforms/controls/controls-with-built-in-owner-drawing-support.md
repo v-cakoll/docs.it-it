@@ -1,13 +1,6 @@
 ---
 title: Controlli con supporto incorporato per la creazione da parte del proprietario
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - drawing [Windows Forms], owner
 - drawing [Windows Forms], custom
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efd297dcc11005d6b6d47bb9ce3853a757046e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a5cbdc733a2f1cda3e708ceaae8604297f8da58a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Controlli con supporto incorporato per la creazione da parte del proprietario
 Il disegno da parte del proprietario in Windows Form, noto anche come disegno personalizzato, è una tecnica che consente di modificare l'aspetto visivo di alcuni controlli.  
@@ -53,7 +41,7 @@ Il disegno da parte del proprietario in Windows Form, noto anche come disegno pe
   
 -   <xref:System.Windows.Forms.ComboBox>  
   
--   <xref:System.Windows.Forms.MenuItem>(utilizzato da <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu>)  
+-   <xref:System.Windows.Forms.MenuItem> (utilizzato da <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu>)  
   
 -   <xref:System.Windows.Forms.TabControl>  
   
@@ -188,7 +176,7 @@ Il disegno da parte del proprietario in Windows Form, noto anche come disegno pe
 -   [Procedura: Personalizzare l'aspetto delle righe nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>Controllo ToolStrip  
- <xref:System.Windows.Forms.ToolStrip>e i controlli derivati consentono di personalizzare l'aspetto di aspetto.  
+ <xref:System.Windows.Forms.ToolStrip> e i controlli derivati consentono di personalizzare qualsiasi altro aspetto relativo a come appaiono.  
   
  Per fornire per il rendering personalizzate per <xref:System.Windows.Forms.ToolStrip> i controlli, impostare il `Renderer` proprietà di un <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripManager>, <xref:System.Windows.Forms.ToolStripPanel>, o <xref:System.Windows.Forms.ToolStripContentPanel> per un `ToolStripRenderer` dell'oggetto e gestire uno o più dei numerosi eventi di disegno forniti dal `ToolStripRenderer` classe. In alternativa, impostare un `Renderer` proprietà a un'istanza della classe personalizzata derivata da `ToolStripRenderer`, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, o <xref:System.Windows.Forms.ToolStripSystemRenderer> che implementa o si esegue l'override specifico `On` *EventName* metodi.  
   

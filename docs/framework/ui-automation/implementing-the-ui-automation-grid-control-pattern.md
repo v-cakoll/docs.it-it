@@ -1,28 +1,19 @@
 ---
 title: Implementazione del pattern di controllo Grid di automazione interfaccia utente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, grid
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-caps.latest.revision: "27"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4667cd149940310e2422686b9e9fdf6e7e99ca9e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0038202fb7c7f1a6e0b4f21592d7a1056c4dfa2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementazione del pattern di controllo Grid di automazione interfaccia utente
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Se una cella è vuota, è necessario che venga restituito un elemento di automazione interfaccia utente per supportare la proprietà <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> per tale cella. Ciò è possibile quando il layout degli elementi figlio nella griglia è simile a una matrice irregolare (vedere l'esempio riportato di seguito).  
   
- ![Visualizzazione di Esplora con layout irregolare. ] (../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
+ ![Esplora risorse di Windows Vista con layout irregolare. ] (../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 Esempio di controllo griglia con coordinate vuote  
   
 -   Una griglia contenente un singolo elemento deve comunque implementare <xref:System.Windows.Automation.Provider.IGridProvider> se viene logicamente considerata una griglia. Il numero di elementi figlio nella griglia non ha importanza.  
@@ -59,9 +50,9 @@ Esempio di controllo griglia con coordinate vuote
   
 |Membri obbligatori|Tipo|Note|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Proprietà|Nessuna|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Metodo|nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Metodo|Nessuno|  
   
  Questo pattern di controllo non è associato a eventi.  
   

@@ -1,14 +1,6 @@
 ---
 title: Metodo ICLRPolicyManager::SetTimeoutAndAction
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetTimeoutAndAction
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 60454f91-d855-4ddf-bb6d-60a02f5eabab
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b67150b7544f1d8d25532c564800404b634cae99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c375fdffacccb27c20878c4e6adef9dd947148e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>Metodo ICLRPolicyManager::SetTimeoutAndAction
 Imposta un valore di timeout per l'operazione specificata e specifica l'azione di criteri che Common language runtime (CLR) deve intraprendere quando si verifica l'operazione.  
@@ -70,7 +58,7 @@ HRESULT SetTimeoutAndAction (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`SetTimeoutAndAction`stato restituito correttamente.|  
+|S_OK|`SetTimeoutAndAction` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
@@ -79,7 +67,7 @@ HRESULT SetTimeoutAndAction (
 |E_INVALIDARG|Non è possibile impostare un timeout per l'oggetto specificato `operation`, o è stato specificato un valore non valido per `action`.|  
   
 ## <a name="remarks"></a>Note  
- `SetTimeoutAndAction`incapsula le funzionalità del [ICLRPolicyManager:: SetTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) e [ICLRPolicyManager::](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) metodi e può essere chiamato al posto delle chiamate sequenziali di questi due metodi.  
+ `SetTimeoutAndAction` incapsula le funzionalità del [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) e [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) metodi e può essere chiamato al posto di chiamate sequenziali di questi due metodi.  
   
 > [!IMPORTANT]
 >  Non tutti i valori di azione criteri possono essere specificati come il comportamento di timeout per le operazioni CLR. Vedere la sezione Note degli argomenti di questi due metodi per i valori validi.  
@@ -89,9 +77,9 @@ HRESULT SetTimeoutAndAction (
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Enumerazione EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  

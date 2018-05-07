@@ -1,34 +1,20 @@
 ---
 title: Riferimento allo schema del contratto dati
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 06bc79e059300d448ababa87974b590f54f7984c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-schema-reference"></a>Riferimento allo schema del contratto dati
 In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utilizzato da <xref:System.Runtime.Serialization.DataContractSerializer> per descrivere i tipi di Common Language Runtime (CLR) per la serializzazione XML.  
   
 ## <a name="datacontractserializer-mappings"></a>Mapping DataContractSerializer  
- Il `DataContractSerializer` esegue il mapping di tipi CLR a XSD quando i metadati vengono esportati da un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usando un endpoint di metadati o lo [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Per altre informazioni, vedere [serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ Il `DataContractSerializer` esegue il mapping di tipi CLR a XSD quando i metadati vengono esportati da un servizio Windows Communication Foundation (WCF) mediante un endpoint di metadati o il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Per altre informazioni, vedere [serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  `DataContractSerializer` esegue, inoltre, il mapping di XSD ai tipi CLR quando viene utilizzato Svcutil.exe per accedere a documenti WSDL (Web Services Description Language) o XSD e generare contratti dati per servizi o client.  
   
@@ -105,7 +91,7 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
 |`choice`|Non consentito|  
 |`sequence`|Supportato, esegue il mapping a membri dati di un contratto dati.|  
 |`attribute`|Non consentito, anche se use = "prohibited" (con un'eccezione). Sono supportati solo attributi facoltativi dello spazio dei nomi dello schema di serializzazione standard. Essi non eseguono il mapping ai membri dati nel modello di programmazione del contratto dati. Attualmente, solo uno di tali attributi ha significato e viene illustrato nella sezione ISerializable. Tutti gli altri vengono ignorati.|  
-|`attributeGroup`|Non consentito. Nella versione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 1, `DataContractSerializer` ignora la presenza di `attributeGroup` in `xs:complexType`.|  
+|`attributeGroup`|Non consentito. Nella versione v1 WCF `DataContractSerializer` ignora la presenza di `attributeGroup` all'interno di `xs:complexType`.|  
 |`anyAttribute`|Non consentito.|  
 |(vuoto)|Esegue il mapping a un contratto dati senza membri dati.|  
   
@@ -215,7 +201,7 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
   
  \* Quando si utilizza il `simpleType` e `complexType,` mapping per i tipi anonimi è uguale a quello dei tipi non anonimi, ad eccezione del fatto che non esiste alcun contratto dati anonimo e quindi viene creato un contratto dati denominato, con un nome generato derivato dal nome dell'elemento. Le regole per i tipi anonimi sono riportate nell'elenco seguente:  
   
--   Dettaglio di implementazione di[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] : se il nome `xs:element` non contiene punti, il tipo anonimo esegue il mapping a un tipo interno del tipo di contratto dati esterno. Se il nome contiene punti, il tipo di contratto dati risultante è indipendente (non è un tipo interno).  
+-   Dettaglio di implementazione WCF: se il `xs:element` nome non contiene punti, il tipo anonimo esegue il mapping a un tipo interno del tipo di contratto dati esterno. Se il nome contiene punti, il tipo di contratto dati risultante è indipendente (non è un tipo interno).  
   
 -   Il nome del contratto dati generato del tipo interno è il nome del contratto dati del tipo esterno seguito da un punto, dal nome dell'elemento e dalla stringa "Type".  
   

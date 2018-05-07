@@ -1,28 +1,19 @@
 ---
 title: Implementazione del pattern di controllo ScrollItem di automazione interfaccia utente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, Scroll Item
 - UI Automation, Scroll Item control pattern
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
-caps.latest.revision: "16"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: ef089e72c3b8dd089db5022ea1808cee98c27ecd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cdf663b2989ccf93fa9bb6742bfb491a691dea02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>Implementazione del pattern di controllo ScrollItem di automazione interfaccia utente
 > [!NOTE]
@@ -44,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
 |Membri obbligatori|Tipo di membro|Note|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-Metodo|nessuno|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-Metodo|Nessuno|  
   
  Questo pattern di controllo non è associato a proprietà o eventi.  
   

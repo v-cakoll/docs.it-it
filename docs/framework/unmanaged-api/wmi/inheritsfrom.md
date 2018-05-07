@@ -2,10 +2,6 @@
 title: Funzione InheritsFrom (riferimenti alle API non gestite)
 description: La funzione InheritsFrom determina se una classe o istanza deriva da una classe particolare padre.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - InheritsFrom
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0dce964829399e6761152a8ff424671b47cc6eb3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 87a1c1ee44d3b192747bd785f538c0332300ff50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom (funzione)
 Determina se la classe o istanza corrente deriva da una classe padre specificata.
@@ -53,7 +46,7 @@ HRESULT InheritsFrom (
 [in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
 
 `wszAncestor`  
-[in] Il nome della classe. `wszAncestor`deve puntare a un oggetto valido `LPCWSTR`.
+[in] Il nome della classe. `wszAncestor` deve puntare a un valore valido `LPCWSTR`.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -74,7 +67,7 @@ Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject::Inherit
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

@@ -1,31 +1,17 @@
 ---
 title: Tipi supportati dal serializzatore dei contratti dati
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c53a11408254dc3c5f2abfb7d5d45305d3429280
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 9a6279b9850ce5cd3d23cffeaf233dec1b360deb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Tipi supportati dal serializzatore dei contratti dati
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizza <xref:System.Runtime.Serialization.DataContractSerializer> come motore di serializzazione predefinito per convertire i dati in XML e convertire di nuovo XML in dati. <xref:System.Runtime.Serialization.DataContractSerializer> è progettato per serializzare tipi di *contratto dati* . Supporta tuttavia molti altri tipi che possono essere considerati come tipi dotati di un contratto dati implicito. Nell'elenco seguente sono riportati tutti i tipi serializzabili:  
+Windows Communication Foundation (WCF) usa il <xref:System.Runtime.Serialization.DataContractSerializer> come motore di serializzazione predefinito per convertire i dati in XML e convertire XML in dati. <xref:System.Runtime.Serialization.DataContractSerializer> è progettato per serializzare tipi di *contratto dati* . Supporta tuttavia molti altri tipi che possono essere considerati come tipi dotati di un contratto dati implicito. Nell'elenco seguente sono riportati tutti i tipi serializzabili:  
   
 -   Tutti i tipi visibili pubblicamente con un costruttore che non dispone di parametri.  
   
@@ -51,13 +37,13 @@ ms.lasthandoff: 04/28/2018
   
 -   Per serializzare o deserializzare un tipo che implementa <xref:System.Runtime.Serialization.ISerializable> in codice parzialmente attendibile tramite <xref:System.Runtime.Serialization.DataContractSerializer> è necessario disporre delle autorizzazioni <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> e <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> .  
   
--   Quando si esegue codice [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in modalità [Partial Trust](../../../../docs/framework/wcf/feature-details/partial-trust.md) , la serializzazione e la deserializzazione dei campi `readonly` ( `public` e `private`) non sono supportate. Ciò è dovuto al fatto che IL generato non è verificabile e pertanto richiede autorizzazioni elevate.  
+-   Quando si esegue codice WCF [attendibilità parziale](../../../../docs/framework/wcf/feature-details/partial-trust.md) modalità, la serializzazione e deserializzazione di `readonly` campi (entrambi `public` e `private`) non è supportata. Ciò è dovuto al fatto che IL generato non è verificabile e pertanto richiede autorizzazioni elevate.  
   
 -   Entrambe le classi <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Xml.Serialization.XmlSerializer> sono supportate in un ambiente di trust parziale. Tuttavia, l'utilizzo di <xref:System.Runtime.Serialization.DataContractSerializer> è soggetto alle condizioni seguenti:  
   
     -   Tutti i tipi `[DataContract]` serializzabili devono essere pubblici.  
   
-    -   Tutti i campi `[DataMember]` o le proprietà in un tipo `[DataContract]` devono essere pubblici e di lettura/scrittura. La serializzazione e la deserializzazione di campi `readonly` non sono supportate quando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene eseguito in un'applicazione parzialmente attendibile.  
+    -   Tutti i campi `[DataMember]` o le proprietà in un tipo `[DataContract]` devono essere pubblici e di lettura/scrittura. La serializzazione e deserializzazione di `readonly` campi non è supportato durante l'esecuzione di WCF in un'applicazione parzialmente attendibile.  
   
     -   L'attributo `[Serializable]`/`ISerializable]` non è supportato in un ambiente parzialmente attendibile.  
   
@@ -76,7 +62,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Sono supportate sia le strutture che le classi.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> non supporta il modello di programmazione utilizzato dai servizi Web <xref:System.Xml.Serialization.XmlSerializer> e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . In particolare, non supporta attributi quali <xref:System.Xml.Serialization.XmlElementAttribute> e <xref:System.Xml.Serialization.XmlAttributeAttribute>. Per abilitare il supporto per questo modello di programmazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deve essere impostato per utilizzare <xref:System.Xml.Serialization.XmlSerializer> anziché <xref:System.Runtime.Serialization.DataContractSerializer>.  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> non supporta il modello di programmazione utilizzato dai servizi Web <xref:System.Xml.Serialization.XmlSerializer> e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . In particolare, non supporta attributi quali <xref:System.Xml.Serialization.XmlElementAttribute> e <xref:System.Xml.Serialization.XmlAttributeAttribute>. Per abilitare il supporto per questo modello di programmazione, WCF deve essere impostato per utilizzare il <xref:System.Xml.Serialization.XmlSerializer> anziché il <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 -   Il tipo <xref:System.DBNull> viene trattato in modo speciale. È un tipo singleton e sulla deserializzazione il deserializzatore rispetta il vincolo singleton e punta tutti i riferimenti `DBNull` all'istanza singleton. Dato che `DBNull` è un tipo serializzabile, richiede l'autorizzazione <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> .  
   

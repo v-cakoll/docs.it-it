@@ -1,14 +1,6 @@
 ---
 title: 'Icorprofilerinfo7:: Readinmemorysymbols'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 api_name:
 - ICorProfilerInfo7.ReadInMemorySymbols
 api_location:
@@ -18,17 +10,13 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5851f73cc899ef21d8a5dcfd8f03617641a6625a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9874c8e567a89fd3977be360666c86406f2cd395
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>Icorprofilerinfo7:: Readinmemorysymbols
 [Supportato in [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] e versioni successive]  
@@ -69,7 +57,7 @@ HRESULT ReadInMemorySymbols(
  `CORPROF_E_MODULE_IS_DYNAMIC`, se il modulo è stato creato utilizzando <xref:System.Reflection.Emit>.  
   
 ## <a name="remarks"></a>Note  
- Il `ReadInMemorySymbols` metodo tenta di leggere `countSymbolBytes` dei dati a partire dall'offset `symbolsReadOffset` all'interno del flusso in memoria. I dati vengono copiati in `pSymbolBytes`, che dovranno avere `countSymbolBytes` di spazio disponibile.     `pCountSymbolsBytesRead`contiene il numero effettivo di byte letti, che può essere inferiore rispetto a `countSymbolBytes` se viene raggiunta la fine del flusso.  
+ Il `ReadInMemorySymbols` metodo tenta di leggere `countSymbolBytes` dei dati a partire dall'offset `symbolsReadOffset` all'interno del flusso in memoria. I dati vengono copiati in `pSymbolBytes`, che dovranno avere `countSymbolBytes` di spazio disponibile.     `pCountSymbolsBytesRead` contiene il numero effettivo di byte letti, che può essere inferiore rispetto a `countSymbolBytes` se viene raggiunta la fine del flusso.  
   
 > [!NOTE]
 >  L'implementazione corrente non supporta Reflection. Emit. Se il modulo è stato creato tramite Reflection. Emit, il metodo restituisce `CORPROF_E_MODULE_IS_DYNAMIC`.  
@@ -79,7 +67,7 @@ HRESULT ReadInMemorySymbols(
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

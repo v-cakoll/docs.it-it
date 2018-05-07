@@ -1,14 +1,6 @@
 ---
 title: Provider di flusso (WCF Data Services)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 119877802bc6d685cd5b440cedb6ab71b20abf45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provider di flusso (WCF Data Services)
 Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono rappresentare flussi audio e video, immagini, file documento o altri tipi di elementi multimediali binari. Quando un'entità del modello di dati include una o più proprietà binarie, il servizio dati restituisce tali dati binari codificati in base 64 all'interno dell'elemento entry presente nel feed di risposta. Poiché il caricamento e la serializzazione di dati binari di grandi dimensioni in questo modo può influire sulle prestazioni, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definisce un meccanismo per recuperare dati binari indipendentemente dell'entità a cui appartiene. Questa operazione viene eseguita separando i dati binari dall'entità in uno o più flussi di dati.  
@@ -93,7 +79,7 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
  Per informazioni generali su come creare un servizio dati, vedere [configurazione del servizio dati](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Abilitazione dei flussi binari di grandi dimensioni nell'ambiente di hosting  
- Quando si crea un servizio dati in un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applicazione Web, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzata per fornire l'implementazione del protocollo HTTP. Per impostazione predefinita, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] limita la dimensione dei messaggi HTTP a solo KB 65. Per consentire il flusso dei dati binari di grandi dimensioni verso e dal servizio dati, è inoltre necessario configurare l'applicazione Web per l'abilitazione di file binari di grandi dimensioni e l'uso di flussi per il trasferimento. A tal fine, aggiungere quanto segue all'elemento `<configuration />` del file Web.config dell'applicazione:  
+ Quando si crea un servizio dati in un'applicazione Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], Windows Communication Foundation (WCF) viene utilizzato per fornire l'implementazione del protocollo HTTP. Per impostazione predefinita, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] limita la dimensione dei messaggi HTTP a solo KB 65. Per consentire il flusso dei dati binari di grandi dimensioni verso e dal servizio dati, è inoltre necessario configurare l'applicazione Web per l'abilitazione di file binari di grandi dimensioni e l'uso di flussi per il trasferimento. A tal fine, aggiungere quanto segue all'elemento `<configuration />` del file Web.config dell'applicazione:  
   
   
   

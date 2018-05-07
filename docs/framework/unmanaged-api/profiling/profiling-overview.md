@@ -1,13 +1,6 @@
 ---
 title: Cenni preliminari sulla profilatura
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - managed code, profiling API support
 - unmanaged code, combining with managed code in profiling
@@ -34,19 +27,16 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-overview"></a>Cenni preliminari sulla profilatura
-<a name="top"></a>Un profiler è uno strumento che consente di monitorare l'esecuzione di un'altra applicazione. Un profiler CLR (Common Language Runtime) è una DLL costituita da funzioni che ricevono e inviano messaggi a CLR usando l'API di profilatura. La DLL del profiler viene caricata in fase di esecuzione da CLR.  
+<a name="top"></a> Un profiler è uno strumento che consente di monitorare l'esecuzione di un'altra applicazione. Un profiler CLR (Common Language Runtime) è una DLL costituita da funzioni che ricevono e inviano messaggi a CLR usando l'API di profilatura. La DLL del profiler viene caricata in fase di esecuzione da CLR.  
   
  Gli strumenti di profilatura tradizionali si basano sulla misurazione dell'esecuzione dell'applicazione, ovvero del tempo impiegato da ciascuna funzione oppure dell'utilizzo della memoria nel tempo da parte dell'applicazione. L'API di profilatura fa riferimento a una classe più ampia di strumenti di diagnostica, quali utilità di code coverage e persino supporti di debug avanzati, tutti usati per fini diagnostici. L'API di profilatura non si limita a misurare l'esecuzione di un'applicazione, ne esegue anche il monitoraggio. Per questa ragione, non deve mai essere usata dall'applicazione stessa e l'esecuzione dell'applicazione non deve dipendere dal profiler (né esserne influenzata).  
   
@@ -66,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Combinazione di codice gestito e in un Code Profiler](#combining_managed_unmanaged)  
   
--   [Analisi codice non gestito](#unmanaged)  
+-   [Profilatura del codice non gestito](#unmanaged)  
   
 -   [Uso di COM](#com)  
   

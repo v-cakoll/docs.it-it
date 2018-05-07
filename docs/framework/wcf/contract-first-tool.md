@@ -1,24 +1,12 @@
 ---
-title: "Strumento con priorità al contratto (\"contract-first\")"
-ms.custom: 
+title: Strumento con priorità al contratto ("contract-first")
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5079a4b45c7adf0cfd4d9ae1069379184422dc98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contract-first-tool"></a>Strumento con priorità al contratto ("contract-first")
 I contratti di servizio devono spesso essere creati a partire da servizi esistenti. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le classi dei contratti dati possono essere create automaticamente dai servizi esistenti utilizzando lo strumento con priorità al contratto ("contract-first"). Per utilizzare lo strumento con priorità al contratto ("contract-first") è necessario che il file di definizione di XML Schema (XSD) sia scaricato localmente; lo strumento non può importare i contratti dati remoti tramite HTTP.  
@@ -72,37 +60,37 @@ I contratti di servizio devono spesso essere creati a partire da servizi esisten
 ## <a name="configuring-contract-first-options"></a>Configurazione delle opzioni con priorità al contratto ("contract-first")  
  Le opzioni con priorità al contratto ("contract-first") possono essere configurate nel menu Proprietà di un progetto [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Per consentire lo sviluppo di priorità al contratto, selezionare il **Abilita XSD come linguaggio di definizione del tipo** casella di controllo nella pagina WCF della finestra delle proprietà del progetto.  
   
- ![Opzioni del progetto WCF con contratto &#45; primo](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
+ ![Contratto che mostra le opzioni del progetto WCF&#45;primo](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   
  Per configurare le proprietà avanzate, fare clic sul pulsante Avanzate.  
   
- ![Contratto avanzate &#45; Proprietà primo](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
+ ![Advanced contratto&#45;proprietà primo](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
   
  Per la generazione di codice dai contratti è possibile configurare le seguenti impostazioni avanzate. Attualmente, le impostazioni possono essere configurate solo per tutti i file del progetto e non per singoli file.  
   
--   **Modalità serializzatore**: questa impostazione determina il serializzatore usato per leggere il file di contratto di servizio. Quando **serializzatore XML** è selezionata, il **tipi di raccolta** e **Riutilizza tipi** le opzioni sono disabilitate. Queste opzioni si applicano solo per il **serializzatore dei contratti dati**.  
+-   **Modalità serializzatore**: questa impostazione determina il serializzatore usato per leggere i file di contratto di servizio. Quando **serializzatore XML** è selezionata, il **tipi di raccolta** e **Riutilizza tipi** le opzioni sono disabilitate. Queste opzioni si applicano solo per il **serializzatore dei contratti dati**.  
   
 -   **Riutilizza tipi**: questa impostazione specifica quali librerie sono utilizzate per riutilizzare il tipo. Questa impostazione si applica solo se **modalità serializzatore** è impostato su **serializzatore dei contratti dati**.  
   
--   **Tipo di raccolta**: questa impostazione specifica il tipo completo o completo dell'assembly da utilizzare per il tipo di raccolta dati. Questa impostazione si applica solo se **modalità serializzatore** è impostato su **serializzatore dei contratti dati**.  
+-   **Tipo di raccolta**: questa impostazione specifica il tipo completo o completo dell'assembly da utilizzare per il tipo di dati di raccolta. Questa impostazione si applica solo se **modalità serializzatore** è impostato su **serializzatore dei contratti dati**.  
   
 -   **Tipo di dizionario**: questa impostazione specifica il tipo completo o completo dell'assembly da utilizzare per il tipo di dati del dizionario.  
   
 -   **EnableDataBinding**: questa impostazione specifica se implementare la <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia su tutti i tipi di dati per implementare il data binding.  
   
--   **ExcludedTypes**: questa impostazione specifica l'elenco dei tipi completo o completo dell'assembly da escludere dagli assembly di riferimento. Questa impostazione si applica solo se **modalità serializzatore** è impostato su **serializzatore dei contratti dati**.  
+-   **ExcludedTypes**: questa impostazione specifica l'elenco dei tipi di nome completo o completo dell'assembly da escludere dagli assembly di riferimento. Questa impostazione si applica solo se **modalità serializzatore** è impostato su **serializzatore dei contratti dati**.  
   
 -   **GenerateInternalTypes**: questa impostazione specifica se generare classi contrassegnate come interne. Questa impostazione si applica solo se **modalità serializzatore** è impostato su **serializzatore dei contratti dati**.  
   
 -   **GenerateSerializableTypes**: questa impostazione specifica se generare classi con la <xref:System.SerializableAttribute> attributo. Questa impostazione si applica solo se **modalità serializzatore** è impostato su **serializzatore dei contratti dati**.  
   
--   **/Importxmltypes**: questa impostazione specifica se è necessario configurare il serializzatore dei contratti dati per applicare il <xref:System.SerializableAttribute> attributo alle classi senza il <xref:System.Runtime.Serialization.DataContractAttribute> attributo.  Questa impostazione si applica solo se **modalità serializzatore** è impostato su **serializzatore dei contratti dati**.  
+-   **/Importxmltypes**: questa impostazione specifica se è necessario configurare il serializzatore dei contratti dati per applicare la <xref:System.SerializableAttribute> attributo alle classi senza il <xref:System.Runtime.Serialization.DataContractAttribute> attributo.  Questa impostazione si applica solo se **modalità serializzatore** è impostato su **serializzatore dei contratti dati**.  
   
--   **SupportFx35TypedDataSets**: questa impostazione specifica se fornire funzionalità aggiuntive per il set di dati tipizzati creato per .net Framework 3.5. Quando **modalità serializzatore** è impostato su **serializzatore XML**, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> estensione verrà aggiunto all'unità di importazione di XML schema quando questo valore è impostato su True. Quando **modalità serializzatore** è impostato su **serializzatore dei contratti dati**, il tipo <xref:System.DateTimeOffset> verrà escluso dai riferimenti quando questo valore è impostato su False, in modo che un <xref:System.DateTimeOffset> viene sempre generata per versioni precedenti del framework.  
+-   **SupportFx35TypedDataSets**: questa impostazione specifica se fornire funzionalità aggiuntive per i set di dati tipizzati creati per .net Framework 3.5. Quando **modalità serializzatore** è impostato su **serializzatore XML**, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> estensione verrà aggiunto all'unità di importazione di XML schema quando questo valore è impostato su True. Quando **modalità serializzatore** è impostato su **serializzatore dei contratti dati**, il tipo <xref:System.DateTimeOffset> verrà escluso dai riferimenti quando questo valore è impostato su False, in modo che un <xref:System.DateTimeOffset> viene sempre generata per versioni precedenti del framework.  
   
 -   **InputXsdFiles**: questa impostazione specifica l'elenco dei file di input. Ogni file deve contenere un XML Schema valido.  
   
--   **Lingua**: questa impostazione specifica il linguaggio del codice contratto generato. L'impostazione deve essere riconoscibile da <xref:System.CodeDom.Compiler.CodeDomProvider>.  
+-   **Linguaggio**: questa impostazione specifica il linguaggio del codice contratto generato. L'impostazione deve essere riconoscibile da <xref:System.CodeDom.Compiler.CodeDomProvider>.  
   
 -   **NamespaceMappings**: questa impostazione specifica i mapping degli spazi dei nomi di destinazione XSD agli spazi dei nomi CLR. Ogni mapping deve utilizzare il formato seguente:  
   

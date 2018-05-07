@@ -1,14 +1,6 @@
 ---
 title: Struttura CorDebugBlockingObject
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: reference
 api_name:
 - CorDebugBlockingObject Structure
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5944edd1-0914-4efa-aba0-d5a277c38b1a
 topic_type:
 - apiref
-caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 85b48fd565d7cc4bb158260df167477d3e61d81e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed7db321b32657087b791758096c692f25f3d7f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cordebugblockingobject-structure"></a>Struttura CorDebugBlockingObject
 Definisce un oggetto che blocca un thread e il motivo specifico che il thread è bloccato.  
@@ -61,11 +49,11 @@ CorDebugBlockingReason blockingReason;
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl  
+ **Intestazione:** Cordebug. idl  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

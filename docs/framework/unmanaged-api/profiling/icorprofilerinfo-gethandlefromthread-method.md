@@ -1,14 +1,6 @@
 ---
 title: Metodo ICorProfilerInfo::GetHandleFromThread
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo.GetHandleFromThread
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 465fb61d17269873b3a2aa2f323086f209cab946
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9658ad8a1963d3747fb7c23dce84790a30b17db3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>Metodo ICorProfilerInfo::GetHandleFromThread
 L'ID di un thread viene eseguito il mapping a un handle del thread Win32.  
@@ -61,9 +49,9 @@ HRESULT GetHandleFromThread(
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

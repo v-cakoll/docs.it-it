@@ -1,36 +1,24 @@
 ---
 title: Panoramica delle sessioni affidabili
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d2749188214f3f68ee3ed5df87fc0aa7cac604d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c5344c2804cf4c17fdc46a7fea5a4a360122b6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions-overview"></a>Panoramica delle sessioni affidabili
 
-La messaggistica affidabile SOAP di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] garantisce l'affidabilità del trasferimento di messaggi end-to-end tra endpoint SOAP. Svolge questa funzione su reti inaffidabili risolvendo gli errori del trasporto e gli errori a livello di messaggio SOAP. In particolare, assicura il recapito basato sulla sessione, singolo e (facoltativamente) ordinato dei messaggi inviati su intermediari SOAP o del trasporto. Recapito basato sulla sessione fornisce per raggruppare i messaggi in una sessione con ordinamento facoltativo dei messaggi.
+Windows Communication Foundation (WCF) la messaggistica affidabile SOAP fornisce l'affidabilità del trasferimento di messaggi end-to-end tra endpoint SOAP. Svolge questa funzione su reti inaffidabili risolvendo gli errori del trasporto e gli errori a livello di messaggio SOAP. In particolare, assicura il recapito basato sulla sessione, singolo e (facoltativamente) ordinato dei messaggi inviati su intermediari SOAP o del trasporto. Recapito basato sulla sessione fornisce per raggruppare i messaggi in una sessione con ordinamento facoltativo dei messaggi.
 
 In questo argomento descrive le sessioni affidabili, come e quando utilizzarle e come proteggerle.
 
 ## <a name="wcf-reliable-sessions"></a>Sessioni affidabili WCF
 
-Le sessioni affidabili [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono un'implementazione della messaggistica affidabile SOAP, nel modo definito dal protocollo WS-ReliableMessaging.
+Le sessioni affidabili WCF è un'implementazione di SOAP reliable messaging come definito dal protocollo WS-ReliableMessaging.
 
-La messaggistica affidabile SOAP di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce una sessione end-to-end affidabile tra due endpoint, indipendentemente dal numero o dal tipo di intermediari che separano gli endpoint di messaggistica. Sono inclusi tutti gli intermediari del trasporto che non utilizzano SOAP (ad esempio, il proxy HTTP) o gli intermediari che utilizzano SOAP (ad esempio bridge o router basati su SOAP) necessari per i messaggi tra gli endpoint. Un canale di sessione affidabile supporta *interattivo* comunicazione in modo che i servizi connessi da tale canale eseguiti contemporaneamente e scambiare ed elaborare messaggi in condizioni di bassa latenza, ovvero all'interno di relativamente brevi intervalli di tempo. Questo accoppiamento implica che questi componenti avanzamento o failover contemporaneamente, pertanto non c'è nessun isolamento fornito tra di essi.
+La messaggistica affidabile SOAP WCF fornisce una sessione affidabile end-to-end tra due endpoint, indipendentemente dal numero o dal tipo di intermediari che separano gli endpoint di messaggistica. Sono inclusi tutti gli intermediari del trasporto che non utilizzano SOAP (ad esempio, il proxy HTTP) o gli intermediari che utilizzano SOAP (ad esempio bridge o router basati su SOAP) necessari per i messaggi tra gli endpoint. Un canale di sessione affidabile supporta *interattivo* comunicazione in modo che i servizi connessi da tale canale eseguiti contemporaneamente e scambiare ed elaborare messaggi in condizioni di bassa latenza, ovvero all'interno di relativamente brevi intervalli di tempo. Questo accoppiamento implica che questi componenti avanzamento o failover contemporaneamente, pertanto non c'è nessun isolamento fornito tra di essi.
 
 Una sessione affidabile maschera due tipi di errori:
 
@@ -52,7 +40,7 @@ Una sessione affidabile assicura per i messaggi SOAP ciò che TCP assicura per i
 
 ## <a name="reliable-sessions-and-bindings"></a>Sessioni affidabili e associazioni
 
-Come accennato in precedenza, una sessione affidabile è neutra rispetto al trasporto. Inoltre, è possibile stabilire una sessione affidabile su molti modelli di scambio di messaggi, ad esempio request / reply o duplex. Oggetto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sessione affidabile è esposto come proprietà di un set di associazioni.
+Come accennato in precedenza, una sessione affidabile è neutra rispetto al trasporto. Inoltre, è possibile stabilire una sessione affidabile su molti modelli di scambio di messaggi, ad esempio request / reply o duplex. Una sessione affidabile di WCF è esposto come proprietà di un set di associazioni.
 
 Utilizzare una sessione affidabile su endpoint che utilizzano:
 
@@ -74,23 +62,23 @@ Utilizzare una sessione affidabile su qualsiasi altra associazione creando un'as
 
 È possibile impilare una sessione affidabile su diversi tipi di canale sottostante e la forma del canale di sessione affidabile risultante varia. Il client che sul server, il tipo di canale di sessione affidabile supportato dipende dal tipo di canale sottostante utilizzato. Nella tabella seguente sono elencati i tipi di canale di sessione supportati sul client come funzione del canale sottostante.
 
-| Tipi di canale di sessione affidabile supportati &#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| Tipi di canale di sessione affidabile supportati&#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
 | `IOutputSessionChannel`                         | Yes               | Sì                      | Sì              | Sì                     |
 | `IRequestSessionChannel`                        | Sì               | Sì                      | No               | No                      |
 | `IDuplexSessionChannel`                         | No                | No                       | Sì              | Yes                     |
 
-&#8224; I tipi di canale supportati sono i valori disponibili per il modello generico `TChannel` valore del parametro viene passato il <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> metodo.
+&#8224;I tipi di canale supportati sono i valori disponibili per il tipo generico `TChannel` valore del parametro viene passato il <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> metodo.
 
 Nella tabella seguente sono elencati i tipi di canale di sessione supportati sul server come funzione del canale sottostante.
 
-| Tipi di canale di sessione affidabile supportati &#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| Tipi di canale di sessione affidabile supportati&#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
 | `IInputSessionChannel`                          | Yes             | Sì                    | Sì              | Sì                     |
 | `IReplySessionChannel`                          | Sì             | Sì                    | No               | No                      |
 | `IDuplexSessionChannel`                         | No              | No                     | Sì              | Yes                     |
 
-&#8225; I tipi di canale supportati sono i valori disponibili per il modello generico `TChannel` valore del parametro viene passato il <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> metodo.
+&#8225;I tipi di canale supportati sono i valori disponibili per il tipo generico `TChannel` valore del parametro viene passato il <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> metodo.
 
 ## <a name="reliable-sessions-and-security"></a>Sessioni affidabili e protezione
 
@@ -102,7 +90,7 @@ L'unica eccezione si verifica in caso di utilizzo di HTTPS. La sessione di Secur
 
 ## <a name="using-reliable-sessions"></a>Utilizzo di sessioni affidabili
 
-Per utilizzare sessioni affidabili [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], creare un endpoint con un'associazione che supporti una sessione affidabile. Utilizzare una delle associazioni fornite dal sistema che [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] offre con la sessione affidabile attivata o creare un'associazione personalizzata che esegue questa operazione.
+Per utilizzare sessioni affidabili WCF, creare un endpoint con un'associazione che supporti una sessione affidabile. Utilizzare una delle associazioni fornite dal sistema che WCF fornisce con la sessione affidabile attivata o creare un'associazione personalizzata che esegue questa operazione.
 
 Le associazioni definite dal sistema che supportano e attivano una sessione affidabile per impostazione predefinita includono:
 
@@ -118,11 +106,11 @@ Le associazioni fornite dal sistema che supportano una sessione affidabile come 
 
 Per un esempio di come creare un'associazione personalizzata, vedere [procedura: creare un'associazione di sessione affidabile personalizzata con HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
 
-Per una discussione su [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] associazioni che supportano sessioni affidabili, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md).
+Per una discussione sulle associazioni di WCF che supportano sessioni affidabili, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md).
 
 ## <a name="when-to-use-reliable-sessions"></a>Quando utilizzare sessioni affidabili
 
-È importante capire quando utilizzare sessioni affidabili nell'applicazione. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta sessioni affidabili tra endpoint che sono contemporaneamente attivi e operativi. Se l'applicazione richiede uno degli endpoint non sia disponibile per un periodo di tempo, quindi utilizzare le code per realizzare l'affidabilità.
+È importante capire quando utilizzare sessioni affidabili nell'applicazione. WCF supporta le sessioni affidabili tra endpoint che sono attivi e operativi allo stesso tempo. Se l'applicazione richiede uno degli endpoint non sia disponibile per un periodo di tempo, quindi utilizzare le code per realizzare l'affidabilità.
 
 Se lo scenario richiede due endpoint connesso tramite TCP, TCP può essere sufficiente a fornire gli scambi di messaggi affidabili. Tuttavia, non è necessario utilizzare una sessione affidabile, poiché TCP garantisce che i pacchetti arrivino in ordine e una sola volta.
 

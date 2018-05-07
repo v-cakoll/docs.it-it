@@ -1,27 +1,15 @@
 ---
 title: 'Procedura: eseguire la migrazione del codice per client di servizi Web ASP.NET a Windows Communication Foundation'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2e0a22a7-e1d5-4718-8997-4319a7cd9027
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: baf43f2bfa2175062c57f73e45835c251ac5769e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb60f9cb2e8f35ee703b049eae9e3d99c1ec7d49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-aspnet-web-service-client-code-to-the-windows-communication-foundation"></a>Procedura: eseguire la migrazione del codice per client di servizi Web ASP.NET a Windows Communication Foundation
-Nella procedura seguente vengono descritti i passaggi generali da eseguire per la migrazione del codice per client di servizi Web ASP.NET a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+La procedura seguente descrive i passaggi generali da seguire per la migrazione del codice client di servizio Web ASP.NET a WCF.  
   
 ## <a name="procedure"></a>Routine  
   
@@ -33,9 +21,9 @@ Nella procedura seguente vengono descritti i passaggi generali da eseguire per l
   
 3.  Rimuovere il codice del client ASP.NET dal progetto client. Tale codice è presente nei moduli generati tramite lo strumento WSDL.exe.  
   
-4.  Generare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] codice client usando il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Aggiungere il codice al progetto client ed eseguire il merge del risultato della configurazione nel file di configurazione esistente del client.  
+4.  Generare codice client WCF usando il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Aggiungere il codice al progetto client ed eseguire il merge del risultato della configurazione nel file di configurazione esistente del client.  
   
-5.  Compilare l'applicazione. Correggere gli errori di compilazione sostituendo i riferimenti ai tipi di client ASP.NET precedenti con i nuovi tipi di client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+5.  Compilare l'applicazione. Corregge gli errori di compilazione sostituendo i riferimenti ai tipi di client ASP.NET precedenti con i riferimenti ai nuovi tipi di client WCF.  
   
 6.  Eseguire il set di test.  
   

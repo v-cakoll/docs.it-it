@@ -1,30 +1,18 @@
 ---
-title: "Attività"
-ms.custom: 
+title: Attività
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity"></a>Attività
-Questo argomento descrive le tracce attività del modello di traccia di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Le attività sono unità di elaborazione che consentono all'utente di restringere l'ambito di un errore e quindi di individuarne le cause con maggiore facilità. Gli errori che si verificano nella stessa attività sono correlati in modo diretto. Si consideri ad esempio il caso di un'operazione che non riesce poiché la decrittografia di un messaggio ha avuto esito negativo. Le tracce relative alla non riuscita dell'operazione e della decrittografia del messaggio vengono visualizzate entrambe nella stessa attività, evidenziando in questo modo una correlazione diretta fra i due eventi di errore.  
+In questo argomento descrive le tracce di attività nel modello di traccia di Windows Communication Foundation (WCF). Le attività sono unità di elaborazione che consentono all'utente di restringere l'ambito di un errore e quindi di individuarne le cause con maggiore facilità. Gli errori che si verificano nella stessa attività sono correlati in modo diretto. Si consideri ad esempio il caso di un'operazione che non riesce poiché la decrittografia di un messaggio ha avuto esito negativo. Le tracce relative alla non riuscita dell'operazione e della decrittografia del messaggio vengono visualizzate entrambe nella stessa attività, evidenziando in questo modo una correlazione diretta fra i due eventi di errore.  
   
 ## <a name="configuring-activity-tracing"></a>Configurazione della traccia attività  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]fornisce attività predefinite per applicazioni di elaborazione (vedere [elenco attività](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). È inoltre possibile definire attività a livello di programmazione allo scopo di raggruppare più tracce utente. Per ulteriori informazioni, vedere [la creazione di tracce di codice utente](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] fornisce attività predefinite per le applicazioni di elaborazione (vedere [elenco delle attività](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). È inoltre possibile definire attività a livello di programmazione allo scopo di raggruppare più tracce utente. Per ulteriori informazioni, vedere [la creazione di tracce di codice utente](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
  Per emettere tracce attività in fase di esecuzione, utilizzare l'impostazione `ActivityTracing` dell'origine di traccia `System.ServiceModel` o di altre origini di traccia personalizzate o fornite da [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], come illustrato nel codice di configurazione seguente.  
   

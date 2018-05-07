@@ -1,14 +1,6 @@
 ---
 title: Metodo ISymUnmanagedWriter::DefineSequencePoints
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter.DefineSequencePoints
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e1dcc427a6d034ce108ca66f71cc24b1050a72f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1dc87b201638bab974c59722a69300977b14cf08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>Metodo ISymUnmanagedWriter::DefineSequencePoints
 Definisce un gruppo di punti di sequenza nel metodo corrente. Ogni riga e colonna iniziale definisce l'inizio di un'istruzione all'interno di un metodo. Ogni riga e colonna finale definisce la fine di un'istruzione all'interno di un metodo. Le matrici devono essere ordinate in ordine crescente di offset. L'offset viene sempre misurato dall'inizio del metodo, in byte.  
@@ -77,7 +65,7 @@ HRESULT DefineSequencePoints(
  S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -1,30 +1,18 @@
 ---
 title: Dispatcher di canali personalizzati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c67425c67625fcfcfaac5ec689f4f70dbd3d64f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cd27d485efe7fe91e7c59627bf14e188e85f386
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-channel-dispatcher"></a>Dispatcher di canali personalizzati
 In questo esempio viene descritto come compilare lo stack di canali in modo personalizzato implementando direttamente <xref:System.ServiceModel.ServiceHostBase> e come creare un dispatcher del canale personalizzato in un ambiente host Web. Il dispatcher del canale interagisce con <xref:System.ServiceModel.Channels.IChannelListener> per accettare canali e recupera messaggi dallo stack di canali. Questo esempio fornisce anche un esempio di base che illustra come compilare uno stack di canali in un ambiente host Web tramite <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
   
 ## <a name="custom-servicehostbase"></a>ServiceHostBase personalizzato  
- In questo esempio viene implementato il tipo di base <xref:System.ServiceModel.ServiceHostBase> invece di <xref:System.ServiceModel.ServiceHost> per dimostrare come sostituire l'implementazione di stack di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con un livello di gestione dei messaggi personalizzato all'interno dello stack di canali. Viene eseguito l'override del metodo virtuale <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> per compilare i listener del canale e il dispatcher del canale.  
+ Questo esempio viene implementato il tipo di base <xref:System.ServiceModel.ServiceHostBase> invece di <xref:System.ServiceModel.ServiceHost> per dimostrare come sostituire l'implementazione dello stack di Windows Communication Foundation (WCF) con un messaggio personalizzato a livello all'inizio dello stack di canale di gestione. Viene eseguito l'override del metodo virtuale <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> per compilare i listener del canale e il dispatcher del canale.  
   
  Per implementare un servizio ospitato sul Web, ottenere l'estensione del servizio <xref:System.ServiceModel.Activation.VirtualPathExtension> dalla raccolta <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> e aggiungerla a <xref:System.ServiceModel.Channels.BindingParameterCollection> in modo che il livello di trasporto sia in grado di configurare il listener del canale in base alle impostazioni dell'ambiente host, ovvero le impostazioni Internet Information Services (IIS)/servizio di attivazione dei processi di Windows.  
   
@@ -34,7 +22,7 @@ In questo esempio viene descritto come compilare lo stack di canali in modo pers
  Il dispatcher apre innanzitutto il listener del canale, quindi accetta il canale di risposta singleton. Con il canale, inizia a inviare messaggi (richieste) in un ciclo infinito. Per ogni richiesta, crea un messaggio di risposta e lo restituisce al client.  
   
 ## <a name="creating-a-response-message"></a>Creazione di un messaggio di risposta  
- L'elaborazione del messaggio viene implementata nel tipo `MyServiceManager`. Nel metodo `HandleRequest`, l'intestazione `Action` del messaggio viene dapprima controllata per verificare se la richiesta è supportata. Un'azione SOAP predefinita "http://tempuri.org/HelloWorld/Hello" viene definita per fornire applicazione di filtri del messaggio, in modo analogo al concetto di contratto di servizio nell'implementazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di <xref:System.ServiceModel.ServiceHost>.  
+ L'elaborazione del messaggio viene implementata nel tipo `MyServiceManager`. Nel metodo `HandleRequest`, l'intestazione `Action` del messaggio viene dapprima controllata per verificare se la richiesta è supportata. Azione SOAP predefinita "http://tempuri.org/HelloWorld/Hello" viene definita per fornire il filtro dei messaggi. in modo analogo al concetto di contratto di servizio nell'implementazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di <xref:System.ServiceModel.ServiceHost>.  
   
  Nel caso dell'azione SOAP corretta, l'esempio recupera i dati del messaggio richiesti e genera una risposta corrispondente alla richiesta in modo analogo a quanto si verifica nel caso di <xref:System.ServiceModel.ServiceHost>.  
   
@@ -62,6 +50,6 @@ Server replied: You said: Howdy. Message id: 5
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

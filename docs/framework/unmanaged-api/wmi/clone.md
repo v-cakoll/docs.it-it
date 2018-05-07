@@ -1,11 +1,7 @@
 ---
 title: Funzione clone (riferimenti alle API non gestite)
-description: "La funzione Clone restituisce un nuovo oggetto che è un clone completo dell'oggetto corrente."
+description: La funzione Clone restituisce un nuovo oggetto che è un clone completo dell'oggetto corrente.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Clone
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 270150bb674ee7f9a71cf28008c663e3b833600d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clone-function"></a>Clone (funzione)
 Restituisce un nuovo oggetto che è un clone completo dell'oggetto corrente.   
@@ -62,7 +55,7 @@ I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* fi
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null`è stato specificato come parametro, e non è consentito in questo caso. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` è stato specificato come parametro, e non è consentito in questo caso. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per clonare l'oggetto. |
 | `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
   
@@ -77,7 +70,7 @@ L'oggetto clonato è un oggetto COM che presenta un conteggio dei riferimenti di
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

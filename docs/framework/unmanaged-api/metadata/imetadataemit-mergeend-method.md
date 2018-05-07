@@ -1,14 +1,6 @@
 ---
 title: Metodo IMetaDataEmit::MergeEnd
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.MergeEnd
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 265fc007b5817e8dffd5846738a7a0003bbddf9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitmergeend-method"></a>Metodo IMetaDataEmit::MergeEnd
 Unisce in corrente ambito tutti gli ambiti dei metadati specificati da uno o più chiamate precedenti a [IMetaDataEmit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  
@@ -58,7 +46,7 @@ HRESULT MergeEnd ();
   
      Se le proprietà dei moduli sono già state impostate per l'ambito corrente, non le proprietà dei moduli vengono importati. Tuttavia, se il modulo non è stato impostato nell'ambito corrente, vengono importati solo una volta, quando vengono rilevati prima. Se le proprietà del modulo vengono rilevate nuovamente, sono duplicati. Se vengono confrontati i valori di tutte le proprietà, tranne MVID, module e non vengono trovati duplicati, viene generato un errore.  
   
--   Per le definizioni di tipo (`TypeDef`), nessun duplicato viene unito all'ambito corrente. `TypeDef`per rilevare eventuali duplicati vengono controllati gli oggetti *nome completo dell'oggetto* + *GUID* + *numero di versione*. Se viene trovata una corrispondenza nel nome o il GUID e uno degli altri due elementi è diverso, viene generato un errore. In caso contrario, se tutti e tre gli elementi corrispondono, `MergeEnd` esegue un controllo superficiale per verificare che le voci siano veramente duplicati; in caso contrario, viene generato un errore. Cerca di questo controllo superficiale:  
+-   Per le definizioni di tipo (`TypeDef`), nessun duplicato viene unito all'ambito corrente. `TypeDef` per rilevare eventuali duplicati vengono controllati gli oggetti *nome completo dell'oggetto* + *GUID* + *numero di versione*. Se viene trovata una corrispondenza nel nome o il GUID e uno degli altri due elementi è diverso, viene generato un errore. In caso contrario, se tutti e tre gli elementi corrispondono, `MergeEnd` esegue un controllo superficiale per verificare che le voci siano veramente duplicati; in caso contrario, viene generato un errore. Cerca di questo controllo superficiale:  
   
     -   Le stesse dichiarazioni di membri, che si verificano nello stesso ordine. I membri contrassegnati come `mdPrivateScope` (vedere il [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumerazione) non sono inclusi in questo controllo, vengono unite in modo speciale.  
   
@@ -77,9 +65,9 @@ HRESULT MergeEnd ();
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in MSCorEE.dll  
+ **Libreria:** usata come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

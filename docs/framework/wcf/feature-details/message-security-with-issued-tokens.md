@@ -1,27 +1,17 @@
 ---
 title: Protezione a livello di messaggio con il client token emessi
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
-caps.latest.revision: "10"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 5badab7ed0773be30ba72045ebf97974e062629c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 237c56c74afe3c1e9bbdf2002011e76a9eeec5ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-issued-tokens"></a>Protezione a livello di messaggio con il client token emessi
-Il client token emessi consente di utilizzare lo scenario di sicurezza federata in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Il client token emessi consente lo scenario di sicurezza federata in Windows Communication Foundation (WCF).  
   
  La protezione federata consente di stabilire una relazione di trust tra domini indipendenti. Ogni dominio centralizza l'autenticazione e l'autorizzazione in un servizio token di sicurezza. Quando fra due servizi di questo tipo viene stabilita una relazione di trust, i membri di un dominio possono utilizzare i servizi dell'altro.  
   

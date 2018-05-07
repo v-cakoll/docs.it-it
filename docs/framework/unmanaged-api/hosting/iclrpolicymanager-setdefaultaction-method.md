@@ -1,14 +1,6 @@
 ---
 title: Metodo ICLRPolicyManager::SetDefaultAction
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetDefaultAction
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f9411e7a-27df-451f-9f6c-d643d6a7a7ce
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 751853aaf4322c15b44bb9b912d293a081c24ba8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9a183c7491ad5d67bc2c68edba3ef2d54839da12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>Metodo ICLRPolicyManager::SetDefaultAction
 Specifica l'azione di criteri che Common language runtime (CLR) deve intraprendere quando si verifica l'operazione specificata.  
@@ -58,7 +46,7 @@ HRESULT SetDefaultAction (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`SetDefaultAction`stato restituito correttamente.|  
+|S_OK|`SetDefaultAction` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
@@ -67,9 +55,9 @@ HRESULT SetDefaultAction (
 |E_INVALIDARG|Un valido `action` è stato specificato per il `operation`, o è stato specificato un valore non valido per `operation`.|  
   
 ## <a name="remarks"></a>Note  
- Non tutti i valori di azione criteri possono essere specificati come il comportamento predefinito per le operazioni CLR. `SetDefaultAction`in genere possono essere utilizzate solo per attivare un comportamento. Ad esempio, un host può specificare che le interruzioni di thread deve essere trasformata nelle interruzioni di thread, ma non è possibile specificare l'opposto. La tabella seguente descrive validi `action` i valori per ogni possibile `operation` valore.  
+ Non tutti i valori di azione criteri possono essere specificati come il comportamento predefinito per le operazioni CLR. `SetDefaultAction` in genere possono essere utilizzate solo per attivare un comportamento. Ad esempio, un host può specificare che le interruzioni di thread deve essere trasformata nelle interruzioni di thread, ma non è possibile specificare l'opposto. La tabella seguente descrive validi `action` i valori per ogni possibile `operation` valore.  
   
-|Valore per`operation`|Valori validi per`action`|  
+|Valore per `operation`|Valori validi per `action`|  
 |---------------------------|-------------------------------|  
 |OPR_ThreadAbort|-eAbortThread<br />-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
 |OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
@@ -83,9 +71,9 @@ HRESULT SetDefaultAction (
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Enumerazione EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  

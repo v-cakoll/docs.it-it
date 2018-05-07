@@ -1,29 +1,15 @@
 ---
 title: Utilizzo del moniker WCF con i client COM
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 322467510d499040c07d6e5e84842542aa325737
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 79040cd267d354d32b3e957dc70fcc65b09b0fc8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Utilizzo del moniker WCF con i client COM
-In questo esempio viene illustrato come usare il moniker del servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per integrare servizi Web in ambienti di sviluppo basati su COM, ad esempio Microsoft Office Visual Basic for Applications (Office VBA) o Visual Basic 6.0. L'esempio è costituito da un client Windows Script Host (file con estensione vbs), una libreria di classi di supporto (file con estensione dll) e una libreria di servizi (file con estensione dll) ospitati in Internet Information Services (IIS). Il servizio è un servizio di calcolatrice e il client COM chiama operazioni matematiche, Add, Subtract, Multiply e Divide, nel servizio. L'attività del client è visibile nella finestra di messaggio.  
+Questo esempio viene illustrato come usare il moniker del servizio Windows Communication Foundation (WCF) per integrare servizi Web in ambienti di sviluppo basato su COM, ad esempio Microsoft Office Visual Basic for Applications (Office VBA) o Visual Basic 6.0. L'esempio è costituito da un client Windows Script Host (file con estensione vbs), una libreria di classi di supporto (file con estensione dll) e una libreria di servizi (file con estensione dll) ospitati in Internet Information Services (IIS). Il servizio è un servizio di calcolatrice e il client COM chiama operazioni matematiche, Add, Subtract, Multiply e Divide, nel servizio. L'attività del client è visibile nella finestra di messaggio.  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -33,7 +19,7 @@ In questo esempio viene illustrato come usare il moniker del servizio [!INCLUDE[
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   

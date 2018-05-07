@@ -1,14 +1,6 @@
 ---
 title: Funzione GetVersionFromProcess
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetVersionFromProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: db5054ab9b71eb93005fc0315acba82d807487ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b57d04a8a49371872c679a331b5ae9c45dce797
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getversionfromprocess-function"></a>Funzione GetVersionFromProcess
 Ottiene il numero di versione di common language runtime (CLR) che è associato l'handle del processo specificato.  
@@ -70,8 +58,8 @@ HRESULT GetVersionFromProcess (
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|E_INVALIDARG|`pVersion`è null e `cchBuffer` non è null, o viceversa.<br /><br /> oppure<br /><br /> `hProcess`non è un handle a un processo valido.<br /><br /> oppure<br /><br /> CLR non è caricato.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`è null o inferiore alla lunghezza della stringa di versione.|  
+|E_INVALIDARG|`pVersion` è null e `cchBuffer` non è null, o viceversa.<br /><br /> oppure<br /><br /> `hProcess` non è un handle valido a un processo.<br /><br /> oppure<br /><br /> CLR non è caricato.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` è null o minore della lunghezza della stringa di versione.|  
 |E_NOTIMPL|Questo metodo non è disponibile nel sistema operativo Microsoft Windows 95, Microsoft Windows 98 o Windows Millennium Edition di Microsoft.|  
   
 ## <a name="requirements"></a>Requisiti  
@@ -79,9 +67,9 @@ HRESULT GetVersionFromProcess (
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzione GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  

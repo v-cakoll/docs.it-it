@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox Windows Form'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: faf0422db9915806442ab96759d63e15ff98b813
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9319ffe5e9c4f06565648565ce21dec6fc672f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedura: aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox Windows Form
 Gli elementi possono essere aggiunti a una casella combinata di Windows Form, casella di riepilogo o casella di riepilogo in diversi modi, in quanto questi controlli possono essere associati a un'ampia gamma di origini dati. Tuttavia, in questo argomento viene illustrato il metodo più semplice e non richiede supporta l'associazione dati. Gli elementi visualizzati in genere sono stringhe. Tuttavia, qualsiasi oggetto può essere utilizzato. Il testo che viene visualizzato nel controllo è il valore restituito dell'oggetto `ToString` metodo.  
@@ -102,7 +90,7 @@ Gli elementi possono essere aggiunti a una casella combinata di Windows Form, ca
   
 1.  Chiamare il `Remove` o `RemoveAt` metodo per eliminare gli elementi.  
   
-     `Remove`dispone di un argomento che specifica l'elemento da rimuovere.`RemoveAt` Rimuove l'elemento con il numero di indice specificato.  
+     `Remove` dispone di un argomento che specifica l'elemento da rimuovere.`RemoveAt` Rimuove l'elemento con il numero di indice specificato.  
   
     ```vb  
     ' To remove item with index 0:  

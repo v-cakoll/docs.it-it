@@ -1,14 +1,6 @@
 ---
 title: ICorDebugGenericValue Interface1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugGenericValue
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6c6fb4893edf0bcda9d6f7ddbeea7054f5b4fd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0081f020da673023e2c35f9599e9682215e2c9d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebuggenericvalue-interface1"></a>ICorDebugGenericValue Interface1
 Sottoclasse di "ICorDebugValue" che si applica a tutti i valori. Questa interfaccia fornisce i metodi Get e Set per il valore.  
@@ -45,7 +33,7 @@ Sottoclasse di "ICorDebugValue" che si applica a tutti i valori. Questa interfac
 |[Metodo SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|Copia un nuovo valore dal buffer specificato.|  
   
 ## <a name="remarks"></a>Note  
- `ICorDebugGenericValue`è un'interfaccia secondario perché non utilizzabili in remoto.  
+ `ICorDebugGenericValue` è un'interfaccia secondario perché è non utilizzabile in remoto.  
   
  Per i tipi di riferimento, il valore è il riferimento piuttosto che il contenuto del riferimento.  
   
@@ -57,11 +45,11 @@ Sottoclasse di "ICorDebugValue" che si applica a tutti i valori. Questa interfac
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, Cordebug. H  
+ **Intestazione:** Cordebug. idl, Cordebug. H  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
     

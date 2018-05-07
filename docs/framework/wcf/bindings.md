@@ -1,31 +1,17 @@
 ---
 title: Associazioni di Windows Communication Foundation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d40faff2734095af42f94c60c630dde8494e5975
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings"></a>Associazioni di Windows Communication Foundation
-Le associazioni specificano il modo in cui un endpoint di servizio di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] comunica con altri endpoint. In parole semplici, un'associazione deve specificare il trasporto (ad esempio HTTP o TCP) da utilizzare. Le associazioni consentono inoltre di impostare altre caratteristiche, ad esempio la protezione e il supporto delle transazioni.  
+Le associazioni specificano come un endpoint del servizio Windows Communication Foundation (WCF) comunica con altri endpoint. In parole semplici, un'associazione deve specificare il trasporto (ad esempio HTTP o TCP) da utilizzare. Le associazioni consentono inoltre di impostare altre caratteristiche, ad esempio la protezione e il supporto delle transazioni.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica delle associazioni WCF](../../../docs/framework/wcf/bindings-overview.md)  

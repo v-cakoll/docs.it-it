@@ -1,28 +1,14 @@
 ---
 title: Creazione di associazioni definite dall'utente
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Creazione di associazioni definite dall'utente
 Esistono diversi modi per creare associazioni non fornite dal sistema:  
@@ -38,7 +24,7 @@ Esistono diversi modi per creare associazioni non fornite dal sistema:
   
  Sono disponibili tre tipi di elementi di associazione: elementi di associazione di protocollo, elementi di associazione di codifica ed elementi di associazione del trasporto.  
   
- Elementi di associazione di protocollo: rappresentano passaggi di elaborazione di livello superiore che agiscono sui messaggi. I canali e i listener creati da questi elementi di associazione possono aggiungere, rimuovere o modificare il contenuto del messaggio. Una determinata associazione può avere un numero arbitrario di elementi di associazione di protocollo, ognuno dei quali eredita da <xref:System.ServiceModel.Channels.BindingElement>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] include diversi elementi di associazione di protocollo, tra cui <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> e <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Elementi di associazione di protocollo: rappresentano passaggi di elaborazione di livello superiore che agiscono sui messaggi. I canali e i listener creati da questi elementi di associazione possono aggiungere, rimuovere o modificare il contenuto del messaggio. Una determinata associazione può avere un numero arbitrario di elementi di associazione di protocollo, ognuno dei quali eredita da <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) include diversi elementi di associazione di protocollo, tra cui la <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> e il <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
  Elementi di associazione di codifica: rappresentano trasformazioni tra un messaggio e una codifica pronti per la trasmissione in rete. Le tipiche associazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] includono esattamente un elemento di associazione di codifica. Tra gli esempi di elementi di associazione di codifica sono inclusi <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> e <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Se non viene specificato alcun elemento di associazione di codifica per un'associazione, viene usata la codifica predefinita. L'impostazione predefinita corrisponde a "testo", se il trasporto è HTTP, altrimenti a "binaria".  
   

@@ -1,32 +1,18 @@
 ---
 title: Controllo dell'utilizzo di risorse e miglioramento delle prestazioni
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 031261f50a0615efa7227d3655c90c3423e77796
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Controllo dell'utilizzo di risorse e miglioramento delle prestazioni
-In questo argomento vengono descritte varie proprietà in aree diverse dell'architettura di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] che controllano l'utilizzo di risorse e incidono sulla misurazione delle prestazioni.  
+Questo argomento descrive le varie proprietà in aree diverse dell'architettura di Windows Communication Foundation (WCF) che utilizzano consumo delle risorse di controllo e influire sulle metriche delle prestazioni.  
   
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>Proprietà che limitano l'utilizzo di risorse in WCF  
- In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] vengono applicati vincoli ad alcuni tipi di processi a scopo di sicurezza o di tutela delle prestazioni. I vincoli si presentano in due forme principali: quote e velocità. *Le quote* limiti di volta raggiunti o superati, generano un'eccezione immediata in un determinato momento nel sistema. *Limita* sono limiti che determinano la generazione immediata di un'eccezione. Quando viene raggiunto un limite di velocità, invece, l'elaborazione continua rimanendo nei limiti impostati dal valore della velocità. Questa elaborazione limitata potrebbe generare un'eccezione in un altro punto, ma questo dipende dall'applicazione.  
+ Windows Communication Foundation (WCF) vengono applicati vincoli ad alcuni tipi di processi a scopo di sicurezza o prestazioni. I vincoli si presentano in due forme principali: quote e velocità. *Le quote* limiti di volta raggiunti o superati, generano un'eccezione immediata in un determinato momento nel sistema. *Limita* sono limiti che determinano la generazione immediata di un'eccezione. Quando viene raggiunto un limite di velocità, invece, l'elaborazione continua rimanendo nei limiti impostati dal valore della velocità. Questa elaborazione limitata potrebbe generare un'eccezione in un altro punto, ma questo dipende dall'applicazione.  
   
  Oltre alla distinzione tra quote e velocità, alcune proprietà di limitazione si trovano al livello della serializzazione, alcune al livello del trasporto e alcune al livello dell'applicazione. La proprietà <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType> della quota, ad esempio, implementata da tutti gli elementi dell'associazione del trasporto forniti dal sistema, è pari a 65.536 byte per impostazione predefinita per impedire a client dannosi di effettuare attacchi Denial of Service contro un servizio provocando un consumo di memoria eccessivo. È in genere possibile migliorare le prestazioni abbassando questo valore.  
   

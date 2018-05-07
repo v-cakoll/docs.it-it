@@ -1,14 +1,6 @@
 ---
 title: Metodo IHostSecurityManager::SetThreadToken
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager.SetThreadToken
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e951c345-8a86-4587-911b-a1a57bc6428a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 35418907c2b3c75fef689e53b9d6b86ded1f2570
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71f5cdfaf47c55107980edf089f8964c5936fb23
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanagersetthreadtoken-method"></a>Metodo IHostSecurityManager::SetThreadToken
 Imposta un handle per il thread attualmente in esecuzione.  
@@ -54,7 +42,7 @@ HRESULT SetThreadToken (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`SetThreadToken`stato restituito correttamente.|  
+|S_OK|`SetThreadToken` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
@@ -62,7 +50,7 @@ HRESULT SetThreadToken (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo viene restituito E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- `IHostSecurityManager::SetThreadToken`si comporta in modo analogo alla funzione Win32 con lo stesso nome, con la differenza che la funzione Win32 consente al chiamante di passare un handle a un thread arbitrario, mentre `IHostSecurityManager::SetThreadToken` può associare un token solo il thread attualmente in esecuzione.  
+ `IHostSecurityManager::SetThreadToken` si comporta in modo analogo alla funzione Win32 con lo stesso nome, con la differenza che la funzione Win32 consente al chiamante di passare un handle a un thread arbitrario, mentre `IHostSecurityManager::SetThreadToken` può associare un token solo il thread attualmente in esecuzione.  
   
  Il `HANDLE` tipo non è compatibile con COM; ovvero, la dimensione è specifica per un sistema operativo e richiede marshalling personalizzato. Di conseguenza, questo token è utilizzato solo all'interno del processo, tra CLR e l'host.  
   
@@ -71,9 +59,9 @@ HRESULT SetThreadToken (
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  

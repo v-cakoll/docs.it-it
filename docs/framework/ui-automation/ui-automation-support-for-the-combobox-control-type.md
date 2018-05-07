@@ -1,28 +1,19 @@
 ---
 title: Supporto di automazione interfaccia utente per il tipo di controllo ComboBox
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control types, Combo Box
 - UI Automation, Combo Box control type
 - ComboBox controls
 ms.assetid: bb321126-4770-41da-983a-67b7b89d45dd
-caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: fb6729dbafff1b943cd698d9fac4ab5e0bae5a9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61e387462126bc7b0752932ca617f7a97235a1c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-combobox-control-type"></a>Supporto di automazione interfaccia utente per il tipo di controllo ComboBox
 > [!NOTE]
@@ -68,8 +59,8 @@ ms.lasthandoff: 12/22/2017
   
 |Pattern di controllo|Supporto|Note|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Sì|Il controllo casella combinata, per essere tale, deve sempre contenere il pulsante a discesa.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Sì|Visualizza la selezione corrente nella casella combinata. Questo supporto viene delegato alla casella di riepilogo sotto la casella combinata.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Yes|Il controllo casella combinata, per essere tale, deve sempre contenere il pulsante a discesa.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Yes|Visualizza la selezione corrente nella casella combinata. Questo supporto viene delegato alla casella di riepilogo sotto la casella combinata.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|A seconda dei casi|Se la casella combinata può accettare valori di testo arbitrari, il pattern Value deve essere supportato. Questo pattern consente di impostare a livello di codice i contenuti delle stringhe della casella combinata. Se il pattern Value non è supportato, significa che l'utente deve effettuare una selezione tra gli elementi elenco nel sottoalbero della casella combinata.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|Never|Il pattern Scroll non è mai direttamente supportato in una casella combinata. È supportato se è possibile scorrere una casella di riepilogo contenuta in una casella combinata. Può essere supportato solo quando la casella di riepilogo è visibile sullo schermo.|  
   
@@ -79,12 +70,12 @@ ms.lasthandoff: 12/22/2017
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Supporto|Note|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|Nessuna|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> .|Obbligatorio|nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|Nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> .|Obbligatorio|Nessuno|  
 |Evento di modifica della proprietà<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> .|A seconda dei casi|Se il controllo supporta il pattern Value, deve supportare questo evento.|  
   
 ## <a name="see-also"></a>Vedere anche  

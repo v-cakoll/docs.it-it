@@ -1,14 +1,6 @@
 ---
 title: Metodo IMetaDataImport::EnumEvents
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumEvents
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed783cf80fb068656855c2c06ab814f665f1cede
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 608b4a7d147124ede60e9d81f91600dfdaad0a65
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumevents-method"></a>Metodo IMetaDataImport::EnumEvents
 Enumera i token di definizione di evento per il token TypeDef specificato.  
@@ -70,7 +58,7 @@ HRESULT EnumEvents (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents`stato restituito correttamente.|  
+|`S_OK`|`EnumEvents` stato restituito correttamente.|  
 |`S_FALSE`|Non sono presenti eventi da enumerare. In tal caso, `pcEvents` è zero.|  
   
 ## <a name="requirements"></a>Requisiti  
@@ -78,9 +66,9 @@ HRESULT EnumEvents (
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in MsCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

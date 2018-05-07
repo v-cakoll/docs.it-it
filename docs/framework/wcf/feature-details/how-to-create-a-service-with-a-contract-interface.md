@@ -1,32 +1,18 @@
 ---
 title: "Procedura: creare un servizio con un'interfaccia di contratto"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b4af593edd355ed89da8c5b2c79a4c029b966fe4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 796870b80ed72db2353e79db3e4e3fc164c22875
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>Procedura: creare un servizio con un'interfaccia di contratto
-La modalità preferita per creare un contratto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è tramite un'interfaccia. Questo contratto specifica la raccolta e la struttura dei messaggi necessari per accedere alle operazioni offerte dal servizio. Questa interfaccia definisce i tipi di input e output applicando la classe <xref:System.ServiceModel.ServiceContractAttribute> all'interfaccia e la classe <xref:System.ServiceModel.OperationContractAttribute> ai metodi che si desidera esporre.  
+Il modo preferito per creare un contratto Windows Communication Foundation (WCF) consiste nell'utilizzare un'interfaccia. Questo contratto specifica la raccolta e la struttura dei messaggi necessari per accedere alle operazioni offerte dal servizio. Questa interfaccia definisce i tipi di input e output applicando la classe <xref:System.ServiceModel.ServiceContractAttribute> all'interfaccia e la classe <xref:System.ServiceModel.OperationContractAttribute> ai metodi che si desidera esporre.  
   
  Per ulteriori informazioni sui contratti di servizio, vedere [progettazione contratti di servizio](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
@@ -38,7 +24,7 @@ La modalità preferita per creare un contratto [!INCLUDE[indigo1](../../../../in
   
 3.  Definire i metodi nell'interfaccia.  
   
-4.  Applicare la classe <xref:System.ServiceModel.OperationContractAttribute> a ogni metodo che deve essere esposto come parte del contratto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pubblico.  
+4.  Applicare il <xref:System.ServiceModel.OperationContractAttribute> (classe) a ogni metodo che deve essere esposto come parte del contratto WCF pubblico.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio di codice seguente viene illustrata un'interfaccia che definisce un contratto di servizio.  

@@ -1,14 +1,6 @@
 ---
 title: Metodo ISymUnmanagedReader::GetMethodVersion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedReader.GetMethodVersion
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d6f9ac84-302a-4f5e-b990-e76f4269fceb
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 713b8a89c9519abe407ac1d68adb2552cd012b1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 76d850363940ff53135fc66ec057ee67822fa40d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>Metodo ISymUnmanagedReader::GetMethodVersion
 Ottiene la versione del metodo. La versione del metodo inizia da 1 e viene incrementata ogni volta che il metodo viene ricompilato. La ricompilazione può verificarsi senza apportare modifiche al metodo.  
@@ -57,7 +45,7 @@ HRESULT GetMethodVersion (
  S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

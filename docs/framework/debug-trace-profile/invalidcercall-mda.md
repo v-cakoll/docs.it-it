@@ -1,13 +1,6 @@
 ---
 title: MDA invalidCERCall
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - invalid CER calls
 - InvalidCERCall MDA
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c77c49fef5657d5f69538285149e458209ee9b7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15f41ebd961f25979fe569fd89dd2135a0a6cd41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="invalidcercall-mda"></a>MDA invalidCERCall
 L'assistente al debug gestito `invalidCERCall` viene attivato quando all'interno del grafico delle aree a esecuzione vincolata è presente una chiamata a un metodo che non include alcun contratto di affidabilità o che include un contratto eccessivamente debole. Un contratto debole è un contratto che dichiara che il peggior stato di danneggiamento ha un ambito più vasto rispetto all'istanza passata alla chiamata, ovvero lo stato di <xref:System.AppDomain> o del processo può risultare danneggiato o il risultato non è sempre calcolabile in modo deterministico quando la chiamata avviene all'interno di un'area a esecuzione vincolata.  

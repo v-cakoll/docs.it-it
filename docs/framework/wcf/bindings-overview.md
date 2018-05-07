@@ -1,31 +1,17 @@
 ---
 title: Panoramica sulle associazioni di Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 38661c2ca0e3329f508e2740dfcdf69c0d5e4105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Panoramica sulle associazioni di Windows Communication Foundation
-Le associazioni sono oggetti usati per specificare i dettagli di comunicazione necessari per connettersi all'endpoint di un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Ogni endpoint in un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] richiede un'associazione per essere specificato bene. In questo argomento vengono illustrati di tipi di dettagli di comunicazione definiti dalle associazioni, gli elementi di un'associazione, le associazioni incluse in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e il modo in cui è possibile specificare un'associazione per un endpoint.  
+Le associazioni sono oggetti utilizzati per specificare i dettagli di comunicazione necessarie per connettersi all'endpoint di un servizio Windows Communication Foundation (WCF). Ogni endpoint in un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] richiede un'associazione per essere specificato bene. In questo argomento vengono illustrati di tipi di dettagli di comunicazione definiti dalle associazioni, gli elementi di un'associazione, le associazioni incluse in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e il modo in cui è possibile specificare un'associazione per un endpoint.  
   
 ## <a name="what-a-binding-defines"></a>Elementi definiti da un'associazione  
  Le informazioni presenti in un'associazione possono essere molto semplici o molto complesse. L'associazione più semplice specifica solo il protocollo di trasporto (ad esempio HTTP) che deve essere usato per connettersi all'endpoint. In termini più generali, le informazioni contenute in un'associazione sulla modalità di connessione a un endpoint rientrano in una delle categorie seguenti.  

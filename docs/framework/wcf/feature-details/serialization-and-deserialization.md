@@ -1,38 +1,24 @@
 ---
 title: Serializzazione e deserializzazione
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2343ebe5a2a029ddb40da98d28f5c442aa7b6962
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 754b09b3b90399c242ddbaf968242f969cb27b8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-and-deserialization"></a>Serializzazione e deserializzazione
-In[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è disponibile un nuovo motore di serializzazione, ovvero <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> esegue la conversione tra oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e XML in entrambe le direzioni. In questo argomento viene illustrato il funzionamento del serializzatore.  
+Windows Communication Foundation (WCF) include un nuovo motore di serializzazione, la <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> esegue la conversione tra oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e XML in entrambe le direzioni. In questo argomento viene illustrato il funzionamento del serializzatore.  
   
  Durante la serializzazione di oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , il serializzatore è in grado di comprendere numerosi modelli di programmazione della serializzazione, incluso il nuovo modello di *contratto dati* . Per un elenco completo dei tipi supportati, vedere [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Per un'introduzione ai contratti dati, vedere [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
- Durante la deserializzazione di XML, il serializzatore utilizza le classi <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> . Supporta inoltre le classi <xref:System.Xml.XmlDictionaryReader> e <xref:System.Xml.XmlDictionaryWriter> per produrre, in alcuni casi, XML ottimizzato, ad esempio quando viene utilizzato il formato XML binario di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+ Durante la deserializzazione di XML, il serializzatore utilizza le classi <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> . Supporta anche il <xref:System.Xml.XmlDictionaryReader> e <xref:System.Xml.XmlDictionaryWriter> alle classi di abilitarlo per produrre, XML ottimizzato in alcuni casi, ad esempio quando formatta usando il codice XML binario di WCF.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include anche un serializzatore complementare, <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> è simile ai serializzatori <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> perché emette anche nomi di tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] come parte dei dati serializzati. Viene utilizzato quando gli stessi tipi sono condivisi alle estremità di serializzazione e deserializzazione. Sia <xref:System.Runtime.Serialization.DataContractSerializer> che <xref:System.Runtime.Serialization.NetDataContractSerializer> derivano da una classe di base comune, <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
+ WCF include anche un serializzatore complementare, il <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> è simile ai serializzatori <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> perché emette anche nomi di tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] come parte dei dati serializzati. Viene utilizzato quando gli stessi tipi sono condivisi alle estremità di serializzazione e deserializzazione. Sia <xref:System.Runtime.Serialization.DataContractSerializer> che <xref:System.Runtime.Serialization.NetDataContractSerializer> derivano da una classe di base comune, <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
 > [!WARNING]
 >  <xref:System.Runtime.Serialization.DataContractSerializer> serializza stringhe che contengono caratteri di controllo con un valore esadecimale inferiore a 20 come entità XML. Questo può causare un problema con un client non WCF durante l'invio di tali dati a un servizio WCF.  
@@ -128,7 +114,7 @@ In[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è disponibile un nuov
   
 -   Semantica. Talvolta è importante mantenere due riferimenti allo stesso oggetto e non a due oggetti identici.  
   
- Per queste ragioni, alcuni overload del costruttore `DataContractSerializer` hanno un parametro `preserveObjectReferences` (l'impostazione predefinita è `false`). Quando questo parametro è impostato su `true`, viene utilizzato un metodo speciale di codificare i riferimenti all'oggetto, che solo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comprende. Quando è impostato su `true`, l'esempio di codice XML è simile al seguente.  
+ Per queste ragioni, alcuni overload del costruttore `DataContractSerializer` hanno un parametro `preserveObjectReferences` (l'impostazione predefinita è `false`). Quando questo parametro è impostato su `true`, viene utilizzato un metodo speciale di riferimenti a oggetti, che riconosca l'unico WCF, la codifica. Quando è impostato su `true`, l'esempio di codice XML è simile al seguente.  
   
 ```xml  
 <PurchaseOrder ser:id="1">  

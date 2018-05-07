@@ -1,24 +1,12 @@
 ---
 title: Esecuzione side-by-side in ADO.NET
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bdb12ce6f697bbc42052e35c252c9cad6a5e962e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 793a48966192326e2a1273c6ea4b9c9eddda76fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Esecuzione side-by-side in ADO.NET
 In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] il supporto dell'esecuzione side-by-side indica la possibilità di eseguire un'applicazione in un computer in cui sono installate più versioni di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] usando esclusivamente la versione per la quale è stata compilata l'applicazione stessa. Per informazioni dettagliate sulla configurazione di esecuzione side-by-side, vedere [esecuzione Side-by-Side](../../../../docs/framework/deployment/side-by-side-execution.md).  

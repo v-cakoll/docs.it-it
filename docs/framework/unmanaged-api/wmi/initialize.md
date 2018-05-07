@@ -2,10 +2,6 @@
 title: Initialize (funzione) (riferimenti alle API non gestite)
 description: La funzione di inizializzazione esegue l'inizializzazione di WMI.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Initialize
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d62d959c5dfeac237abb20b86df87ae07a077dbd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01de35a0cd4d359dfba0375a85fbce017e44b9f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initialize-function"></a>Initialize (funzione)
 Esegue l'inizializzazione di WMI.  
@@ -54,7 +47,7 @@ La funzione restituisce sempre `S_OK` (0).
   
  **Intestazione:** WMINet_Utils.def  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

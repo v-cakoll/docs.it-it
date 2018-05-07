@@ -1,14 +1,6 @@
 ---
 title: Metodo ITypeNameBuilder::Clear
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ITypeNameBuilder.Clear
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 18d54280-46af-479f-8d84-5ab64f8b23b9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3f87eae1ab0e39c3fea40d24a8fb2ab8289ae8c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e0ffbfcbf40a415fd6f53d97ef3fb9c78c94902
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="itypenamebuilderclear-method"></a>Metodo ITypeNameBuilder::Clear
 Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.  
@@ -49,9 +37,9 @@ HRESULT Clear ( );
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -1,14 +1,6 @@
 ---
 title: Metodo ISymUnmanagedScope::GetStartOffset
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedScope.GetStartOffset
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: da6bbc75-94d1-4354-9722-0d455b4428fb
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9e0328af628eec062dc9efa7012bbeff213f1b86
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 19d116825efc4eb2ec1de22f232f46f8fb0fdf18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedscopegetstartoffset-method"></a>Metodo ISymUnmanagedScope::GetStartOffset
 Ottiene l'offset iniziale per questo ambito.  
@@ -53,7 +41,7 @@ HRESULT GetStartOffset(
  S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  

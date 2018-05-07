@@ -1,14 +1,6 @@
 ---
 title: Puntatore alla funzione FExecuteInAppDomainCallback
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - FExecuteInAppDomainCallback
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9852abbf2f69dda5c4c3b06f48adbd1bc33f5a1e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c3cafe3a8912702a093f9df7234112c0057b440
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>Puntatore alla funzione FExecuteInAppDomainCallback
 Punta a una funzione che viene chiamato da common language runtime (CLR) per eseguire codice gestito.  
@@ -58,9 +46,9 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** MSCorWks.dll  
+ **Libreria:** mscorwks. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

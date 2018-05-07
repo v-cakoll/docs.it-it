@@ -1,14 +1,6 @@
 ---
 title: Funzione StrongNameGetPublicKey
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameGetPublicKey
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5b58c87f-3f72-40df-9b9a-291076931cc3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cec7c1edac24d43924abb2bf8784d45ed6372129
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c3ace4a3103231f776d4e2b034f8e18ce861ee97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamegetpublickey-function"></a>Funzione StrongNameGetPublicKey
 Ottiene la chiave pubblica da una coppia di chiavi pubblica/privata. La coppia di chiavi può essere fornita come un nome di contenitore di chiavi all'interno di un provider del servizio di crittografia (CSP) o come una raccolta di byte non elaborata.  
@@ -73,7 +61,7 @@ BOOLEAN StrongNameGetPublicKey (
  [out] Le dimensioni della chiave pubblica restituita BLOB.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`al termine dell'esecuzione; in caso contrario, `false`.  
+ `true` al termine dell'esecuzione; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
  La chiave pubblica è contenuta un [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) struttura.  
@@ -85,9 +73,9 @@ BOOLEAN StrongNameGetPublicKey (
   
  **Intestazione:** StrongName. H  
   
- **Libreria:** inclusa come risorsa in MsCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  

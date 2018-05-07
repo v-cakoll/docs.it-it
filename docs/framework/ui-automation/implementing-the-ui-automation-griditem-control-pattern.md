@@ -1,28 +1,19 @@
 ---
 title: Implementazione del pattern di controllo GridItem di automazione interfaccia utente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, GridItem
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d234ea6f15706a47f6a758528dbe4eda0f3b778a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bfe7fb8ab64f148d8ca5af0e419ca60690a1acce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>Implementazione del pattern di controllo GridItem di automazione interfaccia utente
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Celle unite segnaleranno le <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> e <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> proprietà in base alla cella di aggancio sottostante come definito dal provider di automazione interfaccia utente. In genere si tratterà della riga o della colonna più in alto e più a sinistra.  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider>non consente la modifica attiva della griglia, ad esempio l'unione o di divisione delle celle.  
+-   <xref:System.Windows.Automation.Provider.IGridItemProvider> non consente la modifica attiva della griglia, ad esempio l'unione o la divisione delle celle.  
   
 -   I controlli che implementano <xref:System.Windows.Automation.Provider.IGridItemProvider> in genere può essere attraversato (ovvero, un client di automazione interfaccia utente può spostarsi sui controlli adiacenti) usando la tastiera.  
   
@@ -50,11 +41,11 @@ ms.lasthandoff: 12/22/2017
   
 |Membri obbligatori|Tipo di membro|Note|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Proprietà|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Proprietà|Nessuno|  
   
  Questo pattern di controllo non è associato a metodi o eventi.  
   

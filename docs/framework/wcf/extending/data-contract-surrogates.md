@@ -1,28 +1,14 @@
 ---
 title: Surrogati del contratto dati
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6b372b998d7b3a91189032947a9ad8c68074b5d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 455900b1ac5d10c02e6b1341e737eb6874c874f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-surrogates"></a>Surrogati del contratto dati
 Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello del contratto dati. È progettata per la personalizzazione e la sostituzione dei tipi nelle situazioni in cui gli utenti desiderano modificare il modo in cui un tipo viene serializzato, deserializzato o proiettato nei metadati. Un surrogato può essere utilizzato, ad esempio, quando un contratto dati non è stato specificato per il tipo, i campi e le proprietà non sono contrassegnati con l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> o gli utenti desiderano creare dinamicamente variazioni dello schema.  

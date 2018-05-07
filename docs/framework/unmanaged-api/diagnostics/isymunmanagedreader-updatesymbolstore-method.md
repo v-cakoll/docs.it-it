@@ -1,14 +1,6 @@
 ---
 title: Metodo ISymUnmanagedReader::UpdateSymbolStore
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedReader.UpdateSymbolStore
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 267037cbdf9e9bf45454bd8b584563ba1ecd847d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 81f9db872e9904d2297221e266be710837d0fb66
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>Metodo ISymUnmanagedReader::UpdateSymbolStore
 Aggiorna l'archivio dei simboli esistente con un archivio dei simboli delta. Questo metodo viene utilizzato in scenari di modifica e continuazione per aggiornare l'archivio dei simboli in modo che corrisponda ai file eseguibile (PE) originale delta.  
@@ -60,7 +48,7 @@ HRESULT UpdateSymbolStore (
  S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

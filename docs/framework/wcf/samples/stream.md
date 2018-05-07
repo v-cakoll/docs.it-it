@@ -1,24 +1,12 @@
 ---
 title: Flusso
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab56dd7938f2c7594627b54b4cb61b4e0f6b28fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96b77d0135a4dac1dcb8406a1b9a1372d0c4a35d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stream"></a>Flusso
 L'esempio flusso illustra l'utilizzo della modalità di trasferimento con flusso. Il servizio espone molte operazioni che inviano e ricevono flussi. Questo esempio è indipendente. Sia il client che il servizio sono programmi console.  
@@ -26,7 +14,7 @@ L'esempio flusso illustra l'utilizzo della modalità di trasferimento con flusso
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] può comunicare in due modalità di trasferimento, memorizzando i dati nel buffer o utilizzando il flusso. Per impostazione predefinita, il messaggio viene memorizzato nel buffer e deve essere recapitato completamente prima che un destinatario sia in grado di leggerlo. Nella modalità di trasferimento con flusso, il destinatario può iniziare a elaborare il messaggio prima che esso venga recapitato completamente. La modalità di trasmissione con flusso è utile quando le informazioni passate sono lunghe e possono essere elaborate in serie. La modalità di trasmissione con flusso è utile anche quando il messaggio è troppo grande da memorizzare completamente nel buffer.  
+ Windows Communication Foundation (WCF) possono comunicare in due modalità di trasferimento, flusso o memorizzati nel buffer. Per impostazione predefinita, il messaggio viene memorizzato nel buffer e deve essere recapitato completamente prima che un destinatario sia in grado di leggerlo. Nella modalità di trasferimento con flusso, il destinatario può iniziare a elaborare il messaggio prima che esso venga recapitato completamente. La modalità di trasmissione con flusso è utile quando le informazioni passate sono lunghe e possono essere elaborate in serie. La modalità di trasmissione con flusso è utile anche quando il messaggio è troppo grande da memorizzare completamente nel buffer.  
   
 ## <a name="streaming-and-service-contracts"></a>Flusso e contratti di servizio  
  Il flusso va preso in considerazione quando si progetta un contratto di servizio. Se un'operazione riceve o restituisce grandi quantità di dati, è necessario trasmetterli per evitare un utilizzo eccessivo della memoria a causa della memorizzazione nel buffer di messaggi di input o output. Per trasmettere dati, il parametro che contiene i dati deve essere il solo parametro del messaggio. Ad esempio, se il messaggio di input è quello da trasmettere, l'operazione deve avere esattamente un parametro di input. Allo stesso modo, se deve essere trasmesso il messaggio di output, l'operazione deve avere esattamente un solo parametro di output o un solo valore restituito. In entrambi i casi, il parametro o il valore restituito devono essere `Stream`, `Message`, o `IXmlSerializable`. Segue il contratto di servizio utilizzato in questo esempio di flusso.  
@@ -192,7 +180,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
   

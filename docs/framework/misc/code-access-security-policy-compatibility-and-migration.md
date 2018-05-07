@@ -1,23 +1,17 @@
 ---
-title: "Migrazione e compatibilità dei criteri di sicurezza dall'accesso di codice"
+title: Migrazione e compatibilità dei criteri di sicurezza dall'accesso di codice
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - policy migration, compatibility
 - CLR poliicy migration
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
-caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9feb4553b1b9e013c5c299d867d74499a09e1434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a5007e07340621fa76dc37a48eaf8c17bc048339
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Migrazione e compatibilità dei criteri di sicurezza dall'accesso di codice
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -42,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Migrazione: Sostituzione delle chiamate Obsolete](#migration)  
   
--   [Compatibilità: Uso dell'opzione Legacy relativa di criteri di sicurezza](#compatibility)  
+-   [Compatibilità: Uso dell'opzione Legacy relativa criterio CAS](#compatibility)  
   
 <a name="explicit_use"></a>   
 ## <a name="explicit-use"></a>Uso esplicito  

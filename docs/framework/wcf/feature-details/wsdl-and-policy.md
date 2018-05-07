@@ -1,31 +1,17 @@
 ---
 title: WSDL e criteri
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 330a48989e9d6ca3cee0d11bf4b3fce38a25fa3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsdl-and-policy"></a>WSDL e criteri
-In questo argomento vengono illustrati i dettagli dell'implementazione di WSDL 1.1, WS-Policy e WS-PolicyAttachment di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], nonché ulteriori asserzioni WS-Policy e le estensioni WSDL 1.1 introdotte da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Questo argomento descrive Windows Communication Foundation (WCF) WSDL 1.1, WS-Policy e WS-PolicyAttachment dettagli di implementazione, nonché ulteriori asserzioni WS-Policy e le estensioni WSDL 1.1 introdotte da WCF.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa le specifiche WS-Policy e WS-PolicyAttachment inviate a W3C con i vincoli e i chiarimenti descritti in questo documento.  
+ WCF implementa le specifiche WS-Policy e WS-PolicyAttachment inviate a W3C con i vincoli e i chiarimenti descritti in questo documento.  
   
  In questo documento vengono usati i prefissi e gli spazi dei nomi riportati nella tabella seguente.  
   
@@ -41,19 +27,19 @@ In questo argomento vengono illustrati i dettagli dell'implementazione di WSDL 1
 |cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="wcf-wsdl11-extensions"></a>Estensioni WSDL1.1 di WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa le estensioni WSDL1.1 seguenti per descrivere i requisiti delle sessioni di contratto.  
+ WCF Usa le estensioni WSDL1.1 seguenti per descrivere i requisiti delle sessioni di contratto.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs:boolean, indica che questa operazione avvia una sessione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]; il valore predefinito è `false`.  
+ xs: Boolean, indica questa operazione avvia una sessione WCF. il valore predefinito è `false`.  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs:boolean, indica che questa operazione termina una sessione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]; il valore predefinito è `false`.  
+ xs: Boolean, indica l'operazione termina una sessione WCF. il valore predefinito è `false`.  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
  xs:boolean, indica che questo contratto richiede una sessione per essere stabilito.  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>URI dei trasporti delle associazioni SOAP 1.x HTTP  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa gli URI seguenti per indicare i trasporti da usare per gli elementi di estensione delle associazioni WSDL 1.1, SOAP 1.1 e SOAP 1.2.  
+ WCF Usa gli URI seguenti per indicare i trasporti da usare per gli elementi di estensione associazioni WSDL 1.1, SOAP 1.1 e SOAP 1.2.  
   
 |Trasporto|URI|  
 |---------------|---------|  
@@ -63,7 +49,7 @@ In questo argomento vengono illustrati i dettagli dell'implementazione di WSDL 1
 |Named pipe|http://schemas.microsoft.com/soap/named-pipe|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>Asserzioni di criteri implementate da WCF  
- Oltre alle asserzioni di criteri introdotte nelle specifiche dei servizi Web (WS - *) e menzionate nelle altre sezioni di questo documento, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa le asserzioni di criteri seguenti.  
+ Oltre alle asserzioni di criteri introdotte nelle specifiche dei servizi Web (WS-*) e indicate nelle altre sezioni di questo documento, WCF implementa le asserzioni di criteri seguenti.  
   
 |Asserzione di criteri|Soggetto dei criteri|Descrizione|  
 |----------------------|--------------------|-----------------|  

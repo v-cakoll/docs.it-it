@@ -1,34 +1,20 @@
 ---
 title: Configurazione della registrazione dei messaggi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-caps.latest.revision: 40
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e2d45e7b8769ee525835ad3dc50262a03a5a7b6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4c75b0f27e82b8cfe9327a9911d27d4e435ddf81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-message-logging"></a>Configurazione della registrazione dei messaggi
 In questo argomento viene illustrato come configurare la registrazione dei messaggi per scenari differenti.  
   
 ## <a name="enabling-message-logging"></a>Attivazione della registrazione dei messaggi  
- Per impostazione predefinita, in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] non viene eseguita la registrazione dei messaggi. Per attivarla, è necessario aggiungere un listener di traccia all'origine di traccia `System.ServiceModel.MessageLogging` e impostare gli attributi relativi all'elemento `<messagelogging>` nel file di configurazione.  
+ Windows Communication Foundation (WCF) non registra i messaggi per impostazione predefinita. Per attivarla, è necessario aggiungere un listener di traccia all'origine di traccia `System.ServiceModel.MessageLogging` e impostare gli attributi relativi all'elemento `<messagelogging>` nel file di configurazione.  
   
  Nell'esempio seguente viene illustrato come abilitare la registrazione e specificare opzioni aggiuntive.  
   

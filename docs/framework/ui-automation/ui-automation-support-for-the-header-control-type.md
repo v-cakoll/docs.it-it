@@ -1,28 +1,19 @@
 ---
 title: Supporto di automazione interfaccia utente per il tipo di controllo Header
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Header control type
 - Header control type
 - control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
-caps.latest.revision: "20"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 088dfaa44f5e544e06bce45f1faa51921f9368cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13d339cc05abd543f7e22a87870e0acc0a463fd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>Supporto di automazione interfaccia utente per il tipo di controllo Header
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 |Visualizzazione controlli|Visualizzazione contenuto|  
 |------------------|------------------|  
-|Header<br /><br /> -HeaderItem (1 o più)|nessuno|  
+|Header<br /><br /> -HeaderItem (1 o più)|Nessuno|  
   
  I controlli intestazione hanno sempre 1 o più elementi figlio nella visualizzazione controlli dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
@@ -78,11 +69,11 @@ ms.lasthandoff: 12/22/2017
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Supporto|Note|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> .|Obbligatorio|Nessuna|  
-|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|Obbligatorio|Nessuna|  
-|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|Obbligatorio|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> .|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> .|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> .|Obbligatorio|Nessuno|  
+|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|Obbligatorio|Nessuno|  
+|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|Obbligatorio|Nessuno|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Automation.ControlType.Header>  

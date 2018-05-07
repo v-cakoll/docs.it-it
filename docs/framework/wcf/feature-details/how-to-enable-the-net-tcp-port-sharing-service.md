@@ -1,30 +1,18 @@
 ---
 title: 'Procedura: attivare il servizio di condivisione delle porte Net.TCP'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b9f1c57f067fa7c8bece3acaf0d51303b31d13bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5a18e11d9fc15f23b5353883a63d838face58a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Procedura: attivare il servizio di condivisione delle porte Net.TCP
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa un servizio di Windows denominato Servizio di condivisione porte Net.TCP per facilitare la condivisione delle porte TCP tra più processi. Il servizio viene installato come parte di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ma, per motivi di sicurezza, non viene attivato per impostazione predefinita e deve quindi essere attivato manualmente al primo utilizzo. In questo argomento viene illustrato come configurare il servizio di condivisione delle porte Net TCP usando lo snap-in MMC (Microsoft Management Console).  
+Windows Communication Foundation (WCF) usa un servizio Windows denominato il servizio di condivisione porte Net. TCP per facilitare la condivisione delle porte TCP tra più processi. Questo servizio viene installato come parte di WCF, ma il servizio non è abilitato per impostazione predefinita come misura di sicurezza e pertanto è necessario abilitare manualmente prima di primo utilizzo. In questo argomento viene illustrato come configurare il servizio di condivisione delle porte Net TCP usando lo snap-in MMC (Microsoft Management Console).  
   
  Dopo aver abilitato il servizio di condivisione porta Net. TCP e avviarlo manualmente, vedere [procedura: configurare un servizio WCF di utilizzare la condivisione delle porte](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md) per informazioni su come configurare il servizio per l'utilizzo di questo servizio.  
   

@@ -1,29 +1,15 @@
 ---
 title: 'Procedura: creare una credenziale di supporto'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6ec7412d1de2bca349c7cfbf4a37c98ca60cc78d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Procedura: creare una credenziale di supporto
-È possibile avere uno schema di sicurezza personalizzato che richiede più di una credenziale. Ad esempio, è possibile che un servizio richieda a un client non solo un nome utente e una password, ma anche una credenziale che dimostri che l'utente del client abbia un'età superiore a 18 anni. La seconda credenziale è un *credenziale di supporto*. In questo argomento viene illustrato come implementare tali credenziali in un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+È possibile avere uno schema di sicurezza personalizzato che richiede più di una credenziale. Ad esempio, è possibile che un servizio richieda a un client non solo un nome utente e una password, ma anche una credenziale che dimostri che l'utente del client abbia un'età superiore a 18 anni. La seconda credenziale è un *credenziale di supporto*. In questo argomento viene illustrato come implementare tali credenziali in un client Windows Communication Foundation (WCF).  
   
 > [!NOTE]
 >  La specifica per supportare le credenziali è parte della specifica SecurityPolicy-WS. Per altre informazioni, vedere [specifiche di sicurezza di servizi Web](http://go.microsoft.com/fwlink/?LinkId=88537).  

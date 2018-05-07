@@ -1,14 +1,6 @@
 ---
 title: Uso di contratti dati
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,23 +9,17 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-caps.latest.revision: 38
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 839227e9a67d904ea4613f841deac5a9a3f6f9ea
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 992f35a9f7406ac161ddb5e31fdaf85756bfe31f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-data-contracts"></a>Uso di contratti dati
 Un *contratto dati* è un accordo formale tra un servizio e un client che descrive astrattamente i dati da scambiare. Per comunicare, non è necessario che il client e il servizio condividano gli stessi tipi, ma solo gli stessi contratti dati. Un contratto dati definisce con precisione, per ogni parametro o tipo restituito, i dati serializzati (trasformati in XML) che verranno scambiati.  
   
 ## <a name="data-contract-basics"></a>Nozioni fondamentali dei contratti dati  
- Per impostazione predefinita in[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzato un motore di serializzazione denominato serializzatore dei contratti dati per serializzare e deserializzare i dati (convertendoli in/da XML). Ogni tipo primitivo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , ad esempio numeri interi e stringhe, nonché alcuni tipi trattati come primitivi, ad esempio <xref:System.DateTime> e <xref:System.Xml.XmlElement>, può essere serializzato senza ulteriore preparazione ed è considerato in possesso di contratti dati predefiniti. I tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , inoltre, dispongono di contratti dati esistenti. Per un elenco completo dei tipi serializzabili, vedere [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Windows Communication Foundation (WCF) usa un motore di serializzazione denominato serializzatore dei contratti dati per impostazione predefinita per serializzare e deserializzare i dati (convertendoli in / da XML). Ogni tipo primitivo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , ad esempio numeri interi e stringhe, nonché alcuni tipi trattati come primitivi, ad esempio <xref:System.DateTime> e <xref:System.Xml.XmlElement>, può essere serializzato senza ulteriore preparazione ed è considerato in possesso di contratti dati predefiniti. I tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , inoltre, dispongono di contratti dati esistenti. Per un elenco completo dei tipi serializzabili, vedere [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  Per poter essere serializzabili, è necessario che i nuovi tipi complessi creati dispongano di un contratto dati appositamente definito. Per impostazione predefinita, tramite <xref:System.Runtime.Serialization.DataContractSerializer> viene dedotto il contratto dati e vengono serializzati tutti i tipi visibili pubblicamente. Vengono serializzati i campi e le proprietà di lettura/scrittura pubblici del tipo. È possibile rifiutare esplicitamente i membri per la serializzazione tramite <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>. È inoltre possibile creare in modo esplicito un contratto dati utilizzando gli attributi <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> . Ciò viene di norma realizzato applicando l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> al tipo. Questo attributo può essere applicato a classi, strutture ed enumerazioni. L'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> deve quindi essere applicato a ogni membro del tipo di contratto dati per indicare che si tratta di un *membro dati*, ovvero che deve essere serializzato. Per altre informazioni, vedere [tipi serializzabili](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   

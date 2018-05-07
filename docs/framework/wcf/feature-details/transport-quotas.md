@@ -1,45 +1,31 @@
 ---
 title: Quote dei trasporti
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-quotas"></a>Quote dei trasporti
 Le quote dei trasporti sono un meccanismo di criterio per stabilire quando una connessione sta utilizzando risorse eccessive. Una quota è un limite che impedisce l'utilizzo di risorse aggiuntive quando il valore della quota viene superato. Le quote dei trasporti impediscono attacchi di tipo Denial of Service (DoS) volutamente dannosi o non intenzionali.  
   
- I trasporti [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dispongono di valori di quota predefiniti basati su un'allocazione conservativa di risorse. Questi valori predefiniti sono adatti per ambienti di sviluppo e scenari con installazioni di piccole dimensioni. Gli amministratori del servizio devono esaminare le quote dei trasporti e ottimizzare i singoli valori nel caso in cui un'installazione stia esaurendo le risorse o le connessioni vengano limitate nonostante la disponibilità di risorse aggiuntive.  
+ Trasporti di Windows Communication Foundation (WCF) con valori di quota predefiniti basati su un'allocazione conservativa di risorse. Questi valori predefiniti sono adatti per ambienti di sviluppo e scenari con installazioni di piccole dimensioni. Gli amministratori del servizio devono esaminare le quote dei trasporti e ottimizzare i singoli valori nel caso in cui un'installazione stia esaurendo le risorse o le connessioni vengano limitate nonostante la disponibilità di risorse aggiuntive.  
   
 ## <a name="types-of-transport-quotas"></a>Tipi di quote dei trasporti  
- I trasporti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono caratterizzati da tre tipi di quote:  
+ I trasporti WCF contengono tre tipi di quote:  
   
--   *Timeout* attenuare attacchi denial of service che si basano sul blocco di risorse per un lungo periodo di tempo.  
+-   *Timeout* attenuare attacchi denial of service che si basano su risorse per un lungo periodo di tempo prolungati.  
   
--   *Limiti di allocazione della memoria* impediscono un'unica connessione esaurisca la memoria di sistema e neghi il servizio ad altre connessioni.  
+-   *Limiti di allocazione della memoria* impedire un'unica connessione esaurisca la memoria di sistema e neghi il servizio ad altre connessioni.  
   
--   *Limiti delle dimensioni della raccolta* limitano il consumo di risorse che allocano memoria indirettamente o sono in approvvigionamento limitato.  
+-   *Limiti di dimensioni della raccolta* limitano il consumo di risorse che allocano memoria indirettamente o sono in approvvigionamento limitato.  
   
 ## <a name="transport-quota-descriptions"></a>Descrizioni delle quote dei trasporti  
- Contenuto della sezione vengono descritte le quote dei trasporti disponibili per i trasporti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard: HTTP(S), TCP/IP e named pipe. I trasporti personalizzati possono esporre le proprie quote configurabili non incluse in questo elenco. Consultare la documentazione per il trasporto personalizzato e quote relative.  
+ Questa sezione vengono descritte le quote del trasporto disponibile per i trasporti WCF standard: HTTP (S), TCP/IP e named pipe. I trasporti personalizzati possono esporre le proprie quote configurabili non incluse in questo elenco. Consultare la documentazione per il trasporto personalizzato e quote relative.  
   
  Ogni impostazione della quota è caratterizzata da un tipo, un valore minimo e un valore predefinito. Il valore massimo di una quota è limitato dal tipo. A causa di limitazioni dei computer, non è sempre possibile impostare una quota sul suo valore massimo.  
   

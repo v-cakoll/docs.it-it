@@ -1,34 +1,20 @@
 ---
 title: Attacchi di tipo replay
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e827c51378b9f75835b9b98280b4995d2cae2fc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3139e0ea094f1f7483261ffd10026815e5d12f31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="replay-attacks"></a>Attacchi di tipo replay
 Oggetto *attacco di tipo replay* si verifica quando un utente malintenzionato copia un flusso di messaggi tra due parti e lo riproduce verso una o più parti. Se l'attacco non viene respinto, i computer colpiti elaborano il flusso come se i messaggi fossero legittimi. Ciò determina una serie di conseguenze negative, ad esempio la creazione di ordini ridondanti di un articolo.  
   
 ## <a name="bindings-may-be-subject-to-reflection-attacks"></a>Vulnerabilità delle associazioni agli attacchi di tipo reflection  
- *Attacchi di tipo reflection* sono riproduzioni di messaggi a un mittente proveniente dal destinatario della risposta. Lo standard *rilevamento riproduzione* nel [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] meccanismo non gestiscono automaticamente questo.  
+ *Attacchi di tipo reflection* sono riproduzioni di messaggi a un mittente proveniente dal destinatario della risposta. Lo standard *rilevamento riproduzione* in Windows Communication Foundation (WCF) meccanismo non gestiscono automaticamente questo.  
   
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], tuttavia, gli attacchi di tipo reflection vengono respinti per impostazione predefinita. Infatti, il modello dei servizi di tale piattaforma prevede l'aggiunta di un ID di messaggio firmato ai messaggi di richiesta nonché un'intestazione firmata `relates-to` nei messaggi di risposta. Risulta di conseguenza impossibile riprodurre il messaggio di richiesta come risposta. Negli scenari che prevedono messaggi affidabili gli attacchi di tipo reflection vengono respinti per i motivi seguenti:  
+ Attacchi di tipo reflection vengono risolti per impostazione predefinita perché il modello di servizio WCF aggiunge un ID messaggio firmato ai messaggi di richiesta e prevede un signed `relates-to` intestazione nei messaggi di risposta. Risulta di conseguenza impossibile riprodurre il messaggio di richiesta come risposta. Negli scenari che prevedono messaggi affidabili gli attacchi di tipo reflection vengono respinti per i motivi seguenti:  
   
 -   Lo schema dei messaggi di creazione di sequenza non corrisponde a quello di creazione di sequenza di risposta.  
   

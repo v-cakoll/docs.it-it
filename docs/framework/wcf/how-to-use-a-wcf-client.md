@@ -1,33 +1,19 @@
 ---
 title: 'Procedura: usare un client di Windows Communication Foundation'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0330c386730c6b0436196bb5b85162bc4621c214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6667a8e9862054d7d8d5b20e70dfbe699de02eab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Procedura: usare un client di Windows Communication Foundation
-Questa è l'ultima delle sei attività necessarie per creare un'applicazione [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] di base. Per una panoramica di tutte e sei le attività, vedere il [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md) argomento.  
+Questa è l'ultima delle sei attività necessarie per creare un'applicazione di Windows Communication Foundation (WCF) di base. Per una panoramica di tutte e sei le attività, vedere il [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md) argomento.  
   
- Una volta creato e configurato un proxy [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], è possibile creare un'istanza del client e l'applicazione client può essere compilata e utilizzata per comunicare con il servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. In questo argomento vengono illustrate le procedure per la creazione di un'istanza e l'utilizzo di un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. La procedura consente di eseguire tre operazioni:  
+ Dopo aver creato e configurato un proxy di Windows Communication Foundation (WCF), un'istanza del client possono essere creata e l'applicazione client può essere compilato e utilizzato per comunicare con il [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizio. In questo argomento vengono illustrate le procedure per la creazione di un'istanza e l'utilizzo di un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. La procedura consente di eseguire tre operazioni:  
   
 1.  Creazione di un'istanza di un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   

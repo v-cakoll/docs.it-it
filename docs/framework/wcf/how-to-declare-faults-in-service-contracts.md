@@ -1,30 +1,18 @@
 ---
 title: 'Procedura: dichiarare errori nei contratti di servizio'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf707e58586673097c89e0e0f4d72ea68ef7247
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 142ad26702f0732bc5103e29d5a44bc57ab37625
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Procedura: dichiarare errori nei contratti di servizio
-Nel codice gestito, vengono generate eccezioni quando si verificano condizioni di errore. Nelle applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], tuttavia, i contratti di servizio specificano quali informazioni sugli errori vengono restituite dai client dichiarando errori SOAP nel contratto di servizio. Per una panoramica della relazione tra eccezioni ed errori, vedere [specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+Nel codice gestito, vengono generate eccezioni quando si verificano condizioni di errore. Nelle applicazioni Windows Communication Foundation (WCF), tuttavia, i contratti di servizio specificare le informazioni di errore viene restituite ai client dichiarando errori SOAP nel contratto di servizio. Per una panoramica della relazione tra eccezioni ed errori, vedere [specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Creare un contratto di servizio che specifica un errore SOAP.  
   

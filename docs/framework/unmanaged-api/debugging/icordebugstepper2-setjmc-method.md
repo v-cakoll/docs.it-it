@@ -1,14 +1,6 @@
 ---
 title: Metodo ICorDebugStepper2::SetJMC
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugStepper2.SetJMC
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f5cdc135-6db4-4b32-9dd1-260ec58b774f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7fbbe0d3e42df073a5718ca037b44f6f2f31ec23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ad05d2f6226d570fc854fb48575851dd718e410
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugstepper2setjmc-method"></a>Metodo ICorDebugStepper2::SetJMC
 Imposta un valore che specifica se ICorDebugStepper passo solo nel codice creato dallo sviluppatore di un'applicazione. Questo processo è noto anche come my (JMC) il debug del codice.  
@@ -53,8 +41,8 @@ HRESULT SetJMC (
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, Cordebug. H  
+ **Intestazione:** Cordebug. idl, Cordebug. H  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

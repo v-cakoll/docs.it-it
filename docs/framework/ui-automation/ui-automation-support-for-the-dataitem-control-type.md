@@ -1,28 +1,19 @@
 ---
 title: Supporto per automazione interfaccia utente del tipo di controllo DataItem
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Data Item control type
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-caps.latest.revision: "36"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: be826cce87d428a156bb7a10d858e5848b2f1143
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bef3393cda31e546afdb7b720cb08a2d45cb45bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo DataItem
 > [!NOTE]
@@ -72,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|A seconda dei casi|Se è possibile espandere o comprimere l'elemento dati per visualizzare e nascondere informazioni, è necessario il supporto del pattern Expand Collapse.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|A seconda dei casi|Gli elementi dati supportano il pattern GridItem quando un insieme di elementi dati è disponibile in un contenitore in cui è possibile spostarsi elemento per elemento.|  
 |<xref:System.Windows.Automation.Provider.IScrollItemProvider>|A seconda dei casi|Tutti gli elementi dati supportano la possibilità di scorrimento nella visualizzazione con il pattern ScrollItem quando il relativo contenitore dei dati ha più elementi adattabili allo schermo.|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Sì|Tutti gli elementi dati devono supportare il pattern SelectionItem per indicare quando l'elemento è selezionato.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Yes|Tutti gli elementi dati devono supportare il pattern SelectionItem per indicare quando l'elemento è selezionato.|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider>|A seconda dei casi|Se l'elemento dati è contenuto in un tipo di controllo DataGrid, supporta questo pattern.|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|A seconda dei casi|Se l'elemento dati contiene uno stato che può essere alternato ciclicamente.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|A seconda dei casi|Se il testo primario dell'elemento dati è modificabile, il pattern Value deve essere supportato.|  
@@ -89,19 +80,19 @@ ms.lasthandoff: 12/22/2017
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Supporto|Note|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> .|Obbligatorio|Nessuna|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|nessuno|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|A seconda dei casi|nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> .|Obbligatorio|Nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|Nessuno|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|A seconda dei casi|Nessuno|  
 |Evento di modifica della proprietà<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> .|A seconda dei casi|Nessuno|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Obbligatorio|Nessuna|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Obbligatorio|Nessuna|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|A seconda dei casi|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> .|A seconda dei casi|nessuno|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Obbligatorio|Nessuno|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Obbligatorio|Nessuno|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Obbligatorio|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|A seconda dei casi|Nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> .|A seconda dei casi|Nessuno|  
   
 <a name="Data_Item_Control_Type_Example"></a>   
 ## <a name="dataitem-control-type-example"></a>Esempio del tipo di controllo DataItem  

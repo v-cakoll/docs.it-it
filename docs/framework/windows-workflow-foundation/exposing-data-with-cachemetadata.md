@@ -1,23 +1,12 @@
 ---
 title: Esposizione dei dati con CacheMetadata
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a25e658d512cf0575a4e3902a9a951099675e29a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 386bbb8734e26eff8079f2913284668125a8a774
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exposing-data-with-cachemetadata"></a>Esposizione dei dati con CacheMetadata
 Prima di eseguire un'attività, il runtime del flusso di lavoro ottiene tutte le informazioni sull'attività necessarie per la gestione dell'esecuzione. Tali informazioni vengono ottenute durante l'esecuzione del metodo <xref:System.Activities.Activity.CacheMetadata%2A>. L'implementazione predefinita di questo metodo fornisce al runtime tutti gli argomenti pubblici, le variabili e le attività figlio esposti dall'attività al momento dell'esecuzione; se l'attività deve dare ulteriori informazioni al runtime, ad esempio membri privati o attività che devono essere pianificate dall'attività, è possibile eseguire l'override di questo metodo.  

@@ -1,24 +1,12 @@
 ---
 title: Criteri di autorizzazione
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-caps.latest.revision: "38"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4ba4548e6ea62f408fddf3629eca1318c482f728
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: fc0c147f2f9a57c80edda6144a14f208bde835eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authorization-policy"></a>Criteri di autorizzazione
 In questo esempio viene illustrato come implementare i criteri di autorizzazione dell'attestazione personalizzati e un gestore autorizzazioni personalizzato del servizio associato. Questa procedura è utile quando il servizio esegue i controlli di accesso basati sull'attestazione nelle operazioni del servizio e prima dei controlli di accesso, concede al chiamante alcuni diritti. In questo esempio viene illustrato sia il processo di aggiunta delle attestazioni che il processo di controllo dell'accesso a fronte del set finalizzato di attestazioni. Tutti i messaggi dell'applicazione tra il client e il server vengono firmati e crittografati. Per impostazione predefinita, con l'associazione `wsHttpBinding` vengono utilizzati un nome utente e una password forniti dal client per accedere con un account Windows NT valido. Questo esempio viene illustrato come utilizzare un oggetto personalizzato <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` per autenticare il client. Viene inoltre illustrata l'autenticazione del client nel servizio tramite un certificato X.509. In questo esempio viene illustrata un'implementazione di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> e <xref:System.ServiceModel.ServiceAuthorizationManager> che, insieme, concedono l'accesso a metodi specifici del servizio per utenti specifici. Questo esempio è basato sul [nome utente di sicurezza messaggio](../../../../docs/framework/wcf/samples/message-security-user-name.md), ma viene illustrato come eseguire una trasformazione di attestazioni prima di <xref:System.ServiceModel.ServiceAuthorizationManager> la chiamata.  
@@ -292,9 +280,9 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>  
 ```  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce un modello dettagliato basato sulle attestazioni per l'esecuzione dei controlli di accesso. L'oggetto <xref:System.ServiceModel.ServiceAuthorizationManager> viene utilizzato per eseguire il controllo dell'accesso e determinare se le attestazioni associate al client soddisfano i requisiti necessari per accedere al metodo del servizio.  
+ Windows Communication Foundation (WCF) fornisce un modello dettagliato basato sulle attestazioni per l'esecuzione di controlli di accesso. L'oggetto <xref:System.ServiceModel.ServiceAuthorizationManager> viene utilizzato per eseguire il controllo dell'accesso e determinare se le attestazioni associate al client soddisfano i requisiti necessari per accedere al metodo del servizio.  
   
- A scopo di dimostrazione, in questo esempio viene illustrata un'implementazione di <xref:System.ServiceModel.ServiceAuthorizationManager> per il metodo <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> per consentire a un utente l'accesso ai metodi in base alle attestazioni di tipo http://example.com/claims/allowedoperation, il cui valore è l'URI di azione dell'operazione che può essere chiamata.  
+ Ai fini della dimostrazione, in questo esempio viene illustrata un'implementazione di <xref:System.ServiceModel.ServiceAuthorizationManager> che implementa le <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metodo per consentire l'accesso dell'utente ai metodi in base alle attestazioni di tipo http://example.com/claims/allowedoperation il cui valore è l'URI di azione dell'operazione che è può essere chiamato.  
   
 ```  
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager  

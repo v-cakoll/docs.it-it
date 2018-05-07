@@ -1,44 +1,32 @@
 ---
 title: Applicazioni client di livello intermedio
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13399243994943ddf853447e2e29f3695702aa35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cca832266b2eb2ab7b1b4eb1a5fe937525db97d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="middle-tier-client-applications"></a>Applicazioni client di livello intermedio
-In questo argomento vengono analizzati alcuni aspetti specifici delle applicazioni client di livello intermedio che usano [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+In questo argomento vengono illustrati alcuni aspetti specifici per le applicazioni client di livello intermedio che usano Windows Communication Foundation (WCF).  
   
 ## <a name="increasing-middle-tier-client-performance"></a>Miglioramento delle prestazioni dei client di livello intermedio  
- Paragonata alle tecnologie di comunicazione precedenti, ad esempio i servizi Web che usano [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], la creazione di un'istanza client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può essere più complessa a causa del vasto set di funzionalità di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ad esempio, quando un oggetto <xref:System.ServiceModel.ChannelFactory%601> viene aperto può stabilire una sessione protetta con il servizio, una procedura che aumenta il tempo di avvio per l'istanza client. In genere queste funzionalità aggiuntive non influiscono significativamente sulle applicazioni client in quanto il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] effettua più chiamate e quindi viene chiuso.  
+ Paragonata alle tecnologie di comunicazione precedenti, ad esempio servizi Web che usano [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], la creazione di un'istanza del client WCF può essere più complessa a causa del set completo di funzionalità di WCF. Ad esempio, quando un oggetto <xref:System.ServiceModel.ChannelFactory%601> viene aperto può stabilire una sessione protetta con il servizio, una procedura che aumenta il tempo di avvio per l'istanza client. In genere, queste funzionalità aggiuntive non influiscono sulle applicazioni client notevolmente poiché il client WCF effettua più chiamate e quindi viene chiusa.  
   
- Le applicazioni client di livello intermedio possono tuttavia creare rapidamente molti oggetti client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e devono quindi soddisfare maggiori requisiti di inizializzazione. Per migliorare le prestazioni delle applicazioni di livello intermedio durante le chiamate ai servizi è possibile seguire principalmente due diversi approcci:  
+ Le applicazioni client di livello intermedio, tuttavia, possono creare rapidamente molti oggetti client WCF e, di conseguenza, esperienza maggiori requisiti di inizializzazione. Per migliorare le prestazioni delle applicazioni di livello intermedio durante le chiamate ai servizi è possibile seguire principalmente due diversi approcci:  
   
--   Memorizzare nella cache l'oggetto client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e riutilizzarlo, se possibile, per chiamate successive.  
+-   Memorizzare nella cache l'oggetto client WCF e riutilizzarla per le chiamate successive, dove possibile.  
   
--   Creare un oggetto <xref:System.ServiceModel.ChannelFactory%601> e usarlo per creare nuovi oggetti di canale client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per ogni chiamata.  
+-   Creare un <xref:System.ServiceModel.ChannelFactory%601> oggetto, quindi utilizzare quell'oggetto per creare oggetti di canale per ogni chiamata nuovi client WCF.  
   
  Quando si seguono queste procedure è opportuno considerare gli aspetti seguenti:  
   
--   Se il servizio gestisce uno stato specifico del client usando una sessione, non è possibile riutilizzare il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di livello intermedio con richieste di client di vari livelli poiché lo stato del servizio è associato allo stato del client di livello intermedio.  
+-   Se il servizio gestisce uno stato di specifiche del client tramite una sessione, quindi non è possibile riutilizzare il client WCF di livello intermedio con richieste di vari livelli poiché lo stato del servizio è legato a quella del client di livello intermedio.  
   
--   Se il servizio deve eseguire l'autenticazione per ogni singolo client, è necessario creare un nuovo client per ogni richiesta in ingresso nel livello intermedio anziché riutilizzare il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di livello intermedio (o l'oggetto di canale client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ) perché le credenziali client del livello intermedio non possono essere modificate dopo che il client (o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]) <xref:System.ServiceModel.ChannelFactory%601> è stato creato.  
+-   Se il servizio deve eseguire l'autenticazione in base al client, è necessario creare un nuovo client per ogni richiesta in ingresso nel livello intermedio anziché riutilizzare il client WCF di livello intermedio (o un oggetto del canale client WCF) perché le credenziali del client di livello intermedio non può essere modificato dopo il client di WCF (o <xref:System.ServiceModel.ChannelFactory%601>) è stato creato.  
   
--   Sebbene i canali e i client creati dai canali siano thread-safe, è possibile che non supportino la scrittura di più messaggi in rete contemporaneamente. Se vengono inviati messaggi di grandi dimensioni, in particolare se viene eseguito il flusso, l'operazione di invio potrebbe bloccarsi in attesa del completamento di un'altra operazione di invio. Ciò causa due tipi di problemi: la mancanza di concorrenza e la possibilità di deadlock se il flusso di controllo torna al servizio riutilizzando il canale (ovvero, il client condiviso chiama un servizio il cui percorso di codice comporta un callback al client condiviso). Questa situazione si verifica indipendentemente dal tipo di client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che si riutilizza.  
+-   Sebbene i canali e i client creati dai canali siano thread-safe, è possibile che non supportino la scrittura di più messaggi in rete contemporaneamente. Se vengono inviati messaggi di grandi dimensioni, in particolare se viene eseguito il flusso, l'operazione di invio potrebbe bloccarsi in attesa del completamento di un'altra operazione di invio. Ciò causa due tipi di problemi: la mancanza di concorrenza e la possibilità di deadlock se il flusso di controllo torna al servizio riutilizzando il canale (ovvero, il client condiviso chiama un servizio il cui percorso di codice comporta un callback al client condiviso). Questo vale indipendentemente dal tipo di client WCF che è riutilizzare.  
   
 -   È necessario gestire i canali in stato di errore indipendentemente dal fatto che si condivida o meno il canale. Quando i canali vengono riutilizzati, un canale in stato di errore può tuttavia annullare più richieste o operazioni di invio in sospeso.  
   

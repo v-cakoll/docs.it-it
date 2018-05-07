@@ -1,29 +1,15 @@
 ---
 title: "Procedura: bloccare gli endpoint nell'organizzazione"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e5b10665e9a820c7057231c684769bddf9cb0c79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: c91faf201c9a7cb0e5dd810059dbaa39b1e8eb05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Procedura: bloccare gli endpoint nell'organizzazione
-Le aziende di grandi dimensioni spesso richiedono che le applicazioni vengano sviluppate in conformità con i criteri di sicurezza aziendali. Nell'argomento seguente viene illustrato come installare e sviluppare un validator dell'endpoint client che può essere usato per convalidare tutte le applicazioni client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] installate nei computer.  
+Le aziende di grandi dimensioni spesso richiedono che le applicazioni vengano sviluppate in conformità con i criteri di sicurezza aziendali. L'argomento seguente viene illustrato come sviluppare e installare un validator dell'endpoint client che può essere usato per convalidare tutte le applicazioni client Windows Communication Foundation (WCF) installate nel computer.  
   
  In questo caso, il validator è un validator client perché questo comportamento dell'endpoint viene aggiunto al client [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sezione nel file Machine. config. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] vengono caricati i comportamenti dell'endpoint comuni solo per le applicazioni client e i comportamenti del servizio comuni solo per le applicazioni di servizio. Per installare questo stesso validator per le applicazioni di servizio, il validator deve essere un comportamento del servizio. Per altre informazioni, vedere la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sezione.  
   

@@ -1,28 +1,16 @@
 ---
 title: Sicurezza del trasporto con autenticazione del certificato
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-caps.latest.revision: 20
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 19b54739d82fe7363319211d3f753416e0966aed
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a4f29d9ac34437431a95a247ef1e7aa5c9084c36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Sicurezza del trasporto con autenticazione del certificato
 In questo argomento viene illustrato l'utilizzo dei certificati X.509 per l'autenticazione del server e del client con la sicurezza del trasporto. Per ulteriori informazioni su x. 509 certificati vedere [certificati x. 509 a chiave pubblica](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx). I certificati devono essere emesso da un'autorità di certificazione, è spesso un emittente di certificati di terze parti. Nei domini Windows Server è possibile utilizzare Servizi certificati Active Directory per rilasciare certificati ai computer client del dominio. Per ulteriori informazioni vedere [Servizi certificati di Windows 2008 R2](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). In questo scenario, il servizio è ospitato in Internet Information Services (IIS) configurato con Secure Sockets Layer (SSL). Il servizio è configurato con un certificato SSL (X.509) per consentire ai client di verificare l'identità del server. Anche il client è configurato con un certificato X.509 per consentire al servizio di verificare l'identità del client. Il certificato del server deve essere ritenuto attendibile dal client e il certificato del client deve essere ritenuto attendibile dal server. Il meccanismo per cui effettivamente il servizio e il client verificano le reciproche identità non rientra nell'ambito di questo argomento. Per ulteriori informazioni vedere [firma digitale su Wikipedia](http://go.microsoft.com/fwlink/?LinkId=253157).  

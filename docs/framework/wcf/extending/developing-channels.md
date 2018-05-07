@@ -1,27 +1,15 @@
 ---
 title: Sviluppo di canali
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42c89ae71078a3ddfbe7e85273a6f62879781c80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: def60ec0cce8da71e7e2d98ff456420949360aed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-channels"></a>Sviluppo di canali
-Per sviluppare un protocollo o un canale di trasporto che possa essere utilizzato con il livello dell'applicazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono necessari vari passaggi. In questo argomento vengono illustrati tali passaggi con rimandi agli argomenti specifici per ulteriori informazioni. Per comprendere il modello di canale e i vari tipi menzionati in questo argomento, vedere [Cenni preliminari sul modello di canale](../../../../docs/framework/wcf/extending/channel-model-overview.md). Per un esempio di canale di trasporto completo, vedere [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
+Per sviluppare un canale di trasporto o protocollo che può essere usato con Windows Communication Foundation (WCF) livello dell'applicazione richiede diversi passaggi. In questo argomento vengono illustrati tali passaggi con rimandi agli argomenti specifici per ulteriori informazioni. Per comprendere il modello di canale e i vari tipi menzionati in questo argomento, vedere [Cenni preliminari sul modello di canale](../../../../docs/framework/wcf/extending/channel-model-overview.md). Per un esempio di canale di trasporto completo, vedere [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
   
 ## <a name="the-channel-development-task-list"></a>Elenco delle attività di sviluppo di un canale  
  I passaggi per creare un canale definito dall'utente sono i seguenti. Per tutti i canali è necessario:  

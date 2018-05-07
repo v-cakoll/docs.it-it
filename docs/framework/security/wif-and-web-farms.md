@@ -1,24 +1,14 @@
 ---
 title: WIF e Web farm
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 93c3e4251943afa383002043d9259184be82d929
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed6a7fbe550dad85cf505eaf20a446803b84c96f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-and-web-farms"></a>WIF e Web farm
 Quando si usa Windows Identity Foundation (WIF) per proteggere le risorse di un'applicazione relying party (RP) distribuita in una Web farm, è necessario eseguire passaggi specifici per garantire che WIF possa elaborare i token da istanze dell'applicazione relying party in esecuzione in computer diversi nella farm. Tale elaborazione comprende la convalida delle firme dei token di sessione, la crittografia e la decrittografia dei token di sessione, la memorizzazione nella cache dei token di sessione e il rilevamento dei token di sicurezza riprodotti.  
@@ -65,7 +55,7 @@ Quando si usa Windows Identity Foundation (WIF) per proteggere le risorse di un'
 -   Se l'applicazione rileva token riprodotti, è necessario seguire una strategia di cache distribuita simile per la cache di riproduzione dei token, derivando da <xref:System.IdentityModel.Tokens.TokenReplayCache> e puntando al servizio di caching di riproduzione dei token nell'elemento di configurazione [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
->  Tutti gli esempi di codice e XML in questo argomento sono tratti dall'esempio [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408).  
+>  Tutti XML di esempio e codice in questo argomento riguarda la [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) esempio.  
   
 > [!IMPORTANT]
 >  Gli esempi in questo argomento vengono forniti come sono e non devono essere usati nel codice di produzione senza alcuna modifica.  

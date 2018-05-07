@@ -1,14 +1,6 @@
 ---
 title: Metodo ICorDebugModule2::ApplyChanges
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModule2.ApplyChanges
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4855b7a42d471304d000465a0437f29bdff05494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a406e945a67352bc7f126b40bd56f4a11dd693b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmodule2applychanges-method"></a>Metodo ICorDebugModule2::ApplyChanges
 Applica le modifiche nei metadati e le modifiche nel codice Microsoft intermediate language (MSIL) per il processo in esecuzione.  
@@ -65,7 +53,7 @@ HRESULT ApplyChanges (
  [in] Buffer che contiene il codice MSIL aggiornato.  
   
 ## <a name="remarks"></a>Note  
- Il `pbMetadata` parametro è in un formato di metadati delta speciale (come output da [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata`accetta i metadati precedenti come base e descrive le singole modifiche da applicare alla base.  
+ Il `pbMetadata` parametro è in un formato di metadati delta speciale (come output da [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` accetta i metadati precedenti come base e descrive le singole modifiche da applicare alla base.  
   
  Al contrario, il `pbIL[`] parametro contiene il nuovo codice MSIL per il metodo aggiornato ed è concepito per sostituire completamente il precedente codice MSIL per il metodo  
   
@@ -78,8 +66,8 @@ HRESULT ApplyChanges (
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, Cordebug. H  
+ **Intestazione:** Cordebug. idl, Cordebug. H  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

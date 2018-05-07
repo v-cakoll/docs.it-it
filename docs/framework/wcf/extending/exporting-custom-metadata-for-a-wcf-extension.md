@@ -1,27 +1,15 @@
 ---
 title: Esportazione di metadati personalizzati per un'estensione WCF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbdbef495232fb1ffaeb8d1dc739c2db1355556d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Esportazione di metadati personalizzati per un'estensione WCF
-In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], l'esportazione dei metadati è il processo utilizzato per descrivere gli endpoint di un servizio e quindi proiettarli in una rappresentazione parallela standardizzata che i client possono utilizzare allo scopo di comprendere come utilizzare il servizio. I metadati personalizzati sono costituiti da elementi XML non esportabili mediante le unità di esportazione dei metadati forniti dal sistema. Questi metadati comprendono in genere elementi WSDL personalizzati di elementi di comportamenti e associazioni definiti dall'utente nonché asserzioni di criteri personalizzate relative alle funzionalità e ai requisiti di associazioni e contratti.  
+In Windows Communication Foundation (WCF), l'esportazione dei metadati è il processo di descrivere gli endpoint di servizio e quindi proiettarli in una rappresentazione parallela standardizzata che i client possono usare per comprendere come utilizzare il servizio. I metadati personalizzati sono costituiti da elementi XML non esportabili mediante le unità di esportazione dei metadati forniti dal sistema. Questi metadati comprendono in genere elementi WSDL personalizzati di elementi di comportamenti e associazioni definiti dall'utente nonché asserzioni di criteri personalizzate relative alle funzionalità e ai requisiti di associazioni e contratti.  
   
  Questa sezione descrive come esportare elementi WSDL o asserzioni di criteri personalizzati, senza tuttavia trattare il processo di esportazione in sé. Per ulteriori informazioni su come usare i tipi di esportare e importano metadati indipendentemente dai metadati personalizzati o costruito sistema, vedere [di esportazione e importazione di metadati](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   

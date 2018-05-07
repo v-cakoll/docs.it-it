@@ -2,10 +2,6 @@
 title: Funzione SpawnDerivedClass (riferimenti alle API non gestite)
 description: La funzione SpawnDerivedClass crea un nuovo oggetto che deriva da un oggetto.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnDerivedClass
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 51a0dd0013b1bb3898bcc81ee2d64be20a5b6ecc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe93b7ee28db8151345871b0dd716d41227ed565
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass (funzione)
 Crea un oggetto appena derivata da un oggetto specificato.    
@@ -75,7 +68,7 @@ I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* fi
 
 Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject::SpawnDerivedClass](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) metodo.
 
-`ptr`deve essere una definizione di classe che diventa la classe padre dell'oggetto generato. L'oggetto restituito diventa una sottoclasse dell'oggetto corrente.
+`ptr` deve essere una definizione di classe che diventa la classe padre dell'oggetto generato. L'oggetto restituito diventa una sottoclasse dell'oggetto corrente.
 
 Il nuovo oggetto restituito `ppNewClass` diventa automaticamente una sottoclasse dell'oggetto corrente. Impossibile eseguire l'override di questo comportamento. Non vi è alcun altro metodo per cui è possono creare le sottoclassi (classi derivate).
 
@@ -84,7 +77,7 @@ Il nuovo oggetto restituito `ppNewClass` diventa automaticamente una sottoclasse
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

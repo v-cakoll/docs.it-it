@@ -1,24 +1,12 @@
 ---
 title: Mesh del peer
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f70c1dfba6ceb53cd674726702c471dbe508d46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: afd9eae36f28c28b33b74c4456feb4ba8c91314d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-meshes"></a>Mesh del peer
 Oggetto *mesh* è una raccolta denominata (un grafico interconnesso) di nodi peer che possono comunicare tra loro e sono identificati da un ID mesh univoco. Ogni nodo è connesso a più nodi. In una rete ben collegata, vi è un percorso tra due nodi qualsiasi, con un numero di hop relativamente basso tra i nodi situati alle estremità della rete e la rete rimarrà collegata anche se alcuni nodi o connessioni non vanno a buon fine. I nodi attivi nella mesh pubblicano le informazioni sugli endpoint con un ID mesh corrispondente così che gli altri peer possano trovarli.  
@@ -42,4 +30,4 @@ Oggetto *mesh* è una raccolta denominata (un grafico interconnesso) di nodi pee
   
 -   **Ordinamento dei messaggi:** i messaggi provenienti da un'unica origine potrebbero non arrivare a tutte le altre parti nello stesso ordine o nell'ordine di invio. Se ci sono applicazioni che richiedono che i messaggi vengano recapitati in un determinato ordine, è necessario definire tale ordine all'interno delle applicazioni in questione, ad esempio, includendo un ID a incremento progressivo costante con tutti i messaggi.  
   
--   **La messaggistica affidabile:** canale Peer non include un meccanismo per assicurare la ricezione dei messaggi da tutti i peer. Per garantire il recapito dei messaggi, è necessario scrivere un livello di affidabilità sul canale peer.
+-   **Messaggistica affidabile:** canale Peer non include un meccanismo per assicurare la ricezione dei messaggi da tutti i peer. Per garantire il recapito dei messaggi, è necessario scrivere un livello di affidabilità sul canale peer.

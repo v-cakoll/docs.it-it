@@ -1,14 +1,6 @@
 ---
 title: Interfaccia ICorRuntimeHost
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1280c49c2eea6a06eca10ebd8896b0722e321547
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: facc756061e7eb381abecc544ca4b15bfdde6343
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehost-interface"></a>Interfaccia ICorRuntimeHost
 Fornisce metodi che consentono all'host avviare e arrestare in modo esplicito, common language runtime (CLR) per creare e configurare i domini applicazione, per accedere al dominio predefinito e per enumerare tutti i domini in esecuzione nel processo.  
@@ -46,7 +34,7 @@ Fornisce metodi che consentono all'host avviare e arrestare in modo esplicito, c
 |[Metodo CloseEnum](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-closeenum-method.md)|Reimposta un enumeratore di dominio fino all'inizio dell'elenco di domini.|  
 |[Metodo CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)|Crea un dominio applicazione. Il chiamante riceve un puntatore a interfaccia di tipo <xref:System._AppDomain> a un'istanza di tipo <xref:System.AppDomain?displayProperty=nameWithType>.|  
 |[Metodo CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)|Crea un dominio applicazione. Questo metodo consente al chiamante di passare un'istanza di IAppDomainSetup per configurare le funzionalità aggiuntive dell'oggetto restituito <xref:System._AppDomain> istanza.|  
-|[Metodo CreateDomainSetup](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|Ottiene un puntatore a interfaccia di tipo `IAppDomainSetup` per un <xref:System.AppDomainSetup> istanza. `IAppDomainSetup`fornisce metodi per configurare gli aspetti di un dominio applicazione prima che venga creato.|  
+|[Metodo CreateDomainSetup](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|Ottiene un puntatore a interfaccia di tipo `IAppDomainSetup` per un <xref:System.AppDomainSetup> istanza. `IAppDomainSetup` fornisce metodi per configurare gli aspetti di un dominio applicazione prima che venga creato.|  
 |[Metodo CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|Ottiene un puntatore a interfaccia di tipo <xref:System.Security.Principal.IIdentity>, che consente all'host creare l'evidenza di sicurezza da passare al [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) o [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md).|  
 |[Metodo CreateLogicalThreadState](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createlogicalthreadstate-method.md)|Non usare.|  
 |[Metodo CurrentDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-currentdomain-method.md)|Ottiene un puntatore a interfaccia di tipo <xref:System._AppDomain> che rappresenta il dominio caricato sul thread corrente.|  
@@ -68,7 +56,7 @@ Fornisce metodi che consentono all'host avviare e arrestare in modo esplicito, c
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
  **Versioni di .NET framework:** 1.0, 1.1  
   

@@ -2,10 +2,6 @@
 title: Funzione SetSecurity (riferimenti alle API non gestite)
 description: La funzione SetSecurity recupera il token di rappresentazione del thread corrente.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SetSecurity
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: abb716d64bde9b298203e54d862ff4f1b2bcd170
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fd354e1103832abee7f634eace3dd6defa8b646
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setsecurity-function"></a>Funzione SetSecurity
 Recupera il token di rappresentazione associato al thread corrente.   
@@ -45,7 +38,7 @@ HRESULT SetSecurity (
 
 ## <a name="parameters"></a>Parametri
 
-`pNeedToReset`[out] Quando la funzione viene restituito, contiene un puntatore a un `boolean` che indica se il token deve essere reimpostato tramite la chiamata di [ResetSecurity](resetsecurity.md) (funzione).  
+`pNeedToReset` [out] Quando la funzione viene restituito, contiene un puntatore a un `boolean` che indica se il token deve essere reimpostato tramite una chiamata di [ResetSecurity](resetsecurity.md) (funzione).  
 
 `token`  
 [out] Quando la funzione viene restituito, contiene un puntatore all'handle del token di rappresentazione associato al thread corrente. Il valore può essere `null` se non è disponibile alcun token associato al thread corrente. 
@@ -61,7 +54,7 @@ Se la funzione ha esito negativo, il valore restituito è un codice di errore di
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

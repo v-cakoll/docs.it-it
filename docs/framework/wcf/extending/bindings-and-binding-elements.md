@@ -1,28 +1,14 @@
 ---
 title: Associazioni ed elementi di associazione
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 232d2d23ea88c834d2e28bae99cd2e001f6efac6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 32b8b9e1fbb3ae16f4dd81620658569a9408057b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-binding-elements"></a>Associazioni ed elementi di associazione
 Le associazioni sono raccolte di elementi di configurazione speciale, chiamati *gli elementi di associazione*, vengono esaminati dal runtime del servizio ogni volta che un client o viene creato l'endpoint del servizio. Il tipo e l'ordine degli elementi di un'associazione determinano la scelta e l'ordine di sovrapposizione dei canali di protocollo e di trasporto dello stack di canali di un endpoint.  
@@ -32,7 +18,7 @@ Le associazioni sono raccolte di elementi di configurazione speciale, chiamati *
  Ogni associazione deve contenere un solo elemento di associazione di trasporto. Ogni elemento di associazione di trasporto implica un elemento di associazione di codifica dei messaggi predefinito. Per eseguire l'override di questo elemento è possibile aggiungere all'associazione un unico elemento di associazione di codifica dei messaggi. Oltre agli elementi di associazione di trasporto e di codifica, l'associazione può contenere un numero qualsiasi di elementi di associazione di protocollo per soddisfare i requisiti di funzionalità di un servizio nonché per consentire l'invio di messaggi SOAP fra endpoint. Per informazioni dettagliate, vedere [utilizzando associazioni per configurare servizi e client](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
 ## <a name="extending-bindings-and-binding-elements"></a>Estensione delle associazioni e degli elementi di associazione  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offre associazioni fornite dal sistema in grado di soddisfare i requisiti di una vasta gamma di scenari. (Per ulteriori informazioni, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md).) In determinati casi, tuttavia, è necessario creare e utilizzare associazioni non disponibili in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Negli scenari seguenti occorre creare una nuova associazione.  
+ Windows Communication Foundation (WCF) include le associazioni fornite dal sistema che includono un'ampia gamma di scenari. (Per ulteriori informazioni, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md).) In determinati casi, tuttavia, è necessario creare e utilizzare associazioni non disponibili in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Negli scenari seguenti occorre creare una nuova associazione.  
   
 -   Esigenza di utilizzare un nuovo elemento di associazione, ad esempio di trasporto, di codifica o di protocollo. In questo scenario è necessario creare una nuova associazione contenente l'elemento di associazione desiderato. Ad esempio, se si aggiunge un elemento di trasporto UDP `UdpTransportBindingElement` personalizzato occorre creare una nuova associazione per utilizzarlo. Per informazioni sull'esecuzione di questo comportamento utilizzando la <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> del tipo, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

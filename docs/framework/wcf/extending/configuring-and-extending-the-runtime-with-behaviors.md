@@ -1,34 +1,20 @@
 ---
 title: Configurazione ed estensione del runtime con i comportamenti
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2ea157ea1ac73a287ba39c1468e7e9a5781d40a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Configurazione ed estensione del runtime con i comportamenti
-I comportamenti consentono di modificare il comportamento predefinito e di aggiungere estensioni personalizzate che controllano e convalidano la configurazione del servizio o modificano il comportamento nel runtime nelle applicazioni client e di servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. In questo argomento vengono descritte le interfacce di comportamento e viene illustrato come implementarle e aggiungerle alla descrizione del servizio (in un'applicazione di servizio) o all'endpoint (in un'applicazione client) a livello di codice o in un file di configurazione. Per ulteriori informazioni sull'utilizzo dei comportamenti forniti dal sistema, vedere [specifica del comportamento in fase di esecuzione del servizio](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) e [specifica del comportamento in fase di esecuzione Client](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
+I comportamenti consentono di modificare il comportamento predefinito e aggiungere estensioni personalizzate che controllano e convalidare la configurazione del servizio o modificano il comportamento di runtime nelle applicazioni client e il servizio Windows Communication Foundation (WCF). In questo argomento vengono descritte le interfacce di comportamento e viene illustrato come implementarle e aggiungerle alla descrizione del servizio (in un'applicazione di servizio) o all'endpoint (in un'applicazione client) a livello di codice o in un file di configurazione. Per ulteriori informazioni sull'utilizzo dei comportamenti forniti dal sistema, vedere [specifica del comportamento in fase di esecuzione del servizio](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) e [specifica del comportamento in fase di esecuzione Client](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>comportamenti  
- I tipi di comportamento vengono aggiunti agli oggetti di descrizione del servizio o dell'endpoint del servizio (rispettivamente nel servizio o nel client) prima che tali oggetti vengano utilizzati da [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per creare un runtime che esegue un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Quando questi comportamenti vengono chiamati durante il processo di costruzione del runtime, saranno quindi in grado di accedere alle proprietà e ai metodi runtime che modificano il runtime costruito dal contratto, dalle associazioni e dagli indirizzi.  
+ Tipi di comportamento vengono aggiunti al servizio o gli oggetti di descrizione dell'endpoint di servizio (nel servizio o nel client, rispettivamente) prima di tali oggetti vengono utilizzati da Windows Communication Foundation (WCF) per creare un runtime che esegue un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio o un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client. Quando questi comportamenti vengono chiamati durante il processo di costruzione del runtime, saranno quindi in grado di accedere alle proprietà e ai metodi runtime che modificano il runtime costruito dal contratto, dalle associazioni e dagli indirizzi.  
   
 ### <a name="behavior-methods"></a>Metodi di comportamento  
  Tutti i comportamenti dispongono di un metodo `AddBindingParameters`, un metodo `ApplyDispatchBehavior`, un metodo `Validate` e un metodo `ApplyClientBehavior` con un'eccezione: poiché l'interfaccia <xref:System.ServiceModel.Description.IServiceBehavior> non può essere eseguita in un client, non implementa `ApplyClientBehavior`.  

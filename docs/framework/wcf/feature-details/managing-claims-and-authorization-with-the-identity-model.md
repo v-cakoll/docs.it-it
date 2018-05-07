@@ -1,13 +1,6 @@
 ---
-title: "Gestione di attestazioni e autorizzazioni con il modello di identità"
-ms.custom: 
+title: Gestione di attestazioni e autorizzazioni con il modello di identità
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authorization [WCF]
 - WCF security
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gestione di attestazioni e autorizzazioni con il modello di identità
-L'autorizzazione è il processo volto a determinare quali entità dispongono delle autorizzazioni per modificare, visualizzare o altrimenti accedere a una risorsa del computer. In un'azienda, ad esempio, è possibile che l'accesso ai file dei dipendenti sia consentito solo ai responsabili. In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono supportati due meccanismi per l'esecuzione del processo di autorizzazione. Il primo meccanismo consente di controllare l'autorizzazione utilizzando costrutti Common Language Runtime (CLR) esistenti. Il secondo è un modello basato sulle attestazioni, noto come il *modello di identità*. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene utilizzato il modello di identità per creare attestazioni dai messaggi in ingresso; le classi di tale modello possono essere estese per supportare nuovi tipi di attestazione per schemi di autorizzazione personalizzati. In questo argomento viene presentata una panoramica dei principali concetti di programmazione del modello di identità, nonché un elenco delle classi più importanti utilizzate da tale funzionalità.  
+L'autorizzazione è il processo volto a determinare quali entità dispongono delle autorizzazioni per modificare, visualizzare o altrimenti accedere a una risorsa del computer. In un'azienda, ad esempio, è possibile che l'accesso ai file dei dipendenti sia consentito solo ai responsabili. Windows Communication Foundation (WCF) supporta due meccanismi per l'elaborazione di autorizzazione. Il primo meccanismo consente di controllare l'autorizzazione utilizzando costrutti Common Language Runtime (CLR) esistenti. Il secondo è un modello basato sulle attestazioni, noto come il *modello di identità*. WCF utilizza il modello di identità per creare attestazioni dai messaggi in ingresso; Classi del modello di identità possono essere esteso per supportare nuovi tipi di attestazione per schemi di autorizzazione personalizzati. In questo argomento viene presentata una panoramica dei principali concetti di programmazione del modello di identità, nonché un elenco delle classi più importanti utilizzate da tale funzionalità.  
   
 ## <a name="identity-model-scenarios"></a>Scenari del modello di identità  
  Negli scenari seguenti viene illustrato l'utilizzo del modello di identità.  
@@ -136,7 +124,7 @@ L'autorizzazione è il processo volto a determinare quali entità dispongono del
  ![Gestione attestazioni e autorizzazioni](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF e modello di identità  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'infrastruttura del modello di identità come base per il processo di autorizzazione. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe consente di specificare *autorizzazione* criteri come parte di un servizio. Tali criteri di autorizzazione sono note come *criteri di autorizzazione esterni*, e possono eseguire l'elaborazione delle attestazioni in base a criteri locali o mediante interazioni con un servizio remoto. Gestione autorizzazioni, rappresentata dal <xref:System.ServiceModel.ServiceAuthorizationManager> classe valuta i criteri di autorizzazione esterni con i criteri di autorizzazione che riconoscono i vari tipi (token) di credenziali e popola il cosiddetto un  *contesto di autorizzazione* con le attestazioni appropriate a un messaggio in arrivo. Il contesto di autorizzazione è rappresentato dalla classe <xref:System.IdentityModel.Policy.AuthorizationContext>.  
+ WCF utilizza l'infrastruttura del modello di identità come base per l'esecuzione di autorizzazione. In WCF, il <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe consente di specificare *autorizzazione* criteri come parte di un servizio. Tali criteri di autorizzazione sono note come *criteri di autorizzazione esterni*, e possono eseguire l'elaborazione delle attestazioni in base a criteri locali o mediante interazioni con un servizio remoto. Gestione autorizzazioni, rappresentata dal <xref:System.ServiceModel.ServiceAuthorizationManager> classe valuta i criteri di autorizzazione esterni con i criteri di autorizzazione che riconoscono i vari tipi (token) di credenziali e popola il cosiddetto un  *contesto di autorizzazione* con le attestazioni appropriate a un messaggio in arrivo. Il contesto di autorizzazione è rappresentato dalla classe <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
 ## <a name="identity-model-programming"></a>Programmazione del modello di identità  
  Nella tabella seguente viene descritto il modello a oggetti utilizzato per programmare le estensioni del modello di identità. Queste classi sono tutte contenute nello spazio dei nomi <xref:System.IdentityModel.Policy> o <xref:System.IdentityModel.Claims>.  

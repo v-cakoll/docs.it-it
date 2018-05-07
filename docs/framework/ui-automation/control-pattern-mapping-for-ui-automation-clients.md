@@ -1,27 +1,18 @@
 ---
 title: Mapping dei pattern di controllo per i client di automazione interfaccia utente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-caps.latest.revision: "18"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 6a5f9d115c601775cc4f5b1c61d71d739f7a405b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 571d94c7654038c7ea47721caa35c41d31983016
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapping dei pattern di controllo per i client di automazione interfaccia utente
 > [!NOTE]
@@ -47,42 +38,42 @@ ms.lasthandoff: 12/22/2017
 |------------------|---------------|-------------------------|-------------------|  
 |Button|Nessuno|Invoke, Toggle, ExpandCollapse|Nessuno|  
 |Calendar|Grid, Table|Selection, Scroll|Value|  
-|CheckBox|Toggle|nessuno|nessuno|  
+|CheckBox|Toggle|Nessuno|Nessuno|  
 |ComboBox|ExpandCollapse|Selection, Value|Scroll|  
 |DataGrid|Grid|Scroll, Selection, Table|Nessuno|  
 |DataItem|SelectionItem|ExpandCollapse, GridItem, ScrollItem, Table, Toggle, Value|Nessuno|  
 |Document|Testo|Scroll, Value|Nessuno|  
-|Edit|nessuno|Text, RangeValue, Value|None|  
-|Group|nessuno|ExpandCollapse|nessuno|  
-|Header|nessuno|Transform|nessuno|  
-|HeaderItem|Nessuno|Transform, Invoke|nessuno|  
-|Hyperlink|Invoke|Value|nessuno|  
+|Edit|Nessuno|Text, RangeValue, Value|Nessuno|  
+|Gruppo|Nessuno|ExpandCollapse|Nessuno|  
+|Header|Nessuno|Transform|Nessuno|  
+|HeaderItem|Nessuno|Transform, Invoke|Nessuno|  
+|Hyperlink|Invoke|Value|Nessuno|  
 |Image|Nessuno|GridItem, TableItem|Invoke, SelectionItem|  
-|List|nessuno|Grid, MultipleView, Scroll, Selection|Table|  
+|List|Nessuno|Grid, MultipleView, Scroll, Selection|Table|  
 |ListItem|SelectionItem|ExpandCollapse, GridItem, Invoke, ScrollItem, Toggle, Value|Nessuno|  
-|Menu|nessuno|Nessuna|Nessuno|  
-|MenuBar|Nessuno|ExpandCollapse, Dock, Transform|nessuno|  
+|Menu|Nessuno|Nessuna|Nessuno|  
+|MenuBar|Nessuno|ExpandCollapse, Dock, Transform|Nessuno|  
 |MenuItem|Nessuno|ExpandCollapse, Invoke, SelectionItem, Toggle|Nessuno|  
 |Pane|Nessuno|Dock Scroll, Transform|Window|  
-|ProgressBar|Nessuno|RangeValue, Value|nessuno|  
-|RadioButton|SelectionItem|nessuno|Toggle|  
-|ScrollBar|nessuno|RangeValue|Scroll|  
+|ProgressBar|Nessuno|RangeValue, Value|Nessuno|  
+|RadioButton|SelectionItem|Nessuno|Toggle|  
+|ScrollBar|Nessuno|RangeValue|Scroll|  
 |Separatore|Nessuno|Nessuna|Nessuno|  
-|Slider|nessuno|RangeValue, Selection, Value|Nessuno|  
-|Spinner|nessuno|RangeValue, Selection, Value|nessuno|  
-|Pulsante di menu combinato|Invoke, ExpandCollapse|Nessuno|nessuno|  
+|Slider|Nessuno|RangeValue, Selection, Value|Nessuno|  
+|Spinner|Nessuno|RangeValue, Selection, Value|Nessuno|  
+|Pulsante di menu combinato|Invoke, ExpandCollapse|Nessuno|Nessuno|  
 |StatusBar|Nessuno|Grid|Nessuno|  
-|Tab|Selection|Scroll|nessuno|  
-|TabItem|SelectionItem|nessuno|Invoke|  
-|Table|Grid, GridItem, Table, TableItem|Nessuno|nessuno|  
+|Scheda|Selection|Scroll|Nessuno|  
+|TabItem|SelectionItem|Nessuno|Invoke|  
+|Table|Grid, GridItem, Table, TableItem|Nessuno|Nessuno|  
 |Testo|Nessuno|GridItem, TableItem, Text|Valore|  
-|Thumb|Transform|Nessuno|nessuno|  
-|TitleBar|Nessuno|Nessuna|nessuno|  
-|ToolBar|Nessuno|Dock, ExpandCollapse, Transform|nessuno|  
-|ToolTip|nessuno|Text, Window|nessuno|  
-|Tree|Nessuno|Scroll, Selection|nessuno|  
+|Thumb|Transform|Nessuno|Nessuno|  
+|TitleBar|Nessuno|Nessuna|Nessuno|  
+|ToolBar|Nessuno|Dock, ExpandCollapse, Transform|Nessuno|  
+|ToolTip|Nessuno|Text, Window|Nessuno|  
+|Tree|Nessuno|Scroll, Selection|Nessuno|  
 |TreeItem|ExpandCollapse|Invoke, ScrollItem, SelectionItem, Toggle|Nessuno|  
-|Window|Transform, Window|Dock|nessuno|  
+|Window|Transform, Window|Dock|Nessuno|  
   
 > [!NOTE]
 >  Se un tipo di controllo non dispone di pattern di controllo supportati ma ha uno o più pattern di controllo supportati in modo condizionale, uno dei pattern di controllo condizionali risulterà sempre supportato.  

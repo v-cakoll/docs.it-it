@@ -1,24 +1,12 @@
 ---
 title: Tipi conosciuti
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e0359e3094b86e3433cebee7c835c7eecec16fe0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 003f2e39804bb393c9d8c54a6fc208fdd1b22e97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="known-types"></a>Tipi conosciuti
 Questo esempio illustra come specificare informazioni sui tipi derivati in un contratto dati. I contratti dati consentono di passare dati strutturati a e da i servizi. Nella programmazione orientata a oggetti, un tipo che eredita da un altro tipo può essere utilizzato al posto del tipo originale. Nella programmazione orientata al servizio, vengono comunicati schemi piuttosto che tipi e, pertanto, la relazione tra tipi non viene mantenuta. L'attributo <xref:System.Runtime.Serialization.KnownTypeAttribute> consente alle informazioni sui tipi derivati di essere incluse nel contratto dati. Se questo meccanismo non viene utilizzato, un tipo derivato non può essere inviato o ricevuto se è atteso un tipo base.  
@@ -178,7 +166,7 @@ No magnitude was sent from the service
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
   

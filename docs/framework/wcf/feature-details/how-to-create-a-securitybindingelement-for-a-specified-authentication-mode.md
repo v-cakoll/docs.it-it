@@ -1,32 +1,20 @@
 ---
 title: 'Procedura: creare un elemento SecurityBindingElement per una modalità di autenticazione specificata'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7c7747a-5b8c-463f-8493-7266dac75066
-caps.latest.revision: 9
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 423ec48aac29c0aba2b4f4dda1b68f3c1979c5e4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70c3e371be3af5f03ea85f1681155c2590d42373
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-securitybindingelement-for-a-specified-authentication-mode"></a>Procedura: creare un elemento SecurityBindingElement per una modalità di autenticazione specificata
-In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono disponibili varie modalità per l'autenticazione reciproca di client e servizi. È possibile creare elementi di associazione di sicurezza per tali modalità di autenticazione utilizzando metodi statici sulla classe <xref:System.ServiceModel.Channels.SecurityBindingElement> o tramite configurazione, come spiegato nell'esempio seguente.  
+Windows Communication Foundation (WCF) sono disponibili varie modalità con cui i client e servizi per l'autenticazione reciproca. È possibile creare elementi di associazione di sicurezza per tali modalità di autenticazione utilizzando metodi statici sulla classe <xref:System.ServiceModel.Channels.SecurityBindingElement> o tramite configurazione, come spiegato nell'esempio seguente.  
   
  Per ulteriori informazioni sulle modalità di 18 autenticazione, vedere [modalità di autenticazione di SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   

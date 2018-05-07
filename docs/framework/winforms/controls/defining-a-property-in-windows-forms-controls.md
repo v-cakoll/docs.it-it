@@ -1,13 +1,6 @@
 ---
-title: "Definizione di una proprietà nei controlli Windows Form"
-ms.custom: 
+title: Definizione di una proprietà nei controlli Windows Form
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,23 +8,18 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47b56a4112dc39adb12bb8f7c6db7656352ae930
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dc47d7152419d55b3e52aec70257e2b39e9aaca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definizione di una proprietà nei controlli Windows Form
 Per una panoramica delle proprietà, vedere [Cenni preliminari sulle proprietà](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Quando si definisce una proprietà sono da considerare i seguenti elementi:  
   
 -   È necessario applicare attributi alle proprietà definite. Gli attributi specificano l'aspetto di una proprietà in una progettazione. Per informazioni dettagliate, vedere [Attributi per componenti in fase di progettazione](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
   
--   Se la modifica della proprietà ha effetto sulla visualizzazione del controllo, chiamare il <xref:System.Windows.Forms.Control.Invalidate%2A> metodo (che il controllo eredita da <xref:System.Windows.Forms.Control>) dal `set` della funzione di accesso. <xref:System.Windows.Forms.Control.Invalidate%2A>a sua volta chiama il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo, che consente di ricreare il controllo. Più chiamate al metodo <xref:System.Windows.Forms.Control.Invalidate%2A> risultato in una singola chiamata a <xref:System.Windows.Forms.Control.OnPaint%2A> per migliorare l'efficienza.  
+-   Se la modifica della proprietà ha effetto sulla visualizzazione del controllo, chiamare il <xref:System.Windows.Forms.Control.Invalidate%2A> metodo (che il controllo eredita da <xref:System.Windows.Forms.Control>) dal `set` della funzione di accesso. <xref:System.Windows.Forms.Control.Invalidate%2A> a sua volta chiama il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo, che consente di ricreare il controllo. Più chiamate al metodo <xref:System.Windows.Forms.Control.Invalidate%2A> risultato in una singola chiamata a <xref:System.Windows.Forms.Control.OnPaint%2A> per migliorare l'efficienza.  
   
 -   La libreria di classi .NET Framework fornisce convertitori di tipi per tipi di dati comuni, ad esempio numeri interi, numeri decimali, valori booleani e altri. Lo scopo di un convertitore di tipi è in genere quello di fornire la conversione da stringa a valore (da dati stringa in altri tipi di dati). I tipi di dati comuni sono associati a convertitori di tipi predefiniti che convertono i valori in stringhe e le stringhe in tipi di dati appropriati. Se si definisce una proprietà che è un tipo di dati personalizzati (vale a dire non standard), è necessario applicare un attributo che specifica il convertitore di tipi da associare a tale proprietà. È inoltre possibile usare un attributo per associare un editor di tipi dell'interfaccia utente personalizzato a una proprietà. Un editor di tipi dell'interfaccia utente fornisce un'interfaccia utente per la modifica di un tipo di dati o proprietà. La selezione colori è un esempio di un editor di tipi dell'interfaccia utente. Alla fine di questo argomento vengono forniti esempi di attributi.  
   

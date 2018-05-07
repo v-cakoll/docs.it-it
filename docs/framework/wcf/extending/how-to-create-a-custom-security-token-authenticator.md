@@ -1,36 +1,24 @@
 ---
 title: 'Procedura: creare un autenticatore del token di sicurezza personalizzato'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4415edbe9f04cb56cefadcb3ae521994fac28ffb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 41936b407dfdb3fecee80b2513b557016cdcfe5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Procedura: creare un autenticatore del token di sicurezza personalizzato
 In questo argomento viene illustrato come creare un autenticatore del token di sicurezza personalizzato e come integrarlo con un gestore del token di sicurezza personalizzato. Un autenticatore del token di sicurezza codi sicurezzantenuto di un token di sicurezza fornito con un messaggio in ingresso. Se la convalida ha esito positivo, l'autenticatore restituisce una raccolta di istanze <xref:System.IdentityModel.Policy.IAuthorizationPolicy> che, quando valutata, restituisce un set di attestazioni.  
   
- Per utilizzare un autenticatore del token di sicurezza personalizzato in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], è necessario creare prima credenziali personalizzate e implementazioni del gestore del token di sicurezza. Per ulteriori informazioni sulla creazione di credenziali personalizzate e sicurezza token manager, vedere [procedura dettagliata: creazione di Client personalizzato e credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Per ulteriori informazioni sulle credenziali, gestore del token di sicurezza e le classi di provider e un autenticatore, vedere [architettura di sicurezza](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Per utilizzare un autenticatore del token di sicurezza personalizzato in Windows Communication Foundation (WCF), è necessario innanzitutto creare credenziali personalizzate e sicurezza implementazioni del gestore del token. Per ulteriori informazioni sulla creazione di credenziali personalizzate e sicurezza token manager, vedere [procedura dettagliata: creazione di Client personalizzato e credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Per ulteriori informazioni sulle credenziali, gestore del token di sicurezza e le classi di provider e un autenticatore, vedere [architettura di sicurezza](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Procedure  
   
@@ -60,7 +48,7 @@ In questo argomento viene illustrato come creare un autenticatore del token di s
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
   
- [Procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) viene descritto come creare credenziali personalizzate e una protezione personalizzata di gestore del token. Per utilizzare l'autenticatore del token di sicurezza personalizzato qui creato, viene modificata un'implementazione del gestore del token di sicurezza per restituire l'autenticatore personalizzato dal metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>. Il metodo restituisce un autenticatore quando viene passato un requisito di token di sicurezza appropriato.  
+ [Procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) viene descritto come creare credenziali personalizzate e una protezione personalizzata gestore del token. Per utilizzare l'autenticatore del token di sicurezza personalizzato qui creato, viene modificata un'implementazione del gestore del token di sicurezza per restituire l'autenticatore personalizzato dal metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>. Il metodo restituisce un autenticatore quando viene passato un requisito di token di sicurezza appropriato.  
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>Per integrare un autenticatore del token di sicurezza personalizzato con un gestore del token di sicurezza personalizzato  
   

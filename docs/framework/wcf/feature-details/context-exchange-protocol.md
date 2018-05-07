@@ -1,27 +1,15 @@
 ---
 title: Protocollo di scambio del contesto
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f19b228eadcf8dabfaba2fc31f4f49f1b4d149b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a682b94b1ab659515e618e79230d94f57f140717
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="context-exchange-protocol"></a>Protocollo di scambio del contesto
-In questa sezione viene descritto il protocollo di scambio del contesto introdotto in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] versione. Questo protocollo consente al canale client di accettare un contesto fornito da un servizio e di applicarlo a tutte le richieste successive a quel servizio inviate sulla stessa istanza del canale client. L'implementazione del protocollo di scambio del contesto può utilizzare uno dei due meccanismi seguenti per propagare il contesto tra il server e il client: cookie HTTP o un'intestazione SOAP.  
+Questa sezione descrive il protocollo di scambio del contesto introdotto nella versione di Windows Communication Foundation (WCF) .NET Framework versione 3.5. Questo protocollo consente al canale client di accettare un contesto fornito da un servizio e di applicarlo a tutte le richieste successive a quel servizio inviate sulla stessa istanza del canale client. L'implementazione del protocollo di scambio del contesto può utilizzare uno dei due meccanismi seguenti per propagare il contesto tra il server e il client: cookie HTTP o un'intestazione SOAP.  
   
  Il protocollo di scambio del contesto viene implementato in un livello del canale personalizzato. Il canale comunica il contesto da e verso il livello dell'applicazione utilizzando una proprietà <xref:System.ServiceModel.Channels.ContextMessageProperty>. Per la trasmissione tra endpoint, il valore del contesto viene serializzato come intestazione SOAP a livello del canale oppure convertito in o da le proprietà del messaggio che rappresentano una richiesta e una risposta HTTP. Nel secondo caso, è previsto che uno dei livelli di canale sottostanti converta la richiesta HTTP e le proprietà del messaggio di risposta rispettivamente in e da cookie HTTP. Il meccanismo utilizzato per scambiare il contesto viene scelto utilizzando la proprietà <xref:System.ServiceModel.Channels.ContextExchangeMechanism> in <xref:System.ServiceModel.Channels.ContextBindingElement>. I valori validi sono `HttpCookie` e `SoapHeader`.  
   

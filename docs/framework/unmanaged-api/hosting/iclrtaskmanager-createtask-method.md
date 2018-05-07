@@ -1,14 +1,6 @@
 ---
 title: Metodo ICLRTaskManager::CreateTask
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTaskManager.CreateTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e9e78db6e43397709f913f8f79a617221f98db87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f731e121324793a027c5977a02e1973b0d6fff20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>Metodo ICLRTaskManager::CreateTask
 Le richieste in modo esplicito che common language runtime (CLR) creare una nuova attività.  
@@ -65,7 +53,7 @@ HRESULT CreateTask (
 ## <a name="remarks"></a>Note  
  CLR crea una nuova attività automaticamente al momento dell'inizializzazione, quando il codice utente crea un thread utilizzando tipi di <xref:System.Threading> dello spazio dei nomi, o quando le dimensioni del pool di thread sono aumentata. Crea inoltre attività quando il codice non gestito effettua una chiamata a una funzione gestita.  
   
- `CreateTask`consente all'host di richiedere esplicitamente a CLR di creare una nuova attività. Ad esempio, l'host è possibile richiamare questo metodo per pre-inizializzare le strutture di dati.  
+ `CreateTask` consente all'host effettuare una richiesta esplicita che CLR crea una nuova attività. Ad esempio, l'host è possibile richiamare questo metodo per pre-inizializzare le strutture di dati.  
   
 > [!IMPORTANT]
 >  La nuova attività, viene restituita in uno stato sospeso e rimane sospesa fino a quando l'host chiama in modo esplicito [IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
@@ -75,9 +63,9 @@ HRESULT CreateTask (
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

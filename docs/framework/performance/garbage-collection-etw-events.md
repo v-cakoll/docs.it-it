@@ -1,28 +1,18 @@
 ---
 title: Eventi ETW di Garbage Collection
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GC events
 - garbage collection events [.NET Framework]
 - ETW, garbage collection events (CLR)
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
-caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 133d48baa9613ea698b6d6a21f0dfe88a798859c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13f7e935ab999ccc3cd3ea1e308e8d686bed4171
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="garbage-collection-etw-events"></a>Eventi ETW di Garbage Collection
 <a name="top"></a> Questi eventi raccolgono informazioni relative alla Garbage Collection ai fini della diagnostica e del debug, tra cui stabilire quante volte è stato eseguito il processo di Garbage Collection, la quantità di memoria liberata durante la procedura di Garbage Collection e così via.  
@@ -75,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
-|Conteggio|win:UInt32|L' *n*Garbage Collection.|  
+|Conteggio|win:UInt32|L' *ennesima*Garbage Collection.|  
 |Profondità|win:UInt32|La generazione che viene raccolta.|  
 |Motivo|win:UInt32|Motivo per cui è stata attivata la Garbage Collection:<br /><br /> 0x0 - Allocazione heap oggetto piccolo.<br /><br /> 0x1 - Indotto.<br /><br /> 0x2 - Memoria insufficiente.<br /><br /> 0x3 - Vuoto.<br /><br /> 0x4 - Allocazione heap oggetto grande.<br /><br /> 0x5 - Spazio esaurito (per heap oggetto piccolo).<br /><br /> 0x6 - Spazio esaurito (per heap oggetto grande).<br /><br /> 0x7 - Indotto ma non forzato come blocco.|  
 |Tipo|win:UInt32|0x0 - Un'operazione di Garbage Collection bloccante è stata eseguita all'esterno della procedura di Garbage Collection in background.<br /><br /> 0x1 - Garbage Collection in background.<br /><br /> 0x2 - Un'operazione di Garbage Collection bloccante è stata eseguita durante la procedura di Garbage Collection in background.|  
@@ -101,7 +91,7 @@ ms.lasthandoff: 12/22/2017
   
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
-|Conteggio|win:UInt32|L' *n*Garbage Collection.|  
+|Conteggio|win:UInt32|L' *ennesima*Garbage Collection.|  
 |Profondità|win:UInt32|La generazione che è stata raccolta.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   

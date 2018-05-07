@@ -1,27 +1,15 @@
 ---
 title: Trasferimento
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83bb76cc46d72f3d368de20669391c3e7f24a0f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transfer"></a>Trasferimento
-In questo argomento viene descritto il trasferimento nella modalità di traccia attività [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+In questo argomento viene descritto il trasferimento nel modello di traccia di attività di Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Definizione di trasferimento  
  I trasferimenti tra le attività rappresentano le relazioni causali tra eventi nelle attività correlate all'interno di endpoint. Due attività sono correlate con i trasferimenti quando controllano i flussi tra queste attività, ad esempio, una chiamata al metodo che supera i limiti di attività. In [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], quando arrivano i byte nel servizio, l'ascolto dell'attività viene trasferito all'attività di ricezione byte in cui viene creato l'oggetto messaggio. Per un elenco di scenari di traccia end-to-end e le loro rispettive attività e la traccia di progettazione, vedere [gli scenari di traccia End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  

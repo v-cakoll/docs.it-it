@@ -1,14 +1,6 @@
 ---
 title: Metodo IHostAssemblyStore::ProvideAssembly
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyStore.ProvideAssembly
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2097c1ea64e5e9a2a09e0ec57243624b05eeea65
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e32d48931177a42dd14092b4052370764a217abe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>Metodo IHostAssemblyStore::ProvideAssembly
 Ottiene un riferimento a un assembly che non fa riferimento il [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) restituito da [IHostAssemblyManager:: GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md). Common language runtime (CLR) chiama `ProvideAssembly` per ogni assembly che non compare nell'elenco.  
@@ -58,7 +46,7 @@ HRESULT ProvideAssembly (
  [out] Un puntatore a un identificatore univoco per l'assembly richiesto per `IStream`.  
   
  `pHostContext`  
- [out] Un puntatore a dati specifici dell'host utilizzato per determinare l'evidenza dell'assembly richiesto, senza la necessità di una piattaforma di chiamata di PInvoke. `pHostContext`corrisponde alla <xref:System.Reflection.Assembly.HostContext%2A> proprietà di gestito <xref:System.Reflection.Assembly> classe.  
+ [out] Un puntatore a dati specifici dell'host utilizzato per determinare l'evidenza dell'assembly richiesto, senza la necessità di una piattaforma di chiamata di PInvoke. `pHostContext` corrisponde ai <xref:System.Reflection.Assembly.HostContext%2A> proprietà di gestito <xref:System.Reflection.Assembly> classe.  
   
  `ppStmAssemblyImage`  
  [out] Un puntatore all'indirizzo di un `IStream` che contiene l'immagine eseguibile portabile (PE) da caricare oppure null se non è stato possibile trovare l'assembly.  
@@ -70,7 +58,7 @@ HRESULT ProvideAssembly (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`ProvideAssembly`stato restituito correttamente.|  
+|S_OK|`ProvideAssembly` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
@@ -87,9 +75,9 @@ HRESULT ProvideAssembly (
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  

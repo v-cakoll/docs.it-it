@@ -1,32 +1,20 @@
 ---
 title: Esecuzione di query su dataset tipizzati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: fff678a54416e72f4be8c3fdfdcacec5a7d90af7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 30a6512202615590a4b399b8ce7173b213a8873c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="querying-typed-datasets"></a>Esecuzione di query su dataset tipizzati
 Se si conosce lo schema di <xref:System.Data.DataSet> in fase di progettazione dell'applicazione, è consigliabile usare <xref:System.Data.DataSet> tipizzati con [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Un oggetto tipizzato <xref:System.Data.DataSet> è una classe che deriva da un <xref:System.Data.DataSet>. In quanto tale, tale oggetto eredita tutti i metodi, gli eventi e le proprietà di un <xref:System.Data.DataSet>. Inoltre, un oggetto tipizzato <xref:System.Data.DataSet> fornisce metodi fortemente tipizzati, proprietà ed eventi. È quindi possibile accedere a tabelle e colonne in base al nome, anziché usare metodi basati su raccolta. Le query risultano quindi più semplici e più leggibili. Per ulteriori informazioni, vedere [tipizzati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]supporta inoltre l'esecuzione di query su un oggetto tipizzato <xref:System.Data.DataSet>. Con un oggetto tipizzato <xref:System.Data.DataSet>, non è necessario utilizzare il metodo generico <xref:System.Data.DataRowExtensions.Field%2A> metodo o <xref:System.Data.DataRowExtensions.SetField%2A> metodo per accedere ai dati di colonna.  I nomi delle proprietà sono disponibili in fase di compilazione perché le informazioni sul tipo è incluso nel <xref:System.Data.DataSet>. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]fornisce accesso ai valori di colonna come tipo corretto, in modo che gli errori di mancata corrispondenza di tipo vengono intercettati durante la compilazione del codice anziché in fase di esecuzione.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] supporta inoltre l'esecuzione di query su un oggetto tipizzato <xref:System.Data.DataSet>. Con un oggetto tipizzato <xref:System.Data.DataSet>, non è necessario utilizzare il metodo generico <xref:System.Data.DataRowExtensions.Field%2A> metodo o <xref:System.Data.DataRowExtensions.SetField%2A> metodo per accedere ai dati di colonna.  I nomi delle proprietà sono disponibili in fase di compilazione perché le informazioni sul tipo è incluso nel <xref:System.Data.DataSet>. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] fornisce l'accesso ai valori di colonna come tipo corretto, in modo che gli errori di mancata corrispondenza di tipo vengono intercettati durante la compilazione del codice anziché in fase di esecuzione.  
   
  Prima di iniziare a eseguire query su un oggetto <xref:System.Data.DataSet> tipizzato, è necessario generare la classe usando Progettazione DataSet in [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  Per altre informazioni, vedere [Create and configure datasets](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio) (Creare e configurare set di dati).  
   

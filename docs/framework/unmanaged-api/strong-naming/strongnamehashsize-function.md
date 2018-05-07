@@ -1,14 +1,6 @@
 ---
 title: Funzione StrongNameHashSize
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameHashSize
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 738c98d7-a60c-45fe-a296-220af05e6991
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 20a0d5fc284dde7b127f1f177a448a95701ac8b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92b9d9b5baee856f09dd24a62767aff604728997
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamehashsize-function"></a>Funzione StrongNameHashSize
 Ottiene le dimensioni del buffer necessarie per generare un hash, utilizzando l'algoritmo hash specificato.  
@@ -56,7 +44,7 @@ BOOLEAN StrongNameHashSize (
  [out] Dimensioni del buffer restituito, in byte.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`al termine dell'esecuzione; in caso contrario, `false`.  
+ `true` al termine dell'esecuzione; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
  Se il `StrongNameHashSize` funzione non viene completata correttamente, chiamare il [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.  
@@ -66,9 +54,9 @@ BOOLEAN StrongNameHashSize (
   
  **Intestazione:** StrongName. H  
   
- **Libreria:** inclusa come risorsa in MsCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo StrongNameHashSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)  

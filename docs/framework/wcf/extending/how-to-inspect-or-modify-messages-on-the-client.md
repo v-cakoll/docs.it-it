@@ -1,24 +1,12 @@
 ---
 title: 'Procedura: ispezionare o modificare i messaggi sul client'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 06f4feaa5b0b44a26e3d31b65dc465b67544482f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3cd0cf9dd772cad5e1dc16f61ef55eb3b314858d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Procedura: ispezionare o modificare i messaggi sul client
 È possibile ispezionare o modificare i messaggi in arrivo o in uscita su un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementando un'interfaccia <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> e inserendola nel runtime del client. Per ulteriori informazioni, vedere [estensione client](../../../../docs/framework/wcf/extending/extending-clients.md). La funzionalità equivalente nel servizio è <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Per un esempio di codice completo, vedere il [controlli messaggi](../../../../docs/framework/wcf/samples/message-inspectors.md) esempio.  
@@ -27,7 +15,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Implementare l'interfaccia <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
   
-2.  Implementare <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> in base all'ambito in cui si desidera inserire il controllo dei messaggi client. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>Consente di modificare il comportamento a livello di endpoint. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>Consente di modificare il comportamento a livello di contratto.  
+2.  Implementare <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> in base all'ambito in cui si desidera inserire il controllo dei messaggi client. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> Consente di modificare il comportamento a livello di endpoint. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> Consente di modificare il comportamento a livello di contratto.  
   
 3.  Inserire il comportamento prima di chiamare il metodo <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> su <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Per informazioni dettagliate, vedere [la configurazione e l'estensione del Runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   

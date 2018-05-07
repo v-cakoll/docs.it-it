@@ -1,14 +1,6 @@
 ---
 title: Metodo ICorProfilerInfo::EndInprocDebugging
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo.EndInprocDebugging
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 35bc1188-9767-4141-8038-60ea015b99ac
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a36c557d9ab2fa661808aa2f0be942d11ea9fa61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbf7e2e7de54b065f25f3a1873d760ab5051cc91
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a>Metodo ICorProfilerInfo::EndInprocDebugging
 Arresta una sessione di debug in-process. Questo metodo è obsoleto in .NET Framework versione 2.0.  
@@ -59,7 +47,7 @@ HRESULT EndInprocDebugging(
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
  **Versione di .NET framework:** 1.0  
   

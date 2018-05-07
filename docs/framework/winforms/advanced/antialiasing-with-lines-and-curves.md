@@ -1,13 +1,6 @@
 ---
 title: Anti-aliasing con linee e curve
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8552f185a93b688555dbcfab3da9d28d9bfde6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ccc75a535d8ef21cc780ae8e20d590631306bdc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Anti-aliasing con linee e curve
-Quando si utilizza [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare una linea, si forniscono i punti iniziale e finale della riga, ma non è necessario fornire le informazioni sui singoli pixel della riga. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]funziona in combinazione con il software dei driver di visualizzazione per determinare i pixel verranno attivati per visualizzare la riga in un particolare dispositivo di visualizzazione.  
+Quando si utilizza [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare una linea, si forniscono i punti iniziale e finale della riga, ma non è necessario fornire le informazioni sui singoli pixel della riga. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funziona in combinazione con il software dei driver di visualizzazione per determinare quali pixel verrà attivato per visualizzare la riga in un particolare dispositivo di visualizzazione.  
   
 ## <a name="aliasing"></a>Alias  
  Prendere in considerazione la linea rossa direttamente che unisce il punto (4, 2) per il punto (16, 10). Si supponga che il sistema di coordinate ha origine nell'angolo superiore sinistro e che l'unità di misura è il pixel. Si supponga inoltre che l'asse x punta a destra e i punti di asse y verso il basso. Nella figura seguente mostra una linea rossa tracciata su uno sfondo ingrandita.  

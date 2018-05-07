@@ -1,14 +1,6 @@
 ---
 title: Metodo ICLRHostBindingPolicyManager::EvaluatePolicy
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRHostBindingPolicyManager.EvaluatePolicy
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3a3a9446-7a4e-4836-9b27-5c536c15993d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14f4db56529fbbb08f8f3d9adde0d4dc7a8ce045
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e37d56a321e6529812045e37c4f1929818b38a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>Metodo ICLRHostBindingPolicyManager::EvaluatePolicy
 Valuta i criteri di associazione per conto dell'host.  
@@ -76,7 +64,7 @@ HRESULT EvaluatePolicy (
 |-------------|-----------------|  
 |S_OK|La valutazione è stata completata correttamente.|  
 |E_INVALIDARG|Sia `pwzReferenceIdentity` o `pbApplicationPolicy` è un riferimento null.|  
-|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize`è troppo piccolo.|  
+|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize` è troppo piccolo.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
@@ -91,9 +79,9 @@ HRESULT EvaluatePolicy (
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

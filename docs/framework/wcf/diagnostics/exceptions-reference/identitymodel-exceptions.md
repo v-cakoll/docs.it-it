@@ -1,24 +1,12 @@
 ---
 title: Eccezioni IdentityModel
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identitymodel-exceptions"></a>Eccezioni IdentityModel
 In questo argomento vengono elencate tutte le eccezioni generate da IdentityModel.  
@@ -91,8 +79,8 @@ In questo argomento vengono elencate tutte le eccezioni generate da IdentityMode
 |SAMLSignatureAlreadyRead|La firma è già letta nell'asserzione SAML.|  
 |AlgorithmAndPrivateKeyMisMatch|Mancata corrispondenza tra l'algoritmo specificato e la chiave privata.|  
 |EmptyTransformChainNotSupported|Catena di trasformazioni vuota non supportata.|  
-|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper &#124;' offset' non compreso nell'intervallo.|  
-|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper &#124;' dimensioni ' non compreso nell'intervallo. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=Il gestore del token di sicurezza non è in grado di creare un autenticatore del token per il requisito specifico.|  
+|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper&#124;'offset' non è compreso nell'intervallo.|  
+|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper&#124;'size' non è compreso nell'intervallo. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=Il gestore del token di sicurezza non è in grado di creare un autenticatore del token per il requisito specifico.|  
 |UnableToCreateKeyedHashAlgorithm|Impossibile creare un KeyedHashAlgorithm dal valore specifico per l'algoritmo di firma specifico.|  
 |SAMLUnableToLoadAssertion|Il \<SAML: Assertion > Impossibile caricare l'elemento.|  
 |X509FindValueMismatchMulti|L'argomento findValue di X509FindType specifico deve essere uno dei 2 tipi di valori. L'argomento findValue è di un altro tipo.|  

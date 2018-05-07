@@ -1,14 +1,6 @@
 ---
 title: Funzione StrongNameGetBlobFromImage
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameGetBlobFromImage
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1de658e6-da32-4d01-9097-6f43c92222e1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3dd5fa1838517baa97079f5d7f75a789384255a2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d562aef58c1e3b5bbbe690b54eb08384052c657
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamegetblobfromimage-function"></a>Funzione StrongNameGetBlobFromImage
 Ottiene una rappresentazione binaria dell'immagine di assembly in corrispondenza dell'indirizzo di memoria specificata.  
@@ -64,7 +52,7 @@ BOOLEAN StrongNameGetBlobFromImage (
  [in, out] La richiesta di dimensione massima, in byte, di `pbBlob`. Al momento della restituzione, le dimensioni effettive, in byte, di `pbBlob`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`al termine dell'esecuzione; in caso contrario, `false`.  
+ `true` al termine dell'esecuzione; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
  Se il `StrongNameGetBlobFromImage` funzione non viene completata correttamente, chiamare il [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.  
@@ -74,9 +62,9 @@ BOOLEAN StrongNameGetBlobFromImage (
   
  **Intestazione:** StrongName. H  
   
- **Libreria:** inclusa come risorsa in MsCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo StrongNameGetBlobFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  

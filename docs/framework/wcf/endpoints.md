@@ -1,31 +1,17 @@
 ---
 title: Endpoint di Windows Communication Foundation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0725c4f4275853cce958072a57d7f6ca4059e8cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2588cc0bd70932aa91d300d8ecbe35cd2bcd7d00
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Endpoint di Windows Communication Foundation
-Tutte le comunicazioni con un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servizio avviene tramite il *endpoint* del servizio. Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) viene eseguita mediante il *endpoint* del servizio. Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
  Per una panoramica su come creare un endpoint, vedere [Cenni preliminari sulla creazione di Endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md). Ogni endpoint contiene:  
   

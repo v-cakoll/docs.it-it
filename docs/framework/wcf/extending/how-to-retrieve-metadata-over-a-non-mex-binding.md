@@ -1,33 +1,19 @@
 ---
 title: "Procedura: recuperare metadati attraverso un'associazione non MEX"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b469a08ad9759a2d5213f13256ec2def96107acc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedura: recuperare metadati attraverso un'associazione non MEX
 In questo argomento viene illustrato come recuperare metadati da un endpoint MEX attraverso un'associazione non MEX. Il codice in questo esempio è basato sul [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) esempio.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Per recuperare metadati attraverso un'associazione non MEX  
   
-1.  Determinare l'associazione utilizzata dall'endpoint MEX. Per i servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è possibile determinare l'associazione MEX accedendo al file di configurazione del servizio. In questo caso, l'associazione MEX è definita nella configurazione del servizio seguente:  
+1.  Determinare l'associazione utilizzata dall'endpoint MEX. Per i servizi Windows Communication Foundation (WCF), è possibile determinare l'associazione MEX accedendo al file di configurazione del servizio. In questo caso, l'associazione MEX è definita nella configurazione del servizio seguente:  
   
     ```xml  
     <services>  

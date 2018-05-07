@@ -1,14 +1,6 @@
 ---
 title: Metodo ICLRMetaHost::RequestRuntimeLoadedNotification
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRMetaHost.RequestRuntimeLoadedNotification
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b7866270d8c9234a375401dfd05b504a06ddbf4b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ac041db64a874cc143657c601f30e4482dd2462
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>Metodo ICLRMetaHost::RequestRuntimeLoadedNotification
 Fornisce una funzione di callback che viene chiamato quando è caricata una versione di common language runtime (CLR), ma non ancora avviata. Questo metodo sostituisce il [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) (funzione).  
@@ -91,11 +79,11 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  Se l'host tenta di caricare o causare un altro runtime da caricare in modo rientrante, la `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` parametri che vengono fornite nel callback di funzione deve essere utilizzata nel modo seguente:  
   
--   `pfnCallbackThreadSet`deve essere chiamato dal thread che potrebbero causare un carico di runtime prima di tenta di tale carico.  
+-   `pfnCallbackThreadSet` deve essere chiamato dal thread che potrebbero causare un carico di runtime prima di tenta un carico di questo tipo.  
   
--   `pfnCallbackThreadUnset`deve essere chiamato quando il thread non comporterà un caricamento di runtime (e prima di restituire il callback iniziale).  
+-   `pfnCallbackThreadUnset` deve essere chiamato quando il thread non comporterà un carico di runtime (e prima di restituire il callback iniziale).  
   
--   `pfnCallbackThreadSet`e `pfnCallbackThreadUnset` sono entrambi non rientrante.  
+-   `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` sono entrambi non rientrante.  
   
 > [!NOTE]
 >  Hosting di applicazioni non devono chiamare `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` all'esterno dell'ambito del `pCallbackFunction` parametro.  
@@ -105,9 +93,9 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  **Intestazione:** Metahost. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  

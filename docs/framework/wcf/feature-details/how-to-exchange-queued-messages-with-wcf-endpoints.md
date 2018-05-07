@@ -1,34 +1,20 @@
 ---
 title: 'Procedura: scambiare messaggi in coda con endpoint WCF'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f44f3a58e0a8283753cb682f25cf2f167450724
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ab6ca46fad8ee1ededef5cc14a9654b79b2e6a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procedura: scambiare messaggi in coda con endpoint WCF
-Le code garantiscono una messaggistica affidabile tra un client e un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], anche se il servizio non è disponibile al momento della comunicazione. Nelle procedure seguenti viene spiegato come assicurare una comunicazione durevole tra un client e un servizio utilizzando l'associazione in coda standard in caso di implementazione del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Le code garantiscono che non la messaggistica affidabile può avvenire tra un client e un servizio Windows Communication Foundation (WCF), anche se il servizio non è disponibile al momento della comunicazione. Le procedure seguenti viene spiegato come assicurare una comunicazione durevole tra un client e un servizio utilizzando lo standard associazione in coda quando si implementa il servizio WCF.  
   
- Contenuto della sezione viene spiegato come utilizzare <xref:System.ServiceModel.NetMsmqBinding> per la comunicazione in coda tra un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ In questa sezione viene illustrato come utilizzare <xref:System.ServiceModel.NetMsmqBinding> per la comunicazione in coda tra un client WCF e un servizio WCF.  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>Per utilizzare l'accodamento in un servizio WCF  
   
@@ -54,7 +40,7 @@ Le code garantiscono una messaggistica affidabile tra un client e un servizio [!
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Definire un oggetto <xref:System.ServiceModel.Description.ServiceEndpoint> nella configurazione che specifichi l'indirizzo del servizio e utilizzi l'associazione <xref:System.ServiceModel.NetMsmqBinding> standard. Per ulteriori informazioni sull'utilizzo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configurazione, vedere [configurazione di applicazioni di Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Definire un oggetto <xref:System.ServiceModel.Description.ServiceEndpoint> nella configurazione che specifichi l'indirizzo del servizio e utilizzi l'associazione <xref:System.ServiceModel.NetMsmqBinding> standard. Per ulteriori informazioni sull'utilizzo di configurazione WCF, vedere [configurazione di applicazioni di Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
   
   
@@ -65,7 +51,7 @@ Le code garantiscono una messaggistica affidabile tra un client e un servizio [!
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>Per creare un client per il servizio in coda  
   
-1.  Nell'esempio di codice riportato di seguito viene illustrato come eseguire l'applicazione host e utilizzare lo strumento Svcutil.exe per creare il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+1.  Nell'esempio seguente viene illustrato come eseguire l'applicazione host e utilizzare lo strumento Svcutil.exe per creare il client WCF.  
   
     ```  
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -75,7 +61,7 @@ Le code garantiscono una messaggistica affidabile tra un client e un servizio [!
   
   
   
-3.  Creare un ambito di transazione da scrivere nella coda transazionale, chiamare l'operazione `SubmitPurchaseOrder` e chiudere il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], come illustrato nell'esempio seguente.  
+3.  Creare un ambito di transazione da scrivere nella coda transazionale, chiamare il `SubmitPurchaseOrder` operazione e chiudere il client WCF, come illustrato nell'esempio seguente.  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  

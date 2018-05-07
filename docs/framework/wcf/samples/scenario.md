@@ -1,27 +1,15 @@
 ---
 title: Scenario2
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 816557e0-f676-4731-95c5-b02cbef3d8d7
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94ff7c693824e721b17c79b921f4380dba7d04e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f241bf6d4fb2d5f463b85cadf093ab308015c6a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scenario"></a>Scenario
-Contenuto della sezione sono inclusi esempi che descrivono scenari di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+In questa sezione è contenuti esempi che illustrano scenari in Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Scenari di data binding](../../../../docs/framework/wcf/samples/data-binding-scenarios.md)  
@@ -40,4 +28,4 @@ Contenuto della sezione sono inclusi esempi che descrivono scenari di [!INCLUDE[
  Viene illustrato come propagare le informazioni di identità del chiamante da un servizio a un'altro utilizzando un'infrastruttura di sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
- Viene illustrato il modello di pubblicazione-sottoscrizione basato su elenchi implementato come programma [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].
+ Viene illustrato il modello basato su elenchi di pubblicazione-sottoscrizione implementato come un programma di Windows Communication Foundation (WCF).

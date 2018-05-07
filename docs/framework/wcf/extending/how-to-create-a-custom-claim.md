@@ -1,30 +1,18 @@
 ---
-title: 'Procedura: creare un''attestazione personalizzata'
-ms.custom: 
+title: "Procedura: creare un'attestazione personalizzata"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92420b993a1959b03090181944a34a32ab500733
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c1e8886ab3d9d90b217ce79078633433458bbe4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-claim"></a>Procedura: creare un'attestazione personalizzata
-L'infrastruttura del modello di identità in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce una serie di tipi di attestazione e diritti incorporati, oltre alle funzioni di supporto per la creazione di istanze di <xref:System.IdentityModel.Claims.Claim> con tali tipi e diritti. Queste attestazioni incorporate sono progettate per modellare le informazioni presenti nei tipi di credenziali client supportati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per impostazione predefinita. In molti casi, le attestazioni incorporate sono sufficienti; tuttavia alcune applicazioni possono richiedere attestazioni personalizzate. Un'attestazione è costituita dal tipo di attestazione, dalla risorsa a cui si applica l'attestazione e dal diritto asserito sulla risorsa in questione. In questo argomento viene descritto come creare un'attestazione personalizzata.  
+L'infrastruttura del modello di identità in Windows Communication Foundation (WCF) fornisce un set di tipi di attestazione incorporati e diritti con le funzioni di supporto per la creazione di <xref:System.IdentityModel.Claims.Claim> istanze con tali tipi e diritti. Queste attestazioni incorporate sono progettate per modellare le informazioni presenti nei tipi di credenziali client supportati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per impostazione predefinita. In molti casi, le attestazioni incorporate sono sufficienti; tuttavia alcune applicazioni possono richiedere attestazioni personalizzate. Un'attestazione è costituita dal tipo di attestazione, dalla risorsa a cui si applica l'attestazione e dal diritto asserito sulla risorsa in questione. In questo argomento viene descritto come creare un'attestazione personalizzata.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Per creare un'attestazione personalizzata basata su un tipo di dati primitivo  
   
