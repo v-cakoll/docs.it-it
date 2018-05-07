@@ -1,14 +1,6 @@
 ---
 title: Tipi di raccolta nei contratti dati
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: dccc53f13889e2073579af19e86459fe56b069e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipi di raccolta nei contratti dati
 Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]tali elenchi possono essere rappresentati mediante matrici o una varietà di altri tipi (elenco generico, <xref:System.ComponentModel.BindingList%601>generico, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Una raccolta, ad esempio, può contenere un elenco di indirizzi per un determinato cliente. Queste raccolte vengono denominate *raccolte di elenchi*, indipendentemente dal tipo effettivo.  
@@ -86,7 +72,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
   
  Durante la serializzazione, quando il tipo dichiarato è un'interfaccia, il tipo dell'istanza effettivo utilizzato può essere qualsiasi tipo che implementa quell'interfaccia. Le restrizioni discusse in precedenza (la presenza di un costruttore predefinito e di un metodo `Add`) non sono applicabili. È ad esempio possibile impostare indirizzi in Customer2 su un'istanza della classe <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> generica di Address, anche se non si può dichiarare direttamente un membro dati di tipo <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>generico.  
   
- Durante la deserializzazione, quando il tipo dichiarato è un'interfaccia, il motore di serializzazione sceglie un tipo che implementi l'interfaccia dichiarata e viene creata un'istanza del tipo. Il meccanismo dei tipi noti (descritto in [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) non ha alcun effetto in questo caso. La scelta del tipo è incorporata in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Durante la deserializzazione, quando il tipo dichiarato è un'interfaccia, il motore di serializzazione sceglie un tipo che implementi l'interfaccia dichiarata e viene creata un'istanza del tipo. Meccanismo dei tipi noti (descritto in [tipi conosciuti di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) non ha alcun effetto; la scelta del tipo è incorporata in WCF.  
   
 ## <a name="customizing-collection-types"></a>Personalizzazione dei tipi di raccolta  
  È possibile personalizzare i tipi di raccolta utilizzando l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , che presenta molti utilizzi.  
@@ -235,7 +221,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
 ## <a name="collections-and-schema"></a>Raccolte e schema  
  Tutte le raccolte equivalenti presentano la stessa rappresentazione nello schema XSD (XML Schema Definition Language). Per questo motivo in genere non si ottiene, nel codice client generato, lo stesso tipo di raccolta del codice generato nel server. Il server, ad esempio, può utilizzare un contratto dati con <xref:System.Collections.Generic.List%601> generico del membro dati Integer ma nel codice client generato lo stesso membro dati può diventare una matrice di numeri interi.  
   
- Le raccolte di dizionario sono contrassegnate con un'annotazione dello schema specifica di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]che indica che si tratta di dizionari. In caso contrario, non sarebbero distinguibili da semplici elenchi contenenti voci con una chiave e un valore. Per una descrizione più precisa del modo in cui le raccolte vengono rappresentate nello schema del contratto dati, vedere [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+ Le raccolte di dizionario sono contrassegnate con un'annotazione di schema specifica di WCF che indicano che si tratta di dizionari; in caso contrario, non sarebbero distinguibili da semplici elenchi contenenti voci con una chiave e un valore. Per una descrizione più precisa del modo in cui le raccolte vengono rappresentate nello schema del contratto dati, vedere [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Per impostazione predefinita i tipi non vengono generati per raccolte non personalizzate nel codice importato. I membri dati di tipi di raccolta di elenco sono importati come matrici e i membri dati di tipi di raccolta di dizionario sono importati come dizionario generico.  
   

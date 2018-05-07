@@ -1,23 +1,12 @@
 ---
 title: Modello di conferma automatica
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c3595e501341f64883ce2552f0a3c0850691f38c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b30703ffba3b721ac544ea6471ec47ce7f746d2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auto-confirm-pattern"></a>Modello di conferma automatica
 Questa esempio è costituito da tre scenari in cui viene eseguita l'illustrazione di un'attività `AutoConfirmScope` personalizzata. Nel primo esempio viene illustrata l'esecuzione riuscita di una sequenza di quattro attività compensabili dove la seconda e la terza sono annidate in un oggetto `AutoConfirmScope`. Nel secondo esempio viene illustrata la stessa sequenza con un'eccezione che si verifica dopo l'esecuzione della quarta attività <xref:System.Activities.Statements.CompensableActivity>. Nel terzo scenario viene illustrata la stessa sequenza con un'eccezione che si verifica in `AutoConfirmScope` dopo il completamento del secondo <xref:System.Activities.Statements.CompensableActivity>.  
@@ -45,6 +34,6 @@ Questa esempio è costituito da tre scenari in cui viene eseguita l'illustrazion
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`

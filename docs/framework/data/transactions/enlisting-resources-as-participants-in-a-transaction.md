@@ -1,26 +1,15 @@
 ---
 title: Integrazione di risorse come partecipanti a una transazione
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 786a12c2-d530-49f4-9c59-5c973e15a11d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 270b3755901e3c5bc95352b5f3d07a338e73a90e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf7afb9fd255d9b67f40bc4e8c0685d727939972
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Integrazione di risorse come partecipanti a una transazione
 Ogni risorsa che partecipa a una transazione viene gestita dalla gestione risorse, le cui azioni vengono coordinate dalla gestione transazioni. La coordinazione si basa sull'invio di notifiche ai partecipanti che hanno utilizzato la gestione transazioni per integrarsi nella transazione.  

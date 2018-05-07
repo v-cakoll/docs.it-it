@@ -1,29 +1,15 @@
 ---
 title: Host servizio WCF (WcfSvcHost.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1da8d7a08e7887e8ba3fd50a8f809e2ff551a7fd
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: c000ad3ba53f103cb1a24a9a7fbc71049ba707c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host servizio WCF (WcfSvcHost.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Host del servizio (WcfSvcHost.exe) consente di avviare il debugger di Visual Studio (F5) per ospitare e testare un servizio che è stato implementato automaticamente. È quindi possibile testare il servizio mediante Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (WcfTestClient.exe) o un client specifico per trovare e correggere qualsiasi errore potenziale.  
+Host del servizio Windows Communication Foundation (WCF) (WcfSvcHost.exe) consente di avviare il debugger di Visual Studio (F5) per ospitare e testare un servizio che è stato implementato automaticamente. È quindi possibile testare il servizio mediante Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (WcfTestClient.exe) o un client specifico per trovare e correggere qualsiasi errore potenziale.  
   
 ## <a name="wcf-service-host"></a>Host servizio WCF  
  Host servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enumera i servizi in un progetto di servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], carica la configurazione del progetto e crea un'istanza di un host per ciascun servizio che trova. Lo strumento è integrato in Visual Studio tramite il [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modello di servizio e viene richiamato quando si avvia il debug del progetto.  

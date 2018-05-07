@@ -1,24 +1,12 @@
 ---
 title: 'Procedura: creare un servizio flusso di lavoro che chiama un altro servizio flusso di lavoro'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fda5a7286c3d20c7cdc2093e58bfe3fbdcf1d1c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Procedura: creare un servizio flusso di lavoro che chiama un altro servizio flusso di lavoro
 Per un servizio di flusso di lavoro è talvolta necessario ottenere informazioni da un altro servizio analogo.  In questo argomento viene illustrato come eseguire chiamate tra servizi di flusso di lavoro. Verranno creati due servizi di flusso di lavoro: uno che dispone di un metodo che inverte la stringa di input e l'altro che converte la stringa di input in caratteri maiuscoli dopo aver invertito la stringa utilizzata dal primo servizio.  
@@ -69,7 +57,7 @@ Per un servizio di flusso di lavoro è talvolta necessario ottenere informazioni
   
     2.  **Risultato**: ReversedStringToReturn  
   
-    3.  **I parametri**: creare un nuovo parametro con un **direzione** di In, un **tipo** della stringa e un **valore** su StringToReverse.  
+    3.  **I parametri**: creare un nuovo parametro con un **direzione** di In, una **tipo** della stringa e una **valore** stringtoreverse.  
   
     4.  **TargetType**: NestedServices.StringLibrary  
   
@@ -109,11 +97,11 @@ Per un servizio di flusso di lavoro è talvolta necessario ottenere informazioni
   
     2.  **Risultato**: StringToReverse  
   
-    3.  **I parametri**: creare un nuovo parametro con un **direzione** di In, un **tipo** della stringa e un **valore** su StringToUpper.  
+    3.  **I parametri**: creare un nuovo parametro con un **direzione** di In, una **tipo** della stringa e una **valore** stringtoupper.  
   
     4.  **TargetType**: NestedServices.StringLibrary  
   
-8.  A questo punto verrà chiamato il primo servizio sulla stringa modificata. Fare clic sul progetto e selezionare **Aggiungi riferimento al servizio**. Aggiungere un riferimento al servizio all'indirizzo http://localhost/NestedServices/StringReverserService.xamlx e compilare il progetto per creare un'attività personalizzata per accedere al primo servizio Web.  
+8.  A questo punto verrà chiamato il primo servizio sulla stringa modificata. Fare clic sul progetto e selezionare **Aggiungi riferimento al servizio**. Aggiungere un riferimento al servizio su http://localhost/NestedServices/StringReverserService.xamlx . sln e compilare il progetto per creare un'attività personalizzata per accedere al primo servizio Web.  
   
 9. Trascinare un'istanza della nuova attività flusso di lavoro, tra il **InvokeMethod** attività e **SendReplyToReceive** le attività. Assegnare la variabile StringToReverse alla proprietà InputString della nuova attività e la variabile StringToReturn alla proprietà StringToReturn.  
   

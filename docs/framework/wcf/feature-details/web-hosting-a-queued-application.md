@@ -1,29 +1,15 @@
 ---
 title: Sito Web che ospita un'applicazione in coda
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f396ffadeca81d86d867842b63cad3c63d67ff3a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>Sito Web che ospita un'applicazione in coda
-Il servizio di attivazione dei processi di Windows (WAS, Windows Process Activation Service) gestisce l'attivazione e la durata dei processi di lavoro che contengono applicazioni che ospitano servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Il modello di processo WAS generalizza il modello di processo [!INCLUDE[iis601](../../../../includes/iis601-md.md)] per il server HTTP rimuovendo la dipendenza da HTTP. Questo consente ai servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di usare protocolli HTTP e non HTTP, ad esempio net.msmq e msmq.formatname, in un ambiente host che supporta l'attivazione basata su messaggi e offre la possibilità di ospitare un gran numero di applicazioni in un determinato computer.  
+Il servizio di attivazione processo Windows (WAS) gestisce l'attivazione e la durata dei processi di lavoro che contengono i servizi Windows Communication Foundation (WCF) che host applicazioni. Il modello di processo WAS generalizza il modello di processo [!INCLUDE[iis601](../../../../includes/iis601-md.md)] per il server HTTP rimuovendo la dipendenza da HTTP. In questo modo i servizi WCF da usare HTTP e protocolli non HTTP, ad esempio NET. MSMQ e MSMQ. FormatName, in un ambiente di hosting che supporta l'attivazione basata su messaggi e offre la possibilità di ospitare un gran numero di applicazioni in un determinato computer.  
   
  WAS include un servizio di attivazione di Accodamento messaggi (MSMQ) che attiva un'applicazione in coda quando uno o più i messaggi vengono posizionati in una delle code usate dall'applicazione. Il servizio di attivazione MSMQ è un servizio NT che viene automaticamente avviato per impostazione predefinita.  
   
@@ -49,7 +35,7 @@ Il servizio di attivazione dei processi di Windows (WAS, Windows Process Activat
  Il servizio di attivazione MSMQ viene eseguito come SERVIZIO DI RETE. Si tratta del servizio che monitora le code per attivare applicazioni. Per consentire a tale servizio di attivare applicazioni dalla coda, quest'ultima deve assicurare l'accesso SERVIZIO DI RETE per la lettura dei messaggi presenti nel relativo elenco di controllo di accesso.  
   
 ### <a name="poison-messaging"></a>Messaggistica non elaborabile  
- La gestione dei messaggi non elaborabili in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene eseguita dal canale, che non solo rileva che un messaggio non è elaborabile ma seleziona una disposizione in base alla configurazione utente. Il risultato dell'operazione è la presenza nella coda di un solo messaggio. L'applicazione ospitata sul Web viene interrotta più volte consecutivamente e il messaggio viene spostato in una coda di tentativi. A un certo momento, determinato in base all'intervallo di tempo che intercorre tra i cicli di ripetizione dei tentativi, il messaggio viene spostato dalla coda di tentativi alla coda principale, per riprovare l'operazione. Questo però richiede che il canale in coda sia attivo. Se l'applicazione viene riciclata da WAS, il messaggio resta nella coda di tentativi fino a quando non arriva un altro messaggio nella coda principale, per attivare l'applicazione in coda. La soluzione alternativa in questo caso consiste nello spostare manualmente il messaggio dalla coda di tentativi alla coda principale, per riattivare l'applicazione.  
+ Messaggi non elaborabili in WCF viene gestito dal canale, che non solo rileva che un messaggio non è elaborabile ma seleziona una disposizione in base alla configurazione utente. Il risultato dell'operazione è la presenza nella coda di un solo messaggio. L'applicazione ospitata sul Web viene interrotta più volte consecutivamente e il messaggio viene spostato in una coda di tentativi. A un certo momento, determinato in base all'intervallo di tempo che intercorre tra i cicli di ripetizione dei tentativi, il messaggio viene spostato dalla coda di tentativi alla coda principale, per riprovare l'operazione. Questo però richiede che il canale in coda sia attivo. Se l'applicazione viene riciclata da WAS, il messaggio resta nella coda di tentativi fino a quando non arriva un altro messaggio nella coda principale, per attivare l'applicazione in coda. La soluzione alternativa in questo caso consiste nello spostare manualmente il messaggio dalla coda di tentativi alla coda principale, per riattivare l'applicazione.  
   
 ### <a name="subqueue-and-system-queue-caveat"></a>Informazioni sulle code secondarie e le code di sistema  
  Un'applicazione ospitata da WAS non può essere attivata in base a messaggi presenti in una coda di sistema, quale quella di messaggi non recapitabili a livello di sistema, o in code secondarie, quali quelle di messaggi non elaborabili. Si tratta di una limitazione di questa versione del prodotto.  

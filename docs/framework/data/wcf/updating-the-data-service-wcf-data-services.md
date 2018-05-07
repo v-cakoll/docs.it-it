@@ -1,13 +1,6 @@
 ---
 title: Aggiornamento del servizio dati (WCF Data Services)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc8041dee12c8300e18e6321c717cbd80b93d650
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58bbe74fdeb0af5d7095b0b1a57fb8bd475032ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Aggiornamento del servizio dati (WCF Data Services)
 Quando si utilizza il [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client di utilizzare un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed, la libreria traduce le voci del feed in istanze di classi del servizio dati client. Queste classi del servizio dati vengono rilevate utilizzando la classe <xref:System.Data.Services.Client.DataServiceContext> a cui appartiene <xref:System.Data.Services.Client.DataServiceQuery%601>. Il client rileva le modifiche alle entità segnalate utilizzando i metodi su <xref:System.Data.Services.Client.DataServiceContext>. Questi metodi consentono al client di rilevare le entità aggiunte ed eliminate, nonché le modifiche apportate ai valori delle proprietà o alle relazioni tra le istanze di entità. Le modifiche rilevate vengono restituite al servizio dati sotto forma di operazioni basate su REST quando si chiama il metodo <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
@@ -78,7 +66,7 @@ Quando si utilizza il [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)
 ## <a name="creating-and-modifying-relationship-links"></a>Creazione e modifica dei collegamenti delle relazioni  
  Quando si aggiunge una nuova entità utilizzando il <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> appropriato o metodo *AddTo* metodo il <xref:System.Data.Services.Client.DataServiceContext> classe che il **Aggiungi riferimento al servizio** finestra di dialogo Genera l'errore, tutte le relazioni tra la nuova entità e le entità correlate non vengono definite automaticamente.  
   
- È possibile creare e modificare le relazioni tra istanze di entità e fare in modo che tali modifiche vengano apportate nel servizio dati mediante la libreria client. Le relazioni tra entità vengono definite come associazioni nel modello e l'oggetto <xref:System.Data.Services.Client.DataServiceContext> rileva ogni relazione come oggetto collegamento nel contesto. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Fornisce i metodi seguenti nel <xref:System.Data.Services.Client.DataServiceContext> classe per creare, modificare ed eliminare questi collegamenti:  
+ È possibile creare e modificare le relazioni tra istanze di entità e fare in modo che tali modifiche vengano apportate nel servizio dati mediante la libreria client. Le relazioni tra entità vengono definite come associazioni nel modello e l'oggetto <xref:System.Data.Services.Client.DataServiceContext> rileva ogni relazione come oggetto collegamento nel contesto. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Fornisce i metodi seguenti sul <xref:System.Data.Services.Client.DataServiceContext> classe per creare, modificare ed eliminare i collegamenti seguenti:  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  

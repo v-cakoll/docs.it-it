@@ -1,11 +1,6 @@
 ---
 title: Istruzione REM (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.'
 - vb.Rem
@@ -18,14 +13,11 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d64ce970e3e74437f5e8c63c8a4d578900902192
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3bd526b08e1ba3be856e1e823cf8ef49ea9b6c97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rem-statement-visual-basic"></a>Istruzione REM (Visual Basic)
 Utilizzato per includere note esplicative nel codice sorgente di un programma.  
@@ -39,7 +31,7 @@ REM comment
   
 ## <a name="parts"></a>Parti  
  `comment`  
- Parametro facoltativo. Il testo di qualsiasi commento da includere. Uno spazio è necessario tra il `REM` (parola chiave) e `comment`.  
+ Facoltativo. Il testo di qualsiasi commento da includere. Uno spazio è necessario tra il `REM` (parola chiave) e `comment`.  
   
 ## <a name="remarks"></a>Note  
  È possibile inserire un `REM` istruzione da solo su una riga oppure è possibile inserirlo in una riga dopo un'altra istruzione. Il `REM` istruzione deve essere l'ultima istruzione nella riga. Se segue un'altra istruzione, il `REM` devono essere separati da tale istruzione da uno spazio.  

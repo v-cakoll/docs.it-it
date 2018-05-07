@@ -1,17 +1,12 @@
 ---
 title: 'Introduzione a F # con gli strumenti da riga di comando'
 description: "Informazioni su come compilare una soluzione multiprogetto semplice in F # utilizzando l'interfaccia CLI di .NET Core in qualsiasi sistema operativo (Windows, macOs o Linux)."
-author: cartermp
-ms.author: phcart
 ms.date: 03/26/2018
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 767385be605d863644db563a2e86a41ca80527c4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 35ec2313742a0b14c92f3de2662a16aff389b214
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Introduzione a F # con l'interfaccia CLI di .NET Core
 

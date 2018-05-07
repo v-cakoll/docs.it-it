@@ -1,27 +1,15 @@
 ---
 title: 'Procedura: creare un servizio che restituisca dati arbitrari usando il modello di programmazione HTTP Web WCF'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 829e9f2bcf909bee41f53b4b7cabbb0803e77963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procedura: creare un servizio che restituisca dati arbitrari usando il modello di programmazione HTTP Web WCF
-Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità di restituzione dei dati da un'operazione del servizio, Ciò si verifica quando un'operazione del servizio deve restituire dati in un formato non supportato da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. In questo argomento viene illustrato l'utilizzo del modello di programmazione HTTP Web di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per creare un servizio di tale tipo. In questo servizio è presente un'operazione che restituisce un flusso.  
+Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità di restituzione dei dati da un'operazione del servizio, Ciò accade quando un'operazione del servizio deve restituire dati in un formato non supportato da WCF. Questo argomento viene illustrato l'uso del modello di programmazione WCF WEB HTTP per creare tale servizio. In questo servizio è presente un'operazione che restituisce un flusso.  
   
 ### <a name="to-implement-the-service-contract"></a>Per implementare il contratto di servizio  
   
@@ -36,7 +24,7 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
         }  
     ```  
   
-     Poiché il metodo restituisce <xref:System.IO.Stream>, in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si presuppone che l'operazione abbia il controllo completo sui byte restituiti dall'operazione del servizio e non viene applicata alcuna formattazione ai dati restituiti.  
+     Poiché il metodo restituisce un <xref:System.IO.Stream>, WCF si presuppone che l'operazione ha il controllo completo sui byte restituiti dall'operazione del servizio e viene non applicata alcuna formattazione ai dati che viene restituiti.  
   
 2.  Implementare il contratto di servizio Il contratto ha una sola operazione (`GetImage`). Questo metodo genera una bitmap, quindi la salva in <xref:System.IO.MemoryStream> in formato .jpg. L'operazione restituisce quindi il flusso al chiamante.  
   

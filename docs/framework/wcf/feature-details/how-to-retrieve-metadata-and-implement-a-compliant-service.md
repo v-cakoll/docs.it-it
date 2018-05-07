@@ -1,31 +1,17 @@
 ---
 title: 'Procedura: recuperare metadati e implementare un servizio conforme'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac7654fa041688bbd703d564f6703df9671fbaea
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 9ae888f5a9569ef51be52b91ea019fea897597b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Procedura: recuperare metadati e implementare un servizio conforme
-Spesso i servizi non vengono progettati e implementati dalla stessa persona. Negli ambienti dove le applicazioni interoperative svolgono un ruolo importante, i contratti possono essere progettati o descritti in WSDL (Web Services Description Language) e uno sviluppatore deve implementare un servizio che sia conforme al contratto fornito. In alcuni casi può essere necessario eseguire la migrazione di un servizio esistente a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mantenendo tuttavia il formato di trasmissione. I contratti duplex richiedono inoltre ai chiamanti di implementare anche un contratto di callback.  
+Spesso i servizi non vengono progettati e implementati dalla stessa persona. Negli ambienti dove le applicazioni interoperative svolgono un ruolo importante, i contratti possono essere progettati o descritti in WSDL (Web Services Description Language) e uno sviluppatore deve implementare un servizio che sia conforme al contratto fornito. È anche possibile eseguire la migrazione di un servizio esistente per Windows Communication Foundation (WCF) ma mantiene il formato wire. I contratti duplex richiedono inoltre ai chiamanti di implementare anche un contratto di callback.  
   
- In questi casi, è necessario utilizzare il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (o uno strumento equivalente) per generare un'interfaccia del contratto di servizio in un linguaggio gestito che è possibile implementare per soddisfare i requisiti del contratto. In genere il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) viene usato per acquisire un contratto di servizio utilizzato con una channel factory o una [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nonché con un file di configurazione di client che consente di impostare il tipo di client di associazione corretto e l'indirizzo. Per usare il file di configurazione generato, è necessario modificarlo in un file di configurazione del servizio. Può inoltre essere necessario modificare il contratto di servizio.  
+ In questi casi, è necessario utilizzare il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (o uno strumento equivalente) per generare un'interfaccia del contratto di servizio in un linguaggio gestito che è possibile implementare per soddisfare i requisiti del contratto. In genere il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) viene usato per acquisire un contratto di servizio che viene usato con una channel factory o un tipo di client WCF e con un file di configurazione di client che consente di impostare l'associazione corretta e l'indirizzo. Per usare il file di configurazione generato, è necessario modificarlo in un file di configurazione del servizio. Può inoltre essere necessario modificare il contratto di servizio.  
   
 ### <a name="to-retrieve-data-and-implement-a-compliant-service"></a>Per recuperare dati e implementare un servizio conforme  
   

@@ -1,13 +1,6 @@
 ---
-title: "Eventi di modifica delle proprietà"
-ms.custom: 
+title: Eventi di modifica delle proprietà
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], change events
 - property value changes [WPF]
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46a11b072731daf420e35bc9c9cfd7d4fced1fe5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac2a44eb92e384851bbe6ac860fd9b46d3377a06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-change-events"></a>Eventi di modifica delle proprietà
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definisce diversi eventi generati in risposta a una modifica nel valore di una proprietà. Spesso la proprietà è una proprietà di dipendenza. L'evento stesso è in alcuni casi un evento indirizzato, in altri casi un evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] standard. La definizione dell'evento varia in base allo scenario, poiché alcune modifiche delle proprietà sono inviate in modo più appropriato tramite un albero di elementi, mentre altre in genere sono di interesse solo per l'oggetto in cui la proprietà è stata modificata.  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  Se la proprietà è una proprietà di dipendenza personalizzata o se si lavora con una classe derivata in cui è stato definito il codice di creazione dell'istanza, è un meccanismo per tenere traccia delle modifiche di proprietà che è incorporata in più efficiente il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di proprietà: il i callback del sistema di proprietà <xref:System.Windows.CoerceValueCallback> e <xref:System.Windows.PropertyChangedCallback>. Per informazioni dettagliate su come usare il sistema di proprietà [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per la convalida e la coercizione, vedere [Callback e convalida delle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) e [Proprietà di dipendenza personalizzate](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
   
 ### <a name="dependencypropertychanged-events"></a>Eventi DependencyPropertyChanged  
- Un'altra coppia di tipi che fanno parte di uno scenario di evento di modifica proprietà <xref:System.Windows.DependencyPropertyChangedEventArgs> e <xref:System.Windows.DependencyPropertyChangedEventHandler>. Gli eventi per queste modifiche delle proprietà non sono eventi indirizzati, bensì eventi [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] standard. <xref:System.Windows.DependencyPropertyChangedEventArgs>un evento insolito di dati perché non deriva dal tipo di dichiarazione <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> è una struttura, non una classe.  
+ Un'altra coppia di tipi che fanno parte di uno scenario di evento di modifica proprietà <xref:System.Windows.DependencyPropertyChangedEventArgs> e <xref:System.Windows.DependencyPropertyChangedEventHandler>. Gli eventi per queste modifiche delle proprietà non sono eventi indirizzati, bensì eventi [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] standard. <xref:System.Windows.DependencyPropertyChangedEventArgs> è un evento insolito segnalazione dei dati tipo poiché non deriva da <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> è una struttura, non una classe.  
   
  Gli eventi che utilizzano <xref:System.Windows.DependencyPropertyChangedEventArgs> e <xref:System.Windows.DependencyPropertyChangedEventHandler> sono leggermente più comuni di `RoutedPropertyChanged` eventi. Un esempio di un evento che utilizza questi tipi è <xref:System.Windows.UIElement.IsMouseCapturedChanged>.  
   

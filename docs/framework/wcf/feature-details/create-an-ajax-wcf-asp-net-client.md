@@ -1,27 +1,15 @@
 ---
 title: 'Procedura: creare un servizio WCF compatibile con AJAX e un client ASP.NET che accede al servizio'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aafa15129e4a131c5f50eb3296a87fc141e1bda6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58971d11ab76112627dd81d53381236932268e25
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Procedura: creare un servizio WCF compatibile con AJAX e un client ASP.NET che accede al servizio
-In questo argomento viene illustrato come utilizzare Visual Studio 2008 per creare un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] compatibile con AJAX e un client ASP.NET che accede a tale servizio. Il codice per il servizio e per il client viene fornito nella sezione Esempio dopo la descrizione dei passaggi necessari per la creazione del servizio e del client della sezione Procedure.  
+In questo argomento viene illustrato come utilizzare Visual Studio 2008 per creare un servizio con supporto AJAX Windows Communication Foundation (WCF) e un client ASP.NET che accede al servizio. Il codice per il servizio e per il client viene fornito nella sezione Esempio dopo la descrizione dei passaggi necessari per la creazione del servizio e del client della sezione Procedure.  
   
 ### <a name="to-create-the-aspnet-client-application"></a>Per creare un'applicazione client ASP.NET  
   

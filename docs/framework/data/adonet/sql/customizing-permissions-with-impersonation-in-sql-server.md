@@ -1,24 +1,12 @@
 ---
 title: Personalizzazione delle autorizzazioni con rappresentazione in SQL Server
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7175542d8a9441d9f0d3eeb05acc67cf12d6a270
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ac2c6805a9ab49d95f68e56306d7d9fb8aab2a2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personalizzazione delle autorizzazioni con rappresentazione in SQL Server
 In molte applicazioni vengono usate le stored procedure per accedere ai dati, basandosi sul concatenamento delle proprietà per restringere l'accesso alle tabelle di base. È possibile concedere autorizzazioni EXECUTE sulle stored procedure, revocando o negando le autorizzazioni sulle tabelle di base. SQL Server non verifica le autorizzazioni del chiamante se il proprietario della stored procedure coincide con quello delle tabelle. Il concatenamento delle proprietà non funziona se i proprietari degli oggetti sono diversi oppure se si usano istruzioni SQL dinamiche.  
@@ -82,7 +70,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Cambio di contesto](http://msdn.microsoft.com/library/ms188268.aspx) nella documentazione Online di SQL Server|Sono inclusi collegamenti ad argomenti in cui viene descritto l'uso della clausola EXECUTE AS.|  
-|[Utilizzo di EXECUTE AS per creare set di autorizzazioni personalizzati](http://msdn.microsoft.com/library/ms190384.aspx) e [l'utilizzo di EXECUTE AS nei moduli](http://msdn.microsoft.com/library/ms178106.aspx) nella documentazione Online di SQL Server|Argomenti in cui viene descritto l'uso della clausola EXECUTE AS.|  
+|[Utilizzo di EXECUTE AS per creare set di autorizzazioni personalizzati](http://msdn.microsoft.com/library/ms190384.aspx) e [utilizzo di EXECUTE AS nei moduli](http://msdn.microsoft.com/library/ms178106.aspx) nella documentazione Online di SQL Server|Argomenti in cui viene descritto l'uso della clausola EXECUTE AS.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

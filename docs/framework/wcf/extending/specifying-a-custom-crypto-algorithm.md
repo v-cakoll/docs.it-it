@@ -1,24 +1,12 @@
 ---
 title: Specifica di un algoritmo di crittografia personalizzato
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 965f121faa851722e6e2e7f92e805252f7e927c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Specifica di un algoritmo di crittografia personalizzato
 WCF consente di specificare un algoritmo di crittografia personalizzato da usare per crittografare i dati o calcolare le firme digitali. A tale scopo, attenersi alla procedura seguente:  
@@ -116,7 +104,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- La sezione di <`cryptoClasses`> elemento crea il mapping tra il SHA256CryptoServiceProvider e l'alias "SHA256CSP". Il <`nameEntry`> elemento crea il mapping tra l'alias "SHA256CSP" e l'URL specificato (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm).  
+ La sezione di <`cryptoClasses`> elemento crea il mapping tra il SHA256CryptoServiceProvider e l'alias "SHA256CSP". Il <`nameEntry`> elemento crea il mapping tra l'alias "SHA256CSP" e l'URL specificato (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
   
  Per registrare l'algoritmo personalizzato nel codice usare il metodo <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])>. Questo metodo crea entrambi i mapping. Nell'esempio seguente viene illustrato come chiamare questo metodo:  
   

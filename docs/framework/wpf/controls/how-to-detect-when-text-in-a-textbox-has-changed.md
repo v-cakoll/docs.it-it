@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: rilevare eventuali modifiche del testo in un oggetto TextBox'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - text change [WPF], detecting
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ef1da879026d8cbefd6ef1baeb6c315e0ea1c02
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1befd18220488334319a55bce2ce602aef20d3d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Procedura: rilevare eventuali modifiche del testo in un oggetto TextBox
 In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> evento per eseguire un metodo ogni volta che il testo in un <xref:System.Windows.Controls.TextBox> controllo è stato modificato.  
@@ -34,7 +22,7 @@ In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Contr
   
  Il gestore eventi viene chiamato ogni volta che il contenuto del <xref:System.Windows.Controls.TextBox> controllo vengono modificati, da un utente o a livello di codice.  
   
- **Nota:** questo evento viene generato quando il <xref:System.Windows.Controls.TextBox> controllo viene creato e compilato inizialmente con il testo.  
+ **Nota:** questo evento viene generato quando il <xref:System.Windows.Controls.TextBox> controllo viene creato e popolato inizialmente con testo.  
   
 ## <a name="example"></a>Esempio  
  Nel [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] che definisce il <xref:System.Windows.Controls.TextBox> di controllo, specificare il <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> attributo con un valore che corrisponde al nome di metodo del gestore eventi.  
@@ -49,7 +37,7 @@ In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Contr
   
  Il gestore eventi viene chiamato ogni volta che il contenuto del <xref:System.Windows.Controls.TextBox> controllo vengono modificati, da un utente o a livello di codice.  
   
- **Nota:** questo evento viene generato quando il <xref:System.Windows.Controls.TextBox> controllo viene creato e compilato inizialmente con il testo.  
+ **Nota:** questo evento viene generato quando il <xref:System.Windows.Controls.TextBox> controllo viene creato e popolato inizialmente con testo.  
   
  Commenti  
   

@@ -1,34 +1,22 @@
 ---
 title: 'Procedura: usare un moniker di servizio con i contratti per lo scambio di metadati'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d2b5b6d4a671a3eb281f49dd60fd3c00ee76f8a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6265860c2e1efb2f74a0243157a223a33889629a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Procedura: usare un moniker di servizio con i contratti per lo scambio di metadati
-Dopo aver sviluppato alcuni nuovi servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è possibile scegliere di chiamare questi servizi da uno script o da un'applicazione Visual Basic 6.0. Uno metodo per ottenere questo risultato consiste nel generare un assembly client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], registrare l'assembly con COM, installare l'assembly nella cache di assembly globale e quindi fare riferimento ai tipi COM dal codice Visual Basic. Quando si distribuisce l'applicazione, è necessario distribuire anche l'assembly client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. L'utente dovrà quindi registrare l'assembly client WCF con COM e posizionarlo nella cache di assembly globale. L'interoperabilità COM [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consente anche di eseguire le stesse chiamate al servizio senza basarsi su un assembly client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Il moniker [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consente di chiamare qualsiasi servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] da qualsiasi linguaggio compatibile con COM (Visual Basic, VBScript, Visual Basic, Applications Edition (VBA) e così via) specificando un URI dell'endpoint Mex (metadata exchange) che il moniker del servizio usa per estrarre informazioni sui tipi per il servizio. In questo argomento viene illustrato come chiamare l'esempio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] della Guida introduttiva usando un moniker [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che specifica un endpoint Mex.  
+Dopo aver sviluppato alcuni nuovi servizi WCF, si potrebbe decidere che si desidera essere in grado di chiamare questi servizi da uno script o un'applicazione Visual Basic 6.0. Un metodo, è possibile generare un assembly client WCF, registrare l'assembly con COM, installare l'assembly nella Global Assembly Cache e quindi fare riferimento ai tipi COM dal codice Visual Basic. Quando si distribuisce l'applicazione, è necessario distribuire anche l'assembly Client WCF. L'utente dovrà quindi registrare l'assembly client WCF con COM e posizionarlo nella cache di assembly globale. Interoperabilità COM WCF consente inoltre di apportare le stesse chiamate al servizio senza basarsi su un assembly client WCF. Il moniker WCF consente di chiamare qualsiasi servizio WCF da qualsiasi linguaggio compatibile con COM (Visual Basic, VBScript, Visual Basic, Applications Edition (VBA) e così via) specificando un endpoint di exchange (Mex) metadati URI che utilizza il moniker del servizio per estrarre tipo informazioni sul servizio. In questo argomento viene descritto come chiamare l'esempio di recupero WCF usando un moniker WCF che specifica un endpoint Mex.  
   
 > [!NOTE]
->  Non viene mai creata un'istanza dei tipi definiti dall'assembly client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e l'assembly viene usato solo per i metadati.  
+>  I tipi definiti dall'assembly client WCF sono mai creata un'istanza. e l'assembly viene usato solo per i metadati.  
   
 ### <a name="using-the-service-moniker-with-a-mex-address"></a>Utilizzo del moniker del servizio con un indirizzo Mex  
   
-1.  Creare l'esempio della Guida introduttiva e usare Internet Explorer per passare all'URL (http://localhost/ServiceModelSamples/Service.svc) per verificare che il servizio sia in funzione.  
+1.  Compilare l'esempio di Guida introduttiva e usare Internet Explorer per passare all'URL (http://localhost/ServiceModelSamples/Service.svc) per verificare che il servizio sia in funzione.  
   
 2.  Creare uno script di Visual Basic o un'applicazione Visual Basic che contiene il codice seguente:  
   

@@ -1,26 +1,12 @@
 ---
 title: Diffusione di informazioni
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1f6c33787f920fbe7e795e27ff10d7a0c83db21e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="information-disclosure"></a>Diffusione di informazioni
 La diffusione di informazioni consente all'autore di un attacco di acquisire informazioni importanti su un sistema. Considerare sempre, pertanto, quali informazioni vengono rivelate e se possono essere utilizzate da un utente malintenzionato. Di seguito vengono elencati i possibili attacchi dovuti alla diffusione di informazioni e per ognuno di essi vengono fornite mitigazioni.  
@@ -47,7 +33,7 @@ La diffusione di informazioni consente all'autore di un attacco di acquisire inf
   
 -   I riferimenti a servizi sono normalmente considerati attendibili. Assicurarsi, ogni qualvolta si trasferiscono istanze del riferimento al servizio, che non siano stati alterati.  
   
--   Alcune applicazioni possono presentare un'esperienza utente che consente di stabilire in modo interattivo l'affidabilità in base ai dati nel riferimento al servizio e ai dati di attendibilità verificati dall'host remoto. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce punti di estendibilità per tale funzionalità che devono tuttavia essere implementati dall'utente.  
+-   Alcune applicazioni possono presentare un'esperienza utente che consente di stabilire in modo interattivo l'affidabilità in base ai dati nel riferimento al servizio e ai dati di attendibilità verificati dall'host remoto. WCF fornisce punti di estendibilità per tale funzionalità, ma l'utente deve state implementate.  
   
 ## <a name="ntlm"></a>NTLM  
  Nell'ambiente di dominio Windows, l'autenticazione di Windows utilizza per impostazione predefinita il protocollo Kerberos per autenticare e autorizzare utenti. Se, per qualche ragione, il protocollo Kerberos non può essere utilizzato, come fallback viene utilizzato NT LAN Manager (NTLM). Per disattivare questo comportamento, impostare la proprietà <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> su `false`. Quando si utilizza NTLM è consigliabile prendere in considerazione i problemi seguenti:  

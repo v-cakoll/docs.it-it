@@ -1,13 +1,6 @@
 ---
 title: Architettura di programmazione delle applicazioni di servizio
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,25 +14,22 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-caps.latest.revision: "15"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 2d44ee323040346437261b51fddb707a30d1de6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0c760d0f9b65fc9b612a8bee8abb68fa5b4ecae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-application-programming-architecture"></a>Architettura di programmazione delle applicazioni di servizio
 Le applicazioni di servizio Windows sono basate su una classe che eredita dalla <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> classe. Eseguire l'override di metodi da questa classe e definire le funzionalità per utilizzarli per determinare il comportamento del servizio.  
   
  Le classi principali coinvolte nella creazione del servizio sono:  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>-Si esegue l'override di metodi di <xref:System.ServiceProcess.ServiceBase> classe durante la creazione di un servizio e definire il codice per determinare il funzionamento del servizio in questa classe ereditata.  
+-   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> Ovvero si esegue l'override di metodi dal <xref:System.ServiceProcess.ServiceBase> classe durante la creazione di un servizio e definire il codice per determinare il funzionamento del servizio in questa classe ereditata.  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType>e <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> : consentono di installare e disinstallare il servizio.  
+-   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> e <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> : utilizzare queste classi per installare e disinstallare il servizio.  
   
  Inoltre, una classe denominata <xref:System.ServiceProcess.ServiceController> può essere utilizzato per modificare il servizio. Questa classe non viene eseguita la creazione di un servizio, ma può essere utilizzata per avviare e arrestare il servizio, passare a esso i comandi e restituire una serie di enumerazioni.  
   

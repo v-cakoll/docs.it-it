@@ -1,27 +1,15 @@
 ---
 title: "Procedura: animare l'opacità di un elemento o un pennello"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - opacity [WPF], animating
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c3b750e6ee21c8347d3896ec290f0ff564cc0a2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a45bf0344c10e1214aa5218e25e9bd9a87d5ea60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Procedura: animare l'opacità di un elemento o un pennello
 Per fare un elemento framework rimosso dalla visualizzazione, è possibile animare relativo <xref:System.Windows.UIElement.Opacity%2A> proprietà oppure è possibile aggiungere un'animazione il <xref:System.Windows.Media.Brush.Opacity%2A> proprietà del <xref:System.Windows.Media.Brush> (o pennelli) utilizzato per disegnarlo. Animazione di opacità dell'elemento rende e relativi elementi figlio dissolvenza rimosso dalla visualizzazione, ma animazione il pennello usato per disegnare l'elemento consente di selezionare più selettivo sulla parte dell'elemento viene applicata la dissolvenza. Ad esempio, è possibile animare l'opacità di un pennello utilizzato per disegnare lo sfondo di un pulsante. Si verificherebbe lo sfondo del pulsante a dissolvenza in entrata e in uscita della visualizzazione, lasciando il testo completamente opaco.  

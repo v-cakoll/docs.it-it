@@ -1,24 +1,12 @@
 ---
 title: Scenari asincroni con trasporti HTTP, TCP o pipe con nome
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76c4c225b333af6d376fa409a05ea5727ede6e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08f70186a59b8717c4441167ee720ba1c20b9dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>Scenari asincroni con trasporti HTTP, TCP o pipe con nome
 In questo argomento vengono descritti attività e trasferimenti per vari scenari Request/Reply asincroni, con richieste multithreading che utilizzano HTTP, TCP o named pipe.  
@@ -44,7 +32,7 @@ In questo argomento vengono descritti attività e trasferimenti per vari scenari
 #### <a name="propagation-is-disabled-on-either-sides-using-http"></a>La propagazione è disattivata su uno dei due lati, con l'utilizzo di HTTP  
  Se `propagateActivity` = `false` su un lato, ProcessMessage non indica l'attività ProcessAction da trasferire. Pertanto, viene richiamata una nuova attività ProcessAction temporanea con un nuovo ID. Quando la risposta asincrona viene abbinata alla richiesta nel codice di ServiceModel, l'ID attività può essere recuperato dal contesto locale. L'effettiva attività ProcessAction può essere trasferita con tale ID.  
   
- ![Scenari asincroni con HTTP &#47; TCP &#47; Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
+ ![Scenari asincroni con HTTP&#47;TCP&#47;Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
   
  Figura 2. Client asincrono, senza callback, `propagateActivity` = `false` su entrambi i lati, HTTP  
   
@@ -53,7 +41,7 @@ In questo argomento vengono descritti attività e trasferimenti per vari scenari
  Un'attività elaborazione azione viene creata in un client asincrono quando `propagateActivity` = `false` nel chiamante o chiamato e quando il messaggio di risposta non include un'intestazione Action.  
   
 #### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>La propagazione è attivata su entrambi i lati, con l'utilizzo di TCP o named pipe  
- ![Scenari asincroni con HTTP &#47; TCP &#47; Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
+ ![Scenari asincroni con HTTP&#47;TCP&#47;Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
   
  Figura 3. Client asincrono, senza callback, `propagateActivity` = `true` su entrambi i lati, Named Pipe/TCP  
   
@@ -66,7 +54,7 @@ In questo argomento vengono descritti attività e trasferimenti per vari scenari
   
  Come nella figura 2, se `propagateActivity` = `false` su un lato, ProcessMessage non indica l'attività ProcessAction da trasferire. Pertanto, viene richiamata una nuova attività ProcessAction temporanea con un nuovo ID. Quando la risposta asincrona viene abbinata alla richiesta nel codice di ServiceModel, l'ID attività può essere recuperato dal contesto locale. L'effettiva attività ProcessAction può essere trasferita con tale ID.  
   
- ![Scenari asincroni con HTTP &#47; TCP &#47; Named pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
+ ![Scenari asincroni con HTTP&#47;TCP&#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
   
  Figura 4. Client asincrono, senza callback, `propagateActivity` = `false` su entrambi i lati, Named Pipe/TCP  
   
@@ -86,7 +74,7 @@ In questo argomento vengono descritti attività e trasferimenti per vari scenari
  Figura 6. Client asincrono con callback, `endCall` esternamente al callback  
   
 ### <a name="asynchronous-server-with-callback"></a>Server asincrono con callback  
- ![Scenari asincroni con HTTP &#47; TCP &#47; Nome &#45; Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
+ ![Scenari asincroni con HTTP&#47;TCP&#47; denominato&#45;Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
   
  Figura 7. Server asincrono con callback  
   

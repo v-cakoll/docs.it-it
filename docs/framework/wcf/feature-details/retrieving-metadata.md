@@ -1,28 +1,14 @@
 ---
 title: Recupero dei metadati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfc96c585ba55fbf63283d7cb23fae5b364b0465
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f0665b4f0fb91b102ef1d5b75a5433992f5a6e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-metadata"></a>Recupero dei metadati
 Il recupero dei metadati è il processo di richiesta e di recupero dei metadati da un endpoint di metadati, ad esempio un endpoint di metadati WS-MetadataExchange (MEX) o un endpoint di metadati HTTP/GET.  
@@ -31,7 +17,7 @@ Il recupero dei metadati è il processo di richiesta e di recupero dei metadati 
  È possibile recuperare i metadati del servizio utilizzando richieste WS-MetadataExchange o HTTP/GET tramite la [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) strumento e passando il `/target:metadata` switch e un indirizzo. Svcutil.exe scarica i metadati all'indirizzo specificato e salva il file su disco. Lo strumento utilizza internamente un'istanza <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> e carica dalla configurazione la configurazione dell'endpoint <xref:System.ServiceModel.Description.IMetadataExchange> il cui nome corrisponde allo schema dell'indirizzo passato a Svcutil.exe come input.  
   
 ## <a name="retrieving-metadata-programmatically-using-the-metadataexchangeclient"></a>Recupero dei metadati a livello di codice utilizzando MetadataExchangeClient  
- In[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è possibile recuperare i metadati del servizio utilizzando protocolli standard, ad esempio richieste WS-MetadataExchange e HTTP/GET. Entrambi questi protocolli sono supportati dal tipo <xref:System.ServiceModel.Description.MetadataExchangeClient>. Per recuperare i metadati del servizio, utilizzare il tipo <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> fornendo un indirizzo per l'endpoint dei metadati e un'associazione facoltativa. L'associazione utilizzata da un'istanza <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> può essere una delle associazioni predefinite dalla classe statica <xref:System.ServiceModel.Description.MetadataExchangeBindings>, un'associazione fornita dall'utente o un'associazione caricata dalla configurazione dell'endpoint per il contratto `IMetadataExchange`. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> può inoltre risolvere i riferimenti dell'URL HTTP ai metadati utilizzando il tipo <xref:System.Net.HttpWebRequest>.  
+ Windows Communication Foundation (WCF) è possibile recuperare i metadati del servizio utilizzando protocolli standard, ad esempio WS-MetadataExchange e richieste HTTP/GET. Entrambi questi protocolli sono supportati dal tipo <xref:System.ServiceModel.Description.MetadataExchangeClient>. Per recuperare i metadati del servizio, utilizzare il tipo <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> fornendo un indirizzo per l'endpoint dei metadati e un'associazione facoltativa. L'associazione utilizzata da un'istanza <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> può essere una delle associazioni predefinite dalla classe statica <xref:System.ServiceModel.Description.MetadataExchangeBindings>, un'associazione fornita dall'utente o un'associazione caricata dalla configurazione dell'endpoint per il contratto `IMetadataExchange`. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> può inoltre risolvere i riferimenti dell'URL HTTP ai metadati utilizzando il tipo <xref:System.Net.HttpWebRequest>.  
   
  Per impostazione predefinita, un'istanza di <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> è collegata a una sola istanza di <xref:System.ServiceModel.ChannelFactory>. È possibile modificare o sostituire l'istanza di <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> utilizzata da <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> eseguendo l'override del metodo virtuale <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A>. Analogamente, è possibile modificare o sostituire l'istanza di <xref:System.Net.HttpWebRequest> utilizzata da <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> per le richieste HTTP/GET eseguendo l'override del metodo virtuale <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType>.  
   

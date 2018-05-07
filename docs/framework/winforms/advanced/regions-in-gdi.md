@@ -1,13 +1,6 @@
 ---
 title: Regioni in GDI+
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - drawing [Windows Forms], regions
 - regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d3805c2d67f5241425ef72d3802aba996d33cfb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dc7f10571163d447802c90cd61d71b11d0e695d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regions-in-gdi"></a>Regioni in GDI+
 Un'area è una parte dell'area di visualizzazione di un dispositivo di output. Aree possono essere semplice (un rettangolo singolo) o complesso (una combinazione di poligoni e curve chiuse). La figura seguente mostra due aree: una creata da un rettangolo e l'altro costruito da un percorso.  
   
- ![Aree](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art27.gif "AboutGdip02_Art27")  
+ ![Le aree](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art27.gif "AboutGdip02_Art27")  
   
 ## <a name="using-regions"></a>Utilizzo delle regioni  
  Le aree vengono spesso utilizzate per il ritaglio e l'hit test. Il ritaglio implica la restrizione di disegno per una determinata area geografica dell'area di visualizzazione, in genere la parte che deve essere aggiornato. Processo di hit testing implica il controllo per determinare se il cursore si trova in una determinata area dello schermo quando viene premuto un pulsante del mouse.  
@@ -39,11 +27,11 @@ Un'area è una parte dell'area di visualizzazione di un dispositivo di output. A
   
  L'intersezione di due aree è il set di tutti i punti appartenenti a entrambe le aree. L'unione è il set di tutti i punti appartenenti a uno o l'altro o entrambe le aree. Il complemento di un'area è il set di tutti i punti che non sono presenti nell'area. Nella figura seguente mostra l'intersezione e l'unione delle due aree illustrato nella figura precedente.  
   
- ![Aree](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art28.gif "AboutGdip02_Art28")  
+ ![Le aree](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art28.gif "AboutGdip02_Art28")  
   
  Il <xref:System.Drawing.Region.Xor%2A> metodo, applicato a una coppia di regioni, genera un'area che contiene tutti i punti che appartengono a un'area o l'altro, ma non entrambi. Il <xref:System.Drawing.Region.Exclude%2A> metodo, applicato a una coppia di regioni, genera un'area che contiene tutti i punti nella prima area che non si trovano nella seconda area. La figura seguente mostra le aree risultanti dall'applicazione di <xref:System.Drawing.Region.Xor%2A> e <xref:System.Drawing.Region.Exclude%2A> metodi alle due aree riportate all'inizio di questo argomento.  
   
- ![Aree](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art29.gif "AboutGdip02_Art29")  
+ ![Le aree](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art29.gif "AboutGdip02_Art29")  
   
  Per riempire un'area, è necessario un <xref:System.Drawing.Graphics> oggetto, un <xref:System.Drawing.Brush> , oggetto e un <xref:System.Drawing.Region> oggetto. Il <xref:System.Drawing.Graphics> oggetto fornisce il <xref:System.Drawing.Graphics.FillRegion%2A> (metodo) e <xref:System.Drawing.Brush> oggetto archivia gli attributi del riempimento, ad esempio colore o il motivo. Nell'esempio seguente inserisce un'area con un colore a tinta unita.  
   

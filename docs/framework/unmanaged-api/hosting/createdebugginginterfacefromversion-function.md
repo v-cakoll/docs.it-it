@@ -1,14 +1,6 @@
 ---
 title: Funzione CreateDebuggingInterfaceFromVersion
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CreateDebuggingInterfaceFromVersion
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a746a849-463c-44f5-a2f0-9e812ed8bcc3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b3f269f5b1758481995d6064e7137e62bff4a868
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b51b924652019cf05401e1972797c18e74b82d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>Funzione CreateDebuggingInterfaceFromVersion
 Crea un [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) oggetto in base alle informazioni di versione specificata.  
@@ -66,7 +54,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|E_INVALIDARG|`szDebuggeeVersion`o `ppCordb` è null o la versione stringa non è corretta.|  
+|E_INVALIDARG|`szDebuggeeVersion` o `ppCordb` è null o la versione stringa non è corretta.|  
   
 ## <a name="remarks"></a>Note  
  Il `szDebuggeeVersion` esegue il mapping di parametro per la versione corrispondente di MSCorDbi.dll.  
@@ -76,9 +64,9 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria:** Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

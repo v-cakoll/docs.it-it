@@ -1,13 +1,7 @@
 ---
 title: Sicurezza basata sui ruoli
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - role-based security, about role-based security
 - user authentication, principals
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - authentication [.NET Framework], principals
 - role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 18b2883fd69f5cadf2fce3dc677e5d2b79806d0b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 596165bfac9c65898448714a4477b7f045bd87d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="role-based-security"></a>Sicurezza basata sui ruoli
 I ruoli vengono spesso usati nelle applicazioni finanziarie o aziendali per l'applicazione dei criteri di sicurezza. Ad esempio, è possibile che un'applicazione imponga limiti alle dimensioni della transazione in corso di elaborazione in funzione del ruolo rivestito dall'utente che effettua la richiesta. Gli impiegati potrebbero essere autorizzati a elaborare unicamente transazioni inferiori a una determinata soglia, mentre per i supervisori il limite potrebbe essere superiore e per i vicepresidenti ancora più alto (o addirittura assente). La sicurezza basata sui ruoli può anche essere usata quando un'applicazione richiede più approvazioni per completare un'operazione. È questo ad esempio il caso di un sistema di acquisto in cui qualsiasi dipendente può generare una richiesta di acquisto, ma solo un agente di acquisto può convertire la richiesta in un ordine di acquisto da inviare a un fornitore.  

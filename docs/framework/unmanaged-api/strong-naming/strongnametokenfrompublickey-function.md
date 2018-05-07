@@ -1,14 +1,6 @@
 ---
 title: Funzione StrongNameTokenFromPublicKey
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameTokenFromPublicKey
 api_location:
@@ -26,17 +18,13 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0cb649f43bfea2e11c986aa3fff5a702e2b58c25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb8ff76da288975ef291d226bb1f205e73a64252
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnametokenfrompublickey-function"></a>Funzione StrongNameTokenFromPublicKey
 Ottiene un token che rappresenta una chiave pubblica. Un token con nome sicuro è la forma abbreviata di una chiave pubblica.  
@@ -68,7 +56,7 @@ BOOLEANStrongNameTokenFromPublicKey (
  [out] Le dimensioni in byte, del token restituito con nome sicuro.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`al termine dell'esecuzione; in caso contrario, `false`.  
+ `true` al termine dell'esecuzione; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
  Un token con nome sicuro è la forma abbreviata di una chiave pubblica utilizzata per risparmiare spazio quando si archiviano le informazioni sulla chiave nei metadati. In particolare, vengono utilizzati i token con nome sicuro nei riferimenti ad assembly per fare riferimento all'assembly dipendenti.  
@@ -80,9 +68,9 @@ BOOLEANStrongNameTokenFromPublicKey (
   
  **Intestazione:** StrongName. H  
   
- **Libreria:** inclusa come risorsa in mscoree.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  

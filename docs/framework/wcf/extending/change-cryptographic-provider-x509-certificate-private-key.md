@@ -1,14 +1,6 @@
 ---
 title: 'Procedura: modificare il Provider di crittografia per un certificato X.509&#39;chiave privata s'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e7dea9834b654be0b86155e18524053efa4b778b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: be6033efc03e25967af8bbb3266b0f60df02eaba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Procedura: modificare il Provider di crittografia per un certificato X.509&#39;chiave privata s
-In questo argomento viene illustrato come modificare il provider di crittografia usato per fornire la chiave privata di un certificato X.509 e come integrare il provider nel framework di sicurezza di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Per ulteriori informazioni sull'utilizzo dei certificati, vedere [utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+In questo argomento viene illustrato come modificare il provider di crittografia utilizzato per fornire la chiave privata di un certificato X.509 e come integrare il provider nel framework di sicurezza di Windows Communication Foundation (WCF). Per ulteriori informazioni sull'utilizzo dei certificati, vedere [utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  Il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] framework di sicurezza consente di introdurre nuovi tipi di token di sicurezza, come descritto in modo [procedura: creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). È anche possibile usare un token personalizzato per sostituire tipi di token esistenti forniti dal sistema.  
   

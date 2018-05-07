@@ -1,32 +1,18 @@
 ---
 title: 'Procedura: creare un contratto Windows Communication Foundation con una classe'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 54d5e1328482fc7d0c1ee33918ffae6bf7195db9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 296f500532040aaebf0f6d7d37a7a9aae99a3451
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>Procedura: creare un contratto Windows Communication Foundation con una classe
-La modalità preferita per creare un contratto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è tramite un'interfaccia. Per altre informazioni, vedere [procedura: definire un contratto di servizio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Un'alternativa, illustrata qui, consiste nel creare una classe e quindi nell'applicare l'attributo <xref:System.ServiceModel.ServiceContractAttribute> direttamente alla classe e l'attributo <xref:System.ServiceModel.OperationContractAttribute> a ognuno dei metodi nella classe che fanno parte del contratto.  
+La strategia ottimale di creazione di un contratto Windows Communication Foundation (WCF) consiste nell'utilizzare un'interfaccia. Per altre informazioni, vedere [procedura: definire un contratto di servizio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Un'alternativa, illustrata qui, consiste nel creare una classe e quindi nell'applicare l'attributo <xref:System.ServiceModel.ServiceContractAttribute> direttamente alla classe e l'attributo <xref:System.ServiceModel.OperationContractAttribute> a ognuno dei metodi nella classe che fanno parte del contratto.  
   
 > [!WARNING]
 >  `[ServiceContract]` e `[ServiceContractAttribute]` eseguono la stessa operazione. La stessa situazione è valida per `[OperationContract]` e `[OperationContractAttribute]`. In ogni caso il primo è l'abbreviazione del secondo.  
@@ -41,7 +27,7 @@ La modalità preferita per creare un contratto [!INCLUDE[indigo1](../../../../in
   
 3.  Creare metodi nella classe.  
   
-4.  Applicare la classe <xref:System.ServiceModel.OperationContractAttribute> a ogni metodo che deve essere esposto come parte del contratto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pubblico.  
+4.  Applicare il <xref:System.ServiceModel.OperationContractAttribute> (classe) a ogni metodo che deve essere esposto come parte del contratto WCF pubblico.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio di codice seguente viene illustrata una classe che definisce un contratto di servizio.  

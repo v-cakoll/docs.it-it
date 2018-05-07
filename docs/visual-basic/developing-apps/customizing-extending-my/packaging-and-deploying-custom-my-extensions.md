@@ -1,23 +1,16 @@
 ---
 title: Assemblaggio e distribuzione personalizzata delle estensioni My (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94a9ea977d0add14ae9f0c9a889b008b94610ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 901d0b80a18d2f4d262cc65eb485dcc628bc6a08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Assemblaggio e distribuzione personalizzata delle estensioni My (Visual Basic)
 Visual Basic fornisce un modo semplice per la distribuzione personalizzata `My` estensioni spazio dei nomi utilizzando modelli di Visual Studio. Se si sta creando un modello di progetto per il quale il `My` le estensioni sono parte integrante del nuovo tipo di progetto, è possibile includere personalizzato `My` codice di estensione con il progetto quando si esporta il modello. Per ulteriori informazioni sull'esportazione di modelli di progetto, vedere [procedura: creare modelli di progetto](/visualstudio/ide/how-to-create-project-templates).  
@@ -63,7 +56,7 @@ Visual Basic fornisce un modo semplice per la distribuzione personalizzata `My` 
 |---|---|  
 |`ID`|Obbligatorio. Identificatore univoco per l'estensione. Se l'estensione con questo ID è già stato aggiunto al progetto, l'utente non necessario aggiungerlo di nuovo.|  
 |`Version`|Obbligatorio. Numero di versione per il modello di elemento.|  
-|`AssemblyFullName`|Parametro facoltativo. Nome dell'assembly. Quando viene aggiunto un riferimento all'assembly al progetto, l'utente viene chiesto di aggiungere il `My` estensione da questo modello di elemento.|  
+|`AssemblyFullName`|Facoltativo. Nome dell'assembly. Quando viene aggiunto un riferimento all'assembly al progetto, l'utente viene chiesto di aggiungere il `My` estensione da questo modello di elemento.|  
   
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Aggiungere il \<CustomDataSignature > dell'elemento del file. vstemplate  
  Per identificare il modello di elemento di Visual Studio come un `My` estensione spazio dei nomi, è inoltre necessario modificare il file con estensione vstemplate per il modello di elemento. È necessario aggiungere un `<CustomDataSignature>` elemento per il `<TemplateData>` elemento. Il `<CustomDataSignature>` elemento deve contenere il testo `Microsoft.VisualBasic.MyExtension`, come illustrato nell'esempio seguente.  
@@ -101,7 +94,7 @@ Visual Basic fornisce un modo semplice per la distribuzione personalizzata `My` 
  Per installare il modello, è possibile copiare la cartella compressa (zip) nella cartella dei modelli di elemento Visual Basic (ad esempio, Documenti\Visual Studio 2008\Templates\Item Templates\Visual Basic). In alternativa, è possibile pubblicare il modello come un file di programma di installazione Visual Studio (vsi).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensione di My Namespace in Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+ [Estensione dello spazio dei nomi My in Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  [Estensione del modello di applicazione Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
  [Personalizzazione degli oggetti disponibili in My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
  [Pagina Estensioni My, Progettazione progetti](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

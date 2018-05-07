@@ -1,14 +1,6 @@
 ---
 title: Struttura COR_IL_MAP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_IL_MAP
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e2772833d75ced2209896ca37cf6cf37fb965f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9676730a4f11ed77996b7a4aab4e538aba9b53c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corilmap-structure"></a>Struttura COR_IL_MAP
 Specifica le modifiche nell'offset relativo di una funzione.  
@@ -53,7 +41,7 @@ typedef struct _COR_IL_MAP {
 |------------|-----------------|  
 |`oldOffset`|Il vecchio offset Microsoft intermediate language (MSIL) relativo all'inizio della funzione.|  
 |`newOffset`|Nuovo offset MSIL relativo all'inizio della funzione.|  
-|`fAccurate`|`true`Se il mapping è nota l'accuratezza; in caso contrario, `false`.|  
+|`fAccurate`|`true` Se il mapping è nota l'accuratezza; in caso contrario, `false`.|  
   
 ## <a name="remarks"></a>Note  
  Il formato della mappa è come segue: presuppone che il debugger `oldOffset` fa riferimento a un offset MSIL all'interno del codice MSIL originale, non modificato. Il `newOffset` parametro fa riferimento all'offset MSIL corrispondente all'interno del codice instrumentato.  
@@ -95,11 +83,11 @@ typedef struct _COR_IL_MAP {
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorProf.idl  
+ **Intestazione:** Cordebug. idl, Corprof. idl  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

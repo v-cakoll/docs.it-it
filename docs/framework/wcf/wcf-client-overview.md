@@ -1,34 +1,20 @@
 ---
 title: Panoramica dei client WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7f083ea44b9bdbd9bf85d65c42d663d87af8d812
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 1aa540d084e9b11cc7a355db02047705f55ea4be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-client-overview"></a>Panoramica dei client WCF
-Contenuto della sezione vengono descritte le operazioni svolte delle applicazioni client e vengono fornite istruzioni su come configurare, creare e usare un client [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], nonché su come proteggere le applicazioni client.  
+In questa sezione viene descritto cosa fare le applicazioni client, come configurare, creare e usare un client Windows Communication Foundation (WCF) e come proteggere le applicazioni client.  
   
 ## <a name="using-wcf-client-objects"></a>Uso di oggetti client WCF  
  Un'applicazione client è un'applicazione gestita che usa un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per comunicare con un'altra applicazione. Per creare un'applicazione client per un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è necessario eseguire i passaggi seguenti:  

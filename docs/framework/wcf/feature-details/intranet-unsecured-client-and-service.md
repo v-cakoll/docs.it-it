@@ -1,30 +1,20 @@
 ---
 title: Client e servizio Intranet non protetti
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-caps.latest.revision: "20"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0cfd98d401921c47bd85f8d4089e3efb437ca6b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08e8b5f9a22fc558af6f8f7c2ca3049e4a692ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Client e servizio Intranet non protetti
-La figura seguente illustra un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] di base sviluppato per fornire informazioni su una rete privata protetta a un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La protezione non è necessaria perché i dati sono di scarsa importanza, la rete è considerata naturalmente protetta o la protezione viene fornita da un livello sottostante l'infrastruttura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+La figura seguente illustra un semplice servizio di Windows Communication Foundation (WCF) sviluppato per fornire informazioni su una rete privata protetta a un'applicazione WCF. Sicurezza non è necessario perché i dati sono di importanza bassa, la rete è considerata naturalmente protetta o la sicurezza è fornita da un livello sottostante l'infrastruttura WCF.  
   
  ![Scenario di servizio e client non protette Intranet](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
   
@@ -33,7 +23,7 @@ La figura seguente illustra un servizio [!INCLUDE[indigo1](../../../../includes/
 |Modalità di sicurezza|None|  
 |Trasporto|TCP|  
 |Binding|<xref:System.ServiceModel.NetTcpBinding>|  
-|Interoperabilità|Solo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
+|Interoperabilità|Solo WCF|  
 |Autenticazione|None|  
 |Integrità|None|  
 |Riservatezza|None|  
@@ -92,7 +82,7 @@ La figura seguente illustra un servizio [!INCLUDE[indigo1](../../../../includes/
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Codice  
- Il codice seguente mostra un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di base che accede a un endpoint non protetto usando il protocollo TCP.  
+ Nel codice seguente viene illustrato un client WCF di base che accede a un endpoint non protetto utilizzando il protocollo TCP.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  

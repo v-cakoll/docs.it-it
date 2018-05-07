@@ -1,28 +1,16 @@
 ---
 title: Strutture ad albero in WPF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - logical tree [WPF]
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 363d81ff0e4262ce0c8252ada3625bb9a157f5a1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e7695fa94a7742d474cb998ff26a5cf009cdb6eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trees-in-wpf"></a>Strutture ad albero in WPF
 In molte tecnologie gli elementi e i componenti sono organizzati in una struttura ad albero in cui gli sviluppatori modificano direttamente i nodi degli oggetti nell'albero per influire sul rendering o sul comportamento di un'applicazione. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] usa anche molte metafore correlate alla struttura ad albero per definire le relazioni tra gli elementi del programma. In genere gli sviluppatori WPF possono creare un'applicazione nel codice o definire parti dell'applicazione in XAML usando come riferimento concettuale la metafora della struttura ad albero di oggetti, ma chiameranno un'API specifica o useranno un markup specifico a tale scopo anziché un'API di modifica della struttura ad albero di oggetti generica simile a quella usata nel modello DOM XML. WPF espone due classi helper che forniscono una visualizzazione albero metafora <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>. Nella documentazione di WPF vengono inoltre usati i termini struttura ad albero visuale e albero logico, in quanto tali strutture ad albero sono utili per la comprensione del comportamento di alcune funzionalità chiave di WPF. In questo argomento definisce ciò che rappresentano la struttura ad albero visuale e albero logico, viene illustrato come relazione tra tali strutture per un concetto di struttura complessiva di oggetto e introduce <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>s.  

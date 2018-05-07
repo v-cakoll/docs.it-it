@@ -1,34 +1,20 @@
 ---
 title: 'Procedura: configurare le impostazioni del servizio COM+'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bdbdbae857685ddb447843fd704896de018b1c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-com-service-settings"></a>Procedura: configurare le impostazioni del servizio COM+
 Quando l'interfaccia di un'applicazione viene aggiunta o rimossa usando lo strumento di configurazione del servizio COM+, la configurazione del servizio Web viene aggiornata nel file di configurazione dell'applicazione. Nella modalità di COM+, il file config si trova nella Directory radice dell'applicazione (%PROGRAMFILES%\ComPlus Applications\\{appid} è l'impostazione predefinita). In entrambe le modalità di hosting Web il file Web.config è posizionato nella directory vroot specificata.  
   
 > [!NOTE]
->  Per evitare la manomissione dei messaggi tra un client e un server è necessario firmare i messaggi. Inoltre, per evitare la diffusione di informazioni dai messaggi scambiati tra un client e un server è necessario usare la crittografia a livello di messaggio o di trasporto. Come per i servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], è necessario usare la limitazione delle richieste per limitare il numero di chiamate, connessioni, istanze e operazioni in sospeso simultanee. Ciò consente di evitare un utilizzo eccessivo di risorse. Il comportamento della limitazione delle richieste viene specificato tramite impostazioni del file di configurazione del servizio.  
+>  Per evitare la manomissione dei messaggi tra un client e un server è necessario firmare i messaggi. Inoltre, per evitare la diffusione di informazioni dai messaggi scambiati tra un client e un server è necessario usare la crittografia a livello di messaggio o di trasporto. Come per i servizi Windows Communication Foundation (WCF), è consigliabile utilizzare la limitazione delle richieste per limitare il numero di chiamate simultanee, le connessioni, istanze e operazioni in sospeso. Ciò consente di evitare un utilizzo eccessivo di risorse. Il comportamento della limitazione delle richieste viene specificato tramite impostazioni del file di configurazione del servizio.  
   
 ## <a name="example"></a>Esempio  
  Si consideri un componente che implementa l'interfaccia seguente:  
@@ -62,13 +48,13 @@ public interface IFinancesContract : IDisposable
   
  Le applicazioni client che usano questo servizio dovrebbero essere conformi a questo contratto, nonché usare un'associazione che sia compatibile con quella specificata nella configurazione dell'applicazione.  
   
- Nell'esempio di codice seguente viene illustrato un file di configurazione predefinito. Essendo un servizio Web [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], è conforme allo schema di configurazione del modello di servizio standard e può essere modificato come altri file di configurazione dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Nell'esempio di codice seguente viene illustrato un file di configurazione predefinito. Essendo un servizio Web di Windows Communication Foundation (WCF), è conforme allo schema di configurazione del modello di servizio standard e possono essere modificata nella esattamente come altri file di configurazione di servizi WCF.  
   
  Modifiche tipiche includono:  
   
 -   Modifica dell'indirizzo endpoint dal modulo ApplicationName/ComponentName/InterfaceName predefinito in un modulo maggiormente utilizzabile.  
   
--   Modifica dello spazio dei nomi del servizio dal modulo "http://tempuri.org/InterfaceID" predefinito in un modulo più attinente.  
+-   Modifica lo spazio dei nomi del servizio da quello predefinito "http://tempuri.org/InterfaceID" form a un modulo più attinente.  
   
 -   Modifica dell'endpoint per l'uso di un'associazione del trasporto differente.  
   

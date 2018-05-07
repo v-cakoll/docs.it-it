@@ -1,30 +1,18 @@
 ---
 title: 'Procedura: esportare asserzioni di criteri personalizzate'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8620dec4997947df2dc7078e337a5e421d66c55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4182007d32ea857aa333542b4df29da18b8062df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Procedura: esportare asserzioni di criteri personalizzate
-Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoint del servizio. Le applicazioni del servizio possono utilizzare asserzioni di criteri personalizzate nei metadati del servizio per comunicare informazioni sulla personalizzazione di endpoint, associazione e contratto all'applicazione client. È possibile utilizzare [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per esportare asserzioni in espressioni di criteri collegate alle associazioni WSDL nell'endpoint, nell'operazione o negli oggetti del messaggio, a seconda delle funzionalità o dei requisiti da comunicare.  
+Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoint del servizio. Le applicazioni del servizio possono utilizzare asserzioni di criteri personalizzate nei metadati del servizio per comunicare informazioni sulla personalizzazione di endpoint, associazione e contratto all'applicazione client. È possibile utilizzare Windows Communication Foundation (WCF) per esportare asserzioni in espressioni di criteri allegate alle associazioni WSDL nell'endpoint, operazione o negli oggetti messaggio, a seconda delle funzionalità o requisiti da che comunicare.  
   
  Le asserzioni di criteri personalizzate vengono esportate mediante l'implementazione dell'interfaccia <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> in un elemento <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, inserendo l'elemento dell'associazione direttamente nell'associazione dell'endpoint del servizio o registrando l'elemento dell'associazione nel file di configurazione dell'applicazione. È necessario che l'implementazione dell'esportazione del criterio aggiunga l'asserzione di criteri personalizzata come istanza <xref:System.Xml.XmlElement?displayProperty=nameWithType> all'elemento <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> appropriato nell'elemento <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> passato al metodo <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>.  
   

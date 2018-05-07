@@ -1,26 +1,12 @@
 ---
 title: Uso di un resolver del contratto dati
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 53459517591c36430b9326d6605c4eb1b28a13e7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 467977374e9e2b4a369be7ce467ced1b0dca1195
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-data-contract-resolver"></a>Uso di un resolver del contratto dati
 Un resolver del contratto dati consente di configurare tipi noti in modo dinamico. I tipi noti sono necessari se si serializza o deserializza un tipo non previsto da un contratto dati. Per ulteriori informazioni sui tipi noti, vedere [tipi conosciuti di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). I tipi noti vengono in genere specificati in modo statico. Ciò significa che è necessario conoscere tutti i tipi possibili che un'operazione può ricevere durante l'implementazione dell'operazione. Poiché in alcuni scenari tale condizione non è possibile, è importante specificare i tipi noti in modo dinamico.  

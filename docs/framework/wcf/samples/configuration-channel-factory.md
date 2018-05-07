@@ -1,24 +1,12 @@
 ---
 title: Configurazione di una channel factory
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13001ff291c1d2874e5c9ce6e427afe09067432a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3d439fb17d676ce337207a726fb9e491cf0a0ab0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-channel-factory"></a>Configurazione di una channel factory
 In questo esempio viene descritto l'utilizzo di <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> consente la gestione centrale della configurazione client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Può essere anche utile in scenari nei quali la configurazione viene selezionata o modificata dopo la fase di caricamento del dominio dell'applicazione.  
@@ -50,7 +38,7 @@ ICalculatorChannel client1 = factory1.CreateChannel();
   
 3.  In **proprietà comuni**selezionare **progetto di avvio**, quindi fare clic su **più progetti di avvio**.  
   
-4.  Spostare il **servizio** all'inizio dell'elenco, il progetto con il **azione 'Start'**e quindi spostare il **Client** progetto dopo la **servizio**progetto, anche con il **azione 'Start'**, pertanto il **Client** progetto viene eseguito dopo il **servizio** progetto.  
+4.  Spostare il **servizio** all'inizio dell'elenco, il progetto con il **azione 'Start'** e quindi spostare il **Client** progetto dopo la **servizio**progetto, anche con il **azione 'Start'**, pertanto il **Client** progetto viene eseguito dopo il **servizio** progetto.  
   
 5.  Fare clic su **OK**, quindi premere F5 o CTRL + F5 per eseguire l'esempio.  
   
@@ -59,6 +47,6 @@ ICalculatorChannel client1 = factory1.CreateChannel();
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigurationChannelFactory`

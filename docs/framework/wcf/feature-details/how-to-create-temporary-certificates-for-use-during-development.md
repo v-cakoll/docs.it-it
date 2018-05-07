@@ -1,32 +1,18 @@
 ---
 title: 'Procedura: creare certificati temporanei da usare durante lo sviluppo'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5a096fd6e052fc744af5cee1ab0d322e1daafe6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8310e7c465d0e3494482b6a38a7b2a67b67ae842
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedura: creare certificati temporanei da usare durante lo sviluppo
-Quando si sviluppa un servizio o un client protetto usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], è spesso necessario fornire un certificato X.509 da usare come credenziale. Il certificato in genere fa parte di una catena di certificati con autorità radice contenuta nell'archivio Autorità di certificazione radice attendibile del computer. La catena di certificati consente di definire l'ambito per un set di certificati quando in genere l'autorità radice è dell'organizzazione o dell'unità aziendale. Per emulare questo comportamento in fase di sviluppo, è possibile creare due certificati per soddisfare i requisiti di sicurezza. Il primo è un certificato autofirmato che si trova nell'archivio Autorità di certificazione radice attendibile, mentre il secondo certificato viene creato dal primo e si trova nell'archivio Personale del computer locale o dell'utente corrente. Questo argomento descrive i passaggi per la creazione di questi due certificati mediante lo [strumento di creazione certificati (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), fornito da [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
+Quando si sviluppa un servizio protetto o i client che utilizza Windows Communication Foundation (WCF), è spesso necessario fornire un certificato X.509 da usare come credenziale. Il certificato in genere fa parte di una catena di certificati con autorità radice contenuta nell'archivio Autorità di certificazione radice attendibile del computer. La catena di certificati consente di definire l'ambito per un set di certificati quando in genere l'autorità radice è dell'organizzazione o dell'unità aziendale. Per emulare questo comportamento in fase di sviluppo, è possibile creare due certificati per soddisfare i requisiti di sicurezza. Il primo è un certificato autofirmato che si trova nell'archivio Autorità di certificazione radice attendibile, mentre il secondo certificato viene creato dal primo e si trova nell'archivio Personale del computer locale o dell'utente corrente. Questo argomento descrive i passaggi per la creazione di questi due certificati mediante lo [strumento di creazione certificati (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), fornito da [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
   
 > [!IMPORTANT]
 >  I certificati generati dallo strumento di creazione certificati sono forniti solo a scopo di test. Quando si distribuisce un servizio o un client, assicurarsi di usare un certificato appropriato rilasciato da un'autorità di certificazione. Tale certificato può essere fornito da un server dei certificati di [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] dell'organizzazione o da terze parti.  

@@ -1,26 +1,12 @@
 ---
 title: Distribuzione in base all'elemento corpo
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ab8ddccafa8dbf1ecde8afbb07f0a61faa62be5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a59f639fc0f1adad48bfda5fd8105340ac004cef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-by-body-element"></a>Distribuzione in base all'elemento corpo
 Questo esempio dimostra come implementare un algoritmo alternativo per l'assegnazione di messaggi in arrivo alle operazioni.  
@@ -82,7 +68,7 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>Aggiunta di un selettore dell'operazione a un servizio  
- I selettori dell'operazione di distribuzione del servizio sono estensioni del dispatcher [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Per la selezione dei metodi nel canale di callback dei contratti duplex, sono disponibili anche selettori dell'operazione client che funzionano in modo simile ai selettori dell'operazione di distribuzione descritti qui, ma che non sono trattati in modo esplicito in questo esempio.  
+ Selettori dell'operazione di distribuzione del servizio sono estensioni per il dispatcher di Windows Communication Foundation (WCF). Per la selezione dei metodi nel canale di callback dei contratti duplex, sono disponibili anche selettori dell'operazione client che funzionano in modo simile ai selettori dell'operazione di distribuzione descritti qui, ma che non sono trattati in modo esplicito in questo esempio.  
   
  Analogamente alla maggior parte delle estensioni del modello di servizi, i selettori dell'operazione di distribuzione vengono aggiunti al dispatcher usando i comportamenti. Oggetto *comportamento* è un oggetto di configurazione che aggiunge una o più estensioni al runtime della distribuzione (o al runtime client) o in caso contrario ne modifica le impostazioni.  
   
@@ -187,7 +173,7 @@ public interface IDispatchedByBody
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   

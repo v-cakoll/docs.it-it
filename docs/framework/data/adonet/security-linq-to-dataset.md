@@ -1,24 +1,12 @@
 ---
 title: Sicurezza (LINQ to DataSet)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6116b2b8-75f4-4d8b-aea6-c13e55cda50b
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 305ff1232b21def3c8e7dcb1bec529f81c4e701a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 43d529b6f74b58783cc2aaa7a81b2f75790b4e40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-linq-to-dataset"></a>Sicurezza (LINQ to DataSet)
 In questo argomento vengono illustrati i problemi di sicurezza riscontrati in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -31,7 +19,7 @@ In questo argomento vengono illustrati i problemi di sicurezza riscontrati in [!
 ## <a name="external-input"></a>Input esterno  
  Le applicazioni accettano spesso input esterno, ad esempio da un utente o da un altro agente esterno, ed eseguono azioni sulla base di tale input.  In caso di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], l'applicazione può costruire una query in un modo specifico, in base a input esterno o utilizzare input esterno nella query. Le query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] accettano parametri ovunque vengano accettati i valori letterali. Gli sviluppatori di applicazioni devono usare query con parametri, anziché inserire valori letterali direttamente nella query tramite un agente esterno.  
   
- Eventuale input derivato in modo diretto o indiretto dall'utente o da un agente esterno può includere contenuto che sfrutta la sintassi del linguaggio di destinazione per eseguire azioni non autorizzate. Tale fenomeno è noto come attacco SQL injection, il cui nome deriva da uno schema di attacco in cui il linguaggio di destinazione è Transact-SQL. L'input utente inserito direttamente nella query viene usato per rilasciare una tabella di database, determinare un attacco di tipo Denial of Service o alterare in altro modo la natura dell'operazione da eseguire. Sebbene la composizione di query sia possibile in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], essa viene eseguita attraverso l'API del modello a oggetti. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]le query non vengono composte mediante la modifica o concatenazione, in cui si trovano in Transact-SQL e non sono soggette ad attacchi SQL injection in senso tradizionale.  
+ Eventuale input derivato in modo diretto o indiretto dall'utente o da un agente esterno può includere contenuto che sfrutta la sintassi del linguaggio di destinazione per eseguire azioni non autorizzate. Tale fenomeno è noto come attacco SQL injection, il cui nome deriva da uno schema di attacco in cui il linguaggio di destinazione è Transact-SQL. L'input utente inserito direttamente nella query viene usato per rilasciare una tabella di database, determinare un attacco di tipo Denial of Service o alterare in altro modo la natura dell'operazione da eseguire. Sebbene la composizione di query sia possibile in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], essa viene eseguita attraverso l'API del modello a oggetti. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] le query non vengono composte mediante la modifica o concatenazione, in cui si trovano in Transact-SQL e non sono soggette ad attacchi SQL injection in senso tradizionale.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

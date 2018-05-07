@@ -1,26 +1,12 @@
 ---
 title: 'Procedura: usare i filtri'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 2c8c5519d31d1d57c1c568599964b97043f806a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-filters"></a>Procedura: usare i filtri
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione di routing che usa più filtri. In questo esempio, i messaggi vengono indirizzati a due implementazioni di un servizio di calcolo, regularCalc e roundingCalc. Entrambe le implementazioni supportano le stesse operazioni; tuttavia uno dei servizi arrotonda tutti i calcoli all'integer più vicino prima della restituzione. Un'applicazione client deve essere in grado di indicare se usare la versione del servizio che esegue l'arrotondamento. Se non viene espressa alcuna preferenza in merito al servizio da usare, il carico viene bilanciato tra i due servizi. Le operazioni esposte da entrambi servizi sono:  
@@ -145,7 +131,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     Se viene ricevuto un messaggio a un indirizzo che inizia con "http://localhost/routingservice/router/rounding/", questo filtro restituisce **true**. Poiché l'indirizzo di base utilizzato da questa configurazione è "http://localhost/routingservice/router" e l'indirizzo specificato per roundingEndpoint è "rounding/calculator", l'indirizzo completo utilizzato per comunicare con questo endpoint è "http://localhost/ routingservice/router/rounding/calculator", che corrisponde al filtro.  
+     Se viene ricevuto un messaggio a un indirizzo che inizia con "http://localhost/routingservice/router/rounding/", quindi questo filtro restituisce **true**. Poiché l'indirizzo di base usato da questa configurazione è "http://localhost/routingservice/router"e l'indirizzo specificato per roundingEndpoint è "rounding/calculator", l'indirizzo completo usato per comunicare con questo endpoint è"http://localhost/routingservice/router/rounding/calculator", che corrisponde a questo filtro.  
   
     > [!NOTE]
     >  Il filtro PrefixEndpointAddress non valuta il nome host in caso di corrispondenza poiché è possibile fare riferimento a un singolo host usando diversi nomi host che potrebbero essere tutti riferimenti validi all'host da parte dell'applicazione client. Ad esempio, tutti i valori seguenti possono fare riferimento allo stesso host:  

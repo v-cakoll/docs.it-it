@@ -1,13 +1,6 @@
 ---
 title: Cenni preliminari sui controlli HScrollBar e VScrollBar (Windows Form)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - HScrollBar
 - VScrollBar
@@ -18,21 +11,16 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8fbdb3778959d1691200cde49e485d8a63c6e645
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 572ba9f16d1c78e1825d0c9db7530c6c78175d27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Cenni preliminari sui controlli HScrollBar e VScrollBar (Windows Form)
 Windows Form <xref:System.Windows.Forms.ScrollBar> controlli vengono utilizzati per semplificare la navigazione tramite un lungo elenco di elementi o di una grande quantità di informazioni mediante lo scorrimento orizzontale o verticale all'interno di un'applicazione o un controllo. Barre di scorrimento sono un elemento comune dell'interfaccia di Windows, pertanto la <xref:System.Windows.Forms.ScrollBar> controllo viene spesso utilizzato con i controlli che non derivano dalla <xref:System.Windows.Forms.ScrollableControl> classe. Analogamente, molti sviluppatori scelgono di incorporare il <xref:System.Windows.Forms.ScrollBar> controllo durante la creazione di controlli utente personalizzati.  
   
- Il <xref:System.Windows.Forms.HScrollBar> (orizzontale) e <xref:System.Windows.Forms.VScrollBar> controlli (verticali) funzionano in modo indipendente da altri controlli e avere il proprio set di metodi, proprietà ed eventi. <xref:System.Windows.Forms.ScrollBar>i controlli non sono uguali alle barre di scorrimento predefinite associate a caselle di testo, caselle di riepilogo, caselle combinate o i form MDI (il <xref:System.Windows.Forms.TextBox> controllo ha un <xref:System.Windows.Forms.TextBox.ScrollBars%2A> proprietà per visualizzare o nascondere le barre di scorrimento sono associate al controllo).  
+ Il <xref:System.Windows.Forms.HScrollBar> (orizzontale) e <xref:System.Windows.Forms.VScrollBar> controlli (verticali) funzionano in modo indipendente da altri controlli e avere il proprio set di metodi, proprietà ed eventi. <xref:System.Windows.Forms.ScrollBar> i controlli non corrispondono alle barre di scorrimento predefinite associate a caselle di testo, caselle di riepilogo, caselle combinate o i form MDI (il <xref:System.Windows.Forms.TextBox> controllo ha un <xref:System.Windows.Forms.TextBox.ScrollBars%2A> proprietà per visualizzare o nascondere le barre di scorrimento associate al controllo).  
   
  Il <xref:System.Windows.Forms.ScrollBar> controlli utilizzano il <xref:System.Windows.Forms.ScrollBar.Scroll> evento per monitorare lo spostamento della casella di scorrimento (detta anche la casella di scorrimento) lungo la barra di scorrimento. Utilizzo di <xref:System.Windows.Forms.ScrollBar.Scroll> eventi consente di accedere al valore di barra di scorrimento viene trascinata.  
   

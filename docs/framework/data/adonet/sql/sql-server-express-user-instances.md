@@ -1,27 +1,15 @@
 ---
 title: Connessione alle istanze utente di SQL Server Express
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4b8b795454ab038b9e992c5e1187a0c4dcb46c76
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0af929de17a29d497ce6cf6c8cb055d416ab8761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-express-user-instances"></a>Connessione alle istanze utente di SQL Server Express
 In Microsoft SQL Server Express Edition (SQL Server Express) è supportata la funzionalità istanze utente, disponibile solo quando si usa il provider di dati .NET Framework per SQL Server (`SqlClient`). Un'istanza utente è un'istanza distinta del motore di database di SQL Server Express generata da un'istanza padre. Le istanze utente consentono agli utenti non amministratori di collegarsi e connettersi ai database SQL Server Express dai propri computer locali. Ogni istanza viene eseguita nel contesto di sicurezza del singolo utente, a livello di un'istanza per ogni utente.  
@@ -71,7 +59,7 @@ Initial Catalog=InstanceDB;
 > [!NOTE]
 >  È inoltre possibile utilizzare il <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> e <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> proprietà per compilare una stringa di connessione in fase di esecuzione.  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>Utilizzando il &#124; DataDirectory &#124; Stringa di sostituzione  
+### <a name="using-the-124datadirectory124-substitution-string"></a>Tramite il &#124;DataDirectory&#124; stringa di sostituzione  
  `AttachDbFileName` è stata estesa in ADO.NET 2.0 con l'introduzione della stringa di sostituzione `|DataDirectory|` (racchiusa tra barre verticali). `DataDirectory` viene usata insieme a `AttachDbFileName` per indicare un percorso relativo di un file di dati, consentendo agli sviluppatori di creare stringhe di connessione basate su un percorso relativo dell'origine dati senza che sia necessario specificare un percorso completo.  
   
  La posizione fisica alla quale `DataDirectory` punta dipende dal tipo di applicazione. In questo esempio il file Northwind.mdf da collegare è situato nella cartella \app_data dell'applicazione.  

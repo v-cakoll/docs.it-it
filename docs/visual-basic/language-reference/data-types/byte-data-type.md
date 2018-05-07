@@ -1,11 +1,6 @@
 ---
 title: Tipo di dati Byte (Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Byte
 helpviewer_keywords:
@@ -14,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02234afc0dc51a2c1338cdd16d1f97765f64b45e
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 28189ab4ab1a9be9265d1cca020039b5302fb5d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="byte-data-type-visual-basic"></a>Tipo di dati byte (Visual Basic)
 Contiene interi senza segno a 8 bit (1-byte) in un intervallo compreso tra 0 e 255.
@@ -60,7 +55,7 @@ Dim number As Byte = &H_6A
 
 -   **Ampliamento.** Il `Byte` può ampliarsi nel tipo di dati `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, o `Double`. È pertanto possibile convertire `Byte` a uno di questi tipi senza generare un <xref:System.OverflowException?displayProperty=nameWithType> errore.
   
--   **Caratteri tipo.** `Byte`non dispone di alcun carattere di tipo letterale o un carattere di tipo identificatore.
+-   **Caratteri tipo.** `Byte` non dispone di alcun carattere di tipo letterale o un carattere di tipo identificatore.
 
 -   **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Byte?displayProperty=nameWithType>.
 

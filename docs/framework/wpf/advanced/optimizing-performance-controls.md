@@ -1,28 +1,16 @@
 ---
 title: 'Ottimizzazione delle prestazioni: controlli'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e4ceee26263a1d047aeda0881b955070de4326d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-controls"></a>Ottimizzazione delle prestazioni: controlli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] include molti dei componenti dell'interfaccia utente comuni alla maggior parte delle applicazioni Windows. Questo argomento illustra le tecniche da adottare per migliorare le prestazioni dell'interfaccia utente.  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  La virtualizzazione dell'interfaccia utente è un aspetto importante dei controlli elenco e non deve essere confusa con la virtualizzazione dei dati. Con la virtualizzazione dell'interfaccia utente vengono archiviati in memoria solo gli elementi visibili, mentre in uno scenario di associazione dati viene archiviata in memoria l'intera struttura dei dati. Con la virtualizzazione dei dati, al contrario, vengono archiviati in memoria solo gli elementi dati visibili sullo schermo.  
   
- Virtualizzazione dell'interfaccia utente è abilitata per impostazione predefinita, il <xref:System.Windows.Controls.ListView> e <xref:System.Windows.Controls.ListBox> controlla quando i relativi elementi elenco associati a dati. <xref:System.Windows.Controls.TreeView>virtualizzazione può essere abilitata impostando il <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` proprietà associata `true`. Se si desidera abilitare la virtualizzazione dell'interfaccia utente per i controlli personalizzati che derivano da <xref:System.Windows.Controls.ItemsControl> o controlli di elementi esistenti che utilizzano il <xref:System.Windows.Controls.StackPanel> classe, ad esempio <xref:System.Windows.Controls.ComboBox>, è possibile impostare il <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> a <xref:System.Windows.Controls.VirtualizingStackPanel> e impostare <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> per `true`. Purtroppo è possibile che la virtualizzazione dell'interfaccia utente venga inavvertitamente disabilitata per questi controlli. Di seguito sono elencate le condizioni che disabilitano la virtualizzazione dell'interfaccia utente.  
+ Virtualizzazione dell'interfaccia utente è abilitata per impostazione predefinita, il <xref:System.Windows.Controls.ListView> e <xref:System.Windows.Controls.ListBox> controlla quando i relativi elementi elenco associati a dati. <xref:System.Windows.Controls.TreeView> virtualizzazione può essere abilitata impostando il <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` proprietà associata `true`. Se si desidera abilitare la virtualizzazione dell'interfaccia utente per i controlli personalizzati che derivano da <xref:System.Windows.Controls.ItemsControl> o controlli di elementi esistenti che utilizzano il <xref:System.Windows.Controls.StackPanel> classe, ad esempio <xref:System.Windows.Controls.ComboBox>, è possibile impostare il <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> a <xref:System.Windows.Controls.VirtualizingStackPanel> e impostare <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> per `true`. Purtroppo è possibile che la virtualizzazione dell'interfaccia utente venga inavvertitamente disabilitata per questi controlli. Di seguito sono elencate le condizioni che disabilitano la virtualizzazione dell'interfaccia utente.  
   
 -   I contenitori vengono aggiunti direttamente al <xref:System.Windows.Controls.ItemsControl>. Ad esempio, se un'applicazione vengono aggiunti in modo esplicito <xref:System.Windows.Controls.ListBoxItem> oggetti in un <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListBox> virtualizzare il <xref:System.Windows.Controls.ListBoxItem> oggetti.  
   
@@ -57,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Supporting"></a>   
 ## <a name="supporting-bidirectional-virtualization"></a>Supporto della virtualizzazione bidirezionale  
- <xref:System.Windows.Controls.VirtualizingStackPanel>offre supporto incorporato per la virtualizzazione dell'interfaccia utente in una direzione, orizzontalmente o verticalmente. Se si desidera utilizzare la virtualizzazione bidirezionale per i controlli, è necessario implementare un pannello personalizzato che estende la <xref:System.Windows.Controls.VirtualizingStackPanel> classe. Il <xref:System.Windows.Controls.VirtualizingStackPanel> classe espone metodi virtuali, ad esempio <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, e <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Questi metodi virtuali consentono di rilevare una modifica nella parte visibile di un elenco e gestirlo di conseguenza.  
+ <xref:System.Windows.Controls.VirtualizingStackPanel> offre supporto incorporato per la virtualizzazione dell'interfaccia utente in una direzione, orizzontalmente o verticalmente. Se si desidera utilizzare la virtualizzazione bidirezionale per i controlli, è necessario implementare un pannello personalizzato che estende la <xref:System.Windows.Controls.VirtualizingStackPanel> classe. Il <xref:System.Windows.Controls.VirtualizingStackPanel> classe espone metodi virtuali, ad esempio <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, e <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Questi metodi virtuali consentono di rilevare una modifica nella parte visibile di un elenco e gestirlo di conseguenza.  
   
 <a name="Optimizing"></a>   
 ## <a name="optimizing-templates"></a>Ottimizzazione dei modelli  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="deferred-scrolling"></a>Scorrimento posticipato  
  Per impostazione predefinita, quando l'utente trascina il cursore su una barra di scorrimento, la visualizzazione del contenuto viene continuamente aggiornata.  Se lo scorrimento è lento nel controllo, valutare la possibilità di usare lo scorrimento posticipato,  in cui il contenuto viene aggiornato solo quando l'utente rilascia il cursore.  
   
- Per implementare lo scorrimento posticipato, impostare il <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> proprietà `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>è una proprietà associata e può essere impostata su <xref:System.Windows.Controls.ScrollViewer> e qualsiasi controllo che ha un <xref:System.Windows.Controls.ScrollViewer> nel relativo modello di controllo.  
+ Per implementare lo scorrimento posticipato, impostare il <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> proprietà `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> è una proprietà associata e può essere impostata su <xref:System.Windows.Controls.ScrollViewer> e i controlli con un <xref:System.Windows.Controls.ScrollViewer> nel relativo modello di controllo.  
   
 <a name="Controls"></a>   
 ## <a name="controls-that-implement-performance-features"></a>Controlli che implementano le funzioni relative alle prestazioni  

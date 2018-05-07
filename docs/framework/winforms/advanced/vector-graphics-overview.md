@@ -1,13 +1,6 @@
 ---
 title: Cenni preliminari sulla grafica vettoriale
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603b76c999933f177a9e48ddb819562b8e4dd8f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31fec6d0d3769251d21783b4657d00b06431e942
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vector-graphics-overview"></a>Cenni preliminari sulla grafica vettoriale
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Consente di disegnare linee, rettangoli e altre forme in un sistema di coordinate. È possibile scegliere tra un'ampia gamma di sistemi di coordinate, ma il sistema di coordinate è l'origine nell'angolo superiore sinistro con l'asse x a destra e l'asse y rivolta verso il basso. L'unità di misura nel sistema di coordinate predefinito è il pixel.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Consente di disegnare linee, rettangoli e altre forme in un sistema di coordinate. È possibile scegliere tra un'ampia gamma di sistemi di coordinate, ma il sistema di coordinate è l'origine nell'angolo superiore sinistro con l'asse x a destra e l'asse y rivolta verso il basso. L'unità di misura nel sistema di coordinate predefinito è il pixel.  
   
 ## <a name="the-building-blocks-of-gdi"></a>I blocchi predefiniti di GDI+  
  ![Grafica vettoriale](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
  ![Grafica vettoriale](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
- Quando si utilizza [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare una riga, un rettangolo o una curva, si forniscono determinate informazioni sull'elemento da disegnare. Ad esempio, è possibile specificare una riga, fornendo due punti ed è possibile specificare un rettangolo fornendo un punto, un'altezza e larghezza. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]funziona in combinazione con il software dei driver di visualizzazione per determinare i pixel che devono essere accesi per mostrare la riga, nel rettangolo o curva. Nella figura seguente mostra i pixel che vengono attivati per visualizzare una linea tra il punto (4, 2) per il punto (12, 8).  
+ Quando si utilizza [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare una riga, un rettangolo o una curva, si forniscono determinate informazioni sull'elemento da disegnare. Ad esempio, è possibile specificare una riga, fornendo due punti ed è possibile specificare un rettangolo fornendo un punto, un'altezza e larghezza. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funziona in combinazione con il software dei driver di visualizzazione per determinare i pixel devono essere attivati per visualizzare la riga, nel rettangolo o curva. Nella figura seguente mostra i pixel che vengono attivati per visualizzare una linea tra il punto (4, 2) per il punto (12, 8).  
   
  ![Grafica vettoriale](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   

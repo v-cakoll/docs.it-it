@@ -1,33 +1,19 @@
 ---
 title: Introduzione all'estendibilità
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], extensibility
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 991c3879990fd5b6562a2270c65e1560efadc022
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 142478352c8eb1c893d8b95b960c6079f735fa06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-extensibility"></a>Introduzione all'estendibilità
-Il modello dell'applicazione [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] è progettato per soddisfare la maggior parte dei requisiti di comunicazione di qualsiasi applicazione distribuita. Esistono tuttavia scenari che non sono supportati dal modello di applicazione predefinito né dalle implementazioni fornite dal sistema. Il modello di estendibilità [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] deve supportare scenari personalizzati consentendo di modificare il comportamento del sistema a ogni livello, anche al punto di sostituire l'intero modello di applicazione. In questo argomento vengono illustrate le varie aree di estensione e vengono forniti i collegamenti alle informazioni aggiuntive relative a ogni area.  
+Il modello di applicazione Windows Communication Foundation (WCF) è progettato per soddisfare la maggior parte dei requisiti di comunicazione di qualsiasi applicazione distribuita. Esistono tuttavia scenari che non sono supportati dal modello di applicazione predefinito né dalle implementazioni fornite dal sistema. Il modello di estendibilità [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] deve supportare scenari personalizzati consentendo di modificare il comportamento del sistema a ogni livello, anche al punto di sostituire l'intero modello di applicazione. In questo argomento vengono illustrate le varie aree di estensione e vengono forniti i collegamenti alle informazioni aggiuntive relative a ogni area.  
   
 ## <a name="areas-to-extend"></a>Aree da estendere  
  È possibile estendere:  

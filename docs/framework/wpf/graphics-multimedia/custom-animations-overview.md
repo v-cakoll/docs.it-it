@@ -1,13 +1,6 @@
 ---
 title: Cenni preliminari sulle animazioni personalizzate
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom classes [WPF], animation
 - key frames [WPF], custom
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb8dcce1d72991a803d8a068f29cd0fe3430fdfc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f212cd89fe9fe1bcf95a374fa0cd92aedadefa9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-animations-overview"></a>Cenni preliminari sulle animazioni personalizzate
 Questo argomento descrive come e quando estendere il sistema di animazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] creando fotogrammi chiave e classi di animazione personalizzati o usando il callback per frame come alternativa al sistema.  
@@ -39,9 +27,9 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
 ## <a name="extending-the-animation-system"></a>Estensione del sistema di animazione  
  Esistono diversi modi per estendere il sistema di animazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], a seconda del livello di funzionalità incorporate che si desidera usare.  Esistono tre punti di estendibilità principali nel motore di animazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   Creare un oggetto fotogramma chiave personalizzato ereditando da una del  *\<tipo >*classi fotogramma chiave, ad esempio <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Questo approccio usa la maggior parte delle funzionalità incorporate del motore di animazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+-   Creare un oggetto fotogramma chiave personalizzato ereditando da una del  *\<tipo >* classi fotogramma chiave, ad esempio <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Questo approccio usa la maggior parte delle funzionalità incorporate del motore di animazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   Creare una classe di animazione ereditando dalla <xref:System.Windows.Media.Animation.AnimationTimeline> o uno del  *\<tipo >*classi AnimationBase.  
+-   Creare una classe di animazione ereditando dalla <xref:System.Windows.Media.Animation.AnimationTimeline> o uno del  *\<tipo >* classi AnimationBase.  
   
 -   Usare il callback per frame per generare animazioni per frame. Questo approccio ignora completamente il sistema di animazione e di intervalli.  
   
@@ -49,8 +37,8 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
   
 |Quando si vuole...|Usare questo approccio|  
 |-------------------------|-----------------------|  
-|Personalizzare l'interpolazione tra valori di un tipo che possiede un *\<Tipo>*AnimationUsingKeyFrames corrispondente.|Creare un fotogramma chiave personalizzato. Per altre informazioni, vedere la sezione [Creare un fotogramma chiave personalizzato](#createacustomkeyframe).|  
-|Non personalizzare solo l'interpolazione tra valori di un tipo che possiede un *\<Tipo>*Animation corrispondente.|Creare una classe di animazione personalizzata che eredita dalla classe *\<Tipo>*AnimationBase che corrisponde al tipo che si desidera animare. Per altre informazioni, vedere la sezione [Create a Custom Animation Class](#createacustomanimationtype) (Creare una classe di animazione personalizzata).|  
+|Personalizzare l'interpolazione tra valori di un tipo che possiede un *\<Tipo>* AnimationUsingKeyFrames corrispondente.|Creare un fotogramma chiave personalizzato. Per altre informazioni, vedere la sezione [Creare un fotogramma chiave personalizzato](#createacustomkeyframe).|  
+|Non personalizzare solo l'interpolazione tra valori di un tipo che possiede un *\<Tipo>* Animation corrispondente.|Creare una classe di animazione personalizzata che eredita dalla classe *\<Tipo>* AnimationBase che corrisponde al tipo che si desidera animare. Per altre informazioni, vedere la sezione [Create a Custom Animation Class](#createacustomanimationtype) (Creare una classe di animazione personalizzata).|  
 |Animare un tipo che non possiede alcuna animazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] corrispondente.|Utilizzare un <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> o creare una classe che eredita da <xref:System.Windows.Media.Animation.AnimationTimeline>. Per altre informazioni, vedere la sezione [Create a Custom Animation Class](#createacustomanimationtype) (Creare una classe di animazione personalizzata).|  
 |Animare più oggetti con valori che vengono calcolati a ogni frame e si basano l'ultimo set di interazioni tra oggetti.|Usare il callback per frame. Per altre informazioni, vedere la sezione [Usare il callback per frame](#useperframecallback).|  
   
@@ -66,30 +54,30 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
   
  **Istruzioni per l'implementazione**  
   
- Eseguire la derivazione dalla classe astratta *\<Tipo>*KeyFrame e implementare il metodo InterpolateValueCore. Il metodo InterpolateValueCore restituisce il valore corrente del fotogramma chiave. Accetta due parametri: il valore del fotogramma chiave precedente e un valore di avanzamento compreso tra 0 e 1. Un avanzamento pari a 0 indica che ha iniziato il fotogramma chiave e il valore 1 indica che il fotogramma chiave appena completata e deve restituire il valore specificato dal relativo <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> proprietà.  
+ Eseguire la derivazione dalla classe astratta *\<Tipo>* KeyFrame e implementare il metodo InterpolateValueCore. Il metodo InterpolateValueCore restituisce il valore corrente del fotogramma chiave. Accetta due parametri: il valore del fotogramma chiave precedente e un valore di avanzamento compreso tra 0 e 1. Un avanzamento pari a 0 indica che ha iniziato il fotogramma chiave e il valore 1 indica che il fotogramma chiave appena completata e deve restituire il valore specificato dal relativo <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> proprietà.  
   
- Poiché il  *\<tipo >*KeyFrame eredita dal <xref:System.Windows.Freezable> (classe), è necessario inoltre eseguire l'override <xref:System.Windows.Freezable.CreateInstanceCore%2A> core per restituire una nuova istanza della classe. Se la classe non usa le proprietà di dipendenza per archiviare i dati o richiede un'altra inizializzazione dopo la creazione, potrebbe essere necessario eseguire l'override di altri metodi. Per altre informazioni, vedere [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Poiché il  *\<tipo >* KeyFrame eredita dal <xref:System.Windows.Freezable> (classe), è necessario inoltre eseguire l'override <xref:System.Windows.Freezable.CreateInstanceCore%2A> core per restituire una nuova istanza della classe. Se la classe non usa le proprietà di dipendenza per archiviare i dati o richiede un'altra inizializzazione dopo la creazione, potrebbe essere necessario eseguire l'override di altri metodi. Per altre informazioni, vedere [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
- Dopo aver creato l'animazione *\<Tipo>*KeyFrame personalizzata, è possibile usarla con *\<Tipo>*AnimationUsingKeyFrames per tale tipo.  
+ Dopo aver creato l'animazione *\<Tipo>* KeyFrame personalizzata, è possibile usarla con *\<Tipo>* AnimationUsingKeyFrames per tale tipo.  
   
 <a name="createacustomanimationtype"></a>   
 ## <a name="create-a-custom-animation-class"></a>Creare una classe di animazione personalizzata  
- La creazione di un tipo di animazione personalizzato consente un maggiore controllo sul modo in cui un oggetto viene animato. Esistono due procedure consigliate per creare un nuovo tipo di animazione: è possibile derivare il <xref:System.Windows.Media.Animation.AnimationTimeline> classe o  *\<tipo >*personalizzata. La derivazione della classe *\<Tipo>*Animation o *\<Tipo>*AnimationUsingKeyFrames non è consigliata.  
+ La creazione di un tipo di animazione personalizzato consente un maggiore controllo sul modo in cui un oggetto viene animato. Esistono due procedure consigliate per creare un nuovo tipo di animazione: è possibile derivare il <xref:System.Windows.Media.Animation.AnimationTimeline> classe o  *\<tipo >* personalizzata. La derivazione della classe *\<Tipo>* Animation o *\<Tipo>* AnimationUsingKeyFrames non è consigliata.  
   
 ### <a name="derive-from-typeanimationbase"></a>Derivazione dalla classe \<Tipo>AnimationBase  
- La derivazione da una classe *\<Tipo>*AnimationBase è il modo più semplice per creare un nuovo tipo di animazione. Usare questo approccio quando si desidera creare una nuova animazione per il tipo che dispone già di una classe *\<Tipo>*AnimationBase.  
+ La derivazione da una classe *\<Tipo>* AnimationBase è il modo più semplice per creare un nuovo tipo di animazione. Usare questo approccio quando si desidera creare una nuova animazione per il tipo che dispone già di una classe *\<Tipo>* AnimationBase.  
   
  **Istruzioni per l'implementazione**  
   
- Eseguire la derivazione di una classe *\<Tipo>*Animation e implementare il metodo GetCurrentValueCore. Il metodo GetCurrentValueCore restituisce il valore corrente dell'animazione. Il metodo accetta tre parametri: un valore iniziale suggerito, un valore finale suggerito e un <xref:System.Windows.Media.Animation.AnimationClock>, che consente di determinare lo stato di avanzamento dell'animazione.  
+ Eseguire la derivazione di una classe *\<Tipo>* Animation e implementare il metodo GetCurrentValueCore. Il metodo GetCurrentValueCore restituisce il valore corrente dell'animazione. Il metodo accetta tre parametri: un valore iniziale suggerito, un valore finale suggerito e un <xref:System.Windows.Media.Animation.AnimationClock>, che consente di determinare lo stato di avanzamento dell'animazione.  
   
- Poiché il  *\<tipo >*AnimationBase eredita dal <xref:System.Windows.Freezable> (classe), è necessario inoltre eseguire l'override <xref:System.Windows.Freezable.CreateInstanceCore%2A> core per restituire una nuova istanza della classe. Se la classe non usa le proprietà di dipendenza per archiviare i dati o richiede un'altra inizializzazione dopo la creazione, potrebbe essere necessario eseguire l'override di altri metodi. Per altre informazioni, vedere [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Poiché il  *\<tipo >* AnimationBase eredita dal <xref:System.Windows.Freezable> (classe), è necessario inoltre eseguire l'override <xref:System.Windows.Freezable.CreateInstanceCore%2A> core per restituire una nuova istanza della classe. Se la classe non usa le proprietà di dipendenza per archiviare i dati o richiede un'altra inizializzazione dopo la creazione, potrebbe essere necessario eseguire l'override di altri metodi. Per altre informazioni, vedere [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
- Per altri informazioni, vedere la documentazione relativa al metodo GetCurrentValueCore per la classe *\<Tipo>*AnimationBase per il tipo che si desidera animare. Per un esempio, vedere [Esempio di animazione personalizzata](http://go.microsoft.com/fwlink/?LinkID=159981)  
+ Per altri informazioni, vedere la documentazione relativa al metodo GetCurrentValueCore per la classe *\<Tipo>* AnimationBase per il tipo che si desidera animare. Per un esempio, vedere [Esempio di animazione personalizzata](http://go.microsoft.com/fwlink/?LinkID=159981)  
   
  **Approcci alternativi**  
   
- Se si desidera semplicemente modificare il modo in cui i valori dell'animazione vengono interpolati, si prenda in considerazione la derivazione da una delle classi *\<Tipo>*KeyFrame. Il fotogramma chiave creato può essere usato con la classe *\<Tipo>*AnimationUsingKeyFrames corrispondente fornita da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Se si desidera semplicemente modificare il modo in cui i valori dell'animazione vengono interpolati, si prenda in considerazione la derivazione da una delle classi *\<Tipo>* KeyFrame. Il fotogramma chiave creato può essere usato con la classe *\<Tipo>* AnimationUsingKeyFrames corrispondente fornita da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ### <a name="derive-from-animationtimeline"></a>Derivazione dalla classe AnimationTimeline  
  Derivare il <xref:System.Windows.Media.Animation.AnimationTimeline> classe quando si desidera creare un'animazione per un tipo che non dispone già di un corrispondente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animazione, o si desidera creare un'animazione che non deve essere fortemente tipizzata.  
@@ -98,21 +86,21 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
   
  Derivare la <xref:System.Windows.Media.Animation.AnimationTimeline> classe ed eseguire l'override dei membri seguenti:  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A>: Se la nuova classe è concreta, è necessario eseguire l'override <xref:System.Windows.Freezable.CreateInstanceCore%2A> per restituire una nuova istanza della classe.  
+-   <xref:System.Windows.Freezable.CreateInstanceCore%2A> : Se la nuova classe è concreta, è necessario eseguire l'override <xref:System.Windows.Freezable.CreateInstanceCore%2A> per restituire una nuova istanza della classe.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>: Eseguire l'override di questo metodo per restituire il valore corrente dell'animazione. Il metodo accetta tre parametri: un valore di origine predefinito, un valore di destinazione predefinito e un <xref:System.Windows.Media.Animation.AnimationClock>. Utilizzare il <xref:System.Windows.Media.Animation.AnimationClock> per ottenere l'ora corrente o avanzamento dell'animazione. L'uso dei valori predefiniti di origine e destinazione è facoltativo.  
+-   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> : Eseguire l'override di questo metodo per restituire il valore corrente dell'animazione. Il metodo accetta tre parametri: un valore di origine predefinito, un valore di destinazione predefinito e un <xref:System.Windows.Media.Animation.AnimationClock>. Utilizzare il <xref:System.Windows.Media.Animation.AnimationClock> per ottenere l'ora corrente o avanzamento dell'animazione. L'uso dei valori predefiniti di origine e destinazione è facoltativo.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>: Eseguire l'override di questa proprietà per indicare se l'animazione utilizza il valore di destinazione predefinito specificato per il <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> metodo.  
+-   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> : Eseguire l'override di questa proprietà per indicare se l'animazione utilizza il valore di destinazione predefinito specificato per il <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> metodo.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>: Eseguire l'override di questa proprietà per indicare il <xref:System.Type> di output prodotto dall'animazione.  
+-   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> : Eseguire l'override di questa proprietà per indicare il <xref:System.Type> di output prodotto dall'animazione.  
   
  Se la classe non usa le proprietà di dipendenza per archiviare i dati o richiede un'altra inizializzazione dopo la creazione, potrebbe essere necessario eseguire l'override di altri metodi. Per altre informazioni, vedere [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
  Il paradigma consigliato (usato dalle animazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) consiste nell'usare due livelli di ereditarietà:  
   
-1.  Creare una classe astratta  *\<tipo >*AnimationBase che deriva da <xref:System.Windows.Media.Animation.AnimationTimeline>. Questa classe deve eseguire l'override di <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> metodo. Deve anche introdurre un nuovo metodo astratto, GetCurrentValueCore ed eseguire l'override <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> in modo che la convalida dei tipi i parametri di valore di destinazione predefinito e il valore di origine predefinito, quindi chiama GetCurrentValueCore.  
+1.  Creare una classe astratta  *\<tipo >* AnimationBase che deriva da <xref:System.Windows.Media.Animation.AnimationTimeline>. Questa classe deve eseguire l'override di <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> metodo. Deve anche introdurre un nuovo metodo astratto, GetCurrentValueCore ed eseguire l'override <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> in modo che la convalida dei tipi i parametri di valore di destinazione predefinito e il valore di origine predefinito, quindi chiama GetCurrentValueCore.  
   
-2.  Creare un'altra classe che eredita dalla nuova  *\<tipo >*personalizzata ed esegue l'override di <xref:System.Windows.Freezable.CreateInstanceCore%2A> (metodo), il metodo GetCurrentValueCore introdotte, e <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> proprietà.  
+2.  Creare un'altra classe che eredita dalla nuova  *\<tipo >* personalizzata ed esegue l'override di <xref:System.Windows.Freezable.CreateInstanceCore%2A> (metodo), il metodo GetCurrentValueCore introdotte, e <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> proprietà.  
   
  **Approcci alternativi**  
   

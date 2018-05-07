@@ -1,13 +1,6 @@
 ---
 title: Hit testing a livello visivo
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1bdecedece4581eaf8a010eddc0974e44fe88ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60da11af51722e86a61c5e3298fafba2221f000b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Hit testing a livello visivo
 In questo argomento vengono forniti dei cenni preliminari sulle funzionalità di hit testing fornite dal livello visivo. Supporto per l'hit test consente di determinare se un valore di geometria o un punto rientra contenuto di cui viene eseguito il rendering di un <xref:System.Windows.Media.Visual>, che consente di implementare il comportamento dell'interfaccia utente, ad esempio un rettangolo di selezione per selezionare più oggetti.  
@@ -61,7 +49,7 @@ Diagramma dell'area di hit testing valida
   
  Nella figura seguente, l'oggetto cerchio è sovrapposto sia al quadrato che al triangolo. Se si è solo interessati all'hit test l'oggetto visivo il cui valore di ordine z è superiore, è possibile impostare l'enumerazione di hit test visiva da restituire <xref:System.Windows.Media.HitTestResultBehavior.Stop> dal <xref:System.Windows.Media.HitTestResultCallback> per interrompere lo scorrimento dell'hit test dopo il primo elemento.  
   
- ![Diagramma di z &#45; l'ordine di un struttura ad albero visuale](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
+ ![Diagramma di z&#45;dell'ordine di un struttura ad albero visuale](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
 Diagramma dell'ordine Z di una struttura ad albero visuale  
   
  Se si desidera enumerare tutti gli oggetti visivi in un momento specifico o di geometria, restituire <xref:System.Windows.Media.HitTestResultBehavior.Continue> dal <xref:System.Windows.Media.HitTestResultCallback>. Ciò significa che è possibile eseguire l'hit test per gli oggetti visivi che sono al di sotto di altri oggetti, anche se sono completamente nascosti. Per altre informazioni, vedere il codice di esempio nella sezione "Utilizzo del callback dei risultati di un hit test".  
@@ -86,7 +74,7 @@ Diagramma dell'ordine Z di una struttura ad albero visuale
 ### <a name="how-the-visual-tree-affects-hit-testing"></a>Effetti della struttura ad albero visuale sull'hit testing  
  Il punto iniziale nella struttura ad albero visuale determina quali oggetti vengono restituiti durante l'enumerazione di hit test degli oggetti. Se si dispone di più oggetti da sottoporre a hit test, l'oggetto visivo usato come punto di inizio nella struttura ad albero visuale deve essere il predecessore comune di tutti gli oggetti interessati. Se si desidera ad esempio sottoporre a hit test sia l'elemento pulsante che l'elemento visivo di disegno nel diagramma seguente, è necessario impostare il punto di inizio nella struttura ad albero visuale sul predecessore comune a entrambi. In questo caso, l'elemento canvas è il predecessore comune di sia dell'elemento pulsante che dell'elemento visivo di disegno.  
   
- ![Diagramma della gerarchia di una struttura ad albero visuale](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-overview-01.gif "wcpsdk_mmgraphics_visuals_overview_01")  
+ ![Diagramma di una gerarchia struttura ad albero visuale](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-overview-01.gif "wcpsdk_mmgraphics_visuals_overview_01")  
 Diagramma della gerarchia di una struttura ad albero visuale  
   
 > [!NOTE]
@@ -156,6 +144,6 @@ Eliminazione di una struttura ad albero visuale
  <xref:System.Windows.Media.HitTestFilterCallback>  
  <xref:System.Windows.UIElement.IsHitTestVisible%2A>  
  [Hit Test mediante DrawingVisuals Sample](http://go.microsoft.com/fwlink/?LinkID=159994)  
- [Hit Test con interoperatività Win32](http://go.microsoft.com/fwlink/?LinkID=159995)  
+ [Hit Test con esempio di interoperatività Win32](http://go.microsoft.com/fwlink/?LinkID=159995)  
  [Eseguire un hit test della geometria in un oggetto Visual](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
  [Eseguire un hit test utilizzando un contenitore di host Win32](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)

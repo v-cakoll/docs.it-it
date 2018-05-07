@@ -1,34 +1,22 @@
 ---
 title: 'Procedura: proteggere un servizio con credenziali di Windows'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-caps.latest.revision: 26
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2828b6b9df313bab5a904712ad4e97cc7062f387
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 5ed09947350a284dd7701b37bad93912f79f7e3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Procedura: proteggere un servizio con credenziali di Windows
-Questo argomento viene illustrato come abilitare sicurezza del trasporto in un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servizio che si trova in un dominio di Windows e viene chiamato dai client nello stesso dominio. Per ulteriori informazioni su questo scenario, vedere [protezione del trasporto con l'autenticazione di Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Per un'applicazione di esempio, vedere il [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) esempio.  
+In questo argomento viene illustrato come abilitare sicurezza del trasporto per un servizio Windows Communication Foundation (WCF) che risiede in un dominio di Windows e viene chiamato dai client nello stesso dominio. Per ulteriori informazioni su questo scenario, vedere [protezione del trasporto con l'autenticazione di Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Per un'applicazione di esempio, vedere il [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) esempio.  
   
  In questo argomento si presuppone la presenza di un'interfaccia e di un'implementazione del contratto esistente già definite, alle quali vengono aggiunti elementi. È inoltre possibile modificare un servizio e un client esistenti.  
   

@@ -1,21 +1,12 @@
 ---
 title: Concetti relativi alla serializzazione
 ms.date: 08/07/2017
-ms.prod: .net
-ms.topic: article
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 038e150e167da62c7e67d59eb1f460237851ed87
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: f16de0e95f7520e377dc9920743261ad6019e430
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-concepts"></a>Concetti relativi alla serializzazione
 Perché utilizzare la serializzazione? I due motivi principali sono la possibilità di rendere persistente lo stato di un oggetto su un supporto di archiviazione in modo da potere ricreare una copia esatta in una fase successiva e di inviare l'oggetto per valore da un dominio dell'applicazione a un altro. Ad esempio, la serializzazione viene utilizzata per salvare lo stato della sessione in ASP.NET e per copiare oggetti negli Appunti in Windows Form. Viene inoltre utilizzata da .NET Remoting per passare oggetti per valore da un dominio dell'applicazione a un altro.

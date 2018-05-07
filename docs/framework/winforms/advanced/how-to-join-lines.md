@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: unire linee'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,19 +14,14 @@ helpviewer_keywords:
 - lines [Windows Forms], joining
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d12cc7b4b4c878ec812190fd56a1face64118ab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cecced7b32af7187cb1ef072921f0ff28f04adad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-join-lines"></a>Procedura: unire linee
-Un'unione di linee è l'area comune è costituito da due righe le cui estremità soddisfa o si sovrappongono. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]sono disponibili tre stili di join di linee: decorato, rilievo e arrotondato. Stile di linea join è una proprietà del <xref:System.Drawing.Pen> classe. Quando si specifica uno stile di linea join per un <xref:System.Drawing.Pen> dell'oggetto, che verrà applicata a tutte le righe collegate in qualsiasi tipo di join <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto disegnato utilizzando quella penna.  
+Un'unione di linee è l'area comune è costituito da due righe le cui estremità soddisfa o si sovrappongono. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sono disponibili tre stili di join di linee: decorato, rilievo e arrotondato. Stile di linea join è una proprietà del <xref:System.Drawing.Pen> classe. Quando si specifica uno stile di linea join per un <xref:System.Drawing.Pen> dell'oggetto, che verrà applicata a tutte le righe collegate in qualsiasi tipo di join <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto disegnato utilizzando quella penna.  
   
  Nella figura seguente mostra i risultati dell'esempio di join di linee in rilievo.  
   

@@ -1,24 +1,12 @@
 ---
 title: 'Procedura: usare un moniker di servizio con i contratti WSDL'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c36ac73ced510c1ba3b7e16c71f764c46d6c8f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 838e7affcf47742c8f372879fcb33946d53ba43f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Procedura: usare un moniker di servizio con i contratti WSDL
 In alcune situazioni può essere necessario disporre di un client per l'interoperabilità COM completamente autonomo. Il servizio che si desidera chiamare può non esporre un endpoint MEX e la DLL del client WCF può non essere registrata per l'interoperabilità COM. In questi casi è possibile creare un file WSDL che descriva il servizio e lo passi nel moniker del servizio WCF. In questo argomento viene illustrato come chiamare l'esempio WCF della Guida introduttiva utilizzando un moniker WSDL WCF.  
@@ -27,7 +15,7 @@ In alcune situazioni può essere necessario disporre di un client per l'interope
   
 1.  Aprire e compilare la soluzione di esempio GettingStarted.  
   
-2.  Aprire Internet Explorer e immettere http://localhost/ServiceModelSamples/Service.svc per assicurarsi che il servizio sia in funzione.  
+2.  Aprire Internet Explorer e passare a http://localhost/ServiceModelSamples/Service.svc per assicurarsi che il servizio sia funzionante.  
   
 3.  Nel file Service.cs aggiungere l'attributo seguente alla classe CalculatorService:  
   
@@ -37,7 +25,7 @@ In alcune situazioni può essere necessario disporre di un client per l'interope
   
   
   
-5.  Creare un file WSDL che deve essere letto dall'applicazione. Poiché gli spazi dei nomi vengono aggiunti nei passaggi 3 e 4, è possibile utilizzare Internet Explorer per eseguire una query per l'intera descrizione WSDL del servizio immettendo http://localhost/ServiceModelSamples/Service.svc?wsdl. È quindi possibile salvare il file da Internet Explorer come serviceWSDL.xml. Se non si specificano gli spazi dei nomi nei passaggi 3 e 4, il documento WSDL restituito dalla query sull'URL precedente non sarà il WSDL completo. Il documento WSDL restituito includerà molte istruzioni di importazione che consentono di importare altri documenti WSDL. Sarà quindi necessario esaminare ogni istruzione di importazione e compilare il documento WSDL completo, combinando il WSDL restituito dal servizio con il WSDL importato.  
+5.  Creare un file WSDL che deve essere letto dall'applicazione. Poiché gli spazi dei nomi sono stati aggiunti nei passaggi 3 e 4, è possibile utilizzare Internet Explorer per eseguire una query per l'intera descrizione WSDL del servizio passando a http://localhost/ServiceModelSamples/Service.svc?wsdl. È quindi possibile salvare il file da Internet Explorer come serviceWSDL.xml. Se non si specificano gli spazi dei nomi nei passaggi 3 e 4, il documento WSDL restituito dalla query sull'URL precedente non sarà il WSDL completo. Il documento WSDL restituito includerà molte istruzioni di importazione che consentono di importare altri documenti WSDL. Sarà quindi necessario esaminare ogni istruzione di importazione e compilare il documento WSDL completo, combinando il WSDL restituito dal servizio con il WSDL importato.  
   
 6.  Aprire Visual Basic 6.0 e creare un nuovo file standard con estensione exe. Aggiungere un pulsante al form e fare doppio clic su di esso per aggiungere il codice seguente al gestore Click:  
   

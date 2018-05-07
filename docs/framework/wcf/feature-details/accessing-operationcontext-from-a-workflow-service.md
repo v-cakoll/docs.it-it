@@ -1,24 +1,12 @@
 ---
 title: Accesso a OperationContext da un servizio flusso di lavoro
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f63c2e2305eab5a97cf547bf607fbe97bb573376
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c10e83c02ec0e2e74462e84c68fd2fcd3ff761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Accesso a OperationContext da un servizio flusso di lavoro
 Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flusso di lavoro, è necessario implementare l'interfaccia <xref:System.ServiceModel.Activities.IReceiveMessageCallback> in una proprietà di esecuzione personalizzata. Eseguire l'override del metodo <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> passato come riferimento a <xref:System.ServiceModel.OperationContext>. In questo argomento viene descritta l'implementazione della proprietà di esecuzione per recuperare un'intestazione personalizzata e un'attività personalizzata che esporrà tale proprietà a <xref:System.ServiceModel.Activities.Receive> in fase di esecuzione.  L'attività personalizzata implementerà lo stesso comportamento di un <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` attività, ad eccezione che, quando un <xref:System.ServiceModel.Activities.Receive> viene posizionato all'interno, il <xref:System.ServiceModel.Activities.IReceiveMessageCallback> verrà chiamato e <xref:System.ServiceModel.OperationContext> verranno recuperate le informazioni.  Nell'argomento viene inoltre illustrato come accedere a <xref:System.ServiceModel.OperationContext> sul lato client per aggiungere intestazioni in uscita tramite l'interfaccia <xref:System.ServiceModel.Activities.ISendMessageCallback>.  

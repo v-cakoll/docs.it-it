@@ -1,32 +1,18 @@
 ---
 title: Procedure consigliate per comunicazioni in coda
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b54569ad3d11c3b9b1b96e2738bdf0582b63b0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>Procedure consigliate per comunicazioni in coda
-In questo argomento vengono illustrate le procedure consigliate per le comunicazioni in coda in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Nelle sezioni seguenti vengono descritte le procedure consigliate in funzione dello scenario.  
+In questo argomento fornisce le procedure consigliate per la comunicazione in coda in Windows Communication Foundation (WCF). Nelle sezioni seguenti vengono descritte le procedure consigliate in funzione dello scenario.  
   
 ## <a name="fast-best-effort-queued-messaging"></a>Messaggistica in coda di tipo veloce ed efficiente  
  Per scenari che richiedono la separazione fornita dalla messaggistica in coda nonché velocità, elevate prestazioni ed efficienza, utilizzare una coda non transazionale e impostare la proprietà <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> su `false`.  
@@ -69,7 +55,7 @@ In questo argomento vengono illustrate le procedure consigliate per le comunicaz
   
  Quando si utilizza il batch, è necessario sapere che la concorrenza e la limitazione danno luogo a batch simultanei.  
   
- Per raggiungere velocità effettive e disponibilità più elevate, utilizzare una farm di servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in grado di leggere dalla coda. In questo caso, tutti i servizi interessati devono esporre lo stesso contratto nello stesso endpoint. L'approccio della farm funziona in modo ottimale per applicazioni che hanno elevate frequenze di produzione di messaggi poiché consente a un certo numero di servizi di leggere dalla stessa coda.  
+ Per ottenere maggiore velocità effettiva e disponibilità, usare una farm di servizi WCF che leggere dalla coda. In questo caso, tutti i servizi interessati devono esporre lo stesso contratto nello stesso endpoint. L'approccio della farm funziona in modo ottimale per applicazioni che hanno elevate frequenze di produzione di messaggi poiché consente a un certo numero di servizi di leggere dalla stessa coda.  
   
  Quando si utilizzano le farm, è necessario sapere che le letture transazionali remote non sono supportate in MSMQ 3.0. MSMQ 4.0 supporta le letture transazionali remote.  
   
@@ -84,11 +70,11 @@ In questo argomento vengono illustrate le procedure consigliate per le comunicaz
  Sebbene le code siano tipicamente unidirezionali, in alcuni scenari è necessario determinare una correlazione tra una risposta ricevuta a una richiesta inviata precedentemente. Se tale correlazione viene richiesta, è consigliato applicare al messaggio la propria intestazione del messaggio SOAP contenente informazioni sulla correlazione. In genere, il mittente allega questa intestazione al messaggio e il destinatario, dopo aver elaborato il messaggio e aver risposto con un messaggio nuovo in una coda di risposte, allega l'intestazione del messaggio del mittente contenente le informazioni sulla correlazione così che il mittente possa identificare il messaggio di risposta con il messaggio di richiesta.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>Integrazione con applicazioni non WCF  
- Utilizzare `MsmqIntegrationBinding` in caso di integrazione di servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o di client con servizi o client non [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Non -[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applicazione può essere un'applicazione MSMQ scritta utilizzando System. Messaging, COM+, Visual Basic o C++.  
+ Utilizzare `MsmqIntegrationBinding` l'integrazione di servizi WCF o client con i servizi non WCF o client. L'applicazione non WCF può essere un'applicazione MSMQ scritta utilizzando System. Messaging, COM+, Visual Basic o C++.  
   
  Quando si utilizza `MsmqIntegrationBinding`, è necessario sapere che:  
   
--   Il corpo di un messaggio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non equivale al corpo di un messaggio MSMQ. Quando si invia un messaggio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizzando un'associazione in coda, il corpo del messaggio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è posizionato all'interno di un messaggio MSMQ. L'infrastruttura MSMQ vede solo il messaggio MSMQ ignorando queste informazioni aggiuntive.  
+-   Il corpo del messaggio WCF non è quella di un corpo del messaggio MSMQ. Quando si invia un messaggio WCF utilizzando un'associazione in coda, il corpo del messaggio WCF viene posizionata all'interno di un messaggio MSMQ. L'infrastruttura MSMQ vede solo il messaggio MSMQ ignorando queste informazioni aggiuntive.  
   
 -   `MsmqIntegrationBinding` supporta i tipi di serializzazione più comuni. In base al tipo di serializzazione, il tipo del corpo del messaggio generico, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, prende parametri di tipo diverso. <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray>, ad esempio, richiede `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> e `MsmqMessage<Stream>` richiede .  
   

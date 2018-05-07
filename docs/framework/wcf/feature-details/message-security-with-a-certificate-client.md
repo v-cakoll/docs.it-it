@@ -1,32 +1,20 @@
 ---
 title: Protezione dei messaggi con un client di certificato
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e31c7a9e53e8b918661c0c6c544e697e2a772e6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 570c7763da912de4e0d2729e7579a200f35c4941
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-certificate-client"></a>Protezione dei messaggi con un client di certificato
-Nello scenario seguente sono illustrati un client e un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protetti tramite la protezione a livello di messaggio. Sia il client che il servizio sono autenticati mediante certificati. Per altre informazioni, vedere [protezione di applicazione distribuita](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
+Lo scenario seguente viene illustrato un client Windows Communication Foundation (WCF) e un servizio protetti tramite la modalità sicurezza messaggio. Sia il client che il servizio sono autenticati mediante certificati. Per altre informazioni, vedere [protezione di applicazione distribuita](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
   
  Per un'applicazione di esempio, vedere [certificato di sicurezza messaggio](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
   
@@ -35,7 +23,7 @@ Nello scenario seguente sono illustrati un client e un servizio [!INCLUDE[indigo
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Modalità di sicurezza|Messaggio|  
-|Interoperabilità|Solo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
+|Interoperabilità|Solo WCF|  
 |Autenticazione (server)|Utilizzo del certificato del servizio|  
 |Autenticazione (client)|Utilizzo del certificato client|  
 |Integrità|Sì|  

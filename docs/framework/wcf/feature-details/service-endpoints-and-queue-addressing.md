@@ -1,33 +1,19 @@
 ---
 title: Mapping fra gli endpoint di servizio e l'indirizzamento delle code
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a2f4807e447482ee790f2ca9a2ab4dbde531b1c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Mapping fra gli endpoint di servizio e l'indirizzamento delle code
-Questo argomento descrive come i client indirizzano i servizi che leggono da code e il mapping fra gli endpoint di servizio e le code. Come promemoria, l'illustrazione seguente mostra la distribuzione standard delle applicazioni [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in coda.  
+Questo argomento descrive come i client indirizzano i servizi che leggono da code e il mapping fra gli endpoint di servizio e le code. Come promemoria, nell'illustrazione seguente mostra la distribuzione di applicazioni in coda di Windows Communication Foundation (WCF).  
   
  ![In coda applicazione diagramma](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "figura coda distribuita")  
   
- Per inviare il messaggio al servizio, il client indirizza il messaggio alla coda di destinazione. Per leggere i messaggi da questa coda, il servizio imposta il proprio indirizzo di attesa sulla coda di destinazione. L'indirizzamento di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si basa sugli URI (Uniform Resource Identifier), mentre i nomi di coda del sistema di accodamento dei messaggi (MSMQ) non si basano sugli URI. È pertanto essenziale comprendere come utilizzare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per indirizzare le code create in MSMQ.  
+ Per inviare il messaggio al servizio, il client indirizza il messaggio alla coda di destinazione. Per leggere i messaggi da questa coda, il servizio imposta il proprio indirizzo di attesa sulla coda di destinazione. L'indirizzamento in WCF è basato su URI Uniform Resource Identifier mentre i nomi di coda di Accodamento messaggi (MSMQ) non sono basati su URI. È pertanto fondamentale comprendere come indirizzare le code create in MSMQ mediante WCF.  
   
 ## <a name="msmq-addressing"></a>Indirizzamento di MSMQ  
  Nel sistema MSMQ le code vengono identificate tramite nomi di percorso e di formato. I percorsi specificano un nome host e un elemento `QueueName`. Fra il nome host e l'elemento `Private$` è inoltre previsto l'elemento facoltativo `QueueName`. Tale elemento indica una coda privata non pubblicata nel servizio di directory Active Directory.  
@@ -37,11 +23,11 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
  Per ulteriori informazioni sui nomi di percorso e il formato MSMQ, vedere [sull'accodamento messaggi](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>Associazione NetMsmqBinding e indirizzamento del servizio  
- Quando si indirizza un messaggio a un servizio, lo schema contenuto nell'URI viene scelto in base al trasporto utilizzato per le comunicazioni. Ogni trasporto in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] presenta uno schema univoco. Lo schema deve riflettere le caratteristiche del trasporto utilizzato per le comunicazioni, ad esempio net.tcp, net.pipe, HTTP e così via.  
+ Quando si indirizza un messaggio a un servizio, lo schema contenuto nell'URI viene scelto in base al trasporto utilizzato per le comunicazioni. Ogni trasporto in WCF presenta uno schema univoco. Lo schema deve riflettere le caratteristiche del trasporto utilizzato per le comunicazioni, ad esempio net.tcp, net.pipe, HTTP e così via.  
   
- Il trasporto in coda del sistema MSMQ in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espone uno schema net.msmq. Tutti i messaggi indirizzati utilizzando lo schema net.msmq vengono inviati utilizzando l'associazione `NetMsmqBinding` sul canale del trasporto in coda del sistema MSMQ.  
+ MSMQ il trasporto in coda in WCF espone uno schema NET. MSMQ. Tutti i messaggi indirizzati utilizzando lo schema net.msmq vengono inviati utilizzando l'associazione `NetMsmqBinding` sul canale del trasporto in coda del sistema MSMQ.  
   
- L'indirizzamento di una coda in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si basa sul modello seguente:  
+ L'indirizzamento di una coda in WCF è basato sul modello seguente:  
   
  NET. MSMQ: / / \< *nome host*> / [private /] \< *-nome della coda*>  
   
@@ -49,7 +35,7 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
 -   \<*nome host*> è il nome del computer che ospita la coda di destinazione.  
   
--   L'elemento facoltativo [private] viene utilizzato quando si indirizza una coda di destinazione privata. Per indirizzare una coda pubblica è necessario non specificare [private]. Si noti che, a differenza dei percorsi MSMQ, nel modello URI di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non è presente il simbolo "$".  
+-   L'elemento facoltativo [private] viene utilizzato quando si indirizza una coda di destinazione privata. Per indirizzare una coda pubblica è necessario non specificare [private]. Si noti che, a differenza dei percorsi MSMQ, non vi sia alcun "$" nel formato URI WCF.  
   
 -   \<*Nome coda*> è il nome della coda. Il nome della coda può riferirsi anche a una coda secondaria. Di conseguenza, \< *-nome della coda*> = \< *name-of-queue*> [; *nome queue*].  
   
@@ -102,10 +88,10 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
  NET. MSMQ: //localhost/ [private /] \< *personalizzata dei messaggi non recapitabili lettera nome---coda*>.  
   
- Un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verifica che tutti i messaggi che riceve siano stati indirizzati alla coda specifica su cui è in attesa. Se un messaggio viene rilevato in una coda a cui non era destinato, tale messaggio non viene elaborato dal servizio. Si tratta di un problema che i servizi in attesa di una coda di messaggi non recapitabili devono affrontare, poiché questo tipo di coda contiene messaggi che in realtà erano destinati altrove. Per leggere i messaggi di una coda di messaggi non recapitabili o non elaborabili occorre utilizzare un comportamento `ServiceBehavior` con il parametro <xref:System.ServiceModel.AddressFilterMode.Any>. Per un esempio, vedere [non recapitabili](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
+ Un servizio WCF verifica che tutti i messaggi ricevuti siano stato indirizzato alla coda specifica su che attesa. Se un messaggio viene rilevato in una coda a cui non era destinato, tale messaggio non viene elaborato dal servizio. Si tratta di un problema che i servizi in attesa di una coda di messaggi non recapitabili devono affrontare, poiché questo tipo di coda contiene messaggi che in realtà erano destinati altrove. Per leggere i messaggi di una coda di messaggi non recapitabili o non elaborabili occorre utilizzare un comportamento `ServiceBehavior` con il parametro <xref:System.ServiceModel.AddressFilterMode.Any>. Per un esempio, vedere [non recapitabili](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>Associazione MsmqIntegrationBinding e indirizzamento del servizio  
- L'associazione `MsmqIntegrationBinding` viene utilizzata per comunicare con le applicazioni MSMQ tradizionali. Per facilitare l'interoperazione con le applicazioni MSMQ esistenti, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta solo l'indirizzamento del nome di formato. Di conseguenza, i messaggi inviati tramite questa associazione devono attenersi allo schema degli URI seguente:  
+ L'associazione `MsmqIntegrationBinding` viene utilizzata per comunicare con le applicazioni MSMQ tradizionali. Per facilitare l'interoperazione con un'applicazione MSMQ esistente, WCF supporta l'indirizzamento del nome formato unico. Di conseguenza, i messaggi inviati tramite questa associazione devono attenersi allo schema degli URI seguente:  
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
@@ -115,7 +101,7 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
  Quando si esegue l'indirizzamento tramite il protocollo SRMP utilizzando l'associazione `MsmqIntegrationBinding` non occorre aggiungere /msmq/ nel nome di formato Direct per consentire ai servizi Internet Information Services (IIS) di eseguire la distribuzione. Ad esempio: quando si indirizza una coda abc utilizzando il protocollo SRMP del protocollo, anziché DIRECT =http://adatum.com/msmq/private$/ abc, è consigliabile utilizzare DIRECT =http://adatum.com/private$/ abc.  
   
- Si noti che non è possibile utilizzare l'indirizzamento net.msmq:// con l'associazione `MsmqIntegrationBinding`. Poiché l'associazione `MsmqIntegrationBinding` supporta l'indirizzamento del nome di formato MSMQ in formato libero, è possibile utilizzare un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che utilizza questa associazione per utilizzare le funzionalità di multicast e di lista di distribuzione di MSMQ. Un'eccezione è la specifica dell'elemento `CustomDeadLetterQueue` quando si utilizza l'associazione `MsmqIntegrationBinding`. Analogamente al caso di specifica dell'elemento quando si utilizza l'associazione `NetMsmqBinding`, tale elemento deve presentare il formato net.msmq://.  
+ Si noti che non è possibile utilizzare l'indirizzamento net.msmq:// con l'associazione `MsmqIntegrationBinding`. Poiché `MsmqIntegrationBinding` supporta MSMQ formato nome indirizzamento in formato libero, è possibile utilizzare un servizio WCF che utilizza questa associazione per utilizzare le funzionalità di lista di distribuzione e il multicast di MSMQ. Un'eccezione è la specifica dell'elemento `CustomDeadLetterQueue` quando si utilizza l'associazione `MsmqIntegrationBinding`. Analogamente al caso di specifica dell'elemento quando si utilizza l'associazione `NetMsmqBinding`, tale elemento deve presentare il formato net.msmq://.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Hosting Web di un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

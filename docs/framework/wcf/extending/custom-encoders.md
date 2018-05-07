@@ -1,31 +1,17 @@
 ---
 title: Codificatori personalizzati
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4f7b011b038714ee8349e74f6be270c85aed0a7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-encoders"></a>Codificatori personalizzati
 In questo argomento verranno illustrate le procedure per creare codificatori personalizzati.  
   
- In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], si utilizza un *associazione* per specificare come trasferire i dati attraverso una rete tra endpoint. Un'associazione è costituita da una sequenza di *gli elementi di associazione*. Un'associazione include elementi di associazione facoltativi del protocollo, ad esempio sicurezza, un *codificatore di messaggi* elemento di associazione e un elemento di associazione di trasporto obbligatorio. Un codificatore di messaggi è rappresentato da un elemento di associazione di codifica dei messaggi. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono inclusi tre codificatori di messaggi: Binary, MTOM (Message Transmission Optimization Mechanism) e Text.  
+ In Windows Communication Foundation (WCF), si utilizza un *associazione* per specificare come trasferire i dati attraverso una rete tra endpoint. Un'associazione è costituita da una sequenza di *gli elementi di associazione*. Un'associazione include elementi di associazione facoltativi del protocollo, ad esempio sicurezza, un *codificatore di messaggi* elemento di associazione e un elemento di associazione di trasporto obbligatorio. Un codificatore di messaggi è rappresentato da un elemento di associazione di codifica dei messaggi. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono inclusi tre codificatori di messaggi: Binary, MTOM (Message Transmission Optimization Mechanism) e Text.  
   
  Un elemento di associazione di codifica dei messaggi serializza un oggetto <xref:System.ServiceModel.Channels.Message> in uscita e lo passa al trasporto oppure riceve dal trasporto il formato serializzato di un messaggio e lo passa al livello protocollo o, se non è presente, all'applicazione.  
   

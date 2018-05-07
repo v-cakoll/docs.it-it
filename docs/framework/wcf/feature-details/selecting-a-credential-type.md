@@ -1,33 +1,19 @@
 ---
 title: Selezione di un tipo di credenziale
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae5eb9a10f438f1bb76c51c3c9da68273d94ab57
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 756017462ccaf8a555b0634e8a43cfdd3bc63d32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selecting-a-credential-type"></a>Selezione di un tipo di credenziale
-*Le credenziali* sono i dati [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzata per stabilire un'identità attestata o funzionalità. Ad esempio, un passaporto è una credenziale rilasciata da un'autorità dello Stato per provare la cittadinanza in un paese o un'area geografica. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le credenziali possono essere di vario tipo, ad esempio token del nome utente e certificati X.509. In questo argomento vengono esaminate le credenziali, come vengono usate in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e come selezionare la credenziale appropriata per l'applicazione.  
+*Credenziali* sono i dati di Windows Communication Foundation (WCF) viene utilizzata per stabilire un'identità attestata o funzionalità. Ad esempio, un passaporto è una credenziale rilasciata da un'autorità dello Stato per provare la cittadinanza in un paese o un'area geografica. In WCF, credenziali possono assumere forme diverse, ad esempio token del nome utente e certificati X.509. In questo argomento viene illustrato come selezionare la credenziale appropriata per l'applicazione, come vengono usati in WCF e le credenziali.  
   
  In molti paesi e aree geografiche, la patente di guida costituisce un esempio di credenziale. Oltre a contenere dati che descrivono l'identità e le capacità di un individuo, una patente contiene una prova di possesso, ovvero la foto del titolare. La patente viene inoltre rilasciata da un'autorità attendibile, in genere un apposito ente governativo e, allo scopo di impedire manomissioni e falsificazioni, viene sigillata ed eventualmente corredata di ologramma.  
   
- Quando si presenta una credenziale, è necessario presentare sia i dati sia la prova di possesso dei dati. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta vari tipi di credenziali, basati su sistemi di sicurezza sia a livello di trasporto sia a livello di messaggio. Si considerino ad esempio due tipi di credenziali supportati in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: nome utente e certificati (X.509).  
+ Quando si presenta una credenziale, è necessario presentare sia i dati sia la prova di possesso dei dati. WCF supporta diversi tipi di credenziali a livello di trasporto e messaggio di sicurezza. Si consideri, ad esempio, due tipi di credenziali supportati in WCF: nome utente e certificati (X.509) le credenziali.  
   
  Nel primo tipo di credenziale, il nome utente rappresenta l'attestazione di identità e la password rappresenta la prova di possesso. In questo caso l'autorità attendibile è il sistema che convalida nome utente e password.  
   
@@ -41,7 +27,7 @@ ms.lasthandoff: 04/30/2018
 |None|Specifica che il client non deve presentare alcuna credenziale. Il client viene pertanto autenticato come anonimo.|  
 |Di base|Specifica l'autenticazione di base per il client. Per ulteriori informazioni, vedere il documento RFC2617:[HTTP Authentication: Basic and Digest Authentication](http://go.microsoft.com/fwlink/?LinkID=88313).|  
 |Digest|Specifica l'autenticazione digest per il client. Per ulteriori informazioni, vedere il documento RFC2617:[HTTP Authentication: Basic and Digest Authentication](http://go.microsoft.com/fwlink/?LinkID=88313).|  
-|Ntlm|Specifica l'autenticazione NT LAN Manager (NTLM). Viene usato quando non è possibile usare l'autenticazione Kerberos per qualche motivo. È inoltre possibile disabilitarne l'uso come fallback impostando la proprietà <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> su `false`, affinché [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] effettui tutti i tentativi possibili per generare un'eccezione se viene usata l'autenticazione NTLM. Si noti che l'impostazione di questa proprietà su `false` potrebbe non impedire l'invio di credenziali NTLM nella rete.|  
+|Ntlm|Specifica l'autenticazione NT LAN Manager (NTLM). Viene usato quando non è possibile usare l'autenticazione Kerberos per qualche motivo. È anche possibile disabilitare l'uso come fallback impostando il <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> proprietà `false`, che comporta l'esecuzione WCF rendere i tentativi possibili per generare un'eccezione se viene usato NTLM. Si noti che l'impostazione di questa proprietà su `false` potrebbe non impedire l'invio di credenziali NTLM nella rete.|  
 |Windows|Specifica l'autenticazione Windows. Per specificare solo il protocollo Kerberos in un dominio Windows, impostare la proprietà <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> su `false` (l'impostazione predefinita è `true`).|  
 |Certificato|Esegue l'autenticazione client mediante un certificato X.509.|  
 |Password|L'utente deve specificare un nome utente e una password. Convalidare la coppia di nome utente/password usando l'autenticazione di Windows o un'altra soluzione personalizzata.|  
@@ -53,17 +39,17 @@ ms.lasthandoff: 04/30/2018
 |-------------|-----------------|  
 |None|Specifica che il client non deve presentare una credenziale. Il client viene pertanto autenticato come anonimo.|  
 |Windows|Consente lo scambio di messaggi SOAP all'interno di un contesto di sicurezza stabilito mediante una credenziale Windows.|  
-|Nome utente|Consente al servizio di richiedere che l'autenticazione del client si basi su una credenziale di tipo nome utente. Si noti che in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i nomi utente non possono essere usati in nessuna operazione di crittografia, come la generazione di una firma o la crittografia di dati. Quando si usano credenziali di tipo nome utente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assicura che il trasporto sia protetto.|  
+|Nome utente|Consente al servizio di richiedere che l'autenticazione del client si basi su una credenziale di tipo nome utente. Si noti che WCF non consente le operazioni di crittografia con i nomi utente, ad esempio la generazione di una firma o la crittografia dei dati. WCF assicura che il trasporto è protetto quando si usano credenziali nome utente.|  
 |Certificato|Consente al servizio di richiedere che il client venga autenticato tramite un certificato X.509.|  
 |Token emesso|Un tipo di token personalizzato, configurato in base a un criterio di sicurezza. Il tipo di token predefinito è Security Assertions Markup Language (SAML). Il token viene emesso da un servizio token di sicurezza. Per ulteriori informazioni, vedere [federazione e i token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Modello di negoziazione delle credenziali del servizio  
  *Negoziazione* è il processo di definizione di un trust tra un client e un servizio mediante lo scambio di credenziali. Il processo viene eseguito in maniera iterativa tra il client e il servizio in modo da divulgare solo le informazioni necessarie per il passaggio successivo nel processo di negoziazione. In pratica, il risultato finale è il recapito della credenziale di un servizio al client da usare nelle operazioni successive.  
   
- Con una sola eccezione, le associazioni fornite dal sistema in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per impostazione predefinita negoziano automaticamente la credenziale del servizio quando si usa la sicurezza a livello di messaggio (l'eccezione è <xref:System.ServiceModel.BasicHttpBinding>, che non consente la sicurezza per impostazione predefinita). Per disabilitare questo comportamento, vedere le proprietà <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> e <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A>.  
+ Con un'unica eccezione, per impostazione predefinita le associazioni fornite dal sistema in WCF negoziano la credenziale del servizio automaticamente quando si utilizza la sicurezza a livello di messaggio. (l'eccezione è <xref:System.ServiceModel.BasicHttpBinding>, che non consente la sicurezza per impostazione predefinita). Per disabilitare questo comportamento, vedere le proprietà <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> e <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A>.  
   
 > [!NOTE]
->  Quando viene usata la sicurezza SSL con .NET Framework 3.5 e versioni successive, un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa sia i certificati intermedi nel proprio archivio certificati sia i certificati intermedi ricevuti durante la negoziazione SSL per eseguire la convalida della catena di certificati sul certificato del servizio. In .NET Framework 3.0 vengono usati solo i certificati intermedi installati nell'archivio certificati locale.  
+>  Quando viene utilizzata la sicurezza SSL con .NET Framework 3.5 e versioni successive, un client WCF utilizza i certificati intermedi nel proprio archivio certificati sia i certificati intermedi ricevuti durante la negoziazione SSL per eseguire la convalida di catena di certificati del servizio certificato. In .NET Framework 3.0 vengono usati solo i certificati intermedi installati nell'archivio certificati locale.  
   
 #### <a name="out-of-band-negotiation"></a>Negoziazione fuori banda  
  Se la negoziazione automatica è disabilitata, la credenziale del servizio deve essere fornita al client prima di inviare qualsiasi messaggio al servizio. È anche noto come un *out of band* provisioning. Ad esempio, se il tipo di credenziale specificato è un certificato e la negoziazione automatica è disabilitata, il client deve contattare il proprietario del servizio per ricevere e installare il certificato nel computer che esegue l'applicazione client. Questa operazione può essere eseguita, ad esempio, quando si desidera controllare accuratamente i client che possono accedere a un servizio in uno scenario business-to-business. Questo timeout-di--negoziazione banda può essere eseguita in posta elettronica e il certificato x. 509 viene archiviato nell'archivio certificati di Windows, utilizzare uno strumento come lo snap-in certificati di Microsoft Management Console (MMC).  
@@ -90,7 +76,7 @@ ms.lasthandoff: 04/30/2018
  Se il client specifica un nome utente e una password validi, tali credenziali vengono usate per autenticare client. In caso contrario, vengono usate le credenziali dell'utente connesso.  
   
 ### <a name="setting-client-credentials"></a>Impostazione delle credenziali del client  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le applicazioni client usano un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per connettersi ai servizi. Ogni client deriva dalla classe <xref:System.ServiceModel.ClientBase%601> e la proprietà <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> sul client consente alla specifica di vari valori delle credenziali client.  
+ In WCF, le applicazioni client usare un client WCF per connettersi ai servizi. Ogni client deriva dalla classe <xref:System.ServiceModel.ClientBase%601> e la proprietà <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> sul client consente alla specifica di vari valori delle credenziali client.  
   
 #### <a name="setting-a-certificate"></a>Impostazione di un certificato  
  Per fornire a un servizio un certificato X.509 usato per autenticare il client per un servizio, usare il metodo <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> della classe <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>.  
@@ -98,7 +84,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>Come usare le credenziali client per autenticare il client per il servizio  
  Le informazioni sulla credenziale client richieste per comunicare con un servizio vengono fornite mediante la proprietà <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> o la proprietà <xref:System.ServiceModel.ChannelFactory.Credentials%2A>. Il canale di sicurezza usa queste informazioni per autenticare il client per il servizio. L'autenticazione viene eseguita tramite una delle due modalità seguenti:  
   
--   Le credenziali client vengono usate una volta prima che il primo messaggio venga inviato, usando l'istanza client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per stabilire un contesto di sicurezza. Tutti i messaggi dell'applicazione vengono quindi protetti tramite il contesto di sicurezza.  
+-   Le credenziali client vengono utilizzate una volta prima che venga inviato il primo messaggio, utilizzando l'istanza del client WCF per stabilire un contesto di sicurezza. Tutti i messaggi dell'applicazione vengono quindi protetti tramite il contesto di sicurezza.  
   
 -   Le credenziali client vengono usate per autenticare ogni messaggio dell'applicazione inviato al servizio. In questo caso, nessun contesto viene stabilito tra il client e il servizio.  
   
@@ -106,7 +92,7 @@ ms.lasthandoff: 04/30/2018
  Quando si usa il primo metodo, il contesto stabilito viene associato permanentemente all'identità del client. Pertanto, quando il contesto di sicurezza è stato stabilito, l'identità associata al client non può essere modificata.  
   
 > [!IMPORTANT]
->  È necessario tenere presente un aspetto legato all'impossibilità di cambiare identità (quando viene stabilito il contesto di sicurezza, ovvero il comportamento predefinito). Se si crea un servizio che comunica con un secondo servizio, l'identità usata per aprire il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] al secondo servizio non può essere modificata. Questo diventa un problema se più client possono usare il primo servizio e il servizio rappresenta i client nell'accesso al secondo servizio. Se il servizio riusa lo stesso client per tutti i chiamanti, tutte le chiamate al secondo servizio vengono eseguite con l'identità del primo chiamante usato per aprire il client al secondo servizio. In altre parole, il servizio usa l'identità del primo client per tutti i client che vogliono comunicare con il secondo servizio. Ciò può causare un'elevazione di privilegi. Se questo non è il comportamento desiderato del servizio, è necessario registrare ogni chiamante e creare un nuovo client per il secondo servizio per ogni singolo chiamante e verificare che il servizio usi solo il client corretto per consentire ai diversi chiamanti la comunicazione con il secondo servizio.  
+>  È necessario tenere presente un aspetto legato all'impossibilità di cambiare identità (quando viene stabilito il contesto di sicurezza, ovvero il comportamento predefinito). Se si crea un servizio che comunica con un secondo servizio, l'identità utilizzata per aprire il client WCF per il secondo servizio non può essere modificato. Questo diventa un problema se più client possono usare il primo servizio e il servizio rappresenta i client nell'accesso al secondo servizio. Se il servizio riusa lo stesso client per tutti i chiamanti, tutte le chiamate al secondo servizio vengono eseguite con l'identità del primo chiamante usato per aprire il client al secondo servizio. In altre parole, il servizio usa l'identità del primo client per tutti i client che vogliono comunicare con il secondo servizio. Ciò può causare un'elevazione di privilegi. Se questo non è il comportamento desiderato del servizio, è necessario registrare ogni chiamante e creare un nuovo client per il secondo servizio per ogni singolo chiamante e verificare che il servizio usi solo il client corretto per consentire ai diversi chiamanti la comunicazione con il secondo servizio.  
   
  Per ulteriori informazioni sulle credenziali e le sessioni protette, vedere [considerazioni sulla sicurezza per le sessioni protette](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   

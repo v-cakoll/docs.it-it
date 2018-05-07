@@ -1,28 +1,14 @@
 ---
 title: Configurazione di HTTP e HTTPS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-http-and-https"></a>Configurazione di HTTP e HTTPS
 I client e i servizi WCF possono comunicare su HTTP e HTTPS. Le impostazioni HTTP/HTTPS vengono configurate tramite Internet Information Services (IIS) o tramite l'utilizzo di uno strumento da riga di comando. Quando un servizio WCF è ospitato in IIS è possibile configurare le impostazioni HTTP o HTTPS in IIS utilizzando lo strumento inetmgr.exe. Se un servizio WCF è indipendente, le impostazioni HTTP o HTTPS vengono configurate tramite uno strumento da riga di comando.  
@@ -79,7 +65,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
  Per istruzioni dettagliate, vedere [procedura: configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="configuring-the-ip-listen-list"></a>Configurazione dell'elenco di ascolto IP  
- L'API server HTTP viene associata a un indirizzo IP e a una porta solo quando un utente registra un URL. Per impostazione predefinita, l'API server HTTP viene associata alla porta nell'URL per tutti gli indirizzi IP del computer. Nasce un conflitto se un'applicazione che non utilizza l'API server HTTP è stata precedentemente associata alla combinazione in questione di indirizzo IP e porta. L'elenco di ascolto IP consente ai servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di coesistere con applicazioni che utilizzano una porta per alcuni degli indirizzi IP del computer. Se l'elenco di ascolto IP contiene voci, l'API server HTTP viene associata solo agli indirizzi IP specificati nell'elenco. La modifica dell'elenco di ascolto IP richiede privilegi amministrativi.  
+ L'API server HTTP viene associata a un indirizzo IP e a una porta solo quando un utente registra un URL. Per impostazione predefinita, l'API server HTTP viene associata alla porta nell'URL per tutti gli indirizzi IP del computer. Nasce un conflitto se un'applicazione che non utilizza l'API server HTTP è stata precedentemente associata alla combinazione in questione di indirizzo IP e porta. L'elenco di ascolto IP consente ai servizi WCF di coesistere con le applicazioni che utilizzano una porta per alcuni degli indirizzi IP della macchina. Se l'elenco di ascolto IP contiene voci, l'API server HTTP viene associata solo agli indirizzi IP specificati nell'elenco. La modifica dell'elenco di ascolto IP richiede privilegi amministrativi.  
   
 ### <a name="running-windows-xp-or-server-2003"></a>Esecuzione di Windows XP o di Windows Server 2003  
  Utilizzare lo strumento httpcfg per modificare l'elenco di ascolto IP, come illustrato nell'esempio seguente. Il [documentazione di Windows Support Tools](http://go.microsoft.com/fwlink/?LinkId=94840) viene illustrata la sintassi dello strumento httpcfg.exe.  
@@ -101,7 +87,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  L'API server HTTP prevede alcune impostazioni di configurazione avanzate non disponibili tramite HttpCfg. Queste impostazioni vengono mantenute nel Registro di sistema e valgono per tutte le applicazioni in esecuzione sui sistemi che utilizzano API server HTTP. Per informazioni su queste impostazioni, vedere [impostazioni del Registro di sistema Http.sys per IIS](http://go.microsoft.com/fwlink/?LinkId=94843). La maggior parte degli utenti non dovrebbe avere la necessità di modificare queste impostazioni.  
   
 ## <a name="issues-specific-to-windows-xp"></a>Problemi specifici di Windows XP  
- IIS non supporta la condivisione delle porte su [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Se IIS è in esecuzione e un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tenta di utilizzare uno spazio dei nomi con la stessa porta, l'avvio del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ha esito negativo. IIS e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizzano entrambi la porta 80 come impostazione predefinita. Modificare l'assegnazione della porta per uno dei servizi o utilizzare l'elenco di ascolto IP per assegnare il servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a una scheda di rete non utilizzata da IIS. IIS 6.0 e versioni successive sono stati riprogettati per utilizzare API server HTTP.  
+ IIS non supporta la condivisione delle porte su [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Se IIS è in esecuzione e un servizio WCF tenta di usare uno spazio dei nomi con la stessa porta avviare il servizio WCF. IIS e WCF che sia utilizzato per impostazione predefinita la porta 80. Modificare l'assegnazione della porta per uno dei servizi o utilizzare l'elenco di ascolto IP per assegnare il servizio WCF a una scheda di rete non utilizzata da IIS. IIS 6.0 e versioni successive sono stati riprogettati per utilizzare API server HTTP.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.WSDualHttpBinding>  

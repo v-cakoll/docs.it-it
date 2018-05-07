@@ -1,31 +1,19 @@
 ---
 title: 'Procedura: creare un provider di token di sicurezza personalizzati'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 37e7f9541457c475bfe187485520df63a84f7555
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 480b968a15193bccb84ba491347dbba69e16fb52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Procedura: creare un provider di token di sicurezza personalizzati
 In questo argomento viene illustrato come creare nuovi tipi di token con un provider di token di sicurezza personalizzati e come integrare il provider con un gestore di token di sicurezza personalizzati.  
@@ -33,7 +21,7 @@ In questo argomento viene illustrato come creare nuovi tipi di token con un prov
 > [!NOTE]
 >  Creare un provider di token personalizzati se i token forniti dal sistema, presenti nello spazio dei nomi <xref:System.IdentityModel.Tokens>, non corrispondono ai propri requisiti.  
   
- Il provider di token di sicurezza crea una rappresentazione dei token di sicurezza in base alle informazioni presenti nelle credenziali del client o del servizio. Per usare il provider di token di sicurezza personalizzati nella protezione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], è necessario creare credenziali personalizzate e implementazioni del gestore dei token di sicurezza.  
+ Il provider di token di sicurezza crea una rappresentazione dei token di sicurezza in base alle informazioni presenti nelle credenziali del client o del servizio. Per utilizzare il provider di token di sicurezza personalizzato in sicurezza Windows Communication Foundation (WCF), è necessario creare credenziali personalizzate e implementazioni di gestore del token di sicurezza.  
   
  Per ulteriori informazioni sulle credenziali personalizzate e gestore del token di sicurezza, vedere il [procedura dettagliata: creazione di Client personalizzato e credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   

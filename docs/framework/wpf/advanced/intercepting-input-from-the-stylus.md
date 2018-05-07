@@ -1,13 +1,6 @@
 ---
 title: Intercettazione dell'input dello stilo
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5fde62e2e1ab17b26c91051f68b7d4225450c60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 813c5f6060b3a59358b286c93a9077debd41a746
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Intercettazione dell'input dello stilo
 Il <xref:System.Windows.Input.StylusPlugIns> architettura fornisce un meccanismo per l'implementazione di controllo di basso livello su <xref:System.Windows.Input.Stylus> input e la creazione di input penna <xref:System.Windows.Ink.Stroke> oggetti. La <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fornisce un meccanismo per implementare un comportamento personalizzato e applicarlo al flusso di dati provenienti dal dispositivo stilo per prestazioni ottimali.  
@@ -45,7 +33,7 @@ Il <xref:System.Windows.Input.StylusPlugIns> architettura fornisce un meccanismo
 ## <a name="architecture"></a>Architettura  
  Il <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> è l'evoluzione del [StylusInput](http://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409) API, descritte in [accesso e la modifica di Input penna](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)nella [Software di Microsoft Windows XP Tablet PC Edition Kit di sviluppo 1.7](http://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409).  
   
- Ogni <xref:System.Windows.UIElement> ha un <xref:System.Windows.UIElement.StylusPlugIns%2A> proprietà che è un <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>. È possibile aggiungere un <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> a un elemento <xref:System.Windows.UIElement.StylusPlugIns%2A> proprietà per modificare <xref:System.Windows.Input.StylusPoint> dati man mano che viene generati. <xref:System.Windows.Input.StylusPoint>i dati sono costituiti da tutte le proprietà supportate dal digitalizzatore del sistema, inclusi il <xref:System.Windows.Input.StylusPoint.X%2A> e <xref:System.Windows.Input.StylusPoint.Y%2A> punto dati, nonché <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> dati.  
+ Ogni <xref:System.Windows.UIElement> ha un <xref:System.Windows.UIElement.StylusPlugIns%2A> proprietà che è un <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>. È possibile aggiungere un <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> a un elemento <xref:System.Windows.UIElement.StylusPlugIns%2A> proprietà per modificare <xref:System.Windows.Input.StylusPoint> dati man mano che viene generati. <xref:System.Windows.Input.StylusPoint> dati è costituito da tutte le proprietà supportate dal digitalizzatore del sistema, inclusi i <xref:System.Windows.Input.StylusPoint.X%2A> e <xref:System.Windows.Input.StylusPoint.Y%2A> punto dati, nonché <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> dati.  
   
  Il <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> gli oggetti vengono inseriti direttamente nel flusso di dati provenienti dal <xref:System.Windows.Input.Stylus> dispositivo quando si aggiunge il <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> per il <xref:System.Windows.UIElement.StylusPlugIns%2A> proprietà. L'ordine in cui vengono aggiunti i plug-in per il <xref:System.Windows.UIElement.StylusPlugIns%2A> raccolta definisce l'ordine in cui riceveranno <xref:System.Windows.Input.StylusPoint> dati. Ad esempio, se si aggiunge un plug-in filtro che limita l'input a una determinata area e quindi aggiungere un plug-in che riconosce quando vengono scritti, il plug-in riceverà filtrato <xref:System.Windows.Input.StylusPoint> dati.  
   

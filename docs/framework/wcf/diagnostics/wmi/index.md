@@ -1,29 +1,15 @@
 ---
 title: Uso di Strumentazione gestione Windows (WMI) per la diagnostica
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e01418844db4197cea2f9292f72b9089e77a596
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a53fee8bfed9f5a0f5773c9dfcfbaab5f173ddad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Uso di Strumentazione gestione Windows (WMI) per la diagnostica
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] espone dati di ispezione di un servizio in fase di esecuzione tramite un provider WMI di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+Windows Communication Foundation (WCF) espone dati di ispezione di un servizio in fase di esecuzione tramite un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] provider Strumentazione gestione Windows (WMI).  
   
 ## <a name="enabling-wmi"></a>Abilitazione di WMI  
  WMI è l'implementazione Microsoft dello standard WBEM (Web-Based Enterprise Management). Per ulteriori informazioni sul SDK di WMI, vedere [Strumentazione gestione Windows](https://msdn.microsoft.com/library/aa394582.aspx). WBEM è uno standard industriale che definisce la modalità in cui le applicazioni espongono la strumentazione della gestione a strumenti di gestione esterni.  

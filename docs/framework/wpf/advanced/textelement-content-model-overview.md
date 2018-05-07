@@ -1,13 +1,6 @@
 ---
 title: Cenni preliminari sul modello di contenuto TextElement
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95d25ff6819ba913b7e9270bc2d87dd77032c5c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a50e8a10563fdc5e16ee2e2a46389e13b51e447
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="textelement-content-model-overview"></a>Cenni preliminari sul modello di contenuto TextElement
 Questa panoramica del modello di contenuto viene descritto il contenuto supportato per un <xref:System.Windows.Documents.TextElement>. Il <xref:System.Windows.Documents.Paragraph> classe è un tipo di <xref:System.Windows.Documents.TextElement>. Un modello di contenuto descrive gli oggetti o gli elementi che possono essere contenuti in altri oggetti o elementi. Questa panoramica viene riepilogato il modello di contenuto utilizzato per oggetti derivati da <xref:System.Windows.Documents.TextElement>. Per ulteriori informazioni, vedere [Flow Document Overview](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
@@ -69,9 +57,9 @@ Questa panoramica del modello di contenuto viene descritto il contenuto supporta
 ## <a name="working-with-textelement-content-programmatically"></a>Uso del contenuto TextElement a livello di codice  
  Il contenuto di un <xref:System.Windows.Documents.TextElement> è costituito da raccolte e pertanto a livello di codice la modifica del contenuto di <xref:System.Windows.Documents.TextElement> oggetti avviene quando si lavora con queste raccolte. Sono disponibili tre diverse raccolte utilizzate da <xref:System.Windows.Documents.TextElement> -classi derivate:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Rappresenta una raccolta di <xref:System.Windows.Documents.Inline> elementi. <xref:System.Windows.Documents.InlineCollection>definisce il contenuto figlio consentito del <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, e <xref:System.Windows.Controls.TextBlock> elementi.  
+-   <xref:System.Windows.Documents.InlineCollection>: Rappresenta una raccolta di <xref:System.Windows.Documents.Inline> elementi. <xref:System.Windows.Documents.InlineCollection> definisce il contenuto figlio consentito del <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, e <xref:System.Windows.Controls.TextBlock> elementi.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Rappresenta una raccolta di <xref:System.Windows.Documents.Block> elementi. <xref:System.Windows.Documents.BlockCollection>definisce il contenuto figlio consentito del <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, e <xref:System.Windows.Documents.Figure> elementi.  
+-   <xref:System.Windows.Documents.BlockCollection>: Rappresenta una raccolta di <xref:System.Windows.Documents.Block> elementi. <xref:System.Windows.Documents.BlockCollection> definisce il contenuto figlio consentito del <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, e <xref:System.Windows.Documents.Figure> elementi.  
   
 -   <xref:System.Windows.Documents.ListItemCollection>: Un elemento di contenuto di flusso che rappresenta un particolare elemento di contenuto in un oggetto ordinato o ordinato <xref:System.Windows.Documents.List>.  
   

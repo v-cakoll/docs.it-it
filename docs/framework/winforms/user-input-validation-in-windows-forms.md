@@ -1,31 +1,17 @@
 ---
 title: Convalida dell'input utente in Windows Form
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, validating user input
 - validation [Windows Forms], Windows Forms user input
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d0e3ec867e44c4f01b239e8e243259d7c951d96
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: adc138ad1e277f69f27f9f86fc5c3ea28a8d5cce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Convalida dell'input utente in Windows Form
 Quando gli utenti immettono i dati nell'applicazione, si desidera verificare che i dati siano validi prima di essere utilizzati nell'applicazione. Potrebbe essere necessario che alcuni campi di testo non sia di lunghezza zero, che un campo formattato come un numero di telefono o altro tipo di dati in formato corretto o che una stringa non contenga caratteri non sicuri che può essere usati per compromettere la sicurezza di un database. Windows Form sono disponibili diversi metodi per convalidare l'input dell'applicazione.  
@@ -56,7 +42,7 @@ Quando gli utenti immettono i dati nell'applicazione, si desidera verificare che
  Quando si utilizza l'associazione dati, i dati nel controllo viene sincronizzati con l'origine dati durante l'esecuzione del <xref:System.Windows.Forms.Control.Validating> evento. Se si annulla la <xref:System.Windows.Forms.Control.Validating> eventi, i dati non verranno sincronizzati con l'origine dati.  
   
 > [!IMPORTANT]
->  Se si dispone di convalida personalizzato che si verifica dopo il <xref:System.Windows.Forms.Control.Validating> evento, non avrà alcun effetto il data binding. Ad esempio, se si dispone di codice un <xref:System.Windows.Forms.Control.Validated> evento che tenta di annullare l'associazione dati, l'associazione dati continueranno a essere eseguiti. In questo caso, per eseguire la convalida nel <xref:System.Windows.Forms.Control.Validated> evento, impostare il controllo **modalità aggiornamento origine dati** proprietà (**in (Databindings)**\\**(avanzate)** ) da **OnValidation** a **mai**e aggiungere *controllo*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` nel codice di convalida.  
+>  Se si dispone di convalida personalizzato che si verifica dopo il <xref:System.Windows.Forms.Control.Validating> evento, non avrà alcun effetto il data binding. Ad esempio, se si dispone di codice un <xref:System.Windows.Forms.Control.Validated> evento che tenta di annullare l'associazione dati, l'associazione dati continueranno a essere eseguiti. In questo caso, per eseguire la convalida nel <xref:System.Windows.Forms.Control.Validated> evento, impostare il controllo **modalità aggiornamento origine dati** proprietà (**in (Databindings)**\\ **(avanzate)** ) da **OnValidation** a **mai**e aggiungere *controllo*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` nel codice di convalida.  
   
 ### <a name="implicit-and-explicit-validation"></a>Convalida implicita ed esplicita  
  Pertanto, quando di un controllo vengono convalidati i dati? Questo è responsabilità dell'utente, lo sviluppatore. È possibile utilizzare la convalida può essere implicita o esplicita, a seconda delle esigenze dell'applicazione.  

@@ -1,34 +1,20 @@
 ---
 title: Configurazione del client
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c2c0d17c7274cc9fdaf1b5080950ddb4f69f539a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0fd3d1a15164447275ef488ac91b9a8bd240032d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-configuration"></a>Configurazione del client
-La configurazione client di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] può essere utilizzata per specificare l'indirizzo, l'associazione, il comportamento e il contratto, ovvero le proprietà di base dell'endpoint client utilizzate dai client per connettersi agli endpoint di servizio. Il [ \<client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento ha un [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) i cui attributi consentono di configurare l'endpoint di base sull'elemento. Questi attributi sono descritti nella sezione "Configurazione degli endpoint" di questo argomento.  
+È possibile utilizzare la configurazione del client Windows Communication Foundation (WCF) per specificare l'indirizzo, associazione, comportamento e contratto, le proprietà di "ABC" dell'endpoint client, quali i client usano per connettersi agli endpoint del servizio. Il [ \<client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento ha un [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) i cui attributi consentono di configurare l'endpoint di base sull'elemento. Questi attributi sono descritti nella sezione "Configurazione degli endpoint" di questo argomento.  
   
  Il [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento contiene inoltre un [ \<metadati >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) elemento utilizzato per specificare le impostazioni per l'importazione e l'esportazione dei metadati, un [ \<intestazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) elemento che contiene una raccolta di intestazioni di indirizzo personalizzate e un [ \<identità >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elemento che consente l'autenticazione di un endpoint da altri endpoint lo scambio di messaggi con esso. Il [ \<intestazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) e [ \<identità >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elementi fanno parte di <xref:System.ServiceModel.EndpointAddress> e sono descritti nella [indirizzi](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) argomento. I collegamenti agli argomenti che spiegano l'utilizzo delle estensioni di metadati sono riportati nella sottosezione "Configurazione di metadati" di questo argomento.  
   
 ## <a name="configuring-endpoints"></a>Configurazione degli endpoint  
- La configurazione del client è progettata per consentire al client di specificare uno o più endpoint, ognuno con il proprio nome, indirizzo e contratto, con ogni tipo di riferimento di [ \<associazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) e [ \< i comportamenti >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementi nella configurazione del client da utilizzare per configurare tale endpoint. Il file di configurazione client deve essere denominato con il nome previsto dal runtime di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ovvero "App.config". Nell'esempio seguente viene illustrato un file di configurazione client.  
+ La configurazione del client è progettata per consentire al client di specificare uno o più endpoint, ognuno con il proprio nome, indirizzo e contratto, con ogni tipo di riferimento di [ \<associazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) e [ \< i comportamenti >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementi nella configurazione del client da utilizzare per configurare tale endpoint. Il file di configurazione client deve essere denominato "App. config", poiché si tratta del nome che prevede che il runtime WCF. Nell'esempio seguente viene illustrato un file di configurazione client.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

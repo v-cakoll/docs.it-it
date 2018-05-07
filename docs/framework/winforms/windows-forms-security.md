@@ -1,13 +1,6 @@
 ---
 title: Sicurezza di Windows Form
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - designer access security [Windows Forms]
 - permissions [Windows Forms], Windows Forms
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8bd9b87fdfa54a6f9bf53e4fa897106257b4c625
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3dc4397319d42760a1886a96377a949da6ae63be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-security"></a>Sicurezza di Windows Form
 Windows Form dispongono di un modello di sicurezza è basata su codice (sicurezza livelli sono impostati per il codice, indipendentemente dall'utente che esegue il codice). Si tratta di oltre agli schemi di sicurezza eventualmente già installati nel sistema. Sono inclusi quelli nel browser (ad esempio, la sicurezza basata sull'area in Internet Explorer) o il sistema operativo (ad esempio, la sicurezza basata su credenziali di Windows NT).  
@@ -44,7 +32,7 @@ Windows Form dispongono di un modello di sicurezza è basata su codice (sicurezz
  Viene descritto finestre, mediante gli Appunti ed eseguire chiamate a codice non gestito in un ambiente parzialmente attendibile.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [NIB: Criteri di sicurezza predefinito](http://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [NIB: Criterio di sicurezza predefinito](http://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
  Elenca le autorizzazioni predefinite concesse nei set di autorizzazioni Internet, Intranet locale e l'attendibilità totale.  
   
  [NIB: Amministrazione di criteri di sicurezza generale](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  

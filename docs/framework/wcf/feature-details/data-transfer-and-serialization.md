@@ -1,30 +1,18 @@
 ---
 title: Trasferimento dati e serializzazione
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8daadec1eef20e62747cdbfcafd1fd13cfc16093
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-transfer-and-serialization"></a>Trasferimento dati e serializzazione
-In un sistema collegato, per eseguire qualsiasi attività, servizi e client dipendono dallo scambio di dati. Gli sviluppatori di un servizio o di un client devono comprendere inoltre come [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] gestisce i dati e la serializzazione dei dati per creare applicazioni efficienti e facili da gestire.  
+In un sistema collegato, per eseguire qualsiasi attività, servizi e client dipendono dallo scambio di dati. Gli sviluppatori di un servizio o client, è necessario comprendere come Windows Communication Foundation (WCF) gestisce dati e la serializzazione dei dati per poter creare applicazioni efficienti e facili da gestire.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Definizione del trasferimento dati nei contratti di servizio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -55,7 +43,7 @@ In un sistema collegato, per eseguire qualsiasi attività, servizi e client dipe
  Descrive gli elementi da prendere in considerazione quando si programma il trasferimento dei dati e la serializzazione.  
   
  [Panoramica dell'architettura di trasferimento dati](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- Descrive il principio generale del trasferimento dei dati in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Descrive una visualizzazione della struttura complessiva di trasferimento dei dati in WCF.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel>  

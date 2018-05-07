@@ -1,27 +1,20 @@
 ---
 title: Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori
 description: Microservizi .NET - Architettura per le applicazioni .NET incluse in contenitori | Parte introduttiva
-keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 289f34b12cc0278212ceb737c2b9cb3f2ff986c1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d4499384d63f11a1d78d0aa84749aed8ea554794
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 ![](./media/cover.png)
 
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori
 
-DOWNLOAD disponibile all'indirizzo: <https://aka.ms/microservicesebook>
+Download disponibile all'indirizzo: <https://aka.ms/microservicesebook>
 
 PUBBLICATO DA
 
@@ -131,7 +124,7 @@ Questa guida non tratta gli argomenti relativi a ciclo di vita delle applicazion
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft** (e-book scaricabile): [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+-   **Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft** (e-book scaricabile) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
 ## <a name="who-should-use-this-guide"></a>Destinatari della guida
 

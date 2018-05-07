@@ -1,42 +1,30 @@
 ---
 title: Controllo degli eventi di sicurezza
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 27
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e4219553f97f272577e8efdeb106b43e5f76ee59
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auditing-security-events"></a>Controllo degli eventi di sicurezza
-Le applicazioni create in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono utilizzare una funzionalità di controllo che consente di registrare gli eventi di sicurezza in base all'esito: è possibile registrare solo gli eventi con esito positivo, solo gli eventi con esito negativo o entrambi. Gli eventi vengono scritti nel registro eventi del sistema Windows e possono essere esaminati tramite il Visualizzatore eventi.  
+Le applicazioni create con Windows Communication Foundation (WCF) è possono registrare gli eventi di sicurezza (esito positivo, negativo o entrambi) con funzionalità di controllo. Gli eventi vengono scritti nel registro eventi del sistema Windows e possono essere esaminati tramite il Visualizzatore eventi.  
   
  La funzionalità di controllo consente a un amministratore di individuare un attacco mentre è ancora in corso o quando è già avvenuto. Tale funzionalità consente inoltre agli sviluppatori di semplificare il debug dei problemi di sicurezza. Ad esempio, se per un errore nella configurazione dei criteri di autorizzazione o di verifica il sistema nega l'accesso a un utente autorizzato, uno sviluppatore può individuare e isolare rapidamente la causa di questo errore esaminando il registro eventi.  
   
- Per ulteriori informazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sicurezza, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). Per ulteriori informazioni sulla programmazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vedere [programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Per ulteriori informazioni sulla sicurezza WCF, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). Per ulteriori informazioni sulla programmazione WCF, vedere [programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Livelli e comportamenti di controllo  
  Esistono due livelli di controllo di sicurezza:  
   
 -   Livello Autorizzazione servizio, che prevede l'autorizzazione di un chiamante.  
   
--   Livello Messaggio, in cui [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verifica la validità del messaggio e autentica il chiamante.  
+-   Livello di messaggio, in cui WCF controlla la validità di messaggio e autentica il chiamante.  
   
  È possibile controllare controllo su entrambi i livelli per esito positivo o negativo, che è noto come il *comportamento di controllo*.  
   

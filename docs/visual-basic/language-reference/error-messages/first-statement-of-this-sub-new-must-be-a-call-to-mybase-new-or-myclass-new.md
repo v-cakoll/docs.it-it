@@ -1,28 +1,19 @@
 ---
-title: La prima istruzione di questo &#39; Sub nuovo &#39; deve essere una chiamata a &#39; MyBase. New &#39; o &#39; MyClass. New &#39; (Nessun costruttore accessibile senza parametri)
+title: La prima istruzione di questo &#39;Sub New&#39; deve essere una chiamata a &#39;MyBase. New&#39; o &#39;MyClass. New&#39; (nessun costruttore accessibile senza parametri)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30148
 - vbc30148
 helpviewer_keywords:
 - BC30148
 ms.assetid: 4426e8fc-cb39-4eb8-ba95-503cd32fcc89
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1065643e1f6c868092fbad839af0dbbd33afaf01
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3b24385932700a4843ae295bc82ef9529cc86b9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="first-statement-of-this-39sub-new39-must-be-a-call-to-39mybasenew39-or-39myclassnew39-no-accessible-constructor-without-parameters"></a>La prima istruzione di questo &#39; Sub nuovo &#39; deve essere una chiamata a &#39; MyBase. New &#39; o &#39; MyClass. New &#39; (Nessun costruttore accessibile senza parametri)
+# <a name="first-statement-of-this-39sub-new39-must-be-a-call-to-39mybasenew39-or-39myclassnew39-no-accessible-constructor-without-parameters"></a>La prima istruzione di questo &#39;Sub New&#39; deve essere una chiamata a &#39;MyBase. New&#39; o &#39;MyClass. New&#39; (nessun costruttore accessibile senza parametri)
 La prima istruzione di questo 'Sub New' deve essere una chiamata a 'MyBase. New' o 'MyClass. New' perché classe di base\<basename >' di '\<derivedname >' non dispone di un 'Sub New' accessibile che può essere chiamato senza argomenti.  
   
  In una classe derivata, ogni costruttore deve chiamare un costruttore di classe di base (`MyBase.New`). Se la classe di base ha un costruttore senza parametri accessibile alle classi derivate, `MyBase.New` può essere chiamato automaticamente. In caso contrario, un costruttore di classe di base deve essere chiamato con parametri e questa operazione non può essere eseguita automaticamente. In questo caso, la prima istruzione di ogni costruttore di classe derivata deve chiamare un costruttore con parametri nella classe base o chiamare un altro costruttore nella classe derivata che esegue un costruttore della classe base chiamare.  

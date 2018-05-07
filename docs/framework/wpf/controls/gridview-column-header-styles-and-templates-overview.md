@@ -1,13 +1,6 @@
 ---
 title: Panoramica sui modelli e sugli stili di intestazione delle colonne in GridView
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - column headers [WPF], customizing
 - ListView controls [WPF], GridView column header styles
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - headers [WPF], customizing
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 996d6d5f531a866d4fc80acc3848cdf264901032
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 28b4a64a6c79b226b1ff4b3bfcbf9a55b6d8df78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Panoramica sui modelli e sugli stili di intestazione delle colonne in GridView
 Questa panoramica illustra l'ordine di precedenza per le proprietà che consentono di personalizzare in un'intestazione di colonna il <xref:System.Windows.Controls.GridView> modalità di visualizzazione di un <xref:System.Windows.Controls.ListView> controllo.  
@@ -39,12 +27,12 @@ Questa panoramica illustra l'ordine di precedenza per le proprietà che consento
 |||||  
 |-|-|-|-|  
 |**Classi**|<xref:System.Windows.Controls.GridView>|<xref:System.Windows.Controls.GridViewColumn>|<xref:System.Windows.Controls.GridViewColumnHeader>|  
-|**Proprietà di contesto di Menu**|<xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A>|Non applicabile|<xref:System.Windows.FrameworkElement.ContextMenu%2A>|  
+|**Proprietà di menu di scelta rapida**|<xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A>|Non applicabile|<xref:System.Windows.FrameworkElement.ContextMenu%2A>|  
 |**ToolTip**<br /><br /> **Proprietà**|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|Non applicabile|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
 |**Modello di intestazione**<br /><br /> **Proprietà**|<xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
 |**Proprietà di stile**|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
   
- <sup>1</sup>per **proprietà modello di intestazione**, se si imposta sia il modello e proprietà del selettore di modello, la proprietà di modello ha la precedenza. Ad esempio, se si impostano entrambe le <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> e <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> proprietà, il <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> proprietà ha la precedenza.  
+ <sup>1</sup>per **proprietà modello di intestazione**, se è impostato sia il modello e le proprietà di selettore di modello, la proprietà di modello ha la precedenza. Ad esempio, se si impostano entrambe le <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> e <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> proprietà, il <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> proprietà ha la precedenza.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  

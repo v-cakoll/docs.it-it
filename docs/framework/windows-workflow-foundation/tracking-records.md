@@ -1,23 +1,12 @@
 ---
 title: Record di rilevamento
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c871f019179c091fc022be0bf03ad84fbe66dc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b07175943f85b61024030c1e0251e24d1eb35c86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracking-records"></a>Record di rilevamento
 L'esecuzione del flusso di lavoro è instrumentata per creare record di rilevamento per seguire l'esecuzione di un'istanza del flusso di lavoro.  
@@ -40,7 +29,7 @@ L'esecuzione del flusso di lavoro è instrumentata per creare record di rilevame
   
 -   **WorkflowInstanceAbortedRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato quando un'istanza del flusso di lavoro viene interrotto. Il record contiene il motivo dell'interruzione dell'istanza del flusso di lavoro. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>.  
   
--   **WorkflowInstanceUnhandledExceptionRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato se un'eccezione si verifica nell'istanza del flusso di lavoro e non è gestita da qualsiasi attività. Il record contiene i dettagli sull'eccezione. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
+-   **WorkflowInstanceUnhandledExceptionRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato se un'eccezione si verifica nell'istanza del flusso di lavoro e non viene gestita da qualsiasi attività. Il record contiene i dettagli sull'eccezione. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
   
 -   **WorkflowInstanceSuspendedRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato ogni volta che un'istanza del flusso di lavoro viene sospesa. Il record contiene il motivo della sospensione dell'istanza del flusso di lavoro. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>.  
   
@@ -50,7 +39,7 @@ L'esecuzione del flusso di lavoro è instrumentata per creare record di rilevame
   
 -   **ActivityScheduledRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato quando un'attività pianifica un'attività figlio. Questo record contiene dettagli relativi sia all'attività padre (attività di pianificazione) sia all'attività figlio pianificata. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.ActivityScheduledRecord>.  
   
--   **FaultPropagationRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato per ogni gestore che esamina il record finché viene gestito. Viene usato per indicare il percorso di un errore all'interno dell'istanza del flusso di lavoro. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.FaultPropagationRecord>.  
+-   **FaultPropagationRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato per ogni gestore che esamina il record fino a quando non viene gestita. Viene usato per indicare il percorso di un errore all'interno dell'istanza del flusso di lavoro. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.FaultPropagationRecord>.  
   
 -   **CancelRequestedRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato ogni volta che un'attività tenta di annullare un'attività figlio. Questo record contiene dettagli relativi sia all'attività padre sia a quella figlio annullata. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.CancelRequestedRecord>.  
   

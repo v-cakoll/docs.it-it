@@ -1,13 +1,6 @@
 ---
 title: Trasformazioni globali e locali
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - transformations [Windows Forms], global
 - transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e8d05bd0c3e76d643d56b652c8849eef1045ea8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a5a8201f0adb44347bdd42081e0263176d179321
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="global-and-local-transformations"></a>Trasformazioni globali e locali
 Una trasformazione globale è una trasformazione che si applica a ogni elemento creato da un determinato <xref:System.Drawing.Graphics> oggetto. Al contrario, una trasformazione locale è una trasformazione che si applica a un elemento specifico da disegnare.  
@@ -38,7 +26,7 @@ Una trasformazione globale è una trasformazione che si applica a ogni elemento 
   
  Nella figura seguente mostra le matrici utilizzate durante la trasformazione.  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05_art14")  
+ ![Le trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05_art14")  
   
 > [!NOTE]
 >  Nell'esempio precedente, i puntini di sospensione viene ruotata intorno all'origine del sistema di coordinate, che si trova nell'angolo superiore sinistro dell'area client. Ciò produce un risultato diverso rispetto a rotazione dell'ellisse lungo il centro.  
@@ -53,7 +41,7 @@ Una trasformazione globale è una trasformazione che si applica a ogni elemento 
   
  Si supponga un sistema di coordinate con relativa origine di 200 pixel dal bordo sinistro dell'area client e 150 pixel dalla parte superiore dell'area client. Si supponga inoltre che l'unità di misura per il pixel, con l'asse x a destra e l'asse y verso l'alto. Il sistema di coordinate è l'asse y rivolta verso il basso, pertanto è necessario eseguire un riflesso tra l'asse orizzontale. Nella figura seguente viene illustrata la matrice di tale tipo di reflection.  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.gif "AboutGdip05_art15")  
+ ![Le trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.gif "AboutGdip05_art15")  
   
  Si supponga, quindi che è necessario eseguire una conversione di 200 unità a destra e 150 verso il basso.  
   
@@ -69,7 +57,7 @@ Una trasformazione globale è una trasformazione che si applica a ogni elemento 
   
  Nella figura seguente mostra il nuovo sistema di coordinate e i due rettangoli.  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")  
+ ![Le trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sistemi di coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  

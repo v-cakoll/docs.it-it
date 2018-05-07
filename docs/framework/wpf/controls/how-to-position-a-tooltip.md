@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: posizionare un oggetto ToolTip'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cc81fa247f21448a4ccbd62baccb72c0ec14bb31
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 218d8814cf75cd80a63c94397ed00e92c6a9a8fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-position-a-tooltip"></a>Procedura: posizionare un oggetto ToolTip
 In questo esempio viene illustrato come specificare la posizione di una descrizione comando sullo schermo.  
@@ -34,7 +22,7 @@ In questo esempio viene illustrato come specificare la posizione di una descrizi
   
 ### <a name="corresponding-tooltip-properties-according-to-class"></a>Proprietà di descrizione comandi corrispondenti in base alla classe  
   
-|<xref:System.Windows.Controls.ToolTip?displayProperty=nameWithType>proprietà della classe|<xref:System.Windows.Controls.ToolTipService?displayProperty=nameWithType>proprietà della classe|  
+|<xref:System.Windows.Controls.ToolTip?displayProperty=nameWithType> proprietà della classe|<xref:System.Windows.Controls.ToolTipService?displayProperty=nameWithType> proprietà della classe|  
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.ToolTip.Placement%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.Placement%2A?displayProperty=nameWithType>|  
 |<xref:System.Windows.Controls.ToolTip.PlacementTarget%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.PlacementTarget%2A?displayProperty=nameWithType>|  
@@ -49,7 +37,7 @@ In questo esempio viene illustrato come specificare la posizione di una descrizi
  ![Posizionamento di ToolTip](../../../../docs/framework/wpf/controls/media/tooltipplacement.png "ToolTipPlacement")  
 Posizionamento di ToolTip mediante la proprietà di posizionamento  
   
- ![Posizionamento di ToolTip mediante un rettangolo di posizionamento](../../../../docs/framework/wpf/controls/media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")  
+ ![Posizionamento di ToolTip mediante un rettangolo di selezione host](../../../../docs/framework/wpf/controls/media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")  
 Posizionamento di ToolTip mediante le proprietà di posizionamento e PlacementRectangle  
   
  ![Diagramma di posizionamento di ToolTip](../../../../docs/framework/wpf/controls/media/tooltipplacementprhv.png "ToolTipPlacementPRHV")  
@@ -74,4 +62,4 @@ Posizionamento di ToolTip mediante le proprietà Placement, PlacementRectangle e
  <xref:System.Windows.Controls.ToolTipService>  
  [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
  [Panoramica sul controllo ToolTip](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
- [Utilizzare la ContextMenuService e ToolTipService](http://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)
+ [Utilizzare le ContextMenuService e ToolTipService](http://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)

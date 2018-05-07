@@ -1,28 +1,19 @@
 ---
-title: "Namespace o il tipo specificato nelle importazioni &#39; &lt;nomelementoqualificato&gt;&#39; &#39; t contiene membri pubblici o non è stato trovato"
+title: Namespace o il tipo specificato nelle istruzioni Imports &#39; &lt;nomeelementoqualificato&gt; &#39; &#39;t contiene membri pubblici o non è stato trovato
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc40056
 - vbc40056
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 49cd9fa5d5182b2cf2d7fc4623bc8e9aa02bf85e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8be0df5cbe4b8d4a640c9b6c2e126b3828254fd6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace o il tipo specificato nelle importazioni &#39; &lt;nomelementoqualificato&gt;&#39; &#39; t contiene membri pubblici o non è stato trovato
+# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace o il tipo specificato nelle istruzioni Imports &#39; &lt;nomeelementoqualificato&gt; &#39; &#39;t contiene membri pubblici o non è stato trovato
 Namespace o il tipo specificato nelle importazioni\<nomelementoqualificato >' non contiene alcun membro pubblico o non è stato trovato. Verificare che lo spazio dei nomi o il tipo sia definito e contenga almeno un membro pubblico. Assicurarsi che il nome di alias non contenga altri alias.  
   
  Un `Imports` istruzione specifica un elemento contenitore che può essere trovato o non definisce alcun `Public` membri.  

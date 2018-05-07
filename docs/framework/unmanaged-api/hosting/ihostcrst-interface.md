@@ -1,14 +1,6 @@
 ---
 title: Interfaccia IHostCrst
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostCrst
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: ac298ebd-0815-47e4-a823-30b31baab903
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3a9ed2b390ad741d90f9179ef5101d328d3b639d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 88f2ef8299911905d651ad5c3076dc9c74f397f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostcrst-interface"></a>Interfaccia IHostCrst
 Serve come rappresentazione dell'host di una sezione critica di threading.  
@@ -47,16 +35,16 @@ Serve come rappresentazione dell'host di una sezione critica di threading.
 |[Metodo TryEnter](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-tryenter-method.md)|Tenta di accedere immediatamente sezione critica e i report l'esito.|  
   
 ## <a name="remarks"></a>Note  
- `IHostCrst`consente a common language runtime (CLR) per comunicare direttamente con la rappresentazione dell'host di una sezione critica, anziché utilizzare le funzioni Win32, ad esempio `EnterCriticalSection` o `LeaveCriticalSection`.  
+ `IHostCrst` consente a common language runtime (CLR) per comunicare direttamente con la rappresentazione dall'host di una sezione critica, anziché usare funzioni Win32, ad esempio `EnterCriticalSection` o `LeaveCriticalSection`.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

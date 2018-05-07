@@ -1,26 +1,12 @@
 ---
 title: Introduzione al routing
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-introduction"></a>Introduzione al routing
 Il servizio di routing fornisce un intermediario SOAP di collegamento generico in grado di indirizzare i messaggi in base al relativo contenuto. Il servizio di routing consente di creare logica di routing complessa per l'implementazione di scenari quali l'aggregazione dei servizi, il controllo delle versioni dei servizi, il routing prioritario e il routing multicast. Il servizio di routing offre inoltre funzionalità di gestione degli errori che consentono di configurare elenchi di endpoint di backup ai quali vengono inviati i messaggi se si verifica un errore di invio all'endpoint di destinazione primario.  
@@ -111,7 +97,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- In questo esempio configura il servizio di Routing per esporre un unico endpoint con un indirizzo di "http://localhost:8000/servicemodelsamples/Service/routingservice/router", viene utilizzato per ricevere messaggi da indirizzare. Poiché i messaggi vengono indirizzati agli endpoint di tipo request/reply, l'endpoint servizio usa il contratto <xref:System.ServiceModel.Routing.IRequestReplyRouter>. Questa configurazione definisce inoltre un singolo endpoint client "http://localhost:8000/servicemodelsamples/Service/servicemodelsample/servizio" che sono indirizzati i messaggi. La tabella dei filtri (non illustrata) denominata "routingTable1" contiene la logica di routing usata per instradare i messaggi e viene associata all'endpoint di servizio utilizzando il **RoutingBehavior** (per un file di configurazione) o  **RoutingConfiguration** (per la configurazione a livello di codice).  
+ Questo esempio mostra come configurare il servizio di Routing per esporre un unico endpoint con un indirizzo di "http://localhost:8000/routingservice/router", che consente di ricevere messaggi da indirizzare. Poiché i messaggi vengono indirizzati agli endpoint di tipo request/reply, l'endpoint servizio usa il contratto <xref:System.ServiceModel.Routing.IRequestReplyRouter>. Questa configurazione definisce inoltre un singolo endpoint client "http://localhost:8000/servicemodelsample/service" che i messaggi vengano instradati alla. La tabella dei filtri (non illustrata) denominata "routingTable1" contiene la logica di routing usata per instradare i messaggi e viene associata all'endpoint di servizio utilizzando il **RoutingBehavior** (per un file di configurazione) o  **RoutingConfiguration** (per la configurazione a livello di codice).  
   
 ### <a name="routing-logic"></a>Logica di routing  
  Per definire la logica di routing usata per indirizzare i messaggi, è necessario stabilire su quali dati contenuti nei messaggi in entrata è possibile intervenire in modo univoco. Se ad esempio tutti gli endpoint di destinazione del routing condividono le stesse azioni SOAP, il valore dell'elemento Action all'interno del messaggio non rappresenta un indicatore utile dell'endpoint specifico a cui deve essere indirizzato il messaggio. Se è necessario indirizzare i messaggi in modo univoco a un endpoint specifico, è consigliabile applicare filtri in base a dati che identificano in modo univoco l'endpoint di destinazione a cui il messaggio viene indirizzato.  
@@ -173,7 +159,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   Più filtri devono restituire `true` in seguito alla valutazione del messaggio.  
   
- Se vengono soddisfatte queste condizioni, il messaggio viene indirizzato a tutti gli endpoint di tutti i filtri che restituiscono `true`. Nell'esempio seguente viene definita una configurazione che determina il routing dei messaggi a entrambi gli endpoint se l'indirizzo dell'endpoint nel messaggio è http://localhost:8000/routingservice/router/rounding.  
+ Se vengono soddisfatte queste condizioni, il messaggio viene indirizzato a tutti gli endpoint di tutti i filtri che restituiscono `true`. L'esempio seguente definisce una configurazione di routing che determina i messaggi instradati a entrambi gli endpoint se l'indirizzo dell'endpoint nel messaggio è http://localhost:8000/routingservice/router/rounding.  
   
 ```xml  
 <!--ROUTING SECTION -->  

@@ -1,31 +1,17 @@
 ---
 title: Servizio di routing
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3170108ae190c08a42cc7d80d66576a7b4f8a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-service"></a>Servizio di routing
 Il servizio di routing è un intermediario SOAP generico che funge da router dei messaggi. La funzionalità principale del servizio di routing consiste nella capacità di indirizzare messaggi in base al relativo contenuto, il che rende possibile l'inoltro di un messaggio a un endpoint client in base a un valore presente all'interno del messaggio stesso, nell'intestazione o nel corpo.  
   
- <xref:System.ServiceModel.Routing.RoutingService> viene implementato come servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nello spazio dei nomi <xref:System.ServiceModel.Routing>. Il servizio di routing espone uno o più endpoint servizio che ricevono messaggi e quindi indirizza ogni messaggio a uno o più endpoint client in base al contenuto del messaggio stesso. Il servizio offre le funzionalità indicate di seguito.  
+ Il <xref:System.ServiceModel.Routing.RoutingService> viene implementato come un servizio Windows Communication Foundation (WCF) nei <xref:System.ServiceModel.Routing> dello spazio dei nomi. Il servizio di routing espone uno o più endpoint servizio che ricevono messaggi e quindi indirizza ogni messaggio a uno o più endpoint client in base al contenuto del messaggio stesso. Il servizio offre le funzionalità indicate di seguito.  
   
 -   Routing basato sul contenuto  
   
@@ -47,10 +33,10 @@ Il servizio di routing è un intermediario SOAP generico che funge da router dei
   
  Mentre è possibile creare un servizio di intermediario che soddisfi uno o più di questi obiettivi, spesso tale implementazione viene associata a uno scenario o una soluzione specifica e non può essere agevolmente applicata alle nuove applicazioni.  
   
- Il servizio di routing fornisce un intermediario SOAP di collegamento, generico e dinamicamente configurabile compatibile con i modelli relativi al canale e al servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e consente di eseguire il routing basato sul contenuto di messaggi basati su SOAP.  
+ Il servizio di Routing fornisce un intermediario SOAP generico, può essere configurato in modo dinamico, collegabile è compatibile con i modelli di servizio WCF e canale, che consente di eseguire routing basato sul contenuto dei messaggi basato su SOAP.  
   
 > [!NOTE]
->  Attualmente il servizio di routing non supporta il routing dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST.  Per indirizzare chiamate REST, provare a usare <xref:System.Web.Routing> oppure [Application Request Routing](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
+>  Attualmente il servizio di routing non supporta il routing dei servizi WCF REST.  Per indirizzare chiamate REST, provare a usare <xref:System.Web.Routing> oppure [Application Request Routing](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
   
 ## <a name="content-based-routing"></a>Routing basato sul contenuto  
  Il routing basato sul contenuto consiste nella possibilità di indirizzare un messaggio in base a uno o più valori contenuti nel messaggio. Il servizio di routing controlla ogni messaggio e lo indirizza all'endpoint di destinazione in base ai contenuti del messaggio e alla logica di routing creata. Il routing basato sul contenuto rappresenta la base per l'aggregazione e il controllo delle versioni dei servizi, nonché per il routing prioritario.  

@@ -1,28 +1,16 @@
 ---
 title: Tipi di colonna nel controllo DataGridView di Windows Form
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92c6881fe876bba3fe0224a358a9b12767d53f0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6630323b66265f478151ec80ab8b225c0b653917
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Tipi di colonna nel controllo DataGridView di Windows Form
 Il <xref:System.Windows.Forms.DataGridView> controllo utilizza diversi tipi di colonna per visualizzare le informazioni e consentire agli utenti di modificare o aggiungere informazioni.  
@@ -41,7 +29,7 @@ Il <xref:System.Windows.Forms.DataGridView> controllo utilizza diversi tipi di c
 |<xref:System.Windows.Forms.DataGridViewButtonColumn>|Consente di visualizzare i pulsanti in celle. Non generata automaticamente durante l'associazione. In genere utilizzate come colonne non associate.|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|Consente di visualizzare gli elenchi a discesa nelle celle. Non generata automaticamente durante l'associazione. In genere associati a dati manualmente.|  
 |<xref:System.Windows.Forms.DataGridViewLinkColumn>|Consente di visualizzare i collegamenti nelle celle. Non generata automaticamente durante l'associazione. In genere associati a dati manualmente.|  
-|Tipo di colonna personalizzato|È possibile creare la propria classe di colonna tramite l'eredità di <xref:System.Windows.Forms.DataGridViewColumn> classe o una qualsiasi delle classi derivate per fornire un aspetto personalizzato, il comportamento o controlli ospitati. Per ulteriori informazioni, vedere [procedura: personalizzare celle e colonne nel controllo DataGridView Windows Form dall'estensione di comportamento relativi e l'aspetto](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|Tipo di colonna personalizzato|È possibile creare la propria classe di colonna tramite l'eredità di <xref:System.Windows.Forms.DataGridViewColumn> classe o una qualsiasi delle classi derivate per fornire un aspetto personalizzato, il comportamento o controlli ospitati. Per altre informazioni, vedere [procedura: personalizzare celle e colonne nel controllo DataGridView Windows Form dall'estensione di comportamento Their e l'aspetto](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
   
  Questi tipi di colonna sono descritti più dettagliatamente nelle sezioni seguenti.  
   
@@ -53,7 +41,7 @@ Il <xref:System.Windows.Forms.DataGridView> controllo utilizza diversi tipi di c
  Il tipo di dati di valore di cella di una colonna è incluso il <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> proprietà della colonna.  
   
 ## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
- Il <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> viene utilizzato con <xref:System.Boolean> e <xref:System.Windows.Forms.CheckState> valori. <xref:System.Boolean>i valori vengono visualizzati come caselle di controllo a due o tre stati in base al valore di <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> proprietà. Quando la colonna è associata a <xref:System.Windows.Forms.CheckState> valori, il <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> valore della proprietà è `true` per impostazione predefinita.  
+ Il <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> viene utilizzato con <xref:System.Boolean> e <xref:System.Windows.Forms.CheckState> valori. <xref:System.Boolean> i valori vengono visualizzati come caselle di controllo a due o tre stati in base al valore di <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> proprietà. Quando la colonna è associata a <xref:System.Windows.Forms.CheckState> valori, il <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> valore della proprietà è `true` per impostazione predefinita.  
   
  In genere, i valori di cella di casella di controllo vengono utilizzati per l'archiviazione, come gli altri dati, o per l'esecuzione di operazioni bulk. Se si desidera rispondere immediatamente quando gli utenti di fare clic su una cella di casella di controllo, è possibile gestire il <xref:System.Windows.Forms.DataGridView.CellClick> evento, ma questo evento si verifica prima che il valore della cella viene aggiornato. Se è necessario il nuovo valore al momento della selezione, è possibile calcolare il valore previsto in base al valore corrente. Un altro approccio consiste nell'eseguire immediatamente il commit della modifica e gestire il <xref:System.Windows.Forms.DataGridView.CellValueChanged> eventi per rispondere a esso. Per eseguire il commit della modifica quando la cella è selezionata, è necessario gestire il <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> evento. Nel gestore, se la cella corrente contiene una casella di controllo, chiamare il <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> (metodo) e passare il <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> valore.  
   

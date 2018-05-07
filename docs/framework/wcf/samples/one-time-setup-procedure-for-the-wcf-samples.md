@@ -1,29 +1,15 @@
 ---
 title: Procedura di installazione singola per gli esempi di Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: 83
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3bf4d70217a8231fe4ddc5b9a15afdfe8f0522e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura di installazione singola per gli esempi di Windows Communication Foundation
-La maggior parte degli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono ospitati su Internet Information Services (IIS) e vengono eseguiti da una directory virtuale comune. Questa procedura di installazione singola crea una cartella sul disco. Aggiunge inoltre una directory virtuale di IIS denominata **ServiceModelSamples**.  
+La maggior parte degli esempi di Windows Communication Foundation (WCF) sono ospitata in Internet Information Services (IIS) e vengono eseguita da una directory virtuale comune. Questa procedura di installazione singola crea una cartella sul disco. Aggiunge inoltre una directory virtuale di IIS denominata **ServiceModelSamples**.  
   
  Il **ServiceModelSamples** directory virtuale viene utilizzata per la creazione e l'esecuzione di tutti gli esempi che utilizzano un servizio ospitato in IIS. Si tratta della sola directory virtuale richiesta per eseguire gli esempi. La compilazione di un esempio determinerà la sostituzione dei servizi distribuiti in precedenza in questa directory virtuale. Solo l'esempio compilato più di recente verrà distribuito e reso disponibile in tale directory.  
   

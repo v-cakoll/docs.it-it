@@ -1,13 +1,6 @@
 ---
 title: Utilizzo di librerie da codice parzialmente attendibile
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [.NET Framework], partially trusted code
 - partially trusted code
@@ -16,22 +9,19 @@ helpviewer_keywords:
 - code access security, partially trusted code
 - APTCA
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
-caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 00f532e4e93936dbd719f2b8a0c060e54e16425b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b2eaf6ccebed38c778e328e34cb6f53177347b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Utilizzo di librerie da codice parzialmente attendibile
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  In questo argomento viene descritto il comportamento degli assembly con nome sicuro e si applica solo a [livello 1](../../../docs/framework/misc/security-transparent-code-level-1.md) assembly. [Il codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md) assembly il [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] o versioni successive non sono interessati dai nomi sicuri. Per ulteriori informazioni sulle modifiche al sistema di sicurezza, vedere [modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
+>  In questo argomento viene descritto il comportamento degli assembly con nome sicuro e si applica solo a [livello 1](../../../docs/framework/misc/security-transparent-code-level-1.md) assembly. [Codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md) assembly di [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] o versioni successive non sono interessati dai nomi sicuri. Per ulteriori informazioni sulle modifiche al sistema di sicurezza, vedere [modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
   
  Le applicazioni che ritenute del tutto attendibili dall'host o sandbox non è consentito chiamare condiviso librerie gestite, a meno che il writer delle librerie consenta in modo specifico mediante l'utilizzo del <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attributo. Di conseguenza, i writer delle applicazioni devono tenere presente che alcune librerie non saranno disponibili da un contesto parzialmente attendibile. Per impostazione predefinita, tutto il codice che viene eseguito in un contesto di attendibilità parziale [sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) e non in elenco di assembly totalmente attendibili è parzialmente attendibile. Se non si prevede che il codice venga eseguito da un contesto parzialmente attendibile o venga chiamato da un codice parzialmente attendibile, non sono rilevanti le informazioni contenute in questa sezione. Se tuttavia si scrive codice che deve interagire con codice parzialmente attendibile o agire da un contesto parzialmente attendibile, si devono prendere in considerazione i seguenti fattori:  
   

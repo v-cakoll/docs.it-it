@@ -1,31 +1,17 @@
 ---
 title: Uso di ServiceThrottlingBehavior per controllare le prestazioni dei servizi WCF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - behavior [WCF], service performance
 ms.assetid: f9dc120c-dc24-49d5-930e-b22f5bc73423
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b7e00e70bab0c5652bbc721d582a1b276e6a3fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b54d1d6146b9751fdd12502771de01fe52854c07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a>Uso di ServiceThrottlingBehavior per controllare le prestazioni dei servizi WCF
-La classe <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> espone proprietà che possono essere usate per limitare il numero di istanze o sessioni create al livello dell'applicazione. Usando questo comportamento è possibile ottimizzare le prestazioni dell'applicazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+La classe <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> espone proprietà che possono essere usate per limitare il numero di istanze o sessioni create al livello dell'applicazione. Tramite questo comportamento, è possibile ottimizzare le prestazioni dell'applicazione Windows Communication Foundation (WCF).  
   
 ## <a name="controlling-service-instances-and-concurrent-calls"></a>Controllo delle istanze di servizio e delle chiamate contemporanee  
  Usare la proprietà <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A> per specificare il numero massimo di messaggi elaborati attivamente in una classe <xref:System.ServiceModel.ServiceHost> e la proprietà <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> per specificare il numero massimo di oggetti <xref:System.ServiceModel.InstanceContext> nel servizio.  

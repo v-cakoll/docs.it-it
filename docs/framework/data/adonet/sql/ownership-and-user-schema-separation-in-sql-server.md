@@ -1,24 +1,12 @@
 ---
-title: "Proprietà e separazione tra schemi e utenti in SQL Server"
-ms.custom: 
+title: Proprietà e separazione tra schemi e utenti in SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8f78cd816be7a4c68853a25f89859bbe2452bb9c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 69d0c0dee6141b80908c8cdc36dfe21ff318f423
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Proprietà e separazione tra schemi e utenti in SQL Server
 Uno dei concetti principali in merito alla sicurezza di SQL Server è che i proprietari di oggetti dispongono di autorizzazioni irrevocabili per amministrarli. Non è possibile rimuovere privilegi dal proprietario di un oggetto, né eliminare utenti da un database che contiene oggetti di cui sono proprietari.  
@@ -66,7 +54,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Separazione tra Schema e utente](http://msdn.microsoft.com/library/ms190387.aspx) nella documentazione Online di SQL Server|Vengono descritte le modifiche introdotte dalla distinzione tra utente e schema, tra cui il nuovo comportamento, l'impatto sulla proprietà, le visualizzazioni del catalogo e le autorizzazioni.|  
+|[Distinzione tra utente e Schema](http://msdn.microsoft.com/library/ms190387.aspx) nella documentazione Online di SQL Server|Vengono descritte le modifiche introdotte dalla distinzione tra utente e schema, tra cui il nuovo comportamento, l'impatto sulla proprietà, le visualizzazioni del catalogo e le autorizzazioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

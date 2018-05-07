@@ -1,31 +1,17 @@
 ---
 title: Cenni preliminari sul controllo Panel (Windows Form)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Panel
 helpviewer_keywords:
 - grouping controls [Windows Forms], Panel control
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a8855c88a0ec60cd0d44d73046e44c9614347d90
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ba766629f923b091459531ce74d28dca4b4ea0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panel-control-overview-windows-forms"></a>Cenni preliminari sul controllo Panel (Windows Form)
 Windows Form <xref:System.Windows.Forms.Panel> controlli vengono utilizzati per fornire un raggruppamento identificabile per altri controlli. In genere, utilizzare i pannelli di suddividere un form dalla funzione. Ad esempio, potrebbe essere un modulo d'ordine che specifica le opzioni di spedizione, ad esempio quali notturno vettore da usare. Raggruppamento di tutte le opzioni in un pannello concede all'utente un'indicazione visiva logica. In fase di progettazione tutti i controlli possono essere spostati facilmente, quando si sposta il <xref:System.Windows.Forms.Panel> controllare tutti i controlli in esso contenuti, troppo spostano. I controlli raggruppati in un pannello è possibile accedere tramite il relativo <xref:System.Windows.Forms.Control.Controls%2A> proprietà. Questa proprietà restituisce una raccolta di <xref:System.Windows.Forms.Control> istanze, pertanto è necessario eseguire il cast di un controllo in genere recuperate in questo modo al relativo tipo specifico.  

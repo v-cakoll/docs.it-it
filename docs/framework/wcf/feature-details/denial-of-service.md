@@ -1,28 +1,14 @@
 ---
 title: Denial of Service (Negazione del servizio)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 52a22d96e981ff10d444569465d8e74ddf890836
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="denial-of-service"></a>Denial of Service (Negazione del servizio)
 Si verifica un attacco Denial of Service quando un sistema viene sommerso da una quantità di messaggi tale da non poter essere elaborata o da poter essere elaborata solo molto lentamente.  
@@ -62,15 +48,15 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Possibili blocchi del servizio causati da implementazioni non valide di IAuthorizationPolicy  
  La chiamata del metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> su un'implementazione non valida dell'interfaccia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> può causare il blocco del servizio.  
   
- Prevenzione: usare solo codice attendibile. In altre parole, usare solo codice scritto e verificato o proveniente da un provider attendibile. Non consentire l'aggiunta nel codice di estensioni non attendibili di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> senza la dovuta considerazione. Questo vale per tutte le estensioni usate in un'implementazione del servizio. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non fa distinzioni tra codice dell'applicazione e codice esterno aggiunto usando punti di estendibilità.  
+ Prevenzione: usare solo codice attendibile. In altre parole, usare solo codice scritto e verificato o proveniente da un provider attendibile. Non consentire l'aggiunta nel codice di estensioni non attendibili di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> senza la dovuta considerazione. Questo vale per tutte le estensioni usate in un'implementazione del servizio. WCF non distinzioni tra codice dell'applicazione e codice esterno che è collegato alla rete elettrica con i punti di estendibilità.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Possibile necessità di ridimensionamento per la dimensione massima dei token Kerberos  
- Se un client appartiene a un gran numero di gruppi (circa 900, anche se il numero effettivo varia a seconda dei gruppi), può verificarsi un problema quando il blocco dell'intestazione di un messaggio supera i 64 kilobyte. In tal caso, è possibile aumentare il dimensione massima Kerberos del token, come descritto nell'articolo di supporto Microsoft "[l'autenticazione Kerberos di Internet Explorer non funziona a causa di un buffer insufficiente, la connessione a IIS](http://go.microsoft.com/fwlink/?LinkId=89176)." Può inoltre essere necessario aumentare la dimensione massima dei messaggi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per adattarla al più ampio token Kerberos.  
+ Se un client appartiene a un gran numero di gruppi (circa 900, anche se il numero effettivo varia a seconda dei gruppi), può verificarsi un problema quando il blocco dell'intestazione di un messaggio supera i 64 kilobyte. In tal caso, è possibile aumentare il dimensione massima Kerberos del token, come descritto nell'articolo di supporto Microsoft "[l'autenticazione Kerberos di Internet Explorer non funziona a causa di un buffer insufficiente, la connessione a IIS](http://go.microsoft.com/fwlink/?LinkId=89176)." È necessario anche aumentare la dimensione massima del messaggio WCF per contenere il token Kerberos più grande.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Generazione da parte della registrazione automatica di più certificati per computer con lo stesso nome di soggetto  
  *La registrazione automatica* è una funzionalità di [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] registreranno automaticamente gli utenti e computer per i certificati. Quando un computer si trova in un dominio con questa funzionalità attivata, viene automaticamente creato un certificato X.509 con l'obiettivo di eseguire l'autenticazione client, tale certificato viene quindi inserito nell'archivio dei certificati personali del computer locale ogni qualvolta un nuovo computer viene associato alla rete. Tuttavia, la registrazione automatica usa lo stesso nome di soggetto per tutti i certificati creati nella cache.  
   
- Può quindi accadere che l'apertura dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] abbia esito negativo nei domini con la registrazione automatica. Ciò si verifica perché i criteri predefiniti per la ricerca delle credenziali X.509 del servizio potrebbero essere ambigui, dal momento che esistono più certificati con il nome DNS (Domain Name System) completo del computer. Un certificato ha origine dalla registrazione automatica, l'altro potrebbe invece essere un certificato autorilasciato.  
+ L'impatto è che i servizi WCF possono non riuscire aprire sui domini con la registrazione automatica. Ciò si verifica perché i criteri predefiniti per la ricerca delle credenziali X.509 del servizio potrebbero essere ambigui, dal momento che esistono più certificati con il nome DNS (Domain Name System) completo del computer. Un certificato ha origine dalla registrazione automatica, l'altro potrebbe invece essere un certificato autorilasciato.  
   
  Per risolvere questo problema, fanno riferimento al certificato esatto da usare con un criterio di ricerca più preciso nel [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Usare, ad esempio, l'opzione <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> e specificare il certificato in base all'identificazione personale univoca (hash).  
   
@@ -82,7 +68,7 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
 ## <a name="protect-configuration-files-with-acls"></a>Protezione dei file di configurazione con elenchi di controllo di accesso (ACL)  
  È possibile specificare attestazioni obbligatorie e facoltative nel codice e nei file di configurazione per i token rilasciati da [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Ciò comporta l'emissione di elementi corrispondenti nei messaggi `RequestSecurityToken` inviati al servizio token di sicurezza. L'autore di un attacco può modificare il codice o la configurazione per rimuovere attestazioni obbligatorie o facoltative, facendo in modo che il servizio token di sicurezza rilasci un token che non consente l'accesso al servizio di destinazione.  
   
- Per prevenire il problema: richiedere l'accesso al computer per modificare il file di configurazione. Usare elenchi di controllo di accesso (ACL) per proteggere i file di configurazione. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede che il codice si trovi nella directory dell'applicazione o nella Global Assembly Cache prima di consentirne il caricamento dalla configurazione. Usare elenchi di controllo di accesso alle directory per proteggere le directory.  
+ Per prevenire il problema: richiedere l'accesso al computer per modificare il file di configurazione. Usare elenchi di controllo di accesso (ACL) per proteggere i file di configurazione. WCF richiede che codice sia nella directory dell'applicazione o nella global assembly cache prima che consentirà di tale codice deve essere caricata dalla configurazione. Usare elenchi di controllo di accesso alle directory per proteggere le directory.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Raggiunto il numero massimo di sessioni protette per un servizio  
  Quando un client viene correttamente autenticato da un servizio e viene stabilita una sessione protetta con il servizio, il servizio tiene traccia della sessione fino a quando il client non la annulla o la sessione non scade. Ogni sessione stabilita viene conteggiata a fronte del numero massimo consentito di sessioni attive simultanee con un servizio. Quando viene raggiunto questo limite, i client che tentano di creare una nuova sessione con il servizio in questione vengono rifiutati fino a quando una o più sessioni attive non scadono o non vengono annullate da un client. Un client può avere più sessioni con un servizio e ognuna di esse viene conteggiata per il raggiungimento del limite.  

@@ -1,26 +1,12 @@
 ---
 title: Code di messaggi non recapitabili
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9f92aeb02d997820fa2955419a3cdcf1c4369b45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dead-letter-queues"></a>Code di messaggi non recapitabili
 Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. È basato sul [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) esempio. In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  
@@ -182,7 +168,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- I messaggi nella coda di messaggi non recapitabili sono indirizzati al servizio che sta elaborando il messaggio. Di conseguenza, quando il servizio messaggi non recapitabili legge messaggi dalla coda, il livello canale di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] trova la mancata corrispondenza negli endpoint e non distribuisce il messaggio. In questo caso, il messaggio è indirizzato al servizio di elaborazione ordini ma viene ricevuto dal servizio messaggi non recapitabili. Per ricevere un messaggio indirizzato a un altro endpoint, in `ServiceBehavior` viene specificato un filtro degli indirizzi con il quale confrontare qualsiasi indirizzo. Questo è necessario per elaborare correttamente i messaggi che vengono letti dalla coda di messaggi non recapitabili.  
+ I messaggi nella coda di messaggi non recapitabili sono indirizzati al servizio che sta elaborando il messaggio. Pertanto, quando il servizio messaggi non recapitabili legge messaggi dalla coda, il livello del canale Windows Communication Foundation (WCF) trova la mancata corrispondenza negli endpoint e non invia il messaggio. In questo caso, il messaggio è indirizzato al servizio di elaborazione ordini ma viene ricevuto dal servizio messaggi non recapitabili. Per ricevere un messaggio indirizzato a un altro endpoint, in `ServiceBehavior` viene specificato un filtro degli indirizzi con il quale confrontare qualsiasi indirizzo. Questo è necessario per elaborare correttamente i messaggi che vengono letti dalla coda di messaggi non recapitabili.  
   
  In questo esempio, il servizio messaggi non recapitabili reinvia il messaggio se la ragione dell'errore è che il messaggio è scaduto. Per tutte le altre ragioni, visualizza l'errore di recapito, come illustrato nel codice di esempio seguente:  
 
@@ -370,7 +356,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   

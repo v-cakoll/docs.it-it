@@ -1,33 +1,21 @@
 ---
 title: Trasporti in Windows Communication Foundation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transports [WCF]
 - WCF, transports
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 62eb27919e762004667b3d5179c35cb04d9a9422
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6bb8e8b90c26533661684bd403b9ec439f1bb37e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Trasporti in Windows Communication Foundation
-Il livello di trasporto è al livello più basso dello stack dei canali. I trasporti principali utilizzati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono HTTP, Https, TCP e named pipe. Negli argomenti di questa sezione vengono fornite informazioni sulla scelta fra questi trasporti, la configurazione del trasporto e l'impostazione delle proprietà di ottimizzazione.  
+Il livello di trasporto è al livello più basso dello stack dei canali. I trasporti principali usati in Windows Communication Foundation (WCF) sono HTTP, HTTPS, TCP e named pipe. Negli argomenti di questa sezione vengono fornite informazioni sulla scelta fra questi trasporti, la configurazione del trasporto e l'impostazione delle proprietà di ottimizzazione.  
   
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono inclusi trasporti aggiuntivi. Per informazioni sul trasporto di Accodamento messaggi (noto anche come MSMQ), vedere [code e sessioni affidabili](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Per informazioni sul trasporto peer-to-peer, vedere [rete Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ WCF sono inclusi trasporti aggiuntivi. Per informazioni sul trasporto di Accodamento messaggi (noto anche come MSMQ), vedere [code e sessioni affidabili](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Per informazioni sul trasporto peer-to-peer, vedere [rete Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
@@ -43,7 +31,7 @@ Il livello di trasporto è al livello più basso dello stack dei canali. I trasp
  Descrive come configurare gli elementi di associazione del trasporto HTTP e HTTPS.  
   
  [Procedura: Sostituire la prenotazione URL WCF con una prenotazione limitata](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
- Descrive come utilizzare le prenotazioni limitate URL di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Viene descritto come utilizzare le prenotazioni WCFURL con restrizioni.  
   
  [Quote dei trasporti](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
  Vengono fornite considerazioni per l'impostazione delle quote disponibili nel livello di trasporto.  
@@ -52,7 +40,7 @@ Il livello di trasporto è al livello più basso dello stack dei canali. I trasp
  Descrive come configurare il livello di trasporto quando i messaggi vengono inviati o ricevuti attraverso un firewall o quando si utilizza la conversione degli indirizzi di rete (NAT).  
   
  [Condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- Descrive come utilizzare il componente di condivisione porte Net.TCP di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Viene descritto come utilizzare il componente di condivisione delle porte Net. TCP di WCF.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  

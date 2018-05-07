@@ -1,13 +1,6 @@
 ---
-title: "Funzionalità dei tipi di carattere OpenType"
-ms.custom: 
+title: Funzionalità dei tipi di carattere OpenType
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-caps.latest.revision: "38"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6344fed6cf480e3d3f91a559c99b79f438afa985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8ee4107ee7db20f2948ea9a33ef853815a22665
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="opentype-font-features"></a>Funzionalità dei tipi di carattere OpenType
 Questo argomento contiene una panoramica di alcune delle funzionalità principali della tecnologia [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -107,7 +95,7 @@ Testo con apici e pedici OpenType
   
  Il testo seguente visualizza lettere maiuscole standard per il tipo di carattere Pescadero, seguite da lettere in stile "SmallCaps" e "AllSmallCaps". In questo caso, viene usata la stessa dimensione di carattere per tutte e tre le parole.  
   
- ![Testo con caratteri maiuscoli OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")  
+ ![Testo caratteri maiuscoli OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")  
 Testo con caratteri maiuscoli OpenType  
   
  Nell'esempio di codice seguente viene illustrato come definire le maiuscole per il tipo di carattere Pescadero, utilizzando le proprietà del <xref:System.Windows.Documents.Typography> oggetto. Quando si usa il formato "SmallCaps", tutte le iniziali maiuscole vengono ignorate.  
@@ -187,7 +175,7 @@ Testo con glifi standard e ornati OpenType
   
  I glifi ornati vengono spesso usati come elementi decorativi in brevi frasi come gli annunci di eventi. Il testo seguente usa glifi ornati per porre in risalto le lettere maiuscole del nome dell'evento.  
   
- ![Testo con caratteri ornati OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont09.gif "opentypefont09")  
+ ![Testo con caratteri ornati](../../../../docs/framework/wpf/advanced/media/opentypefont09.gif "opentypefont09")  
 Testo con glifi ornati OpenType  
   
  Nell'esempio di codice seguente viene illustrato come definire caratteri ornati per un tipo di carattere, utilizzando le proprietà del <xref:System.Windows.Documents.Typography> oggetto.  
@@ -197,7 +185,7 @@ Testo con glifi ornati OpenType
 ### <a name="contextual-swashes"></a>Glifi ornati contestuali  
  Alcune combinazioni di glifi ornati possono creare un aspetto poco gradevole, ad esempio con tratti discendenti che si sovrappongono nelle lettere adiacenti. L'uso di un glifo ornato contestuale permette di usare un glifo ornato sostitutivo che conferisce un aspetto migliore. Il testo seguente mostra la stessa parola prima e dopo l'applicazione di un glifo ornato contestuale.  
   
- ![Testo con caratteri ornati contestuali OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont19.gif "OpenTypeFont19")  
+ ![Testo con caratteri ornati contestuali](../../../../docs/framework/wpf/advanced/media/opentypefont19.gif "OpenTypeFont19")  
 Testo con glifi ornati contestuali OpenType  
   
  Nell'esempio di codice seguente viene illustrato come definire un ornati contestuali per il tipo di carattere Pescadero, utilizzando le proprietà del <xref:System.Windows.Documents.Typography> oggetto.  
@@ -258,7 +246,7 @@ Testo con formati di tipo storico OpenType
   
  Il testo seguente mostra stili di frazione per il tipo di carattere Palatino Linotype.  
   
- ![Testo che utilizza barra e frazioni sovrapposte](../../../../docs/framework/wpf/advanced/media/opentypefont12.gif "opentypefont12")  
+ ![Testo che utilizza la barra e frazioni](../../../../docs/framework/wpf/advanced/media/opentypefont12.gif "opentypefont12")  
 Testo con frazioni con barra e frazioni sovrapposte OpenType  
   
  Nell'esempio di codice seguente viene illustrato come definire stili per il tipo di formati di carattere, utilizzando le proprietà di frazioni di <xref:System.Windows.Documents.Typography> oggetto.  
@@ -268,12 +256,12 @@ Testo con frazioni con barra e frazioni sovrapposte OpenType
 ### <a name="old-style-numerals"></a>Caratteri numerici in stile antico  
  I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supportano un formato numerico in stile antico. Questo formato è utile per visualizzare valori numerici in stili che non sono più quelli standard. Il testo seguente mostra una data del 18° secolo con formati numerici standard e in stile antico per il tipo di carattere Palatino Linotype.  
   
- ![Testo con stile antico OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")  
+ ![Testo stile antico OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")  
 Testo con caratteri numerici in stile antico OpenType  
   
  Il testo seguente mostra caratteri numerici standard per il tipo di carattere Palatino Linotype, seguiti da caratteri numerici in stile antico.  
   
- ![Utilizzo di set di caratteri numerici in stile antico OpenType testo](../../../../docs/framework/wpf/advanced/media/opentypefont13.gif "opentypefont13")  
+ ![Testo con set di caratteri numerici in stile antico OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont13.gif "opentypefont13")  
 Testo con set di caratteri numerici in stile antico OpenType  
   
  Nell'esempio di codice seguente viene illustrato come definire stile antico per il tipo di formati di carattere, utilizzando le proprietà del <xref:System.Windows.Documents.Typography> oggetto.  
@@ -297,7 +285,7 @@ Testo con cifre proporzionali e tabulari OpenType
   
  Il testo seguente mostra un identificatore di ordine di esempio con il tipo di carattere Miramonte. La prima riga usa caratteri numerici standard. La seconda riga usa caratteri numerici con zero barrato per distinguere meglio il carattere numerico dalla lettera "O" maiuscola.  
   
- ![Testo che utilizza zero barrato](../../../../docs/framework/wpf/advanced/media/opentypefont17.gif "OpenTypeFont17")  
+ ![Testo che utilizza numerici con zero barrato](../../../../docs/framework/wpf/advanced/media/opentypefont17.gif "OpenTypeFont17")  
 Testo con caratteri numerici con zero barrato OpenType  
   
  Nell'esempio di codice seguente viene illustrato come definire zero barrato per il tipo di carattere Miramonte, utilizzando le proprietà del <xref:System.Windows.Documents.Typography> oggetto.  
@@ -310,7 +298,7 @@ Testo con caratteri numerici con zero barrato OpenType
   
  Il testo seguente visualizza lettere maiuscole standard per il tipo di carattere Pescadero, seguite da lettere in stile "SmallCaps" e "AllSmallCaps". In questo caso, viene usata la stessa dimensione di carattere per tutte e tre le parole.  
   
- ![Testo con caratteri maiuscoli OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")  
+ ![Testo caratteri maiuscoli OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")  
 Testo con caratteri maiuscoli OpenType  
   
  Nell'esempio di codice seguente viene illustrato come definire le maiuscole per il tipo di carattere Pescadero, utilizzando le proprietà del <xref:System.Windows.Documents.Typography> oggetto. Quando si usa il formato "SmallCaps", tutte le iniziali maiuscole vengono ignorate.  

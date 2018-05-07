@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: ridimensionare un controllo Label Windows Form in base al contenuto'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - captions [Windows Forms], sizing
 - sizing controls
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - labels [Windows Forms], sizing to fit contents
 - Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2c34506ca33af80b83f365893e56a5a9d437b89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e067966b606d77ceb9d11d2784c0d5f73ad332a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>Procedura: ridimensionare un controllo Label Windows Form in base al contenuto
 Windows Form <xref:System.Windows.Forms.Label> controllo può essere a riga singola o multilinea e dimensioni fisse o automaticamente ridimensionato in base alla lunghezza della didascalia. Il <xref:System.Windows.Forms.Label.AutoSize%2A> proprietà consente di ridimensionare i controlli per adattarli didascalie maggiore o minore, particolarmente utile se la didascalia verrà modificato in fase di esecuzione.  

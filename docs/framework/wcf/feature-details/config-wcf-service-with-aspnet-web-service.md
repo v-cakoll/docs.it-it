@@ -1,34 +1,22 @@
 ---
 title: 'Procedura: configurare un servizio WCF che interagisca con client di servizi Web ASP.NET'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b4bd1dce4128e6f25294525f10226d98f732cd4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 12c5645b53e8e931edabc1a13fc1749e40538044
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Procedura: configurare un servizio WCF che interagisca con client di servizi Web ASP.NET
-Per configurare un endpoint del servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per l'interoperabilità con client di servizi Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], utilizzare il tipo <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> come tipo di associazione per l'endpoint del servizio.  
+Per configurare un endpoint del servizio Windows Communication Foundation (WCF) per l'interoperabilità con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] client del servizio Web, utilizzare il <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> tipo come tipo di associazione per l'endpoint del servizio.  
   
  È possibile, se lo si desidera, attivare nell'associazione il supporto per HTTPS e l'autenticazione del client a livello di trasporto. I client di servizi Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] non supportano la codifica messaggi MTOM, pertanto la proprietà <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> deve essere lasciata con il suo valore predefinito <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. I client di servizi Web ASP.NET non supportano WS-Security, pertanto <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> deve essere impostato su <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
   
- Per rendere i metadati un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio disponibile per [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] strumenti di generazione del proxy del servizio Web (vale a dire [Web Services Description Language Tool (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [(strumento di individuazione Servizi Web Disco.exe)](http://go.microsoft.com/fwlink/?LinkId=73834)e la funzionalità Aggiungi riferimento Web in Visual Studio), è necessario esporre un endpoint dei metadati HTTP/GET.  
+ Per rendere disponibili per i metadati per un servizio WCF [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] strumenti di generazione del proxy del servizio Web (vale a dire [Web Services Description Language Tool (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [strumento di individuazione Servizi Web (Disco.exe)](http://go.microsoft.com/fwlink/?LinkId=73834)e la funzionalità Aggiungi riferimento Web in Visual Studio), è necessario esporre un endpoint di metadati HTTP/GET.  
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>Per aggiungere un endpoint WCF compatibile con client di servizi Web ASP.NET nel codice  
   
@@ -51,7 +39,7 @@ Per configurare un endpoint del servizio [!INCLUDE[indigo1](../../../../includes
 4.  Attivare un endpoint dei metadati HTTP/GET per il servizio. Per informazioni dettagliate, vedere il [procedura: pubblicare metadati per un servizio utilizzando un File di configurazione](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio di codice seguente viene illustrato come aggiungere un endpoint [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] compatibile con i client di servizi Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] nel codice e, in alternativa, nei file di configurazione.  
+ Esempio di codice seguente viene illustrato come aggiungere un endpoint WCF compatibile con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] nel codice client del servizio Web e in alternativa nei file di configurazione.  
   
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)] 
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)] 

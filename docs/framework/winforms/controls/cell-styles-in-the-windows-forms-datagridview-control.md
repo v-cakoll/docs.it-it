@@ -1,28 +1,16 @@
 ---
 title: Stili della cella nel controllo DataGridView Windows Form
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 915aba380b6fe35299de94720f216cda5ab66721
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 463fbbffe1e88991934f08fbe7e7445b2e233081
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Stili della cella nel controllo DataGridView Windows Form
 Ogni cella all'interno di <xref:System.Windows.Forms.DataGridView> controllo può disporre di uno stile specifico, ad esempio il formato di testo, colore di sfondo, colore di primo piano e tipo di carattere. In genere, tuttavia, più celle condividono le caratteristiche di stile particolare.  
@@ -66,7 +54,7 @@ Ogni cella all'interno di <xref:System.Windows.Forms.DataGridView> controllo pu�
 |<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Ottiene o imposta gli stili di cella predefinito utilizzati da righe alternate nel controllo. Consente di creare un effetto registro.|  
 |<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Ottiene o imposta gli stili predefiniti utilizzati dalle intestazioni di riga del controllo. Se sono abilitati, sottoposto a override dal tema corrente.|  
 |<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Ottiene o imposta gli stili predefiniti utilizzati dalle intestazioni di colonna del controllo. Se sono abilitati, sottoposto a override dal tema corrente.|  
-|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell>e le classi derivate|Ottiene o imposta gli stili specificati a livello di cella. Questi stili sostituiscono quelli ereditati dai livelli superiori.|  
+|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell> e le classi derivate|Ottiene o imposta gli stili specificati a livello di cella. Questi stili sostituiscono quelli ereditati dai livelli superiori.|  
 |`InheritedStyle`|<xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewRow>, <xref:System.Windows.Forms.DataGridViewColumn>e le classi derivate|Ottiene tutti gli stili attualmente applicati alla cella, riga o colonna, inclusi gli stili ereditati dai livelli superiori.|  
   
  Come indicato in precedenza, ottenere il valore di una proprietà di stile automaticamente creata un'istanza di un nuovo <xref:System.Windows.Forms.DataGridViewCellStyle> oggetto se la proprietà non è stata precedentemente impostata. Per evitare la creazione di questi oggetti inutilmente, le classi di riga e colonna hanno un <xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A> proprietà che è possibile verificare per determinare se il <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A> proprietà è stata impostata. Analogamente, le classi di cella hanno un <xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A> proprietà che indica se il <xref:System.Windows.Forms.DataGridViewCell.Style%2A> proprietà è stata impostata.  
@@ -80,7 +68,7 @@ Ogni cella all'interno di <xref:System.Windows.Forms.DataGridView> controllo pu�
   
 2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(solo per le celle delle righe con numeri di indice dispari)  
+3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (solo per le celle delle righe con numeri di indice dispari)  
   
 4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -98,7 +86,7 @@ Ogni cella all'interno di <xref:System.Windows.Forms.DataGridView> controllo pu�
   
  Nel diagramma seguente viene illustrato questo processo.  
   
- ![Proprietà di tipo DataGridViewCellStyle](../../../../docs/framework/winforms/controls/media/datagridviewcells1.gif "DataGridViewCells1")  
+ ![Le proprietà di tipo DataGridViewCellStyle](../../../../docs/framework/winforms/controls/media/datagridviewcells1.gif "DataGridViewCells1")  
   
  È inoltre possibile accedere agli stili ereditati da colonne e righe specifiche. La colonna <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> proprietà eredita i valori dalle proprietà seguenti.  
   
@@ -110,7 +98,7 @@ Ogni cella all'interno di <xref:System.Windows.Forms.DataGridView> controllo pu�
   
 1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(solo per le celle delle righe con numeri di indice dispari)  
+2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (solo per le celle delle righe con numeri di indice dispari)  
   
 3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -120,7 +108,7 @@ Ogni cella all'interno di <xref:System.Windows.Forms.DataGridView> controllo pu�
   
  Nella tabella seguente viene illustrato come la <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> ereditato la colonna contenente il valore della proprietà per una cella di esempio.  
   
-|Proprietà di tipo`DataGridViewCellStyle`|Esempio `ForeColor` valore per l'oggetto recuperato|  
+|proprietà di tipo `DataGridViewCellStyle`|Esempio `ForeColor` valore per l'oggetto recuperato|  
 |----------------------------------------------|----------------------------------------------------|  
 |<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
 |<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType>|  
@@ -133,7 +121,7 @@ Ogni cella all'interno di <xref:System.Windows.Forms.DataGridView> controllo pu�
   
  Il diagramma seguente illustra come i diversi <xref:System.Windows.Forms.DataGridViewCellStyle> proprietà possono ereditare i relativi valori da posizioni diverse.  
   
- ![DataGridView ereditarietà del valore di proprietà &#45;](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
+ ![Proprietà DataGridView&#45;valore ereditarietà](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
   
  Sfruttando di ereditarietà, è possibile fornire stili appropriati per l'intero controllo senza dover specificare le stesse informazioni in più posizioni.  
   

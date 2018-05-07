@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: eseguire il rendering in un intervallo per frame tramite CompositionTarget'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eb7e917c59f11ed78f8d44fa4b674d8d572f3623
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c080c6deca63eacdf0e1123f4ca8bbb495ed9ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Procedura: eseguire il rendering in un intervallo per frame tramite CompositionTarget
 Il motore delle animazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre molte funzionalità per la creazione di animazioni basate su fotogrammi. Esistono tuttavia scenari di applicazione in cui è necessario un controllo con granularità più fine sul rendering per fotogramma. Il <xref:System.Windows.Media.CompositionTarget> oggetto offre la possibilità di creare animazioni personalizzate basate su un callback per frame.  
   
- <xref:System.Windows.Media.CompositionTarget>è una classe statica che rappresenta l'area di visualizzazione in cui viene disegnata l'applicazione. Il <xref:System.Windows.Media.CompositionTarget.Rendering> evento viene generato ogni volta che viene disegnata la scena dell'applicazione. La frequenza dei fotogrammi di rendering è il numero di volte al secondo in cui viene disegnata la scena.  
+ <xref:System.Windows.Media.CompositionTarget> è una classe statica che rappresenta l'area di visualizzazione in cui viene disegnata l'applicazione. Il <xref:System.Windows.Media.CompositionTarget.Rendering> evento viene generato ogni volta che viene disegnata la scena dell'applicazione. La frequenza dei fotogrammi di rendering è il numero di volte al secondo in cui viene disegnata la scena.  
   
 > [!NOTE]
 >  Per un esempio di codice completo utilizzando <xref:System.Windows.Media.CompositionTarget>, vedere [utilizzando l'esempio CompositionTarget](http://go.microsoft.com/fwlink/?LinkID=160045).  

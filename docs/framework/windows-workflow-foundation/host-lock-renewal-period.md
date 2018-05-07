@@ -1,23 +1,12 @@
 ---
 title: Host Lock Renewal Period
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f8ba94fc-27e0-4d8e-8f85-50a6d2a3cd43
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b7447d11e93cf33e69bc52d2cdec239c1be55bcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91d83259c766120f7e3ffc9e49f1cf1b18c32a18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="host-lock-renewal-period"></a>Host Lock Renewal Period
 Il **Host Lock Renewal Period** proprietà dell'archivio di istanze del flusso di lavoro SQL consente di specificare il periodo di tempo entro il quale l'host rinnova il blocco su un'istanza del flusso di lavoro. Il blocco rimane valido per Host Lock Renewal Period + 30 secondi. Se l'host non riesce a rinnovare il blocco (ovvero estende il lease) entro questo periodo di tempo, il blocco scade e il provider di persistenza sblocca l'istanza. Il valore di questa proprietà è di tipo TimeSpan nel formato "hh". Il valore minimo consentito è "00: 00:01" (1 secondo). Il valore predefinito di questa proprietà è "00: 00:30" (30 secondi).  

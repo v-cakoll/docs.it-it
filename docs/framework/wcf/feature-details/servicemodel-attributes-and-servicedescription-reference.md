@@ -1,36 +1,22 @@
 ---
 title: Attributi ServiceModel e riferimento a ServiceDescription
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ba8888c2a1bd3c16ab6d216c365870c0df0e499a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc7c36ff7a1c81227f118ee7113be8f7f9eb2e9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Attributi ServiceModel e riferimento a ServiceDescription
-Il *albero di descrizione* è la gerarchia dei tipi (a partire dal <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> classe) che descrivono ogni aspetto di un servizio. In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzato un albero di descrizione per compilare un runtime di servizio valido, per pubblicare asserzioni (metadati) Web Services Description Language (WSDL), XML Schema Definition Language (XSD) e di criteri sul servizio che i client possono utilizzare per connettersi al servizio e utilizzarlo, nonché per generare varie rappresentazioni di codice e di file di configurazione dei valori dell'albero di descrizione.  
+Il *albero di descrizione* è la gerarchia dei tipi (a partire dal <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> classe) che descrivono ogni aspetto di un servizio. Windows Communication Foundation (WCF) usa un albero di descrizione per compilare un runtime di servizio valido, per pubblicare Web Services Description Language (WSDL), il linguaggio XML Schema definition (XSD) e le asserzioni di criteri (metadati) sul servizio che i client possono usare per connettersi e usare il servizio e per generare varie rappresentazioni file di codice e la configurazione dei valori di struttura ad albero di descrizione.  
   
- In questo argomento viene illustrato come le proprietà relative al contratto vengono ottenute dal contratto di servizio e come vengono implementate e aggiunte alla struttura di descrizione. In alcuni casi, i valori degli attributi vengono convertiti in proprietà di comportamento e il comportamento viene quindi inserito nell'albero di descrizione. Per ulteriori informazioni sul modo in cui vengono convertiti i valori di struttura ad albero di descrizione in metadati, vedere [ServiceDescription e riferimento a WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
+ In questo argomento viene illustrato come le proprietà relative al contratto vengono ottenute dal contratto di servizio e come vengono implementate e aggiunte all'albero di descrizione. In alcuni casi, i valori degli attributi vengono convertiti in proprietà di comportamento e il comportamento viene quindi inserito nell'albero di descrizione. Per ulteriori informazioni sul modo in cui vengono convertiti i valori di struttura ad albero di descrizione in metadati, vedere [ServiceDescription e riferimento a WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>Operazioni di mapping all'albero di descrizione  
- Nelle applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], i contratti di servizio vengono modellati da interfacce (o classi) che utilizzano attributi per contrassegnare l'interfaccia o la classe e i relativi metodi come raggruppamento di operazioni. Quando una classe <xref:System.ServiceModel.ServiceHost> viene aperta, eventuali implementazioni e contratti di servizio vengono analizzati e vengono uniti alle informazioni di configurazione in una struttura di descrizione.  
+ Nelle applicazioni di WCF, i contratti di servizio vengono modellati da interfacce (o classi) che utilizzano attributi per contrassegnare l'interfaccia o classe e i relativi metodi come raggruppamento di operazioni. Quando una classe <xref:System.ServiceModel.ServiceHost> viene aperta, eventuali implementazioni e contratti di servizio vengono analizzati e vengono uniti alle informazioni di configurazione in una struttura di descrizione.  
   
- Esistono due tipi di modelli dell'operazione: il *parametro* modello e *contratto di messaggio* modello. Il modello parametro utilizza metodi gestiti che non dispongono di un parametro o di un tipo di valore restituito contrassegnato dalla classe <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>. In questo modello gli sviluppatori controllano la serializzazione di parametri e di valori restituiti ma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera i valori utilizzati per popolare la struttura di descrizione per il servizio e il relativo contratto.  
+ Esistono due tipi di modelli dell'operazione: il *parametro* modello e *contratto di messaggio* modello. Il modello parametro utilizza metodi gestiti che non dispongono di un parametro o di un tipo di valore restituito contrassegnato dalla classe <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>. In questo modello, gli sviluppatori controllano la serializzazione dei parametri e valori restituiscono, ma WCF genera i valori utilizzati per popolare l'albero di descrizione per il servizio e il relativo contratto.  
   
  Le associazioni specificate nei file di configurazione vengono caricate direttamente nella proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType>.  
   

@@ -1,34 +1,20 @@
 ---
 title: Nomi di contratto dati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18ba9aa1f7af3733acd60924d0aa24ceb1b5126c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-names"></a>Nomi di contratto dati
-Talvolta un client e un servizio non condividono gli stessi tipi. Possono comunque passarsi dati a condizione che i contratti dati siano equivalenti su entrambi i lati. [Equivalenza dei contratti dati](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) è basato sul contratto dati e i nomi dei membri di dati, e pertanto in cui viene fornito un meccanismo per eseguire il mapping di tipi e membri di tali nomi. In questo argomento vengono illustrate le regole per denominare i contratti dati, nonché il comportamento predefinito dell'infrastruttura [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] quando si creano nomi.  
+Talvolta un client e un servizio non condividono gli stessi tipi. Possono comunque passarsi dati a condizione che i contratti dati siano equivalenti su entrambi i lati. [Equivalenza dei contratti dati](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) è basata sul contratto dati e i nomi dei membri di dati, e pertanto viene fornito un meccanismo per eseguire il mapping di tipi e membri a tali nomi. In questo argomento spiega le regole per la denominazione dei contratti dati, nonché il comportamento predefinito dell'infrastruttura di Windows Communication Foundation (WCF) durante la creazione di nomi.  
   
 ## <a name="basic-rules"></a>Regole di base  
  Le regole di base sulla denominazione di contratti dati sono le seguenti:  
@@ -37,15 +23,15 @@ Talvolta un client e un servizio non condividono gli stessi tipi. Possono comunq
   
 -   I membri dati hanno solo nomi, ma non spazi dei nomi.  
   
--   Nell'elaborazione di contratti dati, l'infrastruttura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applica la distinzione tra maiuscole e minuscole sia agli spazi dei nomi che ai nomi di contratto dati e di membro dati.  
+-   Durante l'elaborazione di contratti dati, l'infrastruttura WCF è distinzione maiuscole/minuscole per entrambi gli spazi dei nomi e i nomi dei contratti dati e i membri di dati.  
   
 ## <a name="data-contract-namespaces"></a>Spazi dei nomi di contratto dati  
  Uno spazio dei nomi di contratto dati prende il formato di un URI (Uniform Resource Identifier). L'URI può essere assoluto o relativo. Per impostazione predefinita, ai contratti dati per un particolare tipo viene assegnato uno spazio dei nomi che proviene dallo spazio dei nomi CLR (Common Language Runtime) di quel tipo.  
   
- Per impostazione predefinita, qualsiasi spazio dei nomi CLR specificato (nel formato *CLR*) viene eseguito il mapping allo spazio dei nomi "http://schemas.datacontract.org/2004/07/Clr.Namespace". Per eseguire l'override di questa impostazione predefinita, applicare l'attributo <xref:System.Runtime.Serialization.ContractNamespaceAttribute> all'intero modulo o assembly. In alternativa, per controllare lo spazio dei nomi di contratto dati per ogni tipo, impostare la proprietà <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> di <xref:System.Runtime.Serialization.DataContractAttribute>.  
+ Per impostazione predefinita, qualsiasi spazio dei nomi CLR specificato (nel formato *CLR. Namespace*) viene eseguito il mapping allo spazio dei nomi "http://schemas.datacontract.org/2004/07/Clr.Namespace". Per eseguire l'override di questa impostazione predefinita, applicare l'attributo <xref:System.Runtime.Serialization.ContractNamespaceAttribute> all'intero modulo o assembly. In alternativa, per controllare lo spazio dei nomi di contratto dati per ogni tipo, impostare la proprietà <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> di <xref:System.Runtime.Serialization.DataContractAttribute>.  
   
 > [!NOTE]
->  Lo spazio dei nomi "http://schemas.microsoft.com/2003/10/Serialization" è riservato e non può essere utilizzato come spazio dei nomi di contratto dati.  
+>  Il "http://schemas.microsoft.com/2003/10/Serialization"spazio dei nomi è riservato e non può essere utilizzato come uno spazio dei nomi del contratto dati.  
   
 > [!NOTE]
 >  Non è possibile eseguire l'override dello spazio dei nomi predefinito nei tipi di contratto dati che contengono dichiarazioni `delegate`.  

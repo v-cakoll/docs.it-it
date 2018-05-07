@@ -1,26 +1,12 @@
 ---
 title: Esempio di integrazione di SystemWebRouting
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: de8869956a59cb47623dbc4d84763e19d6f181bf
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
-ms.translationtype: MT
+ms.openlocfilehash: 43785f84cb3852a35f1ed3bd555287842455a89b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemwebrouting-integration-sample"></a>Esempio di integrazione di SystemWebRouting
 In questo esempio viene descritta l'integrazione del livello di hosting con le classi nello spazio dei nomi <xref:System.Web.Routing>. Le classi nello spazio dei nomi <xref:System.Web.Routing> consentono a un'applicazione di usare URL che non corrispondono direttamente a una risorsa fisica. L'uso del routing Web consente allo sviluppatore di creare indirizzi virtuali per HTTP dei quali viene quindi eseguito il mapping ai servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] effettivi. Ciò si rivela utile quando un servizio WCF deve essere ospitato senza richiedere una risorsa o un file fisico oppure quando l'accesso ai servizi deve essere eseguito con URL che non contengono file con estensioni quali html o aspx. In questo esempio viene descritto come usare la classe <xref:System.Web.Routing.RouteTable> per creare URI virtuali mappati a servizi in esecuzione definiti in global.asax. 
@@ -39,7 +25,7 @@ In questo esempio siano già installato nel computer in uso. Verificare la direc
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+ Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
@@ -51,11 +37,11 @@ In questo esempio siano già installato nel computer in uso. Verificare la direc
   
      Verrà aperta la visualizzazione directory per l'esempio. Si noti che non sono presenti file con l'estensione di file svc.  
   
-3.  Nella barra degli indirizzi, aggiungere `movies` all'URL, in modo che legge http://localhost: [port] /Movies, quindi premere INVIO.  
+3.  Nella barra degli indirizzi, aggiungere `movies` all'URL, in modo che venga legge http://localhost:[port] /Movies, quindi premere INVIO.  
   
      Il feed movies verrà visualizzato nel browser.  
   
-4.  Nella barra degli indirizzi aggiungere `channels` all'URL, in modo da ottenere http://localhost:[port]/channels, quindi premere INVIO.  
+4.  Nella barra degli indirizzi, aggiungere `channels` all'URL, in modo che sia letture http://localhost:[porta] / i canali e premere INVIO.  
   
      Il feed channels verrà visualizzato nel browser.  
   
@@ -81,11 +67,11 @@ In questo esempio siano già installato nel computer in uso. Verificare la direc
   
 4.  Avviare l'applicazione, facendo l'applicazione Web **Gestione applicazione** e quindi **Sfoglia**.  
   
-5.  Nella barra degli indirizzi aggiungere `movies` all'URL, in modo da ottenere http://localhost:[port]/movies, quindi premere INVIO.  
+5.  Nella barra degli indirizzi, aggiungere `movies` all'URL, in modo che sia letture http://localhost:[port] /Movies, quindi premere INVIO.  
   
      Il feed movies verrà visualizzato nel browser.  
   
-6.  Nella barra degli indirizzi aggiungere `channels` all'URL, in modo da ottenere http://localhost:[port]/channels, quindi premere INVIO.  
+6.  Nella barra degli indirizzi, aggiungere `channels` all'URL, in modo che sia letture http://localhost:[porta] / i canali e premere INVIO.  
   
      Il feed channels verrà visualizzato nel browser.  
   

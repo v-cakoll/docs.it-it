@@ -1,14 +1,6 @@
 ---
 title: Interfaccia IHostTaskManager
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9573891a2c27a2a92eccd0522f84175effa8037a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9715738931d1b6a91ad9fae7e00ba607905d380f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanager-interface"></a>Interfaccia IHostTaskManager
 Fornisce metodi che consentono a common language runtime (CLR) per gestire le attività tramite l'host anziché utilizzare le funzioni fiber o thread del sistema operativo standard.  
@@ -61,16 +49,16 @@ Fornisce metodi che consentono a common language runtime (CLR) per gestire le at
 |[Metodo SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|Notifica all'host che deve essere disattivata l'attività corrente.|  
   
 ## <a name="remarks"></a>Note  
- `IHostTaskManager`consente a CLR di creare e gestire attività, per fornire hook per l'host di eseguire un'azione quando il controllo viene trasferito da gestito a codice non gestito e viceversa e per specificare le azioni l'host può e non può accettare durante l'esecuzione di codice.  
+ `IHostTaskManager` consente a CLR creare e gestire attività, per fornire hook per l'host di eseguire un'azione quando il controllo viene trasferito dal codice gestito a codice non gestito e viceversa e specificare determinate azioni l'host può e non può accettare durante l'esecuzione di codice.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

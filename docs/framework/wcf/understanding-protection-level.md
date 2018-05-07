@@ -1,14 +1,6 @@
 ---
 title: Informazioni sul livello di protezione
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4b079d7f6e22f0c1904433c2822b92da91923ef2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 0f17d6e787a48edd562559f52ac015edf7bc702c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-protection-level"></a>Informazioni sul livello di protezione
-La proprietà `ProtectionLevel` è disponibile in molte classi diverse, ad esempio nelle classi <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute>. Tale proprietà controlla la modalità di protezione di una parte del messaggio o dell'intero messaggio. In questo argomento ne viene illustrata la funzionalità in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] e il funzionamento.  
+La proprietà `ProtectionLevel` è disponibile in molte classi diverse, ad esempio nelle classi <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute>. Tale proprietà controlla la modalità di protezione di una parte del messaggio o dell'intero messaggio. Questo argomento illustra la funzionalità di Windows Communication Foundation (WCF) e il relativo funzionamento.  
   
  Per istruzioni su come impostare il livello di protezione, vedere [procedura: impostare la proprietà ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).  
   

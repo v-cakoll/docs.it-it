@@ -1,30 +1,18 @@
 ---
 title: 'Procedura: creare un servizio HTTP Web WCF'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d147286fd2f8fe3f4f5e822598a07b51ae6d9791
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Procedura: creare un servizio HTTP Web WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consente di creare un servizio che espone un endpoint Web. Gli endpoint Web inviano dati in XML o JSON, senza SOAP envelope. In questo argomento viene dimostrato come esporre un endpoint di questo tipo.  
+Windows Communication Foundation (WCF) consente di creare un servizio che espone un endpoint Web. Gli endpoint Web inviano dati in XML o JSON, senza SOAP envelope. In questo argomento viene dimostrato come esporre un endpoint di questo tipo.  
   
 > [!NOTE]
 >  L'unico modo per proteggere un endpoint Web è esporlo tramite HTTPS utilizzando la sicurezza del trasporto. Quando si utilizza la sicurezza basata sul messaggio, le informazioni sulla sicurezza vengono inserite generalmente nelle intestazioni SOAP e poiché i messaggi inviati a endpoint non SOAP non contengono SOAP envelope, non esiste altra posizione in cui inserire le informazioni sulla sicurezza ed è necessario affidarsi alla sicurezza del trasporto.  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  Se non viene aggiunto un endpoint, l'oggetto <xref:System.ServiceModel.Web.WebServiceHost> ne crea automaticamente uno predefinito. <xref:System.ServiceModel.Web.WebServiceHost> aggiunge anche <xref:System.ServiceModel.Description.WebHttpBehavior> e disabilita la pagina della Guida HTTP e la funzionalità GET WSDL (Web Services Description Language) in modo che l'endpoint dei metadati non interferisca con l'endpoint HTTP predefinito.  
     >   
-    >  L'aggiunta di un endpoint non SOAP con un URL "" provoca un comportamento imprevisto quando si tenta di chiamare un'operazione sull'endpoint. La ragione è che l'URI di ascolto dell'endpoint è lo stesso URI della pagina della Guida (la pagina visualizzata quando si esplora all'indirizzo di base di un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]).  
+    >  L'aggiunta di un endpoint non SOAP con un URL "" provoca un comportamento imprevisto quando si tenta di chiamare un'operazione sull'endpoint. Questo accade perché l'URI dell'endpoint è lo stesso URI della pagina della Guida (la pagina che viene visualizzata quando si passa all'indirizzo di base di un servizio WCF) di ascolto.  
   
      Per evitare che ciò accada è possibile svolgere una delle azioni seguenti:  
   

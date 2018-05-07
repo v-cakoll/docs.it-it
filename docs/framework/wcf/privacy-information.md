@@ -1,31 +1,19 @@
 ---
 title: Informazioni sulla privacy di Windows Communication Foundation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, privacy information
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: e9c4130cd4680d4cd68ca8c6ba36c38b5d065f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informazioni sulla privacy di Windows Communication Foundation
-Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si compila un'applicazione usando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], versione 3.0, è possibile che questa abbia un impatto sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] non invia informazioni a Microsoft dall'applicazione a meno che non sia lo sviluppatore o l'utente finale a determinarne l'invio.  
+Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si compila un'applicazione che utilizza Windows Communication Foundation (WCF), versione 3.0, l'applicazione può influire sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] non invia informazioni a Microsoft dall'applicazione a meno che non sia lo sviluppatore o l'utente finale a determinarne l'invio.  
   
 ## <a name="wcf-in-brief"></a>WCF in breve  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è un framework di messaggistica distribuito che usa Microsoft .NET Framework, che consente agli sviluppatori di compilare applicazioni distribuite. I messaggi comunicati tra due applicazioni contengono informazioni di intestazione e corpo.  
@@ -138,13 +126,13 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Chiavi rimosse:  
   
- \-Per xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- Per xmlns:WST="http://schemas.xmlsoap.org/ws/2004/04/trust ="http://schemas.xmlsoap.org/ws/2004/04/trust"e xmlns:WST="http://schemas.xmlsoap.org/ws/2005/02/trust = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \-Per xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Per xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -152,15 +140,15 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Potenziali informazioni personali rimosse:  
   
- \-Per xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Per xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \-Per xmlns: SAML = "urn: oasis: nomi: tc: SAML:1.0:assertion" vengono rimossi gli elementi in grassetto (seguenti):  
+ \- Per xmlns:SAML="urn:OASIS:Names:TC:SAML:1.0:Assertion ="urn: oasis: i nomi: tc: SAML:1.0:assertion"vengono rimossi gli elementi in grassetto (seguenti):  
   
- \<Asserzione  
+ \<asserzione  
   
  MajorVersion="1"  
   
@@ -182,7 +170,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition />*  
+ \<DoNotCacheCondition / > *  
   
  <\!-tipo di base astratta  
   
@@ -200,9 +188,9 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  [any]*  
   
- \</Advice>?  
+ \</ Advice >?  
   
- <\!-Tipi di base astratti  
+ <\!-I tipi di base astratti  
   
  \<Istruzione / > *  
   
@@ -232,7 +220,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  \</SubjectConfirmation>?  
   
- \</Subject>  
+ \</ Soggetto >  
   
  \</ SubjectStatement > *  
   
@@ -266,7 +254,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  />*  
   
- \</AuthenticationStatement>*  
+ \</ AuthenticationStatement > *  
   
  \<AttributeStatement >  
   
@@ -296,7 +284,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  [Subject]  
   
- \<Action Namespace="[uri]">[string]\</Action>+  
+ \<Azione Namespace = "[uri]" > [stringa]\</Action > +  
   
  \<Evidenza >  
   
@@ -306,16 +294,16 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  \</ Evidenza >?  
   
- \</AuthorizationDecisionStatement>*  
+ \</ AuthorizationDecisionStatement > *  
   
- \</Assertion>  
+ \</ Asserzione >  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Informazioni rimosse dai corpi dei messaggi in caso di registrazione di messaggi decrittografati/non crittografati  
  Come descritto in precedenza, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] rimuove chiavi e potenziali informazioni personali note dalle intestazioni dei messaggi registrati in forma decrittografata/non crittografata. Inoltre, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] rimuove chiavi e potenziali informazioni personali note dai corpi dei messaggi per gli elementi del corpo e le azioni riportati nell'elenco seguente, che descrivono messaggi di sicurezza coinvolti nello scambio di chiavi.  
   
  Per gli spazi dei nomi seguenti:  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (se, ad esempio, non ci sono azioni disponibili)  
+ xmlns:WST="http://schemas.xmlsoap.org/ws/2004/04/trust ="http://schemas.xmlsoap.org/ws/2004/04/trust"e xmlns:WST="http://schemas.xmlsoap.org/ws/2005/02/trust = "http://schemas.xmlsoap.org/ws/2005/02/trust" (ad esempio, se nessuna azione disponibile)  
   
  Vengono rimosse informazioni per questi elementi del corpo, che implicano lo scambio di chiavi:  
   

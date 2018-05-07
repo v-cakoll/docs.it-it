@@ -1,24 +1,12 @@
 ---
 title: 'CustomPeerResolverService: registrazioni client'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9c979922bf8c7b786fd0a671c22289fb148a883c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f8b6f5ac3a41fdc7f817553693b0621ee0ea3de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService: registrazioni client
 Ogni nodo della rete pubblica le informazioni sull'endpoint relative nel servizio resolver tramite la funzione `Register`. Il servizio resolver archivia queste informazioni come record di registrazione. Questo record contiene un identificatore univoco (RegistrationID) e informazioni sull'endpoint (PeerNodeAddress) per il nodo.  
@@ -37,7 +25,7 @@ Ogni nodo della rete pubblica le informazioni sull'endpoint relative nel servizi
   
  Per implementare il proprio servizio resolver, è necessario scrivere una funzione di manutenzione per rimuovere i record di registrazione non aggiornati. Sono disponibili diversi modi per eseguire questa operazione:  
   
--   **Manutenzione periodica**: impostare un timer per passare disattivi periodicamente ed esaminare l'archivio dati per eliminare i record obsoleti. Questo approccio è utilizzato da <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>.  
+-   **Manutenzione periodica**: impostare un timer in modo disattivi periodicamente ed esaminare l'archivio dati per eliminare i record obsoleti. Questo approccio è utilizzato da <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>.  
   
 -   **Eliminazione passiva**: anziché cercare attivamente i record non aggiornati a intervalli regolari, è possibile identificare ed eliminare i record non aggiornati quando il servizio è già in esecuzione un'altra funzione. Questo approccio potrebbe potenzialmente rallentare i tempi di risposta alle richieste dei client resolver, ma elimina la necessità di un timer e potrebbe rivelarsi più efficiente qualora si preveda che un numero ridotto di nodi abbandoni la rete senza chiamare `Unregister`.  
   

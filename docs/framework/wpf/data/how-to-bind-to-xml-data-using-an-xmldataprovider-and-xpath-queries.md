@@ -1,28 +1,16 @@
 ---
-title: 'Procedura: eseguire l''associazione a dati XML tramite un oggetto XMLDataProvider e query XPath'
-ms.custom: 
+title: "Procedura: eseguire l'associazione a dati XML tramite un oggetto XMLDataProvider e query XPath"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XmlDataProvider [WPF], binding to XML data
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92037be2280eaa248951ff9bad82b7a1581a4fd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb8eb727fb6614440721c4d34a7d1828182d2f14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Procedura: eseguire l'associazione a dati XML tramite un oggetto XMLDataProvider e query XPath
 In questo esempio viene illustrato come associare a [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] dati utilizzando un <xref:System.Windows.Data.XmlDataProvider>.  
@@ -55,7 +43,7 @@ In questo esempio viene illustrato come associare a [!INCLUDE[TLA#tla_xml](../..
   
 -   `XPath="*[position()>3]"` restituirà tutti gli elementi libro ad eccezione dei primi 3.  
   
- Quando si esegue un **XPath** esegue una query, viene restituito un <xref:System.Xml.XmlNode> o un elenco di XmlNode. <xref:System.Xml.XmlNode>è un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] oggetto, che significa che è possibile utilizzare il <xref:System.Windows.Data.Binding.Path%2A> proprietà da associare il [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] proprietà. Considerare di nuovo l'esempio precedente. Se il resto dell'esempio è uguale a e si modifica il <xref:System.Windows.Controls.TextBlock> associazione al seguente, si noterà i nomi di XmlNodes restituito nel <xref:System.Windows.Controls.ListBox>. In questo caso, il nome di tutti i nodi restituiti è "*Book*".  
+ Quando si esegue un **XPath** esegue una query, viene restituito un <xref:System.Xml.XmlNode> o un elenco di XmlNode. <xref:System.Xml.XmlNode> è un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] oggetto, che significa che è possibile usare il <xref:System.Windows.Data.Binding.Path%2A> proprietà da associare il [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] proprietà. Considerare di nuovo l'esempio precedente. Se il resto dell'esempio è uguale a e si modifica il <xref:System.Windows.Controls.TextBlock> associazione al seguente, si noterà i nomi di XmlNodes restituito nel <xref:System.Windows.Controls.ListBox>. In questo caso, il nome di tutti i nodi restituiti è "*Book*".  
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   

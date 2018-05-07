@@ -1,26 +1,12 @@
 ---
 title: Framework dei servizi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-framework"></a>Framework dei servizi
 In questo argomento vengono elencate tutte le eccezioni generate dai dati del framework dei servizi.  
@@ -49,8 +35,8 @@ In questo argomento vengono elencate tutte le eccezioni generate dai dati del fr
 |channelDoesNotHaveADuplexSession0|Il canale corrente non supporta la chiusura della sessione di output Il canale non implementa ISessionChannel\<IDuplexSession >.|  
 |ClientRuntimeRequiresFormatter0|L'elemento ClientOperation specificato richiede un formattatore, poiché SerializeRequest e DeserializeReply non sono entrambi False.|  
 |CommunicationObjectAborted1|Impossibile utilizzare l'oggetto di comunicazione specificato per la comunicazione perché è stato interrotto.|  
-|CommunicationObjectAbortedStack2|Impossibile utilizzare l'oggetto di comunicazione specificato per la comunicazione perché è stato interrotto: {1}|  
-|CommunicationObjectBaseClassMethodNotCalled|L'oggetto di comunicazione specificato ha sostituito la funzione virtuale {1} ma non effettua una chiamata alla versione definita nella classe di base.|  
+|CommunicationObjectAbortedStack2|L'oggetto di comunicazione specificato non può essere utilizzato per la comunicazione perché è stato interrotto: {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|L'oggetto di comunicazione specificato ha sostituito la funzione virtuale {1} ma non effettua una chiamata alla versione definita nella classe base.|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|Il contratto specificato dispone di una o più operazioni IsTerminating o diverse da IsInitiating, ma la proprietà SessionMode non è impostata su SessionMode.Required. Gli attributi IsInitiating e IsTerminating possono essere utilizzati solo nel contesto di una sessione.|  
 |CouldnTCreateChannelForChannelType2|È stato richiesto il tipo di canale specificato, ma l'associazione specificata non lo supporta o non è configurato correttamente per supportarlo.|  
 |DispatchRuntimeRequiresFormatter0|L'elemento DispatchOperation specificato richiede un formattatore, poiché DeserializeRequest e SerializeReply non sono entrambi False.|  

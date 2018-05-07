@@ -1,29 +1,17 @@
 ---
 title: Eventi di anteprima
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Preview events [WPF]
 - suppressing events [WPF]
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a258a0e145e9a24e6e87bb511fdbd6166422a656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d6c1ab32cb43730af2f935f4bd4405059994c12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="preview-events"></a>Eventi di anteprima
 Gli eventi di anteprima, noti anche come eventi di tunneling, sono gli eventi indirizzati in cui la direzione della route viene trasferito dalla radice dell'applicazione verso l'elemento che ha generato l'evento e viene restituito come origine dati di evento. Non tutti gli scenari supportano o richiedono eventi di anteprima. In questo argomento vengono descritte le situazioni in cui sono presenti tali eventi, come applicazioni o componenti deve essere gestita, e i casi in cui la creazione di eventi di anteprima in componenti personalizzati o classi potrebbe essere appropriata.  

@@ -1,27 +1,15 @@
 ---
 title: Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-caps.latest.revision: "55"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
-Lo strumento Visualizzatore di tracce dei servizi [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consente di analizzare le tracce di diagnostica create da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Il Visualizzatore di tracce dei servizi offre funzionalità per unire, visualizzare e filtrare facilmente i messaggi di traccia nel log che consentono di diagnosticare, risolvere e controllare i problemi relativi ai servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation (WCF) consente di analizzare le tracce diagnostiche che vengono generate da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Il Visualizzatore di tracce dei servizi offre funzionalità per unire, visualizzare e filtrare facilmente i messaggi di traccia nel log che consentono di diagnosticare, risolvere e controllare i problemi relativi ai servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
 ## <a name="configuring-tracing"></a>Configurazione delle funzionalità di traccia  
  Le tracce di diagnostica forniscono informazioni che mostrano quello si sta verificando in tutta l'operazione dell'applicazione. Come si intuisce dal nome, è possibile seguire le operazioni dall'origine alla destinazione e tramite punti intermedi.  
@@ -272,7 +260,7 @@ Lo strumento Visualizzatore di tracce dei servizi [!INCLUDE[indigo1](../../../in
   
 4.  Nella visualizzazione albero a sinistra viene visualizzata la struttura del record di traccia selezionato nel passaggio 1. Passare all'elemento per il quale si desidera creare una condizione. In questo esempio, passare all'elemento ThreadID che si trova nel XPath: /E2ETraceEvent/System/Execution/@ThreadID nodo. Fare doppio clic sull'attributo ThreadID contenuto nella visualizzazione albero. Nella parte destra della finestra di dialogo viene creata un'espressione per l'attributo.  
   
-5.  Impostare il parametro relativo alla condizione di ThreadID su "{0}". Questo passaggio fa in modo che il valore ThreadID venga configurato quando il filtro viene applicato. Per ulteriori informazioni, consultare la sezione relativa all'applicazione dei filtri. È possibile definire fino a quattro parametri. Le condizioni vengono combinate mediante l'operatore OR.  
+5.  Modificare il campo dei parametri per la condizione di ThreadID da None per '{0}'. Questo passaggio fa in modo che il valore ThreadID venga configurato quando il filtro viene applicato. Per ulteriori informazioni, consultare la sezione relativa all'applicazione dei filtri. È possibile definire fino a quattro parametri. Le condizioni vengono combinate mediante l'operatore OR.  
   
 6.  Fare clic su **Ok** per creare il filtro.  
   
@@ -297,7 +285,7 @@ Lo strumento Visualizzatore di tracce dei servizi [!INCLUDE[indigo1](../../../in
   
 2.  Fare clic su **Filtra ora**e osservare il risultato dell'operazione.  
   
- Se il filtro utilizza più parametri, immetterli utilizzando ';' come separatore nel **trova** campo. Ad esempio, nella stringa seguente sono definiti 3 parametri: "1;findValue;text". Il visualizzatore applica "1" al parametro {0} del filtro, mentre "findValue" e "text" sono applicati rispettivamente ai parametri {1} e {2} del filtro.  
+ Se il filtro utilizza più parametri, immetterli utilizzando ';' come separatore nel **trova** campo. Ad esempio, nella stringa seguente sono definiti 3 parametri: "1;findValue;text". Il Visualizzatore applica "1" per il {0} parametro del filtro. 'findValue' e 'text' vengono applicati alle {1} e {2} rispettivamente.  
   
 ###### <a name="sharing-custom-filters"></a>Condivisione di filtri personalizzati  
  I filtri personalizzati possono essere condivisi tra sessioni diverse e utenti diversi. È possibile esportare i filtri in un file di definizione e quindi importare questo file in un altro percorso.  
@@ -422,8 +410,8 @@ Lo strumento Visualizzatore di tracce dei servizi [!INCLUDE[indigo1](../../../in
 |![Traccia di sospensione dell'attività](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Traccia di sospensione dell’attività: traccia che indica il tempo di sospensione di un’attività. Nessuna traccia è generata in un'attività sospesa finché l'attività non riprende. Un'attività sospesa indica che non si sta verificando nessuna elaborazione in quell'attività nell'ambito dell'origine della traccia. Le tracce di Sospensione/Ripresa sono utili per il profiling. La traccia di sospensione viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
 |![Traccia riprendere le attività](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Traccia di ripresa dell'attività: traccia che indica il momento di ripresa di un’attività dopo la sospensione. Le tracce possono essere generate nuovamente in quell'attività. Le tracce di Sospensione/Ripresa sono utili per il profiling. La traccia di ripresa viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
 |![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Trasferimento: traccia generata quando il flusso di controllo logico viene trasferito da un’attività all’altra. L'attività originaria del trasferimento può continuare ad eseguire le operazioni in parallelo con l'attività che riceve il trasferimento. La traccia di trasferimento viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
-|![Transfer From](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Trasferimento da: traccia che definisce il trasferimento da un’altra attività all’attività corrente.|  
-|![Transfer To](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Trasferimento a: traccia che definisce il trasferimento di un flusso di controllo logico dall’attività corrente a un’altra attività.|  
+|![Trasferimento da](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Trasferimento da: traccia che definisce il trasferimento da un’altra attività all’attività corrente.|  
+|![Trasferire](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Trasferimento a: traccia che definisce il trasferimento di un flusso di controllo logico dall’attività corrente a un’altra attività.|  
   
 ### <a name="wcf-traces"></a>Tracce WCF  
   
@@ -444,7 +432,7 @@ Lo strumento Visualizzatore di tracce dei servizi [!INCLUDE[indigo1](../../../in
   
 |Icona|Descrizione|  
 |----------|-----------------|  
-|![Attività di ambiente](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Attività dell'ambiente: attività che crea, apre o chiude un host o un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Gli errori che si sono verificati durante queste fasi verranno visualizzati in questa attività.|  
+|![Attività dell'ambiente](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Attività dell'ambiente: attività che crea, apre o chiude un host o un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Gli errori che si sono verificati durante queste fasi verranno visualizzati in questa attività.|  
 |![Attività Listen](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Attività Listen: attività che si registra tracce riferita a un listener. In questa attività, si possono visualizzare informazioni e richieste di connessione del listener.|  
 |![Attività ricezione byte](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Attività ricezione byte: attività che raduna tutte le tracce relative alla ricezione di byte in ingresso su una connessione tra due endpoint. Questa attività è essenziale nelle correlazioni con le attività del trasporto che propagano l'ID attività, ad esempio http.sys. Errori di connessione, quali interruzioni, verranno visualizzati in questa attività.|  
 |![Attività elaborazione messaggio](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Attività Elaborazione messaggi: attività che raduna tracce relative alla creazione di un messaggio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Gli errori causati da envelope errata o da messaggi in formato non valido verranno visualizzati nell'attività. In questa attività, è possibile controllare le intestazioni del messaggio per vedere se un ID attività è stato propagato dal chiamante. In questo caso, quando si passa all’attività di tipo ProcessAction (icona successiva), si può inoltre assegnare a tale attività l'ID attività propagato per la correlazione tra tracce di chiamante e chiamato.|  

@@ -1,34 +1,20 @@
 ---
 title: 'Procedura: usare un validator di nome utente e password personalizzato'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ea4f4d7021f02d239b9e2e93a85b5baaf5a0317
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8580219181af8fd28bcc99c60bd1e681ffbdad54
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Procedura: usare un validator di nome utente e password personalizzato
-Per impostazione predefinita, quando per l'autenticazione vengono utilizzati un nome utente e una password, in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzato Windows per convalidarli. Tuttavia, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consente agli utente personalizzata nome e una password schemi di autenticazione, noto anche come *validator*. Per incorporare un validator personalizzato di nome utente e password, creare una classe che deriva da <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> e configurarla.  
+Per impostazione predefinita, quando viene usato un nome utente e una password per l'autenticazione, Windows Communication Foundation (WCF) Usa Windows per convalidare il nome utente e password. Tuttavia, WCF consente di utente personalizzata nome e una password gli schemi di autenticazione, noto anche come *validator*. Per incorporare un validator personalizzato di nome utente e password, creare una classe che deriva da <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> e configurarla.  
   
  Per un'applicazione di esempio, vedere [convalida della Password nome utente](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
   
@@ -64,7 +50,7 @@ Per impostazione predefinita, quando per l'autenticazione vengono utilizzati un 
   
     1.  Nel file di configurazione, sotto il [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, aggiungere un [ \<associazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
   
-    2.  Aggiungere un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) o [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento per la sezione delle associazioni. Per ulteriori informazioni sulla creazione di un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elemento di associazione vedere [procedura: specificare un'associazione al servizio nella configurazione](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+    2.  Aggiungere un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) o [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento per la sezione delle associazioni. Per ulteriori informazioni sulla creazione di un elemento di associazione di WCF, vedere [procedura: specificare un'associazione al servizio nella configurazione](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
     3.  Impostare il `mode` attributo del [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) o [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) a `Message`, `Transport`, `or``TransportWithMessageCredential`.  
   
@@ -75,9 +61,9 @@ Per impostazione predefinita, quando per l'autenticazione vengono utilizzati un 
          Quando si utilizza la sicurezza a livello di trasporto su HTTP (S), impostare il `clientCredentialType` attributo del [ \<trasporto >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) o [ \<trasporto >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) a `Basic`.  
   
         > [!NOTE]
-        >  Quando un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è ospitato in Internet Information Services (IIS) utilizzando la protezione a livello di trasporto e la proprietà <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> è impostata su <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, lo schema di autenticazione personalizzato utilizza un sottoinsieme dell'autenticazione di Windows. Questo avviene perché in tale scenario, IIS esegue l'autenticazione di Windows prima di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiamando l'autenticatore personalizzato.  
+        >  Quando un servizio WCF è ospitato in Internet Information Services (IIS) utilizzando la sicurezza a livello di trasporto e il <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> è impostata su <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, lo schema di autenticazione personalizzato utilizza un sottoinsieme dell'autenticazione di Windows. Questo avviene perché in questo scenario, IIS esegue l'autenticazione di Windows prima di WCF richiamando l'autenticatore personalizzato.  
   
-     Per ulteriori informazioni sulla creazione di un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elemento di associazione vedere [procedura: specificare un'associazione al servizio nella configurazione](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+     Per ulteriori informazioni sulla creazione di un elemento di associazione di WCF, vedere [procedura: specificare un'associazione al servizio nella configurazione](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
      Nell'esempio seguente viene illustrato il codice di configurazione per l'associazione.  
   
@@ -110,7 +96,7 @@ Per impostazione predefinita, quando per l'autenticazione vengono utilizzati un 
     6.  Impostare `userNamePasswordValidationMode` su `Custom`.  
   
         > [!IMPORTANT]
-        >  Se il valore `userNamePasswordValidationMode` non è impostato, in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene utilizzata l'autenticazione Windows anziché il validator personalizzato di nome utente e password.  
+        >  Se il `userNamePasswordValidationMode` valore non è impostato, WCF utilizza l'autenticazione di Windows anziché il validator di nome e una password utente personalizzata.  
   
     7.  Impostare `customUserNamePasswordValidatorType` sul tipo che rappresenta il validator personalizzato di nome utente e password.  
   

@@ -1,41 +1,29 @@
 ---
 title: Controlli Windows Form per funzione
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], by function
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a48e1e728e3ded58b0045554a81588933027074c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 058a18878b89991bd8124bd69e18476d4f1479d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-controls-by-function"></a>Controlli Windows Form per funzione
 Windows Form offre i controlli e componenti che eseguono una serie di funzioni. Nella tabella seguente sono elencati i controlli Windows Form e i componenti in base alla funzione generale. Inoltre, in cui sono presenti più controlli che svolgono la stessa funzione, il controllo consigliato viene elencato con una nota relativa al controllo sostituiva. In una tabella successiva, sono elencati i controlli sostituiti con sostitutivi consigliati.  
   
 > [!NOTE]
->  Le tabelle seguenti elencano non ciascun controllo o un componente, che è possibile usare in Windows Form. per un elenco più completo, vedere [controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+>  Le tabelle seguenti elencano non ciascun controllo o un componente che è possibile usare in Windows Form. per un elenco più completo, vedere [controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
   
 ## <a name="recommended-controls-and-components-by-function"></a>Controlli e componenti dalla funzione consigliati  
   
 |Funzione|Control|Descrizione|  
 |--------------|-------------|-----------------|  
-|Visualizzazione dei dati|Controllo <xref:System.Windows.Forms.DataGridView>|Il <xref:System.Windows.Forms.DataGridView> controllo fornisce una tabella personalizzabile per la visualizzazione dei dati. La <xref:System.Windows.Forms.DataGridView> classe consente la personalizzazione di celle, righe, colonne e i bordi. **Nota:** il <xref:System.Windows.Forms.DataGridView> controllo fornisce diverse funzionalità di base e avanzate che non sono presenti nel <xref:System.Windows.Forms.DataGrid> controllo. Per ulteriori informazioni, vedere [differenze tra il Windows Form controlli DataGridView e DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
-|Spostamento e l'associazione dati|<xref:System.Windows.Forms.BindingSource>componente|Semplifica l'associazione dei controlli in un form ai dati, fornendo la gestione delle valute, la notifica delle modifiche e altri servizi.|  
+|Visualizzazione dei dati|Controllo <xref:System.Windows.Forms.DataGridView>|Il <xref:System.Windows.Forms.DataGridView> controllo fornisce una tabella personalizzabile per la visualizzazione dei dati. La <xref:System.Windows.Forms.DataGridView> classe consente la personalizzazione di celle, righe, colonne e i bordi. **Nota:** il <xref:System.Windows.Forms.DataGridView> controllo fornisce diverse funzionalità di base e avanzate che non sono presenti nel <xref:System.Windows.Forms.DataGrid> controllo. Per altre informazioni, vedere [differenze tra il Windows Form controlli DataGridView e DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
+|Spostamento e l'associazione dati|<xref:System.Windows.Forms.BindingSource> Componente|Semplifica l'associazione dei controlli in un form ai dati, fornendo la gestione delle valute, la notifica delle modifiche e altri servizi.|  
 ||Controllo <xref:System.Windows.Forms.BindingNavigator>|Fornisce un'interfaccia di tipo barra degli strumenti per esplorare e modificare i dati in un form.|  
 |Modifica del testo|Controllo <xref:System.Windows.Forms.TextBox>|Visualizza il testo immesso in fase di progettazione che può essere modificato dagli utenti in fase di esecuzione, o modificata a livello di codice.|  
 ||Controllo <xref:System.Windows.Forms.RichTextBox>|Consente il testo da visualizzare con formattazione in formato testo normale o RTF (RICH).|  
@@ -53,7 +41,7 @@ Windows Form offre i controlli e componenti che eseguono una serie di funzioni. 
 ||Controllo <xref:System.Windows.Forms.NumericUpDown>|Visualizza un elenco di numeri che agli utenti di scorrere con pulsanti su e giù.|  
 ||Controllo <xref:System.Windows.Forms.TreeView>|Visualizza una raccolta gerarchica di oggetti del nodo che può essere costituita da testo con icone o caselle di controllo facoltative.|  
 |Visualizzazione grafica|Controllo <xref:System.Windows.Forms.PictureBox>|File di grafica consente di visualizzare, ad esempio le bitmap e icone, in un frame.|  
-|Archiviazione di grafica|Controllo <xref:System.Windows.Forms.ImageList>|Funge da repository per le immagini. <xref:System.Windows.Forms.ImageList>controlli e le immagini che contengono possono essere riutilizzate da un'applicazione al successivo.|  
+|Archiviazione di grafica|Controllo <xref:System.Windows.Forms.ImageList>|Funge da repository per le immagini. <xref:System.Windows.Forms.ImageList> controlli e le immagini che contengono possono essere riutilizzate da un'applicazione a quella successiva.|  
 |Impostazione del valore|Controllo <xref:System.Windows.Forms.CheckBox>|Visualizza una casella di controllo e l'etichetta di testo. In genere utilizzato per impostare le opzioni.|  
 ||Controllo <xref:System.Windows.Forms.CheckedListBox>|Visualizza un elenco di elementi, ognuno accompagnati da una casella di controllo di scorrimento.|  
 ||Controllo <xref:System.Windows.Forms.RadioButton>|Visualizza un pulsante che può essere attivato o disattivata.|  
@@ -73,8 +61,8 @@ Windows Form offre i controlli e componenti che eseguono una serie di funzioni. 
 ||Controllo <xref:System.Windows.Forms.LinkLabel>|Visualizza il testo come un collegamento ipertestuale e genera un evento quando l'utente fa clic sul testo speciale. In genere il testo è un collegamento a un'altra finestra o un sito Web.|  
 ||Controllo <xref:System.Windows.Forms.NotifyIcon>|Visualizza un'icona nell'area di notifica dello stato della barra delle applicazioni che rappresenta un'applicazione in esecuzione in background.|  
 ||Controllo <xref:System.Windows.Forms.ToolStrip>|Consente di creare barre degli strumenti che può contenere un Microsoft Windows XP, Microsoft Office, Microsoft Internet Explorer o un aspetto personalizzato, con o senza temi e con supporto per l'overflow e il riordino degli elementi in fase di esecuzione. **Nota:** il <xref:System.Windows.Forms.ToolStrip> controllo è progettato per sostituire il <xref:System.Windows.Forms.ToolBar> controllo.|  
-|Guida dell'utente|<xref:System.Windows.Forms.HelpProvider>componente|Fornisce la Guida in linea o popup per i controlli.|  
-||<xref:System.Windows.Forms.ToolTip>componente|Fornisce una finestra popup che consente di visualizzare una breve descrizione dello scopo del controllo quando l'utente posiziona il puntatore del mouse sul controllo.|  
+|Guida dell'utente|<xref:System.Windows.Forms.HelpProvider> Componente|Fornisce la Guida in linea o popup per i controlli.|  
+||<xref:System.Windows.Forms.ToolTip> Componente|Fornisce una finestra popup che consente di visualizzare una breve descrizione dello scopo del controllo quando l'utente posiziona il puntatore del mouse sul controllo.|  
 |Raggruppamento di altri controlli.|Controllo <xref:System.Windows.Forms.Panel>|Consente di raggruppare un set di controlli in un frame senza etichetta, che è possibile scorrere.|  
 ||Controllo <xref:System.Windows.Forms.GroupBox>|Su un frame non scorrevole con etichette, di raggruppare un set di controlli (ad esempio i pulsanti di opzione).|  
 ||Controllo <xref:System.Windows.Forms.TabControl>|Fornisce una pagina a schede per l'organizzazione e l'accesso in modo efficiente gli oggetti raggruppati.|  

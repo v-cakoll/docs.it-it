@@ -1,29 +1,15 @@
 ---
 title: Abilitazione dinamica della traccia analitica
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d070c66eebbf1a067254c38c6e5bfc7f40742863
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 46dfba2cb148009ddfd0bbd40e3b7202d774e0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Abilitazione dinamica della traccia analitica
-Utilizzando gli strumenti forniti con il sistema operativo Windows, è possibile abilitare o disabilitare la traccia in modo dinamico utilizzando Traccia eventi per Windows (ETW). Per tutti i servizi [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] la traccia analitica può essere abilitata e disabilitata in modo dinamico senza modificare il file Web.config dell'applicazione o riavviare il servizio. In questo modo l'applicazione che genera gli eventi di traccia non subisce variazioni.  
+Utilizzando gli strumenti forniti con il sistema operativo Windows, è possibile abilitare o disabilitare la traccia in modo dinamico utilizzando Traccia eventi per Windows (ETW). Per tutti i [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] servizi Windows Communication Foundation (WCF), la traccia analitica può essere abilitata e disabilitata in modo dinamico senza modificare il file dell'applicazione Web. config o il riavvio del servizio. In questo modo l'applicazione che genera gli eventi di traccia non subisce variazioni.  
   
  È possibile configurare le opzioni di traccia di[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] in modo analogo. È ad esempio possibile impostare il livello di gravità da **Error** su **Information** senza interferire con l'applicazione. A tale scopo utilizzare gli strumenti seguenti:  
   

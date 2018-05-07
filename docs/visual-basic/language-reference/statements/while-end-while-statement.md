@@ -1,11 +1,6 @@
 ---
 title: Istruzione While...End While (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.While
 - vb.While...EndWhile
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f831f233eaa4f1c38d56f3a89bda9b0cf1bccaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9f46a6ec65faef4448bdd25e30a6cc0c605cd0f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whileend-while-statement-visual-basic"></a>Istruzione While...End While (Visual Basic)
 Esegue una serie di istruzioni purché una determinata condizione è `True`.  
@@ -42,10 +34,10 @@ End While
   
 |Termine|Definizione|  
 |---|---|  
-|`condition`|Obbligatorio. `Boolean`espressione. Se `condition` è `Nothing`, Visual Basic lo considera come `False`.|  
-|`statements`|Parametro facoltativo. Uno o più istruzioni che seguono `While`, che ogni fase di esecuzione `condition` è `True`.|  
-|`Continue While`|Parametro facoltativo. Trasferisce il controllo all'iterazione successiva del `While` blocco.|  
-|`Exit While`|Parametro facoltativo. Trasferisce il controllo fuori il `While` blocco.|  
+|`condition`|Obbligatorio. `Boolean` Espressione. Se `condition` è `Nothing`, Visual Basic lo considera come `False`.|  
+|`statements`|Facoltativo. Uno o più istruzioni che seguono `While`, che ogni fase di esecuzione `condition` è `True`.|  
+|`Continue While`|Facoltativo. Trasferisce il controllo all'iterazione successiva del `While` blocco.|  
+|`Exit While`|Facoltativo. Trasferisce il controllo fuori il `While` blocco.|  
 |`End While`|Obbligatorio. Termina la definizione del blocco `While`.|  
   
 ## <a name="remarks"></a>Note  
@@ -63,7 +55,7 @@ End While
  È possibile annidare `While` inserendo un ciclo all'interno di altra. È inoltre possibile annidare tipi diversi di strutture di controllo all'interno di un altro. Per ulteriori informazioni, vedere [strutture di controllo nidificate](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 ## <a name="exit-while"></a>Uscita durante  
- Il [uscire mentre](../../../visual-basic/language-reference/statements/exit-statement.md) istruzione può fornire un altro modo per uscire da un `While` ciclo. `Exit While`Trasferisce il controllo all'istruzione che segue immediatamente il `End While` istruzione.  
+ Il [uscire mentre](../../../visual-basic/language-reference/statements/exit-statement.md) istruzione può fornire un altro modo per uscire da un `While` ciclo. `Exit While` Trasferisce immediatamente il controllo all'istruzione che segue il `End While` istruzione.  
   
  In genere si usa `Exit While` dopo la valutazione di alcune condizioni (ad esempio, in un `If...Then...Else` struttura). È possibile uscire da un ciclo se si rileva una condizione che rende Impossibile continuare la ripetizione, ad esempio una richiesta di terminazione o di un valore errato o non necessarie. È possibile utilizzare `Exit While` quando si testa una condizione che potrebbe causare un *ciclo infinito*, ovvero un ciclo che è stato possibile eseguire un numero estremamente elevato o persino infinito di volte. È quindi possibile utilizzare `Exit While` per interrompere il ciclo.  
   

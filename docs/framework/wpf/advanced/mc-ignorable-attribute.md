@@ -1,13 +1,6 @@
 ---
 title: Attributo mc:Ignorable
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - mc XML namespace prefix [WPF]
 - mc:Ignorable attribute
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9767b721321b34030a2f276a90c618c658645207
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b8a2ef6e27bc6b25776157e59bef04b883fcb1a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mcignorable-attribute"></a>Attributo mc:Ignorable
 Specifica quale [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] prefissi di spazio dei nomi rilevati in un file di markup possono essere ignorati da un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore. Il `mc:Ignorable` attributo supporta la compatibilità dei markup per il mapping dello spazio dei nomi personalizzati e per [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] il controllo delle versioni.  
@@ -66,7 +54,7 @@ Specifica quale [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md
   
  Gli elementi o attributi in cui la parte del prefisso del nome dell'elemento vengono identificati come `mc:Ignorable` non generano errori quando vengono elaborati da un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore. Se tale attributo non può essere risolto in un costrutto di programmazione o il tipo sottostante, tale elemento viene ignorato. Si noti tuttavia che gli elementi ignorati potrebbero ancora generare ulteriori errori di analisi per altri requisiti dell'elemento che può avere effetti collaterali di tale elemento non viene elaborata. Ad esempio, un modello di contenuto di un elemento specifico potrebbe richiedere esattamente un elemento figlio, ma se l'elemento figlio specificato è stato un `mc:Ignorable` prefisso e l'elemento figlio specificato non può essere risolto in un tipo, il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] potrebbe processore Genera un errore.  
   
- `mc:Ignorable`si applica solo ai mapping dello spazio dei nomi alle stringhe dell'identificatore. `mc:Ignorable`non si applica ai mapping dello spazio dei nomi negli assembly, specificare un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] dello spazio dei nomi e un assembly (o predefinito per l'eseguibile dell'assembly corrente).  
+ `mc:Ignorable` si applica solo ai mapping dello spazio dei nomi alle stringhe dell'identificatore. `mc:Ignorable` non si applica ai mapping dello spazio dei nomi in assembly, specificare un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] dello spazio dei nomi e un assembly (o predefinito per il file eseguibile corrente dell'assembly).  
   
  Se si implementa un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore, il processore non deve generare l'analisi o l'elaborazione di errori la risoluzione del tipo per qualsiasi elemento o attributo qualificato da un prefisso che è stato identificato come `mc:Ignorable`. Ma l'implementazione di processore può ancora generare eccezioni che sono il risultato di un elemento riesce a caricare o essere elaborati, ad esempio fornito in precedenza nell'esempio di elemento figlio di uno secondario.  
   

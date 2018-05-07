@@ -1,12 +1,6 @@
 ---
 title: Istruzione Throw (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Throw
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 50ada551c32b8296f0dad2ae929ca9c81a14a711
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cfa53b3585846da25711739fb7af4bde21746b29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="throw-statement-visual-basic"></a>Istruzione Throw (Visual Basic)
 Genera un'eccezione all'interno di una stored procedure.  
@@ -55,11 +46,11 @@ Throw [ expression ]
  [!code-vb[VbVbalrStatements#84](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/throw-statement_1.vb)]  
   
 ## <a name="requirements"></a>Requisiti  
- **Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Namespace:** [VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Modulo:**`Interaction`  
+ **Modulo:** `Interaction`  
   
- **Assembly:** libreria di Runtime di Visual Basic (in Microsoft.VisualBasic.dll)  
+ **Assembly:** libreria di Runtime di Visual Basic (in VisualBasic)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  

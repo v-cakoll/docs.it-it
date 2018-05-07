@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76ce5cd67b66dea47f5bd12e78bb27179b391257
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5773181b8883f0f94ff451808c8c97ce3407970e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento
 L'esempio di codice seguente visualizza un controllo personalizzato denominato `FlashTrackBar` che può essere usato per visualizzare all'utente il livello o lo stato di avanzamento di un'applicazione. Usa una sfumatura per rappresentare visivamente lo stato di avanzamento.  
@@ -66,7 +54,7 @@ L'esempio di codice seguente visualizza un controllo personalizzato denominato `
 |`OnValueChanged`|Il metodo che genera l'evento `ValueChanged`.|  
   
 > [!NOTE]
->  `FlashTrackBar`Usa il <xref:System.EventArgs> classe per i dati dell'evento e <xref:System.EventHandler> delegato dell'evento.  
+>  `FlashTrackBar` Usa il <xref:System.EventArgs> classe per i dati dell'evento e <xref:System.EventHandler> delegato dell'evento.  
   
  Per gestire il corrispondente *EventName* eventi, `FlashTrackBar` esegue l'override di metodi seguenti che eredita da <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   

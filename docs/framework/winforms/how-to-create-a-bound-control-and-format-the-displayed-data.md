@@ -1,28 +1,16 @@
 ---
 title: 'Procedura: creare un controllo con associazione e formattare i dati visualizzati'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6088048ed27b2021e297494275f4e80f7c0cb681
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9055ec9c4b646e0c86819e4e72db8ce20086bace
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Procedura: creare un controllo con associazione e formattare i dati visualizzati
 Con l'associazione di dati di Windows Form, è possibile formattare i dati visualizzati in un controllo con associazione a dati mediante il **formattazione e associazione avanzata** la finestra di dialogo.  
@@ -61,7 +49,7 @@ Con l'associazione di dati di Windows Form, è possibile formattare i dati visua
     |Valuta|Specificare il numero di posizioni decimali utilizzando **decimali** controllo di scorrimento.|  
     |Data/Ora|Selezionare come data e ora deve essere visualizzate selezionando uno degli elementi di **tipo** nella casella di selezione.|  
     |Scientifico|Specificare il numero di posizioni decimali utilizzando **decimali** controllo di scorrimento.|  
-    |Custom (Personalizzati)|Specificare una stringa di formato personalizzata.<br /><br /> Per ulteriori informazioni, vedere [formattazione dei tipi di](../../../docs/standard/base-types/formatting-types.md). **Nota:** stringhe di formato personalizzate non sono garantite correttamente il round trip tra l'origine dati e il controllo associato. Gestire invece l'evento <xref:System.Windows.Forms.Binding.Parse> o <xref:System.Windows.Forms.Binding.Format> per il binding e applicare la formattazione personalizzata nel codice di gestione degli eventi.|  
+    |Custom (Personalizzati)|Specificare una stringa di formato personalizzata.<br /><br /> Per altre informazioni, vedere [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md). **Nota:** stringhe di formato personalizzate potrebbero non funzionare correttamente il round trip tra l'origine dati e il controllo associato. Gestire invece l'evento <xref:System.Windows.Forms.Binding.Parse> o <xref:System.Windows.Forms.Binding.Format> per il binding e applicare la formattazione personalizzata nel codice di gestione degli eventi.|  
   
 8.  Fare clic su **OK** per chiudere la **formattazione e associazione avanzata** la finestra di dialogo e tornare alla finestra Proprietà.  
   

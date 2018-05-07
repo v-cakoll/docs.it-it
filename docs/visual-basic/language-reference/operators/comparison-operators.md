@@ -1,11 +1,6 @@
 ---
 title: Operatori di confronto (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<>
 - vb.>=
@@ -35,29 +30,26 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa450f7978f46196663c7534b31597b04d80482a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e37f55b4c873c3dbea22a8edf0e5e2b58824720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-operators-visual-basic"></a>Operatori di confronto (Visual Basic)
 Di seguito sono indicati gli operatori di confronto definiti in Visual Basic.  
   
- `<`(operatore)  
+ `<` (operatore)  
   
- `<=`(operatore)  
+ `<=` (operatore)  
   
- `>`(operatore)  
+ `>` (operatore)  
   
- `>=`(operatore)  
+ `>=` (operatore)  
   
- `=`(operatore)  
+ `=` (operatore)  
   
- `<>`(operatore)  
+ `<>` (operatore)  
   
  [Operatore Is](../../../visual-basic/language-reference/operators/is-operator.md)  
   
@@ -65,7 +57,7 @@ Di seguito sono indicati gli operatori di confronto definiti in Visual Basic.
   
  [Operatore Like](../../../visual-basic/language-reference/operators/like-operator.md)  
   
- Questi operatori confrontano due espressioni per determinare se sono uguali, e in caso contrario, le differenze. `Is`, `IsNot`, e `Like` sono descritti in dettaglio in pagine specifiche della Guida. Gli operatori di confronto relazionali sono descritti in dettaglio in questa pagina.  
+ Questi operatori confrontano due espressioni per determinare se sono uguali, e in caso contrario, le differenze. `Is`, `IsNot`, e `Like` vengono discussi in dettaglio nelle pagine della Guida separate. Gli operatori di confronto relazionali sono descritti in dettaglio in questa pagina.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -97,14 +89,14 @@ result = string Like pattern
 ## <a name="remarks"></a>Note  
  Nella tabella seguente contiene un elenco di operatori di confronto relazionali e le condizioni che determinano se `result` è `True` o `False`.  
   
-|Operatore|`True`Se|`False`Se|  
+|Operatore|`True` Se|`False` Se|  
 |--------------|---------------|----------------|  
-|`<`(Minore di)|`expression1` < `expression2`|`expression1` >= `expression2`|  
-|`<=`(Minore o uguale a)|`expression1` <= `expression2`|`expression1` > `expression2`|  
-|`>`(Maggiore di)|`expression1` > `expression2`|`expression1` <= `expression2`|  
-|`>=`(Maggiore o uguale a)|`expression1` >= `expression2`|`expression1` < `expression2`|  
-|`=`(Uguale a)|`expression1` = `expression2`|`expression1` <> `expression2`|  
-|`<>`(Non uguale a)|`expression1` <> `expression2`|`expression1` = `expression2`|  
+|`<` (Minore di)|`expression1` < `expression2`|`expression1` >= `expression2`|  
+|`<=` (Minore o uguale a)|`expression1` <= `expression2`|`expression1` > `expression2`|  
+|`>` (Maggiore di)|`expression1` > `expression2`|`expression1` <= `expression2`|  
+|`>=` (Maggiore o uguale a)|`expression1` >= `expression2`|`expression1` < `expression2`|  
+|`=` (È uguale a)|`expression1` = `expression2`|`expression1` <> `expression2`|  
+|`<>` (Non uguale a)|`expression1` <> `expression2`|`expression1` = `expression2`|  
   
 > [!NOTE]
 >  Il [= operatore](../../../visual-basic/language-reference/operators/assignment-operator.md) viene usato anche come un operatore di assegnazione.  
@@ -122,11 +114,11 @@ result = string Like pattern
 ## <a name="comparing-strings"></a>Confronto di stringhe  
  Quando si confrontano stringhe, le espressioni stringa vengono valutate in base all'ordine alfabetico, che dipende il `Option Compare` impostazione.  
   
- `Option Compare Binary`Consente i confronti per un tipo di ordinamento derivato dalle rappresentazioni binarie interne dei caratteri di stringhe. Il tipo di ordinamento è determinato dalla tabella codici. Nell'esempio seguente viene illustrato un tipico ordinamento binario.  
+ `Option Compare Binary` Consente i confronti per un tipo di ordinamento derivato dalle rappresentazioni binarie interne dei caratteri di stringhe. Il tipo di ordinamento è determinato dalla tabella codici. Nell'esempio seguente viene illustrato un tipico ordinamento binario.  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- `Option Compare Text`Consente di stringhe i confronti per un criterio di ordinamento testuale, tra maiuscole e minuscole determinato dalle impostazioni locali dell'applicazione. Quando si imposta `Option Compare Text` e ordinare i caratteri nell'esempio precedente, si applica l'ordinamento di testo seguente:  
+ `Option Compare Text` basi stringa i confronti per un criterio di ordinamento testuale, tra maiuscole e minuscole determinato dalle impostazioni locali dell'applicazione. Quando si imposta `Option Compare Text` e ordinare i caratteri nell'esempio precedente, si applica l'ordinamento di testo seguente:  
   
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`  
   
@@ -138,15 +130,15 @@ result = string Like pattern
   
 |Se gli operandi sono|Risultato del confronto è|  
 |---------------------|-------------------|  
-|Entrambi`String`|Confronto in base alle caratteristiche di ordinamento delle stringhe di ordinamento.|  
+|Entrambi `String`|Confronto in base alle caratteristiche di ordinamento delle stringhe di ordinamento.|  
 |Entrambi numerici|Gli oggetti convertiti in `Double`, confronto numerico.|  
-|Uno numerico e uno`String`|Il `String` viene convertito in un `Double` e viene eseguito un confronto numerico. Se il `String` non può essere convertito in `Double`, un <xref:System.InvalidCastException> viene generata un'eccezione.|  
-|Uno o entrambi sono tipi di riferimento diverso da`String`|Viene generato un tipo <xref:System.InvalidCastException>.|  
+|Uno numerico e uno `String`|Il `String` viene convertito in un `Double` e viene eseguito un confronto numerico. Se il `String` non può essere convertito in `Double`, un <xref:System.InvalidCastException> viene generata un'eccezione.|  
+|Uno o entrambi sono tipi di riferimento diverso da `String`|Viene generato un tipo <xref:System.InvalidCastException>.|  
   
  Considerano i confronti numerici `Nothing` come 0. Confronti di stringhe considerano `Nothing` come `""` (una stringa vuota).  
   
 ## <a name="overloading"></a>Overload  
- Gli operatori di confronto relazionale (`<`. `<=``>`, `>=`, `=`, `<>`) può essere *overload*, il che significa che una classe o struttura possibile ridefinirne il comportamento quando un operando ha il tipo di quella classe o struttura. Se il codice utilizza uno di questi operatori in una classe o una struttura, assicurarsi di comprendere il comportamento ridefinito. Per ulteriori informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Gli operatori di confronto relazionale (`<`. `<=``>`, `>=`, `=`, `<>`) può essere *overload*, ovvero una classe o struttura possibile ridefinirne il comportamento quando un operando ha il tipo di quella classe o struttura. Se il codice utilizza uno di questi operatori in una classe o una struttura, assicurarsi di comprendere il comportamento ridefinito. Per ulteriori informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
  Si noti che il [= operatore](../../../visual-basic/language-reference/operators/assignment-operator.md) può essere sottoposto a overload solo come operatore di confronto relazionale, non come un operatore di assegnazione.  
   

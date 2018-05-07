@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: utilizzare una tabella di riassociazione cromatica'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e208aa9c98c1ca19baee83760cfd0f75972ecfa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba763cc7960e71c6fc705d40eefdbde163d06181
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-color-remap-table"></a>Procedura: utilizzare una tabella di riassociazione cromatica
 Modifica del mapping è il processo di conversione dei colori in un'immagine in base a una tabella di modifica del mapping dei colori. La tabella è una matrice di <xref:System.Drawing.Imaging.ColorMap> oggetti. Ogni <xref:System.Drawing.Imaging.ColorMap> oggetto nella matrice è un <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> proprietà e un <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> proprietà.  

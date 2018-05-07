@@ -1,32 +1,20 @@
 ---
 title: Concetti fondamentali di Windows Communication Foundation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], concepts
 - concepts [WCF]
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-caps.latest.revision: "39"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 651515095a0c9f9e970fff2d77421cfa804fa701
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 44b36fc917ceb30141d7d2235b8bb364d3b998c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concetti fondamentali di Windows Communication Foundation
-In questo documento viene fornita una panoramica dettagliata dell'architettura [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Il documento è concepito per spiegare i concetti principali e le modalità di interazione. Per un'esercitazione sulla creazione di quella più semplice di un [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizio e client, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md). Per informazioni su [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] di programmazione, vedere [programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md).  
+Questo documento viene fornita una panoramica dell'architettura di Windows Communication Foundation (WCF). Il documento è concepito per spiegare i concetti principali e le modalità di interazione. Per un'esercitazione sulla creazione di quella più semplice di un [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizio e client, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md). Per informazioni su [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] di programmazione, vedere [programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="wcf-fundamentals"></a>Nozioni fondamentali su WCF  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è uno strumento runtime e un set di API per la creazione di sistemi che inviano messaggi tra servizi e client. La stessa infrastruttura e le stesse API vengono utilizzate per creare applicazioni che comunicano con le altre applicazioni nello stesso computer o su un sistema di un'altra società accessibile tramite Internet.  

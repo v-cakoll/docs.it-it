@@ -1,13 +1,6 @@
 ---
 title: Estensione del markup DynamicResource
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - DynamicResource
 - DynamicResourceExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3f6c8500f9b9cd6d617789a2da3444519971ae81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c09d009a8cc90e050f6cfb1a8d2abd5c61c5b19f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamicresource-markup-extension"></a>Estensione del markup DynamicResource
 Fornisce un valore per uno [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attributo proprietà passando tale valore un riferimento a una risorsa definita. Il comportamento di ricerca per tale risorsa è analogo alla ricerca in fase di esecuzione.  
@@ -63,13 +51,13 @@ Fornisce un valore per uno [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sha
   
  Una chiave di risorsa può essere qualsiasi stringa definita nel [grammatica XamlName](../../../../docs/framework/xaml-services/xamlname-grammar.md). Una chiave di risorsa può essere anche altri tipi di oggetto, ad esempio un <xref:System.Type>. Oggetto <xref:System.Type> chiave è fondamentale per la modalità possono applicare stili controlli i temi. Per altre informazioni, vedere [Cenni preliminari sulla modifica di controlli](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
   
- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]per la ricerca dei valori delle risorse, ad esempio <xref:System.Windows.FrameworkElement.FindResource%2A>, seguire la stessa logica di ricerca di risorse utilizzate da `DynamicResource`.  
+ [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] per la ricerca dei valori delle risorse, ad esempio <xref:System.Windows.FrameworkElement.FindResource%2A>, seguire la stessa logica di ricerca di risorsa utilizzata da `DynamicResource`.  
   
  Un modo alternativo per fare riferimento a una risorsa è un [estensione di Markup StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
   
  La sintassi per gli attributi è quella più comunemente utilizzata con questa estensione di markup. Il token di stringa fornito dopo la stringa dell'identificatore `DynamicResource` viene assegnato come valore <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> della classe dell'estensione <xref:System.Windows.DynamicResourceExtension> sottostante.  
   
- `DynamicResource`può essere utilizzato nella sintassi dell'elemento oggetto. In questo caso, se si specifica il valore di <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> proprietà è obbligatoria.  
+ `DynamicResource` può essere utilizzato nella sintassi dell'elemento oggetto. In questo caso, se si specifica il valore di <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> proprietà è obbligatoria.  
   
  L'oggetto `DynamicResource` può anche essere utilizzato per un utilizzo dettagliato degli attributi che consente di specificare la proprietà <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> come coppia proprietà=valore:  
   

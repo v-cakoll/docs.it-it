@@ -1,23 +1,12 @@
 ---
 title: TransactionScope di base
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e22b76a-76de-43b4-9be7-7a86ed3d5a44
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78b6faacb131adf18417bf8b9e77182e8e0f8938
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe6877c4b2d72dc3d571740395fd4dc92ca8e99c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-transactionscope"></a>TransactionScope di base
 Questo esempio è costituito da quattro scenari che vengono eseguiti illustrando come annidare istanze di <xref:System.Activities.Statements.TransactionScope>. Nel primo scenario viene illustrato l'annidamento di un'attività di terze parti di cui l'autore non dispone di informazioni sulla modalità di costruzione. Nel secondo e nel terzo scenario viene illustrato come vengono rispettati timeout, mentre nello scenario finale viene illustrata l'impostazione di <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A>.  
@@ -46,6 +35,6 @@ Questo esempio è costituito da quattro scenari che vengono eseguiti illustrando
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`

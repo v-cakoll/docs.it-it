@@ -1,29 +1,15 @@
 ---
 title: 'Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice
-In questo argomento viene illustrato come rendere individuabile un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. È basato sul [indipendente](http://go.microsoft.com/fwlink/?LinkId=145523) esempio.  
+In questo argomento viene illustrato come rendere individuabile un servizio Windows Communication Foundation (WCF). È basato sul [indipendente](http://go.microsoft.com/fwlink/?LinkId=145523) esempio.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Per configurare l'esempio di servizio indipendente esistente per l'individuazione  
   
@@ -105,7 +91,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio [!IN
     }  
     ```  
   
-     In questo modo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene informato del fatto che la classe <xref:System.ServiceModel.Discovery.DiscoveryClient> deve utilizzare l'endpoint di individuazione UDP standard per inviare e ricevere messaggi di individuazione.  
+     Questo valore indica a WCF che la <xref:System.ServiceModel.Discovery.DiscoveryClient> classe deve utilizzare l'endpoint di individuazione UDP standard per inviare e ricevere messaggi di individuazione.  
   
 8.  Alla riga successiva, chiamare il metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> e specificare un'istanza <xref:System.ServiceModel.Discovery.FindCriteria> che contiene il contratto di servizio che si desiderare cercare. In questo caso specificare `ICalculator`.  
   

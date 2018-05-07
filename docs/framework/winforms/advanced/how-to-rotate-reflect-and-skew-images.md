@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: ruotare, riflettere e inclinare immagini'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 163af74d27adcb7ec720a54bfd969bd704f7b1e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f580b4d3016f1ecedc33302fe57caeec5698aeb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>Procedura: ruotare, riflettere e inclinare immagini
 È possibile ruotare, riflettere e inclinare un'immagine, specificando i punti di destinazione per gli angoli superiore sinistro, superiore destro e inferiore sinistro dell'immagine originale. I punti di tre destinazione determinano una trasformazione affine che esegue il mapping dell'immagine rettangolare originale in un parallelogramma.  
@@ -41,11 +29,11 @@ ms.lasthandoff: 12/22/2017
   
  Nella figura seguente mostra l'immagine originale e l'immagine associata al parallelogramma. L'immagine originale è stata inclinata, riflessa, ruotata e convertito. L'asse x lungo il bordo superiore dell'immagine originale viene eseguito il mapping alla riga in cui viene eseguito tramite (200, 20) e (110, 100). L'asse y lungo il bordo sinistro dell'immagine originale viene eseguito il mapping alla riga in cui viene eseguito tramite (200, 20) e (250, 30).  
   
- ![Strisce](../../../../docs/framework/winforms/advanced/media/stripes1.gif "Stripes1")  
+ ![Vengono archiviati con striping](../../../../docs/framework/winforms/advanced/media/stripes1.gif "Stripes1")  
   
  Nella figura seguente mostra una trasformazione analoga applicata a un'immagine fotografica.  
   
- ![Aumento trasformato](../../../../docs/framework/winforms/advanced/media/transformedclimber.png "TransformedClimber")  
+ ![Trasformato scalatore](../../../../docs/framework/winforms/advanced/media/transformedclimber.png "TransformedClimber")  
   
  Nella figura seguente mostra una trasformazione analoga applicata a un metafile.  
   

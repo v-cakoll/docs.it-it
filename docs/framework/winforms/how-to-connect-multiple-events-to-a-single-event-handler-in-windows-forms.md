@@ -1,14 +1,6 @@
 ---
-title: "Procedura: connettere più eventi a un unico gestore eventi in Windows Form"
-ms.custom: 
+title: 'Procedura: connettere più eventi a un unico gestore eventi in Windows Form'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - vb
 helpviewer_keywords:
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfd955b4153c7a2bc54d8b52ff1801541c3a7559
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 527a76376a4c1d5ad051f4768ca2bd42c3548b3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procedura: connettere più eventi a un unico gestore eventi in Windows Form
 Nella progettazione delle applicazioni, potrebbe essere necessario utilizzare un singolo gestore eventi per più eventi o di più eventi di eseguire la stessa procedura. Ad esempio, è spesso un notevole risparmio di tempo per generare l'evento stesso come un pulsante sul form non espongono la stessa funzionalità di un comando di menu. È possibile farlo usando la visualizzazione di eventi della finestra proprietà in c# o il `Handles` (parola chiave) e **nome classe** e **nome del metodo** caselle di riepilogo a discesa nell'Editor di codice Visual Basic.  

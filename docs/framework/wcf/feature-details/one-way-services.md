@@ -1,30 +1,16 @@
 ---
 title: Servizi unidirezionali
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 03efc27f2ba54ca22f03e3ece84770fe0dcadbb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-way-services"></a>Servizi unidirezionali
 Il comportamento predefinito di un'operazione del servizio segue il modello request-reply, in base al quale il client resta in attesa del messaggio di risposta, anche se l'operazione del servizio è rappresentata nel codice come metodo `void`. Con un'operazione unidirezionale, viene invece trasmesso solo un messaggio. Il destinatario non invia un messaggio di risposta, né il mittente ne aspetta uno.  
@@ -57,7 +43,7 @@ public interface IOneWayCalculator
  Per un esempio completo, vedere il [unidirezionale](../../../../docs/framework/wcf/samples/one-way.md) esempio.  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>Blocco dei client con operazioni unidirezionali  
- È importante tenere presente che, mentre alcune applicazioni unidirezionali eseguono la restituzione non appena i dati in uscita vengono scritti nella connessione di rete, in vari scenari l'implementazione di un'associazione o di un servizio può causare il blocco di un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] quando si utilizzano operazioni unidirezionali. Nelle applicazioni client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], l'oggetto client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non esegue la restituzione fino a quando i dati in uscita non sono stati scritti nella connessione di rete. Questo vale per tutti i modelli di scambio dei messaggi, comprese le operazioni bidirezionali; ciò significa che qualsiasi problema durante la scrittura dei dati sul trasporto impedisce al client di eseguire la restituzione. A seconda del problema, il risultato potrebbe essere un'eccezione o un ritardo nell'invio di messaggi al servizio.  
+ È importante tenere presente che mentre alcune applicazioni unidirezionali eseguono la restituzione non appena i dati in uscita vengono scritti nella connessione di rete, in vari scenari l'implementazione di un'associazione o di un servizio può causare un client WCF bloccare utilizzano operazioni unidirezionali. Nelle applicazioni client WCF, l'oggetto client WCF non restituisce fino a quando i dati in uscita sono stati scritti nella connessione di rete. Questo vale per tutti i modelli di scambio dei messaggi, comprese le operazioni bidirezionali; ciò significa che qualsiasi problema durante la scrittura dei dati sul trasporto impedisce al client di eseguire la restituzione. A seconda del problema, il risultato potrebbe essere un'eccezione o un ritardo nell'invio di messaggi al servizio.  
   
  Ad esempio, se il trasporto non è in grado di individuare l'endpoint, viene generata un'eccezione <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> senza molto ritardo. È tuttavia possibile che per qualche motivo il servizio non sia in grado di leggere i dati fuori transito, impedendo così all'operazione di invio del trasporto client di eseguire la restituzione. In questi casi, se viene superato il periodo di <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> sull'associazione del trasporto client, viene generata una <xref:System.TimeoutException?displayProperty=nameWithType>, ma non prima che il periodo di timeout sia scaduto. È inoltre possibile che siano generati così tanti messaggi su un servizio che il servizio non è in grado di elaborarli oltre un certo punto. Anche in questo caso il client unidirezionale si blocca fino a quando il servizio non può elaborare i messaggi o fino a quando non viene generata un'eccezione.  
   

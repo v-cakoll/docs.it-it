@@ -1,28 +1,16 @@
 ---
 title: 'Procedura: modificare la terminazione alla fine di una linea o di un segmento'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Shape elements [WPF], ends
 - Shape elements [WPF], caps
 - graphics [WPF], Shape caps
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d2cd55de403b766344749259068ccd313558f89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e69f461d426fc6a587263cea7a18478da53b5b09
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Procedura: modificare la terminazione alla fine di una linea o di un segmento
 In questo esempio viene illustrato come modificare la forma all'inizio o alla fine di un elemento aperto <xref:System.Windows.Shapes.Shape> elemento. Per modificare la terminazione all'inizio di un oggetto aperto <xref:System.Windows.Shapes.Shape>, utilizzare il relativo <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> proprietà. Per modificare la terminazione alla fine di un oggetto aperto <xref:System.Windows.Shapes.Shape>, utilizzare il relativo <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> proprietà. Per visualizzare le terminazioni riga disponibili, vedere il <xref:System.Windows.Media.PenLineCap> enumerazione.  

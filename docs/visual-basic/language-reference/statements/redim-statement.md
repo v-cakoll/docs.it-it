@@ -1,11 +1,6 @@
 ---
 title: Istruzione ReDim (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ReDim
 - vb.Preserve
@@ -31,14 +26,11 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8cec66ee33bfd82b3abd623a0130f5635aa3d1d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redim-statement-visual-basic"></a>Istruzione ReDim (Visual Basic)
 Rialloca lo spazio di archiviazione per una variabile di matrice.  
@@ -53,7 +45,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 |Termine|Definizione|  
 |----------|----------------|  
-|`Preserve`|Parametro facoltativo. Modificatore utilizzato per conservare i dati nella matrice esistente quando si modifica soltanto la grandezza dell'ultima dimensione.|  
+|`Preserve`|Facoltativo. Modificatore utilizzato per conservare i dati nella matrice esistente quando si modifica soltanto la grandezza dell'ultima dimensione.|  
 |`name`|Obbligatorio. Nome della variabile di matrice. Vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`boundlist`|Obbligatorio. Elenco di limiti relativi a ogni dimensione della matrice ridefinita.|  
   
@@ -74,7 +66,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **Tipi di dati.** L'istruzione `ReDim` non è in grado di modificare il tipo di dati di una variabile di matrice oppure i relativi elementi.  
   
--   **Inizializzazione.** L'istruzione `ReDim` non può fornire nuovi valori di inizializzazione per gli elementi della matrice.  
+-   **inizializzazione.** L'istruzione `ReDim` non può fornire nuovi valori di inizializzazione per gli elementi della matrice.  
   
 -   **Numero di dimensioni.** L'istruzione `ReDim` non può modificare la classificazione (numero di dimensioni) della matrice.  
   
@@ -86,7 +78,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Sostituzione della matrice.** `ReDim`Rilascia la matrice esistente e crea una nuova matrice con lo stesso rango. La nuova matrice sostituisce quella rilasciata nella variabile di matrice.  
+-   **Sostituzione della matrice.** `ReDim` Rilascia la matrice esistente e crea una nuova matrice con lo stesso rango. La nuova matrice sostituisce quella rilasciata nella variabile di matrice.  
   
 -   **Inizializzazione senza Preserve.** Se non si specifica `Preserve`, `ReDim` inizializza gli elementi della nuova matrice utilizzando il valore predefinito per i loro tipi di dati.  
   

@@ -1,13 +1,6 @@
 ---
 title: Estensione del markup TemplateBinding
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - TemplateBinding
 - TemplateBindingExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 959cad0d53b12c3093b95b19ff56ed55eec7eb4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d425d17405bc8241c3fd85c77c6672265a060900
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="templatebinding-markup-extension"></a>Estensione del markup TemplateBinding
 Collega il valore di una proprietà in un modello di controllo come valore di un'altra proprietà sul controllo basato su modelli.  
@@ -51,7 +39,7 @@ Collega il valore di una proprietà in un modello di controllo come valore di un
 ## <a name="remarks"></a>Note  
  Oggetto `TemplateBinding` è un formato ottimizzato di un [associazione](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) per gli scenari di modello, analogo a un `Binding` costruito con `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` è sempre un'associazione unidirezionale, anche se le proprietà implicano come impostazione predefinita l'associazione bidirezionale. Entrambe le proprietà in questione devono essere proprietà di dipendenza.  
   
- [RelativeSource](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md) è un'altra estensione di markup che a volte viene utilizzata in combinazione con o instead of `TemplateBinding` per eseguire l'associazione di proprietà all'interno di un modello.  
+ [RelativeSource](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md) è un'altra estensione di markup che viene a volte usata in combinazione con o instead of `TemplateBinding` per eseguire l'associazione di proprietà all'interno di un modello.  
   
  Che descrive i modelli di controllo come concetto non rientra in questo contesto. Per ulteriori informazioni, vedere [modelli e stili del controllo](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
   

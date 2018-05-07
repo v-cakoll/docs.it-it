@@ -1,28 +1,14 @@
 ---
 title: Flusso delle transazioni WS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-caps.latest.revision: 43
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f79ffdfe624674074f2e9cadeaccb7f2ab3ba0d7
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 699ba3efad0c8b98aacfc4b64f2fdf03270478b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-transaction-flow"></a>Flusso delle transazioni WS
 Questo esempio dimostra l'uso di una transazione coordinata dal client e le opzioni client e server per il flusso delle transazioni mediante il protocollo WS-Atomic Transaction o OleTransactions. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio calcolatrice ma con le operazioni per illustrare l'utilizzo del `TransactionFlowAttribute` con il **TransactionFlowOption** enumerazione per determinare a quale livello di transazione è abilitato il flusso. All'interno dell'ambito della transazione propagata, viene scritto un log delle operazioni richieste in un database che persiste fino a che la transazione coordinata dal client non è stata completata; se la transazione client non viene completata, la transazione del servizio Web assicura che non venga eseguito il commit degli aggiornamenti appropriati al database.  
@@ -77,7 +63,7 @@ public interface ICalculator
 ```  
   
 > [!NOTE]
->  L'associazione netTcpBinding fornita dal sistema consente di specificare il transactionProtocol mentre la wsHttpBinding fornita dal sistema usa solo il protocollo WSAtomicTransactionOctober2004 più interoperabile. Il protocollo OleTransactions è disponibile solo per l'uso da parte dei client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+>  L'associazione netTcpBinding fornita dal sistema consente di specificare il transactionProtocol mentre la wsHttpBinding fornita dal sistema usa solo il protocollo WSAtomicTransactionOctober2004 più interoperabile. OleTransactions protocollo è disponibile solo per utilizzo da parte dei client Windows Communication Foundation (WCF).  
   
  Per la classe che implementa l'interfaccia `ICalculator`, a tutti i metodi viene attribuita la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> impostata su `true`. Questa impostazione dichiara che tutte le azioni intraprese all'interno del metodo avvengono all'interno dell'ambito di una transazione. In questo caso, le azioni intraprese includono la registrazione sul database del log. Se la richiesta dell'operazione include una transazione propagata allora le azioni avvengono all'interno dell'ambito della transazione in ingresso o viene generato automaticamente un nuovo ambito della transazione.  
   
@@ -298,6 +284,6 @@ Press <ENTER> to terminate the service.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

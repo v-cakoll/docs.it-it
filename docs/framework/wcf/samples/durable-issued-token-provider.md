@@ -1,30 +1,18 @@
 ---
 title: Provider di token rilasciati in modo durevole
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc92bd92f688ae2b12889779083142e6ddd481d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 20006f87f7ecba9c09f6c957f8b6355dec7fbd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-issued-token-provider"></a>Provider di token rilasciati in modo durevole
 Questo esempio illustra come implementare un provider di token rilasciato del client personalizzato.  
   
 ## <a name="discussion"></a>Discussione  
- Un provider di token in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene fornito con un provider di token [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. I provider di token personalizzati sono utili nei casi seguenti:  
+ Un provider di token in Windows Communication Foundation (WCF) viene utilizzato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene fornito con un provider di token [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. I provider di token personalizzati sono utili nei casi seguenti:  
   
 -   Se è disponibile un archivio di credenziali con cui il provider di token incluso non è in grado di operare.  
   
@@ -261,7 +249,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
   

@@ -1,14 +1,6 @@
 ---
 title: Metodo IMetaDataDispenser::DefineScope
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataDispenser.DefineScope
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: df7a700a5747f88f14cbfa4d10f1f4d0c2a14ab7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11382f00839917185ba3c85b8fbae5c32d0b0d4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>Metodo IMetaDataDispenser::DefineScope
 Crea una nuova area in memoria in cui è possibile creare nuovi metadati.  
@@ -65,7 +53,7 @@ HRESULT DefineScope (
  [out] Puntatore all'interfaccia restituita.  
   
 ## <a name="remarks"></a>Note  
- `DefineScope`Crea un set di tabelle di metadati in memoria, genera un GUID (identificatore di versione del modulo o MVID) per i metadati e viene creata una voce nella tabella dei moduli per l'unità di compilazione generata.  
+ `DefineScope` Crea un set di tabelle di metadati in memoria, genera un GUID (identificatore di versione del modulo o MVID) per i metadati e viene creata una voce nella tabella dei moduli per l'unità di compilazione generati.  
   
  È possibile collegare gli attributi per l'ambito dei metadati nel suo complesso usando il [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) o [IMetaDataEmit:: DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) metodo, come appropriato.  
   
@@ -74,9 +62,9 @@ HRESULT DefineScope (
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in MsCorEE.dll  
+ **Libreria:** usata come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  

@@ -1,23 +1,14 @@
 ---
 title: Oggetti estensibili
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
-ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
-ms.translationtype: MT
+ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensible-objects"></a>Oggetti estensibili
 Questo modello viene usato per estendere le classi di runtime esistenti con nuove funzionalità oppure per aggiungere un nuovo stato a un oggetto. Le estensioni, allegate a uno degli oggetti estensibili, attivano i comportamenti in fasi molto diverse dell'elaborazione per accedere a stato e funzionalità condivisi allegati a un oggetto estensibile comune al quale possono accedere.  
@@ -57,7 +48,7 @@ where T : IExtensibleObject<T>
  L'interfaccia <xref:System.ServiceModel.IExtensionCollection%601> è una raccolta degli oggetti <xref:System.ServiceModel.IExtension%601> che consentono il recupero di <xref:System.ServiceModel.IExtension%601> in base al tipo. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> restituisce l'ultimo oggetto aggiunto che è un oggetto <xref:System.ServiceModel.IExtension%601> di quel tipo.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Oggetti estensibili in Windows Communication Foundation  
- In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] esistono quattro oggetti estensibili:  
+ Esistono quattro oggetti estensibili in Windows Communication Foundation (WCF):  
   
 -   <xref:System.ServiceModel.ServiceHostBase>: è la classe base per l'host del servizio.  Le estensioni di questa classe possono essere usate per estendere il comportamento di <xref:System.ServiceModel.ServiceHostBase> o per archiviare lo stato per ogni servizio.  
   

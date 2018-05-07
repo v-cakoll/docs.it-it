@@ -1,27 +1,15 @@
 ---
 title: 'Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee99c7c74f0e1e2d287802d46cf4b716cfa3b76d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione
-Quello che segue è il secondo di quattro argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [procedura: implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), è implementato un proxy di individuazione. In questo argomento viene creato un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che invia messaggi di annuncio (`Hello` e `Bye`) al proxy dell'individuazione, determinandone la registrazione e il relativo annullamento dal proxy di individuazione.  
+Quello che segue è il secondo di quattro argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [procedura: implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), è implementato un proxy di individuazione. In questo argomento, si crea un servizio WCF che invia messaggi di annuncio (`Hello` e `Bye`) al proxy di individuazione, in modo da registrare e annullare la registrazione di se stesso con il proxy di individuazione.  
   
 ### <a name="to-define-the-service-contract"></a>Per definire il contratto di servizio  
   

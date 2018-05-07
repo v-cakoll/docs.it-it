@@ -1,14 +1,6 @@
 ---
 title: Funzione StrongNameCompareAssemblies
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameCompareAssemblies
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1ed98b1713427a71c73c30ddd64188f61d51045c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4bd1d098f21a3d5ba43b6251c87c36df4347a924
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamecompareassemblies-function"></a>Funzione StrongNameCompareAssemblies
 Determina se due assembly differiscono solo per le firme con nome sicuro.  
@@ -59,23 +47,23 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Uno dei valori seguenti:  
   
--   `SN_CMP_DIFFERENT`(0): Specifica che l'assembly deve contenere dati diversi.  
+-   `SN_CMP_DIFFERENT` (0): Specifica che l'assembly deve contenere dati diversi.  
   
--   `SN_CMP_IDENTICAL`(1) - specifica che gli assembly sono esattamente uguali, comprese le firme e checksum.  
+-   `SN_CMP_IDENTICAL` (1) - specifica che gli assembly sono esattamente uguali, comprese le firme e checksum.  
   
--   `SN_CMP_SIGONLY`(2) - specifica che gli assembly si differenziano solo per la firma e checksum.  
+-   `SN_CMP_SIGONLY` (2) - specifica che gli assembly si differenziano solo per la firma e checksum.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`al termine dell'esecuzione; in caso contrario, `false`.  
+ `true` al termine dell'esecuzione; in caso contrario, `false`.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** StrongName. H  
   
- **Libreria:** inclusa come risorsa in MsCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Note  
  La firma nome sicuro di un assembly è costituito da testo Nome, versione, impostazioni cultura e token di chiave pubblica dell'assembly.  

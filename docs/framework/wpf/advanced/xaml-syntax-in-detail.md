@@ -1,13 +1,6 @@
 ---
 title: Descrizione dettagliata della sintassi XAML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XML [WPF], namespaces
 - XAML [WPF], parsing of attributes
@@ -36,16 +29,11 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88e66210fd8066e82a11d07ea0cfeb83808d646c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d98141c0ad96ef1bd3958ae8d3166aedde76f535
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-syntax-in-detail"></a>Descrizione dettagliata della sintassi XAML
 In questo argomento definisce le condizioni che consentono di descrivere gli elementi della sintassi XAML. Questi termini vengono utilizzati di frequente in tutto il resto della documentazione, sia per la documentazione di WPF in modo specifico e per gli altri modelli che utilizzano XAML o i concetti di base XAML abilitati per il supporto del linguaggio XAML a livello di System. Xaml. In questo argomento consente di espandere la terminologia di base presentata nell'argomento [Panoramica di XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -69,7 +57,7 @@ In questo argomento definisce le condizioni che consentono di descrivere gli ele
   
 <a name="object_element_syntax"></a>   
 ## <a name="object-element-syntax"></a>Sintassi degli elementi oggetto  
- *La sintassi dell'elemento dell'oggetto* è la sintassi del markup XAML che crea un'istanza di una classe CLR o una struttura dichiarando un elemento XML. Questa sintassi è simile alla sintassi di elemento di altri linguaggi di markup, ad esempio HTML. Sintassi dell'elemento oggetto inizia con una parentesi uncinata (\<), seguito immediatamente dal nome del tipo di classe o struttura viene creata un'istanza. Zero o più spazi possono seguire il nome del tipo e possono anche essere dichiarati zero o più attributi dell'elemento oggetto, con uno o più spazi, separare ogni nome di attributo = coppia "value". Infine, uno dei seguenti deve essere true:  
+ *La sintassi dell'elemento dell'oggetto* è riportata la sintassi di markup XAML che crea un'istanza di una classe CLR o una struttura dichiarando un elemento XML. Questa sintassi è simile alla sintassi di elemento di altri linguaggi di markup, ad esempio HTML. Sintassi dell'elemento oggetto inizia con una parentesi uncinata (\<), seguito immediatamente dal nome del tipo di classe o struttura viene creata un'istanza. Zero o più spazi possono seguire il nome del tipo e possono anche essere dichiarati zero o più attributi dell'elemento oggetto, con uno o più spazi, separare ogni nome di attributo = coppia "value". Infine, uno dei seguenti deve essere true:  
   
 -   L'elemento e il tag deve essere chiuso da una barra (/) seguita immediatamente da una parentesi uncinata chiusa (>).  
   
@@ -134,7 +122,7 @@ In questo argomento definisce le condizioni che consentono di descrivere gli ele
 ...  
 ```  
   
- Le enumerazioni che supporta gli attributi che possono essere impostati in XAML sono rare in WPF. Tuttavia, è un'enumerazione di questo tipo è <xref:System.Windows.Media.StyleSimulations>. È possibile, ad esempio, utilizzare la sintassi delimitato da virgole di attributi basata su flag per modificare l'esempio fornito nella sezione Osservazioni per il <xref:System.Windows.Documents.Glyphs> classe; `StyleSimulations = "BoldSimulation"` potrebbe diventare `StyleSimulations = "BoldSimulation,ItalicSimulation"`. <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType>è un'altra proprietà in cui può essere specificato più di un valore di enumerazione. Tuttavia, questa proprietà è un caso speciale, perché il <xref:System.Windows.Input.ModifierKeys> enumerazione supporta il proprio convertitore. Il convertitore di tipi per i modificatori utilizza un segno più (+) come delimitatore, anziché una virgola (,). Questa conversione supporta la sintassi più tradizionale per rappresentare le combinazioni di tasti nella programmazione di Microsoft Windows, ad esempio "Ctrl + Alt".  
+ Le enumerazioni che supporta gli attributi che possono essere impostati in XAML sono rare in WPF. Tuttavia, è un'enumerazione di questo tipo è <xref:System.Windows.Media.StyleSimulations>. È possibile, ad esempio, utilizzare la sintassi delimitato da virgole di attributi basata su flag per modificare l'esempio fornito nella sezione Osservazioni per il <xref:System.Windows.Documents.Glyphs> classe; `StyleSimulations = "BoldSimulation"` potrebbe diventare `StyleSimulations = "BoldSimulation,ItalicSimulation"`. <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType> è un'altra proprietà in cui può essere specificato più di un valore di enumerazione. Tuttavia, questa proprietà è un caso speciale, perché il <xref:System.Windows.Input.ModifierKeys> enumerazione supporta il proprio convertitore. Il convertitore di tipi per i modificatori utilizza un segno più (+) come delimitatore, anziché una virgola (,). Questa conversione supporta la sintassi più tradizionale per rappresentare le combinazioni di tasti nella programmazione di Microsoft Windows, ad esempio "Ctrl + Alt".  
   
 ### <a name="properties-and-event-member-name-references"></a>Le proprietà e i riferimenti al nome membro evento  
  Quando si specifica un attributo, è possibile fare riferimento a qualsiasi proprietà o evento esistente come membro del tipo CLR che è creata un'istanza per l'elemento oggetto contenitore.  
@@ -149,7 +137,7 @@ In questo argomento definisce le condizioni che consentono di descrivere gli ele
   
 <a name="property_element_syntax"></a>   
 ## <a name="property-element-syntax"></a>Sintassi per gli elementi proprietà  
- *La sintassi degli elementi* certi versi dalle regole di sintassi di base XML per gli elementi. Nel codice XML, il valore di un attributo è una stringa di fatto, con la sola possibile variazione viene utilizzato il formato di codifica di stringa. In XAML, è possibile assegnare altri elementi dell'oggetto come valore di una proprietà. Questa funzionalità è abilitata per la sintassi. Anziché la proprietà viene specificata come un attributo all'interno del tag di elemento, la proprietà viene specificata utilizzando un elemento di apertura tag *nomeTipoElemento*. *propertyName* modulo, interno è specificato il valore della proprietà e quindi viene chiuso l'elemento proprietà.  
+ *Sintassi dell'elemento proprietà* è una sintassi che versi dalle regole di sintassi XML base per gli elementi. Nel codice XML, il valore di un attributo è una stringa di fatto, con la sola possibile variazione viene utilizzato il formato di codifica di stringa. In XAML, è possibile assegnare altri elementi dell'oggetto come valore di una proprietà. Questa funzionalità è abilitata per la sintassi. Anziché la proprietà viene specificata come un attributo all'interno del tag di elemento, la proprietà viene specificata utilizzando un elemento di apertura tag *nomeTipoElemento*. *propertyName* modulo, interno è specificato il valore della proprietà e quindi viene chiuso l'elemento proprietà.  
   
  In particolare, la sintassi inizia con una parentesi uncinata (\<), seguito immediatamente dal nome del tipo di classe o struttura che la sintassi è contenuta all'interno. Questo è immediatamente seguito da un punto singolo (.), quindi dal nome di una proprietà, quindi da una parentesi uncinata chiusa (>). Come con la sintassi degli attributi, tale proprietà deve esistere all'interno i membri pubblici dichiarati nel tipo specificato. Il valore da assegnare alla proprietà è contenuto all'interno dell'elemento proprietà. In genere, il valore viene assegnato come uno o più elementi oggetto, perché gli oggetti come valori è lo scenario che la sintassi degli elementi è dedicato alla risoluzione. Infine, un tag di chiusura equivalente specificando lo stesso *nomeTipoElemento*. *propertyName* combinazione deve essere specificata, in opportunamente annidato e bilanciato con gli altri tag di elemento.  
   
@@ -267,7 +255,7 @@ In questo argomento definisce le condizioni che consentono di descrivere gli ele
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- In questo caso, `StaticResource` identifica il <xref:System.Windows.StaticResourceExtension> classe che fornisce l'implementazione dell'estensione di markup. La stringa successiva `MyStyle` viene utilizzato come input per il valore non predefinito <xref:System.Windows.StaticResourceExtension> costruttore, in cui il parametro accettato dalla stringa di estensione dichiara l'oggetto richiesto <xref:System.Windows.ResourceKey>. `MyStyle`è previsto che il [X:Key](../../../../docs/framework/xaml-services/x-key-directive.md) valore di un <xref:System.Windows.Style> definito come risorsa. Il [estensione di Markup StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) utilizzo richiede che la risorsa venga utilizzata per fornire il <xref:System.Windows.Style> valore della proprietà tramite la logica di ricerca di risorse statiche in fase di caricamento.  
+ In questo caso, `StaticResource` identifica il <xref:System.Windows.StaticResourceExtension> classe che fornisce l'implementazione dell'estensione di markup. La stringa successiva `MyStyle` viene utilizzato come input per il valore non predefinito <xref:System.Windows.StaticResourceExtension> costruttore, in cui il parametro accettato dalla stringa di estensione dichiara l'oggetto richiesto <xref:System.Windows.ResourceKey>. `MyStyle` è previsto che il [X:Key](../../../../docs/framework/xaml-services/x-key-directive.md) pari a un <xref:System.Windows.Style> definito come risorsa. Il [estensione di Markup StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) utilizzo richiede che la risorsa venga utilizzata per fornire il <xref:System.Windows.Style> valore della proprietà tramite la logica di ricerca di risorse statiche in fase di caricamento.  
   
  Per altre informazioni sulle estensioni di markup, vedere [Estensioni di markup e WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md). Per informazioni di riferimento sulle estensioni di markup e altre funzionalità abilitate nell'implementazione XAML di .NET generale di programmazione XAML, vedere [Namespace XAML (x) Funzionalità del linguaggio](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). Per le estensioni di markup specifico di WPF, vedere [estensioni XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md).  
   
@@ -309,13 +297,13 @@ In questo argomento definisce le condizioni che consentono di descrivere gli ele
   
  [!code-xaml[XAMLOvwSupport#TypeNameProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
   
- `Button.Background`Poiché la ricerca qualificata per tale proprietà su <xref:System.Windows.Controls.Button> ha esito positivo (<xref:System.Windows.Controls.Control.Background%2A> è stata ereditata dal controllo del codice) e <xref:System.Windows.Controls.Button> è la classe dell'elemento oggetto o una classe di base. `Control.Background`Poiché il <xref:System.Windows.Controls.Control> classe definisce effettivamente <xref:System.Windows.Controls.Control.Background%2A> e <xref:System.Windows.Controls.Control> è un <xref:System.Windows.Controls.Button> classe di base.  
+ `Button.Background` Poiché la ricerca qualificata per tale proprietà su <xref:System.Windows.Controls.Button> ha esito positivo (<xref:System.Windows.Controls.Control.Background%2A> è stata ereditata dal controllo del codice) e <xref:System.Windows.Controls.Button> è la classe dell'elemento oggetto o una classe di base. `Control.Background` funziona perché il <xref:System.Windows.Controls.Control> classe definisce effettivamente <xref:System.Windows.Controls.Control.Background%2A> e <xref:System.Windows.Controls.Control> è un <xref:System.Windows.Controls.Button> classe di base.  
   
  Tuttavia, le operazioni seguenti *typeName*. *memberName* esempio di form non funziona e in cui sono visualizzato i commento:  
   
  [!code-xaml[XAMLOvwSupport#TypeNameBadProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
- <xref:System.Windows.Controls.Label>un'altra classe derivata di <xref:System.Windows.Controls.Control>, e se è stato specificato `Label.Background` all'interno di un <xref:System.Windows.Controls.Label> elemento oggetto, questo utilizzo avrebbe avuto esito positivo. Tuttavia, poiché <xref:System.Windows.Controls.Label> non è la classe o una classe di base di <xref:System.Windows.Controls.Button>, il comportamento del processore XAML specificato consiste nell'elaborazione `Label.Background` come una proprietà associata. `Label.Background`non è una proprietà associata disponibile, e questo utilizzo non riesce.  
+ <xref:System.Windows.Controls.Label> un'altra classe derivata di <xref:System.Windows.Controls.Control>, e se è stato specificato `Label.Background` all'interno di un <xref:System.Windows.Controls.Label> elemento oggetto, questo utilizzo avrebbe avuto esito positivo. Tuttavia, poiché <xref:System.Windows.Controls.Label> non è la classe o una classe di base di <xref:System.Windows.Controls.Button>, il comportamento del processore XAML specificato consiste nell'elaborazione `Label.Background` come una proprietà associata. `Label.Background` non è una proprietà associata disponibile e si verifica un errore di questo utilizzo.  
   
 ### <a name="basetypenamemembername-property-elements"></a>Elementi proprietà nomeTipoBase. nomemembro  
  In modo analogo a come il *typeName*. *memberName* formato funziona per la sintassi di attributo, un *nomeTipoBase*. *memberName* funziona per la sintassi degli elementi di sintassi. Ad esempio, la sintassi seguente funziona:  

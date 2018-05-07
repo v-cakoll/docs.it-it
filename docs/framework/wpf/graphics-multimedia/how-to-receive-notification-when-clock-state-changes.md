@@ -1,13 +1,6 @@
 ---
-title: 'Procedura: ricevere una notifica quando un orario in formato &#39; s modifiche di stato'
-ms.custom: 
+title: 'Procedura: ricevere una notifica quando un orario in formato&#39;s modifiche stato'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +8,13 @@ helpviewer_keywords:
 - clocks [WPF], notification of state changes
 - notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 396e2c51894ad5ed11f8953bceb1bd36899cfc62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0eaca4d2a05d01e686efc15dfceebb6de4f4b64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>Procedura: ricevere una notifica quando un orario in formato &#39; s modifiche di stato
+# <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>Procedura: ricevere una notifica quando un orario in formato&#39;s modifiche stato
 Un clock <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> evento si verifica quando il relativo <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> diventa valido, ad esempio quando l'orologio avvia o arresta. È possibile registrare questo evento utilizzando direttamente un <xref:System.Windows.Media.Animation.Clock>, o eseguire la registrazione tramite un <xref:System.Windows.Media.Animation.Timeline>.  
   
  Nell'esempio seguente, un <xref:System.Windows.Media.Animation.Storyboard> e due <xref:System.Windows.Media.Animation.DoubleAnimation> gli oggetti vengono utilizzati per animare la larghezza di due rettangoli. Il <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> evento viene utilizzato per l'ascolto dei cambiamenti di stato dell'orologio.  

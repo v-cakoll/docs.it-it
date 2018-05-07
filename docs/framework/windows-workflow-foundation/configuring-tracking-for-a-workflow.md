@@ -1,23 +1,12 @@
 ---
 title: Configurazione del rilevamento per un flusso di lavoro
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb64569984d71e35ef9f502c79d3a0bb8b4b8988
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 70697d82242ab0704dd67129940a6660d300bef9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurazione del rilevamento per un flusso di lavoro
 Un flusso di lavoro può essere eseguito in tre modi:  
@@ -156,7 +145,7 @@ invoker.Invoke();
 ```  
   
 ### <a name="viewing-tracking-records-in-event-viewer"></a>Visualizzazione dei record di rilevamento in Visualizzatore eventi  
- Esistono due log del Visualizzatore eventi di particolare interesse per il rilevamento dell'esecuzione di WF: il log analitico e il log debug. Entrambi si trovano in Microsoft &#124; Windows &#124; Nodo applicazioni Server dell'applicazione.  I log presenti in questa sezione contengono gli eventi relativi una singola applicazione piuttosto che gli eventi che interessano l'intero sistema.  
+ Esistono due log del Visualizzatore eventi di particolare interesse per il rilevamento dell'esecuzione di WF: il log analitico e il log debug. Entrambi si trovano in Microsoft&#124;Windows&#124;nodo Server applicazioni-applicazioni.  I log presenti in questa sezione contengono gli eventi relativi una singola applicazione piuttosto che gli eventi che interessano l'intero sistema.  
   
  Gli eventi di traccia di debug vengono scritti nel log di debug. Per raccogliere gli eventi di traccia di debug di WF nel Visualizzatore eventi, abilitare il log di debug.  
   
@@ -170,7 +159,7 @@ invoker.Invoke();
   
 5.  Eseguire l'applicazione abilitata per il rilevamento per generare gli eventi di rilevamento.  
   
-6.  Fare doppio clic su di **Debug** nodo e selezionare **aggiornare.** Gli eventi di traccia verranno visualizzati nel riquadro centrale.  
+6.  Fare doppio clic sui **Debug** nodo e selezionare **aggiornare.** Gli eventi di traccia verranno visualizzati nel riquadro centrale.  
   
  In WF 4 è presente un partecipante del rilevamento mediante il quale vengono scritti i record di rilevamento in una sessione ETW (Event Tracing for Windows). Il partecipante del rilevamento ETW viene configurato con un profilo di rilevamento per sottoscrivere i record di rilevamento.  Quando il rilevamento è abilitato, vengono generati record di rilevamento di errori su ETW. Gli eventi di rilevamento ETW (in un intervallo da 100 a 113) corrispondenti agli eventi di rilevamento generati dal partecipante del rilevamento ETW vengono scritti nel log analitico.  
   
@@ -186,11 +175,11 @@ invoker.Invoke();
   
 5.  Eseguire l'applicazione abilitata per il rilevamento per generare record di rilevamento.  
   
-6.  Fare doppio clic su di **analitico** nodo e selezionare **aggiornare.** I record di rilevamento dovrebbero essere visibili nel riquadro centrale.  
+6.  Fare doppio clic sui **analitico** nodo e selezionare **aggiornare.** I record di rilevamento dovrebbero essere visibili nel riquadro centrale.  
   
  Nell'immagine seguente vengono mostrati gli eventi di rilevamento nel visualizzatore eventi.  
   
- ![Mostrare il Visualizzatore eventi i record di rilevamento](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")  
+ ![Visualizzazione di Visualizzatore eventi i record di rilevamento](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")  
   
 ### <a name="registering-an-application-specific-provider-id"></a>Registrazione di un ID provider specifico dell'applicazione  
  Se gli eventi devono essere scritti in un registro applicazioni specifico, attenersi alla seguente procedura per registrare il nuovo manifesto del provider.  

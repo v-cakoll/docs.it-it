@@ -1,13 +1,6 @@
 ---
 title: Cenni preliminari sui modelli di dati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3f1efefa4d32e3512b0dda6eca237a5e4938bf7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-templating-overview"></a>Cenni preliminari sui modelli di dati
 Il modello di applicazione di modelli di dati WPF offre una notevole flessibilità per definire la presentazione dei dati. I controlli WPF dispongono di funzionalità incorporate per supportare la personalizzazione della presentazione dei dati. In questo argomento viene innanzitutto illustrato come definire un <xref:System.Windows.DataTemplate> e vengono presentate altre funzionalità di creazione del modello di dati, ad esempio la selezione di modelli basati sulla logica personalizzata e il supporto per la visualizzazione di dati gerarchici.  
@@ -35,7 +23,7 @@ Il modello di applicazione di modelli di dati WPF offre una notevole flessibilit
 ## <a name="prerequisites"></a>Prerequisiti  
  Questo argomento è incentrato sulle funzionalità di applicazione dei modelli di dati e non è un'introduzione ai concetti di data binding. Per informazioni sui concetti di data binding, vedere [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- <xref:System.Windows.DataTemplate>riguarda la presentazione dei dati ed è una delle numerose funzionalità fornite dal modello di stili e modelli di WPF. Per un'introduzione del modello di stili e modelli WPF, ad esempio di come utilizzare un <xref:System.Windows.Style> per impostare le proprietà sui controlli, vedere il [stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md) argomento.  
+ <xref:System.Windows.DataTemplate> riguarda la presentazione dei dati ed è una delle numerose funzionalità fornite dal modello di stili e modelli di WPF. Per un'introduzione del modello di stili e modelli WPF, ad esempio di come utilizzare un <xref:System.Windows.Style> per impostare le proprietà sui controlli, vedere il [stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md) argomento.  
   
  Inoltre, è importante comprendere `Resources`, che sono essenzialmente cosa abilitare gli oggetti, ad esempio <xref:System.Windows.Style> e <xref:System.Windows.DataTemplate> potranno essere riutilizzati. Per altre informazioni sulle risorse, vedere [Risorse XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
@@ -144,7 +132,7 @@ Il modello di applicazione di modelli di dati WPF offre una notevole flessibilit
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>Elementi di un DataTemplate  
- Nell'esempio precedente, è stato inserito il trigger all'interno di <xref:System.Windows.DataTemplate> utilizzando il <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> proprietà. Il <xref:System.Windows.Setter> del trigger imposta il valore di una proprietà di un elemento (il <xref:System.Windows.Controls.Border> elemento) che si trova all'interno di <xref:System.Windows.DataTemplate>. Tuttavia, se le proprietà che la `Setters` sono interessati non sono proprietà degli elementi che sono all'interno dell'oggetto <xref:System.Windows.DataTemplate>, può risultare più appropriata per impostare le proprietà utilizzando un <xref:System.Windows.Style> per il <xref:System.Windows.Controls.ListBoxItem> classe (se il si vuole associare il controllo è un <xref:System.Windows.Controls.ListBox>). Ad esempio, se si desidera il <xref:System.Windows.Trigger> per animare la <xref:System.Windows.UIElement.Opacity%2A> valore dell'elemento quando si posiziona il mouse su un elemento, si definiscono trigger all'interno di un <xref:System.Windows.Controls.ListBoxItem> stile. Per un esempio, vedere [Introduction to Styling and Templating Sample](http://go.microsoft.com/fwlink/?LinkID=160010) (Introduzione all'esempio di applicazione di stili e modelli).  
+ Nell'esempio precedente è stato inserito il trigger all'interno di <xref:System.Windows.DataTemplate> utilizzando il <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> . Il <xref:System.Windows.Setter> del trigger imposta il valore di una proprietà di un elemento (il <xref:System.Windows.Controls.Border> elemento) che si trova all'interno di <xref:System.Windows.DataTemplate>. Tuttavia, se le proprietà che la `Setters` sono interessati non sono proprietà degli elementi che sono all'interno dell'oggetto <xref:System.Windows.DataTemplate>, può risultare più appropriata per impostare le proprietà utilizzando un <xref:System.Windows.Style> per il <xref:System.Windows.Controls.ListBoxItem> classe (se il si vuole associare il controllo è un <xref:System.Windows.Controls.ListBox>). Ad esempio, se si desidera il <xref:System.Windows.Trigger> per animare la <xref:System.Windows.UIElement.Opacity%2A> valore dell'elemento quando si posiziona il mouse su un elemento, si definiscono trigger all'interno di un <xref:System.Windows.Controls.ListBoxItem> stile. Per un esempio, vedere [Introduction to Styling and Templating Sample](http://go.microsoft.com/fwlink/?LinkID=160010) (Introduzione all'esempio di applicazione di stili e modelli).  
   
  In generale, tenere presente che il <xref:System.Windows.DataTemplate> si applichino a ogni oggetto generato <xref:System.Windows.Controls.ListBoxItem> (per ulteriori informazioni su come e dove viene effettivamente applicato, vedere il <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> pagina.). Il <xref:System.Windows.DataTemplate> riguarda solo la presentazione e l'aspetto degli oggetti dati. Nella maggior parte dei casi, tutti gli altri aspetti di presentazione, come ad esempio l'aspetto di un elemento simile a quando è selezionata o come <xref:System.Windows.Controls.ListBox> definisce gli elementi, non fanno parte della definizione di un <xref:System.Windows.DataTemplate>. Per un esempio, vedere la sezione [Applicazione di stili e modelli di ItemsControl](#DataTemplating_ItemsControl).  
   
@@ -156,7 +144,7 @@ Il modello di applicazione di modelli di dati WPF offre una notevole flessibilit
   
  [!code-xaml[DataTemplatingIntro_snip#ImportantTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#importanttemplate)]  
   
- Si noti nell'esempio viene utilizzata la <xref:System.Windows.DataTemplate>.<xref:System.Windows.FrameworkTemplate.Resources%2A> proprietà. Le risorse definite in questa sezione sono condivise dagli elementi all'interno di <xref:System.Windows.DataTemplate>.  
+ Si noti nell'esempio viene utilizzata la <xref:System.Windows.DataTemplate>.<xref:System.Windows.FrameworkTemplate.Resources%2A> . Le risorse definite in questa sezione sono condivise dagli elementi all'interno di <xref:System.Windows.DataTemplate>.  
   
  Per fornire la logica per scegliere quale <xref:System.Windows.DataTemplate> da utilizzare in base il `Priority` valore dell'oggetto dati, creare una sottoclasse di <xref:System.Windows.Controls.DataTemplateSelector> ed eseguire l'override di <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> metodo. Nell'esempio seguente, il <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> metodo fornisce la logica per restituire il modello appropriato in base al valore del `Priority` proprietà. Il modello da restituire viene trovato nelle risorse di busta <xref:System.Windows.Window> elemento.  
   

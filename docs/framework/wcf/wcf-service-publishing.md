@@ -1,29 +1,15 @@
 ---
 title: Pubblicazione servizio WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 9f76ab11e9697fc5af5c507d4dc9d944c433c918
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-service-publishing"></a>Pubblicazione servizio WCF
-Pubblicazione servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] assiste l'utente nel passaggio dall'ambiente di sviluppo iniziale fornito da Host servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fino all'effettiva distribuzione dell'applicazione in un ambiente di produzione a scopo di test. Prima di impegnarsi in un piano di distribuzione finale, è possibile usare Pubblicazione servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] per verificare che il servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] venga eseguito correttamente e sia pronto per la pubblicazione. È inoltre possibile scegliere di distribuire le librerie dei servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] in diverse posizioni di destinazione per il test.  
+Pubblicazione servizio Windows Communication Foundation (WCF) fornisce assistenza per dall'ambiente di sviluppo iniziale fornito da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host del servizio e [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client di prova all'effettiva distribuzione all'applicazione di un ambiente di produzione ambiente a scopo di test. Prima eseguire il commit a un piano di distribuzione finale, è possibile usare pubblicazione servizio Windows Communication Foundation (WCF) per verificare che il [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizio eseguito correttamente e sia pronto per la pubblicazione. È inoltre possibile scegliere di distribuire le librerie dei servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] in diverse posizioni di destinazione per il test.  
   
 ## <a name="supported-services-and-target-locations"></a>Servizi supportati e posizioni di destinazione  
  Pubblicazione servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] supporta la pubblicazione di servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] creati dal set di modelli delle librerie dei servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e dei modelli di elementi corrispondenti, tra cui:  
@@ -51,13 +37,13 @@ Pubblicazione servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] assi
   
 3.  Il **pubblica** verrà visualizzata la finestra. Fare clic su di **...** . per specificare la posizione di destinazione in cui distribuire il servizio. È possibile scegliere di distribuire l'applicazione IIS locale, File System o sito FTP. Se distribuire l'applicazione IIS locale, è possibile selezionare il sito Web e creare l'applicazione web, fare clic il **Crea nuova applicazione Web** in alto nell'angolo destro.  
   
-4.  Dopo aver fatto clic **pubblica** nella finestra principale di Visual Studio distribuisce l'applicazione nel percorso di destinazione specificato e copia i file Web. config, con estensione svc e assembly nella directory di destinazione. . Il nome dell'estensione svc sarà "ProjectName.ServiceName.svc". Al termine della pubblicazione il servizio, è possibile trovare un che nella finestra di Output di Visual Studio, è simile a "Connessione al collegamento ipertestuale"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName". Premere CTRL e fare clic sul collegamento per aprire una pagina del browser in Visual Studio per visualizzare la struttura di directory del servizio.  
+4.  Dopo aver fatto clic **pubblica** nella finestra principale di Visual Studio distribuisce l'applicazione nel percorso di destinazione specificato e copia i file Web. config, con estensione svc e assembly nella directory di destinazione. . Il nome dell'estensione svc sarà "ProjectName.ServiceName.svc". Al termine della pubblicazione il servizio, è possibile trovare un DBCS nella finestra Output di Visual Studio, che presenta un aspetto simile a "Connessione a un collegamento ipertestuale"http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName ...". Premere CTRL e fare clic sul collegamento per aprire una pagina del browser in Visual Studio per visualizzare la struttura di directory del servizio.  
   
-     Se non è possibile collegarsi al sito, è possibile che il browser di directory non sia abilitato in IIS. Seguire i suggerimenti nella sezione "Possibili operazioni" per abilitare la funzionalità. In alternativa, è possibile digitare direttamente"HYPERLINK"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc" per visualizzare la pagina del servizio.  
+     Se non è possibile collegarsi al sito, è possibile che il browser di directory non sia abilitato in IIS. Seguire i suggerimenti nella sezione "Possibili operazioni" per abilitare la funzionalità. In alternativa, è possibile digitare direttamente"HYPERLINK"http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc" per visualizzare la pagina del servizio.  
   
  È possibile utilizzare **pubblica** per specificare se si desidera copiare l'assembly, configurazione e il file con estensione svc per tutti i servizi definiti nel progetto nel percorso di destinazione e sovrascrivere i file esistenti nella destinazione.  
   
- Se si sceglie di distribuire l'applicazione nel sito Web IIS locale, è possibile rilevare errori correlati all'installazione di IIS. Verificare che IIS sia installato in modo corretto. È possibile digitare "http://localhost"http://localhost"HYPERLINK" nel browser e verificare se la pagina predefinita IIS verrà visualizzati.  In alcuni casi i problemi potrebbero essere causati dalla registrazione non corretta di ASP.NET o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] in IIS. È possibile aprire il prompt dei comandi di Visual Studio ed eseguire il comando "aspnet_regiis.exe - ir" per risolvere i problemi di registrazione ASP.NET o eseguire il comando "ServiceModelReg.exe-ia" per correggere problemi di registrazione di WCF.  
+ Se si sceglie di distribuire l'applicazione nel sito Web IIS locale, è possibile rilevare errori correlati all'installazione di IIS. Verificare che IIS sia installato in modo corretto. È possibile digitare "HYPERLINK"http://localhost" http://localhost" nel browser e verificare se la pagina predefinita IIS verrà visualizzati.  In alcuni casi i problemi potrebbero essere causati dalla registrazione non corretta di ASP.NET o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] in IIS. È possibile aprire il prompt dei comandi di Visual Studio ed eseguire il comando "aspnet_regiis.exe - ir" per risolvere i problemi di registrazione ASP.NET o eseguire il comando "ServiceModelReg.exe-ia" per correggere problemi di registrazione di WCF.  
   
 ## <a name="files-generated-for-publishing"></a>File generati per la pubblicazione  
  Prima che una libreria di servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] possa essere ospitata sul Web, devono essere generati automaticamente i file di assembly, il file Web.config e il file con estensione svc. Tutti i file vengono copiati nella posizione di destinazione specificata. Il servizio viene quindi pubblicato.  

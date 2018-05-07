@@ -1,13 +1,6 @@
 ---
 title: Cenni preliminari sugli oggetti TileBrush
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7d5e9fa36ddeda0c724eeb0bb46a64d0ba36c99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac247a9caa54c40a31e3c78ba8537d60a333feb5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tilebrush-overview"></a>Cenni preliminari sugli oggetti TileBrush
-<xref:System.Windows.Media.TileBrush>gli oggetti forniscono un elevato livello di controllo sulla modalità di disegno di un'area con un'immagine, <xref:System.Windows.Media.Drawing>, o <xref:System.Windows.Media.Visual>. In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.TileBrush> funzionalità per ottenere un maggiore controllo sul modo in un <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, o <xref:System.Windows.Media.VisualBrush> disegna un'area.  
+<xref:System.Windows.Media.TileBrush> gli oggetti forniscono un elevato livello di controllo sulla modalità di disegno di un'area con un'immagine <xref:System.Windows.Media.Drawing>, o <xref:System.Windows.Media.Visual>. In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.TileBrush> funzionalità per ottenere un maggiore controllo sul modo in un <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, o <xref:System.Windows.Media.VisualBrush> disegna un'area.  
   
   
 <a name="prerequisite"></a>   
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="tilebrush"></a>   
 ## <a name="painting-an-area-with-tiles"></a>Disegno di un'area mediante tessere  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, sono <xref:System.Windows.Media.VisualBrush> sono tipi di <xref:System.Windows.Media.TileBrush> oggetti. I pennelli tessera forniscono un elevato livello di controllo sulla modalità di disegno di un'area con un'immagine, un disegno o un oggetto visivo. Anziché ad esempio disegnare un'area con una sola immagine estesa, è possibile usare una serie di immagini affiancate che creano un modello.  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, vengono <xref:System.Windows.Media.VisualBrush> sono tipi di <xref:System.Windows.Media.TileBrush> oggetti. I pennelli tessera forniscono un elevato livello di controllo sulla modalità di disegno di un'area con un'immagine, un disegno o un oggetto visivo. Anziché ad esempio disegnare un'area con una sola immagine estesa, è possibile usare una serie di immagini affiancate che creano un modello.  
   
  Il disegno di un'area con un pennello tessera include tre componenti: il contenuto, la tessera di base e l'area di output.  
   
@@ -68,7 +56,7 @@ Componenti di un oggetto TileBrush con TileMode impostata su Tile
   
 -   <xref:System.Windows.Media.Stretch.Fill>: Il contenuto del pennello viene adattato il riquadro. Poiché l'altezza e la larghezza del contenuto vengono ridimensionate in modo indipendente, è possibile che non vengano mantenute le proporzioni originali del contenuto. In altre parole, il contenuto del pennello potrebbe essere distorto per adattarsi completamente alla tessera di output.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Il contenuto del pennello viene ridimensionato in modo da adattarlo completamente il riquadro. Vengono mantenute le proporzioni del contenuto.  
+-   <xref:System.Windows.Media.Stretch.Uniform>: Il contenuto del pennello è ridimensionato in modo da adattarlo completamente il riquadro. Vengono mantenute le proporzioni del contenuto.  
   
 -   <xref:System.Windows.Media.Stretch.UniformToFill>: Il contenuto del pennello viene ridimensionato in modo da riempire l'area di output completamente mantenendo le proporzioni originali del contenuto.  
   
@@ -113,7 +101,7 @@ Componenti di un oggetto TileBrush con TileMode impostata su Tile
   
 -   <xref:System.Windows.Media.TileMode.None>: Solo la tessera di base viene disegnata.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: Viene disegnata la tessera di base e l'area rimanente viene riempita ripetendo la tessera di base in modo che il bordo destro di una tessera sia adiacente al bordo sinistro della successiva e allo stesso modo per superiore e inferiore.  
+-   <xref:System.Windows.Media.TileMode.Tile>: Viene disegnata la tessera di base e l'area rimanente viene riempita ripetendo la tessera di base in modo che il bordo destro di una tessera sia adiacente al bordo sinistro della successiva e che lo allo stesso modo per superiore e inferiore.  
   
 -   <xref:System.Windows.Media.TileMode.FlipX>: Uguale <xref:System.Windows.Media.TileMode.Tile>, ma le colonne alternate di tessere vengono capovolte orizzontalmente.  
   
@@ -140,5 +128,5 @@ Componenti di un oggetto TileBrush con TileMode impostata su Tile
  [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
  [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
  [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Esempio di ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005)  
+ [Esempio ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [Esempio VisualBrush](http://go.microsoft.com/fwlink/?LinkID=160049)

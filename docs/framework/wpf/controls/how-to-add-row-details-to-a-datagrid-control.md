@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: aggiungere dettagli di riga un controllo DataGrid'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,21 +9,16 @@ helpviewer_keywords:
 - row details [WPF], DataGrid
 - DataGrid [WPF], row details
 ms.assetid: 0bdc6f50-9b4c-483f-9df6-a47a1fde998b
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f65eb9e916fad83deb1476c1d8f0def4981d08d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6b0cc99c9833e514d2d52ecf139ab8e110f73e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-row-details-to-a-datagrid-control"></a>Procedura: aggiungere dettagli di riga un controllo DataGrid
 Quando si utilizza il <xref:System.Windows.Controls.DataGrid> (controllo), è possibile personalizzare la presentazione dei dati tramite l'aggiunta di una sezione dei dettagli di riga. L'aggiunta di una sezione dei dettagli di riga consente di raggruppare i dati in un modello che è possibile rendere visibile o compressa. Ad esempio, è possibile aggiungere i dettagli di riga per un <xref:System.Windows.Controls.DataGrid> che includa solo un riepilogo dei dati per ogni riga di <xref:System.Windows.Controls.DataGrid>, ma presenta più campi di dati quando l'utente seleziona una riga. Definire il modello per la sezione dei dettagli della riga nel <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> proprietà. Nella figura seguente viene illustrato un esempio di una sezione dei dettagli di riga.  
   
- ![DataGrid con i dettagli della riga](../../../../docs/framework/wpf/controls/media/ndp-rowdetails.png "NDP_RowDetails")  
+ ![DataGrid con i dettagli delle righe](../../../../docs/framework/wpf/controls/media/ndp-rowdetails.png "NDP_RowDetails")  
   
  Il modello di informazioni di riga è definire come inline XAML o come una risorsa. Entrambi gli approcci vengono visualizzati nelle procedure seguenti. Un modello di dati che viene aggiunto come una risorsa può essere utilizzata in tutto il progetto senza creare nuovamente il modello. Un modello di dati che viene aggiunto come inline XAML è accessibile solo dal controllo in cui è definito.  
   

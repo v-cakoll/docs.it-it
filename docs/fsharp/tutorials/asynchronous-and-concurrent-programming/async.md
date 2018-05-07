@@ -1,17 +1,12 @@
 ---
 title: 'Programmazione asincrona in F #'
 description: 'Informazioni su come la programmazione asincrona F # viene eseguita tramite un modello di programmazione a livello di linguaggio che è facile da usare e il linguaggio naturale.'
-author: cartermp
-ms.author: phcart
 ms.date: 06/20/2016
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: a3047b98637cb4b142f374a2a2b5e7270e850fd6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 93ecd05efc493489435214dcd7ae78fffcccec1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="async-programming-in-f"></a>Programmazione asincrona in F # #
 

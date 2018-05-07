@@ -1,27 +1,15 @@
 ---
 title: Impostazioni del Registro di sistema ClearType
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d915af4ee436bb6c661a7b412b0e36702191339a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cacdc47a35bfd197bcac29edc6f7c780d3b8578f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleartype-registry-settings"></a>Impostazioni del Registro di sistema ClearType
 In questo argomento viene fornita una panoramica di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] le impostazioni del Registro di sistema utilizzate da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni.  
@@ -29,7 +17,7 @@ In questo argomento viene fornita una panoramica di [!INCLUDE[TLA2#tla_winclient
   
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Informazioni generali sulla tecnologia  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]le applicazioni che eseguono il rendering di testo da un dispositivo di visualizzazione utilizzano [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funzionalità per fornire una migliore esperienza di lettura. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] è una tecnologia software sviluppata da [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] che consente di migliorare la leggibilità del testo sui display LCD (Liquid Crystal Display), ad esempio gli schermi di computer portatili, Pocket PC e i monitor a schermo piatto. Il funzionamento della tecnologia [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] si basa sull'accesso a singoli elementi striscia di colore verticali in ogni pixel di uno schermo LCD. Per ulteriori informazioni su [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], vedere [ClearType Overview](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni che eseguono il rendering di testo da un dispositivo di visualizzazione utilizzano [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funzionalità per fornire una migliore esperienza di lettura. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] è una tecnologia software sviluppata da [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] che consente di migliorare la leggibilità del testo sui display LCD (Liquid Crystal Display), ad esempio gli schermi di computer portatili, Pocket PC e i monitor a schermo piatto. Il funzionamento della tecnologia [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] si basa sull'accesso a singoli elementi striscia di colore verticali in ogni pixel di uno schermo LCD. Per ulteriori informazioni su [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], vedere [ClearType Overview](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
   
  Testo che viene eseguito il rendering con [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] possono essere visualizzati in modo significativo diverso quando viene visualizzato su vari dispositivi di visualizzazione. Ad esempio, un numero ridotto di monitoraggi implementa strisce di colore in blu, verde, rosso ordine anziché più comune rosso, verde e blu ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) ordine.  
   
@@ -39,7 +27,7 @@ In questo argomento viene fornita una panoramica di [!INCLUDE[TLA2#tla_winclient
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Impostazioni Registro di sistema  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Specifica i quattro impostazioni del Registro di sistema per il controllo [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funzionalità:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Specifica i quattro impostazioni del Registro di sistema per il controllo [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funzionalità:  
   
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
@@ -71,7 +59,7 @@ In questo argomento viene fornita una panoramica di [!INCLUDE[TLA2#tla_winclient
  ![Impostazioni ClearType nell'Editor del Registro di sistema](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]le applicazioni il rendering del testo in uno dei scegliendo tra due modalità, con e senza [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Quando viene eseguito il rendering testo senza [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], viene indicato come per il rendering in scala di grigi.  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni il rendering del testo in una delle modalità entrambi due, con e senza [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Quando viene eseguito il rendering testo senza [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], viene indicato come per il rendering in scala di grigi.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Livello di gamma  

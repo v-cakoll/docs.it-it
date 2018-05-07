@@ -1,14 +1,6 @@
 ---
 title: Metodo IHostMemoryManager::GetMemoryLoad
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMemoryManager.GetMemoryLoad
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e8138f6e-a0a4-48d4-8dae-9466b4dc6180
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 320881447eed00bf0dfeada0f5fbd224c32dfe96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b92ef3a6d7eb45a3b978c916c406bfa6199f17d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmemorymanagergetmemoryload-method"></a>Metodo IHostMemoryManager::GetMemoryLoad
 Ottiene la quantità di memoria fisica che è attualmente in uso e pertanto non disponibile, come indicato dall'host.  
@@ -58,7 +46,7 @@ HRESULT GetMemoryLoad (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`GetMemoryLoad`stato restituito correttamente.|  
+|S_OK|`GetMemoryLoad` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
 |HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
@@ -66,7 +54,7 @@ HRESULT GetMemoryLoad (
 |E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo viene restituito E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- `GetMemoryLoad`esegue il wrapping di Win32 `GlobalMemoryStatus` (funzione). Il valore di `pMemoryLoad` è l'equivalente del `dwMemoryLoad` campo il `MEMORYSTATUS` struttura restituita da `GlobalMemoryStatus`.  
+ `GetMemoryLoad` esegue il wrapping Win32 `GlobalMemoryStatus` (funzione). Il valore di `pMemoryLoad` è l'equivalente del `dwMemoryLoad` campo il `MEMORYSTATUS` struttura restituita da `GlobalMemoryStatus`.  
   
  Il runtime utilizza il valore restituito come un approccio euristico per il garbage collector. Ad esempio, se l'host indica che la maggior parte della memoria è in uso, il garbage collector è possibile scegliere di raccogliere da più generazioni per aumentare la quantità di memoria che può essere potenzialmente diventano disponibili.  
   
@@ -75,9 +63,9 @@ HRESULT GetMemoryLoad (
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.GC?displayProperty=nameWithType>  

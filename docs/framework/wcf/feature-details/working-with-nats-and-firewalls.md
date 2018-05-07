@@ -1,34 +1,20 @@
 ---
 title: Uso di conversioni NAT e firewall
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe74b4bd86a25a8e6b769be1abe5fd81e5ffe5f9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 72582af358d363038d09b313632c023f3c054dbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-nats-and-firewalls"></a>Uso di conversioni NAT e firewall
 Fra il client e il server di una connessione di rete spesso non esiste un percorso diretto di comunicazione. I pacchetti vengono filtrati, instradati, analizzati e trasformati sia nei computer endpoint sia nei computer intermedi della rete. Le conversioni Network Address Translation (NAT) e i firewall sono esempi di applicazioni intermedie che in genere partecipano a una comunicazione di rete.  
   
- La presenza di conversioni NAT e di firewall influisce sul funzionamento dei trasporti e dei modelli di scambio dei messaggi (MEP, Message Exchange Pattern) di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Questo argomento descrive il funzionamento delle conversioni NAT e dei firewall nelle topologie di rete più comuni. Vengono inoltre forniti consigli su come rendere le applicazioni più affidabili quando si utilizzano determinate combinazioni di trasporti e di modelli MEP di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qualora nella rete siano presenti conversioni NAT e firewall.  
+ Trasporti di Windows Communication Foundation (WCF) e message exchange pattern (MEP, Message) reagire in modo diverso a, la presenza di conversioni NAT e firewall. Questo argomento descrive il funzionamento delle conversioni NAT e dei firewall nelle topologie di rete più comuni. Vengono forniti consigli per combinazioni specifiche di WCF trasporti e dei MEP che come rendere le applicazioni più affidabili a conversioni NAT e firewall sulla rete.  
   
 ## <a name="how-nats-affect-communication"></a>Effetti delle conversioni NAT sulle comunicazioni  
  Il protocollo NAT è stato creato per consentire a più computer di condividere un solo indirizzo IP esterno. Un protocollo NAT di nuovo mapping di porta associa un indirizzo IP interno e la relativa porta di una connessione a un indirizzo IP esterno avente un nuovo un numero di porta. Il nuovo numero di porta consente al protocollo NAT di correlare il traffico di ritorno alla comunicazione originale. Molti utenti privati attualmente dispongono di un indirizzo IP a cui è possibile instradare pacchetti solo privatamente e che utilizza una conversione NAT per svolgere l'instradamento globale dei pacchetti.  
@@ -45,7 +31,7 @@ Fra il client e il server di una connessione di rete spesso non esiste un percor
  I firewall utilizzati nei computer degli utenti privati vengono in genere configurati in modo da accettare soltanto le connessioni in ingresso provenienti dai computer con cui l'utente ha precedentemente stabilito una connessione in uscita. I firewall utilizzati nei computer aziendali vengono in genere configurati in modo da accettare soltanto le connessioni in ingresso a un determinato gruppo di porte. Ad esempio, un firewall può essere configurato in modo da accettare soltanto le connessioni in ingresso alle porte 80 e 443 allo scopo di consentire il funzionamento dei servizi basati su HTTP e HTTPS. Sia per gli utenti aziendali sia per gli utenti privati sono disponibili firewall gestiti che consentono agli utenti o ai processi attendibili del computer di modificare la configurazione del firewall. I firewall gestiti sono più diffusi fra gli utenti privati, in quanto in questo caso non esiste alcun criterio aziendale di controllo dell'utilizzo di rete.  
   
 ## <a name="using-teredo"></a>Utilizzo di Teredo  
- Teredo è una tecnologia di transizione IPv6 che consente l'indirizzabilità diretta dei computer protetti tramite NAT. Questa tecnologia si basa sull'utilizzo di un server che può essere oggetto di routing pubblico e globale allo scopo di segnalare le connessioni potenzialmente disponibili. Il server Teredo offre al client e al server dell'applicazione un punto comune di incontro presso il quale poter scambiare informazioni relative alla connessione. I computer richiedono quindi un indirizzo Teredo temporaneo da utilizzare per il tunneling dei pacchetti attraverso la rete esistente. Affinché Teredo sia supportato in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è necessario abilitare il supporto per IPv6 e Teredo nel sistema operativo. In [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e nei sistemi operativi successivi Teredo è supportato. In [!INCLUDE[wv](../../../../includes/wv-md.md)] e nei sistemi operativi successivi IPv6 è supportato per impostazione predefinita, pertanto è sufficiente abilitare Teredo. In [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] è necessario che l'utente abiliti il supporto per IPv6 e Teredo. Per altre informazioni, vedere la [Panoramica di Teredo](http://go.microsoft.com/fwlink/?LinkId=87571).  
+ Teredo è una tecnologia di transizione IPv6 che consente l'indirizzabilità diretta dei computer protetti tramite NAT. Questa tecnologia si basa sull'utilizzo di un server che può essere oggetto di routing pubblico e globale allo scopo di segnalare le connessioni potenzialmente disponibili. Il server Teredo offre al client e al server dell'applicazione un punto comune di incontro presso il quale poter scambiare informazioni relative alla connessione. I computer richiedono quindi un indirizzo Teredo temporaneo da utilizzare per il tunneling dei pacchetti attraverso la rete esistente. Affinché Teredo sia supportato in WCF è necessario abilitare il supporto IPv6 e Teredo nel sistema operativo. In [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e nei sistemi operativi successivi Teredo è supportato. In [!INCLUDE[wv](../../../../includes/wv-md.md)] e nei sistemi operativi successivi IPv6 è supportato per impostazione predefinita, pertanto è sufficiente abilitare Teredo. In [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] è necessario che l'utente abiliti il supporto per IPv6 e Teredo. Per altre informazioni, vedere la [Panoramica di Teredo](http://go.microsoft.com/fwlink/?LinkId=87571).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Scelta di un trasporto e di un MEP  
  La scelta di un trasporto e di un MEP prevede tre passaggi:  
@@ -64,7 +50,7 @@ Fra il client e il server di una connessione di rete spesso non esiste un percor
   
 -   Utilizzare un servizio raggiungibile per la registrazione degli endpoint oppure per l'inoltro del traffico. L'utilizzo di un servizio di connessione globalmente raggiungibile, ad esempio un server Teredo, aumenta notevolmente le probabilità di riuscire a stabilire una connessione quando la topologia di rete presenta vincoli oppure non è nota.  
   
- Nelle tabelle seguenti vengono riportati i MEP unidirezionale, request/reply e duplex nonché i trasporti TCP standard, TCP con Teredo e HTTP standard e duale in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Nelle tabelle seguenti esaminare unidirezionale, request/reply e duplex MEP, Message e TCP standard, TCP con Teredo, e trasporti HTTP standard e duale in WCF.  
   
 |Indirizzabilità|Diretta server|Diretta server con attraversamento NAT|NAT server|NAT server con attraversamento NAT|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  

@@ -1,27 +1,15 @@
 ---
 title: Servizi WCF e traccia eventi per Windows
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb8924cc04442e3b9eda5e251e6dcdc57f5660c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Servizi WCF e traccia eventi per Windows
-In questo esempio viene descritto come usare la traccia analitica in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per generare eventi in Traccia eventi per Windows (ETW). Le tracce analitiche sono eventi generati in corrispondenza di punti chiave nello stack [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che consentono risolvere i problemi relativi ai servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in un ambiente di produzione.  
+In questo esempio viene illustrato come utilizzare la traccia analitica in Windows Communication Foundation (WCF) per generare eventi in traccia eventi per Windows (ETW). Le tracce analitiche sono eventi generati in corrispondenza di punti chiave nello stack [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che consentono risolvere i problemi relativi ai servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in un ambiente di produzione.  
   
  La funzionalità di tracci analitica nei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consiste in una traccia che può essere attivata in un ambiente di produzione con impatto minimo sulle prestazioni. Queste tracce vengono inviate come eventi a una sessione ETW.  
   
@@ -37,7 +25,7 @@ In questo esempio viene descritto come usare la traccia analitica in [!INCLUDE[i
   
      Nel Web browser, fare clic su **Calculator.svc**. L'URI del documento WSDL per il servizio viene visualizzato nel browser. Copiare l'URI.  
   
-     Per impostazione predefinita, il servizio si pone in ascolto delle richieste sulla porta 1378 (http://localhost:1378/Calculator.svc).  
+     Per impostazione predefinita, il servizio viene avviato in ascolto delle richieste sulla porta 1378 (http://localhost:1378/Calculator.svc).  
   
 4.  Eseguire il client di prova [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (WcfTestClient.exe).  
   
@@ -45,7 +33,7 @@ In questo esempio viene descritto come usare la traccia analitica in [!INCLUDE[i
   
 5.  All'interno di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client di prova, aggiungere il servizio selezionando **File**e quindi **Aggiungi servizio**.  
   
-     Aggiungere l'indirizzo dell'endpoint nella casella di input. L'indirizzo predefinito è http://localhost:1378/Calculator.svc.  
+     Aggiungere l'indirizzo dell'endpoint nella casella di input. Il valore predefinito è http://localhost:1378/Calculator.svc.  
   
 6.  Aprire l'applicazione Visualizzatore eventi.  
   
@@ -94,7 +82,7 @@ In questo esempio viene descritto come usare la traccia analitica in [!INCLUDE[i
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   

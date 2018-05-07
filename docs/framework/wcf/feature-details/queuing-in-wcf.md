@@ -1,49 +1,35 @@
 ---
 title: Accodamento in WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7f0a6700dba8eb844cc471704095b29c2a2c7937
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queuing-in-wcf"></a>Accodamento in WCF
-Contenuto della sezione viene descritto come usare la comunicazione in coda in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+In questa sezione viene descritto come usare la comunicazione in coda in Windows Communication Foundation (WCF).  
   
 ## <a name="queues-as-a-wcf-transport-binding"></a>Accodamento come associazione di trasporto WCF  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], i contratti specificano ciò che viene scambiato. I contratti sono scambi di messaggi dipendenti dall'azienda o specifici dell'applicazione. Il meccanismo (o la modalità) usato per scambiare messaggi viene specificato nelle associazioni. Le associazioni in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incapsulano dettagli dello scambio di messaggi. Espongono funzionalità di configurazione che consentono all'utente di controllare vari aspetti del trasporto o del protocollo rappresentato dall'associazione. L'accodamento in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene considerato come qualsiasi altra associazione di trasporto e questo è un grande vantaggio per molte applicazioni di accodamento. Oggi, molte applicazioni di accodamento vengono scritte in modo diverso dalle applicazioni distribuite in stile chiamata di procedura remota (RPC), rendendone più difficile la gestione. Con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], lo stile di scrittura di un'applicazione distribuita è prevalentemente lo stesso e questo facilita la gestione. Inoltre, eseguendo il factoring del meccanismo di scambio separatamente dalla regola business, è più semplice configurare il trasporto o apportarvi modifiche senza incidere sul codice specifico dell'applicazione. Nella figura seguente viene illustrata la struttura di un servizio e un client WCF usando MSMQ come trasporto.  
+ In WCF i contratti specificano ciò che viene scambiato. I contratti sono scambi di messaggi dipendenti dall'azienda o specifici dell'applicazione. Il meccanismo (o la modalità) usato per scambiare messaggi viene specificato nelle associazioni. Associazioni di WCF incapsulano dettagli dello scambio di messaggi. Espongono funzionalità di configurazione che consentono all'utente di controllare vari aspetti del trasporto o del protocollo rappresentato dall'associazione. Accodamento in WCF viene trattato come qualsiasi altra associazione di trasporto, ovvero un grande vantaggio per molte applicazioni di Accodamento. Oggi, molte applicazioni di accodamento vengono scritte in modo diverso dalle applicazioni distribuite in stile chiamata di procedura remota (RPC), rendendone più difficile la gestione. Con WCF, lo stile di scrittura di un'applicazione distribuita è molto simile, rendendo più semplice eseguire e gestire. Inoltre, eseguendo il factoring del meccanismo di scambio separatamente dalla regola business, è più semplice configurare il trasporto o apportarvi modifiche senza incidere sul codice specifico dell'applicazione. Nella figura seguente viene illustrata la struttura di un servizio e un client WCF usando MSMQ come trasporto.  
   
  ![In coda applicazione diagramma](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "figura coda distribuita")  
   
- Come risulta evidente dalla figura precedente, il client e il servizio devono definire solo la semantica dell'applicazione, ovvero, il contratto e l'implementazione. Il servizio configura un'associazione in coda con le impostazioni preferite. Il client utilizza il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client per il servizio e per generare un file di configurazione che descrive i binding da usare per inviare messaggi al servizio. Quindi, per inviare un messaggio in coda, il client crea un'istanza di un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e richiama un'operazione su di essa. Questo fa sì che il messaggio venga inviato alla coda di trasmissione e trasferito alla coda di destinazione. Tutte le complessità della comunicazione in coda vengono nascoste all'applicazione che sta inviando e ricevendo messaggi.  
+ Come risulta evidente dalla figura precedente, il client e il servizio devono definire solo la semantica dell'applicazione, ovvero, il contratto e l'implementazione. Il servizio configura un'associazione in coda con le impostazioni preferite. Il client utilizza il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare un client WCF al servizio e per generare un file di configurazione che descrive i binding da usare per inviare messaggi al servizio. Pertanto, per inviare un messaggio in coda, il client crea un'istanza di un client WCF e richiama un'operazione su di esso. Questo fa sì che il messaggio venga inviato alla coda di trasmissione e trasferito alla coda di destinazione. Tutte le complessità della comunicazione in coda vengono nascoste all'applicazione che sta inviando e ricevendo messaggi.  
   
- Tra i suggerimenti relativi all'associazione in coda in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono inclusi i seguenti:  
+ Suggerimenti relativi all'associazione in coda in WCF includono:  
   
--   Tutte le operazioni del servizio devono essere unidirezionali, poiché l'associazione in coda predefinita in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta la comunicazione duplex tramite code. Un esempio di comunicazioni bidirezionali ([comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md)) viene illustrato come utilizzare due contratti unidirezionali per implementare la comunicazione duplex tramite code.  
+-   Servizio tutte le operazioni devono essere unidirezionali, poiché il valore predefinito in coda associazione WCF non consente comunicazione duplex tramite code. Un esempio di comunicazioni bidirezionali ([comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md)) viene illustrato come utilizzare due contratti unidirezionali per implementare la comunicazione duplex tramite code.  
   
--   Per generare un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usando lo scambio di metadati è necessario un endpoint HTTP aggiuntivo sul servizio, in modo sia possibile eseguire query dirette su di esso per generare il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e ottenere le informazioni di associazione per configurare adeguatamente la comunicazione in coda.  
+-   Per generare un WCF client utilizzando WS-metadata exchange richiede un endpoint HTTP aggiuntivo sul servizio in modo che sia possibile eseguire query su direttamente per generare il client WCF e ottenere le informazioni di associazione per configurare adeguatamente la comunicazione in coda.  
   
--   In base all'associazione in coda, è necessaria una configurazione aggiuntiva all'esterno di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ad esempio, la classe <xref:System.ServiceModel.NetMsmqBinding> fornita con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede che si configurino le associazioni e si proceda alla configurazione minima dell'accodamento messaggi (MSMQ).  
+-   In base l'associazione in coda, è richiesta configurazione aggiuntiva all'esterno di WCF. Ad esempio, il <xref:System.ServiceModel.NetMsmqBinding> classe che viene fornito con WCF è necessario configurare le associazioni, nonché la configurazione minima di Message Queuing (MSMQ).  
   
- Nelle sezioni seguenti vengono descritte le associazioni in coda specifiche fornite con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], basate su MSMQ.  
+ Le sezioni seguenti descrivono le associazioni di in coda specifiche fornite con WCF, che sono basate su MSMQ.  
   
 ### <a name="msmq"></a>MSMQ  
- Il trasporto in coda in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa MSMQ per la relativa comunicazione in coda.  
+ Il trasporto in coda in WCF utilizza MSMQ per le comunicazioni in coda.  
   
  MSMQ viene fornito con Windows come componente facoltativo e viene eseguito come servizio NT. Acquisisce i messaggi per la trasmissione in una coda di trasmissione e per il recapito in una coda di destinazione. I gestori code MSMQ implementano un protocollo di trasferimento messaggi affidabile, in modo che i messaggi non vengano persi durante la trasmissione. Il protocollo può essere nativo o basato su SOAP, ad esempio SRMP (SOAP Reliable Message Protocol).  
   
@@ -54,7 +40,7 @@ Contenuto della sezione viene descritto come usare la comunicazione in coda in [
  Per ulteriori informazioni su MSMQ, vedere [installazione di Accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- Il [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) è l'associazione in coda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce per due [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint per comunicare tramite MSMQ. L'associazione, pertanto, espone proprietà specifiche di MSMQ. Tuttavia, non tutte le funzionalità e le proprietà di MSMQ vengono esposte in `NetMsmqBinding`. La classe compatta `NetMsmqBinding` è progettata con un set ottimale di funzionalità che la maggior parte dei clienti dovrebbe trovare sufficiente.  
+ Il [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) è l'associazione in coda WCF fornisce due endpoint WCF comunicare tramite MSMQ. L'associazione, pertanto, espone proprietà specifiche di MSMQ. Tuttavia, non tutte le funzionalità e le proprietà di MSMQ vengono esposte in `NetMsmqBinding`. La classe compatta `NetMsmqBinding` è progettata con un set ottimale di funzionalità che la maggior parte dei clienti dovrebbe trovare sufficiente.  
   
  La classe `NetMsmqBinding` manifesta i principali concetti di accodamento descritti fino ad ora nella forma di proprietà sulle associazioni. Queste proprietà, a loro volta, comunicano a MSMQ come trasferire e recapitare i messaggi. Nelle sezioni seguenti vengono descritte le categorie di proprietà. Per altre informazioni, vedere gli argomenti concettuali che descrivono le proprietà specifiche più completo.  
   
@@ -75,7 +61,7 @@ Contenuto della sezione viene descritto come usare la comunicazione in coda in [
   
  Molti sistemi di accodamento prevedono una coda di messaggi non recapitabili a livello di sistema. MSMQ include una coda di messaggi non recapitabili non transazionale a livello di sistema per i messaggi il cui recapito nelle code non transazionali ha esito negativo e una coda di messaggi non recapitabili transazionale a livello di sistema per i messaggi il cui recapito nelle code transazionali ha esito negativo.  
   
- Se più client che inviano messaggi a code di destinazione diverse condividono il servizio MSMQ, tutti i messaggi inviati dai client finiranno nella stessa coda di messaggi non recapitabili. Ciò non è sempre preferibile. Per un migliore isolamento, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] prevedono una coda di messaggi non recapitabili personalizzata (o specifica dell'applicazione) che l'utente può specificare per l'archiviazione dei messaggi il cui recapito ha esito negativo. Pertanto, client diversi non condividono la stessa coda di messaggi non recapitabili.  
+ Se più client che inviano messaggi a code di destinazione diverse condividono il servizio MSMQ, tutti i messaggi inviati dai client finiranno nella stessa coda di messaggi non recapitabili. Ciò non è sempre preferibile. Per un migliore isolamento, WCF e MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] forniscono una coda messaggi non recapitabili personalizzata o recapitabili specifiche dell'applicazione, che l'utente può specificare per archiviare i messaggi non recapitabili. Pertanto, client diversi non condividono la stessa coda di messaggi non recapitabili.  
   
  L'associazione dispone di due proprietà interessanti:  
   
@@ -105,7 +91,7 @@ Contenuto della sezione viene descritto come usare la comunicazione in coda in [
 -   `UseActiveDirectory`: valore booleano che indica se è necessario usare Active Directory per la risoluzione degli indirizzi delle code. Per impostazione predefinita, questa funzionalità è disattivata. Per altre informazioni, vedere [gli endpoint del servizio e l'indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- La classe `MsmqIntegrationBinding` viene usata quando si desidera che un endpoint [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comunichi con un'applicazione MSMQ esistente scritta in C, C++, COM o con API System.Messaging.  
+ Il `MsmqIntegrationBinding` viene utilizzato quando si desidera che un endpoint WCF per comunicare con un'applicazione MSMQ esistente scritta in C, C++, COM o System.Messaging APIs.  
   
  Le proprietà dell'associazione sono le stesse di `NetMsmqBinding`. Esistono tuttavia le differenze seguenti:  
   

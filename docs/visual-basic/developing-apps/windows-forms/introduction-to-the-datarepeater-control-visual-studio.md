@@ -1,23 +1,16 @@
 ---
 title: Introduzione al controllo DataRepeater (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - repeating data
 - DataRepeater, overview
 - DataRepeater
 ms.assetid: 78a52a1d-65f0-4ecb-97ff-53bc114300c5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 699876cc568b22114e5ed8741c2fd0c053a137af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc0cf9c358faf3e738eb3b24ec61577b88dbce4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-datarepeater-control-visual-studio"></a>Introduzione al controllo DataRepeater (Visual Studio)
 Il controllo Visual Basic PowerPacks <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> è un contenitore scorrevole per controlli che visualizzano dati ripetuti, ad esempio le righe in una tabella di database. Può essere usato come alternativa al controllo <xref:System.Windows.Forms.DataGridView> quando è necessario maggiore controllo sul layout dei dati. Il <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> "ripete" un gruppo di controlli correlati mediante la creazione di più istanze in una visualizzazione a scorrimento. Ciò consente agli utenti di visualizzare più record contemporaneamente.  

@@ -1,11 +1,6 @@
 ---
 title: Istruzione SyncLock
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.SyncLock
 - SyncLock
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c363b41bb7a409c490a6e07d4a1a4f1bb44c1438
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: cf2aad9ec2ba67200d175fbcddfcb49afeac6efc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synclock-statement"></a>Istruzione SyncLock
 Acquisisce un blocco esclusivo per un blocco di istruzioni prima di eseguire il blocco.  
@@ -45,7 +37,7 @@ End SyncLock
  Termina un `SyncLock` blocco.  
   
 ## <a name="remarks"></a>Note  
- Il `SyncLock` istruzione garantisce che più thread eseguano contemporaneamente il blocco di istruzioni. `SyncLock`impedisce l'immissione il blocco fino a quando nessun altro thread è in esecuzione, ogni thread.  
+ Il `SyncLock` istruzione garantisce che più thread eseguano contemporaneamente il blocco di istruzioni. `SyncLock` impedisce l'immissione il blocco fino a quando nessun altro thread è in esecuzione, ogni thread.  
   
  L'utilizzo più comune di `SyncLock` consiste nel proteggere i dati vengano aggiornati da più thread contemporaneamente. Se le istruzioni che modificano i dati devono essere completate senza interruzioni, inserirli all'interno di un `SyncLock` blocco.  
   

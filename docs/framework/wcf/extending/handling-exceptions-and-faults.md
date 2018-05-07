@@ -1,30 +1,18 @@
 ---
 title: Gestione di eccezioni ed errori
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae8d16db6fefccf01692088e29676f6bfeace0e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a7fb7b5dd5755b9d534d9a96af3db598a44b42b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-exceptions-and-faults"></a>Gestione di eccezioni ed errori
 Le eccezioni vengono utilizzate per comunicare errori localmente, all'interno del servizio o nell'implementazione del client. Gli errori, d'altra parte, vengono utilizzati per comunicare problemi tra servizi, ad esempio dal server al client o viceversa. Oltre agli errori, i canali del trasporto spesso utilizzano meccanismi specifici per comunicare errori a livello di trasporto. Il trasporto HTTP, ad esempio, utilizza codici di stato, come 404, per comunicare un URL di endpoint inesistente (nessun endpoint al quale restituire un errore). Questo documento è composto da tre sezioni che contengono materiale sussidiario utile per gli autori di canali personalizzati. Nella prima sezione sono contenute linee guida sulle circostanze e le modalità di definizione e generazione delle eccezioni. Nella seconda sezione è fornito materiale sussidiario sulla generazione e l'utilizzo di errori. Nella terza sezione viene spiegato come fornire informazioni di traccia per aiutare l'utente del canale personalizzato a risolvere i problemi delle applicazioni in esecuzione.  
   
 ## <a name="exceptions"></a>Eccezioni  
- È necessario tenere presenti due principi per la generazione di un'eccezione: innanzitutto deve essere di tipo tale da consentire agli utenti di scrivere codice corretto in grado di reagire in modo appropriato all'eccezione. In secondo luogo deve fornire informazioni sufficienti per consentire all'utente di capire il problema, valutare le conseguenze dell'errore e correggerlo. Nelle sezioni seguenti vengono fornite linee guida sui tipi e i messaggi di eccezione per i canali di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Materiale sussidiario generale sulle eccezioni è inoltre disponibile in .NET nel documento relativo al materiale sussidiario di progettazione per le eccezioni.  
+ È necessario tenere presenti due principi per la generazione di un'eccezione: innanzitutto deve essere di tipo tale da consentire agli utenti di scrivere codice corretto in grado di reagire in modo appropriato all'eccezione. In secondo luogo deve fornire informazioni sufficienti per consentire all'utente di capire il problema, valutare le conseguenze dell'errore e correggerlo. Le sezioni seguenti forniscono informazioni aggiuntive sui tipi di eccezione e i messaggi per i canali di Windows Communication Foundation (WCF). Materiale sussidiario generale sulle eccezioni è inoltre disponibile in .NET nel documento relativo al materiale sussidiario di progettazione per le eccezioni.  
   
 ### <a name="exception-types"></a>Tipi di eccezione  
  Tutte le eccezioni generate dai canali devono essere <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> o un tipo derivato da <xref:System.ServiceModel.CommunicationException>. Eccezioni come ad esempio <xref:System.ObjectDisposedException> possono essere generate ma solo per indicare che il codice chiamante ha adoperato male il canale. Se il canale viene utilizzato correttamente, deve generare solo le eccezioni date. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono disponibili sette tipi di eccezione che derivano da <xref:System.ServiceModel.CommunicationException> e il cui impiego previsto è con i canali. Esistono altre eccezioni derivate da <xref:System.ServiceModel.CommunicationException>, pensate per essere utilizzate in altre parti del sistema. Questi tipi di eccezione sono elencati di seguito:  

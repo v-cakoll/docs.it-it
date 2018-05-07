@@ -1,29 +1,15 @@
 ---
 title: UriTemplate e UriTemplateTable
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 09726af0a124723de025f29927954a2100aebcb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate e UriTemplateTable
-Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il layout degli URI a cui rispondono i loro servizi. In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono state aggiunte due nuove classi per consentire agli sviluppatori di controllare gli URI. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> rappresentano in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gli elementi fondamentali del motore di invio basato su URI. Queste classi possono inoltre essere utilizzate autonomamente, in modo da consentire agli sviluppatori di sfruttare i modelli e il meccanismo di mapping degli URI senza dover implementare un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il layout degli URI a cui rispondono i loro servizi. Windows Communication Foundation (WCF) aggiunte due nuove classi per consentire agli sviluppatori di controllare gli URI. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> costituiscono la base del motore di distribuzione basata sull'URI in WCF. Queste classi possono essere utilizzate anche nel meccanismo del mapping delle proprie, consentendo agli sviluppatori di sfruttare i vantaggi dei modelli e l'URI senza implementare un servizio WCF.  
   
 ## <a name="templates"></a>Modelli  
  I modelli consentono di descrivere set di URI relativi. Nella tabella seguente il set di modelli URI illustra come definire un sistema per il recupero di vari tipi di informazioni meteorologiche.  
@@ -35,7 +21,7 @@ Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il la
 |Previsioni urbane|previsioni/{regione}/{città}|  
 |Previsioni di attività|previsioni/{regione}/{città}/{attività}|  
   
- Questa tabella descrive un insieme di URI simili fra loro dal punto di vista strutturale. Ogni voce è un modello URI. I segmenti nelle parentesi graffe descrivono variabili, mentre quelli non all'interno di parentesi graffe descrivono stringhe letterali. Le classi modello di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consentono di sviluppare un elemento di codice che accetta un URI in ingresso, ad esempio "/previsioni/Campania/Napoli/ciclo", e quindi lo fa corrispondere al modello che lo descrive, ovvero "/previsioni/{regione}/{città}/{attività}".  
+ Questa tabella descrive un insieme di URI simili fra loro dal punto di vista strutturale. Ogni voce è un modello URI. I segmenti nelle parentesi graffe descrivono variabili, mentre quelli non all'interno di parentesi graffe descrivono stringhe letterali. Le classi di modello WCF consentono a uno sviluppatore di eseguire un URI in ingresso, ad esempio, "/ meteo/wa/seattle/ripetizione" e confrontarla a un modello che lo descrive, "/ previsioni {regione} / {città} / {attività}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
  L'elemento <xref:System.UriTemplate> è una classe che incapsula un modello URI. Il costruttore accetta un parametro di stringa che definisce il modello. Questa stringa contiene il modello nel formato descritto nella sezione seguente. La classe <xref:System.UriTemplate> fornisce metodi che consentono di mettere in corrispondenza un URI in ingresso con un modello, generare un URI a partire da un modello, recuperare una raccolta di nomi variabili utilizzati nel modello, determinare se due modelli sono equivalenti e restituire la stringa del modello.  

@@ -1,14 +1,6 @@
 ---
 title: 'Procedura: creare un token personalizzato'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,22 +10,16 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c270b63586809044f1bb3e56841ae8cf590e7bb1
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: eb227075b1a696216e62e851aa8b10c7511ac93f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>Procedura: creare un token personalizzato
 Questo argomento illustra come creare un token di sicurezza personalizzato utilizzando la classe <xref:System.IdentityModel.Tokens.SecurityToken> e come integrarlo in un provider e un autenticatore di token di sicurezza personalizzati. Per un esempio di codice completo, vedere il [Token personalizzato](../../../../docs/framework/wcf/samples/custom-token.md) esempio.  
   
- Oggetto *token di sicurezza* è essenzialmente un elemento XML che viene utilizzato il [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] framework di sicurezza per rappresentare le attestazioni relative a un mittente nel messaggio SOAP. La sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] offre vari token per le modalità di autenticazione fornite dal sistema. Alcuni esempi sono il token di sicurezza basato su certificato X.509 rappresentato dalla classe <xref:System.IdentityModel.Tokens.X509SecurityToken> o il token di sicurezza del nome utente rappresentato dalla classe <xref:System.IdentityModel.Tokens.UserNameSecurityToken>.  
+ Un *token di sicurezza* è essenzialmente un elemento XML che viene usato dal framework di sicurezza di Windows Communication Foundation (WCF) per rappresentare le attestazioni relative a un mittente nel messaggio SOAP. La sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] offre vari token per le modalità di autenticazione fornite dal sistema. Alcuni esempi sono il token di sicurezza basato su certificato X.509 rappresentato dalla classe <xref:System.IdentityModel.Tokens.X509SecurityToken> o il token di sicurezza del nome utente rappresentato dalla classe <xref:System.IdentityModel.Tokens.UserNameSecurityToken>.  
   
  Talvolta una determinata modalità di autenticazione o credenziale non è supportata dai tipi di token disponibili. In tal caso è necessario creare un token di sicurezza personalizzato per fornire una rappresentazione XML della credenziale personalizzata nel messaggio SOAP.  
   

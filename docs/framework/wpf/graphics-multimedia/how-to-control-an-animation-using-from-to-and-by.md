@@ -1,29 +1,17 @@
 ---
-title: 'Procedura: controllare un''animazione mediante i valori From, To e By'
-ms.custom: 
+title: "Procedura: controllare un'animazione mediante i valori From, To e By"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], From/to/by
 - basic animation [WPF]
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17f87c8bcf09022aa389df779e29f5e5affabc20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6f2bfb207163136d79e815e7f910673e8fafade
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>Procedura: controllare un'animazione mediante i valori From, To e By
 Un "da/a/da" o "base" viene creata una transizione tra due valori di destinazione (vedere [panoramica dell'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) per un'introduzione ai tipi diversi di animazioni). Per impostare i valori di destinazione di un'animazione di base, utilizzare il relativo <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, e <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> proprietà.  Nella tabella seguente sono riepilogati come <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, e <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> proprietà possono essere utilizzate insieme o separatamente i valori per determinare una destinazione di un'animazione.  

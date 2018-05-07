@@ -1,28 +1,16 @@
 ---
 title: 'Procedura: applicare un oggetto Material alle parti anteriore e posteriore di un oggetto tridimensionale'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - 3-D objects [WPF], applying Material class
 - Material class [WPF], applying to both sides of 3-D object
 - classes [WPF], Material
 ms.assetid: d93c8ad6-4939-4d29-9544-4d16d98093c1
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c5ead8805c3d16bc16e259bdf90a19f05500563c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0ccf0aa045886f0731cd22ecdc8e14fa6af55fd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>Procedura: applicare un oggetto Material alle parti anteriore e posteriore di un oggetto tridimensionale
 Nell'esempio seguente viene illustrato come applicare un <xref:System.Windows.Media.Media3D.Material> nella parte anteriore e posteriore di un oggetto 3D dell'oggetto e animare l'oggetto per visualizzare entrambi i lati dell'oggetto. Il <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> proprietà di un <xref:System.Windows.Media.Media3D.GeometryModel3D> viene utilizzato per applicare un colore rosso <xref:System.Windows.Media.Brush> per il lato anteriore dell'oggetto e <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> proprietà del <xref:System.Windows.Media.Media3D.GeometryModel3D> viene utilizzato per applicare un blu <xref:System.Windows.Media.Brush> al lato posteriore dell'oggetto. Il codice riportato di seguito viene illustrata l'applicazione dei materiali all'oggetto:  

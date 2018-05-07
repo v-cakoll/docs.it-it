@@ -1,28 +1,16 @@
 ---
 title: Ricolorazione di immagini
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - images [Windows Forms], recoloring
 - recoloring images
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c55c27c09a60e5ac5dd8f2fc6ef9372d4390621d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a85a0637e86657d68b5ea34d8c6eea74cb31af8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recoloring-images"></a>Ricolorazione di immagini
 Nuova colorazione è il processo di modificare i colori delle immagini. Alcuni esempi di ricolorazione modifica un colore a un altro, intensità del colore un relativo a un altro colore, la modifica della luminosità o contrasto di tutti i colori e la conversione dei colori in gradazioni di grigio.  

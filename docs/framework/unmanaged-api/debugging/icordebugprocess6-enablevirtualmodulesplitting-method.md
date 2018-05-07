@@ -1,24 +1,14 @@
 ---
 title: Metodo ICorDebugProcess6::EnableVirtualModuleSplitting
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
-caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 34a2c2571ba7f3560d861d0a5271cc3a955253a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b4565deddee2e7714d937bf61574243cc07a4602
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>Metodo ICorDebugProcess6::EnableVirtualModuleSplitting
 Abilita o disabilita la suddivisione dei moduli virtuali.  
@@ -109,17 +99,17 @@ HRESULT EnableVirtualModuleSplitting(
 |[ICorDebugFunction:: GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|Restituisce il modulo secondario in cui questa funzione è stata definita in origine|Restituisce il modulo del contenitore a cui questa funzione è stata unita|  
 |[ICorDebugClass:: GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Restituisce il modulo secondario in cui questa classe è stata definita in origine.|Restituisce il modulo del contenitore a cui questa classe è stata unita.|  
 |ICorDebugModuleDebugEvent::GetModule|Restituisce il modulo del contenitore caricato. I moduli secondari non vengono associati a eventi di caricamento a prescindere da questa impostazione.|Restituisce il modulo del contenitore caricato.|  
-|[ICorDebugAppDomain:: EnumerateAssemblies](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|Restituisce un elenco di assembly secondari e normali. Non sono inclusi assembly del contenitore. **Nota:** se mancano i simboli in qualsiasi assembly del contenitore, nessuno dei relativi assembly secondari saranno enumerati. Se mancano i simboli in qualsiasi assembly normale, l'enumerazione potrebbe essere eseguita.|Restituisce un elenco di assembly del contenitore e normali; non sono inclusi assembly secondari. **Nota:** se mancano i simboli in qualsiasi assembly normale, è possibile o potrebbe non essere enumerato.|  
+|[ICorDebugAppDomain:: EnumerateAssemblies](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|Restituisce un elenco di assembly secondari e normali. Non sono inclusi assembly del contenitore. **Nota:** se mancano i simboli in qualsiasi assembly del contenitore, nessuno dei relativi assembly secondari saranno enumerati. Se mancano i simboli in qualsiasi assembly normale, l'enumerazione potrebbe essere eseguita.|Restituisce un elenco di assembly del contenitore e normali; non sono inclusi assembly secondari. **Nota:** se mancano i simboli in qualsiasi assembly normale, potrebbe o potrebbe non essere enumerato.|  
 |[ICorDebugCode:: GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md) (quando si fa riferimento solo al codice IL)|Restituisce IL, valido in un'immagine di assembly pre-merge. In particolare, quando i tipi a cui si fa riferimento non sono definiti nel modulo virtuale che contiene IL, gli eventuali token di metadati inline corrispondono correttamente a TypeRef o MemberRef. I token TypeRef o MemberRef possono essere cercati [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) oggetto per l'oggetto ICorDebugModule virtuale corrispondente.|Restituisce IL nell'immagine di assembly post-merge.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, Cordebug. H  
+ **Intestazione:** Cordebug. idl, Cordebug. H  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
- **Versioni di .NET framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICorDebugProcess6](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)  

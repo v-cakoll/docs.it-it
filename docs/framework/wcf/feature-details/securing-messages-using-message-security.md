@@ -1,44 +1,32 @@
 ---
 title: Protezione dei messaggi mediante protezione a livello di messaggio
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ebe2526e564ef24d20f1602fd5824b44e2e2bbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Protezione dei messaggi mediante protezione a livello di messaggio
-Contenuto della sezione viene descritta la protezione del messaggio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in caso di utilizzo di <xref:System.ServiceModel.NetMsmqBinding>.  
+In questa sezione presenta la protezione dei messaggi WCF quando si usano <xref:System.ServiceModel.NetMsmqBinding>.  
   
 > [!NOTE]
 >  Prima di leggere questo argomento, è consigliabile leggere [concetti sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
- Nell'illustrazione seguente è rappresentato un modello concettuale della comunicazione in coda che utilizza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. L'illustrazione e la terminologia vengono utilizzate nella spiegazione  
+ Nella figura seguente fornisce un modello concettuale della comunicazione in coda tramite WCF. L'illustrazione e la terminologia vengono utilizzate nella spiegazione  
   
  dei concetti della protezione del trasporto.  
   
  ![In coda applicazione diagramma](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "figura coda distribuita")  
   
- Durante l'invio di messaggi in coda mediante [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], il messaggio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene allegato come corpo del messaggio MSMQ (Accodamento messaggi). Mentre la protezione del trasporto protegge l'intero messaggio MSMQ, la protezione del messaggio, o SOAP, protegge il corpo del messaggio MSMQ.  
+ Quando l'invio di messaggi in coda mediante WCF, il messaggio WCF viene allegato come corpo del messaggio di Accodamento messaggi (MSMQ). Mentre la protezione del trasporto protegge l'intero messaggio MSMQ, la protezione del messaggio, o SOAP, protegge il corpo del messaggio MSMQ.  
   
- Il concetto chiave della protezione del messaggio consiste nel fatto che il client protegge il messaggio per l'applicazione ricevente (servizio), a differenza dalla protezione del trasporto in cui il client protegge il messaggio per la coda di destinazione. In tale contesto, Accodamento messaggi non svolge alcun ruolo nella protezione del messaggio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con la protezione del messaggio.  
+ Il concetto chiave della protezione del messaggio consiste nel fatto che il client protegge il messaggio per l'applicazione ricevente (servizio), a differenza dalla protezione del trasporto in cui il client protegge il messaggio per la coda di destinazione. Di conseguenza, MSMQ non svolge nessuna parte per la protezione del messaggio WCF mediante la sicurezza dei messaggi.  
   
- La protezione del messaggio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aggiunge intestazioni di sicurezza al messaggio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che si integrano con infrastrutture di sicurezza esistenti, ad esempio un certificato o il protocollo Kerberos.  
+ Sicurezza dei messaggi WCF aggiunge intestazioni di sicurezza per il messaggio WCF che si integrano con infrastrutture di sicurezza esistenti, ad esempio un certificato o il protocollo Kerberos.  
   
 ## <a name="message-credential-type"></a>Tipo di credenziali del messaggio  
  Mediante la protezione del messaggio il servizio e il client possono presentare credenziali per autenticarsi reciprocamente. È possibile selezionare la protezione del messaggio impostando la modalità <xref:System.ServiceModel.NetMsmqBinding.Security%2A> su `Message` o `Both` (ovvero per utilizzare sia la protezione del trasporto che la protezione del messaggio).  

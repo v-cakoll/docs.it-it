@@ -1,17 +1,12 @@
 ---
 title: 'Cicli: espressione for...to (F#)'
 description: "Vedere come il ciclo for di F #... per l'espressione viene utilizzato per eseguire l'iterazione in un ciclo su un intervallo di valori di una variabile di ciclo."
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 95a8960d71c82c01118d2e71479fc0ec5298a02b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 841c7d557abc11e0253cb87ab8081cc77671b44b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loops-forto-expression"></a>Espressione Loops: for...to
 

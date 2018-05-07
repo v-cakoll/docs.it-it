@@ -1,14 +1,6 @@
 ---
 title: Metodo ICLRProbingAssemblyEnum::Get
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRProbingAssemblyEnum.Get
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fdb67a77-782f-44cf-a8a1-b75999b0f3c8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd54558eeb49ebf7a2a2e9304830b09a08d1038e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f5ddd352d027365e02366e9aa779053da3bdc2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>Metodo ICLRProbingAssemblyEnum::Get
 Ottiene l'identità dell'assembly in corrispondenza dell'indice specificato.  
@@ -62,8 +50,8 @@ HRESULT Get (
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`Get`stato restituito correttamente.|  
-|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer`è troppo piccolo.|  
+|S_OK|`Get` stato restituito correttamente.|  
+|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` è troppo piccolo.|  
 |ERROR_NO_MORE_ITEMS|L'enumerazione non contiene più elementi.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
@@ -74,16 +62,16 @@ HRESULT Get (
 ## <a name="remarks"></a>Note  
  L'identità in corrispondenza dell'indice 0 è l'identità specifica per l'architettura del processore. L'identità in corrispondenza dell'indice 1 è l'assembly di architettura neutra per Microsoft intermediate language (MSIL). L'identità in corrispondenza dell'indice 2 non contiene alcuna informazione di architettura.  
   
- `Get`viene in genere chiamato due volte. La prima chiamata fornisce un valore null per `pwzBuffer`e imposta `pcchBufferSize` per le dimensioni appropriate per `pwzBuffer`. La seconda chiamata viene fornito un dimensionati `pwzBuffer`e contiene i dati di identità assembly canonica dopo il completamento.  
+ `Get` viene in genere chiamato due volte. La prima chiamata fornisce un valore null per `pwzBuffer`e imposta `pcchBufferSize` per le dimensioni appropriate per `pwzBuffer`. La seconda chiamata viene fornito un dimensionati `pwzBuffer`e contiene i dati di identità assembly canonica dopo il completamento.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Mscoree. H  
   
- **Libreria:** inclusa come risorsa in MSCorEE.dll  
+ **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)  

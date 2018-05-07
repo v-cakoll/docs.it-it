@@ -1,23 +1,12 @@
 ---
 title: Traccia del flusso di lavoro
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b07dda940e35746a4d57c0cd300375692c6ab2f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f4ce25efae0e42fa7c95ce5dffe8da8e31db05a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-tracing"></a>Traccia del flusso di lavoro
 La traccia del flusso di lavoro consente di acquisire informazioni diagnostiche usando i listener di traccia di .NET Framework. La traccia può essere abilitata in seguito al rilevamento di un problema con l'applicazione, quindi nuovamente disabilitata quando il problema viene risolto. Sono disponibili due modi per abilitare la traccia di debug per i flussi di lavoro: è possibile configurarla usando il visualizzatore di Traccia eventi oppure usare l'oggetto <xref:System.Diagnostics> per inviare eventi di traccia a un file.  
@@ -48,7 +37,7 @@ La traccia del flusso di lavoro consente di acquisire informazioni diagnostiche 
     3.  Eseguire il comando seguente nella directory del framework corrente (ad esempio, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
->  Se si utilizza .NET Framework 4 Client Profile, è innanzitutto necessario registrare il manifesto ETW eseguendo il comando seguente dalla directory di .NET Framework 4:`ServiceModelReg.exe –i –c:etw`  
+>  Se si utilizza .NET Framework 4 Client Profile, è innanzitutto necessario registrare il manifesto ETW eseguendo il comando seguente dalla directory di .NET Framework 4: `ServiceModelReg.exe –i –c:etw`  
   
 ## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>Abilitazione della traccia di debug tramite l'oggetto System.Diagnostics  
  Questi listener possono essere configurati nel file App.config dell'applicazione flusso di lavoro o nel file Web.config per un servizio flusso di lavoro. In questo esempio, un [TextWriterTraceListener](http://go.microsoft.com/fwlink/?LinkId=165424) è configurato per il salvataggio delle informazioni di traccia nel file MyTraceLog.txt nella directory corrente.  

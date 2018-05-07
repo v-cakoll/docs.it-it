@@ -1,13 +1,6 @@
 ---
-title: "B &#233; in GDI+ spline di Bézier"
-ms.custom: 
+title: B&#233;Bézier Bézier in GDI+
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +9,13 @@ helpviewer_keywords:
 - splines [Windows Forms], Bezier
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8cc06a81c879e6ebd50c4eb6a70590c28cc43f6e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e247ec2bcd57c2fb2f5c32f61d38a2e7a267ff1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="b233zier-splines-in-gdi"></a>B &#233; in GDI+ spline di Bézier
+# <a name="b233zier-splines-in-gdi"></a>B&#233;Bézier Bézier in GDI+
 Una spline di Bézier è una curva specificata da quattro punti: due punti finali (p1 e p2) e due punti di controllo (c1 e c2). La curva inizia p1 e p2 termina. La curva non passano attraverso i punti di controllo, ma i punti di controllo di agire come grado attirare l'attenzione, estrarre la curva in determinate direzioni e che influenzano il modo di che curvatura. Nella figura seguente mostra una curva di Bézier insieme ai relativi punti di controllo e di endpoint.  
   
  ![Spline di Bézier](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art11a.gif "Aboutgdip02_art11a")  

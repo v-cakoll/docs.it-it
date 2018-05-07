@@ -1,29 +1,15 @@
 ---
 title: Override dell'identità di un servizio per l'autenticazione
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5383a1d241134318ce48c8c0c9f39f831396730
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Override dell'identità di un servizio per l'autenticazione
 In genere non è necessario impostare l'identità in un servizio, perché la selezione del tipo di credenziale di un client impone il tipo di identità esposto nei metadati del servizio. Ad esempio, il codice di configurazione seguente usa il [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) e imposta il `clientCredentialType` attributo Windows.  
@@ -37,7 +23,7 @@ In genere non è necessario impostare l'identità in un servizio, perché la sel
  Per un'applicazione di esempio che illustra l'impostazione di identità, vedere [esempio identità del servizio](../../../../docs/framework/wcf/samples/service-identity-sample.md). Per ulteriori informazioni sull'identità del servizio, vedere [identità del servizio e l'autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Autenticazione Kerberos e identità  
- Per impostazione predefinita, quando un servizio è configurato per usare una credenziale di Windows, un [ \<identità >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elemento che contiene un [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) o [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elemento è stato generato in WSDL. Se il servizio è in esecuzione con il `LocalSystem`, `LocalService`, o `NetworkService` account, il nome dell'entità (SPN) viene generato per impostazione predefinita sotto forma di un servizio `host/` \< *hostname*> perché Questi account hanno accesso ai dati SPN del computer. Se il servizio è in esecuzione con un account diverso, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] genera un UPN nel formato \< *username*>@<*domainName*`>`. Questo si verifica perché l'autenticazione Kerberos richiede che venga fornito un UPN o un SPN al client per l'autenticazione del servizio.  
+ Per impostazione predefinita, quando un servizio è configurato per usare una credenziale di Windows, un [ \<identità >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elemento che contiene un [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) o [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elemento è stato generato in WSDL. Se il servizio è in esecuzione con il `LocalSystem`, `LocalService`, o `NetworkService` account, il nome dell'entità (SPN) viene generato per impostazione predefinita sotto forma di un servizio `host/` \< *hostname*> perché Questi account hanno accesso ai dati SPN del computer. Se il servizio è in esecuzione con un account diverso, Windows Communication Foundation (WCF) genera un UPN nel formato \< *username*>@<*domainName* `>` . Questo si verifica perché l'autenticazione Kerberos richiede che venga fornito un UPN o un SPN al client per l'autenticazione del servizio.  
   
  È inoltre possibile usare lo strumento Setspn.exe per registrare un SPN aggiuntivo con l'account di un servizio in un dominio. È quindi possibile usare il nome SPN come identità del servizio. Per scaricare lo strumento, vedere [Windows 2000 Resource Kit Tool: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752). Per ulteriori informazioni sullo strumento, vedere [Panoramica su Setspn](http://go.microsoft.com/fwlink/?LinkId=61374).  
   

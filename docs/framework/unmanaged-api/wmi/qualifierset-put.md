@@ -2,10 +2,6 @@
 title: Funzione QualifierSet_Put (riferimenti alle API non gestite)
 description: La funzione QualifierSet_Put scrive qualificatore denominato e il relativo valore.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bf5c6dbf0f707942d58f4d7cf155636f0532724
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put (funzione)
 Scrive il qualificatore denominato e il valore. Nuovo qualificatore sovrascrive il valore precedente con lo stesso nome. Se il qualificatore non esiste, viene creato. 
@@ -57,9 +50,9 @@ HRESULT QualifierSet_Put (
 `wszName`   
 [in] Il nome del qualificatore da scrivere.
 
-`pVal`[in] Un puntatore a un oggetto valido `VARIANT` che contiene il qualificatore da scrivere. Questo parametro non può essere `null`.
+`pVal` [in] Un puntatore a un valore valido `VARIANT` che contiene il qualificatore da scrivere. Questo parametro non può essere `null`.
 
-`lFlavor`[in] Una delle costanti seguenti che definisce i tipi di qualificatore desiderato per il qualificatore. Il valore predefinito è `WBEM_FLAVOR_OVERRIDABLE` (0).
+`lFlavor` [in] Una delle costanti seguenti che definisce le versioni del qualificatore desiderato per il qualificatore. Il valore predefinito è `WBEM_FLAVOR_OVERRIDABLE` (0).
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
@@ -90,7 +83,7 @@ Questa funzione esegue il wrapping di una chiamata al [IWbemQualifierSet::Put](h
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

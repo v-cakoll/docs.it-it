@@ -1,24 +1,12 @@
 ---
-title: "Modifica dei livelli di condivisione della cache per le attività Send"
-ms.custom: 
+title: Modifica dei livelli di condivisione della cache per le attività Send
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 59c6ae1ae31a5aa256844e6efca158e4702b6aba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 359a9189cee34eeb814a2303be3d2da725456e39
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Modifica dei livelli di condivisione della cache per le attività Send
 L'estensione <xref:System.ServiceModel.Activities.SendMessageChannelCache> consente di personalizzare i livelli di condivisione della cache, le impostazioni della cache della channel factory e della cache del canale per i flussi di lavoro che inviano messaggi agli endpoint del servizio tramite le attività di messaggistica <xref:System.ServiceModel.Activities.Send>. Questi sono in genere flussi di lavoro del client ma potrebbero essere anche servizi del flusso di lavoro ospitati in un oggetto <xref:System.ServiceModel.WorkflowServiceHost>. La cache della channel factory contiene gli oggetti <xref:System.ServiceModel.ChannelFactory%601> memorizzati nella cache. La cache del canale contiene i canali memorizzati nella cache.  
@@ -31,11 +19,11 @@ L'estensione <xref:System.ServiceModel.Activities.SendMessageChannelCache> conse
   
  Di seguito sono riportati i diversi livelli di condivisione della cache disponibili per le attività <xref:System.ServiceModel.Activities.Send> in un flusso di lavoro e il relativo utilizzo consigliato:  
   
--   **Livello host**: nell'host di livello di condivisione, la cache è disponibile solo per le istanze del flusso di lavoro ospitate nell'host del servizio del flusso di lavoro. Una cache può essere condivisa anche tra host del servizio flusso di lavoro di una cache a livello di processo.  
+-   **Livello host**: nel livello di condivisione host, la cache è disponibile solo per le istanze del flusso di lavoro ospitate nell'host del servizio del flusso di lavoro. Una cache può essere condivisa anche tra host del servizio flusso di lavoro di una cache a livello di processo.  
   
--   **Livello di istanza**: nel livello di condivisione istanza, la cache è disponibile a un'istanza del flusso di lavoro specifico in tutta la durata, ma la cache non è disponibile in altre istanze del flusso di lavoro.  
+-   **Livello di istanza**: nell'istanza livello di condivisione, la cache è disponibile a un'istanza del flusso di lavoro specifico tutta la sua durata, ma la cache non è disponibile in altre istanze del flusso di lavoro.  
   
--   **Nessuna Cache**: la cache è stata disattivata per impostazione predefinita, se si dispone di un flusso di lavoro che utilizza gli endpoint definiti nella configurazione. In questo caso, è consigliabile mantenere disattivata la cache anche perché l'attivazione potrebbe risultare non sicura, ad esempio, se per ogni invio è necessaria un'identità diversa (credenziali diverse o utilizzo della rappresentazione).  
+-   **Nessuna Cache**: la cache viene disattivata per impostazione predefinita se si dispone di un flusso di lavoro che utilizza gli endpoint definiti nella configurazione. In questo caso, è consigliabile mantenere disattivata la cache anche perché l'attivazione potrebbe risultare non sicura, ad esempio, se per ogni invio è necessaria un'identità diversa (credenziali diverse o utilizzo della rappresentazione).  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>Modifica del livello di condivisione della cache per un flusso di lavoro client  
  Per impostare la condivisione della cache in un flusso di lavoro client, aggiungere un'istanza della classe <xref:System.ServiceModel.Activities.SendMessageChannelCache> come estensione al set desiderato di istanze del flusso di lavoro. In questo modo la cache viene condivisa in tutte le istanze del flusso di lavoro. Negli esempi di codice seguenti viene mostrato come eseguire questi passaggi.  

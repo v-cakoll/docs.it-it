@@ -1,24 +1,12 @@
 ---
 title: Ricezione memorizzata nel buffer
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: abec64433d10a23dca6186c6c9a553bbed12a017
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ee53edafc94fd5efd4e412b1b9198a8763b79462
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="buffered-receive"></a>Ricezione memorizzata nel buffer
 In questo esempio viene illustrato come impostare e configurare la funzionalità di ricezione memorizzata nel buffer in Windows Workflow Foundation (WF). La ricezione memorizzata nel buffer consente a un autore di creare un flusso di lavoro senza dover preoccuparsi dell'ordine con cui vengono ricevuti i messaggi. La funzionalità di ricezione memorizzata nel buffer memorizza localmente nel buffer i messaggi e li recapita quando il flusso di lavoro è pronto per riceverli.  
@@ -31,12 +19,12 @@ In questo esempio viene illustrato come impostare e configurare la funzionalità
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`  
   
 ## <a name="discussion"></a>Discussione  
- In questo esempio, un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene implementato usando [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e dispone di una sequenza di attività <xref:System.ServiceModel.Activities.Receive>. Questo flusso di lavoro modella un semplice processo di approvazione di un prestito in cui il flusso di lavoro prevede l'approvazione di tre notifiche per un prestito. Un'applicazione client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] invia tre notifiche correlate nell'ordine inverso rispetto a quello previsto dal servizio. Poiché la funzionalità di ricezione memorizzata nel buffer viene attivata in corrispondenza del servizio, ogni messaggio non ordinato viene memorizzato nel buffer in corrispondenza del servizio ed elaborato quando il flusso di lavoro diventa pronto per riceverlo.  
+ In questo esempio, un servizio Windows Communication Foundation (WCF) viene implementato usando [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e dispone di una sequenza di <xref:System.ServiceModel.Activities.Receive> le attività. Questo flusso di lavoro modella un semplice processo di approvazione di un prestito in cui il flusso di lavoro prevede l'approvazione di tre notifiche per un prestito. Un'applicazione client Windows Communication Foundation (WCF) invia tre notifiche correlate nell'ordine inverso rispetto a quello previsto dal servizio. Poiché la funzionalità di ricezione memorizzata nel buffer viene attivata in corrispondenza del servizio, ogni messaggio non ordinato viene memorizzato nel buffer in corrispondenza del servizio ed elaborato quando il flusso di lavoro diventa pronto per riceverlo.  
   
  La funzionalità di ricezione memorizzata nel buffer richiede che l'associazione supporti l'oggetto <xref:System.ServiceModel.Activities.ReceiveContent>, pertanto il servizio usa l'oggetto <xref:System.ServiceModel.NetMsmqBinding>. Non è richiesta alcuna configurazione particolare per l'associazione, pertanto vengono usate le impostazioni predefinite.  
   
@@ -115,6 +103,6 @@ In questo esempio viene illustrato come impostare e configurare la funzionalità
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`

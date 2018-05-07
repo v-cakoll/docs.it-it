@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: specificare il contesto di sicurezza per i servizi'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, security
 - security [Visual Studio], contexts
@@ -17,27 +10,24 @@ helpviewer_keywords:
 - services, security
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
-caps.latest.revision: "10"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 9ce65358f6d63414dbe6798d3cc2464ee2741980
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e3e5ad7dd44dcaf1593ac80bbe6d0a367964e4e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Procedura: specificare il contesto di sicurezza per i servizi
 Per impostazione predefinita, i servizi eseguiti in un contesto di sicurezza diverso rispetto a quello dell'utente connesso. Vengono eseguiti nel contesto dell'account di sistema predefinito, i servizi chiamato `LocalSystem`, che concede privilegi di accesso diversi a risorse di sistema rispetto all'utente. È possibile modificare questo comportamento per specificare un account utente diverso in cui eseguire il servizio.  
   
  Impostare il contesto di sicurezza modificando la <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> proprietà per il processo in cui viene eseguito il servizio. Questa proprietà consente di impostare il servizio in uno dei quattro tipi di account:  
   
--   `User`, che comporta il sistema per la richiesta di un nome utente valido e una password quando il servizio viene installato ed eseguito nel contesto di un account specificato da un singolo utente della rete.  
+-   `User`, che comporta l'esecuzione il sistema per la richiesta di un nome utente valido e una password quando il servizio viene installato ed eseguito nel contesto di un account specificato da un singolo utente della rete.  
   
 -   `LocalService`, che viene eseguita nel contesto di un account che opera come utente senza privilegi nel computer locale e presenta credenziali anonime a tutti i server remoti.  
   
--   `LocalSystem`, che viene eseguita nel contesto di un account che fornisce privilegi locali estesi e presenta le credenziali del computer per tutti i server remoti.  
+-   `LocalSystem`, che viene eseguita nel contesto di un account che fornisce privilegi estesi locali e presenta le credenziali del computer per tutti i server remoti.  
   
 -   `NetworkService`, che viene eseguita nel contesto di un account che opera come utente senza privilegi nel computer locale e presenta le credenziali del computer per tutti i server remoti.  
   

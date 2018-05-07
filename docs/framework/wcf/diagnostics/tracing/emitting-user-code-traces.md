@@ -1,27 +1,15 @@
 ---
 title: Creazione di tracce di codice utente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="emitting-user-code-traces"></a>Creazione di tracce di codice utente
-Oltre ad attivare le funzionalità di traccia nella configurazione allo scopo di raccogliere dati di strumentazione generati da [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], è possibile creare tracce nel codice utente a livello di programmazione. In questo modo è possibile creare attivamente dati di strumentazione che possono essere successivamente usati a scopo diagnostico. In questo argomento viene illustrata la procedura da seguire.  
+Oltre ad abilitare la traccia nella configurazione per raccogliere dati di strumentazione generati da Windows Communication Foundation (WCF), è anche possibile creare tracce a livello di programmazione nel codice utente. In questo modo è possibile creare attivamente dati di strumentazione che possono essere successivamente usati a scopo diagnostico. In questo argomento viene illustrata la procedura da seguire.  
   
  Inoltre, il [estensione traccia](../../../../../docs/framework/wcf/samples/extending-tracing.md) esempio include tutto il codice illustrato nelle sezioni seguenti.  
   
@@ -134,17 +122,17 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  Nel diagramma seguente è inoltre possibile vedere tracce di trasferimento da e verso l'attività di calcolo, nonché due coppie di tracce Start e Stop per ogni attività di richiesta, una per il client e una per il servizio (una per ogni origine di traccia).  
   
- ![Visualizzatore di tracce: Creazione utente &#45; le tracce di codice](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
+ ![Visualizzatore di tracce: Creazione utente&#45;le tracce di codice](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Elenco delle attività in base all'ora di creazione (riquadro sinistro) e alle relative attività annidate (riquadro superiore destro)  
   
  Se il codice del servizio genera un'eccezione che determina a sua volta la generazione di un'eccezione nel client (ad esempio, quando il client non ha ottenuto la risposta alla richiesta), entrambi i messaggi di errore o di avviso del client e del servizio vengono restituiti nella stessa attività per correlazione diretta. Nel diagramma seguente, il servizio genera un'eccezione che indica "il servizio rifiuta di elaborare la richiesta nel codice utente". Anche il client genera un'eccezione che indica "il server non è riuscito a elaborare la richiesta a causa di un errore interno".  
   
- ![Uso del Visualizzatore di tracce per creare l'utente &#45; codice traccia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
+ ![Uso del Visualizzatore di tracce per creare l'utente&#45;le tracce di codice](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
 Se l'ID attività è stato propagato, gli errori verificatisi su endpoint diversi per una determinata richiesta vengono visualizzati nella stessa attività.  
   
  Facendo doppio clic sull'attività Multiply nel riquadro sinistro è possibile visualizzare il grafico seguente, con le tracce relative all'attività Multiply per ogni processo coinvolto. Si può notare un avviso verificatosi inizialmente nel servizio (eccezione generata), seguito da avvisi ed errori nel client in quanto la richiesta non è stata elaborata. Si può pertanto presupporre la relazione di errore causale tra gli endpoint e derivare la causa radice dell'errore.  
   
- ![Uso del Visualizzatore di tracce per creare l'utente &#45; codice traccia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
+ ![Uso del Visualizzatore di tracce per creare l'utente&#45;le tracce di codice](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Visualizzazione grafica della correlazione tra errori  
   
  Per ottenere le tracce precedenti è stato impostato `ActivityTracing` per le origini di traccia dell'utente e `propagateActivity=true` per l'origine di traccia `System.ServiceModel`. Non è stato impostato `ActivityTracing` per l'origine di traccia `System.ServiceModel` per attivare la propagazione di attività codice utente-codice utente. Quando la traccia attività ServiceModel è attiva, l'ID attività definito nel client non viene propagato fino al codice utente del servizio. I trasferimenti, tuttavia, mettono in correlazione le attività client e le attività del codice utente del servizio alle attività [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] intermedie.  

@@ -1,14 +1,6 @@
 ---
 title: Metodo IBindingDisplay::InitializeForProcess
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IBindingDisplay.InitializeForProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 59417acb-4e59-46ad-acfe-d827e6ab6078
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56f55788fcaf08507f413a03c5364ce3bcdbbf3c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8954c2f6ecaf2767dd01b0601096d9e3f6df9b98
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>Metodo IBindingDisplay::InitializeForProcess
 Inizializza il [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) oggetto.  
@@ -51,7 +39,7 @@ HRESULT InitializeForProcess (
  [in] Identificatore di processo.  
   
 ## <a name="remarks"></a>Note  
- Il debugger chiama il `InitializeForProcess` metodo al momento della creazione per inizializzare la visualizzazione di associazione. `InitializeForProcess`deve essere chiamato in fase di creazione prima di qualsiasi altro metodo per `IBindingDisplay` viene chiamato.  
+ Il debugger chiama il `InitializeForProcess` metodo al momento della creazione per inizializzare la visualizzazione di associazione. `InitializeForProcess` deve essere chiamato in fase di creazione prima di qualsiasi altro metodo per `IBindingDisplay` viene chiamato.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -60,7 +48,7 @@ HRESULT InitializeForProcess (
   
  **Libreria:** BindingDisplay. idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)

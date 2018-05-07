@@ -1,34 +1,20 @@
 ---
 title: Meccanismi del controllo di accesso
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89606d1e02b58f5f627d28b7354def848cd5a350
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57ead53dd9e6bc1b2e3624791c7cc0c7d437cd7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-control-mechanisms"></a>Meccanismi del controllo di accesso
-In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le possibilità di controllo dell'accesso sono numerose. In questo argomento vengono discussi brevemente i vari meccanismi e vengono forniti suggerimenti sulle circostanze in cui utilizzarli. L'argomento consente quindi di selezionare il meccanismo corretto da utilizzare. Le tecnologie di accesso sono elencate in ordine di complessità. La tecnologia più semplice è <xref:System.Security.Permissions.PrincipalPermissionAttribute>, la più complessa è il modello di identità.  
+È possibile controllare l'accesso in modo diversi con Windows Communication Foundation (WCF). In questo argomento vengono discussi brevemente i vari meccanismi e vengono forniti suggerimenti sulle circostanze in cui utilizzarli. L'argomento consente quindi di selezionare il meccanismo corretto da utilizzare. Le tecnologie di accesso sono elencate in ordine di complessità. La tecnologia più semplice è <xref:System.Security.Permissions.PrincipalPermissionAttribute>, la più complessa è il modello di identità.  
   
- Oltre a questi meccanismi, la rappresentazione e delega con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è illustrato in [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Oltre a questi meccanismi, rappresentazione e delega con WCF, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="principalpermissionattribute"></a>PrincipalPermissionAttribute  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute> viene utilizzato per limitare l'accesso a un metodo del servizio. Quando l'attributo è applicato a un metodo, può essere utilizzato per richiedere l'identità o l'appartenenza di un chiamante specifico in un gruppo di Windows o in un ruolo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Se il client viene autenticato utilizzando un certificato X.509, acquisisce un'identità primaria costituita dal nome del soggetto e dall'identificazione personale del certificato.  
@@ -41,16 +27,16 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le possibilità di co
  Una funzionalità di [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] è il provider di appartenenza. Anche se tecnicamente il provider di appartenenza non è un meccanismo per il controllo dell'accesso, consente di controllare l'accesso al servizio limitando il set di possibili identità che possono accedere all'endpoint del servizio. La funzionalità di appartenenza comprende un database che può essere popolato con combinazioni nome utente/password che consentono agli utenti di un sito Web di creare account nel sito. Per accedere a un servizio che utilizza il provider di appartenenza, è necessario che l'utente esegua la procedura di accesso indicando nome utente e password.  
   
 > [!NOTE]
->  È necessario innanzitutto popolare il database con la funzionalità [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], quindi è possibile per un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizzare tale database a scopo di autorizzazione.  
+>  È necessario innanzitutto popolare il database utilizzando il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] funzionalità prima che un servizio WCF può utilizzarlo a scopo di autorizzazione.  
   
  È inoltre possibile utilizzare la funzionalità di appartenenza se si dispone già di un database di appartenenza di un sito Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] esistente e si desidera consentire agli stessi utenti di utilizzare il servizio, autorizzandoli con lo stesso nome utente e password.  
   
- Per ulteriori informazioni sull'utilizzo della funzionalità di appartenenza in un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] del servizio, vedere [procedura: utilizzare il Provider di appartenenze ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
+ Per ulteriori informazioni sull'utilizzo della funzionalità di appartenenza in un servizio WCF, vedere [procedura: utilizzare il Provider di appartenenze ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
   
 ## <a name="aspnet-role-provider"></a>Provider di ruoli ASP.NET  
- Un'altra funzionalità di [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] consiste nella possibilità di gestire l'autorizzazione mediante ruoli. Il provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] consente a uno sviluppatore di creare ruoli per gli utenti e di assegnare ogni utente a uno o più ruoli. Come per il provider di appartenenza, i ruoli e le assegnazioni sono archiviati in un database e possono essere popolati mediante strumenti forniti da una particolare implementazione del provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Come per la funzionalità di appartenenza, gli sviluppatori di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] possono utilizzare le informazioni contenute nel database per autorizzare gli utenti del servizio in base ai ruoli. Essi, ad esempio, possono utilizzare il provider di ruoli in combinazione con il meccanismo di controllo dell'accesso `PrincipalPermissionAttribute` descritto in precedenza.  
+ Un'altra funzionalità di [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] consiste nella possibilità di gestire l'autorizzazione mediante ruoli. Il provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] consente a uno sviluppatore di creare ruoli per gli utenti e di assegnare ogni utente a uno o più ruoli. Come per il provider di appartenenza, i ruoli e le assegnazioni sono archiviati in un database e possono essere popolati mediante strumenti forniti da una particolare implementazione del provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Come con la funzionalità di appartenenza, WCF gli sviluppatori possono utilizzare le informazioni nel database per autorizzare gli utenti del servizio dai ruoli. Essi, ad esempio, possono utilizzare il provider di ruoli in combinazione con il meccanismo di controllo dell'accesso `PrincipalPermissionAttribute` descritto in precedenza.  
   
- È inoltre possibile utilizzare il provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] se si dispone già di un database del provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] esistente e si desidera utilizzare lo stesso set di regole e assegnazioni utente nel servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ È anche possibile usare il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provider di ruoli se si dispone di un oggetto esistente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] database provider di ruoli e si desidera usare lo stesso set di regole e le assegnazioni utente nel servizio di WCF.  
   
  Per ulteriori informazioni sull'utilizzo di funzionalità del provider di ruoli, vedere [procedura: utilizzare il Provider di ruoli ASP.NET con un servizio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
@@ -59,7 +45,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le possibilità di co
   
  È inoltre possibile utilizzare AzMan e il provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] se si dispone già dell'accesso a un'installazione di AzMan esistente e si desidera autorizzare gli utenti del servizio utilizzando le funzionalità della combinazione AzMan/provider di ruoli.  
   
- Per ulteriori informazioni su AzMan e il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provider di ruoli, vedere [procedura: utilizzare Gestione autorizzazioni (AzMan) con ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=88951). Per ulteriori informazioni sull'utilizzo di AzMan e il provider di ruoli per [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizi, vedere [procedura: utilizzare il Provider di ruoli ASP.NET di gestione autorizzazioni con un servizio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
+ Per ulteriori informazioni su AzMan e il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provider di ruoli, vedere [procedura: utilizzare Gestione autorizzazioni (AzMan) con ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=88951). Per ulteriori informazioni sull'utilizzo di AzMan e il provider di ruoli per i servizi WCF, vedere [procedura: utilizzare il Provider di ruoli ASP.NET di gestione autorizzazioni con un servizio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
   
 ## <a name="identity-model"></a>Modello di identità  
  Il modello di identità è un set di API che consentono di gestire attestazioni e criteri per autorizzare client. Con il modello di identità, è possibile esaminare ogni attestazione contenuta in credenziali che il chiamante ha utilizzato per autenticarsi nel servizio, confrontare le attestazioni con il set di criteri per il servizio e concedere o negare l'accesso in base al confronto.  

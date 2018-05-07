@@ -1,33 +1,19 @@
 ---
 title: 'Endpoint: indirizzi, associazioni e contratti'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 477c23facd846580bac698ce6e61d02e11afe430
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0909d1d10ab8932f27f7ca6cba6207d57fa4f4cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Endpoint: indirizzi, associazioni e contratti
-Tutte le comunicazioni con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servizio avviene tramite il *endpoint* del servizio. Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) viene eseguita mediante il *endpoint* del servizio. Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio WCF.  
   
  Ogni endpoint è costituito da quattro proprietà:  
   
@@ -39,12 +25,12 @@ Tutte le comunicazioni con un [!INCLUDE[indigo1](../../../../includes/indigo1-md
   
 -   Un set di comportamenti che specificano dettagli di implementazione locali dell'endpoint.  
   
- In questo argomento viene illustrata la struttura di un endpoint e viene spiegato come tale struttura viene rappresentata nel modello a oggetti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ In questo argomento viene illustrata questa struttura di endpoint e viene illustrato come viene rappresentato nel modello a oggetti WCF.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Struttura di un endpoint  
  Ogni endpoint è costituito dagli elementi seguenti:  
   
--   Indirizzo: l'indirizzo identifica in modo univoco l'endpoint e comunica ai potenziali utenti l'ubicazione del servizio. Nel modello a oggetti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], l'indirizzo è rappresentato dalla classe <xref:System.ServiceModel.EndpointAddress>. Una classe <xref:System.ServiceModel.EndpointAddress> contiene:  
+-   Indirizzo: l'indirizzo identifica in modo univoco l'endpoint e comunica ai potenziali utenti l'ubicazione del servizio. È rappresentato nel modello a oggetti WCF per il <xref:System.ServiceModel.EndpointAddress> classe. Una classe <xref:System.ServiceModel.EndpointAddress> contiene:  
   
     -   Una proprietà <xref:System.ServiceModel.EndpointAddress.Uri%2A>, che rappresenta l'indirizzo del servizio.  
   
@@ -60,7 +46,7 @@ Tutte le comunicazioni con un [!INCLUDE[indigo1](../../../../includes/indigo1-md
   
     -   I necessari requisiti di sicurezza (ad esempio, la protezione dei messaggi SSL o SOAP).  
   
-     Per altre informazioni, vedere [panoramica delle associazioni WCF](../../../../docs/framework/wcf/bindings-overview.md). Nel modello a oggetti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], un'associazione è rappresentata dalla classe astratta di base <xref:System.ServiceModel.Channels.Binding>. Per la maggior parte degli scenari, gli utenti possono utilizzare una delle associazioni fornite dal sistema. Per ulteriori informazioni, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     Per altre informazioni, vedere [panoramica delle associazioni WCF](../../../../docs/framework/wcf/bindings-overview.md). Un'associazione è rappresentata nel modello a oggetti WCF dalla classe di base astratta <xref:System.ServiceModel.Channels.Binding>. Per la maggior parte degli scenari, gli utenti possono utilizzare una delle associazioni fornite dal sistema. Per ulteriori informazioni, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
 -   Contratti: il contratto delinea la funzionalità che l'endpoint espone al client. Un contratto specifica:  
   
@@ -74,7 +60,7 @@ Tutte le comunicazioni con un [!INCLUDE[indigo1](../../../../includes/indigo1-md
   
      Per ulteriori informazioni sulla definizione di un contratto, vedere [progettazione contratti di servizio](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
--   Comportamenti: è possibile utilizzare i comportamenti dell'endpoint per personalizzare il comportamento locale dell'endpoint del servizio. I comportamenti dell'endpoint realizzano questo obiettivo partecipando nel processo di compilazione un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]runtime. Un esempio di comportamento dell'endpoint è rappresentato dalla proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, che consente di specificare un indirizzo di ascolto diverso dall'indirizzo SOAP o WSDL (Web Services Description Language). Per altre informazioni, vedere [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+-   Comportamenti: è possibile utilizzare i comportamenti dell'endpoint per personalizzare il comportamento locale dell'endpoint del servizio. I comportamenti dell'endpoint realizzano questo obiettivo partecipando processo di compilazione di un WCFruntime. Un esempio di comportamento dell'endpoint è rappresentato dalla proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, che consente di specificare un indirizzo di ascolto diverso dall'indirizzo SOAP o WSDL (Web Services Description Language). Per altre informazioni, vedere [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Definizione di endpoint  
  È possibile specificare l'endpoint di un servizio in modo imperativo, tramite codice, o in modo dichiarativo, tramite la configurazione. Per altre informazioni, vedere [procedura: creare un Endpoint del servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) e [procedura: creare un Endpoint del servizio nel codice](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
@@ -83,7 +69,7 @@ Tutte le comunicazioni con un [!INCLUDE[indigo1](../../../../includes/indigo1-md
  Contenuto della sezione viene illustrato lo scopo di associazioni, endpoint e indirizzi; viene descritto come configurare un'associazione e un endpoint e viene dimostrato come utilizzare il comportamento `ClientVia` e la proprietà `ListenUri`.  
   
  [Indirizzi](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
- Viene descritto come vengono indirizzati gli endpoint in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Viene descritto come vengono indirizzati gli endpoint in WCF.  
   
  [Associazioni](../../../../docs/framework/wcf/feature-details/bindings.md)  
  Viene descritto come vengono utilizzate le associazioni per specificare i dettagli sul trasporto, la codifica e il protocollo necessari per consentire la comunicazione tra client e servizi.  

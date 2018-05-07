@@ -1,34 +1,22 @@
 ---
 title: 'Procedura: specificare credenziali di sicurezza del canale'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Procedura: specificare credenziali di sicurezza del canale
-Il moniker dei servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consente alle applicazioni COM di chiamare servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La maggior parte dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede al client di specificare credenziali per l'autenticazione e l'autorizzazione. Quando viene chiamato un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] da un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è possibile specificare queste credenziali nel codice gestito o in un file di configurazione dell'applicazione. Quando si chiama un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] da un'applicazione COM, per specificare le credenziali è possibile usare l'interfaccia <xref:System.ServiceModel.ComIntegration.IChannelCredentials>. In questo argomento vengono illustrate varie modalità di specifica delle credenziali mediante l'interfaccia <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
+Il Moniker del servizio Windows Communication Foundation (WCF) consente alle applicazioni COM di chiamare i servizi WCF. La maggior parte dei servizi WCF richiedono al client specificare le credenziali per l'autenticazione e autorizzazione. Quando si chiama un servizio WCF da un client WCF, è possibile specificare queste credenziali nel codice gestito o in un file di configurazione dell'applicazione. Quando si chiama un servizio WCF da un'applicazione COM, è possibile utilizzare il <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaccia per specificare le credenziali. In questo argomento vengono illustrate varie modalità di specifica delle credenziali mediante l'interfaccia <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> è un'interfaccia basata su IDispatch nella quale non viene visualizzata la funzionalità IntelliSense nell'ambiente Visual Studio.  
   
- In questo articolo verrà utilizzato il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio definito nel [messaggio di esempio per la sicurezza](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ In questo articolo verrà utilizzato il servizio WCF definito nella [messaggio di esempio per la sicurezza](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
 ### <a name="to-specify-a-client-certificate"></a>Per specificare un certificato client  
   
@@ -40,7 +28,7 @@ Il moniker dei servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] c
   
 4.  Aggiungere `bindingNamespace=``http://Microsoft.ServiceModel.Samples` al tag dell'endpoint in App. config per il servizio.  
   
-5.  Compilare l'esempio di sicurezza dei messaggi ed eseguire Service.exe. Aprire Internet Explorer e passare all'URI del servizio () per verificare che il servizio sia in funzione.  
+5.  Compilare l'esempio di sicurezza dei messaggi ed eseguire Service.exe. Usare Internet Explorer e passare all'URI del servizio (http://localhost:8000/ServiceModelSamples/Service) per verificare che il servizio sia in funzione.  
   
 6.  Aprire Visual Basic 6.0 e creare un nuovo file standard con estensione exe. Aggiungere un pulsante al form e fare doppio clic su di esso per aggiungere il codice seguente al gestore Click:  
   

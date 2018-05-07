@@ -1,28 +1,19 @@
 ---
-title: "&#39; &lt;parola chiave&gt;&#39; è valido solo all'interno di un metodo di istanza"
+title: "&#39;&lt;parola chiave&gt; &#39; è valido solo all'interno di un metodo di istanza"
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30043
 - vbc30043
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a61314c036cec0fd1412a9c844a610fbd1401add
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d9e26aa7dccf1b9c6390a20a59b10a0d248969d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39; &lt;parola chiave&gt;&#39; è valido solo all'interno di un metodo di istanza
+# <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39;&lt;parola chiave&gt; &#39; è valido solo all'interno di un metodo di istanza
 Il `Me`, `MyClass`, e `MyBase` parole chiave fanno riferimento a istanze di classe specifico. Non possono essere utilizzati all'interno di un oggetto condiviso `Function` o `Sub` stored procedure.  
   
  **ID errore:** BC30043  

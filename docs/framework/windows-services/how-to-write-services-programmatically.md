@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: scrivere servizi a livello di codice'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - services, creating
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
-caps.latest.revision: "21"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: cdb9c7bba564b71bfba86076218e48610cf73076
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99fd44723bba21127e2a5e0ba3e9bfc4b90b52d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-services-programmatically"></a>Procedura: scrivere servizi a livello di codice
 Se si sceglie di non utilizzare il modello di progetto di servizio Windows, è possibile scrivere i propri servizi impostando l'ereditarietà e altri elementi dell'infrastruttura manualmente. Quando si crea un servizio a livello di codice, è necessario eseguire diversi passaggi gestiti automaticamente il modello:  

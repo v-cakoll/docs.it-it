@@ -1,13 +1,6 @@
 ---
-title: "Procedura: specificare la modalità di modifica per il controllo DataGridView di Windows Form"
-ms.custom: 
+title: 'Procedura: specificare la modalità di modifica per il controllo DataGridView di Windows Form'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42773e29d7071c5bc5f3d5de3660c9891788b422
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5117dfe2e017cf4af1d352fdbf23c6599c0e56a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Procedura: specificare la modalità di modifica per il controllo DataGridView di Windows Form
 Per impostazione predefinita, gli utenti possono modificare il contenuto dell'oggetto corrente <xref:System.Windows.Forms.DataGridView> cella di casella di testo digitare in essa contenuti o premendo F2. Ciò pone la cella in modalità di modifica se vengono soddisfatte tutte le condizioni seguenti:  

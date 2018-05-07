@@ -1,29 +1,15 @@
 ---
 title: Gestione degli errori HTTP Web WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bcd0e6d1e6318404eb47741dc61ccf2ff9358b47
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 228f8cdbe5ddde63f2b6afd82a27055f2241e058
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-error-handling"></a>Gestione degli errori HTTP Web WCF
-La gestione degli errori HTTP Web di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consente di restituire errori da servizi HTTP Web [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che specificano un codice di stato HTTP e restituiscono dettagli dell'errore utilizzando lo stesso formato dell'operazione (ad esempio, XML o JSON).  
+Gestione degli errori HTTP Web di Windows Communication Foundation (WCF) consente di restituire errori da servizi HTTP Web WCF che specificano un codice di stato HTTP e restituiscono i dettagli dell'errore utilizzando lo stesso formato dell'operazione (ad esempio, XML o JSON).  
   
 ## <a name="wcf-web-http-error-handling"></a>Gestione degli errori HTTP Web WCF  
  La classe <xref:System.ServiceModel.Web.WebFaultException> definisce un costruttore che consente di specificare un codice di stato HTTP. Questo codice di stato viene quindi restituito al client. Versione generica della classe <xref:System.ServiceModel.Web.WebFaultException>, <xref:System.ServiceModel.Web.WebFaultException%601> consente di restituire un tipo definito dall'utente che contiene informazioni sull'errore verificatosi. Questo oggetto personalizzato viene serializzato utilizzando il formato specificato dall'operazione e restituito al client. Nell'esempio riportato di seguito viene illustrato il modo in cui restituire un codice di stato HTTP.  

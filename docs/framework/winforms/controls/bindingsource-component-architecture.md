@@ -1,29 +1,17 @@
 ---
 title: Architettura del componente BindingSource
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - BindingSource component [Windows Forms], architecture
 - Windows Forms, data binding
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0334bd7a0bc5ff46c43fd7ee549422d98c35efe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingsource-component-architecture"></a>Architettura del componente BindingSource
 Con il <xref:System.Windows.Forms.BindingSource> componente, è possibile associare universalmente tutti i controlli Windows Form alle origini dati.  
@@ -57,13 +45,13 @@ Con il <xref:System.Windows.Forms.BindingSource> componente, è possibile associ
   
 -   Origine dati sotto forma di elenco.  
   
--   <xref:System.Windows.Forms.BindingSource>come un <xref:System.ComponentModel.IBindingList>.  
+-   <xref:System.Windows.Forms.BindingSource> come un <xref:System.ComponentModel.IBindingList>.  
   
 -   Creazione di un elemento personalizzato.  
   
 -   Creazione di elementi transazionale.  
   
--   <xref:System.Collections.IEnumerable>supporto.  
+-   <xref:System.Collections.IEnumerable> supporto.  
   
 -   Supporto in fase di progettazione.  
   
@@ -120,7 +108,7 @@ Con il <xref:System.Windows.Forms.BindingSource> componente, è possibile associ
 |Un riferimento null (`Nothing` in Visual Basic) con <xref:System.Windows.Forms.BindingSource.DataMember%2A> impostato|Non è supportato. Genera <xref:System.ArgumentException>.|  
 |Tipo non di elenco o un oggetto di tipo "T"|Un oggetto vuoto <xref:System.ComponentModel.IBindingList> di tipo "T".|  
 |Istanza di matrice|Un <xref:System.ComponentModel.IBindingList> contenente gli elementi della matrice.|  
-|<xref:System.Collections.IEnumerable>istanza|Un <xref:System.ComponentModel.IBindingList> contenente il <xref:System.Collections.IEnumerable> elementi|  
+|<xref:System.Collections.IEnumerable> Istanza|Un <xref:System.ComponentModel.IBindingList> contenente il <xref:System.Collections.IEnumerable> elementi|  
 |Elenco contenente il tipo di istanza "T"|Un <xref:System.ComponentModel.IBindingList> istanza contenente il tipo "T".|  
   
  Inoltre, <xref:System.Windows.Forms.BindingSource.DataSource%2A> può essere impostata su altri tipi di elenco, ad esempio <xref:System.ComponentModel.IListSource> e <xref:System.ComponentModel.ITypedList>e <xref:System.Windows.Forms.BindingSource> li gestirà in modo appropriato. In questo caso, il tipo di contenuto nell'elenco deve avere un costruttore predefinito.  

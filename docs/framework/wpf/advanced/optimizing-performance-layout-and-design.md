@@ -1,13 +1,6 @@
 ---
 title: 'Ottimizzazione delle prestazioni: layout e progettazione'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: df87170b05f830916ef2f77fd4cb5a4abab42faa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c9921e664d69038480e73ee6779ca9e48b81c7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Ottimizzazione delle prestazioni: layout e progettazione
 La progettazione dell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] può influire sulle relative prestazioni, poiché crea un sovraccarico non necessario durante il calcolo del layout e la convalida dei riferimenti agli oggetti. La costruzione di oggetti, soprattutto in fase di runtime, può influire sulle caratteristiche di prestazioni dell'applicazione.  
@@ -41,7 +29,7 @@ La progettazione dell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../inc
   
 -   L'oggetto <xref:System.Windows.FrameworkElement> le proprietà correlate alle dimensioni, ad esempio <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, e <xref:System.Windows.FrameworkElement.Margin%2A>, vengono valutati.  
   
--   <xref:System.Windows.Controls.Panel>-viene applicata la logica specifica, ad esempio il <xref:System.Windows.Controls.DockPanel.Dock%2A> proprietà del <xref:System.Windows.Controls.DockPanel>, o <xref:System.Windows.Controls.StackPanel.Orientation%2A> proprietà del <xref:System.Windows.Controls.StackPanel>.  
+-   <xref:System.Windows.Controls.Panel>-viene applicata la logica specifica, ad esempio il <xref:System.Windows.Controls.DockPanel.Dock%2A> proprietà del <xref:System.Windows.Controls.DockPanel>, o il <xref:System.Windows.Controls.StackPanel.Orientation%2A> proprietà del <xref:System.Windows.Controls.StackPanel>.  
   
 -   Il contenuto viene disposto, o posizionato, dopo la misurazione di tutti gli oggetti figlio.  
   

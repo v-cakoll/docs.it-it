@@ -1,27 +1,15 @@
 ---
 title: Cenni preliminari sull'utilizzo del layout automatico
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75066b59d0f3a686c66fdbdd187ba4c18e786e6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8693150099559ca09541eb790c134ca3d5277e78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-automatic-layout-overview"></a>Cenni preliminari sull'utilizzo del layout automatico
 Questo argomento vengono presentate le linee guida per gli sviluppatori su come scrivere [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applicazioni con localizzabili [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. In passato, la localizzazione di un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] era un processo molto tempo. Ogni lingua che il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] è stato adattato richiedeva modifiche pixel per pixel. Oggi, con la progettazione e di destra standard di codifica, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] può essere costruito in modo che i localizzatori hanno ridimensionamento e riposizionamento scopo. L'approccio alla scrittura di applicazioni che possono essere più facilmente ridimensionare e riposizionare viene chiamato il layout automatico e può essere ottenuta usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] progettazione di applicazioni.  
@@ -63,7 +51,7 @@ Pulsante a ridimensionamento automatico
 |----------------------|-----------------|  
 |Non usare posizioni assolute.|-Non usare <xref:System.Windows.Controls.Canvas> perché posizionamento assoluto degli elementi.<br />-Utilizzare <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, e <xref:System.Windows.Controls.Grid> per posizionare i controlli.<br />-Per informazioni sui diversi tipi di pannelli, vedere [Panoramica pannelli](../../../../docs/framework/wpf/controls/panels-overview.md).|  
 |Non impostare una dimensione fissa per una finestra.|-Utilizzare <xref:System.Windows.Window.SizeToContent%2A>.<br />- Ad esempio:<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]|  
-|Aggiungere un <xref:System.Windows.FrameworkElement.FlowDirection%2A>.|<ul><li>Aggiungere un <xref:System.Windows.FrameworkElement.FlowDirection%2A> all'elemento radice dell'applicazione.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre un modo pratico per supportare layout orizzontali, bidirezionale e verticali. Nel framework della presentazione di <xref:System.Windows.FrameworkElement.FlowDirection%2A> proprietà può essere utilizzata per definire il layout. I modelli di direzione del flusso sono:<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight>(LrTb), un layout orizzontale per alfabeto latino, Asia orientale e così via.</li><li><xref:System.Windows.FlowDirection.RightToLeft>(RlTb), ovvero bidirezionale per arabo, ebraico e così via.</li></ul></li></ul>|  
+|Aggiungere un <xref:System.Windows.FrameworkElement.FlowDirection%2A>.|<ul><li>Aggiungere un <xref:System.Windows.FrameworkElement.FlowDirection%2A> all'elemento radice dell'applicazione.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre un modo pratico per supportare layout orizzontali, bidirezionale e verticali. Nel framework della presentazione di <xref:System.Windows.FrameworkElement.FlowDirection%2A> proprietà può essere utilizzata per definire il layout. I modelli di direzione del flusso sono:<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb), ovvero un layout orizzontale per alfabeto latino, Asia orientale e così via.</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb), ovvero bidirezionale per arabo, ebraico e così via.</li></ul></li></ul>|  
 |Usare tipi di carattere compositi anziché tipi di carattere fisici.|<ul><li>Con i tipi di carattere compositi di <xref:System.Windows.Controls.Control.FontFamily%2A> proprietà non devono essere localizzati.</li><li>Gli sviluppatori possono usare uno dei tipi di carattere riportati di seguito oppure crearne uno personalizzato.<br /><br /> <ul><li>Interfaccia utente globale</li><li>Global San Serif</li><li>Global Serif</li></ul></li></ul>|  
 |Aggiungere xml:lang.|-Aggiungere la `xml:lang` attributo nell'elemento radice del [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], ad esempio `xml:lang="en-US"` per un'applicazione in lingua inglese.<br />-Poiché utilizzano tipi di carattere compositi `xml:lang` per determinare il tipo di carattere da utilizzare, impostare questa proprietà per supportare scenari multilingue.|  
   
@@ -84,7 +72,7 @@ Grid
   
  [!code-xaml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
   
- **Nota** per l'esempio di codice completo, vedere [condivisione proprietà ridimensionamento tra griglie](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ **Nota** per l'esempio di codice completo, vedere [condivisione ridimensionamento proprietà tra griglie](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Globalizzazione per WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  

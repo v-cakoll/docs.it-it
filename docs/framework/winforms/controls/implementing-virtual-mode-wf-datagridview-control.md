@@ -1,13 +1,6 @@
 ---
-title: "Procedura dettagliata: implementazione della modalità virtuale nel controllo DataGridView Windows Form"
-ms.custom: 
+title: 'Procedura dettagliata: implementazione della modalità virtuale nel controllo DataGridView Windows Form'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,21 +12,16 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3b9a70aaf2643811354cc9d7f6b51ed0805ca916
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 52e93ebe0b2903fdf2fe97f4ce812331e740f8b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Procedura dettagliata: implementazione della modalità virtuale nel controllo DataGridView Windows Form
 Quando si desidera visualizzare grandi quantità di dati tabulari in un <xref:System.Windows.Forms.DataGridView> (controllo), è possibile impostare il <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> proprietà `true` e gestire in modo esplicito l'interazione del controllo con il relativo archivio dati. Ciò consente di ottimizzare le prestazioni del controllo in questa situazione.  
   
- Il <xref:System.Windows.Forms.DataGridView> controllo fornisce diversi eventi che è possibile gestire per interagire con un archivio dati personalizzato. In questa procedura dettagliata è illustrato il processo di implementazione di questi gestori eventi. L'esempio di codice in questo argomento utilizza un'origine dati molto semplice a scopo illustrativo. In un ambiente di produzione, viene in genere verrà caricato solo le righe necessarie per visualizzare in una cache e gestire <xref:System.Windows.Forms.DataGridView> gli eventi di interagire con e aggiornare la cache. Per ulteriori informazioni, vedere [implementazione della modalità virtuale con caricamento dati JIT nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
+ Il <xref:System.Windows.Forms.DataGridView> controllo fornisce diversi eventi che è possibile gestire per interagire con un archivio dati personalizzato. In questa procedura dettagliata è illustrato il processo di implementazione di questi gestori eventi. L'esempio di codice in questo argomento utilizza un'origine dati molto semplice a scopo illustrativo. In un ambiente di produzione, viene in genere verrà caricato solo le righe necessarie per visualizzare in una cache e gestire <xref:System.Windows.Forms.DataGridView> gli eventi di interagire con e aggiornare la cache. Per altre informazioni, vedere [implementazione del modo virtuale con caricamento dati JIT nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
   
  Per copiare il codice in questo argomento come elenco singolo, vedere [procedura: implementare la modalità virtuale nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md).  
   

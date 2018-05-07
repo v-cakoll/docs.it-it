@@ -1,28 +1,16 @@
 ---
 title: Scenari del controllo DataGridView (Windows Form)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38e5337f775d98f8729c62b3481c3e839bff2252
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a320b40664e4fe2254109183731db346a5d7d0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Scenari del controllo DataGridView (Windows Form)
 Con il <xref:System.Windows.Forms.DataGridView> (controllo), è possibile visualizzare dati tabulari forniti da un'ampia gamma di origini dati. Per le operazioni semplici, è possibile inserire manualmente un <xref:System.Windows.Forms.DataGridView> e modificare i dati direttamente tramite il controllo. In genere, tuttavia, si verrà archiviano i dati in un'origine dati esterna e associare il controllo a esso tramite un <xref:System.Windows.Forms.BindingSource> componente.  
@@ -80,7 +68,7 @@ Con il <xref:System.Windows.Forms.DataGridView> (controllo), è possibile visual
   
 ### <a name="scenario-key-points"></a>Punti chiave dello scenario  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle>oggetti consentono di specificare il colore, tipo di carattere, la formattazione, le informazioni sul posizionamento a più livelli e per i singoli elementi del controllo.  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle> oggetti consentono di specificare il colore, tipo di carattere, formattazione e posizionamento informazioni a più livelli e per i singoli elementi del controllo.  
   
 -   Stili della cella possono essere a più livelli e condiviso da più elementi, consentendo il riutilizzo del codice.  
   

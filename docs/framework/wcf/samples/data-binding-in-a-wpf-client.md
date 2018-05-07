@@ -1,29 +1,15 @@
 ---
 title: Data binding in un client Windows Presentation Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d10591866e11bd9e5ae707a0c17c3e293d7f4f71
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 225bdedb67e218092ff3369d4fe742c4fc897fc6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Data binding in un client Windows Presentation Foundation
-In questo esempio viene illustrato come usare un data binding in un client Windows Presentation Foundation (WPF). L'esempio usa un servizio di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] che genera casualmente una matrice di album da restituire al client. Ogni album è dotato di un nome, di un prezzo e di un elenco di tracce. Le tracce dell'album sono dotate di un nome e di una durata. Le informazioni restituite dal servizio viene automaticamente associate all'interfaccia utente (UI) fornito dal client Windows Presentation Foundation (WPF).  
+In questo esempio viene illustrato come usare un data binding in un client Windows Presentation Foundation (WPF). L'esempio Usa un servizio Windows Communication Foundation (WCF) che genera casualmente una matrice di album da restituire al client. Ogni album è dotato di un nome, di un prezzo e di un elenco di tracce. Le tracce dell'album sono dotate di un nome e di una durata. Le informazioni restituite dal servizio viene automaticamente associate all'interfaccia utente (UI) fornito dal client Windows Presentation Foundation (WPF).  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -91,7 +77,7 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
   

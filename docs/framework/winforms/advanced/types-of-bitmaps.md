@@ -1,13 +1,6 @@
 ---
 title: Tipi di bitmap
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - jpeg files
 - TIFF files
@@ -27,16 +20,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6af28e7b50cb7e4a2a90153a053a83931c738214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a79f34daac4238093693947f5fb5e73bb56213d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-bitmaps"></a>Tipi di bitmap
 Una bitmap è una matrice di bit che specifica il colore di ogni pixel in una matrice rettangolare di pixel. Il numero di bit destinati a un singolo pixel determina il numero di colori che possono essere assegnati a tale pixel. Ad esempio, se ogni pixel è rappresentato da 4 bit, quindi un pixel specifico può essere assegnato uno dei 16 colori diversi (2 ^ 4 = 16). La tabella seguente illustra alcuni esempi del numero di colori che possono essere assegnati a un pixel rappresentato da un determinato numero di bit.  
@@ -64,7 +52,7 @@ Una bitmap è una matrice di bit che specifica il colore di ogni pixel in una ma
  ![Esempio di bitmap](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Formati di File di grafica  
- Esistono numerosi formati standard per il salvataggio di bitmap nei file su disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]supporta la grafica formati di file descritti nei paragrafi seguenti.  
+ Esistono numerosi formati standard per il salvataggio di bitmap nei file su disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] supporta la grafica formati di file descritti nei paragrafi seguenti.  
   
 ### <a name="bmp"></a>BMP  
  BMP è un formato standard utilizzato da Windows per archiviare le immagini indipendenti dal dispositivo e indipendenti dall'applicazione. Il numero di bit per pixel (1, 4, 8, 15, 24, 32 o 64) per un determinato file BMP è specificato in un'intestazione del file. I file BMP con 24 bit per pixel sono comuni. File BMP in genere non vengono compressi e, pertanto, non sono adatti per il trasferimento tramite Internet.  
@@ -81,7 +69,7 @@ Una bitmap è una matrice di bit che specifica il colore di ogni pixel in una ma
   
  La compressione JPEG non funzionerà correttamente per le linee, blocchi di colore a tinta unita e acuto limiti. Nella figura seguente mostra un'immagine BMP con due immagini JPEG e un'immagine GIF. Le immagini JPEG e GIF sono stati compressi dal BMP. Il rapporto di compressione è 4:1 per l'immagine GIF, 4:1 per il più piccolo JPEG e 8:3 per l'immagine JPEG più grande. Si noti che il file GIF mantiene i limiti acuti lungo le righe, ma le immagini JPEG tendono a sfumati.  
   
- ![Tipi di file](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
+ ![I tipi di file](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
  JPEG è uno schema di compressione non è un formato di file. File JFIF JPEG Interchange Format () è un formato di file utilizzato per l'archiviazione e il trasferimento di immagini che sono state compresse in base allo schema JPEG. I file JFIF visualizzati dai browser Web utilizzano l'estensione jpg.  
   

@@ -1,27 +1,15 @@
 ---
 title: Istruzioni del firewall
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 270df09f709dfdfeb78b9bd72bc3744c6614bc5e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ae7adcb773167a6af190355dd595f0f063fedc8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="firewall-instructions"></a>Istruzioni del firewall
-È necessario abilitare più porte o programmi nel firewall in modo tale che gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possano funzionare. In molti degli esempi la comunicano avviene tramite le porte comprese nell'intervallo 8000-8003 e la porta 9000. Il firewall viene attivato per impostazione predefinita e impedisce l'accesso a queste porte. Per abilitare il firewall per gli esempi, completare una delle procedure descritte di seguito, a seconda dei requisiti e dell’ambiente di sicurezza:  
+È necessario abilitare più porte o programmi nel firewall in modo che gli esempi di Windows Communication Foundation (WCF) in grado di funzionare. In molti degli esempi la comunicano avviene tramite le porte comprese nell'intervallo 8000-8003 e la porta 9000. Il firewall viene attivato per impostazione predefinita e impedisce l'accesso a queste porte. Per abilitare il firewall per gli esempi, completare una delle procedure descritte di seguito, a seconda dei requisiti e dell’ambiente di sicurezza:  
   
 -   Opzione 1: abilitazione degli esempi in modo interattivo durante l’esecuzione. Non apportare nessuna modifica alla configurazione del firewall in anticipo e procedere con l’avvio e l’esecuzione degli esempi. Quando si esegue un esempio, un **avviso di sicurezza di Windows** viene visualizzata la finestra di dialogo. Il programma di esempio in questione può essere quindi aggiunto, in modo interattivo, a un elenco sbloccato. Questa procedura può richiedere il riavvio dell'esempio.  
   

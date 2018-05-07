@@ -1,27 +1,15 @@
 ---
 title: Sottosistema attendibile
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ca07db06d4bff9660760c5abf8c9bc2f1f9f2944
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59c44609017ab18a176624b7ef6d409005151c3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trusted-subsystem"></a>Sottosistema attendibile
 Un client accede a uno o più servizi Web distribuiti in una rete. I servizi Web sono progettati per far sì che l'accesso alle risorse aggiuntive (ad esempio database o altri servizi Web) sia incapsulato nella logica di business del servizio Web. Queste risorse devono essere protette da accessi non autorizzati. Nella figura seguente viene illustrato un processo di sottosistema attendibile.  
@@ -43,13 +31,13 @@ Un client accede a uno o più servizi Web distribuiti in una rete. I servizi Web
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Modalità di sicurezza|Messaggio|  
-|Interoperabilità|Solo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].|  
+|Interoperabilità|Windows Communication Foundation (WCF) solo.|  
 |Autenticazione (servizio)|Il servizio del token di sicurezza autentica e autorizza i client.|  
 |Autenticazione (client)|Il sottosistema attendibile autentica il client e la risorsa autentica il servizio del sottosistema attendibile.|  
 |Integrità|Sì|  
 |Riservatezza|Sì|  
 |Trasporto|HTTP tra il client e il servizio del sottosistema attendibile.<br /><br /> NET.TCP tra il servizio del sottosistema attendibile e la risorsa (servizio back-end).|  
-|Binding|<xref:System.ServiceModel.WSHttpBinding>e <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Binding|<xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Risorsa (servizio back-end)  
   

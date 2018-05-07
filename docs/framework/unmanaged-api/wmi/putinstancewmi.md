@@ -2,10 +2,6 @@
 title: Funzione PutInstanceWmi (riferimenti alle API non gestite)
 description: La funzione PutInstanceWmi crea o aggiorna un'istanza di una classe esistente.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutInstanceWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1996103eea87562226537f9aa90dc337c56313c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0db08ef4938a88ee657e2d65dda70edac09df8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi (funzione)
 Crea o aggiorna un'istanza di una classe esistente. L'istanza viene scritto il repository WMI. 
@@ -80,7 +73,7 @@ I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* fi
 | `WBEM_E_INVALID_OBJECT` | 0x8004100f | L'istanza specificata non è valido. (Ad esempio, la chiamata `PutInstanceWmi` con una classe restituisce questo valore.) |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parametro non è valido. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | Il `WBEM_FLAG_CREATE_ONLY` flag è stato specificato, ma l'istanza è già esistente. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`è stato specificato `lFlags`, ma l'istanza non esiste. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` è stato specificato `lFlags`, ma l'istanza non esiste. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per completare l'operazione. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI è stato probabilmente arrestato e riavviarlo. Chiamare [ConnectServerWmi](connectserverwmi.md) nuovamente. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Il collegamento remote procedure call (RPC) tra il processo corrente e WMI non riuscita. |
@@ -106,7 +99,7 @@ Se la chiamata di funzione non riesce, è possibile ottenere informazioni aggiun
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

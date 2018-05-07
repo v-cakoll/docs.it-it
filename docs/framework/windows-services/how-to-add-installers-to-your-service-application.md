@@ -1,13 +1,6 @@
 ---
-title: 'Procedura: aggiungere programmi di installazione all''applicazione di servizio'
-ms.custom: 
+title: "Procedura: aggiungere programmi di installazione all'applicazione di servizio"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, deploying
 - installation components, adding to services
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - ServiceInstaller class, adding installers to services
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
-caps.latest.revision: "14"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 15487d4311f896aa09c1c7712292058086a49b50
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: faece1d7ee752e4c17f39027ff8a97fc95ed451b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Procedura: aggiungere programmi di installazione all'applicazione di servizio
 Visual Studio fornisce componenti di installazione che è possono installare le risorse associate alle applicazioni di servizio. Componenti di installazione registrano un singolo servizio sul sistema in cui viene installato e Gestione controllo servizi di informare che il servizio esista. Quando si lavora con un'applicazione di servizio, è possibile selezionare un collegamento nella finestra proprietà per aggiungere automaticamente i programmi di installazione appropriati per il progetto.  

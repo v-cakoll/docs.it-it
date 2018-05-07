@@ -1,26 +1,12 @@
 ---
 title: Esempio di condivisione delle porte Net.TCP
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0db4148f9be6db97dec2b8b680dad56171106b2c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: cfd87868a5ecc557ccca1003f54f3a896b2f9fcc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nettcp-port-sharing-sample"></a>Esempio di condivisione delle porte Net.TCP
 Il protocollo TCP/IP utilizza un numero a 16 bit, definito porta, per differenziare le connessioni a più applicazioni di rete che sono in esecuzione nello stesso computer. Se un'applicazione è in ascolto su una porta, tutto il traffico TCP per quella porta viene indirizzato a tale applicazione. Su quella porta non possono essere contemporaneamente in ascolto altre applicazioni.  
@@ -30,13 +16,13 @@ Il protocollo TCP/IP utilizza un numero a 16 bit, definito porta, per differenzi
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
  Molti protocolli utilizzano un numero di porta standard o predefinito. Ad esempio, il protocollo HTTP utilizza in genere la porta TCP 80. Internet Information Services (IIS) dispone di un listener per condividere una porta tra più applicazioni HTTP. IIS è in ascolto direttamente sulla porta e inoltra i messaggi all'applicazione appropriata in base alle informazioni presenti all'interno del flusso di messaggi. In questo modo più applicazioni HTTP possono utilizzare lo stesso numero di porta senza dover competere per riservare la porta per la ricezione dei messaggi.  
   
- Condivisione delle porte NetTcp è un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]funzionalità che consente allo stesso modo a più applicazioni di rete condividere una singola porta. Il servizio di condivisione porte Net.Tcp accetta connessioni mediante il protocollo net.tcp e inoltra i messaggi in base al relativo indirizzo di destinazione.  
+ Condivisione delle porte NetTcp è una funzionalità di Windows Communication Foundation (WCF) che consente allo stesso modo a più applicazioni di rete condividere una singola porta. Il servizio di condivisione porte Net.Tcp accetta connessioni mediante il protocollo net.tcp e inoltra i messaggi in base al relativo indirizzo di destinazione.  
   
  Questo servizio non è abilitato per impostazione predefinita ed è necessario abilitarlo manualmente prima di eseguire questo esempio. Per ulteriori informazioni, vedere [procedura: abilitare il servizio di condivisione porta Net. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Se il servizio è disabilitato, viene generata un'eccezione all'avvio dell'applicazione server.  
   

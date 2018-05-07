@@ -1,36 +1,22 @@
 ---
 title: Panoramica delle code
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb5d0f51fbbb6c8bad9bfbbfd9977368fdbd0666
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-overview"></a>Panoramica delle code
-Contenuto della sezione vengono introdotti i concetti generali e fondamentali alla base delle comunicazioni in coda. Nelle sezioni successive verrà illustrato in dettaglio come i concetti dell'accodamento descritti in questa sezione si applicano a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Contenuto della sezione vengono introdotti i concetti generali e fondamentali alla base delle comunicazioni in coda. Nelle sezioni successive esplorare in dettaglio come i concetti di Accodamento descritti di seguito si applicano in Windows Communication Foundation (WCF).  
   
 ## <a name="basic-queuing-concepts"></a>Concetti di base dell'accodamento  
  Durante la progettazione di un'applicazione distribuita, è importante scegliere il trasporto giusto per la comunicazione tra i servizi e i client. Molti fattori influiscono sul tipo di trasporto da usare. Un fattore importante, ovvero l'isolamento tra il servizio, il client e il trasporto, impone l'uso di un trasporto in coda o un trasporto diretto, ad esempio TCP o HTTP. A causa della natura dei trasporti diretti quali TCP e HTTP, la comunicazione si arresta completamente se il servizio o il client smette di funzionare o in caso di errore nella rete. Il servizio, il client e la rete devono essere in esecuzione contemporaneamente per consentire il funzionamento dell'applicazione. I trasporti in coda forniscono l'isolamento, ovvero se si verifica un errore nel servizio o nel client oppure nei collegamenti di comunicazione tra questi, il client e servizio possono continuare a funzionare.  
   
- Le code assicurano una comunicazione affidabile anche in caso di errori nelle parti in comunicazione o nella rete. I messaggi scambiati tra le parti in comunicazione vengono acquisiti e recapitati dalle code. In genere le code sono associate a qualche tipo di archivio che può essere volatile o durevole. Le code archiviano i messaggi di un client per conto di un servizio e in un secondo momento li inoltrano al servizio. Poiché le code di riferimento indiretto forniscono un isolamento garantito delle parti rispetto agli errori, questo rappresenta il meccanismo di comunicazione preferito per i sistemi a elevata disponibilità e i servizi non connessi. Il riferimento indiretto comporta tuttavia un elevato costo di latenza. *Latenza* tempo di attesa tra il momento in cui il client invia un messaggio e l'ora in cui il servizio lo riceve. Di conseguenza, quando il messaggio è stato inviato, non è possibile stabilire quando tale messaggio verrà elaborato. La maggior parte delle applicazioni in coda deve gestire una latenza elevata. Nella figura seguente viene mostrato un modello concettuale della comunicazione in coda.  
+ Le code assicurano una comunicazione affidabile anche in caso di errori nelle parti in comunicazione o nella rete. I messaggi scambiati tra le parti in comunicazione vengono acquisiti e recapitati dalle code. In genere le code sono associate a qualche tipo di archivio che può essere volatile o durevole. Le code archiviano i messaggi di un client per conto di un servizio e in un secondo momento li inoltrano al servizio. Poiché le code di riferimento indiretto forniscono un isolamento garantito delle parti rispetto agli errori, questo rappresenta il meccanismo di comunicazione preferito per i sistemi a elevata disponibilità e i servizi non connessi. Il riferimento indiretto comporta tuttavia un elevato costo di latenza. *Latenza* il ritardo di tempo tra il momento in cui il client invia un messaggio e l'ora il servizio lo riceve. Di conseguenza, quando il messaggio è stato inviato, non è possibile stabilire quando tale messaggio verrà elaborato. La maggior parte delle applicazioni in coda deve gestire una latenza elevata. Nella figura seguente viene mostrato un modello concettuale della comunicazione in coda.  
   
  ![Modello di comunicazione in coda](../../../../docs/framework/wcf/feature-details/media/qconceptual-figure1c.gif "QConceptual Figure1c")  
   

@@ -1,13 +1,6 @@
 ---
 title: Cenni preliminari sugli oggetti Freezable
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7390181570c6deeea77e5e76493a62e84107286b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3b9f6f7af22b2a846f4ee34e8d4d00bb032fd69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="freezable-objects-overview"></a>Cenni preliminari sugli oggetti Freezable
 In questo argomento viene descritto come creare e utilizzare in modo efficace <xref:System.Windows.Freezable> oggetti, che forniscono funzionalità speciali che consentono di migliorare le prestazioni dell'applicazione. Sono esempi di oggetti freezable pennelli, penne, trasformazioni, geometrie e animazioni.  
@@ -94,14 +82,14 @@ In questo argomento viene descritto come creare e utilizzare in modo efficace <x
   
  Nell'esempio di codice precedente è stata eseguita una copia modificabile di un oggetto bloccato utilizzando il <xref:System.Windows.Freezable.Clone%2A> metodo. La sezione successiva illustra la clonazione in modo più dettagliato.  
   
- **Nota** perché un oggetto bloccato freezable non possono essere animata, il sistema di animazione crea automaticamente cloni modificabili di bloccata <xref:System.Windows.Freezable> oggetti quando si tenta di aggiungere un'animazione con un <xref:System.Windows.Media.Animation.Storyboard>. Per eliminare le prestazioni overhead causata dalla clonazione, lasciare non bloccato se si intende animare l'oggetto. Per ulteriori informazioni sull'animazione con storyboard, vedere il [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ **Nota** perché un oggetto bloccato freezable non può essere aggiunta un'animazione, animazione verranno automaticamente creati cloni modificabili di bloccato <xref:System.Windows.Freezable> oggetti quando si tenta di aggiungere un'animazione con un <xref:System.Windows.Media.Animation.Storyboard>. Per eliminare le prestazioni overhead causata dalla clonazione, lasciare non bloccato se si intende animare l'oggetto. Per ulteriori informazioni sull'animazione con storyboard, vedere il [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
   
 ### <a name="freezing-from-markup"></a>Blocco dal Markup  
  Per bloccare un <xref:System.Windows.Freezable> oggetto dichiarato nel markup, si utilizza il `PresentationOptions:Freeze` attributo. Nell'esempio seguente, un <xref:System.Windows.Media.SolidColorBrush> è dichiarato come una risorsa di pagina e bloccato. E viene quindi utilizzato per impostare lo sfondo di un pulsante.  
   
  [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
   
- Utilizzare il `Freeze` attributo, è necessario eseguire il mapping allo spazio dei nomi di opzioni di presentazione: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. `PresentationOptions`è il prefisso consigliato per il mapping di questo spazio dei nomi:  
+ Utilizzare il `Freeze` attributo, è necessario eseguire il mapping allo spazio dei nomi di opzioni di presentazione: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. `PresentationOptions` è il prefisso consigliato per il mapping di questo spazio dei nomi:  
   
 ```  
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   

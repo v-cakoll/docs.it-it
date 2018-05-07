@@ -1,27 +1,15 @@
 ---
 title: Selezione automatica del formato
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da09df968bffee9a07f1c03d5b771271a9d44129
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9b9b4da4d5d3bdb3892feb49c033fbe4fc640cb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-format-selection"></a>Selezione automatica del formato
-In questo esempio viene descritto come abilitare la selezione automatica del formato (XML o JSON) con il modello di programmazione REST di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e come impostare in modo esplicito il formato nel codice dell'operazione.  
+In questo esempio viene illustrato come abilitare la selezione automatica del formato (XML o JSON) con il modello, nonché come impostare in modo esplicito il formato nel codice dell'operazione di programmazione REST di Windows Communication Foundation (WCF).  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
  L'esempio è costituito da un servizio e dal codice client che effettua le richieste al servizio. Il servizio supporta una singola operazione `GET` (`EchoWithGet`) HTTP e una singola operazione `POST` (`EchoWithPost`) HTTP. Entrambe operazioni prevedono una stringa, quindi restituiscono la stringa nella risposta. Con l'operazione `GET`, la stringa viene fornita in un parametro della stringa di query dell'URI. Con l'operazione `POST`, la stringa viene fornita nel corpo della richiesta serializzata in XML. Il servizio è in grado di restituire risposte in XML o JSON usando le nuove funzionalità di selezione automatica del formato e di selezione imperativa del formato di [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  
@@ -47,7 +35,7 @@ In questo esempio viene descritto come abilitare la selezione automatica del for
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AutomaticFormatSelection`  
   

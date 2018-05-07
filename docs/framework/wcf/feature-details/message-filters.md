@@ -1,28 +1,14 @@
 ---
 title: Filtri messaggi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-caps.latest.revision: 8
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bd5019668e865d2fea835b450d992d45b5273ed7
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e129924de53fb0dba61798cc492729c8af69ed94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-filters"></a>Filtri messaggi
 Per implementare il routing basato sul contenuto, il servizio di routing usa implementazioni di <xref:System.ServiceModel.Dispatcher.MessageFilter> che controllano sezioni specifiche di un messaggio, ad esempio l'indirizzo, il nome dell'endpoint o un'istruzione XPath. Se nessuno dei filtri messaggi disponibili in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] soddisfa le esigenze specifiche, è possibile creare un filtro personalizzato con un'implementazione della classe <xref:System.ServiceModel.Dispatcher.MessageFilter> di base.  

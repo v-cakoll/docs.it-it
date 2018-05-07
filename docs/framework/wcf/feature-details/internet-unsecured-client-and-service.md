@@ -1,38 +1,28 @@
 ---
 title: Client e servizio non protetti in Internet
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-caps.latest.revision: "17"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b202c4d67b48a9559afe035dc6b7bc95f6cc7779
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93bf7a038a46ff6c03f89e576f3e4150cd069dba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-unsecured-client-and-service"></a>Client e servizio non protetti in Internet
-Nell'illustrazione seguente è mostrato un esempio di un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pubblico non protetto e di un servizio.  
+Nella figura seguente viene illustrato un esempio di client Windows Communication Foundation (WCF) pubblica, protetta e servizio.  
   
- ![Scenario di sicuri e il servizio Internet non protetto](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
+ ![Scenario di non sicuri e il servizio Internet non protetto](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Modalità di sicurezza|None|  
 |Trasporto|HTTP|  
-|Binding|<xref:System.ServiceModel.BasicHttpBinding>nel codice, o [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento di configurazione.|  
+|Binding|<xref:System.ServiceModel.BasicHttpBinding> nel codice, o il [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento nella configurazione.|  
 |Interoperabilità|Con servizi e client di servizi Web esistenti|  
 |Autenticazione|None|  
 |Integrità|None|  
@@ -89,7 +79,7 @@ Nell'illustrazione seguente è mostrato un esempio di un client [!INCLUDE[indigo
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Codice  
- Nel codice seguente è mostrato un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di base che accede a un endpoint non protetto.  
+ Nel codice seguente viene illustrato un client WCF di base che accede a un endpoint non protetto.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  

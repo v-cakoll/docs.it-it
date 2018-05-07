@@ -1,27 +1,17 @@
 ---
 title: Combinazione di protocolli trust in scenari federati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d7b5fee9-2246-4b09-b8d7-9e63cb817279
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7031e222b152bfa61e13e0e4a44b5ad9418b07c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bca23ba16c69c6d21ed7cf49aaebb8d2ed079f5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Combinazione di protocolli trust in scenari federati
-In alcuni scenari i client federati comunicano con un servizio e con un servizio token di sicurezza che non hanno la stessa versione Trust. Il WSDL del servizio può contenere un'asserzione `RequestSecurityTokenTemplate` con elementi WS-Trust di versioni diverse rispetto al servizio token di sicurezza. In tali casi, un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] converte gli elementi WS-Trust ricevuti da `RequestSecurityTokenTemplate` affinché corrispondano alla versione Trust del servizio token di sicurezza. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] le versioni Trust non corrispondenti vengono gestite solo per le associazioni standard. Tutti i parametri dell'algoritmo standard riconosciuti da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fanno parte del binding standard. In questo argomento viene descritto il comportamento di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con le varie impostazioni di trust tra il servizio e il servizio token di sicurezza.  
+In alcuni scenari i client federati comunicano con un servizio e con un servizio token di sicurezza che non hanno la stessa versione Trust. Il WSDL del servizio può contenere un'asserzione `RequestSecurityTokenTemplate` con elementi WS-Trust di versioni diverse rispetto al servizio token di sicurezza. In questi casi, un client Windows Communication Foundation (WCF) converte gli elementi di WS-Trust ricevuti dal `RequestSecurityTokenTemplate` in base alla versione trust servizio token di sicurezza. WCF gestisce le versioni trust non corrispondenti solo per le associazioni standard. Tutti i parametri dell'algoritmo standard riconosciuti da WCF fanno parte dell'associazione standard. In questo argomento viene descritto il comportamento WCF con varie impostazioni di trust tra il servizio e il servizio token di sicurezza.  
   
 ## <a name="rp-feb-2005-and-sts-feb-2005"></a>Componente febbraio 2005 e servizio token di sicurezza febbraio 2005  
  Il WSDL per il componente contiene gli elementi seguenti all'interno della sezione `RequestSecurityTokenTemplate`:  
@@ -40,7 +30,7 @@ In alcuni scenari i client federati comunicano con un servizio e con un servizio
   
  Il file di configurazione client contiene un elenco di parametri.  
   
- Poiché [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non è in grado di distinguere i parametri del client da quelli del servizio e viceversa, li aggiunge tutti e li invia in `RequestSecurityTokenTemplate` (RST).  
+ WCF non è possibile distinguere tra il client e il servizio ha parametri. Aggiunge tutti i parametri e li invia nel `RequestSecurityTokenTemplate` (RST).  
   
 ## <a name="rp-trust-13-and-sts-trust-13"></a>Componente Trust 1.3 e servizio token di sicurezza Trust 1.3  
  Il WSDL per il componente contiene gli elementi seguenti all'interno della sezione `RequestSecurityTokenTemplate`:  
@@ -61,7 +51,7 @@ In alcuni scenari i client federati comunicano con un servizio e con un servizio
   
  Il file di configurazione client contiene un elemento `secondaryParameters` che esegue il wrapping dei parametri specificati dal componente.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rimuove gli elementi `EncryptionAlgorithm`, `CanonicalizationAlgorithm` e `KeyWrapAlgorithm` dall'elemento di primo livello sotto RST se sono presenti nell'elemento `SecondaryParameters`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aggiunge l'elemento `SecondaryParameters` al token RST non modificato in uscita.  
+ WCF rimuove il `EncryptionAlgorithm`, `CanonicalizationAlgorithm` e `KeyWrapAlgorithm` elementi dall'elemento di primo livello sotto RST se sono presenti all'interno di `SecondaryParameters` elemento. WCF aggiunge il `SecondaryParameters` elemento RST in uscita senza modificata.  
   
 ## <a name="rp-trust-feb-2005-and-sts-trust-13"></a>Componente Trust febbraio 2005 e servizio token di sicurezza Trust 1.3  
  Il WSDL per il componente contiene i seguenti elementi nella sezione `RequestSecurityTokenTemplate`:  
@@ -80,15 +70,15 @@ In alcuni scenari i client federati comunicano con un servizio e con un servizio
   
  Il file di configurazione client contiene un elenco di parametri.  
   
- Dal file di configurazione client, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non è in grado di distinguere i parametri del servizio da quelli del client. Di conseguenza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] converte tutti i parametri in uno spazio dei nomi della versione Trust 1.3.  
+ Dal file di configurazione client WCF non è possibile distinguere tra i parametri del servizio e client. Pertanto WCF converte tutti i parametri in uno spazio dei nomi versione 1.3 di Trust.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gestisce gli elementi `KeyType`, `KeySize` e `TokenType` nel modo seguente:  
+ WCF gestisce il `KeyType`, `KeySize`, e `TokenType` elementi come indicato di seguito:  
   
 -   Scaricare il WSDL, creare il binding e assegnare `KeyType`, `KeySize` e `TokenType` dai parametri del componente. Viene quindi generato il file di configurazione client.  
   
 -   Il client è ora in grado di modificare qualsiasi parametro nel file di configurazione.  
   
--   In fase di esecuzione, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] copia tutti i parametri specificati nella sezione `AdditionalTokenParameters` del file di configurazione client eccetto `KeyType`, `KeySize` e `TokenType`, poiché tali parametri vengono gestiti durante la generazione del file di configurazione.  
+-   Durante la fase di esecuzione, WCF consente di copiare tutti i parametri specificati nel `AdditionalTokenParameters` sezione del file di configurazione client eccetto `KeyType`, `KeySize` e `TokenType`, perché questi parametri vengono presi in considerazione durante il file di configurazione generazione.  
   
 ## <a name="rp-trust-13-and-sts-trust-feb-2005"></a>Componente Trust 1.3 e servizio token di sicurezza Trust febbraio 2005  
  Il WSDL per il componente contiene i seguenti elementi nella sezione `RequestSecurityTokenTemplate`:  
@@ -109,4 +99,4 @@ In alcuni scenari i client federati comunicano con un servizio e con un servizio
   
  Il file di configurazione client contiene un elemento `secondaryParamters` che esegue il wrapping dei parametri specificati dal componente.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] copia tutti i parametri specificati all'interno della sezione `SecondaryParameters` nell'elemento RST di primo livello, ma non li converte nello spazio dei nomi WS-Trust 2005.
+ WCF consente di copiare tutti i parametri specificati all'interno di `SecondaryParameters` sezione in cui l'elemento RST di primo livello, ma non li converte allo spazio dei nomi WS-Trust 2005.

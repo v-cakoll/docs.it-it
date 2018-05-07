@@ -1,13 +1,6 @@
 ---
 title: Cenni preliminari sulla modifica di controlli
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f9290c249ed85ffc1fe98878daf2c2f0777786f5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a6c2c796819924cdbd15d6eefffe10a607bad9bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-authoring-overview"></a>Panoramica della creazione di controlli
 L'estendibilità del modello di controlli di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] riduce notevolmente l'esigenza di creare un nuovo controllo. In alcuni casi può tuttavia essere ancora necessario creare un controllo personalizzato. Questo argomento illustra le funzionalità che riducono al minimo l'esigenza di creare un controllo personalizzato e i diversi modelli di creazione di controlli in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Viene anche illustrato come creare un nuovo controllo.  
@@ -83,7 +71,7 @@ L'estendibilità del modello di controlli di [!INCLUDE[TLA#tla_winclient](../../
 ### <a name="deriving-from-frameworkelement"></a>Derivazione da FrameworkElement  
  I controlli che derivano da <xref:System.Windows.Controls.UserControl> o <xref:System.Windows.Controls.Control> si basano sulla composizione di elementi esistenti. Per molti scenari, questa è una soluzione accettabile, poiché qualsiasi oggetto che eredita da <xref:System.Windows.FrameworkElement> può trovarsi in un <xref:System.Windows.Controls.ControlTemplate>. A volte, tuttavia, le funzionalità di composizione semplice di elementi non sono sufficienti per definire l'aspetto di un controllo. Per questi scenari, basare un componente su <xref:System.Windows.FrameworkElement> è la scelta giusta.  
   
- Esistono due metodi standard per la compilazione <xref:System.Windows.FrameworkElement>-componenti basati su: diretto composizione di elementi di rendering e personalizzati. Il rendering diretto comporta l'override di <xref:System.Windows.UIElement.OnRender%2A> metodo <xref:System.Windows.FrameworkElement> e fornendo <xref:System.Windows.Media.DrawingContext> operazioni che definiscono in modo esplicito gli elementi visivi del componente. Si tratta del metodo utilizzato da <xref:System.Windows.Controls.Image> e <xref:System.Windows.Controls.Border>. Composizione di elementi personalizzati comporta l'utilizzo di oggetti di tipo <xref:System.Windows.Media.Visual> per comporre l'aspetto del componente. Per un esempio, vedere [Uso degli oggetti DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md). <xref:System.Windows.Controls.Primitives.Track>è un esempio di un controllo in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che usa la composizione di elementi personalizzati. È anche possibile combinare il rendering diretto e la composizione personalizzata di elementi nello stesso controllo.  
+ Esistono due metodi standard per la compilazione <xref:System.Windows.FrameworkElement>-componenti basati su: diretto composizione di elementi di rendering e personalizzati. Il rendering diretto comporta l'override di <xref:System.Windows.UIElement.OnRender%2A> metodo <xref:System.Windows.FrameworkElement> e fornendo <xref:System.Windows.Media.DrawingContext> operazioni che definiscono in modo esplicito gli elementi visivi del componente. Si tratta del metodo utilizzato da <xref:System.Windows.Controls.Image> e <xref:System.Windows.Controls.Border>. Composizione di elementi personalizzati comporta l'utilizzo di oggetti di tipo <xref:System.Windows.Media.Visual> per comporre l'aspetto del componente. Per un esempio, vedere [Uso degli oggetti DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md). <xref:System.Windows.Controls.Primitives.Track> è un esempio di un controllo in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che utilizza la composizione di elemento personalizzato. È anche possibile combinare il rendering diretto e la composizione personalizzata di elementi nello stesso controllo.  
   
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>Vantaggi della derivazione da FrameworkElement  
  Prendere in considerazione la derivazione da <xref:System.Windows.FrameworkElement> se una qualsiasi delle condizioni seguenti:  
@@ -127,7 +115,7 @@ L'estendibilità del modello di controlli di [!INCLUDE[TLA#tla_winclient](../../
   
 -   Definire un metodo per il <xref:System.Windows.CoerceValueCallback> denominato `CoerceValue`. `CoerceValue` garantisce che `Value` sia maggiore o uguale a `MinValue` e minore o uguale a `MaxValue`.  
   
--   Definire un metodo per il <xref:System.Windows.PropertyChangedCallback>, denominato `OnValueChanged`. `OnValueChanged`Crea un <xref:System.Windows.RoutedPropertyChangedEventArgs%601> dell'oggetto e lo prepara generare il `ValueChanged` dell'evento indirizzato. Gli eventi indirizzati sono illustrati nella sezione successiva.  
+-   Definire un metodo per il <xref:System.Windows.PropertyChangedCallback>, denominato `OnValueChanged`. `OnValueChanged` Crea un <xref:System.Windows.RoutedPropertyChangedEventArgs%601> dell'oggetto e lo prepara generare il `ValueChanged` dell'evento indirizzato. Gli eventi indirizzati sono illustrati nella sezione successiva.  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -195,7 +183,7 @@ L'estendibilità del modello di controlli di [!INCLUDE[TLA#tla_winclient](../../
   
 -   Implementare una coppia di metodi CLR`public` `static` denominati `Set`*NomeProprietà* e `Get`*NomeProprietà*. Entrambi i metodi devono accettare una classe derivata da <xref:System.Windows.DependencyProperty> come primo argomento. Il metodo `Set`*NomeProprietà* accetta anche un argomento il cui tipo corrisponde al tipo di dati registrato per la proprietà. Il metodo `Get`*NomeProprietà* deve restituire un valore dello stesso tipo. In assenza del metodo `Set`*NomeProprietà*, la proprietà viene contrassegnata come di sola lettura.  
   
--   `Set`*PropertyName* e `Get` *PropertyName* devono essere indirizzati direttamente il <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> oggetto metodi di dipendenza di destinazione, rispettivamente. Le finestre di progettazione possono accedere alla proprietà associata eseguendo una chiamata tramite il wrapper del metodo oppure una chiamata diretta all'oggetto dipendenza di destinazione.  
+-   `Set` *PropertyName* e `Get` *PropertyName* devono essere indirizzati direttamente il <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> metodi sulla dipendenza di destinazione dell'oggetto, rispettivamente. Le finestre di progettazione possono accedere alla proprietà associata eseguendo una chiamata tramite il wrapper del metodo oppure una chiamata diretta all'oggetto dipendenza di destinazione.  
   
  Per altre informazioni sulle proprietà associate, vedere [Cenni preliminari sulle proprietà associate](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).  
   

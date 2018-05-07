@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: utilizzare una matrice di colori per impostare i valori alfa nelle immagini'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - matrices [Windows Forms], alpha values
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5dde9417782e4404237a995364d65058f023c3e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed129cd9487ba1416cd69b2e13f59747856cb598
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Procedura: utilizzare una matrice di colori per impostare i valori alfa nelle immagini
 Il <xref:System.Drawing.Bitmap> classe (che eredita dalla classe di <xref:System.Drawing.Image> classe) e <xref:System.Drawing.Imaging.ImageAttributes> classe fornisce la funzionalità per ottenere e impostare i valori pixel. È possibile utilizzare il <xref:System.Drawing.Imaging.ImageAttributes> i valori di classe per modificare il canale alfa per un'intera immagine, oppure è possibile chiamare il <xref:System.Drawing.Bitmap.SetPixel%2A> metodo la <xref:System.Drawing.Bitmap> classe per modificare i valori dei singoli pixel.  
@@ -36,7 +24,7 @@ Il <xref:System.Drawing.Bitmap> classe (che eredita dalla classe di <xref:System
   
  Durante il rendering, i valori alfa nella mappa di bit vengono convertiti all'80% del valore precedente. Il risultato di un'immagine che viene sfumata con lo sfondo. Come mostrato nella figura seguente, l'immagine bitmap è trasparente; è possibile visualizzare la riga di colore nera a tinta unita attraverso di esso.  
   
- ![Fusione alfa con una matrice](../../../../docs/framework/winforms/advanced/media/image2.png "immagine2")  
+ ![Riempimenti con fusione alfa con una matrice](../../../../docs/framework/winforms/advanced/media/image2.png "immagine2")  
   
  In cui l'immagine sulla parte dello sfondo bianca, l'immagine viene sfumata con il colore bianco. In cui l'immagine incroci la linea di colore nera, l'immagine viene sfumato con il colore nero.  
   

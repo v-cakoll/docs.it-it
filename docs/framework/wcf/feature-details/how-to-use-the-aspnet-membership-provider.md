@@ -1,30 +1,16 @@
 ---
 title: 'Procedura: usare provider di appartenenza ASP.NET'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 19fb83d21c77f3206c314a2e6c40562fcb75f151
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d71e3679f4bf395b240c330fc573d6f613d1be07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Procedura: usare provider di appartenenza ASP.NET
 Il provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] è una funzionalità che consente agli sviluppatori di [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] di creare siti Web che consentono agli utenti di creare combinazioni di nome utente e password univoche. Con questa funzionalità qualsiasi utente può stabilire un account nel sito e accedere in modo esclusivo al sito e ai relativi servizi. Si tratta di una funzionalità in contrasto con la protezione di Windows, in base alla quale è necessario che gli utenti dispongano di un account in un dominio Windows. Qualsiasi utente che fornisca le credenziali (ovvero nome utente e password) può utilizzare il sito e i relativi servizi.  
@@ -33,10 +19,10 @@ Il provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md
   
  La funzionalità di appartenenza richiede l'utilizzo di un database SQL Server per archiviare le informazioni utente. La funzionalità include anche metodi per presentare una domanda agli utenti che hanno dimenticato la password.  
   
- Gli sviluppatori [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono sfruttare queste funzionalità a fini di sicurezza. In caso di integrazione in un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], gli utenti devono fornire una combinazione di nome utente e password all'applicazione client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Per trasferire i dati per il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] del servizio, utilizzare un'associazione che supporta le credenziali di nome e password utente, ad esempio il <xref:System.ServiceModel.WSHttpBinding> (nella configurazione, il [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) e impostare le credenziali client tipo di `UserName`. Nel servizio, la sicurezza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] autentica l'utente sulla base del nome utente e della password, inoltre assegna il ruolo specificato dal ruolo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+ Gli sviluppatori di Windows Communication Foundation (WCF) possono sfruttare queste funzionalità per motivi di sicurezza. Quando è integrato in un'applicazione WCF, gli utenti devono fornire una combinazione nome utente/password per l'applicazione client WCF. Per trasferire i dati al servizio WCF, utilizzare un'associazione che supporta le credenziali di nome/password utente, ad esempio il <xref:System.ServiceModel.WSHttpBinding> (nella configurazione, il [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) e impostare il tipo di credenziale per client`UserName`. Nel servizio, autentica l'utente basato sul nome utente e la password sicurezza WCF e assegna anche il ruolo specificato per il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ruolo.  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non fornisce metodi per popolare il database con combinazioni di nome utente/password o altre informazioni utente.  
+>  WCF non fornisce metodi per popolare il database con combinazioni nome utente/password o altre informazioni utente.  
   
 ### <a name="to-configure-the-membership-provider"></a>Per configurare il provider di appartenenza  
   
@@ -73,7 +59,7 @@ Il provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md
   
 1.  Nel file di configurazione, sotto il [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, aggiungere un [ \<associazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
   
-2.  Aggiungere un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) per la sezione delle associazioni. Per ulteriori informazioni sulla creazione di un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elemento di associazione vedere [procedura: specificare un'associazione al servizio nella configurazione](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2.  Aggiungere un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) per la sezione delle associazioni. Per ulteriori informazioni sulla creazione di un elemento di associazione di WCF, vedere [procedura: specificare un'associazione al servizio nella configurazione](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 3.  Impostare l'attributo `mode` dell'elemento `<security>` su `Message`.  
   
@@ -111,7 +97,7 @@ Il provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md
 6.  Impostare l'attributo `userNamePasswordValidationMode` su `MembershipProvider`.  
   
     > [!IMPORTANT]
-    >  Se il valore `userNamePasswordValidationMode` non è impostato, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'autenticazione di Windows invece del provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+    >  Se il `userNamePasswordValidationMode` valore non è impostato, WCF utilizza l'autenticazione di Windows anziché il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provider di appartenenze.  
   
 7.  Impostare l'attributo `membershipProviderName` sul nome del provider (specificato al momento di aggiungere il provider nella prima procedura in questo argomento). Nell'esempio seguente viene illustrato il frammento `<serviceCredentials>` fino a questo punto.  
   

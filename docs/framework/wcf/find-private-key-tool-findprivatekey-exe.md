@@ -1,20 +1,12 @@
 ---
 title: Ricerca dello strumento di chiave privata (FindPrivateKey.exe)
 ms.date: 09/11/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4bdfa1a9e45332e8c2acbbc8cd8a09bd2f927fbc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f156cbb2f4fad8d51e356bd4dee2d72d9397ffb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a>Ricerca dello strumento di chiave privata (FindPrivateKey.exe)
 
@@ -40,8 +32,8 @@ Nelle tabelle seguenti vengono descritti gli argomenti e le opzioni che possono 
 
 |Opzione|Descrizione|
 |------------|-----------------|
-|`/n <`*subjectName*`>`|Specifica il nome dell’oggetto del certificato.|
-|`/t <`*identificazione personale*`>`|Specifica l'identificazione digitale del certificato. Usare Certmgr.exe per recuperare l'identificazione digitale del certificato.|
+|`/n <` *subjectName* `>`|Specifica il nome dell’oggetto del certificato.|
+|`/t <` *Identificazione personale* `>`|Specifica l'identificazione digitale del certificato. Usare Certmgr.exe per recuperare l'identificazione digitale del certificato.|
 |`/f`|Restituisce soltanto il nome file.|
 |`/d`|Restituisce soltanto la directory.|
 |`/a`|Restituisce il nome file assoluto.|

@@ -1,27 +1,15 @@
 ---
 title: Riepilogo dei tipi di traccia
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe4222ac124174341a28035c955a2a9bef4a167c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e3bc66753dd44e1dc4c7417caf593820300f69a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trace-type-summary"></a>Riepilogo dei tipi di traccia
-[Livelli di origine](http://go.microsoft.com/fwlink/?LinkID=94943) definisce vari livelli di traccia: critico, errore, avviso, informazioni e dettagliato, nonché viene descritto il `ActivityTracing` flag che attiva o disattiva l'output di traccia gli eventi di trasferimento di limite e attività.  
+[SourceLevels](http://go.microsoft.com/fwlink/?LinkID=94943) definisce vari livelli di traccia: critico, errore, avviso, informazioni e dettagliato, nonché come fornisce la descrizione del `ActivityTracing` flag che attiva o disattiva l'output della traccia gli eventi di trasferimento di limite e attività.  
   
  È inoltre possibile rivedere [TraceEventType](http://go.microsoft.com/fwlink/?LinkId=95169) per i tipi di traccia che può essere emessi da <xref:System.Diagnostics>.  
   

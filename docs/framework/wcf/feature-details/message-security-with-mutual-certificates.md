@@ -1,30 +1,20 @@
 ---
 title: Protezione dei messaggi con certificati reciproci
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-caps.latest.revision: "18"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: a60af220bf962e523a35bc5b8d8abca041a9fd46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1407593bf90b28a1890a8c18564b31d0aa67e0cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-mutual-certificates"></a>Protezione dei messaggi con certificati reciproci
-Nello scenario seguente sono illustrati un client e un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protetti tramite la protezione a livello di messaggio. Il client e il servizio sono autenticati mediante certificati.  
+Lo scenario seguente viene illustrato un servizio Windows Communication Foundation (WCF) e un client protetto usando la modalità sicurezza messaggio. Il client e il servizio sono autenticati mediante certificati.  
   
  Questo scenario è interoperativo perché utilizza WS-Security con la specifica X.509 Certificate Token Profile.  
   
@@ -172,4 +162,4 @@ Nello scenario seguente sono illustrati un client e un servizio [!INCLUDE[indigo
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
- [Procedura: creare e installare i certificati temporanei in WCF per la sicurezza del trasporto durante lo sviluppo](http://go.microsoft.com/fwlink/?LinkId=244264)
+ [Procedura: creare e installare certificati temporanei in WCF per la sicurezza del trasporto durante lo sviluppo](http://go.microsoft.com/fwlink/?LinkId=244264)

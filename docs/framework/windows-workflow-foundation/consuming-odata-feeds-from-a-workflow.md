@@ -1,24 +1,12 @@
 ---
 title: Utilizzo di feed OData da un flusso di lavoro
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ce7d7812eadea2d9472a62bd007d2eca6ae07891
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 9db52f734cbb9676f37c5d7a5a800b1d1efa7fbc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Utilizzo di feed OData da un flusso di lavoro
 WCF Data Services è un componente di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] che consente di creare servizi che usano Open Data Protocol (OData) per esporre e usare dati sul Web o su rete Intranet tramite la semantica REST (Representational State Transfer). In OData i dati vengono esposti come risorse indirizzabili tramite URI. Un'applicazione può interagire con un servizio dati basato su OData quando è in grado di inviare una richiesta HTTP e di elaborare il feed OData restituito da un servizio dati. In WCF Data Services sono inoltre disponibili librerie client che consentono di programmare in modo più completo quando si usano feed OData da applicazioni [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . In questo argomento viene fornita una panoramica sull'uso di un feed OData in un flusso di lavoro con e senza librerie client.  

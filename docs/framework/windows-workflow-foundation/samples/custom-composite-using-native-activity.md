@@ -1,23 +1,12 @@
 ---
-title: "Attività composta personalizzata tramite l'oggetto NativeActivity"
-ms.custom: 
+title: Attività composta personalizzata tramite l'oggetto NativeActivity
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40a042aeaecd63c9932d7919f54a4cb1b026e988
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 78d00a13bdc018946fa20635a47677b1508c1ed1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-composite-using-native-activity"></a>Attività composta personalizzata tramite l'oggetto NativeActivity
 In questo esempio viene illustrato come scrivere un oggetto <xref:System.Activities.NativeActivity> che pianifica altri oggetti <xref:System.Activities.Activity> per controllare il flusso dell'esecuzione di un flusso di lavoro. In questo esempio vengono usati due flussi di controllo comuni, Sequence e While, per illustrate le operazioni da eseguire.  
@@ -35,7 +24,7 @@ In questo esempio viene illustrato come scrivere un oggetto <xref:System.Activit
   
  Una volta completata l'attività figlio, viene eseguito l'oggetto <xref:System.Activities.CompletionCallback>. Il ciclo continua dall'inizio. Come per `Execute`, un oggetto <xref:System.Activities.CompletionCallback> accetta un oggetto <xref:System.Activities.NativeActivityContext>, consentendo al responsabile dell'implementazione di accedere al runtime.  
   
- `MyWhile`è diverso da `MySequence` in quanto consente di pianificare un singolo <xref:System.Activities.Activity> oggetto ripetutamente e in cui viene utilizzato un <xref:System.Activities.Activity%601>< bool\> denominato `Condition` per determinare se deve verificarsi questa pianificazione. Come per `MySequence`, l'oggetto `MyWhile` usa un metodo `InternalExecute` per centralizzare la relativa logica di pianificazione. Consente di pianificare il `Condition` <xref:System.Activities.Activity>< bool\> con un <xref:System.Activities.CompletionCallback%601> \<bool > denominato `OnEvaluationCompleted`. Quando viene completata l'esecuzione dell'oggetto `Condition`, il risultato diventa disponibile tramite questo oggetto <xref:System.Activities.CompletionCallback> in un parametro fortemente tipizzato denominato `result`. Se `true`, l'oggetto `MyWhile` chiama il metodo <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, passando gli oggetti `Body`<xref:System.Activities.Activity> e `InternalExecute` come oggetto <xref:System.Activities.CompletionCallback>. Quando viene completata l'esecuzione dell'oggetto `Body`, l'oggetto `Condition` viene nuovamente pianificato in `InternalExecute`, avviando di nuovo il ciclo. Quando l'oggetto `Condition` restituisce `false`, un'istanza dell'oggetto `MyWhile` restituisce il controllo al runtime senza pianificare l'oggetto `Body` e il runtime ne imposta lo stato su <xref:System.Activities.ActivityInstanceState.Closed>.  
+ `MyWhile` è diverso da `MySequence` in quanto consente di pianificare un singolo <xref:System.Activities.Activity> oggetto ripetutamente e in che usa un <xref:System.Activities.Activity%601>< bool\> denominato `Condition` per determinare se deve verificarsi questa pianificazione. Come per `MySequence`, l'oggetto `MyWhile` usa un metodo `InternalExecute` per centralizzare la relativa logica di pianificazione. Consente di pianificare il `Condition` <xref:System.Activities.Activity>< bool\> con un <xref:System.Activities.CompletionCallback%601> \<bool > denominato `OnEvaluationCompleted`. Quando viene completata l'esecuzione dell'oggetto `Condition`, il risultato diventa disponibile tramite questo oggetto <xref:System.Activities.CompletionCallback> in un parametro fortemente tipizzato denominato `result`. Se `true`, l'oggetto `MyWhile` chiama il metodo <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, passando gli oggetti `Body`<xref:System.Activities.Activity> e `InternalExecute` come oggetto <xref:System.Activities.CompletionCallback>. Quando viene completata l'esecuzione dell'oggetto `Body`, l'oggetto `Condition` viene nuovamente pianificato in `InternalExecute`, avviando di nuovo il ciclo. Quando l'oggetto `Condition` restituisce `false`, un'istanza dell'oggetto `MyWhile` restituisce il controllo al runtime senza pianificare l'oggetto `Body` e il runtime ne imposta lo stato su <xref:System.Activities.ActivityInstanceState.Closed>.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
@@ -48,6 +37,6 @@ In questo esempio viene illustrato come scrivere un oggetto <xref:System.Activit
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\CustomCompositeNativeActivity`

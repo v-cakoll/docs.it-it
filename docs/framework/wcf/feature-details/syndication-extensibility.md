@@ -1,24 +1,12 @@
 ---
-title: "Estendibilità della diffusione"
-ms.custom: 
+title: Estendibilità della diffusione
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5322ff2c79ab5051b3a9aaaeaafe7db6c9c2f683
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8182aee9d8a526d995ab1266e5c654f29f4af3d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syndication-extensibility"></a>Estendibilità della diffusione
 L'API di diffusione è progettata per fornire un modello di programmazione di formato neutro che consente di scrivere in rete il contenuto diffuso in molteplici formati. Il modello di dati astratto è costituito dalle classi seguenti:  
@@ -35,7 +23,7 @@ L'API di diffusione è progettata per fornire un modello di programmazione di fo
   
  Queste classi eseguono il mapping in modo rigoroso ai costrutti definiti nella specifica Atom 1.0, anche se alcuni dei nomi sono diversi.  
   
- Una funzionalità chiave dei protocolli di diffusione è l'estensibilità. Sia Atom 1.0 che RSS 2.0 aggiungono attributi ed elementi ai feed di diffusione che non sono definiti nelle specifiche. Il modello di programmazione della diffusione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offre le modalità seguenti di utilizzare attributi personalizzati ed estensioni, accesso non fortemente tipizzato e derivazione di una nuova classe.  
+ Una funzionalità chiave dei protocolli di diffusione è l'estensibilità. Sia Atom 1.0 che RSS 2.0 aggiungono attributi ed elementi ai feed di diffusione che non sono definiti nelle specifiche. Il modello di programmazione di diffusione di Windows Communication Foundation (WCF) offre le seguenti modalità di utilizzo di attributi personalizzati ed estensioni, accesso non fortemente tipizzato e derivazione di una nuova classe.  
   
 ## <a name="loosely-typed-access"></a>Accesso non fortemente tipizzato  
  L'aggiunta di estensioni tramite la derivazione di una nuova classe richiede che venga scritto codice aggiuntivo. Un'altra opzione consiste nell'accedere alle estensioni in modo non fortemente tipizzato. Tutti i tipi definiti nel modello di dati astratto di diffusione contengono le proprietà denominate `AttributeExtensions` e `ElementExtensions` (con un'eccezione, <xref:System.ServiceModel.Syndication.SyndicationContent> ha una proprietà `AttributeExtensions` ma nessuna proprietà `ElementExtensions`). Queste proprietà sono raccolte di estensioni non elaborate rispettivamente dai metodi `TryParseAttribute` e `TryParseElement`. È possibile accedere a queste estensioni non elaborate chiamando <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType> sulla proprietà `ElementExtensions` di <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationPerson> e <xref:System.ServiceModel.Syndication.SyndicationCategory>. Questo set di metodi cerca tutte le estensioni con il nome e lo spazio dei nomi specificati, le deserializza singolarmente in istanze di `TExtension` e le restituisce come una raccolta di oggetti `TExtension`.  

@@ -1,13 +1,7 @@
 ---
 title: Eccezioni e prestazioni
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - tester-doer pattern
 - TryParse pattern
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7972cf7d63ee22e791d46046f30c9be467cc758e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: dfffc2a1c0f607541194a7f51717d5bf8a8537f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-and-performance"></a>Eccezioni e prestazioni
 Un problema comune relative alle eccezioni è che se le eccezioni vengono utilizzate per il codice che normalmente non riesce, le prestazioni dell'implementazione saranno inaccettabili. Si tratta di un problema valido. Quando un membro genera un'eccezione, le prestazioni possono essere notevolmente più lenti. Tuttavia, è possibile ottenere buone prestazioni rimanendo rigorosamente le linee guida di eccezione che non consentire l'utilizzo di codici di errore. Due modelli descritti in questa sezione vengono forniti suggerimenti per eseguire questa operazione.  

@@ -2,10 +2,6 @@
 title: Funzione PutClassWmi (riferimenti alle API non gestite)
 description: La funzione PutClassWmi crea una nuova classe o aggiorna uno esistente.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutClassWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 219cec2096cd3d1dfe1e0d3c0903b62692e444e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ce887d59d02cfc2e4d8c183aa495dcc1535853c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi (funzione)
 Crea una nuova classe o aggiorna uno esistente.  
@@ -84,7 +77,7 @@ I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* fi
 | `WBEM_E_INVALID OPERATION` | 0x80041016 | Il nome della classe specificata non è valido. |
 | `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | È stato effettuato un tentativo di apportare una modifica invalidare una sottoclasse. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | Il `WBEM_FLAG_CREATE_ONLY` flag è stato specificato, ma la classe esiste già. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`è stato specificato `lFlags`, e la classe non è stata trovata. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` è stato specificato `lFlags`, e la classe non è stata trovata. |
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | Le proprietà necessarie per le classi non impostate. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per completare l'operazione. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI è stato probabilmente arrestato e riavviarlo. Chiamare [ConnectServerWmi](connectserverwmi.md) nuovamente. |
@@ -104,7 +97,7 @@ Se la chiamata di funzione non riesce, è possibile ottenere informazioni aggiun
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

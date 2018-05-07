@@ -1,24 +1,16 @@
 ---
 title: Sottoespressione (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - lambda expressions [Visual Basic], sub expression
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43e35bd0386bc56478603ec36437981785cc8ffb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 602212e664fa3362742fb1ba0dc033610272d3af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-expression-visual-basic"></a>Sottoespressione (Visual Basic)
 Dichiara i parametri e il codice che definiscono un'espressione lambda subroutine.  
@@ -37,7 +29,7 @@ End Sub
   
 |Termine|Definizione|  
 |---|---|  
-|`parameterlist`|Parametro facoltativo. Un elenco di nomi di variabili locali che rappresentano i parametri della procedura. Le parentesi devono essere presenti anche quando l'elenco è vuoto. Per ulteriori informazioni, vedere [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`parameterlist`|Facoltativo. Un elenco di nomi di variabili locali che rappresentano i parametri della procedura. Le parentesi devono essere presenti anche quando l'elenco è vuoto. Per ulteriori informazioni, vedere [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`statement`|Obbligatorio. Una singola istruzione.|  
 |`statements`|Obbligatorio. Un elenco di istruzioni.|  
   

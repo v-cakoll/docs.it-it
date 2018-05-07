@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: configurare un emittente locale'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,26 +8,21 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c24b039709a013f210a42d67c744c03489e4cf73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b227398af3ea0dfd7cd866f1110ccc1737553c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Procedura: configurare un emittente locale
 In questo argomento viene illustrato come configurare un client per utilizzare un emittente locale per i token emessi.  
   
  Spesso, quando un client comunica con un servizio federato, il servizio specifica l'indirizzo del servizio token di sicurezza previsto per l'emissione del token che il client utilizzerà per autenticarsi presso il servizio federato. In alcuni casi, il client può essere configurato per utilizzare un *emittente locale*.  
   
- In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzato un emittente locale quando l'indirizzo dell'emittente di un'associazione federata è http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous o `null`. In tali casi, è necessario configurare la classe <xref:System.ServiceModel.Description.ClientCredentials> con l'indirizzo dell'emittente locale e con l'associazione da utilizzare per comunicare con tale emittente.  
+ Windows Communication Foundation (WCF) viene utilizzato un emittente locale nei casi in cui l'indirizzo dell'emittente di un'associazione federativa http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous o `null`. In tali casi, è necessario configurare la classe <xref:System.ServiceModel.Description.ClientCredentials> con l'indirizzo dell'emittente locale e con l'associazione da utilizzare per comunicare con tale emittente.  
   
 > [!NOTE]
->  Se il <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> proprietà del `ClientCredentials` classe è impostata su `true`, non è specificato un indirizzo emittente locale e l'indirizzo dell'emittente specificato dal [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) o altri http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, l'associazione federata è http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, o `null`, quindi Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] emittente verrà utilizzato.  
+>  Se il <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> proprietà del `ClientCredentials` (classe) è impostata su `true`, non è specificato un indirizzo emittente locale e l'indirizzo dell'emittente specificato dal [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) o altri associazione federata è http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, o `null`, quindi le finestre [!INCLUDE[infocard](../../../../includes/infocard-md.md)] emittente verrà utilizzato.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Per configurare l'emittente locale nel codice  
   

@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: Creare un evento indirizzato personalizzato'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd335cb08056cb8b7c696555d666f54cad81b87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8aa038008ed93cedfe49fde4e0269712b4fb19a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Procedura: Creare un evento indirizzato personalizzato
 Per l'evento personalizzato supportare il routing degli eventi, è necessario registrare un <xref:System.Windows.RoutedEvent> utilizzando il <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> metodo. Questo esempio illustra le nozioni di base per la creazione di un evento indirizzato personalizzato.  

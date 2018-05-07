@@ -1,34 +1,20 @@
 ---
 title: Uso di sessioni
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e826e0952f95608fd8d85a5b1fad6b17d3fdacb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-sessions"></a>Uso di sessioni
-Nelle applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] una *sessione* correla un gruppo di messaggi in una conversazione. Le sessioni[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sono differenti dall'oggetto sessione disponibile nelle applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] , supportano comportamenti diversi e sono controllate in modi diversi. In questo argomento vengono descritte le funzionalità che vengono attivate dalle sessioni nelle applicazioni [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e le relative modalità di utilizzo.  
+Nelle applicazioni Windows Communication Foundation (WCF), un *sessione* correla un gruppo di messaggi in una conversazione. Le sessioni[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sono differenti dall'oggetto sessione disponibile nelle applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] , supportano comportamenti diversi e sono controllate in modi diversi. In questo argomento vengono descritte le funzionalità che vengono attivate dalle sessioni nelle applicazioni [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e le relative modalità di utilizzo.  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Sessioni nelle applicazioni Windows Communication Foundation  
  Quando un contratto di servizio specifica che è necessaria una sessione, significa che tutte le chiamate, ovvero gli scambi di messaggi sottostanti che supportano le chiamate, devono essere parte della stessa conversazione. Se un contratto consente sessioni ma non ne richiede, i client possono connettersi e possono stabilire o meno una sessione. Se, al termine della sessione, un messaggio viene inviato sullo stesso canale basato sulla sessione, viene generata un'eccezione.  

@@ -1,35 +1,21 @@
 ---
 title: Diffusione WCF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1f7f5fd65fc298107a66e2049c059f3cc58b3d44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 627de6431c641e48367a97e3f80f3d05d185ab45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-syndication"></a>Diffusione WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offre supporto per usare in modo semplice feed di diffusione in Atom, RSS o in altri formati personalizzati, in modo da leggerli e crearli, nonché esporli in un endpoint del servizio. Negli argomenti di questa sezione viene descritto dettagliatamente tale modello di programmazione per la diffusione.  
+Windows Communication Foundation (WCF) fornisce il supporto per operare con facilità i feed di diffusione in Atom, RSS o in altri formati personalizzati, che consente di leggere e il crearli, nonché esporli in un endpoint del servizio. Negli argomenti di questa sezione viene descritto dettagliatamente tale modello di programmazione per la diffusione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica della diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- Viene fornita una panoramica sul supporto della diffusione fornito da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Viene fornita una panoramica del supporto della diffusione fornito da WCF.  
   
  [Architettura della diffusione](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
  Vengono descritte le classi nel modello a oggetti e l'estensibilità della diffusione.  

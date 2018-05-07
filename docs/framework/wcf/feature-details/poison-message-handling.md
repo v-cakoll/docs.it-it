@@ -1,36 +1,22 @@
 ---
 title: Gestione dei messaggi non elaborabili
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b860e239d001a03da191d73de2f7b53e7073c7a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="poison-message-handling"></a>Gestione dei messaggi non elaborabili
 Oggetto *messaggio non elaborabile* è un messaggio che ha superato il numero massimo di tentativi di recapito all'applicazione. Questa situazione può insorgere quando un'applicazione basata sulla coda non è in grado di elaborare un messaggio a causa di errori. Per far fronte a richieste di affidabilità, un'applicazione in coda riceve messaggi nell'ambito di una transazione. Se la transazione nella quale è stato ricevuto un messaggio in coda viene interrotta, il messaggio resta nella coda, quindi viene eseguito un nuovo tentativo nell'ambito di una nuova transazione. Se il problema che ha determinato l'interruzione della transazione non viene risolto, l'applicazione ricevente può rimanere bloccata in una successione continua di ricezioni e interruzioni dello stesso messaggio fino al raggiungimento del numero massimo di tentativi di recapito. Ne consegue l'impossibilità di elaborare il messaggio.  
   
  Un messaggio può diventare non elaborabile per varie ragioni. Le cause più comuni sono specifiche dell'applicazione. Ad esempio, se un'applicazione legge un messaggio da una coda ed esegue alcune operazioni di elaborazione del database, è possibile che non riesca a ottenere un blocco per il database, causando l'interruzione della transazione. A causa dell'interruzione della transazione del database, il messaggio rimane nella coda e l'applicazione è costretta a rileggerlo una seconda volta e ad eseguire un altro tentativo di acquisire un blocco sul database. I messaggi, inoltre, possono diventare non elaborabili se contengono informazioni non valide. Un ordine di acquisto, ad esempio, potrebbe contenere un numero cliente non valido. In questi casi è possibile che l'applicazione interrompa a ragione la transazione determinando la trasformazione del messaggio in messaggio non elaborabile.  
   
- In rari casi è possibile che i messaggi non vengano inviati all'applicazione. Il livello di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] può rilevare l'esistenza di un problema relativo al messaggio, ad esempio il messaggio dispone del frame errato, le credenziali allegate non sono valide oppure presenta un'intestazione Action non valida. In questi casi l'applicazione non riceve mai il messaggio ma quest'ultimo, pur diventando non elaborabile, può essere elaborato manualmente.  
+ In rari casi è possibile che i messaggi non vengano inviati all'applicazione. Il livello di Windows Communication Foundation (WCF) può rilevare un problema con il messaggio, ad esempio se il messaggio dispone del frame errato, le credenziali del messaggio non valido associato a essa, o un'intestazione action non valido. In questi casi l'applicazione non riceve mai il messaggio ma quest'ultimo, pur diventando non elaborabile, può essere elaborato manualmente.  
   
 ## <a name="handling-poison-messages"></a>Gestione di messaggi non elaborabili  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] la gestione dei messaggi non elaborabili mette a disposizione dell'applicazione ricevente un meccanismo per gestire messaggi che non possono essere inviati all'applicazione o messaggi inviati all'applicazione che però non possono essere elaborati per motivi specifici dell'applicazione. La gestione dei messaggi non elaborabili è configurata in base alle proprietà seguenti in ogni associazione in coda disponibile:  
+ In WCF, dei messaggi non elaborabili fornisce un meccanismo per un'applicazione ricevente gestire messaggi che non possono essere distribuiti all'applicazione o messaggi che vengono inviati all'applicazione, ma che non possono essere elaborati a causa di specifiche dell'applicazione per motivi. La gestione dei messaggi non elaborabili è configurata in base alle proprietà seguenti in ogni associazione in coda disponibile:  
   
 -   `ReceiveRetryCount`. Valore integer che indica il numero massimo di tentativi di recapito di un messaggio dalla coda dell'applicazione all'applicazione. Il valore predefinito è 5. È sufficiente nei casi in cui un tentativo immediato corregge il problema, ad esempio con un deadlock temporaneo su un database.  
   
@@ -46,7 +32,7 @@ Oggetto *messaggio non elaborabile* è un messaggio che ha superato il numero ma
   
 -   Rifiuta. Opzione disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Viene indicato a MSMQ di inviare al gestore code mittente un acknowledgement negativo che indichi che l'applicazione non è in grado di ricevere il messaggio. Il messaggio viene inserito nella coda di messaggi non recapitabili del gestore code mittente.  
   
--   Sposta. Opzione disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Il messaggio non elaborabile viene spostato in una coda di messaggi non elaborabili per l'elaborazione successiva da parte di un'applicazione di gestione apposita. La coda di messaggi non elaborabili è una coda secondaria della coda dell'applicazione. Un'applicazione di gestione di messaggi non elaborabili può essere un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che legge i messaggi dalla coda non elaborabile. La coda non elaborabile è una coda secondaria della coda dell'applicazione e possono essere indirizzata come net.msmq://\<*-nome del computer*>/*applicationQueue*; poison, dove  *nome del computer* è il nome del computer in cui risiede la coda e *applicationQueue* è il nome della coda specifica dell'applicazione.  
+-   Sposta. Opzione disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Il messaggio non elaborabile viene spostato in una coda di messaggi non elaborabili per l'elaborazione successiva da parte di un'applicazione di gestione apposita. La coda di messaggi non elaborabili è una coda secondaria della coda dell'applicazione. Un'applicazione di gestione dei messaggi non elaborabili può essere un servizio WCF che legge i messaggi dalla coda non elaborabile. La coda non elaborabile è una coda secondaria della coda dell'applicazione e possono essere indirizzata come net.msmq://\<*-nome del computer*>/*applicationQueue*; poison, dove  *nome del computer* è il nome del computer in cui risiede la coda e *applicationQueue* è il nome della coda specifica dell'applicazione.  
   
  Di seguito è indicato il numero massimo di tentativi di recapito possibili per un messaggio:  
   
@@ -57,20 +43,20 @@ Oggetto *messaggio non elaborabile* è un messaggio che ha superato il numero ma
 > [!NOTE]
 >  Non vengono eseguiti altri tentativi per i messaggi recapitati correttamente.  
   
- Per tenere traccia del numero dei tentativi di lettura di un messaggio, in [!INCLUDE[wv](../../../../includes/wv-md.md)] vengono gestite una proprietà del messaggio durevole che conta il numero di interruzioni e una proprietà del numero di spostamenti che conta gli spostamenti del messaggio tra la coda dell'applicazione e le code secondarie. Queste proprietà vengono utilizzate nel canale di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per calcolare il numero di tentativi di ricezione e il numero dei cicli di ripetizione. In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] il numero delle interruzioni viene conservato in memoria dal canale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e viene azzerato se nell'applicazione si verifica un errore. Il canale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], inoltre, è in grado di mantenere in memoria un numero massimo di 256 interruzioni di messaggi in qualsiasi momento. Se viene letto il 257 esimo messaggio, il messaggio più vecchio viene eliminato dal conteggio.  
+ Per tenere traccia del numero dei tentativi di lettura di un messaggio, in [!INCLUDE[wv](../../../../includes/wv-md.md)] vengono gestite una proprietà del messaggio durevole che conta il numero di interruzioni e una proprietà del numero di spostamenti che conta gli spostamenti del messaggio tra la coda dell'applicazione e le code secondarie. Il canale WCF li usa per calcolare il numero di tentativi di ricezione e il numero di cicli di ripetizione. Nel [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)], il numero delle interruzioni viene conservato in memoria dal canale WCF e viene azzerato se l'applicazione non riesce. Inoltre, il canale WCF può contenere che un numero interruzioni in memoria fino a 256 messaggi in qualsiasi momento. Se viene letto il 257 esimo messaggio, il messaggio più vecchio viene eliminato dal conteggio.  
   
  Le proprietà del numero di interruzioni e del numero di spostamenti sono a disposizione dell'operazione del servizio mediante il contesto dell'operazione. Nell'esempio di codice seguente viene spiegato come accedervi.  
   
  [!code-csharp[S_UE_MSMQ_Poison#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/service.cs#1)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce due associazioni in coda standard:  
+ WCF fornisce due associazioni in coda standard:  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. Associazione di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] idonea per l'esecuzione di comunicazioni basate sulla coda con altri endpoint [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   <xref:System.ServiceModel.NetMsmqBinding>. Oggetto [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] associazione adatta per l'esecuzione di comunicazioni basate sulla coda con altri endpoint WCF.  
   
 -   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Associazione idonea per la comunicazione con applicazioni di accodamento messaggi esistenti.  
   
 > [!NOTE]
->  È possibile modificare le proprietà di queste associazioni in base ai requisiti del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. L'intero meccanismo di gestione dei messaggi non elaborabili è locale nell'applicazione ricevente. A meno che l'applicazione ricevente non venga arrestata e non venga inviato un acknowledgment negativo al mittente, il processo è invisibile all'applicazione mittente. In questo caso il messaggio viene spostato nella coda dei messaggi non recapitabili del mittente.  
+>  È possibile modificare le proprietà di queste associazioni in base ai requisiti del servizio WCF. L'intero meccanismo di gestione dei messaggi non elaborabili è locale nell'applicazione ricevente. A meno che l'applicazione ricevente non venga arrestata e non venga inviato un acknowledgment negativo al mittente, il processo è invisibile all'applicazione mittente. In questo caso il messaggio viene spostato nella coda dei messaggi non recapitabili del mittente.  
   
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Procedura consigliata: gestione di MsmqPoisonMessageException  
  Quando il servizio stabilisce che un messaggio non è elaborabile, il trasporto in coda genera un'eccezione <xref:System.ServiceModel.MsmqPoisonMessageException> contenente il `LookupId` del messaggio non elaborabile.  
@@ -116,7 +102,7 @@ Oggetto *messaggio non elaborabile* è un messaggio che ha superato il numero ma
   
 -   Accodamento messaggi in [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta il riconoscimento negativo, diversamente da quanto avviene in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Un negative acknowledgment dal gestore delle code ricevente determina l'inserimento, da parte del gestore delle code mittente, del messaggio respinto nella coda dei messaggi non recapitabili. Per questa ragione, `ReceiveErrorHandling.Reject` non è consentito con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Accodamento messaggi in [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta una proprietà del messaggio che conta il numero di volte che viene tentato di recapitare il messaggio. Questa proprietà del numero di interruzioni non è disponibile in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Poiché in[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] il conteggio delle interruzioni viene conservato in memoria, è possibile che questa proprietà non contenga un valore accurato quando lo stesso messaggio viene letto da più di un servizio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in una farm.  
+-   Accodamento messaggi in [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta una proprietà del messaggio che conta il numero di volte che viene tentato di recapitare il messaggio. Questa proprietà del numero di interruzioni non è disponibile in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantiene il conteggio delle interruzioni in memoria, pertanto è possibile che questa proprietà non può contenere un valore accurato quando lo stesso messaggio viene letto da più di un servizio WCF in una farm.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

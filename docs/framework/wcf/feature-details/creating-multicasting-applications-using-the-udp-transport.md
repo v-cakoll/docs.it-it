@@ -1,24 +1,12 @@
 ---
 title: Creazione di applicazioni multicasting usando il trasporto UDP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 57c30c8b6b381be931789f3f64cbd26943bb2b34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84b36029416a66ef03768aed7d0c789a41eed8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Creazione di applicazioni multicasting usando il trasporto UDP
 Le applicazioni multicasting inviano piccoli messaggi a numerosi destinatari contemporaneamente senza la necessità di stabilire connessioni punto a punto. In queste applicazioni viene data più importanza alla velocità che all'affidabilità. In altre parole, è più importante inviare dati in modo tempestivo che garantire l'effettiva ricezione degli specifici messaggi. In WCF è ora previsto il supporto della scrittura di applicazioni multicasting con <xref:System.ServiceModel.UdpBinding>. Questo trasporto è utile negli scenari in cui un servizio deve spedire contemporaneamente piccoli messaggi a una serie di client. Un'applicazione di teleborsa è un esempio di servizio di questo tipo.  
@@ -102,7 +90,7 @@ while (true)
  Questo codice genera informazioni sulla borsa e utilizza il contratto di servizio IStockTicker per inviare messaggi multicast di chiamata ai servizi in attesa all'indirizzo UDP corretto.  
   
 ### <a name="udp-and-reliable-messaging"></a>UDP e messaggistica affidabile  
- L'associazione UDP non supporta la messaggistica affidabile a causa della semplicità del protocollo UDP. Se è necessario verificare che i messaggi vengano ricevuti da un endpoint remoto, utilizzare un trasporto che supporti la messaggistica affidabile, come HTTP o TCP. Per ulteriori informazioni sulla messaggistica affidabile, vedere http://go.microsoft.com/fwlink/?LinkId=231830  
+ L'associazione UDP non supporta la messaggistica affidabile a causa della semplicità del protocollo UDP. Se è necessario verificare che i messaggi vengano ricevuti da un endpoint remoto, utilizzare un trasporto che supporti la messaggistica affidabile, come HTTP o TCP. Per ulteriori informazioni vedere messaggistica affidabile http://go.microsoft.com/fwlink/?LinkId=231830  
   
 ### <a name="two-way-multicast-messaging"></a>Messaggistica multicast bidirezionale  
  Mentre i messaggi multicast sono generalmente unidirezionali, UdpBinding supporta lo scambio di messaggi request/reply. I messaggi inviati tramite il trasporto UDP contengono sia l'indirizzo del mittente sia quello del destinatario. È necessario prestare attenzione quando si utilizza l'indirizzo del mittente poiché potrebbe essere modificato in modo intenzionalmente dannoso durante il trasferimento.  L'indirizzo può essere controllato utilizzando il codice seguente:  

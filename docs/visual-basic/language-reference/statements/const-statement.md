@@ -1,25 +1,16 @@
 ---
 title: Istruzione Const (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="const-statement-visual-basic"></a>Istruzione Const (Visual Basic)
 Dichiara e definisce una o più costanti.  
@@ -33,13 +24,13 @@ Const constantlist
   
 ## <a name="parts"></a>Parti  
  `attributelist`  
- Parametro facoltativo. Elenco di attributi che si applicano a tutte le costanti dichiarate in questa istruzione. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi quadre ("`<`"e"`>`").  
+ Facoltativo. Elenco di attributi che si applicano a tutte le costanti dichiarate in questa istruzione. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi quadre ("`<`"e"`>`").  
   
  `accessmodifier`  
- Parametro facoltativo. Consente di specificare il codice può accedere a queste costanti. Può essere [pubblica](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, o [privata](../../../visual-basic/language-reference/modifiers/private.md).  
+ Facoltativo. Consente di specificare il codice può accedere a queste costanti. Può essere [pubblica](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, o [privata](../../../visual-basic/language-reference/modifiers/private.md).  
   
  `Shadows`  
- Parametro facoltativo. Consente di dichiarare nuovamente e nascondere un elemento di programmazione in una classe base. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ Facoltativo. Consente di dichiarare nuovamente e nascondere un elemento di programmazione in una classe base. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `constantlist`  
  Obbligatorio. Elenco di costanti che vengono dichiarate in questa istruzione.  
@@ -85,7 +76,7 @@ Const constantlist
   
 -   **Tipi diversi.** È possibile specificare i tipi di dati diversi per costanti diverse utilizzando un oggetto separato `As` clausola per ogni variabile è dichiarata. Tuttavia, non è possibile dichiarare più costanti dello stesso tipo utilizzando un comune `As` clausola.  
   
--   **Inizializzazione.** È necessario inizializzare il valore di ogni costante in `constantlist`. Utilizzare `initializer` per fornire un'espressione da assegnare alla costante. L'espressione può essere qualsiasi combinazione di valori letterali, sono già definite altre costanti e membri di enumerazione che sono già definiti. È possibile utilizzare gli operatori aritmetici e logici per combinare tali elementi.  
+-   **inizializzazione.** È necessario inizializzare il valore di ogni costante in `constantlist`. Utilizzare `initializer` per fornire un'espressione da assegnare alla costante. L'espressione può essere qualsiasi combinazione di valori letterali, sono già definite altre costanti e membri di enumerazione che sono già definiti. È possibile utilizzare gli operatori aritmetici e logici per combinare tali elementi.  
   
      Non è possibile utilizzare variabili o funzioni `initializer`. Tuttavia, è possibile utilizzare parole chiave di conversione, ad esempio `CByte` e `CShort`. È inoltre possibile utilizzare `AscW` se viene chiamata con una costante `String` o `Char` argomento, dal momento che può essere valutato in fase di compilazione.  
   

@@ -1,33 +1,19 @@
 ---
 title: Estensione di dispatcher
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4240a19401d97cd0636d13a94fd07ad4ef753388
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bc700aefc3b50102dc0a3faabbbcd09c1c8fc4bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-dispatchers"></a>Estensione di dispatcher
 I dispatcher sono responsabili del pull dei messaggi in arrivo dai canali sottostanti, della loro conversione in chiamate al metodo nel codice dell'applicazione e della restituzione dei risultati al chiamante. Le estensioni del dispatcher consentono di modificare questa elaborazione.  È possibile implementare controlli di parametri e messaggi che controllano o modificano il contenuto dei messaggi o dei parametri.  È possibile modificare la modalità in cui i messaggi vengono indirizzati alle operazioni o forniscono altre funzionalità.  
   
- In questo argomento viene illustrato come usare le classi <xref:System.ServiceModel.Dispatcher.DispatchRuntime> e <xref:System.ServiceModel.Dispatcher.DispatchOperation> in un'applicazione di servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per modificare il comportamento di esecuzione predefinito di un dispatcher o per intercettare o modificare messaggi, parametri o valori restituiti prima o dopo il loro invio o recupero dal livello del canale. Per ulteriori informazioni sull'elaborazione dei messaggi di runtime del client equivalenti, vedere [estensione client](../../../../docs/framework/wcf/extending/extending-clients.md). Per comprendere il ruolo che <xref:System.ServiceModel.IExtensibleObject%601> tipi riprodurre l'accesso a uno stato condiviso tra vari oggetti di personalizzazione di runtime, vedere [gli oggetti estensibili](../../../../docs/framework/wcf/extending/extensible-objects.md).  
+ In questo argomento viene descritto come utilizzare il <xref:System.ServiceModel.Dispatcher.DispatchRuntime> e <xref:System.ServiceModel.Dispatcher.DispatchOperation> classi in Windows Communication Foundation (WCF) del servizio dell'applicazione per modificare il comportamento di esecuzione predefinito di un dispatcher o per intercettare o modificare messaggi, parametri, restituire valori prima o dopo il loro invio o recupero dal livello del canale. Per ulteriori informazioni sull'elaborazione dei messaggi di runtime del client equivalenti, vedere [estensione client](../../../../docs/framework/wcf/extending/extending-clients.md). Per comprendere il ruolo che <xref:System.ServiceModel.IExtensibleObject%601> tipi riprodurre l'accesso a uno stato condiviso tra vari oggetti di personalizzazione di runtime, vedere [gli oggetti estensibili](../../../../docs/framework/wcf/extending/extensible-objects.md).  
   
 ## <a name="dispatchers"></a>Dispatcher  
  Il livello del modello di servizi esegue la conversione tra il modello di programmazione dello sviluppatore e lo scambio di messaggi sottostante, comunemente denominato livello del canale. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], i dispatcher di canale ed endpoint (rispettivamente <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> e <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>) sono i componenti del servizio responsabili dell'accettazione di nuovi canali, della ricezione di messaggi, della chiamata e dell'invio di operazioni e dell'elaborazione delle risposte. Gli oggetti dispatcher sono oggetti destinatario, ma anche le implementazioni del contratto di callback nei servizi duplex espongono oggetti dispatcher per ispezione, modifica o estensione.  
@@ -38,7 +24,7 @@ I dispatcher sono responsabili del pull dei messaggi in arrivo dai canali sottos
   
  Nel grafico seguente viene fornita una panoramica dettagliata degli elementi architettonici di un servizio.  
   
- ![L'architettura del runtime di invio](../../../../docs/framework/wcf/extending/media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")  
+ ![L'architettura del runtime di spedizione](../../../../docs/framework/wcf/extending/media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")  
   
 ### <a name="channel-dispatchers"></a>Dispatcher del canale  
  Viene creato un oggetto <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> per associare una classe <xref:System.ServiceModel.Channels.IChannelListener> in un particolare URI (denominato URI di ascolto) a un'istanza di un servizio. Ogni oggetto <xref:System.ServiceModel.ServiceHost> può avere numerosi oggetti <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>, ognuno associato a un solo listener e URI di ascolto. All'arrivo di un messaggio <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> esegue una query su ognuno degli oggetti <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> associati per scoprire se l'endpoint può accettare il messaggio, quindi passa il messaggio all'endpoint che ne ha la possibilità.  

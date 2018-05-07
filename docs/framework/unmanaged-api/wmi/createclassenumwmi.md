@@ -2,10 +2,6 @@
 title: Funzione CreateClassEnumWmi (riferimenti alle API non gestite)
 description: La funzione CreateClassEnumWmi restituisce un enumeratore per tutte le classi che soddisfano criteri specificati.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CreateClassEnumWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2058bad61af79244d211afb6a7661ca1642db070
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f84902586a2b940d52eb6365a141af61af802dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi (funzione)
 Restituisce un enumeratore per tutte le classi che soddisfano i criteri di selezione specificati.  
@@ -79,7 +72,7 @@ I flag consigliati sono `WBEM_FLAG_RETURN_IMMEDIATELY` e `WBEM_FLAG_FORWARD_ONLY
 `authLevel`  
 [in] Il livello di autorizzazione.
 
-`impLevel`[in] Il livello di rappresentazione.
+`impLevel` [in] Il livello di rappresentazione.
 
 `pCurrentNamespace`   
 [in] Un puntatore a un [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) oggetto che rappresenta lo spazio dei nomi corrente.
@@ -119,7 +112,7 @@ Se la chiamata di funzione non riesce, è possibile ottenere informazioni aggiun
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
 [WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
