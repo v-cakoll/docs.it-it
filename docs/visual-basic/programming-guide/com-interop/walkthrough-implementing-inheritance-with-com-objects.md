@@ -1,27 +1,17 @@
 ---
 title: "Procedura dettagliata: implementazione dell'ereditarietà con gli oggetti COM (Visual Basic)"
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], COM reusability
 - base classes [Visual Basic], COM reusability
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b03b81c9e04e79f8ce7763ecf8a489d248ff480b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: a1c1b7c247d3277c6614a4774395650c4c069c2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Procedura dettagliata: implementazione dell'ereditarietà con gli oggetti COM (Visual Basic)
 È possibile derivare classi Visual Basic da `Public` classi di oggetti COM, anche quelli creati in versioni precedenti di Visual Basic. Le proprietà e metodi delle classi ereditate da oggetti COM possono essere sottoposto a override o sottoposti a overload solo come proprietà e metodi di qualsiasi altra classe di base possono essere sottoposto a override o di overload. Ereditarietà dagli oggetti COM è utile quando si dispone di una libreria di classe esistente che non si desidera ricompilare.  
@@ -85,7 +75,7 @@ ms.lasthandoff: 04/27/2018
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Per utilizzare un oggetto COM con Visual Basic 2005 e versioni successive  
   
-1.  Aprire un nuovo progetto applicazione Windows Visual Basic.  
+1.  Aprire un nuovo progetto Applicazione Windows in Visual Basic.  
   
 2.  Scegliere **Aggiungi riferimento** dal menu **Progetto**.  
   

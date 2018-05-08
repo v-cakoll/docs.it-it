@@ -1,22 +1,12 @@
 ---
 title: Varianza nei delegati (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9fe76a32f76f760497021289ec1c6ce673cec1b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d857f120be0fe810489ba69edb55af9cc0dd6940
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variance-in-delegates-visual-basic"></a>Varianza nei delegati (Visual Basic)
 .NET framework 3.5 è stato introdotto il supporto della varianza per la corrispondenza delle firme del metodo con i tipi delegati in tutti i delegati in c# e Visual Basic. Ciò significa che è possibile assegnare ai delegati non solo i metodi con firme corrispondenti, ma anche i metodi che restituiscono più tipi derivati (covarianza) o accettano parametri con meno tipi derivati (controvarianza) rispetto a quelli specificati dal tipo di delegato. Sono inclusi sia i delegati generici che quelli non generici.  
@@ -157,7 +147,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```  
   
 > [!IMPORTANT]
->  `ByRef`i parametri in Visual Basic non possono essere contrassegnati come variante.  
+>  `ByRef` i parametri in Visual Basic non possono essere contrassegnati come variante.  
   
  È anche possibile supportare sia la varianza che la covarianza nello stesso delegato, ma per parametri di tipo diverso. come illustrato nell'esempio riportato di seguito.  
   

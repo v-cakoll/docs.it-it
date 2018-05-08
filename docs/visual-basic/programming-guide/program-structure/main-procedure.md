@@ -1,13 +1,6 @@
 ---
 title: Routine Main in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Main
 helpviewer_keywords:
@@ -15,19 +8,16 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6de98ad4e470cd0becaf25f5a9a00c8095e44b15
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 109bf94eb91292cfca700a9e456c8ab53e83d68f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="main-procedure-in-visual-basic"></a>Routine Main in Visual Basic
 Ogni applicazione di Visual Basic deve contenere una routine denominata `Main`. Questa procedura viene utilizzata come punto di partenza e controllo generale per l'applicazione. Le chiamate di .NET Framework la `Main` procedura quando è stata caricata l'applicazione ed è pronta per passare il controllo a esso. A meno che non si sta creando un'applicazione Windows Forms, è necessario scrivere il `Main` procedure per le applicazioni eseguite nel proprio.  
   
- `Main`contiene il codice che viene eseguito per primo. In `Main`, è possibile determinare il form da caricare per primo all'avvio del programma, scoprire se una copia dell'applicazione è già in esecuzione nel sistema, stabilire un set di variabili per l'applicazione o aprire un database che richiede l'applicazione.  
+ `Main` contiene il codice che viene eseguito per primo. In `Main`, è possibile determinare il form da caricare per primo all'avvio del programma, scoprire se una copia dell'applicazione è già in esecuzione nel sistema, stabilire un set di variabili per l'applicazione o aprire un database che richiede l'applicazione.  
   
 ## <a name="requirements-for-the-main-procedure"></a>Requisiti per la procedura principale  
  Un file che viene eseguito nel proprio (in genere con estensione .exe) deve contenere un `Main` stored procedure. Una libreria (ad esempio con estensione dll) non viene eseguito nel propria e non richiede un `Main` stored procedure. Come indicato di seguito sono riportati i requisiti per i diversi tipi di progetti che è possibile creare:  
@@ -56,7 +46,7 @@ Ogni applicazione di Visual Basic deve contenere una routine denominata `Main`. 
     End Module  
     ```  
   
--   `Main`può inoltre restituire un `Integer` valore, il sistema operativo utilizza il codice di uscita per il programma. Altri programmi è possano testare questo codice esaminando il valore di ERRORLEVEL di Windows. Per restituire un codice di uscita, è necessario dichiarare `Main` come un `Function` procedure anziché un `Sub` stored procedure.  
+-   `Main` può inoltre restituire un `Integer` valore che verrà utilizzato il sistema operativo come codice di uscita del programma. Altri programmi è possano testare questo codice esaminando il valore di ERRORLEVEL di Windows. Per restituire un codice di uscita, è necessario dichiarare `Main` come un `Function` procedure anziché un `Sub` stored procedure.  
   
     ```  
     Module mainModule  
@@ -73,7 +63,7 @@ Ogni applicazione di Visual Basic deve contenere una routine denominata `Main`. 
     End Module  
     ```  
   
--   `Main`può anche richiedere un `String` matrice come argomento. Ogni stringa della matrice contiene uno degli argomenti della riga di comando utilizzati per richiamare il programma. È possibile eseguire azioni diverse a seconda di valori.  
+-   `Main` può inoltre assumere un `String` matrice come argomento. Ogni stringa della matrice contiene uno degli argomenti della riga di comando utilizzati per richiamare il programma. È possibile eseguire azioni diverse a seconda di valori.  
   
     ```  
     Module mainModule  

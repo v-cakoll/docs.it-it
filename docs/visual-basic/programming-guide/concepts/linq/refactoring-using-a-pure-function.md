@@ -1,22 +1,12 @@
 ---
 title: Refactoring tramite una funzione pura (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7a8114dcfde7adbbdb1016bae4f2916dc28b6854
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe1ad3b189891a1655e014dc49dac00c79507a7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Refactoring tramite una funzione pura (Visual Basic)
 Nell'esempio seguente effettua il refactoring nell'esempio precedente, [Refactoring tramite un metodo di estensione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)per l'uso di una funzione pura In questo esempio, il codice per trovare il testo di un paragrafo viene spostato il metodo statico puro `ParagraphText`.  

@@ -1,22 +1,12 @@
 ---
 title: Forma dei documenti WordprocessingML (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5809e8148e7ac426b876ad11948878ee0bfcd016
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 40d1013d5b5c131cc0b83c1b62bff2555ab179a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Forma dei documenti WordprocessingML (Visual Basic)
 In questo argomento viene descritta la forma XML di un documento WordprocessingML.  
@@ -24,7 +14,7 @@ In questo argomento viene descritta la forma XML di un documento WordprocessingM
 ## <a name="microsoft-office-formats"></a>Formati di Microsoft Office  
  Il formato di file nativo per Microsoft Office System 2007 è Office Open XML (più comunemente, Open XML). Open XML è un formato basato su XML conforme allo standard ECMA e attualmente in approvazione per gli standard ISO-IEC. Il linguaggio di markup per i file di elaborazione testi all'interno di Open XML è denominato WordprocessingML. In questa esercitazione vengono usati file di origine WordprocessingML come di input per gli esempi.  
   
- Se si utilizza Microsoft Office 2003, è possibile salvare i documenti nel formato Office Open XML se è stato installato Microsoft Office Compatibility Pack per Word, Excel e formati di File di PowerPoint 2007.  
+ Se si usa Microsoft Office 2003, è possibile salvare i documenti nel formato Office Open XML se è stato installato Microsoft Office Compatibility Pack per formati di file di Word, Excel e PowerPoint 2007.  
   
 ## <a name="the-shape-of-wordprocessingml-documents"></a>Forma dei documenti WordprocessingML  
  Il primo aspetto da considerare è la forma dei documenti WordprocessingML. Un documento WordprocessingML contiene un elemento corpo, denominato `w:body`, che contiene i paragrafi del documento. Ogni paragrafo contiene una o più sequenze di testo, denominate `w:r`. Ogni sequenza di testo contiene uno o più parti di testo, denominate `w:t`.  
