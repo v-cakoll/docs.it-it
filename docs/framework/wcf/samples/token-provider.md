@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 97602a261f1e86cb70b38f21080c2a2e792605e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d513ddd41d87da7274f961969d261724b49aab65
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-provider"></a>Provider di token
-Questo esempio dimostra come implementare un provider di token personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene usato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene fornito con il provider di token di Gestione credenziali predefinito. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene anche fornito con un provider di token [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. I provider di token personalizzati sono utili nei casi seguenti:  
+Questo esempio dimostra come implementare un provider di token personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene usato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con il Provider di Token Gestione credenziali predefinito. WCF viene anche fornito con un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provider di token. I provider di token personalizzati sono utili nei casi seguenti:  
   
 -   Se è disponibile un archivio di credenziali con cui questi provider di token non sono in grado di operare.  
   
--   Se si vuole fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto in cui l'utente fornisce i dettagli a quello in cui il framework client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa le credenziali.  
+-   Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il framework di client WCF utilizza le credenziali.  
   
 -   Se si sta compilando un token personalizzato.  
   
@@ -108,7 +108,7 @@ Questo esempio dimostra come implementare un provider di token personalizzato. U
 </system.serviceModel>  
 ```  
   
- I passaggi seguenti illustrano come sviluppare un provider di token personalizzato e integrarlo nel framework di sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ La procedura seguente illustra come sviluppare un provider di token personalizzato e integrarlo nel framework di sicurezza WCF:  
   
 1.  Scrivere un provider di token personalizzati.  
   

@@ -2,17 +2,17 @@
 title: Modello di configurazione gerarchica
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: 4debeaf0bfd2558552a7943f3767a4f9b53ce550
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 233a8d4ba36835ab26e0c4a8cd044cf60d497a0b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hierarchical-configuration-model"></a>Modello di configurazione gerarchica
 In questo esempio viene descritto come implementare una gerarchia di file di configurazione per i servizi. Viene inoltre descritto come associazioni, comportamenti del servizio e comportamenti dell'endpoint vengono ereditati dai livelli superiori nella gerarchia.  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
- Una delle funzionalità sviluppate per [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] è il miglioramento nel modello di configurazione gerarchico. Un esempio di un modello di configurazione gerarchico può essere quello definito da Machine.config -> Rootweb.config -> Web.config. In [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], le associazioni e i comportamenti definiti nei livelli superiori della gerarchia di configurazione vengono aggiunti ai servizi senza configurazione esplicita. In questo esempio viene illustrato come è possibile semplificare la configurazione del servizio basandosi sugli elementi di configurazione definiti a livello di applicazione o computer.  
+ Una delle funzionalità sviluppate per WCF in [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] è il miglioramento nel modello di configurazione gerarchico. Un esempio di un modello di configurazione gerarchico può essere quello definito da Machine.config -> Rootweb.config -> Web.config. In [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], le associazioni e i comportamenti definiti nei livelli superiori della gerarchia di configurazione vengono aggiunti ai servizi senza configurazione esplicita. In questo esempio viene illustrato come è possibile semplificare la configurazione del servizio basandosi sugli elementi di configurazione definiti a livello di applicazione o computer.  
   
  Questo esempio è costituito da nove servizi, definiti in tre livelli di gerarchia. `Service1` è alla radice. `Service2` e `Service3` ereditano gli elementi predefiniti da `Service1`. `Service4`, `Service5`, `Service6` e `Service7` sono definiti a un terzo livello della gerarchia, ereditando gli elementi predefiniti da `Service3`. Infine, `Service10` e `Service11` sono a un quarto livello della gerarchia.  
   

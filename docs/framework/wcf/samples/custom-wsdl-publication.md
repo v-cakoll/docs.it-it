@@ -2,11 +2,11 @@
 title: Pubblicazione WSDL personalizzata
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b75aa2269d9c21a6f6d7f579d3c0b6f547a92332
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-wsdl-publication"></a>Pubblicazione WSDL personalizzata
 Nell'esempio viene illustrato come eseguire le seguenti operazioni:  
@@ -230,7 +230,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- Quando l'unità di importazione personalizzata è stata specificata, il sistema dei metadati [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] la carica in qualsiasi elemento <xref:System.ServiceModel.Description.WsdlImporter> creato per tale scopo. In questo esempio viene utilizzato <xref:System.ServiceModel.Description.MetadataExchangeClient> per scaricare i metadati, l'elemento <xref:System.ServiceModel.Description.WsdlImporter> configurato correttamente per importare i metadati utilizzando l'unità di importazione personalizzata creata dall'esempio e <xref:System.ServiceModel.Description.ServiceContractGenerator> per compilare le informazioni del contratto modificate nel codice client Visual Basic e C# che possono essere utilizzate in Visual Studio per supportare Intellisense o possono essere compilate nella documentazione XML.  
+ Dopo che l'unità di importazione personalizzata è stata specificata, il sistema di metadati WCF carica l'utilità di importazione personalizzata in qualsiasi <xref:System.ServiceModel.Description.WsdlImporter> creato a tale scopo. In questo esempio viene utilizzato <xref:System.ServiceModel.Description.MetadataExchangeClient> per scaricare i metadati, l'elemento <xref:System.ServiceModel.Description.WsdlImporter> configurato correttamente per importare i metadati utilizzando l'unità di importazione personalizzata creata dall'esempio e <xref:System.ServiceModel.Description.ServiceContractGenerator> per compilare le informazioni del contratto modificate nel codice client Visual Basic e C# che possono essere utilizzate in Visual Studio per supportare Intellisense o possono essere compilate nella documentazione XML.  
   
 ```  
 /// From WSDL Documentation:  

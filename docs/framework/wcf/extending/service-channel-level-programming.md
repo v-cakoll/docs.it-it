@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-channel-level-programming"></a>Programmazione client a livello di canale
 In questo argomento viene descritto come scrivere un'applicazione di servizio Windows Communication Foundation (WCF) senza utilizzare il <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> e il relativo modello a oggetti associato.  
@@ -28,7 +28,7 @@ In questo argomento viene descritto come scrivere un'applicazione di servizio Wi
 5.  Chiudere tutti gli oggetti canale.  
   
 #### <a name="creating-a-binding"></a>Creazione di un'associazione  
- Il primo passaggio dell'attesa e della ricezione di messaggi consiste nel creare un'associazione. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono disponibili molte associazioni predefinite o fornite dal sistema che è possibile utilizzare direttamente creando un'istanza. È inoltre possibile creare un'associazione personalizzata creando un'istanza della classe CustomBinding, operazione che viene eseguita nel codice dell'elenco 1.  
+ Il primo passaggio dell'attesa e della ricezione di messaggi consiste nel creare un'associazione. WCF sono disponibili varie associazioni predefinite o fornite dal sistema che possono essere utilizzate direttamente creando uno di essi. È inoltre possibile creare un'associazione personalizzata creando un'istanza della classe CustomBinding, operazione che viene eseguita nel codice dell'elenco 1.  
   
  Nell'esempio di codice seguente viene creata un'istanza di <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> e viene aggiunto un elemento <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> alla raccolta Elements, una raccolta di elementi di associazione utilizzati per generare lo stack di canali. Nell'esempio, poiché la raccolta degli elementi presenta solo <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, lo stack di canali risultante dispone solo del canale di trasporto HTTP.  
   

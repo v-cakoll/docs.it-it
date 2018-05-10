@@ -2,11 +2,11 @@
 title: Utilizzo dei contatori delle prestazioni
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2e25551494a433c53832127fdb0a32cb4eccac47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8784b4a481b8313d370aad1d8f265dcb44ab3ed6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-performance-counters"></a>Utilizzo dei contatori delle prestazioni
 Questo esempio viene illustrato come accedere ai contatori delle prestazioni di Windows Communication Foundation (WCF) e su come creare contatori delle prestazioni definiti dall'utente. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -28,7 +28,7 @@ Questo esempio viene illustrato come accedere ai contatori delle prestazioni di 
   
  Questa attività può essere eseguita anche utilizzando la [strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Quando i contatori delle prestazioni vengono abilitati, l'intera suite di contatori delle prestazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene abilitata per il servizio. .NET Framework gestisce automaticamente i dati relativi alle prestazioni a tre livelli: `ServiceModelService`, `ServiceModelEndpoint` e `ServiceModelOperation`. Per ognuno di questi livelli sono presenti dei contatori delle prestazioni, ad esempio "Chiamate", "Chiamate al secondo" e "Chiamate di sicurezza non autorizzate".  
+ Quando sono abilitati i contatori delle prestazioni, l'intera suite di contatori delle prestazioni WCF è abilitata per il servizio. .NET Framework gestisce automaticamente i dati relativi alle prestazioni a tre livelli: `ServiceModelService`, `ServiceModelEndpoint` e `ServiceModelOperation`. Per ognuno di questi livelli sono presenti dei contatori delle prestazioni, ad esempio "Chiamate", "Chiamate al secondo" e "Chiamate di sicurezza non autorizzate".  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
@@ -47,10 +47,10 @@ Questo esempio viene illustrato come accedere ai contatori delle prestazioni di 
   
 2.  Rimuovere i contatori delle prestazioni elencati selezionandoli e premendo CANC.  
   
-3.  Aggiungi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contatori il pulsante destro del riquadro del grafico e selezionando **Aggiungi contatori**. Nel **Aggiungi contatori** nella finestra di dialogo **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 o ServiceModelService 3.0.0.0** nell'oggetto prestazione casella a discesa. Selezionare i contatori che si desidera visualizzare nell'elenco.  
+3.  Aggiungere contatori WCF il pulsante destro del riquadro del grafico e scegliendo **Aggiungi contatori**. Nel **Aggiungi contatori** nella finestra di dialogo **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 o ServiceModelService 3.0.0.0** nell'oggetto prestazione casella a discesa. Selezionare i contatori che si desidera visualizzare nell'elenco.  
   
     > [!NOTE]
-    >  Se nel computer non è in esecuzione alcun servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], non sono disponibili contatori delle prestazioni di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+    >  Non sono presenti contatori di prestazioni WCF per un servizio se non sono servizi WCF in esecuzione nel computer.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Per utilizzare l'editor di configurazione per abilitare i contatori  
   

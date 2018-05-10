@@ -2,22 +2,22 @@
 title: Provider di token SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 56c432b0874f59fed87c0d892732422161d668ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="saml-token-provider"></a>Provider di token SAML
-Questo esempio dimostra come implementare un provider di token SAML client personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene usato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene fornito con il provider di token di Gestione credenziali predefinito. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene anche fornito con un provider di token [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. I provider di token personalizzati sono utili nei casi seguenti:  
+Questo esempio dimostra come implementare un provider di token SAML client personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene usato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con il Provider di Token Gestione credenziali predefinito. WCF viene anche fornito con un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provider di token. I provider di token personalizzati sono utili nei casi seguenti:  
   
 -   Se è disponibile un archivio di credenziali con cui questi provider di token non sono in grado di operare.  
   
--   Se si vuole fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto in cui l'utente fornisce i dettagli a quello in cui il framework client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa le credenziali.  
+-   Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il framework di client WCF utilizza le credenziali.  
   
 -   Se si sta compilando un token personalizzato.  
   
- Questo esempio mostra come compilare un provider di token personalizzato che consente di usare un token SAML ottenuto dall'esterno del framework client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ In questo esempio viene illustrato come compilare un provider di token personalizzato che consente a un token SAML ottenuto di fuori framework client WCF da usare.  
   
  Per riassumere, questo esempio dimostra quanto segue.  
   
@@ -25,7 +25,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
   
 -   Come è possibile passare un token SAML alle credenziali client personalizzate.  
   
--   Come viene fornito il token SAML al framework client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   Modo in cui viene fornito il token SAML al framework client WCF.  
   
 -   Come viene autenticato il servizio dal client mediante il certificato X.509 del server.  
   
@@ -110,7 +110,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
 </system.serviceModel>  
 ```  
   
- I passaggi seguenti illustrano come sviluppare un provider di token SAML personalizzato e integrarlo nel framework di sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ I passaggi seguenti mostrano come sviluppare un provider di token SAML personalizzato e integrarlo con WCF: framework di sicurezza:  
   
 1.  Scrivere un provider di token SAML personalizzato.  
   

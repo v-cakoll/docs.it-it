@@ -2,11 +2,11 @@
 title: Controllo delle versioni dei servizi
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: efff9778f1cbe2ee5d97912ada0193c4e8ba137c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75a19c62f52c1d9468976f7ebea72245d1d341eb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-versioning"></a>Controllo delle versioni dei servizi
 Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro ciclo di vita, potrebbe essere necessario cambiare i servizi (e gli endpoint che espongono) per molteplici ragioni, ad esempio perché cambiano le esigenze aziendali, i requisiti IT o per risolvere altri problemi. Ogni modifica introduce una nuova versione del servizio. In questo argomento viene illustrato come controllare la versione di Windows Communication Foundation (WCF).  
@@ -34,7 +34,7 @@ Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro cic
   
  Per i contratti di servizio, compatibilità significa che è possibile aggiungere nuove operazioni esposte dal servizio, ma non rimuovere o modificare semanticamente le operazioni esistenti.  
   
- Per i contratti dati, compatibilità significa che è possibile aggiungere nuove definizioni del tipo di schema, ma non modificare quelle esistenti in modo tale da causare interruzioni. Le modifiche che possono determinare interruzioni potrebbero includere la rimozione di membri dati o la modifica del loro tipo di dati in modo incompatibile. Questa funzionalità consente al servizio una certa libertà di modifica della versione dei propri contratti senza interrompere i client. Nelle prossime due sezioni vengono illustrate le modifiche che non determinano interruzioni e quelle che determinano interruzioni, che è possibile apportare a contratti di servizio e a contratti dati di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Per i contratti dati, compatibilità significa che è possibile aggiungere nuove definizioni del tipo di schema, ma non modificare quelle esistenti in modo tale da causare interruzioni. Le modifiche che possono determinare interruzioni potrebbero includere la rimozione di membri dati o la modifica del loro tipo di dati in modo incompatibile. Questa funzionalità consente al servizio una certa libertà di modifica della versione dei propri contratti senza interrompere i client. Le prossime due sezioni illustrano non determina interruzioni e ultime modifiche che possono essere apportate ai dati WCF e i contratti di servizio.  
   
 ## <a name="data-contract-versioning"></a>Controllo delle versioni dei contratti dati  
  Contenuto della sezione viene illustrato il controllo delle versioni dei dati quando si utilizzano le classi <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.DataContractAttribute>.  
@@ -53,7 +53,7 @@ Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro cic
 ### <a name="lax-versioning"></a>Controllo delle versioni Lax  
  In molti altri scenari, lo sviluppatore del servizio può presumere che l'aggiunta di un nuovo membro facoltativo al contratto dati non causerà l'interruzione dei client esistenti. A tale fine, deve controllare se i client esistenti non stanno eseguendo la convalida dello schema e ignorano i membri dati sconosciuti. In questi scenari, è possibile sfruttare le funzionalità del contratto dati per aggiungere nuovi membri in modo da non causare interruzioni. Lo sviluppatore del servizio può fare tranquillamente questa ipotesi se le funzionalità del contratto dati per il controllo delle versioni sono già state utilizzate per la prima versione del servizio.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], Servizi Web ASP.NET e numerosi altri Web servizio Stack supportano *controllo delle versioni lax*: vale a dire, ovvero non generano eccezioni per i nuovi membri dati sconosciuti nei dati ricevuti.  
+ WCF, servizi Web ASP.NET e molti altri servizi Web stack supportano *controllo delle versioni lax*: vale a dire, ovvero non generano eccezioni per i nuovi membri dati sconosciuti nei dati ricevuti.  
   
  Accade di credere erroneamente che l'aggiunta di un nuovo membro non interromperà i client esistenti. Se non si è certi che tutti i client possano gestire il controllo delle versioni lax, è consigliabile utilizzare le indicazioni sul controllo delle versioni strict e trattare i contratti dati come immutabili.  
   
@@ -92,7 +92,7 @@ Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro cic
 ## <a name="message-contract-versioning"></a>Controllo delle versioni dei contratti di messaggio  
  Le linee guida per il controllo delle versioni dei contratti di messaggio sono molto simili al controllo delle versioni dei contratti dati. Se è richiesto il controllo rigoroso delle versioni, non modificare il corpo del messaggio, ma creare un nuovo contratto di messaggio con un nome completo univoco. Se si sa che è possibile utilizzare il controllo lax delle versioni, è possibile aggiungere nuove parti al corpo del messaggio ma non modificare o rimuove quelle esistenti. Questo materiale sussidiario si applica sia ai contratti di messaggio bare che a quelli wrapped.  
   
- È sempre possibile aggiungere intestazioni messaggio, anche se è utilizzato il controllo strict delle versioni. Il flag MustUnderstand può influire sul controllo delle versioni. In genere, il modello di controllo delle versioni per le intestazioni in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è quello descritto nella specifica SOAP.  
+ È sempre possibile aggiungere intestazioni messaggio, anche se è utilizzato il controllo strict delle versioni. Il flag MustUnderstand può influire sul controllo delle versioni. In generale, il modello di controllo delle versioni per le intestazioni in WCF è come descritto nella specifica SOAP.  
   
 ## <a name="service-contract-versioning"></a>Controllo delle versioni dei contratti di servizio  
  Anche il controllo delle versioni dei contratti di servizio implica operazioni di aggiunta, modifica e rimozione, in modo analogo a quello dei contratti dati.  
@@ -118,7 +118,7 @@ Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro cic
  L'elenco degli errori descritti nel contratto di un servizio non è considerato completo. In qualsiasi momento, un'operazione può restituire errori che non sono descritti nel suo contratto. La modifica de set di errori descritti nel contratto non è pertanto considerata una modifica che determina interruzioni. Questo è il caso, ad esempio, dell'aggiunta di un nuovo errore al contratto utilizzando <xref:System.ServiceModel.FaultContractAttribute> o della rimozione di un errore esistente dal contratto.  
   
 ### <a name="service-contract-libraries"></a>Librerie di contratti di servizio  
- Le organizzazioni possono avere librerie di contratti in cui un contratto viene pubblicato in un repository centrale e il servizio implementa i contratti da quel repository. In questo caso, quando si pubblica un contratto di servizio nel repository, non si ha alcun controllo su chi crea i servizi che l'implementano. Non è pertanto possibile modificare il contratto di servizio dopo che è stato pubblicato, rendendolo di fatto immutabile. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] supporta l'ereditarietà dei contratti, che può essere utilizzata per creare un nuovo contratto che estende i contratti esistenti. Per utilizzare questa funzionalità, definire una nuova interfaccia del contratto di servizio che eredita dalla vecchia interfaccia del contratto di servizio, quindi aggiungere metodi alla nuova interfaccia. Modificare quindi il servizio che implementa il vecchio contratto per implementare quello nuovo e modificare la definizione dell'endpoint "versionOld" per utilizzare il nuovo contratto. Ai client "versionOld", l'endpoint continuerà a sembrare come se esponesse il contratto "versionOld"; ai client "versionNew", l'endpoint sembrerà esporre il contratto "versionNew".  
+ Le organizzazioni possono avere librerie di contratti in cui un contratto viene pubblicato in un repository centrale e il servizio implementa i contratti da quel repository. In questo caso, quando si pubblica un contratto di servizio nel repository, non si ha alcun controllo su chi crea i servizi che l'implementano. Non è pertanto possibile modificare il contratto di servizio dopo che è stato pubblicato, rendendolo di fatto immutabile. WCF supporta l'ereditarietà del contratto, che può essere usato per creare un nuovo contratto che estende i contratti esistenti. Per utilizzare questa funzionalità, definire una nuova interfaccia del contratto di servizio che eredita dalla vecchia interfaccia del contratto di servizio, quindi aggiungere metodi alla nuova interfaccia. Modificare quindi il servizio che implementa il vecchio contratto per implementare quello nuovo e modificare la definizione dell'endpoint "versionOld" per utilizzare il nuovo contratto. Ai client "versionOld", l'endpoint continuerà a sembrare come se esponesse il contratto "versionOld"; ai client "versionNew", l'endpoint sembrerà esporre il contratto "versionNew".  
   
 ## <a name="address-and-binding-versioning"></a>Controllo delle versioni di associazioni e indirizzi  
  Le modifiche all'indirizzo endpoint e all'associazione sono modifiche che possono determinare interruzioni a meno che i client non siano in grado di scoprire dinamicamente il nuovo indirizzo endpoint o la nuova associazione. Per implementare questa funzionalità è possibile utilizzare un Registro di sistema UDDI (Universal Discovery Description and Integration) e il modello di chiamata UDDI in cui un client tenta di comunicare con un endpoint e, in caso di errore, esegue una query nel registro di sistema UDDI noto, per cercare i metadati dell'endpoint corrente. Il client utilizza quindi l'indirizzo e l'associazione da questi metadati per comunicare con l'endpoint. Se la comunicazione riesce, il client memorizza nella cache le informazioni sull'indirizzo e sull'associazione per utilizzarle in seguito.  

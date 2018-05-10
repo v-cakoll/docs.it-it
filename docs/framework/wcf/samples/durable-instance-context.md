@@ -2,11 +2,11 @@
 title: Contesto dell'istanza durevole
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 75516bfa0cf5ac7bfb27eb5ee2c51d04c30bc9a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb331fc0e5f384f0ffb268c1c6f7a5ffc99478ec
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-instance-context"></a>Contesto dell'istanza durevole
 In questo esempio viene illustrato come personalizzare il runtime di Windows Communication Foundation (WCF) per abilitare contesti dell'istanza durevoli. SQL Server 2005 viene utilizzato come archivio di backup (in questo caso SQL Server 2005 Express). Tuttavia, viene fornito anche un modo di accedere ai meccanismi di archiviazione personalizzati.  
@@ -14,7 +14,7 @@ In questo esempio viene illustrato come personalizzare il runtime di Windows Com
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- Questo esempio riguarda l'estensione del livello del canale e del livello del modello di servizio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. È pertanto necessario comprendere i concetti sottostanti prima di entrare nei dettagli dell'implementazione.  
+ In questo esempio riguarda l'estensione sia il livello del canale e il livello del modello di servizio di WCF. È pertanto necessario comprendere i concetti sottostanti prima di entrare nei dettagli dell'implementazione.  
   
  I contesti dell'istanza durevoli si trovano spesso in situazioni del mondo reale. Ad esempio, un'applicazione di carrello degli acquisti ha la possibilità di sospendere gli acquisti a metà strada e continuarli un altro giorno. Quando si visita il carrello degli acquisti il giorno successivo, il contesto originale viene ripristinato. È importante notare che l'applicazione di carrello degli acquisti (sul server) non mantiene l'istanza del carrello degli acquisti mentre si è disconnessi. Invece, lo stato viene salvato in un archivio durevole e viene utilizzato per generare una nuova istanza del contesto ripristinato. Pertanto l'istanza del servizio che può essere utile allo stesso contesto non corrisponde all'istanza precedente (ovvero, non ha lo stesso indirizzo di memoria).  
   
@@ -119,7 +119,7 @@ if (isFirstMessage)
 }  
 ```  
   
- Queste implementazioni del canale vengono quindi aggiunte appropriatamente al runtime del canale di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dalle classi `DurableInstanceContextBindingElement` e `DurableInstanceContextBindingElementSection`. Vedere il [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) documentazione di esempio per ulteriori informazioni su elementi di associazione e sezioni di elemento di associazione del canale.  
+ Queste implementazioni del canale vengono quindi aggiunti al runtime di canale WCF per il `DurableInstanceContextBindingElement` classe e `DurableInstanceContextBindingElementSection` classe in modo appropriato. Vedere il [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) documentazione di esempio per ulteriori informazioni su elementi di associazione e sezioni di elemento di associazione del canale.  
   
 ## <a name="service-model-layer-extensions"></a>Estensioni del livello del modello di servizio  
  Ora che l'ID del contesto è stato trasferito utilizzando il livello del canale, il comportamento del servizio può essere implementato per personalizzare la creazione di istanze. In questo esempio, viene utilizzata una gestione archivi per caricare e salvare lo stato a o da l'archivio permanente. Come spiegato in precedenza, questo esempio fornisce una gestione archivi che utilizza SQL Server 2005 come archivio di backup. È tuttavia possibile aggiungere meccanismi di archiviazione personalizzati a questa estensione. Per fare ciò, viene dichiarata un'interfaccia pubblica che deve essere implementata da tutte le gestioni archivi.  
@@ -228,9 +228,9 @@ else
   
  L'infrastruttura necessaria per leggere e scrivere istanze dall'archiviazione permanente è implementata. È ora necessario eseguire i passaggi necessari per modificare il comportamento del servizio.  
   
- Come primo passaggio di questo processo è necessario salvare l'ID del contesto che è stato trasferito sul InstanceContext attuale utilizzando il livello del canale. InstanceContext è un componente di runtime che fa da collegamento tra il dispatcher [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e l'istanza del servizio. Può essere utilizzato per fornire stati e comportamenti aggiuntivi all'istanza del servizio. È essenziale, perché nella comunicazione con sessione l'ID del contesto viene inviato solo con il primo messaggio.  
+ Come primo passaggio di questo processo è necessario salvare l'ID del contesto che è stato trasferito sul InstanceContext attuale utilizzando il livello del canale. InstanceContext è un componente di runtime che funge da collegamento tra il dispatcher WCF e l'istanza del servizio. Può essere utilizzato per fornire stati e comportamenti aggiuntivi all'istanza del servizio. È essenziale, perché nella comunicazione con sessione l'ID del contesto viene inviato solo con il primo messaggio.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consente di estendere il componente del runtime InstanceContext aggiungendo un nuovo stato e un nuovo comportamento tramite il modello di oggetti estensibili. Questo modello viene utilizzato in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per estendere le classi del runtime esistenti con nuove funzionalità oppure per aggiungere nuove funzionalità di stato a un oggetto. Sono disponibili tre interfacce nel modello di oggetti estensibili: IExtensibleObject\<T >, IExtension\<T > e IExtensionCollection\<T >:  
+ WCF consente di estendere il componente del runtime InstanceContext aggiungendo un nuovo stato e il comportamento tramite il modello di oggetti estensibili. Questo modello viene utilizzato in WCF per estendere le classi runtime esistenti con nuove funzionalità oppure per aggiungere nuove funzionalità di stato a un oggetto. Sono disponibili tre interfacce nel modello di oggetti estensibili: IExtensibleObject\<T >, IExtension\<T > e IExtensionCollection\<T >:  
   
 -   Il IExtensibleObject\<T > viene implementata dagli oggetti che consentono le estensioni che personalizzano le proprie funzionalità.  
   
@@ -278,7 +278,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  Come descritto precedentemente, l'ID del contesto viene letto dalla raccolta `Properties` della classe `Message` e passato al costruttore della classe dell'estensione. Questo dimostra che le informazioni possono essere scambiate tra i livelli in modo coerente.  
   
- Il successivo passaggio consiste nell'eseguire l'override del processo di creazione dell'istanza di servizio. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consente l'implementazione dei comportamenti di creazione di istanze personalizzati e la relativa associazione al runtime utilizzando l'interfaccia IInstanceProvider. La nuova classe `InstanceProvider` viene implementata per eseguire quel processo. Il tipo di servizio previsto dal provider di istanze viene accettato nel costruttore. In un secondo momento viene utilizzato per creare nuove istanze. Nell'implementazione `GetInstance` un'istanza di una gestione archivi viene creata cercando un'istanza persistente. Se restituisce `null`, viene creata una nuova istanza del tipo di servizio e viene restituita al chiamante.  
+ Il successivo passaggio consiste nell'eseguire l'override del processo di creazione dell'istanza di servizio. WCF consente l'implementazione del comportamento di creazione di istanze personalizzati e la relativa associazione al runtime utilizzando l'interfaccia IInstanceProvider. La nuova classe `InstanceProvider` viene implementata per eseguire quel processo. Il tipo di servizio previsto dal provider di istanze viene accettato nel costruttore. In un secondo momento viene utilizzato per creare nuove istanze. Nell'implementazione `GetInstance` un'istanza di una gestione archivi viene creata cercando un'istanza persistente. Se restituisce `null`, viene creata una nuova istanza del tipo di servizio e viene restituita al chiamante.  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -349,9 +349,9 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
   
  Per riassumere, questo esempio ha prodotto un canale che abilita il protocollo di rete personalizzato per lo scambio di ID del contesto personalizzati e sovrascrive il comportamento di istanza predefinito per caricare le istanze dall'archivio permanente.  
   
- Rimane da trovare un modo per salvare l'istanza del servizio nell'archivio permanente. Come illustrato precedentemente, esiste già la funzionalità necessaria per salvare lo stato in un'implementazione `IStorageManager`. Ora è necessario integrare questa funzionalità con il runtime di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. È necessario un altro attributo applicabile ai metodi della classe di implementazione del servizio. Questo attributo va applicato ai metodi che modificano lo stato dell'istanza del servizio.  
+ Rimane da trovare un modo per salvare l'istanza del servizio nell'archivio permanente. Come illustrato precedentemente, esiste già la funzionalità necessaria per salvare lo stato in un'implementazione `IStorageManager`. È ora necessario integrare questa funzionalità con il runtime WCF. È necessario un altro attributo applicabile ai metodi della classe di implementazione del servizio. Questo attributo va applicato ai metodi che modificano lo stato dell'istanza del servizio.  
   
- La classe `SaveStateAttribute` implementa questa funzionalità. Implementa inoltre la classe `IOperationBehavior` per modificare il runtime di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per ogni operazione. Quando un metodo è contrassegnato da questo attributo, il runtime di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiama il metodo `ApplyBehavior` mentre viene generato l'elemento  `DispatchOperation` appropriato. In questa implementazione del metodo c'è una sola riga di codice:  
+ La classe `SaveStateAttribute` implementa questa funzionalità. Implementa inoltre `IOperationBehavior` (classe) per modificare il runtime WCF per ogni operazione. Quando un metodo è contrassegnato con questo attributo, il runtime WCF richiama il `ApplyBehavior` il metodo appropriato `DispatchOperation` in fase di costruzione. In questa implementazione del metodo c'è una sola riga di codice:  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
@@ -373,7 +373,7 @@ return result;
 ```  
   
 ## <a name="using-the-extension"></a>Utilizzo dell'estensione  
- Le estensioni del livello del canale e del livello del modello di servizio sono state completate e possono essere utilizzate nelle applicazioni di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. È necessario che i servizi aggiungano il canale allo stack di canali utilizzando un'associazione personalizzata e che contrassegnino quindi le classi di implementazione del servizio con gli attributi appropriati.  
+ Sia il livello del canale e le estensioni del livello di servizio modello vengono eseguite e possono essere utilizzate nelle applicazioni WCF. È necessario che i servizi aggiungano il canale allo stack di canali utilizzando un'associazione personalizzata e che contrassegnino quindi le classi di implementazione del servizio con gli attributi appropriati.  
   
 ```  
 [DurableInstanceContext]  

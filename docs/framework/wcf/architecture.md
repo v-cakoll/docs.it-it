@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: b54c9cd7f4e6bc33dac07d30a86df81668ae13e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-architecture"></a>Architettura di Windows Communication Foundation
 L'immagine seguente illustra i livelli principali dell'architettura di Windows Communication Foundation (WCF).  
@@ -24,7 +24,7 @@ L'immagine seguente illustra i livelli principali dell'architettura di Windows C
  I criteri e le associazioni stipulano le condizioni necessarie per la comunicazione con un servizio.  L'associazione, ad esempio, deve specificare almeno il trasporto utilizzato (ad esempio HTTP o TCP) e una codifica. I criteri comprendono requisiti di sicurezza e altre condizioni che devono essere soddisfatte per la comunicazione con un servizio.  
   
 ### <a name="service-runtime"></a>Fase di esecuzione del servizio  
- Il livello della fase di esecuzione del servizio contiene i comportamenti che si verificano solo durante l'operazione effettiva del servizio, ovvero, i comportamenti della fase di esecuzione del servizio. La limitazione delle richieste controlla la quantità dei messaggi elaborati, che può essere variata se la richiesta per il servizio raggiunge un limite preimpostato. Un comportamento dell'errore specifica la situazione che ha luogo quando si verifica un errore interno nel servizio, ad esempio controllando le informazioni comunicate al client (troppe informazioni possono favorire un utente malintenzionato consentendogli di organizzare un attacco). Il comportamento dei metadati stabilisce il modo e l'opportunità di rendere disponibili i metadati al mondo esterno. Il comportamento dell'istanza specifica il numero delle istanze del servizio che possono essere eseguite (ad esempio, un singleton specifica una sola istanza per l'elaborazione di tutti i messaggi). Il comportamento della transazione consente il rollback delle operazioni transazionali in caso di errore. Il comportamento della distribuzione è il controllo del modo in cui un messaggio viene elaborato nell'infrastruttura [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Il livello della fase di esecuzione del servizio contiene i comportamenti che si verificano solo durante l'operazione effettiva del servizio, ovvero, i comportamenti della fase di esecuzione del servizio. La limitazione delle richieste controlla la quantità dei messaggi elaborati, che può essere variata se la richiesta per il servizio raggiunge un limite preimpostato. Un comportamento dell'errore specifica la situazione che ha luogo quando si verifica un errore interno nel servizio, ad esempio controllando le informazioni comunicate al client (troppe informazioni possono favorire un utente malintenzionato consentendogli di organizzare un attacco). Il comportamento dei metadati stabilisce il modo e l'opportunità di rendere disponibili i metadati al mondo esterno. Il comportamento dell'istanza specifica il numero delle istanze del servizio che possono essere eseguite (ad esempio, un singleton specifica una sola istanza per l'elaborazione di tutti i messaggi). Il comportamento della transazione consente il rollback delle operazioni transazionali in caso di errore. Comportamento di distribuzione è il controllo del modo in cui un messaggio viene elaborato dall'infrastruttura WCF.  
   
  L'estendibilità consente la personalizzazione di processi della fase di esecuzione. Il controllo messaggi, ad esempio, è la funzionalità che consente di controllare parti di un messaggio e il filtro parametri consente il verificarsi di azioni preimpostate in base a filtri che agiscono sulle intestazioni del messaggio.  
   
@@ -42,7 +42,7 @@ L'immagine seguente illustra i livelli principali dell'architettura di Windows C
 ### <a name="hosting-and-activation"></a>Hosting e attivazione  
  Nella forma finale un servizio è un programma. Come altri programmi, un servizio viene eseguito in un file eseguibile. Questo è noto come un *self-hosted* servizio.  
   
- Servizi possono inoltre essere *ospitato*, oppure eseguire in un file eseguibile gestito da un agente esterno, ad esempio IIS o il servizio di attivazione di Windows (WAS). WAS consente alle applicazioni [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] di essere attivate automaticamente se distribuite in un computer che esegue WAS. I servizi possono inoltre essere eseguiti manualmente come file eseguibili (file con estensione exe). Un servizio può essere eseguito automaticamente come servizio Windows. I componenti COM+, inoltre, possono essere ospitati come servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Servizi possono inoltre essere *ospitato*, oppure eseguire in un file eseguibile gestito da un agente esterno, ad esempio IIS o il servizio di attivazione di Windows (WAS). ERA consente alle applicazioni WCF di essere attivate automaticamente se distribuite in un computer che esegue. I servizi possono inoltre essere eseguiti manualmente come file eseguibili (file con estensione exe). Un servizio può essere eseguito automaticamente come servizio Windows. I componenti COM+ possono anche essere ospitati come servizi WCF.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

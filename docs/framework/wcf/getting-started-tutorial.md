@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 4a095e5391f3b532211b82a190c7010f41283e31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64d9fc09d56c417c2226d030ef6f5ee7204c4eb6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="getting-started-tutorial"></a>Esercitazione introduttiva
-Gli argomenti contenuti in questa sezione sono destinati a fornire una rapida descrizione per Windows Communication Foundation (WCF) esperienza di programmazione. Vengono ideati per essere completati secondo l'ordine dell'elenco posto nella parte inferiore di questo argomento. Nel corso di questa esercitazione vengono fornite informazioni introduttive sui passaggi necessari per creare applicazioni di servizio e client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Un servizio espone uno o più endpoint, ciascuno dei quali espone una o più operazioni del servizio. Il *endpoint* di un servizio specifica un indirizzo in cui è possibile trovare il servizio, un'associazione che contiene le informazioni che descrivono come un client deve comunicare con il servizio e un contratto che definisce la funzionalità viene fornita dal servizio ai propri client.  
+Gli argomenti contenuti in questa sezione sono destinati a fornire una rapida descrizione per Windows Communication Foundation (WCF) esperienza di programmazione. Vengono ideati per essere completati secondo l'ordine dell'elenco posto nella parte inferiore di questo argomento. Esecuzione di questa esercitazione consente di acquisire una comprensione dei passaggi necessari per creare applicazioni client e servizio WCF. Un servizio espone uno o più endpoint, ciascuno dei quali espone una o più operazioni del servizio. Il *endpoint* di un servizio specifica un indirizzo in cui è possibile trovare il servizio, un'associazione che contiene le informazioni che descrivono come un client deve comunicare con il servizio e un contratto che definisce la funzionalità viene fornita dal servizio ai propri client.  
   
  Seguendo la sequenza degli argomenti di questa esercitazione si otterrà un servizio funzionante e un client che chiama il servizio. Nei primi tre argomenti viene descritto come definire e implementare un contratto di servizio, nonché come ospitare il servizio. Il servizio creato è self-hosted all'interno di un'applicazione console. I servizi possono anche essere ospitati in Internet Information Services (IIS). Per ulteriori informazioni su come eseguire questa operazione, vedere [procedura: ospitare un servizio WCF in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Il servizio viene configurato nel codice; tuttavia, i servizi possono essere configurati anche all'interno di un file di configurazione. Per ulteriori informazioni sull'utilizzo di un file di configurazione, vedere [configurazione di servizi tramite file di configurazione](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
   
@@ -30,7 +30,7 @@ Gli argomenti contenuti in questa sezione sono destinati a fornire una rapida de
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Definire un contratto di servizio](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- Viene descritto come creare un contratto [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usando un'interfaccia definita dall'utente. Il contratto definisce la funzionalità esposta dal servizio.  
+ Viene descritto come creare un contratto WCF utilizzando un'interfaccia definita dall'utente. Il contratto definisce la funzionalità esposta dal servizio.  
   
  [Procedura: Implementare un contratto di servizio](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
  Viene descritto come implementare un contratto di servizio. Una volta definito, un contratto deve essere implementato con una classe di servizio.  
@@ -39,13 +39,13 @@ Gli argomenti contenuti in questa sezione sono destinati a fornire una rapida de
  Viene descritto come configurare un endpoint per il servizio nel codice e come ospitare il servizio in un'applicazione console. Per diventare attivo, un servizio deve essere configurato e ospitato all'interno di un ambiente di runtime. Questo ambiente crea il servizio e ne controlla contesto e durata.  
   
  [Procedura: Creare un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- Viene descritto come recuperare i metadati usati per creare un proxy client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] da un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. In questo processo viene usata la funzionalità Aggiungi riferimento al servizio di Visual Studio 2011.  
+ Viene descritto come recuperare i metadati utilizzati per creare un proxy client WCF da un servizio WCF. In questo processo viene usata la funzionalità Aggiungi riferimento al servizio di Visual Studio 2011.  
   
  [Procedura: Configurare un client](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
  Viene descritto come configurare un client WCF. La configurazione del client richiede la specifica dell'endpoint usato dal client per accedere al servizio.  
   
  [Procedura: Usare un client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
- Viene descritto come usare il proxy client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per richiamare le operazioni del servizio.  
+ Viene descritto come utilizzare il proxy client WCF per richiamare operazioni del servizio.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel.ServiceContractAttribute>  

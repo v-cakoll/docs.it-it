@@ -2,11 +2,11 @@
 title: Rilevamento tramite un file di testo
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: 3ff786836dbf5b10d64702733c92579185ef2f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracking-using-a-text-file"></a>Rilevamento tramite un file di testo
 In questo esempio viene illustrato come estendere il rilevamento in Windows Workflow Foundation (WF) creando un partecipante del rilevamento personalizzato. I partecipanti di rilevamento sono classi .NET Framework che ricevono record di rilevamento dal runtime man mano che vengono generati. È possibile creare un partecipante di rilevamento per trasportare gli eventi di rilevamento a qualunque destinazione necessaria per lo specifico scenario. Ad esempio, il partecipante di rilevamento Analisi eventi per Windows (ETW) viene fornito come parte di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Il partecipante di rilevamento in questo esempio scrive i record in formato XML in un file di testo.  
@@ -17,7 +17,7 @@ In questo esempio viene illustrato come estendere il rilevamento in Windows Work
 |Classe|Descrizione|  
 |-----------|-----------------|  
 |`TextFileTrackingExtensionElement`|<xref:System.ServiceModel.Configuration.BehaviorExtensionElement> consente di definire la sezione di configurazione usata per configurare il partecipante di rilevamento del file di testo. Gli utenti possono specificare la destinazione del file di log usando file di configurazione standard di .NET Framework.|  
-|`TextFileTrackingBehavior`|I comportamenti disponibili in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consentono agli utenti di inserire estensioni nel runtime. Tramite questo comportamento il partecipante di rilevamento viene aggiunto al servizio all'avvio di quest'ultimo.|  
+|`TextFileTrackingBehavior`|I comportamenti di WCF consentono agli utenti di inserire estensioni nel runtime. Tramite questo comportamento il partecipante di rilevamento viene aggiunto al servizio all'avvio di quest'ultimo.|  
 |`TextFileTrackingParticipant`|Il partecipante di rilevamento riceve i partecipanti di rilevamento in fase di esecuzione e li archivia in un file di log come XML.|  
   
 ## <a name="behavior-extension-elements-configuration"></a>Configurazione degli elementi estensione di comportamento  

@@ -2,21 +2,21 @@
 title: Provider di token rilasciati in modo durevole
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 20006f87f7ecba9c09f6c957f8b6355dec7fbd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-issued-token-provider"></a>Provider di token rilasciati in modo durevole
 Questo esempio illustra come implementare un provider di token rilasciato del client personalizzato.  
   
 ## <a name="discussion"></a>Discussione  
- Un provider di token in Windows Communication Foundation (WCF) viene utilizzato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene fornito con un provider di token [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. I provider di token personalizzati sono utili nei casi seguenti:  
+ Un provider di token in Windows Communication Foundation (WCF) viene utilizzato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provider di token. I provider di token personalizzati sono utili nei casi seguenti:  
   
 -   Se è disponibile un archivio di credenziali con cui il provider di token incluso non è in grado di operare.  
   
--   Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto in cui l'utente fornisce i dettagli a quello in cui il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza le credenziali.  
+-   Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il client WCF Usa le credenziali.  
   
 -   Se si sta compilando un token personalizzato.  
   
@@ -26,7 +26,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
   
 -   Come è possibile configurare un client con un provider personalizzato.  
   
--   Come i token rilasciati possono essere memorizzati nella cache e forniti al client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   La modalità token rilasciati possono essere memorizzati nella cache e fornito al client WCF.  
   
 -   Come viene autenticato il servizio dal client mediante il certificato X.509 del server.  
   
@@ -109,7 +109,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
  Il servizio token di sicurezza espone un solo endpoint utilizzando l'elemento wsHttpBinding standard. Il servizio token di sicurezza risponde alle richieste di token dei client e, se il client si autentica utilizzando un account di Windows, emette un token che contiene il nome utente del client come attestazione nel token emesso. Come parte del processo di creazione del token, il servizio token di protezione firma il token utilizzando la chiave privata associata al certificato CN=STS . Crea, inoltre, una chiave simmetrica e la crittografa utilizzando la chiave pubblica associata al certificato CN=localhost. Nel restituire il token al client, il servizio token di protezione restituisce anche la chiave simmetrica. Il client presenta il token emesso al servizio di calcolatrice e dimostra che conosce la chiave simmetrica firmando il messaggio con quella chiave.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>Credenziali client e servizio token di protezione personalizzati  
- I passaggi seguenti illustrano come sviluppare un provider di token personalizzato in grado di memorizzare nella cache i token rilasciati e come integrarlo nella sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ I passaggi seguenti mostrano come sviluppare un provider di token personalizzato che memorizza nella cache i token rilasciati e integrarlo con WCF: protezione.  
   
 #### <a name="to-develop-a-custom-token-provider"></a>Per sviluppare un provider di token personalizzato  
   

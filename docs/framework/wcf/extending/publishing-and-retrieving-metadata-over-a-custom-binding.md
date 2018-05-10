@@ -2,11 +2,11 @@
 title: Pubblicazione e recupero di metadati su un'associazione personalizzata
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-ms.openlocfilehash: 607cf70e8e226e6c97a785f2478ad3a655b21a7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 528f7662ee3a1f956427e5e42f540816f55027f8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>Pubblicazione e recupero di metadati su un'associazione personalizzata
 La classe <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> fornisce supporto per l'aggiunta di endpoint dei metadati a un servizio. Tali endpoint dei metadati possono rispondere alle richieste HTTP GET a un URL che ha un `?wsdl` querystring e alle richieste GET WS-Transfer come definito nella specifica WS-MetadataExchange (MEX). Gli endpoint MEX implementano il contratto <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType>.  
@@ -19,7 +19,7 @@ La classe <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayP
 ## <a name="retrieving-metadata-over-a-custom-binding"></a>Recupero di metadati su un'associazione personalizzata  
  I metadati possono essere recuperati da endpoint di metadati Get HTTP e Get HTTPS utilizzando richieste GET HTTP o HTTPS standard.  
   
- Per recuperare metadati da un endpoint di metadati MEX è generalmente possibile utilizzare una delle associazioni MEX standard supportate in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Per altre informazioni, vedere <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>. Il tipo <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> e lo strumento Svcutil.exe consentono di selezionare automaticamente una di queste associazioni MEX standard in base all'indirizzo dell'endpoint dei metadati specificato.  
+ Per recuperare i metadati da un endpoint di metadati MEX che è generalmente possibile utilizzare una delle associazioni MEX standard supportate da WCF. Per altre informazioni, vedere <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>. Il tipo <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> e lo strumento Svcutil.exe consentono di selezionare automaticamente una di queste associazioni MEX standard in base all'indirizzo dell'endpoint dei metadati specificato.  
   
  Se un endpoint di metadati MEX utilizza un'associazione diversa dalle associazioni MEX standard, è possibile configurare l'associazione utilizzata da <xref:System.ServiceModel.Description.MetadataExchangeClient> mediante codice o fornendo una configurazione dell'endpoint del client <xref:System.ServiceModel.Description.IMetadataExchange>. Lo strumento Svcutil.exe carica automaticamente dal file di configurazione una configurazione dell'endpoint del client <xref:System.ServiceModel.Description.IMetadataExchange> che ha lo stesso nome dello schema URI per l'indirizzo dell'endpoint dei metadati.  
   

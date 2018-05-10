@@ -2,11 +2,11 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: 2c864bd0c1d27e9c771a1b97e756c04b107ac2b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6554ec9c5eaefaf8c9e39d2a8d92982716cc18c5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pooling"></a>Pooling
 In questo esempio viene illustrato come estendere Windows Communication Foundation (WCF) per supportare il pool degli oggetti. L'esempio illustra come creare un attributo sintatticamente e semanticamente simile alla funzionalità dell'attributo `ObjectPoolingAttribute` di Enterprise Services. Il pool degli oggetti può fornire una spinta notevole alle prestazioni di un'applicazione. Tuttavia, può avere l'effetto contrario se non utilizzato correttamente. Il pool degli oggetti consente di ridurre il sovraccarico dovuto alla creazione continua di oggetti frequentemente utilizzati che richiedono un'inizializzazione estesa. Tuttavia, se una chiamata a un metodo su un oggetto del pool richiede una quantità considerevole di tempo, il pool degli oggetti mette in coda richieste aggiuntive appena viene raggiunta la dimensione del pool massima. Pertanto può non riuscire a soddisfare richieste di creazione di oggetti generando un'eccezione di timeout.  
@@ -14,14 +14,14 @@ In questo esempio viene illustrato come estendere Windows Communication Foundati
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- Il primo passaggio nel creare un'estensione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è decidere il punto di estensibilità da utilizzare.  
+ Il primo passaggio nella creazione di un'estensione WCF è decidere il punto di estensibilità da utilizzare.  
   
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] il termine *dispatcher* fa riferimento a un componente runtime responsabile della conversione dei messaggi in arrivo in chiamate al metodo sul servizio dell'utente e per la conversione di valori restituiti da quel metodo in un'in uscita Messaggio. Un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea un dispatcher per ogni endpoint. Un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deve utilizzare un dispatcher se il contratto associato a quel client è un contratto duplex.  
+ In WCF il termine *dispatcher* fa riferimento a un componente runtime responsabile della conversione dei messaggi in arrivo in chiamate al metodo sul servizio dell'utente e per la conversione di valori restituiti da quel metodo in un messaggio in uscita. Un servizio WCF crea un dispatcher per ogni endpoint. Un client WCF deve utilizzare un dispatcher se il contratto associato a tale client è un contratto duplex.  
   
  I dispatcher del canale e dell'endpoint offrono estensibilità sul canale e sul contratto esponendo le varie proprietà che controllano il comportamento del dispatcher. La proprietà <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> consente inoltre di ispezionare, modificare e personalizzare la modalità di autenticazione dei certificati. Questo esempio si concentra sulla proprietà <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> che punta all'oggetto che fornisce le istanze della classe del servizio.  
   
 ## <a name="the-iinstanceprovider"></a>Provider di istanze  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], il dispatcher crea istanze della classe del servizio utilizzando una proprietà <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, che implementa l'interfaccia <xref:System.ServiceModel.Dispatcher.IInstanceProvider>. Questa interfaccia ha tre metodi:  
+ In WCF, il dispatcher crea istanze della classe di servizio utilizzando un <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, che implementa il <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfaccia. Questa interfaccia ha tre metodi:  
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: quando un messaggio arriva il dispatcher chiama il metodo <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> per creare un'istanza della classe del servizio al fine di elaborare il messaggio. La frequenza delle chiamate a questo metodo è determinata dalla proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>. Ad esempio, se la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> è impostata su <xref:System.ServiceModel.InstanceContextMode.PerCall> viene creata una nuova istanza della classe del servizio per elaborare ogni messaggio che arriva, pertanto il metodo <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> viene chiamato ogni qualvolta arriva un messaggio.  
   
@@ -100,7 +100,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  Questo esempio utilizza un attributo personalizzato. Quando la classe <xref:System.ServiceModel.ServiceHost> viene costruita esamina gli attributi utilizzati nella definizione del tipo del servizio e aggiunge i comportamenti disponibili alla raccolta di comportamenti della descrizione del servizio.  
   
- L'interfaccia <xref:System.ServiceModel.Description.IServiceBehavior> contiene tre metodi: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> e <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> viene utilizzato per assicurare che il comportamento possa essere applicato al servizio. In questo esempio, l'implementazione assicura che il servizio non sia configurato con <xref:System.ServiceModel.InstanceContextMode.Single>. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> viene utilizzato per configurare le associazioni del servizio. Non è obbligatorio in questo scenario. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> viene utilizzato per configurare i dispatcher del servizio. Questo metodo viene chiamato [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] quando viene inizializzata la classe <xref:System.ServiceModel.ServiceHost>. I parametri seguenti vengono passati in questo metodo:  
+ L'interfaccia <xref:System.ServiceModel.Description.IServiceBehavior> contiene tre metodi: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> e <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> viene utilizzato per assicurare che il comportamento possa essere applicato al servizio. In questo esempio, l'implementazione assicura che il servizio non sia configurato con <xref:System.ServiceModel.InstanceContextMode.Single>. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> viene utilizzato per configurare le associazioni del servizio. Non è obbligatorio in questo scenario. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> viene utilizzato per configurare i dispatcher del servizio. Questo metodo viene chiamato da WCF quando il <xref:System.ServiceModel.ServiceHost> in fase di inizializzazione. I parametri seguenti vengono passati in questo metodo:  
   
 -   `Description`: questo argomento fornisce la descrizione del servizio per l'intero servizio. Può essere utilizzato per controllare dati della descrizione sugli endpoint del servizio, contratti, associazioni e altri dati.  
   
@@ -177,7 +177,7 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
   
  Oltre a un'implementazione della classe <xref:System.ServiceModel.Description.IServiceBehavior>, la classe <xref:System.EnterpriseServices.ObjectPoolingAttribute> ha molti membri per personalizzare il pool di oggetti utilizzando gli argomenti dell'attributo. Questi membri includono <xref:System.EnterpriseServices.ObjectPoolingAttribute.MaxPoolSize%2A>, <xref:System.EnterpriseServices.ObjectPoolingAttribute.MinPoolSize%2A> e <xref:System.EnterpriseServices.ObjectPoolingAttribute.CreationTimeout%2A>, per corrispondere al set di funzionalità del pool di oggetti fornito da Enterprise Services .NET.  
   
- Il comportamento del pool di oggetti può ora essere aggiunto a un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] annotando l'implementazione del servizio con l'attributo `ObjectPooling` personalizzato appena creato.  
+ Comportamento del pool di oggetti possono ora essere aggiunto a un servizio WCF annotando l'implementazione del servizio con l'oggetto personalizzato appena creato `ObjectPooling` attributo.  
   
 ```  
 [ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]      

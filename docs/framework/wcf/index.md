@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-ms.openlocfilehash: f3b8abb2a8e0079dc18624c5ac0408a2738f06b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 56054216dc6e90e789c230acb3d56565a9ba3d69
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Sviluppo di applicazioni orientate ai servizi con WCF
 In questa sezione della documentazione vengono fornite informazioni su Windows Communication Foundation (WCF), un modello di programmazione unificato per la compilazione di applicazioni orientate ai servizi. Consente agli sviluppatori di compilare soluzioni transazionali protette e affidabili in grado di integrarsi a piattaforme diverse e interagire con investimenti esistenti.
@@ -34,7 +34,7 @@ In questa sezione della documentazione vengono fornite informazioni su Windows C
  Vengono descritti i concetti fondamentali per la creazione di applicazioni Windows Communication Foundation.  
   
  [Dettagli delle funzionalità di WCF](../../../docs/framework/wcf/feature-details/index.md)  
- Mostra gli argomenti che consentono di scegliere le funzionalità [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] che è necessario usare.  
+ Mostra gli argomenti che consentono di scegliere quale WCF le funzionalità è necessario utilizzare.  
   
  [Estensione di WCF](../../../docs/framework/wcf/extending/index.md)  
  Viene descritto come modificare ed estendere i componenti di runtime WCF.  
@@ -67,7 +67,7 @@ In questa sezione della documentazione vengono fornite informazioni su Windows C
  Esempi che forniscono istruzioni su vari aspetti di Windows Communication Foundation.  
   
  [Glossario di Windows Communication Foundation](../../../docs/framework/wcf/glossary.md)  
- Mostra un elenco di termini specifici di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]  
+ Mostra un elenco di termini specifici a WCF  
   
  [Riferimenti generali](../../../docs/framework/wcf/general-reference.md)  
  Nella sezione vengono illustrati gli elementi usati per configurare client e servizi di Windows Communication Foundation.  

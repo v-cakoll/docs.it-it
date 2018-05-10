@@ -5,11 +5,11 @@ hide_bc: true
 title: Documentazione di .NET
 description: Informazioni su come usare .NET per creare un'ampia gamma di applicazioni su qualsiasi piattaforma con C#, Visual Basic ed F#. Informazioni di riferimento sulle API, codice di esempio, esercitazioni e altro ancora.
 ms.custom: updateeachrelease
-ms.openlocfilehash: 2168e42c9db3c4f6893656d0247a180b7dd290f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7fbafb9a5ca939b4ca8bb78d38b66767e3cf6ab9
+ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/08/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -212,6 +212,26 @@ ms.lasthandoff: 05/04/2018
                                                 <p><a href="/dotnet/visual-basic/getting-started">Introduzione</a></p>
                                                 <p><a href="/dotnet/visual-basic/walkthroughs">Panoramica di Visual Basic</a></p>
                                                 <p><a href="/dotnet/visual-basic/language-reference">Riferimenti per il linguaggio Visual Basic</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="/dotnet/images/hub/mldotnet.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/dotnet/machine-learning">Guida a ML.NET</a></h3>
+                                                <p><a href="/dotnet/machine-learning/tutorials">Esercitazioni</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources">Risorse</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources/glossary">Glossario</a></p>
+                                                <p><a href="/dotnet/api?view=ml-dotnet">API ML.NET</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -644,6 +664,68 @@ ms.lasthandoff: 05/04/2018
                                                     <h3>Unity</h3>
                                                     <p>Informazioni su come usare Unity per creare giochi 2D e 3D con C# con Unity Manual.
                                                     </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#ml-ai">Machine Learning e AI</a>
+                        <ul id="ml-ai" class="cardsC">
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/dotnet/images/hub/swimlane-machine-learning-brain-lightbulb.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <a href="/dotnet/machine-learning">
+                                                    <h3>ML.NET</h3>
+                                                    <p>Creazione di soluzioni AI personalizzate e integrazione delle soluzioni nelle applicazioni .NET.</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/dotnet/images/hub/swimlane-cognitive-services.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <a href="/azure/cognitive-services">
+                                                    <h3>Servizi cognitivi</h3>
+                                                    <p>Aggiungere ad app, siti Web e bot codice per vedere, ascoltare, parlare e capire.</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/dotnet/images/hub/swimlane-azure-machine-learning.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <a href="/azure/machine-learning">
+                                                    <h3>Azure Machine Learning</h3>
+                                                    <p>AI per tutti con una piattaforma end-to-end, scalabile e affidabile completa di sperimentazione e gestione di modelli.</p>
                                                 </a>
                                             </div>
                                         </div>

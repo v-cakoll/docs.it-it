@@ -8,33 +8,33 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: de56725f926ec9f6d4cc39c8160fa7af0f3ab80a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cbdc693197344fe570c1462f6ca3115018eb69d6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="basic-wcf-programming"></a>Programmazione WCF di base
 Questa sezione vengono presentate le nozioni di base per la creazione di applicazioni Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Ciclo di vita della programmazione di base](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- Descrive il ciclo di vita relativo alla progettazione, generazione e distribuzione di applicazioni di servizio e client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Descrive il ciclo di vita di progettazione, compilazione e distribuzione di applicazioni di servizio e client WCF.  
   
  [Progettazione e implementazione di servizi](../../../docs/framework/wcf/designing-and-implementing-services.md)  
  Descrive come progettare e implementare un contratto di servizio, scegliere un modello per lo scambio di messaggi, specificare un contratto di errore e altri aspetti di base dei servizi.  
   
  [Configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md)  
- Descrive come configurare un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per supportare i requisiti del contratto, personalizzare il comportamento in fase di esecuzione locale e indicare l'indirizzo per pubblicare il servizio.  
+ Viene descritto come configurare un servizio WCF per supportare i requisiti del contratto, personalizzare il comportamento di runtime locale e indicare l'indirizzo per pubblicare il servizio.  
   
  [Servizi di hosting](../../../docs/framework/wcf/hosting-services.md)  
  Descrive le caratteristiche fondamentali dei servizi host in un'applicazione.  
   
  [Creazione di client](../../../docs/framework/wcf/building-clients.md)  
- Descrive come ottenere metadati dai servizi, convertirli in codice client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], gestire problemi di sicurezza e generare, configurare e ospitare un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Viene descritto come ottenere metadati dai servizi, convertirli in codice client WCF, gestire i problemi di sicurezza e creare, configurare e ospitare un client WCF.  
   
  [Introduzione all'estendibilità](../../../docs/framework/wcf/introduction-to-extensibility.md)  
- Descrive come estendere [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per creare soluzioni personalizzate.  
+ Viene descritto come estendere WCF per creare soluzioni personalizzate.  
   
  [Guida rapida alla risoluzione dei problemi di WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
  Descrive alcuni dei problemi più comuni, cosa è possibile fare per risolverli e dove trovare ulteriori informazioni sul problema.  

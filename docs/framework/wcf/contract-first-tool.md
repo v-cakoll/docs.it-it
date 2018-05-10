@@ -2,11 +2,11 @@
 title: Strumento con priorità al contratto ("contract-first")
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f061f4dd37861c1cf3dd0cc8318de9f0f65b90e4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contract-first-tool"></a>Strumento con priorità al contratto ("contract-first")
 I contratti di servizio devono spesso essere creati a partire da servizi esistenti. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le classi dei contratti dati possono essere create automaticamente dai servizi esistenti utilizzando lo strumento con priorità al contratto ("contract-first"). Per utilizzare lo strumento con priorità al contratto ("contract-first") è necessario che il file di definizione di XML Schema (XSD) sia scaricato localmente; lo strumento non può importare i contratti dati remoti tramite HTTP.  
@@ -58,7 +58,7 @@ I contratti di servizio devono spesso essere creati a partire da servizi esisten
  Per aggiungere il contratto di servizio precedenti per il progetto, fare clic sul progetto e selezionare **Aggiungi nuovo...** . Selezionare Definizione schema nel riquadro WCF della finestra di dialogo Modelli e denominare il nuovo file SampleContract.xsd. Copiare e incollare il codice illustrato in precedenza nella visualizzazione codice del nuovo file.  
   
 ## <a name="configuring-contract-first-options"></a>Configurazione delle opzioni con priorità al contratto ("contract-first")  
- Le opzioni con priorità al contratto ("contract-first") possono essere configurate nel menu Proprietà di un progetto [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Per consentire lo sviluppo di priorità al contratto, selezionare il **Abilita XSD come linguaggio di definizione del tipo** casella di controllo nella pagina WCF della finestra delle proprietà del progetto.  
+ Contratto-first opzioni possono essere configurate nel menu di proprietà di un progetto WCF. Per consentire lo sviluppo di priorità al contratto, selezionare il **Abilita XSD come linguaggio di definizione del tipo** casella di controllo nella pagina WCF della finestra delle proprietà del progetto.  
   
  ![Contratto che mostra le opzioni del progetto WCF&#45;primo](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   

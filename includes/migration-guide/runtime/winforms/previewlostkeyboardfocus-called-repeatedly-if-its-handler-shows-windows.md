@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Dettagli|A partire da .NET Framework 4.5, la chiamata di <code>System.Windows.Forms.MessageBox.Show</code> da un gestore <xref:System.Windows.UIElement.PreviewLostKeyboardFocus> causerà la riattivazione del gestore alla chiusura della finestra di messaggio, con un potenziale ciclo infinito di finestre di messaggio.|
-|Suggerimento|Esistono due modi per risolvere l'errore:<ol><li>Può essere evitato chiamando <code>System.Windows.MessageBox.Show</code> invece di <code>System.Windows.Forms.MessageBox.Show</code>.</li><li>Può essere evitato visualizzando la finestra di messaggio da un gestore eventi <xref:System.Windows.UIElement.LostKeyboardFocus>, anziché un gestore eventi <xref:System.Windows.UIElement.PreviewLostKeyboardFocus?displayProperty=name>.</li></ol>|
+|Dettagli|A partire da .NET Framework 4.5, la chiamata di <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> da un gestore <xref:System.Windows.UIElement.PreviewLostKeyboardFocus> causerà la riattivazione del gestore alla chiusura della finestra di messaggio, con un potenziale ciclo infinito di finestre di messaggio.|
+|Suggerimento|Esistono due modi per aggirare questo problema:<ol><li>Può essere evitato chiamando <xref:System.Windows.MessageBox.Show%2A?displayProperty=nameWithType> invece di <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType>.</li><li>Può essere evitato visualizzando la finestra di messaggio da un gestore eventi <xref:System.Windows.UIElement.LostKeyboardFocus?displayProperty=nameWithType>, anziché un gestore eventi <xref:System.Windows.UIElement.PreviewLostKeyboardFocus?displayProperty=name>.</li></ol>|
 |Ambito|Microsoft Edge|
 |Versione|4.5|
 |Tipo|Runtime|

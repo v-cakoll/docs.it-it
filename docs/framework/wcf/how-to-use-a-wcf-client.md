@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 6667a8e9862054d7d8d5b20e70dfbe699de02eab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 79431588e27b02a40d5898929f1bdf644c8a79cd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Procedura: usare un client di Windows Communication Foundation
 Questa è l'ultima delle sei attività necessarie per creare un'applicazione di Windows Communication Foundation (WCF) di base. Per una panoramica di tutte e sei le attività, vedere il [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md) argomento.  
   
- Dopo aver creato e configurato un proxy di Windows Communication Foundation (WCF), un'istanza del client possono essere creata e l'applicazione client può essere compilato e utilizzato per comunicare con il [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizio. In questo argomento vengono illustrate le procedure per la creazione di un'istanza e l'utilizzo di un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. La procedura consente di eseguire tre operazioni:  
+ Dopo aver creato e configurato un proxy di Windows Communication Foundation (WCF), un'istanza del client possono essere creata e l'applicazione client può essere compilato e utilizzato per comunicare con il servizio WCF. In questo argomento vengono descritte le procedure per creare un'istanza e l'utilizzo di un client WCF. La procedura consente di eseguire tre operazioni:  
   
-1.  Creazione di un'istanza di un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+1.  Crea un'istanza di un client WCF.  
   
 2.  Chiamata delle operazioni del servizio dal proxy generato.  
   

@@ -2,24 +2,24 @@
 title: Endpoint SOAP e HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: bf11563b937426c3c1701e7fed79e82e4e4669ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c8a4695dbcaee2f0e7584418fbeac12815fa967
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="soap-and-http-endpoints"></a>Endpoint SOAP e HTTP
-In questo esempio viene illustrato come implementare un servizio basato su RPC e come esporlo nel formato SOAP e il "Plain Old XML" (POX) formato utilizzando il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modello di programmazione Web. Vedere il [servizio HTTP di base](../../../../docs/framework/wcf/samples/basic-http-service.md) per ulteriori dettagli sul binding HTTP per il servizio. Questo esempio si concentra sui dettagli che riguardano l'esposizione dello stesso servizio su SOAP e HTTP tramite associazioni diverse.  
+In questo esempio viene illustrato come implementare un servizio basato su RPC e come esporlo nel formato SOAP e il formato "Plain Old XML" (POX) utilizzando il modello di programmazione Web WCF. Vedere il [servizio HTTP di base](../../../../docs/framework/wcf/samples/basic-http-service.md) per ulteriori dettagli sul binding HTTP per il servizio. Questo esempio si concentra sui dettagli che riguardano l'esposizione dello stesso servizio su SOAP e HTTP tramite associazioni diverse.  
   
 ## <a name="demonstrates"></a>Dimostrazione  
- Esposizione di un servizio RPC su SOAP e HTTP con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Esposizione di un servizio RPC su SOAP e HTTP tramite WCF.  
   
 ## <a name="discussion"></a>Discussione  
- Questo esempio è costituito da due componenti: un progetto di applicazione Web (Service) contenente un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e un'applicazione console (Client) che richiama le operazioni del servizio usando associazioni SOAP e HTTP.  
+ Questo esempio è costituito da due componenti: un progetto di applicazione Web (servizio) che contiene un servizio WCF e un'applicazione console (Client) che richiama le operazioni del servizio usando associazioni SOAP e HTTP.  
   
- Il servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espone 2 operazioni, ovvero `GetData` e `PutData`, che eseguono l'eco della stringa passata come input. Le operazioni del servizio vengono annotate con <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>. Questi attributi controllano la proiezione HTTP di queste operazioni. Vengono inoltre annotate con <xref:System.ServiceModel.OperationContractAttribute>, consentendone l'esposizione su associazioni SOAP. Il metodo `PutData` del servizio genera un oggetto <xref:System.ServiceModel.Web.WebFaultException> che viene inviato di nuovo su HTTP usando il codice di stato HTTP e su SOAP come errore SOAP.  
+ Il servizio WCF espone 2 operazioni, ovvero`GetData` e `PutData` – che eseguono l'eco la stringa passata come input. Le operazioni del servizio vengono annotate con <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>. Questi attributi controllano la proiezione HTTP di queste operazioni. Vengono inoltre annotate con <xref:System.ServiceModel.OperationContractAttribute>, consentendone l'esposizione su associazioni SOAP. Il metodo `PutData` del servizio genera un oggetto <xref:System.ServiceModel.Web.WebFaultException> che viene inviato di nuovo su HTTP usando il codice di stato HTTP e su SOAP come errore SOAP.  
   
- Il file Web.config configura il servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con 3 endpoint:  
+ Il file Web. config configura il servizio WCF con 3 endpoint:  
   
 -   L'endpoint ~/service.svc/mex che espone i metadati del servizio per l'accesso da client basati su SOAP.  
   

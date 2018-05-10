@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemi di sicurezza per la registrazione dei messaggi
 In questo argomento viene illustrato come evitare che i dati riservati vengano esposti nei log dei messaggi e come proteggere gli eventi generati dalla registrazione dei messaggi.  
@@ -16,7 +16,7 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
 ## <a name="security-concerns"></a>Problemi di sicurezza  
   
 ### <a name="logging-sensitive-information"></a>Registrazione di informazioni riservate  
- Windows Communication Foundation (WCF) non modifica i dati nelle intestazioni specifiche dell'applicazione e del corpo. Inoltre in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non viene tenuta traccia delle informazioni personali nelle intestazioni specifiche dell'applicazione o nei dati del corpo.  
+ Windows Communication Foundation (WCF) non modifica i dati nelle intestazioni specifiche dell'applicazione e del corpo. WCF anche non tiene traccia delle informazioni personali nelle intestazioni specifiche dell'applicazione o dati del corpo.  
   
  Quando la registrazione dei messaggi è abilitata, le informazioni personali contenute nelle intestazioni specifiche dell'applicazione, ad esempio una stringa di query, e le informazioni contenute nel corpo, ad esempio un numero di carta di credito, possono divenire visibili nei log. Il distributore dell'applicazione è responsabile dell'applicazione del controllo di accesso sui file di log e di configurazione. Se non si desidera che questo tipo di informazioni sia visibile, è necessario disabilitare la registrazione oppure filtrare parte dei dati se si intende condividere i file registro.  
   

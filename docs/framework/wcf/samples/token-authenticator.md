@@ -2,11 +2,11 @@
 title: Autenticatore token
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 35bba0b6a81ff11164636e906440db7e9b2ca25b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-authenticator"></a>Autenticatore token
 In questo esempio viene illustrato come implementare un autenticatore di token personalizzato. Un autenticatore del token di Windows Communication Foundation (WCF) viene utilizzato per la convalida del token utilizzato con il messaggio, verificando che è coerente e l'autenticazione dell'identità associata al token.  
@@ -23,11 +23,11 @@ In questo esempio viene illustrato come implementare un autenticatore di token p
   
 -   Come il server può convalidare le credenziali client utilizzando un autenticatore di token personalizzato.  
   
--   Come il codice del servizio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si collega all'autenticatore del token personalizzato.  
+-   Modo in cui il codice del servizio WCF consente di associare l'accesso con l'autenticatore del token personalizzato.  
   
 -   Come può essere autenticato il servizio dal client mediante il certificato X.509 del server.  
   
- Questo esempio mostra anche come l'identità del chiamante sia accessibile da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dopo il processo di autenticazione del token personalizzato.  
+ In questo esempio mostra anche come identità del chiamante sia accessibile da WCF dopo il processo di autenticazione del token personalizzato.  
   
  Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante il file di configurazione App.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione viene configurata con una classe standard `wsHttpBinding`, con la modalità di sicurezza impostata sul messaggio, modalità predefinita di `wsHttpBinding`. In questo esempio viene impostata la classe `wsHttpBinding` standard per usare l'autenticazione del nome utente del client. Il servizio configura anche il certificato del servizio usando il comportamento `serviceCredentials`. Il comportamento `securityCredentials` consente di specificare un certificato del servizio. Un certificato del servizio viene usato da un client per autenticare il servizio e fornire protezione del messaggio. La configurazione seguente fa riferimento al certificato localhost installato durante l'installazione dell'esempio come descritto nelle istruzioni seguenti.  
   

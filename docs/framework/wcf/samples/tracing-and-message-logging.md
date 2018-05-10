@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13d23c0f69c65dd3bd6b2714dd710eb7f97a1c07
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing-and-message-logging"></a>Traccia e registrazione dei messaggi
 In questo esempio viene illustrato come attivare la traccia e la registrazione dei messaggi. Le tracce risultante e i log dei messaggi vengono visualizzati utilizzando il [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -17,7 +17,7 @@ In questo esempio viene illustrato come attivare la traccia e la registrazione d
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
 ## <a name="tracing"></a>Traccia  
- Windows Communication Foundation (WCF) utilizza il meccanismo di traccia definito il <xref:System.Diagnostics> dello spazio dei nomi. In questo modello di traccia, i dati di traccia vengono prodotti da origini di traccia implementate dalle applicazioni. Ogni origine è identificata da un nome. Gli utenti della traccia creano listener di traccia per le origini di traccia per le quali desiderano recuperare informazioni. Per ricevere dati di traccia è necessario creare un listener per l'origine di traccia. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è possibile eseguire questa operazione aggiungendo il codice seguente al file di configurazione del servizio o del client impostando il `switchValue` dell'origine della traccia del modello di servizio:  
+ Windows Communication Foundation (WCF) utilizza il meccanismo di traccia definito il <xref:System.Diagnostics> dello spazio dei nomi. In questo modello di traccia, i dati di traccia vengono prodotti da origini di traccia implementate dalle applicazioni. Ogni origine è identificata da un nome. Gli utenti della traccia creano listener di traccia per le origini di traccia per le quali desiderano recuperare informazioni. Per ricevere dati di traccia è necessario creare un listener per l'origine di traccia. In WCF, questo scopo è possibile aggiungere il codice seguente al file di configurazione del servizio o del client impostando l'origine di traccia del modello di servizio `switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -55,12 +55,12 @@ In questo esempio viene illustrato come attivare la traccia e la registrazione d
   
 -   Correlare le attività tramite trasferimenti e propagazione.  
   
--   Diminuire il costo delle prestazioni di traccia di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (ad esempio, il costo dello spazio su disco di un file di log).  
+-   Ridurre l'impatto sulle prestazioni di traccia WCF (ad esempio, il costo di spazio su disco di un file di log).  
   
  Per ulteriori informazioni sulla traccia di attività definite dall'utente, vedere il [estensione traccia](../../../../docs/framework/wcf/samples/extending-tracing.md) esempio.  
   
 ## <a name="message-logging"></a>Registrazione messaggi  
- La registrazione di messaggi può essere abilitata sia sul client e che sul servizio di qualsiasi applicazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Per abilitare la registrazione messaggi è necessario aggiungere il codice seguente al client o al servizio:  
+ La registrazione dei messaggi può essere abilitata sia sul client e il servizio di qualsiasi applicazione WCF. Per abilitare la registrazione messaggi è necessario aggiungere il codice seguente al client o al servizio:  
   
 ```xml  
 <configuration>  

@@ -2,18 +2,18 @@
 title: Servizi WCF e traccia eventi per Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea917ee87b598fc3ad01df70d9aedfadfd1396a4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Servizi WCF e traccia eventi per Windows
-In questo esempio viene illustrato come utilizzare la traccia analitica in Windows Communication Foundation (WCF) per generare eventi in traccia eventi per Windows (ETW). Le tracce analitiche sono eventi generati in corrispondenza di punti chiave nello stack [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che consentono risolvere i problemi relativi ai servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in un ambiente di produzione.  
+In questo esempio viene illustrato come utilizzare la traccia analitica in Windows Communication Foundation (WCF) per generare eventi in traccia eventi per Windows (ETW). Le tracce analitiche sono eventi generati in punti chiave nello stack di WCF che consentono la risoluzione dei problemi dei servizi WCF in ambiente di produzione.  
   
- La funzionalità di tracci analitica nei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consiste in una traccia che può essere attivata in un ambiente di produzione con impatto minimo sulle prestazioni. Queste tracce vengono inviate come eventi a una sessione ETW.  
+ Traccia analitica nei servizi WCF è la traccia che può essere abilitata in un ambiente di produzione con impatto minimo sulle prestazioni. Queste tracce vengono inviate come eventi a una sessione ETW.  
   
- In questo esempio è incluso un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di base in cui gli eventi vengono inviati dal servizio al registro eventi che può essere visualizzato tramite Visualizzatore eventi. È inoltre possibile avviare una sessione ETW dedicata che rimanga in ascolto degli eventi generati dal servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Nell'esempio è incluso uno script che consente di creare una sessione ETW dedicata che archivia gli eventi in un file binario che può essere letto tramite Visualizzatore eventi.  
+ In questo esempio include un servizio WCF di base in cui gli eventi vengono generati dal servizio nel registro eventi, che può essere visualizzato tramite Visualizzatore eventi. È anche possibile avviare una sessione ETW dedicata che ascolta gli eventi del servizio WCF. Nell'esempio è incluso uno script che consente di creare una sessione ETW dedicata che archivia gli eventi in un file binario che può essere letto tramite Visualizzatore eventi.  
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
@@ -27,17 +27,17 @@ In questo esempio viene illustrato come utilizzare la traccia analitica in Windo
   
      Per impostazione predefinita, il servizio viene avviato in ascolto delle richieste sulla porta 1378 (http://localhost:1378/Calculator.svc).  
   
-4.  Eseguire il client di prova [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (WcfTestClient.exe).  
+4.  Eseguire il client di prova WCF (WcfTestClient.exe).  
   
-     Il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client di prova (WcfTestClient.exe) si trova nella \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] directory di installazione > \Common7\IDE\ WcfTestClient.exe (impostazione predefinita [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] è c:\Programmi\Microsoft Visual Studio 10.0).  
+     Il client di prova WCF (WcfTestClient.exe) si trova nel \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] directory di installazione > \Common7\IDE\ WcfTestClient.exe (impostazione predefinita [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] è c:\Programmi\Microsoft Visual Studio 10.0).  
   
-5.  All'interno di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client di prova, aggiungere il servizio selezionando **File**e quindi **Aggiungi servizio**.  
+5.  All'interno del client di test WCF, aggiungere il servizio selezionando **File**, quindi **Aggiungi servizio**.  
   
      Aggiungere l'indirizzo dell'endpoint nella casella di input. Il valore predefinito è http://localhost:1378/Calculator.svc.  
   
 6.  Aprire l'applicazione Visualizzatore eventi.  
   
-     Prima di richiamare il servizio, avviare Visualizzatore eventi e verificare che il registro eventi sia in ascolto per rilevare gli eventi generati dal servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     Prima di richiamare il servizio, avviare il Visualizzatore eventi e assicurarsi che il registro eventi sia in ascolto per rilevare eventi creati dal servizio WCF.  
   
 7.  Dal **avviare** dal menu **strumenti di amministrazione**e quindi **Visualizzatore eventi**.  Abilitare il **analitico** e **Debug** log.  
   
@@ -51,7 +51,7 @@ In questo esempio viene illustrato come utilizzare la traccia analitica in Windo
   
 #### <a name="to-test-the-service"></a>Per eseguire il test del servizio  
   
-1.  Tornare a client di prova [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], fare doppio clic su `Divide` e mantenere i valori predefiniti che specificano un valore per il denominatore pari a 0.  
+1.  Tornare al client di prova WCF e fare doppio clic su `Divide` e mantenere i valori predefiniti, che specificano un denominatore pari a 0.  
   
      Se il valore del denominatore è 0, il servizio genererà un errore.  
   

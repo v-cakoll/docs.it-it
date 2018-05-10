@@ -2,11 +2,11 @@
 title: 'Client: channel factory e canali'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: c7890f5fafb4e53053c4c393a7c8af584bd7a520
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 91e19c692718ae02e2f125a791904f62fe8401f7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client-channel-factories-and-channels"></a>Client: channel factory e canali
 In questo argomento viene illustrata la creazione di channel factory e canali.  
@@ -19,7 +19,7 @@ Una channel factory crea canali.
   
  Quando sono chiuse, le channel factory sono responsabili della chiusura di tutti i canali creati non ancora chiusi. Il modello rappresentato è asimmetrico perché quando un listener del canale viene chiuso, smette solo di accettare nuovi canali, mentre lascia aperti i canali esistenti affinché possano continuare a ricevere messaggi.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce supporti di classi di base per questo processo. (Per un diagramma di classi di supporto canale descritti in questo argomento, vedere [Cenni preliminari sul modello di canale](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
+ WCF fornisce gli helper di classe di base per questo processo. (Per un diagramma di classi di supporto canale descritti in questo argomento, vedere [Cenni preliminari sul modello di canale](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
   
 -   Il <xref:System.ServiceModel.Channels.CommunicationObject> implementa <xref:System.ServiceModel.ICommunicationObject> e impone la macchina a stati descritta nel passaggio 2 di [sviluppo canali](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

@@ -2,11 +2,11 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 5c2079f1aa90821448c88de53d311d064bb6e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c746897666ae78844df35c2989c803d852c3f70e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="srmp"></a>SRMP
 In questo esempio viene illustrato come eseguire comunicazioni transazionali in coda usando Accodamento messaggi (MSMQ) su HTTP.  
@@ -37,7 +37,7 @@ In questo esempio viene illustrato come eseguire comunicazioni transazionali in 
  Per eseguire questo esempio è necessario che, oltre a MSMQ, IIS sia installato sul computer del servizio e su quello del client,  
   
 ## <a name="demonstrates"></a>Dimostrazione  
- Nell'esempio viene illustrato come inviare messaggi in coda di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usando MSMQ su HTTP. Questa procedura viene anche chiamata messaggistica SRMP. Quando viene inviato un messaggio in coda, MSMQ sul computer mittente trasferisce i messaggi al gestore code di destinazione usando il trasporto TCP o HTTP. Se sceglie SRMP, l'utente sceglie HTTP come tipo di trasporto per il trasferimento della coda. Il protocollo SRMP protetto consente l'uso di HTTPS.  
+ Nell'esempio viene illustrato l'invio di WCF usando MSMQ su HTTP messaggi in coda. Questa procedura viene anche chiamata messaggistica SRMP. Quando viene inviato un messaggio in coda, MSMQ sul computer mittente trasferisce i messaggi al gestore code di destinazione usando il trasporto TCP o HTTP. Se sceglie SRMP, l'utente sceglie HTTP come tipo di trasporto per il trasferimento della coda. Il protocollo SRMP protetto consente l'uso di HTTPS.  
   
 ## <a name="example"></a>Esempio  
  L'esempio di codice si basa sull'esempio transazionale. L'invio di un messaggio alla coda e la ricezione di un messaggio dalla coda mediante SRMP sono uguali all'invio e alla ricezione di messaggi mediante un protocollo nativo.  

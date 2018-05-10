@@ -22,18 +22,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e67d4297ca0fe7028380b6d862f9f86c93bcaa61
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Procedura dettagliata: utilizzo di servizi delle applicazioni client
 Questo argomento descrive come creare un'applicazione Windows che usa i servizi delle applicazioni client per autenticare gli utenti e recuperare impostazioni e ruoli utente.  
   
  Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:  
   
--   Creare un'applicazione Windows Form e usare Progettazione progetti di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] per abilitare e configurare i servizi delle applicazioni client.  
+-   Creare un'applicazione Windows Form e usare Creazione progetti di Visual Studio per abilitare e configurare i servizi delle applicazioni client.  
   
 -   Creare una semplice applicazione del servizio Web ASP.NET per ospitare i servizi delle applicazioni e testare la configurazione client.  
   
@@ -57,15 +57,15 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 #### <a name="to-create-a-client-application-and-enable-client-application-services"></a>Per creare un'applicazione client e abilitare i servizi dell'applicazione client  
   
-1.  In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] selezionare l'opzione di menu **File &#124; Nuovo &#124; Progetto**.  
+1.  In Visual Studio selezionare l'opzione di menu **File &#124; Nuovo &#124; Progetto**.  
   
-2.  Nel riquadro **Tipi progetto** della finestra di dialogo **Nuovo progetto** espandere il nodo **Visual Basic** o **Visual C#**, quindi selezionare il tipo di progetto **Windows**.  
+2.  Nel riquadro **Tipi progetto** della finestra di dialogo **Nuovo progetto** espandere il nodo **Visual Basic** o **Visual C#** , quindi selezionare il tipo di progetto **Windows** .  
   
 3.  Assicurarsi che l'opzione **.NET Framework 3.5** sia selezionata, quindi selezionare il modello **Applicazione Windows Form** .  
   
 4.  Modificare il **Nome** del progetto in `ClientAppServicesDemo`, quindi fare clic su **OK**.  
   
-     In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]verrà aperto un nuovo progetto Windows Form.  
+     Verrà aperto un nuovo progetto Windows Form in Visual Studio.  
   
 5.  Scegliere **Proprietà di ClientAppServicesDemo** dal menu **Progetto**.  
   
@@ -248,9 +248,9 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 #### <a name="to-validate-the-user-in-your-application-code"></a>Per convalidare l'utente nel codice dell'applicazione  
   
-1.  Nel progetto ClientAppServicesDemo in **Esplora soluzioni** aggiungere un riferimento all'assembly System.Web.  
+1.  Nel progetto ClientAppServicesDemo in **Esplora soluzioni**aggiungere un riferimento all'assembly System.Web.  
   
-2.  Selezionare il file Form1, quindi scegliere **Visualizza &#124; Codice** dal menu principale di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+2.  Selezionare il file Form1, quindi scegliere **Visualizza &#124; Codice** dal menu principale di Visual Studio.  
   
 3.  Nell'editor del codice aggiungere le seguenti istruzioni all'inizio del file Form1.  
   
@@ -329,9 +329,9 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 4.  Nella finestra di progettazione aggiungere un controllo `CheckBox` al form sotto la casella di testo **Password** .  
   
-5.  Nella finestra **Proprietà** specificare il valore **per**(Name)`rememberMeCheckBox` e il valore **per**Text`&Remember me`.  
+5.  Nella finestra **Proprietà** specificare il valore **per** (Name) `rememberMeCheckBox` e il valore **per** Text `&Remember me`.  
   
-6.  Scegliere **Visualizza &#124; Codice** dal menu principale di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+6.  Selezionare **Visualizza &#124; Codice** dal menu principale di Visual Studio.  
   
 7.  Nell'editor del codice aggiungere il codice seguente all'inizio del file.  
   
@@ -371,7 +371,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 #### <a name="to-change-the-user-interface-based-on-user-role"></a>Per modificare l'interfaccia utente basata sul ruolo utente  
   
-1.  In **Esplora soluzioni** nel progetto ClientAppServicesDemo, selezionare Form1, quindi scegliere **Visualizza &#124; Finestra di progettazione** dal menu principale di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+1.  In **Esplora soluzioni** nel progetto ClientAppServicesDemo selezionare Form1, quindi scegliere **Visualizza &#124; Finestra di progettazione** dal menu principale di Visual Studio.  
   
 2.  Nella finestra di progettazione aggiungere un controllo <xref:System.Windows.Forms.Button> al form dalla **Casella degli strumenti**.  
   
@@ -407,7 +407,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
  È ora possibile eseguire l'applicazione e accedere come employee per non vedere il pulsante e come manager per visualizzarlo.  
   
 ## <a name="accessing-web-settings"></a>Accesso alle impostazioni Web  
- Nella procedura seguente verrà aggiunta al form una casella di testo che verrà associata a un'impostazione Web. Come il codice precedente che usa autenticazione e ruoli, il codice delle impostazioni non accede direttamente al provider delle impostazioni. Usa invece la classe `Settings` fortemente tipizzata (alla quale si accede come `Properties.Settings.Default` in C# e come `My.Settings` in Visual Basic) generata per il progetto da [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ Nella procedura seguente verrà aggiunta al form una casella di testo che verrà associata a un'impostazione Web. Come il codice precedente che usa autenticazione e ruoli, il codice delle impostazioni non accede direttamente al provider delle impostazioni. Usa invece la classe `Settings` fortemente tipizzata (alla quale si accede come `Properties.Settings.Default` in C# e come `My.Settings` in Visual Basic) generata per il progetto da Visual Studio.  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>Per usare le impostazioni Web nell'interfaccia utente  
   
@@ -425,7 +425,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
      L'impostazione `WebSettingsTestText` viene visualizzata nella finestra di progettazione con il valore predefinito `DefaultText`. Inoltre, per il progetto viene generata una classe `Settings` che contiene una proprietà `WebSettingsTestText`.  
   
-5.  In **Esplora soluzioni** nel progetto ClientAppServicesDemo, selezionare Form1, quindi scegliere **Visualizza &#124; Finestra di progettazione** dal menu principale di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+5.  In **Esplora soluzioni** nel progetto ClientAppServicesDemo selezionare Form1, quindi scegliere **Visualizza &#124; Finestra di progettazione** dal menu principale di Visual Studio.  
   
 6.  Nella finestra di progettazione aggiungere un controllo <xref:System.Windows.Forms.TextBox> al form.  
   
@@ -510,7 +510,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 #### <a name="to-enable-offline-mode-in-your-application"></a>Per abilitare la modalità offline nell'applicazione  
   
-1.  In **Esplora soluzioni** nel progetto ClientAppServicesDemo, selezionare Form1, quindi scegliere **Visualizza &#124; Finestra di progettazione** dal menu principale di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+1.  In **Esplora soluzioni** nel progetto ClientAppServicesDemo selezionare Form1, quindi scegliere **Visualizza &#124; Finestra di progettazione** dal menu principale di Visual Studio.  
   
 2.  Nella finestra di progettazione aggiungere un controllo <xref:System.Windows.Forms.CheckBox> al form.  
   

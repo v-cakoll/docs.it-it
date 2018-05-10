@@ -2,11 +2,11 @@
 title: 'Codificatore di messaggi personalizzato: codificatore di testi personalizzato'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 975cfd44834ed31a5d723fdca0fe467cba63e68d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 369706ecdc2e37a5fb62a448a273b045fe424df8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Codificatore di messaggi personalizzato: codificatore di testi personalizzato
 In questo esempio viene illustrato come implementare un codificatore di messaggi di testo personalizzato utilizzando Windows Communication Foundation (WCF).  
@@ -20,7 +20,7 @@ In questo esempio viene illustrato come implementare un codificatore di messaggi
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`  
   
- La classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta solo le codifiche UTF-8, UTF-16 e Big Endian Unicode. Il codificatore di messaggi di testi personalizzato in questo esempio supporta ogni codifica dei caratteri supportata dalla piattaforma che può essere necessaria per l'interoperabilità. L'esempio è costituito da un programma di console client (.exe) e da una libreria di servizi (.dll) ospitati su Internet Information Services (IIS). Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta. Il contratto è definito dall'interfaccia `ICalculator`, che espone operazioni matematiche (somma, sottrazione, moltiplicazione e divisione). Il client esegue richieste sincrone a un'operazione matematica specificata e il servizio risponde fornendo il risultato. Il client e il servizio utilizzano `CustomTextMessageEncoder` anziché la classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> predefinita.  
+ Il <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> di WCF supporta solo le codifiche UTF-8, UTF-16 e Big endian Unicode. Il codificatore di messaggi di testi personalizzato in questo esempio supporta ogni codifica dei caratteri supportata dalla piattaforma che può essere necessaria per l'interoperabilità. L'esempio è costituito da un programma di console client (.exe) e da una libreria di servizi (.dll) ospitati su Internet Information Services (IIS). Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta. Il contratto è definito dall'interfaccia `ICalculator`, che espone operazioni matematiche (somma, sottrazione, moltiplicazione e divisione). Il client esegue richieste sincrone a un'operazione matematica specificata e il servizio risponde fornendo il risultato. Il client e il servizio utilizzano `CustomTextMessageEncoder` anziché la classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> predefinita.  
   
  L'implementazione del codificatore personalizzato è costituita da una factory del codificatore di messaggi, un codificatore di messaggi, un messaggio che codifica l'elemento di associazione e un gestore di configurazione, e illustra quanto segue:  
   
@@ -47,7 +47,7 @@ In questo esempio viene illustrato come implementare un codificatore di messaggi
 4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>Factory di codificatori di messaggi e codificatori dei messaggi.  
- Quando la classe <xref:System.ServiceModel.ServiceHost> o il canale client vengono aperti, il componente della fase di progettazione `CustomTextMessageBindingElement` crea `CustomTextMessageEncoderFactory`. La factory crea `CustomTextMessageEncoder`. Il codificatore di messaggi aziona entrambi in modalità di trasmissione e in modalità di memorizzazione nel buffer. Utilizza le classi <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> per leggere e scrivere i messaggi, rispettivamente. Al contrario dei lettori e writer XML ottimizzati di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], che supportano solo UTF-8, UTF-16 e Big Endian Unicode, questi lettori e writer supportano ogni piattaforma di codifica supportata.  
+ Quando la classe <xref:System.ServiceModel.ServiceHost> o il canale client vengono aperti, il componente della fase di progettazione `CustomTextMessageBindingElement` crea `CustomTextMessageEncoderFactory`. La factory crea `CustomTextMessageEncoder`. Il codificatore di messaggi aziona entrambi in modalità di trasmissione e in modalità di memorizzazione nel buffer. Utilizza le classi <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> per leggere e scrivere i messaggi, rispettivamente. Ottimizzato lettori XML e i writer di WCF che supportano solo UTF-8, UTF-16 e Big endian Unicode, questi lettori e writer supportano ogni piattaforma supportata codifica.  
   
  Nel codice seguente viene illustrato il codificatore di messaggio personalizzato.  
   
@@ -190,11 +190,11 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 ```  
   
 ## <a name="message-encoding-binding-element"></a>Elemento di associazione di codifica dei messaggi  
- Gli elementi di associazione consentono la configurazione dello stack di runtime di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Per utilizzare il codificatore di messaggi personalizzato in un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è necessario un elemento di associazione che crea la factory del codificatore di messaggi con le impostazioni adatte al livello adatto nello stack di runtime.  
+ Gli elementi di associazione consentono la configurazione dello stack di runtime WCF. Per utilizzare il codificatore di messaggi personalizzato in un'applicazione WCF, è necessario un elemento di associazione che crea la factory del codificatore di messaggi con le impostazioni appropriate al livello appropriato nello stack di runtime.  
   
- La classe `CustomTextMessageBindingElement` deriva dalla classe base <xref:System.ServiceModel.Channels.BindingElement> ed eredita dalla classe <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. Ciò consente agli altri componenti di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di riconoscere questo elemento di associazione come elemento di associazione di codifica dei messaggi. L'implementazione del metodo <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> restituisce un'istanza della factory del codificatore di messaggi corrispondente con le impostazioni appropriate.  
+ La classe `CustomTextMessageBindingElement` deriva dalla classe base <xref:System.ServiceModel.Channels.BindingElement> ed eredita dalla classe <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. In questo modo altri componenti WCF di riconoscere questo elemento di associazione come un elemento associazione di codifica dei messaggi. L'implementazione del metodo <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> restituisce un'istanza della factory del codificatore di messaggi corrispondente con le impostazioni appropriate.  
   
- `CustomTextMessageBindingElement` espone impostazioni per `MessageVersion`, `ContentType` e `Encoding` tramite proprietà. Il codificatore supporta le versioni Soap11Addressing e Soap12Addressing1. L'impostazione predefinita è Soap11Addressing1. Il valore predefinito della proprietà `ContentType` è "text/xml". La proprietà `Encoding` consente di impostare il valore della codifica dei caratteri desiderata. Il client e il servizio di esempio utilizzano la codifica dei caratteri ISO-8859-1 (Latin1) che non è supportata dalla classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ `CustomTextMessageBindingElement` espone impostazioni per `MessageVersion`, `ContentType` e `Encoding` tramite proprietà. Il codificatore supporta le versioni Soap11Addressing e Soap12Addressing1. L'impostazione predefinita è Soap11Addressing1. Il valore predefinito della proprietà `ContentType` è "text/xml". La proprietà `Encoding` consente di impostare il valore della codifica dei caratteri desiderata. Il client di esempio e il servizio utilizza la codifica dei caratteri ISO-8859-1 (Latin1), che non è supportato per il <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> di WCF.  
   
  Nel codice seguente viene illustrato come creare l'associazione a livello di codice utilizzando il codificatore del messaggio di testo personalizzato.  
   

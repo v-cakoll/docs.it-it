@@ -2,11 +2,11 @@
 title: data binding in un client Windows Form
 ms.date: 03/30/2017
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
-ms.openlocfilehash: a84aeedba89cc7a5c267a0fd1f6c4f604fe80d43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 38991390f2d0dd272b8d07041b61e6cf16db0cae
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>data binding in un client Windows Form
 Questo esempio viene illustrato come associare ai dati restituiti da un servizio Windows Communication Foundation (WCF) in un'applicazione Windows Form.  
@@ -14,11 +14,11 @@ Questo esempio viene illustrato come associare ai dati restituiti da un servizio
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo articolo.  
   
- In questo esempio viene illustrato un servizio che implementa un contratto in cui viene definito un modello di comunicazione request/reply. L'esempio è costituito da un'applicazione Windows Form client (.exe) e da un servizio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ospitato su Internet Information Services (IIS).  
+ In questo esempio viene illustrato un servizio che implementa un contratto in cui viene definito un modello di comunicazione request/reply. L'esempio è costituito da un client Windows Forms application (.exe) e un servizio WCF ospitato da Internet Information Services (IIS).  
   
  Il contratto viene definito mediante l'interfaccia `IWeatherService`, che espone un'operazione denominata `GetWeatherData`. Questa operazione accetta una matrice di città e restituisce una matrice di oggetti `WeatherData` che rappresentano la temperatura massima e minima prevista per una città.  
   
- L'associazione di dati si verifica sul client dell'applicazione Windows Form. Nella finestra di progettazione Windows Form viene definito un elemento `DataGridView`, che costituisce una rappresentazione grafica dei dati. Viene creato anche un intermediario denominato `BindingSource`. L'origine dati di `BindingSource` è impostata sulla matrice dei dati restituita dal servizio. Lo scopo dell'elemento `BindingSource` consiste nel fornire un livello di riferimento indiretto tra i dati e la visualizzazione dei dati. Tutte le interazioni con i dati, ad esempio l'esplorazione, l'ordinamento, il filtro e l'aggiornamento, vengono eseguite mediante chiamate al componente `BindingSource`. Per eseguire l'associazione di dati all'oggetto `DataGridView`, l'elemento `datasource` di  `DataGridView` viene impostato sull'oggetto `BindingSource`. Tutti i dati restituiti dal servizio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] vengono visualizzati graficamente dall'utente.  Ogni volta che l'utente fa clic sul pulsante, i dati restituiti vengono automaticamente aggiornati nell'oggetto `DataGridView` associato a dati.  
+ L'associazione di dati si verifica sul client dell'applicazione Windows Form. Nella finestra di progettazione Windows Form viene definito un elemento `DataGridView`, che costituisce una rappresentazione grafica dei dati. Viene creato anche un intermediario denominato `BindingSource`. L'origine dati di `BindingSource` è impostata sulla matrice dei dati restituita dal servizio. Lo scopo dell'elemento `BindingSource` consiste nel fornire un livello di riferimento indiretto tra i dati e la visualizzazione dei dati. Tutte le interazioni con i dati, ad esempio l'esplorazione, l'ordinamento, il filtro e l'aggiornamento, vengono eseguite mediante chiamate al componente `BindingSource`. Per eseguire l'associazione di dati all'oggetto `DataGridView`, l'elemento `datasource` di  `DataGridView` viene impostato sull'oggetto `BindingSource`. Tutti i dati restituiti dal servizio WCF viene quindi visualizzato graficamente all'utente.  Ogni volta che l'utente fa clic sul pulsante, i dati restituiti vengono automaticamente aggiornati nell'oggetto `DataGridView` associato a dati.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   

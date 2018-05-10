@@ -2,11 +2,11 @@
 title: Eccezioni previste
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c4af62e0870cdd670c46ead169033ff72902fc0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="expected-exceptions"></a>Eccezioni previste
 In questo esempio viene illustrato come rilevare le eccezioni previste quando si utilizza un client tipizzato. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice. In questo esempio, il client è un'applicazione console (.exe) e il servizio è ospitato da Internet Information Services (IIS).  
@@ -16,9 +16,9 @@ In questo esempio viene illustrato come rilevare le eccezioni previste quando si
   
  In questo esempio viene illustrata l'intercettazione e la gestione di due tipi di eccezione previsti che devono essere gestiti da programmi specifici, ovvero `TimeoutException` e `CommunicationException`.  
   
- Le eccezioni generate dai metodi di comunicazione in un client Windows Communication Foundation (WCF) sono previste o impreviste. Le eccezioni impreviste includono gli errori irreversibili come `OutOfMemoryException` e gli errori di programmazione come `ArgumentNullException` o `InvalidOperationException`. Gli errori imprevisti non possono essere gestiti in modo utile, pertanto in genere non è necessario rilevarli quando si chiama un metodo di comunicazione client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Le eccezioni generate dai metodi di comunicazione in un client Windows Communication Foundation (WCF) sono previste o impreviste. Le eccezioni impreviste includono gli errori irreversibili come `OutOfMemoryException` e gli errori di programmazione come `ArgumentNullException` o `InvalidOperationException`. In genere non è utile per gestire gli errori imprevisti, pertanto, in genere che è necessario non intercettare li quando si chiama un metodo di comunicazione client WCF.  
   
- Le eccezioni previste dai metodi di comunicazione su un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] includono `TimeoutException`, `CommunicationException` e qualsiasi classe derivata da `CommunicationException`. Queste eccezioni indicano un problema durante la comunicazione che può essere gestita correttamente interrompendo il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e riportando un errore di comunicazione. Perché fattori esterni possono provocare questi errori in qualsiasi applicazione, le eccezioni devono essere rilevate da applicazioni specifiche e deve essere eseguito il ripristino quando si verificano.  
+ Previsto eccezioni dai metodi di comunicazione in un client WCF includono `TimeoutException`, `CommunicationException`, e qualsiasi classe derivata da `CommunicationException`. Queste informazioni indicano un problema durante la comunicazione che può essere gestita in modo sicuro da interrompere il client WCF e la segnalazione di un errore di comunicazione. Perché fattori esterni possono provocare questi errori in qualsiasi applicazione, le eccezioni devono essere rilevate da applicazioni specifiche e deve essere eseguito il ripristino quando si verificano.  
   
  Un client può generare numerose classi derivate di `CommunicationException`. In alcuni casi, le applicazioni rilevano anche alcune di queste eccezioni per una gestione speciale, ma lasciano che le altre vengano gestite come `CommunicationException`. Questo processo può essere portato a termine rilevando prima il tipo di eccezione più specifico e quindi `CommunicationException` in una clausola di rilevamento successiva.  
   

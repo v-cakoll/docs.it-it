@@ -2,17 +2,17 @@
 title: Trasferimento
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa7535aa393544077a9802b5c3255d6e5f6accda
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transfer"></a>Trasferimento
 In questo argomento viene descritto il trasferimento nel modello di traccia di attività di Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Definizione di trasferimento  
- I trasferimenti tra le attività rappresentano le relazioni causali tra eventi nelle attività correlate all'interno di endpoint. Due attività sono correlate con i trasferimenti quando controllano i flussi tra queste attività, ad esempio, una chiamata al metodo che supera i limiti di attività. In [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], quando arrivano i byte nel servizio, l'ascolto dell'attività viene trasferito all'attività di ricezione byte in cui viene creato l'oggetto messaggio. Per un elenco di scenari di traccia end-to-end e le loro rispettive attività e la traccia di progettazione, vedere [gli scenari di traccia End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ I trasferimenti tra le attività rappresentano le relazioni causali tra eventi nelle attività correlate all'interno di endpoint. Due attività sono correlate con i trasferimenti quando controllano i flussi tra queste attività, ad esempio, una chiamata al metodo che supera i limiti di attività. In WCF, quando sono byte in ingresso nel servizio, l'attività di ascolto viene trasferito all'attività di ricezione byte in cui viene creato l'oggetto messaggio. Per un elenco di scenari di traccia end-to-end e le loro rispettive attività e la traccia di progettazione, vedere [gli scenari di traccia End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
   
  Per emettere tracce di trasferimento, usare l'impostazione `ActivityTracing` nell'origine di traccia, come illustrato nel codice di configurazione seguente.  
   

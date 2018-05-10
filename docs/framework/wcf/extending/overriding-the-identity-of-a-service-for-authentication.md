@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df1f2490f8636d52ac75fad2469adadec2a57da
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Override dell'identità di un servizio per l'autenticazione
 In genere non è necessario impostare l'identità in un servizio, perché la selezione del tipo di credenziale di un client impone il tipo di identità esposto nei metadati del servizio. Ad esempio, il codice di configurazione seguente usa il [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) e imposta il `clientCredentialType` attributo Windows.  
@@ -30,9 +30,9 @@ In genere non è necessario impostare l'identità in un servizio, perché la sel
 > [!NOTE]
 >  Per usare il tipo di credenziale di Windows senza negoziazione, l'account utente del servizio deve avere accesso al nome SPN registrato con il dominio Active Directory. È possibile eseguire questa operazione nei modi seguenti:  
   
--   Usare l'account NetworkService o LocalSystem per eseguire il servizio. Poiché questi account hanno accesso al nome SPN del computer stabilito quando il computer viene associato al dominio Active Directory, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera automaticamente l'elemento SPN corretto nell'endpoint del servizio nei metadati (WSDL) del servizio.  
+-   Usare l'account NetworkService o LocalSystem per eseguire il servizio. Poiché questi account hanno accesso al nome SPN viene stabilito quando il computer viene aggiunto al dominio di Active Directory del computer, WCF genera automaticamente l'elemento SPN corretto nell'endpoint del servizio nei metadati del servizio (WSDL).  
   
--   Usare un account di dominio Active Directory arbitrario per eseguire il servizio. In questo caso, stabilire un SPN per l'account di dominio, eventualmente usando l'utilità Setspn.exe. Dopo aver creato il nome SPN per l'account del servizio, configurare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per la pubblicazione del nome SPN in questione nei client del servizio tramite i relativi metadati (WSDL). Questa operazione viene eseguita impostando l'identità dell'endpoint esposto tramite un file di configurazione dell'applicazione o tramite codice.  
+-   Usare un account di dominio Active Directory arbitrario per eseguire il servizio. In questo caso, stabilire un SPN per l'account di dominio, eventualmente usando l'utilità Setspn.exe. Dopo aver creato il nome SPN per l'account del servizio, configurare WCF per pubblicare tale SPN ai client del servizio tramite i relativi metadati (WSDL). Questa operazione viene eseguita impostando l'identità dell'endpoint esposto tramite un file di configurazione dell'applicazione o tramite codice.  
   
  Per ulteriori informazioni sui nomi SPN, il protocollo Kerberos e Active Directory, vedere [supplemento tecnico Kerberos per Windows](http://go.microsoft.com/fwlink/?LinkId=88330).  
   
@@ -59,7 +59,7 @@ In genere non è necessario impostare l'identità in un servizio, perché la sel
   
   
 ### <a name="setting-identity-programmatically"></a>Impostazione dell'identità a livello di programmazione  
- Il servizio non deve necessariamente specificare in modo esplicito un'identità, poiché [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] la determina automaticamente. Tuttavia, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consente di specificare un'identità su un endpoint, se necessario. Nel codice seguente viene aggiunto un nuovo endpoint di servizio con un'identità DNS specifica.  
+ Il servizio non è necessario specificare in modo esplicito un'identità, poiché WCF determina automaticamente. Tuttavia, WCF consente di specificare un'identità su un endpoint, se necessario. Nel codice seguente viene aggiunto un nuovo endpoint di servizio con un'identità DNS specifica.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  

@@ -2,24 +2,24 @@
 title: Contract2
 ms.date: 03/30/2017
 ms.assetid: 305eeb65-a52f-459e-9aa8-0ef071eade16
-ms.openlocfilehash: d7af8df46fabcb96a8f7015e360ee2617b7273a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b751e3d4fd6eae01e3fcd7500f844427d46524c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contract"></a>Contratto
 In questa sezione è contenuti esempi che illustrano i contratti in Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Contratti dati](../../../../docs/framework/wcf/samples/data-contracts.md)  
- Vengono descritti contratti dati in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Viene illustrato in WCF i contratti dati.  
   
  [Contratti di messaggio](../../../../docs/framework/wcf/samples/message-contracts.md)  
- Vengono descritti contratti di messaggio in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Viene illustrato in WCF i contratti di messaggio.  
   
  [Contratti di servizio](../../../../docs/framework/wcf/samples/service-contracts.md)  
- Vengono descritti contratti di servizio in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Viene illustrato come contratti di servizio in WCF.  
   
  [DataContractResolver](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
  Viene descritto come è possibile personalizzare processi di serializzazione e deserializzazione tramite la classe <xref:System.Runtime.Serialization.DataContractResolver>.  

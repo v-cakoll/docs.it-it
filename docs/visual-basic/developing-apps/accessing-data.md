@@ -12,11 +12,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 306a618f193f9223443938ae2a9e0996c1b5295c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: fb6645279a71252ff0ac81348c460b8981771797
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Accesso ai dati nelle applicazioni Visual Basic
 Visual Basic include numerose nuove funzionalità per semplificare lo sviluppo di applicazioni che accedono ai dati. I moduli associati ai dati per applicazioni Windows vengono creati trascinando elementi dalla [finestra Origine dati](/visualstudio/data-tools/add-new-data-sources) nel modulo. I controlli ai dati si associano trascinando elementi dalla **finestra Origini dati** nei controlli esistenti.  
@@ -26,7 +26,7 @@ Visual Basic include numerose nuove funzionalità per semplificare lo sviluppo d
  Include collegamenti alle pagine sulla incorporazione della funzionalità di accesso ai dati nelle applicazioni.
 
  [Visual Studio Data Tools per .NET](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- Include collegamenti alle pagine sulla creazione di applicazioni che usano i dati tramite [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Include collegamenti alle pagine sulla creazione di applicazioni che usano i dati tramite Visual Studio.  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Include collegamenti agli argomenti che descrivono come usare LINQ con Visual Basic.  
@@ -41,7 +41,7 @@ Visual Basic include numerose nuove funzionalità per semplificare lo sviluppo d
  Include collegamenti agli argomenti che illustrano come creare applicazioni dati a più livelli.  
      
  [Aggiungere nuove connessioni](/visualstudio/data-tools/add-new-connections)  
- Include collegamenti alle pagine che illustrano come connettere le applicazioni ai dati con gli strumenti di progettazione e gli oggetti di connessione ADO.NET tramite [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Include collegamenti alle pagine che illustrano come connettere le applicazioni ai dati con gli strumenti di progettazione e gli oggetti di connessione ADO.NET tramite Visual Studio.  
 
  [Uso di set di dati in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  Include collegamenti alle pagine che descrivono come caricare dati nei set di dati e come eseguire le istruzioni SQL e le stored procedure.  

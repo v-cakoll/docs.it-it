@@ -2,11 +2,11 @@
 title: Intercettore dei messaggi personalizzati
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a59b2075473e2ca4c8cb8751fd6cb733f282238b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-interceptor"></a>Intercettore dei messaggi personalizzati
 In questo esempio viene illustrato l'utilizzo del modello di estensibilità del canale. In particolare, viene illustrato come implementare un elemento di associazione personalizzato che crea channel factory e listener del canale per intercettare tutti i messaggi in ingresso e in uscita in un particolare punto nello stack di runtime. L'esempio include anche un client e un server che illustrano l'utilizzo di queste factory personalizzate.  
@@ -25,7 +25,7 @@ In questo esempio viene illustrato l'utilizzo del modello di estensibilità del 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- L'esempio descrive la procedura consigliata per la creazione di un canale su più livelli personalizzato in Windows Communication Foundation (WCF), utilizzando il framework del canale e seguendo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] procedure consigliate. I passaggi per creare un canale su più livelli personalizzato sono i seguenti.  
+ L'esempio descrive la procedura consigliata per la creazione di un canale su più livelli personalizzato in Windows Communication Foundation (WCF), utilizzando il framework del canale e seguendo le procedure consigliate WCF. I passaggi per creare un canale su più livelli personalizzato sono i seguenti.  
   
 1.  Decidere quali forme del canale saranno supportate dalla channel factory e dal listener del canale.  
   

@@ -2,11 +2,11 @@
 title: Estensione della funzionalità di traccia
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 685ba85dc240bc2fdefdf02d9ece2279e3507abc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59291b6a57ba602e5fea84dcd571a8d767b7cc04
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-tracing"></a>Estensione della funzionalità di traccia
 In questo esempio viene illustrato come estendere la funzionalità di traccia di Windows Communication Foundation (WCF) scrivendo le tracce di attività definite dall'utente nel codice client e del servizio. In questo modo l'utente può creare attività di traccia e raggruppare le tracce in unità logiche di lavoro. È anche possibile correlare le attività tramite trasferimenti (all'interno dello stesso endpoint) e propagazione (attraverso diversi endpoint). In questo esempio la traccia è abilitata sia per il client che per il servizio. Per ulteriori informazioni su come abilitare la traccia nel file di configurazione client e servizio, vedere [traccia e registrazione dei messaggi](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -26,7 +26,7 @@ In questo esempio viene illustrato come estendere la funzionalità di traccia di
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
 ## <a name="tracing-and-activity-propagation"></a>Traccia e propagazione delle attività  
- La traccia delle attività definita dall'utente consente all'utente di creare attività di traccia personalizzate per raggruppare le tracce in unità logiche di lavoro, correlare le attività tramite trasferimenti e propagazione, e ridurre i costi della traccia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (ad esempio, lo spazio su disco di un file di log).  
+ La funzionalità di traccia di attività definite dall'utente consente all'utente di creare le proprie attività di traccia per raggruppare le tracce in unità logiche di lavoro, correlare le attività tramite trasferimenti e propagazione e ridurre i costi della traccia WCF (ad esempio, lo spazio su disco dei costi di un file di log).  
   
 ### <a name="adding-custom-sources"></a>Aggiunta di origini personalizzate  
  Le tracce definite dall'utente possono essere aggiunte sia al codice del client che al codice del servizio. Aggiunta di origini di traccia per i file di configurazione client o del servizio consentono di queste tracce personalizzate essere registrato e visualizzato nel [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Nell'esempio di codice seguente viene illustrato come aggiungere un'origine di traccia definita dall'utente denominata `ServerCalculatorTraceSource` al file di configurazione.  
@@ -67,7 +67,7 @@ In questo esempio viene illustrato come estendere la funzionalità di traccia di
 ```  
   
 ### <a name="correlating-activities"></a>Correlazione di attività  
- Per correlare direttamente le attività attraverso gli endpoint, l'attributo `propagateActivity` deve essere impostato su `true` nell'origine di traccia `System.ServiceModel`. Per propagare inoltre le tracce senza passare attraverso le attività [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è necessario disattivare la traccia dell'attività ServiceModel. Tutto ciò è illustrato nell'esempio di codice seguente.  
+ Per correlare direttamente le attività attraverso gli endpoint, l'attributo `propagateActivity` deve essere impostato su `true` nell'origine di traccia `System.ServiceModel`. Inoltre, per propagare le tracce senza passare attraverso le attività WCF, traccia attività ServiceModel deve essere spenta. Tutto ciò è illustrato nell'esempio di codice seguente.  
   
 > [!NOTE]
 >  La disattivazione dell'attività di traccia ServiceModel non equivale a disattivare il livello di traccia, indicato dalla proprietà `switchValue`.  
@@ -85,7 +85,7 @@ In questo esempio viene illustrato come estendere la funzionalità di traccia di
 ```  
   
 ### <a name="lessening-performance-cost"></a>Riduzione del costo in termini di prestazioni  
- La disattivazione di `ActivityTracing` nell'origine di traccia `System.ServiceModel` genera un file di traccia che contiene solo le tracce di attività definite dall'utente, senza includere le tracce di attività ServiceModel. Di conseguenza, le dimensioni del file di log risulteranno molto più piccole. Tuttavia, si perde la possibilità per correlare le tracce di elaborazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ La disattivazione di `ActivityTracing` nell'origine di traccia `System.ServiceModel` genera un file di traccia che contiene solo le tracce di attività definite dall'utente, senza includere le tracce di attività ServiceModel. Di conseguenza, le dimensioni del file di log risulteranno molto più piccole. Tuttavia, la possibilità per correlare le tracce di elaborazione WCF viene persa.  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   

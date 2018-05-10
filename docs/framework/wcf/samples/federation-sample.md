@@ -2,17 +2,17 @@
 title: Esempio di federazione
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 38581c7003c30038ee1a3438caa96b7f2782a23e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9c2b91f7d8bdf24476c76fcd479b7f2fb44c90f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="federation-sample"></a>Esempio di federazione
 Nell'esempio viene illustrata la sicurezza federata.  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
- Windows Communication Foundation (WCF) fornisce il supporto per la distribuzione di architetture di sicurezza federata tramite la `wsFederationHttpBinding`. L'elemento `wsFederationHttpBinding` offre un'associazione sicura, affidabile e interoperativa che comporta l'utilizzo di HTTP come meccanismo di trasporto sottostante per la comunicazione request/reply e Text/XML come formato di trasmissione per la codifica. Per ulteriori informazioni sulla federazione nel [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vedere [federazione](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Windows Communication Foundation (WCF) fornisce il supporto per la distribuzione di architetture di sicurezza federata tramite la `wsFederationHttpBinding`. L'elemento `wsFederationHttpBinding` offre un'associazione sicura, affidabile e interoperativa che comporta l'utilizzo di HTTP come meccanismo di trasporto sottostante per la comunicazione request/reply e Text/XML come formato di trasmissione per la codifica. Per ulteriori informazioni sulla federazione in WCF, vedere [federazione](../../../../docs/framework/wcf/feature-details/federation.md).  
   
  Lo scenario è costituito da 4 elementi:  
   

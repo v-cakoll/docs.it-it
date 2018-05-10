@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e6471de1a6231f114f6967bb6f777a8dc4d39b82
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ce5af6f31a10f23703b761e041b21f08b71952b9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Procedura dettagliata: creazione di una pipeline del flusso di dati
 Sebbene sia possibile usare i metodi <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> per ricevere messaggi da blocchi di origine, è anche possibile connettere blocchi di messaggi per formare una *pipeline del flusso di dati*. Una pipeline del flusso di dati è costituita da una serie di componenti o *blocchi di flussi di dati*, ognuno dei quali esegue un'attività specifica che contribuisce a un obiettivo più grande. In ogni blocco di flussi di dati di una pipeline del flusso di dati viene eseguito un lavoro quando si riceve un messaggio da un altro blocco di flussi di dati. Un'analogia a questo è data da una catena di montaggio per la produzione di automobili. Man mano che ciascun veicolo passa attraverso la catena di montaggio, in una postazione viene assemblato il telaio, nella successiva viene installato il motore e così via. Grazie alla catena di montaggio in cui è possibile eseguire il montaggio di più veicoli contemporaneamente, si ottiene una maggiore produzione rispetto al montaggio completo dei veicoli uno alla volta.
@@ -45,7 +45,7 @@ Sebbene sia possibile usare i metodi <xref:System.Threading.Tasks.Dataflow.Dataf
  Prima di iniziare questa procedura dettagliata, leggere [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
   
 ## <a name="creating-a-console-application"></a>Creazione di un'applicazione console  
- In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] creare un progetto Applicazione console di Visual C# o Visual Basic. Installare il pacchetto System.Threading.Tasks.Dataflow NuGet.
+ In Visual Studio creare un progetto Applicazione console di Visual C# o Visual Basic. Installare il pacchetto System.Threading.Tasks.Dataflow NuGet.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 

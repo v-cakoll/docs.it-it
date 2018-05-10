@@ -2,11 +2,11 @@
 title: Associazione WS
 ms.date: 03/30/2017
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
-ms.openlocfilehash: 67102c7c2925c2ac032d9defccdd5e187e76d608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11480b91c6ac6a5501029dfdf10cd81d3fa18820
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-binding"></a>Associazione WS
 In questa sezione è contenuti esempi che illustrano l'associazione al servizio Windows in Windows Communication Foundation (WCF).  
@@ -25,7 +25,7 @@ In questa sezione è contenuti esempi che illustrano l'associazione al servizio 
  Viene illustrato come utilizzare la codifica dei messaggi MTOM (Message Transmission Optimization Mechanism, meccanismo di ottimizzazione della trasmissione dei messaggi) con un WSHttpBinding.  
   
  [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)  
- Viene descritto come implementare un servizio tipico e un client tipico utilizzando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Viene illustrato come implementare un servizio tipico e un client tipico utilizzando WCF.  
   
  [Sessioni affidabili WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md)  
  Viene illustrato l'utilizzo delle sessioni affidabili.  
@@ -34,7 +34,7 @@ In questa sezione è contenuti esempi che illustrano l'associazione al servizio 
  Viene illustrato l'utilizzo della sicurezza del trasporto SSL con l'associazione <xref:System.ServiceModel.WSHttpBinding>.  
   
  [Associazioni di sicurezza ai messaggi](../../../../docs/framework/wcf/samples/message-security-binding.md)  
- Viene illustrato l'utilizzo della sicurezza dei messaggi in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Viene illustrato l'utilizzo della protezione dei messaggi in WCF.  
   
  [Trasporto WS con credenziali del messaggio](../../../../docs/framework/wcf/samples/ws-transport-with-message-credential.md)  
  In questo esempio viene illustrato l'utilizzo della sicurezza del trasporto SSL in combinazione con l'inclusione delle credenziali client nel messaggio.

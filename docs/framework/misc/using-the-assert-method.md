@@ -1,13 +1,6 @@
 ---
 title: Utilizzo del metodo Assert
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,16 +16,13 @@ helpviewer_keywords:
 - permissions [.NET Framework], overriding security checks
 - permissions [.NET Framework], assertions
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
-caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 90e5d910e0d6e6f55234255ac378fa58ebf7f307
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea8be23eb6fd2500e59527890b874b8f19ec06d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-assert-method"></a>Utilizzo del metodo Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -66,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Il metodo A è incluso nell'assembly A, il metodo B nell'assembly B e così via.  
   
- ![](../../../docs/framework/misc/media/assert.gif "Assert")  
+ ![](../../../docs/framework/misc/media/assert.gif "Assert)")  
 Uso di Assert  
   
  In questo scenario, il metodo a chiama B, B chiama C, C chiama E ed E chiama F. metodo C effettua un'asserzione dell'autorizzazione per leggere i file nell'unità C (autorizzazione P1) e metodo E richiede l'autorizzazione per leggere i file con estensione txt presenti nell'unità C (autorizzazione P1A). Quando la richiesta in F viene rilevata in fase di esecuzione, viene eseguita un'analisi dello stack per controllare le autorizzazioni di tutti i chiamanti di F, a partire da E. E dispone dell'autorizzazione P1A, pertanto il percorso stack procede esaminando le autorizzazioni di C, in cui viene individuata l'asserzione di C. Poiché l'autorizzazione richiesta (P1A) è un subset dell'autorizzazione oggetto dell'asserzione (P1), il percorso stack si interrompe e automaticamente il controllo di sicurezza ha esito positivo. Non è importante che agli assembly A e B non sia stata concessa l'autorizzazione P1A. Con l'asserzione di P1, il metodo C garantisce che i chiamanti possano accedere alla risorsa protetta da P1, anche se non è stata loro concessa l'autorizzazione di accesso.  

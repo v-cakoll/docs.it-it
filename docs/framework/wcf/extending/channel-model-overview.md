@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-ms.openlocfilehash: df2993d9ba25c043aa66029aa00fae945d5cec9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13fe07d1521832ed12ba5770e0bd069ff9b917d2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="channel-model-overview"></a>Panoramica sul modello dei canali
-Lo stack dei canali Windows Communication Foundation (WCF) è uno stack di comunicazione su più livelli con uno o più canali che elaborano i messaggi. Nella parte inferiore dello stack è presente un canale di trasporto che è responsabile dell'adattamento dello stack dei canali al trasporto sottostante (ad esempio TCP, HTTP, SMTP e altri tipi di trasporto.). I canali forniscono un modello di programmazione di basso livello per l'invio e la ricezione di messaggi. Questo modello di programmazione si basa su varie interfacce e altri tipi noti collettivamente come modello dei canali [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. In questo argomento vengono illustrate le forme del canale, la costruzione di un listener del canale di base (sul servizio) e di una channel factory (sul client).  
+Lo stack dei canali Windows Communication Foundation (WCF) è uno stack di comunicazione su più livelli con uno o più canali che elaborano i messaggi. Nella parte inferiore dello stack è presente un canale di trasporto che è responsabile dell'adattamento dello stack dei canali al trasporto sottostante (ad esempio TCP, HTTP, SMTP e altri tipi di trasporto.). I canali forniscono un modello di programmazione di basso livello per l'invio e la ricezione di messaggi. Questo modello di programmazione si basa su varie interfacce e altri tipi noti collettivamente come modello dei canali WCF. In questo argomento vengono illustrate le forme del canale, la costruzione di un listener del canale di base (sul servizio) e di una channel factory (sul client).  
   
 ## <a name="channel-stack"></a>Stack dei canali  
- Gli endpoint [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comunicano con il mondo esterno utilizzando uno stack di comunicazione chiamato stack dei canali. Nel diagramma seguente lo stack dei canali viene messo a confronto con altri stack di comunicazione, ad esempio TCP/IP.  
+ Endpoint WCF di comunicare con il mondo esterno utilizzando uno stack di comunicazione chiamato stack dei canali. Nel diagramma seguente lo stack dei canali viene messo a confronto con altri stack di comunicazione, ad esempio TCP/IP.  
   
  ![Modello del canale](../../../../docs/framework/wcf/extending/media/wcfc-channelstackhighlevelc.gif "wcfc_ChannelStackHighLevelc")  
   

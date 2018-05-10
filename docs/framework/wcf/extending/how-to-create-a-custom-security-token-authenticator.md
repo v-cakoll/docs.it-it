@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 41936b407dfdb3fecee80b2513b557016cdcfe5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ba554ed23ae039796f51f4a699d368c4a6c0587e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Procedura: creare un autenticatore del token di sicurezza personalizzato
 In questo argomento viene illustrato come creare un autenticatore del token di sicurezza personalizzato e come integrarlo con un gestore del token di sicurezza personalizzato. Un autenticatore del token di sicurezza codi sicurezzantenuto di un token di sicurezza fornito con un messaggio in ingresso. Se la convalida ha esito positivo, l'autenticatore restituisce una raccolta di istanze <xref:System.IdentityModel.Policy.IAuthorizationPolicy> che, quando valutata, restituisce un set di attestazioni.  
@@ -33,7 +33,7 @@ In questo argomento viene illustrato come creare un autenticatore del token di s
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
   
- Il codice precedente restituisce una raccolta di criteri di autorizzazione nel metodo <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29>. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non fornisce un'implementazione pubblica di questa interfaccia. Nella procedura seguente viene illustrato come eseguire l'operazione in base ai propri requisiti.  
+ Il codice precedente restituisce una raccolta di criteri di autorizzazione nel metodo <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29>. WCF non fornisce un'implementazione pubblica di questa interfaccia. Nella procedura seguente viene illustrato come eseguire l'operazione in base ai propri requisiti.  
   
 #### <a name="to-create-a-custom-authorization-policy"></a>Per creare un criterio di autorizzazione personalizzato  
   
@@ -43,7 +43,7 @@ In questo argomento viene illustrato come creare un autenticatore del token di s
   
 3.  Implementare la proprietà di sola lettura <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A>. Questa proprietà deve restituire un emittente dei set di attestazioni ottenuti dal token. Tale emittente deve corrispondere all'emittente del token o a un'autorità responsabile della convalida del contenuto del token. Nell'esempio seguente viene utilizzata l'attestazione dell'emittente passata alla classe dall'autenticatore del token di sicurezza personalizzato creato nella procedura precedente. L'autenticatore del token di sicurezza personalizzato utilizza il set di attestazioni fornito dal sistema (restituito dalla proprietà <xref:System.IdentityModel.Claims.ClaimSet.System%2A>) per rappresentare l'emittente del token nome utente.  
   
-4.  Implementare il metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>. Questo metodo compila un'istanza della classe <xref:System.IdentityModel.Policy.EvaluationContext> (passata come argomento) con attestazioni basate sul contenuto del token di sicurezza in ingresso. Il metodo restituisce `true` al termine della valutazione. Nei casi in cui l'implementazione si basa sulla presenza di altri criteri di autorizzazione che forniscono informazioni aggiuntive al contesto di valutazione, questo metodo può restituire `false` se le informazioni necessarie non sono ancora presenti nel contesto di valutazione. In tal caso, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] chiamerà nuovamente il metodo dopo la valutazione di tutti gli altri criteri di autorizzazione generati per il messaggio in ingresso se almeno uno di tali criteri di autorizzazione ha modificato il contesto di valutazione.  
+4.  Implementare il metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>. Questo metodo compila un'istanza della classe <xref:System.IdentityModel.Policy.EvaluationContext> (passata come argomento) con attestazioni basate sul contenuto del token di sicurezza in ingresso. Il metodo restituisce `true` al termine della valutazione. Nei casi in cui l'implementazione si basa sulla presenza di altri criteri di autorizzazione che forniscono informazioni aggiuntive al contesto di valutazione, questo metodo può restituire `false` se le informazioni necessarie non sono ancora presenti nel contesto di valutazione. In tal caso, WCF chiamerà il metodo nuovamente dopo la valutazione di tutti gli altri criteri di autorizzazione generati per il messaggio in ingresso se almeno uno di tali criteri di autorizzazione ha modificato il contesto di valutazione.  
   
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  

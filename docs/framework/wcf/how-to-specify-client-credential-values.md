@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: e1133194fe925bca4fb79d8adc1975a2063450f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9625400b855492ead12a5a2f1fa74f10164f6cdd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>Procedura: specificare valori di credenziali client
 Utilizza Windows Communication Foundation (WCF), il servizio può specificare la modalità di autenticazione di un client al servizio. Ad esempio, un servizio può stabilire che il client venga autenticato con un certificato.  
@@ -44,7 +44,7 @@ Utilizza Windows Communication Foundation (WCF), il servizio può specificare la
   
 1.  Utilizzare il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare codice e la configurazione dal servizio.  
   
-2.  Crea un'istanza del client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] utilizzando il codice generato.  
+2.  Creare un'istanza del client WCF usando il codice generato.  
   
 3.  Nella classe del client impostare la proprietà <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> della classe <xref:System.ServiceModel.ClientBase%601> su un valore appropriato. In questo esempio la proprietà viene impostata su un certificato X.509 utilizzando il metodo <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> della classe <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>.  
   

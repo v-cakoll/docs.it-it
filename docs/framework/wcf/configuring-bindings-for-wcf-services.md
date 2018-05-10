@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 8fcb2fbf49984ce2b6aaf1f112575d05a3d7d038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b91c8ff5a78ef2b2b2db5ea26ae7a1733a97ffd0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configurazione di associazioni per i servizi Windows Communication Foundation
 Durante la creazione di un'applicazione, è spesso necessario assegnare all'amministratore il compito di prendere alcune decisioni dopo la distribuzione dell'applicazione. Non è in alcun modo possibile, ad esempio, conoscere in anticipo l'indirizzo di un servizio, o URI (Uniform Resource Identifier). Anziché inserire un indirizzo nel codice, è preferibile consentire che questa operazione venga eseguita da un amministratore dopo la creazione del servizio. Questa flessibilità viene realizzata attraverso la configurazione.  
@@ -39,9 +39,9 @@ Durante la creazione di un'applicazione, è spesso necessario assegnare all'ammi
   
  Ad esempio, specificando il [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento indica l'utilizzo di HTTP come trasporto per un endpoint. Ciò consente di associare l'endpoint in fase di esecuzione quando il servizio che utilizza l'endpoint è aperto.  
   
- Le associazioni sono di due tipi: predefinite e personalizzate. Le associazioni predefinite contengono combinazioni utili di elementi utilizzati in scenari comuni. Per un elenco di associazioni predefinite tipi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fornisce, vedere [associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md). Se nessuna raccolta di associazioni predefinite presenta la combinazione corretta delle funzionalità necessarie per un'applicazione di servizio, è possibile costruire associazioni personalizzate che soddisfino i requisiti dell'applicazione. Per ulteriori informazioni sulle associazioni personalizzate, vedere [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Le associazioni sono di due tipi: predefinite e personalizzate. Le associazioni predefinite contengono combinazioni utili di elementi utilizzati in scenari comuni. Per un elenco di tipi di associazione predefiniti forniti da WCF, vedere [associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md). Se nessuna raccolta di associazioni predefinite presenta la combinazione corretta delle funzionalità necessarie per un'applicazione di servizio, è possibile costruire associazioni personalizzate che soddisfino i requisiti dell'applicazione. Per ulteriori informazioni sulle associazioni personalizzate, vedere [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
- Nei quattro esempi seguenti vengono illustrate le configurazioni di associazione più comuni utilizzate per la configurazione di un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Nei quattro esempi seguenti vengono illustrano le configurazioni di associazione più comuni utilizzate per la configurazione di un servizio WCF.  
   
 #### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>Specificare un tipo di associazione per un endpoint  
  Nel primo esempio viene illustrato come specificare un endpoint configurato con un indirizzo, un contratto e un'associazione.  

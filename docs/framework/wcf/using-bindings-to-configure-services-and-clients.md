@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 39866d7cdd871c6450e0864848c7a3197779045a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8271f51885c0d7800d26018b94942a7d832bf4a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Uso di associazioni per configurare servizi e client
 Le associazioni sono oggetti che specificano i dettagli di comunicazione necessari per connettersi a un endpoint. In particolare, le associazioni contengono le informazioni di configurazione usate per creare il client o il runtime del servizio definendo le specifiche dei trasporti, i formati di trasmissione (codifica del messaggio) e i protocolli da usare per il relativo endpoint o canale client. Per creare un servizio Windows Communication Foundation (WCF) funzionante, ogni endpoint nel servizio richiede un'associazione. In questo argomento viene illustrato cosa sono le associazioni, come vengono definite e come viene specificata una particolare associazione per un endpoint.  
@@ -26,15 +26,15 @@ Le associazioni sono oggetti che specificano i dettagli di comunicazione necessa
  Determina la codifica del messaggio, ad esempio, testo/XML, binaria o MTOM (Message Transmission Optimization Mechanism), che determina il modo in cui i messaggi vengono rappresentati come flussi di byte durante la trasmissione.  
   
 ## <a name="system-provided-bindings"></a>Associazioni fornite dal sistema  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] include un set di associazioni fornite dal sistema progettate per soddisfare la maggior parte dei requisiti e degli scenari delle applicazioni. Le classi seguenti rappresentano alcuni esempi di associazioni fornite dal sistema:  
+ WCF include un set di associazioni fornite dal sistema progettate per soddisfare la maggior parte dei requisiti dell'applicazione e degli scenari. Le classi seguenti rappresentano alcuni esempi di associazioni fornite dal sistema:  
   
 -   <xref:System.ServiceModel.BasicHttpBinding>: associazione di protocollo HTTP adatta alla connessione a servizi Web conformi alla specifica WS-I Basic Profile 1.1 (ad esempio, servizi basati sui servizi Web ASP.NET [ASMX]).  
   
 -   <xref:System.ServiceModel.WSHttpBinding>: associazione di protocollo HTTP adatta alla connessione agli endpoint conformi ai protocolli e alle specifiche dei servizi Web.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: usa la codifica binaria .NET e le tecnologie di frame insieme al trasporto delle named pipe di Windows per la connessione ad altri endpoint [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sullo stesso computer.  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>: Usa la codifica binaria .NET e frame tecnologie in combinazione con il trasporto di named pipe di Windows per connettersi agli altri endpoint WCF nello stesso computer.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: usa la codifica binaria .NET e tecnologie di frame insieme al servizio di accodamento messaggi (MSMQ) per creare connessioni dei messaggi in coda con gli altri endpoint [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+-   <xref:System.ServiceModel.NetMsmqBinding>: Usa la codifica binaria .NET e tecnologie in combinazione con l'accodamento messaggi (noto anche come MSMQ) di frame per creare connessioni dei messaggi in coda con altri endpoint WCF.  
   
  Per un elenco completo delle associazioni fornite dal sistema, con le descrizioni, vedere [associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md).  
   
@@ -49,7 +49,7 @@ Le associazioni sono oggetti che specificano i dettagli di comunicazione necessa
 2.  Creare un endpoint che usa questa associazione.  
   
 ## <a name="code-and-configuration"></a>Codice e configurazione  
- È possibile definire o configurare associazioni tramite il codice o la configurazione. Questi due approcci sono indipendenti dal tipo di associazione usato, ad esempio, se si usa un'associazione fornita dal sistema o <xref:System.ServiceModel.Channels.CustomBinding>. In generale, l'uso del codice garantisce il controllo completo sulla definizione di un'associazione durante la compilazione. La configurazione, d'altra parte, consente a un amministratore di sistema o all'utente di un servizio o di un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] di modificare i parametri delle associazioni. Questa flessibilità è spesso utile in quando non è possibile prevedere in alcun modo i requisiti specifici del computer e le condizioni della rete in cui deve essere distribuita un'applicazione [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Se le informazioni sull'associazione (e l'indirizzo) vengono separate dal codice, gli amministratori possono modificare i dettagli dell'associazione senza dover compilare o distribuire nuovamente l'applicazione. Si noti che se l'associazione viene definita nel codice, sovrascrive qualsiasi definizione basata sulla configurazione creata nel file di configurazione. Per esempi di questi approcci, vedere gli argomenti seguenti:  
+ È possibile definire o configurare associazioni tramite il codice o la configurazione. Questi due approcci sono indipendenti dal tipo di associazione usato, ad esempio, se si usa un'associazione fornita dal sistema o <xref:System.ServiceModel.Channels.CustomBinding>. In generale, l'uso del codice garantisce il controllo completo sulla definizione di un'associazione durante la compilazione. Configurazione, d'altra parte, consente a un amministratore di sistema o all'utente di un servizio WCF o un client per modificare i parametri delle associazioni. Questa flessibilità è spesso consigliabile in quanto non è possibile stimare i requisiti specifici del computer e le condizioni in cui è possibile distribuire un'applicazione WCF della rete. Se le informazioni sull'associazione (e l'indirizzo) vengono separate dal codice, gli amministratori possono modificare i dettagli dell'associazione senza dover compilare o distribuire nuovamente l'applicazione. Si noti che se l'associazione viene definita nel codice, sovrascrive qualsiasi definizione basata sulla configurazione creata nel file di configurazione. Per esempi di questi approcci, vedere gli argomenti seguenti:  
   
 -   [Procedura: ospitare un servizio WCF in un'applicazione gestita da](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) fornisce un esempio di creazione di un'associazione nel codice.  
   

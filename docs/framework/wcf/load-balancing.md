@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d554dfd8d21b6e0e5f4aef0f4402e16485c2e8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="load-balancing"></a>Bilanciamento del carico
-Un modo per aumentare la capacità delle applicazioni di Windows Communication Foundation (WCF) consiste nella scalabilità orizzontale distribuendole in una farm di server con bilanciamento del carico. Nelle applicazioni [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] il bilanciamento del carico può essere realizzato utilizzando tecniche standard, tra cui servizi di bilanciamento del carico come Bilanciamento carico di rete di Windows, nonché appositi dispositivi basati su hardware.  
+Un modo per aumentare la capacità delle applicazioni di Windows Communication Foundation (WCF) consiste nella scalabilità orizzontale distribuendole in una farm di server con bilanciamento del carico. Le applicazioni WCF possono essere con carico bilanciato utilizzando bilanciamento tecniche, tra cui servizi di bilanciamento del carico software, ad esempio Windows Network Load Balancing standard nonché carico basato su hardware appositi dispositivi.  
   
- Nelle sezioni seguenti vengono illustrate alcune considerazioni sul bilanciamento del carico delle applicazioni [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] create utilizzando varie associazioni fornite dal sistema.  
+ Le sezioni seguenti illustrano le considerazioni per le applicazioni WCF compilate utilizzando varie associazioni fornite dal sistema di bilanciamento del carico.  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>Bilanciamento del carico con l'associazione HTTP di base  
- Dal punto di vista del bilanciamento del carico, le applicazioni [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] che comunicano utilizzando <xref:System.ServiceModel.BasicHttpBinding> non sono diverse da altri tipi comuni di traffico di rete HTTP (contenuto HTML statico, pagine ASP.NET o servizi Web ASMX). I canali [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] che utilizzano questa associazione sono intrinsecamente senza stato e terminano le connessioni quando vengono chiusi. Di conseguenza, <xref:System.ServiceModel.BasicHttpBinding> funziona correttamente con le tecniche esistenti di bilanciamento del carico HTTP.  
+ Dalla prospettiva del bilanciamento del carico, le applicazioni WCF che comunicano utilizzando il <xref:System.ServiceModel.BasicHttpBinding> non sono diverse da altri tipi comuni di HTTP traffico di rete (statico contenuto HTML, pagine ASP.NET o servizi Web ASMX). Canali WCF che utilizzano questa associazione sono intrinsecamente senza stati e terminano le connessioni quando si chiude il canale. Di conseguenza, <xref:System.ServiceModel.BasicHttpBinding> funziona correttamente con le tecniche esistenti di bilanciamento del carico HTTP.  
   
  Per impostazione predefinita, <xref:System.ServiceModel.BasicHttpBinding> invia nei messaggi un'intestazione HTTP Connection con un valore `Keep-Alive` che consente ai client di stabilire connessioni permanenti ai servizi che le supportano. Questa configurazione offre un miglioramento della velocità effettiva poiché le connessioni stabilite in precedenza possono essere riutilizzate per l'invio di messaggi successivi allo stesso server. Il riutilizzo delle connessioni può tuttavia causare una forte associazione dei client a un server specifico all'interno della farm con carico bilanciato, riducendo in questo modo l'efficacia del bilanciamento del carico di tipo round robin. Se questo comportamento è inaccettabile, è possibile disattivare il `Keep-Alive` HTTP nel server utilizzando la proprietà <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> con una classe <xref:System.ServiceModel.Channels.CustomBinding> o una classe <xref:System.ServiceModel.Channels.Binding> definita dall'utente. Nell'esempio seguente viene illustrato come eseguire questa operazione utilizzando la configurazione.  
   

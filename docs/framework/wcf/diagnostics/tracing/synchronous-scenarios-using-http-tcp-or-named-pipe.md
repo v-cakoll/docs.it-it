@@ -2,11 +2,11 @@
 title: Scenari sincroni con trasporti HTTP, TCP o pipe con nome
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11a5d8f43d12d35728c65c7a60ad8a4fa2fc1b3a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Scenari sincroni con trasporti HTTP, TCP o pipe con nome
 In questo argomento vengono descritte le attività e i trasferimenti di esecuzione in vari scenari request/reply sincroni che prevedono un client a thread singolo e che utilizzano un trasporto HTTP, TCP o pipe con nome. Vedere [scenari asincroni con HTTP, TCP o Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) per ulteriori informazioni sulle richieste a thread multipli.  
@@ -54,7 +54,7 @@ In questo argomento vengono descritte le attività e i trasferimenti di esecuzio
  L'unica differenza rispetto allo scenario precedente è che viene restituito un messaggio di errore SOAP come messaggio di risposta. Se `propagateActivity` = `true`, l'ID attività del messaggio di richiesta viene aggiunta al messaggio di errore SOAP.  
   
 ## <a name="synchronous-one-way-without-errors"></a>Unidirezionale sincrono senza errori  
- L'unica differenza rispetto al primo scenario è che non viene restituito alcun messaggio al server. Inoltre, per i protocolli basati su HTTP, il sistema invia al client uno stato che indica l'eventuale presenza di errori. Ciò è dovuto al fatto che HTTP è l'unico protocollo avente una semantica request/reply appartenente allo stack di protocolli di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Poiché l'elaborazione TCP è nascosta a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], al client non viene inviato alcun acknowledgement.  
+ L'unica differenza rispetto al primo scenario è che non viene restituito alcun messaggio al server. Inoltre, per i protocolli basati su HTTP, il sistema invia al client uno stato che indica l'eventuale presenza di errori. Infatti, quest'ultimo è l'unico protocollo avente una semantica request / reply che fa parte dello stack di protocolli WCF. Poiché l'elaborazione TCP è nascosta da WCF, viene inviato alcun acknowledgement al client.  
   
 ## <a name="synchronous-one-way-with-errors"></a>Unidirezionale sincrono con errori  
  Se durante l'elaborazione del messaggio (Q o successivo) si verifica un errore, al client non viene restituita alcuna notifica. Questo comportamento è identico allo scenario "Sincrono unidirezionale senza errori". Se si desidera ricevere un messaggio di errore, evitare di utilizzare uno scenario unidirezionale.  

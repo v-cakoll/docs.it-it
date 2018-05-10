@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b8faa7a3f92be25b1c1ae700c92e5d2a0828a5a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 65523fcc1d08bd48a432e6cf599dfcb73ade8747
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
-In questo esempio viene illustrato come creare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). In questo esempio illustra l'implementazione di un [Crea connessione](http://go.microsoft.com/fwlink/?LinkId=178141) canale che può essere composte con la messaggistica affidabile e, facoltativamente, un canale sicuro per creare un'associazione sicura affidabile basato sulla specifica RSP.  
+In questo esempio viene illustrato come creare WCF e [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). In questo esempio illustra l'implementazione di un [Crea connessione](http://go.microsoft.com/fwlink/?LinkId=178141) canale che può essere composte con la messaggistica affidabile e, facoltativamente, un canale sicuro per creare un'associazione sicura affidabile basato sulla specifica RSP.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

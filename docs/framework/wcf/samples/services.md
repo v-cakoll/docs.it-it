@@ -2,30 +2,30 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: ef5de3fc51e43a88adb021b66732492f03d9d912
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="services"></a>Servizi
 In questa sezione è contenuti esempi che illustrano i servizi Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)  
- Vengono descritti i servizi di hosting di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Illustra l'hosting dei servizi WCF.  
   
  [Interoperabilità dei servizi](../../../../docs/framework/wcf/samples/service-interoperability.md)  
- Viene descritta l'interazione tra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e altre tecnologie del servizio.  
+ Viene descritta l'interazione tra WCF e altre tecnologie del servizio.  
   
  [Comportamenti](../../../../docs/framework/wcf/samples/behaviors.md)  
- Vengono descritti i comportamenti del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Illustra i comportamenti del servizio WCF.  
   
  [Sicurezza del servizio](../../../../docs/framework/wcf/samples/service-security.md)  
- Viene descritta la sicurezza del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Viene illustrata la sicurezza del servizio WCF.  
   
  [Configurazione semplificata per servizi WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- Viene illustrato come implementare e configurare un tipico servizio e un client mediante [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Viene illustrato come implementare e configurare un servizio tipico e un client tramite WCF.  
   
  [Uso di endpoint standard](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
  Viene illustrato come utilizzare endpoint standard in file di configurazione del servizio.  
@@ -55,7 +55,7 @@ In questa sezione è contenuti esempi che illustrano i servizi Windows Communica
  Viene descritto un servizio che ospita più endpoint in un solo `ListenUri`.  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- Viene illustrato come inviare informazioni aggiuntive in una chiamata di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizzando le intestazioni.  
+ Viene illustrato come inviare informazioni aggiuntive su una chiamata WCF utilizzando le intestazioni.  
   
  [Descrizione del servizio](../../../../docs/framework/wcf/samples/service-description.md)  
  Viene descritto come un servizio può recuperare le informazioni di descrizione del servizio nella fase di esecuzione.  

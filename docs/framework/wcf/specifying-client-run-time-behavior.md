@@ -7,11 +7,11 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: dbee1fecda66dc377513bdf8cae4645f009b6384
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bc104c4f51ebc64154bd3d9b39ac2bca13b2fab1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-client-run-time-behavior"></a>Specifica del comportamento in fase di esecuzione dei client
 I client Windows Communication Foundation (WCF), ad esempio i servizi Windows Communication Foundation (WCF), possono essere configurati per modificare il comportamento in fase di esecuzione per adattarlo all'applicazione client. Sono disponibili tre attributi per la specifica del comportamento in fase di esecuzione dei client. Gli oggetti callback dei client duplex possono usare gli attributi <xref:System.ServiceModel.CallbackBehaviorAttribute> e <xref:System.ServiceModel.Description.CallbackDebugBehavior> per modificare il proprio comportamento in fase di esecuzione. L'altro attributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, può essere usato per separare la destinazione logica dalla destinazione di rete immediata. Inoltre, i tipi di callback dei client duplex possono usare alcuni dei comportamenti del lato servizi. Per altre informazioni, vedere [che specifica il comportamento di Run-Time servizio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -35,7 +35,7 @@ I client Windows Communication Foundation (WCF), ad esempio i servizi Windows Co
   
 -   Si procede in questo modo solo negli scenari di debug controllati.  
   
- Nell'esempio di codice seguente viene mostrato un file di configurazione client che indica a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] di restituire informazioni sulle eccezioni gestite da un oggetto callback client in messaggi SOAP.  
+ Esempio di codice seguente viene illustrato un client i file di configurazione che indica a WCF per restituire informazioni sulle eccezioni gestite da un client di oggetto di callback nei messaggi SOAP.  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  

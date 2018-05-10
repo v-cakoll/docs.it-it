@@ -2,11 +2,11 @@
 title: Aggiornamenti flusso personalizzati
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-stream-upgrades"></a>Aggiornamenti flusso personalizzati
 I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso continuo di byte tra il client e il server. Questo flusso viene realizzato da un oggetto <xref:System.IO.Stream>. In un aggiornamento flusso, il client desidera aggiungere un livello di protocollo facoltativo allo stack di canali e chiede all'altra estremità del canale di comunicazione di farlo. L'aggiornamento flusso consiste nel sostituire l'oggetto <xref:System.IO.Stream> originale con un oggetto aggiornato.  
@@ -66,7 +66,7 @@ I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso co
 ## <a name="security-upgrades"></a>Aggiornamenti della protezione  
  L'aggiunta di un aggiornamento della protezione è una versione specifica del processo generale di aggiornamento flusso.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce già due elementi di associazione per l'aggiornamento della protezione del flusso. La configurazione della protezione a livello di trasporto viene incapsulata dalle classi <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> e <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>, che possono essere configurate e aggiunte a un'associazione personalizzata. Questi elementi di associazione estendono la classe <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> che crea i provider di aggiornamento flusso client e server. Questi elementi di associazione includono metodi che creano le classi di provider di aggiornamento flusso di sicurezza specifiche, che non sono `public`, pertanto, per questi due casi, tutto ciò che è necessario fare è aggiungere l'elemento di associazione all'associazione.  
+ WCF fornisce già due elementi di associazione per l'aggiornamento della protezione di flusso. La configurazione della protezione a livello di trasporto viene incapsulata dalle classi <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> e <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>, che possono essere configurate e aggiunte a un'associazione personalizzata. Questi elementi di associazione estendono la classe <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> che crea i provider di aggiornamento flusso client e server. Questi elementi di associazione includono metodi che creano le classi di provider di aggiornamento flusso di sicurezza specifiche, che non sono `public`, pertanto, per questi due casi, tutto ciò che è necessario fare è aggiungere l'elemento di associazione all'associazione.  
   
  Per gli scenari di sicurezza non soddisfatti dai due elementi di associazione precedenti vengono derivate tre classi `abstract` correlate alla protezione dalle classi di base di iniziatore, acceptor e provider precedenti:  
   

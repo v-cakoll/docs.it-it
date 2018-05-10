@@ -2,21 +2,21 @@
 title: Importazione di metadati personalizzati per un'estensione WCF
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: bb7124cbce3fa38d00446b6568c85fc3136ee180
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99e2bd7c0ce1fd4a8154a0d6d9650487197d98d8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importazione di metadati personalizzati per un'estensione WCF
-In Windows Communication Foundation (WCF), l'importazione dei metadati è il processo di generazione di una rappresentazione astratta di un servizio o alle relative parti componente dai relativi metadati. Ad esempio, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può importare istanze della classe <xref:System.ServiceModel.Description.ServiceEndpoint>, della classe <xref:System.ServiceModel.Channels.Binding> o della classe <xref:System.ServiceModel.Description.ContractDescription> da un documento WSDL di un servizio. Per importare i metadati di un servizio in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è necessario utilizzare un'implementazione della classe astratta <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType>. I tipi che derivano dalla classe <xref:System.ServiceModel.Description.MetadataImporter> implementano il supporto per l'importazione dei formati di metadati che si basano sulla logica di importazione di WS-Policy di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+In Windows Communication Foundation (WCF), l'importazione dei metadati è il processo di generazione di una rappresentazione astratta di un servizio o alle relative parti componente dai relativi metadati. Ad esempio, è possibile importare WCF <xref:System.ServiceModel.Description.ServiceEndpoint> casi <xref:System.ServiceModel.Channels.Binding> istanze o <xref:System.ServiceModel.Description.ContractDescription> documentare le istanze di un documento WSDL per un servizio. Per importare i metadati del servizio in WCF, utilizzare un'implementazione della <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> classe astratta. Tipi che derivano dal <xref:System.ServiceModel.Description.MetadataImporter> classe implementano il supporto per l'importazione dei formati dei metadati che utilizzano WS-Policy importare logica di WCF.  
   
  I metadati personalizzati sono costituiti da elementi XML non importabili mediante le utilità di importazione dei metadati forniti dal sistema. Esempi comuni di metadati personalizzati sono le estensioni WSDL personalizzate e le asserzioni di criteri personalizzate.  
   
  Questa sezione descrive come importare le estensioni WSDL e le asserzioni di criteri personalizzate, senza tuttavia tratta il processo di importazione in sé. Per ulteriori informazioni su come usare i tipi di esportare e importano metadati indipendentemente dai metadati personalizzati o sistema supportato, vedere [di esportazione e importazione di metadati](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Panoramica  
- Il tipo <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> è un'implementazione della classe astratta <xref:System.ServiceModel.Description.MetadataImporter> fornita da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Il tipo <xref:System.ServiceModel.Description.WsdlImporter> importa metadati WSDL insieme ai relativi criteri allegati. Questi elementi vengono quindi raggruppati in un oggetto <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType>. Le asserzioni di criteri e le estensioni WSDL non riconosciute dalle unità di importazione predefinite vengono importate tramite una delle unità di importazione personalizzate e registrate di documenti WSDL e di criteri. In genere, le unità di importazione vengono implementate per supportare gli elementi di associazione definiti dall'utente o per modificare il contratto importato.  
+ Il <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> il tipo è l'implementazione del <xref:System.ServiceModel.Description.MetadataImporter> astratta incluso con WCF. Il tipo <xref:System.ServiceModel.Description.WsdlImporter> importa metadati WSDL insieme ai relativi criteri allegati. Questi elementi vengono quindi raggruppati in un oggetto <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType>. Le asserzioni di criteri e le estensioni WSDL non riconosciute dalle unità di importazione predefinite vengono importate tramite una delle unità di importazione personalizzate e registrate di documenti WSDL e di criteri. In genere, le unità di importazione vengono implementate per supportare gli elementi di associazione definiti dall'utente o per modificare il contratto importato.  
   
  Contenuto della sezione sono descritti gli argomenti seguenti:  
   

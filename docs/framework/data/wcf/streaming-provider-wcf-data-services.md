@@ -10,11 +10,11 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 119877802bc6d685cd5b440cedb6ab71b20abf45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d65ea58bc2e98ab2607ce105b496ac0a870362b0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provider di flusso (WCF Data Services)
 Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono rappresentare flussi audio e video, immagini, file documento o altri tipi di elementi multimediali binari. Quando un'entità del modello di dati include una o più proprietà binarie, il servizio dati restituisce tali dati binari codificati in base 64 all'interno dell'elemento entry presente nel feed di risposta. Poiché il caricamento e la serializzazione di dati binari di grandi dimensioni in questo modo può influire sulle prestazioni, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definisce un meccanismo per recuperare dati binari indipendentemente dell'entità a cui appartiene. Questa operazione viene eseguita separando i dati binari dall'entità in uno o più flussi di dati.  
@@ -79,12 +79,12 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
  Per informazioni generali su come creare un servizio dati, vedere [configurazione del servizio dati](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Abilitazione dei flussi binari di grandi dimensioni nell'ambiente di hosting  
- Quando si crea un servizio dati in un'applicazione Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], Windows Communication Foundation (WCF) viene utilizzato per fornire l'implementazione del protocollo HTTP. Per impostazione predefinita, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] limita la dimensione dei messaggi HTTP a solo KB 65. Per consentire il flusso dei dati binari di grandi dimensioni verso e dal servizio dati, è inoltre necessario configurare l'applicazione Web per l'abilitazione di file binari di grandi dimensioni e l'uso di flussi per il trasferimento. A tal fine, aggiungere quanto segue all'elemento `<configuration />` del file Web.config dell'applicazione:  
+ Quando si crea un servizio dati in un'applicazione Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], Windows Communication Foundation (WCF) viene utilizzato per fornire l'implementazione del protocollo HTTP. Per impostazione predefinita, WCF limita la dimensione dei messaggi HTTP a soli 65.000 byte. Per consentire il flusso dei dati binari di grandi dimensioni verso e dal servizio dati, è inoltre necessario configurare l'applicazione Web per l'abilitazione di file binari di grandi dimensioni e l'uso di flussi per il trasferimento. A tal fine, aggiungere quanto segue all'elemento `<configuration />` del file Web.config dell'applicazione:  
   
   
   
 > [!NOTE]
->  È necessario usare una modalità di trasferimento del campo <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> per assicurarsi che i dati binari nei messaggi di richiesta e di risposta vengano trasmessi, ma non memorizzati nel buffer da parte di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+>  È necessario utilizzare un <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modalità di trasferimento per garantire che i dati binari nei messaggi di richiesta e risposta vengono trasmessi e non memorizzato nel buffer da WCF.  
   
  Per ulteriori informazioni, vedere [Streaming di trasferimento messaggi](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) e [delle quote del trasporto](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   

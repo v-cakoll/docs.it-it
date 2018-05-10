@@ -13,11 +13,11 @@ ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9b196bbbce110acb596602fa4de2507515cdbb68
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 37e06d97b082ba6de75d8efa81723442403e39be
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (Riferimenti per C#)
 Consente di generare i checksum per i file di origine facilitando in tal modo le operazioni di debug delle pagine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -33,7 +33,7 @@ Consente di generare i checksum per i file di origine facilitando in tal modo le
  Nome del file che richiede il monitoraggio per modifiche o aggiornamenti.  
   
  `"{guid}"`  
- Identificatore univoco globale (GUID, Globally Unique Identifier) del file.  
+ Identificatore univoco globale (GUID, Globally Unique Identifier) dell'algoritmo hash.  
   
  `"checksum_bytes"`  
  Stringa di cifre esadecimali che rappresenta i byte del checksum. Deve essere un numero pari di cifre esadecimali. Un numero dispari di cifre genera un avviso in fase di compilazione, pertanto la direttiva viene ignorata.  
@@ -54,7 +54,7 @@ class TestClass
 {  
     static int Main()  
     {  
-        #pragma checksum "file.cs" "{3673e4ca-6098-4ec1-890f-8fceb2a794a2}" "{012345678AB}" // New checksum  
+        #pragma checksum "file.cs" "{406EA660-64CF-4C82-B6F0-42D48172A799}" "ab007f1d23d9" // New checksum  
     }  
 }  
 ```  

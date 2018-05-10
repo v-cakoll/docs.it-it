@@ -2,20 +2,20 @@
 title: Esempio di elemento di associazione di individuazione
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 7dc38acbe91e03f579414294da07bff5cc53cc4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Esempio di elemento di associazione di individuazione
 In questo esempio viene illustrato come utilizzare l'elemento di associazione del client di individuazione per individuare un servizio. Questa funzionalità consente agli sviluppatori di aggiungere un canale client di individuazione allo stack dei canali del client esistente, rendendo il modello di programmazione estremamente intuitivo. Quando il canale associato viene aperto, l'indirizzo del servizio viene risolto utilizzando la funzionalità di individuazione. L'esempio è costituito dai progetti seguenti:  
   
--   **CalculatorService**: un individuabile [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio.  
+-   **CalculatorService**: un servizio WCF individuabile.  
   
--   **CalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applicazione client che utilizza il canale client di individuazione per cercare e chiamare CalculatorService.  
+-   **CalculatorClient**: applicazione client WCF che utilizza il canale client di individuazione per cercare e chiamare CalculatorService.  
   
--   **DynamicCalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applicazione client che utilizza un endpoint dinamico per cercare e chiamare CalculatorService.  
+-   **DynamicCalculatorClient**: applicazione client WCF che utilizza un endpoint dinamico per cercare e chiamare CalculatorService.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

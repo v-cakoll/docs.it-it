@@ -2,11 +2,11 @@
 title: Demux personalizzato
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-ms.openlocfilehash: 76f8d60fdcc1fcba9942a78138e83104dfcd972b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e88672f152b87740feef1345b3eac213916a1527
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-demux"></a>Demux personalizzato
 Questo esempio viene illustrato come le intestazioni del messaggio MSMQ possono eseguire il mapping a diverse operazioni del servizio in modo che Windows Communication Foundation (WCF) servizi che utilizzano <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> non sono limitati all'uso di un'operazione di servizio come dimostrato nel [ Accodamento messaggi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) e [Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) esempi.  
@@ -108,7 +108,7 @@ public static void Main()
  Il nome della coda MSMQ è specificato in una sezione appSettings del file di configurazione.  
   
 > [!NOTE]
->  Nel nome della coda viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso. Nell'indirizzo dell'endpoint di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene specificato uno schema msmq.formatname e viene usato "localhost" per il computer locale. Di seguito viene indicato lo schema di un indirizzo di coda formattato correttamente in base alle linee guida sull'indirizzamento dei nomi del formato MSMQ.  
+>  Nel nome della coda viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso. L'indirizzo dell'endpoint WCF specifica uno schema MSMQ. FormatName e viene utilizzato localhost per il computer locale. Di seguito viene indicato lo schema di un indirizzo di coda formattato correttamente in base alle linee guida sull'indirizzamento dei nomi del formato MSMQ.  
   
 ```xml  
 <appSettings>  

@@ -2,11 +2,11 @@
 title: Gestione dei messaggi non elaborabili in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 25d99e6864b967b498fc53a6f6d78f476f4d938f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0ddab7832e308336d5bfb1c5f75fd13fe63fe72
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Gestione dei messaggi non elaborabili in MSMQ 4,0
 Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili in un servizio. Questo esempio è basato sul [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) esempio. In questo esempio viene usato l'oggetto `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  
@@ -156,7 +156,7 @@ public class OrderProcessorService : IOrderProcessor
 ## <a name="processing-messages-from-the-poison-message-queue"></a>Elaborazione dei messaggi dalla coda di messaggi non elaborabili  
  Il servizio messaggi non elaborabili legge i messaggi dalla coda finale di messaggi non elaborabili e li elabora.  
   
- I messaggi nella coda di messaggi non elaborabili sono indirizzati al servizio che sta elaborando il messaggio, il quale può essere diverso dall'endpoint del servizio messaggi non elaborabili. Pertanto, quando il servizio messaggi non elaborabili legge messaggi dalla coda, il livello del canale di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trova la mancata corrispondenza negli endpoint e non invia il messaggio. In questo caso, il messaggio è indirizzato al servizio di elaborazione ordini ma viene ricevuto dal servizio messaggi non elaborabili. Per continuare a ricevere il messaggio anche se è indirizzato a un endpoint diverso, è necessario aggiungere un `ServiceBehavior` per filtrare gli indirizzi nei quali il criterio di corrispondenza è qualsiasi endpoint del servizio al quale il messaggio è indirizzato. Questo è necessario per elaborare correttamente i messaggi che vengono letti dalla coda di messaggi non elaborabili.  
+ I messaggi nella coda di messaggi non elaborabili sono indirizzati al servizio che sta elaborando il messaggio, il quale può essere diverso dall'endpoint del servizio messaggi non elaborabili. Pertanto, quando il servizio messaggi non elaborabili legge messaggi dalla coda, il livello del canale WCF trova la mancata corrispondenza negli endpoint e non invia il messaggio. In questo caso, il messaggio è indirizzato al servizio di elaborazione ordini ma viene ricevuto dal servizio messaggi non elaborabili. Per continuare a ricevere il messaggio anche se è indirizzato a un endpoint diverso, è necessario aggiungere un `ServiceBehavior` per filtrare gli indirizzi nei quali il criterio di corrispondenza è qualsiasi endpoint del servizio al quale il messaggio è indirizzato. Questo è necessario per elaborare correttamente i messaggi che vengono letti dalla coda di messaggi non elaborabili.  
   
  L'implementazione stessa del servizio messaggi non elaborabili è molto simile all'implementazione del servizio. Implementa il contratto ed elabora gli ordini. Di seguito è riportato l'esempio di codice completo:  
 

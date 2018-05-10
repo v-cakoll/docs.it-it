@@ -8,16 +8,16 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: be6033efc03e25967af8bbb3266b0f60df02eaba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 633e87bca302adc0963e1bf52d2470c9dbae81a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Procedura: modificare il Provider di crittografia per un certificato X.509&#39;chiave privata s
 In questo argomento viene illustrato come modificare il provider di crittografia utilizzato per fornire la chiave privata di un certificato X.509 e come integrare il provider nel framework di sicurezza di Windows Communication Foundation (WCF). Per ulteriori informazioni sull'utilizzo dei certificati, vedere [utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
- Il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] framework di sicurezza consente di introdurre nuovi tipi di token di sicurezza, come descritto in modo [procedura: creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). È anche possibile usare un token personalizzato per sostituire tipi di token esistenti forniti dal sistema.  
+ Il framework di sicurezza WCF consente di introdurre nuovi tipi di token di sicurezza come descritto in [procedura: creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). È anche possibile usare un token personalizzato per sostituire tipi di token esistenti forniti dal sistema.  
   
  In questo argomento, il token di sicurezza X.509 fornito dal sistema viene sostituito da un token X.509 personalizzato che prevede un'implementazione diversa per la chiave privata del certificato. Ciò è utile negli scenari in cui l'effettiva chiave privata viene fornita da un provider di crittografia diverso rispetto a quello predefinito di Windows. Un esempio di provider di crittografia alternativo è un modulo di sicurezza hardware che esegue tutte le operazioni di crittografia relative alla chiave privata e non archivia le chiavi private in memoria, migliorando così la protezione del sistema.  
   
@@ -32,11 +32,11 @@ In questo argomento viene illustrato come modificare il provider di crittografia
   
 2.  Eseguire l'override della proprietà di sola lettura <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A>. Questa proprietà restituisce le dimensioni effettive della chiave nella coppia di chiavi pubblica/privata del certificato.  
   
-3.  Eseguire l'override del metodo <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>. Questo metodo viene chiamato dal framework di sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per decifrare una chiave simmetrica con la chiave privata del certificato (la chiave precedentemente crittografata con la chiave pubblica del certificato).  
+3.  Eseguire l'override del metodo <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>. Questo metodo viene chiamato dal framework di sicurezza WCF per decrittografare una chiave simmetrica con la chiave privata del certificato. (la chiave precedentemente crittografata con la chiave pubblica del certificato).  
   
-4.  Eseguire l'override del metodo <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>. Questo metodo viene chiamato dal framework della protezione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per ottenere un'istanza della classe <xref:System.Security.Cryptography.AsymmetricAlgorithm> che rappresenta il provider di crittografia per la chiave pubblica o privata del certificato, a seconda dei parametri passati al metodo.  
+4.  Eseguire l'override del metodo <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>. Questo metodo viene chiamato dal framework di sicurezza WCF per ottenere un'istanza di <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe che rappresenta il provider di crittografia chiave pubblica o privata, a seconda dei parametri del certificato passati al metodo.  
   
-5.  Parametro facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A>. Eseguire l'override di questo metodo se è richiesta un'implementazione diversa della classe <xref:System.Security.Cryptography.HashAlgorithm>.  
+5.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A>. Eseguire l'override di questo metodo se è richiesta un'implementazione diversa della classe <xref:System.Security.Cryptography.HashAlgorithm>.  
   
 6.  Eseguire l'override del metodo <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A>. Questo metodo restituisce un'istanza della classe <xref:System.Security.Cryptography.AsymmetricSignatureFormatter> associata alla chiave privata del certificato.  
   
@@ -45,7 +45,7 @@ In questo argomento viene illustrato come modificare il provider di crittografia
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
   
- Nella procedura seguente viene illustrato come integrare l'implementazione della chiave di sicurezza asimmetrica X.509 personalizzata creata nella procedura precedente con il framework di sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per sostituire il token di sicurezza X.509 fornito dal sistema.  
+ La procedura seguente viene illustrato come integrare la x. 509 sicurezza asimmetrica chiave implementazione personalizzata creata nella procedura precedente con il framework di sicurezza WCF per sostituire la sicurezza X.509 fornito dal sistema token.  
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>Per sostituire il token di sicurezza X.509 fornito dal sistema con una chiave di sicurezza asimmetrica X.509 personalizzata  
   

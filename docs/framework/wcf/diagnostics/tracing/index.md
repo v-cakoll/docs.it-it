@@ -2,16 +2,16 @@
 title: Traccia
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: a0c3e5591280247cab97b6597a42ca496c9654d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6f427425b1bbf19ecd8b30fb1498634a7a3d5fa9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing"></a>Traccia
 Windows Communication Foundation (WCF) fornisce strumenti applicativi e dati di diagnostica per l'analisi e monitoraggio degli errori. Al posto di un debugger, è possibile utilizzare la traccia per capire il comportamento o le cause di errori di un'applicazione. È anche possibile correlare errori e processi attraverso i componenti per fornire un'esperienza end-to-end.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] restituisce i dati seguenti per la traccia diagnostica:  
+ WCF restituisce i dati seguenti per la traccia diagnostica:  
   
 -   Tracce delle attività cardine di processo in tutti i componenti delle applicazioni, ad esempio chiamate dell'operazione, eccezioni del codice, avvisi e altri eventi di elaborazione significativi.  
   
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) fornisce strumenti applicativi e dati di 
   
  [Riferimenti per le tracce](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
- In questo argomento vengono elencate tutte le tracce generate da [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ Questo argomento vengono elencate tutte le tracce generate da WCF.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

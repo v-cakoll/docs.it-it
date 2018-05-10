@@ -2,16 +2,16 @@
 title: Esempio di serializzazione JSON con tipizzazione debole
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 66e68985da94df11a81ba6d387438fe29dd96d56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 294c00bd18b5fabba5baa20770fd593031a98994
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Esempio di serializzazione JSON con tipizzazione debole
 Quando si serializza un tipo definito dall'utente in un formato di trasmissione specificato o si deserializza un formato di trasmissione in un tipo definito dall'utente, il tipo definito dall'utente specificato deve essere disponibile sia nel servizio che nel client. Per eseguire questa operazione, in genere l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> viene applicato ai tipi definiti dall'utente e l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> viene applicato ai relativi membri. Questo meccanismo viene applicato anche quando si usano oggetti JSON (JavaScript Object Notation), come descritto nell'argomento [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
- In alcuni scenari, un servizio Windows Communication Foundation (WCF) o un client deve accedere a oggetti JSON generati da un servizio o client non controllabili dallo sviluppatore. Poiché il numero di servizi Web che espone pubblicamente API JSON è in aumento, può diventare arduo per lo sviluppatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] costruire tipi definiti dall'utente locali nei quali deserializzare gli oggetti JSON arbitrari. In questo esempio viene illustrato un meccanismo che consente agli sviluppatori [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di utilizzare oggetti JSON arbitrari deserializzati, senza creare tipi definiti dall'utente. Questo meccanismo è noto come *serializzazione con tipizzazione debole* di oggetti JSON, perché il tipo nel quale viene deserializzato un oggetto JSON non è noto in fase di compilazione.  
+ In alcuni scenari, un servizio Windows Communication Foundation (WCF) o un client deve accedere a oggetti JSON generati da un servizio o client non controllabili dallo sviluppatore. Poiché il numero di servizi Web che espone pubblicamente API JSON, può diventare arduo per lo sviluppatore WCF costruire tipi definiti dall'utente locali nei quali deserializzare gli oggetti JSON arbitrari. In questo esempio fornisce un meccanismo che consente agli sviluppatori WCF di utilizzare oggetti arbitrari deserializzati JSON, senza creare tipi definiti dall'utente. Questo meccanismo è noto come *serializzazione con tipizzazione debole* di oggetti JSON, perché il tipo nel quale viene deserializzato un oggetto JSON non è noto in fase di compilazione.  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -22,7 +22,7 @@ Quando si serializza un tipo definito dall'utente in un formato di trasmissione 
 {"personal": {"name": "Paul", "age": 23, "height": 1.7, "isSingle": true, "luckyNumbers": [5,17,21]}, "favoriteBands": ["Band ABC", "Band XYZ"]}  
 ```  
   
- Per deserializzare questo oggetto, un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deve implementare i tipi definiti dall'utente seguenti.  
+ Per deserializzare questo oggetto, un client WCF deve implementare i seguenti tipi definiti dall'utente.  
   
 ```  
 [DataContract]  

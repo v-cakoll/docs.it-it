@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 09996681b17d324d53c74b727b183f3a457cc664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40e0d2e8d9293792e295f1b1a45de84f4d66d8af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="guidelines-and-best-practices"></a>Linee guida e suggerimenti
 In questa sezione contiene argomenti che forniscono le linee guida per la creazione di applicazioni Windows Communication Foundation (WCF).  
@@ -22,7 +22,7 @@ In questa sezione contiene argomenti che forniscono le linee guida per la creazi
  Viene illustrato come e quando creare contratti dati che non determinano interruzioni quando vengono create versioni successive.  
   
  [Controllo delle versioni dei servizi](../../../docs/framework/wcf/service-versioning.md)  
- Illustra come controllare la versione in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Dopo la distribuzione potrebbe essere necessario modificare i servizi (e gli endpoint che espongono) per soddisfare, ad esempio, la modifica di requisiti aziendali o di requisiti IT o per correggere problemi. Ogni modifica introduce una nuova versione del servizio.  
+ Viene illustrato come controllare la versione in WCF. Dopo la distribuzione potrebbe essere necessario modificare i servizi (e gli endpoint che espongono) per soddisfare, ad esempio, la modifica di requisiti aziendali o di requisiti IT o per correggere problemi. Ogni modifica introduce una nuova versione del servizio.  
   
  [Bilanciamento del carico](../../../docs/framework/wcf/load-balancing.md)  
  Elenca le linee guida per il bilanciamento del carico con una Web farm.  

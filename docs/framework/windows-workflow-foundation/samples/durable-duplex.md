@@ -2,11 +2,11 @@
 title: Duplex durevole
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-duplex"></a>Duplex durevole
 In questo esempio viene illustrato come impostare e configurare lo scambio durevole di messaggi duplex usando le attività di messaggistica in Windows Workflow Foundation (WF). Un scambio durevole di messaggi duplex è un scambio di messaggi bidirezionale che si verifica in un lungo periodo di tempo. È possibile che la durata dello scambio di messaggi sia superiore alla durata del canale di comunicazione e alla durata in memoria delle istanze del servizio.  
@@ -41,7 +41,7 @@ In questo esempio viene illustrato come impostare e configurare lo scambio durev
 >  L'associazione usata da questo esempio non è sicura. In caso di distribuzione dell'applicazione è necessario configurare l'associazione in base ai requisiti di sicurezza dell'applicazione stessa.  
   
 > [!NOTE]
->  Le code usate in questo esempio non sono transazionali. Per un esempio che illustra come configurare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] scambi usando le code di transazione dei messaggi, vedere il [attivazione MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) esempio.  
+>  Le code usate in questo esempio non sono transazionali. Per un esempio che illustra come configurare lo scambio di messaggi WCF usando le code di transazione, vedere la [attivazione MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) esempio.  
   
  Per l'invio del messaggio da Service1.xamlx a Service2.xamlx viene usato un endpoint client configurato con l'indirizzo di Service2.xamlx e con l'associazione personalizzata definita precedentemente. Il callback da Service2.xamlx a Service1.xamlx viene inviato usando un endpoint client senza indirizzo configurato in modo esplicito, perché l'indirizzo viene rilevato dal contesto di callback inviato da Service1.xamlx. Nel codice seguente vengono definiti gli endpoint client.  
   

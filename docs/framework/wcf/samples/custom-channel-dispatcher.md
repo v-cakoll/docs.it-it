@@ -2,11 +2,11 @@
 title: Dispatcher di canali personalizzati
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: 7cd27d485efe7fe91e7c59627bf14e188e85f386
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f7bb67f45c3aa9eb0cb58fa2f30744d5500fab0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-channel-dispatcher"></a>Dispatcher di canali personalizzati
 In questo esempio viene descritto come compilare lo stack di canali in modo personalizzato implementando direttamente <xref:System.ServiceModel.ServiceHostBase> e come creare un dispatcher del canale personalizzato in un ambiente host Web. Il dispatcher del canale interagisce con <xref:System.ServiceModel.Channels.IChannelListener> per accettare canali e recupera messaggi dallo stack di canali. Questo esempio fornisce anche un esempio di base che illustra come compilare uno stack di canali in un ambiente host Web tramite <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
@@ -22,13 +22,13 @@ In questo esempio viene descritto come compilare lo stack di canali in modo pers
  Il dispatcher apre innanzitutto il listener del canale, quindi accetta il canale di risposta singleton. Con il canale, inizia a inviare messaggi (richieste) in un ciclo infinito. Per ogni richiesta, crea un messaggio di risposta e lo restituisce al client.  
   
 ## <a name="creating-a-response-message"></a>Creazione di un messaggio di risposta  
- L'elaborazione del messaggio viene implementata nel tipo `MyServiceManager`. Nel metodo `HandleRequest`, l'intestazione `Action` del messaggio viene dapprima controllata per verificare se la richiesta è supportata. Azione SOAP predefinita "http://tempuri.org/HelloWorld/Hello" viene definita per fornire il filtro dei messaggi. in modo analogo al concetto di contratto di servizio nell'implementazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di <xref:System.ServiceModel.ServiceHost>.  
+ L'elaborazione del messaggio viene implementata nel tipo `MyServiceManager`. Nel metodo `HandleRequest`, l'intestazione `Action` del messaggio viene dapprima controllata per verificare se la richiesta è supportata. Azione SOAP predefinita "http://tempuri.org/HelloWorld/Hello" viene definita per fornire il filtro dei messaggi. Questa operazione è simile al concetto di contratto di servizio nell'implementazione WCF di <xref:System.ServiceModel.ServiceHost>.  
   
  Nel caso dell'azione SOAP corretta, l'esempio recupera i dati del messaggio richiesti e genera una risposta corrispondente alla richiesta in modo analogo a quanto si verifica nel caso di <xref:System.ServiceModel.ServiceHost>.  
   
  In questo caso, il verbo HTTP-GET viene gestito in modo speciale restituendo un messaggio HTML personalizzato, affinché sia possibile accedere al servizio da un browser per verificarne la corretta compilazione. Se l'azione SOAP non corrisponde, restituire un messaggio di errore per indicare che la richiesta non è supportata.  
   
- Il client di questo esempio è un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] normale che non presuppone nulla dal servizio. Pertanto, il servizio è progettato in modo specifico per individuare una corrispondenza tra ciò che si ottiene da una normale implementazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in <xref:System.ServiceModel.ServiceHost>. Di conseguenza, nel client viene richiesto solo un contratto di servizio.  
+ Il client di questo esempio è un normale client WCF che non presuppone nulla dal servizio. In tal caso, il servizio è appositamente progettato in modo che corrispondano a quelli ottenuti da WCF normale<xref:System.ServiceModel.ServiceHost> implementazione. Di conseguenza, nel client viene richiesto solo un contratto di servizio.  
   
 ## <a name="using-the-sample"></a>Utilizzo dell'esempio  
  L'esecuzione dell'applicazione client in modo diretto produce l'output seguente.  

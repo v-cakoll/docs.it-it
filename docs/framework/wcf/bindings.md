@@ -4,24 +4,24 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
-ms.openlocfilehash: d40faff2734095af42f94c60c630dde8494e5975
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 188d132a4695bec0725efbaae3e4ed4d2cb17c3b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-bindings"></a>Associazioni di Windows Communication Foundation
 Le associazioni specificano come un endpoint del servizio Windows Communication Foundation (WCF) comunica con altri endpoint. In parole semplici, un'associazione deve specificare il trasporto (ad esempio HTTP o TCP) da utilizzare. Le associazioni consentono inoltre di impostare altre caratteristiche, ad esempio la protezione e il supporto delle transazioni.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica delle associazioni WCF](../../../docs/framework/wcf/bindings-overview.md)  
- Cenni preliminari sul funzionamento delle associazioni di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], sulle associazioni fornite dal sistema e su come sia possibile definirle o modificarle.  
+ Panoramica delle quali associazioni WCF scopo, quali associazioni fornisce il sistema e come è possibile definire o modificarle.  
   
  [Associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md)  
- Elenco di associazioni incluse in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Queste associazioni coprono la maggior parte dei requisiti di sicurezza e dei modelli di messaggio.  
+ Un elenco di associazioni incluse in WCF. Queste associazioni coprono la maggior parte dei requisiti di sicurezza e dei modelli di messaggio.  
   
  [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- Un'associazione di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contiene importanti informazioni che i client devono utilizzare per connettersi agli endpoint del servizio.  
+ Un binding WCF sono contenute importanti informazioni che i client devono usare per connettersi agli endpoint del servizio.  
   
  [Configurazione delle associazioni per i servizi](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  La configurazione consente ad amministratori e programmi di installazione di personalizzare le associazioni per gli endpoint del servizio.  

@@ -2,16 +2,16 @@
 title: Esempio di feed di diagnostica autonomo
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 730cf011208ea1b57929fff4a1953fd3a935335c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Esempio di feed di diagnostica autonomo
 In questo esempio viene illustrato come creare un feed di diffusione con Windows Communication Foundation (WCF) RSS/Atom. È un programma "Hello World" di base che illustra le nozioni di base del modello a oggetti e configurarlo in un servizio Windows Communication Foundation (WCF).  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modella i feed di diffusione in forma di operazioni di servizio che restituiscono un tipo di dati speciale, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Le istanze dell’elemento <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> possono serializzare un feed in entrambi i formati RSS 2.0 e ATOM, 1.0. Nell'esempio di codice seguente viene illustrato il contratto usato.  
+ WCF modella i feed di diffusione come operazioni del servizio che restituiscono un tipo di dati speciali <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Le istanze dell’elemento <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> possono serializzare un feed in entrambi i formati RSS 2.0 e ATOM, 1.0. Nell'esempio di codice seguente viene illustrato il contratto usato.  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -31,9 +31,9 @@ In questo esempio viene illustrato come creare un feed di diffusione con Windows
     }  
 ```  
   
- L'operazione `GetProcesses` è annotata con l'attributo <xref:System.ServiceModel.Web.WebGetAttribute> che consente di controllare come [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] invia richieste HTTP GET alle operazioni di servizio e di specificare il formato dei messaggi inviati.  
+ Il `GetProcesses` operazione è annotata con la <xref:System.ServiceModel.Web.WebGetAttribute> richieste di attributo che consente di controllare la modalità WCF invia HTTP GET da operazioni del servizio e specificare il formato dei messaggi inviati.  
   
- Come tutti i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], i feed di diffusione possono essere indipendenti o ospitati in qualsiasi applicazione gestita. Per funzionare correttamente, i servizi di diffusione richiedono un'associazione specifica (<xref:System.ServiceModel.WebHttpBinding>) e un comportamento dell'endpoint specifico (<xref:System.ServiceModel.Description.WebHttpBehavior>). La nuova classe <xref:System.ServiceModel.Web.WebServiceHost> fornisce una API appropriata per la creazione degli endpoint senza configurazione specifica.  
+ Come qualsiasi servizio WCF, feed di diffusione possono essere indipendenti o ospitati in qualsiasi applicazione gestita. Per funzionare correttamente, i servizi di diffusione richiedono un'associazione specifica (<xref:System.ServiceModel.WebHttpBinding>) e un comportamento dell'endpoint specifico (<xref:System.ServiceModel.Description.WebHttpBehavior>). La nuova classe <xref:System.ServiceModel.Web.WebServiceHost> fornisce una API appropriata per la creazione degli endpoint senza configurazione specifica.  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  

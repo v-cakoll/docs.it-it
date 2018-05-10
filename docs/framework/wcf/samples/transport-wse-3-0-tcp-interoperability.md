@@ -2,14 +2,14 @@
 title: 'Trasporto: Interoperabilità WSE 3.0 TCP'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: fb877e6d55214e9a268a88b33a4613ca8df0eb8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8cdd88b354f2e07c84ccfda85c8552d37ca2f519
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Trasporto: Interoperabilità WSE 3.0 TCP
-L'esempio trasporto: interoperabilità WSE 3.0 TCP illustra come implementare una sessione duplex TCP come un trasporto personalizzato di Windows Communication Foundation (WCF). Illustra anche come utilizzare l'estendibilità del livello del canale per connettersi via cavo con sistemi distribuiti esistenti. Nei passaggi seguenti viene illustrato come compilare questo trasporto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] personalizzato:  
+L'esempio trasporto: interoperabilità WSE 3.0 TCP illustra come implementare una sessione duplex TCP come un trasporto personalizzato di Windows Communication Foundation (WCF). Illustra anche come utilizzare l'estendibilità del livello del canale per connettersi via cavo con sistemi distribuiti esistenti. La procedura seguente illustra come compilare questo trasporto personalizzato WCF:  
   
 1.  A partire da un socket TCP, creare client e implementazioni server di <xref:System.ServiceModel.Channels.IDuplexSessionChannel> che utilizzano framing DIME per delineare i limiti del messaggio.  
   
@@ -128,7 +128,7 @@ L'esempio trasporto: interoperabilità WSE 3.0 TCP illustra come implementare un
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- È costituito da due test. Il primo imposta un client tipizzato utilizzando codice generato da WSE 3.0 WSDL. Il secondo utilizza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] come client e server, inviando direttamente messaggi sul canale API.  
+ È costituito da due test. Il primo imposta un client tipizzato utilizzando codice generato da WSE 3.0 WSDL. Il secondo test utilizza WCF come sia il client e server inviando direttamente messaggi sul canale API.  
   
  Quando si esegue l'esempio, viene visualizzato l'output seguente:  
   
@@ -182,7 +182,7 @@ Symbols:
   
     2.  Impostare StockService come progetto di avvio.  
   
-    3.  Aprire StockService.cs nel progetto StockService e impostare come commento l'attributo [Policy] sulla classe `StockService`. Ciò disabilita la sicurezza dell'esempio. Mentre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può interoperare con gli endpoint protetti WSE 3.0, la sicurezza è stata disabilitata in modo che l'esempio sia focalizzato sul trasporto TCP personalizzato.  
+    3.  Aprire StockService.cs nel progetto StockService e impostare come commento l'attributo [Policy] sulla classe `StockService`. Ciò disabilita la sicurezza dell'esempio. Sebbene WCF può interagire con WSE 3.0 endpoint sicuri, la sicurezza è disabilitata per mantenere l'esempio sia focalizzato sul trasporto TCP personalizzato.  
   
     4.  Premere F5 per avviare `TcpSyncStockService`. Il servizio si avvia in una nuova finestra della console.  
   

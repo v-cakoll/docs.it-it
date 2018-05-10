@@ -1,26 +1,12 @@
 ---
 title: Attivazione MSMQ
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0f8077e425464d5a9f33662366377d573719659
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4dc8cc2a3c6d9178f6507c87ae512a8929bd1380
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="msmq-activation"></a>Attivazione MSMQ
 In questo esempio viene illustrato come ospitare le applicazioni del servizio di attivazione dei processi di Windows (WAS) lette da una coda di messaggi. Questo esempio viene utilizzata la `netMsmqBinding` e si basa sul [comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md) esempio. Il servizio in questo caso è un'applicazione ospitata su Web. Il client è indipendente e genera output sulla console per osservare lo stato degli ordini di acquisto inviati.  
@@ -33,11 +19,11 @@ In questo esempio viene illustrato come ospitare le applicazioni del servizio di
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Se questa directory non esiste, andare al [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t blank"e gli esempi di Windows Workflow Foundation (WF) per [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] per scaricare tutti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare a Windows Communication Foundation (WCF) HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t blank"e gli esempi di Windows Workflow Foundation (WF) per [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] per scaricare tutti WCF e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Il servizio Attivazione processo Windows (WAS), il nuovo meccanismo di attivazione del processo di [!INCLUDE[lserver](../../../../includes/lserver-md.md)], fornisce funzionalità simili a IIS che in precedenza erano disponibili solo per applicazioni basate su HTTP e applicazioni che usano protocolli non HTTP. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa l'interfaccia dell'adattatore listener per comunicare le richieste di attivazione ricevute su protocolli non HTTP supportati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio TCP, Named Pipe e MSMQ. La funzionalità per ricevere richieste su protocolli non HTTP viene ospitata dai servizi Windows gestiti in esecuzione su SMSvcHost.exe.  
+ Il servizio Attivazione processo Windows (WAS), il nuovo meccanismo di attivazione del processo di [!INCLUDE[lserver](../../../../includes/lserver-md.md)], fornisce funzionalità simili a IIS che in precedenza erano disponibili solo per applicazioni basate su HTTP e applicazioni che usano protocolli non HTTP. Windows Communication Foundation (WCF) utilizza l'interfaccia dell'adattatore Listener per comunicare le richieste di attivazione ricevute su protocolli non HTTP supportati da WCF, ad esempio TCP, Named pipe e MSMQ. La funzionalità per ricevere richieste su protocolli non HTTP viene ospitata dai servizi Windows gestiti in esecuzione su SMSvcHost.exe.  
   
  Il servizio di adattatore listener Net.Msmq (NetMsmqActivator) attiva le applicazioni in coda in base ai messaggi nella coda.  
   
@@ -97,7 +83,7 @@ public class OrderProcessorService : IOrderProcessor
  Il nome della coda MSMQ è specificato in una sezione appSettings del file di configurazione. L'endpoint per il servizio è definito nella sezione System.serviceModel del file di configurazione.  
   
 > [!NOTE]
->  Il nome della coda MSMQ e l'indirizzo endpoint usano convenzioni di indirizzamento leggermente diverse. Nel nome della coda MSMQ viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso. Nell'indirizzo dell'endpoint di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene specificato uno schema net.msmq: e vengono usati "localhost" per il computer locale e le barre nel percorso. Per leggere da una coda ospitata sul computer remoto, sostituire "." e "localhost" con il nome computer remoto.  
+>  Il nome della coda MSMQ e l'indirizzo endpoint usano convenzioni di indirizzamento leggermente diverse. Nel nome della coda MSMQ viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso. L'indirizzo dell'endpoint WCF specifica un NET. MSMQ: schema, viene usato "localhost" per il computer locale e barre nel percorso. Per leggere da una coda ospitata sul computer remoto, sostituire "." e "localhost" con il nome computer remoto.  
   
  Viene usato un file con estensione svc con il nome della classe per ospitare il codice del servizio in WAS.  
   
@@ -229,7 +215,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 1.  Verificare che [!INCLUDE[iisver](../../../../includes/iisver-md.md)] sia installato in quanto è necessario per l'attivazione tramite il servizio di attivazione dei processi di Windows (WAS).  
   
-2.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). È inoltre necessario installare i componenti di attivazione non HTTP di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+2.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Inoltre, è necessario installare i componenti di attivazione non HTTP di WCF:  
   
     1.  Dal **avviare** menu, scegliere **Pannello di controllo**.  
   

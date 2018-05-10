@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 4c75b0f27e82b8cfe9327a9911d27d4e435ddf81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-message-logging"></a>Configurazione della registrazione dei messaggi
 In questo argomento viene illustrato come configurare la registrazione dei messaggi per scenari differenti.  
@@ -66,7 +66,7 @@ In questo argomento viene illustrato come configurare la registrazione dei messa
   
  Per i messaggi in uscita, la registrazione avviene immediatamente dopo che il messaggio esce dal codice utente e immediatamente prima che il messaggio vada in transito.  
   
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i messaggi vengono registrati a due livelli differenti, ovvero a livello di servizio e a livello di trasporto. Vengono inoltre registrati i messaggi in formato non valido. Le tre categorie sono indipendenti l'una dall'altra e possono essere attivate separatamente nella configurazione.  
+ WCF registra i messaggi a due livelli diversi, servizio e di trasporto. Vengono inoltre registrati i messaggi in formato non valido. Le tre categorie sono indipendenti l'una dall'altra e possono essere attivate separatamente nella configurazione.  
   
  È possibile controllare il livello di registrazione impostando gli attributi `logMessagesAtServiceLevel`, `logMalformedMessages` e `logMessagesAtTransportLevel` dell'elemento `messageLogging`.  
   
@@ -77,7 +77,7 @@ In questo argomento viene illustrato come configurare la registrazione dei messa
  I messaggi registrati a questo livello sono pronti per essere codificati o decodificati prima o dopo il trasporto in transito. Se sono stati definiti dei filtri, vengono registrati solo i messaggi che corrispondono a tali filtri. In caso contrario, vengono registrati tutti i messaggi al livello di trasporto. A questo livello vengono registrati tutti i messaggi dell'infrastruttura, compresi i messaggi di messaggistica affidabile. Per i messaggi trasmessi come flusso, vengono registrate solo le intestazioni. Inoltre, a questo livello i messaggi protetti vengono registrati come crittografati, a meno che non si utilizzi un trasporto protetto come HTTPS.  
   
 ### <a name="malformed-level"></a>Livello dei messaggi in formato non valido  
- I messaggi in formato non valido sono messaggi rifiutati dallo stack [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in qualsiasi fase dell'elaborazione. I messaggi in formato non valido vengono registrati così come sono, vale a dire crittografati se lo sono, con XML non corretto e così via. `maxSizeOfMessageToLog` definisce le dimensioni del messaggio da registrare come CDATA. Per impostazione predefinita, la proprietà `maxSizeOfMessageToLog` è uguale a 256 K. Per ulteriori informazioni su questo attributo, vedere la sezione altre opzioni.  
+ I messaggi in formato non valido sono messaggi rifiutati dallo stack di WCF in alcuna fase dell'elaborazione. I messaggi in formato non valido vengono registrati così come sono, vale a dire crittografati se lo sono, con XML non corretto e così via. `maxSizeOfMessageToLog` definisce le dimensioni del messaggio da registrare come CDATA. Per impostazione predefinita, la proprietà `maxSizeOfMessageToLog` è uguale a 256 K. Per ulteriori informazioni su questo attributo, vedere la sezione altre opzioni.  
   
 ### <a name="other-options"></a>Altre opzioni  
  Oltre ai livelli di registrazione, l'utente può specificare le opzioni seguenti:  

@@ -2,11 +2,11 @@
 title: Scelta di un modello di scambio dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 3466be98522eef0ebec6f6613f51566700a7cdb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac5ff841eb4e314c1c9d04c895d7a22766da003e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Scelta di un modello di scambio dei messaggi
 Il primo passaggio nella scrittura di un trasporto personalizzato è necessario stabilire quali *modelli di scambio dei messaggi* (o MEP) sono necessari per il canale a cui si sta sviluppando. In questo argomento vengono descritte le opzioni disponibili e vengono illustrati i vari requisiti. Questa è la prima attività nell'elenco di attività di sviluppo channel descritto in [sviluppo canali](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -47,7 +47,7 @@ I tre modelli di scambio dei messaggi di base. Dall'alto verso il basso: datagra
 >  Per il trasporto UDP, l'unico modello di scambio dei messaggi supportato è il datagramma, poiché il protocollo UPD è di tipo fire and forget.  
   
 ## <a name="sessions-and-sessionful-channels"></a>Sessioni e canali con sessione  
- Nel campo delle reti, esistono protocolli orientati alla connessione, ad esempio il protocollo TCP, e protocolli senza connessione, ad esempio il protocollo UPD. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] il termine sessione viene utilizzato per indicare un'astrazione logica simile a una connessione. I protocolli WCF con sessione sono simili ai protocolli di rete orientati alla connessione, mentre i protocolli WCF senza sessione sono simili ai protocolli di rete senza connessione.  
+ Nel campo delle reti, esistono protocolli orientati alla connessione, ad esempio il protocollo TCP, e protocolli senza connessione, ad esempio il protocollo UPD. WCF utilizza il termine sessione per indicare un'astrazione logica simile a quello di connessione. I protocolli WCF con sessione sono simili ai protocolli di rete orientati alla connessione, mentre i protocolli WCF senza sessione sono simili ai protocolli di rete senza connessione.  
   
  Nel modello a oggetti dei canali, ogni sessione logica si manifesta come un'istanza di un canale con sessione. Ogni nuova sessione creata dal client e accettata nel servizio corrisponde pertanto a un nuovo canale con sessione su ciascun lato. Nel diagramma seguente viene illustrata, nella parte superiore, la struttura dei canali senza sessione e, nella parte inferiore, la struttura dei canali con sessione.  
   

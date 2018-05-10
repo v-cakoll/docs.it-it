@@ -2,11 +2,11 @@
 title: Strumento di registrazione ServiceModel (ServiceModelReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: 660bad0b80a80a21936c9c8a5d485fe05b8c8acf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fab1a356cd035ed006bfe90d713e179907e0137
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>Strumento di registrazione ServiceModel (ServiceModelReg.exe)
 Questo strumento da riga di comando offre la possibilità di gestire la registrazione di componenti WCF e WF in un singolo computer. In condizioni normali l'utilizzo di questo strumento non è consigliabile perché i componenti WCF e WF vengono configurati quando installati. Tuttavia, se si verificano problemi con l'attivazione del servizio, si può tentare la registrazione dei componenti tramite questo strumento.  
@@ -41,7 +41,7 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 |`-?`|Visualizza il testo della Guida|  
   
 ## <a name="fixing-the-fileloadexception-error"></a>Correzione dell’errore FileLoadException   
- Se sono state installate versioni precedenti di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sul computer, è possibile che venga visualizzato un errore `FileLoadFoundException` durante l’esecuzione dello strumento ServiceModelReg per registrare una nuova installazione. Ciò può verificarsi anche se sono stati rimossi manualmente file dall’installazione precedente, ma sono state mantenute intatte le impostazioni machine.config.  
+ Se le versioni precedenti di WCF è stato installato nel computer, è possibile che venga visualizzato un `FileLoadFoundException` errore quando si esegue lo strumento ServiceModelReg per registrare una nuova installazione. Ciò può verificarsi anche se sono stati rimossi manualmente file dall’installazione precedente, ma sono state mantenute intatte le impostazioni machine.config.  
   
  Verrà visualizzato un messaggio di errore simile al seguente:  
   
@@ -50,7 +50,7 @@ Error: System.IO.FileLoadException: Could not load file or assembly 'System.Serv
 File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'  
 ```  
   
- È necessario notare dal messaggio di errore che è stato installato l’assembly System.ServiceModel Versione 2.0.0.0 di una precedente versione di Customer Technology Preview (CTP). La versione corrente dell'assembly System.ServiceModel rilasciata è invece 3.0.0.0. Pertanto, è possibile incontrare questo problema quando si vuole installare la versione ufficiale [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] su un computer nel quale è stata installata una precedente versione di CTP [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ma non completamente disinstallata.  
+ È necessario notare dal messaggio di errore che è stato installato l’assembly System.ServiceModel Versione 2.0.0.0 di una precedente versione di Customer Technology Preview (CTP). La versione corrente dell'assembly System.ServiceModel rilasciata è invece 3.0.0.0. Pertanto, questo problema viene rilevato quando si desidera installare la versione ufficiale di WCF in un computer in cui è stata installata una versione di CTP preliminare di WCF, ma non completamente disinstallata.  
   
  ServiceModelReg.exe non può eseguire la pulizia di voci della versione precedente, né può registrare voci della versione nuova. L’unica soluzione alternativa è modificare manualmente machine.config. È possibile trovare questo file al percorso seguente.  
   
@@ -58,7 +58,7 @@ File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToke
 %windir%\Microsoft.NET\Framework\v2.0.50727\config\machine.config   
 ```  
   
- Se si esegue [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] su un computer a 64 bit, è necessario modificare lo stesso file anche in questa posizione.  
+ Se si eseguono WCF in un computer a 64 bit, è consigliabile modificare anche lo stesso file in questa posizione.  
   
 ```  
 %windir%\Microsoft.NET\Framework64\v2.0.50727\config\machine.config   

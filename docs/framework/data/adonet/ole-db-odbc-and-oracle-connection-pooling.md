@@ -2,11 +2,11 @@
 title: Pool di connessioni OLE DB, ODBC e Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 2e42b52bb75008fd34f3e4bef1788626d96368bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Pool di connessioni OLE DB, ODBC e Oracle
 Il pool di connessioni consente di migliorare notevolmente le prestazioni e di aumentare la scalabilità dell'applicazione. Questa sezione descrive il pool di connessioni per i provider di dati .NET Framework per OLE DB, ODBC e Oracle.  
@@ -26,8 +26,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  Il pool di connessioni per il provider di dati .NET Framework per ODBC è gestito da Gestione driver ODBC, che viene usato anche per la connessione e non è influenzato dal provider di dati .NET Framework per ODBC.  
   
  Per abilitare o disabilitare il pool di connessioni, aprire **Amministrazione origine dati ODBC** nella cartella Strumenti di amministrazione nel Pannello di controllo. Il **il pool di connessioni** scheda consente di specificare i parametri per ogni driver ODBC installato del pool di connessioni. Notare che le modifiche apportate al pool di connessioni per uno specifico driver ODBC avranno effetto su tutte le applicazioni che usano tale driver ODBC.  
-  
- Per ulteriori informazioni sui pool di connessioni ODBC, vedere [INFO: spesso frequenti domande sui pool di connessioni ODBC](http://support.microsoft.com/kb/169470).  
   
 ## <a name="connection-pooling-for-oracleclient"></a>Pool di connessioni per client Oracle  
  Il provider di dati .NET Framework per Oracle fornisce automaticamente pool di connessioni per l'applicazione client ADO.NET. È possibile inoltre specificare diversi modificatori delle stringhe di connessione per controllare il comportamento del pool. Per altre informazioni, vedere "Controllo del pool di connessioni con le parole chiave delle stringhe di connessione" in questo argomento.  

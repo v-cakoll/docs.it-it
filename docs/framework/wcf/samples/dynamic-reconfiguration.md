@@ -2,14 +2,14 @@
 title: Riconfigurazione dinamica
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-ms.openlocfilehash: 3783dd79918dc42a5ad6567bb4f3d2d0fe8bc1e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 81a2b494c48476e683053e12e58264e756201124
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="dynamic-reconfiguration"></a>Riconfigurazione dinamica
-Questo esempio viene illustrato il servizio di routing di Windows Communication Foundation (WCF). Il servizio di routing è un componente di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che semplifica l'aggiunta nell'applicazione di un router basato sul contenuto. In questo esempio viene adattato l'esempio relativo alla calcolatrice [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard per comunicare tramite il servizio di routing. In questo esempio viene illustrato come è possibile riconfigurare il servizio di routing dinamicamente durante il runtime.  
+Questo esempio viene illustrato il servizio di routing di Windows Communication Foundation (WCF). Il servizio di routing è un componente WCF che rende più semplice includere un router basato sul contenuto nell'applicazione. In questo esempio adatta l'esempio di calcolatrice WCF standard per comunicare tramite il servizio di routing. In questo esempio viene illustrato come è possibile riconfigurare il servizio di routing dinamicamente durante il runtime.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

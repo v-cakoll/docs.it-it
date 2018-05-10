@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 91e5e45d380ec6a8229a7272c841e1a345423c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46ca6294d68537e86a319b55d8c11e3ae0084738
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="endpoint-creation-overview"></a>Cenni preliminari sulla creazione di endpoint
-Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) viene eseguita mediante il *endpoint* del servizio. Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Questa sezione descrive la struttura di un endpoint e viene illustrato come definire un endpoint nella configurazione e nel codice.  
+Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) viene eseguita mediante il *endpoint* del servizio. Gli endpoint forniscono ai client l'accesso alle funzionalità che offre un servizio WCF. Questa sezione descrive la struttura di un endpoint e viene illustrato come definire un endpoint nella configurazione e nel codice.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Struttura di un endpoint  
  Ogni endpoint contiene un indirizzo che indica dove individuare l'endpoint, un'associazione che specifica in che modo un client può comunicare con l'endpoint e un contratto che identifica i metodi disponibili.  
   
--   **Indirizzo**. L'indirizzo identifica in modo univoco l'endpoint e comunica ai potenziali utenti l'ubicazione del servizio. È rappresentato nel modello a oggetti [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dall'indirizzo <xref:System.ServiceModel.EndpointAddress> che contiene un URI (Uniform Resource Identifier) e proprietà dell'indirizzo che includono un'identità, alcuni elementi WSDL (Web Services Description Language) e una raccolta di intestazioni facoltative. Le intestazioni facoltative forniscono dettagli aggiuntivi sull'indirizzo per identificare o interagire con l'endpoint. Per altre informazioni, vedere [specificando un indirizzo Endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+-   **Indirizzo**. L'indirizzo identifica in modo univoco l'endpoint e comunica ai potenziali utenti l'ubicazione del servizio. È rappresentato nel modello a oggetti WCF per il <xref:System.ServiceModel.EndpointAddress> indirizzo, che contiene un URI (Uniform Resource Identifier) e proprietà dell'indirizzo che includono un'identità, alcuni elementi di Web Services Description Language (WSDL) e una raccolta di facoltativo intestazioni. Le intestazioni facoltative forniscono dettagli aggiuntivi sull'indirizzo per identificare o interagire con l'endpoint. Per altre informazioni, vedere [specificando un indirizzo Endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 -   **Associazione**. L'associazione specifica la modalità di comunicazione con l'endpoint. L'associazione specifica in che modo l'endpoint comunica con il mondo, incluso il protocollo di trasporto da usare (ad esempio, TCP o HTTP), il tipo di codifica da usare per i messaggi (ad esempio, testo o binaria) e i requisiti di sicurezza necessari (ad esempio, Secure Sockets Layer [SSL] o sicurezza dei messaggi SOAP). Per altre informazioni, vedere [usando le associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   

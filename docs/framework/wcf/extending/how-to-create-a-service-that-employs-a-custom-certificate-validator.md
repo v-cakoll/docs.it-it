@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: d4a1532ed91b17cf5bed909026ace695aeba8cd9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc768f5e5086e6eba1ccac9d969eac14e14ceb2f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Procedura: creare un servizio che usa un validator del certificato personalizzato
 In questo argomento viene illustrato come implementare un validator del certificato personalizzato e come configurare le credenziali del client o del servizio per sostituire la logica di convalida del certificato predefinita con il validator del certificato personalizzato.  
   
- Se il certificato X.509 viene usato per autenticare un client o servizio, Windows Communication Foundation (WCF) per impostazione predefinita utilizza l'archivio certificati di Windows e l'API di crittografia per convalidare il certificato e assicurarsi che sia attendibile. A volte la funzionalità di convalida del certificato predefinita non è sufficiente e deve essere modificata. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un modo semplice per modificare la logica di convalida consentendo agli utenti di aggiungere un validator del certificato personalizzato. Se si specifica un validator del certificato personalizzato, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non usa la logica di convalida del certificato incorporata, bensì si basa sul validator personalizzato.  
+ Se il certificato X.509 viene usato per autenticare un client o servizio, Windows Communication Foundation (WCF) per impostazione predefinita utilizza l'archivio certificati di Windows e l'API di crittografia per convalidare il certificato e assicurarsi che sia attendibile. A volte la funzionalità di convalida del certificato predefinita non è sufficiente e deve essere modificata. WCF fornisce un modo semplice per modificare la logica di convalida consentendo agli utenti di aggiungere un validator del certificato personalizzato. Se viene specificato un validator del certificato personalizzato, WCF non utilizza la logica di convalida del certificato incorporata, bensì si basa sul validator personalizzato invece.  
   
 ## <a name="procedures"></a>Procedure  
   

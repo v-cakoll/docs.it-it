@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d37163770f2fd192a6fd2a03878b28f0237646
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Creazione di associazioni definite dall'utente
 Esistono diversi modi per creare associazioni non fornite dal sistema:  
@@ -26,9 +26,9 @@ Esistono diversi modi per creare associazioni non fornite dal sistema:
   
  Elementi di associazione di protocollo: rappresentano passaggi di elaborazione di livello superiore che agiscono sui messaggi. I canali e i listener creati da questi elementi di associazione possono aggiungere, rimuovere o modificare il contenuto del messaggio. Una determinata associazione può avere un numero arbitrario di elementi di associazione di protocollo, ognuno dei quali eredita da <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) include diversi elementi di associazione di protocollo, tra cui la <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> e il <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
- Elementi di associazione di codifica: rappresentano trasformazioni tra un messaggio e una codifica pronti per la trasmissione in rete. Le tipiche associazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] includono esattamente un elemento di associazione di codifica. Tra gli esempi di elementi di associazione di codifica sono inclusi <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> e <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Se non viene specificato alcun elemento di associazione di codifica per un'associazione, viene usata la codifica predefinita. L'impostazione predefinita corrisponde a "testo", se il trasporto è HTTP, altrimenti a "binaria".  
+ Elementi di associazione di codifica: rappresentano trasformazioni tra un messaggio e una codifica pronti per la trasmissione in rete. Le associazioni WCF tipiche includono esattamente un elemento di associazione di codifica. Tra gli esempi di elementi di associazione di codifica sono inclusi <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> e <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Se non viene specificato alcun elemento di associazione di codifica per un'associazione, viene usata la codifica predefinita. L'impostazione predefinita corrisponde a "testo", se il trasporto è HTTP, altrimenti a "binaria".  
   
- Elementi di associazione del trasporto: rappresentano la trasmissione di un messaggio di codifica su un protocollo di trasporto. Le tipiche associazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] includono esattamente un elemento di associazione del trasporto, che eredita da <xref:System.ServiceModel.Channels.TransportBindingElement>. Tra gli esempi di elementi di associazione del trasporto sono inclusi <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> e <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
+ Elementi di associazione del trasporto: rappresentano la trasmissione di un messaggio di codifica su un protocollo di trasporto. Le associazioni WCF tipiche includono esattamente un elemento associazione di trasporto, che eredita da <xref:System.ServiceModel.Channels.TransportBindingElement>. Tra gli esempi di elementi di associazione del trasporto sono inclusi <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> e <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
   
  Quando si creano nuove associazioni, l'ordine degli elementi di associazione aggiunti è importante. Aggiungere sempre gli elementi di associazione nell'ordine seguente:  
   
@@ -39,12 +39,12 @@ Esistono diversi modi per creare associazioni non fornite dal sistema:
 |Sicurezza|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|No|  
 |Duplex composito|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|No|  
 |Codifica|Testo, binario, MTOM, personalizzata|Sì*|  
-|Trasporto|TCP, named pipe, HTTP, HTTPS, MSMQ, personalizzato|Sì|  
+|Trasporto|TCP, named pipe, HTTP, HTTPS, MSMQ, personalizzato|Yes|  
   
- *Dato che per ogni associazione è necessaria una codifica, se non viene specificata alcuna codifica, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne aggiunge automaticamente una predefinita. L'impostazione predefinita è Text/XML per i trasporti HTTP e HTTPS e Binary per gli altri trasporti.  
+ * Perché è necessaria per ogni associazione, se non è specificata alcuna codifica, WCF aggiunge automaticamente una predefinita. L'impostazione predefinita è Text/XML per i trasporti HTTP e HTTPS e Binary per gli altri trasporti.  
   
 ## <a name="creating-a-new-binding-element"></a>Creazione di un nuovo elemento di associazione  
- Oltre ai tipi derivati da <xref:System.ServiceModel.Channels.BindingElement> forniti da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è possibile creare propri elementi di associazione. Questo consente di personalizzare la modalità di creazione dello stack di associazioni e di specificare i componenti in esso inclusi creando un proprio <xref:System.ServiceModel.Channels.BindingElement> che può essere composto con gli altri tipi forniti dal sistema nello stack.  
+ Oltre ai tipi derivati da <xref:System.ServiceModel.Channels.BindingElement> che vengono fornite da WCF, è possibile creare elementi dell'associazione. Questo consente di personalizzare la modalità di creazione dello stack di associazioni e di specificare i componenti in esso inclusi creando un proprio <xref:System.ServiceModel.Channels.BindingElement> che può essere composto con gli altri tipi forniti dal sistema nello stack.  
   
  Ad esempio, se si implementa un `LoggingBindingElement` che offre la possibilità di registrare il messaggio in un database, è necessario posizionare tale elemento sopra un canale di trasporto nello stack di canali. In questo caso, l'applicazione crea un'associazione personalizzata che compone `LoggingBindingElement` con `TcpTransportBindingElement`, come nell'esempio seguente.  
   
@@ -64,7 +64,7 @@ Binding customBinding = new CustomBinding(
   
  Un'associazione definita dall'utente deve implementare almeno il metodo <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> e la proprietà <xref:System.ServiceModel.Channels.Binding.Scheme%2A>.  
   
- Il metodo <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> restituisce una nuova classe <xref:System.ServiceModel.Channels.BindingElementCollection> contenente gli elementi di associazione per l'associazione. La raccolta è ordinata e deve contenere prima gli elementi di associazione di protocollo, seguiti dall'elemento di associazione di codifica, seguito dall'elemento di associazione del trasporto. Quando si utilizza il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gli elementi di associazione fornita dal sistema, è necessario seguire l'elemento di associazione ordinamento alle regole specificate nella [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md). Questa raccolta non deve mai fare riferimento a oggetti a cui si fa riferimento nella classe di associazioni definite dall'utente; gli autori delle associazioni devono pertanto restituire un `Clone()` di <xref:System.ServiceModel.Channels.BindingElementCollection> in ogni chiamata a <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
+ Il metodo <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> restituisce una nuova classe <xref:System.ServiceModel.Channels.BindingElementCollection> contenente gli elementi di associazione per l'associazione. La raccolta è ordinata e deve contenere prima gli elementi di associazione di protocollo, seguiti dall'elemento di associazione di codifica, seguito dall'elemento di associazione del trasporto. Quando si utilizzano gli elementi di associazione fornita dal sistema WCF, è necessario seguire l'elemento di associazione ordinamento regole specificate nella [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md). Questa raccolta non deve mai fare riferimento a oggetti a cui si fa riferimento nella classe di associazioni definite dall'utente; gli autori delle associazioni devono pertanto restituire un `Clone()` di <xref:System.ServiceModel.Channels.BindingElementCollection> in ogni chiamata a <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
   
  La proprietà <xref:System.ServiceModel.Channels.Binding.Scheme%2A> rappresenta lo schema URI del protocollo di trasporto in uso nell'associazione. Ad esempio, il *WSHttpBinding* e *NetTcpBinding* restituiscono "http" e "net.tcp" dalle rispettive <xref:System.ServiceModel.Channels.Binding.Scheme%2A> proprietà.  
   

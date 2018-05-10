@@ -2,11 +2,11 @@
 title: Processo di approvazione dei documenti
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: b1ef35f5a96399b669f0cda039bf1f6dd0fde979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="document-approval-process"></a>Processo di approvazione dei documenti
 Questo esempio viene illustrato l'utilizzo di molte funzionalità di Windows Workflow Foundation (WF) e Windows Communication Foundation (WCF) insieme. Insieme implementano uno scenario del processo di approvazione dei documenti. Un'applicazione client può inviare documenti da sottoporre ad approvazione e approvare documenti. Un'applicazione di gestione delle approvazioni è utile per semplificare le comunicazioni tra i client e per applicare le regole del processo di approvazione che consiste in un flusso di lavoro che può eseguire molti tipi di approvazione. Le attività servono per ottenere un processo di approvazione singola, di approvazione a quorum (una percentuale del gruppo di responsabili approvazione) e di approvazione complessa costituito da un'approvazione a quorum e una singola in sequenza.  
@@ -29,7 +29,7 @@ Questo esempio viene illustrato l'utilizzo di molte funzionalità di Windows Wor
   
 1.  Un client esegue una sottoscrizione per essere un utente del sistema del processo di approvazione.  
   
-2.  Un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] effettua un invio a un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ospitato dall'applicazione di gestione delle approvazioni.  
+2.  Un client WCF invia a un servizio WCF ospitato dall'applicazione di gestione delle approvazioni.  
   
 3.  Al client viene restituito un ID utente univoco. Il client può ora partecipare ai processi di approvazione.  
   
@@ -47,19 +47,19 @@ Questo esempio viene illustrato l'utilizzo di molte funzionalità di Windows Wor
   
 10. Un client può ricevere una richiesta di approvazione e rispondere alla richiesta in qualsiasi momento.  
   
-11. Un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ospitato nel client può ricevere una richiesta di approvazione dall'applicazione di gestione delle approvazioni.  
+11. Un servizio WCF ospitato nel client può ricevere una richiesta di approvazione dall'applicazione di gestione delle approvazioni.  
   
 12. Le informazioni sul documento vengono presentate nel client per la revisione.  
   
 13. L'utente può approvare o rifiutare il documento.  
   
-14. Un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene usato per restituire una risposta di approvazione all'applicazione di gestione delle approvazioni.  
+14. Un client WCF viene utilizzato per inviare una risposta di approvazione all'applicazione di gestione delle approvazioni.  
   
  Dal punto di vista dell'applicazione di gestione delle approvazioni, il processo di approvazione funziona nel modo seguente:  
   
 1.  Un client richiede la partecipazione al sistema del processo di approvazione.  
   
-2.  Un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nell'applicazione di gestione delle approvazioni riceve una richiesta di entrare a far parte del sistema del processo di approvazione.  
+2.  Un servizio WCF del gestore di approvazione riceve una richiesta da parte del sistema del processo di approvazione.  
   
 3.  Viene generato un ID univoco per il client. Le informazioni utente vengono archiviate in un database.  
   

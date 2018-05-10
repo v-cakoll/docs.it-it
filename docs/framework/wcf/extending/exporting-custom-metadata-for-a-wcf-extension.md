@@ -2,11 +2,11 @@
 title: Esportazione di metadati personalizzati per un'estensione WCF
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c2ae547f10e96a1fdc16fc428e98145fc81c59d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Esportazione di metadati personalizzati per un'estensione WCF
 In Windows Communication Foundation (WCF), l'esportazione dei metadati è il processo di descrivere gli endpoint di servizio e quindi proiettarli in una rappresentazione parallela standardizzata che i client possono usare per comprendere come utilizzare il servizio. I metadati personalizzati sono costituiti da elementi XML non esportabili mediante le unità di esportazione dei metadati forniti dal sistema. Questi metadati comprendono in genere elementi WSDL personalizzati di elementi di comportamenti e associazioni definiti dall'utente nonché asserzioni di criteri personalizzate relative alle funzionalità e ai requisiti di associazioni e contratti.  
@@ -14,7 +14,7 @@ In Windows Communication Foundation (WCF), l'esportazione dei metadati è il pro
  Questa sezione descrive come esportare elementi WSDL o asserzioni di criteri personalizzati, senza tuttavia trattare il processo di esportazione in sé. Per ulteriori informazioni su come usare i tipi di esportare e importano metadati indipendentemente dai metadati personalizzati o costruito sistema, vedere [di esportazione e importazione di metadati](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Panoramica  
- Quando si pubblicano i metadati tramite il comportamento <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, il sistema analizza la descrizione <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> e quindi genera elementi XSD e WSDL (comprese le asserzioni di criteri) per tutti i contratti e le associazioni che [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è in grado di supportare utilizzando attributi e associazioni forniti dal sistema. Tuttavia, l'esportazione degli elementi relativi agli attributi e alle associazioni aventi un comportamento personalizzato richiede un supporto specifico.  
+ Quando si pubblicano i metadati utilizzando il <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, il <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> viene esaminato e XSD e WSDL, comprese le asserzioni di criteri - vengono generati per tutti i contratti e associazioni in grado di supportare utilizzando attributi fornite dal sistema e le associazioni WCF. Tuttavia, l'esportazione degli elementi relativi agli attributi e alle associazioni aventi un comportamento personalizzato richiede un supporto specifico.  
   
  Contenuto della sezione sono descritti gli argomenti seguenti:  
   

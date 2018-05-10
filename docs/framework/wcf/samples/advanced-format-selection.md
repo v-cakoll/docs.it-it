@@ -2,11 +2,11 @@
 title: Selezione avanzata del formato
 ms.date: 03/30/2017
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-ms.openlocfilehash: 2d0e78bc1ec1dcd7e4a22b246f5cc35356f5f986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4913d8dbf69f574aa4f329279bed0d92710512f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-format-selection"></a>Selezione avanzata del formato
 In questo esempio viene illustrato come estendere il modello di programmazione REST di Windows Communication Foundation (WCF) per supportare i nuovi formati di risposta in uscita. Nell'esempio viene inoltre usato un modello T4 per restituire la risposta come pagina XHTML, a dimostrazione di come sia possibile implementare un modello di programmazione dello stile di visualizzazione.  
@@ -18,7 +18,7 @@ In questo esempio viene illustrato come estendere il modello di programmazione R
   
  Il formato di risposta restituito dal servizio viene innanzitutto determinato da un parametro della stringa di query `format` e quindi da un'intestazione HTTP Accept fornita con la richiesta. Se il valore del parametro della stringa di query `format` corrisponde a uno dei formati precedenti, la risposta viene restituita in tale formato. Se la stringa di query `format` non è presente, il servizio scorre gli elementi dell'intestazione Accept inclusa nella richiesta e restituisce il formato del primo tipo di contenuto supportato dal servizio.  
   
- È opportuno notare il tipo restituito dall'operazione. Il modello di programmazione REST di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta a livello nativo solo i formati di risposta XML e JSON quando un'operazione restituisce un tipo diverso da <xref:System.ServiceModel.Channels.Message>. Tuttavia, quando si usa <xref:System.ServiceModel.Channels.Message> come tipo restituito, lo sviluppatore dispone del controllo completo sulla modalità di formattazione del contenuto del messaggio.  
+ È opportuno notare il tipo restituito dall'operazione. Il livello nativo solo modello di programmazione WCF REST supporta i formati di risposta XML e JSON quando un'operazione restituisce un tipo diverso da <xref:System.ServiceModel.Channels.Message>. Tuttavia, quando si usa <xref:System.ServiceModel.Channels.Message> come tipo restituito, lo sviluppatore dispone del controllo completo sulla modalità di formattazione del contenuto del messaggio.  
   
  Nell'esempio vengono usati i metodi <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> e <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> per serializzare l'elenco di stringhe rispettivamente in messaggi XML, JSON e ATOM. Per il formato di risposta jpeg, viene usato il metodo <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> e l'immagine viene salvata nel flusso. Per la risposta XHTML, viene usato il metodo <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> insieme a un modello T4 pre-elaborato costituito da un file con estensione tt e da un file con estensione cs generato automaticamente. Il file con estensione tt consente a uno sviluppatore di scrivere una risposta in un form del modello contenente variabili e strutture di controllo. Per ulteriori informazioni su T4, vedere [la generazione di elementi di modelli di testo](http://go.microsoft.com/fwlink/?LinkId=166023).  
   

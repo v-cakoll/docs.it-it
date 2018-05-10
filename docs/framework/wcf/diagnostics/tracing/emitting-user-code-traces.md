@@ -2,11 +2,11 @@
 title: Creazione di tracce di codice utente
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b424139f4c1656193f80cf76c704af2b2887e3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="emitting-user-code-traces"></a>Creazione di tracce di codice utente
 Oltre ad abilitare la traccia nella configurazione per raccogliere dati di strumentazione generati da Windows Communication Foundation (WCF), è anche possibile creare tracce a livello di programmazione nel codice utente. In questo modo è possibile creare attivamente dati di strumentazione che possono essere successivamente usati a scopo diagnostico. In questo argomento viene illustrata la procedura da seguire.  
@@ -65,9 +65,9 @@ Trace.CorrelationManager.ActivityId = oldID;
  Se si imposta l'attributo `propagateActivity` su `true` per l'origine di traccia `System.ServiceModel` in entrambi i file di configurazione del client e del servizio, l'elaborazione del servizio per la richiesta Add si verifica nella stessa attività definita nel client. Se il servizio definisce attività e trasferimenti specifici, le tracce del servizio non vengono visualizzate nell'attività propagata dal client. Vengono invece visualizzate in un'attività correlata mediante tracce di trasferimento all'attività il cui ID viene propagato dal client.  
   
 > [!NOTE]
->  Se l'attributo `propagateActivity` viene impostato su `true` sia nel client che nel servizio, l'attività di ambiente nell'ambito dell'operazione del servizio viene impostata da [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+>  Se il `propagateActivity` attributo è impostato su `true` sia il client di servizio, l'attività di ambiente nell'ambito dell'operazione del servizio è impostato da WCF.  
   
- Per controllare se un'attività è stata impostata nell'ambito da [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], è possibile usare il codice seguente.  
+ È possibile utilizzare il codice seguente per verificare se un'attività è stata impostata nell'ambito da WCF.  
   
 ```  
 // Check if an activity was set in scope by WCF, if it was   
@@ -135,7 +135,7 @@ Se l'ID attività è stato propagato, gli errori verificatisi su endpoint divers
  ![Uso del Visualizzatore di tracce per creare l'utente&#45;le tracce di codice](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Visualizzazione grafica della correlazione tra errori  
   
- Per ottenere le tracce precedenti è stato impostato `ActivityTracing` per le origini di traccia dell'utente e `propagateActivity=true` per l'origine di traccia `System.ServiceModel`. Non è stato impostato `ActivityTracing` per l'origine di traccia `System.ServiceModel` per attivare la propagazione di attività codice utente-codice utente. Quando la traccia attività ServiceModel è attiva, l'ID attività definito nel client non viene propagato fino al codice utente del servizio. I trasferimenti, tuttavia, mettono in correlazione le attività client e le attività del codice utente del servizio alle attività [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] intermedie.  
+ Per ottenere le tracce precedenti è stato impostato `ActivityTracing` per le origini di traccia dell'utente e `propagateActivity=true` per l'origine di traccia `System.ServiceModel`. Non è stato impostato `ActivityTracing` per l'origine di traccia `System.ServiceModel` per attivare la propagazione di attività codice utente-codice utente. (Quando la traccia attività ServiceModel è attiva, l'ID attività definito nel client non viene propagata completamente in codice utente del servizio; I trasferimenti, correlare, tuttavia, il client e servizio codice le attività degli utenti alle attività di WCF intermedi.)  
   
  La definizione delle attività e la propagazione dell'ID attività consentono di eseguire la correlazione diretta degli errori sui vari endpoint. In questo modo è possibile individuare più rapidamente la causa radice di un errore.  
   

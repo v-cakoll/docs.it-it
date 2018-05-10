@@ -2,14 +2,14 @@
 title: Bridging e gestione degli errori
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: f13a55704422e8a958e55c489f6db11108b03c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bridging-and-error-handling"></a>Bridging e gestione degli errori
-In questo esempio di seguito viene illustrato come utilizzata il servizio di routing di Windows Communication Foundation (WCF) per il collegamento delle comunicazioni tra un client e un servizio che utilizzano associazioni diverse. L'esempio mostra inoltre come utilizzare un servizio di backup per scenari di failover. Il servizio di routing è un componente di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che semplifica l'aggiunta nell'applicazione di un router basato sul contenuto. In questo esempio viene adattato l'esempio relativo alla calcolatrice [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard per comunicare tramite il servizio di routing.  
+In questo esempio di seguito viene illustrato come utilizzata il servizio di routing di Windows Communication Foundation (WCF) per il collegamento delle comunicazioni tra un client e un servizio che utilizzano associazioni diverse. L'esempio mostra inoltre come utilizzare un servizio di backup per scenari di failover. Il servizio di routing è un componente WCF che rende più semplice includere un router basato sul contenuto nell'applicazione. In questo esempio adatta l'esempio di calcolatrice WCF standard per comunicare tramite il servizio di routing.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

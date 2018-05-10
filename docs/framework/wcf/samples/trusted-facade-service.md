@@ -2,11 +2,11 @@
 title: Servizio facciata attendibile
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 08e115d297439910c16601051539a23a5a6bebc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5a4cfe63f2fc6facbe4ce78d1c0047349e303fd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="trusted-facade-service"></a>Servizio facciata attendibile
 Questo scenario viene illustrato come propagare le informazioni di identità del chiamante da un servizio a un altro, usando Windows Communication Foundation (WCF) infrastruttura di sicurezza.  
@@ -21,7 +21,7 @@ Questo scenario viene illustrato come propagare le informazioni di identità del
   
 -   Servizio back-end calcolatrice  
   
- Il servizio di facciata ha la responsabilità di convalidare la richiesta e autenticare il chiamante. Una volta completate correttamente l'autenticazione e la convalida, inoltra la richiesta al servizio back-end usando il canale di comunicazione controllato dalla rete perimetrale alla rete interna. I servizio di facciata include come parte della richiesta inoltrata informazioni sull'identità del chiamante, in modo che il servizio back-end possa usare queste informazioni nell'elaborazione. L'identità del chiamante viene trasmessa usando un token di sicurezza `Username` all'interno dell'intestazione di `Security` del messaggio. L'esempio usa l'infrastruttura di sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per trasmettere ed estrarre queste informazioni dall'intestazione di `Security` .  
+ Il servizio di facciata ha la responsabilità di convalidare la richiesta e autenticare il chiamante. Una volta completate correttamente l'autenticazione e la convalida, inoltra la richiesta al servizio back-end usando il canale di comunicazione controllato dalla rete perimetrale alla rete interna. I servizio di facciata include come parte della richiesta inoltrata informazioni sull'identità del chiamante, in modo che il servizio back-end possa usare queste informazioni nell'elaborazione. L'identità del chiamante viene trasmessa usando un token di sicurezza `Username` all'interno dell'intestazione di `Security` del messaggio. L'esempio utilizza l'infrastruttura di sicurezza WCF per trasmettere ed estrarre queste informazioni dal `Security` intestazione.  
   
 > [!IMPORTANT]
 >  Il servizio back-end considera attendibile il servizio di facciata per autenticare il chiamante. Di conseguenza il servizio back-end non autentica nuovamente il chiamante, ma usa le informazioni di identità fornite dal servizio di facciata nella richiesta inoltrata. A causa di questa relazione di trust, il servizio back-end deve autenticare il servizio di facciata in modo da assicurare che il messaggio inoltrato provenga da una fonte attendibile, in questo caso, dal servizio di facciata.  
@@ -110,7 +110,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
   
  Il [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elemento di associazione si occupa della trasmissione di nome utente e l'estrazione del chiamante iniziale. Il [ \<windowsStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) e [ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) con attenzione l'autenticazione di servizi back-end e di facciata e protezione dei messaggi.  
   
- Per inoltrare la richiesta l'implementazione del servizio di facciata deve fornire il nome utente del chiamante iniziale, in modo che l'infrastruttura di sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] possa posizionarlo nel messaggio inoltrato. Il nome utente del chiamante iniziale viene fornito nell'implementazione del servizio di facciata impostandolo nella proprietà `ClientCredentials` sull'istanza del proxy client che il servizio di facciata usa per comunicare con il servizio back-end.  
+ Per inoltrare la richiesta, l'implementazione del servizio di facciata deve fornire nome utente del chiamante iniziale, in modo che infrastruttura di sicurezza WCF possa posizionarlo nel messaggio inoltrato. Il nome utente del chiamante iniziale viene fornito nell'implementazione del servizio di facciata impostandolo nella proprietà `ClientCredentials` sull'istanza del proxy client che il servizio di facciata usa per comunicare con il servizio back-end.  
   
  Nel codice seguente viene illustrata l'implementazione del metodo `GetCallerIdentity` nel servizio di facciata. Gli altri metodi usano lo stesso modello.  
   
@@ -125,9 +125,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Come illustrato nel codice precedente, la password non viene impostata nella proprietà `ClientCredentials` . Viene impostato solo il nome utente. In questo caso l'infrastruttura di sicurezza di[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea un token di sicurezza del nome utente senza una password, esattamente quello che richiede questo scenario.  
+ Come illustrato nel codice precedente, la password non viene impostata nella proprietà `ClientCredentials` . Viene impostato solo il nome utente. Infrastruttura di sicurezza WCF crea un token di sicurezza nome utente senza una password in questo caso, che è esattamente quello che richiede questo scenario.  
   
- Nel servizio back-end, le informazioni contenute nel token di sicurezza del nome utente devono essere autenticate. Per impostazione predefinita, la sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tenta di eseguire il mapping dell'utente a un account di Windows usando la password fornita. In questo caso non è stata fornita una password e non è necessario che il servizio back-end autentichi il nome utente, visto che l'autenticazione è già stata eseguita dal servizio di facciata. Per implementare questa funzionalità in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], viene fornito un `UserNamePasswordValidator` personalizzato che impone solo che venga specificato un nome utente nel token e non esegue altre autenticazioni.  
+ Nel servizio back-end, le informazioni contenute nel token di sicurezza del nome utente devono essere autenticate. Per impostazione predefinita, sicurezza WCF tenta di eseguire il mapping all'utente a un account di Windows tramite la password specificata. In questo caso non è stata fornita una password e non è necessario che il servizio back-end autentichi il nome utente, visto che l'autenticazione è già stata eseguita dal servizio di facciata. Per implementare questa funzionalità in un oggetto personalizzato WCF `UserNamePasswordValidator` viene specificato che impone solo che un nome utente specificato nel token e non esegue altre autenticazioni.  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -208,7 +208,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Le informazioni relative all'account del servizio di facciata vengono estratte usando la proprietà `ServiceSecurityContext.Current.WindowsIdentity` . Per accedere alle informazioni relative al chiamante iniziale, il servizio back-end usa la proprietà `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` . Cerca un'attestazione di `Identity` di tipo `Name`. Questa attestazione viene generata automaticamente dall'infrastruttura di sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dalle informazioni contenute nel token di protezione `Username` .  
+ Le informazioni relative all'account del servizio di facciata vengono estratte usando la proprietà `ServiceSecurityContext.Current.WindowsIdentity` . Per accedere alle informazioni relative al chiamante iniziale, il servizio back-end usa la proprietà `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` . Cerca un'attestazione di `Identity` di tipo `Name`. Questa attestazione viene generata automaticamente dall'infrastruttura di sicurezza WCF dalle informazioni contenute nel `Username` token di sicurezza.  
   
 ## <a name="running-the-sample"></a>Esecuzione dell'esempio  
  Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Premere INVIO nella finestra del client per arrestare il client. È possibile premere INVIO nelle finestre della console del servizio di facciata e del servizio back-end per arrestare i servizi.  

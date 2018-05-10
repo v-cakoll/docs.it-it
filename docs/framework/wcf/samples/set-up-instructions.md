@@ -5,21 +5,21 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: 20f6662289384b1a094c34c0c0c986b754a44ad2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cbb23281d94bbd1edc66b0a3b9caafca62304487
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="set-up-instructions"></a>Istruzioni di configurazione
 Questo insieme di argomenti viene descritto come impostare i servizi che sono necessarie per eseguire un servizio Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
- Vengono delineati i passaggi per l'impostazione degli esempi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Vengono delineati i passaggi per l'impostazione degli esempi di WCF.  
   
  [Istruzioni del firewall](../../../../docs/framework/wcf/samples/firewall-instructions.md)  
- Vengono delineati i passaggi necessari per impostare Windows Firewall in modo da consentire il funzionamento dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Vengono delineati i passaggi necessari per configurare Windows Firewall per consentire ai servizi WCF a funzionare.  
   
  [Istruzioni per l'hosting su Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
  Vengono delineati i passaggi necessari per impostare IIS.  
@@ -31,10 +31,10 @@ Questo insieme di argomenti viene descritto come impostare i servizi che sono ne
  Vengono delineati i passaggi necessari per creare una directory virtuale.  
   
  [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- Vengono delineati i passaggi per la creazione degli esempi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Vengono delineati i passaggi per la compilazione degli esempi di WCF.  
   
  [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
- Vengono delineati i passaggi per l'esecuzione degli esempi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nello stesso computer e in diversi computer.  
+ Vengono delineati i passaggi per l'esecuzione degli esempi di WCF nello stesso computer e tra più computer.  
   
  [Abilitazione servizi Peer-to-Peer](http://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
  Vengono delineati i passaggi per installare il componente peer-to-peer Windows, ovvero il resolver incorporato per i servizi di messaggistica peer-to-peer.  

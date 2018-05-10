@@ -2,17 +2,17 @@
 title: Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cfa1ec0e486943d196ec016be87544f17a0114e6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi
 In questo argomento viene illustrato il formato dei dati di traccia, come visualizzarlo e gli approcci che usano Service Trace Viewer per risolvere i problemi dell'applicazione.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Uso dello strumento Visualizzatore di tracce dei servizi  
- Lo strumento Visualizzatore di tracce dei servizi Windows Communication Foundation (WCF) consente di correlare le tracce di diagnostica prodotte dai [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] causare listener per individuare la radice di un errore. Questo strumento consente di visualizzare, raggruppare e filtrare facilmente le tracce per diagnosticare, riparare e verificare i problemi dei servizi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+ Lo strumento Visualizzatore di tracce dei servizi Windows Communication Foundation (WCF) consente di correlare le tracce di diagnostica prodotte dai listener WCF per individuare la causa radice di un errore. Lo strumento consente di visualizzare, raggruppare e filtrare le tracce in modo che è possibile diagnosticare, riparare e verificare i problemi dei servizi WCF facilmente. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
  In questo argomento è riportate le schermate di tracce generate eseguendo il [traccia e registrazione dei messaggi](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) di esempio, quando viene visualizzato utilizzando il [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). In questo argomento viene dimostrato come capire il contenuto della traccia, le attività e la loro correlazione e come analizzare moltissime tracce in caso di risoluzione dei problemi.  
   
@@ -104,11 +104,11 @@ In questo argomento viene illustrato il formato dei dati di traccia, come visual
 ```  
   
 ## <a name="servicemodel-e2e-tracing"></a>Traccia E2E ServiceModel  
- Quando l'origine di traccia `System.ServiceModel` è impostata con un `switchValue` diverso da Off e `ActivityTracing`, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] crea attività e trasferimenti per l'elaborazione [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ Quando il `System.ServiceModel` origine di traccia viene impostato con un `switchValue` diverso da Off e `ActivityTracing`, WCF crea attività e trasferimenti per l'elaborazione di WCF.  
   
- Un'attività è un'unità logica di elaborazione che raggruppa tutte le tracce relative a quell'unità di elaborazione. È possibile definire, ad esempio, un'attività per ogni richiesta. I trasferimenti creano una relazione causale tra le attività all'interno di endpoint. La propagazione dell'ID attività consente di correlare le attività attraverso gli endpoint. Questa operazione può essere eseguita impostando `propagateActivity` = `true` nella configurazione per ogni endpoint. Attività, trasferimenti e propagazione consentono di eseguire la correlazione degli errori. In questo modo è possibile individuare più rapidamente la causa fondamentale di un errore.  
+ Un'attività è un'unità logica di elaborazione che raggruppa tutte le tracce relative a quell'unità di elaborazione. È possibile definire, ad esempio, un'attività per ogni richiesta. I trasferimenti creano una relazione causale tra le attività all'interno di endpoint. La propagazione dell'ID attività consente di correlare le attività attraverso gli endpoint. Questa operazione può essere eseguita impostando `propagateActivity` = `true` nella configurazione per ogni endpoint. Attività, trasferimenti e propagazione consentono di eseguire la correlazione degli errori. In questo modo è possibile individuare più rapidamente la causa radice di un errore.  
   
- Nel client viene creata un'attività [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] per ogni chiamata al modello oggetto (ad esempio apertura di ChannelFactory, addizione, divisione e così via). Ogni chiamata dell'operazione viene elaborata in un'attività "Processaction".  
+ Nel client, un'attività WCF viene creata per ogni chiamata al modello oggetto (ad esempio, apertura di ChannelFactory, Add, divisione e così via.) Ogni chiamata dell'operazione viene elaborata in un'attività "Processaction".  
   
  Nella schermata seguente, estratto il [traccia e registrazione dei messaggi](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) esempio riquadro di sinistra viene visualizzato l'elenco delle attività create nel processo del client, ordinato in base al momento della creazione. Di seguito è riportato un elenco cronologico delle attività:  
   
@@ -127,14 +127,14 @@ In questo argomento viene illustrato il formato dei dati di traccia, come visual
  La visualizzazione dei messaggi dell'infrastruttura di sicurezza è resa possibile da wsHttpBinding.  
   
 > [!NOTE]
->  In [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], i messaggi di risposta elaborati inizialmente vengono riportati in un'attività separata (elaborazione messaggio), quindi vengono correlati all'attività Elaborazione azione corrispondente che include il messaggio di richiesta, tramite un trasferimento. Ciò vale per i messaggi dell'infrastruttura e le richieste asincrone ed è dovuto al fatto che è necessario ispezionare il messaggio, leggere l'intestazione activityId e identificare l'attività Elaborazione azione esistente con quell'ID per correlarla ad esso. Per le richieste sincrone, viene bloccata la risposta e pertanto viene riconosciuta a quale Elaborazione azione è correlata la risposta.  
+>  In WCF, viene illustrata la messaggi di risposta elaborati inizialmente in un'attività separata (elaborazione messaggio) vengono correlati l'attività elaborazione azione corrispondente che include il messaggio di richiesta, usando un trasferimento. Ciò vale per i messaggi dell'infrastruttura e le richieste asincrone ed è dovuto al fatto che è necessario ispezionare il messaggio, leggere l'intestazione activityId e identificare l'attività Elaborazione azione esistente con quell'ID per correlarla ad esso. Per le richieste sincrone, viene bloccata la risposta e pertanto viene riconosciuta a quale Elaborazione azione è correlata la risposta.  
   
  ![Utilizzo del Visualizzatore di tracce](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace4.gif "e2eTrace4")  
 Elenco delle attività client WCF in base all'ora di creazione (riquadro sinistro) e alle relative tracce e attività annidate (riquadro superiore destro)  
   
  Quando si seleziona un'attività nel riquadro sinistro, le tracce e le attività annidate compaiono nel riquadro in alto a destra. Questa è pertanto una visualizzazione gerarchica ridotta dell'elenco delle attività sulla sinistra, basato sull'attività padre selezionata. Dato che l'Elaborazione azione di aggiunta è la prima richiesta fatta, questa attività contiene l'attività Impostazione sessione di sicurezza (trasferimento a, trasferimento da) e le tracce per l'elaborazione effettiva dell'azione di aggiunta.  
   
- Se si fa doppio clic sull'attività di aggiunta di Elaborazione azione nel pannello sinistro, è possibile visualizzare una rappresentazione grafica delle attività [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] del client pertinenti. La prima attività sulla sinistra è l'attività radice (0000), che è l'attività predefinita. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] effettua il trasferimento all'esterno dell'attività di ambiente. Se questa non è definita, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] trasferisce fuori da 0000. Qui, la seconda attività, Add di Elaborazione azione, viene trasferita fuori da 0. Quindi si vede l'attività di impostazione della sessione di sicurezza.  
+ Se facciamo fare doppio clic sull'elaborazione azione Aggiungi attività nel riquadro sinistro, si noterà una rappresentazione grafica delle attività client WCF correlati da aggiungere. La prima attività sulla sinistra è l'attività radice (0000), che è l'attività predefinita. WCF viene trasferita fuori da attività di ambiente. Se non è definito, WCF viene trasferita fuori da 0000. Qui, la seconda attività, Add di Elaborazione azione, viene trasferita fuori da 0. Quindi si vede l'attività di impostazione della sessione di sicurezza.  
   
  ![Utilizzo del Visualizzatore di tracce](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
 Visualizzazione grafica delle attività client WCF: Attività di ambiente (qui 0), Elaborazione azione e Impostazione sessione di sicurezza  
@@ -146,7 +146,7 @@ Elenco di tracce per l'attività Elaborazione azione: nella stessa attività vie
   
  In questo caso, è caricare le tracce del client solo per maggiore chiarezza, ma le tracce del servizio (messaggio di richiesta ricevuto e il messaggio di risposta inviato) viene visualizzata nella stessa attività se sono caricate nello strumento anche e `propagateActivity` è stato impostato su `true.` come illustrato nella figura versione successiva.  
   
- Nel servizio, il modello di attività esegue il mapping ai concetti [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] come segue:  
+ Il servizio, il modello di attività viene eseguito il mapping ai concetti WCF come indicato di seguito:  
   
 1.  Viene costruito e aperto un ServiceHost (ciò può creare diverse attività correlate all'host, ad esempio, nel caso della protezione).  
   
@@ -154,11 +154,11 @@ Elenco di tracce per l'attività Elaborazione azione: nella stessa attività vie
   
 3.  Quando il listener rileva una richiesta di comunicazione iniziata dal client, trasferita a un'attività "Ricezione byte", in cui vengono elaborati tutti i byte inviati dal client. In questa attività, è possibile vedere qualsiasi errore di connessione che si sia verificato durante l'interazione tra client e servizio.  
   
-4.  Per ogni set di byte ricevuto che corrisponde a un messaggio, viene elaborato in un'attività "Elaborazione messaggio", in cui viene creato il [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] oggetto messaggio. In questa attività vengono visualizzati gli errori correlati a una envelope errata o a un messaggio in formato non valido.  
+4.  Per ogni set di byte ricevuto che corrisponde a un messaggio, viene elaborato in un'attività "Elaborazione messaggio", in cui viene creato l'oggetto messaggio WCF. In questa attività vengono visualizzati gli errori correlati a una envelope errata o a un messaggio in formato non valido.  
   
-5.  Quando il messaggio è formato, viene trasferito a un'attività Elaborazione azione. Se `propagateActivity` è impostato su `true` sia nel client che nel servizio, l'ID di questa attività è identico a quello definito nel client e descritto in precedenza. A partire da questa fase si inizia a beneficiare della correlazione diretta tra gli endpoint, perché tutte le tracce emesse in [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] correlate alla richiesta si trovano in quella stessa attività, inclusa l'elaborazione del messaggio di risposta.  
+5.  Quando il messaggio è formato, viene trasferito a un'attività Elaborazione azione. Se `propagateActivity` è impostato su `true` sia nel client che nel servizio, l'ID di questa attività è identico a quello definito nel client e descritto in precedenza. Da questa fase si inizia a beneficiare correlazione diretta tra gli endpoint, perché sono tutte le tracce emesse in WCF sono correlati alla richiesta in quella stessa attività, tra cui l'elaborazione dei messaggi di risposta.  
   
-6.  Per l'azione out-of-process, si crea un'attività "Esecuzione codice utente" per isolare le tracce emesse nel codice utente da quelle emesse in [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Nell'esempio precedente, il "Servizio invia la risposta Add" viene emessa nell'attività "Esecuzione codice utente" non nell'attività propagata dal client, se applicabile.  
+6.  Per l'azione out-of-process, viene creata un'attività "Codice utente Execute" per isolare le tracce emesse nel codice utente da quelle emesse in WCF. Nell'esempio precedente, il "Servizio invia la risposta Add" viene emessa nell'attività "Esecuzione codice utente" non nell'attività propagata dal client, se applicabile.  
   
  Nella figura seguente, la prima attività sulla sinistra è l'attività radice (0000), ed è l'attività predefinita. Le tre attività seguenti interessano l'apertura di ServiceHost. L'attività nella colonna 5 è il listener e le attività rimanenti (da 6 a 8) descrivono l'elaborazione WCF di un messaggio, dall'elaborazione dei byte all'attivazione del codice utente.  
   

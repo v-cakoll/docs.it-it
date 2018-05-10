@@ -2,14 +2,14 @@
 title: Formattatore e selettore dell'operazione
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 469b7f2c99652cb6fceb2e8f12f1c74f0140b5ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db548e99c99ba6f29cc1c6e998d0e7485cd41046
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Formattatore e selettore dell'operazione
-In questo esempio viene illustrato come punti di estendibilità di Windows Communication Foundation (WCF) possono essere usati per consentire i dati del messaggio in un formato diverso da che cosa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è prevista. Per impostazione predefinita, i formattatori [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prevedono che i parametri del metodo siano inclusi nell'elemento `soap:body`. In realtà, nell'esempio viene illustrato come implementare un formattatore dell'operazione personalizzato che analizza i dati dei parametri da una stringa di query HTTP GET e richiama i metodi utilizzando tali dati.  
+Questo esempio viene illustrato come utilizzare i punti di estendibilità di Windows Communication Foundation (WCF) per consentire i dati del messaggio in un formato diverso da quello previsto dal WCF. Per impostazione predefinita, i formattatori WCF prevede che i parametri del metodo siano inclusi nel `soap:body` elemento. In realtà, nell'esempio viene illustrato come implementare un formattatore dell'operazione personalizzato che analizza i dati dei parametri da una stringa di query HTTP GET e richiama i metodi utilizzando tali dati.  
   
  L'esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa il `ICalculator` contratto di servizio. Viene mostrato come i messaggi Add, Subtract, Multiply e Divide possono essere modificati per utilizzare HTTP GET per le richieste client-server e HTTP POST con i messaggi POX per le risposte server-client.  
   
@@ -29,7 +29,7 @@ In questo esempio viene illustrato come punti di estendibilità di Windows Commu
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
 ## <a name="key-concepts"></a>Concetti chiave  
- `QueryStringFormatter`. Il formattatore dell'operazione è il componente di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] responsabile per la conversione di un messaggio in una matrice di oggetti parametro e di una matrice di oggetti parametro in un messaggio. Questa operazione viene eseguita nel client utilizzando l'interfaccia <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> e nel server con l'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>. Queste interfacce consentono agli utenti di ottenere i messaggi di richiesta e risposta dai metodi `Serialize` e `Deserialize`.  
+ `QueryStringFormatter` -Il formattatore dell'operazione è il componente in WCF è responsabile della conversione di un messaggio in una matrice di oggetti parametro e una matrice di oggetti parametro in un messaggio. Questa operazione viene eseguita nel client utilizzando l'interfaccia <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> e nel server con l'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>. Queste interfacce consentono agli utenti di ottenere i messaggi di richiesta e risposta dai metodi `Serialize` e `Deserialize`.  
   
  In questo esempio, `QueryStringFormatter` implementa entrambe le interfacce e viene implementato nel client e nel server.  
   
@@ -59,10 +59,10 @@ In questo esempio viene illustrato come punti di estendibilità di Windows Commu
   
  La proprietà <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> è impostata sull'implementazione di <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>.  
   
- Per impostazione predefinita, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza un filtro dell'indirizzo Corrispondenza esatta. L'URI del messaggio in ingresso contiene un suffisso del nome dell'operazione seguito da una stringa di query che contiene i dati dei parametri, pertanto il comportamento dell'endpoint modifica anche il filtro dell'indirizzo in modo da renderlo un filtro Prefisso corrispondente. Usa il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> a questo scopo.  
+ Per impostazione predefinita, WCF utilizza un filtro dell'indirizzo corrispondenza esatta. L'URI del messaggio in ingresso contiene un suffisso del nome dell'operazione seguito da una stringa di query che contiene i dati dei parametri, pertanto il comportamento dell'endpoint modifica anche il filtro dell'indirizzo in modo da renderlo un filtro Prefisso corrispondente. Usa WCF<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> per questo scopo.  
   
 ### <a name="installing-operation-formatters"></a>Installazione di formattatori dell'operazione  
- I comportamenti dell'operazione che specificano i formattatori sono univoci. Un comportamento di questo tipo viene sempre implementato per impostazione predefinita per ogni operazione allo scopo di creare il formattatore dell'operazione necessario. Tuttavia, questi comportamenti hanno lo stesso aspetto degli altri comportamenti dell'operazione e non possono essere identificati da qualsiasi altro attributo. Per installare un comportamento sostitutivo, l'implementazione deve cercare specifici comportamenti del formattatore installati dal caricatore dei tipi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per impostazione predefinita e sostituirli o aggiungere un comportamento compatibile da eseguire dopo il comportamento predefinito.  
+ I comportamenti dell'operazione che specificano i formattatori sono univoci. Un comportamento di questo tipo viene sempre implementato per impostazione predefinita per ogni operazione allo scopo di creare il formattatore dell'operazione necessario. Tuttavia, questi comportamenti hanno lo stesso aspetto degli altri comportamenti dell'operazione e non possono essere identificati da qualsiasi altro attributo. Per installare un comportamento sostitutivo, l'implementazione deve cercare specifici comportamenti del formattatore installati dal caricatore del tipo WCF per impostazione predefinita e di sostituirlo o aggiungere un comportamento compatibile da eseguire dopo il comportamento predefinito.  
   
  Questi comportamenti dei formattatori dell'operazione possono essere impostati a livello di codice prima di chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> o specificando un comportamento dell'operazione da eseguire dopo quello predefinito. Tuttavia, non può essere configurato facilmente da un comportamento dell'endpoint (e pertanto mediante la configurazione) perché il modello di comportamento non consente la sostituzione di un comportamento con un altro o la modifica della struttura di descrizione.  
   

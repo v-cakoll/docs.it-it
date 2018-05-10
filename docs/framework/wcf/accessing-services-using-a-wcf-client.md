@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: d29483995a1fbf7a8c9918db0c3b65f7deac1e44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0bde07dbeb70eaafbde4d90627d245554ad7ca6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Accesso ai servizi tramite client WCF
-Dopo aver creato un servizio, il passaggio successivo consiste nel creare un proxy client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Un'applicazione client usa il proxy client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per comunicare con il servizio. Le applicazioni client importano di norma i metadati di un servizio per generare il codice client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] che può essere usato per richiamare il servizio.  
+Dopo aver creato un servizio, il passaggio successivo consiste nel creare un proxy client WCF. Un'applicazione client usa il proxy client WCF per comunicare con il servizio. Le applicazioni client importano di norma i metadati del servizio per generare codice client WCF che può essere usato per richiamare il servizio.  
   
- I passaggi di base per la creazione di un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] includono i seguenti:  
+ Di seguito sono indicati i passaggi di base per la creazione di un client WCF:  
   
 1.  Compilare il codice del servizio.  
   
-2.  Generare il proxy client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+2.  Generare il proxy client WCF.  
   
 3.  Creare un'istanza del proxy client WCF.  
   
@@ -39,7 +39,7 @@ Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
 Svcutil.exe <list of WSDL and XSD files on file system>  
 ```  
   
- Il risultato è un file di codice che contiene il codice client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] che l'applicazione client può usare per richiamare il servizio.  
+ Il risultato è un file di codice che contiene il codice client WCF che l'applicazione client può utilizzare per richiamare il servizio.  
   
  È inoltre possibile usare lo strumento per generare file di configurazione.  
   
@@ -79,7 +79,7 @@ Public Interface ICalculator
 End Interface
 ```
   
- Lo strumento ServiceModel Metadata Utility Tool e la funzionalità Aggiungi il riferimento al servizio in Visual Studio generano la seguente classe client di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. La classe eredita dalla classe generica <xref:System.ServiceModel.ClientBase%601> e implementa l'interfaccia `ICalculator`. Lo strumento genera anche l'interfaccia `ICalculator` (procedure non illustrata di seguito).  
+ La strumento ServiceModel Metadata utility e Aggiungi riferimento al servizio in Visual Studio genera la seguente classe client WCF. La classe eredita dalla classe generica <xref:System.ServiceModel.ClientBase%601> e implementa l'interfaccia `ICalculator`. Lo strumento genera anche l'interfaccia `ICalculator` (procedure non illustrata di seguito).  
   
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
@@ -147,7 +147,7 @@ End Class
 ```
   
 ## <a name="using-the-wcf-client"></a>Utilizzo del client WCF  
- Per usare il client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], creare un'istanza del client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e quindi chiamarne i metodi, come illustrato nel codice seguente.  
+ Per utilizzare il client di WCF, creare un'istanza del client WCF e quindi chiamarne i metodi, come illustrato nel codice seguente.  
   
 ```csharp
 // Create a client object with the given client endpoint configuration.
@@ -172,7 +172,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 ```
   
 ## <a name="debugging-exceptions-thrown-by-a-client"></a>Debug delle eccezioni generate da un client  
- Molte eccezioni generate da un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vengono provocate da un'eccezione nel servizio. Di seguito ne vengono riportati alcuni esempi:  
+ Molte eccezioni generate da un client WCF sono causate da un'eccezione nel servizio. Di seguito ne vengono riportati alcuni esempi:  
   
 -   <xref:System.Net.Sockets.SocketException>: connessione esistente chiusa forzatamente dall'host remoto.  
   

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 81fc656784dadf0706e2ae3feda09cd08b886560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec8af8c7df9335774b1f3953f88c2aad438963b6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pii-security-lockdown"></a>Blocco della sicurezza delle informazioni personali
 In questo esempio viene illustrato come controllare svariate funzionalità correlate alla sicurezza di un servizio Windows Communication Foundation (WCF) da:  
@@ -29,11 +29,11 @@ In questo esempio viene illustrato come controllare svariate funzionalità corre
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>Discussione  
- Queste funzionalità possono essere usate separatamente o tutte insieme per controllare gli aspetti della sicurezza di un servizio. Non si tratta di una guida definitiva alla sicurezza di un servizio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Queste funzionalità possono essere usate separatamente o tutte insieme per controllare gli aspetti della sicurezza di un servizio. Non si tratta di una Guida definitiva alla sicurezza di un servizio WCF.  
   
  I file di configurazione di .NET Framework possono contenere informazioni riservate, ad esempio stringhe di connessione per connettersi ai database. Negli scenari condivisi, ospitati da Web, potrebbe essere auspicabile crittografare queste informazioni nel file di configurazione per un servizio, in modo che i dati contenuti all'interno del file di configurazione siano protetti dagli osservatori esterni. Nella versione 2.0 e successive di .NET Framework è possibile crittografare parti del file di configurazione usando la DPAPI (Windows Data Protection API) o il provider di crittografia RSA. L'aspnet_regiis.exe che usa DPAPI o RSA è in grado di crittografare parti selezionate di un file di configurazione.  
   
- Negli scenari ospitati da Web è possibile che alcuni servizi siano all'interno di sottodirectory di altri servizi. La semantica predefinita per determinare i valori di configurazione consente ai file di configurazione che si trovano nelle directory annidate di eseguire l'override dei valori di configurazione della directory padre. In alcune situazioni questo può essere inaccettabile per molteplici ragioni. La configurazione del servizio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta il blocco dei valori di configurazione, in modo che la configurazione annidata possa generare eccezioni quando viene eseguito un servizio annidato usando valori di configurazione sottoposti a override.  
+ Negli scenari ospitati da Web è possibile che alcuni servizi siano all'interno di sottodirectory di altri servizi. La semantica predefinita per determinare i valori di configurazione consente ai file di configurazione che si trovano nelle directory annidate di eseguire l'override dei valori di configurazione della directory padre. In alcune situazioni questo può essere inaccettabile per molteplici ragioni. Supporta la configurazione del servizio WCF il blocco dei valori di configurazione in modo che la configurazione annidata genera eccezioni quando viene eseguito un servizio annidato usando l'override di valori di configurazione.  
   
  In questo esempio viene illustrato come controllare la registrazione di informazioni personali nei registri di traccia e dei messaggi, come il nome utente e la password. Per impostazione predefinita, la registrazione di informazioni personali note è disattivata. Tuttavia in alcune situazioni la registrazione delle informazioni personali può essere importante per eseguire il debug di un'applicazione. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md). Questo esempio usa inoltre la registrazione di traccia e dei messaggi. Per ulteriori informazioni, vedere il [traccia e registrazione dei messaggi](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) esempio.  
   

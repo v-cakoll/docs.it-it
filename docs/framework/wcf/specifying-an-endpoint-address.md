@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 784b0fe3e2b23287d458f9aa4d8276e10dd6ed97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7e2253c527cbb2b6f21b222b1e9691c2ecff01f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Specifica di un indirizzo endpoint
 Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) viene eseguita interamente tramite gli endpoint. Ogni <xref:System.ServiceModel.Description.ServiceEndpoint> contiene una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> e una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Il contratto specifica quali operazioni sono disponibili. L'associazione specifica come comunicare con il servizio e l'indirizzo specifica dove trovare il servizio. Ogni endpoint deve avere un indirizzo univoco. L'indirizzo dell'endpoint è rappresentato dalla classe <xref:System.ServiceModel.EndpointAddress>, che contiene un URI (Uniform Resource Identifier), che rappresenta l'indirizzo del servizio, una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A>, che rappresenta l'identità di sicurezza del servizio, e una raccolta di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Le intestazioni facoltative forniscono informazioni di indirizzamento più dettagliate che consentono di identificare o interagire con l'endpoint. Ad esempio, le intestazioni possono indicare come elaborare un messaggio in ingresso, dove l'endpoint deve inviare un messaggio di risposta o quale istanza di un servizio usare per elaborare un messaggio in ingresso di un particolare utente, quando sono disponibili più istanze.  
   
 ## <a name="definition-of-an-endpoint-address"></a>Definizione di un indirizzo endpoint  
- In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], una classe <xref:System.ServiceModel.EndpointAddress> modella un riferimento endpoint (EPR), come definito nello standard WS-Addressing.  
+ In WCF un <xref:System.ServiceModel.EndpointAddress> Modella un riferimento dell'endpoint (EPR) come definito nello standard WS-Addressing.  
   
  L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti. Ad esempio, questo URI, "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" include le quattro parti seguenti:  
   
@@ -29,11 +29,11 @@ Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) vi
   
 -   Percorso: /mathservice.svc/secureEndpoint  
   
- Il modello di riferimento endpoint prevede che ogni riferimento possa includere alcuni parametri di riferimento che aggiungono ulteriori informazioni di identificazione. In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], questi parametri di riferimento vengono modellati come istanze della classe <xref:System.ServiceModel.Channels.AddressHeader>.  
+ Il modello di riferimento endpoint prevede che ogni riferimento possa includere alcuni parametri per riferimento che aggiungono ulteriori informazioni di identificazione. In WCF, questi parametri per riferimento vengono modellati come istanze del <xref:System.ServiceModel.Channels.AddressHeader> classe.  
   
  L'indirizzo endpoint per un servizio può essere specificato in modo imperativo mediante l'utilizzo di codice oppure in modo dichiarativo mediante la configurazione. In genere definire endpoint nel codice non è pratico in quanto le associazioni e gli indirizzi di un servizio distribuito sono solitamente diversi da quelli usati durante lo sviluppo del servizio. In genere è più pratico definire endpoint di servizio mediante la configurazione piuttosto che mediante codice. Se le informazioni sull'associazione e sull'indirizzo non vengono incluse nel codice, tali dati possono essere modificati senza dover compilare e distribuire nuovamente l'applicazione. Se non è specificato alcun endpoint nel codice o nella configurazione, il runtime ne aggiunge uno predefinito ad ogni indirizzo di base per ciascun contratto di servizio implementato dal servizio.  
   
- Esistono due modo per specificare gli indirizzi degli endpoint per un servizio in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. È possibile specificare un indirizzo assoluto per ogni endpoint associato al servizio o fornire un indirizzo di base per la classe <xref:System.ServiceModel.ServiceHost> di un servizio e quindi specificare un indirizzo per ogni endpoint associato a questo servizio, che viene definito come relativo all'indirizzo di base. È possibile utilizzare entrambe le procedure per specificare gli indirizzi degli endpoint per un servizio nella configurazione o nel codice. Se non si specifica un indirizzo relativo, il servizio utilizza l'indirizzo di base. È inoltre possibile avere più indirizzi di base per un servizio, ma per ogni servizio è consentito un solo indirizzo di base per ogni trasporto. Se sono presenti più endpoint, ognuno dei quali è configurato con un'associazione diversa, i relativi indirizzi devono essere univoci. Gli endpoint che utilizzano la stessa associazione ma contratti diversi possono utilizzare lo stesso indirizzo.  
+ Esistono due modi per specificare gli indirizzi degli endpoint per un servizio in WCF. È possibile specificare un indirizzo assoluto per ogni endpoint associato al servizio o fornire un indirizzo di base per la classe <xref:System.ServiceModel.ServiceHost> di un servizio e quindi specificare un indirizzo per ogni endpoint associato a questo servizio, che viene definito come relativo all'indirizzo di base. È possibile utilizzare entrambe le procedure per specificare gli indirizzi degli endpoint per un servizio nella configurazione o nel codice. Se non si specifica un indirizzo relativo, il servizio utilizza l'indirizzo di base. È inoltre possibile avere più indirizzi di base per un servizio, ma per ogni servizio è consentito un solo indirizzo di base per ogni trasporto. Se sono presenti più endpoint, ognuno dei quali è configurato con un'associazione diversa, i relativi indirizzi devono essere univoci. Gli endpoint che utilizzano la stessa associazione ma contratti diversi possono utilizzare lo stesso indirizzo.  
   
  Quando si ospita il servizio in IIS, non si gestisce l'istanza di <xref:System.ServiceModel.ServiceHost>. Nel caso di un servizio ospitato in IIS, l'indirizzo di base è sempre l'indirizzo specificato nel file con estensione svc. Per gli endpoint del servizio ospitato in IIS è quindi necessario utilizzare sempre indirizzi relativi. Fornire un indirizzo endpoint completo può provocare errori nella fase di distribuzione del servizio. Per altre informazioni, vedere [distribuzione di un servizio WCF ospitato](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   

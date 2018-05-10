@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f8a6c6be6874c1a90c9e40b5b82d833aeaa9b63a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Procedura: configurare i servizi delle applicazioni client
-In questo argomento viene descritto come usare [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Creazione progetti** per attivare e configurare i servizi delle applicazioni client. È possibile usare i servizi delle applicazioni client per convalidare gli utenti e recuperare i ruoli utente e le impostazioni da un servizio dell'applicazione [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] esistente. Dopo la configurazione, è possibile accedere ai servizi abilitati nel codice dell'applicazione come descritto in [Cenni preliminari sui servizi delle applicazioni client](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Per altre informazioni sui servizi delle applicazioni [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], vedere l'argomento relativo ai [Panoramica sui servizi delle applicazioni ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+In questo argomento viene descritto come usare **Creazione progetti** di Visual Studio per abilitare e configurare i servizi delle applicazioni client. È possibile usare i servizi delle applicazioni client per convalidare gli utenti e recuperare i ruoli utente e le impostazioni da un servizio dell'applicazione [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] esistente. Dopo la configurazione, è possibile accedere ai servizi abilitati nel codice dell'applicazione come descritto in [Cenni preliminari sui servizi delle applicazioni client](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Per altre informazioni sui servizi delle applicazioni [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], vedere l'argomento relativo ai [Panoramica sui servizi delle applicazioni ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
  È possibile abilitare e configurare i servizi delle applicazioni client nella pagina **Servizi** di **Creazione progetti**. La pagina **Servizi** aggiorna i valori nel file app. config del progetto. Per accedere a **Creazione progetti**, usare il comando **Proprietà** nel menu **Progetto**. Per altre informazioni sulla pagina **Servizi**, vedere [Services Page, Project Designer](https://msdn.microsoft.com/library/bb398109) (Pagina Servizi, Creazione progetti).  
   
@@ -100,7 +100,7 @@ In questo argomento viene descritto come usare [!INCLUDE[vsprvs](../../../includ
   
      Il valore predefinito di `Data Source = |SQL/CE|` viene visualizzato nella casella di testo.  
   
-3.  Per generare e usare un database di SQL Server Compact, mantenere il valore predefinito della stringa di connessione. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] genera un file di database e lo inserisce nella directory indicata dalla proprietà <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>.  
+3.  Per generare e usare un database di SQL Server Compact, mantenere il valore predefinito della stringa di connessione. Visual Studio genera un file di database e lo inserisce nella directory indicata dalla proprietà <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>.  
   
 4.  Per generare e usare un database [!INCLUDE[ssEW](../../../includes/ssew-md.md)] crittografato, aggiungere i valori `password` e `encrypt database` alla stringa di connessione, come illustrato nell'esempio seguente.  
   

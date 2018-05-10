@@ -2,11 +2,11 @@
 title: Risoluzione dei problemi relativi all'esercitazione introduttiva
 ms.date: 03/30/2017
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 863e9dd1253624c025e830f589068068cb996413
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12812bd1ef88eab14a8defed0b71657b0d33c618
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Risoluzione dei problemi relativi all'esercitazione introduttiva
 In questo argomento vengono elencati i problemi più comuni che possono verificarsi durante l'Esercitazione introduttiva e le relative soluzioni.  
@@ -31,7 +31,7 @@ In questo argomento vengono elencati i problemi più comuni che possono verifica
   
 <a name="BKMK_q2"></a>   
 ## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>Tentativo di eseguire l'applicazione di servizio: HTTP non è stato possibile registrare l'URL http://+:8000/ServiceModelSamples/Service/. Il processo non dispone dei diritti di accesso a questo spazio dei nomi.  
- Il processo che ospita un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] deve essere eseguito con privilegi di amministratore. Se il servizio viene eseguito da [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], è necessario eseguire [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] come amministratore. Per fare **avviare**, fare doppio clic su [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] e selezionare **Esegui come amministratore**. Se il servizio viene eseguito da un prompt della riga di comando, è necessario avviare il prompt della riga di comando come amministratore. Fare clic su **avviare**, fare doppio clic su **prompt dei comandi** e selezionare **Esegui come amministratore**.  
+ Con privilegi amministrativi, è necessario eseguire il processo che ospita un servizio WCF. Se il servizio viene eseguito da [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], è necessario eseguire [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] come amministratore. Per fare **avviare**, fare doppio clic su [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] e selezionare **Esegui come amministratore**. Se il servizio viene eseguito da un prompt della riga di comando, è necessario avviare il prompt della riga di comando come amministratore. Fare clic su **avviare**, fare doppio clic su **prompt dei comandi** e selezionare **Esegui come amministratore**.  
   
 <a name="BKMK_q3"></a>   
 ## <a name="attempting-to-use-the-svcutilexe-tool-svcutil-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>Se si tenta di utilizzare lo strumento Svcutil.exe, viene visualizzato l'errore seguente: 'svcutil' non è riconosciuto come comando interno o esterno, un programma eseguibile o un file batch.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedure consigliate: controllo delle versioni del contratto dati
 In questo argomento vengono elencate le procedure consigliate per la creazione di contratti dati che possono evolvere facilmente nel tempo. Per ulteriori informazioni sui contratti dati, vedere gli argomenti in [utilizzando i contratti dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -21,7 +21,7 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
  Di conseguenza, anche lo scenario di controllo delle versioni più comune, quale l'aggiunta di un nuovo membro dati, non può essere implementato agevolmente rispetto a un schema specificato. Le versioni più recenti di un contratto dati (ad esempio con un nuovo membro dati) non vengono convalidate usando lo schema obsoleto.  
   
- Esistono tuttavia molti scenari in cui non è richiesta una totale conformità allo schema. Molte piattaforme dei servizi Web, incluso [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e i servizi Web XML creati usando ASP.NET, non eseguono la convalida dello schema per impostazione predefinita e pertanto tollerano elementi aggiuntivi che non sono descritti nello schema. Se si usano tali piattaforme, l'implementazione di molti scenari di controllo delle versioni risulta più semplice.  
+ Esistono tuttavia molti scenari in cui non è richiesta una totale conformità allo schema. Molte piattaforme di servizi Web, tra cui WCF e servizi Web XML creati usando ASP.NET, non eseguire la convalida dello schema per impostazione predefinita e pertanto tollerano elementi aggiuntivi non descritti dallo schema. Se si usano tali piattaforme, l'implementazione di molti scenari di controllo delle versioni risulta più semplice.  
   
  Sono pertanto disponibili due set di linee guida per il controllo delle versioni di un contratto dati: un set per gli scenari in cui la rigorosa validità dello schema è importante e un altro set per gli scenari in cui non lo è.  
   
@@ -36,7 +36,7 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
  Per altre informazioni, vedere le procedure consigliate: [servizio di controllo delle versioni](../../../docs/framework/wcf/service-versioning.md).  
   
- In alcuni casi è necessario garantire la rigorosa conformità allo schema per i messaggi inviati dall'applicazione, ma non è possibile basarsi sui messaggi in ingresso per essere rigorosamente conformi allo schema. In questo caso, vi è il rischio che un messaggio in ingresso contenga dati estranei. I valori estranei vengono archiviati e restituiti da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e determinano quindi l'invio di messaggi non validi per lo schema. Per evitare questo problema, è necessario disattivare la funzionalità di creazione di sequenze di andata e ritorno. È possibile ottenere questo risultato in due modi.  
+ In alcuni casi è necessario garantire la rigorosa conformità allo schema per i messaggi inviati dall'applicazione, ma non è possibile basarsi sui messaggi in ingresso per essere rigorosamente conformi allo schema. In questo caso, vi è il rischio che un messaggio in ingresso contenga dati estranei. I valori estranei vengono archiviati e restituiti da WCF e pertanto i risultati nei messaggi di schema non valido inviati. Per evitare questo problema, è necessario disattivare la funzionalità di creazione di sequenze di andata e ritorno. È possibile ottenere questo risultato in due modi.  
   
 -   Non implementare l'interfaccia <xref:System.Runtime.Serialization.IExtensibleDataObject> sui tipi usati.  
   

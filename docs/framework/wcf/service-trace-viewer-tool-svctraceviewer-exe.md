@@ -2,14 +2,14 @@
 title: Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 215e34a3e7b075463ceeaa15386d3a347ffff064
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
-Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation (WCF) consente di analizzare le tracce diagnostiche che vengono generate da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Il Visualizzatore di tracce dei servizi offre funzionalità per unire, visualizzare e filtrare facilmente i messaggi di traccia nel log che consentono di diagnosticare, risolvere e controllare i problemi relativi ai servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation (WCF) consente di analizzare le tracce diagnostiche che vengono generate da WCF. Service Trace Viewer consente di unire, visualizzare e filtrare i messaggi di traccia nel log in modo che è possibile diagnosticare, riparare e verificare i problemi di servizio WCF.  
   
 ## <a name="configuring-tracing"></a>Configurazione delle funzionalità di traccia  
  Le tracce di diagnostica forniscono informazioni che mostrano quello si sta verificando in tutta l'operazione dell'applicazione. Come si intuisce dal nome, è possibile seguire le operazioni dall'origine alla destinazione e tramite punti intermedi.  
@@ -55,7 +55,7 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Apertura e visualizzazione di file di traccia WCF  
  Il Visualizzatore traccia servizio supporta tre tipi di file:  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] File di traccia, con estensione .svcLog  
+-   File (. svclog) di traccia WCF  
   
 -   File di traccia eventi, con estensione etl  
   
@@ -65,7 +65,7 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
   
 ##### <a name="to-open-a-trace-file"></a>Per aprire un file di traccia  
   
-1.  Avviare Service Trace Viewer utilizzando una finestra di comando per passare al [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] il percorso di installazione (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) e quindi digitare `SvcTraceViewer.exe`.  
+1.  Avviare Service Trace Viewer utilizzando una finestra di comando per passare al percorso di installazione di WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) e quindi digitare `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  Lo strumento Visualizzatore di tracce dei servizi può essere associato a due tipi di file: svclog e stvproj. Per eseguire e annullare la registrazione delle estensioni di file è possibile utilizzare due parametri nella riga di comando.  
@@ -87,7 +87,7 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
 >  Non è consigliabile caricare un file di log di traccia di dimensioni superiori a 200 MB. Se si tenta di caricare un file di dimensioni superiori, il processo di caricamento può richiedere molto tempo, a seconda delle risorse del computer. Lo strumento Visualizzatore di tracce dei servizi può non rispondere per molto tempo o può esaurire la memoria del computer. Per evitare che ciò avvenga, è consigliabile configurare la funzionalità di caricamento parziale. Per ulteriori informazioni su questa procedura, vedere la sezione "Caricamento di file di traccia di grandi dimensioni”.  
   
 #### <a name="event-tracing-and-crimson-tracing"></a>Formati di traccia eventi e di traccia Crimson  
- Il formato nativo del visualizzatore è il formato di traccia di attività generato da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Le tracce generate in un altro formato devono essere convertite affinché il visualizzatore sia in grado di leggerle. Attualmente, oltre al formato di traccia delle attività, il visualizzatore supporta i formati di traccia eventi e di traccia Crimson.  
+ Formato nativo del visualizzatore è il formato di traccia di attività che genera WCF. Le tracce generate in un altro formato devono essere convertite affinché il visualizzatore sia in grado di leggerle. Attualmente, oltre al formato di traccia delle attività, il visualizzatore supporta i formati di traccia eventi e di traccia Crimson.  
   
  Quando si apre un file che non contiene tracce di attività, il visualizzatore prova a convertirlo. Occorre quindi specificare il nome e il percorso del file in cui salvare i dati di traccia convertiti. Dopo aver eseguito la conversione dei dati, il visualizzatore mostra il contenuto del nuovo file.  
   
@@ -104,7 +104,7 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
 -   Nel **progetto** scheda, è possibile aggiungere file a un progetto.  
   
 ### <a name="viewing-wcf-traces"></a>Visualizzazione di tracce WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] genera tracce utilizzando il formato di traccia di attività. Nel modello delle tracce delle attività, le singole tracce vengono raggruppate in attività in base al loro scopo. Il flusso di controllo logico viene trasferito tra le attività. Durante il periodo di attività di un'applicazione, ad esempio, iniziano e terminano molte attività di trasmissione di messaggi. Per ulteriori informazioni sulla visualizzazione di tracce e le attività e dell'interfaccia utente di Service Trace Viewer troppo, vedere [utilizzando Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ WCF genera tracce utilizzando il formato di traccia di attività. Nel modello delle tracce delle attività, le singole tracce vengono raggruppate in attività in base al loro scopo. Il flusso di controllo logico viene trasferito tra le attività. Durante il periodo di attività di un'applicazione, ad esempio, iniziano e terminano molte attività di trasmissione di messaggi. Per ulteriori informazioni sulla visualizzazione di tracce e le attività e dell'interfaccia utente di Service Trace Viewer troppo, vedere [utilizzando Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 #### <a name="switching-to-different-views"></a>Passaggio a una visualizzazione specifica  
  Nel Visualizzatore di tracce dei servizi sono disponibili le visualizzazioni distinte seguenti, Vengono visualizzati come schede nel riquadro a sinistra del visualizzatore e sono accessibili anche dal **vista** menu.  
@@ -217,7 +217,7 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
   
 -   la barra degli strumenti di filtro consente di accedere ai filtri predefiniti e personalizzati. Può essere abilitata tramite il **vista** menu.  
   
--   Il filtro predefinito del visualizzatore può essere utilizzato per filtrare in modo selettivo le tracce [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Per impostazione predefinita, tale filtro è impostato in modo da consentire il passaggio di tutte le tracce dell'infrastruttura. Le impostazioni di questo filtro vengono definite nel **le opzioni di filtro** sottomenu sotto **vista** menu.  
+-   Il filtro predefinito del visualizzatore è utilizzabile per filtrare in modo selettivo le parti delle tracce WCF. Per impostazione predefinita, tale filtro è impostato in modo da consentire il passaggio di tutte le tracce dell'infrastruttura. Le impostazioni di questo filtro vengono definite nel **le opzioni di filtro** sottomenu sotto **vista** menu.  
   
 -   I filtri XPath personalizzati consentono agli utenti di avere il controllo completo sull'applicazione dei filtri. Possono essere definiti nel **filtro personalizzato** in **vista** menu.  
   
@@ -237,7 +237,7 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
  Il **deselezionare** pulsante Reimposta i filtri predefiniti e personalizzati per consentire tutte le tracce di pass-through.  
   
 #### <a name="filter-options"></a>Opzioni di filtro  
- Il visualizzatore è in grado di rimuovere automaticamente dalla visualizzazione le tracce [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. La rimozione può riguardare in modo selettivo le tracce generate da aree specifiche di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ad esempio le tracce relative alle transazioni.  
+ Il visualizzatore è in grado di rimuovere automaticamente dalla visualizzazione determinate tracce di WCF. La rimozione può riguardare in modo selettivo le tracce generate da aree specifiche di WCF, ad esempio le tracce relative alle transazioni.  
   
  Le impostazioni di questo filtro vengono definite nel **le opzioni di filtro** sottomenu sotto **vista** menu.  
   
@@ -347,7 +347,7 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
 -   Passo indietro: Utilizzare il **attività** menu oppure premere "F9". È anche possibile utilizzare tasto di direzione "up" nel riquadro delle tracce.  
   
 > [!NOTE]
->  In questo modo è possibile accedere a un'attività che si verifica in un processo diverso o anche in un computer diverso, dato che i messaggi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] possono contenere ID attività validi su più computer.  
+>  Ciò è possibile accedere a un'attività che si verificano in un processo diverso o anche in un computer diverso, poiché messaggi WCF possono contenere attività ID su più computer.  
   
 #### <a name="follow-transfer"></a>Trasferimento successivo  
  Le tracce di trasferimento sono tracce speciali del file di traccia che descrivono il trasferimento dell'esecuzione da un'attività a un'altra. Ad esempio, "Attività A" possono trasferire "Dell'attività b". In tal caso, l'icona "Attività A" con il nome "A: attività" e il trasferimento è una traccia di trasferimento. Questa traccia di trasferimento è un collegamento tra le due tracce. In "Attività B", è inoltre possibile una traccia di trasferimento alla fine dell'attività per trasferire "Attività A". Questo funzionamento è simile alle chiamate di funzione dei programmi: A chiama B e quindi B restituisce il risultato.  
@@ -417,9 +417,9 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
   
 |Icona|Descrizione|  
 |----------|-----------------|  
-|![Traccia Log dei messaggi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Traccia Log dei messaggi: traccia generata quando un messaggio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] viene registrato per mezzo della funzionalità di registrazione dei  messaggi, quando l’origine di traccia `System.ServiceModel.MessageLogging` è abilitata. Facendo clic su questa traccia verrà visualizzato il messaggio. Ci sono quattro punti di registrazione configurabili per un messaggio: ServiceLevelSendRequest, TransportSend, TransportReceive e ServiceLevelReceiveRequest che possono essere specificati anche dall'attributo `messageSource` nella traccia del log dei messaggi.|  
-|![Traccia messaggio ricevuto](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Traccia Messaggio ricevuto: traccia generata quando viene ricevuto un messaggio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], se la l'origine di traccia `System.ServiceModel` è abilitata al livello di traccia Informazioni o Dettagliato. Questa traccia è essenziale per la visualizzazione la freccia di correlazione del messaggio nell'attività **grafico** visualizzazione.|  
-|![Traccia messaggio inviato](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Traccia Messaggio ricevuto: traccia generata quando viene ricevuto un messaggio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], se la l'origine di traccia `System.ServiceModel` è abilitata al livello di traccia Informazioni o Dettagliato. Questa traccia è essenziale per la visualizzazione la freccia di correlazione del messaggio nell'attività **grafico** visualizzazione.|  
+|![Traccia Log dei messaggi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Traccia Log dei messaggi: traccia che viene generata quando viene registrato un messaggio WCF tramite la funzionalità di registrazione dei messaggi, quando il `System.ServiceModel.MessageLogging` origine di traccia è abilitata. Facendo clic su questa traccia verrà visualizzato il messaggio. Ci sono quattro punti di registrazione configurabili per un messaggio: ServiceLevelSendRequest, TransportSend, TransportReceive e ServiceLevelReceiveRequest che possono essere specificati anche dall'attributo `messageSource` nella traccia del log dei messaggi.|  
+|![Traccia messaggio ricevuto](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Traccia messaggio ricevuto: traccia che viene generata quando viene ricevuto un messaggio WCF, se il `System.ServiceModel` origine di traccia è abilitata a livello di informazioni o dettagliato. Questa traccia è essenziale per la visualizzazione la freccia di correlazione del messaggio nell'attività **grafico** visualizzazione.|  
+|![Traccia messaggio inviato](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Traccia messaggio inviato: traccia che viene generata quando viene inviato un messaggio WCF se il `System.ServiceModel` origine di traccia è abilitata a livello di informazioni o dettagliato. Questa traccia è essenziale per la visualizzazione la freccia di correlazione del messaggio nell'attività **grafico** visualizzazione.|  
   
 ### <a name="activities"></a>Attività  
   
@@ -432,11 +432,11 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
   
 |Icona|Descrizione|  
 |----------|-----------------|  
-|![Attività dell'ambiente](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Attività dell'ambiente: attività che crea, apre o chiude un host o un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Gli errori che si sono verificati durante queste fasi verranno visualizzati in questa attività.|  
+|![Attività dell'ambiente](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Attività dell'ambiente: attività che crea, apre o chiude un host WCF o un client. Gli errori che si sono verificati durante queste fasi verranno visualizzati in questa attività.|  
 |![Attività Listen](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Attività Listen: attività che si registra tracce riferita a un listener. In questa attività, si possono visualizzare informazioni e richieste di connessione del listener.|  
 |![Attività ricezione byte](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Attività ricezione byte: attività che raduna tutte le tracce relative alla ricezione di byte in ingresso su una connessione tra due endpoint. Questa attività è essenziale nelle correlazioni con le attività del trasporto che propagano l'ID attività, ad esempio http.sys. Errori di connessione, quali interruzioni, verranno visualizzati in questa attività.|  
-|![Attività elaborazione messaggio](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Attività Elaborazione messaggi: attività che raduna tracce relative alla creazione di un messaggio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Gli errori causati da envelope errata o da messaggi in formato non valido verranno visualizzati nell'attività. In questa attività, è possibile controllare le intestazioni del messaggio per vedere se un ID attività è stato propagato dal chiamante. In questo caso, quando si passa all’attività di tipo ProcessAction (icona successiva), si può inoltre assegnare a tale attività l'ID attività propagato per la correlazione tra tracce di chiamante e chiamato.|  
-|![Traccia Log dei messaggi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Attività Elaborazione azione: attività che raduna tutte le tracce relative ad una richiesta [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tra due endpoint. Se `propagateActivity` è impostato su `true` su entrambi gli endpoint della configurazione, tutte le tracce da entrambi gli endpoint vengono incorporate in un'unica attività per correlazione diretta. Tale attività conterrà errori a causa dell’elaborazione nel trasporto o della sicurezza, che si estendono al limite del codice utente e viceversa (se esiste una risposta).|  
+|![Attività elaborazione messaggio](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Attività elaborazione messaggi: attività che raduna le tracce relative alla creazione di un messaggio WCF. Gli errori causati da envelope errata o da messaggi in formato non valido verranno visualizzati nell'attività. In questa attività, è possibile controllare le intestazioni del messaggio per vedere se un ID attività è stato propagato dal chiamante. In questo caso, quando si passa all’attività di tipo ProcessAction (icona successiva), si può inoltre assegnare a tale attività l'ID attività propagato per la correlazione tra tracce di chiamante e chiamato.|  
+|![Traccia Log dei messaggi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Attività elaborazione azione: attività che raduna tutte le tracce relative a una richiesta WCF tra due endpoint. Se `propagateActivity` è impostato su `true` su entrambi gli endpoint della configurazione, tutte le tracce da entrambi gli endpoint vengono incorporate in un'unica attività per correlazione diretta. Tale attività conterrà errori a causa dell’elaborazione nel trasporto o della sicurezza, che si estendono al limite del codice utente e viceversa (se esiste una risposta).|  
 |![Attività elaborazione messaggio](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Attività Esecuzione del codice utente: attività che raduna le tracce del codice utente per l'elaborazione di una richiesta.|  
   
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  

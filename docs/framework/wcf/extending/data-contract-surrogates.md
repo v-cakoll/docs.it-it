@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 455900b1ac5d10c02e6b1341e737eb6874c874f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b06cb45d6075c8de1da973a11e2edec6792df304
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-contract-surrogates"></a>Surrogati del contratto dati
 Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello del contratto dati. È progettata per la personalizzazione e la sostituzione dei tipi nelle situazioni in cui gli utenti desiderano modificare il modo in cui un tipo viene serializzato, deserializzato o proiettato nei metadati. Un surrogato può essere utilizzato, ad esempio, quando un contratto dati non è stato specificato per il tipo, i campi e le proprietà non sono contrassegnati con l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> o gli utenti desiderano creare dinamicamente variazioni dello schema.  
@@ -133,7 +133,7 @@ Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello d
  Il metodo  viene chiamato all'inizio dell'esportazione e dell'importazione dello schema. Restituisce i tipi di dati personalizzati utilizzati nello schema esportato o importato. Viene passato a <xref:System.Collections.ObjectModel.Collection%601> (il parametro `customDataTypes`), che è una raccolta di tipi. Il metodo aggiunge ulteriori tipi noti a questa raccolta. I tipi di dati personalizzati conosciuti sono indispensabili per attivare la serializzazione e la deserializzazione dei dati personalizzati utilizzando la classe <xref:System.Runtime.Serialization.DataContractSerializer>. Per ulteriori informazioni, vedere [tipi conosciuti di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implementazione di un surrogato  
- Per utilizzare il surrogato del contratto dati all'interno di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è necessario attenersi a una procedura speciale.  
+ Per utilizzare il surrogato del contratto dati all'interno di WCF, è necessario seguire una procedura speciale.  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>Per utilizzare un surrogato per serializzazione e deserializzazione  
  Utilizzare la classe <xref:System.Runtime.Serialization.DataContractSerializer> per eseguire serializzazione e deserializzazione di dati con il surrogato. L'elemento <xref:System.Runtime.Serialization.DataContractSerializer> viene creato da <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. È necessario specificare anche il surrogato.  
@@ -174,7 +174,7 @@ Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello d
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>Per utilizzare un surrogato per l'esportazione dei metadati  
- Per impostazione predefinita, quando si esportano metadati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per un servizio, è necessario che vengano generati sia schemi WSDL che XSD. È necessario che il surrogato venga aggiunto al componente responsabile della generazione di schema XSD per i tipi di contratto dati, <xref:System.Runtime.Serialization.XsdDataContractExporter>. A tale scopo, utilizzare un comportamento che implementi <xref:System.ServiceModel.Description.IWsdlExportExtension> per modificare l'elemento <xref:System.ServiceModel.Description.WsdlExporter> oppure modificare direttamente l'elemento <xref:System.ServiceModel.Description.WsdlExporter> utilizzato per esportare metadati.  
+ Per impostazione predefinita, quando si esportano metadati da WCF per un servizio, WSDL e XSD dello schema deve essere generato. È necessario che il surrogato venga aggiunto al componente responsabile della generazione di schema XSD per i tipi di contratto dati, <xref:System.Runtime.Serialization.XsdDataContractExporter>. A tale scopo, utilizzare un comportamento che implementi <xref:System.ServiceModel.Description.IWsdlExportExtension> per modificare l'elemento <xref:System.ServiceModel.Description.WsdlExporter> oppure modificare direttamente l'elemento <xref:System.ServiceModel.Description.WsdlExporter> utilizzato per esportare metadati.  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>Per utilizzare un surrogato per l'esportazione dei metadati  
   

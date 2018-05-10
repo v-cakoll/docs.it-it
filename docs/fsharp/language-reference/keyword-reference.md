@@ -2,11 +2,11 @@
 title: Riferimento per parole chiave (F#)
 description: 'Trovare collegamenti a informazioni su tutte le parole chiave del linguaggio F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 2cb2fbb3236fcfeebc801b467d657f031b8da55a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d8a2bf667f5303cc19e8d4279e433efca25c294
+ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="keyword-reference"></a>Riferimento per parole chiave
 
@@ -114,7 +114,6 @@ I token seguenti sono riservati come parole chiave per l'espansione futura del l
 * `eager`
 * `event`
 * `external`
-* `fixed`
 * `functor`
 * `include`
 * `method`

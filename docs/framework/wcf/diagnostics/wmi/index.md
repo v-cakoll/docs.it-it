@@ -2,19 +2,19 @@
 title: Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a53fee8bfed9f5a0f5773c9dfcfbaab5f173ddad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b06cc61714b3fdc63086d2b79b087540bece698
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Uso di Strumentazione gestione Windows (WMI) per la diagnostica
-Windows Communication Foundation (WCF) espone dati di ispezione di un servizio in fase di esecuzione tramite un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] provider Strumentazione gestione Windows (WMI).  
+Windows Communication Foundation (WCF) espone dati di ispezione di un servizio in fase di esecuzione tramite un provider di Strumentazione gestione Windows (WMI) di WCF.  
   
 ## <a name="enabling-wmi"></a>Abilitazione di WMI  
  WMI è l'implementazione Microsoft dello standard WBEM (Web-Based Enterprise Management). Per ulteriori informazioni sul SDK di WMI, vedere [Strumentazione gestione Windows](https://msdn.microsoft.com/library/aa394582.aspx). WBEM è uno standard industriale che definisce la modalità in cui le applicazioni espongono la strumentazione della gestione a strumenti di gestione esterni.  
   
- Un provider WMI è un componente che espone la strumentazione in fase di esecuzione attraverso un'interfaccia compatibile con WBEM. È costituito da un set di oggetti WMI che hanno coppie di valore/attributo. Le coppie possono essere costituite da un numero qualsiasi di tipi semplici. Gli strumenti di gestione sono in grado di connettersi ai servizi attraverso l'interfaccia in fase di esecuzione. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] espone attributi di servizi quali indirizzi, associazioni, comportamenti e listener.  
+ Un provider WMI è un componente che espone la strumentazione in fase di esecuzione attraverso un'interfaccia compatibile con WBEM. È costituito da un set di oggetti WMI che hanno coppie di valore/attributo. Le coppie possono essere costituite da un numero qualsiasi di tipi semplici. Gli strumenti di gestione sono in grado di connettersi ai servizi attraverso l'interfaccia in fase di esecuzione. WCF espone attributi di servizi quali indirizzi, associazioni, comportamenti e listener.  
   
  Il provider WMI incorporato può essere attivato nel file di configurazione dell'applicazione. Questa operazione viene eseguita tramite il `wmiProviderEnabled` attributo del [ \<diagnostica >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) nel [ \<System. ServiceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sezione, come illustrato nell'esempio seguente configurazione.  
   
@@ -38,18 +38,18 @@ Windows Communication Foundation (WCF) espone dati di ispezione di un servizio i
   
  Se nel file di configurazione non viene specificato alcun listener di traccia per la registrazione dei messaggi né alcun listener di traccia `System.ServiceModel`, nessuna delle modifiche apportate verrà resa effettiva, anche se accettata da WMI. Per ulteriori informazioni sulla corretta configurazione dei rispettivi listener, vedere [la configurazione di registrazione dei messaggi](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) e [configurazione traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Il livello di traccia di tutte le altre origini di traccia specificate dalla configurazione viene attivato all'avvio dell'applicazione e non può essere modificato.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] espone un metodo `GetOperationCounterInstanceName` per lo scripting. Se al metodo viene fornito un nome operazione, il metodo restituisce il nome di un'istanza di contatore delle prestazioni. L'input non viene tuttavia convalidato. Pertanto, se si fornisce un nome operazione errato, verrà restituito un nome di contatore errato.  
+ WCF espone un `GetOperationCounterInstanceName` metodo per lo scripting. Se al metodo viene fornito un nome operazione, il metodo restituisce il nome di un'istanza di contatore delle prestazioni. L'input non viene tuttavia convalidato. Pertanto, se si fornisce un nome operazione errato, verrà restituito un nome di contatore errato.  
   
- La proprietà `OutgoingChannel` dell'istanza `Service` non conta i canali aperti da un servizio per la connessione a un altro servizio se il client [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] nel servizio di destinazione non viene creato all'interno del metodo `Service`.  
+ Il `OutgoingChannel` proprietà del `Service` istanza non conta i canali aperti da un servizio per connettersi a un altro servizio, se il client WCF al servizio di destinazione non viene creato all'interno di `Service` (metodo).  
   
  **Attenzione** WMI supporta soltanto un <xref:System.TimeSpan> valore fino a 3 cifre decimali. Ad esempio, se il servizio imposta una delle proprietà su <xref:System.TimeSpan.MaxValue>, quando viene visualizzato in WMI il valore viene troncato dopo 3 cifre decimali.  
   
 ## <a name="security"></a>Sicurezza  
- Poiché il provider WMI di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] consente la rilevazione di servizi in un ambiente, nel concedere l'accesso all'ambiente è necessario prestare particolare attenzione. Se si consentono deroghe all'accesso al solo amministratore (impostazione predefinita), è possibile che l'accesso a dati sensibili presenti nell'ambiente sia consentito anche a utenti meno attendibili. In particolare, se le autorizzazioni all'accesso WMI remoto vengono concesse indistintamente, possono verificarsi attacchi flood. Se un processo viene sovraccaricato da un numero eccessivo di richieste WMI, è possibile che si verifichi una riduzione delle prestazioni.  
+ Poiché il provider WMI per WCF consente l'individuazione dei servizi in un ambiente, si deve prestare molta attenzione per concedere l'accesso a esso. Se si consentono deroghe all'accesso al solo amministratore (impostazione predefinita), è possibile che l'accesso a dati sensibili presenti nell'ambiente sia consentito anche a utenti meno attendibili. In particolare, se le autorizzazioni all'accesso WMI remoto vengono concesse indistintamente, possono verificarsi attacchi flood. Se un processo viene sovraccaricato da un numero eccessivo di richieste WMI, è possibile che si verifichi una riduzione delle prestazioni.  
   
  Inoltre, se si concedono liberamente autorizzazioni di accesso al file MOF, utenti meno attendibili potrebbero modificare il comportamento di WMI e alterare gli oggetti caricati nello schema WMI. È possibile ad esempio rimuovere campi in modo che i dati critici vengano nascosti dall'amministratore o che i campi che non contengono o generano eccezioni vengano aggiunti al file.  
   
- Per impostazione predefinita, il provider WMI di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] concede le autorizzazioni "esegui metodo", "scrittura provider" e "abilita account" per l'amministratore e l'autorizzazione "abilita account" per ASP.NET, Servizio locale e Servizio di rete. In particolare, sulle piattaforme diverse da [!INCLUDE[wv](../../../../../includes/wv-md.md)] l'account ASP.NET dispone dell'accesso in lettura allo spazio dei nomi ServiceModel di WMI. Se non si desidera concedere questi privilegi a un particolare gruppo di utenti, è necessario disattivare il provider WMI (è disabilitato per impostazione predefinita) o disabilitare l'accesso per il gruppo di utenti specifico.  
+ Per impostazione predefinita, il provider WMI per WCF concede "Esegui metodo", "Scrittura provider", "Abilita account" autorizzazioni di amministratore e "Abilita account" per ASP.NET, servizio locale e servizio di rete. In particolare, sulle piattaforme diverse da [!INCLUDE[wv](../../../../../includes/wv-md.md)] l'account ASP.NET dispone dell'accesso in lettura allo spazio dei nomi ServiceModel di WMI. Se non si desidera concedere questi privilegi a un particolare gruppo di utenti, è necessario disattivare il provider WMI (è disabilitato per impostazione predefinita) o disabilitare l'accesso per il gruppo di utenti specifico.  
   
  Inoltre, l'abilitazione di WMI mediante la configurazione potrebbe non essere possibile a causa di privilegi utente insufficienti. Per questo errore non viene tuttavia scritto alcun evento nel registro eventi.  
   
@@ -149,7 +149,7 @@ Whoami /user
  In questo modo, è possibile ottenere il SID dell'utente corrente, ma non è possibile usare tale metodo per ottenere il SID per utenti arbitrari. Un altro metodo per ottenere il SID consiste nell'utilizzare il [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) dello strumento di [strumenti di Windows 2000 Resource Kit per attività amministrative](http://go.microsoft.com/fwlink/?LinkId=178660). Questo strumento confronta il SID di due utenti (locale o di dominio) e, come conseguenza secondaria, stampa i due SID nella riga di comando. Per altre informazioni, vedere [SID Well Known](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Accesso a istanze di oggetti WMI remote  
- Per accedere a istanze WMI di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] in un computer remoto, è necessario abilitare la riservatezza pacchetto negli strumenti usati per l'accesso. Nella sezione seguente viene descritta la procedura per accedere a istanze WMI usando WMI CIM Studio, Tester di Strumentazione gestione Windows e .NET SDK 2.0.  
+ Se è necessario per accedere a istanze WMI per WCF in un computer remoto, è necessario abilitare riservatezza pacchetto negli strumenti utilizzati per l'accesso. Nella sezione seguente viene descritta la procedura per accedere a istanze WMI usando WMI CIM Studio, Tester di Strumentazione gestione Windows e .NET SDK 2.0.  
   
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
  Se è stato installato [WMI Administrative Tools](http://go.microsoft.com/fwlink/?LinkId=95185), è possibile usare WMI CIM Studio per accedere alle istanze WMI. Gli strumenti si trovano nella cartella seguente:  

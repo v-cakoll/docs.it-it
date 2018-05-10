@@ -2,11 +2,11 @@
 title: Selezione automatica del formato
 ms.date: 03/30/2017
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-ms.openlocfilehash: 9b9b4da4d5d3bdb3892feb49c033fbe4fc640cb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8c26253bee069bf9bbc009ea219e6c12cab034ef
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="automatic-format-selection"></a>Selezione automatica del formato
 In questo esempio viene illustrato come abilitare la selezione automatica del formato (XML o JSON) con il modello, nonché come impostare in modo esplicito il formato nel codice dell'operazione di programmazione REST di Windows Communication Foundation (WCF).  
@@ -14,9 +14,9 @@ In questo esempio viene illustrato come abilitare la selezione automatica del fo
 ## <a name="sample-details"></a>Dettagli dell'esempio  
  L'esempio è costituito da un servizio e dal codice client che effettua le richieste al servizio. Il servizio supporta una singola operazione `GET` (`EchoWithGet`) HTTP e una singola operazione `POST` (`EchoWithPost`) HTTP. Entrambe operazioni prevedono una stringa, quindi restituiscono la stringa nella risposta. Con l'operazione `GET`, la stringa viene fornita in un parametro della stringa di query dell'URI. Con l'operazione `POST`, la stringa viene fornita nel corpo della richiesta serializzata in XML. Il servizio è in grado di restituire risposte in XML o JSON usando le nuove funzionalità di selezione automatica del formato e di selezione imperativa del formato di [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  
   
- Nell'esempio la selezione automatica del formato viene abilitata tramite il file App.config. Sull'endpoint HTTP Web predefinito all'attributo `automaticFormatSelectionEnabled` è stato assegnato il valore `true`. Con la selezione automatica del formato abilitata, l'infrastruttura di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seleziona il formato di riposta più appropriato (XML o JSON) analizzando le intestazioni HTTP Accept e Content-Type della richiesta. Per usare questa nuova funzionalità, non è necessario che lo sviluppatore fornisca una configurazione o un codice aggiuntivo oltre all'impostazione dell'attributo `automaticFormatSelectionEnabled` su `true`. Nel codice client in Program.cs le richieste vengono inviate in entrambe le `GET` e `POST` operazioni del servizio con l'intestazione HTTP Accept specificata come "application/xml" o "application/json" e il servizio restituisce una risposta che formato corrispondente.  
+ Nell'esempio la selezione automatica del formato viene abilitata tramite il file App.config. Sull'endpoint HTTP Web predefinito all'attributo `automaticFormatSelectionEnabled` è stato assegnato il valore `true`. Con la selezione automatica del formato abilitata, l'infrastruttura WCF seleziona il più appropriato risposta formato (XML o JSON) dato le intestazioni HTTP Accept o Content-Type della richiesta. Per usare questa nuova funzionalità, non è necessario che lo sviluppatore fornisca una configurazione o un codice aggiuntivo oltre all'impostazione dell'attributo `automaticFormatSelectionEnabled` su `true`. Nel codice client in Program.cs le richieste vengono inviate in entrambe le `GET` e `POST` operazioni del servizio con l'intestazione HTTP Accept specificata come "application/xml" o "application/json" e il servizio restituisce una risposta che formato corrispondente.  
   
- Anche nell'operazione `GET` viene usata la selezione imperativa del formato. L'operazione `GET` verifica se è presente un parametro della stringa di query `format` facoltativo e in caso affermativo imposta il formato della risposta sulla proprietà <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A>. In questo modo, l'impostazione imperativa del formato della risposta determina l'override della selezione automatica del formato effettuata dall'infrastruttura di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Anche nell'operazione `GET` viene usata la selezione imperativa del formato. L'operazione `GET` verifica se è presente un parametro della stringa di query `format` facoltativo e in caso affermativo imposta il formato della risposta sulla proprietà <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A>. L'impostazione in modo imperativo il formato della risposta in questo modo sostituisce la selezione automatica del formato effettuata dall'infrastruttura WCF.  
   
  L'esempio è costituito da un servizio indipendente e da un client in esecuzione in un'applicazione console. Quando l'applicazione console è in esecuzione, il client invia richieste al servizio e scrive nella finestra della console le informazioni pertinenti incluse nelle risposte.  
   

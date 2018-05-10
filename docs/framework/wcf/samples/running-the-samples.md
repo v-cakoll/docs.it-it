@@ -2,11 +2,11 @@
 title: Esecuzione degli esempi di Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: ee02b6e737e4728a378533ebb5ba89cec9807b33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68b05b590e80a65ba8816c0dcfd8d140b71eb8c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Esecuzione degli esempi di Windows Communication Foundation
 Gli esempi di Windows Communication Foundation (WCF) possono essere eseguiti in una configurazione solo computer o tra computer. Nel modo in cui sono forniti, essi sono pronti per essere eseguiti su un solo computer. In una configurazione a più computer, è necessario modificare le impostazioni del file di configurazione di un esempio. Le procedure descritte di seguito spiegano come eseguire un esempio nello stesso computer e configurazioni su più computer. Notare che ci sono variazioni nei passaggi per servizi ospitati su Internet Information Services (IIS) e gli esempi indipendenti. La maggior parte degli esempi sono ospitati su IIS; vedere le informazioni leggimi dell'esempio per determinare come viene ospitato l'esempio.  
@@ -14,7 +14,7 @@ Gli esempi di Windows Communication Foundation (WCF) possono essere eseguiti in 
  In [!INCLUDE[wv](../../../../includes/wv-md.md)] gli esempi che non sono ospitati da IIS richiedono privilegi elevati per registrare un listener con Http.sys. Usare Httpcfg.exe per registrare gli indirizzi di ascolto del servizio con l'account sotto cui il servizio è in esecuzione o avviare il servizio da un prompt dei comandi in esecuzione con privilegi di amministratore.  
   
 > [!NOTE]
->  Prima di compilare o eseguire uno del [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] esempi, assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+>  Prima di compilare o eseguire uno degli esempi WCF, assicurarsi di avere eseguito il [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Per eseguire l'esempio sullo stesso computer  
   

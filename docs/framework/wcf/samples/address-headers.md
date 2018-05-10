@@ -2,11 +2,11 @@
 title: Intestazioni di indirizzo
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: c0e3807aadc18c7737f3a5e354135721cbfccf3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 276649c17a04822eb27eb4e3ed9cbe711b384edc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="address-headers"></a>Intestazioni di indirizzo
 Nell'esempio delle intestazioni di indirizzo viene illustrato come i client possano passare parametri per riferimento a un servizio utilizzando Windows Communication Foundation (WCF).  
@@ -14,9 +14,9 @@ Nell'esempio delle intestazioni di indirizzo viene illustrato come i client poss
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- La specifica WS-Addressing definisce la nozione di un riferimento dell'endpoint come un modo di indirizzare un particolare endpoint servizio Web. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], i riferimenti all'endpoint vengono modellati utilizzando la classe `EndpointAddress`: `EndpointAddress` è il tipo del campo Indirizzo della classe `ServiceEndpoint`.  
+ La specifica WS-Addressing definisce la nozione di un riferimento dell'endpoint come un modo di indirizzare un particolare endpoint servizio Web. In WCF, i riferimenti all'endpoint vengono modellati utilizzando la `EndpointAddress` class - `EndpointAddress` è il tipo di campo dell'indirizzo di `ServiceEndpoint` (classe).  
   
- Parte del modello di riferimento all'endpoint è che ogni riferimento può portare alcuni parametri di riferimento che aggiungono informazioni di identificazione aggiuntive. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], questi parametri di riferimento vengono modellati come istanze della classe `AddressHeader`.  
+ Parte del modello di riferimento all'endpoint è che ogni riferimento può portare alcuni parametri per riferimento che aggiungono informazioni di identificazione aggiuntive. In WCF, questi parametri per riferimento vengono modellati come istanze di `AddressHeader` classe.  
   
  In questo esempio, il client aggiunge un parametro di riferimento a `EndpointAddress` dell'endpoint client. Il servizio cerca questo parametro per riferimento e ne usa il valore nella logica dell'operazione del servizio "Hello".  
   

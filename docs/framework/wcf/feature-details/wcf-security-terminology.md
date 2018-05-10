@@ -1,35 +1,23 @@
 ---
 title: Terminologia di sicurezza di WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-security-terminology"></a>Terminologia di sicurezza di WCF
 Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza possono risultare poco chiari. Questo argomento fornisce brevi spiegazioni di alcuni termini di sicurezza, senza tuttavia offrire una descrizione dettagliata per ognuno degli argomenti correlati.  
   
- Per ulteriori informazioni sui termini usati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] documentazione, vedere [concetti fondamentali di Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Per ulteriori informazioni sui termini utilizzati nella documentazione di Windows Communication Foundation (WCF), vedere [concetti fondamentali di Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  elenco di controllo di accesso (ACL)  
  Elenco di protezioni applicate a un oggetto, che può essere un file, un processo, un evento o un qualsiasi altro elemento a cui è associato un descrittore di sicurezza. Una voce appartenente a un ACL è detta voce di controllo di accesso (ACE, Access Control Entry). Esistono due tipi di ACL: discrezionale e di sistema.  
@@ -189,7 +177,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  Nome dell'account utente (talvolta detto di *nome accesso utente*) e un nome di dominio che identifica il dominio in cui si trova l'account utente. Questo nome rappresenta il formato standard dei nomi di accesso a un dominio Windows. Il formato è: someone@example.com (per un indirizzo di posta elettronica).  
   
 > [!NOTE]
->  Oltre al formato standard UPN, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] accetta nomi UPN in formato di livello inferiore, ad esempio cohowinery.com\utente.  
+>  Oltre a formato standard UPN, WCF accetta nomi UPN in forma di livello inferiore, ad esempio, com\utente.  
   
  X.509  
  Standard riconosciuto a livello internazionale che definisce le parti obbligatorie dei certificati.  

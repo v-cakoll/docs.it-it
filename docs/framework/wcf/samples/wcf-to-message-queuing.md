@@ -2,11 +2,11 @@
 title: Da Windows Communication Foundation a Accodamento messaggi
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 83c16fc097cc6eca76578730bcad0491b648c5c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0864098a55cbd7b43100bf9e0a1836e749eb2bc9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Da Windows Communication Foundation a Accodamento messaggi
 Questo esempio viene illustrato come un'applicazione Windows Communication Foundation (WCF) può inviare un messaggio a un'applicazione di Accodamento messaggi (MSMQ). Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda. Non è necessario che il servizio e il client siano in esecuzione contemporaneamente.  
@@ -95,9 +95,9 @@ Console.WriteLine("Order has been submitted:{0}", po);
 client.Close();  
 ```
 
- Il client utilizza un ordine client "in" personalizzato per inviare il messaggio MSMQ alla coda. Poiché l'applicazione che riceve ed elabora il messaggio è un'applicazione MSMQ e non un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], non c'è contratto di servizio implicito tra le due applicazioni. Quindi, in questo scenario, non si può creare un proxy utilizzando lo strumento Svcutil.exe.  
+ Il client utilizza un ordine client "in" personalizzato per inviare il messaggio MSMQ alla coda. Poiché l'applicazione che riceve ed elabora il messaggio è un'applicazione MSMQ e non è un'applicazione WCF, non è presente alcun contratto di servizio implicito tra le due applicazioni. Quindi, in questo scenario, non si può creare un proxy utilizzando lo strumento Svcutil.exe.  
   
- Il client personalizzato essenzialmente è lo stesso per tutte le applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che utilizzano l'associazione `MsmqIntegration` per inviare messaggi. A differenza di altri client, non include varie operazioni del servizio. È un'operazione di solo invio del messaggio.  
+ Il client personalizzato essenzialmente è lo stesso per tutte le applicazioni WCF che utilizzano il `MsmqIntegration` associazione per inviare messaggi. A differenza di altri client, non include varie operazioni del servizio. È un'operazione di solo invio del messaggio.  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  

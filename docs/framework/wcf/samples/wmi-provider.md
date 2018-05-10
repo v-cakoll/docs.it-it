@@ -2,18 +2,18 @@
 title: Provider WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 202923ab1d09b0ce836dbfce7360dd22a479a900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d135466c402fa21b6a1b11f208ca900f58748bdb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wmi-provider"></a>Provider WMI
-In questo esempio viene illustrato come raccogliere dati dai servizi Windows Communication Foundation (WCF) in fase di esecuzione usando il provider di Strumentazione gestione Windows (WMI) incorporato in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Viene inoltre illustrato come aggiungere un oggetto WMI definito dall'utente a un servizio. L'esempio attiva il provider WMI per il [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) e viene illustrato come raccogliere dati di `ICalculator` servizio in fase di esecuzione.  
+In questo esempio viene illustrato come raccogliere dati dai servizi Windows Communication Foundation (WCF) in fase di esecuzione usando il provider di Strumentazione gestione Windows (WMI) incorporato in WCF. Viene inoltre illustrato come aggiungere un oggetto WMI definito dall'utente a un servizio. L'esempio attiva il provider WMI per il [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) e viene illustrato come raccogliere dati di `ICalculator` servizio in fase di esecuzione.  
   
  WMI è l'implementazione Microsoft dello standard WBEM (Web-Based Enterprise Management). Per ulteriori informazioni sul SDK di WMI, vedere [Strumentazione gestione Windows](https://msdn.microsoft.com/library/aa394582.aspx). WBEM è uno standard industriale che definisce la modalità in cui le applicazioni espongono la strumentazione della gestione a strumenti di gestione esterni.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]implementa un provider WMI, un componente che espone la strumentazione in fase di esecuzione attraverso un'interfaccia compatibile con WBEM. Gli strumenti di gestione sono in grado di connettersi ai servizi attraverso l'interfaccia in fase di esecuzione. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espone attributi di servizi quali indirizzi, associazioni, comportamenti e listener.  
+ WCF implementa un provider WMI, un componente che espone la strumentazione in fase di esecuzione tramite un'interfaccia compatibile con WBEM. Gli strumenti di gestione sono in grado di connettersi ai servizi attraverso l'interfaccia in fase di esecuzione. WCF espone attributi di servizi quali indirizzi, associazioni, comportamenti e listener.  
   
  Il provider WMI incorporato viene attivato nel file di configurazione dell'applicazione. Questa operazione viene eseguita tramite il `wmiProviderEnabled` attributo del [ \<diagnostica >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) nel [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sezione, come illustrato nell'esempio seguente configurazione:  
   
@@ -35,7 +35,7 @@ In questo esempio viene illustrato come raccogliere dati dai servizi Windows Com
   
  In questo esempio vengono usati due script Java: uno per enumerare i servizi in esecuzione nel computer con alcune delle relative proprietà e il secondo per visualizzare i dati WMI definiti dall'utente. Lo script apre una connessione al provider WMI, analizza i dati e visualizza i dati raccolti.  
   
- Avviare l'esempio per creare un'istanza in esecuzione di un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Mentre il servizio è in esecuzione, eseguire ogni script Java usando il comando seguente nel prompt dei comandi:  
+ Avviare l'esempio per creare un'istanza in esecuzione di un servizio WCF. Mentre il servizio è in esecuzione, eseguire ogni script Java usando il comando seguente nel prompt dei comandi:  
   
 ```  
 cscript EnumerateServices.js  
@@ -116,7 +116,7 @@ cscript EnumerateCustomObjects.js
   
  L'output mostra che nel computer è in esecuzione un solo servizio. Il servizio espone un endpoint che implementa il contratto `ICalculator`. Le impostazioni del comportamento e l'associazione implementate dall'endpoint sono elencate come la somma dei singoli elementi dello stack di messaggistica.  
   
- WMI non si limita a esporre la strumentazione di gestione dell'infrastruttura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Mediante lo stesso meccanismo l'applicazione può esporre dati specifici del dominio. WMI è un meccanismo unificato per l'ispezione e il controllo di un servizio Web.  
+ WMI non limita a esporre la strumentazione di gestione dell'infrastruttura di WCF. Mediante lo stesso meccanismo l'applicazione può esporre dati specifici del dominio. WMI è un meccanismo unificato per l'ispezione e il controllo di un servizio Web.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
@@ -129,7 +129,7 @@ cscript EnumerateCustomObjects.js
 4.  Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Se si installa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dopo avere installato ASP.NET, potrebbe essere necessario eseguire "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe " -r -x per fornire all'account ASP.NET l'autorizzazione per pubblicare oggetti WMI.  
+    >  Se è installato WCF dopo l'installazione di ASP.NET, potrebbe essere necessario eseguire "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe "- r - x per fornire l'autorizzazione di account ASPNET per pubblicare oggetti WMI.  
   
 5.  Visualizzare i dati dall'esempio riportato tramite WMI usando i comandi: `cscript EnumerateServices.js` o `cscript EnumerateCustomObjects.js`.  
   

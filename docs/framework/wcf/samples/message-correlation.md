@@ -2,11 +2,11 @@
 title: Correlazione dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 1573cdafafb5861099b275caa888c79d23cafeb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7105c66153625b4a7a2b9a2d61a2ab2821cab2af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-correlation"></a>Correlazione dei messaggi
 Questo esempio viene illustrato come un'applicazione di Accodamento messaggi (MSMQ) può inviare un messaggio MSMQ a un servizio Windows Communication Foundation (WCF) e come i messaggi possono essere correlati tra applicazioni mittenti e riceventi in uno scenario di richiesta/risposta. In questo esempio viene utilizzata l'associazione msmqIntegrationBinding. Il servizio in questo caso è un'applicazione console self-hosted che consente di osservare il servizio che riceve i messaggi in coda. k  
@@ -64,9 +64,9 @@ public class OrderProcessorService : IOrderProcessor
 }  
 ```
 
- Il servizio utilizza un `OrderResponseClient` client personalizzato per inviare il messaggio MSMQ alla coda. Poiché l'applicazione che riceve ed elabora il messaggio è un'applicazione MSMQ e non un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], non c'è contratto di servizio implicito tra le due applicazioni. Pertanto, in questo scenario, non è possibile creare un proxy utilizzando lo strumento Svcutil.exe.  
+ Il servizio utilizza un `OrderResponseClient` client personalizzato per inviare il messaggio MSMQ alla coda. Poiché l'applicazione che riceve ed elabora il messaggio è un'applicazione MSMQ e non è un'applicazione WCF, non è presente alcun contratto di servizio implicito tra le due applicazioni. Pertanto, in questo scenario, non è possibile creare un proxy utilizzando lo strumento Svcutil.exe.  
   
- Il proxy personalizzato è essenzialmente lo stesso per tutte le applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che utilizzano l'associazione `msmqIntegrationBinding` per inviare messaggi. A differenza di altri proxy, non include una serie di operazioni del servizio. È un'operazione di solo invio del messaggio.  
+ Il proxy personalizzato è essenzialmente lo stesso per tutte le applicazioni WCF che utilizzano il `msmqIntegrationBinding` associazione per inviare messaggi. A differenza di altri proxy, non include una serie di operazioni del servizio. È un'operazione di solo invio del messaggio.  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -212,7 +212,7 @@ static void PlaceOrder()
  La coda MSMQ da cui vengono ricevute le risposte per l'ordine è specificato in una sezione appSettings del file di configurazione, come illustrato nella configurazione di esempio seguente.  
   
 > [!NOTE]
->  Nel nome della coda viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso. Nell'indirizzo dell'endpoint di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene specificato uno schema msmq.formatname e viene utilizzato "localhost" per il computer locale. Un nome di formato creato correttamente segue msmq.formatname nell'URI in base alle linee guida MSMQ.  
+>  Nel nome della coda viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso. L'indirizzo dell'endpoint WCF specifica uno schema MSMQ. FormatName e viene usato "localhost" per il computer locale. Un nome di formato creato correttamente segue msmq.formatname nell'URI in base alle linee guida MSMQ.  
   
 ```xml  
 <appSettings>  

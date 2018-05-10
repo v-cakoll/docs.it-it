@@ -2,46 +2,46 @@
 title: Client di test WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: fa06077cef3a53b796b85a1eb84bf0fdfba2f598
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 78be40268b46c4c85ee034db67d67ee0fbf2158f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Client di test WCF (WcfTestClient.exe)
-Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe) è un strumento GUI che consente agli utenti di immettere parametri di test, inviare l'input immesso al servizio e Visualizza la risposta restituita dal servizio. In combinazione con Host servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] offre una funzione di test del servizio trasparente.  
+Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe) è un strumento GUI che consente agli utenti di immettere parametri di test, inviare l'input immesso al servizio e Visualizza la risposta restituita dal servizio. Fornisce un test in combinazione con Host servizio WCF del servizio trasparente.  
   
- In genere, è possibile trovare il [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client di prova (WcfTestClient.exe) nel percorso seguente: C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE - Community può essere uno dei "Enterprise", "Professional" o "Community" a seconda del livello di Visual Studio è installato.
+ In genere, è possibile trovare il Client di prova WCF (WcfTestClient.exe) nel percorso seguente: C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE - Community può essere uno tra "Enterprise", "Professional" o "Community", a seconda che livello di Visual Studio è installato.
   
 ## <a name="scenarios-for-using-test-client"></a>Scenari per l'uso di Client di test  
- Nelle sezioni seguenti sono illustrati gli scenari più comuni nei quali è possibile usare Client di prova [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per semplificare il processo di sviluppo.  
+ Le sezioni seguenti illustrano gli scenari più comuni in cui è possibile utilizzare Client di prova WCF per semplificare il processo di sviluppo.  
   
 ### <a name="inside-visual-studio"></a>All'interno di Visual Studio  
   
 #### <a name="wcf-service-host-starts-wcf-test-client-with-a-single-service"></a>Host servizio WCF avvia Client di test WCF con un solo servizio  
- Dopo avere creato un nuovo progetto di servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e avere premuto F5 per avviare il debugger, Servizio Host [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] avvia l'hosting del servizio nel progetto. Quindi, Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] apre e visualizza un elenco degli endpoint di servizio definiti nel file di configurazione. È possibile testare i parametri e richiamare il servizio e ripetere il processo per testare e convalidare continuamente il servizio.  
+ Dopo aver creato un nuovo progetto di servizio WCF e premere F5 per avviare il debugger, l'Host del servizio WCF avvia ospitare il servizio nel progetto. Quindi, Client di prova WCF aprirà e visualizzerà un elenco di endpoint servizio definiti nel file di configurazione. È possibile testare i parametri e richiamare il servizio e ripetere il processo per testare e convalidare continuamente il servizio.  
   
 #### <a name="wcf-service-host-starts-wcf-test-client-with-multiple-services"></a>Host servizio WCF avvia Client di test WCF con più servizi  
- È inoltre possibile usare Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per il debug di un progetto di servizio contenente più servizi. All'apertura, Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] esegue automaticamente l'iterazione dell'elenco dei servizi nel progetto e li apre per il test.  
+ È inoltre possibile utilizzare Client di prova WCF per facilitare il debug di un progetto di servizio contenente più servizi. Quando si apre, Client di prova WCF automaticamente l'iterazione dell'elenco dei servizi nel progetto e li apre per il testing.  
   
 ### <a name="outside-visual-studio"></a>All'esterno di Visual Studio  
- È inoltre possibile richiamare Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (WcfTestClient.exe) dall'esterno di Visual Studio per eseguire il test di un servizio arbitrario su Internet. Per individuare lo strumento, passare al percorso seguente:  
+ È anche possibile richiamare il Client di prova WCF (WcfTestClient.exe) all'esterno di Visual Studio per testare un servizio arbitrario su Internet. Per individuare lo strumento, passare al percorso seguente:  
   
  C:\Programmi\Microsoft Visual Studio 9.0\Common7\IDE\  
   
  Per usare lo strumento, fare doppio clic sul nome del file per aprirlo da questo percorso oppure avviarlo da una riga di comando.  
   
- Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usa un numero arbitrario di URI come argomenti della riga di comando.  Di seguito sono riportati gli URI dei servizi che è possibile sottoporre a test.  
+ Client di prova WCF Usa un numero arbitrario di URI come argomenti della riga di comando.  Di seguito sono riportati gli URI dei servizi che è possibile sottoporre a test.  
   
  `wcfTestClient.exe URI1 URI2 …`  
   
- Dopo il [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] finestra Client di Test viene aperto, fare clic su **File**->**Aggiungi servizio**, quindi immettere l'indirizzo dell'endpoint del servizio che si desidera aprire.  
+ Dopo l'apertura della finestra del Client di prova WCF, fare clic su **File**->**Aggiungi servizio**, quindi immettere l'indirizzo dell'endpoint del servizio che si desidera aprire.  
   
 ## <a name="wcf-test-client-user-interface"></a>Interfaccia utente di Client di test WCF  
- È possibile usare Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con uno o più servizi.  
+ È possibile utilizzare Client di prova WCF con uno o più servizi.  
   
 ### <a name="service-operations"></a>Operazioni di servizio  
- Nel riquadro di sinistra della finestra principale di Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sono elencati tutti i servizi disponibili, insieme ai rispettivi endpoint e operazioni.  
+ Il riquadro sinistro della finestra principale di Client di prova WCF Elenca tutti i servizi disponibili, insieme ai rispettivi endpoint e operazioni.  
   
  Quando si fa doppio clic su un'operazione, è possibile visualizzare il relativo contenuto nel riquadro di destra all'interno di una nuova scheda con il nome dell'operazione.  
   
@@ -69,12 +69,12 @@ Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe)
  Se il **avvia un nuovo proxy** casella di controllo è selezionata, viene avviato un nuovo proxy per ogni **Invoke**, lo scenario di sessione precedente è stato terminato e viene reimpostato lo stato del servizio.  
   
 ### <a name="editing-client-configuration"></a>Modifica della configurazione client  
- Nel riquadro di sinistra della finestra principale del Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sono elencati i file di configurazione client. Fare doppio clic su uno degli elementi per visualizzare il contenuto del file nel riquadro di destra.  
+ Il riquadro sinistro della finestra principale di Client di prova WCF Elenca i file di configurazione client. Fare doppio clic su uno degli elementi per visualizzare il contenuto del file nel riquadro di destra.  
   
 #### <a name="edit-with-service-configuration-editor"></a>Apportare modifiche con l'Editor configurazione servizi  
  Fare doppio clic su **File di configurazione** nel riquadro sinistro e selezionare il menu di scelta rapida **modifica con SvcConfigEditor**. Editor configurazione servizi verrà avviato con il contenuto della configurazione client. Sarà possibile modificare la configurazione e salvarla all'interno dello strumento.  
   
- Dopo avere salvato il file nell'Editor di configurazione dei servizi, Client di prova [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] visualizzerà un messaggio di avviso per informare che il file è stato modificato all'esterno e chiedere se si desidera ricaricarlo.  
+ Dopo aver salvato il file nell'Editor di configurazione di servizio, Client di prova WCF viene visualizzato un messaggio di avviso per informare l'utente che il file è stato modificato all'esterno e chiede se si desidera ricaricarlo.  
   
  Se si seleziona **Sì**, il contenuto della configurazione nella scheda "Client.dll. config" rifletterà le modifiche apportate nell'editor.  
   
@@ -84,14 +84,14 @@ Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe)
  Se si desidera annullare tutte le modifiche e ripristinare la configurazione del client predefinito, fare doppio clic su **File di configurazione** nel riquadro sinistro e selezionare il menu di scelta rapida **Ripristina configurazione predefinita**. Il valore di configurazione predefinito viene caricato e viene ripristinato il contenuto nella scheda "Client.dll. config".  
   
 #### <a name="validate-changes"></a>Convalidare le modifiche  
- Quando le modifiche salvate vengono caricate in Client di prova [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], viene verificata la validità della configurazione rispetto allo schema [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Se vengono rilevati errori, verrà visualizzata una finestra di dialogo contenente i dettagli degli errori.  
+ Quando le modifiche salvate vengono caricate in Client di prova WCF, la configurazione viene verificata la validità rispetto allo schema WCF. Se vengono rilevati errori, verrà visualizzata una finestra di dialogo contenente i dettagli degli errori.  
   
- Durante la generazione del proxy, compilazione binaria o di richiamo del servizio, le voci di menu che supportano la modifica (vale a dire, "Modifica...", "Restore …" e così via) sono disabilitate. La chiamata del servizio risulta inoltre disattivata durante il caricamento della configurazione aggiornata in Client di prova [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Durante la generazione del proxy, compilazione binaria o di richiamo del servizio, le voci di menu che supportano la modifica (vale a dire, "Modifica...", "Restore …" e così via) sono disabilitate. Chiamata del servizio risulta inoltre disattivata durante il caricamento aggiornamento configurazione al Client di prova WCF.  
   
 #### <a name="persist-client-configuration"></a>Rendere persistente la configurazione client  
- Il **strumenti**->**opzioni**->**configurazione Client** scheda contiene un **sempre rigenerare la configurazione durante l'avvio Servizi** opzione, abilitata per impostazione predefinita. Questa opzione specifica che ogni volta che Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] carica un servizio, il file di configurazione viene rigenerato automaticamente in base ai file App.config del contratto di servizio e del servizio più recenti.  
+ Il **strumenti**->**opzioni**->**configurazione Client** scheda contiene un **sempre rigenerare la configurazione durante l'avvio Servizi** opzione, abilitata per impostazione predefinita. Questa opzione specifica che ogni volta che il Client di prova WCF carica un servizio, rigenera un file di configurazione in base al contratto di servizio più recente e il file app. config del servizio.  
   
- Se è stata modificata la configurazione del client per il [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizio e si desidera usare sempre il file aggiornato per eseguire il debug del servizio, è possibile deselezionare il **rigenerare** opzione. In tal modo, anche quando si aggiorna il servizio e si riapre Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], il file Client.dll.config corrisponderà a quello aggiornato in precedenza dall'utente anziché a un file rigenerato in base al servizio aggiornato.  
+ Se si hanno modificato la configurazione del client per il servizio WCF e si desidera usare sempre il file aggiornato per il debug del servizio, è possibile deselezionare le **rigenerare** opzione. In questo modo, anche quando si aggiorna il servizio e si riapre Client di prova WCF, il file client è quello aggiornato in precedenza anziché rigenerata una basata sul servizio aggiornato.  
   
  Potrebbe tuttavia essere necessario modificare il file di configurazione per renderlo coerente con il proxy rigenerato. Se il proxy e file di configurazione rigenerati non corrispondono perché un servizio è stato aggiornato, si verificheranno errori quando il servizio viene richiamato.  
   
@@ -105,35 +105,35 @@ Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe)
 ### <a name="adding-removing-and-refreshing-services"></a>Aggiunta, rimozione e aggiornamento di servizi  
   
 #### <a name="add-service"></a>Aggiungere un servizio  
- Fare clic su **File**->**Aggiungi servizio** per aggiungere un servizio a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client di Test. Verrà quindi richiesto di digitare l'URI (indirizzo endpoint) del servizio da aggiungere. L'indirizzo del servizio può corrispondere a un indirizzo mex o a un indirizzo WSDL.  
+ Fare clic su **File**->**Aggiungi servizio** per aggiungere un servizio al Client di prova WCF. Verrà quindi richiesto di digitare l'URI (indirizzo endpoint) del servizio da aggiungere. L'indirizzo del servizio può corrispondere a un indirizzo mex o a un indirizzo WSDL.  
   
- È inoltre possibile trovare un elenco di endpoint 10 servizio aggiunti recentemente nel **servizi recenti** sottomenu. Se si seleziona uno di questi endpoint, il servizio specificato verrà aggiunto a Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ È inoltre possibile trovare un elenco di endpoint 10 servizio aggiunti recentemente nel **servizi recenti** sottomenu. Se si seleziona uno di essi, il servizio specificato viene aggiunto al Client di prova WCF.  
   
  È anche possibile fare doppio clic la radice dell'albero del servizio **progetti di servizi**e selezionare **Aggiungi servizio** per ottenere lo stesso risultato.  
   
  Durante il processo di generazione proxy, di compilazione binaria o di richiamo del servizio, le voci di menu che supportano l'aggiunta di un servizio risultano disabilitate. Anche la chiamata del servizio è disabilitata.  
   
 #### <a name="remove-service"></a>Rimuovere un servizio  
- Fare doppio clic sulla radice del servizio del servizio da rimuovere e selezionare **Rimuovi servizio** per rimuovere un servizio da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client di Test.  
+ Fare doppio clic sulla radice del servizio del servizio da rimuovere, quindi scegliere **Rimuovi servizio** per rimuovere un servizio da Client di prova WCF.  
   
  Durante il processo di generazione proxy, di compilazione binaria o di richiamo del servizio, le voci di menu che supportano la rimozione di un servizio risultano disabilitate. Anche la chiamata del servizio è disabilitata.  
   
 #### <a name="refresh-service"></a>Aggiornare un servizio  
- Se viene apportata una modifica al servizio mentre [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è in esecuzione il Client di Test e si desidera assicurarsi che il [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] implementazione Client di Test per il servizio è aggiornato, la radice del servizio del servizio e scegliere **Aggiorna Servizio**. Si noti che dopo l'aggiornamento lo stato del servizio viene reimpostato.  
+ Se viene apportata una modifica al servizio mentre Client di prova WCF è in esecuzione e si desidera verificare che l'implementazione del Client di prova WCF per il servizio sia aggiornata, fare doppio clic sulla radice del servizio del servizio e selezionare **Aggiorna servizio**. Si noti che dopo l'aggiornamento lo stato del servizio viene reimpostato.  
   
  Durante il processo di generazione proxy, di compilazione binaria o di richiamo del servizio, le voci di menu che supportano l'aggiornamento di un servizio risultano disabilitate. Anche la chiamata del servizio è disabilitata.  
   
 ## <a name="location-of-files-generated-by-the-test-client"></a>Percorso dei file generati da Client di test  
- Per impostazione predefinita, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] archivia di Client di prova generati file di codice e la configurazione di client nella cartella "%appdata%\Local\temp\Test Client Projects". Questa cartella viene eliminata dopo la chiusura di Client di prova [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Se un file di configurazione viene modificato in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client di prova e **sempre rigenerare la configurazione all'avvio dei servizi** opzione è disabilitata, il file modificato verrà copiato nella cartella "Cached Config" nel percorso personale" Client Projects Documents\Test Client Projects"con un file XML di mapping (metadati-indirizzo-a--nome file) come indice.  
+ Per impostazione predefinita, Client di prova WCF Archivia file di codice e la configurazione client generati nella cartella "%appdata%\Local\temp\Test Client Projects". Questa cartella viene eliminata dopo la chiusura di Client di prova WCF. Se un file di configurazione viene modificato in Client di prova WCF e il **sempre rigenerare la configurazione all'avvio dei servizi** opzione è disabilitata, il file modificato verrà copiato nella cartella "Memorizzato nella cache Config" nel percorso "Documenti\test Client Projects Documents\Test Client Projects"con un file XML di mapping (metadati-indirizzo-a--nome file) come indice.  
   
- È inoltre possibile avviare Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] in una riga di comando, usare l'opzione `/ProjectPath` per specificare il percorso desiderato per l'archiviazione dei file generati oppure usare l'opzione `/RestoreProjectPath` per ripristinare il percorso predefinito. La sintassi è la seguente:  
+ È inoltre possibile avviare Client di prova WCF in una riga di comando, usare il `/ProjectPath` per specificare un percorso desiderato per l'archiviazione dei file generati oppure usare il `/RestoreProjectPath` passa a ripristinare il percorso predefinito. La sintassi è la seguente:  
   
  `wcfTestClient.exe /ProjectPath [desired location]`  
   
- L'esecuzione di questo comando non determina l'apertura di Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ma solo la modifica del percorso della cartella. È possibile eseguire questo comando indipendentemente dal fatto che Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sia o meno in esecuzione. Il nuovo percorso verrà applicato al riavvio di Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Le informazioni sul percorso possono essere salvati nel Registro di sistema o nel file WcfTestClient.exe Option nella cartella "%appdata%\Local\temp\Test Client Projects".  
+ Eseguendo questo comando non viene aperto il Client di prova WCF. ma solo la modifica del percorso della cartella. È possibile eseguire questo comando se Client di prova WCF è in esecuzione o non. Nella nuova posizione viene applicata quando il Client di prova WCF viene riavviato. Le informazioni sul percorso possono essere salvati nel Registro di sistema o nel file WcfTestClient.exe Option nella cartella "%appdata%\Local\temp\Test Client Projects".  
   
 ## <a name="features-supported-by-wcf-test-client"></a>Funzionalità supportate da Client di prova WCF  
- Nell'elenco seguente sono incluse le funzionalità supportate da Client di prova [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]:  
+ Di seguito è un elenco delle funzionalità supportate da Client di prova WCF:  
   
 -   Chiamata al servizio: messaggio di richiesta/risposta e unidirezionale.  
   
@@ -145,7 +145,7 @@ Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe)
   
 -   Serializzazione XML.  
   
- Nell'elenco seguente sono incluse le funzionalità non supportate da Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]:  
+ Di seguito è un elenco di funzionalità non supportate dal Client di prova WCF:  
   
 -   Tipi: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, tipi che implementano l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable>, tra cui l'attributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> correlato, i tipi <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement> e il tipo <xref:System.Data.DataTable> di ADO.NET.  
   
@@ -158,11 +158,11 @@ Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe)
 -   Associazioni: WSFederationbinding, qualsiasi associazione Context e associazione Https, WebHttpbinding (supporto per messaggi di riposta Json).  
   
 ## <a name="closing-wcf-test-client"></a>Chiusura di Client di test WCF  
- È possibile chiudere CLient di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] nei seguenti modi:  
+ È possibile chiudere Client di prova WCF nei modi seguenti:  
   
--   Nel **File** menu, fare clic su **uscita**. In alternativa, nel [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] finestra principale del Client di Test, fare clic su **Chiudi**. Entrambe le azioni determinano inoltre l'arresto [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host automatico servizio e arrestare il debug di Visual Studio elaborare se [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client di prova è stato avviato da Visual Studio.  
+-   Nel **File** menu, fare clic su **uscita**. In alternativa, nella finestra principale del Client di Test WCF, fare clic su **Chiudi**. Entrambi queste azioni anche arrestare Host automatico servizio di WCF e arrestare il processo di debug di Visual Studio se Client di prova WCF è stato avviato da Visual Studio.  
   
--   Fare doppio clic sui **Host servizio WCF** sull'icona nell'area di notifica e quindi fare clic su **uscita.** Questo chiude sia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host automatico servizio e [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client di prova e si arresta il debug di Visual Studio elaborare.  
+-   Fare doppio clic sui **Host servizio WCF** sull'icona nell'area di notifica e quindi fare clic su **uscita.** Questo chiude sia Host automatico servizio di WCF e Client di prova WCF e arresta il processo di debug di Visual Studio.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Host del servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

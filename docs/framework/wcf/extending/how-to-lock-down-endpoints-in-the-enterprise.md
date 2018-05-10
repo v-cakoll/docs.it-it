@@ -2,16 +2,16 @@
 title: "Procedura: bloccare gli endpoint nell'organizzazione"
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: c91faf201c9a7cb0e5dd810059dbaa39b1e8eb05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ec14193bdcc24722ad8e2259781c4c185f3ca3f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Procedura: bloccare gli endpoint nell'organizzazione
 Le aziende di grandi dimensioni spesso richiedono che le applicazioni vengano sviluppate in conformità con i criteri di sicurezza aziendali. L'argomento seguente viene illustrato come sviluppare e installare un validator dell'endpoint client che può essere usato per convalidare tutte le applicazioni client Windows Communication Foundation (WCF) installate nel computer.  
   
- In questo caso, il validator è un validator client perché questo comportamento dell'endpoint viene aggiunto al client [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sezione nel file Machine. config. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] vengono caricati i comportamenti dell'endpoint comuni solo per le applicazioni client e i comportamenti del servizio comuni solo per le applicazioni di servizio. Per installare questo stesso validator per le applicazioni di servizio, il validator deve essere un comportamento del servizio. Per altre informazioni, vedere la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sezione.  
+ In questo caso, il validator è un validator client perché questo comportamento dell'endpoint viene aggiunto al client [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sezione nel file Machine. config. WCF carica i comportamenti dell'endpoint comuni solo per le applicazioni client e carica i comportamenti del servizio comuni solo per le applicazioni di servizio. Per installare questo stesso validator per le applicazioni di servizio, il validator deve essere un comportamento del servizio. Per altre informazioni, vedere la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sezione.  
   
 > [!IMPORTANT]
 >  Comportamenti del servizio o dell'endpoint non contrassegnati con il <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attributo (APTCA) aggiunti al [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sezione di un file di configurazione non vengono eseguiti quando l'applicazione in esecuzione in una relazione di trust parziale ambiente e non l'eccezione viene generata in questo caso. Per imporre l'esecuzione di comportamenti comuni, ad esempio validator, è necessario:  

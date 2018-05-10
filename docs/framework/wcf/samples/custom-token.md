@@ -2,11 +2,11 @@
 title: Token personalizzato
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 5850f97d6d3a66aacf82ab1cb2338240a75a00fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-token"></a>Token personalizzato
 In questo esempio viene illustrato come aggiungere un'implementazione del token personalizzata in un'applicazione Windows Communication Foundation (WCF). Nell'esempio viene usato un `CreditCardToken` per passare in modo protetto le informazioni sulle carte di credito del client al servizio. Il token viene passato nell'intestazione del messaggio WS-Security e viene firmato e crittografato usando l'elemento di associazione di sicurezza simmetrica, il corpo del messaggio e altre intestazioni del messaggio. Questa operazione è utile nei casi in cui i token incorporati non sono sufficienti In questo esempio viene illustrato come fornire un token di sicurezza personalizzato a un servizio, invece di usare uno dei token incorporati. Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.  
@@ -20,7 +20,7 @@ In questo esempio viene illustrato come aggiungere un'implementazione del token 
   
 -   In che modo il servizio può usare e convalidare un token di sicurezza personalizzato.  
   
--   In che modo il codice del servizio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può ottenere le informazioni sui token di sicurezza ricevuti, compreso il token di sicurezza personalizzato.  
+-   Modo in cui il codice del servizio WCF può ottenere le informazioni sui token di sicurezza ricevuto includendo il token di sicurezza personalizzato.  
   
 -   Come viene usato il certificato X.509 del server per proteggere la chiave simmetrica usata per crittografare il messaggio e la firma.  
   
@@ -114,9 +114,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>Implementazione del token di sicurezza personalizzato  
- Per abilitare un token di sicurezza personalizzato in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], creare una rappresentazione dell'oggetto del token di sicurezza personalizzato. Nell'esempio la rappresentazione si trova nella classe `CreditCardToken`. La rappresentazione dell'oggetto contiene tutte le informazioni del token di sicurezza pertinenti e fornisce un elenco di chiavi di sicurezza contenute nel token di sicurezza. In questo caso, il token di sicurezza della carta di credito non contiene chiavi di sicurezza.  
+ Per abilitare un token di sicurezza personalizzato in WCF, creare una rappresentazione dell'oggetto del token di sicurezza personalizzato. Nell'esempio la rappresentazione si trova nella classe `CreditCardToken`. La rappresentazione dell'oggetto contiene tutte le informazioni del token di sicurezza pertinenti e fornisce un elenco di chiavi di sicurezza contenute nel token di sicurezza. In questo caso, il token di sicurezza della carta di credito non contiene chiavi di sicurezza.  
   
- La prossima sezione descrive le operazioni da eseguire per consentire la trasmissione in rete di un token personalizzato e il suo utilizzo da parte di un endpoint di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ La prossima sezione descrive cosa deve essere eseguita per abilitare un token personalizzato deve essere trasmesso in rete e utilizzata da un endpoint WCF.  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -154,7 +154,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Recupero del token della carta di credito personalizzato a e da il messaggio  
- I serializzatori di token di sicurezza in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono responsabili per la creazione di una rappresentazione dell'oggetto dei token di sicurezza dal XML nel messaggio e della creazione di un modulo XML dei token di sicurezza. Sono inoltre responsabili per altre funzionalità, ad esempio per la lettura e la scrittura degli identificatori di chiave che puntano ai token di sicurezza, ma in questo esempio viene usata solo la funzionalità relativa al token di sicurezza. Per abilitare un token personalizzato è necessario implementare un serializzatore del token di sicurezza. In questo esempio viene usata la classe `CreditCardSecurityTokenSerializer` a questo scopo.  
+ I serializzatori di token di sicurezza in WCF sono responsabili per la creazione di una rappresentazione dell'oggetto del token di sicurezza dal codice XML nel messaggio e la creazione di un modulo XML dei token di sicurezza. Sono inoltre responsabili per altre funzionalità, ad esempio per la lettura e la scrittura degli identificatori di chiave che puntano ai token di sicurezza, ma in questo esempio viene usata solo la funzionalità relativa al token di sicurezza. Per abilitare un token personalizzato è necessario implementare un serializzatore del token di sicurezza. In questo esempio viene usata la classe `CreditCardSecurityTokenSerializer` a questo scopo.  
   
  Nel servizio, il serializzatore personalizzato legge il modulo XML del token personalizzato e lo usa per creare la rappresentazione dell'oggetto del token personalizzato.  
   

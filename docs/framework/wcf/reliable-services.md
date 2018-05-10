@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: 02e0b8822c29490462fe74803a34222188afc910
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f98da5db34686e3bf09cc14c42a2ff6b693201f6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reliable-services"></a>Servizi affidabili
-Le code e sessioni affidabili rappresentano le funzionalità di Windows Communication Foundation (WCF) che implementano la messaggistica affidabile. In questo argomento vengono illustrate le funzionalità di messaggistica affidabile di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Le code e sessioni affidabili rappresentano le funzionalità di Windows Communication Foundation (WCF) che implementano la messaggistica affidabile. Questo argomento illustra le funzionalità di messaggistica affidabile di WCF.  
   
  *Messaggistica affidabile* è la modalità di un'origine di messaggistica affidabile (chiamato il *origine*) trasferisce in modo affidabile i messaggi a una destinazione di messaggistica affidabile (chiamato il *destinazione*).  
   
@@ -25,7 +25,7 @@ Le code e sessioni affidabili rappresentano le funzionalità di Windows Communic
   
 -   Separa l'una dall'altra l'origine e la destinazione. In questo modo viene fornito un errore e un recupero indipendente dell'origine e della destinazione, nonché un trasferimento e un recapito affidabile dei messaggi, anche quando l'origine o la destinazione non è disponibile.  
   
- La messaggistica affidabile comporta spesso il costo di una latenza elevata. *Latenza* è il tempo necessario per il messaggio raggiunga la destinazione dall'origine. In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vengono pertanto forniti i tipi seguenti di messaggistica affidabile:  
+ La messaggistica affidabile comporta spesso il costo di una latenza elevata. *Latenza* è il tempo necessario per il messaggio raggiunga la destinazione dall'origine. WCF, pertanto, fornisce i tipi seguenti di messaggistica affidabile:  
   
 -   [Le sessioni affidabili](../../../docs/framework/wcf/feature-details/reliable-sessions.md), che offre il trasferimento affidabile senza il costo della latenza elevata.  
   
@@ -37,7 +37,7 @@ Le code e sessioni affidabili rappresentano le funzionalità di Windows Communic
  Le sessioni affidabili forniscono trasferimenti affidabili dei messaggi con una latenza bassa. Provvedono ai messaggi SOAP su qualsiasi proxy o intermediario, in modo equivalente a TCP per i pacchetti su bridge IP. Per ulteriori informazioni sulle sessioni affidabili, vedere [sessioni affidabili](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Code  
- Le code in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] forniscono il trasferimento affidabile dei messaggi e la separazione tra le origini e le destinazioni al prezzo di una latenza elevata. La comunicazione in coda di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] si basa su Accodamento messaggi (MSMQ).  
+ Le code in WCF forniscono il trasferimento affidabile dei messaggi e la separazione tra origini e le destinazioni al prezzo di una latenza elevata. WCF in coda la comunicazione si basa su Accodamento messaggi (MSMQ).  
   
  MSMQ viene fornito con Windows come componente facoltativo. Il servizio MSMQ viene eseguito come un servizio di Windows. Acquisisce i messaggi da trasmettere in una coda di trasmissione per conto dell'origine e li recapita a una coda di destinazione. La coda di destinazione accetta i messaggi per conto della destinazione a cui verranno recapitati in seguito quando la destinazione richiederà i messaggi. I gestori MSMQ implementano un protocollo di trasferimento messaggi affidabile in modo che i messaggi non vadano persi durante la trasmissione. Il protocollo può essere nativo o un protocollo basato su SOAP denominato SRMP (SOAP Reliable Messagging Protocol).  
   
