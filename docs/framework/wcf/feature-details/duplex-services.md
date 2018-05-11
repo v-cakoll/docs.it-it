@@ -1,15 +1,15 @@
 ---
 title: Servizi duplex
-ms.date: 03/30/2017
+ms.date: 05/09/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: afe72b01fe3ec38cc34b0a7ff4d28ff714cf3dd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da92b8f2d1223f582677a93a8ff6fd697512d297
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="duplex-services"></a>Servizi duplex
 Un contratto di servizio duplex è un modello di scambio di messaggi nel quale entrambi gli endpoint possono inviare messaggi l'uno all'altro in modo indipendente. Un servizio duplex, pertanto, può inviare messaggi all'endpoint client, fornendo un comportamento simile a quello degli eventi. Una comunicazione duplex ha luogo quando un client si connette a un servizio e fornisce a quest'ultimo un canale utilizzabile per inviare messaggi al client. Si noti che il comportamento simile a quello degli eventi di servizi duplex funziona solo all'interno di una sessione.  
@@ -52,14 +52,19 @@ HTTP could not register URL
 htp://+:80/Temporary_Listen_Addresses/<guid> because TCP port 80 is being used by another application.  
 ```  
   
- Nel codice di esempio seguente viene illustrato come specificare l'indirizzo endpoint client nel codice.  
+ Esempio di codice seguente viene illustrato come specificare il client indirizzo dell'endpoint a livello di codice.
   
-```  
+```csharp  
 WSDualHttpBinding binding = new WSDualHttpBinding();  
 EndpointAddress endptadr = new EndpointAddress("http://localhost:12000/DuplexTestUsingCode/Server");  
 binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/Client/");  
 ```  
-  
+```vb
+Dim binding As New WSDualHttpBinding()
+Dim endptadr As New EndpointAddress("http://localhost:12000/DuplexTestUsingCode/Server")
+binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/Client/")  
+```
+
  Nel codice di esempio seguente viene illustrato come specificare l'indirizzo endpoint client nella configurazione.  
   
 ```xml  

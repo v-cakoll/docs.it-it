@@ -1,22 +1,22 @@
 ---
-title: Spostare le app di esistenti IaaS di Azure
+title: Spostare le app .NET esistenti a Azure IaaS (infrastruttura Cloud-Ready)
 description: Modernizzare le applicazioni .NET esistenti con Cloud di Azure e i contenitori di Windows.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: b844373d4ea995b553d9a32ea51997fd664064bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 04/28/2018
+ms.openlocfilehash: 458b1bd1fc9fc24ce43d0926655fe0767aabc43c
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="lift-and-shift-existing-apps-azure-iaas"></a>Spostare le app di esistenti IaaS di Azure
+# <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Spostare le app .NET esistenti a Azure IaaS (infrastruttura Cloud-Ready)
 
 > Visione: come primo passaggio, per ridurre i costi di investimento e totale on-premise di hardware e rete manutenzione, semplicemente riallocare le applicazioni esistenti nel cloud.
 
 Prima di entrare nei *come* per migrare le applicazioni esistenti per l'infrastruttura di Azure come piattaforma di servizio (IaaS), è importante analizzare i motivi *perché* si desidera eseguire la migrazione direttamente in IaaS in Azure. Per iniziare a usare le macchine virtuali nel cloud, anziché continuare a usare l'infrastruttura locale esistente, è essenzialmente è lo scenario di questo livello di maturità modernizzazione.
 
-Un altro punto da analizzare è *perché* si consiglia di eseguire la migrazione al cloud IaaS pure anziché aggiungere solo più avanzata di servizi gestiti in Azure. È necessario determinare cosa casi potrebbe essere necessario in primo luogo IaaS.
+Un altro punto da analizzare è *perché* si consiglia di eseguire la migrazione al cloud IaaS pure anziché aggiungere solo più avanzata di servizi gestiti in Azure. Determinare quali casi potrebbe essere necessario in primo luogo IaaS.
 
 Figura 2-1 posiziona le applicazioni Cloud pronto infrastruttura nei livelli di maturità modernizzazione:
 
@@ -30,17 +30,17 @@ Il motivo principale per la migrazione al cloud, anche a livello di IaaS inizial
 
 Dopo aver apportato la decisione di spostare le applicazioni nel cloud, il motivo principale per cui è possibile scegliere IaaS anziché le opzioni più avanzate come PaaS è semplicemente che l'ambiente IaaS sarà maggiore familiarità. Lo spostamento in un ambiente che è simile a corrente, nell'ambiente locale offre una curva di apprendimento più bassa, che rende il percorso più rapido nel cloud.
 
-Tuttavia, richiede il percorso più rapido nel cloud non significa che sarà possibile ottenere il massimo vantaggio da con le applicazioni in esecuzione nel cloud. Qualsiasi organizzazione otterranno i vantaggi più significativi da una migrazione cloud ai livelli di maturità (ottimizzato per il Cloud) già introdotte DevOps Cloud pronto e PaaS.
+Tuttavia, richiede il percorso più rapido nel cloud non significa che sarà possibile ottenere il massimo vantaggio da con le applicazioni in esecuzione nel cloud. Qualsiasi organizzazione otterranno i vantaggi più significativi da una migrazione cloud a livello di maturità già introdotte Cloud nativo e ottimizzato per il Cloud.
 
-È inoltre diventato evidente che le applicazioni sono più semplici da modernizzare e ridefinizione dell'architettura in futuro quando sono già in esecuzione nel cloud, anche in IaaS. Questo vale in parte perché la migrazione dei dati dell'applicazione è già stato raggiunto. Inoltre, l'organizzazione verrà acquisita competenze necessarie per l'utilizzo nel cloud che effettuato lo spostamento funziona in una "impostazioni cultura cloud".
+È inoltre diventato evidente che le applicazioni sono più semplici da modernizzare e ridefinizione dell'architettura in futuro quando sono già in esecuzione nel cloud, anche in IaaS. Migrazione dei dati dell'applicazione è già stato raggiunto. Inoltre, l'organizzazione verrà aver acquisita competenze necessarie per l'utilizzo nel cloud e il turno opera in una "impostazioni cultura cloud".
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Quando eseguire la migrazione di IaaS anziché a PaaS
 
-Nelle sezioni successive verranno descritte le applicazioni di Cloud Computing DevOps principalmente basato su servizi e delle piattaforme PaaS. Queste App offrono il maggior parte dei vantaggi dalla migrazione al cloud.
+Nelle sezioni successive verranno descritte le applicazioni ottimizzato su Cloud principalmente basate su servizi e delle piattaforme PaaS. Queste App offrono il maggior parte dei vantaggi dalla migrazione al cloud. 
 
-Se l'obiettivo è semplicemente per spostare le applicazioni esistenti nel cloud, innanzitutto, identificare le applicazioni esistenti che richiederanno variazioni sostanziali per l'esecuzione in Azure App Service. Queste App devono essere i primo candidati.
+Se l'obiettivo è semplicemente per spostare le applicazioni esistenti nel cloud, innanzitutto, identificare le applicazioni esistenti che non richiedono modifiche sostanziali per l'esecuzione in Azure App Service. Queste App devono essere i primo candidati per l'ottimizzazione su Cloud. 
 
-Quindi, se si desidera o comunque non è possibile spostare i contenitori di Windows e o orchestrators come Azure Service Fabric o Kubernetes, ancora, quindi è quando è necessario utilizzare normale macchine virtuali (IaaS).
+Quindi, per le app che ancora non è possibile spostare i contenitori di Windows e PaaS, ad esempio servizio App o orchestrators come Azure Service Fabric, migrare a semplici normale le macchine virtuali (IaaS). 
 
 Tuttavia, tenere presente che correttamente la configurazione, protezione e gestione di macchine virtuali richiede più tempo e competenze IT rispetto all'utilizzo di servizi PaaS in Azure. Se si prevede di macchine virtuali di Azure, assicurarsi di prendere in considerazione l'impegno di manutenzione richiesto per applicare la patch, aggiornare e gestire l'ambiente di VM. Macchine virtuali di Azure è IaaS.
 
@@ -54,7 +54,7 @@ Migrazione al cloud non deve essere difficile. Tuttavia, molte organizzazioni ha
 
 - Mapping di dipendenza incorporato per l'individuazione di confidenza elevata delle applicazioni a più livelli
 
-- Rightsizing intelligente di macchine virtuali di Azure
+- Intelligente corretto dimensionamento per macchine virtuali di Azure
 
 - Creazione di report con le linee guida per aggiornando i potenziali problemi di compatibilità
 

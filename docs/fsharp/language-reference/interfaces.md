@@ -2,11 +2,11 @@
 title: Interfacce (F#)
 description: 'Informazioni su come le interfacce di F # specificare set di membri correlati che implementano le altre classi.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 174e30c03cd555d2d9c89c88bd80e06a2cdcef46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54ae8a2840ce26814be25f08c3ed02e12df6b7c0
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="interfaces"></a>Interfacce
 
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 ```fsharp
 // Interface declaration:
 [ attributes ]
-type interface-name =
+type [accessibility-modifier] interface-name =
     [ interface ]     [ inherit base-interface-name ...]
     abstract member1 : [ argument-types1 -> ] return-type1
     abstract member2 : [ argument-types2 -> ] return-type2
@@ -42,6 +42,8 @@ let class-name (argument-list) =
 
 ## <a name="remarks"></a>Note
 Le dichiarazioni di interfaccia sono simili alle dichiarazioni di classe, ad eccezione del fatto che non vengono implementati membri. Al contrario, tutti i membri astratti, come indicato dalla parola chiave `abstract`. Non si specifica un corpo del metodo per i metodi astratti. Tuttavia, è possibile fornire un'implementazione predefinita includendo anche una definizione separata del membro come un metodo con il `default` (parola chiave). In questo modo è equivalente alla creazione di un metodo virtuale in una classe base in altri linguaggi .NET. Tale metodo virtuale può essere sottoposto a override nelle classi che implementano l'interfaccia.
+
+L'accessibilità predefinita per le interfacce è `public`.
 
 È facoltativamente possibile assegnare a ogni parametro del metodo un nome usando la normale sintassi F #:
 

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed9c7a444018e7c5e9ac00de82133cce633fac93
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configuring-http-and-https"></a>Configurazione di HTTP e HTTPS
 I client e i servizi WCF possono comunicare su HTTP e HTTPS. Le impostazioni HTTP/HTTPS vengono configurate tramite Internet Information Services (IIS) o tramite l'utilizzo di uno strumento da riga di comando. Quando un servizio WCF è ospitato in IIS è possibile configurare le impostazioni HTTP o HTTPS in IIS utilizzando lo strumento inetmgr.exe. Se un servizio WCF è indipendente, le impostazioni HTTP o HTTPS vengono configurate tramite uno strumento da riga di comando.  
@@ -19,7 +19,7 @@ I client e i servizi WCF possono comunicare su HTTP e HTTPS. Le impostazioni HTT
   
  Quando si esegue [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], utilizzare lo strumento HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] installa automaticamente questo strumento. Quando si esegue [!INCLUDE[wxp](../../../../includes/wxp-md.md)], è possibile scaricare lo strumento dalla pagina [strumenti di supporto di Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Per altre informazioni, vedere [Panoramica di Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605).  
   
- Se si esegue [!INCLUDE[wv](../../../../includes/wv-md.md)] o Windows 7, queste impostazioni si configurano con lo strumento Netsh.exe.  
+ Quando si esegue [!INCLUDE[wv](../../../../includes/wv-md.md)] o Windows 7, queste impostazioni vengono configurate con lo strumento Netsh.exe.  
   
 ## <a name="configuring-namespace-reservations"></a>Configurazione delle prenotazioni dello spazio dei nomi  
  La prenotazione dello spazio dei nomi assegna i diritti per una parte dello spazio dei nomi URL HTTP a un particolare gruppo di utenti. Una prenotazione concede a quegli utenti il diritto di creare servizi in ascolto sulla parte dello spazio dei nomi. Le prenotazioni sono prefissi URL, pertanto la prenotazione riguarda tutti i sottopercorsi del percorso di prenotazione. Le prenotazioni dello spazio dei nomi permettono due modalità per utilizzare caratteri jolly. La documentazione dell'API Server HTTP viene descritto il [ordine della risoluzione tra attestazioni dello spazio dei nomi che implicano caratteri jolly](http://go.microsoft.com/fwlink/?LinkId=94841).  
