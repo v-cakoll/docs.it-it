@@ -2,11 +2,11 @@
 title: Firme (F#)
 description: 'Informazioni su come utilizzare un file di firma F # per contenere le informazioni sulle firme pubbliche di un set di F # elementi di programma, ad esempio moduli, tipi e spazi dei nomi.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 04539a871dda9eedd1495e0e5b1f3f5026bae037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e182a1a0ac7f3f9fab27026e582d83ee737822e
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="signatures"></a>Firme
 
@@ -64,6 +64,9 @@ Le regole per le firme di valore sono le seguenti:
 
 
 - Il modello dei parametri (anche noto come *grado*) delle firme e delle implementazioni deve essere coerente.
+
+
+- Se i nomi dei parametri in un file della firma è diverso dal file di implementazione corrispondente, il nome nel file della firma da utilizzare invece che potrebbe causare problemi durante il debug o di profilatura. Se si desidera ricevere una notifica di tali mancate corrispondenze, Abilita avviso 3218 nel file di progetto o quando si richiama il compilatore (vedere `--warnon` sotto [le opzioni del compilatore](compiler-options.md)).
 
 
 L'esempio di codice seguente mostra un esempio di file della firma che contiene lo spazio dei nomi, il modulo, il valore di funzione e le firme di tipo, oltre agli attributi appropriati. Mostra anche il file di implementazione corrispondente.

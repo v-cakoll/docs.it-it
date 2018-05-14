@@ -1,20 +1,14 @@
 ---
 title: Programmazione asincrona
 description: Informazioni sul modello di programmazione asincrona a livello del linguaggio C# fornito da .NET Core.
-keywords: .NET, .NET Core
 author: cartermp
-ms.author: wiwagn
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: d2633bf18fa32adc58dd3f5a2388d11010672da8
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 22a63ab55ba7f7888973f08ebdb3cbc149d6ac57
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -222,7 +216,7 @@ Sebbene produca una quantità minore di codice, è necessario prestare molta att
 
 Sebbene la programmazione asincrona è relativamente semplice, ci sono alcuni dettagli da tenere presente per evitare comportamenti non previsti.
 
-*  `async`I metodi  **devono avere una parola chiave**  `await`  **nel corpo, altrimenti non verranno eseguiti.**
+*  `async`I metodi **devono avere una parola chiave** `await`  **nel corpo, altrimenti non verranno eseguiti.**
 
 Questo è importante da tenere presente.  Se `await` non viene usato nel corpo di un metodo `async`, il compilatore C# genererà un avviso, ma il codice verrà compilato ed eseguito come se fosse un metodo normale.  Si noti che anche questo sarebbe estremamente inefficiente, perché la macchina a stati generata dal compilatore C# per il metodo asincrono non produrrebbe niente.
 

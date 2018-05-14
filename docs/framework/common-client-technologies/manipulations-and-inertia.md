@@ -1,24 +1,12 @@
 ---
 title: Modifiche e inerzia
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3731bf83-dba5-478c-94a5-1d7c36443073
-caps.latest.revision: "3"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8bcc561ec5bf35385ca48ffd78ccd7fda8a99eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 49a26e16e5fdc8c18023f8f16ada41712b3e8fa1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manipulations-and-inertia"></a>Modifiche e inerzia
 Le classi dei processori di *modifiche* e *inerzia* consentono all'applicazione di spostare elementi dell'interfaccia utente in modo naturale e intuitivo. Le modifiche consentono agli utenti di spostare, ruotare e ridimensionare i componenti tramite modificatori, ad esempio un mouse, uno stilo o (in uno scenario abilitato per il tocco diretto) le dita. L'*inerzia* emula il comportamento reale per gli elementi dell'interfaccia utente in movimento simulando le forze di attrito sugli elementi. Ciò consente di rallentare gradualmente il movimento (lineare e angolare) degli elementi prima dell'arresto completo.  

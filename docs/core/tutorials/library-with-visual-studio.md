@@ -4,17 +4,11 @@ description: Informazioni su come creare una libreria di classi .NET Standard sc
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 95db68e2568a2d54b6f7fe540672de3256226fd8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fa265dc5e1101c54ae8d65ad9a3232cd6bd4e52a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017
 

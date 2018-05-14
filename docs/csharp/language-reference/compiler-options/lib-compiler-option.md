@@ -1,10 +1,6 @@
 ---
 title: -lib (opzioni del compilatore C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /lib
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b60c6028d4b3f72acc31fe6028f7f956e1037eb0
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: 7db975909f498a0b84e7405a12a8f8ec1e2dd34b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (opzioni del compilatore C#)
 L'opzione **-lib** specifica la posizione degli assembly a cui si fa riferimento tramite l'opzione [-reference (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
@@ -50,7 +43,7 @@ L'opzione **-lib** specifica la posizione degli assembly a cui si fa riferimento
   
  Per specificare un riferimento a un assembly, usare **-reference**.  
   
- L'opzione**-lib** è di tipo additivo: se viene specificata più volte, ogni nuovo valore verrà aggiunto a eventuali valori precedenti.  
+ L'opzione **-lib** è di tipo additivo: se viene specificata più volte, ogni nuovo valore verrà aggiunto a eventuali valori precedenti.  
   
  In alternativa a **-lib**, è possibile copiare nella directory di lavoro tutti gli assembly necessari. Sarà quindi sufficiente passare a **-reference** il nome dell'assembly. In seguito sarà possibile eliminare gli assembly dalla directory di lavoro. Dal momento che il percorso dell'assembly dipendente non è specificato nel manifesto dell'assembly, sarà possibile avviare l'applicazione sul computer di destinazione perché trovi e usi l'assembly nella Global Assembly Cache.  
   

@@ -1,23 +1,17 @@
 ---
 title: Tipi di enumerazione (Guida per programmatori C#)
 ms.date: 09/10/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
 - enums [C#]
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: "17"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a97c3569899e7cf99dd522024de8373c60076571
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Tipi di enumerazione (Guida per programmatori C#)
 
@@ -47,7 +41,7 @@ I vantaggi dell'uso di enum anziché di un tipo numerico sono i seguenti:
 
 - Si specifica in modo chiaro per il codice client quali sono i valori validi per la variabile.
 
-- In [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], IntelliSense elenca i valori definiti.
+- In Visual Studio IntelliSense elenca i valori definiti.
 
 Quando non si specificano valori per gli elementi nell'elenco di enumeratori, i valori vengono incrementati automaticamente di 1. Nell'esempio precedente, `Day.Sunday` ha valore 0, `Day.Monday` ha valore 1 e così via. Quando si crea un nuovo oggetto `Day`, se a questo non si assegna un valore in modo esplicito, l'oggetto avrà il valore predefinito `Day.Sunday` (0). Quando si crea un enum, selezionare il valore predefinito più logico e assegnare a questo un valore pari a zero. In tal modo tutti gli enum avranno quel valore predefinito, se non è stato loro assegnato un valore in modo esplicito al momento della creazione.
 

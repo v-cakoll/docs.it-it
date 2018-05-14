@@ -1,23 +1,16 @@
 ---
 title: '#pragma (Riferimenti per C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#pragma'
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-caps.latest.revision: 18
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6f53bd0ed3f35f049b0a1cbb21c5b9a563f9fce9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a4829d5062474922d45a2f4f8e1cddf9023b6ad8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pragma-c-reference"></a>#pragma (Riferimenti per C#)
 `#pragma` fornisce al compilatore istruzioni speciali per la compilazione del file in cui si trova. Le istruzioni devono essere supportate dal compilatore. In altre parole, non è possibile usare `#pragma` per creare istruzioni di pre-elaborazione personalizzate. Il compilatore Microsoft C# supporta le due istruzioni `#pragma` seguenti:  

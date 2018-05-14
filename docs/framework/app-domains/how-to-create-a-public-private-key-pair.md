@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: Creare una coppia di chiavi pubblica/privata'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,22 +15,19 @@ helpviewer_keywords:
 - .snk files
 - strong-named assemblies, key pairs
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8076f5ed713c88f8f538959855408a8c542705a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe799e15655d4ae1d9d9b7303728b503a5e45082
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>Procedura: Creare una coppia di chiavi pubblica/privata
 Per firmare un assembly con un nome sicuro, è necessario disporre di una coppia di chiavi pubblica/privata. Questa coppia di chiavi crittografiche, pubblica e privata, viene usata durante la compilazione per creare un assembly con nome sicuro. È possibile creare una coppia di chiavi usando lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md). Ai file delle coppie di chiavi è in genere associata l'estensione snk.  
   
 > [!NOTE]
->  In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] le pagine delle proprietà del progetto C# e Visual Basic includono una scheda **Firma**, che consente di selezionare i file di chiave esistenti o di generarne di nuovi senza usare Sn.exe. In Visual C++ è possibile specificare il percorso di un file di chiave esistente nella pagina delle proprietà **Avanzate** nella sezione **Linker** della sezione **Proprietà di configurazione** della finestra **Pagine delle proprietà**. L'uso dell'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> per l'identificazione delle coppie di file di chiave è diventato obsoleto a partire da [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)].  
+>  In Visual Studio le pagine delle proprietà del progetto C# e Visual Basic includono una scheda **Firma**, che consente di selezionare i file di chiave esistenti o di generarne di nuovi senza usare Sn.exe. In Visual C++ è possibile specificare il percorso di un file di chiave esistente nella pagina delle proprietà **Avanzate** nella sezione **Linker** della sezione **Proprietà di configurazione** della finestra **Pagine delle proprietà**. L'uso dell'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> per l'identificazione delle coppie di file di chiave è diventato obsoleto a partire da [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)].  
   
 ### <a name="to-create-a-key-pair"></a>Per creare una coppia di chiavi  
   
@@ -69,7 +59,7 @@ sn -p keypair.snk public.snk
   
  Quando firma un assembly con un nome sicuro, [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) cerca il file della chiave relativo alla directory corrente e alla directory di output. Se si utilizzano i compilatori della riga di comando, è sufficiente copiare la chiave nella directory corrente contenente i moduli di codice.  
   
- Se si usa una versione precedente di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] in cui non è disponibile una scheda **Firma** nelle proprietà del progetto, il percorso del file di chiave consigliato è la directory del progetto con l'attributo di file specificato come segue:  
+ Se si usa una versione precedente di Visual Studio in cui non è disponibile una scheda **Firma** nelle proprietà del progetto, il percorso del file di chiave consigliato è la directory del progetto con l'attributo di file specificato come segue:  
   
  [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)]
  [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)]

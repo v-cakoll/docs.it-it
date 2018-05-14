@@ -1,13 +1,6 @@
 ---
 title: Servizi applicazioni client
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - role-based security [.NET Framework], client application services
 - client application services
@@ -24,16 +17,11 @@ helpviewer_keywords:
 - roles [.NET Framework], client application services
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 597b2d4d37d76ca722ddcebf9fcfeae532f67a00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d67b7467bdacdfca054d0ecd11a81c7d25b158f7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="client-application-services"></a>Servizi applicazioni client
 I servizi delle applicazioni client semplificano la creazione di applicazioni basate su Windows che usano servizi dell'applicazione di accesso, ruoli e profilo di [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] inclusi in Microsoft ASP.NET 2.0 AJAX Extensions. Questi servizi consentono a più applicazioni Web e applicazioni basate su Windows di condividere informazioni utente e funzionalità di gestione degli utenti da un singolo server. Ad esempio, è possibile usare questi servizi per eseguire le seguenti attività:  
@@ -53,7 +41,7 @@ I servizi delle applicazioni client semplificano la creazione di applicazioni ba
  Vengono descritte le funzionalità disponibili tramite il provider di servizi delle applicazioni client.  
   
  [Procedura: Configurare i servizi delle applicazioni client](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- Viene descritto come usare Creazione progetti di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] per abilitare e configurare i servizi delle applicazioni client. Vengono inoltre illustrate le modifiche corrispondenti apportate al file App.config.  
+ Viene descritto come usare Creazione progetti di Visual Studio per abilitare e configurare i servizi delle applicazioni client. Vengono inoltre illustrate le modifiche corrispondenti apportate al file App.config.  
   
  [Procedura: implementare l'accesso utente con i servizi dell'applicazione client](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  Viene descritto come convalidare un utente quando l'applicazione è configurata per l'uso di un provider di servizi di autenticazione client.  

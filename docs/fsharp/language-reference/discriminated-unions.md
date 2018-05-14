@@ -2,11 +2,11 @@
 title: Unioni discriminate (F#)
 description: "Informazioni sull'utilizzo di F # unioni discriminate."
 ms.date: 05/16/2016
-ms.openlocfilehash: 7949fd1685ca128f19dd0d0d4aec7236169cd375
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 617c659e26df52819a98294bcbfa081ab82fed03
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="discriminated-unions"></a>Unioni discriminate
 
@@ -16,14 +16,16 @@ Unioni discriminate forniscono supporto per i valori che possono essere uno dei 
 
 ```fsharp
 [ attributes ]
-type type-name =
+type [accessibility-modifier] type-name =
     | case-identifier1 [of [ fieldname1 : ] type1 [ * [ fieldname2 : ] type2 ...]
     | case-identifier2 [of [fieldname3 : ]type3 [ * [ fieldname4 : ]type4 ...]
 ...
 ```
 
 ## <a name="remarks"></a>Note
-Unioni discriminate sono simili ai tipi di unione in altri linguaggi, ma esistono alcune differenze. Come con un tipo di unione in C++ o un tipo variant in Visual Basic, i dati archiviati nel valore non sono fisso; può essere una delle numerose opzioni distinte. A differenza delle unioni in questi altri linguaggi, tuttavia, per ognuna delle possibili opzioni viene fornito un *identificatore case*. Gli identificatori di case sono nomi per i vari tipi di valori possibili che possono essere oggetti di questo tipo; i valori sono facoltativi. Se i valori non sono presenti, il caso è equivalente a un case di enumerazione. Se sono presenti i valori, ogni valore può essere un singolo valore di un tipo specificato o una tupla che consente di aggregare più campi di tipo stesso o diversi. A partire da F # 3.1, è possibile assegnare un nome a un singolo campo, ma il nome è facoltativo, anche se altri campi nel caso stesso nome.
+Unioni discriminate sono simili ai tipi di unione in altri linguaggi, ma esistono alcune differenze. Come con un tipo di unione in C++ o un tipo variant in Visual Basic, i dati archiviati nel valore non sono fisso; può essere una delle numerose opzioni distinte. A differenza delle unioni in questi altri linguaggi, tuttavia, per ognuna delle possibili opzioni viene fornito un *identificatore case*. Gli identificatori di case sono nomi per i vari tipi di valori possibili che possono essere oggetti di questo tipo; i valori sono facoltativi. Se i valori non sono presenti, il caso è equivalente a un case di enumerazione. Se sono presenti i valori, ogni valore può essere un singolo valore di un tipo specificato o una tupla che consente di aggregare più campi di tipo stesso o diversi. È possibile assegnare un nome a un singolo campo, ma il nome è facoltativo, anche se altri campi in caso analogo sono denominati.
+
+Per impostazione predefinita accessibilità per le unioni discriminate `public`.
 
 Ad esempio, si consideri la seguente dichiarazione di un tipo di forma.
 

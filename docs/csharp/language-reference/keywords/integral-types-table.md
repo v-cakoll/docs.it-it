@@ -1,28 +1,22 @@
 ---
 title: Tabella dei tipi integrali (Riferimenti per C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - integral types, C#
 - Visual C#, integral types
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-caps.latest.revision: "9"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 663ea9a64284c25999564eca9ea5ccec861e9662
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d524224f15d7861328cc24b1e4f9a54fcc16ee34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integral-types-table-c-reference"></a>Tabella dei tipi integrali (Riferimenti per C#)
 La tabella seguente elenca le dimensioni e gli intervalli dei tipi integrali, che costituiscono un sottoinsieme dei tipi semplici.  
   
-|Tipo|Intervallo|Dimensioni|  
+|Tipo|Intervallo|Dimensione|  
 |----------|-----------|----------|  
 |[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|Da -128 a 127|Valore intero con segno a 8 bit|  
 |[byte](../../../csharp/language-reference/keywords/byte.md)|Da 0 a 255|Intero senza segno a 8 bit|  

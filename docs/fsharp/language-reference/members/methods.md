@@ -2,11 +2,11 @@
 title: Metodi (F#)
 description: 'Informazioni su come un metodo di F # è una funzione associata a un tipo che consentono di esporre e implementare le funzionalità e il comportamento degli oggetti e tipi.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 6cd354eaa4698bb194fd8fc04b09348e708cb0f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e0b0789d97a9671425fb08c56c84ba1f66dfbe6
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="methods"></a>Metodi
 
@@ -34,7 +34,7 @@ abstract member self-identifier.method-name : type-signature
 [ attributes ]
 abstract member [inline] self-identifier.method-name : type-signature
 [ attributes ]
-default member [inline] self-identifier.method-nameparameter-list[ : return-type ] =
+default [inline] self-identifier.method-nameparameter-list[ : return-type ] =
     method-body
 
 // Override of inherited virtual method.

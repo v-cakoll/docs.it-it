@@ -2,11 +2,11 @@
 title: Valori (F#)
 description: 'Informazioni su come valori in F # sono quantità di un tipo specifico.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 610ff6cfc6d33cd22a175ca928bfb6e9f8974a36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d2874a694d9c39048a28827be858cba499dca87
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="values"></a>Valori
 
@@ -20,6 +20,7 @@ Il termine *associazione* indica il processo di associare, ovvero collegare, un 
 
 Il tipo di valore viene dedotto dalla definizione. Per un tipo primitivo, ad esempio un numero intero o a virgola mobile, il tipo è determinato dal tipo di valore letterale. Nell'esempio precedente il compilatore deduce quindi il tipo di `b` come `unsigned int`, mentre il tipo di `a` come `int`. Il tipo di valore di una funzione è determinato dal valore restituito nel corpo della funzione. Per altre informazioni sui tipi di valori delle funzioni, vedere [Funzioni](../functions/index.md). Per altre informazioni sui tipi di valori letterali, vedere [Valori letterali](../literals.md).
 
+Il compilatore non emette diagnostica sulle associazioni inutilizzate per impostazione predefinita. Per ricevere questi messaggi, abilitare avviso 1182 nel file di progetto o quando si richiama il compilatore (vedere `--warnon` sotto [le opzioni del compilatore](../compiler-options.md)).
 
 ## <a name="why-immutable"></a>Valori non modificabili
 I valori non modificabili sono valori che non possono essere modificati nel corso dell'esecuzione del programma. Se si ha familiarità con i linguaggi di programmazione, ad esempio, C++, Visual Basic o C#, potrebbe sembrare inconsueto che F# dia più importanza ai valori non modificabili piuttosto che alle variabili alle quali è possibile assegnare nuovi valori durante l'esecuzione di un programma. I dati non modificabili sono elementi importanti nella programmazione funzionale. In un ambiente a thread multipli, è molto difficile gestire le variabili condivise che possono essere modificate da thread diversi. Con le variabili modificabili può talvolta essere anche difficile sapere se una variabile può essere modificata quando viene passata a un'altra funzione.
@@ -35,6 +36,8 @@ F# non è un linguaggio funzionale puro, ma supporta completamente la programmaz
 È possibile assegnare un valore iniziale a una variabile modificabile tramite la parola chiave `let` nello stesso modo in cui si definisce un valore. La differenza tuttavia è che successivamente è possibile assegnare nuovi valori alle variabili modificabili tramite l'operatore `<-`, come illustrato nell'esempio seguente.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+
+I valori contrassegnati `mutable` potrebbe essere automaticamente promossa diventando `'a ref` se acquisito da una chiusura, tra cui moduli creazione chiusure, ad esempio `seq` generatori. Se si desidera ricevere una notifica in questo caso, attivare l'avviso 3180 nel file di progetto o quando si richiama il compilatore.
     
 ## <a name="related-topics"></a>Argomenti correlati
 
