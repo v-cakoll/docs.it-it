@@ -1,30 +1,18 @@
 ---
 title: Composizione di query Entity SQL annidate
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 29f1f4f22a48aed1020b8e7ea42fe5ffd5b9f566
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 92e3153350787ef75c48ee52f1b6c68e09e15b4b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="0f92c-102">Composizione di query Entity SQL annidate</span><span class="sxs-lookup"><span data-stu-id="0f92c-102">Composing Nested Entity SQL Queries</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="0f92c-103"> è un linguaggio funzionale completo.</span><span class="sxs-lookup"><span data-stu-id="0f92c-103"> is a rich functional language.</span></span> <span data-ttu-id="0f92c-104">Il blocco predefinito di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è un'espressione.</span><span class="sxs-lookup"><span data-stu-id="0f92c-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="0f92c-105">A differenza dei tradizionali SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è limitato a un set di risultati tabulari: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta la creazione di espressioni complesse che possono contenere valori letterali, parametri o le espressioni nidificate.</span><span class="sxs-lookup"><span data-stu-id="0f92c-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="0f92c-106">Un valore nell'espressione può essere con parametri o composto da un'altra espressione.</span><span class="sxs-lookup"><span data-stu-id="0f92c-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
+# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="8e700-102">Composizione di query Entity SQL annidate</span><span class="sxs-lookup"><span data-stu-id="8e700-102">Composing Nested Entity SQL Queries</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="8e700-103"> è un linguaggio funzionale completo.</span><span class="sxs-lookup"><span data-stu-id="8e700-103"> is a rich functional language.</span></span> <span data-ttu-id="8e700-104">Il blocco predefinito di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è un'espressione.</span><span class="sxs-lookup"><span data-stu-id="8e700-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="8e700-105">A differenza dei tradizionali SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è limitato a un set di risultati tabulari: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta la creazione di espressioni complesse che possono contenere valori letterali, parametri o le espressioni nidificate.</span><span class="sxs-lookup"><span data-stu-id="8e700-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="8e700-106">Un valore nell'espressione può essere con parametri o composto da un'altra espressione.</span><span class="sxs-lookup"><span data-stu-id="8e700-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
   
-## <a name="nested-expressions"></a><span data-ttu-id="0f92c-107">Espressioni annidate</span><span class="sxs-lookup"><span data-stu-id="0f92c-107">Nested Expressions</span></span>  
- <span data-ttu-id="0f92c-108">Un'espressione annidata può essere inserita in una posizione qualsiasi in cui è accettato un valore del tipo restituito dall'espressione.</span><span class="sxs-lookup"><span data-stu-id="0f92c-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="0f92c-109">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0f92c-109">For example:</span></span>  
+## <a name="nested-expressions"></a><span data-ttu-id="8e700-107">Espressioni annidate</span><span class="sxs-lookup"><span data-stu-id="8e700-107">Nested Expressions</span></span>  
+ <span data-ttu-id="8e700-108">Un'espressione annidata può essere inserita in una posizione qualsiasi in cui è accettato un valore del tipo restituito dall'espressione.</span><span class="sxs-lookup"><span data-stu-id="8e700-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="8e700-109">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="8e700-109">For example:</span></span>  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -36,7 +24,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- <span data-ttu-id="0f92c-110">Una query annidata può essere inserita in una clausola di proiezione.</span><span class="sxs-lookup"><span data-stu-id="0f92c-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="0f92c-111">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0f92c-111">For example:</span></span>  
+ <span data-ttu-id="8e700-110">Una query annidata può essere inserita in una clausola di proiezione.</span><span class="sxs-lookup"><span data-stu-id="8e700-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="8e700-111">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="8e700-111">For example:</span></span>  
   
 ```  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -46,7 +34,7 @@ SELECT address, (SELECT DEREF(soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
- <span data-ttu-id="0f92c-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le query annidate devono sempre essere racchiuse tra parentesi:</span><span class="sxs-lookup"><span data-stu-id="0f92c-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
+ <span data-ttu-id="8e700-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le query annidate devono sempre essere racchiuse tra parentesi:</span><span class="sxs-lookup"><span data-stu-id="8e700-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
   
 ```  
 -- Pseudo-Entity SQL  
@@ -57,19 +45,19 @@ UNION ALL
 FROM … );  
 ```  
   
- <span data-ttu-id="0f92c-113">Nell'esempio riportato di seguito viene illustrato come annidare correttamente le espressioni in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [procedura: ordinare l'unione di due query](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).</span><span class="sxs-lookup"><span data-stu-id="0f92c-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).</span></span>  
+ <span data-ttu-id="8e700-113">Nell'esempio riportato di seguito viene illustrato come annidare correttamente le espressioni in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [procedura: ordinare l'unione di due query](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).</span><span class="sxs-lookup"><span data-stu-id="8e700-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).</span></span>  
   
-## <a name="nested-queries-in-projection"></a><span data-ttu-id="0f92c-114">Query  annidate nella proiezione</span><span class="sxs-lookup"><span data-stu-id="0f92c-114">Nested Queries in Projection</span></span>  
- <span data-ttu-id="0f92c-115">Le query annidate nella clausola del progetto potrebbero essere tradotte in query del prodotto cartesiano sul server.</span><span class="sxs-lookup"><span data-stu-id="0f92c-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="0f92c-116">In alcuni server di back-end, tra cui Server SLQ, questo può provocare l'aumento delle dimensioni della tabella TempDB, con effetti negativi sulle prestazioni del server.</span><span class="sxs-lookup"><span data-stu-id="0f92c-116">In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
+## <a name="nested-queries-in-projection"></a><span data-ttu-id="8e700-114">Query  annidate nella proiezione</span><span class="sxs-lookup"><span data-stu-id="8e700-114">Nested Queries in Projection</span></span>  
+ <span data-ttu-id="8e700-115">Le query annidate nella clausola del progetto potrebbero essere tradotte in query del prodotto cartesiano sul server.</span><span class="sxs-lookup"><span data-stu-id="8e700-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="8e700-116">In alcuni server di back-end, tra cui Server SLQ, questo può provocare l'aumento delle dimensioni della tabella TempDB, con effetti negativi sulle prestazioni del server.</span><span class="sxs-lookup"><span data-stu-id="8e700-116">In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
   
- <span data-ttu-id="0f92c-117">Di seguito è riportato un esempio di questo tipo di query:</span><span class="sxs-lookup"><span data-stu-id="0f92c-117">The following is an example of such a query:</span></span>  
+ <span data-ttu-id="8e700-117">Di seguito è riportato un esempio di questo tipo di query:</span><span class="sxs-lookup"><span data-stu-id="8e700-117">The following is an example of such a query:</span></span>  
   
 ```  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## <a name="ordering-nested-queries"></a><span data-ttu-id="0f92c-118">Ordinamento di query annidate</span><span class="sxs-lookup"><span data-stu-id="0f92c-118">Ordering Nested Queries</span></span>  
- <span data-ttu-id="0f92c-119">In Entity Framework un'espressione annidata può essere inserita in un punto qualsiasi della query.</span><span class="sxs-lookup"><span data-stu-id="0f92c-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="0f92c-120">Poiché Entity SQL rende molto flessibile la scrittura di query, è possibile scrivere una query contenente una serie di query annidate in ordine.</span><span class="sxs-lookup"><span data-stu-id="0f92c-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="0f92c-121">L'ordine di una query annidata non viene tuttavia mantenuto.</span><span class="sxs-lookup"><span data-stu-id="0f92c-121">However, the order of a nested query is not preserved.</span></span>  
+## <a name="ordering-nested-queries"></a><span data-ttu-id="8e700-118">Ordinamento di query annidate</span><span class="sxs-lookup"><span data-stu-id="8e700-118">Ordering Nested Queries</span></span>  
+ <span data-ttu-id="8e700-119">In Entity Framework un'espressione annidata può essere inserita in un punto qualsiasi della query.</span><span class="sxs-lookup"><span data-stu-id="8e700-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="8e700-120">Poiché Entity SQL rende molto flessibile la scrittura di query, è possibile scrivere una query contenente una serie di query annidate in ordine.</span><span class="sxs-lookup"><span data-stu-id="8e700-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="8e700-121">L'ordine di una query annidata non viene tuttavia mantenuto.</span><span class="sxs-lookup"><span data-stu-id="8e700-121">However, the order of a nested query is not preserved.</span></span>  
   
 ```  
 -- The following query will order the results by last name.  
@@ -86,5 +74,5 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0f92c-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0f92c-122">See Also</span></span>  
- [<span data-ttu-id="0f92c-123">Panoramica di Entity SQL</span><span class="sxs-lookup"><span data-stu-id="0f92c-123">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="8e700-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8e700-122">See Also</span></span>  
+ [<span data-ttu-id="8e700-123">Panoramica di Entity SQL</span><span class="sxs-lookup"><span data-stu-id="8e700-123">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

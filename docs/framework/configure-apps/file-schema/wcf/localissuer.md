@@ -1,37 +1,25 @@
 ---
 title: '&lt;localIssuer&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c7e5c28325326d838da851ff4add12f8ae612c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9118d1462d4790bb457fc8dc2f7c74b6e69de43a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltlocalissuergt"></a><span data-ttu-id="c8eb4-102">&lt;localIssuer&gt;</span><span class="sxs-lookup"><span data-stu-id="c8eb4-102">&lt;localIssuer&gt;</span></span>
-<span data-ttu-id="c8eb4-103">Specifica l'indirizzo e l'associazione dell'autorità emittente locale da usare per ottenere un token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-103">Specifies the address and binding of the local issuer to be used to obtain a security token.</span></span>  
+# <a name="ltlocalissuergt"></a><span data-ttu-id="27a93-102">&lt;localIssuer&gt;</span><span class="sxs-lookup"><span data-stu-id="27a93-102">&lt;localIssuer&gt;</span></span>
+<span data-ttu-id="27a93-103">Specifica l'indirizzo e l'associazione dell'autorità emittente locale da usare per ottenere un token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="27a93-103">Specifies the address and binding of the local issuer to be used to obtain a security token.</span></span>  
   
- <span data-ttu-id="c8eb4-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="c8eb4-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="c8eb4-105">\<i comportamenti ></span><span class="sxs-lookup"><span data-stu-id="c8eb4-105">\<behaviors></span></span>  
-<span data-ttu-id="c8eb4-106">sezione endpointBehaviors</span><span class="sxs-lookup"><span data-stu-id="c8eb4-106">endpointBehaviors section</span></span>  
-<span data-ttu-id="c8eb4-107">\<comportamento ></span><span class="sxs-lookup"><span data-stu-id="c8eb4-107">\<behavior></span></span>  
-<span data-ttu-id="c8eb4-108">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="c8eb4-108">\<clientCredentials></span></span>  
-<span data-ttu-id="c8eb4-109">\<issuedToken ></span><span class="sxs-lookup"><span data-stu-id="c8eb4-109">\<issuedToken></span></span>  
-<span data-ttu-id="c8eb4-110">\<localIssuer ></span><span class="sxs-lookup"><span data-stu-id="c8eb4-110">\<localIssuer></span></span>  
+ <span data-ttu-id="27a93-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="27a93-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="27a93-105">\<i comportamenti ></span><span class="sxs-lookup"><span data-stu-id="27a93-105">\<behaviors></span></span>  
+<span data-ttu-id="27a93-106">sezione endpointBehaviors</span><span class="sxs-lookup"><span data-stu-id="27a93-106">endpointBehaviors section</span></span>  
+<span data-ttu-id="27a93-107">\<comportamento ></span><span class="sxs-lookup"><span data-stu-id="27a93-107">\<behavior></span></span>  
+<span data-ttu-id="27a93-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="27a93-108">\<clientCredentials></span></span>  
+<span data-ttu-id="27a93-109">\<issuedToken ></span><span class="sxs-lookup"><span data-stu-id="27a93-109">\<issuedToken></span></span>  
+<span data-ttu-id="27a93-110">\<localIssuer ></span><span class="sxs-lookup"><span data-stu-id="27a93-110">\<localIssuer></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c8eb4-111">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c8eb4-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="27a93-111">Sintassi</span><span class="sxs-lookup"><span data-stu-id="27a93-111">Syntax</span></span>  
   
 ```xml  
 <localIssuer address="string"  
@@ -39,35 +27,35 @@ ms.lasthandoff: 12/22/2017
       bindingConfiguration="string" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c8eb4-112">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="c8eb4-112">Attributes and Elements</span></span>  
- <span data-ttu-id="c8eb4-113">Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi padre.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-113">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="27a93-112">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="27a93-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="27a93-113">Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi padre.</span><span class="sxs-lookup"><span data-stu-id="27a93-113">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c8eb4-114">Attributi</span><span class="sxs-lookup"><span data-stu-id="c8eb4-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="27a93-114">Attributi</span><span class="sxs-lookup"><span data-stu-id="27a93-114">Attributes</span></span>  
   
-|<span data-ttu-id="c8eb4-115">Attributo</span><span class="sxs-lookup"><span data-stu-id="c8eb4-115">Attribute</span></span>|<span data-ttu-id="c8eb4-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c8eb4-116">Description</span></span>|  
+|<span data-ttu-id="27a93-115">Attributo</span><span class="sxs-lookup"><span data-stu-id="27a93-115">Attribute</span></span>|<span data-ttu-id="27a93-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="27a93-116">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="c8eb4-117">address</span><span class="sxs-lookup"><span data-stu-id="c8eb4-117">address</span></span>|<span data-ttu-id="c8eb4-118">Stringa obbligatoria.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-118">Required string.</span></span> <span data-ttu-id="c8eb4-119">Specifica l'URI dell'emittente locale.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-119">Specifies the URI of the local issuer.</span></span>|  
-|<span data-ttu-id="c8eb4-120">associazione</span><span class="sxs-lookup"><span data-stu-id="c8eb4-120">binding</span></span>|<span data-ttu-id="c8eb4-121">Stringa facoltativa.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-121">Optional string.</span></span> <span data-ttu-id="c8eb4-122">Una delle associazioni fornite dal sistema</span><span class="sxs-lookup"><span data-stu-id="c8eb4-122">One of the system-provided bindings.</span></span> <span data-ttu-id="c8eb4-123">Per un elenco, vedere [associazioni fornite dal sistema](../../../../../docs/framework/wcf/system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="c8eb4-123">For a list, see [System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md).</span></span>|  
-|<span data-ttu-id="c8eb4-124">bindingConfiguration</span><span class="sxs-lookup"><span data-stu-id="c8eb4-124">bindingConfiguration</span></span>|<span data-ttu-id="c8eb4-125">Stringa facoltativa.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-125">Optional string.</span></span> <span data-ttu-id="c8eb4-126">Specifica una configurazione di associazione presente nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-126">Specifies a binding configuration found in the configuration file.</span></span>|  
+|<span data-ttu-id="27a93-117">address</span><span class="sxs-lookup"><span data-stu-id="27a93-117">address</span></span>|<span data-ttu-id="27a93-118">Stringa obbligatoria.</span><span class="sxs-lookup"><span data-stu-id="27a93-118">Required string.</span></span> <span data-ttu-id="27a93-119">Specifica l'URI dell'emittente locale.</span><span class="sxs-lookup"><span data-stu-id="27a93-119">Specifies the URI of the local issuer.</span></span>|  
+|<span data-ttu-id="27a93-120">associazione</span><span class="sxs-lookup"><span data-stu-id="27a93-120">binding</span></span>|<span data-ttu-id="27a93-121">Stringa facoltativa.</span><span class="sxs-lookup"><span data-stu-id="27a93-121">Optional string.</span></span> <span data-ttu-id="27a93-122">Una delle associazioni fornite dal sistema</span><span class="sxs-lookup"><span data-stu-id="27a93-122">One of the system-provided bindings.</span></span> <span data-ttu-id="27a93-123">Per un elenco, vedere [associazioni fornite dal sistema](../../../../../docs/framework/wcf/system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="27a93-123">For a list, see [System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md).</span></span>|  
+|<span data-ttu-id="27a93-124">bindingConfiguration</span><span class="sxs-lookup"><span data-stu-id="27a93-124">bindingConfiguration</span></span>|<span data-ttu-id="27a93-125">Stringa facoltativa.</span><span class="sxs-lookup"><span data-stu-id="27a93-125">Optional string.</span></span> <span data-ttu-id="27a93-126">Specifica una configurazione di associazione presente nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="27a93-126">Specifies a binding configuration found in the configuration file.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c8eb4-127">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="c8eb4-127">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="27a93-127">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="27a93-127">Child Elements</span></span>  
   
-|<span data-ttu-id="c8eb4-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="c8eb4-128">Element</span></span>|<span data-ttu-id="c8eb4-129">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c8eb4-129">Description</span></span>|  
+|<span data-ttu-id="27a93-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="27a93-128">Element</span></span>|<span data-ttu-id="27a93-129">Descrizione</span><span class="sxs-lookup"><span data-stu-id="27a93-129">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c8eb4-130">\<identità ></span><span class="sxs-lookup"><span data-stu-id="c8eb4-130">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="c8eb4-131">Specifica informazioni sull'identità per l'autorità emittente locale.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-131">Specifies identity information for the local issuer.</span></span>|  
-|[<span data-ttu-id="c8eb4-132">\<intestazioni ></span><span class="sxs-lookup"><span data-stu-id="c8eb4-132">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|<span data-ttu-id="c8eb4-133">Raccolta di intestazioni di indirizzo richiesta per indirizzare correttamente l'autorità emittente locale.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-133">A collection of address headers that are required in order to correctly address the local issuer.</span></span> <span data-ttu-id="c8eb4-134">È possibile usare la parola chiave `add` per aggiungere un'intestazione a questa raccolta.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-134">You can use the `add` keyword to add a header to this collection.</span></span>|  
+|[<span data-ttu-id="27a93-130">\<identità ></span><span class="sxs-lookup"><span data-stu-id="27a93-130">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="27a93-131">Specifica informazioni sull'identità per l'autorità emittente locale.</span><span class="sxs-lookup"><span data-stu-id="27a93-131">Specifies identity information for the local issuer.</span></span>|  
+|[<span data-ttu-id="27a93-132">\<intestazioni ></span><span class="sxs-lookup"><span data-stu-id="27a93-132">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|<span data-ttu-id="27a93-133">Raccolta di intestazioni di indirizzo richiesta per indirizzare correttamente l'autorità emittente locale.</span><span class="sxs-lookup"><span data-stu-id="27a93-133">A collection of address headers that are required in order to correctly address the local issuer.</span></span> <span data-ttu-id="27a93-134">È possibile usare la parola chiave `add` per aggiungere un'intestazione a questa raccolta.</span><span class="sxs-lookup"><span data-stu-id="27a93-134">You can use the `add` keyword to add a header to this collection.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="c8eb4-135">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="c8eb4-135">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="27a93-135">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="27a93-135">Parent Elements</span></span>  
   
-|<span data-ttu-id="c8eb4-136">Elemento</span><span class="sxs-lookup"><span data-stu-id="c8eb4-136">Element</span></span>|<span data-ttu-id="c8eb4-137">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c8eb4-137">Description</span></span>|  
+|<span data-ttu-id="27a93-136">Elemento</span><span class="sxs-lookup"><span data-stu-id="27a93-136">Element</span></span>|<span data-ttu-id="27a93-137">Descrizione</span><span class="sxs-lookup"><span data-stu-id="27a93-137">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c8eb4-138">\<issuedToken ></span><span class="sxs-lookup"><span data-stu-id="c8eb4-138">\<issuedToken></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|<span data-ttu-id="c8eb4-139">Specifica un token personalizzato usato per autenticare un client presso un servizio.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-139">Specifies a custom token used to authenticate a client to a service.</span></span>|  
+|[<span data-ttu-id="27a93-138">\<issuedToken ></span><span class="sxs-lookup"><span data-stu-id="27a93-138">\<issuedToken></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|<span data-ttu-id="27a93-139">Specifica un token personalizzato usato per autenticare un client presso un servizio.</span><span class="sxs-lookup"><span data-stu-id="27a93-139">Specifies a custom token used to authenticate a client to a service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c8eb4-140">Note</span><span class="sxs-lookup"><span data-stu-id="c8eb4-140">Remarks</span></span>  
- <span data-ttu-id="c8eb4-141">Quando si ottiene un token rilasciato da un servizio token di sicurezza (STS, Security Token Service), l'applicazione client deve essere configurata con l'indirizzo da usare per comunicare con il servizio token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-141">When obtaining an issued token from a Security Token Service (STS), the client application must be configured with the address and binding to use to communicate with the STS.</span></span> <span data-ttu-id="c8eb4-142">Se <xref:System.ServiceModel.WSFederationHttpBinding> non fornisce un URL per il servizio token di sicurezza o se l'indirizzo dell'emittente di un'associazione federativa è http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous o `null`, il canale [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] del client usa il valore specificato da `address` e `binding` per comunicare con il servizio token di sicurezza e ottenere il token rilasciato.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-142">When the <xref:System.ServiceModel.WSFederationHttpBinding> does not supply a URL for the security token service, or when the issuer address of a federated binding is http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous or `null`, the client's [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] channel uses the values specified by `address` and `binding` to communicate with the STS to obtain the issued token.</span></span> <span data-ttu-id="c8eb4-143">Per ulteriori informazioni sulla configurazione di un emittente locale, vedere [procedura: configurare un emittente locale](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).</span><span class="sxs-lookup"><span data-stu-id="c8eb4-143">For more information on configuring a local issuer, see [How to: Configure a Local Issuer](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="27a93-140">Note</span><span class="sxs-lookup"><span data-stu-id="27a93-140">Remarks</span></span>  
+ <span data-ttu-id="27a93-141">Quando si ottiene un token rilasciato da un servizio token di sicurezza (STS, Security Token Service), l'applicazione client deve essere configurata con l'indirizzo da usare per comunicare con il servizio token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="27a93-141">When obtaining an issued token from a Security Token Service (STS), the client application must be configured with the address and binding to use to communicate with the STS.</span></span> <span data-ttu-id="27a93-142">Quando il <xref:System.ServiceModel.WSFederationHttpBinding> non fornisce un URL per il servizio token di sicurezza o quando è l'indirizzo dell'emittente di un'associazione federativa http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous o `null`, il canale del client Windows Communication Foundation (WCF) utilizza i valori specificati dal `address`e `binding` per comunicare con il servizio token di sicurezza per ottenere il token emesso.</span><span class="sxs-lookup"><span data-stu-id="27a93-142">When the <xref:System.ServiceModel.WSFederationHttpBinding> does not supply a URL for the security token service, or when the issuer address of a federated binding is http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous or `null`, the client's Windows Communication Foundation (WCF) channel uses the values specified by `address` and `binding` to communicate with the STS to obtain the issued token.</span></span> <span data-ttu-id="27a93-143">Per ulteriori informazioni sulla configurazione di un emittente locale, vedere [procedura: configurare un emittente locale](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).</span><span class="sxs-lookup"><span data-stu-id="27a93-143">For more information on configuring a local issuer, see [How to: Configure a Local Issuer](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c8eb4-144">Esempio</span><span class="sxs-lookup"><span data-stu-id="c8eb4-144">Example</span></span>  
- <span data-ttu-id="c8eb4-145">Nell'esempio seguente vengono impostati gli attributi `address`, `binding` e `bindingConfiguration` di un elemento `localIssuer`.</span><span class="sxs-lookup"><span data-stu-id="c8eb4-145">The following example sets the `address`, `binding`, and `bindingConfiguration` attributes of a `localIssuer` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="27a93-144">Esempio</span><span class="sxs-lookup"><span data-stu-id="27a93-144">Example</span></span>  
+ <span data-ttu-id="27a93-145">Nell'esempio seguente vengono impostati gli attributi `address`, `binding` e `bindingConfiguration` di un elemento `localIssuer`.</span><span class="sxs-lookup"><span data-stu-id="27a93-145">The following example sets the `address`, `binding`, and `bindingConfiguration` attributes of a `localIssuer` element.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -88,16 +76,16 @@ ms.lasthandoff: 12/22/2017
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c8eb4-146">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c8eb4-146">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="27a93-146">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="27a93-146">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.LocalIssuer%2A>  
  <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>  
  <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
- [<span data-ttu-id="c8eb4-147">Comportamenti di sicurezza</span><span class="sxs-lookup"><span data-stu-id="c8eb4-147">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [<span data-ttu-id="c8eb4-148">Procedura: Configurare un emittente locale</span><span class="sxs-lookup"><span data-stu-id="c8eb4-148">How to: Configure a Local Issuer</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [<span data-ttu-id="c8eb4-149">Identità del servizio e autenticazione</span><span class="sxs-lookup"><span data-stu-id="c8eb4-149">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [<span data-ttu-id="c8eb4-150">Comportamenti di sicurezza</span><span class="sxs-lookup"><span data-stu-id="c8eb4-150">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [<span data-ttu-id="c8eb4-151">Federazione e token rilasciati</span><span class="sxs-lookup"><span data-stu-id="c8eb4-151">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [<span data-ttu-id="c8eb4-152">Protezione di servizi e client</span><span class="sxs-lookup"><span data-stu-id="c8eb4-152">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="c8eb4-153">Protezione di client</span><span class="sxs-lookup"><span data-stu-id="c8eb4-153">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
- [<span data-ttu-id="c8eb4-154">Procedura: Creare un client federato</span><span class="sxs-lookup"><span data-stu-id="c8eb4-154">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [<span data-ttu-id="c8eb4-155">Federazione e token rilasciati</span><span class="sxs-lookup"><span data-stu-id="c8eb4-155">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+ [<span data-ttu-id="27a93-147">Comportamenti di sicurezza</span><span class="sxs-lookup"><span data-stu-id="27a93-147">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="27a93-148">Procedura: Configurare un emittente locale</span><span class="sxs-lookup"><span data-stu-id="27a93-148">How to: Configure a Local Issuer</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [<span data-ttu-id="27a93-149">Identità del servizio e autenticazione</span><span class="sxs-lookup"><span data-stu-id="27a93-149">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="27a93-150">Comportamenti di sicurezza</span><span class="sxs-lookup"><span data-stu-id="27a93-150">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="27a93-151">Federazione e token rilasciati</span><span class="sxs-lookup"><span data-stu-id="27a93-151">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="27a93-152">Protezione di servizi e client</span><span class="sxs-lookup"><span data-stu-id="27a93-152">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="27a93-153">Protezione di client</span><span class="sxs-lookup"><span data-stu-id="27a93-153">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
+ [<span data-ttu-id="27a93-154">Procedura: Creare un client federato</span><span class="sxs-lookup"><span data-stu-id="27a93-154">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [<span data-ttu-id="27a93-155">Federazione e token rilasciati</span><span class="sxs-lookup"><span data-stu-id="27a93-155">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

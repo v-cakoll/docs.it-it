@@ -1,53 +1,41 @@
 ---
 title: Panoramica dei concetti
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], concepts
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 837ba9cbc5885c5d586ee1d65627b2d1424b4924
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a885bd4ff0d3c35e26fd0f37e82a41abf713b6e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="conceptual-overview"></a><span data-ttu-id="06e8c-102">Panoramica dei concetti</span><span class="sxs-lookup"><span data-stu-id="06e8c-102">Conceptual Overview</span></span>
-<span data-ttu-id="06e8c-103">In questo argomento vengono riepilogate le informazioni sul sistema di messaggistica [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] e sulle classi che ne supportano l'utilizzo.</span><span class="sxs-lookup"><span data-stu-id="06e8c-103">This topic summarizes information about the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] messaging system and the classes that support its use.</span></span>  
+# <a name="conceptual-overview"></a><span data-ttu-id="ce8e0-102">Panoramica dei concetti</span><span class="sxs-lookup"><span data-stu-id="ce8e0-102">Conceptual Overview</span></span>
+<span data-ttu-id="ce8e0-103">In questo argomento riepiloga le informazioni su Windows Communication Foundation (WCF) sistema e le classi che ne supportano l'utilizzo di messaggistica.</span><span class="sxs-lookup"><span data-stu-id="ce8e0-103">This topic summarizes information about the Windows Communication Foundation (WCF) messaging system and the classes that support its use.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="06e8c-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="06e8c-104">In This Section</span></span>  
- [<span data-ttu-id="06e8c-105">Informazioni su Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="06e8c-105">What Is Windows Communication Foundation</span></span>](../../../docs/framework/wcf/whats-wcf.md)  
- <span data-ttu-id="06e8c-106">Breve panoramica di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="06e8c-106">A brief overview of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="ce8e0-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="ce8e0-104">In This Section</span></span>  
+ [<span data-ttu-id="ce8e0-105">Informazioni su Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="ce8e0-105">What Is Windows Communication Foundation</span></span>](../../../docs/framework/wcf/whats-wcf.md)  
+ <span data-ttu-id="ce8e0-106">Una breve panoramica di WCF.</span><span class="sxs-lookup"><span data-stu-id="ce8e0-106">A brief overview of WCF.</span></span>  
   
- [<span data-ttu-id="06e8c-107">Concetti fondamentali di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="06e8c-107">Fundamental Windows Communication Foundation Concepts</span></span>](../../../docs/framework/wcf/fundamental-concepts.md)  
- <span data-ttu-id="06e8c-108">Descrizione dei concetti principali del modello di programmazione [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="06e8c-108">An outline of the major concepts of the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] programming model.</span></span>  
+ [<span data-ttu-id="ce8e0-107">Concetti fondamentali di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="ce8e0-107">Fundamental Windows Communication Foundation Concepts</span></span>](../../../docs/framework/wcf/fundamental-concepts.md)  
+ <span data-ttu-id="ce8e0-108">Una struttura dei concetti principali del modello di programmazione WCF.</span><span class="sxs-lookup"><span data-stu-id="ce8e0-108">An outline of the major concepts of the WCF programming model.</span></span>  
   
- [<span data-ttu-id="06e8c-109">Architettura di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="06e8c-109">Windows Communication Foundation Architecture</span></span>](../../../docs/framework/wcf/architecture.md)  
- <span data-ttu-id="06e8c-110">Rappresentazione grafica dell'architettura [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="06e8c-110">A graphical representation of the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] architecture.</span></span>  
+ [<span data-ttu-id="ce8e0-109">Architettura di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="ce8e0-109">Windows Communication Foundation Architecture</span></span>](../../../docs/framework/wcf/architecture.md)  
+ <span data-ttu-id="ce8e0-110">Rappresentazione grafica dell'architettura di WCF.</span><span class="sxs-lookup"><span data-stu-id="ce8e0-110">A graphical representation of the WCF architecture.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="06e8c-111">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="06e8c-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ce8e0-111">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="ce8e0-111">Reference</span></span>  
  <xref:System.ServiceModel>  
   
-## <a name="related-sections"></a><span data-ttu-id="06e8c-112">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="06e8c-112">Related Sections</span></span>  
- [<span data-ttu-id="06e8c-113">Programmazione WCF di base</span><span class="sxs-lookup"><span data-stu-id="06e8c-113">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
+## <a name="related-sections"></a><span data-ttu-id="ce8e0-112">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="ce8e0-112">Related Sections</span></span>  
+ [<span data-ttu-id="ce8e0-113">Programmazione WCF di base</span><span class="sxs-lookup"><span data-stu-id="ce8e0-113">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [<span data-ttu-id="06e8c-114">Linee guida e procedure consigliate</span><span class="sxs-lookup"><span data-stu-id="06e8c-114">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [<span data-ttu-id="ce8e0-114">Linee guida e procedure consigliate</span><span class="sxs-lookup"><span data-stu-id="ce8e0-114">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
   
- [<span data-ttu-id="06e8c-115">Esempi di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="06e8c-115">Windows Communication Foundation Samples</span></span>](../../../docs/framework/wcf/samples/index.md)  
+ [<span data-ttu-id="ce8e0-115">Esempi di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="ce8e0-115">Windows Communication Foundation Samples</span></span>](../../../docs/framework/wcf/samples/index.md)  
   
- [<span data-ttu-id="06e8c-116">Strumenti</span><span class="sxs-lookup"><span data-stu-id="06e8c-116">Tools</span></span>](../../../docs/framework/wcf/diagnostics/exceptions-reference/tools.md)  
+ [<span data-ttu-id="ce8e0-116">Strumenti</span><span class="sxs-lookup"><span data-stu-id="ce8e0-116">Tools</span></span>](../../../docs/framework/wcf/diagnostics/exceptions-reference/tools.md)  
   
- [<span data-ttu-id="06e8c-117">Requisiti di sistema</span><span class="sxs-lookup"><span data-stu-id="06e8c-117">System Requirements</span></span>](../../../docs/framework/wcf/wcf-system-requirements.md)  
+ [<span data-ttu-id="ce8e0-117">Requisiti di sistema</span><span class="sxs-lookup"><span data-stu-id="ce8e0-117">System Requirements</span></span>](../../../docs/framework/wcf/wcf-system-requirements.md)  
   
- [<span data-ttu-id="06e8c-118">Riferimenti generali</span><span class="sxs-lookup"><span data-stu-id="06e8c-118">General Reference</span></span>](../../../docs/framework/wcf/general-reference.md)
+ [<span data-ttu-id="ce8e0-118">Riferimenti generali</span><span class="sxs-lookup"><span data-stu-id="ce8e0-118">General Reference</span></span>](../../../docs/framework/wcf/general-reference.md)

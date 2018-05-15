@@ -4,6 +4,7 @@
 ### [Uso di oggetti che implementano IDisposable](using-objects.md)
 ## [Garbage Collection](index.md)
 ### [Principi fondamentali di Garbage Collection](fundamentals.md)
+### [Heap oggetto grande](large-object-heap.md)
 ### [Garbage Collection e prestazioni](performance.md)
 ### [Raccolte indotte](induced.md)
 ### [Modalità di latenza](latency.md)

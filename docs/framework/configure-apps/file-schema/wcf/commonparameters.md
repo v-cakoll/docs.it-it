@@ -1,36 +1,24 @@
 ---
-title: '&lt;commonParameters&gt;'
-ms.custom: 
+title: '&lt;Parametri comuni&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dcce701d8c051381317173b37fd37b840bcfa89d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 881a7d0890991aa4f542ff92c2a721b9d9cb7b29
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltcommonparametersgt"></a><span data-ttu-id="26418-102">&lt;commonParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="26418-102">&lt;commonParameters&gt;</span></span>
-<span data-ttu-id="26418-103">Rappresenta una raccolta di parametri che vengono usati globalmente tra più servizi.</span><span class="sxs-lookup"><span data-stu-id="26418-103">Represents a collection of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="26418-104">Questa raccolta in genere contiene la stringa di connessione del database che potrebbe essere condivisa dai servizi durevoli.</span><span class="sxs-lookup"><span data-stu-id="26418-104">This collection will typically include the database connection string that might be shared by durable services.</span></span>  
+# <a name="ltcommonparametersgt"></a><span data-ttu-id="7c1b1-102">&lt;Parametri comuni&gt;</span><span class="sxs-lookup"><span data-stu-id="7c1b1-102">&lt;commonParameters&gt;</span></span>
+<span data-ttu-id="7c1b1-103">Rappresenta una raccolta di parametri che vengono usati globalmente tra più servizi.</span><span class="sxs-lookup"><span data-stu-id="7c1b1-103">Represents a collection of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="7c1b1-104">Questa raccolta in genere contiene la stringa di connessione del database che potrebbe essere condivisa dai servizi durevoli.</span><span class="sxs-lookup"><span data-stu-id="7c1b1-104">This collection will typically include the database connection string that might be shared by durable services.</span></span>  
   
- <span data-ttu-id="26418-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="26418-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="26418-106">\<i comportamenti ></span><span class="sxs-lookup"><span data-stu-id="26418-106">\<behaviors></span></span>  
-<span data-ttu-id="26418-107">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="26418-107">\<serviceBehaviors></span></span>  
-<span data-ttu-id="26418-108">\<behavior></span><span class="sxs-lookup"><span data-stu-id="26418-108">\<behavior></span></span>  
-<span data-ttu-id="26418-109">\<workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="26418-109">\<workflowRuntime></span></span>  
-<span data-ttu-id="26418-110">\<commonParameters></span><span class="sxs-lookup"><span data-stu-id="26418-110">\<commonParameters></span></span>  
+ <span data-ttu-id="7c1b1-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="7c1b1-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="7c1b1-106">\<i comportamenti ></span><span class="sxs-lookup"><span data-stu-id="7c1b1-106">\<behaviors></span></span>  
+<span data-ttu-id="7c1b1-107">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="7c1b1-107">\<serviceBehaviors></span></span>  
+<span data-ttu-id="7c1b1-108">\<comportamento ></span><span class="sxs-lookup"><span data-stu-id="7c1b1-108">\<behavior></span></span>  
+<span data-ttu-id="7c1b1-109">\<workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="7c1b1-109">\<workflowRuntime></span></span>  
+<span data-ttu-id="7c1b1-110">\<commonParameters></span><span class="sxs-lookup"><span data-stu-id="7c1b1-110">\<commonParameters></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26418-111">Sintassi</span><span class="sxs-lookup"><span data-stu-id="26418-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c1b1-111">Sintassi</span><span class="sxs-lookup"><span data-stu-id="7c1b1-111">Syntax</span></span>  
   
 ```xml  
 <workflowRuntime>  
@@ -40,29 +28,29 @@ ms.lasthandoff: 01/19/2018
 </workflowRuntime>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="26418-112">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="26418-112">Attributes and Elements</span></span>  
- <span data-ttu-id="26418-113">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="26418-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7c1b1-112">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="7c1b1-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="7c1b1-113">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="7c1b1-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="26418-114">Attributi</span><span class="sxs-lookup"><span data-stu-id="26418-114">Attributes</span></span>  
- <span data-ttu-id="26418-115">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="26418-115">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7c1b1-114">Attributi</span><span class="sxs-lookup"><span data-stu-id="7c1b1-114">Attributes</span></span>  
+ <span data-ttu-id="7c1b1-115">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="7c1b1-115">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="26418-116">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="26418-116">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7c1b1-116">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="7c1b1-116">Child Elements</span></span>  
   
-|<span data-ttu-id="26418-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="26418-117">Element</span></span>|<span data-ttu-id="26418-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="26418-118">Description</span></span>|  
+|<span data-ttu-id="7c1b1-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="7c1b1-117">Element</span></span>|<span data-ttu-id="7c1b1-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7c1b1-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="26418-119">\<add></span><span class="sxs-lookup"><span data-stu-id="26418-119">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|<span data-ttu-id="26418-120">Aggiunge alla raccolta una coppia nome/valore di parametri comuni usati dai servizi.</span><span class="sxs-lookup"><span data-stu-id="26418-120">Adds a name-value pair of common parameters used by services to the collection.</span></span>|  
+|[<span data-ttu-id="7c1b1-119">\<add></span><span class="sxs-lookup"><span data-stu-id="7c1b1-119">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|<span data-ttu-id="7c1b1-120">Aggiunge alla raccolta una coppia nome/valore di parametri comuni usati dai servizi.</span><span class="sxs-lookup"><span data-stu-id="7c1b1-120">Adds a name-value pair of common parameters used by services to the collection.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="26418-121">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="26418-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7c1b1-121">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="7c1b1-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="26418-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="26418-122">Element</span></span>|<span data-ttu-id="26418-123">Descrizione</span><span class="sxs-lookup"><span data-stu-id="26418-123">Description</span></span>|  
+|<span data-ttu-id="7c1b1-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="7c1b1-122">Element</span></span>|<span data-ttu-id="7c1b1-123">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7c1b1-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="26418-124">\<workflowRuntime></span><span class="sxs-lookup"><span data-stu-id="26418-124">\<workflowRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|<span data-ttu-id="26418-125">Specifica le impostazioni di un'istanza della classe <xref:System.Workflow.Runtime.WorkflowRuntime> per ospitare servizi [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] basati sul flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="26418-125">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] services.</span></span>|  
+|[<span data-ttu-id="7c1b1-124">\<workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="7c1b1-124">\<workflowRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|<span data-ttu-id="7c1b1-125">Specifica le impostazioni per un'istanza di <xref:System.Workflow.Runtime.WorkflowRuntime> per l'hosting di servizi Windows Communication Foundation (WCF) basati sul flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="7c1b1-125">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based Windows Communication Foundation (WCF) services.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="26418-126">Note</span><span class="sxs-lookup"><span data-stu-id="26418-126">Remarks</span></span>  
- <span data-ttu-id="26418-127">L'elemento `<commonParameters>` definisce qualsiasi parametro usato globalmente tra più servizi, ad esempio `ConnectionString` quando si usa <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span><span class="sxs-lookup"><span data-stu-id="26418-127">The `<commonParameters>` element defines any parameters that are used globally across multiple services, for example `ConnectionString` when using the <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7c1b1-126">Note</span><span class="sxs-lookup"><span data-stu-id="7c1b1-126">Remarks</span></span>  
+ <span data-ttu-id="7c1b1-127">L'elemento `<commonParameters>` definisce qualsiasi parametro usato globalmente tra più servizi, ad esempio `ConnectionString` quando si usa <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span><span class="sxs-lookup"><span data-stu-id="7c1b1-127">The `<commonParameters>` element defines any parameters that are used globally across multiple services, for example `ConnectionString` when using the <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="26418-128">Il servizio di rilevamento SQL non utilizzerà in modo coerente il valore `ConnectionString` nel caso in cui venga specificato nella sezione `<commonParameters>`.</span><span class="sxs-lookup"><span data-stu-id="26418-128">SQL Tracking service does not consistently use the `ConnectionString` value if it is specified in the `<commonParameters>` section.</span></span> <span data-ttu-id="26418-129">Alcune delle relative operazioni, ad esempio il recupero della proprietà `StateMachineWorkflowInstance.StateHistory`, potrebbero non riuscire.</span><span class="sxs-lookup"><span data-stu-id="26418-129">Some of its operations such as retrieving the `StateMachineWorkflowInstance.StateHistory` property may fail.</span></span> <span data-ttu-id="26418-130">Una soluzione alternativa consente nello specificare l'attributo `ConnectionString` nella sezione di configurazione per il provider di rilevamento, come indicato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="26418-130">To workaround this, specify the `ConnectionString` attribute in the configuration section for tracking provider, as indicated in the following example.</span></span>  
+>  <span data-ttu-id="7c1b1-128">Il servizio di rilevamento SQL non utilizzerà in modo coerente il valore `ConnectionString` nel caso in cui venga specificato nella sezione `<commonParameters>`.</span><span class="sxs-lookup"><span data-stu-id="7c1b1-128">SQL Tracking service does not consistently use the `ConnectionString` value if it is specified in the `<commonParameters>` section.</span></span> <span data-ttu-id="7c1b1-129">Alcune delle relative operazioni, ad esempio il recupero della proprietà `StateMachineWorkflowInstance.StateHistory`, potrebbero non riuscire.</span><span class="sxs-lookup"><span data-stu-id="7c1b1-129">Some of its operations such as retrieving the `StateMachineWorkflowInstance.StateHistory` property may fail.</span></span> <span data-ttu-id="7c1b1-130">Una soluzione alternativa consente nello specificare l'attributo `ConnectionString` nella sezione di configurazione per il provider di rilevamento, come indicato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="7c1b1-130">To workaround this, specify the `ConnectionString` attribute in the configuration section for tracking provider, as indicated in the following example.</span></span>  
   
  `<add`  
   
@@ -70,7 +58,7 @@ ms.lasthandoff: 01/19/2018
   
  `ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />`  
   
- <span data-ttu-id="26418-131">È possibile consentire a servizi che eseguono il commit di batch di lavoro su archivi di persistenza, ad esempio <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> e <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, di ritentare la transazione usando il parametro `EnableRetries`, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="26418-131">For services that commit work batches to persistence stores, such as <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> and <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, you can enable them to retry their transaction by using the `EnableRetries` parameter as shown in the following example:</span></span>  
+ <span data-ttu-id="7c1b1-131">È possibile consentire a servizi che eseguono il commit di batch di lavoro su archivi di persistenza, ad esempio <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> e <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, di ritentare la transazione usando il parametro `EnableRetries`, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="7c1b1-131">For services that commit work batches to persistence stores, such as <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> and <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, you can enable them to retry their transaction by using the `EnableRetries` parameter as shown in the following example:</span></span>  
   
 ```xml  
 <WorkflowRuntime Name="SampleApplication" UnloadOnIdle="false">  
@@ -84,9 +72,9 @@ ms.lasthandoff: 01/19/2018
 </WorkflowRuntime>  
 ```  
   
- <span data-ttu-id="26418-132">Si noti che il `EnableRetries` parametro può essere impostato a livello globale (come illustrato nel *Parametricomuni* sezione) o per servizi individuali che supportano `EnableRetries` (come illustrato nel *servizi*sezione).</span><span class="sxs-lookup"><span data-stu-id="26418-132">Notice that the `EnableRetries` parameter can be set either at a global level (as shown in the *CommonParameters* section) or for individual services that support `EnableRetries` (as shown in the *Services* section).</span></span>  
+ <span data-ttu-id="7c1b1-132">Si noti che il `EnableRetries` parametro può essere impostato a livello globale (come illustrato nel *Parametricomuni* sezione) o per servizi individuali che supportano `EnableRetries` (come illustrato nel *servizi*sezione).</span><span class="sxs-lookup"><span data-stu-id="7c1b1-132">Notice that the `EnableRetries` parameter can be set either at a global level (as shown in the *CommonParameters* section) or for individual services that support `EnableRetries` (as shown in the *Services* section).</span></span>  
   
- <span data-ttu-id="26418-133">Nel codice di esempio seguente viene illustrato come modificare i parametri comuni a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="26418-133">The following sample code shows how to change the common parameters programmatically.</span></span>  
+ <span data-ttu-id="7c1b1-133">Nel codice di esempio seguente viene illustrato come modificare i parametri comuni a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="7c1b1-133">The following sample code shows how to change the common parameters programmatically.</span></span>  
   
 ```  
 Configuration config=WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");  
@@ -96,9 +84,9 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- <span data-ttu-id="26418-134">Per ulteriori informazioni sull'utilizzo di un file di configurazione per controllare il comportamento di un <xref:System.Workflow.Runtime.WorkflowRuntime> oggetto di un'applicazione host di Windows Workflow Foundation, vedere [i file di configurazione del flusso di lavoro](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).</span><span class="sxs-lookup"><span data-stu-id="26418-134">For more information about using a configuration file to control the behavior of a <xref:System.Workflow.Runtime.WorkflowRuntime> object of a Windows Workflow Foundation host application, see [Workflow Configuration Files](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).</span></span>  
+ <span data-ttu-id="7c1b1-134">Per ulteriori informazioni sull'utilizzo di un file di configurazione per controllare il comportamento di un <xref:System.Workflow.Runtime.WorkflowRuntime> oggetto di un'applicazione host di Windows Workflow Foundation, vedere [i file di configurazione del flusso di lavoro](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).</span><span class="sxs-lookup"><span data-stu-id="7c1b1-134">For more information about using a configuration file to control the behavior of a <xref:System.Workflow.Runtime.WorkflowRuntime> object of a Windows Workflow Foundation host application, see [Workflow Configuration Files](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="26418-135">Esempio</span><span class="sxs-lookup"><span data-stu-id="26418-135">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="7c1b1-135">Esempio</span><span class="sxs-lookup"><span data-stu-id="7c1b1-135">Example</span></span>  
   
 ```xml  
 <commonParameters>  
@@ -107,11 +95,11 @@ config.Save();
 </commonParameters>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="26418-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="26418-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7c1b1-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7c1b1-136">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
  <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
  <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
- [<span data-ttu-id="26418-137">File di configurazione del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="26418-137">Workflow Configuration Files</span></span>](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
- [<span data-ttu-id="26418-138">\<add></span><span class="sxs-lookup"><span data-stu-id="26418-138">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)
+ [<span data-ttu-id="7c1b1-137">File di configurazione del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="7c1b1-137">Workflow Configuration Files</span></span>](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
+ [<span data-ttu-id="7c1b1-138">\<add></span><span class="sxs-lookup"><span data-stu-id="7c1b1-138">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)

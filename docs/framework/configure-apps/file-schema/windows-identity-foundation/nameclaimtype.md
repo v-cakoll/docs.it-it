@@ -1,36 +1,26 @@
 ---
 title: '&lt;nameClaimType&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 2c53886458b4c6e2867e1f9fddd4ab50b199c660
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e403667f16e316004f766b8476e20eca9bd1c988
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltnameclaimtypegt"></a><span data-ttu-id="d0c2b-102">&lt;nameClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="d0c2b-102">&lt;nameClaimType&gt;</span></span>
-<span data-ttu-id="d0c2b-103">Imposta il tipo di attestazione che specifica il <xref:System.Security.Principal.IIdentity.Name%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="d0c2b-103">Sets the claim type that specifies the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span> <span data-ttu-id="d0c2b-104">Il tipo di attestazione utilizzato per la ricerca per un <xref:System.Security.Claims.Claim> nella raccolta di <xref:System.Security.Claims.ClaimsIdentity> gli oggetti restituiti dal <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> metodo di questo gestore del token.</span><span class="sxs-lookup"><span data-stu-id="d0c2b-104">The claim type is used to search for a <xref:System.Security.Claims.Claim> in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of this token handler.</span></span> <span data-ttu-id="d0c2b-105">Il valore dell'attestazione corrispondente viene impostato come il nome del <xref:System.Security.Principal.IIdentity> generato da questo gestore del token.</span><span class="sxs-lookup"><span data-stu-id="d0c2b-105">The value of the matching claim is then set as the name of the <xref:System.Security.Principal.IIdentity> generated from this token handler.</span></span>  
+# <a name="ltnameclaimtypegt"></a><span data-ttu-id="f3f28-102">&lt;nameClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="f3f28-102">&lt;nameClaimType&gt;</span></span>
+<span data-ttu-id="f3f28-103">Imposta il tipo di attestazione che specifica il <xref:System.Security.Principal.IIdentity.Name%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="f3f28-103">Sets the claim type that specifies the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span> <span data-ttu-id="f3f28-104">Il tipo di attestazione utilizzato per la ricerca per un <xref:System.Security.Claims.Claim> nella raccolta di <xref:System.Security.Claims.ClaimsIdentity> gli oggetti restituiti dal <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> metodo di questo gestore del token.</span><span class="sxs-lookup"><span data-stu-id="f3f28-104">The claim type is used to search for a <xref:System.Security.Claims.Claim> in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of this token handler.</span></span> <span data-ttu-id="f3f28-105">Il valore dell'attestazione corrispondente viene impostato come il nome del <xref:System.Security.Principal.IIdentity> generato da questo gestore del token.</span><span class="sxs-lookup"><span data-stu-id="f3f28-105">The value of the matching claim is then set as the name of the <xref:System.Security.Principal.IIdentity> generated from this token handler.</span></span>  
   
- <span data-ttu-id="d0c2b-106">\<System. IdentityModel ></span><span class="sxs-lookup"><span data-stu-id="d0c2b-106">\<system.identityModel></span></span>  
-<span data-ttu-id="d0c2b-107">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="d0c2b-107">\<identityConfiguration></span></span>  
-<span data-ttu-id="d0c2b-108">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="d0c2b-108">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="d0c2b-109">\<add></span><span class="sxs-lookup"><span data-stu-id="d0c2b-109">\<add></span></span>  
-<span data-ttu-id="d0c2b-110">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="d0c2b-110">\<samlSecurityTokenRequirement></span></span>  
-<span data-ttu-id="d0c2b-111">\<nameClaimType ></span><span class="sxs-lookup"><span data-stu-id="d0c2b-111">\<nameClaimType></span></span>  
+ <span data-ttu-id="f3f28-106">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="f3f28-106">\<system.identityModel></span></span>  
+<span data-ttu-id="f3f28-107">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="f3f28-107">\<identityConfiguration></span></span>  
+<span data-ttu-id="f3f28-108">\<securityTokenHandlers></span><span class="sxs-lookup"><span data-stu-id="f3f28-108">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="f3f28-109">\<add></span><span class="sxs-lookup"><span data-stu-id="f3f28-109">\<add></span></span>  
+<span data-ttu-id="f3f28-110">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="f3f28-110">\<samlSecurityTokenRequirement></span></span>  
+<span data-ttu-id="f3f28-111">\<nameClaimType ></span><span class="sxs-lookup"><span data-stu-id="f3f28-111">\<nameClaimType></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0c2b-112">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d0c2b-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f3f28-112">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f3f28-112">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -47,28 +37,28 @@ ms.lasthandoff: 12/22/2017
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d0c2b-113">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="d0c2b-113">Attributes and Elements</span></span>  
- <span data-ttu-id="d0c2b-114">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="d0c2b-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f3f28-113">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="f3f28-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="f3f28-114">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="f3f28-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d0c2b-115">Attributi</span><span class="sxs-lookup"><span data-stu-id="d0c2b-115">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f3f28-115">Attributi</span><span class="sxs-lookup"><span data-stu-id="f3f28-115">Attributes</span></span>  
   
-|<span data-ttu-id="d0c2b-116">Attributo</span><span class="sxs-lookup"><span data-stu-id="d0c2b-116">Attribute</span></span>|<span data-ttu-id="d0c2b-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d0c2b-117">Description</span></span>|  
+|<span data-ttu-id="f3f28-116">Attributo</span><span class="sxs-lookup"><span data-stu-id="f3f28-116">Attribute</span></span>|<span data-ttu-id="f3f28-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f3f28-117">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="d0c2b-118">predefinito</span><span class="sxs-lookup"><span data-stu-id="d0c2b-118">value</span></span>|<span data-ttu-id="d0c2b-119">Stringa che specifica l'URI che rappresenta il tipo di attestazione dell'attestazione da usare per la <xref:System.Security.Principal.IIdentity.Name%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="d0c2b-119">A string that specifies the URI that represents the claim type of the claim to use for the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span> <span data-ttu-id="d0c2b-120">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="d0c2b-120">Required.</span></span>|  
+|<span data-ttu-id="f3f28-118">predefinito</span><span class="sxs-lookup"><span data-stu-id="f3f28-118">value</span></span>|<span data-ttu-id="f3f28-119">Stringa che specifica l'URI che rappresenta il tipo di attestazione dell'attestazione da usare per la <xref:System.Security.Principal.IIdentity.Name%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="f3f28-119">A string that specifies the URI that represents the claim type of the claim to use for the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span> <span data-ttu-id="f3f28-120">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="f3f28-120">Required.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d0c2b-121">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="d0c2b-121">Child Elements</span></span>  
- <span data-ttu-id="d0c2b-122">None</span><span class="sxs-lookup"><span data-stu-id="d0c2b-122">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f3f28-121">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="f3f28-121">Child Elements</span></span>  
+ <span data-ttu-id="f3f28-122">Nessuno</span><span class="sxs-lookup"><span data-stu-id="f3f28-122">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d0c2b-123">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="d0c2b-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f3f28-123">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="f3f28-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="d0c2b-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="d0c2b-124">Element</span></span>|<span data-ttu-id="d0c2b-125">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d0c2b-125">Description</span></span>|  
+|<span data-ttu-id="f3f28-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="f3f28-124">Element</span></span>|<span data-ttu-id="f3f28-125">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f3f28-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d0c2b-126">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="d0c2b-126">\<samlSecurityTokenRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|<span data-ttu-id="d0c2b-127">Fornisce la configurazione per il <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> (classe), la <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe o una classe derivata di una di queste classi.</span><span class="sxs-lookup"><span data-stu-id="d0c2b-127">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span>|  
+|[<span data-ttu-id="f3f28-126">\<samlSecurityTokenRequirement></span><span class="sxs-lookup"><span data-stu-id="f3f28-126">\<samlSecurityTokenRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|<span data-ttu-id="f3f28-127">Fornisce la configurazione per il <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> (classe), la <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe o una classe derivata di una di queste classi.</span><span class="sxs-lookup"><span data-stu-id="f3f28-127">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d0c2b-128">Note</span><span class="sxs-lookup"><span data-stu-id="d0c2b-128">Remarks</span></span>  
- <span data-ttu-id="d0c2b-129">Il `<nameClaimType>` set di elementi di <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> proprietà quando un <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> oggetto viene inizializzato dalla configurazione.</span><span class="sxs-lookup"><span data-stu-id="d0c2b-129">The `<nameClaimType>` element sets the <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> property when a <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> object is initialized from configuration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f3f28-128">Note</span><span class="sxs-lookup"><span data-stu-id="f3f28-128">Remarks</span></span>  
+ <span data-ttu-id="f3f28-129">Il `<nameClaimType>` set di elementi di <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> proprietà quando un <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> oggetto viene inizializzato dalla configurazione.</span><span class="sxs-lookup"><span data-stu-id="f3f28-129">The `<nameClaimType>` element sets the <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> property when a <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> object is initialized from configuration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d0c2b-130">Esempio</span><span class="sxs-lookup"><span data-stu-id="d0c2b-130">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="f3f28-130">Esempio</span><span class="sxs-lookup"><span data-stu-id="f3f28-130">Example</span></span>  
   
 ```xml  
 <add type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel">  
@@ -78,5 +68,5 @@ ms.lasthandoff: 12/22/2017
 </add>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d0c2b-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d0c2b-131">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f3f28-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f3f28-131">See Also</span></span>  
  <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>
