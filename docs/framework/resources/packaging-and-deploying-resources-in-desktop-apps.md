@@ -1,14 +1,6 @@
 ---
 title: Creazione del pacchetto e distribuzione delle risorse in applicazioni desktop
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -34,17 +26,13 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 479ab530ddf02fa3701a7f6f3699258d0eab727e
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 0a6e6219d6449fedabe6e7cb0b349efb6fc74ee6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Creazione del pacchetto e distribuzione delle risorse in applicazioni desktop
 Per recuperare le risorse localizzate le applicazioni usano .NET Framework Resource Manager, rappresentato dalla classe <xref:System.Resources.ResourceManager>. Resource Manager presuppone l'uso di un modello hub e spoke per la creazione di pacchetti e la distribuzione delle risorse. L'hub è l'assembly principale che contiene il codice eseguibile non localizzabile e le risorse di un singolo set di impostazioni cultura, denominate impostazioni cultura neutre o predefinite. Le impostazioni cultura predefinite sono le impostazioni di fallback per l'applicazione, ovvero le impostazioni che vengono usate quando non si trovano le risorse localizzate. Ogni spoke si connette a un assembly satellite contenente le risorse di determinate impostazioni cultura, ma non contiene alcun codice.  

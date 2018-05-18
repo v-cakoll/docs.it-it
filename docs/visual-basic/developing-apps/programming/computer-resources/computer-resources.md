@@ -1,25 +1,16 @@
 ---
 title: Accesso alle risorse del computer (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - computer resources [Visual Basic]
 - My.Computer object [Visual Basic], tasks
 - computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 20c9d23570ec986598ad697f559aaf3a3153a8a0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 7128a71f28d1755a14fcda5f09bee11202ab4154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-computer-resources-visual-basic"></a>Accesso alle risorse del computer (Visual Basic)
 
@@ -36,7 +27,7 @@ L'oggetto `My.Computer` è uno dei tre oggetti principali di `My` e permette l'a
 -   <xref:Microsoft.VisualBasic.Devices.Ports>
 -   Registro di sistema (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
   
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Riproduzione di suoni](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)   
 Elenca le attività associate a `My.Computer.Audio`, ad esempio la riproduzione di un suono in background.

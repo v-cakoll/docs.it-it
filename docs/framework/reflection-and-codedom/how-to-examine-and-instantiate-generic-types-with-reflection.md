@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: esaminare e creare istanze di tipi generici tramite reflection'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cc95b8474cdf9398d5b6705cce1b98772e5add98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0f964ac73f070b99cdfd06e9037d06ce7888938
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Procedura: esaminare e creare istanze di tipi generici tramite reflection
 Le informazioni sui tipi generici vengono ottenute esattamente come quelle relative ad altri tipi, ovvero esaminando un oggetto <xref:System.Type> che rappresenta il tipo generico. La differenza principale è data dal fatto che un tipo generico dispone di un elenco di oggetti <xref:System.Type> che rappresentano i relativi parametri di tipo generico. La prima procedura in questa sezione esamina i tipi generici.  

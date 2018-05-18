@@ -1,13 +1,7 @@
 ---
 title: 'Procedura: aggiungere zeri iniziali a un numero'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7ea854f69e59c614d03f10ff546bd3181f5b51ff
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ce3b59db027ffebf616a035b018629cb7aed30c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Procedura: aggiungere zeri iniziali a un numero
 È possibile aggiungere degli zeri iniziali a un numero intero usando la [stringa di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md) "D" con un identificatore di precisione. È possibile aggiungere zeri iniziali sia ai numeri interi che ai numeri a virgola mobile usando una [stringa di formato numerico personalizzata](../../../docs/standard/base-types/custom-numeric-format-strings.md). In questo argomento viene illustrato come usare entrambi i metodi per aggiungere un numero con gli zeri iniziali.  
@@ -39,9 +28,9 @@ ms.lasthandoff: 12/23/2017
   
 2.  Determinare se si vuole visualizzare il valore di tipo Integer come valore decimale o esadecimale.  
   
-    -   Per visualizzare il valore intero come valore decimale, chiamare il relativo metodo `ToString(String)` e passare la stringa "D*n*" come valore del parametro `format`, dove *n* rappresenta la lunghezza minima della stringa.  
+    -   Per visualizzare il valore di tipo Integer come valore decimale, chiamare il metodo `ToString(String)` e passare la stringa "D*n*" come valore del parametro `format`, dove *n* rappresenta la lunghezza minima della stringa.  
   
-    -   Per visualizzare il valore intero come valore esadecimale, chiamare il relativo metodo `ToString(String)` e passare la stringa "X*n*" come valore del parametro `format`, dove *n* rappresenta la lunghezza minima della stringa.  
+    -   Per visualizzare il valore di tipo Integer come valore esadecimale, chiamare il metodo `ToString(String)` e passare la stringa "X*n*" come valore del parametro `format`, dove *n* rappresenta la lunghezza minima della stringa.  
   
      È anche possibile usare la stringa di formato in un metodo, come <xref:System.String.Format%2A> o <xref:System.Console.WriteLine%2A>, che usa la [formattazione composita](../../../docs/standard/base-types/composite-formatting.md).  
   
@@ -56,11 +45,11 @@ ms.lasthandoff: 12/23/2017
   
 2.  Determinare se si vuole visualizzare il valore di tipo Integer come valore decimale o esadecimale. Se si formatta come valore decimale, è necessario usare l'identificatore di formato standard "D", mentre come valore esadecimale è necessario usare l'identificatore di formato "X".  
   
-3.  Determine la lunghezza della stringa numerica non aggiunta chiamando il metodo `ToString("D").Length` o `ToString("X").Length` del valore di tipo Integer.  
+3.  Determinare la lunghezza della stringa numerica non aggiunta chiamando il metodo `ToString("D").Length` o `ToString("X").Length` del valore di tipo Integer.  
   
 4.  Aggiungere il numero di zeri iniziali da includere nella stringa formattata nella lunghezza della stringa numerica non aggiunta. In questo modo si definisce la lunghezza totale della stringa aggiunta.  
   
-5.  Chiamare il metodo `ToString(String)` del valore intero e passare la stringa "D*n*" per le stringhe decimali e "X*n*" per le stringhe esadecimali, dove *n* rappresenta la lunghezza totale della stringa riempita. È anche possibile usare la stringa di formato "D*n*" o "X*n*" in un metodo che supporta la formattazione composita.  
+5.  Chiamare il metodo `ToString(String)` del valore integer e passare la stringa "D*n*" per le stringhe decimali e la stringa "X*n*" per quelle esadecimali, dove *n* rappresenta la lunghezza totale della stringa aggiunta. È anche possibile usare la stringa di formato "D*n*" o "X*n*" in un metodo che supporta la formattazione composta.  
   
  Il seguente esempio aggiunge un valore di tipo Integer con cinque zeri iniziali.  
   
@@ -84,7 +73,7 @@ ms.lasthandoff: 12/23/2017
   
 1.  Determinare il numero di zeri iniziali che deve avere il valore numerico.  
   
-2.  Determine il numero di cifre alla sinistra del decimale nella stringa numerica non aggiunta. Per eseguire questa operazione:  
+2.  Determinare il numero di cifre alla sinistra del decimale nella stringa numerica non aggiunta. Per eseguire questa operazione:  
   
     1.  Determinare se la rappresentazione della stringa di un numero include un simbolo di separatore decimale.  
   

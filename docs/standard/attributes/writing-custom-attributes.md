@@ -1,13 +1,7 @@
 ---
 title: Scrittura di attributi personalizzati
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,18 +16,13 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b38aa643453d9ad853d0d17af0f1ddf2ba69d4a1
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 114d24c1fc523d5501deb4aa17f9541c5a918276
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-custom-attributes"></a>Scrittura di attributi personalizzati
 Per progettare attributi personalizzati, non è necessario apprendere molti nuovi concetti. Se si ha familiarità con la programmazione orientata agli oggetti e si è in grado di progettare le classi, si ha già gran parte delle conoscenze necessarie. Gli attributi personalizzati sono essenzialmente classi tradizionali che derivano direttamente o indirettamente da <xref:System.Attribute?displayProperty=nameWithType>. Analogamente alle classi tradizionali, gli attributi personalizzati contengono metodi che archiviano e recuperano dati.  

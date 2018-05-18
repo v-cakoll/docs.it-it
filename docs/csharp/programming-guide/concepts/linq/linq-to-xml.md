@@ -1,21 +1,12 @@
 ---
 title: LINQ to XML (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 26c907b1-bc58-465f-bcdc-adbe89df6e55
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9d8058d9eb1452e2f70c9c958808f55c21a8ec0e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6f7b33ce6b120dce224e8775cee8b5c11d6361a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-c"></a>LINQ to XML (C#)
 LINQ to XML offre un'interfaccia di programmazione XML in memoria che usa .NET Language-Integrated Query (LINQ) Framework. LINQ to XML usa le funzionalità del linguaggio .NET Framework più recenti e può essere paragonato a un'interfaccia di programmazione XML DOM (Document Object Model) aggiornata e riprogettata.  
@@ -33,4 +24,4 @@ LINQ to XML offre un'interfaccia di programmazione XML in memoria che usa .NET L
  Specifica i puntatori alla documentazione di riferimento gestito di LINQ to XML.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+ [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

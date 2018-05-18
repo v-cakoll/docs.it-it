@@ -1,22 +1,15 @@
 ---
 title: Glossario .NET
 description: Significato di termini selezionati usati nella documentazione di .NET.
-keywords: Glossario .NET, dizionario .NET, terminologia .NET, piattaforma .NET, .NET Framework, runtime .NET
 author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7e9732fb6eaef240d08449635697ba6b8ad9c510
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 195fbb799432b9d01a5faf301c9f8f2d1edfa1ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-glossary"></a>Glossario .NET
 

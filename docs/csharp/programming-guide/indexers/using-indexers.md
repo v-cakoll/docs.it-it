@@ -1,21 +1,14 @@
 ---
 title: Utilizzo degli indicizzatori (Guida per programmatori C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 17bbfabe8a53fc51e81434d0a2bd9fb2b29c4695
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 82de2841a74f58905d3089bb0b320e7501a77045
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-indexers-c-programming-guide"></a>Utilizzo degli indicizzatori (Guida per programmatori C#)
 Gli indicizzatori sono una convenzione sintattica che consente di creare una [classe](../../../csharp/language-reference/keywords/class.md), uno [struct](../../../csharp/language-reference/keywords/struct.md) o un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) a cui le applicazioni client possono accedere esattamente come a una matrice. Gli indicizzatori sono in genere implementati in tipi il cui scopo principale è incapsulare una raccolta o una matrice interna. Si supponga, ad esempio, di avere una classe denominata TempRecord che rappresenta la temperatura in gradi Farenheit registrata a 10 orari diversi in un periodo di 24 ore. La classe contiene una matrice denominata "temps" di tipo float per rappresentare le temperature e un oggetto <xref:System.DateTime> che rappresenta la data in cui sono state registrate le temperature. Implementando un indicizzatore in questa classe, i client possono accedere alle temperature in un'istanza di TempRecord come `float temp = tr[4]` anziché come `float temp = tr.temps[4]`. La notazione dell'indicizzatore non solo semplifica la sintassi per le applicazioni client, ma rende anche la classe e il relativo scopo più intuitivi per gli altri sviluppatori.  

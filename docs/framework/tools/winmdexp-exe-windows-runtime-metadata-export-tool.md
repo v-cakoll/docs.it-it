@@ -1,27 +1,17 @@
 ---
 title: Winmdexp.exe (Windows Runtime Metadata Export Tool)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 723f724663cb7f08814327a04193f96db7f02ed0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7181f6f28d576c5ddbbbe57d27e1d41e412cef6c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Runtime Metadata Export Tool)
 Lo strumento di esportazione dei metadati di [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) trasforma un modulo .NET Framework in un file che contiene metadati di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Anche se gli assembly .NET Framework e i file di metadati di [!INCLUDE[wrt](../../../includes/wrt-md.md)] utilizzano lo stesso formato fisico, esistono differenze nel contenuto delle tabelle dei metadati, con la conseguenza che gli assembly .NET Framework non sono automaticamente utilizzabili come componenti di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Il processo di trasformazione di un modulo .NET Framework in un componente di [!INCLUDE[wrt](../../../includes/wrt-md.md)] è denominato *esportazione*. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] il file di metadati di Windows (.winmd) risultante contiene sia i metadati che l'implementazione.  

@@ -1,9 +1,6 @@
 ---
 title: Classi statiche e membri di classi statiche (Guida per programmatori C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, static members
 - static members [C#]
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-caps.latest.revision: "49"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b1e7366d8d82ca99a8d779dda1e194dcc8c2ab6e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f3e64d975d2845d8317b37f43c3811af6be03b55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classi statiche e membri di classi statiche (Guida per programmatori C#)
 Una classe [statica](../../../csharp/language-reference/keywords/static.md) corrisponde fondamentalmente a una classe non statica, ma c'è una differenza: di una classe statica non è possibile creare un'istanza. In altre parole, non è possibile usare la parola chiave [new](../../../csharp/language-reference/keywords/new.md) per creare una variabile del tipo di classe. Poiché non esiste una variabile dell'istanza, si accede ai membri di una classe statica tramite il nome stesso della classe. Ad esempio, se si dispone di una classe statica denominata `UtilityClass` che dispone di un metodo pubblico denominato `MethodA`, si chiama il metodo come mostrato nell'esempio seguente:  

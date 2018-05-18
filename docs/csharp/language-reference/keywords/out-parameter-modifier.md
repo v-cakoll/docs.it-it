@@ -1,20 +1,14 @@
 ---
 title: Modificatore del parametro out (Riferimenti per C#)
 ms.date: 03/06/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 052416f97c1fe9ed3aa1a3bafa7410e602096991
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 76c2c27d4575918bb2ed4209a7ff7d2b0517b6f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modificatore del parametro out (Riferimenti per C#)
 La parola chiave `out` fa sì che gli argomenti vengono passati per riferimento. È come la parola chiave [ref](ref.md), con la differenza che `ref` richiede l'inizializzazione della variabile prima di essere passato. È anche come la parola chiave [in](in-parameter-modifier.md), con la differenza che `in` non consente al metodo chiamato di modificare il valore dell'argomento. Per usare un parametro `out`, la definizione del metodo e il metodo chiamante devono usare in modo esplicito la parola chiave `out`. Ad esempio:  

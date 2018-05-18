@@ -1,31 +1,20 @@
 ---
-title: "Informazioni sull'aumento di velocità in PLINQ"
-ms.custom: 
+title: Informazioni sull'aumento di velocità in PLINQ
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7d94a1fa4c559552a32140fd172c0c62e033f7a8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2c2e7d5ce170feecaf69aa5dd9785346de0375d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-speedup-in-plinq"></a>Informazioni sull'aumento di velocità in PLINQ
 L'obiettivo principale di PLINQ consiste nel velocizzare l'esecuzione di query LINQ to Objects mediante l'esecuzione di delegati di query in parallelo in computer multicore. PLINQ assicura le prestazioni migliori quando l'elaborazione di ogni elemento in una raccolta di origine è indipendente, senza stati condivisi tra i singoli delegati. Tali operazioni sono comuni in LINQ to Objects e PLINQ e spesso vengono definite "*squisitamente parallele*" perché si prestano facilmente alla pianificazione su più thread. Tuttavia, non tutte le query sono costituite interamente da operazioni squisitamente parallele. Nella maggior parte dei casi una query implica alcuni operatori che non possono essere parallelizzati o che rallentano l'esecuzione parallela. Anche in caso di query che sono tutte squisitamente parallele, PLINQ deve comunque partizionare l'origine dati e pianificare il lavoro sui thread, unendo in genere i risultati al termine della query. Tutte queste operazioni incrementano i costi di calcolo della parallelizzazione, che vengono definiti *sovraccarico*. Per ottenere prestazioni ottimali in una query PLINQ, l'obiettivo è ottimizzare le parti squisitamente parallele e ridurre al minimo quelle che comportano un sovraccarico. Questo articolo fornisce informazioni che consentono di scrivere query PLINQ che siano il più efficaci possibile producendo comunque risultati corretti.  

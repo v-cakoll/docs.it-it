@@ -1,13 +1,7 @@
 ---
 title: Stringhe di formato TimeSpan standard
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,18 +17,13 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02dd73cd7f8f6be07b298e6fb1aac2b4759d21bb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 82774ffaf03b7eaad6240a0361bede076053de0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-timespan-format-strings"></a>Stringhe di formato TimeSpan standard
 <a name="Top"></a> Una stringa di formato <xref:System.TimeSpan> standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore <xref:System.TimeSpan> che risulta da un'operazione di formattazione. Le stringhe di formato contenenti più caratteri alfabetici, inclusi gli spazi vuoti, vengono interpretate come stringhe di formato <xref:System.TimeSpan> personalizzato. Per altre informazioni, vedere [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md).  

@@ -1,13 +1,7 @@
 ---
 title: Programmazione multithreading con il modello asincrono basato su eventi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
@@ -19,18 +13,11 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 958d6617-5e70-4b36-b5db-63c16dc35e43
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6d93e449877456e415ebd4d3490a7df99280e7e5
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 26e555a158ced352c297952b56f7557cbd825cd7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a>Programmazione multithreading con il modello asincrono basato su eventi
 È possibile esporre funzionalità asincrone al codice client in molti modi. Il modello asincrono basato su eventi determina il modo consigliato per la presentazione del comportamento asincrono da parte delle classi.  

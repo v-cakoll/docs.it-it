@@ -1,13 +1,7 @@
 ---
 title: Composizione dei flussi
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d49661e93675b80bcd579a6cd341b3dc88a688c2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 231bd98b556dafeb69091de4a6770c1462824659
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composing-streams"></a>Composizione dei flussi
 Un archivio di backup è un supporto di archiviazione, ad esempio un disco o la memoria. Ogni tipo di archivio di backup implementa il flusso come implementazione della classe <xref:System.IO.Stream>. Ogni tipo di flusso legge e scrive i byte da e nel relativo archivio di backup. I flussi che si connettono agli archivi di backup sono chiamati flussi di base. I flusso di base hanno costruttori con i parametri necessari per connettere il flusso all'archivio di backup. <xref:System.IO.FileStream>, ad esempio, ha costruttori che specificano un parametro del percorso, che specifica come il file verrà condiviso dai processi e così via.  

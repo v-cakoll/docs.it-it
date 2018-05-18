@@ -1,29 +1,18 @@
 ---
 title: Recupero di nodi ordinati in base all'indice
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 780af689f6aff86e2e96738c356df4a81128f4ef
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c3cfa371394e76aab832c3dd4b065eb811413322
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Recupero di nodi ordinati in base all'indice
 Il DOM (Document Object Model) XML W3C (World Wide Web Consortium) descrive anche un oggetto NodeList, che ha la capacità di gestire un elenco ordinato di nodi, mentre i set non ordinati sono gestiti da **XmlNamedNodeMap**. L'oggetto NodeList in Microsoft .NET Framework è denominato **XmlNodeList**. I metodi e le proprietà che restituiscono un oggetto **XmlNodeList** sono:  

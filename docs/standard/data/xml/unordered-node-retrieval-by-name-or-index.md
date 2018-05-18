@@ -1,29 +1,18 @@
 ---
 title: Recupero di nodi non ordinati in base al nome o all'indice
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b80f48d425623c9e6cdf1431ceb4a37efe7f2465
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 785a609455a35dd87a9593f00b58fd160ac708e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Recupero di nodi non ordinati in base al nome o all'indice
 **XmlNamedNodeMap** è descritto nella specifica W3C (World Wide Web Consortium) come NamedNodeMap. La sua funzione è quella di gestire un set di nodi non ordinato con la capacità di fare riferimento ai nodi in base al nome o all'indice. L'unico modo per accedere a un oggetto **XmlNamedNodeMap** è con la restituzione di un oggetto **XmlNamedNodeMap** tramite un metodo o una proprietà. Sono disponibili tre metodi o proprietà che restituiscono **XmlNamedNodeMap**:  

@@ -1,21 +1,12 @@
 ---
-title: 'Procedura: Concatenare chiamate al metodo dell''asse (LINQ to XML) (C#)'
-ms.custom: 
+title: "Procedura: Concatenare chiamate al metodo dell'asse (LINQ to XML) (C#)"
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7cf5cb445dc64dfa5f4734ae58e6e921a5a92148
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 36160a9dd4cc26b0b1d54e6e8b91d2880dd23abf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Procedura: Concatenare chiamate al metodo dell'asse (LINQ to XML) (C#)
 Uno schema comune da usare nel codice consiste nel chiamare un metodo dell'asse e quindi chiamare uno degli assi del metodo di estensione.  
@@ -96,7 +87,7 @@ foreach (XElement cp in configParameters)
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente è illustrata la stessa tecnica per XML in uno spazio dei nomi. Per altre informazioni, vedere [Uso degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Nell'esempio seguente è illustrata la stessa tecnica per XML in uno spazio dei nomi. Per altre informazioni, vedere [Utilizzo degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
  Nell'esempio viene usato il documento XML seguente: [File XML di esempio: più ordini di acquisto in uno spazio dei nomi](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   

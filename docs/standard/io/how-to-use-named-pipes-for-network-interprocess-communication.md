@@ -1,13 +1,7 @@
 ---
 title: 'Procedura: utilizzare le named pipe per la comunicazione interprocesso in rete'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - impersonation [.NET Framework], named pipes
 - full duplex communcation [.NET Framework], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 36b33a3b29a739391cb926e706cfe811e82579be
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cb8da9ff6df910e1932c593c1f1b882dca12146a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Procedura: utilizzare le named pipe per la comunicazione interprocesso in rete
 Le named pipe forniscono la comunicazione interprocesso tra un server pipe e uno o più client pipe. Offrono maggiori funzionalità rispetto alle pipe anonime che forniscono la comunicazione interprocesso in un computer locale. Le named pipe supportano la comunicazione full duplex in una rete e in più istanze server, la comunicazione basata su messaggi e la rappresentazione client che consente ai processi di connessione di utilizzare il proprio set di autorizzazioni nei server remoti.  

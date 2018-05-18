@@ -1,12 +1,6 @@
 ---
 title: Trasformazioni dati con LINQ (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#], data transformations
 - source elements [LINQ in C#]
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-caps.latest.revision: "17"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0633e348c762879caa4e3f72a3662722b3894e4c
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c165f78c53cec0417d39320580b812ff01fef68b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-transformations-with-linq-c"></a>Trasformazioni dati con LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] non riguarda solo il recupero dei dati. È anche un potente strumento per la trasformazione dei dati. Con una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] è possibile usare una sequenza di origine come input e modificarla in molti modi per creare una nuova sequenza di output. È possibile modificare la sequenza senza modificare gli elementi con operazioni di ordinamento e raggruppamento. Ma probabilmente la funzionalità più potente delle query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] è la possibilità di creare nuovi tipi. Questa operazione viene eseguita nella clausola [select](../../../../csharp/language-reference/keywords/select-clause.md). Ad esempio, è possibile effettuare le attività seguenti:  
@@ -106,7 +97,7 @@ ms.lasthandoff: 12/09/2017
  [!code-csharp[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
  [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
  [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  

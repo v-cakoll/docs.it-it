@@ -1,12 +1,6 @@
 ---
 title: Esempio di socket client asincrono
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +9,14 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 323250f7aae44d07aed8e79654335f29e53438bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d295841173ee2f3bf018a2058b4eac1629c4828f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-client-socket-example"></a>Esempio di socket client asincrono
 Il programma di esempio seguente crea un client che si connette a un server. Il client viene compilato con un socket sincrono, quindi l'esecuzione dell'applicazione client non è sospesa mentre il server restituisce una risposta. L'applicazione invia una stringa al server e quindi visualizza la stringa restituita dal server nella console.  

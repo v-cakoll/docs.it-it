@@ -1,13 +1,7 @@
 ---
 title: 'Procedura: definire e utilizzare provider di formati numerici personalizzati'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f8f06335d96b3e71f14b3df6b40ef3691c0915f1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9800f1b1ec8fbb0eaf91611895aaf9d45629fae0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Procedura: definire e utilizzare provider di formati numerici personalizzati
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]offre ampio controllo sulla rappresentazione di stringa dei valori numerici. e supporta le funzionalità seguenti per la personalizzazione del formato di tali valori:  
@@ -99,7 +88,7 @@ ms.lasthandoff: 12/23/2017
  In questo esempio il metodo che implementa <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> ha lo scopo di fungere da metodo di callback per il metodo <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>. Di conseguenza, il metodo esamina il parametro `formatProvider` per determinare se contiene un riferimento all'oggetto `TelephoneFormatter` corrente. Il metodo può tuttavia essere chiamato anche direttamente dal codice. In questo caso, è possibile usare il parametro `formatProvider` per specificare un oggetto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo> che fornisce informazioni di formattazione specifiche delle impostazioni cultura.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Compilare il codice nella riga di comando usando csc.exe o vbc.exe. Per compilare il codice in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], inserirlo in un modello di progetto di applicazione console.  
+ Compilare il codice nella riga di comando usando csc.exe o vbc.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)

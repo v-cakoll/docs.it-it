@@ -1,29 +1,18 @@
 ---
 title: Migrazione dalla classe XslTransform
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-caps.latest.revision: 3
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 09d982105d8cf1297a53bd755003e3ef2b089293
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: bac8d1496463d1224021270347c9480e7ce391e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrazione dalla classe XslTransform
 L'architettura XSLT è stata riprogettata nella versione [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]. La classe <xref:System.Xml.Xsl.XslTransform> è stata sostituita dalla classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -73,7 +62,7 @@ writer.Close();
 ```  
   
 ### <a name="debug-option"></a>Opzione di debug  
- La classe <xref:System.Xml.Xsl.XslCompiledTransform> è in grado di generare informazioni di debug che consentono di eseguire il debug del foglio di stile con Microsoft [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Debugger. Per altre informazioni, vedere <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>.  
+ La classe <xref:System.Xml.Xsl.XslCompiledTransform> è in grado di generare informazioni di debug che consentono di eseguire il debug del foglio di stile con il debugger di Microsoft Visual Studio. Per altre informazioni, vedere <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>.  
   
 ## <a name="behavioral-differences"></a>Differenze di comportamento  
   

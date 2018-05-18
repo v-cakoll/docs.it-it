@@ -1,13 +1,7 @@
 ---
 title: 'Procedura: leggere e scrivere su un file di dati appena creato'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 04ded71a23ba4cabab0a22e0d66c1084a726d8c8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6b854495a32755b2cbbd0421b1a45458fd2b7863
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Procedura: leggere e scrivere su un file di dati appena creato
 Le classi <xref:System.IO.BinaryWriter> e <xref:System.IO.BinaryReader?displayProperty=nameWithType> vengono usate per scrivere e leggere i dati invece delle stringhe di caratteri. L'esempio seguente illustra come scrivere e leggere i dati in un nuovo flusso di file vuoto denominato `Test.data`. Dopo aver creato il file di dati nella directory corrente, vengono creati gli oggetti <xref:System.IO.BinaryWriter> e <xref:System.IO.BinaryReader> associati e l'oggetto <xref:System.IO.BinaryWriter> viene usato per scrivere i valori interi da 0 a 10 in `Test.data`, lasciando il puntatore del file alla fine del file. Dopo avere reimpostato il puntatore del file sull'origine, l'oggetto <xref:System.IO.BinaryReader> legge il contenuto specificato.  

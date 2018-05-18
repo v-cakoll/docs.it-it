@@ -1,21 +1,12 @@
 ---
 title: 'Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office in Visual Studio (C#)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 3320e866-01f1-4b7f-8932-049a7b2d2a9b
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 45ec4521da08a9a1f4bdc3b433d3f8d765960526
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8e7eb5c797ca87f87950d530112ec64f1327ae0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office in Visual Studio (C#)
 Se si incorporano informazioni sui tipi in un'applicazione che fa riferimento a oggetti COM, è possibile eliminare la necessità di un assembly di interoperabilità primario (PIA). Inoltre, le informazioni sui tipi incorporate consentono di ottenere l'indipendenza dalla versione per l'applicazione. Ovvero, il programma può essere scritto in modo da usare tipi di più versioni di una libreria COM senza richiedere un assembly di interoperabilità primario specifico per ogni versione. Si tratta di uno scenario comune per le applicazioni che usano gli oggetti delle librerie di Microsoft Office. L'incorporamento di informazioni sui tipi consente l'uso della stessa build di un programma con delle diverse versioni di Microsoft Office in computer diversi senza dover ridistribuire il programma o l'assembly di interoperabilità primario per ogni versione di Microsoft Office.  
@@ -133,5 +124,5 @@ Se si incorporano informazioni sui tipi in un'applicazione che fa riferimento a 
 5.  Verificare che sia stata creata una cartella di lavoro di Excel nel percorso specificato nel codice di esempio: C:\SampleFolder\SampleWorkbook.xls.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (c#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+ [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
  [/link (opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)

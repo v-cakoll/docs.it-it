@@ -1,13 +1,7 @@
 ---
 title: 'Procedura: Anticipare le condizioni di spazio insufficiente con lo spazio di memorizzazione isolato'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -28,18 +22,13 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e04b4b85b9a14e842c94226017fcd903ad1cbb40
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9b99803970b205e3dbbb1d78c9bdaf0fefa73a04
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Procedura: Anticipare le condizioni di spazio insufficiente con lo spazio di memorizzazione isolato
 Il codice che usa lo spazio di memorizzazione isolato è vincolato da una [quota](../../../docs/standard/io/isolated-storage.md#quotas) che specifica la dimensione massima per il raggruppamento dati in cui si trovano file e directory dello spazio di memorizzazione isolato. La quota è definita da criteri di sicurezza e può essere configurata dagli amministratori. Se la dimensione massima consentita viene superata quando si prova a scrivere dati, viene generata un'eccezione <xref:System.IO.IsolatedStorage.IsolatedStorageException> e l'operazione non riesce. In questo modo, è possibile impedire attacchi Denial of Service dannosi che possono causare il rifiuto delle richieste da parte dell'applicazione perché l'archivio dati è pieno.  

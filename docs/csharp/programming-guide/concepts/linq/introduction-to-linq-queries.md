@@ -1,26 +1,17 @@
 ---
 title: Introduzione alle query LINQ (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - deferred execution [LINQ]
 - LINQ, queries
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-caps.latest.revision: "47"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ae7a2d03859e95d939ff4c62fa33e07917a873a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f74b762532f0fb2795625185e59360cdfb76b124
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introduzione alle query LINQ (C#)
 Una *query* è un'espressione che recupera dati da un'origine dati. Le query sono in genere espresse in un linguaggio di query specializzato. Nel tempo sono stati sviluppati diversi linguaggi per i vari tipi di origini dati, ad esempio SQL per database relazionali e XQuery per XML. Gli sviluppatori hanno dovuto pertanto imparare un nuovo linguaggio di query per ogni tipo di origine dati o formato dati supportato. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] semplifica questa situazione offrendo un modello coerente per l'uso dei dati con tutti i diversi tipi di origini e formati dati. In una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] vengono sempre usati gli oggetti. Vengono usati gli stessi criteri di codifica di base per eseguire una query e trasformare i dati in documenti XML, database SQL, dataset [!INCLUDE[vstecado](~/includes/vstecado-md.md)], raccolte .NET e qualsiasi altro formato per il quale sia disponibile un provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  

@@ -1,21 +1,12 @@
 ---
 title: Applicazioni multithreading (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b7015cfb-d506-4eac-b2f8-b2caaa9cc977
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 48b056172e3260952155eb40a1a393d86da78344
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ee4d92ae0ad3dadf6568b367522817484cb7337f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multithreaded-applications-c"></a>Applicazioni multithreading (C#)
 Con C# è possibile scrivere applicazioni in grado di eseguire più attività contemporaneamente. Le attività potenzialmente in grado di compromettere altre attività possono essere eseguite su thread separati, un processo noto con il nome di *multithreading* o *threading Free*.  
@@ -50,7 +41,7 @@ newThread.Abort();
 ### <a name="thread-methods"></a>Metodi di thread  
  La tabella seguente descrive alcuni metodi che è possibile usare per controllare i singoli thread.  
   
-|Metodo|Azione|  
+|Metodo|Operazione|  
 |------------|------------|  
 |<xref:System.Threading.Thread.Start%2A>|Avvia l'esecuzione di un thread.|  
 |<xref:System.Threading.Thread.Sleep%2A>|Sospende un thread per un determinato periodo.|  

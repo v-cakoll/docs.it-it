@@ -1,31 +1,20 @@
 ---
 title: Tipi di nodi XML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0fd196f4aed5d4faa3e703f639b927f001b50174
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7f62a113865a481276c371f2fce55a5d9486eb00
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-xml-nodes"></a>Tipi di nodi XML
 Quando un documento XML viene letto in memoria come un albero di nodi, il tipo dei nodi viene deciso al momento della creazione. Nel DOM (Document Object Model) XML sono presenti diversi tipi di nodi, determinati dal W3C (World Wide Web Consortium) ed elencati nella sezione 1.1.1 The DOM Structure Model. Nella tabella seguente vengono elencati i tipi di nodi, l'oggetto assegnato a quel tipo di nodo e una breve descrizione di ciascuno.  
   
-|Tipo di nodo DOM|Oggetto|Descrizione|  
+|Tipo di nodo DOM|Object|Descrizione|  
 |-------------------|------------|-----------------|  
 |Document|<xref:System.Xml.XmlDocument>|Contenitore di tutti i nodi dell'albero, noto anche come livello radice del documento, che non corrisponde sempre all'elemento radice.|  
 |DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|Contenitore temporaneo di uno o più nodi senza alcuna struttura ad albero.|  

@@ -1,27 +1,15 @@
 ---
 title: Mage.exe (Strumento per la generazione e la modifica di manifesti)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-caps.latest.revision: "68"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 405503ac824ccf443d8ada7387d65e55876cb3e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 551173a7ed8d60ca1870159cd7e533720275bd20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Strumento per la generazione e la modifica di manifesti)
 Lo Strumento per la generazione e la modifica di manifesti (Mage.exe) è uno strumento da riga di comando che supporta la creazione e la modifica dei manifesti di applicazione e di distribuzione. In quanto strumento da riga di comando, Mage.exe può essere eseguito sia da script batch sia da altre applicazioni basate su Windows, incluse le applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .  
@@ -62,7 +50,7 @@ Mage [commands] [commandOptions]
 |**-appm, -AppManifest** `manifestPath`||Manifesti di distribuzione.|Inserisce un riferimento a un manifesto dell'applicazione di distribuzione nel relativo manifesto di distribuzione.<br /><br /> Se il file indicato in `manifestPath` non esiste, verrà generato un errore. Lo stesso avviene se il file a cui fa riferimento `manifestPath` non è un manifesto di applicazione.|  
 |**-cf, -CertFile** `filePath`||Tutti i tipi di file.|Specifica il percorso di un certificato digitale X509 per la firma di un manifesto. Questa opzione può essere usata insieme a **-Password** , se per il certificato è necessaria una password.|  
 |**-ch, -CertHash** `hashSignature`||Tutti i tipi di file.|Hash di un certificato digitale contenuto nell'archivio dei certificati personali del computer client. Corrisponde alla stringa di identificazione digitale di un certificato digitale visualizzata nella console dei certificati di Windows.<br /><br /> Il parametro`hashSignature` può essere costituito da caratteri maiuscoli o minuscoli e può essere specificato sia come stringa singola sia con gli ottetti dell'identificazione digitale separati da spazi e l'intera identificazione digitale racchiusa tra virgolette.|  
-|**-fd, -FromDirectory** `directoryPath`||Manifesti di applicazione.|Inserisce nel manifesto dell'applicazione le descrizioni di tutti gli assembly e i file trovati in `directoryPath`, incluse tutte le sottodirectory, dove `directoryPath` corrisponde alla directory contenente l'applicazione che si desidera distribuire. Per ogni file incluso nella directory, viene determinato automaticamente se si tratta di un assembly o di un file statico. Nel primo caso, verranno aggiunti un tag `<dependency>` e un attributo `installFrom` all'applicazione con il nome, la codebase e la versione dell'assembly. Nel secondo caso, verrà aggiunto un tag `<file>` . In base a un semplice set di regole euristiche verrà inoltre rilevato l'eseguibile principale dell'applicazione, che verrà contrassegnato come punto di ingresso dell'applicazione ClickOnce nel manifesto.<br /><br /> I file non vengono mai contrassegnati automaticamente come file di dati da Mage.exe. L'operazione deve essere eseguita manualmente. Per altre informazioni, vedere [How to: Include a Data File in a ClickOnce Application](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application).<br /><br /> Viene inoltre generato un hash per ciascun file in base alla relativa dimensione. Gli hash vengono utilizzati da ClickOnce per verificare che i file di distribuzione non siano stati manomessi dopo la creazione del manifesto. Se uno dei file della distribuzione viene modificato, è possibile eseguire Mage.exe con il comando **-Update** e l'opzione **-FromDirectory** affinché vengano aggiornati gli hash e le versioni degli assembly di tutti i file a cui viene fatto riferimento.<br /><br /> L'opzione**-FromDirectory** includerà tutti i file in tutte le sottodirectory trovate all'interno di `directoryPath`.<br /><br /> Se si usa **-FromDirectory** con il comando **-Update** , i file nel manifesto dell'applicazione che non sono più presenti nella directory verranno rimossi.|  
+|**-fd, -FromDirectory** `directoryPath`||Manifesti di applicazione.|Inserisce nel manifesto dell'applicazione le descrizioni di tutti gli assembly e i file trovati in `directoryPath`, incluse tutte le sottodirectory, dove `directoryPath` corrisponde alla directory contenente l'applicazione che si desidera distribuire. Per ogni file incluso nella directory, viene determinato automaticamente se si tratta di un assembly o di un file statico. Nel primo caso, verranno aggiunti un tag `<dependency>` e un attributo `installFrom` all'applicazione con il nome, la codebase e la versione dell'assembly. Nel secondo caso, verrà aggiunto un tag `<file>` . In base a un semplice set di regole euristiche verrà inoltre rilevato l'eseguibile principale dell'applicazione, che verrà contrassegnato come punto di ingresso dell'applicazione ClickOnce nel manifesto.<br /><br /> I file non vengono mai contrassegnati automaticamente come file di dati da Mage.exe. L'operazione deve essere eseguita manualmente. Per altre informazioni, vedere [How to: Include a Data File in a ClickOnce Application](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application).<br /><br /> Viene inoltre generato un hash per ciascun file in base alla relativa dimensione. Gli hash vengono utilizzati da ClickOnce per verificare che i file di distribuzione non siano stati manomessi dopo la creazione del manifesto. Se uno dei file della distribuzione viene modificato, è possibile eseguire Mage.exe con il comando **-Update** e l'opzione **-FromDirectory** affinché vengano aggiornati gli hash e le versioni degli assembly di tutti i file a cui viene fatto riferimento.<br /><br /> L'opzione **-FromDirectory** includerà tutti i file in tutte le sottodirectory trovate all'interno di `directoryPath`.<br /><br /> Se si usa **-FromDirectory** con il comando **-Update** , i file nel manifesto dell'applicazione che non sono più presenti nella directory verranno rimossi.|  
 |**-if, -IconFile**  `filePath`||Manifesti di applicazione.|Specifica il percorso completo di un file icona (.ICO). Questa icona viene visualizzata accanto al nome dell'applicazione nel menu Start e nella voce in Installazione applicazioni. Se non viene fornita nessun'icona, viene utilizzata l'icona predefinita.|  
 |**-ip, -IncludeProviderURL**  `url`|true|Manifesti di distribuzione.|Indica se il manifesto di distribuzione include il valore del percorso di aggiornamento impostato da **-ProviderURL**.|  
 |**-i, -Install** `willInstall`|true|Manifesti di distribuzione.|Indica se installare o meno l'applicazione ClickOnce nel computer locale o se eseguirla dal Web. Se l'applicazione viene installata, nel menu **Start** di Windows verrà creato un collegamento corrispondente. I valori validi sono "true" (o "t") e "false" (o "f").<br /><br /> Se si specifica l'opzione **-MinVersion** e l'utente ha una versione precedente rispetto a **-MinVersion** , l'applicazione verrà sempre installata, indipendentemente dal valore passato a **-Install**.<br /><br /> Non è possibile usare questa opzione con l'opzione **-BrowserHosted** . Il tentativo di specificare entrambe le opzioni per lo stesso manifesto genera un errore.|  

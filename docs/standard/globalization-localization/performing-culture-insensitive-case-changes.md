@@ -1,13 +1,7 @@
 ---
 title: Esecuzione di modifiche di maiuscole e minuscole indipendenti dalle impostazioni cultura
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e65eb85e1355d3aa98e04e7bd73f0194243dcdb1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8f560e3b080f6355d4e0c433c2a2218fbcbc6d72
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Esecuzione di modifiche di maiuscole e minuscole indipendenti dalle impostazioni cultura
 I metodi <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, e <xref:System.Char.ToLower%2A?displayProperty=nameWithType> forniscono overload che non accettano parametri. Per impostazione predefinita, questi overload senza parametri eseguono modifiche di maiuscole e minuscole in base al valore di <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Ciò produce risultati con distinzione tra maiuscole e minuscole che possono variare in base alle impostazioni cultura. Per definire modifiche di maiuscole e minuscole dipendenti o meno dalle impostazioni cultura, è consigliabile usare gli overload di questi metodi che richiedono di specificare in modo esplicito un parametro `culture`. Per definire modifiche di maiuscole e minuscole dipendenti dalle impostazioni cultura, specificare `CultureInfo.CurrentCulture` per il parametro `culture`. Per definire modifiche indipendenti dalle impostazioni cultura, specificare `CultureInfo.InvariantCulture` per il parametro `culture`.  

@@ -1,21 +1,12 @@
 ---
 title: Proiezione di XML in una forma diversa (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 54eb890e37634362af715c132bfe43b7addb20b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e9d555dadea1ddd8720ef2548136f9bf9fb833c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Proiezione di XML in una forma diversa (C#)
 In questo argomento viene illustrato un esempio di proiezione del codice XML in una forma diversa da quella del codice XML di origine.  
@@ -25,7 +16,7 @@ In questo argomento viene illustrato un esempio di proiezione del codice XML in 
 ## <a name="example"></a>Esempio  
  In questo esempio viene elaborato un documento WordprocessingML, recuperandone i nodi dei paragrafi da un documento WordprocessingML. Vengono inoltre identificati lo stile e il testo di ciascun paragrafo. Infine il codice XML viene proiettato con una forma diversa. Questo esempio si basa su esempi precedenti di questa esercitazione. La nuova istruzione usata per la proiezione è indicata nei commenti del codice riportato di seguito.  
   
- Per istruzioni sulla creazione del documento di origine di questo esempio, vedere [Creazione del documento Office Open XML di origine (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Per istruzioni per la creazione del documento di origine di questo esempio, vedere [Creazione del documento Office Open XML di origine (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   

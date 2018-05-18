@@ -1,21 +1,14 @@
 ---
 title: Struttura generale di un programma C# (Guida per programmatori C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ac9b0ad47dc9608c3082167493caa7c4bc966497
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 33d7c01b86234bb64fd2daa0863f9eb24aa85c70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Struttura generale di un programma C# (Guida per programmatori C#)
 I programmi C# possono essere costituiti da uno o più file. Ciascun file può contenere zero o più spazi dei nomi. Uno spazio dei nomi può contenere tipi, quali classi, struct, interfacce, enumerazioni e delegati. Di seguito viene illustrata la struttura di base di un programma C# che contiene tutti questi elementi.  

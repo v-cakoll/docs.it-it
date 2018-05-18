@@ -1,26 +1,15 @@
 ---
-title: "Lettura delle dichiarazioni di entità e dei riferimenti a entità nel DOM"
-ms.custom: 
+title: Lettura delle dichiarazioni di entità e dei riferimenti a entità nel DOM
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 33b3b0589fb9d3cdf550b8d56d82a2bd999a59f6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 986f0f1d6ce20722b85ac0cfa9e3fe3fa351b75e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>Lettura delle dichiarazioni di entità e dei riferimenti a entità nel DOM
 Un'entità è una dichiarazione che stabilisce il nome da usare in XML al posto del contenuto o del markup. Le entità sono composte da due parti. Innanzitutto, è necessario associare un nome al contenuto di sostituzione tramite una dichiarazione di entità. La dichiarazione di entità viene creata mediante la sintassi `<!ENTITY name "value">` in una DTD (Document Type Definition) o in uno schema XML. Successivamente, il nome definito nella dichiarazione di entità viene usato in XML e, in questo caso, viene denominato riferimento all'entità. Ad esempio, la dichiarazione di entità seguente dichiara un'entità il cui nome `publisher` viene associato al contenuto di "Microsoft Press".  

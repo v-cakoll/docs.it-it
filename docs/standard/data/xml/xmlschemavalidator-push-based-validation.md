@@ -1,29 +1,18 @@
 ---
 title: Convalida basata sul metodo push di XmlSchemaValidator
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 60c2effea612a579b4c66b7c30243b785b86a263
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 36d91d4bd479c1592ae0b3f98d227947686188d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Convalida basata sul metodo push di XmlSchemaValidator
 La classe <xref:System.Xml.Schema.XmlSchemaValidator> fornisce un meccanismo efficiente e a elevate prestazioni per la convalida basata sul metodo push di dati XML in base a schemi XML. Ad esempio, la classe <xref:System.Xml.Schema.XmlSchemaValidator> consente di convalidare un infoset XML sul posto senza la necessità di serializzarlo come documento XML e di eseguire nuovamente l'analisi del documento mediante un lettore XML di convalida.  

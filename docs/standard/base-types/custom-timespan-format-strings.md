@@ -1,13 +1,7 @@
 ---
 title: Stringhe di formato TimeSpan personalizzate
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f86aeab5a024c463dbfbf0a0d0ff198cef80f7ac
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 354b9fe1171e8e41702db001ab3c0e5daa65431e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-timespan-format-strings"></a>Stringhe di formato TimeSpan personalizzate
 Una stringa in formato <xref:System.TimeSpan> definisce la rappresentazione di stringa di un valore <xref:System.TimeSpan> risultante da un'operazione di formattazione. Una stringa in formato personalizzato è costituita da uno o più identificatori in formato <xref:System.TimeSpan> personalizzato con un numero qualsiasi di caratteri di tipo letterale. Qualsiasi stringa in un formato diverso da [TimeSpan standard](../../../docs/standard/base-types/standard-timespan-format-strings.md) viene interpretata come stringa in formato <xref:System.TimeSpan> personalizzato.  
@@ -77,7 +66,7 @@ Una stringa in formato <xref:System.TimeSpan> definisce la rappresentazione di s
 |"FFFFFF"|I milionesimi di secondo in un intervallo di tempo. Eventuali zeri finali frazionari non sono visualizzati.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|  
 |"FFFFFFF"|I decimilionesimi di secondo in un intervallo di tempo. Eventuali zeri finali frazionari o gruppi di sette zeri non sono visualizzati.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|  
 |*'string*'|Delimitatore di stringa letterale.<br /><br /> Altre informazioni: [Altri caratteri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|  
-|\|Carattere di escape.<br /><br /> Altre informazioni: [Altri caratteri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
+|\|Il carattere di escape.<br /><br /> Altre informazioni: [Altri caratteri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
 |Qualsiasi altro carattere|Qualsiasi altro carattere senza escape viene interpretato come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [Altri caratteri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
   
 <a name="dSpecifier"></a>   

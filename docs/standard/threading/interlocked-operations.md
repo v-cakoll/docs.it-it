@@ -1,13 +1,7 @@
 ---
 title: Operazioni interlocked
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - Interlocked class, about Interlocked class
 - threading [.NET Framework], Interlocked class
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c10c1188820b7a270baa0c51696974f93a8a2990
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 38532228f7a5d07bb1b9fcf7e90d2be53a28b04c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlocked-operations"></a>Operazioni interlocked
 La classe <xref:System.Threading.Interlocked> fornisce metodi per la sincronizzazione dell'accesso a una variabile condivisa da più thread. I thread di processi differenti possono usare questo meccanismo se la variabile si trova nella memoria condivisa. Le operazioni con interlock sono atomiche, ovvero un'intera operazione costituisce un'unità che non può essere interrotta da un'altra operazione con interlock nella stessa variabile. Questa caratteristica è importante nei sistemi operativi con multithreading preemptive in cui un thread può essere sospeso dopo il caricamento di un valore da un indirizzo di memoria, ma prima che sia possibile modificarlo e memorizzarlo.  
@@ -36,7 +25,7 @@ La classe <xref:System.Threading.Interlocked> fornisce metodi per la sincronizza
   
 -   In .NET Framework versione 2.0 il metodo <xref:System.Threading.Interlocked.Add%2A> aggiunge un valore intero a una variabile e restituisce il nuovo valore della variabile.  
   
--   In .NET Framework versione 2.0 il metodo <xref:System.Threading.Interlocked.Read%2A> legge un valore intero a 64 bit come operazione atomica. Questa caratteristica è utile nei sistemi a 32 bit in cui la lettura di un valore intero a 64 bit non è normalmente un'operazione atomica.  
+-   In .NET Framework versione 2.0 il metodo <xref:System.Threading.Interlocked.Read%2A> legge un valore intero a 64 bit come operazione atomica. Questa caratteristica è utile nei sistemi a 32 bit in cui la lettura di un valore integer a 64 bit non è normalmente un'operazione atomica.  
   
 -   I metodi <xref:System.Threading.Interlocked.Increment%2A> e <xref:System.Threading.Interlocked.Decrement%2A> aumentano o riducono il valore di una variabile e restituiscono il valore risultante.  
   

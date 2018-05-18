@@ -1,31 +1,19 @@
 ---
 title: Al.exe (Assembly Linker)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Al.exe
 - Assembly Linker
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 830c141a13f2a7676e120600e05d786093a5ff44
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 5a9789669f6d896bfbaf4ccf5cbd0eccdd710980
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -84,7 +72,7 @@ al sources options
 |**/template:** `filename`|Specifica l'assembly, `filename`, dal quale ereditare tutti i metadati dell'assembly, ad eccezione del campo relativo alle impostazioni cultura.<br /><br /> Gli assembly creati con **/template** sono assembly satellite.|
 |**/title:** `text`|Specifica una stringa per il campo **Titolo** dell'assembly. Se `text` contiene uno spazio, racchiudere la stringa tra virgolette doppie (" "). Questa stringa è un attributo personalizzato dell'assembly ed è visualizzabile mediante reflection.<br /><br /> Se non si specifica **/win32res**, l'opzione **/title** viene visualizzata in Esplora file come risorsa **Descrizione** Win32 e usata dalla shell come nome descrittivo di un'applicazione. Viene visualizzata anche nel sottomenu **Apri con** del menu di scelta rapida dei tipi di file supportati da più applicazioni.<br /><br /> Se text è una stringa vuota, la risorsa **Descrizione** Win32 viene visualizzata come spazio singolo.<br /><br /> Se si specifica **/win32res**, **/title** non influisce sulle informazioni della risorsa Win32.<br /><br /> È possibile specificare questa opzione anche come attributo personalizzato (<xref:System.Reflection.AssemblyTitleAttribute>) nel codice sorgente di qualsiasi modulo MSIL.|
 |**/trade[mark]:** `text`|Specifica una stringa per il campo **Marchio** dell'assembly. Se `text` contiene uno spazio, racchiudere la stringa tra virgolette doppie (" "). Questa stringa è un attributo personalizzato dell'assembly ed è visualizzabile mediante reflection.<br /><br /> Se non si specifica **/win32res**, l'opzione **/trademark** viene visualizzata in Esplora file come risorsa **Marchio** Win32.<br /><br /> Se text è una stringa vuota, la risorsa **Marchio** Win32 viene visualizzata come spazio singolo.<br /><br /> Se si specifica **/win32res**, **/trademark** non influisce sulle informazioni della risorsa Win32.<br /><br /> È possibile specificare questa opzione anche come attributo personalizzato (<xref:System.Reflection.AssemblyTrademarkAttribute>) nel codice sorgente di qualsiasi modulo MSIL.|
-|**/v[ersion]:** `version`|Specifica le informazioni sulla versione dell'assembly. Il formato della stringa di versione è `major`.`minor`.`build`.`revision`. Il valore predefinito è 0.<br /><br /> Se si specifica **/version**, è necessario specificare anche `major`. Se si specifica `major` e `minor`, è possibile specificare un asterisco (\*) per `build`. In questo caso il valore `build` coinciderà con il numero dei giorni trascorsi dal 1 gennaio 2000, ora locale, e il valore `revision` sarà uguale alla metà del numero dei secondi trascorsi dalla mezzanotte del giorno corrente, ora locale.<br /><br /> Se si specifica `major`, `minor` e `build`, è possibile specificare un asterisco per `revision`. In questo caso, il valore `revision` sarà uguale alla metà del numero dei secondi trascorsi dalla mezzanotte del giorno corrente, ora locale.<br /><br /> Le stringhe di versione valide sono pertanto le seguenti:<br /><br /> X<br /><br /> X.X<br /><br /> X.X.\*<br /><br /> X.X.X<br /><br /> X.X.X.\*<br /><br /> X.X.X.X<br /><br /> dove X è una costante di tipo Unsigned Short diversa da 65535 (0-65534).<br /><br /> Se non si specifica **/win32res**, l'opzione **/version** viene usata come risorsa **Versione assembly** Win32.<br /><br /> Se non si specificano **/win32res**, **/productversion** e **/fileversion**, l'opzione **/version** viene usata per le risorse **Versione assembly**, Versione file e **Versione prodotto** Win32.<br /><br /> Se si specifica **/win32res**, **/version** non influisce sulle informazioni della risorsa Win32.<br /><br /> È possibile specificare questa opzione anche come attributo personalizzato (<xref:System.Reflection.AssemblyVersionAttribute>) nel codice sorgente di qualsiasi modulo MSIL.|
+|**/v[ersion]:** `version`|Specifica le informazioni sulla versione dell'assembly. Il formato della stringa di versione è `major`.`minor`.`build`.`revision`. Il valore predefinito è 0.<br /><br /> Se si specifica **/version**, è necessario specificare anche `major`. Se si specifica `major` e `minor`, è possibile specificare un asterisco (\*) per `build`. In questo caso il valore `build` coinciderà con il numero dei giorni trascorsi dal 1 gennaio 2000, ora locale, e il valore `revision` sarà uguale alla metà del numero dei secondi trascorsi dalla mezzanotte del giorno corrente, ora locale.<br /><br /> Se si specifica `major`, `minor` e `build`, è possibile specificare un asterisco per `revision`. In questo caso, il valore `revision` sarà uguale alla metà del numero dei secondi trascorsi dalla mezzanotte del giorno corrente, ora locale.<br /><br /> Le stringhe di versione valide sono pertanto le seguenti:<br /><br /> x<br /><br /> X.X<br /><br /> X.X.\*<br /><br /> X.X.X<br /><br /> X.X.X.\*<br /><br /> X.X.X.X<br /><br /> dove X è una costante di tipo Unsigned Short diversa da 65535 (0-65534).<br /><br /> Se non si specifica **/win32res**, l'opzione **/version** viene usata come risorsa **Versione assembly** Win32.<br /><br /> Se non si specificano **/win32res**, **/productversion** e **/fileversion**, l'opzione **/version** viene usata per le risorse **Versione assembly**, Versione file e **Versione prodotto** Win32.<br /><br /> Se si specifica **/win32res**, **/version** non influisce sulle informazioni della risorsa Win32.<br /><br /> È possibile specificare questa opzione anche come attributo personalizzato (<xref:System.Reflection.AssemblyVersionAttribute>) nel codice sorgente di qualsiasi modulo MSIL.|
 |**/win32icon:** `filename`|Inserisce nell'assembly un file icona (.ico). Il file .ico determina l'aspetto desiderato del file di output in Esplora File.|
 |**/win32res:** `filename`|Inserisce nel file di output una risorsa Win32 (file .res). È possibile creare un file di risorse Win32 usando il Compilatore di risorse. Il Compilatore di risorse viene richiamato quando si compila un programma Visual C++. Dal file .rc viene creato un file .res.|
 |`@filename`|Specifica un file di risposta contenente i comandi di *Al.exe*.<br /><br /> Nel file di risposta i comandi possono essere disposti uno per riga oppure tutti sulla stessa riga, separati da uno o più spazi.|

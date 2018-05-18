@@ -1,26 +1,15 @@
 ---
 title: Navigazione dei nodi di attributi e dello spazio dei nomi con XPathNavigator
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2f86abb7da5509a80cceede0f1092a75cef4d8da
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 34ce6ec5a4cc5ddd4542474dc9ce55ff64a274ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Navigazione dei nodi di attributi e dello spazio dei nomi con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> offre due set di metodi di navigazione. Il primo set, che si trova nell'argomento [Navigazione del set di nodi con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), consente di navigare nei *set di nodi* di un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>. Il secondo set, descritto in questo argomento, consente di navigare nei *nodi di attributi e dello spazio dei nomi* di un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  

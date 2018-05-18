@@ -1,21 +1,15 @@
 ---
 title: Polimorfismo (Guida per programmatori C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-caps.latest.revision: "31"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 601c8cf626c846ca6c5d6bc2338e271e6b93544a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8bbf93d14a16b06441ba48b9d4e19cfd249e9146
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guida per programmatori C#)
 Il polimorfismo è spesso definito il terzo pilastro della programmazione orientata a oggetti, dopo l'incapsulamento e l'ereditarietà. Polimorfismo è una parola che deriva dal greco e significa "multiforme". Il polimorfismo presenta due aspetti distinti:  
@@ -91,7 +85,7 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
 > [!NOTE]
 >  Nell'implementazione dei membri virtuali è consigliabile l'uso della parola chiave `base` per le chiamate all'implementazione della classe base di tali membri. In questo modo, nella classe derivata sarà possibile definire la sola implementazione del comportamento specifico per tale classe. Se l'implementazione della classe base non viene chiamata, spetterà alla classe derivata rendere il proprio comportamento compatibile con quello della classe base.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Controllo delle versioni con le parole chiave Override e New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   

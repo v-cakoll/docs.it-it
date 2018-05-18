@@ -1,12 +1,6 @@
 ---
 title: Individuazione della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Log object, output location
 - output, application log location
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f35a850a262e96762b4ada3fdff1f14634f77317
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: fa177fa1f07c52d900f57e5bf61c967f06203c4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Procedura dettagliata: individuazione della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
 L'oggetto `My.Application.Log` può scrivere le informazioni in diversi listener di log. I listener di log sono configurati dal file di configurazione del computer ed è possibile eseguirne l'override con il file di configurazione di un'applicazione. Questo argomento descrive le impostazioni predefinite e illustra come determinare le impostazioni dell'applicazione.  
@@ -31,7 +22,7 @@ L'oggetto `My.Application.Log` può scrivere le informazioni in diversi listener
   
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Per determinare i listener per My.Application.Log  
   
-1.  Individuare il file di configurazione dell'assembly. Se si sta sviluppando l'assembly, è possibile accedere al file app.config in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] da **Esplora soluzioni**. In caso contrario, il nome del file di configurazione sarà il nome dell'assembly seguito da ".config" e si troverà nella stessa directory dell'assembly.  
+1.  Individuare il file di configurazione dell'assembly. Se si sta sviluppando l'assembly, è possibile accedere al file app.config in Visual Studio da **Esplora soluzioni**. In caso contrario, il nome del file di configurazione sarà il nome dell'assembly seguito da ".config" e si troverà nella stessa directory dell'assembly.  
   
     > [!NOTE]
     >  Non tutti gli assembly hanno un file di configurazione.  

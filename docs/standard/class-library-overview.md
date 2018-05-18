@@ -1,13 +1,7 @@
 ---
 title: Panoramica della libreria di classi .NET
-ms.custom: 
 ms.date: 02/08/2018
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - classes [.NET Framework], library overview
 - classes [.NET Core], library overview
@@ -45,15 +39,11 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ffa64d3a1f9ade7a97b15edfdecbad566c871c12
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: c6c61e4721e6daa548db2fffccc75606e98f71cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-class-library-overview"></a>Panoramica della libreria di classi .NET
 Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore che consentono di velocizzare e ottimizzare il processo di sviluppo e di accedere alle funzionalità di sistema. Per facilitare l'interoperabilità tra i linguaggi, la maggior parte dei tipi .NET è conforme a CLS e può pertanto essere usata da qualsiasi linguaggio di programmazione dotato di compilatore conforme alle specifiche CLS.  

@@ -1,13 +1,6 @@
 ---
 title: Gacutil.exe (strumento Global Assembly Cache)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
 - global assembly cache, viewing contents
@@ -24,16 +17,13 @@ helpviewer_keywords:
 - global assembly cache, Gacutil.exe
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
-caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f802abf6ed90a60b057b01589dcf32c2aa495676
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98423e6c103f7eb93b4bfa35ef19b6551c0df0e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (strumento Global Assembly Cache)
 Lo strumento Global Assembly Cache consente di visualizzare e modificare il contenuto della Global Assembly Cache e della Download Cache.  
@@ -69,7 +59,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/ldl**|Elenca il contenuto della cache dei file scaricati.|  
 |**/lr** [*assemblyName*]|Elenca tutti gli assembly e i conteggi dei riferimenti corrispondenti. Se si specifica il parametro *assemblyName*, lo strumento elenca solo gli assembly che corrispondono al nome e i relativi conteggi dei riferimenti corrispondenti.|  
 |**/nologo**|Evita la visualizzazione del messaggio di avvio Microsoft.|  
-|**/r** [*assemblyName &#124; assemblyPath*]<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|Specifica un riferimento analizzato a uno o più assembly da installare o disinstallare. Specificare questa opzione con le opzioni **/i**, **/il**, **/u** o **/ul**.<br /><br /> Per installare un assembly, specificare i parametri *assemblyPath*, *scheme*, *id* e *description* con questa opzione. Per disinstallare un assembly, specificare i parametri *assemblyName*, *scheme*, *id* e *description*.<br /><br /> Per rimuovere un riferimento a un assembly, è necessario specificare gli stessi parametri *scheme*, *id* e *description* specificati con le opzioni **/i** e**/r** (o **/ir**) al momento dell'installazione dell'assembly. Se si sta disinstallando un assembly, questo viene rimosso anche dalla Global Assembly Cache se si tratta dell'ultimo riferimento da rimuovere e se in Windows Installer non ci sono riferimenti residui all'assembly.<br /><br /> Il parametro *scheme* specifica il tipo di schema di installazione. È possibile specificare uno dei valori seguenti:<br /><br /> -  UNINSTALL_KEY: specificare questo valore se il programma di installazione aggiunge l'applicazione a Installazione applicazioni in Microsoft Windows. La applicazioni si aggiungono a Installazione applicazioni aggiungendo una chiave del Registro di sistema a HKLM\Software\Microsoft\Windows\CurrentVersion.<br />-  FILEPATH: specificare questo valore se il programma di installazione non aggiunge l'applicazione a Installazione applicazioni.<br />-  OPAQUE: specificare questo valore se l'inserimento di una chiave del Registro di sistema o di un percorso di file non è applicabile al proprio scenario di installazione. Questo valore consente di specificare informazioni personalizzate per il parametro *id*.<br /><br /> Il valore da specificare per il parametro *id* dipende dal valore specificato per il parametro *scheme*:<br /><br /> -  Se si specifica UNINSTALL_KEY per il parametro *scheme*, specificare il nome dell'applicazione impostato nella chiave del Registro di sistema HKLM\Software\Microsoft\Windows\CurrentVersion. Se ad esempio la chiave del Registro di sistema è HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp, specificare MyApp per il parametro *id*.<br />-  Se si specifica FILEPATH per il parametro *scheme*, specificare il percorso completo del file eseguibile che installa l'assembly come parametro *id*.<br />-  Se si specifica OPAQUE per il parametro *scheme*, è possibile specificare qualsiasi porzione di dati come parametro *id*. I dati specificati devono essere racchiusi tra virgolette ("").<br /><br /> Il parametro *description* consente di specificare testo descrittivo sull'applicazione da installare. Queste informazioni vengono visualizzate quando vengono enumerati i riferimenti.|  
+|**/r** [*assemblyName &#124; assemblyPath*]<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|Specifica un riferimento analizzato a uno o più assembly da installare o disinstallare. Specificare questa opzione con le opzioni **/i**, **/il**, **/u** o **/ul**.<br /><br /> Per installare un assembly, specificare i parametri *assemblyPath*, *scheme*, *id* e *description* con questa opzione. Per disinstallare un assembly, specificare i parametri *assemblyName*, *scheme*, *id* e *description*.<br /><br /> Per rimuovere un riferimento a un assembly, è necessario specificare gli stessi parametri *scheme*, *id* e *description* specificati con le opzioni **/i** e **/r** (o **/ir**) al momento dell'installazione dell'assembly. Se si sta disinstallando un assembly, questo viene rimosso anche dalla Global Assembly Cache se si tratta dell'ultimo riferimento da rimuovere e se in Windows Installer non ci sono riferimenti residui all'assembly.<br /><br /> Il parametro *scheme* specifica il tipo di schema di installazione. È possibile specificare uno dei valori seguenti:<br /><br /> -  UNINSTALL_KEY: specificare questo valore se il programma di installazione aggiunge l'applicazione a Installazione applicazioni in Microsoft Windows. La applicazioni si aggiungono a Installazione applicazioni aggiungendo una chiave del Registro di sistema a HKLM\Software\Microsoft\Windows\CurrentVersion.<br />-  FILEPATH: specificare questo valore se il programma di installazione non aggiunge l'applicazione a Installazione applicazioni.<br />-  OPAQUE: specificare questo valore se l'inserimento di una chiave del Registro di sistema o di un percorso di file non è applicabile al proprio scenario di installazione. Questo valore consente di specificare informazioni personalizzate per il parametro *id*.<br /><br /> Il valore da specificare per il parametro *id* dipende dal valore specificato per il parametro *scheme*:<br /><br /> -  Se si specifica UNINSTALL_KEY per il parametro *scheme*, specificare il nome dell'applicazione impostato nella chiave del Registro di sistema HKLM\Software\Microsoft\Windows\CurrentVersion. Se ad esempio la chiave del Registro di sistema è HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp, specificare MyApp per il parametro *id*.<br />-  Se si specifica FILEPATH per il parametro *scheme*, specificare il percorso completo del file eseguibile che installa l'assembly come parametro *id*.<br />-  Se si specifica OPAQUE per il parametro *scheme*, è possibile specificare qualsiasi porzione di dati come parametro *id*. I dati specificati devono essere racchiusi tra virgolette ("").<br /><br /> Il parametro *description* consente di specificare testo descrittivo sull'applicazione da installare. Queste informazioni vengono visualizzate quando vengono enumerati i riferimenti.|  
 |**/silent**|Evita la visualizzazione di tutto l'output.|  
 |**/u**  *assemblyName*|Disinstalla un assembly dalla cache di assembly globale.|  
 |**/uf**  *assemblyName*|Forza la disinstallazione di un assembly specificato rimuovendone tutti i riferimenti.<br /><br /> Specificare questa opzione equivale a specificare contemporaneamente le opzioni **/u** e **/f**. **Nota:** non è possibile usare questa opzione per rimuovere un assembly installato con Microsoft Windows Installer. Se si tenta di eseguire questa operazione, verrà visualizzato un messaggio di errore.|  

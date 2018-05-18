@@ -1,26 +1,15 @@
 ---
 title: Inferenza di uno schema XML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b18e7ffd-3c04-482d-9934-ba2f6a59b2c9
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cce1a03d555b1d8136718ee4c3106377dabaaeee
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 847d25ae760a2ec91c4ad5979f6b2e4de5dbc5cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inferring-an-xml-schema"></a>Inferenza di uno schema XML
 Viene descritto come usare la classe <xref:System.Xml.Schema.XmlSchemaInference> SOM (Schema Object Model) per inferire uno schema XSD (XML Schema Definition Language) dalla struttura di un documento XML.  

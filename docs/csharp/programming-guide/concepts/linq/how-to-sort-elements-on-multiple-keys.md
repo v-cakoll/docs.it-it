@@ -1,21 +1,12 @@
 ---
-title: "Procedura: Ordinare elementi in base a più chiavi (C#)"
-ms.custom: 
+title: 'Procedura: Ordinare elementi in base a più chiavi (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5ec1873ce9d7c6a3c791597eaab48071be44a997
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 14c5e0282ce3018424461870e1d2c59814fc3f40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a>Procedura: Ordinare elementi in base a più chiavi (C#)
 In questo argomento viene illustrato come ordinare elementi su più chiavi.  
@@ -23,7 +14,7 @@ In questo argomento viene illustrato come ordinare elementi su più chiavi.
 ## <a name="example"></a>Esempio  
  In questo esempio i risultati vengono ordinati dapprima in base al codice postale di spedizione e quindi in base alla data dell'ordine.  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: clienti e ordini (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  

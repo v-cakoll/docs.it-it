@@ -1,9 +1,6 @@
 ---
-title: "Ereditarietà (Guida per programmatori C#)"
+title: Ereditarietà (Guida per programmatori C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: "38"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6294669a05f5cc6c52de5164d89e29062ceb6bdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-c-programming-guide"></a>Ereditarietà (Guida per programmatori C#)
 

@@ -1,28 +1,21 @@
 ---
 title: Conversioni di puntatori (Guida per programmatori C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 36589d139c91e04d9e3d8b31281a91c26b85a5d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e0c3a409d76468a6e214a96e8bb326a9d906fe18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Conversioni di puntatori (Guida per programmatori C#)
 Nella tabella seguente sono illustrate le conversioni di puntatori implicite predefinite. Le conversioni implicite possono avere luogo in numerose situazioni, ad esempio le chiamate di metodi e le istruzioni di assegnazione.  
   
 ## <a name="implicit-pointer-conversions"></a>Conversioni di puntatori implicite  
   
-|Da|Per|  
+|Da|A|  
 |----------|--------|  
 |Qualsiasi tipo di puntatore|void*|  
 |Null|Qualsiasi tipo di puntatore|  
@@ -31,7 +24,7 @@ Nella tabella seguente sono illustrate le conversioni di puntatori implicite pre
   
 ## <a name="explicit-pointer-conversions"></a>Conversioni di puntatori esplicite  
   
-|Da|Per|  
+|Da|A|  
 |----------|--------|  
 |Qualsiasi tipo di puntatore|Qualsiasi altro tipo di puntatore|  
 |sbyte, byte, short, ushort, int, uint, long o ulong|Qualsiasi tipo di puntatore|  

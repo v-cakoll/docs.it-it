@@ -1,13 +1,7 @@
 ---
-title: "Gestione di eccezioni per interoperabilità COM"
-ms.custom: 
+title: Gestione di eccezioni per interoperabilità COM
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: error-reference
 helpviewer_keywords:
 - unmanaged code, exceptions
 - exceptions, unmanaged code
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - exceptions, COM interop
 - COM interop, exceptions
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e894d07e77b929b1ea22df2d34e542544ec3b1f3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9f4429d50f6b7646cb75fad44957a98812282928
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-com-interop-exceptions"></a>Gestione di eccezioni per interoperabilità COM
 Il codice gestito può essere integrato con il codice non gestito per la gestione delle eccezioni. Se un metodo genera un'eccezione nel codice gestito, Common Language Runtime può passare un valore HRESULT a un oggetto COM. Se un metodo non riesce nel codice non gestito, restituendo un HRESULT di errore, il runtime genera un'eccezione che può essere intercettata dal codice gestito.  

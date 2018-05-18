@@ -1,12 +1,6 @@
 ---
 title: Registrazione di informazioni relative all'applicazione (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Log object
 - My.Log object
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4e52aaf4c26b4fa60ee04d7df6aa96980ebbf491
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 68ec09dac026e46716ff18dce88acf9d60635026
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Registrazione di informazioni relative all'applicazione (Visual Basic)
 Questa sezione contiene argomenti che descrivono come registrare le informazioni provenienti dall'applicazione usando l'oggetto `My.Application.Log` o `My.Log`. Viene anche spiegato come estendere le funzionalità di registrazione dell'applicazione.  
@@ -33,7 +24,7 @@ Questa sezione contiene argomenti che descrivono come registrare le informazioni
   
 ## <a name="tasks"></a>Attività  
   
-|Per|Vedere|  
+|A|Vedere|  
 |--------|---------|  
 |Scrivere le informazioni sugli eventi nei log dell'applicazione.|[Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
 |Scrivere le informazioni sulle eccezioni nei log dell'applicazione.|[Procedura: Registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  

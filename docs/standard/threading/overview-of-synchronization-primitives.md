@@ -1,30 +1,19 @@
 ---
 title: Cenni preliminari sulle primitive di sincronizzazione
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET Framework],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 79d6e384458e289c4da8587eae66486a054aad08
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e35c2337ff7e416cb5f2c869f8ede160e05d369f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-synchronization-primitives"></a>Cenni preliminari sulle primitive di sincronizzazione
 <a name="top"></a>.NET Framework fornisce diverse primitive di sincronizzazione per controllare le interazioni dei thread ed evitare race condition. Queste possono essere divise approssimativamente in tre categorie: blocco, segnalazione e operazioni interlocked.  
@@ -52,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 ### <a name="exclusive-locks"></a>Blocchi esclusivi  
  La forma di blocco più semplice è l'istruzione `lock` di C# e l'istruzione `SyncLock` in Visual Basic, che controlla l'accesso a un blocco di codice. Questo blocco viene spesso denominato sezione critica. L'istruzione `lock` viene implementata usando i metodi <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> e usa il blocco `try…catch…finally` per assicurarsi che il blocco venga rilasciato.  
   
- In generale, l'uso dell'istruzione `lock` o `SyncLock` per proteggere piccoli blocchi di codice che non comprendono più di un metodo è la soluzione migliore per usare la classe <xref:System.Threading.Monitor>. Sebbene sia potente, la classe <xref:System.Threading.Monitor> è soggetta a blocchi orfani e deadlock.  
+ In generale, l'uso dell'istruzione `lock` o `SyncLock` per proteggere piccoli blocchi di codice che non comprendono più di un metodo è la soluzione migliore per usare la classe <xref:System.Threading.Monitor>. Sebbene sia potete, la classe <xref:System.Threading.Monitor> è soggetta a blocchi orfani e deadlock.  
   
 #### <a name="monitor-class"></a>Classe Monitor  
  La classe <xref:System.Threading.Monitor> fornisce funzionalità aggiuntive che possono essere usate insieme all'istruzione `lock`:  

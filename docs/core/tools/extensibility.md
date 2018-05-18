@@ -4,17 +4,11 @@ description: Informazioni sull'estendibilità degli strumenti dell'interfaccia d
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 11cf9843f5c10ed7114d45a8c6be0ffeff2b6bad
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6cabd3959a29878788916ae26589be408c12e0ca
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modello di estendibilità degli strumenti CLI di .NET Core
 
@@ -26,15 +20,15 @@ Gli strumenti dell'interfaccia della riga di comando possono essere estesi in tr
 
 1. [Tramite pacchetti NuGet in base al progetto](#per-project-based-extensibility)
 
-  Gli strumenti in base al progetto sono contenuti nel contesto del progetto stesso, ma consentono un'installazione facile mediante il ripristino.
+   Gli strumenti in base al progetto sono contenuti nel contesto del progetto stesso, ma consentono un'installazione facile mediante il ripristino.
 
 2. [Tramite pacchetti NuGet con destinazioni personalizzate](#custom-targets)
 
-  Le destinazioni personalizzate consentono di estendere facilmente il processo di compilazione con attività personalizzate.
+   Le destinazioni personalizzate consentono di estendere facilmente il processo di compilazione con attività personalizzate.
 
 3. [Tramite il PATH di sistema](#path-based-extensibility)
 
-  Gli strumenti basati su PATH sono ottimi per scopi di carattere generale e validi per più progetti. Sono utilizzabili su un singolo computer.
+   Gli strumenti basati su PATH sono ottimi per scopi di carattere generale e validi per più progetti. Sono utilizzabili su un singolo computer.
 
 I tre meccanismi di estendibilità sopra indicati non si escludono a vicenda. È possibile usarne uno, usarli tutti o usare una combinazione dei meccanismi. La scelta dipende dall'obiettivo che si vuole ottenere con l'estensione.
 

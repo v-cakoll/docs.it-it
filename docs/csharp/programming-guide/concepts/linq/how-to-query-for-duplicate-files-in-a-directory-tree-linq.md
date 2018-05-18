@@ -1,21 +1,12 @@
 ---
 title: 'Procedura: Eseguire una query per trovare i file duplicati in un albero di directory (LINQ) (C#)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ccfcd97eefb47807c44819182e3bd46ec7598b3c
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 618f1942133401718dcc71d54476043d27e0c036
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Procedura: Eseguire una query per trovare i file duplicati in un albero di directory (LINQ) (C#)
 Talvolta i file con lo stesso nome possono trovarsi in più di una cartella. Ad esempio, nella cartella di installazione di Visual Studio diverse cartelle hanno un file readme.htm. In questo esempio viene illustrato come eseguire una query per trovare tali nomi di file duplicati in una cartella radice specificata. Nel secondo esempio viene illustrato come eseguire una query per trovare i file con dimensioni e ora di creazione corrispondenti.  

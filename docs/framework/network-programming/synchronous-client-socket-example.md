@@ -1,12 +1,6 @@
 ---
 title: Esempio di socket client sincrono
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +9,14 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: be6c48f240290e2571bfc605bc9c3a84f59aa8e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2931e1ee9644952f2f643941e2076a7e2d5762db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-client-socket-example"></a>Esempio di socket client sincrono
 Il programma di esempio seguente crea un client che si connette a un server. Il client viene compilato con un socket sincrono, quindi l'esecuzione dell'applicazione client viene sospesa fino a quando il server non restituisce una risposta. L'applicazione invia una stringa al server e quindi visualizza la stringa restituita dal server nella console.  

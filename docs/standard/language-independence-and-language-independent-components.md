@@ -1,13 +1,7 @@
 ---
 title: Indipendenza del linguaggio e componenti indipendenti dal linguaggio
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 1d588768f53bf5850a0fa7cc825c5ffa1114ec6f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bf18fb7238eb35b5ceb1624c14b83486485ddc1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indipendenza del linguaggio e componenti indipendenti dal linguaggio
 .NET Framework è indipendente dal linguaggio. In qualità di sviluppatore, è pertanto possibile usare uno dei numerosi linguaggi destinati a .NET Framework, ad esempio C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL e Windows PowerShell. È possibile accedere a tipi e membri di librerie di classi sviluppate per .NET Framework senza dover conoscere il linguaggio in cui sono stati originariamente scritti e senza dover seguire nessuna delle convenzioni del linguaggio originale. Se si è uno sviluppatore di componenti, l'accesso al componente può essere eseguito da qualsiasi applicazione .NET Framework, indipendentemente dal linguaggio.  

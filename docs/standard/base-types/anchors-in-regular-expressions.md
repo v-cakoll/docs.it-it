@@ -1,13 +1,7 @@
 ---
 title: Ancoraggi in espressioni regolari
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e328c294a9b4ca3047c4ad1750ddedf64bac2218
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 2cbf0ceb7d5f8e56955f8989e5eb4efba99540bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancoraggi in espressioni regolari
 <a name="top"></a> Gli ancoraggi, o asserzioni atomiche di larghezza zero, specificano una posizione della stringa in cui deve verificarsi una corrispondenza. Quando si usa un ancoraggio nell'espressione di ricerca, il motore delle espressioni regolari non avanza nella stringa né utilizza caratteri, ma cerca una corrispondenza solo nella posizione specificata. Ad esempio, `^` specifica che la corrispondenza deve iniziare all'inizio di una riga o stringa. Di conseguenza, l'espressione regolare `^http:` considera la corrispondenza "http:" solo quando si verifica all'inizio di una riga. La tabella seguente contiene gli ancoraggi supportati dalle espressioni regolari in .NET.  

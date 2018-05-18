@@ -1,29 +1,18 @@
 ---
 title: Pianificazione di thread
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], scheduling
 - scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6bb715c11cc0d9b07e4ea8805ace7680ca92097c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 794dfe3dc8e8cded9f7008300351598bbd1dee07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scheduling-threads"></a>Pianificazione di thread
 A ogni thread è assegnata una priorità specifica. Ai thread creati all'interno di Common Language Runtime viene inizialmente assegnata la priorità **ThreadPriority.Normal**. I thread creati esternamente al runtime conservano la priorità che avevano prima di entrare nell'ambiente gestito. È possibile ottenere o impostare la priorità di un thread con la proprietà **Thread.Priority**.  

@@ -1,13 +1,7 @@
 ---
 title: Modello di progettazione observer
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c13424ad817ae73b5019f0ce5a7cda54c84adc71
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: d1dbd2c991f4b4259caa180375283ecb6d957336
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="observer-design-pattern"></a>Modello di progettazione observer
 Lo schema progettuale osservatore consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider. È appropriato per qualsiasi scenario che richieda la notifica basata su push. Lo schema definisce un *provider* (anche noto come *oggetto* o *osservabile*) e zero, uno o più *osservatori*. Gli osservatori effettuano la registrazione con il provider e ogni volta che si verifica una condizione, un evento o un cambiamento di stato predefinito, il provider invia automaticamente una notifica a tutti gli osservatori chiamando uno dei relativi metodi. In questa chiamata al metodo, il provider può anche fornire informazioni sullo stato corrente degli osservatori. In .NET Framework, lo schema progettuale osservatore viene applicato implementando le interfacce generiche <xref:System.IObservable%601?displayProperty=nameWithType> e <xref:System.IObserver%601?displayProperty=nameWithType>. Il parametro di tipo generico rappresenta il tipo che fornisce le informazioni di notifica.  

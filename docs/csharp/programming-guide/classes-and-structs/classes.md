@@ -2,22 +2,15 @@
 title: Classi (Guida per programmatori C#)
 description: Informazioni sui tipi di classe e su come crearli
 ms.date: 04/05/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-caps.latest.revision: 40
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1909623d3d8f6110a5fb466575bdab2d45495c2a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 808e25315b0010fd55112f2ed237485c3d0c40d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classes-c-programming-guide"></a>Classi (Guida per programmatori C#)
 Una *classe* è un costrutto che consente di creare tipi personalizzati raggruppando insieme variabili di altri tipi, metodi e eventi. Una classe è simile a un progetto. Definisce i dati e il comportamento di un tipo. Se la classe non è dichiarata come statica, il codice client può creare *istanze* della classe. Queste istanze sono *oggetti* che vengono assegnati a una variabile. L'istanza di una classe rimane in memoria fino a quando tutti i riferimenti non escono dall'ambito. In questa fase, CLR la contrassegna come idonea per Garbage Collection. Se la classe viene dichiarata come [statica](../../../csharp/language-reference/keywords/static.md), non è possibile creare istanze e il codice client può accedervi solo tramite la classe stessa. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  

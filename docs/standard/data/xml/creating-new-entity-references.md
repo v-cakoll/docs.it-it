@@ -1,26 +1,15 @@
 ---
-title: "Creazione di nuovi riferimenti alle entità"
-ms.custom: 
+title: Creazione di nuovi riferimenti alle entità
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 76093fbe7095c2aae7caa69147f6181c292ca734
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0fefea6f8dfd74dfd31c7c07a158e4935ab0e02c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-new-entity-references"></a>Creazione di nuovi riferimenti alle entità
 Il metodo **CreateEntityReference** consente di creare un nuovo nodo **XmlEntityReference**. Il modello DOM XML cerca di vedere se il nome dell'entità a cui si fa riferimento è già stato dichiarato. In caso affermativo, i nodi figlio del nodo **XmlEntityReference** vengono copiati dal nodo della dichiarazione di entità. Se non vi è alcuna dichiarazione di entità corrispondente, viene associato un nodo di testo vuoto come unico figlio del nodo del riferimento all'entità. Poiché i nodi figlio del nodo **XmlEntityReference** sono copie di altri nodi, questi nodi figlio sono di sola lettura e non è possibile modificarli.  

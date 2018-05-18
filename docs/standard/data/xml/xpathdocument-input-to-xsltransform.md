@@ -1,29 +1,18 @@
 ---
 title: Input di XPathDocument in XslTransform
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7d1bbe8b-ed43-4e62-a5ba-d602d244f4ae
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 22adc805a1174b566d3febf8c6182527df59b32c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 030f1117cc7974b4b5d85b35b14a8d0dbc3d87cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>Input di XPathDocument in XslTransform
 Il tipo <xref:System.Xml.XPath.XPathDocument> è una cache di sola lettura per l'elaborazione di documenti con <xref:System.Xml.Xsl.XslTransform>. È strutturalmente simile al DOM XML, ma è altamente ottimizzata per l'elaborazione di trasformazioni XSLT (Extensible Stylesheet Language for Transformation) e del modello di dati XPath (XML Path Language) tramite le funzioni di ottimizzazione di XPath nel tipo <xref:System.Xml.XPath.XPathNavigator>.  

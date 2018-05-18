@@ -1,21 +1,14 @@
 ---
 title: Confronto di uguaglianze (Guida per programmatori C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 199257b1fe371dea3e4ee1eedcf11f3bdce02366
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: c1abee8636cf540d42d92eb7496fb078f06e6e0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Confronto di uguaglianze (Guida per programmatori C#)
 A volte è necessario confrontare due valori per verificarne l'uguaglianza. In alcuni casi si verifica l'*uguaglianza dei valori*, nota anche come *equivalenza*, ovvero se i valori contenuti nelle due variabili sono uguali. In altri casi, è necessario determinare se due variabili fanno riferimento allo stesso oggetto sottostante in memoria. Questo tipo di uguaglianza è detto *uguaglianza dei riferimenti* o *identità*. In questo argomento vengono descritti questi due tipi di uguaglianza e indicati i collegamenti ad altri argomenti per le informazioni dettagliate.  

@@ -1,26 +1,15 @@
 ---
 title: Copia di nodi esistenti da un documento all'altro
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 958dccfc184857b0edd12cd1d9afe7b3b468b1e6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ca36ffdd2eb5eb3acfbacbd543eebf17cfffb5d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Copia di nodi esistenti da un documento all'altro
 Il metodo **ImportNode** è il meccanismo con il quale un nodo o un intero sottoalbero di nodi viene copiato da un oggetto **XmlDocument** a un altro. Il nodo restituito dalla chiamata è una copia del nodo dal documento di origine, inclusi i valori degli attributi, il nome del nodo, il tipo di nodo e tutti gli attributi relativi allo spazio dei nomi quali il prefisso, il nome locale e l'URI dello spazio dei nomi. Il documento di origine non viene modificato. Dopo aver importato il nodo, è necessario aggiungerlo all'albero usando uno dei metodi di inserimento dei nodi.  

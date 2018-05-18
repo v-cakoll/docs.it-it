@@ -1,26 +1,15 @@
 ---
 title: SOM (Schema Object Model) XML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b11fc10128807dfbd0082bbc1884068c5cde7d32
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 40a792f91ecd343684ff4c7921d6b21d25abecf7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-schema-object-model-som"></a>SOM (Schema Object Model) XML
 XML Schema è uno strumento potente e complesso per la creazione e la convalida della struttura in documenti XML conformi. Analogamente alla modellazione dei dati in un database relazionale, uno schema consente di definire la struttura di documenti XML specificando gli elementi che è possibile usare nei documenti, oltre alla struttura e ai tipi che tali elementi devono seguire per essere validi per quello specifico schema.  

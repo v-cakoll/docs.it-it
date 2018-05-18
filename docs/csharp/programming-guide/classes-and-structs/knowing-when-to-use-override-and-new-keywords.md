@@ -1,22 +1,16 @@
 ---
 title: Sapere quando utilizzare le parole chiave Override e New (Guida per programmatori C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-caps.latest.revision: "16"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b4d53f16f046839d56bc1dc37f7b2d8816c5956f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61bfa87b7aaa7c17d4ba67c69fa1e57ee7415dc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Sapere quando utilizzare le parole chiave Override e New (Guida per programmatori C#)
 Nel linguaggio C# un metodo in una classe derivata può avere lo stesso nome di un metodo in una classe di base. È possibile specificare in che modo avviene l'interazione tra i metodi usando le parole chiave [new](../../../csharp/language-reference/keywords/new.md) e [override](../../../csharp/language-reference/keywords/override.md). Il modificatore `override` *estende* il metodo della classe di base e il modificatore `new` lo *nasconde*. La differenza è illustrata negli esempi riportati in questo argomento.  

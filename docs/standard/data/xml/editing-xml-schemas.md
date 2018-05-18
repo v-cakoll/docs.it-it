@@ -1,30 +1,19 @@
 ---
 title: Modifica di schemi XML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: dd2c5a0e4625a348daad9eccb7bae0e4788cab71
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 38519ee90578d0bc13689216fb5674653ead4c19
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="editing-xml-schemas"></a>Modifica di schemi XML
 La modifica di uno schema XML rappresenta una delle funzionalità più importanti del modello SOM (Schema Object Model). È possibile usare tutte le proprietà del modello SOM precedenti alla compilazione dello schema per modificare i valori esistenti in uno schema XML. Sarà quindi possibile ricompilare lo schema XML per riflettere le modifiche.  

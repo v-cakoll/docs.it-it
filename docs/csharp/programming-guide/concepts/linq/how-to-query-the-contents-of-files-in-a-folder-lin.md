@@ -1,21 +1,12 @@
 ---
 title: 'Procedura: Eseguire una query sul contenuto dei file di testo in una cartella (LINQ) (C#)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a95e0ee8e3520562312f03c1f83b6cde4aac32a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e421e1bdb5008816989c26b725faaf2b4ae8caf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Procedura: Eseguire una query sul contenuto dei file di testo in una cartella (LINQ) (C#)
 Questo esempio illustra come eseguire una query su tutti i file in un albero di directory specificato, aprire ogni file e controllarne il contenuto. Questo tipo di tecnica può essere usato per creare indici o indici inversi del contenuto di un albero di directory. In questo esempio viene eseguita una semplice ricerca di una stringa. Tuttavia, con un'espressione regolare è possibile eseguire tipi di criteri di ricerca più complessi. Per altre informazioni, vedere [Procedura: Combinare query LINQ con espressioni regolari (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).  

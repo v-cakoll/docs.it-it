@@ -1,12 +1,6 @@
 ---
 title: 'Procedura dettagliata: Modifica di file con i metodi .NET Framework (Visual Basic)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], walkthroughs
 - text files [Visual Basic], writing to
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bc42dee640271ef84d35ceeb039d98741d296c5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 20150326308513325a9f1219de3e3023e6c5192b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Procedura dettagliata: modifica di file mediante i metodi .NET Framework (Visual Basic)
 Questa procedura dettagliata spiega come aprire e leggere un file usando la classe <xref:System.IO.StreamReader>, verificare se un file è accessibile, cercare una stringa all'interno di un file letto con un'istanza della classe <xref:System.IO.StreamReader> e scrivere in un file usando la classe <xref:System.IO.StreamWriter>.  
@@ -36,7 +27,7 @@ Questa procedura dettagliata spiega come aprire e leggere un file usando la clas
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-the-application"></a>Creare l'applicazione  
- Avviare [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] e iniziare il progetto creando un form che l'utente può usare per scrivere il file specificato.  
+ Avviare Visual Studio e iniziare il progetto creando un modulo che l'utente può usare per scrivere il file specificato.  
   
 #### <a name="to-create-the-project"></a>Per creare il progetto  
   
@@ -46,15 +37,15 @@ Questa procedura dettagliata spiega come aprire e leggere un file usando la clas
   
 3.  Nella casella **Nome** digitare `MyDiary` e fare clic su **OK**.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] aggiunge il progetto a **Esplora soluzioni** e viene aperto **Progettazione Windows Form**.  
+     Visual Studio aggiunge il progetto a **Esplora soluzioni** e viene aperto **Progettazione Windows Form**.  
   
 4.  Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
   
 |**Oggetto**|**Proprietà**|**Valore**|  
 |---|---|---|   
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Submit`<br /><br /> **Invia voce**|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Clear`<br /><br /> **Cancella voce**|  
-|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Testo**<br /><br /> **Multiline**|`Entry`<br /><br /> **Immettere un valore.**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **per**|`Submit`<br /><br /> **Invia voce**|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **per**|`Clear`<br /><br /> **Cancella voce**|  
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **per**<br /><br /> **Multiline**|`Entry`<br /><br /> **Immettere un valore.**<br /><br /> `False`|  
   
 ## <a name="writing-to-the-file"></a>Scrivere nel file  
  Per aggiungere la possibilità di scrivere in un file tramite l'applicazione, usare la classe <xref:System.IO.StreamWriter>. La classe <xref:System.IO.StreamWriter> è progettata per l'output di caratteri in una codifica particolare, mentre la classe <xref:System.IO.Stream> è progettata per l'input e l'output di byte. Usare la classe <xref:System.IO.StreamWriter> per scrivere righe di informazioni in un file di testo standard. Per altre informazioni sulla classe <xref:System.IO.StreamWriter>, vedere <xref:System.IO.StreamWriter>.  
@@ -99,10 +90,10 @@ Questa procedura dettagliata spiega come aprire e leggere un file usando la clas
   
 |Controllo|Proprietà|Valori|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visible**<br /><br /> **Dimensione**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`Display`<br /><br /> **Visualizzazione**|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**|`GetEntries`<br /><br /> **Ottieni voci**|  
-|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **Seleziona una voce**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Visible**<br /><br /> **Dimensione**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **per**|`Display`<br /><br /> **Visualizzazione**|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Testo**|`GetEntries`<br /><br /> **Ottieni voci**|  
+|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **per**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **Seleziona una voce**<br /><br /> `False`|  
   
 #### <a name="to-populate-the-combo-box"></a>Per popolare la casella combinata  
   
@@ -125,11 +116,11 @@ Questa procedura dettagliata spiega come aprire e leggere un file usando la clas
   
  Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
   
-|Controllo|Proprietà|Valori|  
+|Control|Proprietà|Valori|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **Elimina voce**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **Modifica voce**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Testo**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Invia modifica**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **per**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **Elimina voce**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **per**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **Modifica voce**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **per**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Invia modifica**<br /><br /> `False`|  
   
 #### <a name="to-enable-deletion-and-modification-of-entries"></a>Per abilitare l'eliminazione e la modifica delle voci  
   

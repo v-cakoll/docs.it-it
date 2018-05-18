@@ -1,31 +1,20 @@
 ---
 title: 'Archiviazione locale del thread: slot di dati e campi statici relativi ai thread'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], local storage
 - threading [.NET Framework], thread-relative static fields
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 127f7ea9bb6a6bf91547d049f582439882d2fb6e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a17bc509c8c82bfb30811ec3511207ca2d823e5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Archiviazione locale del thread: slot di dati e campi statici relativi ai thread
 È possibile usare l'archiviazione locale dei thread gestiti per archiviare dati univoci relativi a un thread e un dominio dell'applicazione. In .NET Framework sono disponibili due strumenti per usare l'archiviazione locale dei thread gestiti: i campi statici relativi ai thread e gli slot di dati.  

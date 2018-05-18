@@ -1,13 +1,6 @@
 ---
 title: Ilasm.exe (Assembler IL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MSIL generators
 - metadata, MSIL Assembler
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembler IL)
 
@@ -57,7 +47,7 @@ ilasm [options] filename [[options]filename...]
 |**/arm**|Specifica Advanced RISC Machine (ARM) come processore di destinazione.<br /><br /> Se non viene specificato il numero di bit dell'immagine, viene utilizzata l'impostazione predefinita **/32bitpreferred**.|
 |**/base:** `integer`|Imposta ImageBase sul valore specificato da `integer` nell'intestazione NT facoltativa. Se la direttiva IL .imagebase è specificata nel file, questa opzione ne esegue l'override.|
 |**/clock**|Misura e segnala i seguenti tempi di compilazione in millisecondi per il file di origine .il specificato:<br /><br /> **Total Run**: tempo totale impiegato per l'esecuzione di tutte le operazioni specifiche che seguono.<br /><br /> **Startup**: caricamento e apertura del file.<br /><br /> **Emitting MD**: emissione di metadati.<br /><br /> **Ref to Def Resolution**: risoluzione dei riferimenti nelle definizioni nel file.<br /><br /> **CEE File Generation**: generazione dell'immagine del file in memoria.<br /><br /> **PE File Writing**: scrittura dell'immagine in un file PE.|
-|**/debug**[:**IMPL**&#124;**OPT**]|Include informazioni di debug (nomi di variabili locali e di argomenti e numeri di riga). Crea un file PDB.<br /><br /> Se si specifica**/debug** senza altri valori, viene disabilitata l'ottimizzazione JIT e vengono utilizzati i punti di sequenza dal file PDB.<br /><br /> **IMPL** disabilita l'ottimizzazione JIT e utilizza punti di sequenza impliciti.<br /><br /> **OPT** abilita l'ottimizzazione JIT e utilizza punti di sequenza impliciti.|
+|**/debug**[:**IMPL**&#124;**OPT**]|Include informazioni di debug (nomi di variabili locali e di argomenti e numeri di riga). Crea un file PDB.<br /><br /> Se si specifica **/debug** senza altri valori, viene disabilitata l'ottimizzazione JIT e vengono utilizzati i punti di sequenza dal file PDB.<br /><br /> **IMPL** disabilita l'ottimizzazione JIT e utilizza punti di sequenza impliciti.<br /><br /> **OPT** abilita l'ottimizzazione JIT e utilizza punti di sequenza impliciti.|
 |**/dll**|Produce un file *.dll* come output.|
 |**/enc:** `file`|Crea file differenziali di Modifica e continuazione a partire dal file di origine specificato.<br /><br /> Questo argomento è esclusivamente per utilizzo didattico e non è supportato per un utilizzo commerciale.|
 |**/exe**|Produce un file eseguibile come output. Questa è l'impostazione predefinita.|

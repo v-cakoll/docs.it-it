@@ -1,13 +1,7 @@
 ---
 title: Analisi di stringhe numeriche in .NET
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - enumerations [.NET Framework], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f84fcba0ef37fa45c3dd0fb3ba56f5f912bfc2f1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8e79c6cf8bfce4fa1ce37f7253e8583a67afe2f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analisi di stringhe numeriche in .NET
 Tutti i tipi numerici hanno due metodi di analisi statici, `Parse` e `TryParse`, che è possibile usare per convertire la rappresentazione di stringa di un numero in un tipo numerico. Tali metodi consentono di analizzare le stringhe generate usando le stringhe di formato documentate in [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md) e [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md). Per impostazione predefinita, i metodi `Parse` e `TryParse` consentono di convertire correttamente le stringhe contenenti cifre decimali integrali solo in valori integer. Consentono di convertire correttamente le stringhe che contengono cifre decimali integrali e frazionarie, separatori di gruppi e un separatore decimale in valori a virgola mobile. Il metodo `Parse` genera un'eccezione se l'operazione ha esito negativo, mentre il metodo `TryParse` restituisce `false`.  

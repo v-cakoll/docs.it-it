@@ -1,13 +1,7 @@
 ---
 title: Implementazione di un metodo Dispose
-ms.custom: 
 ms.date: 04/07/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 404fdece284accf305ef3cf2324be2e37a8da4b6
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: acc661e8110892dc7daa603ef82b4bc5f167a970
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-dispose-method"></a>Implementazione di un metodo Dispose
 
@@ -138,7 +127,7 @@ Di seguito è illustrato il modello generale per implementare il modello Dispose
 > In C# si esegue l'override di <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definendo un [distruttore](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
   
 <a name="SafeHandles"></a>   
-## <a name="using-safe-handles"></a>Uso di handle sicuri
+## <a name="using-safe-handles"></a>Utilizzo degli handle sicuri
 
 La scrittura di codice per il finalizzatore di un oggetto è un'attività complessa che può causare problemi se non eseguita correttamente. È pertanto consigliabile costruire oggetti <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> anziché implementare un finalizzatore.  
   

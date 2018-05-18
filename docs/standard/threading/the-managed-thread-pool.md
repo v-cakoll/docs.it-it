@@ -1,13 +1,7 @@
 ---
 title: Pool di thread gestiti
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - threading [.NET Framework], thread pool
 - threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3894229ff5561e50d42a36f576a89ee7bf01c067
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-managed-thread-pool"></a>Pool di thread gestiti
 La classe <xref:System.Threading.ThreadPool> fornisce all'applicazione un pool di thread di lavoro gestiti dal sistema, per consentire di concentrarsi sulle attività dell'applicazione anziché sulla gestione dei thread. Se si dispone di attività brevi che richiedono l'elaborazione in background, il pool di thread gestiti consente di sfruttare in modo semplice i vantaggi di più thread. A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è ad esempio possibile creare oggetti <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> che eseguono attività asincrone nei thread del pool.  

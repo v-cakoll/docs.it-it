@@ -1,29 +1,18 @@
 ---
 title: Accesso a dati XML fortemente tipizzati con XPathNavigator
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 651a8e11b5782227cdf5ffcc3d53cf2c75def031
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 040a137f9b7c26c4484a69313e1f405699a19b64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Accesso a dati XML fortemente tipizzati con XPathNavigator
 Analogamente a un'istanza del modello di dati XPath versione 2.0, la classe <xref:System.Xml.XPath.XPathNavigator> può contenere dati tipizzati in modo sicuro associati a tipi CLR (Common Language Runtime). In base al modello di dati XPath versione 2.0, solo gli elementi e gli attributi possono contenere dati tipizzati in modo sicuro. La classe <xref:System.Xml.XPath.XPathNavigator> fornisce meccanismi di accesso ai dati di un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> come dati tipizzati in modo sicuro e meccanismi di conversione da un tipo di dati a un altro.  

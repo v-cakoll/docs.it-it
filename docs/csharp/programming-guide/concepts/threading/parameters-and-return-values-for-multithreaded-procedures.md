@@ -1,21 +1,12 @@
 ---
 title: Parametri e valori restituiti per routine multithreading (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ba63c30c-d9f0-4962-b5c7-9d83ba851e6a
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fec0ad955439f0cd683ad56c8d6433eed2417304
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e27f8e67ff03260e1d13fa633064efc2059e6bdf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a>Parametri e valori restituiti per routine multithreading (C#)
 L'invio e la restituzione di valori in un'applicazione multithreading è un processo complesso poiché è necessario che il costruttore della classe di thread riceva un riferimento a una routine che non accetta alcun argomento e non restituisce alcun valore. Le sezioni seguenti descrivono alcuni metodi semplici per l'inserimento di parametri e la restituzione di valori da routine su thread diversi.  

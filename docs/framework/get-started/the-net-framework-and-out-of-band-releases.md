@@ -1,26 +1,14 @@
 ---
 title: .NET Framework e rilascio fuori programma
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 83c3688afb3fe509d9a57eba8765cbd13bf581c8
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 6c0ea6590a53748c9ed85a6d13f67b260ce23af5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework e rilascio fuori programma
 L'evoluzione di .NET Framework includerà diverse piattaforme, tra cui app Windows Phone e Windows Store, nonché app desktop e Web tradizionali, e consentirà di ottimizzare il riutilizzo del codice. Oltre ai regolari rilasci di .NET Framework, verranno rese disponibili nuove funzionalità fuori banda per migliorare lo sviluppo per più piattaforme o introdurre alcune novità. In questo argomento verrà illustrato l'orientamento futuro di .NET Framework e dei rilasci fuori banda.  

@@ -1,13 +1,6 @@
 ---
-title: "Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)"
-ms.custom: 
+title: Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
 - ActiveX Control Importer
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebde5bd48b02c20f7d607ebcda2b18ed0830c569
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: befc4484324fb28b0fe55ef49f038712bc81e913
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)
 L'utilità di importazione di controlli ActiveX converte in un controllo Windows Form le definizioni dei tipi in una libreria di tipi COM per un controllo ActiveX.  
@@ -79,7 +69,7 @@ aximp [options]{file.dll | file.ocx}
   
  L'esecuzione di Aximp.exe sul file shdocvw.dll comporterà sempre la creazione di un altro file denominato shdocvw.dll nella directory da cui viene eseguito lo strumento. L'inserimento nella directory Documents and Settings del file generato causerà problemi per Microsoft Internet Explorer ed Esplora risorse. Al riavvio del computer, viene eseguita una ricerca nella directory Documents and Settings prima che nella directory system32 per trovare una copia di shdocvw.dll. Verrà utilizzata la copia trovata in Documents and Settings e verrà effettuato un tentativo di caricamento dei wrapper gestiti. Internet Explorer ed Esplora risorse non funzioneranno correttamente in quanto dipendono dal motore di rendering della versione di shdocvw.dll presente nella directory system32. Se si verifica tale problema, eliminare la copia di shdocvw.dll nella directory Documents and Settings e riavviare il computer.  
   
- Anche l'utilizzo di Aximp.exe con shdocvw.dll per creare un assembly .NET da utilizzare nello sviluppo di un'applicazione può causare problemi. In questo caso, l'applicazione caricherà sia la versione del sistema di shdocvw.dll sia la versione generata ed è possibile che venga data priorità alla versione del sistema. In questa situazione, quando si tenta di caricare una pagina Web all'interno del controllo ActiveX WebBrowser è possibile che per l'utente venga visualizzata una finestra di dialogo Apri/Salva. Quando l'utente fa clic su **Apri** la pagina Web viene aperta in Internet Explorer. Ciò si verifica solo su computer in cui viene eseguito Internet Explorer versione 6 o precedenti. Per evitare questo problema usare il controllo <xref:System.Windows.Forms.WebBrowser> gestito o generare il file shdocvw.dll gestito tramite [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] come descritto in [Procedura: Aggiungere riferimenti alle librerie dei tipi](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
+ Anche l'utilizzo di Aximp.exe con shdocvw.dll per creare un assembly .NET da utilizzare nello sviluppo di un'applicazione può causare problemi. In questo caso, l'applicazione caricherà sia la versione del sistema di shdocvw.dll sia la versione generata ed è possibile che venga data priorità alla versione del sistema. In questa situazione, quando si tenta di caricare una pagina Web all'interno del controllo ActiveX WebBrowser è possibile che per l'utente venga visualizzata una finestra di dialogo Apri/Salva. Quando l'utente fa clic su **Apri** la pagina Web viene aperta in Internet Explorer. Ciò si verifica solo su computer in cui viene eseguito Internet Explorer versione 6 o precedenti. Per evitare questo problema, usare il controllo <xref:System.Windows.Forms.WebBrowser> gestito o Visual Studio per generare il file shdocvw.dll gestito come descritto in [Procedura: Aggiungere riferimenti alle librerie dei tipi](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
 ## <a name="example"></a>Esempio  
  Il comando che segue genera MediaPlayer.dll e AxMediaPlayer.dll per il controllo `msdxm.ocx` di Media Player.  

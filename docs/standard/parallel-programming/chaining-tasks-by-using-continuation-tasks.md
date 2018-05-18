@@ -1,31 +1,20 @@
 ---
 title: Concatenamento di attività tramite attività di continuazione
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-caps.latest.revision: 30
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 64a6fd2f5cbaee17ac35d7b4bd6f08326eafac64
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 27d97d38c903cbb33097db0e109758d98527e00f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Concatenamento di attività tramite attività di continuazione
 Nella programmazione asincrona è molto comune che un'operazione asincrona, al completamento, richiami una seconda operazione e vi passi i dati. Tradizionalmente, a questo scopo vengono usati metodi callback. In Task Parallel Library la stessa funzionalità viene resa possibile dalle *attività di continuazione*. Un'attivazione di continuazione, chiamata anche semplicemente continuazione, è un'attività asincrona richiamata da un'altra attività, denominata *attività precedente*, al termine di quest'ultima.  
@@ -130,7 +119,7 @@ Nella programmazione asincrona è molto comune che un'operazione asincrona, al c
   
  Lo stato della continuazione è utile quando si converte codice esistente che usa il [modello di programmazione asincrono (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) per usare TPL. In APM l'oggetto stato viene specificato in genere nel metodo **Begin***Method*. È quindi possibile accedere a tale stato usando la proprietà <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType>. Tramite il metodo <xref:System.Threading.Tasks.Task.ContinueWith%2A> è possibile mantenere questo stato quando si converte il codice che usa il modello APM per usare TPL.  
   
- Lo stato della continuazione può essere utile anche quando si usano oggetti <xref:System.Threading.Tasks.Task> nel debugger di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] . Ad esempio, nella finestra **Attività in parallelo** la colonna **Attività** mostra la rappresentazione di stringa dell'oggetto stato per ogni attività. Per altre informazioni sulla finestra **Attività in parallelo**, vedere [Uso della finestra Attività](/visualstudio/debugger/using-the-tasks-window).  
+ Lo stato della continuazione può essere utile anche quando si usano oggetti <xref:System.Threading.Tasks.Task> nel debugger di Visual Studio. Ad esempio, nella finestra **Attività in parallelo** la colonna **Attività** mostra la rappresentazione di stringa dell'oggetto stato per ogni attività. Per altre informazioni sulla finestra **Attività in parallelo**, vedere [Uso della finestra Attività](/visualstudio/debugger/using-the-tasks-window).  
   
  L'esempio seguente mostra come usare lo stato della continuazione. Viene creata una catena di attività di continuazione. Ogni attività indica la data e l'ora correnti, tramite un oggetto <xref:System.DateTime> , per il parametro `state` del metodo <xref:System.Threading.Tasks.Task.ContinueWith%2A> . Ogni oggetto <xref:System.DateTime> rappresenta la data e l'ora in cui è stata creata l'attività di continuazione. Ogni attività produce come risultato un secondo oggetto <xref:System.DateTime> che rappresenta la data e l'ora di fine dell'attività. Al termine di tutte le attività, questo esempio visualizza la data e l'ora di creazione e la data e l'ora di fine di ogni attività di continuazione.  
   

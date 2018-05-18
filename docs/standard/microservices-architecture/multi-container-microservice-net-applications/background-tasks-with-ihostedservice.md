@@ -1,21 +1,14 @@
 ---
-title: "Implementare attività in background in microservizi con IHostedService e la classe BackgroundService"
-description: "Architettura di microservizi .NET per applicazioni .NET in contenitori | Implementare attività in background in microservizi con IHostedService e la classe BackgroundService"
-keywords: Docker, microservizi, ASP.NET, contenitore
+title: Implementare attività in background in microservizi con IHostedService e la classe BackgroundService
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Implementare attività in background in microservizi con IHostedService e la classe BackgroundService
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d60a4590682b79a9f8ac57afee09884b7edd1f98
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 083d2a8c6a0d1649f8bfb2c21a92fb43381fe9ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementare attività in background in microservizi con IHostedService e la classe BackgroundService
 

@@ -1,26 +1,15 @@
 ---
 title: Cenni preliminari sul modello SOM XML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e18a3151228ea7edb5a8380f6ed707ee88d369e5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bd25cf94a8a57f20b42f5e14c92b3b43e3378844
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-schema-object-model-overview"></a>Cenni preliminari sul modello SOM XML
 Il modello SOM (Schema Object Model) in Microsoft .NET Framework è un'API completa che consente di creare, modificare e convalidare schemi a livello di programmazione. L'API del modello SOM agisce sui documenti di schema XML in modo simile a come il DOM agisce sui documenti XML. I documenti di schema XML sono file XML validi che, una volta caricati nell'API del modello SOM, contengono informazioni sulla struttura e la validità di altri documenti XML conformi allo schema.  

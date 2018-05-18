@@ -1,21 +1,14 @@
 ---
 title: Introduzione ai generics (Guida per programmatori C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - generics [C#], about generics
 ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
-caps.latest.revision: 32
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 30184edbcba47203d8416609b5a28648adf7cbaa
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 892b6bfe5cf18bde91221bb8b2fa7ca7a2813870
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>Introduzione ai generics (Guida per programmatori C#)
 Le classi e i metodi generici sono riutilizzabili, indipendenti dai tipi e molto più efficaci delle rispettive controparti non generiche. I generics sono in genere usati con le raccolte e i metodi che operano su di essi. La versione 2.0 della libreria di classi .NET Framework offre un nuovo spazio dei nomi, <xref:System.Collections.Generic>, che contiene diverse nuove classi di raccolta generiche. È consigliabile che tutte le applicazioni destinate a .NET Framework 2.0 e versioni successive usino le nuove classi di raccolte generiche anziché le controparti non generiche meno recenti, ad esempio <xref:System.Collections.ArrayList>. Per altre informazioni, vedere [Generics in .NET](../../../standard/generics/index.md).  

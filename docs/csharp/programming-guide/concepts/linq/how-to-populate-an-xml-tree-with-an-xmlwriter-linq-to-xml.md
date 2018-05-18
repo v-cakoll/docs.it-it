@@ -1,21 +1,12 @@
 ---
 title: 'Procedura: Popolare un albero XML con XmlWriter (LINQ to XML) (C#)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2df0626d0376973aeaa09876c6737c93dd671da4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cc3aeb8e8fbef3b109c9bc591084f0d033f5f476
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>Procedura: Popolare un albero XML con XmlWriter (LINQ to XML) (C#)
 Per popolare un albero XML, è possibile usare <xref:System.Xml.Linq.XContainer.CreateWriter%2A> per creare <xref:System.Xml.XmlWriter>e quindi scrivere in <xref:System.Xml.XmlWriter>. L'albero XML viene popolato con tutti i nodi scritti in <xref:System.Xml.XmlWriter>.  

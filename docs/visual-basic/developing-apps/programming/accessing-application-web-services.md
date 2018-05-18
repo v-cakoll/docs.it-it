@@ -1,23 +1,16 @@
 ---
 title: Accesso ai servizi Web dell'applicazione (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Web services [Visual Basic], My.WebServices object
 - My.WebServices object
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f15c0fd761f08f41abc05f7019ce27bc8cf8dff3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: b1d5a2166ace2ea16e1764139133457439675876
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>Accesso ai servizi Web dell'applicazione (Visual Basic)
 L'oggetto `My.WebServices` fornisce un'istanza di ogni servizio Web a cui si fa riferimento nel progetto corrente. Ogni istanza viene creata su richiesta. È possibile accedere a questi servizi Web tramite le proprietà dell'oggetto `My.WebServices`. Il nome della proprietà è uguale al nome del servizio Web a cui la proprietà accede. Qualsiasi classe che eredita da <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> è un servizio Web.  
@@ -25,7 +18,7 @@ L'oggetto `My.WebServices` fornisce un'istanza di ogni servizio Web a cui si fa 
 ## <a name="tasks"></a>Attività  
  La tabella seguente presenta i modi possibili per accedere ai servizi Web a cui fa riferimento un'applicazione.  
   
-|Per|Vedere|  
+|A|Vedere|  
 |---|---|   
 |Chiamare un servizio Web|[Oggetto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
 |Chiamare un servizio Web in modo asincrono e gestire un evento quando quest'ultimo viene completato|[Procedura: Chiamare un servizio Web in modo asincrono](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|  

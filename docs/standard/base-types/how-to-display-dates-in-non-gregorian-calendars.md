@@ -1,13 +1,7 @@
 ---
 title: 'Procedura: Visualizzare le date in calendari non gregoriani'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 1a9e45fe43e38be3c618df37a639d63a6a0a5349
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3da8a524af872a724ee6cbe206912572d6338624
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Procedura: Visualizzare le date in calendari non gregoriani
 I tipi <xref:System.DateTime> e <xref:System.DateTimeOffset> e usano il calendario gregoriano come calendario predefinito. Ciò significa che la chiamata al metodo `ToString` di un valore di data e ora visualizza la rappresentazione di stringa di tale data e ora nel calendario gregoriano, anche se la data e l'ora sono state create usando un altro calendario. Questo processo viene mostrato nell'esempio seguente, che usa due modi diversi per creare un valore di data e ora con il calendario persiano, continuando a visualizzare questi valori di data e ora nel calendario gregoriano quando viene chiamato il metodo <xref:System.DateTime.ToString%2A>. L'esempio riflette due tecniche comuni ma non corrette per la visualizzazione della data in un determinato calendario.  
@@ -98,7 +87,7 @@ I tipi <xref:System.DateTime> e <xref:System.DateTimeOffset> e usano il calendar
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Questo esempio richiede un riferimento a System.Core.dll.  
   
- Compilare il codice nella riga di comando usando csc.exe o vbc.exe. Per compilare il codice in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], inserirlo in un modello di progetto di applicazione console.  
+ Compilare il codice nella riga di comando usando csc.exe o vbc.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)

@@ -1,13 +1,7 @@
 ---
 title: Notifiche di Garbage Collection
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ac951ad1f89d058b06280bc176ca7928a1dc65bf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d3470ebdd55adc97a60f07228c441cb7c94a53e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="garbage-collection-notifications"></a>Notifiche di Garbage Collection
 In alcune situazioni un'operazione completa di Garbage Collection (cioè di generazione 2) eseguita da Common Language Runtime può influire negativamente sulle prestazioni. Può essere un problema soprattutto con i server che elaborano grandi volumi di richieste. In questo caso, una lunga procedura di Garbage Collection può provocare un timeout delle richieste. Per evitare che venga eseguita una raccolta completa durante un periodo critico, è possibile essere informati che sta per iniziare una Garbage Collection completa e quindi intraprendere un'azione per reindirizzare il carico di lavoro a un'altra istanza del server. È anche possibile indurre manualmente una raccolta, a condizione che l'istanza del server corrente non sia necessaria per elaborare le richieste.  

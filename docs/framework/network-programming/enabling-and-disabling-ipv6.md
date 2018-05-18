@@ -1,23 +1,15 @@
 ---
 title: Abilitazione e disabilitazione di IPv6
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 9304487963b3df4a3c2870399c474a431deb43b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b018d646816bda96945a440a890da20b81b1cbbc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Abilitazione e disabilitazione di IPv6
 Per usare il protocollo IPv6, assicurarsi di eseguire una versione del sistema operativo che supporti IPv6 e che il sistema operativo e le classi di rete siano configurati correttamente.  
@@ -28,9 +20,9 @@ Per usare il protocollo IPv6, assicurarsi di eseguire una versione del sistema o
 |Sistema operativo abilitato per IPv6|Classi di rete abilitate per IPv6|Descrizione|  
 |-------------------------------------|---------------------------------------|-----------------|  
 |No|No|È possibile analizzare gli indirizzi IPv6.|  
-|No|Sì|È possibile analizzare gli indirizzi IPv6.|  
+|No|Yes|È possibile analizzare gli indirizzi IPv6.|  
 |Yes|No|È possibile analizzare gli indirizzi IPv6 e risolvere gli indirizzi IPv6 usando metodi di risoluzione dei nomi non contrassegnati come obsoleti.|  
-|Sì|Sì|È possibile analizzare e risolvere gli indirizzi IPv6 usando tutti i metodi, inclusi quelli contrassegnati come obsoleti.|  
+|Yes|Yes|È possibile analizzare e risolvere gli indirizzi IPv6 usando tutti i metodi, inclusi quelli contrassegnati come obsoleti.|  
   
  Tenere presente che, per abilitare il supporto IPv6 per tutte le classi nello spazio dei nomi System.Net, è necessario modificare il file di configurazione del computer o il file di configurazione per l'applicazione. Il file di configurazione per un'applicazione ha la precedenza sul file di configurazione del computer.  
   

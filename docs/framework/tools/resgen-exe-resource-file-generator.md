@@ -1,13 +1,6 @@
 ---
 title: Resgen.exe (generatore di file di risorse)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - resource files, .resources files
 - resource files, .resx files
@@ -22,16 +15,13 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-caps.latest.revision: "46"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ca54817183b5e659b62ef04b1693698bd689370b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c8a619021f8e398c5c3dfc974b9130ecacb44d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (generatore di file di risorse)
 Il generatore di file di risorse (Resgen.exe) converte i file di testo (.txt o .restext) e i file di risorse basati su XML (.resx) in file binari Common Language Runtime (.resources) incorporabili in un eseguibile binario o in un assembly satellite di runtime. Vedere [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  

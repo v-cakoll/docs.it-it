@@ -1,29 +1,18 @@
 ---
 title: XPathNavigator nelle trasformazioni
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c492d470fe29041f32039d98ecb854e18f40423c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 76cfa51c7d434a6dfdcdc1e6852779decaa601e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xpathnavigator-in-transformations"></a>XPathNavigator nelle trasformazioni
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un accesso casuale di sola lettura ai dati ed è progettata per essere usata come input per XSLT (Extensible Stylesheet Language for Transformations). Viene implementata su <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> e <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> è basato sul modello di dati W3C (World Wide Web Consortium) secondo la descrizione fornita nella sezione 5 della raccomandazione XML Path Language (XPath) (informazioni in lingua inglese).  

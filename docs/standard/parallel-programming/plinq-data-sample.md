@@ -1,31 +1,20 @@
 ---
 title: PLINQ Data Sample
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4b1aaa6f3027283ff20088d6122f9b4ec4bb1111
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3dd16f46b7d7eb80021a67583f51feae182a2cc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="plinq-data-sample"></a>PLINQ Data Sample
 Questo esempio contiene dati in formato CSV, nonché metodi che trasformano tali dati in raccolte in memoria di clienti, prodotti, ordini e dettagli di ordini. Per sperimentare ulteriormente PLINQ, è possibile incollare esempi di codice da altri argomenti nel codice riportato in questo argomento e richiamarlo dal metodo `Main`. È anche possibile usare questi dati con query PLINQ personalizzate.  

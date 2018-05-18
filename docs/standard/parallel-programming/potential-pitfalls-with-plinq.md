@@ -1,31 +1,20 @@
 ---
 title: Problemi potenziali dell'utilizzo di PLINQ
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 972734b1275c82141c9057398268d068f5eaf3e6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 73ec2d2fb73ee95b39a15307d136c35542578c41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Problemi potenziali dell'utilizzo di PLINQ
 In molti casi, PLINQ può fornire miglioramenti significativi a livello di prestazioni su query LINQ to Objects sequenziali. Le operazioni necessarie per parallelizzare l'esecuzione delle query comportano tuttavia delle complessità che possono determinare problemi che in un codice sequenziale sono meno frequenti o addirittura assenti. In questo argomento sono elencati alcuni suggerimenti da tenere presenti quando si scrivono query PLINQ.  

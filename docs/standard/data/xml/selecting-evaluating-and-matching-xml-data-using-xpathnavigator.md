@@ -1,26 +1,15 @@
 ---
 title: Selezione, valutazione e corrispondenza di dati XML con XPathNavigator
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e503c5be7bb23d15c2b11ef1b31c2eeb5e4d5aa8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 55344de87672c09305c03c25047c2f3cc3bdab7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>Selezione, valutazione e corrispondenza di dati XML con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce metodi per selezionare nodi in un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> usando una query XPath, valutare ed esaminare i risultati di un'espressione XPath e determinare se un nodo in un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> corrisponde a un'espressione XPath specifica. Questi e altri concetti relativi alla selezione, alla valutazione e alla corrispondenza di nodi in un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> vengono descritti negli argomenti che seguono.  

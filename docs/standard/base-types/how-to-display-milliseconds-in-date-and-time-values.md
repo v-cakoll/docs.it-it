@@ -1,13 +1,7 @@
 ---
 title: 'Procedura: visualizzare i millisecondi nei valori data e ora'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 552c28420e9a04483b164cfe7e13d942230ec5e0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a7bf73920d10ff825396e61a3ca4e9efd622d9c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Procedura: visualizzare i millisecondi nei valori data e ora
 I metodi di formattazione di data e ora predefiniti, ad esempio <xref:System.DateTime.ToString?displayProperty=nameWithType>, includono le ore, i minuti e i secondi di un valore di ora, ma ne escludono il componente dei millisecondi. Questo argomento descrive come includere un componente millisecondi di una data e un'ora nelle stringhe di data e ora formattate.  
@@ -62,7 +51,7 @@ I metodi di formattazione di data e ora predefiniti, ad esempio <xref:System.Dat
 >  È possibile visualizzare piccolissime unità di secondo frazionarie, come decimillesimi di secondo o centomillesimi di secondo. Questi valori tuttavia potrebbero non essere significativi. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. In Windows NT 3.5 e versioni successive e nei sistemi operativi [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] la risoluzione del clock è di circa 10-15 millisecondi.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Compilare il codice nella riga di comando usando csc.exe o vbc.exe. Per compilare il codice in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], inserirlo in un modello di progetto di applicazione console.  
+ Compilare il codice nella riga di comando usando csc.exe o vbc.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Globalization.DateTimeFormatInfo>  

@@ -1,10 +1,6 @@
 ---
-title: "Procedura: accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)"
+title: 'Procedura: accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - optional parameters [C#], Office programming
 - named and optional arguments [C#], Office programming
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 751e8240c9385f516315ff3b53221d1e1348ae58
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 4e2599f34e80f70a36d6f497f908887aa6853121
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedura: accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)
 Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Office. Le nuove funzionalità includono argomenti denominati e facoltativi, un nuovo tipo chiamato `dynamic` e la possibilità di passare argomenti a parametri di riferimento nei metodi COM come se fossero parametri di valore.  
@@ -101,7 +94,7 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
      [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versioni successive, converte automaticamente l'oggetto `Object` restituito in `dynamic` se l'assembly viene referenziato dall'opzione del compilatore [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) o, analogamente, se la proprietà **Incorpora tipi di interoperabilità** di Excel è impostata su true. True è il valore predefinito di questa proprietà.  
+     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versioni successive, converte automaticamente l'oggetto restituito `Object` in `dynamic` se si fa riferimento all'assembly con l'opzione del compilatore [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) o, allo stesso modo, se la proprietà **Incorpora tipi di interoperabilità** di Excel viene impostata su true. True è il valore predefinito di questa proprietà.  
   
 ### <a name="to-run-the-project"></a>Per eseguire il progetto  
   

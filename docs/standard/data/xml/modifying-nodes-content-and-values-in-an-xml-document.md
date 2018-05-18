@@ -1,26 +1,15 @@
 ---
 title: Modifica di nodi, contenuto e valori in un documento XML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 72039faef3bcde4db830d110938266c63689219e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 716270450a5f0ede545ffcbd906b0a42f547c20f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modifica di nodi, contenuto e valori in un documento XML
 Sono disponibili molti modi per modificare i nodi e il contenuto in un documento. È possibile:  

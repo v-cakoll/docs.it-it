@@ -1,31 +1,20 @@
 ---
 title: 'Procedura: scrivere un ciclo Parallel.For con variabili di thread locali'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 004998a8891d92e2d1f805b3353fbe93864dcf1d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a70b8e3d1f56eafc04b97a19a1582d9c664e587d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Procedura: scrivere un ciclo Parallel.For con variabili di thread locali
 Questo esempio illustra come usare le variabili locali di thread per archiviare e recuperare lo stato in ogni attività separata creata da un ciclo <xref:System.Threading.Tasks.Parallel.For%2A>. L'uso dei dati locali di thread permette di evitare il sovraccarico dovuto alla sincronizzazione di un numero elevato di accessi a uno stato condiviso. Invece di scrivere in una risorsa condivisa a ogni iterazione, si calcola e si archivia il valore fino al completamento di tutte le iterazioni per l'attività. È quindi possibile scrivere il risultato finale una volta sola nella risorsa condivisa oppure passarlo a un altro metodo.  

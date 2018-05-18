@@ -1,24 +1,17 @@
 ---
 title: Operatore ^ (Riferimenti per C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - ^_CSharpKeyword
 helpviewer_keywords:
 - ^ operator [C#]
 - bitwise exclusive OR operator [C#]
 ms.assetid: b09bc815-570f-4db6-a637-5b4ed99d014a
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4ccd32ea8abd8ca3252380083eafecad2b572ed7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5cc3cd2cfc932646e5b2dd6ec034555b07582379
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>Operatore ^ (Riferimenti per C#)
 Gli operatori `^` binari sono predefiniti per i tipi integrali e `bool`. Per i tipi integrali, `^` calcola l'operazione di OR esclusivo bit per bit dei relativi operandi. Per gli operandi `bool`, `^` calcola l'operazione di OR esclusivo logico dei relativi operandi, ovvero, il risultato è `true` se e solo se esattamente uno degli operandi è `true`.  

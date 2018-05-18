@@ -1,13 +1,7 @@
 ---
 title: Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura nelle raccolte
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - SortedList class, culture-insensitive string operations
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b84f25aa2470104be98b9f3858091c44f40ba6a7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c8972a8e9d73adc60e073a5eab9388260c907b68
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura nelle raccolte
 Nello spazio dei nomi <xref:System.Collections> sono disponibili classi e membri che per impostazione predefinita forniscono un comportamento dipendente dalle impostazioni cultura. I costruttori predefiniti per le classi <xref:System.Collections.CaseInsensitiveComparer> e <xref:System.Collections.CaseInsensitiveHashCodeProvider> inizializzano una nuova istanza tramite la proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Per impostazione predefinita, tutti gli overload del metodo <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> creano una nuova istanza della classe <xref:System.Collections.Hashtable> tramite la proprietà `Thread.CurrentCulture`. Per impostazione predefinita, gli overload del metodo <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> consentono di eseguire ordinamenti dipendenti dalle impostazioni cultura tramite `Thread.CurrentCulture`. Ordinamento e ricerca in un <xref:System.Collections.SortedList> possono essere influenzati dal `Thread.CurrentCulture` quando vengono usate stringhe come chiavi. Per ottenere risultati indipendenti dalle impostazioni cultura da queste classi e da questi metodi dello spazio dei nomi `Collections`, attenersi ai consigli sull'utilizzo forniti in questa sezione.  

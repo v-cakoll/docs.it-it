@@ -1,23 +1,16 @@
 ---
 title: Panoramica di .NET
-description: "Panoramica guidata di alcune delle principali funzionalità di .NET."
-keywords: .NET, .NET Core, panoramica, linguaggi di programmazione, unsafe, gestione della memoria, indipendenza dai tipi, asincrono
+description: Panoramica guidata di alcune delle principali funzionalità di .NET.
 author: cartermp
 ms.author: wiwagn
 ms.date: 05/22/2017
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9dca33f01c119c185717efa0666146191503f577
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b1925397fb7cad5e55f992feaa5be2e2d837aac8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tour-of-net"></a>Panoramica di .NET
 

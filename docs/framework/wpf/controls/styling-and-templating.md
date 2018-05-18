@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: e39afea9fe11cdab9e5a6623499a96468aa9d091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="styling-and-templating"></a>Applicazione di stili e modelli
 Gli stili e i modelli di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono un insieme di funzionalità (stili, modelli, trigger e storyboard) che gli sviluppatori e i progettisti usano per creare effetti visivamente accattivanti e per conferire al prodotto un aspetto coerente. Gli sviluppatori e i progettisti possono personalizzare ampiamente l'aspetto a livello di applicazione, ma l'uso di un modello di stili e modelli definito è fondamentale per consentire la manutenzione e la condivisione dell'aspetto all'interno di un'applicazione e tra più applicazioni. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre questo modello.  
@@ -38,7 +38,7 @@ Gli stili e i modelli di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlash
   
  ![ListView con stile](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
   
- Questo esempio usa stili e modelli per creare un'esperienza utente visivamente accattivante. L'esempio include due <xref:System.Windows.Controls.TextBlock> elementi e un <xref:System.Windows.Controls.ListBox> controllo associato a un elenco di immagini. Per l'esempio completo, vedere [Introduzione a un esempio di applicazione di stili e di modelli](http://go.microsoft.com/fwlink/?LinkID=160010).  
+ Questo esempio usa stili e modelli per creare un'esperienza utente visivamente accattivante. L'esempio include due <xref:System.Windows.Controls.TextBlock> elementi e un <xref:System.Windows.Controls.ListBox> controllo associato a un elenco di immagini. Per l'esempio completo, vedere [Introduzione a un esempio di applicazione di stili e di modelli](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 <a name="styling_basics"></a>   
 ## <a name="style-basics"></a>Nozioni di base sugli stili  

@@ -2,11 +2,11 @@
 title: Strutture (F#)
 description: 'Informazioni su F # struttura, un tipo di oggetto compatto spesso più efficiente rispetto a una classe per i tipi con una piccola quantità di dati e comportamento semplice.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 728533e24dcfae219ae5ab3d410389e95fcfaee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57c4148aec1d6a19237d74aa99824ef475c3632e
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="structures"></a>Strutture
 
@@ -18,13 +18,13 @@ Oggetto *struttura* è un tipo di oggetto compatto che può essere più efficien
 [ attributes ]
 type [accessibility-modifier] type-name =
     struct
-        type-definition-elements
+        type-definition-elements-and-members
     end
 // or
 [ attributes ]
 [<StructAttribute>]
 type [accessibility-modifier] type-name =
-    type-definition-elements
+    type-definition-elements-and-members
 ```
 
 ## <a name="remarks"></a>Note
@@ -32,7 +32,7 @@ Le strutture sono *i tipi di valore*, il che significa che sono archiviati diret
 
 Nella sintassi precedente sono illustrate due forme. La prima non è la sintassi leggera, ma viene comunque usata frequentemente perché, quando si usano la parole chiave `struct` e `end`, è possibile omettere l'attributo `StructAttribute`, che viene visualizzato nella seconda forma. È possibile abbreviare `StructAttribute` in `Struct`.
 
-Il *gli elementi di definizione del tipo* nella sintassi precedente rappresenta definizioni e dichiarazioni di membri. Le strutture possono disporre di costruttori e campi modificabili e non modificabili e possono dichiarare i membri e le implementazioni dell'interfaccia. Per ulteriori informazioni, vedere [membri](members/index.md).
+Il *-definition-elementi-e-i membri dei tipi* nella sintassi precedente rappresenta definizioni e dichiarazioni di membri. Le strutture possono disporre di costruttori e campi modificabili e non modificabili e possono dichiarare i membri e le implementazioni dell'interfaccia. Per ulteriori informazioni, vedere [membri](members/index.md).
 
 Le strutture non possono partecipare all'ereditarietà, non possono contenere associazioni `let` o `do` e non possono contenere in modo ricorsivo campi del proprio tipo (nonostante possano contenere celle di riferimento che facciano riferimento al proprio tipo).
 

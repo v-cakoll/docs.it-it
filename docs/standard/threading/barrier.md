@@ -1,31 +1,20 @@
 ---
 title: Barriera (.NET Framework)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, Barrier
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
-caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 392e975f6bf566c2ba36290940eb0daee03f004f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 864571262d1c9c060235840424542856187341df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="barrier-net-framework"></a>Barriera (.NET Framework)
 Una *barriera* è una primitiva di sincronizzazione definita dall'utente che permette a più thread (noti come *partecipanti*) di lavorare contemporaneamente su un algoritmo in fasi diverse. Ogni partecipante viene eseguito fino al raggiungimento del punto barriera nel codice. La barriera rappresenta la fine di una fase di lavoro. Quando un partecipante raggiunge la barriera, si blocca fino al raggiungimento della stessa barriera da parte di tutti i partecipanti. Dopo che tutti i partecipanti hanno raggiunto la barriera, è possibile richiamare facoltativamente un'azione post- fase. Questa azione post- fase può essere usata per eseguire azioni da parte di un singolo thread mentre tutti gli altri thread rimangono bloccati. Dopo l'esecuzione dell'azione, tutti i partecipanti verranno sbloccati.  

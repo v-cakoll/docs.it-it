@@ -1,30 +1,19 @@
 ---
 title: Convalida di un documento XML nel DOM
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 716e9baca52e9f5b7f4f24821e50b6a16aef9136
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b77d26a79796a9de87c07e366929cb516169907b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Convalida di un documento XML nel DOM
 La classe <xref:System.Xml.XmlDocument> non esegue la convalida del codice XML nel DOM (Document Object Model) in base a uno schema XSD (XML Schema Definition Language) o a una DTD (Document Type Definition) per impostazione predefinita. Viene solo verificata la correttezza del formato XML.  

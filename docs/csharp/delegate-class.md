@@ -1,20 +1,13 @@
 ---
-title: System.Delegate e parola chiave "delegate"
+title: System.Delegate e la parola chiave `delegate`
 description: Informazioni sulle classi di .NET Framework che supportano i delegati e sul mapping tra queste classi e la parola chiave "delegate".
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate e la parola chiave `delegate`
 
@@ -120,7 +113,7 @@ L'esempio Sort() di solito associa un singolo metodo di destinazione al delegato
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>Classi Delegate e MulticastDelegate
 
-Il supporto del linguaggio descritto in precedenza offre le funzionalità e il supporto in genere necessari quando si lavora con i delegati. Queste funzionalità si basano su due classi in framework .NET Core: <xref:System.Delegate> e <xref:System.MulticastDelegate>.
+Il supporto del linguaggio descritto in precedenza offre le funzionalità e il supporto in genere necessari quando si lavora con i delegati. Tali funzionalità si basano su due classi di .NET Core Framework: <xref:System.Delegate> e <xref:System.MulticastDelegate>.
 
 La classe `System.Delegate` e la singola sottoclasse diretta `System.MulticastDelegate` offrono il supporto di .NET Framework per la creazione di delegati, la registrazione di metodi come destinazioni di delegato e la chiamata a tutti i metodi che vengono registrati come destinazione di delegato. 
 

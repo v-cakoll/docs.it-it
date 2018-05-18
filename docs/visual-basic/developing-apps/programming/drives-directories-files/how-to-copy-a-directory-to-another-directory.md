@@ -1,26 +1,17 @@
 ---
-title: 'Procedura: copiare una directory in un''altra directory di Visual Basic'
-ms.custom: 
+title: "Procedura: copiare una directory in un'altra directory di Visual Basic"
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
 - I/O [Visual Basic], copying folders
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 72f20ee767902395439f420f14fc2e352297ad31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b6e095d061619cf9d2e2d87a7247cbdbc51cbe2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Procedura: copiare una directory in un'altra directory di Visual Basic
 Usare il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> per copiare una directory in un'altra directory. Questo metodo consente di copiare il contenuto della directory nonché la directory stessa. Se la directory di destinazione non esiste, viene creata. Se è presente una directory con lo stesso nome nel percorso di destinazione e `overwrite` è impostato su `False`, il contenuto delle due directory viene unito. È possibile specificare un nuovo nome per la directory durante l'operazione.  

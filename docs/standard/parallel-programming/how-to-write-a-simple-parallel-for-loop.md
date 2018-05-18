@@ -1,13 +1,7 @@
 ---
 title: 'Procedura: scrivere un ciclo Parallel.For semplice'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3a70dcb5e3811a18e23aeb2ebf0940d2c52f49a9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a601c8f1fed04c839c2a413e4b0e44a75f4195b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Procedura: scrivere un ciclo Parallel.For semplice
 Questo argomento contiene due esempi che mostrano il metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Il primo usa l'overload del metodo <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType>, mentre il secondo usa l'overload <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, ovvero i due overload più semplici del metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. È possibile usare questi due overload del metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> quando non è necessario annullare il ciclo, interrompere le iterazioni del ciclo o mantenere qualsiasi stato locale dei thread.  

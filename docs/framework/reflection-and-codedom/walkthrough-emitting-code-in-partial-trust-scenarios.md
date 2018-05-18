@@ -1,13 +1,6 @@
 ---
-title: "Procedura dettagliata: creazione di codice in scenari di attendibilità parziale"
-ms.custom: 
+title: 'Procedura dettagliata: creazione di codice in scenari di attendibilità parziale'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,13 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c8461e0a074e7bdf9e1e2631c3f65e16de7256fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: creazione di codice in scenari di attendibilità parziale
 La reflection emit usa le stesse API in scenari di attendibilità sia parziale che completa, ma alcune funzionalità richiedono autorizzazioni speciali nel codice parzialmente attendibile. Inoltre, la reflection emit include una funzionalità, i metodi dinamici ospitati in modo anonimo, progettata per l'uso in situazioni di attendibilità parziale da parte di assembly trasparenti per la sicurezza.  
@@ -144,7 +134,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
      Il metodo <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> crea l'oggetto nel dominio dell'applicazione di destinazione e restituisce un proxy che può essere usato per chiamare le proprietà e metodi dell'oggetto.  
   
     > [!NOTE]
-    >  Se questo codice viene utilizzato in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], è necessario modificare il nome della classe per includere lo spazio dei nomi. Per impostazione predefinita, lo spazio dei nomi è il nome del progetto. Ad esempio, se il progetto è "PartialTrust", il nome della classe deve essere "PartialTrust.Worker".  
+    >  Se questo codice viene utilizzato in Visual Studio, è necessario modificare il nome della classe per includere lo spazio dei nomi. Per impostazione predefinita, lo spazio dei nomi è il nome del progetto. Ad esempio, se il progetto è "PartialTrust", il nome della classe deve essere "PartialTrust.Worker".  
   
 6.  Aggiungere il codice per chiamare il metodo `SimpleEmitDemo` . La chiamata viene sottoposta a marshalling entro i limiti del dominio dell'applicazione e il codice viene eseguito nel dominio dell'applicazione sandbox.  
   
@@ -218,7 +208,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Se si compila questo esempio di codice in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], è necessario modificare il nome della classe in modo che includa lo spazio dei nomi quando si passa la classe al metodo <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Per impostazione predefinita, lo spazio dei nomi è il nome del progetto. Ad esempio, se il progetto è "PartialTrust", il nome della classe deve essere "PartialTrust.Worker".  
+-   Se si compila questo esempio di codice in Visual Studio, è necessario modificare il nome della classe in modo che includa lo spazio dei nomi quando si passa la classe al metodo <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Per impostazione predefinita, lo spazio dei nomi è il nome del progetto. Ad esempio, se il progetto è "PartialTrust", il nome della classe deve essere "PartialTrust.Worker".  
   
 ## <a name="see-also"></a>Vedere anche  
  [Problemi di sicurezza nella reflection emit](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  

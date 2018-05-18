@@ -1,12 +1,6 @@
 ---
-title: 'Procedura: Impostare criteri di cache basati sulla posizione per un''applicazione'
-ms.custom: 
+title: "Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +11,14 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 9d54a34b5d7cf40a6eaa9d777b9b05a1be34f177
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 50312578e9900f65fb2378de5201888fa5d77a8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione
 I criteri di cache basati sulla posizione consentono a un'applicazione di definire in modo esplicito il comportamento di memorizzazione nella cache in base alla posizione della risorsa richiesta. Questo argomento illustra l'impostazione dei criteri di cache a livello di codice. Per informazioni sull'impostazione dei criteri per un'applicazione che usa file di configurazione, vedere [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  

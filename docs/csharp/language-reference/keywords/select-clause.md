@@ -1,9 +1,6 @@
 ---
 title: Clausola select (Riferimento C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - select_CSharpKeyword
 - select
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-caps.latest.revision: "19"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f40bc26d1812e76ac618c5a0ddf23c4cef2700d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6e7277b5d714e48059fe1ed7e8b85e46a14a840c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="select-clause-c-reference"></a>Clausola select (Riferimento C#)
 In un'espressione di query, la clausola `select` specifica il tipo di valori che verranno prodotti quando viene eseguita la query. Il risultato è basato sulla valutazione di tutte le clausole precedenti e su qualsiasi espressione nella clausola `select` stessa. Un'espressione di query deve terminare con una clausola `select` o una clausola [group](../../../csharp/language-reference/keywords/group-clause.md).  
@@ -43,7 +37,7 @@ In un'espressione di query, la clausola `select` specifica il tipo di valori che
  [Riferimenti per C#](../../../csharp/language-reference/index.md)  
  [Parole chiave di query (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
  [Clausola from](../../../csharp/language-reference/keywords/from-clause.md)  
- [parziale (metodo) (riferimenti per c#)](../../../csharp/language-reference/keywords/partial-method.md)  
+ [parziale (Metodo) (Riferimenti per C#)](../../../csharp/language-reference/keywords/partial-method.md)  
  [Tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
  [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [Nozioni di base su LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

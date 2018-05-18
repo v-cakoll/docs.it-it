@@ -1,20 +1,13 @@
 ---
 title: Documentazione del codice con i commenti XML
 description: Informazioni su come documentare il codice con commenti della documentazione XML e generare un file di documentazione XML in fase di compilazione.
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
 ms.date: 02/14/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 709ef2ba2202e69ba35834789ad6e743a0f6b719
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1284f179c7debb323ea3bbd302df1f02bf8b31b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentazione del codice con i commenti XML
 
@@ -25,7 +18,7 @@ I commenti in formato documentazione XML, come tutti gli altri commenti, vengono
 
 È possibile generare il file XML in fase di compilazione eseguendo una delle operazioni seguenti:
 
-- Se si sviluppa un'applicazione con .NET Core dalla riga di comando, è possibile aggiungere un [elemento DocumentationFile](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) alla sezione `<PropertyGroup>` del file di progetto csproj. L'esempio seguente genera un file XML nella directory del progetto con lo stesso nome di file dell'assembly principale:
+- Se si sviluppa un'applicazione con .NET Core dalla riga di comando, è possibile aggiungere un [elemento DocumentationFile](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) alla sezione `<PropertyGroup>` del file di progetto csproj. L'esempio seguente genera un file XML nella directory del progetto con lo stesso nome file radice dell'assembly:
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>

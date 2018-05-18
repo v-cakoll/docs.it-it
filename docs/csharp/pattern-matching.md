@@ -1,19 +1,13 @@
 ---
 title: Criteri di ricerca - Guida a C#
 description: Informazioni sulle espressioni di criteri di ricerca in C#
-keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
-ms.author: wiwagn
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: a0f80fc2c019cefa81506d9dcdeabc57a1e98c2b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0f95ac8b16939173e6cfd7304b9cbe52526b5169
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca #
 
@@ -51,7 +45,7 @@ In questa versione aggiornata l'espressione `is` esegue il test della variabile 
 
 Le regole del linguaggio per i criteri di ricerca consentono di evitare un uso errato dei risultati di un'espressione di confronto. Nell'esempio precedente le variabili `s`, `c` e `r` sono nell'ambito e assegnate definitivamente solo quando le relative espressioni di criteri di ricerca hanno risultati `true`. Se si tenta di usare una variabile in un altro percorso, il codice genera errori del compilatore.
 
-Vengono ora esaminate entrambe le regole nel dettaglio iniziando con l'ambito. La variabile `c` è nell'ambito solo nel ramo `else` della prima istruzione `if`. La variabile `s` è nell'ambito nel metodo `ComputeArea`. Ciò accade perché ogni ramo di un'istruzione `if` definisce un ambito separato per le variabili. Tuttavia, l'istruzione `if` stessa non esegue questa operazione. Ciò significa che le variabili dichiarate nell'istruzione `if` sono nello stesso ambito dell'istruzione `if` (in questo caso, il metodo). Questo comportamento non è specifico dei criteri di ricerca, ma è il comportamento definito per gli ambiti delle variabili e le istruzioni `if` e `else`.
+Vengono ora esaminate entrambe le regole nel dettaglio iniziando con l'ambito. La variabile `c` è nell'ambito solo nel ramo `else` della prima istruzione `if`. La variabile `s` è nell'ambito nel metodo `ComputeAreaModernIs`. Ciò accade perché ogni ramo di un'istruzione `if` definisce un ambito separato per le variabili. Tuttavia, l'istruzione `if` stessa non esegue questa operazione. Ciò significa che le variabili dichiarate nell'istruzione `if` sono nello stesso ambito dell'istruzione `if` (in questo caso, il metodo). Questo comportamento non è specifico dei criteri di ricerca, ma è il comportamento definito per gli ambiti delle variabili e le istruzioni `if` e `else`.
 
 Le variabili `c` e `s` vengono assegnate quando le rispettive istruzioni `if` sono vere a causa del meccanismo di assegnazione definitiva quando sono vere.
 

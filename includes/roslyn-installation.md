@@ -22,7 +22,7 @@ Facoltativamente, è possibile installare anche l'**editor DGML** per visualizza
 1. Eseguire il **programma di installazione di Visual Studio**. 
 1. Selezionare **Modifica**. 
 1. Selezionare la scheda **Singoli componenti**. 
-1. Selezionare la casella di controllo per **.NET Compiler Platform SDK**. È l'ultima voce nella sezione **Compilatori, strumenti di compilazione e runtime**.
+1. Selezionare la casella di controllo per **.NET Compiler Platform SDK**. È la prima voce nella sezione **Compilatori, strumenti di compilazione e runtime**.
 
 Facoltativamente, è possibile installare anche l'**editor DGML** per visualizzare i grafici nel visualizzatore:
 

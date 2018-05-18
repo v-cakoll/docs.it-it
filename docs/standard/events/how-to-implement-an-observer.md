@@ -1,13 +1,7 @@
 ---
-title: 'Procedura: Implementare un observer'
-ms.custom: 
+title: 'Procedura: Implementare un elemento Observer'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,20 +9,15 @@ helpviewer_keywords:
 - observers [.NET Framework], observer design pattern
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b895739daf1f4844d6300df4788441be67b90254
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f291bc91575ccde346f16552636d44951a0e6eac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-implement-an-observer"></a>Procedura: Implementare un observer
+# <a name="how-to-implement-an-observer"></a>Procedura: Implementare un elemento Observer
 Lo schema progettuale degli observer richiede una divisione tra un observer, che si registra per le notifiche, e un provider, che monitora i dati e invia notifiche a uno o più observer. Questo argomento descrive come creare un observer. Un argomento correlato, [Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md), descrive come creare un provider.  
   
 ### <a name="to-create-an-observer"></a>Per creare un observer  
