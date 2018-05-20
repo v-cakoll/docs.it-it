@@ -2,46 +2,52 @@
 title: Proprietà indicizzate (F#)
 description: "Informazioni sulle proprietà indicizzate F # che sono proprietà che forniscono l'accesso di tipo matrice ai dati ordinati."
 ms.date: 05/16/2016
-ms.openlocfilehash: b3945c7fc22977373b601856036178e890abc13e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 503cef9693cfe5e13d4e2d19a721d65bff1ce749
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="indexed-properties"></a>Proprietà indicizzate
 
-*Proprietà indicizzate* sono proprietà che forniscono l'accesso di tipo matrice a ordinati i dati.
+*Proprietà indicizzate* sono proprietà che forniscono l'accesso di tipo matrice a ordinati i dati. Sono disponibili tre forme:
+
+* `Item`
+* `Ordinal`
+* `Cardinal`
+
+Un membro di F # deve chiamarsi uno di questi tre nomi per fornire l'accesso di tipo matrice. `IndexerName` viene utilizzato per rappresentare uno qualsiasi dei tre opzioni seguenti:
 
 
 ## <a name="syntax"></a>Sintassi
 
 ```fsharp
 // Indexed property that has both get and set defined.
-member self-identifier.PropertyName
+member self-identifier.IndexerName
     with get(index-variable) =
         get-function-body
     and set index-variablesvalue-variables =
         set-function-body
 
 // Indexed property that has get only.
-member self-identifier.PropertyName(index-variable) =
+member self-identifier.IndexerName(index-variable) =
     get-function-body
 
 // Alternative syntax for indexed property with get only
-member self-identifier.PropertyName
+member self-identifier.IndexerName
     with get(index-variables) =
         get-function-body
 
 // Indexed property that has set only.
-member self-identifier.PropertyName
+member self-identifier.IndexerName
     with set index-variablesvalue-variables = 
         set-function-body
 ```
 
 ## <a name="remarks"></a>Note
-Le tre forme di sintassi precedente viene illustrato come definire proprietà indicizzate che hanno entrambi un `get` e un `set` (metodo), hanno un `get` solo, metodo o un `set` solo metodo. È possibile combinare la sintassi illustrata solo per get e la sintassi illustrata solo per set e produrre una proprietà che contiene sia get che set. Questo modulo di quest'ultimo consente di inserire gli attributi e modificatori di accessibilità diversi su get e set di metodi.
+Le forme di sintassi precedente viene illustrato come definire proprietà indicizzate che hanno entrambe un `get` e un `set` (metodo), hanno un `get` solo, metodo o un `set` solo metodo. È possibile combinare la sintassi illustrata solo per get e la sintassi illustrata solo per set e produrre una proprietà che contiene sia get che set. Questo modulo di quest'ultimo consente di inserire gli attributi e modificatori di accessibilità diversi su get e set di metodi.
 
-Quando il *PropertyName* è `Item`, il compilatore considera la proprietà come una proprietà indicizzata predefinita. Oggetto *proprietà indicizzata predefinita* è una proprietà che è possibile accedere tramite la sintassi di tipo matrice sull'istanza dell'oggetto. Ad esempio, se `obj` è un oggetto del tipo che definisce questa proprietà, la sintassi `obj.[index]` viene utilizzato per accedere alla proprietà.
+Quando il *IndexerName* è `Item`, il compilatore considera la proprietà come una proprietà indicizzata predefinita. Oggetto *proprietà indicizzata predefinita* è una proprietà che è possibile accedere tramite la sintassi di tipo matrice sull'istanza dell'oggetto. Ad esempio, se `obj` è un oggetto del tipo che definisce questa proprietà, la sintassi `obj.[index]` viene utilizzato per accedere alla proprietà.
 
 La sintassi per l'accesso a una proprietà indicizzata è fornire il nome della proprietà e l'indice racchiuso tra parentesi. Ad esempio, se la proprietà è `Ordinal`, si scrive `obj.Ordinal(index)` per accedervi.
 

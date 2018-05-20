@@ -1,6 +1,6 @@
 ---
 title: Istruzione Event
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59dc8e7b01612af0e4c8f6c1018269580284c46
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="event-statement"></a>Istruzione Event
 Dichiara un evento definito dall'utente.  
@@ -58,7 +58,7 @@ End Event
 |Parte|Descrizione|  
 |---|---|  
 |`attrlist`|Facoltativo. Elenco degli attributi applicabili all'evento. Gli attributi sono separati da una virgola. È necessario racchiudere il [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi quadre ("`<`"e"`>`").|  
-|`accessmodifier`|Facoltativo. Specifica il tipo di codice che può accedere all'evento. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md): può accedere qualsiasi codice che può accedere all'elemento che lo dichiara.<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md), ovvero solo codice all'interno di classe o una classe derivata può accedervi.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md), ovvero solo può accedere il codice nello stesso assembly.<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md): può accedere solo il codice nell'elemento che lo dichiara.<br /><br /> Si può specificare `Protected Friend` per abilitare l'accesso dal codice incluso nella classe dell'evento, in una classe derivata o nello stesso assembly.|  
+|`accessmodifier`|Facoltativo. Specifica il tipo di codice che può accedere all'evento. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md): può accedere qualsiasi codice che può accedere all'elemento che lo dichiara.<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md), ovvero solo codice all'interno di classe o una classe derivata può accedervi.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md), ovvero solo può accedere il codice nello stesso assembly.<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md): può accedere solo il codice nell'elemento che lo dichiara.<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-only può accedere il codice nella classe dell'evento, una classe derivata o nello stesso assembly. <br />- [Protetto privato](../../language-reference/modifiers/private-protected.md)-solo codice nella classe dell'evento o una classe derivata nello stesso assembly può accedere.|  
 |`Shared`|Facoltativo. Specifica che l'evento non è associato a una specifica istanza di una classe o di una struttura.|  
 |`Shadows`|Facoltativo. Indica che l'evento ridichiara e nasconde un elemento di programmazione omonimo o un insieme di elementi in overload di una classe base. È possibile nascondere qualsiasi tipo di elemento dichiarato con qualsiasi altro tipo.<br /><br /> Un elemento nascosto non è disponibile all'interno della classe derivata che lo nasconde, a meno che l'elemento di shadowing sia inaccessibile. Ad esempio, se un elemento `Private` nasconde un elemento della classe base, il codice che non dispone dell'autorizzazione per accedere all'elemento `Private` accede invece all'elemento della classe base.|  
 |`eventname`|Obbligatorio. Nome dell'evento, conforme alle convenzioni di denominazione standard delle variabili.|  

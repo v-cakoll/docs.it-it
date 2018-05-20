@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6d12740333d869b2fd43914437a6f5b5f62f843
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0f831426762ddcb21e4c1c1191e20435a13deb
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 <a name="introduction"></a> Questo articolo offre un riepilogo dei principali nuovi miglioramenti e funzionalità introdotti nelle versioni seguenti di .NET Framework:  
@@ -49,7 +49,7 @@ Non vengono fornite informazioni complete su ogni nuova funzionalità e l'artico
 
 .NET Framework 4.7.2 può essere installato in Windows 10, Windows 8.1, Windows 7 SP1 e nelle piattaforme server corrispondenti a partire da Windows Server 2008 R2 SP1. È possibile installare .NET Framework 4.7.2 usando il programma di installazione Web o il programma di installazione offline. Per la maggior parte degli utenti è consigliabile usare il programma di installazione Web.
 
-Per .NET Framework 4.7.2 in Visual Studio 2012 o versioni successive è possibile installare [.NET Framework 4.7.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=863261). 
+Per .NET Framework 4.7.2 in Visual Studio 2012 o versioni successive è possibile installare [.NET Framework 4.7.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=874338). 
 
 ### <a name="whats-new-in-the-net-framework-472"></a>Novità di .NET Framework 4.7.2
 

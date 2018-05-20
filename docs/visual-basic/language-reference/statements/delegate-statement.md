@@ -7,11 +7,11 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: fb9d8b2c2647ba8fd3b7cee4781f1574b6679b0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3965dc2d71ec9356cdb38d5ddcd4e00f9259951a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="delegate-statement"></a>Istruzione Delegate
 Usato per dichiarare un delegato. Un delegato è un tipo di riferimento che fa riferimento a un `Shared` metodo di un tipo o a un metodo di istanza di un oggetto. Qualsiasi routine con parametri e tipi restituiti corrispondenti può essere utilizzato per creare un'istanza della classe delegata. La procedura può quindi in un secondo momento richiamata mediante l'istanza del delegato.  
@@ -28,7 +28,7 @@ Usato per dichiarare un delegato. Un delegato è un tipo di riferimento che fa r
 |Termine|Definizione|  
 |---|---|  
 |`attrlist`|Facoltativo. Elenco di attributi che si applicano a questo delegato. Gli attributi sono separati da una virgola. È necessario racchiudere il [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi quadre ("`<`"e"`>`").|  
-|`accessmodifier`|Facoltativo. Specifica il tipo di codice può accedere al delegato. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md). Può accedere qualsiasi codice che è possibile accedere all'elemento che dichiara il delegato.<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md). Solo il codice incluso nella classe del delegato o di una classe derivata può accedervi.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Solo il codice all'interno dello stesso assembly può accedere al delegato.<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md). Può accedere solo codice all'interno dell'elemento che dichiara il delegato.<br /><br /> È possibile specificare `Protected Friend` per abilitare l'accesso dal codice all'interno dello stesso assembly, una classe derivata o nella classe del delegato.|  
+|`accessmodifier`|Facoltativo. Specifica il tipo di codice può accedere al delegato. Può essere uno dei seguenti:<br /><br /> - [Pubblica](../../../visual-basic/language-reference/modifiers/public.md). Può accedere qualsiasi codice che è possibile accedere all'elemento che dichiara il delegato.<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md). Solo il codice incluso nella classe del delegato o di una classe derivata può accedervi.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Solo il codice all'interno dello stesso assembly può accedere al delegato.<br />- [Privato](../../../visual-basic/language-reference/modifiers/private.md). Può accedere solo codice all'interno dell'elemento che dichiara il delegato.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) solo codice all'interno dello stesso assembly, classe del delegato o una classe derivata può accedere al delegato. <br />- [Protetto privato](../../language-reference/modifiers/private-protected.md) solo codice all'interno di classe del delegato o in una classe derivata nello stesso assembly può accedere al delegato. |  
 |`Shadows`|Facoltativo. Indica che il delegato ridichiara e nasconde un elemento di programmazione omonimo o un set di elementi in overload di una classe di base. È possibile nascondere qualsiasi tipo di elemento dichiarato con qualsiasi altro tipo.<br /><br /> Un elemento nascosto non è disponibile all'interno della classe derivata che lo nasconde, a meno che l'elemento di shadowing sia inaccessibile. Ad esempio, se un `Private` elemento nasconde un elemento della classe base, il codice che non dispone dell'autorizzazione per accedere il `Private` elemento accede invece all'elemento della classe base.|  
 |`Sub`|Parametro facoltativo, ma uno `Sub` o `Function` devono essere visualizzati. Questa procedura come un delegato dichiara `Sub` routine che restituisce un valore.|  
 |`Function`|Parametro facoltativo, ma uno `Sub` o `Function` devono essere visualizzati. Questa procedura come un delegato dichiara `Function` procedure che restituisce un valore.|  

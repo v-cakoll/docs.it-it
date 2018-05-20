@@ -2,11 +2,11 @@
 title: 'Guida di stile di F #'
 description: 'Altre cinque principi di codice F # funzionante.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 317fc2c101449b0500a54dd9fea3d426757af5cd
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 6d8c1336ca991040a8f6e13290d209cb3b70054d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-style-guide"></a>Guida di stile di F #
 
@@ -40,8 +40,8 @@ Questa guida è stata formulata in base alle basi di codice l'utilizzo di F # in
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Il [linee guida di formattazione di F #](formatting.md) vengono fornite indicazioni sulle modalità di formattazione di codice in modo che sia facile da leggere.
+Il [codice F # la formattazione di linee guida](formatting.md) vengono fornite indicazioni sulle modalità di formattazione di codice in modo che sia facile da leggere.
 
 Il [F # convenzioni di codifica](conventions.md) forniscono materiale sussidiario per idiomi utili per la manutenzione a lungo termine di dimensioni maggiori F # di programmazione F # basi di codice.
 
-Il [F # componente linee guida di progettazione](component-design-guidelines.md) è un set completo di indicazioni per la creazione di componenti di F #, ad esempio le raccolte.
+Il [F # componente linee guida di progettazione](component-design-guidelines.md) forniscono materiale sussidiario per la creazione di componenti di F #, ad esempio le raccolte.

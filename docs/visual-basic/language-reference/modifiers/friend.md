@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 756a18da74ff49cbefaf6a63980302bbcb141713
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d906fc8ada19f22059da44acbd76dd07dacd4801
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 Specifica che uno o più elementi di programmazione dichiarati sono accessibili solo dall'interno dell'assembly che contiene la dichiarazione.  
@@ -27,9 +27,10 @@ Specifica che uno o più elementi di programmazione dichiarati sono accessibili 
  `Friend` l'accesso è spesso il livello preferito per gli elementi di programmazione dell'applicazione, e `Friend` è l'accesso predefinito a livello di un'interfaccia, un modulo, una classe o una struttura.  
   
  È possibile utilizzare `Friend` solo a livello di modulo, interfaccia o spazio dei nomi. Pertanto, il contesto della dichiarazione per un `Friend` elemento deve essere un file di origine, uno spazio dei nomi, un'interfaccia, un modulo, una classe o una struttura, non può essere una stored procedure.  
-  
- È possibile utilizzare il `Friend` modificatore in combinazione con il [Protected](../../../visual-basic/language-reference/modifiers/protected.md) modificatore nella stessa dichiarazione. Questa combinazione conferisce entrambi `Friend` accesso e l'accesso protetto per gli elementi dichiarati, in modo che siano accessibili da un punto qualsiasi nello stesso assembly, dalla rispettiva classe e dalle classi derivate. È possibile specificare `Protected Friend` solo in membri di classi.  
-  
+
+> [!NOTE]
+> È anche possibile usare il [Protected Friend](protected-friend.md) modificatore di accesso, che rende accessibile dall'interno di tale classe, dalle classi derivate e allo stesso assembly in cui è definita la classe un membro di classe. Per limitare l'accesso a un membro all'interno di classe e dalle classi derivate nello stesso assembly, utilizzare il [privato protetto](private-protected.md) modificatore di accesso.
+
  Per un confronto tra `Friend` e l'altro modificatori di accesso, vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
@@ -74,6 +75,8 @@ Specifica che uno o più elementi di programmazione dichiarati sono accessibili 
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Protetto privato](./private-protected.md)   
+ [Protected Friend](./protected-friend.md)   
  [Livelli di accesso in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Routine](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [Strutture](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

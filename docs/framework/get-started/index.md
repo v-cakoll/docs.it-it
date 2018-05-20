@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d62ae73c9a2789087785e1fba6b227245ee08a10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ecac9d30b390be886e9d81f11623070301f7d38
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="get-started-with-the-net-framework"></a>Introduzione a .NET Framework
 
@@ -70,7 +70,7 @@ Per sviluppare app o componenti .NET Framework, eseguire le operazioni seguenti:
 
 2. Selezionare uno o più linguaggi supportati da .NET Framework che si intende usare per lo sviluppo delle app. Sono disponibili numerosi linguaggi, tra cui [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e C++/CLI di Microsoft. Un linguaggio di programmazione che consente di sviluppare app per .NET Framework è conforme alla [specifica CLI (Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkId=199862).
 
-3. Selezionare e installare l'ambiente di sviluppo da usare per creare le app e che supporti uno o più linguaggi di programmazione selezionati. L'ambiente di sviluppo integrato (IDE) Microsoft per le app .NET Framework è [Visual Studio](http://go.microsoft.com/fwlink/?LinkId=325532). È disponibile in numerose edizioni.
+3. Selezionare e installare l'ambiente di sviluppo da usare per creare le app e che supporti uno o più linguaggi di programmazione selezionati. L'ambiente di sviluppo integrato (IDE) Microsoft per le app .NET Framework è [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). È disponibile in numerose edizioni.
 
 Per altre informazioni sullo sviluppo di app destinate a .NET Framework, vedere la [Guida di sviluppo](../../../docs/framework/development-guide.md).
 

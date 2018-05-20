@@ -287,7 +287,7 @@
 ### [Introduzione all'interfaccia della riga di comando di .NET Core](fsharp/get-started/get-started-command-line.md)
 
 ## [Guida di stile di F#](fsharp/style-guide/index.md)
-### [Linee guida per la formattazione di F#](fsharp/style-guide/formatting.md)
+### [Linee guida per la formattazione del codice F#](fsharp/style-guide/formatting.md)
 ### [Convenzioni di codifica C#](fsharp/style-guide/conventions.md)
 ### [Linee guida di progettazione del componente F#](fsharp/style-guide/component-design-guidelines.md)
 

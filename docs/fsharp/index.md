@@ -3,11 +3,11 @@ title: Guida a F#
 description: 'Questa guida fornisce una panoramica delle varie materiali di formazione per F #, un linguaggio di programmazione funzionale che viene eseguita su .NET.'
 author: jackfoxy
 ms.date: 03/19/2018
-ms.openlocfilehash: 393214a5da7445d8ee3dced844da8592f4ca6d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb829e904c006467e1470752b4fe8757ca694b05
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="f-guide"></a>Guida a F#
 
@@ -49,6 +49,8 @@ F # è incentrato sulla produttività essenzialmente. Il supporto per gli strume
 [Introduzione a F # con l'interfaccia CLI Core .NET](get-started/get-started-command-line.md) se si desidera utilizzare gli strumenti da riga di comando.
 
 [Introduzione a F # e Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) per la programmazione per dispositivi mobili con F #.
+
+[F # per Azure notebook](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb) tratta di un'esercitazione per l'apprendimento di F # in un server Jupyter Notebook gratuito e ospitato.
 
 ## <a name="references"></a>Riferimenti
 

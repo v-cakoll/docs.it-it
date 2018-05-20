@@ -2,11 +2,11 @@
 title: 'Convenzioni nel codice F #'
 description: 'Altre linee guida generali e idiomi durante la scrittura di codice F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 4db1e2b4fef97fc060f717a080cd762f9fe08ee0
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: adb2189540496046ccf6e392bd45807860e13520
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-coding-conventions"></a>Convenzioni nel codice F #
 
@@ -108,12 +108,11 @@ open System.IO
 open System.Reflection
 open System.Text
 
-open Microsoft.FSharp.Core.Printf
 open Microsoft.FSharp.Compiler
 open Microsoft.FSharp.Compiler.AbstractIL
+open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.IL
 open Microsoft.FSharp.Compiler.AbstractIL.ILBinaryReader
-open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.Internal
 open Microsoft.FSharp.Compiler.AbstractIL.Internal.Library
 
@@ -123,24 +122,23 @@ open Microsoft.FSharp.Compiler.CompileOps
 open Microsoft.FSharp.Compiler.CompileOptions
 open Microsoft.FSharp.Compiler.Driver
 open Microsoft.FSharp.Compiler.ErrorLogger
+open Microsoft.FSharp.Compiler.Infos
+open Microsoft.FSharp.Compiler.InfoReader
+open Microsoft.FSharp.Compiler.Lexhelp
+open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Lib
+open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.PrettyNaming
 open Microsoft.FSharp.Compiler.Parser
 open Microsoft.FSharp.Compiler.Range
-open Microsoft.FSharp.Compiler.Lexhelp
-open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Tast
 open Microsoft.FSharp.Compiler.Tastops
 open Microsoft.FSharp.Compiler.TcGlobals
-open Microsoft.FSharp.Compiler.Infos
-open Microsoft.FSharp.Compiler.InfoReader
-open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.TypeChecker
 open Microsoft.FSharp.Compiler.SourceCodeServices.SymbolHelpers
 
 open Internal.Utilities
 open Internal.Utilities.Collections
-open Microsoft.FSharp.Compiler.Layout.TaggedTextOps
 ```
 
 Si noti che un'interruzione di riga separa topologici livelli, con ogni livello ordinata in ordine alfanumerico in un secondo momento. Normalmente, ciò consente di organizzare codice senza accidentalmente shadowing valori.
@@ -318,7 +316,7 @@ I tipi, ad esempio `Result<'Success, 'Error>` appropriati per le operazioni di b
 
 ## <a name="partial-application-and-point-free-programming"></a>Applicazione parziale e la programmazione senza punto
 
-F # supporta applicazione parziale e quindi vari modi per programma in uno stile senza punto. Ciò può essere utile per il riutilizzo del codice all'interno di un modulo o l'implementazione di un oggetto, ma non è in genere per esporre pubblicamente. In generale, programmazione senza punto non è un virtù in e di se stesso e può aggiungere un ostacolo significativo cognitivo per gli utenti che non sono immerso nello stile. Senza punto di programmazione in F # è basic si ipotizza un ben sottoposto a training, ma può essere difficile per gli utenti che non hanno familiari con lambda calcolo.
+F # supporta applicazione parziale e quindi vari modi per programma in uno stile senza punto. Ciò può essere utile per il riutilizzo del codice all'interno di un modulo o l'implementazione di un oggetto, ma non è in genere per esporre pubblicamente. In generale, programmazione senza punto non è un virtù in e di se stesso e può aggiungere un ostacolo significativo cognitivo per gli utenti che non sono immerso nello stile.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Non utilizzare applicazione parziale e currying nelle API pubbliche
 
