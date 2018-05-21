@@ -7,38 +7,38 @@ helpviewer_keywords:
 - += operator [C#]
 - addition assignment operator (+=) [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: 90967dcdccfb71995ac83e0dd52ea7bd86f136be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcd56acad8e2b08585e5ae60f1c3cf8183b5664a
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="5ce5c-102">Operatore += (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="5ce5c-102">+= Operator (C# Reference)</span></span>
-<span data-ttu-id="5ce5c-103">Operatore di assegnazione di addizione.</span><span class="sxs-lookup"><span data-stu-id="5ce5c-103">The addition assignment operator.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="14b71-102">Operatore += (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="14b71-102">+= Operator (C# Reference)</span></span>
+<span data-ttu-id="14b71-103">Operatore di assegnazione di addizione.</span><span class="sxs-lookup"><span data-stu-id="14b71-103">The addition assignment operator.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5ce5c-104">Note</span><span class="sxs-lookup"><span data-stu-id="5ce5c-104">Remarks</span></span>  
- <span data-ttu-id="5ce5c-105">Un'espressione che usa l'operatore di assegnazione `+=`, ad esempio</span><span class="sxs-lookup"><span data-stu-id="5ce5c-105">An expression using the `+=` assignment operator, such as</span></span>  
+## <a name="remarks"></a><span data-ttu-id="14b71-104">Note</span><span class="sxs-lookup"><span data-stu-id="14b71-104">Remarks</span></span>  
+ <span data-ttu-id="14b71-105">Un'espressione che usa l'operatore di assegnazione `+=`, ad esempio</span><span class="sxs-lookup"><span data-stu-id="14b71-105">An expression using the `+=` assignment operator, such as</span></span>  
   
-```  
+```csharp  
 x += y  
 ```  
   
- <span data-ttu-id="5ce5c-106">equivale a</span><span class="sxs-lookup"><span data-stu-id="5ce5c-106">is equivalent to</span></span>  
+ <span data-ttu-id="14b71-106">equivale a</span><span class="sxs-lookup"><span data-stu-id="14b71-106">is equivalent to</span></span>  
   
-```  
+```csharp  
 x = x + y  
 ```  
   
- <span data-ttu-id="5ce5c-107">con la differenza che `x` viene valutato una sola volta.</span><span class="sxs-lookup"><span data-stu-id="5ce5c-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="5ce5c-108">Il significato dell'[operatore +](../../../csharp/language-reference/operators/addition-operator.md) dipende dai tipi di `x` e `y` (addizione per gli operandi numerici, concatenazione per gli operandi stringa e così via).</span><span class="sxs-lookup"><span data-stu-id="5ce5c-108">The meaning of the [+ operator](../../../csharp/language-reference/operators/addition-operator.md) depends on the types of `x` and `y` (addition for numeric operands, concatenation for string operands, and so forth).</span></span>  
+ <span data-ttu-id="14b71-107">con la differenza che `x` viene valutato una sola volta.</span><span class="sxs-lookup"><span data-stu-id="14b71-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="14b71-108">Il significato dell'[operatore +](../../../csharp/language-reference/operators/addition-operator.md) dipende dai tipi di `x` e `y` (addizione per gli operandi numerici, concatenazione per gli operandi stringa e così via).</span><span class="sxs-lookup"><span data-stu-id="14b71-108">The meaning of the [+ operator](../../../csharp/language-reference/operators/addition-operator.md) depends on the types of `x` and `y` (addition for numeric operands, concatenation for string operands, and so forth).</span></span>  
   
- <span data-ttu-id="5ce5c-109">L'operatore `+=` non può essere sottoposto direttamente a overload. I tipi definiti dall'utente, tuttavia, possono eseguire l'overload dell'[operatore +](../../../csharp/language-reference/operators/addition-operator.md) (vedere [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="5ce5c-109">The `+=` operator cannot be overloaded directly, but user-defined types can overload the [+ operator](../../../csharp/language-reference/operators/addition-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
+ <span data-ttu-id="14b71-109">L'operatore `+=` non può essere sottoposto direttamente a overload. I tipi definiti dall'utente, tuttavia, possono eseguire l'overload dell'[operatore +](../../../csharp/language-reference/operators/addition-operator.md) (vedere [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="14b71-109">The `+=` operator cannot be overloaded directly, but user-defined types can overload the [+ operator](../../../csharp/language-reference/operators/addition-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
- <span data-ttu-id="5ce5c-110">L'operatore `+=` viene usato anche per specificare un metodo che verrà chiamato in risposta a un evento. I metodi di questo tipo sono chiamati gestori eventi.</span><span class="sxs-lookup"><span data-stu-id="5ce5c-110">The `+=` operator is also used to specify a method that will be called in response to an event; such methods are called event handlers.</span></span> <span data-ttu-id="5ce5c-111">L'uso dell'operatore `+=` in questo contesto è detto *sottoscrizione di un evento*.</span><span class="sxs-lookup"><span data-stu-id="5ce5c-111">The use of the `+=` operator in this context is referred to as *subscribing to an event*.</span></span> <span data-ttu-id="5ce5c-112">Per altre informazioni, vedere [Procedura: sottoscrivere e annullare la sottoscrizione di eventi](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) e [Delegati](../../../csharp/programming-guide/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="5ce5c-112">For more information, see [How to: Subscribe to and Unsubscribe from Events](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) and [Delegates](../../../csharp/programming-guide/delegates/index.md).</span></span>  
+ <span data-ttu-id="14b71-110">L'operatore `+=` viene usato anche per specificare un metodo che verrà chiamato in risposta a un evento. I metodi di questo tipo sono chiamati gestori eventi.</span><span class="sxs-lookup"><span data-stu-id="14b71-110">The `+=` operator is also used to specify a method that will be called in response to an event; such methods are called event handlers.</span></span> <span data-ttu-id="14b71-111">L'uso dell'operatore `+=` in questo contesto è detto *sottoscrizione di un evento*.</span><span class="sxs-lookup"><span data-stu-id="14b71-111">The use of the `+=` operator in this context is referred to as *subscribing to an event*.</span></span> <span data-ttu-id="14b71-112">Per altre informazioni, vedere [Procedura: sottoscrivere e annullare la sottoscrizione di eventi](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) e [Delegati](../../../csharp/programming-guide/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="14b71-112">For more information, see [How to: Subscribe to and Unsubscribe from Events](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) and [Delegates](../../../csharp/programming-guide/delegates/index.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5ce5c-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="5ce5c-113">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="14b71-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="14b71-113">Example</span></span>  
  [!code-csharp[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="5ce5c-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5ce5c-114">See Also</span></span>  
- [<span data-ttu-id="5ce5c-115">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="5ce5c-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="5ce5c-116">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="5ce5c-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="5ce5c-117">Operatori C#</span><span class="sxs-lookup"><span data-stu-id="5ce5c-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="14b71-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="14b71-114">See Also</span></span>  
+ [<span data-ttu-id="14b71-115">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="14b71-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="14b71-116">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="14b71-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="14b71-117">Operatori C#</span><span class="sxs-lookup"><span data-stu-id="14b71-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

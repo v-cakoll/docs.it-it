@@ -1,66 +1,55 @@
 ---
 title: Esempi di espressioni regolari
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - regular expressions [.NET Framework]
 - strings [.NET Framework], regular expressions
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4d2d3aced78d2afed3f0d1396efe5e954ef84102
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8fb58f8e7a1fef711de28534fbe53dfc9d7084ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="regular-expression-examples"></a><span data-ttu-id="078c3-102">Esempi di espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="078c3-102">Regular Expression Examples</span></span>
-<span data-ttu-id="078c3-103">Questa sezione contiene esempi di codice che illustrano l'uso delle espressioni regolari nelle applicazioni comuni.</span><span class="sxs-lookup"><span data-stu-id="078c3-103">This section contains code examples that illustrate the use of regular expressions in common applications.</span></span>  
+# <a name="regular-expression-examples"></a><span data-ttu-id="d040e-102">Esempi di espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="d040e-102">Regular Expression Examples</span></span>
+<span data-ttu-id="d040e-103">Questa sezione contiene esempi di codice che illustrano l'uso delle espressioni regolari nelle applicazioni comuni.</span><span class="sxs-lookup"><span data-stu-id="d040e-103">This section contains code examples that illustrate the use of regular expressions in common applications.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="078c3-104">Lo spazio dei nomi <xref:System.Web.RegularExpressions> contiene un numero di oggetti di espressione regolare che implementano i modelli di espressione regolare predefiniti per l'analisi di stringhe da documenti HTML, XML e ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="078c3-104">The <xref:System.Web.RegularExpressions> namespace contains a number of regular expression objects that implement predefined regular expression patterns for parsing strings from HTML, XML, and ASP.NET documents.</span></span> <span data-ttu-id="078c3-105">Ad esempio, la classe <xref:System.Web.RegularExpressions.TagRegex> identifica i tag di inizio in una stringa e la classe <xref:System.Web.RegularExpressions.CommentRegex> identifica i commenti ASP.NET in una stringa.</span><span class="sxs-lookup"><span data-stu-id="078c3-105">For example, the <xref:System.Web.RegularExpressions.TagRegex> class identifies start tags in a string and the <xref:System.Web.RegularExpressions.CommentRegex> class identifies ASP.NET comments in a string.</span></span>  
+>  <span data-ttu-id="d040e-104">Lo spazio dei nomi <xref:System.Web.RegularExpressions> contiene un numero di oggetti di espressione regolare che implementano i modelli di espressione regolare predefiniti per l'analisi di stringhe da documenti HTML, XML e ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="d040e-104">The <xref:System.Web.RegularExpressions> namespace contains a number of regular expression objects that implement predefined regular expression patterns for parsing strings from HTML, XML, and ASP.NET documents.</span></span> <span data-ttu-id="d040e-105">Ad esempio, la classe <xref:System.Web.RegularExpressions.TagRegex> identifica i tag di inizio in una stringa e la classe <xref:System.Web.RegularExpressions.CommentRegex> identifica i commenti ASP.NET in una stringa.</span><span class="sxs-lookup"><span data-stu-id="d040e-105">For example, the <xref:System.Web.RegularExpressions.TagRegex> class identifies start tags in a string and the <xref:System.Web.RegularExpressions.CommentRegex> class identifies ASP.NET comments in a string.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="078c3-106">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="078c3-106">In This Section</span></span>  
- [<span data-ttu-id="078c3-107">Esempio: Ricerca di HREF</span><span class="sxs-lookup"><span data-stu-id="078c3-107">Example: Scanning for HREFs</span></span>](../../../docs/standard/base-types/regular-expression-example-scanning-for-hrefs.md)  
- <span data-ttu-id="078c3-108">Esempio in cui viene cercata una stringa di input e vengono stampati tutti i valori href="…" con le relative posizioni nella stringa.</span><span class="sxs-lookup"><span data-stu-id="078c3-108">Provides an example that searches an input string and prints out all the href="…" values and their locations in the string.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d040e-106">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="d040e-106">In This Section</span></span>  
+ [<span data-ttu-id="d040e-107">Esempio: Ricerca di HREF</span><span class="sxs-lookup"><span data-stu-id="d040e-107">Example: Scanning for HREFs</span></span>](../../../docs/standard/base-types/regular-expression-example-scanning-for-hrefs.md)  
+ <span data-ttu-id="d040e-108">Esempio in cui viene cercata una stringa di input e vengono stampati tutti i valori href="…" con le relative posizioni nella stringa.</span><span class="sxs-lookup"><span data-stu-id="d040e-108">Provides an example that searches an input string and prints out all the href="…" values and their locations in the string.</span></span>  
   
- [<span data-ttu-id="078c3-109">Esempio: Modifica dei formati di data</span><span class="sxs-lookup"><span data-stu-id="078c3-109">Example: Changing Date Formats</span></span>](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)  
- <span data-ttu-id="078c3-110">Esempio che sostituisce le date nel formato mm/gg/aa con date nel formato gg-mm-aa.</span><span class="sxs-lookup"><span data-stu-id="078c3-110">Provides an example that replaces dates in the form mm/dd/yy with dates in the form dd-mm-yy.</span></span>  
+ [<span data-ttu-id="d040e-109">Esempio: Modifica dei formati di data</span><span class="sxs-lookup"><span data-stu-id="d040e-109">Example: Changing Date Formats</span></span>](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)  
+ <span data-ttu-id="d040e-110">Esempio che sostituisce le date nel formato mm/gg/aa con date nel formato gg-mm-aa.</span><span class="sxs-lookup"><span data-stu-id="d040e-110">Provides an example that replaces dates in the form mm/dd/yy with dates in the form dd-mm-yy.</span></span>  
   
- [<span data-ttu-id="078c3-111">Procedura: Estrarre un protocollo e un numero di porta da un URL</span><span class="sxs-lookup"><span data-stu-id="078c3-111">How to: Extract a Protocol and Port Number from a URL</span></span>](../../../docs/standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md)  
- <span data-ttu-id="078c3-112">Esempio che consente di estrarre un protocollo e un numero di porta da una stringa contenente un URL.</span><span class="sxs-lookup"><span data-stu-id="078c3-112">Provides an example that extracts a protocol and port number from a string that contains a URL.</span></span> <span data-ttu-id="078c3-113">Ad esempio, "http://www.contoso.com:8080/letters/readme.html" restituisce "http:8080".</span><span class="sxs-lookup"><span data-stu-id="078c3-113">For example, "http://www.contoso.com:8080/letters/readme.html" returns "http:8080".</span></span>  
+ [<span data-ttu-id="d040e-111">Procedura: Estrarre un protocollo e un numero di porta da un URL</span><span class="sxs-lookup"><span data-stu-id="d040e-111">How to: Extract a Protocol and Port Number from a URL</span></span>](../../../docs/standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md)  
+ <span data-ttu-id="d040e-112">Esempio che consente di estrarre un protocollo e un numero di porta da una stringa contenente un URL.</span><span class="sxs-lookup"><span data-stu-id="d040e-112">Provides an example that extracts a protocol and port number from a string that contains a URL.</span></span> <span data-ttu-id="d040e-113">Ad esempio, "http://www.contoso.com:8080/letters/readme.html" restituisce "http:8080".</span><span class="sxs-lookup"><span data-stu-id="d040e-113">For example, "http://www.contoso.com:8080/letters/readme.html" returns "http:8080".</span></span>  
   
- [<span data-ttu-id="078c3-114">Procedura: Rimuovere caratteri non validi da una stringa</span><span class="sxs-lookup"><span data-stu-id="078c3-114">How to: Strip Invalid Characters from a String</span></span>](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
- <span data-ttu-id="078c3-115">Esempio che consente di rimuovere i caratteri non alfanumerici non validi da una stringa.</span><span class="sxs-lookup"><span data-stu-id="078c3-115">Provides an example that strips invalid non-alphanumeric characters from a string.</span></span>  
+ [<span data-ttu-id="d040e-114">Procedura: Rimuovere caratteri non validi da una stringa</span><span class="sxs-lookup"><span data-stu-id="d040e-114">How to: Strip Invalid Characters from a String</span></span>](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
+ <span data-ttu-id="d040e-115">Esempio che consente di rimuovere i caratteri non alfanumerici non validi da una stringa.</span><span class="sxs-lookup"><span data-stu-id="d040e-115">Provides an example that strips invalid non-alphanumeric characters from a string.</span></span>  
   
- [<span data-ttu-id="078c3-116">Procedura: Verificare che le stringhe siano in formato di posta elettronica valido</span><span class="sxs-lookup"><span data-stu-id="078c3-116">How to: Verify that Strings Are in Valid Email Format</span></span>](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
- <span data-ttu-id="078c3-117">Esempio che è possibile usare per verificare che una stringa sia in formato di posta elettronica valido.</span><span class="sxs-lookup"><span data-stu-id="078c3-117">Provides an example that you can use to verify that a string is in valid email format.</span></span>  
+ [<span data-ttu-id="d040e-116">Procedura: Verificare che le stringhe siano in formato di posta elettronica valido</span><span class="sxs-lookup"><span data-stu-id="d040e-116">How to: Verify that Strings Are in Valid Email Format</span></span>](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
+ <span data-ttu-id="d040e-117">Esempio che è possibile usare per verificare che una stringa sia in formato di posta elettronica valido.</span><span class="sxs-lookup"><span data-stu-id="d040e-117">Provides an example that you can use to verify that a string is in valid email format.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="078c3-118">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="078c3-118">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d040e-118">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="d040e-118">Reference</span></span>  
  <xref:System.Text.RegularExpressions>  
- <span data-ttu-id="078c3-119">Informazioni di riferimento sulla libreria di classi per lo spazio dei nomi di .NET **System.Text.RegularExpressions**.</span><span class="sxs-lookup"><span data-stu-id="078c3-119">Provides class library reference information for the .NET **System.Text.RegularExpressions** namespace.</span></span>  
+ <span data-ttu-id="d040e-119">Informazioni di riferimento sulla libreria di classi per lo spazio dei nomi di .NET **System.Text.RegularExpressions**.</span><span class="sxs-lookup"><span data-stu-id="d040e-119">Provides class library reference information for the .NET **System.Text.RegularExpressions** namespace.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="078c3-120">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="078c3-120">Related Sections</span></span>  
- [<span data-ttu-id="078c3-121">Espressioni regolari .NET</span><span class="sxs-lookup"><span data-stu-id="078c3-121">.NET Regular Expressions</span></span>](../../../docs/standard/base-types/regular-expressions.md)  
- <span data-ttu-id="078c3-122">Panoramica dell'aspetto del linguaggio di programmazione delle espressioni regolari.</span><span class="sxs-lookup"><span data-stu-id="078c3-122">Provides an overview of the programming language aspect of regular expressions.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="d040e-120">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="d040e-120">Related Sections</span></span>  
+ [<span data-ttu-id="d040e-121">Espressioni regolari .NET</span><span class="sxs-lookup"><span data-stu-id="d040e-121">.NET Regular Expressions</span></span>](../../../docs/standard/base-types/regular-expressions.md)  
+ <span data-ttu-id="d040e-122">Panoramica dell'aspetto del linguaggio di programmazione delle espressioni regolari.</span><span class="sxs-lookup"><span data-stu-id="d040e-122">Provides an overview of the programming language aspect of regular expressions.</span></span>  
   
- [<span data-ttu-id="078c3-123">Modello a oggetti delle espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="078c3-123">The Regular Expression Object Model</span></span>](../../../docs/standard/base-types/the-regular-expression-object-model.md)  
- <span data-ttu-id="078c3-124">Descrive le classi di espressioni regolari contenute nello spazio dei nomi `System.Text.RegularExpression` con esempi del relativo utilizzo.</span><span class="sxs-lookup"><span data-stu-id="078c3-124">Describes the regular expression classes contained in the `System.Text.RegularExpression` namespace and provides examples of their use.</span></span>  
+ [<span data-ttu-id="d040e-123">Modello a oggetti delle espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="d040e-123">The Regular Expression Object Model</span></span>](../../../docs/standard/base-types/the-regular-expression-object-model.md)  
+ <span data-ttu-id="d040e-124">Descrive le classi di espressioni regolari contenute nello spazio dei nomi `System.Text.RegularExpression` con esempi del relativo utilizzo.</span><span class="sxs-lookup"><span data-stu-id="d040e-124">Describes the regular expression classes contained in the `System.Text.RegularExpression` namespace and provides examples of their use.</span></span>  
   
- [<span data-ttu-id="078c3-125">Dettagli sul comportamento delle espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="078c3-125">Details of Regular Expression Behavior</span></span>](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)  
- <span data-ttu-id="078c3-126">Offre informazioni sulle funzionalità e il funzionamento delle espressioni regolari di .NET.</span><span class="sxs-lookup"><span data-stu-id="078c3-126">Provides information about the capabilities and behavior of .NET regular expressions.</span></span>  
+ [<span data-ttu-id="d040e-125">Dettagli sul comportamento delle espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="d040e-125">Details of Regular Expression Behavior</span></span>](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)  
+ <span data-ttu-id="d040e-126">Offre informazioni sulle funzionalità e il funzionamento delle espressioni regolari di .NET.</span><span class="sxs-lookup"><span data-stu-id="d040e-126">Provides information about the capabilities and behavior of .NET regular expressions.</span></span>  
   
- [<span data-ttu-id="078c3-127">Linguaggio di espressioni regolari - Riferimento rapido</span><span class="sxs-lookup"><span data-stu-id="078c3-127">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- <span data-ttu-id="078c3-128">Fornisce informazioni sul set di caratteri, di operatori e di costrutti che è possibile usare per definire le espressioni regolari.</span><span class="sxs-lookup"><span data-stu-id="078c3-128">Provides information on the set of characters, operators, and constructs that you can use to define regular expressions.</span></span>
+ [<span data-ttu-id="d040e-127">Linguaggio di espressioni regolari - Riferimento rapido</span><span class="sxs-lookup"><span data-stu-id="d040e-127">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+ <span data-ttu-id="d040e-128">Fornisce informazioni sul set di caratteri, di operatori e di costrutti che è possibile usare per definire le espressioni regolari.</span><span class="sxs-lookup"><span data-stu-id="d040e-128">Provides information on the set of characters, operators, and constructs that you can use to define regular expressions.</span></span>
