@@ -1,23 +1,15 @@
 ---
 title: Informazioni su problemi ed eccezioni di WebRequest
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d59f30e71001adee0e6e1e68be3cf9cfd1952161
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c7def5c041c5d16a8ea58479664402b7346e52b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Informazioni su problemi ed eccezioni di WebRequest
 <xref:System.Net.WebRequest> e le relative classi derivate (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, e <xref:System.Net.FileWebRequest>) generano eccezioni per segnalare una condizione anomala. In alcuni casi la risoluzione di questi problemi non è scontata.  
@@ -30,7 +22,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Net.WebExceptionStatus.SendFailure><br /><br /> oppure<br /><br /> <xref:System.Net.WebExceptionStatus.ReceiveFailure>|Si è verificato un problema con il socket sottostante. La connessione potrebbe essere stata reimpostata.|Riconnettersi e inviare nuovamente la richiesta.<br /><br /> Verificare che sia installato il Service Pack più recente.<br /><br /> Aumentare il valore della proprietà <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A?displayProperty=nameWithType>.<br /><br /> Impostare <xref:System.Net.HttpWebRequest.KeepAlive%2A?displayProperty=nameWithType> su `false`.<br /><br /> Aumentare il numero massimo di connessioni con la proprietà <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Controllare la configurazione del proxy.<br /><br /> Se si usa SSL, verificare che il processo server disponga dell'autorizzazione per accedere all'archivio certificati.<br /><br /> Per l'invio di una grande quantità di dati, impostare <xref:System.Net.HttpWebRequest.AllowWriteStreamBuffering%2A> su `false`.|  
 |<xref:System.Net.WebExceptionStatus.TrustFailure>|Impossibile convalidare il certificato del server.|Provare ad aprire l'URI con Internet Explorer. Risolvere eventuali avvisi di sicurezza visualizzati da Internet Explorer. Se non è possibile risolvere l'avviso di sicurezza, è possibile creare una classe dei criteri dei certificati che implementa <xref:System.Net.ICertificatePolicy> che restituisce `true` e passarla a <xref:System.Net.ServicePointManager.CertificatePolicy%2A>.<br /><br /> Fare riferimento a [http://support.microsoft.com/?id=823177](http://go.microsoft.com/fwlink/?LinkID=179653).<br /><br /> Assicurarsi che il certificato dell'Autorità di certificazione che ha firmato il certificato del server venga aggiunto all'elenco delle autorità di certificazione attendibili in Internet Explorer.<br /><br /> Assicurarsi che il nome host nell'URL corrisponda al nome comune nel certificato del server.|  
 |<xref:System.Net.WebExceptionStatus.SecureChannelFailure>|Si è verificato un errore nella transazione SSL o è presente un problema con il certificato.|.NET Framework versione 1.1 supporta solo SSL versione 3.0. Se il server usa solo TLS versione 1.0 o SSL versione 2.0, viene generata l'eccezione. Eseguire l'aggiornamento a .NET Framework versione 2.0 e impostare <xref:System.Net.ServicePointManager.SecurityProtocol%2A> in modo che corrisponda al server.<br /><br /> Il certificato client è stato firmato da un'Autorità di certificazione (CA) non attendibile per il server. Installare il certificato della CA nel server. Vedere [http://support.microsoft.com/?id=332077](http://go.microsoft.com/fwlink/?LinkID=179654).<br /><br /> Assicurarsi di avere installato il Service Pack più recente.|  
-|<xref:System.Net.WebExceptionStatus.ConnectFailure>|Connessione non riuscita.|La connessione è bloccata da un firewall o proxy. Modificare il firewall o proxy per consentire la connessione.<br /><br /> Impostare in modo esplicito un <xref:System.Net.WebProxy> nell'applicazione client chiamando il costruttore <xref:System.Net.WebProxy> (WebServiceProxyClass.Proxy = new WebProxy([http://server:80](http://server/), true)).<br /><br /> Eseguire Filemon o Regmon per assicurarsi che l'identità del processo di lavoro disponga delle autorizzazioni necessarie per accedere a WSPWSP.dll, HKLM\System\CurrentControlSet\Services\DnsCache o HKLM\System\CurrentControlSet\Services\WinSock2.|  
+|<xref:System.Net.WebExceptionStatus.ConnectFailure>|Connessione non riuscita.|La connessione è bloccata da un firewall o proxy. Modificare il firewall o proxy per consentire la connessione.<br /><br /> Impostare in modo esplicito una classe <xref:System.Net.WebProxy> nell'applicazione client chiamando il costruttore <xref:System.Net.WebProxy> (WebServiceProxyClass.Proxy = new WebProxy([http://server:80](http://server/), true)).<br /><br /> Eseguire Filemon o Regmon per assicurarsi che l'identità del processo di lavoro disponga delle autorizzazioni necessarie per accedere a WSPWSP.dll, HKLM\System\CurrentControlSet\Services\DnsCache o HKLM\System\CurrentControlSet\Services\WinSock2.|  
 |<xref:System.Net.WebExceptionStatus.NameResolutionFailure>|Il servizio DNS (Domain Name Service) non è riuscito a risolvere il nome host.|Configurare il proxy in modo corretto. Vedere [http://support.microsoft.com/?id=318140](http://go.microsoft.com/fwlink/?LinkID=179655).<br /><br /> Assicurarsi che il software antivirus installato o il firewall non blocchi la connessione.|  
 |<xref:System.Net.WebExceptionStatus.RequestCanceled>|È stato chiamato <xref:System.Net.WebRequest.Abort%2A> o si è verificato un errore.|Questo problema potrebbe essere causato da un carico eccessivo sul client o sul server. Ridurre il carico.<br /><br /> Aumentare l'impostazione <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Vedere [http://support.microsoft.com/?id=821268](http://go.microsoft.com/fwlink/?LinkID=179656) per modificare le impostazioni delle prestazioni del servizio Web.|  
 |<xref:System.Net.WebExceptionStatus.ConnectionClosed>|L'applicazione ha tentato di scrivere in un socket già chiuso.|Il client o il server è sovraccarico. Ridurre il carico.<br /><br /> Aumentare l'impostazione <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Vedere [http://support.microsoft.com/?id=821268](http://go.microsoft.com/fwlink/?LinkID=179656) per modificare le impostazioni delle prestazioni del servizio Web.|  

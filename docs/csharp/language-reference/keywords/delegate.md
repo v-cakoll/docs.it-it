@@ -9,16 +9,16 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: 923d746927063490236a721e8d2600889084dac0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4eafd0ffb6da191db80fd69f1980a167dbfc742b
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="delegate-c-reference"></a>delegate (Riferimenti per C#)
 La dichiarazione di un tipo delegato è simile alla firma di un metodo. Ha un valore restituito e una serie di parametri di qualsiasi tipo:  
   
-```  
+```csharp  
 public delegate void TestDelegate(string message);  
 public delegate int TestDelegate(MyType m, long num);  
 ```  

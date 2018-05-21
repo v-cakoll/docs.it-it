@@ -1,11 +1,7 @@
 ---
 title: Installare .NET Framework per sviluppatori
 ms.custom: updateeachrelease
-ms.date: 03/23/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: get-started-article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - .NET Framework redistributable package, downloading
 - .NET Framework, installing
@@ -14,14 +10,11 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b5cfa21306ccad78825d5f46c78c00a24ff67436
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 157ff544df95740a96cf74fdc740feed7acde7ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installare .NET Framework per sviluppatori
 
@@ -43,8 +36,9 @@ Usare la tabella indicata di seguito per i collegamenti rapidi o continuare a le
   
 |Versione di .NET Framework|Installazione sviluppatore|Installazione ridistribuibile|Supporto per piattaforme|  
 |----------------------------|----------------------------|----------------------------------|----------------------|  
-|**4.7.1**|[NET Framework 4.7.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=852105)|[Pagina di download per il programma di installazione Web 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Pagina di download per il programma di installazione offline 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852107)|Incluso in: <br/>Windows 10 Fall Creators Update<br/>Windows Server, versione 1709<br /><br /> Installabile in:<br/> Windows 10 Creators Update <br /> Aggiornamento dell'anniversario di Windows 10<br /> Windows 8.1 e versioni precedenti<br /> Windows Server 2012 R2 e versioni precedenti<br /> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))||
-|**4.7**|[NET Framework 4.7 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=825319)|[Pagina di download per il programma di installazione Web 4.7](http://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Pagina di download per il programma di installazione offline 4.7](http://go.microsoft.com/fwlink/?LinkId=825303)|Incluso in: <br/>Windows 10 Creators Update<br /><br /> Installabile in:<br /> Aggiornamento dell'anniversario di Windows 10<br /> Windows 8.1 e versioni precedenti<br /> Windows Server 2012 R2 e versioni precedenti<br /> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))||
+|**4.7.2**|[NET Framework 4.7.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=863261)|[Programma di installazione Web 4.7.2 Area download](http://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Programma di installazione offline 4.7.2 Area download](http://go.microsoft.com/fwlink/?LinkId=863265)|Incluso in: <br/>Aggiornamento di Windows 10 (aprile 2018)<br /><br /> Installabile in:<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Aggiornamento dell'anniversario di Windows 10<br /> Windows 8.1 e versioni precedenti<br /> Windows Server, 1709 e versioni precedenti<br /> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))||
+|**4.7.1**|[NET Framework 4.7.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=852105)|[Pagina di download per il programma di installazione Web 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Pagina di download per il programma di installazione offline 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852107)|Incluso in: <br/>Windows 10 Fall Creators Update<br/>Windows Server, versione 1709<br /><br /> Installabile in:<br/> Windows 10 Creators Update <br /> Aggiornamento dell'anniversario di Windows 10<br /> Windows 8.1 e versioni precedenti<br /> Windows Server 2016 e versioni precedenti<br /> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))||
+|**4.7**|[NET Framework 4.7 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=825319)|[Pagina di download per il programma di installazione Web 4.7](http://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Pagina di download per il programma di installazione offline 4.7](http://go.microsoft.com/fwlink/?LinkId=825303)|Incluso in: <br/>Windows 10 Creators Update<br /><br /> Installabile in:<br /> Aggiornamento dell'anniversario di Windows 10<br /> Windows 8.1 e versioni precedenti<br /> Windows Server 2016 e versioni precedenti<br /> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))||
 |**4.6.2**|[NET Framework 4.6.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=780617)|[Pagina di download per il programma di installazione Web 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Pagina di download per il programma di installazione offline 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780601)|Incluso in: <br /> Aggiornamento dell'anniversario di Windows 10<br /><br /> Installabile in:<br /> Aggiornamento di novembre di Windows 10 <br/> Windows 10 <br /> Windows 8.1 e versioni precedenti<br /> Windows Server 2012 R2 e versioni precedenti<br /> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))|
 |**4.6.1**|[NET Framework 4.6.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=690706)|[Pagina di download per il programma di installazione Web 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [Pagina di download per il programma di installazione offline 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671744)|Installabile in:<br /> Windows 10 <br /> Windows 8.1 e versioni precedenti<br /> Windows Server 2012 R2 e versioni precedenti<br /> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))|
 |**4.6**|Incluso in [!INCLUDE[vs_dev14](../../../includes/vs-dev14-md.md)]. Per altre informazioni vedere [Benvenuti in Visual Studio 2015](http://msdn.microsoft.com/library/dd831853\(v=vs.140\).aspx).<br /><br /> [Microsoft .NET Framework 4.6 Targeting Pack](http://go.microsoft.com/fwlink/?LinkId=528261)|[Pagina di download per il programma di installazione Web 4.6](http://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [Pagina di download per il programma di installazione offline 4.6](http://go.microsoft.com/fwlink/?LinkId=528233)|Incluso in: <br /> Windows 10 <br />[!INCLUDE[vs_dev14](../../../includes/vs-dev14-md.md)]<br /><br /> Installabile anche in:<br /> Windows 8.1 e versioni precedenti<br /> Windows Server 2012 R2 e versioni precedenti<br /> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))|  
@@ -73,7 +67,9 @@ Installare un Targeting Pack dello sviluppatore per la versione più recente di 
 
 Un *Targeting Pack* consente all'app di fare riferimento a una versione specifica di .NET Framework per lo sviluppo in Visual Studio e in altri ambienti di sviluppo. Un *Developer Pack* include una versione specifica di .NET Framework, il relativo SDK e il Targeting Pack corrispondente.
 
-Il Developer Pack per .NET Framework 4.5.1 o 4.5.2, il Targeting Pack per .NET Framework 4.6 e il Developer Pack per .NET Framework 4.6.1, 4.6.2, 4.7 o 4.7.1 offrono una versione specifica per .NET Framework degli assembly di riferimento, dei Language Pack e dei file IntelliSense da usare in un ambiente di sviluppo integrato come Visual Studio.  Se si usa Visual Studio, il Developer Pack o il Targeting Pack consente anche di aggiungere la versione installata di .NET Framework alle opzioni di destinazione durante la creazione di un nuovo progetto.  Effettuare una delle seguenti operazioni:  
+Il Developer Pack per .NET Framework 4.5.1 o 4.5.2, il Targeting Pack per .NET Framework 4.6 e il Developer Pack per .NET Framework 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2 offrono una versione specifica per .NET Framework degli assembly di riferimento, dei Language Pack e dei file IntelliSense da usare in un ambiente di sviluppo integrato come Visual Studio.  Se si usa Visual Studio, il Developer Pack o il Targeting Pack consente anche di aggiungere la versione installata di .NET Framework alle opzioni di destinazione durante la creazione di un nuovo progetto.  Effettuare una delle seguenti operazioni:  
+
+- [Microsoft .NET Framework 4.7.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=863261)
 
 - [Microsoft .NET Framework 4.7.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=852105)
 
@@ -113,6 +109,8 @@ Entrambi i programmi di installazione offline e Web sono progettati per computer
   
 1.  Aprire la pagina di download per la versione di .NET Framework che si vuole installare:  
 
+    - .NET Framework 4.7.2 ([programma di installazione Web](http://go.microsoft.com/fwlink/?LinkId=863262) o [programma di installazione offline](http://go.microsoft.com/fwlink/p/?LinkId=863265))
+
     - .NET Framework 4.7.1 ([programma di installazione Web](http://go.microsoft.com/fwlink/?LinkId=852095) o [programma di installazione offline](http://go.microsoft.com/fwlink/p/?LinkId=852107))
 
     - .NET Framework 4.7 ([programma di installazione Web](http://go.microsoft.com/fwlink/?LinkId=825299) o [programma di installazione offline](http://go.microsoft.com/fwlink/p/?LinkId=825303))
@@ -148,11 +146,11 @@ Entrambi i programmi di installazione offline e Web sono progettati per computer
   
  **Note sull'installazione:**  
   
-- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e 4.5.2, oltre a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2, 4.7 e 4.7.1, sono aggiornamenti sul posto di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e 4.5.2, oltre a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2, 4.7, 4.7.1 e 4.7.2, sono aggiornamenti sul posto di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
   
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e le versioni intermedie, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e le versioni intermedie e .NET Framework 4.7 e la versione intermedia sostituiscono [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Quando si installano queste versioni in un sistema con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], gli assembly vengono sostituiti.
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e le versioni intermedie, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e le versioni intermedie e .NET Framework 4.7 e le versioni intermedie sostituiscono [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Quando si installano queste versioni in un sistema con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], gli assembly vengono sostituiti.
   
-- La disinstallazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e delle versioni intermedie, di [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e delle versioni intermedie o di .NET Framework 4.7 e della versione intermedia determina anche la rimozione dei file preesistenti di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Se si vuole tornare a [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], è necessario reinstallarlo insieme a tutti i relativi aggiornamenti. Vedere [Installazione di .NET Framework 4](http://go.microsoft.com/fwlink/p/?LinkId=230665).  
+- La disinstallazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e delle versioni intermedie, di [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e delle versioni intermedie o di .NET Framework 4.7 e delle versioni intermedie determina anche la rimozione dei file preesistenti di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Se si vuole tornare a [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], è necessario reinstallarlo insieme a tutti i relativi aggiornamenti. Vedere [Installazione di .NET Framework 4](http://go.microsoft.com/fwlink/p/?LinkId=230665).  
   
 - Per installare [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e le versioni intermedie, .NET Framework 4.6 e le versioni intermedie e .NET Framework 4.7 e la versione intermedia, è necessario avere le credenziali di amministratore.
   
@@ -167,6 +165,8 @@ Entrambi i programmi di installazione offline e Web sono progettati per computer
 > Nei Language Pack non sono contenuti i componenti .NET Framework necessari per eseguire un'applicazione, pertanto è necessario eseguire il programma di installazione Web oppure offline prima di installare un Language Pack. Se il Language Pack è ancora installato, disinstallarlo, installare .NET Framework e quindi reinstallare il Language Pack.  
   
 1.  Aprire la pagina di download del Language Pack per la versione di .NET Framework installata:  
+
+    - [Language Pack di .NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863258) 
   
     - [Language Pack di.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkID=852090) 
 

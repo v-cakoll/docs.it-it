@@ -1,21 +1,14 @@
 ---
 title: Progettazione di un modello di dominio del microservizio
 description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | Progettazione di un modello di dominio del microservizio
-keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-a-microservice-domain-model"></a>Progettazione di un modello di dominio del microservizio
 
@@ -63,10 +56,10 @@ Alcune persone sostengono che il modello di dominio anemico sia un antipattern: 
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **DevIQ. Domain Entity**
+-   **DevIQ. Entità di dominio**
     [*http://deviq.com/entity/*](http://deviq.com/entity/)
 
--   **Martin Fowler. Il modello di dominio**
+-   **Martin Fowler. Modello di dominio**
     [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
 -   **Martin Fowler. The Anemic Domain Model (Il modello di dominio anemico)**
@@ -87,14 +80,14 @@ Gli oggetti valore sono difficili da gestire nei database relazionali e in ORM c
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Martin Fowler. Modello oggetto di valore**
+-   **Martin Fowler. Schema Value Object**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
 -   **Oggetto valore**
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
--   **Valore di oggetti in fase di sviluppo TDD**
-    [*https://leanpub.com/tdd-ebook/read\#oggetti leanpub-auto-valore*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+-   **Oggetti valore nello sviluppo basato su test**
+    [*https://leanpub.com/tdd-ebook/read\#oggetti-valore-auto-leanpub*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 -   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Progettazione basata su domini: gestire le complessità nel software).** (Libro. Include una trattazione sugli oggetti valore) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
@@ -139,22 +132,22 @@ Identificare ed eseguire operazioni sulle aggregazioni richiede esperienza e ric
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Vaughn Vernon. Progettazione di aggregazione efficace - parte i: modellazione di una singola funzione di aggregazione**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_approfondimento\_AGGREGAZIONI\_parte \_pdf 1.*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+-   **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate (Progettazione efficace degli aggregati - parte I: modellazione di un'aggregazione singola) **
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon. Progettazione aggregazione efficace - parte II: Apportato aggregazioni lavorano insieme**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
+-   **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together**
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *(Progettazione efficace degli aggregati - parte II: usare insieme aggregati diversi)
 
--   **Vaughn Vernon. Progettazione aggregazione efficace - parte III: Ottenere informazioni dettagliate tramite l'individuazione**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
+-   **Vaughn Vernon. Effective Aggregate Design - Part III: Gaining Insight Through Discovery **
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *(Progettazione efficace degli aggregati - parte III: approfondire tramite la scoperta)
 
--   **Sergey Grybniak. Modelli di progettazione tattico DDD**
-    [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+-   **Sergey Grybniak. DDD Tactical Design Patterns**
+    [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part) (Schemi progettuali tattici DDD)
 
--   **Chris Richardson. Lo sviluppo di Microservizi transazionale utilizzando funzioni di aggregazione**
-    [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+-   **Chris Richardson. Developing Transactional Microservices Using Aggregates**
+    [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson) (Sviluppo di microservizi transazionali usando aggregazioni)
 
--   **DevIQ. Il modello di aggregazione**
+-   **DevIQ. Schema Aggregate**
     [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
 
 

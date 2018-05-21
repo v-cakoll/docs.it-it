@@ -1,35 +1,24 @@
 ---
 title: Input alla classe XslCompiledTransform
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7aac1e85bdc27c9c8394eadcae841069115b369d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bc909b666b90d8c8825e7dbef33e48b6126bd7c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Input alla classe XslCompiledTransform
 Il metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> accetta tre tipi di input per il documento di origine: un oggetto che implementa l'interfaccia <xref:System.Xml.XPath.IXPathNavigable>, un oggetto <xref:System.Xml.XmlReader> che legge il documento di origine o un URI della stringa.  
   
 > [!NOTE]
->  Per impostazione predefinita, la classe <xref:System.Xml.Xsl.XslCompiledTransform> conserva gli spazi vuoti in conformità con la sezione 3.4 della raccomandazione W3C XSLT 1.0 all'indirizzo http://www.w3.org/TR/xslt.html#strip.  
+>  Per impostazione predefinita, la classe <xref:System.Xml.Xsl.XslCompiledTransform> conserva gli spazi vuoti in conformità con la sezione 3.4 della raccomandazione W3C XSLT 1.0 all'indirizzo http://www.w3.org/TR/xslt.html#strip).  
   
 ## <a name="ixpathnavigable-interface"></a>Interfaccia IXPathNavigable  
  L'interfaccia <xref:System.Xml.XPath.IXPathNavigable> è implementata nelle classi <xref:System.Xml.XmlNode> e <xref:System.Xml.XPath.XPathDocument>. Queste classi rappresentano una cache di dati XML in memoria.  

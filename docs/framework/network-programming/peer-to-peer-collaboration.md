@@ -1,27 +1,18 @@
 ---
 title: Collaborazione peer-to-peer
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5060e12fb6a9fcc1bac1dfe6ccdcbaea9f2e6385
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
-ms.translationtype: MT
+ms.openlocfilehash: a933c81105399a9411fcb749a06e47bf769cf532
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-to-peer-collaboration"></a>Collaborazione peer-to-peer
-Il termine rete peer-to-peer si riferisce all'utilizzo di computer relativamente potenti (PC) esistenti ai margini di Internet per attività di elaborazione più estese rispetto a quelle solamente basate su client. Moderno personal computer (PC) dispone di un processore molto veloce, un'ampia memoria e un disco rigido di grandi dimensioni, nessuno dei quali sono pienamente utilizzati durante l'esecuzione di attività di elaborazione comuni, ad esempio posta elettronica e browser Web. I PC moderni possono fungere facilmente sia da client che da server (peer) per molti tipi di applicazioni.  
+Il termine rete peer-to-peer si riferisce all'utilizzo di computer relativamente potenti (PC) esistenti ai margini di Internet per attività di elaborazione più estese rispetto a quelle solamente basate su client. I PC moderni hanno processori molto veloci, tanta memoria e dischi rigidi di grandi dimensioni e nessuna di queste risorse viene usata appieno per l'esecuzione di attività di elaborazione comuni, come ad esempio posta elettronica ed esplorazione del Web. I PC moderni possono fungere facilmente sia da client che da server (peer) per molti tipi di applicazioni.  
   
 -   L'infrastruttura di collaborazione peer-to-peer è un'implementazione semplificata dell'infrastruttura peer-to-peer di Microsoft Windows che sfrutta il servizio Persone nelle vicinanze in Windows Vista e piattaforme successive. Si tratta di una funzionalità particolarmente adatta alle applicazioni abilitate per reti peer all'interno di una subnet per cui è attivo il servizio Persone nelle vicinanze, sebbene possa essere usata anche per endpoint o contatti Internet. Incorpora la funzione di gestione dei contatti comuni usata da Live Messenger e altre applicazioni in grado di riconoscere Live per determinare l'endpoint di contatto, la disponibilità e la presenza.  
   

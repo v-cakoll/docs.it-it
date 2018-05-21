@@ -1,21 +1,14 @@
 ---
 title: Progettazione di convalide nel livello del modello di dominio
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Progettazione di convalide nel livello del modello di dominio
-keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e7a111ce20039f8c87d3c3d63efdeaf38a4e1e96
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ce3cb0c79cbd492224ce1d4ecb25cd02062f11cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>Progettazione di convalide nel livello del modello di dominio
 
@@ -121,20 +114,20 @@ L'uso della convalida dei campi con le annotazioni dei dati, ad esempio, consent
 -   **Rick Anderson. Aggiunta della convalida**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
--   **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations** (Sostituzione della generazione di eccezioni con le notifiche nelle convalide) 
-    [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
+-   **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations**
+    [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html) (Sostituzione della generazione di eccezioni con la notifica nelle convalide)
 
--   **Specification and Notification Patterns** (Schemi Specification e Notification) 
-    [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
+-   **Specification and Notification Patterns**
+    [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns) (Modelli di specifica e notifica)
 
--   **Lev Gorodinski. Validation in Domain-Driven Design (DDD)** (Convalida in DDD) 
-    [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
+-   **Lev Gorodinski. Validation in Domain-Driven Design (DDD)**
+    [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/) (Convalida nella progettazione basata su dominio (DDD))
 
--   **Colin Jack. Domain Model Validation** (Convalida dei modelli di dominio) 
-    [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+-   **Colin Jack. Domain Model Validation**
+    [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html) (Convalida del modello di dominio)
 
--   **Jimmy Bogard. Validation in a DDD world** (Convalida in ambito DDD) 
-    [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
+-   **Jimmy Bogard. Validation in a DDD world**
+    [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/) (Convalida in un mondo DDD)
 
 
 >[!div class="step-by-step"]

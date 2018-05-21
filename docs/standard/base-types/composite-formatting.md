@@ -1,13 +1,7 @@
 ---
 title: Formattazione composita
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4922470633f3dec8e2e2f898bdf544f5aa4deded
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composite-formatting"></a>Formattazione composita
 La funzionalità di formattazione composta di .NET consente di usare come input un elenco di oggetti e una stringa di formato composto. Una stringa di formato composto è costituita da testo fisso alternato a segnaposto indicizzati, denominati elementi di formato, che corrispondono agli oggetti dell'elenco. L'operazione di formattazione produce una stringa risultato costituita dal testo fisso originale alternato alla rappresentazione di stringa degli oggetti dell'elenco.  
@@ -123,13 +112,13 @@ La funzionalità di formattazione composta di .NET consente di usare come input 
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>Ordine di elaborazione  
- Se la chiamata al metodo di formattazione composita include un argomento <xref:System.IFormatProvider> il cui valore non è `null`, il runtime chiama il metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> per richiedere un'implementazione di <xref:System.ICustomFormatter>. Se il metodo può restituire un'implementazione di <xref:System.ICustomFormatter>, viene memorizzato nella cache per un utilizzo successivo.  
+ Se la chiamata al metodo di formattazione composita include un argomento <xref:System.IFormatProvider> il cui valore non è `null`, il runtime chiama il metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> per richiedere un'implementazione di <xref:System.ICustomFormatter>. Se il metodo è in grado di restituire un'implementazione <xref:System.ICustomFormatter>, viene memorizzata nella cache per la durata della chiamata del metodo di formattazione composita.
   
- Ogni valore nell'elenco di parametri che corrisponde a un elemento di formato viene convertito in una stringa, attenendosi alla procedura seguente. Se una condizione qualsiasi nei primi tre passaggi è true, la rappresentazione in formato stringa del valore viene restituita in tale passaggio e i passaggi successivi non vengono eseguiti.  
+ Ogni valore nell'elenco di parametri che corrisponde a un elemento di formato viene convertito in una stringa, nel modo seguente:  
   
-1.  Se il valore da formattare è `null`, viene restituita una stringa vuota ("").  
+1.  Se il valore da formattare è `null`, viene restituita una stringa vuota <xref:System.String.Empty?displayProperty=nameWithType>.  
   
-2.  Se l'implementazione di <xref:System.ICustomFormatter> è disponibile, il runtime chiama il metodo <xref:System.ICustomFormatter.Format%2A>. Passa al metodo il valore *formatString* dell'elemento di formato, se disponibile, o `null` in caso contrario, con l'implementazione di <xref:System.IFormatProvider>.  
+2.  Se l'implementazione di <xref:System.ICustomFormatter> è disponibile, il runtime chiama il metodo <xref:System.ICustomFormatter.Format%2A>. Passa al metodo il valore *formatString* dell'elemento di formato, se disponibile, o `null` in caso contrario, con l'implementazione di <xref:System.IFormatProvider>. Se la chiamata al metodo <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> restituisce `null`, l'esecuzione procede al passaggio successivo; in caso contrario, viene restituito il risultato della chiamata <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>.
   
 3.  Se il valore implementa l'interfaccia <xref:System.IFormattable>, verrà chiamato il relativo metodo <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29>. Al metodo viene passato il valore *formatString*, se disponibile nell'elemento di formato, o `null` in caso contrario. L'argomento <xref:System.IFormatProvider> è determinato come segue:  
   

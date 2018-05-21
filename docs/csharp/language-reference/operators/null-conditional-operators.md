@@ -1,10 +1,6 @@
 ---
 title: Operatori condizionali Null (C# e Visual Basic)
 ms.date: 04/03/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-caps.latest.revision: 3
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3ffeaa3c2088d0bb2c000704cfe312b0f9453b68
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: da771fa4a2a89dca308508ea81ef8e0060efa7f0
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. e ?[] - Operatori condizionali Null (C# e Visual Basic)
-Vengono usati per verificare la presenza di valori Null prima di eseguire un'operazione di accesso ai membri (`?.`) o di indice (`?[]`).  Questi operatori consentono di scrivere meno codice per gestire i controlli null, soprattutto per l'ordinamento decrescente delle strutture di dati.  
+Testa il valore dell'operando sul lato sinistro per i valori Null prima di eseguire un accesso ai membri (`?.`) o un'operazione (`?[]`) di indicizzazione; restituisce `null` se l'operando sul lato sinistro restituisce `null`. 
+
+Questi operatori consentono di scrivere meno codice per gestire i controlli null, soprattutto per l'ordinamento decrescente delle strutture di dati.  
   
 ```csharp  
 int? length = customers?.Length; // null if customers is null   
@@ -52,7 +47,7 @@ A?.B?.C?.Do(E);
 A?.B?.C?(E);
 ```  
   
- L'accesso ai membri con condizione Null viene usato anche per richiamare delegati in modo thread-safe scrivendo molto meno codice.  In passato era necessario codice simile al seguente:  
+ L'accesso ai membri con condizione Null viene usato anche per chiamare delegati in modo thread-safe scrivendo molto meno codice.  In passato era necessario codice simile al seguente:  
   
 ```csharp  
 var handler = this.PropertyChanged;  
@@ -69,16 +64,14 @@ If handler IsNot Nothing
  Ora tutto è molto più semplice:  
   
 ```csharp
-PropertyChanged?.Invoke(e)  
+PropertyChanged?.Invoke(…)  
 ```  
 
 ```vb
-PropertyChanged?.Invoke(e)
+PropertyChanged?.Invoke(…)
 ```  
   
- Il codice creato in questo modo è thread-safe perché il compilatore genera il codice per valutare `PropertyChanged` una sola volta, mantenendo il risultato in una variabile temporanea.  
-  
- È necessario chiamare esplicitamente il metodo `Invoke` perché non esiste una sintassi di chiamata dei delegati con condizione Null `PropertyChanged?(e)`.  
+ Il codice creato in questo modo è thread-safe perché il compilatore genera il codice per valutare `PropertyChanged` una sola volta, mantenendo il risultato in una variabile temporanea. È necessario chiamare esplicitamente il metodo `Invoke` perché non esiste una sintassi di chiamata dei delegati con condizione Null `PropertyChanged?(e)`.  
   
 ## <a name="language-specifications"></a>Specifiche del linguaggio  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -89,5 +82,4 @@ PropertyChanged?.Invoke(e)
  [ ?? (operatore null-coalescing)](null-conditional-operator.md)  
  [Riferimenti per C#](../../../csharp/language-reference/index.md)  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)  
  [Guida per programmatori Visual Basic](../../../visual-basic/programming-guide/index.md)

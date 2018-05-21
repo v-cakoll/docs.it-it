@@ -2,11 +2,11 @@
 title: private protected (informazioni di riferimento su C#)
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: b85b227989c9f79aa11486310f540b92ce5bdda6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee36cc713dd5fdb90ae20ef992f8e75eca09597d
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="private-protected-c-reference"></a>private protected (informazioni di riferimento su C#)
 La combinazione delle parole chiave `private protected` è un modificatore di accesso ai membri. Un membro protetto privato è accessibile per i tipi derivati dalla classe che lo contiene, ma solo all'interno dell'assembly che lo contiene. Per un confronto di `private protected` con altri modificatori di accesso, vedere [Livelli di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md). 
@@ -14,7 +14,7 @@ La combinazione delle parole chiave `private protected` è un modificatore di ac
 ## <a name="example"></a>Esempio  
  Un membro protetto privato di una classe base è accessibile dai tipi derivati nell'assembly che lo contiene solo se il tipo statico della variabile è il tipo della classe derivata. Si consideri il segmento di codice di esempio seguente:  
   
- ```
+ ```csharp
  // Assembly1.cs  
  // Compile with: /target:library  
  public class BaseClass
@@ -38,7 +38,7 @@ La combinazione delle parole chiave `private protected` è un modificatore di ac
  }
 ```  
   
-```  
+```csharp  
  // Assembly2.cs  
  // Compile with: /reference:Assembly1.dll  
  class DerivedClass2 : BaseClass

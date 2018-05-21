@@ -1,21 +1,14 @@
 ---
 title: Direttiva using (Riferimenti per C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 02c50b1e7a54d776985b60570c898e7d0739c44c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-directive-c-reference"></a>Direttiva using (Riferimenti per C#)
 La direttiva `using` ha tre usi:  
@@ -64,9 +57,9 @@ class Program
   
  Creare una direttiva `using` per usare i tipi in uno spazio dei nomi senza dover specificare tale spazio dei nomi. Una direttiva `using` non offre accesso ad alcuno spazio dei nomi annidato nello spazio dei nomi specificato.  
   
- Gli spazi dei nomi sono disponibili in due categorie: definiti dall'utente e definiti dal sistema. Gli spazi dei nomi definiti dall'utente vengono definiti nel codice. Per un elenco degli spazi dei nomi definiti dal sistema, vedere [Cenni preliminari sulla libreria di classe di .NET Framework](../../../standard/class-library-overview.md).  
+ Gli spazi dei nomi sono disponibili in due categorie: definiti dall'utente e definiti dal sistema. Gli spazi dei nomi definiti dall'utente vengono definiti nel codice. Per un elenco di spazi dei nomi definiti dal sistema, vedere [.NET Framework Class Library Overview](../../../standard/class-library-overview.md) (Panoramica della libreria di classi di .NET Framework).  
   
- Per esempi relativi a metodi di altri assembly di riferimento, vedere [creare e utilizzare assembly dalla riga di comando](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
+ Per esempi relativi ai metodi di riferimento in altri assembly, vedere [Create and Use Assemblies Using the Command Line](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md) (Creazione e uso degli assembly usando la riga di comando).  
   
 ## <a name="example-1"></a>Esempio 1  
   

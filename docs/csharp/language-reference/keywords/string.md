@@ -10,11 +10,11 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: 748016682db6e02cadbfb8c767391a18d48e1286
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f92a44283e59bd80421758a63b40bc5289c3628b
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="string-c-reference"></a>string (Riferimenti per C#)
 Il tipo `string` rappresenta una sequenza di zero o più caratteri Unicode. `string` è un alias per <xref:System.String> in .NET.  
@@ -62,7 +62,7 @@ char x = str[2];  // x = 's';
   
  I valori letterali della stringa possono contenere qualsiasi carattere letterale. Sono incluse le sequenze di escape. L'esempio seguente usa una sequenza di escape `\\` per la barra rovesciata, `\u0066` per la lettera f e `\n` per la nuova riga.  
   
-```  
+```csharp  
 string a = "\\\u0066\n";  
 Console.WriteLine(a);  
 ```  

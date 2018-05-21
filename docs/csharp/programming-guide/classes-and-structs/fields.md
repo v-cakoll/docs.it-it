@@ -1,21 +1,14 @@
 ---
 title: Campi (Guida per programmatori C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: acf4ade68235a196fd6d2f3c6c71279748f3dd71
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 31073772fd42244167b5e68959ebb373ec759025
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fields-c-programming-guide"></a>Campi (Guida per programmatori C#)
 Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente in una [classe](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md). I campi sono *membri* del rispettivo tipo contenitore.  
@@ -43,7 +36,7 @@ Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente 
 > [!NOTE]
 >  Un inizializzatore di campo non può fare riferimento ad altri campi di istanza.  
   
- I campi possono essere contrassegnati come [pubblica](../../../csharp/language-reference/keywords/public.md), [privata](../../../csharp/language-reference/keywords/private.md), [protetti](../../../csharp/language-reference/keywords/protected.md), [interno](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) o [protetto privato](../../../csharp/language-reference/keywords/private-protected.md). Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere ai campi. Per altre informazioni, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ I campi possono essere contrassegnati come [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) o [private protected](../../../csharp/language-reference/keywords/private-protected.md). Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere ai campi. Per altre informazioni, vedere [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) (Modificatori di accesso).  
   
  È possibile facoltativamente dichiarare un campo come [static](../../../csharp/language-reference/keywords/static.md). Questo rende il campo disponibile per i chiamanti in qualsiasi momento, anche se non esiste alcuna istanza della classe. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   

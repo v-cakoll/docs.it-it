@@ -1,21 +1,14 @@
 ---
 title: Definizione dell'applicazione a più contenitori con docker-compose.yml
 description: Architettura di microservizi .NET per le applicazioni nei contenitori .NET | Definizione dell'applicazione a più contenitori con docker-compose.yml
-keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c4fed5c7ba5c2048d103f22bd2b463c143013280
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ded2e5399938be25005776963b0310b6a49d0353
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definizione dell'applicazione a più contenitori con docker-compose.yml 
 
@@ -434,11 +427,11 @@ Si noti che i valori impostati nell'ambiente di runtime eseguono sempre l'overri
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Panoramica di Docker comporre**
-    [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
+-   **Overview of Docker Compose**
+    [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/) (Panoramica di Docker Compose)
 
--   **Più file Compose**
-    [*https://docs.docker.com/compose/extends/\#più comporre-file-*](https://docs.docker.com/compose/extends/#multiple-compose-files)
+-   **Multiple Compose files**
+    [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files) (Più file Compose)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Creazione di immagini Docker ottimizzate con ASP.NET Core
 
@@ -468,8 +461,8 @@ Il team .NET sta lavorando intensamente per rendere .NET Core e ASP.NET Core un 
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Creazione di immagini di Docker con ASP.NET Core ottimizzate**
-    [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
+-   **Building Optimized Docker Images with ASP.NET Core**
+    [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/) (Compilazione di immagini Docker ottimizzate con ASP.NET Core)
 
 ### <a name="building-the-application-from-a-build-ci-container"></a>Compilazione dell'applicazione da un contenitore (CI) di compilazione
 
@@ -549,8 +542,8 @@ La conclusione generale è che è possibile compilare l'applicazione allo stesso
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Compilazione di bits da un contenitore: impostazione della soluzione eShopOnContainers in un ambiente Windows CLI (dotnet CLI, Docker CLI e il codice di Visual Studio)**
-    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI, - Docker - CLI- e -VS-codice)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
+-   **Building bits from a container: Setting the eShopOnContainers solution up in a Windows CLI environment (dotnet CLI, Docker CLI and VS Code)**
+    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)) (Compilazione di bit da un contenitore: impostazione della soluzione eShopOnContainers in un ambiente Windows CLI (dotnet CLI, Docker CLI e codice di Visual Studio), -Docker-CLI-e codice VS)
 
 
 >[!div class="step-by-step"]

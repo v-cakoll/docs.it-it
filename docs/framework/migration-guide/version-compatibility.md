@@ -1,10 +1,7 @@
 ---
-title: "Compatibilità tra le versioni in .NET Framework"
+title: Compatibilità tra le versioni in .NET Framework
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - .NET Framework, version compatibility
 - .NET Framework 4.5, compatibility with earlier versions
@@ -12,13 +9,11 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 45bb0174bd4c757b6e51621f36b25eb5f4354c94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilità tra le versioni in .NET Framework
 Per compatibilità con le versioni precedenti si intende che un'app sviluppata per una particolare versione di una piattaforma sarà eseguita su versioni successive di quella piattaforma. .NET Framework tenta di ottimizzare la compatibilità con le versioni precedenti: il codice sorgente scritto per una versione di .NET Framework deve essere compilato su versioni successive di .NET Framework e i file binari in esecuzione su una versione di .NET Framework devono comportarsi in modo analogo nelle versioni successive di .NET Framework.  
@@ -50,7 +45,7 @@ Per compatibilità con le versioni precedenti si intende che un'app sviluppata p
   
  In pratica, questa compatibilità può essere interrotta da modifiche apparentemente irrilevanti in .NET Framework e nelle tecniche di programmazione. Ad esempio, i miglioramenti delle prestazioni in .NET Framework 4.5 possono esporre una race condition che non si era verificata nelle versioni precedenti. Allo stesso modo, l'uso di un percorso hardcoded per gli assembly .NET Framework, l'esecuzione di un confronto delle uguaglianze con una particolare versione di .NET Framework e l'acquisizione del valore di un campo privato tramite reflection non sono pratiche compatibili con le versioni precedenti. Inoltre, ogni versione di .NET Framework include correzioni di bug e modifiche correlate alla sicurezza che possono incidere sulla compatibilità di alcune app e componenti.  
   
- Se l'app o il componente non funziona come previsto in .NET Framework 4.5 (e versioni intermedie: [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 o 4.7.1), usare gli elenchi di controllo seguenti:  
+ Se l'app o il componente non funziona come previsto in .NET Framework 4.5 (e versioni intermedie: [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2), usare gli elenchi di controllo seguenti:  
   
 -  Se l'app è stata sviluppata per l'esecuzione in qualsiasi versione di .NET Framework a partire da .NET Framework 4.0, vedere [Compatibilità delle applicazioni in .NET Framework](application-compatibility.md) per creare un elenco di modifiche tra la versione di .NET Framework di destinazione e la versione in cui l'app è in esecuzione.  
 
@@ -64,7 +59,7 @@ Per compatibilità con le versioni precedenti si intende che un'app sviluppata p
   
 -   Se si determina che una modifica in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ha interrotto l'app, vedere [Schema delle impostazioni di runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md) per stabilire se è possibile usare un'impostazione di runtime nel file di configurazione dell'app per ripristinare il comportamento precedente.  
   
--   Se si rileva un problema non documentato, segnalare un bug [Microsoft Connect](http://go.microsoft.com/fwlink/?LinkID=154815) e contattare [netfxcf@microsoft.com](mailto:netfxcf@microsoft.com) con il numero del bug.  
+-   Se si verifica un problema non documentato, segnalarlo nel [sito della community degli sviluppatori .NET](https://developercommunity.visualstudio.com/spaces/61/index.html) oppure nel [repository GitHub Microsoft/dotnet](https://github.com/microsoft/dotnet/issues).
   
 ## <a name="compatibility-and-side-by-side-execution"></a>Compatibilità ed esecuzione affiancata  
  Se non si riesce a trovare una soluzione alternativa adatta al problema, ricordare che .NET Framework 4.5 (e versioni intermedie) viene eseguito side-by-side con le versioni 1.1, 2.0 e 3.5 ed è un aggiornamento sul posto che sostituisce la versione 4. Per app destinate alle versioni 1.1, 2.0 e 3.5, è possibile installare la versione appropriata di .NET Framework nel computer di destinazione per eseguire l'app nell'ambiente migliore. Per altre informazioni sull'esecuzione side-by-side, vedere [Esecuzione side-by-side](../../../docs/framework/deployment/side-by-side-execution.md).  

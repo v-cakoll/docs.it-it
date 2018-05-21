@@ -1,43 +1,37 @@
 ---
-title: "Novità di c# 7.1"
-description: "Panoramica delle nuove funzionalità in c# 7.1."
-keywords: Progettazione del linguaggio c#, 7.1, Visual Studio 2017,
-author: billwagner
-ms.author: wiwagn
+title: Novità di C# 7.1
+description: Panoramica delle nuove funzionalità in C# 7.1.
 ms.date: 08/16/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: devlang-csharp
-ms.openlocfilehash: 02f1f8fc8f0a3221e00e2a3c43ce06423ca43672
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 00baec45d7582d3ac12c7b0865241f5cd8159246
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="whats-new-in-c-71"></a>Novità di c# 7.1
+# <a name="whats-new-in-c-71"></a>Novità di C# 7.1
 
-C# 7.1 è il primo punto di rilascio del linguaggio c#. Contrassegna un rilasci maggiore per la lingua. È possibile utilizzare le nuove funzionalità prima, idealmente quando ogni nuova funzionalità è pronta. 7.1 c# aggiunge la possibilità di configurare il compilatore in modo che corrisponda a una versione specifica del linguaggio. Che consente di separare la decisione di eseguire l'aggiornamento di strumenti della decisione di eseguire l'aggiornamento di versioni in lingue diverse.
+C# 7.1 è la prima versione intermedia del linguaggio C#. Indica una maggiore frequenza per il rilascio delle versioni del linguaggio. Le nuove funzionalità possono essere usate prima, idealmente non appena ognuna di esse è pronta. C# 7.1 aggiunge la possibilità di configurare il compilatore in modo che corrisponda a una specifica versione del linguaggio. Questo consente di separare la decisione di eseguire l'aggiornamento di strumenti dalla decisione di eseguire l'aggiornamento delle versioni del linguaggio.
 
-7.1 c# aggiunge il [selezione della lingua versione](#language-version-selection) elemento di configurazione, tre nuove funzionalità del linguaggio e il nuovo comportamento del compilatore.
+C# 7.1 aggiunge l'elemento di configurazione per la [selezione della versione del linguaggio](#language-version-selection), tre nuove funzionalità del linguaggio e il nuovo comportamento del compilatore.
 
-Le nuove funzionalità del linguaggio in questa versione sono:
+Le nuove funzionalità relative al linguaggio in questa versione sono:
 
-* [`async``Main` (metodo)](#async-main)
-  - Il punto di ingresso per un'applicazione può avere il `async` modificatore.
-* [`default`espressioni letterali](#default-literal-expressions)
-  - Quando è possibile dedurre il tipo di destinazione, è possibile utilizzare espressioni letterali predefinite nelle espressioni di valori predefinito.
-* [Nomi di elemento dedotto tupla](#inferred-tuple-element-names)
-  - I nomi degli elementi di tupla possono essere dedotto dall'inizializzazione tupla in molti casi.
+* Metodo [`async` `Main` ](#async-main)
+  - Il punto di ingresso per un'applicazione può avere il modificatore `async`.
+* Espressioni letterali [`default` ](#default-literal-expressions)
+  - Quando è possibile dedurre il tipo di destinazione, si possono usare espressioni letterali predefinite nelle espressioni con valore predefinito.
+* [Nomi di elemento di tupla dedotti](#inferred-tuple-element-names)
+  - In molti casi i nomi degli elementi della tupla possono essere dedotti dall'inizializzazione tupla.
 
-Infine, il compilatore è disponibili due opzioni `/refout` e `/refonly` tale controllo [la generazione di assembly di riferimento](#reference-assembly-generation).
+Infine, il compilatore offre due opzioni `/refout` e `/refonly` che controllano la [generazione dell'assembly di riferimento](#reference-assembly-generation).
 
-## <a name="language-version-selection"></a>Selezione della lingua della versione
+## <a name="language-version-selection"></a>Selezione della versione del linguaggio
 
-Il compilatore c# supporta 7.1 c# a partire da Visual Studio 2017 versione 15.3 o .NET Core SDK 2.0. Tuttavia, le 7.1 funzionalità sono disattivate per impostazione predefinita. Per abilitare le 7.1 funzionalità, è necessario modificare l'impostazione della versione di lingua per il progetto.
+Il compilatore C# supporta C# 7.1 a partire da Visual Studio 2017 versione 15.3 o .NET Core SDK 2.0. Le funzionalità della versione 7.1 sono tuttavia disattivate per impostazione predefinita. Per abilitare le funzionalità della versione 7.1, è necessario modificare l'impostazione della versione del linguaggio per il progetto.
 
-In Visual Studio, fare clic sul nodo del progetto in Esplora soluzioni e selezionare **proprietà**. Selezionare il **compilare** e selezionare il **avanzate** pulsante. Nell'elenco a discesa, selezionare **c# versione secondaria più recente (versione più recente)**, o la versione **c# 7.1** come illustrato nella seguente immagine. Il `latest` valore indica che si desidera utilizzare la versione secondaria più recente nel computer corrente. Il `C# 7.1` significa che si desidera utilizzare c# 7.1, anche dopo che vengono rilasciate le versioni secondarie successive.
+In Visual Studio fare clic con il pulsante destro del mouse sul nodo del progetto in Esplora soluzioni e scegliere **Proprietà**. Selezionare la scheda **Compilazione** e quindi il pulsante **Avanzate**. Nell'elenco a discesa selezionare l'**Ultima versione secondaria di C# (più recente)** o la versione specifica **C# 7.1** come illustrato nell'immagine seguente. Il valore `latest` indica che si intende usare l'ultima versione secondaria nel computer corrente. Il valore `C# 7.1` indica che si intende usare C# 7.1 anche dopo il rilascio di versioni secondarie successive.
 
-![Impostazione della versione di lingua](./media/csharp-7-1/advanced-build-settings.png)
+![Impostazione della versione del linguaggio](./media/csharp-7-1/advanced-build-settings.png)
 
 In alternativa, è possibile modificare il file "csproj" e aggiungere o modificare le righe seguenti:
 
@@ -48,7 +42,7 @@ In alternativa, è possibile modificare il file "csproj" e aggiungere o modifica
 ```
 
 > [!NOTE]
-> Se si utilizza l'IDE di Visual Studio di aggiornare i file csproj, l'IDE crea nodi diversi per ogni configurazione di compilazione. È in genere imposta il valore lo stesso in tutte le configurazioni di compilazione, ma è necessario impostarlo in modo esplicito per ogni configurazione di compilazione o selezionare "Tutte le configurazioni" quando si modifica questa impostazione. Nel file csproj, verrà visualizzato quanto segue:
+> Se si usa l'IDE di Visual Studio per aggiornare i file csproj, l'IDE crea nodi separati per ogni configurazione della build. In genere si imposta lo stesso valore in tutte le configurazioni della build, ma è necessario impostarlo in modo esplicito per ogni configurazione della build o selezionare "Tutte le configurazioni" quando si modifica questa impostazione. Nel file csproj verrà visualizzato quanto segue:
 
 ```xml
 <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -60,7 +54,7 @@ In alternativa, è possibile modificare il file "csproj" e aggiungere o modifica
 </PropertyGroup>
 ```
 
-Le impostazioni valide per il `LangVersion` elemento sono:
+Le impostazioni valide per l'elemento `LangVersion` sono:
 
 * `ISO-1`
 * `ISO-2`
@@ -73,14 +67,14 @@ Le impostazioni valide per il `LangVersion` elemento sono:
 * `default`
 * `latest`
 
-Le stringhe speciali `default` e `latest` risolvere per le versioni in lingua principale e secondaria più recente installate nel computer di compilazione, rispettivamente.
+Le stringhe speciali `default` e `latest` si risolvono rispettivamente nelle versioni principale e secondaria più recenti del linguaggio installate nel computer di compilazione.
 
-Questa impostazione separa l'installazione di nuove versioni del SDK e strumenti nell'ambiente di sviluppo dalla scelta di incorporare nuove funzionalità del linguaggio in un progetto. È possibile installare il SDK e strumenti più recenti nel computer di compilazione. Ogni progetto può essere configurato per utilizzare una versione specifica del linguaggio per la compilazione.
+Questa impostazione separa l'installazione delle nuove versioni di SDK e strumenti nell'ambiente di sviluppo dalla scelta di incorporare nuove funzionalità del linguaggio in un progetto. È possibile installare l'SDK e gli strumenti più recenti nel computer di compilazione. Ogni progetto può essere configurato per usare una versione specifica del linguaggio in base alla relativa build.
 
-## <a name="async-main"></a>Async principale
+## <a name="async-main"></a>Async main
 
-Un *async principale* metodo consente di utilizzare `await` nel `Main` metodo.
-In precedenza, è necessario scrivere:
+Un metodo *async main* consente di usare `await` nel proprio metodo `Main`.
+In precedenza sarebbe stato necessario scrivere:
 
 ```csharp
 static int Main()
@@ -100,7 +94,7 @@ static async Task<int> Main()
 }
 ```
 
-Se il programma non restituisce un codice di uscita, è possibile dichiarare un `Main` metodo che restituisce un <xref:System.Threading.Tasks.Task>:
+Se il programma non restituisce un codice di uscita, è possibile dichiarare un metodo `Main` che restituisce una classe <xref:System.Threading.Tasks.Task>:
 
 ```csharp
 static async Task Main()
@@ -109,12 +103,12 @@ static async Task Main()
 }
 ```
 
-È possibile leggere informazioni sui dettagli nel [async principale](../programming-guide/main-and-command-args/index.md) argomento nella Guida di programmazione.
+Per altre informazioni dettagliate, leggere l'argomento [async main](../programming-guide/main-and-command-args/index.md) nella guida alla programmazione.
 
-## <a name="default-literal-expressions"></a>Espressioni letterali predefinito
+## <a name="default-literal-expressions"></a>Espressioni letterali predefinite
 
-Le espressioni letterali predefinito rappresentano un progresso espressioni di valori predefiniti.
-Queste espressioni di inizializzare una variabile sul valore predefinito. In cui in precedenza scrivere:
+Le espressioni letterali predefinite rappresentano un miglioramento delle espressioni con valore predefinito.
+Queste espressioni inizializzano una variabile sul valore predefinito. Mentre in precedenza si sarebbe scritto:
 
 ```csharp
 Func<string, bool> whereClause = default(Func<string, bool>);
@@ -126,13 +120,13 @@ Func<string, bool> whereClause = default(Func<string, bool>);
 Func<string, bool> whereClause = default;
 ```
 
-Maggiori informazioni su questa funzionalità avanzata nell'argomento della Guida per programmatori c# in [predefinito espressioni valore](../programming-guide/statements-expressions-operators/default-value-expressions.md).
+Altre informazioni su questo miglioramento sono disponibili nell'argomento della Guida per programmatori C# relativo alle [espressioni con valore predefinito](../programming-guide/statements-expressions-operators/default-value-expressions.md).
 
-Questa funzionalità avanzata modifica anche alcune delle regole di analisi per il [parola chiave default](../language-reference/keywords/default.md).
+Questo miglioramento modifica anche alcune delle regole di analisi per la [parola chiave default](../language-reference/keywords/default.md).
 
-## <a name="inferred-tuple-element-names"></a>Nomi di elemento dedotto tupla
+## <a name="inferred-tuple-element-names"></a>Nomi di elemento di tupla dedotti
 
-Questa funzionalità è un piccolo miglioramento alla funzionalità tuple introdotta in c# 7.0. Molte volte quando l'inizializzazione di una tupla, le variabili utilizzate per il lato destro dell'assegnazione sono gli stessi nomi di cui che si desidera usare gli elementi della tupla:
+Questa funzionalità costituisce un piccolo miglioramento alla funzionalità relativa alle tuple introdotta in C# 7.0. Molte volte, quando si inizializza una tupla, le variabili usate per il lato destro dell'assegnazione corrispondono esattamente ai nomi che si vorrebbero usare per gli elementi della tupla:
 
 ```csharp
 int count = 5;
@@ -140,7 +134,7 @@ string label = "Colors used in the map";
 var pair = (count: count, label: label);
 ```
 
-I nomi degli elementi di tupla possono essere dedotto da variabili utilizzate per inizializzare la tupla in c# 7.1:
+I nomi degli elementi della tupla possono essere dedotti dalle variabili usate per inizializzare la tupla in C# 7.1:
 
 ```csharp
 int count = 5;
@@ -148,9 +142,9 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-Per ulteriori informazioni su questa funzionalità in informazioni di [Tuple](../tuples.md) argomento.
+Informazioni più approfondite sulle tuple sono disponibili nell'argomento [Tuple](../tuples.md).
 
-## <a name="reference-assembly-generation"></a>Generazione di assembly di riferimento
+## <a name="reference-assembly-generation"></a>Generazione assembly di riferimento
 
-Sono disponibili due nuove opzioni del compilatore che generano *gli assembly di riferimento sola*: [/refout](../language-reference/compiler-options/refout-compiler-option.md) e [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
-Gli argomenti collegati illustrano queste opzioni e gli assembly di riferimento in modo più dettagliato.
+Sono disponibili due nuove opzioni del compilatore che generano *gli assembly di solo riferimento* : [/refout](../language-reference/compiler-options/refout-compiler-option.md) e [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+Gli argomenti collegati illustrano in modo più dettagliato queste opzioni e gli assembly di riferimento.

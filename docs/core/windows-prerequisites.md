@@ -4,15 +4,11 @@ description: Informazioni sulle dipendenze per sviluppare ed eseguire applicazio
 author: JRAlexander
 ms.author: johalex
 ms.date: 04/24/2018
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 6f2ba8540a38f8e30d3d968f5e2c891c850053aa
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7c6f39f004ebc39ca714ce419a38d842fcf8f0cb
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Prerequisiti per .NET Core in Windows
 
@@ -50,7 +46,7 @@ Per l'elenco completo dei sistemi operativi supportati .NET Core 1.x, vedere [.N
 * Installazione di .NET Core tramite un file *ZIP*. Sono inclusi i server di compilazione/di integrazione continua/di distribuzione continua.
 
 > [!NOTE]
-> *Per Windows 8.1 e versioni precedenti o Windows Server 2012 R2 e versioni precedenti:* assicurarsi che l'installazione di Windows sia aggiornata e includa [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), che può essere installato tramite Windows Update. Se l'aggiornamento non è installato, quando si avvia un'applicazione .NET Core viene visualizzato un errore simile al seguente: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`.
+> *Per Windows 8.1 e versioni precedenti o Windows Server 2012 R2 e versioni precedenti:* assicurarsi che l'installazione di Windows sia aggiornata e includa [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), che può essere installato tramite Windows Update. Se l'aggiornamento non è installato, quando si avvia un'applicazione .NET Core viene visualizzato un errore simile al seguente: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Prerequisiti con Visual Studio 2017
 

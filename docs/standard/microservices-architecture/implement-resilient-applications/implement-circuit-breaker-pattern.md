@@ -1,21 +1,14 @@
 ---
 title: Implementazione dello schema Circuit Breaker
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Implementazione dello schema Circuit Breaker
-keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/12/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dea94d8eda3341cca5e3aaf6b3c8369c27381135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-circuit-breaker-pattern"></a>Implementazione dello schema Circuit Breaker
 
@@ -235,17 +228,17 @@ Policy.Handle<HttpResponseException>() // etc
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Schema Retry**
-    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
+-   **Retry pattern**
+    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry) (Modello di ripetizione)
 
--   **Resilienza della connessione** (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+-   **Connection Resiliency** (Resilienza della connessione) (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
 
 -   **Polly** (libreria .NET con funzionalità di resilienza e di gestione degli errori temporanei) [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
 -   **Schema Circuit Breaker**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
--   **Marc Brooker. Jitter: Making Things Better With Randomness (Instabilità: usare la casualità per ottimizzare le procedure)** https://brooker.co.za/blog/2015/03/21/backoff.html
+-   **Marc Brooker. Jitter: Making Things Better With Randomness** https://brooker.co.za/blog/2015/03/21/backoff.html(Instabilità: eseguire operazioni meglio con la casualità)
 
 
 >[!div class="step-by-step"]

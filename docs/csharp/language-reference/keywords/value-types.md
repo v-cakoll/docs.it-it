@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fdda6942c6883baaaea5e305a1e699a01e707d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49043a9fe9eabbb54176a0106007ef0d26ed795f
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="value-types-c-reference"></a>Tipi di valore (Riferimenti per C#)
 I tipi valore comprendono due categorie principali:  
@@ -56,31 +56,31 @@ I tipi valore comprendono due categorie principali:
 ## <a name="initializing-value-types"></a>Inizializzazione di tipi valore  
  Le variabili locali in C# devono essere inizializzate prima di poter essere usate. È ad esempio possibile dichiarare una variabile locale senza inizializzazione, come nell'esempio seguente:  
   
-```  
+```csharp  
 int myInt;  
 ```  
   
  Non è possibile usarla prima di averla inizializzata. È possibile inizializzarla mediante l'istruzione seguente:  
   
-```  
+```csharp  
 myInt = new int();  // Invoke default constructor for int type.  
 ```  
   
  Questa istruzione è equivalente all'istruzione seguente:  
   
-```  
+```csharp  
 myInt = 0;         // Assign an initial value, 0 in this example.  
 ```  
   
  Naturalmente, è possibile inserire la dichiarazione e l'inizializzazione nella stessa istruzione, come negli esempi seguenti:  
   
-```  
+```csharp  
 int myInt = new int();  
 ```  
   
  - oppure -  
   
-```  
+```csharp  
 int myInt = 0;  
 ```  
   
@@ -88,7 +88,7 @@ int myInt = 0;
   
  Con i tipi definiti dall'utente, usare [new](../../../csharp/language-reference/keywords/new.md) per richiamare il costruttore predefinito. Ad esempio, l'istruzione seguente richiama il costruttore predefinito dello struct `Point`:  
   
-```  
+```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
 ```  
   

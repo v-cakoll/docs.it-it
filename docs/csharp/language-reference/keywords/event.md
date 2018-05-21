@@ -1,10 +1,6 @@
 ---
 title: event (Riferimenti per C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - event
 - remove
@@ -13,14 +9,11 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-caps.latest.revision: 28
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f7e7f9f96714f8988eb91d77c63cc4f017d040f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b58e06c87ebf601daf231c83993ebe512f51ecd9
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="event-c-reference"></a>event (Riferimenti per C#)
 La parola chiave `event` viene usata per dichiarare un evento in una classe autore.  
@@ -28,11 +21,11 @@ La parola chiave `event` viene usata per dichiarare un evento in una classe auto
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra come dichiarare e generare un evento che usa <xref:System.EventHandler> come tipo di delegato sottostante. Per l'esempio di codice completo che illustra anche come usare il tipo di delegato generico <xref:System.EventHandler%601> e come sottoscrivere un evento e creare un metodo per il gestore dell'evento, vedere [Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
   
- [!code-csharp[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
   
  Gli eventi sono un tipo di delegati multicast speciali che possono essere chiamati solo dall'interno della classe o dello struct in cui sono dichiarati (la classe autore). Se altre classi o altri struct sottoscrivono l'evento, i metodi di gestione eventi corrispondenti verranno chiamati quando la classe publisher genera l'evento. Per altre informazioni e altri esempi di codice, vedere [Eventi](../../../csharp/programming-guide/events/index.md) e [Delegati](../../../csharp/programming-guide/delegates/index.md).  
   
- Gli eventi possono essere contrassegnati come [pubblica](../../../csharp/language-reference/keywords/public.md), [privata](../../../csharp/language-reference/keywords/private.md), [protetti](../../../csharp/language-reference/keywords/protected.md), [interno](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) o [protetto privato](../../../csharp/language-reference/keywords/private-protected.md). Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere all'evento. Per altre informazioni, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Gli eventi possono essere contrassegnati come [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) o [private protected](../../../csharp/language-reference/keywords/private-protected.md). Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere all'evento. Per altre informazioni, vedere [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) (Modificatori di accesso).  
   
 ## <a name="keywords-and-events"></a>Parole chiave ed eventi  
  Agli eventi si applicano le parole chiave seguenti.  

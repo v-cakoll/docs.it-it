@@ -7,11 +7,11 @@ helpviewer_keywords:
 - AND assignment operator (&=) [C#]
 - '&= operator [C#]'
 ms.assetid: e8d58f3f-72dd-4b5a-b995-452fcce7e6bb
-ms.openlocfilehash: a749cf2f73faa80df49699b1e466cde290ed386e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 092f46ddd8ca52e2d705200768c93a3473f1520f
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="amp-operator-c-reference"></a>Operatore &amp;= (Riferimenti per C#)
 Operatore di assegnazione AND.  
@@ -19,13 +19,13 @@ Operatore di assegnazione AND.
 ## <a name="remarks"></a>Note  
  Un'espressione che usa l'operatore di assegnazione `&=`, ad esempio  
   
-```  
+```csharp  
 x &= y  
 ```  
   
  equivale a  
   
-```  
+```csharp  
 x = x & y  
 ```  
   

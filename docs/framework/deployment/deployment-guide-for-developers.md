@@ -1,30 +1,25 @@
 ---
 title: Guida alla distribuzione di .NET Framework per sviluppatori
 ms.custom: updateeachrelease
-ms.date: 12/14/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b2083efabd6c16bafd8b241980c4cd413258ae5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 14bb5cd242a45b98a23a9d807b22aa4487d2591e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guida alla distribuzione di .NET Framework per sviluppatori
 Questo argomento offre informazioni destinate agli sviluppatori che vogliono installare una versione di .NET Framework da .NET Framework 4.5 a [!INCLUDE[net_current](../../../includes/net-current-version.md)] con le proprie app.
 
 Per i collegamenti ai download, vedere la sezione [Pacchetti ridistribuibili](#redistributable-packages). È anche possibile scaricare i pacchetti ridistribuibili e i Language Pack dalle pagine dell'Area download Microsoft seguenti:
+
+- .NET Framework 4.7.2 per tutti i sistemi operativi ([programma di installazione Web](http://go.microsoft.com/fwlink/?LinkId=863262) o [programma di installazione offline](http://go.microsoft.com/fwlink/p/?LinkId=863265))
 
 - .NET Framework 4.7.1 per tutti i sistemi operativi ([programma di installazione Web](http://go.microsoft.com/fwlink/?LinkId=852095) o [programma di installazione offline](http://go.microsoft.com/fwlink/p/?LinkId=852107))
 
@@ -55,7 +50,7 @@ Per i collegamenti ai download, vedere la sezione [Pacchetti ridistribuibili](#r
 
 - È necessario avere privilegi di amministratore per installare [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e le relative versioni intermedie.
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] è incluso in [!INCLUDE[win8](../../../includes/win8-md.md)] e [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], quindi non è necessario distribuirlo con l'applicazione in questi sistemi operativi. Analogamente, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] è incluso in [!INCLUDE[win81](../../../includes/win81-md.md)] e Windows Server 2012 R2. .NET Framework 4.5.2 non è incluso in nessun sistema operativo. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] è incluso in Windows 10, [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] è incluso nell'aggiornamento di novembre di Windows 10 e [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] è incluso nell'aggiornamento dell'anniversario di Windows 10.  .NET Framework 4.7 è incluso in Windows 10 Creators Update, .NET Framework 4.7.1 è invece incluso in Windows 10 Fall Creators Update. Per un elenco completo dei requisiti hardware e software, vedere [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md).
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] è incluso in [!INCLUDE[win8](../../../includes/win8-md.md)] e [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], quindi non è necessario distribuirlo con l'applicazione in questi sistemi operativi. Analogamente, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] è incluso in [!INCLUDE[win81](../../../includes/win81-md.md)] e Windows Server 2012 R2. .NET Framework 4.5.2 non è incluso in nessun sistema operativo. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] è incluso in Windows 10, [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] è incluso nell'aggiornamento di novembre di Windows 10 e [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] è incluso nell'aggiornamento dell'anniversario di Windows 10.  .NET Framework 4.7 è incluso in Windows 10 Creators Update, .NET Framework 4.7.1 è incluso in Windows 10 Fall Creators Update e .NET Framework 4.7.2 è incluso nell'Aggiornamento di Windows 10 (aprile 2018). Per un elenco completo dei requisiti hardware e software, vedere [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md).
 
 - A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], gli utenti possono visualizzare un elenco di applicazioni .NET Framework in esecuzione durante l'installazione e chiuderle con facilità. In questo modo, è possibile evitare i riavvii del sistema dovuti alle installazioni di .NET Framework. Vedere [Riduzione dei riavvii del sistema](../../../docs/framework/deployment/reducing-system-restarts.md).
 
@@ -79,8 +74,8 @@ Per i collegamenti ai download, vedere la sezione [Pacchetti ridistribuibili](#r
 
 ||programma di installazione Web|programma di installazione offline|
 |-|-------------------|-----------------------|
-|File per il download|.NET Framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
-|Connessione Internet necessaria?|Sì|No|
+|File per il download|.NET Framework 4.7.2: <br/>[NDP472-KB4054531-Web.exe](http://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET Framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.2: <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET Framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
+|Connessione Internet necessaria?|Yes|No|
 |Dimensioni del download|Minime (include il programma di installazione per la sola piattaforma di destinazione)*|Massime*|
 |Language Pack|Incluso**|Deve essere [installato separatamente](#chain_langpack), a meno che non si usi il pacchetto destinato a tutti i sistemi operativi|
 |Metodo di distribuzione|Supporta tutti i metodi:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Installazione manuale](#installing_manually)<br />- [Impostazione personalizzata (concatenamento)](#chaining)|Supporta tutti i metodi:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Installazione manuale](#installing_manually)<br />- [Impostazione personalizzata (concatenamento)](#chaining)|
@@ -251,6 +246,8 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Versione|Valore DWORD di Release|
 |-------------|--------------------------------|
+|.NET Framework 4.7.2 installato nell'Aggiornamento di Windows 10 (aprile 2018)|461808|
+|.NET Framework 4.7.2 installato in tutte le versioni del sistema operativo diverse dall'Aggiornamento di Windows 10 (aprile 2018)|461814|
 |.NET Framework 4.7.1 installato in Windows 10 Fall Creators Update|461308|
 |.NET Framework 4.7.1 installato in tutte le versioni del sistema operativo diverse da Windows 10 Fall Creators Update|461310|
 |.NET Framework 4.7 installato in Windows 10 Creators Update|460798|
@@ -277,11 +274,13 @@ Name: Release
 Type: DWORD
 ```
 
- Per determinare se per [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 o 4.7.1 è installata la versione di rilascio finale di un Language Pack, verificare il valore della chiave RELEASE DWORD descritto nella sezione precedente, [Rilevamento di .NET Framework](#detect_net).
+ Per determinare se per una versione particolare di .NET Framework dalla 4.5 alla 4.7.2 è installata la versione di rilascio finale di un Language Pack, verificare il valore della chiave RELEASE del valore DWORD descritto nella sezione precedente, [Rilevamento di .NET Framework](#detect_net).
 
 <a name="chain_langpack"></a> 
 ### <a name="chaining-the-language-packs-to-your-app-setup"></a>Concatenamento dei Language Pack nell'installazione dell'applicazione
  .NET Framework fornisce un set di file eseguibili di Language pack autonomi contenenti le risorse localizzate per impostazioni cultura specifiche. I Language Pack sono disponibili nell'Area download Microsoft:
+
+- [Language Pack di .NET Framework 4.7.2](http://go.microsoft.com/fwlink/p/?LinkId=863258)
 
 - [Language Pack di.NET Framework 4.7.1](http://go.microsoft.com/fwlink/p/?LinkId=852090)
 
@@ -348,7 +347,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
  A partire da [!INCLUDE[win8](../../../includes/win8-md.md)], è possibile disinstallare [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o una delle relative versioni intermedie usando **Attiva o disattiva funzionalità di Windows** nel Pannello di controllo. Nelle versioni precedenti di Windows è possibile disinstallare [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o una delle relative versioni intermedie usando **Installazione applicazioni** nel Pannello di controllo.
 
 > [!IMPORTANT]
-> Per Windows 7 e i sistemi operativi precedenti, la disinstallazione di [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 o 4.7.1 non comporta il ripristino dei file di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e la disinstallazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] non comporta il ripristino dei file di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Se si vuole tornare alla versione precedente, è necessario reinstallarla con tutti gli aggiornamenti.
+> Per Windows 7 e i sistemi operativi precedenti, la disinstallazione di [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2 non comporta il ripristino dei file di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e la disinstallazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] non comporta il ripristino dei file di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Se si vuole tornare alla versione precedente, è necessario reinstallarla con tutti gli aggiornamenti.
 
 ## <a name="appendix"></a>Appendice
 

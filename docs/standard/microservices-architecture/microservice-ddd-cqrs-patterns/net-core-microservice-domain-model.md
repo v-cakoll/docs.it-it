@@ -1,21 +1,14 @@
 ---
 title: Implementazione di un modello di dominio del microservizio con .NET Core
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Implementazione di un modello di dominio del microservizio con .NET Core
-keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0b954efffe2ee7e3e2bdaa49bd1057d72d69088c
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: e0c931405b8b7e3b52bdcbd511737b449dc74273
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementazione di un modello di dominio del microservizio con .NET Core 
 
@@ -181,8 +174,8 @@ Ad esempio, nell'esempio di codice OrderAggregate precedente, sono presenti dive
 -   **Julie Lerman. Programmazione per DDD (Domain-Driven Design): suggerimenti per sviluppatori attenti ai dati**
     [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
--   **Udi Dahan. Come creare modelli di dominio completamente incapsulati**
-    [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+-   **Udi Dahan. How to create fully encapsulated Domain Models**
+    [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/) (Come creare modelli di dominio completamente incapsulati)
 
 
 >[!div class="step-by-step"]

@@ -1,21 +1,14 @@
 ---
-title: "Monitoraggio dell'integrità"
-description: "Architettura di microservizi .NET per applicazioni .NET in contenitori | Monitoraggio dell'integrità"
-keywords: Docker, microservizi, ASP.NET, contenitore
+title: Monitoraggio dell'integrità
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Monitoraggio dell'integrità
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 81c4fc7662212bb3c6586a590d87e731220b7b7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="health-monitoring"></a>Monitoraggio dell'integrità
 
@@ -27,7 +20,7 @@ Nel modello tipico, i servizi inviano report sul proprio stato e queste informaz
 
 ## <a name="implementing-health-checks-in-aspnet-core-services"></a>Implementazione dei controlli di integrità nei servizi ASP.NET Core
 
-Quando si sviluppa un'applicazione Web o un microservizio ASP.NET Core, è possibile usare una libreria denominata `HealthChecks` dal team di ASP.NET. La versione preliminare è disponibile in questo [repository GitHub](https://github.com/dotnet-architecture/HealthChecks).
+Quando si sviluppa un'applicazione Web o un microservizio ASP.NET Core, è possibile usare una libreria fuori banda (non ufficiale in quanto parte di ASP.NETCore) denominata `HealthChecks` dal team di ASP.NET. È disponibile in questo [repository GitHub](https://github.com/dotnet-architecture/HealthChecks).
 
 Questa libreria è facile da usare e offre funzionalità che consentono di accertarsi del corretto funzionamento di qualsiasi risorsa specifica esterna necessaria per l'applicazione (ad esempio un database di SQL Server o un API remota). Quando si usa questa libreria, è possibile anche decidere cosa si intende per integrità della risorsa, come illustrato più avanti.
 
@@ -37,7 +30,7 @@ Per usare questa libreria, è necessario usare prima la libreria presente nei mi
 
 È possibile verificare come viene usata la libreria HealthChecks nell'applicazione di esempio eShopOnContainers. Per iniziare, è necessario definire gli elementi che costituiscono uno stato integro per ogni microservizio. Nell'applicazione di esempio, un microservizio è integro se la relativa API è accessibile tramite HTTP e se è disponibile anche il database SQL Server correlato.
 
-In futuro, sarà possibile installare la libreria HealthChecks come pacchetto NuGet. Al momento della scrittura di questo articolo, tuttavia, è necessario scaricare e compilare il codice come parte della soluzione. Clonare il codice disponibile all'indirizzo https://github.com/dotnet-architecture/HealthChecks e copiare le cartelle seguenti alla soluzione:
+In futuro, sarà possibile installare la libreria HealthChecks come pacchetto NuGet. Al momento della scrittura di questo articolo, tuttavia, è necessario scaricare e compilare il codice come parte della soluzione. Clonare il codice disponibile in https://github.com/dotnet-architecture/HealthChecks e copiare le cartelle seguenti nella soluzione:
 
   - src/common
   - src/Microsoft.AspNetCore.HealthChecks
@@ -192,10 +185,10 @@ Infine, se sono stati archiviati tutti i flussi di eventi, è possibile usare Mi
 
 -   **ASP.NET Core HealthChecks** (rilascio anticipato) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
--   **Introduzione al monitoraggio dell'integrità dell'infrastruttura di servizio**
+-   **Introduzione al monitoraggio dell'integrità di Service Fabric**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
--   **Applicazione Azure Insights**
+-   **Azure Application Insights**
     [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**

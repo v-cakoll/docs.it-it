@@ -1,21 +1,12 @@
 ---
 title: Assembly Friend (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 20b8d4f2d58af510a28160d28e6ef740d293d835
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c9265a6ce53d97f1d0b8aaeb0f1aae3b7b75f2cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="friend-assemblies-c"></a>Assembly Friend (C#)
 Un *assembly Friend* può accedere ai tipi e ai membri [interni](../../../../csharp/language-reference/keywords/internal.md) di un altro assembly. Se un assembly viene riconosciuto di tipo Friend, non è più necessario contrassegnare tipi e membri come pubblici perché altri assembly possano accedervi. Questo metodo è particolarmente utile negli scenari seguenti:  
@@ -81,7 +72,7 @@ public class ClassWithFriendMethod
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
  <xref:System.Security.Permissions.StrongNameIdentityPermission>  
- [Procedura: creare assembly Friend non firmati (c#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [Procedura: creare assembly Friend firmati (c#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+ [Procedura: Creare assembly Friend non firmati (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+ [Procedura: Creare assembly Friend firmati (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
  [Assembly e Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
  [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)

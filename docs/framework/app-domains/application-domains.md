@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04028a2b350493a3cc8f2c92bafafd9658fc7c58
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811443dbd8e2483f7fc1b0f8c44afb4ebcd9efcf
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="application-domains"></a>Domini applicazione
 I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di isolamento tra le applicazioni. Windows, ad esempio, usa i processi per isolare le applicazioni. L'isolamento è necessario per garantire che il codice in esecuzione in un'applicazione non interferisca con altre applicazioni non correlate.  
@@ -74,11 +74,11 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
   
  Il caricamento di assembly indipendenti dal dominio può avvenire in tre modi:  
   
--   Con l'impostazione <xref:System.LoaderOptimization> non viene caricato alcun assembly come indipendente dal dominio, ad eccezione di Mscorlib, che viene sempre caricato come indipendente dal dominio. Questa impostazione viene denominata a dominio singolo perché viene usata in genere quando sull'host è in esecuzione una sola applicazione nel processo.  
-  
--   Con l'impostazione <xref:System.LoaderOptimization> tutti gli assembly vengono caricati come indipendenti dal dominio. Usare questa impostazione quando nel processo esistono più domini applicazione che eseguono tutti lo stesso codice.  
-  
--   Con l'impostazione <xref:System.LoaderOptimization> vengono caricati come indipendenti dal dominio gli assembly con nome sicuro, purché siano stati installati insieme alle relative dipendenze nella Global Assembly Cache. Gli altri assembly vengono caricati e sottoposti a compilazione JIT separatamente per ogni dominio applicazione in cui sono stati caricati e possono pertanto essere scaricati dal processo. Usare questa impostazione se si eseguono più applicazioni nello stesso processo o se si dispone di una combinazione di assembly condivisi da molti domini applicazione e di assembly che devono essere scaricati dal processo.  
+- Con l'impostazione <xref:System.LoaderOptimization.SingleDomain?displayProperty=nameWithType> non viene caricato alcun assembly come indipendente dal dominio, ad eccezione di Mscorlib, che viene sempre caricato come indipendente dal dominio. Questa impostazione viene denominata a dominio singolo perché viene usata in genere quando sull'host è in esecuzione una sola applicazione nel processo.
+
+- Con l'impostazione <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> tutti gli assembly vengono caricati come indipendenti dal dominio. Usare questa impostazione quando nel processo esistono più domini applicazione che eseguono tutti lo stesso codice.
+
+- Con l'impostazione <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType> vengono caricati come indipendenti dal dominio gli assembly con nome sicuro, purché siano stati installati insieme alle relative dipendenze nella Global Assembly Cache. Gli altri assembly vengono caricati e sottoposti a compilazione JIT separatamente per ogni dominio applicazione in cui sono stati caricati e possono pertanto essere scaricati dal processo. Usare questa impostazione se si eseguono più applicazioni nello stesso processo o se si dispone di una combinazione di assembly condivisi da molti domini applicazione e di assembly che devono essere scaricati dal processo.
   
  Il codice con compilazione JIT non può essere condiviso per gli assembly caricati nel contesto di origine del caricamento usando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A> della classe <xref:System.Reflection.Assembly> né può essere caricato da immagini usando overload del metodo <xref:System.Reflection.Assembly.Load%2A> che specificano matrici di byte.  
   

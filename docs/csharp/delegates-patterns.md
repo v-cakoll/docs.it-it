@@ -3,11 +3,11 @@ title: Modelli comuni per i delegati
 description: Informazioni sui modelli comuni per l'uso dei delegati nel codice per evitare l'accoppiamento forte tra i componenti.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: fceab2b9c6bbd1d687566820366459ec57ae7a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9762841656aa362589d01ed011407aeedfe4a20
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="common-patterns-for-delegates"></a>Modelli comuni per i delegati
 
@@ -27,7 +27,7 @@ Il metodo `Where` usa un delegato che determina quali elementi di un filtro pass
 Il prototipo del metodo Where è:
 
 ```csharp
-public static IEnumerable<TSource> Where<in TSource> (IEnumerable<TSource> source, Func<TSource, bool> predicate);
+public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> source, Func<TSource, bool> predicate);
 ```
 
 Questo esempio viene ripetuto con tutti i metodi che fanno parte di LINQ. Tutti i metodi si basano su delegati per il codice che gestisce la query specifica. Lo schema progettuale di questa API è molto utile per apprendere e comprendere.

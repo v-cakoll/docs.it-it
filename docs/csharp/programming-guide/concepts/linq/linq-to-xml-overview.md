@@ -1,21 +1,12 @@
 ---
 title: Panoramica di LINQ to XML (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1c66e87ecc72bf711dfda33cd7c0ea35f126c1e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 318c5494134fd1dd3ac2adbf538d693ad4a5dbf8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-overview-c"></a>Panoramica di LINQ to XML (C#)
 XML è stato ampiamente adottato per la formattazione dei dati in una vasta gamma di contesti. Viene ad esempio usato in applicazioni Web, file di configurazione, file di Microsoft Office Word e in database.  
@@ -72,7 +63,7 @@ select item;
 -   Usare una combinazione di queste funzionalità per trasformare strutture ad albero XML da una forma in un altra.  
   
 ## <a name="creating-xml-trees"></a>Creazione di strutture ad albero XML  
- Uno dei vantaggi più significativi della programmazione con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è facile creare strutture ad albero XML. Ad esempio, per creare un piccolo albero XML, è possibile scrivere il codice seguente:  
+ Uno dei vantaggi più significativi della programmazione con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è rappresentato dalla facilità con cui è possibile creare alberi XML. Ad esempio, per creare un piccolo albero XML, è possibile scrivere il codice seguente:  
   
 ```csharp  
 XElement contacts =  

@@ -1,21 +1,14 @@
 ---
 title: Uso di un server di database eseguito come un contenitore
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Uso di un server di database eseguito come un contenitore
-keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 70dd3686519fc38ae35910284948ccf95e743ef7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ff6afbe9618df918e0a965fa1202bbb999eee5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Uso di un server di database eseguito come un contenitore
 
@@ -54,10 +47,10 @@ L'esecuzione di SQL Server come contenitore non è solo utile per una demo, in c
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Eseguire l'immagine Docker per SQL Server su Linux, Mac o Windows**
+-   **Eseguire l'immagine di SQL Server Docker in Linux, Mac, o Windows**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **Connettersi ed eseguire query su SQL Server in Linux con sqlcmd**
+-   **Connettere ed eseguire query di SQL Server in Linux con sqlcmd**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Seeding con dati di test all'avvio di un'applicazione Web

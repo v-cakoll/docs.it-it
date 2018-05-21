@@ -4,11 +4,11 @@ description: Guida alla scelta dell'implementazione di .NET da prendere in consi
 author: cartermp
 ms.author: mairaw
 ms.date: 03/15/2018
-ms.openlocfilehash: 1bed9bd2ed709907323123ad6658bbf0503ff1fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5626c6c1687fe0b8d558df8772fc69c32981787c
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Scelta di .NET Core o .NET Framework per le app server
 
@@ -93,8 +93,6 @@ Esistono tecnologie di .NET Framework non disponibili in .NET Core. Alcune potre
 * Implementazione di servizi WCF: anche se è presente una [libreria WCF client](https://github.com/dotnet/wcf) per l'utilizzo di servizi WCF da .NET Core, l'implementazione di server WCF è attualmente disponibile solo in .NET Framework. Questo scenario non è attualmente previsto per .NET Core, ma verrà preso in considerazione per il futuro.
 
 * Servizi correlati al flusso di lavoro: Windows Workflow Foundation (WF), Servizi flusso di lavoro (WCF e WF in un unico servizio) e WCF Data Services (in precedenza "ADO.NET Data Services") sono disponibili solo in .NET Framework  e non è previsto alcun trasferimento di WF/WCF+WF/WCF Data Services in .NET Core.
-
-* App Windows Presentation Foundation (WPF) e Windows Form: le applicazioni WPF e Windows Form sono disponibili soltanto in .NET Framework. Attualmente non ne è previsto il trasferimento in .NET Core.
 
 * Supporto per i linguaggi: Visual Basic e F# sono attualmente supportati in .NET Core, ma non per tutti i tipi di progetto. Per un elenco dei modelli di progetto supportati, vedere le [opzioni del modello per dotnet new](../core/tools/dotnet-new.md#arguments).
 

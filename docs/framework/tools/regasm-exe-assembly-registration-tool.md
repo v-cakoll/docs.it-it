@@ -1,29 +1,19 @@
 ---
 title: Regasm.exe (strumento di registrazione di assembly)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Assembly Registration tool
 - assemblies [.NET Framework], registering
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11ccdb4c75af2b37595d9be977f2ab881ebe1184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (strumento di registrazione di assembly)
 Lo strumento di registrazione di assembly legge i metadati all'interno di un assembly e aggiunge al Registro di sistema le voci necessarie per consentire ai client COM di creare classi di .NET Framework in modo trasparente. Quando una classe è stata registrata, qualsiasi client COM può utilizzarla come se si trattasse di una classe COM. La classe viene registrata una sola volta, al momento dell'installazione dell'assembly. Non è possibile creare da COM istanze di classi nell'assembly finché tali classi non sono state effettivamente registrate.  
@@ -58,7 +48,7 @@ regasm assemblyFile [options]
 |**/?** o **/help**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
 > [!NOTE]
->  Le opzioni della riga di comando di Regasm.exe non sono soggette alla distinzione tra maiuscole e minuscole. Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione. Ad esempio, **/n** equivale a **/nologo** e **/t:** *FileOut.tlb* equivale a **/tlb:** *FileOut.tlb*.  
+>  Le opzioni della riga di comando di Regasm.exe non sono soggette alla distinzione tra maiuscole e minuscole. Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione. Ad esempio, **/n** equivale a **/nologo** e **/t:** *outfile.tlb* equivale a **/tlb:** *outfile.tlb*.  
   
 ## <a name="remarks"></a>Note  
  È possibile usare l'opzione **/regfile** per generare un file REG contenente le voci del Registro di sistema, anziché apportare le modifiche direttamente in tale Registro. Per aggiornare il Registro di sistema su un computer è necessario importare il file .reg con lo strumento Editor del Registro di sistema (Regedit.exe). Si noti che il file .reg non contiene alcun aggiornamento del Registro di sistema che può essere effettuato mediante funzioni del Registro di sistema definite dall'utente.  Si noti che l'opzione **/regfile** crea solo voci del Registro di sistema per le classi gestite.  Non vengono create voci per `TypeLibID` o `InterfaceID`.  

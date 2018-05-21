@@ -1,20 +1,13 @@
 ---
 title: Novità di C# 7.0 - Guida a C#
 description: Panoramica delle nuove funzionalità incluse nella prossima versione 7 del linguaggio C#.
-keywords: C#, .NET, .NET Core, funzionalità più recenti, novità
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/21/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 1951c60ee11d0d5c4856f5f92eee8ba690b11f8d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
@@ -91,7 +84,7 @@ I campi non vengono convalidati e non è possibile definire i propri metodi
 > Le tuple erano già disponibili prima di C# 7.0, ma in modo poco efficiente e senza supporto del linguaggio.
 > Questo significava poter fare riferimento agli elementi delle tuple solo come `Item1`, `Item2` e così via. C# 7.0 introduce il supporto del linguaggio per le tuple, che consente nomi semantici per i campi di una tupla con tipi di tupla nuovi e più efficienti.
 
-È possibile creare una tupla assegnando ogni membro a un valore:
+È possibile creare una tupla assegnando un valore a ogni membro:
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
@@ -136,7 +129,7 @@ Può rendersi necessario decomprimere i membri di una tupla che sono stati resti
 
 [!code-csharp[PointWithDeconstruction](../../../samples/snippets/csharp/new-in-7/point.cs#11_PointWithDeconstruction "Point with deconstruction method")]
  
-È possibile estrarre i singoli campi assegnando una tupla a un oggetto `Point`:
+È possibile estrarre i singoli campi assegnando un oggetto `Point` a una tupla:
 
 [!code-csharp[DeconstructPoint](../../../samples/snippets/csharp/new-in-7/program.cs#12_DeconstructPoint "Deconstruct a point")]
 

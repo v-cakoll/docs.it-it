@@ -1,21 +1,14 @@
 ---
 title: Implementazione di connessioni SQL resilienti di Entity Framework Core
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Implementazione di connessioni SQL resilienti di Entity Framework Core
-keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b37d2c5683aff44165d0330c8d42fc881effbb76
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 54d0df517514c359c155de35d34e1e0f56eed4eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-resilient-entity-framework-core-sql-connections"></a>Implementazione di connessioni SQL resilienti di Entity Framework Core
 
@@ -91,11 +84,11 @@ Il primo oggetto DbContext è \_catalogContext e il secondo oggetto DbContext si
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Resilienza della connessione e intercettazione dei comandi con Entity Framework**
-    [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
+-   **Connection Resiliency and Command Interception with the Entity Framework**
+    [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency) (Resilienza della connessione e intercettazione dei comandi con Entity Framework)
 
--   **Cesar de la Torre. Using Resilient Entity Framework Core Sql Connections and Transactions (Utilizzo di connessioni SQL resilienti di Entity Framework Core e transazioni) **
-    <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
+-   **Cesar de la Torre. Using Resilient Entity Framework Core Sql Connections and Transactions**
+    <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/> (Utilizzo di connessioni e transazioni SQL resilienti di Entity Framework Core)
 
 
 >[!div class="step-by-step"]

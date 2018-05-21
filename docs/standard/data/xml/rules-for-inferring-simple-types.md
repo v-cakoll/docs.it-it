@@ -1,26 +1,15 @@
 ---
 title: Regole per l'inferenza di tipi semplici
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: d265d9247d00a20770d401d62fd1e065e2ef1627
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regole per l'inferenza di tipi semplici
 Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce il tipo di dati per attributi ed elementi.  
@@ -45,7 +34,7 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
 |unsignedInt|Numeri interi nell'intervallo compreso tra 0 e 4294967295.|  
 |long|Numeri interi nell'intervallo compreso tra -9223372036854775808 e 9223372036854775807.|  
 |unsignedLong|Numeri interi nell'intervallo compreso tra 0 e 18446744073709551615.|  
-|integer|Un numero finito di cifre che può essere preceduto dal prefisso "-".|  
+|numero intero|Un numero finito di cifre che può essere preceduto dal prefisso "-".|  
 |decimal|Valori numerici che contengono da 0 a 28 cifre di precisione.|  
 |float|Decimali eventualmente seguiti da "E" o "e", quindi da un numero intero che rappresenta l'esponente. I valori decimali possono essere compresi tra -16777216 e 16777216 I valori dell'esponente tra –149 e 104.<br /><br /> Il tipo float consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.|  
 |double|Analogo a float, ad eccezione del fatto che i valori decimali possono essere compresi tra -9007199254740992 e 9007199254740992 e i valori dell'esponente tra –1075 e 970.<br /><br /> Il tipo double consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.|  
@@ -54,7 +43,7 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
 |ora|Formato di ora W3C.|  
 |date|I valori relativi agli anni sono compresi tra 0001 e 9999.|  
 |gYearMonth|Formato dell'anno e del mese gregoriano W3C.|  
-|string|Uno o più caratteri Unicode.|  
+|stringa|Uno o più caratteri Unicode.|  
   
 ## <a name="type-promotion"></a>Promozione tipo  
  La classe <xref:System.Xml.Schema.XmlSchemaInference> esamina i valori di attributi ed elementi singolarmente. Quando i valori vengono rilevati, viene inferito il tipo più restrittivo e senza segno. Se è stato inferito un tipo per un attributo o elemento ed è stato rilevato un nuovo valore che non corrisponde al tipo inferito, quest'ultimo viene promosso a un nuovo tipo applicabile sia al tipo inferito che al nuovo valore. Durante la promozione del tipo inferito, la classe <xref:System.Xml.Schema.XmlSchemaInference> valuta i valori precedenti.  
@@ -75,7 +64,7 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
   
  Quando viene rilevato il primo valore `attr2`, il tipo di `attr2` viene inferito come `unsignedByte` in base al valore `0`. Quando viene rilevato il secondo valore `attr2`, il tipo viene promosso a `string` in base al tipo inferito di `unsignedByte` e al valore corrente `true`, poiché la classe <xref:System.Xml.Schema.XmlSchemaInference> valuta i valori precedenti durante la promozione del tipo dedotto. Se tuttavia entrambe le istanze di `attr2` fossero state rilevate all'interno dello stesso documento XML e non in due documenti XML diversi come descritto in precedenza, `attr2` sarebbe stato inferito come `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Ignorato gli attributi di http://www.w3.org/2001/XMLSchema-instance Namespace  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Attributi ignorati dallo spazio dei nomi http://www.w3.org/2001/XMLSchema-instance  
  Di seguito sono riportati gli attributi di definizione dello schema che vengono ignorati durante l'inferenza dello schema.  
   
 |Attributo|Descrizione|  

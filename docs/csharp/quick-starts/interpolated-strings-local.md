@@ -4,16 +4,12 @@ description: Questa guida introduttiva illustrato come usare la funzionalità di
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7ef904e30475d2cc0584f2baf56bc33a68e172d4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="string-interpolation"></a>Interpolazione di stringhe
 
@@ -173,4 +169,4 @@ L'output è simile al seguente:
 
 È possibile continuare con la guida introduttiva [Raccolte di elenchi](arrays-and-collections.md) nel proprio ambiente di sviluppo.
 
-Per altre informazioni sull'interpolazione di stringhe, vedere l'argomento [Interpolazione di stringhe](../language-reference/tokens/interpolated.md) nei Riferimenti per C#.
+Per altre informazioni, vedere l'argomento [Interpolazione di stringhe](../language-reference/tokens/interpolated.md) e l'esercitazione [Interpolazione di stringhe in C#](../tutorials/string-interpolation.md).

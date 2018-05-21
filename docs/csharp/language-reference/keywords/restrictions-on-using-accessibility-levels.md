@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: bbe358822e885e5ddaba4cb9d982e89cefe1921e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd2f9b11523aac1cb720559db44aa36029d52ddb
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Restrizioni relative all'utilizzo dei livelli di accessibilità (Riferimenti per C#)
 Quando si specifica un tipo in una dichiarazione, verificare se il livello di accessibilità del tipo dipende dal livello di accessibilità di un membro o di un altro tipo. Ad esempio, la classe di base diretta deve essere accessibile almeno quanto la classe derivata. Le dichiarazioni seguenti causano un errore del compilatore perché la classe di base `BaseClass` è meno accessibile di `MyClass`:  
   
-```  
+```csharp  
 class BaseClass {...}  
 public class MyClass: BaseClass {...} // Error  
 ```  
@@ -37,7 +37,7 @@ public class MyClass: BaseClass {...} // Error
 ## <a name="example"></a>Esempio  
  L'esempio seguente contiene dichiarazioni errate di tipi diversi. Il commento che segue ogni dichiarazione indica l'errore del compilatore previsto.  
   
-```  
+```csharp  
 // Restrictions on Using Accessibility Levels  
 // CS0052 expected as well as CS0053, CS0056, and CS0057  
 // To make the program work, change access level of both class B  

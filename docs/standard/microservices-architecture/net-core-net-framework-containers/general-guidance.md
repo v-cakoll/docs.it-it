@@ -1,21 +1,14 @@
 ---
 title: Indicazioni generali
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Indicazioni generali
-keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fa58d1d81b2d1523baf123d4963db2ca00fee15d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-guidance"></a>Indicazioni generali
 
@@ -45,11 +38,11 @@ L'uso di .NET Framework in Docker può migliorare le esperienze di distribuzione
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **E-book: modernizzare le applicazioni .NET Framework esistenti con contenitori Azure e Windows**
-    [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
+-   **e-book: Modernize existing .NET Framework applications with Azure and Windows Containers**
+    [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook) (e-book: Modernizzare le applicazioni .NET Framework esistenti con i contenitori di Azure e di Windows)
 
--   **App di esempio: modernizzazione delle app Web ASP.NET legacy usando contenitori Windows**
-    [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
+-   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers**
+    [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing) (App di esempio: modernizzazione delle app Web ASP.NET legacy usando contenitori Window)
 
 
 >[!div class="step-by-step"]

@@ -1,13 +1,7 @@
 ---
 title: Dettagli sul comportamento delle espressioni regolari
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: bc4d8fdc39153f227e8344ea1da52a0dba2688d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>Dettagli sul comportamento delle espressioni regolari
 Il motore delle espressioni regolari di .NET Framework è un selettore di espressioni regolari di backtracking che incorpora un motore NFA (Nondeterministic Finite Automaton) tradizionale come quello usato da Perl, Python, Emacs e Tcl. Ciò lo distingue dai motori delle espressioni regolari puri DFA (Deterministic Finite Automaton), più veloci ma più limitati, come quelli usati in awk, egrep o lex. Lo distingue anche dai motori NFA POSIX, standardizzati ma più lenti. Nella sezione seguente vengono descritti i tre tipi di motori delle espressioni regolari e viene spiegato perché le espressioni regolari in .NET Framework vengono implementate usando un motore NFA tradizionale.  

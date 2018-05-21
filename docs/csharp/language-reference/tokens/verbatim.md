@@ -1,10 +1,6 @@
 ---
 title: '@ (Riferimenti per C#)'
 ms.date: 02/09/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '@_CSharpKeyword'
 - '@'
@@ -14,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b62231afc3014f9fc2b9ac7bd39168f40e12c8d
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: bdf8735894594acab31586e539f90e426db97f24
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-c-reference"></a>@ (Riferimenti per C#)
 
@@ -28,7 +24,7 @@ Il carattere speciale `@` funge da identificatore verbatim. Può essere usato ne
 
    [!code-csharp[verbatim1](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#1)]
 
-1. Per indicare che un valore letterale stringa deve essere interpretato come verbatim. Il carattere `@` in questa istanza definisce un *valore letterale stringa verbatim*. Le sequenze di escape semplici, ad esempio `"\\"` per una barra rovesciata, le sequenze di escape esadecimali, ad esempio `"\x0041"` per una A maiuscola, le sequenze di escape Unicode, ad esempio `"\u0041"` per una A maiuscola, vengono interpretate letteralmente. Solo una sequenza di escape per le virgolette doppie (`""`) non viene interpretata letteralmente e produce una virgoletta singola. Nell'esempio seguente vengono definiti due percorsi di file identici, uno usando un valore letterale stringa normale e l'altro usando un valore letterale stringa verbatim. Questo è uno degli usi più comuni dei valori letterali stringa verbatim.
+1. Per indicare che un valore letterale stringa deve essere interpretato come verbatim. Il carattere `@` in questa istanza definisce un *valore letterale stringa verbatim*. Le sequenze di escape semplici, ad esempio `"\\"` per una barra rovesciata, le sequenze di escape esadecimali, ad esempio `"\x0041"` per una A maiuscola, le sequenze di escape Unicode, ad esempio `"\u0041"` per una A maiuscola, vengono interpretate letteralmente. Solo una sequenza di escape per le virgolette doppie (`""`) non viene interpretata letteralmente e produce una virgoletta singola. Inoltre, in caso di una [stringa interpolata](interpolated.md) verbatim, le sequenze di escape con parentesi graffa (`{{` e `}}`) non vengono interpretate letteralmente; producono caratteri singoli di parentesi graffa. Nell'esempio seguente vengono definiti due percorsi di file identici, uno usando un valore letterale stringa normale e l'altro usando un valore letterale stringa verbatim. Questo è uno degli usi più comuni dei valori letterali stringa verbatim.
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 

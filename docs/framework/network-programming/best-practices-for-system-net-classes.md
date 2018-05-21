@@ -1,12 +1,6 @@
 ---
 title: Procedure consigliate per le classi System.Net
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - sending data, best practices
 - requesting data from Internet, best practices
@@ -16,22 +10,19 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90722abbdb4568be115c0ac77007d5f18984df6f
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
-ms.translationtype: MT
+ms.openlocfilehash: c74f9d0534675d07c87d3edbcf8434cd98f6c621
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-systemnet-classes"></a>Procedure consigliate per le classi System.Net
 I suggerimenti seguenti consentono di usare al meglio le classi contenute in <xref:System.Net>:  
   
--   Per procedure consigliate Transport Layer Security (TLS), vedere [consigliate Transport Layer Security (TLS) con .NET Framework](tls.md).
+-   Per le procedure consigliate per Transport Layer Security (TLS), vedere [Procedure consigliate per Transport Layer Security (TLS) con .NET Framework](tls.md).
 
 -   Se possibile, usare le classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> anziché eseguire cast di tipo nelle classi derivate. Le applicazioni che usano **WebRequest** e **WebResponse** possono usufruire dei nuovi protocolli Internet senza dover apportare modifiche significative al codice.  
   
