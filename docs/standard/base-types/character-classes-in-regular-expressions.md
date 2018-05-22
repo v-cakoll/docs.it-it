@@ -1,13 +1,7 @@
 ---
 title: Classi di caratteri nelle espressioni regolari
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 58
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 538aa21712f1e2290fb009c24774059098c60c1e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 241bc9756118cd2db15356dcc2c724a24c84d0fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classi di caratteri nelle espressioni regolari
 <a name="Top"></a> Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può verificarsi in una stringa di input per trovare una corrispondenza. Il linguaggio delle espressioni regolari di .NET supporta le classi di caratteri seguenti:  
@@ -220,7 +209,7 @@ ms.lasthandoff: 04/18/2018
  [Torna all'inizio](#Top)  
   
 <a name="NegativeCategoryOrBlock"></a>   
-## <a name="negative-unicode-category-or-unicode-block-p"></a>Categoria Unicode negativa o blocco Unicode: \P {}  
+## <a name="negative-unicode-category-or-unicode-block-p"></a>Categoria Unicode negativa o blocco Unicode: \P{}  
  Lo standard Unicode assegna una categoria generale a ogni carattere. Ad esempio, un carattere particolare può essere una lettera maiuscola (rappresentata dalla categoria `Lu`), una cifra decimale (la categoria `Nd`), un simbolo matematico (la categoria `Sm`) o un separatore di paragrafo (la categoria `Zl`). Anche set di caratteri specifici nello standard Unicode occupano un intervallo specifico o un blocco di punti di codice consecutivi. Il set di caratteri latini si trova ad esempio da \u0000 a \u007F, mentre il set di caratteri arabi si trova da \u0600 a \u06FF.  
   
  Costrutto dell'espressione regolare  
