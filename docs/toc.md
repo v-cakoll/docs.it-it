@@ -231,8 +231,8 @@
 ### [Tuple](csharp/tuples.md)
 ### [Decostruzione di tuple e altri tipi](csharp/deconstruct.md)
 ### [Interfacce](csharp/programming-guide/interfaces/index.md)
-#### [Metodi](csharp/methods.md)
-#### [Espressioni lambda](csharp/lambda-expressions.md)
+### [Metodi](csharp/methods.md)
+### [Espressioni lambda](csharp/lambda-expressions.md)
 ### [Proprietà](csharp/properties.md)
 ### [Indicizzatori](csharp/indexers.md)
 ### [Variabili discard](csharp/discards.md)
@@ -285,7 +285,12 @@
 ### [Introduzione a Visual Studio per Mac](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
 ### [Introduzione a Visual Studio Code e Ionide](fsharp/get-started/get-started-vscode.md)
 ### [Introduzione all'interfaccia della riga di comando di .NET Core](fsharp/get-started/get-started-command-line.md)
-<!--## [Tutorials](fsharp/tutorials/index.md)-->
+
+## [Guida di stile di F#](fsharp/style-guide/index.md)
+### [Linee guida per la formattazione del codice F#](fsharp/style-guide/formatting.md)
+### [Convenzioni di codifica C#](fsharp/style-guide/conventions.md)
+### [Linee guida di progettazione del componente F#](fsharp/style-guide/component-design-guidelines.md)
+
 ## Esercitazioni
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
 ### [Provider di tipi](fsharp/tutorials/type-providers/index.md)

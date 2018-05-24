@@ -1,6 +1,6 @@
 ---
 title: Checked e Unchecked (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 05/15/2018
 helpviewer_keywords:
 - operators [C#], checked and unchecked
 - exceptions [C#], overflow checking
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 26ea8a7864d93b8d64661db2b0dc1df6634f989a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8e292a67fab49b5fc3616e438d063eca2617274
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/18/2018
 ---
-# <a name="checked-and-unchecked-c-reference"></a><span data-ttu-id="dd7f1-102">Checked e Unchecked (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="dd7f1-102">Checked and Unchecked (C# Reference)</span></span>
-<span data-ttu-id="dd7f1-103">È possibile eseguire istruzioni C# in contesti verificati o non verificati.</span><span class="sxs-lookup"><span data-stu-id="dd7f1-103">C# statements can execute in either checked or unchecked context.</span></span> <span data-ttu-id="dd7f1-104">In un contesto verificato l'overflow aritmetico genera un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="dd7f1-104">In a checked context, arithmetic overflow raises an exception.</span></span> <span data-ttu-id="dd7f1-105">In un contesto non verificato l'overflow aritmetico viene ignorato e il risultato è troncato.</span><span class="sxs-lookup"><span data-stu-id="dd7f1-105">In an unchecked context, arithmetic overflow is ignored and the result is truncated.</span></span>  
+# <a name="checked-and-unchecked-c-reference"></a><span data-ttu-id="234ef-102">Checked e Unchecked (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="234ef-102">Checked and Unchecked (C# Reference)</span></span>
+<span data-ttu-id="234ef-103">È possibile eseguire istruzioni C# in contesti verificati o non verificati.</span><span class="sxs-lookup"><span data-stu-id="234ef-103">C# statements can execute in either checked or unchecked context.</span></span> <span data-ttu-id="234ef-104">In un contesto verificato l'overflow aritmetico genera un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="234ef-104">In a checked context, arithmetic overflow raises an exception.</span></span> <span data-ttu-id="234ef-105">In un contesto non verificato, l'overflow aritmetico viene ignorato e il risultato viene troncato mediante l'eliminazione di tutti i bit più significativi che non corrispondono al tipo di destinazione.</span><span class="sxs-lookup"><span data-stu-id="234ef-105">In an unchecked context, arithmetic overflow is ignored and the result is truncated by discarding any high-order bits that don't fit in the destination type.</span></span>  
   
--   <span data-ttu-id="dd7f1-106">[checked](../../../csharp/language-reference/keywords/checked.md) Specificare il contesto verificato.</span><span class="sxs-lookup"><span data-stu-id="dd7f1-106">[checked](../../../csharp/language-reference/keywords/checked.md) Specify checked context.</span></span>  
+-   <span data-ttu-id="234ef-106">[checked](checked.md) Specificare il contesto verificato.</span><span class="sxs-lookup"><span data-stu-id="234ef-106">[checked](checked.md) Specify checked context.</span></span>  
   
--   <span data-ttu-id="dd7f1-107">[unchecked](../../../csharp/language-reference/keywords/unchecked.md) Specificare il contesto non verificato.</span><span class="sxs-lookup"><span data-stu-id="dd7f1-107">[unchecked](../../../csharp/language-reference/keywords/unchecked.md) Specify unchecked context.</span></span>  
+-   <span data-ttu-id="234ef-107">[unchecked](unchecked.md) Specificare il contesto non verificato.</span><span class="sxs-lookup"><span data-stu-id="234ef-107">[unchecked](unchecked.md) Specify unchecked context.</span></span>  
   
- <span data-ttu-id="dd7f1-108">Se né `checked` né `unchecked` vengono specificati, il contesto predefinito dipende da fattori esterni, ad esempio le opzioni del compilatore.</span><span class="sxs-lookup"><span data-stu-id="dd7f1-108">If neither `checked` nor `unchecked` is specified, the default context depends on external factors such as compiler options.</span></span>  
+ <span data-ttu-id="234ef-108">Le operazioni seguenti sono interessate dal controllo di overflow:</span><span class="sxs-lookup"><span data-stu-id="234ef-108">The following operations are affected by the overflow checking:</span></span>  
   
- <span data-ttu-id="dd7f1-109">Le operazioni seguenti sono interessate dal controllo di overflow:</span><span class="sxs-lookup"><span data-stu-id="dd7f1-109">The following operations are affected by the overflow checking:</span></span>  
+-   <span data-ttu-id="234ef-109">Espressioni che usano gli operatori predefiniti seguenti su tipi integrali:</span><span class="sxs-lookup"><span data-stu-id="234ef-109">Expressions using the following predefined operators on integral types:</span></span>  
   
--   <span data-ttu-id="dd7f1-110">Espressioni che usano gli operatori predefiniti seguenti su tipi integrali:</span><span class="sxs-lookup"><span data-stu-id="dd7f1-110">Expressions using the following predefined operators on integral types:</span></span>  
+     <span data-ttu-id="234ef-110">`++`, `--`, `-` unario, `+`, `-`, `*`, `/`</span><span class="sxs-lookup"><span data-stu-id="234ef-110">`++`, `--`, unary `-`, `+`, `-`, `*`, `/`</span></span>  
   
-     <span data-ttu-id="dd7f1-111">`++` `--` - (unario)   `+` -   `*` `/`</span><span class="sxs-lookup"><span data-stu-id="dd7f1-111">`++` `--` - (unary)   `+` -   `*` `/`</span></span>  
+-   <span data-ttu-id="234ef-111">Conversioni numeriche esplicite tra tipi integrali oppure da `float` o `double` a un tipo integrale.</span><span class="sxs-lookup"><span data-stu-id="234ef-111">Explicit numeric conversions between integral types, or from `float` or `double` to an integral type.</span></span>  
   
--   <span data-ttu-id="dd7f1-112">Conversioni numeriche esplicite tra tipi integrali.</span><span class="sxs-lookup"><span data-stu-id="dd7f1-112">Explicit numeric conversions between integral types.</span></span>  
+ <span data-ttu-id="234ef-112">Se non si specifica `checked` né `unchecked`, il contesto predefinito per le espressioni non costanti (espressioni che vengono valutate in fase di esecuzione) è definito dal valore dell'opzione del compilatore [-checked](../compiler-options/checked-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="234ef-112">If neither `checked` nor `unchecked` is specified, the default context for non-constant expressions (expressions that are evaluated at run time) is defined by the value of the [-checked](../compiler-options/checked-compiler-option.md) compiler option.</span></span> <span data-ttu-id="234ef-113">Per impostazione predefinita il valore di tale opzione non è impostato e le operazioni aritmetiche vengono eseguite in un contesto non verificato.</span><span class="sxs-lookup"><span data-stu-id="234ef-113">By default the value of that option is unset and arithmetic operations are executed in an unchecked context.</span></span>
+ 
+ <span data-ttu-id="234ef-114">Per le espressioni costanti (espressioni che possono essere valutate per intero in fase di compilazione), il contesto predefinito viene sempre controllato.</span><span class="sxs-lookup"><span data-stu-id="234ef-114">For constant expressions (expressions that can be fully evaluated at compile time), the default context is always checked.</span></span> <span data-ttu-id="234ef-115">A meno che un'espressione costante non venga posizionata in modo esplicito in un contesto non verificato, gli overflow che si verificano durante la valutazione in fase di compilazione dell'espressione causano errori in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="234ef-115">Unless a constant expression is explicitly placed in an unchecked context, overflows that occur during the compile-time evaluation of the expression cause compile-time errors.</span></span>
   
- <span data-ttu-id="dd7f1-113">L'opzione del compilatore [/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md) consente di specificare il contesto verificato o non verificato per tutte le istruzioni aritmetiche su interi che non rientrano in modo esplicito nell'ambio di una parola chiave `checked` o `unchecked`.</span><span class="sxs-lookup"><span data-stu-id="dd7f1-113">The [/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md) compiler option lets you specify checked or unchecked context for all integer arithmetic statements that are not explicitly in the scope of a `checked` or `unchecked` keyword.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="dd7f1-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dd7f1-114">See Also</span></span>  
- [<span data-ttu-id="dd7f1-115">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="dd7f1-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="dd7f1-116">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="dd7f1-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="dd7f1-117">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="dd7f1-117">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="dd7f1-118">Parole chiave per le istruzioni</span><span class="sxs-lookup"><span data-stu-id="dd7f1-118">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)
+## <a name="see-also"></a><span data-ttu-id="234ef-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="234ef-116">See Also</span></span>  
+ [<span data-ttu-id="234ef-117">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="234ef-117">C# Reference</span></span>](../index.md)  
+ [<span data-ttu-id="234ef-118">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="234ef-118">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+ [<span data-ttu-id="234ef-119">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="234ef-119">C# Keywords</span></span>](index.md)  
+ [<span data-ttu-id="234ef-120">Parole chiave per le istruzioni</span><span class="sxs-lookup"><span data-stu-id="234ef-120">Statement Keywords</span></span>](statement-keywords.md)
