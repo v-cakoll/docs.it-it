@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: d2eace5782b3a070a22acf751fd68340fa939a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="operators-c-programming-guide"></a>Operatori (Guida per programmatori C#)
 Nel linguaggio C# un *operatore* è un elemento del programma che si applica a uno o più *operandi* in un'espressione o in un'istruzione. Gli operatori che accettano un unico operando, ad esempio l'operatore di incremento (`++`) o `new`, sono denominati operatori *unari* . Quelli che accettano due operandi, ad esempio gli operatori aritmetici (`+`,`-`,`*`,`/`), sono denominati operatori *binari* . L'operatore condizionale (`?:`) accetta tre operandi ed è l'unico operatore ternario disponibile in C#.  
@@ -114,7 +114,7 @@ Nel linguaggio C# un *operatore* è un elemento del programma che si applica a u
 |OR logico|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|OR Integer bit per bit, OR logico booleano|  
 |AND condizionale|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Restituisce y solo se x è true|  
 |OR condizionale|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Restituisce y solo se x è false|  
-|Null-coalescing|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) s|Restituisce y se x è Null; in caso contrario x|  
+|Null-coalescing|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) s|Restituisce y se x è Null; in caso contrario x|  
 |Condizionale|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Restituisce y se x è true, z se x è false|  
   
  **Operatori di assegnazione e operatori anonimi**  
