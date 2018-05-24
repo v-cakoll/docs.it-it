@@ -3,11 +3,11 @@ title: Uso di LINQ
 description: Questa esercitazione illustra come generare sequenze con LINQ, come scrivere i metodi da usare nelle query LINQ e come distinguere le modalità di valutazione eager e lazy.
 ms.date: 03/28/2017
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 17c294a372a05a05d3893fce7b3adc426c6305fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5f9baab13cddfb9e294de1e1a6ce967ccbe0813
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="working-with-linq"></a>Uso di LINQ
 
@@ -200,7 +200,7 @@ Eseguire l'esempio e vedere come viene riordinato il mazzo a ogni iterazione, fi
 
 ## <a name="optimizations"></a>Ottimizzazioni
 
-L'esempio creato finora *mischia solo le carte interne*, lasciando le carte in cima e in fondo al mazzo sempre nella stessa posizione, ma è possibile introdurre una variazione e *mischiare anche le carte esterne*, cambiando la posizione di tutte e 52 le schede. Per mischiare il mazzo in questo modo, si alternano le carte in modo che la prima carta della metà inferiore diventi la prima carta del mazzo. Di conseguenza, l'ultima carta della metà superiore diventerà l'ultima carta del mazzo. Si tratta semplicemente di una modifica di riga. Aggiornare la chiamata al metodo shuffle per modificare l'ordine della metà superiore e di quella inferiore del mazzo:
+L'esempio creato finora *mischia le carte esterne*, lasciando le carte in cima e in fondo al mazzo sempre nella stessa posizione, ma è possibile introdurre una variazione e *mischiare anche le carte interne*, cambiando la posizione di tutte e 52 le carte. Per mischiare il mazzo in questo modo, si alternano le carte in modo che la prima carta della metà inferiore diventi la prima carta del mazzo. Di conseguenza, l'ultima carta della metà superiore diventerà l'ultima carta del mazzo. Si tratta semplicemente di una modifica di riga. Aggiornare la chiamata al metodo shuffle per modificare l'ordine della metà superiore e di quella inferiore del mazzo:
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
@@ -264,13 +264,13 @@ public static void Main(string[] args)
 }
 ```
 
-Si noti che la registrazione non viene eseguita ogni volta che si accede a una query, ma solo quando si crea la query originale. L'esecuzione del programma richiede ancora molto tempo, ma ora si è individuato il motivo del problema. Se il tempo necessario per mischiare anche le carte esterne è eccessivo, limitarsi a mischiare quelle interne. Gli effetti della valutazione lazy saranno ancora visibili. In un'unica esecuzione del programma verranno eseguite 2592 query, inclusa la generazione di tutti i semi e valori.
+Si noti che la registrazione non viene eseguita ogni volta che si accede a una query, ma solo quando si crea la query originale. L'esecuzione del programma richiede ancora molto tempo, ma ora si è individuato il motivo del problema. Se il tempo necessario per mischiare anche le carte interne è eccessivo, limitarsi a mischiare quelle esterne. Gli effetti della valutazione lazy saranno ancora visibili. In un'unica esecuzione del programma verranno eseguite 2592 query, inclusa la generazione di tutti i semi e valori.
 
 Esiste un modo semplice per aggiornare il programma ed evitare tutte queste esecuzioni. I metodi LINQ `ToArray()` e `ToList()` consentono di eseguire la query e di memorizzare i risultati rispettivamente in una matrice e in un elenco. Sono quindi utili per memorizzare nella cache i risultati di una query evitando così di ripetere la query di origine.  Aggiungere una chiamata a `ToArray()` alle query che generano i mazzi di carte ed eseguire nuovamente la query:
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
-In questo modo, il numero di query si ridurrà a 30. Eseguire nuovamente il programma per mischiare anche le carte esterne e si noteranno miglioramenti analoghi. Il totale delle query sarà infatti 162.
+In questo modo, il numero di query si ridurrà a 30. Eseguire nuovamente il programma per mischiare anche le carte interne e si noteranno miglioramenti analoghi. Il totale delle query sarà infatti 162.
 
 Non interpretare erroneamente questo esempio pensando che tutte le query devono essere eseguite in modalità eager. Questo esempio è stato pensato per mettere in evidenza i casi d'uso in cui la valutazione lazy può causare problemi di prestazioni. Questo avviene perché ogni nuova configurazione del mazzo di carte è basata sulla configurazione precedente. Quando si usa la valutazione lazy, ogni nuova configurazione del mazzo è basata sul mazzo originale, anche eseguendo il codice che ha creato `startingDeck`. Questo comportamento determina una grande quantità di operazioni aggiuntive. 
 
@@ -324,4 +324,4 @@ Compilare e ripetere l'esecuzione. L'output è un po' più pulito e il codice è
 
 Questo esempio ha illustrato alcuni dei metodi usati in LINQ e come creare metodi personalizzati da usare facilmente con il codice abilitato per LINQ. Ha anche indicato le differenze tra le modalità di valutazione lazy e eager e l'effetto che può avere tale decisione sulle prestazioni.
 
-Ha spiegato anche alcuni aspetti di una delle tecniche di cartomagia. I prestigiatori usano il miscuglio Faro perché possono controllare lo spostamento di ogni carta nel mazzo. In alcuni trucchi, il prestigiatore chiede a una persona del pubblico di mettere una carta all'inizio del mazzo e mischia il mazzo più volte senza mai perdere di vista la posizione della carta. Per altri trucchi di illusionismo il mazzo di carte deve essere impostato in un certo modo. Il prestigiatore ordina il mazzo prima di eseguire il trucco e quindi mischia cinque volte le carte interne al mazzo. In uno spettacolo, può mostrare un mazzo apparentemente ordinato in maniera casuale, mischiare le carte tre volte e infine ottenere un mazzo con le carte disposte esattamente nel modo desiderato.
+Ha spiegato anche alcuni aspetti di una delle tecniche di cartomagia. I prestigiatori usano il miscuglio Faro perché possono controllare lo spostamento di ogni carta nel mazzo. In alcuni trucchi, il prestigiatore chiede a una persona del pubblico di mettere una carta all'inizio del mazzo e mischia il mazzo più volte senza mai perdere di vista la posizione della carta. Per altri trucchi di illusionismo il mazzo di carte deve essere impostato in un certo modo. Il prestigiatore ordina il mazzo prima di eseguire il trucco e quindi mischia cinque volte le carte esterne al mazzo. In uno spettacolo, può mostrare un mazzo apparentemente ordinato in maniera casuale, mischiare le carte tre volte e infine ottenere un mazzo con le carte disposte esattamente nel modo desiderato.

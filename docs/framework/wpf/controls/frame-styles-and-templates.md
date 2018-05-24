@@ -9,11 +9,11 @@ helpviewer_keywords:
 - states [WPF], Frame
 - styles [WPF], Frame
 ms.assetid: a01c32e2-c951-46a0-a82f-2614ca241f0b
-ms.openlocfilehash: ae7227aeca3680b5e10ae62637268eae7825f492
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bbeb915e17bcd59480b921efa1b6a51fa67762
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="frame-styles-and-templates"></a>Stili e modelli di Frame
 In questo argomento vengono descritti gli stili e modelli per il <xref:System.Windows.Controls.Frame> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -43,7 +43,7 @@ In questo argomento vengono descritti gli stili e modelli per il <xref:System.Wi
   
  [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
+ Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.FrameworkElement.Style%2A>  

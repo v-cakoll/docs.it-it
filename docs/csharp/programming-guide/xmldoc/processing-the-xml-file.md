@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: b95101d2f8e12f7c6fee5b410e7801f9d890182d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca70f0c8237a5d9cc4ad9e0bb8c1947c871ce064
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Elaborazione del file XML (Guida per programmatori C#)
 Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. Per informazioni sull'applicazione di tag al codice, vedere [Tag consigliati per i commenti relativi alla documentazione](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md). La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML possono usare la stringa ID per identificare il corrispondente elemento metadati/reflection di .NET Framework a cui si applica la documentazione.  
@@ -42,7 +42,7 @@ Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del 
   
     -   ELEMENT_TYPE_PTR viene rappresentato con '*' dopo il tipo modificato.  
   
-    -   ELEMENT_TYPE_BYREF viene rappresentato con '@' dopo il tipo modificato.  
+    -   ELEMENT_TYPE_BYREF viene rappresentato con "\@" dopo il tipo modificato.  
   
     -   ELEMENT_TYPE_PINNED viene rappresentato con '^' dopo il tipo modificato. Non viene mai generato dal compilatore C#.  
   

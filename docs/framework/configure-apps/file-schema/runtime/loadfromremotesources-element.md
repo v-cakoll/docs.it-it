@@ -7,11 +7,11 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0d442f71a0e2fc7deacd9aaa02cfba7b66f2349
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: acd66cdff9f2c68e7d665b1fd236b18eeb9b4bac
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; elemento
 Specifica se gli assembly da origini remote devono essere concesso l'attendibilità totale.  
@@ -69,7 +69,7 @@ Specifica se gli assembly da origini remote devono essere concesso l'attendibili
   
  Il `enabled` attributo per questo elemento è efficace solo quando sicurezza dall'accesso di codice (CAS) è disabilitato. Per impostazione predefinita, le autorità di certificazione è disattivato nel [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] e versioni successive. Se si imposta `enabled` a `true`, le applicazioni remote vengono concessa l'attendibilità.  
   
- Se `<loadFromRemoteSources>``enabled` non è impostata su `true`, viene generata un'eccezione nelle condizioni seguenti:  
+ Se `<loadFromRemoteSources>` `enabled` non è impostata su `true`, viene generata un'eccezione nelle condizioni seguenti:  
   
 -   Il comportamento di sandboxing del dominio corrente è diverso dal comportamento nel [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]. Sono necessari criteri Autorità di certificazione deve essere disabilitata e il dominio corrente non deve essere creata mediante sandbox.  
   

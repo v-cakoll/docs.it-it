@@ -3,11 +3,11 @@ title: Attributi C# - Panoramica del linguaggio C#
 description: Informazioni sulla programmazione dichiarativa con attributi in C#
 ms.date: 08/10/2016
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.openlocfilehash: d055f5386d1dddef0b70843a0a5fa6fc04922296
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 671023f268ae78d63db8868ef6046b8f13880659
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="attributes"></a>Attributi
 
@@ -17,7 +17,7 @@ Nell'esempio seguente viene dichiarato un attributo `HelpAttribute` che può ess
 
 [!code-csharp[AttributeDefined](../../../samples/snippets/csharp/tour/attributes/Program.cs#L3-L20)]
 
-Tutte le classi di attributo derivano dalla classe di base <xref:System.Attribute> fornita dalla libreria standard. Gli attributi possono essere applicati specificandone il nome (con eventuali argomenti) tra parentesi quadre appena prima della dichiarazione associata. Se il nome dell'attributo termina con `Attribute`, questa parte del nome può essere omessa quando si fa riferimento all'attributo. L'attributo `HelpAttribute`, ad esempio, può essere usato come illustrato di seguito.
+Tutte le classi di attributo derivano dalla classe di base <xref:System.Attribute> fornita dalla libreria standard. Gli attributi possono essere applicati specificandone il nome (con eventuali argomenti) tra parentesi quadre appena prima della dichiarazione associata. Se il nome dell'attributo termina con `Attribute`, questa parte del nome può essere omessa quando si fa riferimento all'attributo. Ad esempio, è possibile usare `HelpAttribute` come segue.
 
 [!code-csharp[AttributeApplied](../../../samples/snippets/csharp/tour/attributes/Program.cs#L22-L28)]
 

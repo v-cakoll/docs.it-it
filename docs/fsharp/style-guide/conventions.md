@@ -2,11 +2,11 @@
 title: 'Convenzioni nel codice F #'
 description: 'Altre linee guida generali e idiomi durante la scrittura di codice F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: adb2189540496046ccf6e392bd45807860e13520
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
-ms.translationtype: HT
+ms.openlocfilehash: f3d16f735ddc1901aeaa5ebb39e2fa2b70a3d836
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-coding-conventions"></a>Convenzioni nel codice F #
 
@@ -91,7 +91,7 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 In F #, è importante l'ordine delle dichiarazioni, inclusi con `open` istruzioni. Diversamente dalla c#, in cui l'effetto della `using` e `using static` sono indipendenti l'ordinamento di tali istruzioni in un file.
 
-In F #, perché possono nascondere elementi aperti in un ambito di altri utenti già presenti. Ciò significa che il riordinamento `open` istruzioni possono modificare il significato del codice. Di conseguenza, l'ordinamento in ordine alfanumerico (o pseudorandomly) non è consigliabile, almeno generare un comportamento diverso che ci si potrebbe aspettare.
+In F #, elementi aperti in un ambito possono nascondere altri è già presente. Ciò significa che il riordinamento `open` istruzioni è stato possibile modificare il significato del codice. Di conseguenza, qualsiasi arbitrario l'ordinamento di tutti i `open` istruzioni (ad esempio, in ordine alfanumerico) non è consigliabile, almeno generare un comportamento diverso che ci si potrebbe aspettare.
 
 In alternativa, è consigliabile che li si ordina [topologicamente](https://en.wikipedia.org/wiki/Topological_sorting); vale a dire, ordinare i `open` istruzioni nell'ordine in cui _livelli_ del sistema sono definiti. In questo alfanumerico ordinamento all'interno di diversi livelli topologici può anche essere considerato.
 
@@ -152,7 +152,9 @@ Esistono più volte quando un valore di inizializzazione può avere effetti coll
 module MyApi =
     let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
-    let dep3 = Random().Next() // Random is not thread-safe
+
+    let private r = Random()
+    let dep3() = r.Next() // Problematic if multiple threads use this
 
     let function1 arg = doStuffWith dep1 dep2 dep3 arg
     let function2 arg = doSutffWith dep1 dep2 dep3 arg
@@ -160,7 +162,9 @@ module MyApi =
 
 Si tratta spesso una buona idea per una serie di motivi:
 
-In primo luogo, in questo modo API stessa affidamento su uno stato condiviso. Ad esempio, più thread chiamante può essere tentando di accedere il `dep3` valore (e non è thread-safe). In secondo luogo, indirizza configurazione dell'applicazione nel codebase se stesso. Questo è difficile da gestire per basi di codice più grande.
+In primo luogo, configurazione dell'applicazione viene inserita nella codebase con `dep1` e `dep2`. Questo è difficile da gestire nel codebase più grande.
+
+I dati in secondo luogo, inizializzati in modo statico non devono includere valori che non sono thread-safe se il componente verrà utilizzato più thread. In questo modo più chiaro viene violato da `dep3`.
 
 Infine, inizializzazione del modulo viene compilato in un costruttore statico per l'intera unità di compilazione. Se si verifica un errore nell'inizializzazione associati a let di valore in tale modulo, si manifesta come una `TypeInitializationException` che viene quindi memorizzato nella cache per l'intera durata dell'applicazione. Ciò può essere difficile da diagnosticare. È in genere un'eccezione interna che è possibile tentare valutarlo, ma se non esiste, non è possibile sapere in anticipo qual è la causa principale.
 

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: f00ae873e615f653d3e760f82b157a57fdaef6ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0b1481988a2e3199fc6d06ca30cb5194ab2f44c
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Riferimenti per C#)
-L'istruzione `foreach` ripete un gruppo di istruzioni incorporate per ciascun elemento di una matrice o di una raccolta di oggetti che implementa l'interfaccia <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. L'istruzione `foreach` viene usata per eseguire l'iterazione della raccolta e ottenere le informazioni desiderate. Per evitare effetti indesiderati, non deve tuttavia essere usata per aggiungere o rimuovere elementi dalla raccolta di origine. Se è necessario aggiungere o rimuovere elementi dalla raccolta di origine, usare il ciclo [for](for.md).
+
+L'istruzione `foreach` ripete un gruppo di istruzioni incorporate per ciascun elemento di una matrice o di una raccolta di oggetti che implementa l'interfaccia <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. L'[istruzione foreach](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement) viene usata per eseguire l'iterazione della raccolta e ottenere le informazioni desiderate. Per evitare effetti indesiderati, non deve tuttavia essere usata per aggiungere o rimuovere elementi dalla raccolta di origine. Se è necessario aggiungere o rimuovere elementi dalla raccolta di origine, usare il ciclo [for](for.md).
   
  L'esecuzione delle istruzioni incorporate viene ripetuta per ogni elemento nella matrice o nella raccolta. Quando l'iterazione è stata completata per tutti gli elementi nella raccolta, il controllo viene trasferito alla prima istruzione che segue il blocco `foreach`.
   
@@ -31,7 +32,8 @@ L'istruzione `foreach` ripete un gruppo di istruzioni incorporate per ciascun el
  [Procedura: Accedere a una classe Collection con foreach](../../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)  
 
 ## <a name="example"></a>Esempio
- Il codice seguente illustra tre esempi.
+
+Il codice seguente illustra tre esempi:
 
 > [!TIP]
 > È possibile modificare gli esempi per sperimentare con la sintassi e provare utilizzi diversi più simili al proprio caso d'uso. Premere "Esegui" per eseguire il codice, quindi apportare le modifiche e premere di nuovo "Esegui".
@@ -49,9 +51,12 @@ L'istruzione `foreach` ripete un gruppo di istruzioni incorporate per ciascun el
 [!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L51-L69)]
  
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Vedere anche  
+
+[Istruzione foreach (specifica del linguaggio C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
 
 [Riferimenti per C#](../index.md)
 

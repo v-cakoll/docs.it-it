@@ -1,20 +1,20 @@
 ---
 title: Istruzione fixed (Riferimenti per C#)
-ms.date: 04/20/2018
+ms.date: 05/10/2018
 f1_keywords:
 - fixed_CSharpKeyword
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: e1664f508cb861ffa73b800eeb0da3a1f1cdc432
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e26e7e7f15dd48cf029d5f67bf5ef0de3e19b7bb
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="fixed-statement-c-reference"></a>Istruzione fixed (Riferimenti per C#)
 
-L'istruzione `fixed` impedisce che il Garbage Collector esegua la rilocazione di una variabile mobile. L'istruzione `fixed` è consentita solo in un contesto di tipo [unsafe](unsafe.md). È possibile usare `Fixed` anche per creare [buffer a dimensione fissa](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
+L'istruzione `fixed` impedisce che il Garbage Collector esegua la rilocazione di una variabile mobile. L'istruzione `fixed` è consentita solo in un contesto di tipo [unsafe](unsafe.md). È possibile usare `fixed` anche per creare [buffer a dimensione fissa](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
 
 L'istruzione `fixed` imposta un puntatore a una variabile gestita e la blocca durante l'esecuzione dell'istruzione. I puntatori alle variabili mobili gestite sono utili solo in un contesto `fixed`. Senza un contesto `fixed`, l'operazione di garbage collection potrebbe spostare le variabili in modo imprevedibile. Il compilatore C# consente di assegnare un puntatore a una variabile gestita in un'istruzione `fixed`.
 
@@ -23,6 +23,12 @@ L'istruzione `fixed` imposta un puntatore a una variabile gestita e la blocca du
 È possibile inizializzare un puntatore usando una matrice, una stringa, un buffer a dimensione fissa o l'indirizzo di una variabile. Nell'esempio seguente viene illustrato l'uso di indirizzi, matrici e stringhe di una variabile. Per altre informazioni sui buffer a dimensione fissa, vedere [Buffer a dimensione fissa](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
+
+A partire da C# 7.3, l'istruzione `fixed` opera su tipi aggiuntivi oltre a matrici, stringhe, buffer a dimensione fissa o variabili non gestite. È possibile bloccare qualsiasi tipo che implementa un metodo denominato `DangerousGetPinnableReference`. `DangerousGetPinnableReference` deve restituire una variabile `ref` a un tipo non gestito. Vedere l'argomento sui [tipi di puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md) per altre informazioni. I tipi .NET <xref:System.Span%601?displayProperty=nameWithType> e <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> introdotti in .NET Core 2.0 usano questo modello e possono essere bloccati. Questa operazione è illustrata nell'esempio seguente:
+
+[!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
+
+Se si creano tipi che devono partecipare a questo modello, vedere <xref:System.Span%601.DangerousGetPinnableReference?displayProperty=nameWithType> per un esempio di implementazione del modello.
 
 Se sono dello stesso tipo, è possibile inizializzare più puntatori in un'unica istruzione:
 

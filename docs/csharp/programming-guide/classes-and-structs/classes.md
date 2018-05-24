@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 808e25315b0010fd55112f2ed237485c3d0c40d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="classes-c-programming-guide"></a>Classi (Guida per programmatori C#)
 Una *classe* è un costrutto che consente di creare tipi personalizzati raggruppando insieme variabili di altri tipi, metodi e eventi. Una classe è simile a un progetto. Definisce i dati e il comportamento di un tipo. Se la classe non è dichiarata come statica, il codice client può creare *istanze* della classe. Queste istanze sono *oggetti* che vengono assegnati a una variabile. L'istanza di una classe rimane in memoria fino a quando tutti i riferimenti non escono dall'ambito. In questa fase, CLR la contrassegna come idonea per Garbage Collection. Se la classe viene dichiarata come [statica](../../../csharp/language-reference/keywords/static.md), non è possibile creare istanze e il codice client può accedervi solo tramite la classe stessa. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
@@ -83,10 +83,9 @@ Quando viene creato l'oggetto, la memoria viene allocata nell'heap gestito e la 
   
  Le definizioni di classe possono essere suddivise tra file di origine diversa. Per altre informazioni, vedere [Classi e metodi parziali](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
   
-## <a name="description"></a>Descrizione  
- Nell'esempio seguente vengono definiti una classe pubblica che contiene un singolo campo, un metodo e un metodo speciale denominato costruttore. Per altre informazioni, vedere [Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md). Viene quindi creata un'istanza alla classe con la parola chiave `new`.  
-  
 ## <a name="example"></a>Esempio  
+ L'esempio seguente definisce una classe pubblica che contiene una [proprietà implementata automaticamente](auto-implemented-properties.md), un metodo e un metodo speciale denominato costruttore. Per altre informazioni, vedere gli argomenti [Proprietà](properties.md), [Metodi](methods.md) e [Costruttori](constructors.md). Le istanze della classe vengono quindi create con la parola chiave `new`.  
+  
  [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  

@@ -4,15 +4,15 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: aa6720430a1d93d7eacb098962c09efad09a179f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58500cf2caa1446af6b663f1b765c0be92309f1d
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificatore del parametro in (Riferimenti per C#)
 
-La parola chiave `in` fa sì che gli argomenti vengono passati per riferimento. È simile alle parole chiave [ref](ref.md) o [out](out-parameter-modifier.md), tranne per il fatto che gli argomenti `in` non possono essere modificati dal metodo chiamato, mentre possono essere modificati gli argomenti `ref`; gli argomenti `out` devono essere modificati dal chiamante e tali modifiche possono essere osservate nel contesto di chiamata.
+La parola chiave `in` fa sì che gli argomenti vengono passati per riferimento. È simile alle parole chiave [ref](ref.md) o [out](out-parameter-modifier.md), ma gli argomenti `in` non possono essere modificati dal metodo chiamato. Mentre gli argomenti `ref` possono essere modificati, gli argomenti `out` devono essere modificati dal chiamante e tali modifiche sono osservabili nel contesto di chiamata.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -49,7 +49,7 @@ class InOverloads
 
 È possibile comprendere le regole di risoluzione dell'overload per i metodi con argomenti per valore rispetto ai metodi con argomenti `in` se si comprende la motivazione per gli argomenti `in`. La definizione di metodi tramite parametri `in` costituisce un'ottimizzazione potenziale delle prestazioni. Alcuni argomenti di tipo `struct` possono essere di grandi dimensioni e quando vengono chiamati metodi all'interno di cicli ristretti o in percorsi di codice critici, il costo della copia di tali strutture ha una rilevanza fondamentale. I metodi dichiarano parametri `in` per specificare che è possibile passare argomenti per riferimento in modo sicuro, perché il metodo chiamato non modifica lo stato degli argomenti. Il passaggio di tali argomenti per riferimento consente di evitare una copia potenzialmente dispendiosa. 
 
-Specificare `in` per gli argomenti presso il sito di chiamata è in genere facoltativo. Non esiste alcuna differenza semantica tra il passaggio di argomenti per valore e il passaggio per riferimento tramite il modificatore `in`. Il modificatore `in` presso il sito di chiamata è facoltativo perché non è necessario indicare che il valore dell'argomento può essere modificato. Si aggiunge il modificatore `in` in modo esplicito presso il sito di chiamata per assicurarsi che l'argomento venga passato per riferimento, non per valore. L'uso di `in` in modo esplicito ha due effetti:
+Specificare `in` per gli argomenti presso il sito di chiamata è in genere facoltativo. Non esiste alcuna differenza semantica tra il passaggio di argomenti per valore e il passaggio per riferimento tramite il modificatore `in`. Il modificatore `in` presso il sito di chiamata è facoltativo perché non è necessario indicare che il valore dell'argomento può essere modificato. Si aggiunge il modificatore `in` in modo esplicito presso il sito di chiamata per assicurarsi che l'argomento venga passato per riferimento, non per valore. L'uso di `in` in modo esplicito ha i due effetti seguenti:
 
 In primo luogo, se si specifica `in` presso il sito di chiamata si impone al compilatore di selezionare un metodo definito con un parametro `in` corrispondente. In caso contrario, se due metodi si differenziano solo per la presenza di `in`, l'overload per valore rappresenta una corrispondenza migliore.
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed306098852e93d43a4055fd1d9b8cf97a01766
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="default-marshaling-behavior"></a>comportamento predefinito del marshalling
 Il marshalling di interoperabilità opera sulle regole che stabiliscono il comportamento dei dati associati a parametri del metodo durante il passaggio tra memoria gestita e non gestita. Queste regole predefinite controllano tali attività di marshalling come le trasformazioni dei tipi di dati, il fatto che un oggetto chiamato possa modificare i dati passati e restituire tali modifiche al chiamante e le circostanze in cui il gestore di marshalling fornisce ottimizzazioni delle prestazioni.  
@@ -345,7 +345,7 @@ interface _Graphics {
 }  
 ```  
   
- Le stesse regole usate per effettuare il marshalling di valori e riferimenti nelle chiamate di platform invoke vengono usate per effettuare il marshalling tramite le interfacce COM. Ad esempio, quando un'istanza del tipo di valore `Point` viene passata da .NET Framework a COM, `Point` viene passato mediante valore. Se il tipo di valore `Point` viene passato mediante riferimento, viene passato un puntatore a un oggetto `Point` nello stack. Il gestore marshalling di interoperabilità non supporta livelli superiori di riferimento indiretto (**Point\*\***) in entrambe le direzioni.  
+ Le stesse regole usate per effettuare il marshalling di valori e riferimenti nelle chiamate di platform invoke vengono usate per effettuare il marshalling tramite le interfacce COM. Ad esempio, quando un'istanza del tipo di valore `Point` viene passata da .NET Framework a COM, `Point` viene passato mediante valore. Se il tipo di valore `Point` viene passato mediante riferimento, viene passato un puntatore a un oggetto `Point` nello stack. Il marshalling di interoperabilità non supporta livelli superiori di riferimento indiretto (**punto** \* \*) in entrambe le direzioni.  
   
 > [!NOTE]
 >  Le strutture con valore di enumerazione <xref:System.Runtime.InteropServices.LayoutKind> impostato su **Explicit** non possono essere usate nell'interoperabilità COM perché la libreria dei tipi esportata non può esprimere un layout esplicito.  

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f18a369157c1e37411a3c8d8b6dfcce99bc347c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Estensioni di markup e XAML WPF
 Questo argomento introduce le estensioni di markup per XAML, con informazioni sulle regole della sintassi, le finalità e il modello a oggetti di classe sottostante. Le estensioni di markup sono una funzionalità generale del linguaggio XAML e dell'implementazione .NET di servizi XAML. Questo argomento descrive in particolare le estensioni di markup per l'uso in XAML WPF.  
@@ -64,7 +64,7 @@ Questo argomento introduce le estensioni di markup per XAML, con informazioni su
   
 -   `RelativeSource` fornisce informazioni di origine per un <xref:System.Windows.Data.Binding> che può passare più relazioni possibili nell'albero degli oggetti in fase di esecuzione. In questo modo, si ottengono origini specializzate per i binding creati in modelli multiuso o creati nel codice senza una completa conoscenza dell'albero di oggetti circostante. Per informazioni dettagliate, vedere [Estensione di markup RelativeSource](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
   
--   `TemplateBinding` permette a un modello di controllo di usare valori per proprietà basate su modelli provenienti da proprietà definite da modelli a oggetti della classe che userà il modello. In altri termini, la proprietà all'interno della definizione del modello può accedere a un contesto che esiste solo dopo l'applicazione del modello. Per informazioni dettagliate, vedere [Estensione di markup TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Per altre informazioni sull'uso pratico di `TemplateBinding`, vedere [Applicazione di stili con l'esempio di ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
+-   `TemplateBinding` permette a un modello di controllo di usare valori per proprietà basate su modelli provenienti da proprietà definite da modelli a oggetti della classe che userà il modello. In altri termini, la proprietà all'interno della definizione del modello può accedere a un contesto che esiste solo dopo l'applicazione del modello. Per informazioni dettagliate, vedere [Estensione di markup TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Per altre informazioni sull'uso pratico di `TemplateBinding`, vedere [Applicazione di stili con l'esempio di ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 -   `ColorConvertedBitmap` supporta uno scenario di creazione di immagini relativamente avanzato. Per informazioni dettagliate, vedere [Estensione di markup ColorConvertedBitmap](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md).  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fb58f8e7a1fef711de28534fbe53dfc9d7084ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee4d884a0efbeb6e57ed727396bf3bcb39979774
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="regular-expression-examples"></a>Esempi di espressioni regolari
 Questa sezione contiene esempi di codice che illustrano l'uso delle espressioni regolari nelle applicazioni comuni.  
@@ -35,7 +35,7 @@ Questa sezione contiene esempi di codice che illustrano l'uso delle espressioni 
  Esempio che consente di rimuovere i caratteri non alfanumerici non validi da una stringa.  
   
  [Procedura: Verificare che le stringhe siano in formato di posta elettronica valido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
- Esempio che è possibile usare per verificare che una stringa sia in formato di posta elettronica valido.  
+ Esempio che consente di verificare se una stringa presenta il formato di posta elettronica valido.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Text.RegularExpressions>  

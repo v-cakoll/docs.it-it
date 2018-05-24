@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c0f831426762ddcb21e4c1c1191e20435a13deb
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: b1e54aa8a9751a01e8856a3e9e71d63b55772f2c
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 <a name="introduction"></a> Questo articolo offre un riepilogo dei principali nuovi miglioramenti e funzionalità introdotti nelle versioni seguenti di .NET Framework:  
@@ -657,8 +657,6 @@ End Class
 | nome                                 | Valore                                     |
 | ------------------------------------ | ----------------------------------------- |
 | La classificazione deve essere compresa tra 1 e 10. | La note doit être comprise entre 1 et 10. |
-
- Questo file può quindi
 
  La localizzazione dell'annotazione dei dati è anche estensibile. Gli sviluppatori possono collegare il proprio provider di localizzazione delle stringhe implementando l'interfaccia di <xref:System.Web.Globalization.IStringLocalizerProvider> per archiviare la stringa di localizzazione in un posto diverso da un file di risorse.
 
@@ -1488,7 +1486,7 @@ SqlClient ora offre automaticamente connessioni più veloci a un gruppo di dispo
 
 - **Supporto per le codifiche della tabella codici**
 
-      [!INCLUDE[net_core](../../../includes/net-core-md.md)] primarily supports the Unicode encodings and by default provides limited support for code page encodings. You can add support for code page encodings available in the .NET Framework but unsupported in [!INCLUDE[net_core](../../../includes/net-core-md.md)] by registering code page encodings with the <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> method. For more information, see <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     [!INCLUDE[net_core](../../../includes/net-core-md.md)] supporta principalmente le codifiche Unicode e per impostazione predefinita offre un supporto limitato per le codifiche della tabella codici. È possibile aggiungere il supporto delle codifiche della tabella codici disponibili in .NET Framework ma non supportate in [!INCLUDE[net_core](../../../includes/net-core-md.md)] registrando le codifiche della tabella codici con il metodo <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Per altre informazioni, vedere <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 

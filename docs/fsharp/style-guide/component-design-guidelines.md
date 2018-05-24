@@ -2,11 +2,11 @@
 title: 'Indicazioni per la progettazione di componenti F #'
 description: 'Altre linee guida per la scrittura di F # componenti destinati al consumo ad altri chiamanti.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 7859baac76be01b2cfbdc8602b6cc417cfe5106f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7e71710b1bc2fe3e8d7a5a091513a1432650dc04
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-component-design-guidelines"></a>Indicazioni per la progettazione di componenti F #
 
@@ -483,7 +483,7 @@ Tuttavia, le operazioni di notazione con punto logico per questo tipo non sono l
 
 Quando si progettano le librerie per usarle da altri linguaggi .NET, è importante rispettare la [indicazioni per la progettazione di librerie .NET](../../standard/design-guidelines/index.md). In questo documento, queste librerie sono contrassegnate come vaniglia librerie .NET, a differenza di F #-rivolti verso librerie che utilizzano F # costruisce senza alcuna restrizione. Progettazione di librerie .NET vaniglia significa che fornisce le API di acquisire familiare e idiomatiche coerente con il resto di .NET Framework riducendo al minimo l'utilizzo di F #-costrutti specifici nell'API pubblica. Le regole sono illustrate nelle sezioni seguenti.
 
-### <a name="namespace-and-type-sesign-for-libraries-for-use-from-other-net-languages"></a>Sesign Namespace e il tipo (per le librerie per l'utilizzo da parte di altri linguaggi .NET)
+### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Progettazione Namespace e tipo (per le librerie per l'utilizzo da parte di altri linguaggi .NET)
 
 #### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>Applicare le convenzioni di denominazione .NET per l'API pubblica i componenti di
 
