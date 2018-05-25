@@ -1,12 +1,12 @@
 ---
 title: Sintassi delle stringhe di connessione
-ms.date: 03/30/2017
+ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: ac7053d1b1b0865f33ae1bcd955493b4c62c7be6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1df49a9ed5d45a1a1ee50145ff036c98ec72cca8
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="connection-string-syntax"></a>Sintassi delle stringhe di connessione
 Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita da <xref:System.Data.Common.DbConnection> oltre a una proprietà <xref:System.Data.Common.DbConnection.ConnectionString%2A> specifica del provider. La sintassi della stringa di connessione specifica per ogni provider è documentata in questa proprietà `ConnectionString`. Nella tabella seguente sono elencati i quattro provider di dati inclusi in .NET Framework.  
@@ -112,11 +112,11 @@ Data Source=MySqlServer\MSSQL1;"
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |No|N/D|No (impostazione predefinita)|Ignorato|Nessuna crittografia.|  
 |No|N/D|Sì|No (impostazione predefinita)|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
-|No|N/D|Sì|Sì|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
-|Sì|No|Ignorato|Ignorato|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
-|Sì|Sì|No (impostazione predefinita)|Ignorato|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
-|Sì|Sì|Sì|No (impostazione predefinita)|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
-|Sì|Sì|Sì|Sì|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
+|No|N/D|Sì|Yes|Crittografia sempre applicata, ma può utilizzare un certificato server autofirmato.|  
+|Yes|No|Ignorato|Ignorato|La crittografia viene applicata solo se è presente un certificato server verificabile; in caso contrario, il tentativo di connessione ha esito negativo.|  
+|Yes|Sì|No (impostazione predefinita)|Ignorato|Crittografia sempre applicata, ma può utilizzare un certificato server autofirmato.|  
+|Yes|Sì|Sì|No (impostazione predefinita)|La crittografia viene applicata solo se è presente un certificato server verificabile; in caso contrario, il tentativo di connessione ha esito negativo.|  
+|Yes|Sì|Sì|Yes|Crittografia sempre applicata, ma può utilizzare un certificato server autofirmato.|  
   
  Per ulteriori informazioni, vedere [utilizzo della crittografia senza convalida](http://go.microsoft.com/fwlink/?LinkId=120500) nella documentazione Online di SQL Server.  
   
