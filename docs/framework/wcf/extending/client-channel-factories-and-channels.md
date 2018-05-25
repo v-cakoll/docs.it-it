@@ -2,11 +2,11 @@
 title: 'Client: channel factory e canali'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 91e19c692718ae02e2f125a791904f62fe8401f7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a42042eaf9a8bc5461f680e3cf8dc5fcc78cebb5
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="client-channel-factories-and-channels"></a>Client: channel factory e canali
 In questo argomento viene illustrata la creazione di channel factory e canali.  
@@ -23,11 +23,11 @@ Una channel factory crea canali.
   
 -   Il <xref:System.ServiceModel.Channels.CommunicationObject> implementa <xref:System.ServiceModel.ICommunicationObject> e impone la macchina a stati descritta nel passaggio 2 di [sviluppo canali](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
--   Il '<xref:System.ServiceModel.Channels.ChannelManagerBase> implementa <xref:System.ServiceModel.Channels.CommunicationObject> e fornisce una classe di base unificata per <xref:System.ServiceModel.Channels.ChannelFactoryBase?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.ChannelListenerBase?displayProperty=nameWithType>. La classe <xref:System.ServiceModel.Channels.ChannelManagerBase> opera unitamente alla classe <xref:System.ServiceModel.Channels.ChannelBase>, una classe di base che implementa l'interfaccia <xref:System.ServiceModel.Channels.IChannel>.  
+-   Il <xref:System.ServiceModel.Channels.ChannelManagerBase> implementa <xref:System.ServiceModel.Channels.CommunicationObject> e fornisce una classe di base unificata per <xref:System.ServiceModel.Channels.ChannelFactoryBase?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.ChannelListenerBase?displayProperty=nameWithType>. La classe <xref:System.ServiceModel.Channels.ChannelManagerBase> opera unitamente alla classe <xref:System.ServiceModel.Channels.ChannelBase>, una classe di base che implementa l'interfaccia <xref:System.ServiceModel.Channels.IChannel>.
   
--   Il '<xref:System.ServiceModel.Channels.ChannelFactoryBase> implementa <xref:System.ServiceModel.Channels.ChannelManagerBase> e <xref:System.ServiceModel.Channels.IChannelFactory> e li consolida il `CreateChannel` overload in uno `OnCreateChannel` metodo astratto.  
+-   Il <xref:System.ServiceModel.Channels.ChannelFactoryBase> implementazione della classe <xref:System.ServiceModel.Channels.ChannelManagerBase> e <xref:System.ServiceModel.Channels.IChannelFactory> e li consolida il `CreateChannel` overload in un unico `OnCreateChannel` metodo astratto.
   
--   Il '<xref:System.ServiceModel.Channels.ChannelListenerBase> implementa <xref:System.ServiceModel.Channels.IChannelListener>. Si occupa della gestione dello stato di base.  
+-   Il <xref:System.ServiceModel.Channels.ChannelListenerBase> implementa <xref:System.ServiceModel.Channels.IChannelListener>. Si occupa della gestione dello stato di base. 
   
  La seguente discussione si basa il [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio.  
   

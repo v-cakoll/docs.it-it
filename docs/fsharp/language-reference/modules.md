@@ -2,11 +2,11 @@
 title: Moduli (F#)
 description: 'Informazioni su come un modulo F # è un raggruppamento di codice F #, ad esempio i valori e tipi di valori di funzione, in un programma F #.'
 ms.date: 04/24/2017
-ms.openlocfilehash: ddb6a0762171f8acc94f0ba0cf29c4b6b3e4990e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 9a1416321e392f7a06551b4a7e3429e3a2d023bd
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="modules"></a>Moduli
 
@@ -131,6 +131,6 @@ Questa funzionalità è anche possibile in [gli spazi dei nomi](namespaces.md) c
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti al linguaggio F #](index.md)
-[gli spazi dei nomi](namespaces.md)
-[F # RFC FS-1009 - Consenti moduli e tipi reciprocamente referenziali su maggiori ambiti all'interno dei file](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+[Riferimenti per il linguaggio F#](index.md)  
+[Spazi dei nomi](namespaces.md)  
+[1009-F # RFC Fi - Consenti moduli e tipi reciprocamente referenziali su maggiori ambiti all'interno dei file](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  
