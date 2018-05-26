@@ -47,7 +47,6 @@
 ## [Inizializzatori di oggetto e di raccolta](object-and-collection-initializers.md)
 ### [Procedura: Inizializzare oggetti usando un inizializzatore di oggetto](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [Procedura: Inizializzare un dizionario con un inizializzatore di raccolta](how-to-initialize-a-dictionary-with-a-collection-initializer.md)
-## [Procedura: Accedere a una classe Collection con foreach](how-to-access-a-collection-class-with-foreach.md)
 ## [Tipi annidati](nested-types.md)
 ## [Classi e metodi parziali](partial-classes-and-methods.md)
 ## [Tipi anonimi](anonymous-types.md)
