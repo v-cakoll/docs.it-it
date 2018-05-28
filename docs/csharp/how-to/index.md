@@ -2,11 +2,11 @@
 title: Articoli sulla procedura (Guida a C#)
 description: Raccolta di suggerimenti rapidi e brevi esempi di codice evidenziati
 ms.date: 12/20/2017
-ms.openlocfilehash: b8164abd84647fc9118acc6e0b84e7fd46838fe9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-c"></a>Procedura (C#)
 
@@ -43,9 +43,8 @@ Per implementare il programma è necessario creare classi e struct. Queste tecni
 Questi articoli contengono informazioni sull'uso delle raccolte di dati.
 
 - [Inizializzare un dizionario con un inizializzatore di insieme](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md).
-- [Accedere a tutti gli elementi in una raccolta tramite `foreach`](../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md).
 
-## <a name="strings"></a>stringhe
+## <a name="working-with-strings"></a>Uso delle stringhe
 
 Le stringhe sono il tipo di dati di base usato per visualizzare o modificare il testo. Questi articoli illustrano le procedure comuni da seguire con le stringhe.
 
