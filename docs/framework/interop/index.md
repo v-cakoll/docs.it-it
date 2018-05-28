@@ -14,7 +14,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 583cfb6e3a5145c6c0dfc82ec9ff64c6d87414ba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
 ---
@@ -45,16 +45,16 @@ Descrive il mapping tra eccezioni e valori HRESULT.
 Descrive i wrapper forniti dall'interoperabilità COM.
 
 [Equivalenza del tipo e tipi di interoperabilità incorporati](type-equivalence-and-embedded-interop-types.md)  
-Descrive come informazioni sui tipi COM sono incorporate nell'assembly e come common language runtime determina l'equivalenza dei tipi COM incorporati.
+Descrive il modo in cui le informazioni sui tipi COM sono incorporate negli assembly e come Common Language Runtime determina l'equivalenza dei tipi COM incorporati.
 
 [Procedura: generare assembly di interoperabilità tramite Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
-Viene descritto come generare assembly di interoperabilità primario utilizzando *Tlbimp.exe* (tipo di libreria utilità di importazione).
+Descrive come generare assembly di interoperabilità primari usando *Tlbimp.exe* (strumento di importazione di librerie dei tipi).
 
 [Procedura: Registrare assembly di interoperabilità primari](how-to-register-primary-interop-assemblies.md)  
-Viene descritto come registrare assembly di interoperabilità primari prima di potervi fare riferimento nei progetti.
+Descrive come registrare gli assembly di interoperabilità primari prima di potervi fare riferimento nei progetti.
 
 [Interoperabilità COM senza registrazione](registration-free-com-interop.md)  
-Descrive la modalità di interoperabilità COM attivazione componenti senza utilizzare il Registro di sistema di Windows.
+Descrive come l'interoperabilità COM consente di attivare componenti senza usare il Registro di sistema di Windows.
 
 [Procedura: Configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione](configure-net-framework-based-com-components-for-reg.md)  
-Viene descritto come creare un manifesto dell'applicazione e come creare e incorporare un manifesto del componente.
+Descrive come creare un manifesto dell'applicazione e come creare e incorporare un manifesto del componente.
