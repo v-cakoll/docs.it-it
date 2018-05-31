@@ -3,12 +3,12 @@ title: Novità di C# 6 - Guida a C#
 description: Informazioni sulle nuove funzionalità di C# versione 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: c23d4f45441451fbf8a2ad2f939bdb1ed6144154
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458005"
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483489"
 ---
 # <a name="whats-new-in-c-6"></a>Novità di C# 6
 
@@ -342,11 +342,11 @@ I dettagli sull'implementazione per l'aggiunta del supporto `await` all'interno 
 
 ## <a name="index-initializers"></a>Inizializzatori di indice.
 
-Gli *inizializzatori di indice* rappresentano una delle due funzionalità che rendono gli inizializzatori di insieme più coerenti. Nelle versioni precedenti di C# gli *inizializzatori di insieme* potevano essere usati solo con le raccolte di stili di sequenza:
+Gli *inizializzatori di indice* sono una delle due funzionalità che rendono gli inizializzatori di insieme più coerenti con l'uso degli indici. Nelle versioni precedenti di C# gli *inizializzatori di insieme* potevano essere usati solo con le raccolte di stili di sequenza, includendo <xref:System.Collections.Generic.Dictionary%602> mediante l'aggiunta di coppie chiave/valore racchiuse tra parentesi graffe:
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#ListInitializer)]
 
-Ora è possibile usarli anche con le raccolte <xref:System.Collections.Generic.Dictionary%602> e tipi simili:
+Ora è possibile usarli con le raccolte <xref:System.Collections.Generic.Dictionary%602> e tipi simili. La nuova sintassi supporta l'assegnazione mediante l'uso di un indice nella raccolta:
 
 [!code-csharp[DictionaryInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#DictionaryInitializer)]
 
