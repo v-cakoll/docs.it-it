@@ -1,14 +1,6 @@
 ---
 title: Utilizzo di funzioni di DLL non gestite
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - unmanaged functions, calling
 - COM interop, DLL functions
@@ -21,69 +13,66 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4133cfbdf4c9f164ae9ba42a6bbba94ce019e0be
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
-ms.translationtype: MT
+ms.openlocfilehash: 3166d6c95532706781188da0c56ebf9022038a50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388378"
 ---
-# <a name="consuming-unmanaged-dll-functions"></a><span data-ttu-id="018c4-102">Utilizzo di funzioni di DLL non gestite</span><span class="sxs-lookup"><span data-stu-id="018c4-102">Consuming Unmanaged DLL Functions</span></span>
-<span data-ttu-id="018c4-103">Platform invoke è un servizio che consente al codice gestito di chiamare funzioni non gestite implementate in librerie a collegamento dinamico (DLL), come quelle nell'API Win32.</span><span class="sxs-lookup"><span data-stu-id="018c4-103">Platform invoke is a service that enables managed code to call unmanaged functions implemented in dynamic link libraries (DLLs), such as those in the Win32 API.</span></span> <span data-ttu-id="018c4-104">Individua e richiama una funzione esportata ed esegue il marshalling degli argomenti (Integer, stringhe, matrici, strutture e così via) nel limite dell'interazione, in base alle necessità.</span><span class="sxs-lookup"><span data-stu-id="018c4-104">It locates and invokes an exported function and marshals its arguments (integers, strings, arrays, structures, and so on) across the interoperation boundary as needed.</span></span>  
+# <a name="consuming-unmanaged-dll-functions"></a><span data-ttu-id="76e56-102">Utilizzo di funzioni di DLL non gestite</span><span class="sxs-lookup"><span data-stu-id="76e56-102">Consuming Unmanaged DLL Functions</span></span>
+<span data-ttu-id="76e56-103">Platform invoke è un servizio che consente al codice gestito di chiamare funzioni non gestite implementate in librerie a collegamento dinamico (DLL), come quelle nell'API Win32.</span><span class="sxs-lookup"><span data-stu-id="76e56-103">Platform invoke is a service that enables managed code to call unmanaged functions implemented in dynamic link libraries (DLLs), such as those in the Win32 API.</span></span> <span data-ttu-id="76e56-104">Individua e richiama una funzione esportata ed esegue il marshalling degli argomenti (Integer, stringhe, matrici, strutture e così via) nel limite dell'interazione, in base alle necessità.</span><span class="sxs-lookup"><span data-stu-id="76e56-104">It locates and invokes an exported function and marshals its arguments (integers, strings, arrays, structures, and so on) across the interoperation boundary as needed.</span></span>  
   
- <span data-ttu-id="018c4-105">In questa sezione vengono presentate le attività associate all'utilizzo di funzioni DLL non gestite e fornisce ulteriori informazioni su platform invoke.</span><span class="sxs-lookup"><span data-stu-id="018c4-105">This section introduces tasks associated with consuming unmanaged DLL functions and provides more information about platform invoke.</span></span> <span data-ttu-id="018c4-106">Oltre alle seguenti attività, vengono illustrate alcune considerazioni generali e viene fornito un collegamento a informazioni ed esempi aggiuntivi.</span><span class="sxs-lookup"><span data-stu-id="018c4-106">In addition to the following tasks, there are general considerations and a link providing additional information and examples.</span></span>  
+ <span data-ttu-id="76e56-105">In questa sezione vengono presentate le attività associate all'utilizzo di funzioni DLL non gestite e sono disponibili altre informazioni su platform invoke.</span><span class="sxs-lookup"><span data-stu-id="76e56-105">This section introduces tasks associated with consuming unmanaged DLL functions and provides more information about platform invoke.</span></span> <span data-ttu-id="76e56-106">Oltre alle seguenti attività, vengono illustrate alcune considerazioni generali e viene fornito un collegamento a informazioni ed esempi aggiuntivi.</span><span class="sxs-lookup"><span data-stu-id="76e56-106">In addition to the following tasks, there are general considerations and a link providing additional information and examples.</span></span>  
   
-#### <a name="to-consume-exported-dll-functions"></a><span data-ttu-id="018c4-107">Per usare le funzioni DLL esportate</span><span class="sxs-lookup"><span data-stu-id="018c4-107">To consume exported DLL functions</span></span>  
+#### <a name="to-consume-exported-dll-functions"></a><span data-ttu-id="76e56-107">Per usare le funzioni DLL esportate</span><span class="sxs-lookup"><span data-stu-id="76e56-107">To consume exported DLL functions</span></span>  
   
-1.  <span data-ttu-id="018c4-108">[Identificare le funzioni nelle DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).</span><span class="sxs-lookup"><span data-stu-id="018c4-108">[Identify functions in DLLs](../../../docs/framework/interop/identifying-functions-in-dlls.md).</span></span>  
+1.  <span data-ttu-id="76e56-108">[Identificare le funzioni nelle DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).</span><span class="sxs-lookup"><span data-stu-id="76e56-108">[Identify functions in DLLs](../../../docs/framework/interop/identifying-functions-in-dlls.md).</span></span>  
   
-     <span data-ttu-id="018c4-109">È necessario specificare almeno il nome della funzione e il nome della DLL che la contiene.</span><span class="sxs-lookup"><span data-stu-id="018c4-109">Minimally, you must specify the name of the function and name of the DLL that contains it.</span></span>  
+     <span data-ttu-id="76e56-109">È necessario specificare almeno il nome della funzione e il nome della DLL che la contiene.</span><span class="sxs-lookup"><span data-stu-id="76e56-109">Minimally, you must specify the name of the function and name of the DLL that contains it.</span></span>  
   
-2.  <span data-ttu-id="018c4-110">[Creare una classe che contenga le funzioni DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).</span><span class="sxs-lookup"><span data-stu-id="018c4-110">[Create a class to hold DLL functions](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).</span></span>  
+2.  <span data-ttu-id="76e56-110">[Creare una classe che contenga le funzioni DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).</span><span class="sxs-lookup"><span data-stu-id="76e56-110">[Create a class to hold DLL functions](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).</span></span>  
   
-     <span data-ttu-id="018c4-111">È possibile usare una classe esistente, creare una classe per ogni funzione non gestita o creare una classe contenente un set di funzioni non gestite correlate.</span><span class="sxs-lookup"><span data-stu-id="018c4-111">You can use an existing class, create an individual class for each unmanaged function, or create one class that contains a set of related unmanaged functions.</span></span>  
+     <span data-ttu-id="76e56-111">È possibile usare una classe esistente, creare una classe per ogni funzione non gestita o creare una classe contenente un set di funzioni non gestite correlate.</span><span class="sxs-lookup"><span data-stu-id="76e56-111">You can use an existing class, create an individual class for each unmanaged function, or create one class that contains a set of related unmanaged functions.</span></span>  
   
-3.  <span data-ttu-id="018c4-112">[Creare prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span><span class="sxs-lookup"><span data-stu-id="018c4-112">[Create prototypes in managed code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span></span>  
+3.  <span data-ttu-id="76e56-112">[Creare prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span><span class="sxs-lookup"><span data-stu-id="76e56-112">[Create prototypes in managed code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span></span>  
   
-     <span data-ttu-id="018c4-113">[Visual Basic] Usare l'istruzione **Declare** con le parole chiave **Function** e **Lib**.</span><span class="sxs-lookup"><span data-stu-id="018c4-113">[Visual Basic] Use the **Declare** statement with the **Function** and **Lib** keywords.</span></span> <span data-ttu-id="018c4-114">In pochissimi casi, è possibile usare **DllImportAttribute** con le parole chiave **Shared Function**.</span><span class="sxs-lookup"><span data-stu-id="018c4-114">In some rare cases, you can use the **DllImportAttribute** with the **Shared Function** keywords.</span></span> <span data-ttu-id="018c4-115">Questi casi vengono illustrati più avanti in questa sezione.</span><span class="sxs-lookup"><span data-stu-id="018c4-115">These cases are explained later in this section.</span></span>  
+     <span data-ttu-id="76e56-113">[Visual Basic] Usare l'istruzione **Declare** con le parole chiave **Function** e **Lib**.</span><span class="sxs-lookup"><span data-stu-id="76e56-113">[Visual Basic] Use the **Declare** statement with the **Function** and **Lib** keywords.</span></span> <span data-ttu-id="76e56-114">In pochissimi casi, è possibile usare **DllImportAttribute** con le parole chiave **Shared Function**.</span><span class="sxs-lookup"><span data-stu-id="76e56-114">In some rare cases, you can use the **DllImportAttribute** with the **Shared Function** keywords.</span></span> <span data-ttu-id="76e56-115">Questi casi vengono illustrati più avanti in questa sezione.</span><span class="sxs-lookup"><span data-stu-id="76e56-115">These cases are explained later in this section.</span></span>  
   
-     <span data-ttu-id="018c4-116">[C#] Usare **DllImportAttribute** per identificare la DLL e la funzione.</span><span class="sxs-lookup"><span data-stu-id="018c4-116">[C#] Use the **DllImportAttribute** to identify the DLL and function.</span></span> <span data-ttu-id="018c4-117">Contrassegnare il metodo con i modificatori **static** ed **extern**.</span><span class="sxs-lookup"><span data-stu-id="018c4-117">Mark the method with the **static** and **extern** modifiers.</span></span>  
+     <span data-ttu-id="76e56-116">[C#] Usare **DllImportAttribute** per identificare la DLL e la funzione.</span><span class="sxs-lookup"><span data-stu-id="76e56-116">[C#] Use the **DllImportAttribute** to identify the DLL and function.</span></span> <span data-ttu-id="76e56-117">Contrassegnare il metodo con i modificatori **static** ed **extern**.</span><span class="sxs-lookup"><span data-stu-id="76e56-117">Mark the method with the **static** and **extern** modifiers.</span></span>  
   
-     <span data-ttu-id="018c4-118">[C++] Usare **DllImportAttribute** per identificare la DLL e la funzione.</span><span class="sxs-lookup"><span data-stu-id="018c4-118">[C++] Use the **DllImportAttribute** to identify the DLL and function.</span></span> <span data-ttu-id="018c4-119">Contrassegnare il metodo o la funzione wrapper con **extern "C"**.</span><span class="sxs-lookup"><span data-stu-id="018c4-119">Mark the wrapper method or function with **extern "C"**.</span></span>  
+     <span data-ttu-id="76e56-118">[C++] Usare **DllImportAttribute** per identificare la DLL e la funzione.</span><span class="sxs-lookup"><span data-stu-id="76e56-118">[C++] Use the **DllImportAttribute** to identify the DLL and function.</span></span> <span data-ttu-id="76e56-119">Contrassegnare il metodo o la funzione wrapper con **extern "C"**.</span><span class="sxs-lookup"><span data-stu-id="76e56-119">Mark the wrapper method or function with **extern "C"**.</span></span>  
   
-4.  <span data-ttu-id="018c4-120">[Chiamare una funzione DLL](../../../docs/framework/interop/calling-a-dll-function.md).</span><span class="sxs-lookup"><span data-stu-id="018c4-120">[Call a DLL function](../../../docs/framework/interop/calling-a-dll-function.md).</span></span>  
+4.  <span data-ttu-id="76e56-120">[Chiamare una funzione DLL](../../../docs/framework/interop/calling-a-dll-function.md).</span><span class="sxs-lookup"><span data-stu-id="76e56-120">[Call a DLL function](../../../docs/framework/interop/calling-a-dll-function.md).</span></span>  
   
-     <span data-ttu-id="018c4-121">Chiamare il metodo sulla classe gestita come qualsiasi altro metodo gestito.</span><span class="sxs-lookup"><span data-stu-id="018c4-121">Call the method on your managed class as you would any other managed method.</span></span> <span data-ttu-id="018c4-122">Il [passaggio di strutture](../../../docs/framework/interop/passing-structures.md) e l'[implementazione di funzioni di callback](../../../docs/framework/interop/callback-functions.md) sono casi particolari.</span><span class="sxs-lookup"><span data-stu-id="018c4-122">[Passing structures](../../../docs/framework/interop/passing-structures.md) and [implementing callback functions](../../../docs/framework/interop/callback-functions.md) are special cases.</span></span>  
+     <span data-ttu-id="76e56-121">Chiamare il metodo sulla classe gestita come qualsiasi altro metodo gestito.</span><span class="sxs-lookup"><span data-stu-id="76e56-121">Call the method on your managed class as you would any other managed method.</span></span> <span data-ttu-id="76e56-122">Il [passaggio di strutture](../../../docs/framework/interop/passing-structures.md) e l'[implementazione di funzioni di callback](../../../docs/framework/interop/callback-functions.md) sono casi particolari.</span><span class="sxs-lookup"><span data-stu-id="76e56-122">[Passing structures](../../../docs/framework/interop/passing-structures.md) and [implementing callback functions](../../../docs/framework/interop/callback-functions.md) are special cases.</span></span>  
   
- <span data-ttu-id="018c4-123">Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="018c4-123">For examples that demonstrate how to construct .NET-based declarations to be used with platform invoke, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
+ <span data-ttu-id="76e56-123">Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="76e56-123">For examples that demonstrate how to construct .NET-based declarations to be used with platform invoke, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
   
-## <a name="a-closer-look-at-platform-invoke"></a><span data-ttu-id="018c4-124">Informazioni dettagliate su platform invoke</span><span class="sxs-lookup"><span data-stu-id="018c4-124">A closer look at platform invoke</span></span>  
- <span data-ttu-id="018c4-125">Platform invoke si basa sui metadati per individuare le funzioni esportate ed eseguire il marshalling degli argomenti in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="018c4-125">Platform invoke relies on metadata to locate exported functions and marshal their arguments at run time.</span></span> <span data-ttu-id="018c4-126">Nella figura seguente viene illustrato questo processo.</span><span class="sxs-lookup"><span data-stu-id="018c4-126">The following illustration shows this process.</span></span>  
+## <a name="a-closer-look-at-platform-invoke"></a><span data-ttu-id="76e56-124">Informazioni dettagliate su platform invoke</span><span class="sxs-lookup"><span data-stu-id="76e56-124">A closer look at platform invoke</span></span>  
+ <span data-ttu-id="76e56-125">Platform invoke si basa sui metadati per individuare le funzioni esportate ed eseguire il marshalling degli argomenti in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="76e56-125">Platform invoke relies on metadata to locate exported functions and marshal their arguments at run time.</span></span> <span data-ttu-id="76e56-126">Nella figura seguente viene illustrato questo processo.</span><span class="sxs-lookup"><span data-stu-id="76e56-126">The following illustration shows this process.</span></span>  
   
- <span data-ttu-id="018c4-127">![Platform invoke](../../../docs/framework/interop/media/pinvoke.gif "pinvoke")</span><span class="sxs-lookup"><span data-stu-id="018c4-127">![Platform invoke](../../../docs/framework/interop/media/pinvoke.gif "pinvoke")</span></span>  
-<span data-ttu-id="018c4-128">Chiamata di platform invoke a una funzione DLL non gestita</span><span class="sxs-lookup"><span data-stu-id="018c4-128">A platform invoke call to an unmanaged DLL function</span></span>  
+ <span data-ttu-id="76e56-127">![Platform invoke](../../../docs/framework/interop/media/pinvoke.gif "pinvoke")</span><span class="sxs-lookup"><span data-stu-id="76e56-127">![Platform invoke](../../../docs/framework/interop/media/pinvoke.gif "pinvoke")</span></span>  
+<span data-ttu-id="76e56-128">Chiamata di platform invoke a una funzione DLL non gestita</span><span class="sxs-lookup"><span data-stu-id="76e56-128">A platform invoke call to an unmanaged DLL function</span></span>  
   
- <span data-ttu-id="018c4-129">Quando platform invoke chiama una funzione non gestita, esegue la sequenza di azioni seguente:</span><span class="sxs-lookup"><span data-stu-id="018c4-129">When platform invoke calls an unmanaged function, it performs the following sequence of actions:</span></span>  
+ <span data-ttu-id="76e56-129">Quando platform invoke chiama una funzione non gestita, esegue la sequenza di azioni seguente:</span><span class="sxs-lookup"><span data-stu-id="76e56-129">When platform invoke calls an unmanaged function, it performs the following sequence of actions:</span></span>  
   
-1.  <span data-ttu-id="018c4-130">Individua la DLL contenente la funziona.</span><span class="sxs-lookup"><span data-stu-id="018c4-130">Locates the DLL containing the function.</span></span>  
+1.  <span data-ttu-id="76e56-130">Individua la DLL contenente la funziona.</span><span class="sxs-lookup"><span data-stu-id="76e56-130">Locates the DLL containing the function.</span></span>  
   
-2.  <span data-ttu-id="018c4-131">Carica la DLL in memoria.</span><span class="sxs-lookup"><span data-stu-id="018c4-131">Loads the DLL into memory.</span></span>  
+2.  <span data-ttu-id="76e56-131">Carica la DLL in memoria.</span><span class="sxs-lookup"><span data-stu-id="76e56-131">Loads the DLL into memory.</span></span>  
   
-3.  <span data-ttu-id="018c4-132">Individua l'indirizzo della funzione in memoria ed effettua il push degli argomenti nello stack, eseguendo il marshalling dei dati in base alle necessità.</span><span class="sxs-lookup"><span data-stu-id="018c4-132">Locates the address of the function in memory and pushes its arguments onto the stack, marshaling data as required.</span></span>  
+3.  <span data-ttu-id="76e56-132">Individua l'indirizzo della funzione in memoria ed effettua il push degli argomenti nello stack, eseguendo il marshalling dei dati in base alle necessità.</span><span class="sxs-lookup"><span data-stu-id="76e56-132">Locates the address of the function in memory and pushes its arguments onto the stack, marshaling data as required.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="018c4-133">L'individuazione e il caricamento della DLL e l'individuazione dell'indirizzo della funzione in memoria si verificano solo alla prima chiamata alla funzione.</span><span class="sxs-lookup"><span data-stu-id="018c4-133">Locating and loading the DLL, and locating the address of the function in memory occur only on the first call to the function.</span></span>  
+    >  <span data-ttu-id="76e56-133">L'individuazione e il caricamento della DLL e l'individuazione dell'indirizzo della funzione in memoria si verificano solo alla prima chiamata alla funzione.</span><span class="sxs-lookup"><span data-stu-id="76e56-133">Locating and loading the DLL, and locating the address of the function in memory occur only on the first call to the function.</span></span>  
   
-4.  <span data-ttu-id="018c4-134">Trasferisce il controllo alla funzione non gestita.</span><span class="sxs-lookup"><span data-stu-id="018c4-134">Transfers control to the unmanaged function.</span></span>  
+4.  <span data-ttu-id="76e56-134">Trasferisce il controllo alla funzione non gestita.</span><span class="sxs-lookup"><span data-stu-id="76e56-134">Transfers control to the unmanaged function.</span></span>  
   
- <span data-ttu-id="018c4-135">Platform invoke dà luogo a eccezioni generate dalla funzione non gestita per il chiamante gestito.</span><span class="sxs-lookup"><span data-stu-id="018c4-135">Platform invoke throws exceptions generated by the unmanaged function to the managed caller.</span></span>  
+ <span data-ttu-id="76e56-135">Platform invoke dà luogo a eccezioni generate dalla funzione non gestita per il chiamante gestito.</span><span class="sxs-lookup"><span data-stu-id="76e56-135">Platform invoke throws exceptions generated by the unmanaged function to the managed caller.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="018c4-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="018c4-136">See Also</span></span>  
- [<span data-ttu-id="018c4-137">Interoperabilità con codice non gestito</span><span class="sxs-lookup"><span data-stu-id="018c4-137">Interoperating with Unmanaged Code</span></span>](../../../docs/framework/interop/index.md)  
- [<span data-ttu-id="018c4-138">Esempi di platform invoke</span><span class="sxs-lookup"><span data-stu-id="018c4-138">Platform Invoke Examples</span></span>](../../../docs/framework/interop/platform-invoke-examples.md)  
- [<span data-ttu-id="018c4-139">Marshalling di interoperabilità</span><span class="sxs-lookup"><span data-stu-id="018c4-139">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)  
+## <a name="see-also"></a><span data-ttu-id="76e56-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="76e56-136">See Also</span></span>  
+ [<span data-ttu-id="76e56-137">Interoperabilità con codice non gestito</span><span class="sxs-lookup"><span data-stu-id="76e56-137">Interoperating with Unmanaged Code</span></span>](../../../docs/framework/interop/index.md)  
+ [<span data-ttu-id="76e56-138">Esempi di platform invoke</span><span class="sxs-lookup"><span data-stu-id="76e56-138">Platform Invoke Examples</span></span>](../../../docs/framework/interop/platform-invoke-examples.md)  
+ [<span data-ttu-id="76e56-139">Marshalling di interoperabilità</span><span class="sxs-lookup"><span data-stu-id="76e56-139">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)  

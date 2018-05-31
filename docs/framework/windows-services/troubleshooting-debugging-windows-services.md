@@ -1,13 +1,6 @@
 ---
 title: 'Risoluzione dei problemi: debug dei servizi Windows'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - debugging Windows Service applications
 - debugging [Visual Studio], Windows services
@@ -18,22 +11,20 @@ helpviewer_keywords:
 - services, debugging
 - Windows Service applications, troubleshooting
 ms.assetid: cf859d4c-f04c-4cb7-81e3-bc7de8bea190
-caps.latest.revision: "8"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: f38e65e93d4e6668795bf254573993d5100e2328
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 77a0c19c2da2d1886beaf396650fa024fc1243a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33510137"
 ---
-# <a name="troubleshooting-debugging-windows-services"></a><span data-ttu-id="6352c-102">Risoluzione dei problemi: debug dei servizi Windows</span><span class="sxs-lookup"><span data-stu-id="6352c-102">Troubleshooting: Debugging Windows Services</span></span>
-<span data-ttu-id="6352c-103">Quando si esegue il debug di un'applicazione di servizio Windows, il servizio e **Windows Service Manager** interagire.</span><span class="sxs-lookup"><span data-stu-id="6352c-103">When you debug a Windows service application, your service and the **Windows Service Manager** interact.</span></span> <span data-ttu-id="6352c-104">Il **Service Manager** avvia il servizio chiamando il <xref:System.ServiceProcess.ServiceBase.OnStart%2A> (metodo), quindi attende 30 secondi per il <xref:System.ServiceProcess.ServiceBase.OnStart%2A> restituzione del metodo.</span><span class="sxs-lookup"><span data-stu-id="6352c-104">The **Service Manager** starts your service by calling the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, and then waits 30 seconds for the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method to return.</span></span> <span data-ttu-id="6352c-105">Se il metodo non restituisce in questo periodo, il gestore viene visualizzato un errore che può essere avviato il servizio.</span><span class="sxs-lookup"><span data-stu-id="6352c-105">If the method does not return in this time, the manager shows an error that the service cannot be started.</span></span>  
+# <a name="troubleshooting-debugging-windows-services"></a><span data-ttu-id="8c760-102">Risoluzione dei problemi: debug dei servizi Windows</span><span class="sxs-lookup"><span data-stu-id="8c760-102">Troubleshooting: Debugging Windows Services</span></span>
+<span data-ttu-id="8c760-103">Quando si esegue il debug di un'applicazione di servizio Windows, il servizio e **Windows Service Manager** interagiscono.</span><span class="sxs-lookup"><span data-stu-id="8c760-103">When you debug a Windows service application, your service and the **Windows Service Manager** interact.</span></span> <span data-ttu-id="8c760-104">**Service Manager** avvia il servizio chiamando il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, quindi attende 30 secondi che il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> restituisca il controllo.</span><span class="sxs-lookup"><span data-stu-id="8c760-104">The **Service Manager** starts your service by calling the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, and then waits 30 seconds for the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method to return.</span></span> <span data-ttu-id="8c760-105">Se il metodo non restituisce il controllo entro questo periodo, il gestore visualizza un errore per indicare che non è possibile avviare il servizio.</span><span class="sxs-lookup"><span data-stu-id="8c760-105">If the method does not return in this time, the manager shows an error that the service cannot be started.</span></span>  
   
- <span data-ttu-id="6352c-106">Quando esegue il debug la <xref:System.ServiceProcess.ServiceBase.OnStart%2A> (metodo), come descritto in [procedura: eseguire il Debug di applicazioni di servizio Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md), è necessario essere a conoscenza di questo periodo di 30 secondi.</span><span class="sxs-lookup"><span data-stu-id="6352c-106">When you debug the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method as described in [How to: Debug Windows Service Applications](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md), you must be aware of this 30-second period.</span></span> <span data-ttu-id="6352c-107">Se si inserisce un punto di interruzione di <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metodo e non eseguire un'istruzione entro 30 secondi, il gestore non avvierà il servizio.</span><span class="sxs-lookup"><span data-stu-id="6352c-107">If you place a breakpoint in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method and do not step through it in 30 seconds, the manager will not start the service.</span></span>  
+ <span data-ttu-id="8c760-106">Quando si esegue il debug del metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, come descritto in [Procedura: Eseguire il debug di applicazioni di servizio per Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md), è necessario essere a conoscenza di questo periodo di 30 secondi.</span><span class="sxs-lookup"><span data-stu-id="8c760-106">When you debug the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method as described in [How to: Debug Windows Service Applications](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md), you must be aware of this 30-second period.</span></span> <span data-ttu-id="8c760-107">Se si inserisce un punto di interruzione nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e non si procede entro 30 secondi, il gestore non avvierà il servizio.</span><span class="sxs-lookup"><span data-stu-id="8c760-107">If you place a breakpoint in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method and do not step through it in 30 seconds, the manager will not start the service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6352c-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6352c-108">See Also</span></span>  
- [<span data-ttu-id="6352c-109">Procedura: eseguire il debug di applicazioni di servizio per Windows</span><span class="sxs-lookup"><span data-stu-id="6352c-109">How to: Debug Windows Service Applications</span></span>](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [<span data-ttu-id="6352c-110">Introduzione alle applicazioni di servizio Windows</span><span class="sxs-lookup"><span data-stu-id="6352c-110">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+## <a name="see-also"></a><span data-ttu-id="8c760-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8c760-108">See Also</span></span>  
+ [<span data-ttu-id="8c760-109">Procedura: eseguire il debug di applicazioni di servizio per Windows</span><span class="sxs-lookup"><span data-stu-id="8c760-109">How to: Debug Windows Service Applications</span></span>](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [<span data-ttu-id="8c760-110">Introduzione alle applicazioni di servizio Windows</span><span class="sxs-lookup"><span data-stu-id="8c760-110">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
