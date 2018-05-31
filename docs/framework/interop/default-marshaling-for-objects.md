@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94377fb2079689e7b6af2c94fa24ca2214a5c729
 ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312183"
 ---
 # <a name="default-marshaling-for-objects"></a>Marshalling predefinito per gli oggetti
 I parametri e i campi tipizzati come <xref:System.Object?displayProperty=nameWithType> possono essere esposti al codice non gestito come uno dei tipi seguenti:  

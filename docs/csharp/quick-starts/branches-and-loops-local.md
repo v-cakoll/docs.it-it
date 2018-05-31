@@ -3,11 +3,12 @@ title: Esercitazione su rami e cicli - Guide introduttive locali per C#
 description: In questa guida introduttiva dedicata ai rami e ai cicli si scrive il codice C# per esplorare la sintassi del linguaggio che supporta le diramazioni condizionali e i cicli per eseguire ripetutamente le istruzioni.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 711cc9b40284076d28b5003935bbbbb77dc36664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a25ea7f266405a017f6f4576659195b2ac1afbf4
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457904"
 ---
 # <a name="branches-and-loops"></a>Rami e cicli
 

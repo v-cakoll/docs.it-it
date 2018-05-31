@@ -5,11 +5,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: ca70f0c8237a5d9cc4ad9e0bb8c1947c871ce064
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 659562864ad323162f15351aa960c2a54164c77d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458060"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Elaborazione del file XML (Guida per programmatori C#)
 Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. Per informazioni sull'applicazione di tag al codice, vedere [Tag consigliati per i commenti relativi alla documentazione](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md). La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML possono usare la stringa ID per identificare il corrispondente elemento metadati/reflection di .NET Framework a cui si applica la documentazione.  
@@ -40,7 +41,7 @@ Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del 
   
     -   Tipi intrinseci (ad esempio, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF ed ELEMENT_TYPE_VOID) vengono rappresentati come nome completo del tipo completo corrispondente, ad esempio System.Int32 o System.TypedReference.  
   
-    -   ELEMENT_TYPE_PTR viene rappresentato con '*' dopo il tipo modificato.  
+    -   ELEMENT_TYPE_PTR viene rappresentato con '\*' dopo il tipo modificato.  
   
     -   ELEMENT_TYPE_BYREF viene rappresentato con "\@" dopo il tipo modificato.  
   
@@ -68,11 +69,11 @@ Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del 
   
 -   Limitatamente agli operatori di conversione (op_Implicit e op_Explicit), il valore restituito del metodo viene codificato con '~' seguito dal tipo restituito, codificato come descritto in precedenza.  
   
--   Nel caso di tipi generici, il nome del tipo verrà seguito da un apice inverso e quindi da un numero che indica il numero di parametri di tipo generici.  Ad esempio,  
+-   Nel caso di tipi generici, il nome del tipo è seguito da un apice inverso e quindi da un numero che indica il numero di parametri di tipo generici. Ad esempio:
   
      ``<member name="T:SampleClass`2">`` è il tag di un tipo che viene definito come `public class SampleClass<T, U>`.  
   
-     Nel caso di metodi che accettano tipi generici come parametri, i parametri dei tipi generici sono caratterizzati da numeri preceduti da apici inversi, ad esempio \`0,`1).  Ogni numero rappresenta la notazione della matrice in base zero per i parametri generici del tipo.  
+     Nel caso di metodi che accettano tipi generici come parametri, i parametri dei tipi generici sono caratterizzati da numeri preceduti da apici inversi, ad esempio \`0,\`1. Ogni numero rappresenta la notazione della matrice in base zero per i parametri generici del tipo.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato come vengono generate le stringhe di ID per una classe e i relativi membri:  

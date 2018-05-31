@@ -4,11 +4,12 @@ description: Il comando dotnet publish consente di pubblicare il progetto .NET C
 author: mairaw
 ms.author: mairaw
 ms.date: 03/10/2018
-ms.openlocfilehash: f4c422eab20f5fe2d1b0c09133953f22a539474e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e7ce5ce1240f03f53f6e120dfce53d15917425f
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472630"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -89,8 +90,8 @@ Non esegue un ripristino implicito quando si esegue il comando.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Specifica il percorso della directory di output. Se non specificato, il percorso predefinito sarà *./bin/[configuration]/[framework]/* per una distribuzione dipendente da framework o *./bin/[configuration]/[framework]/[runtime]* per una distribuzione indipendente.
-Se viene specificato un percorso relativo, la directory di output generata è relativa al percorso del file di progetto e non alla directory di lavoro corrente.
+Specifica il percorso della directory di output. Se non specificato, il percorso predefinito sarà *./bin/[configuration]/[framework]/publish/* per una distribuzione dipendente da framework o *./bin/[configuration]/[framework]/[runtime]/publish/* per una distribuzione indipendente.
+Se il percorso è relativo, la directory di output generata è relativa al percorso del file di progetto e non alla directory di lavoro corrente.
 
 `--self-contained`
 
@@ -128,8 +129,8 @@ Specifica uno o più [manifesti di destinazione](../deploying/runtime-store.md) 
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Specifica il percorso della directory di output. Se non specificato, il percorso predefinito sarà *./bin/[configuration]/[framework]/* per una distribuzione dipendente da framework o *./bin/[configuration]/[framework]/[runtime]* per una distribuzione indipendente.
-Se viene specificato un percorso relativo, la directory di output generata è relativa al percorso del file di progetto e non alla directory di lavoro corrente.
+Specifica il percorso della directory di output. Se non specificato, il percorso predefinito sarà *./bin/[configuration]/[framework]/publish/* per una distribuzione dipendente da framework o *./bin/[configuration]/[framework]/[runtime]/publish/* per una distribuzione indipendente.
+Se il percorso è relativo, la directory di output generata è relativa al percorso del file di progetto e non alla directory di lavoro corrente.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 

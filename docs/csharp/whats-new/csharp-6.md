@@ -3,11 +3,12 @@ title: Novità di C# 6 - Guida a C#
 description: Informazioni sulle nuove funzionalità di C# versione 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 00aeb3ed940acfca748a1a9eb876fd0133baf6c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458005"
 ---
 # <a name="whats-new-in-c-6"></a>Novità di C# 6
 
@@ -351,7 +352,7 @@ Ora è possibile usarli anche con le raccolte <xref:System.Collections.Generic.D
 
 Questa funzionalità significa che i contenitori associativi possono essere inizializzati usando una sintassi simile a ciò che è stato usato per i contenitori sequenziali in diverse versioni.
 
-### <a name="extension-add-methods-in-collection-initializers"></a>Metodi di estensione `Add` negli inizializzatori di insieme
+## <a name="extension-add-methods-in-collection-initializers"></a>Metodi di estensione `Add` negli inizializzatori di insieme
 
 Un'altra funzionalità che semplifica l'inizializzazione della raccolta è la possibilità di usare un *metodo di estensione* per il metodo `Add`. Questa funzionalità è stata aggiunta per la parità con Visual Basic. 
 
@@ -370,10 +371,7 @@ Ora è possibile, ma solo se si crea un metodo di estensione che esegue il mappi
 
 [!code-csharp[ExtensionAdd](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAdd)]
 
-L'uso di questa funzionalità consente di eseguire il mapping di qualsiasi metodo che aggiunge elementi a una raccolta a un metodo denominato `Add` creando un metodo di estensione: 
-
-[!code-csharp[Enrollment](../../../samples/snippets/csharp/new-in-6/enrollment.cs#Enrollment)]
-[!code-csharp[ExtensionAddSample](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAddSample)]
+L'uso di questa funzionalità consente di eseguire il mapping di qualsiasi metodo che aggiunge elementi a una raccolta a un metodo denominato `Add` creando un metodo di estensione.
 
 ## <a name="improved-overload-resolution"></a>Risoluzione dell'overload migliorata
 

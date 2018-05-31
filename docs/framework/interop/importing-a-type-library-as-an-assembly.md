@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 89479ca4a41f761d4aacaf6d8d962bfba62be811
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393416"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importazione di una libreria dei tipi come assembly
 In genere, le definizioni dei tipi COM sono incluse in una libreria dei tipi. Al contrario, i compilatori conformi a CLS producono metadati dei tipi in un assembly. Le due origini delle informazioni sui tipi sono piuttosto diverse. Questo argomento descrive le tecniche per la generazione di metadati da una libreria dei tipi. L'assembly risultante è definito un assembly di interoperabilità e le informazioni sui tipi che contiene permettono alle applicazioni .NET Framework di usare tipi COM.  
@@ -74,8 +75,8 @@ In genere, le definizioni dei tipi COM sono incluse in una libreria dei tipi. Al
  [Esposizione di componenti COM a .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
  [Riepilogo della conversione da libreria dei tipi ad assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
  [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [Personalizzazione di wrapper Standard](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
- [Utilizzo di tipi COM nel codice gestito](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+ [Personalizzazione di wrapper standard](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
+ [Uso dei tipi COM nel codice gestito](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
  [Compilazione di un progetto di interoperabilità](../../../docs/framework/interop/compiling-an-interop-project.md)  
  [Distribuzione di una applicazione di interoperabilità](../../../docs/framework/interop/deploying-an-interop-application.md)  
  [Procedura: aggiungere riferimenti alle librerie dei tipi](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  

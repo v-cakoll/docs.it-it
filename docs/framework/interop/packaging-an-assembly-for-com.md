@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392396"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Preparazione di un assembly per COM
 Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui tipi gestiti che prevedono di incorporare nella propria applicazione:  
@@ -37,7 +38,7 @@ Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui ti
   
      Le classi gestite che implementano l'interfaccia di classe (interfaccia generata dall'interoperabilità COM) sono soggette a restrizioni di controllo delle versioni.  
   
-     Per istruzioni sull'utilizzo dell'interfaccia di classe, vedere [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface).  
+     Per istruzioni sull'uso dell'interfaccia della classe, vedere [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
 -   Istruzioni di distribuzione  
   
@@ -84,7 +85,7 @@ Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui ti
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)  
  [Qualificazione di tipi .NET per l'interoperabilità](qualifying-net-types-for-interoperation.md)  
- [Introduzione all'interfaccia di classe](com-callable-wrapper.md#introducing-the-class-interface)  
+ [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface)  
  [Considerazioni sulla sicurezza degli assembly](../app-domains/assembly-security-considerations.md)  
  [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](../tools/tlbexp-exe-type-library-exporter.md)  
  [Registrazione di assembly presso COM](registering-assemblies-with-com.md)  

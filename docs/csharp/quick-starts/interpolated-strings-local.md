@@ -5,11 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 80b7a2c39094f1101e714b47f0e77f0a7c4907f2
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472763"
 ---
 # <a name="string-interpolation"></a>Interpolazione di stringhe
 
@@ -48,13 +49,13 @@ Ora si proveranno altri esempi di interpolazione di stringhe con altri tipi di d
 
 Nella sezione precedente è stata usata l'interpolazione di stringhe per inserire una stringa in un'altra. Il risultato di un'espressione interpolata può avere qualsiasi tipo di dati. Includiamo valori di vari tipi di dati in una stringa interpolata.
 
-Nell'esempio seguente, in primo luogo, definire un tipo di dati personalizzato `Vegetable` con la proprietà `Name` [e](../properties.md) il metodo `ToString`. Il codice client può usare il metodo per ottenere la rappresentazione di stringa di un'istanza di `Vegetable`. Nell'esempio il metodo `Vegetable.ToString` restituisce il valore della proprietà `Name` inizializzata nel costruttore `Vegetable`:
+Nell'esempio seguente, in primo luogo, viene definito un tipo di dati [class](../programming-guide/classes-and-structs/classes.md) `Vegetable` con la [proprietà](../properties.md) `Name` e il [metodo](../methods.md) `ToString` che esegue l'[override](../language-reference/keywords/override.md) del comportamento del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il [modificatore di accesso `public`](../language-reference/keywords/public.md) rende tale metodo disponibile per qualsiasi codice client per ottenere la rappresentazione stringa di un'istanza di `Vegetable`. Nell'esempio il metodo `Vegetable.ToString` restituisce il valore della proprietà `Name` inizializzata nel [costruttore](../programming-guide/classes-and-structs/constructors.md) `Vegetable`:
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-Creare un'istanza del tipo `Vegetable` usando la parola chiave `new` e fornendo un parametro di nome per il costruttore `Vegetable`:
+Viene quindi creata un'istanza della classe `Vegetable` usando la [parola chiave `new`](../language-reference/keywords/new-operator.md)e fornendo un parametro di nome per il costruttore `Vegetable`:
 
 ```csharp
 var item = new Vegetable("eggplant");
@@ -93,7 +94,7 @@ L'espressione interpolata `item` nella stringa interpolata restituisce il testo 
 
 - Se l'espressione interpolata restituisce `null`, viene usata una stringa vuota ("" o <xref:System.String.Empty?displayProperty=nameWithType>).
 
-- Se l'espressione interpolata non restituisce `null`, in genere viene chiamato il metodo `ToString` del tipo di risultato. È possibile testare questo processo aggiornando l'implementazione del metodo `Vegetable.ToString`. È addirittura possibile evitare di implementare il metodo `ToString`, poiché ogni tipo di dati C# prevede un'implementazione di questo metodo. Per il test di questo funzionamento, impostare come commento la definizione del metodo `Vegetable.ToString` dell'esempio (facendola precedere da un simbolo di commento `//`). Nell'output la stringa "eggplant" viene sostituita dal nome completo del tipo ("Vegetable" in questo esempio), ovvero il comportamento predefinito del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il comportamento predefinito del metodo `ToString` per un tipo di enumerazione prevede la restituzione della rappresentazione di stringa di un valore usato nella definizione dell'enumerazione.
+- Se l'espressione interpolata non restituisce `null`, in genere viene chiamato il metodo `ToString` del tipo di risultato. È possibile testare questo processo aggiornando l'implementazione del metodo `Vegetable.ToString`. Potrebbe anche non essere necessario implementare il metodo `ToString`, poiché ogni tipo prevede un'implementazione di questo metodo. Per il test di questo funzionamento, impostare come commento la definizione del metodo `Vegetable.ToString` nell'esempio (facendola precedere dal simbolo di commento `//`). Nell'output la stringa "eggplant" viene sostituita dal nome completo del tipo ("Vegetable" in questo esempio), ovvero il comportamento predefinito del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il comportamento predefinito del metodo `ToString` per un tipo di enumerazione prevede la restituzione della rappresentazione stringa di un valore usato nella definizione dell'enumerazione.
 
 Nell'output di questo esempio la data è troppo precisa (il prezzo delle melanzane non varia ogni secondo) e il valore del prezzo non indica una valuta. Nella sezione successiva si apprenderà come risolvere questi problemi controllando la formattazione delle rappresentazioni di stringa dei risultati delle espressioni.
 

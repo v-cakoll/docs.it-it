@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0333cd73240e685b46917d85afe0876532db3fd1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391898"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Procedura: fare riferimento a tipi .NET da COM
 Dal punto di vista del codice client e server, le differenze tra COM e .NET Framework sono in gran parte invisibili. I client di Microsoft Visual Basic possono visualizzare un oggetto .NET nel Visualizzatore oggetti, che espone i metodi e la sintassi, le proprietà e i campi dell'oggetto esattamente come se si trattasse di un normale oggetto COM.  
@@ -45,5 +46,5 @@ Dal punto di vista del codice client e server, le differenze tra COM e .NET Fram
 ## <a name="see-also"></a>Vedere anche  
  [Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)  
  [Registrazione di assembly presso COM](registering-assemblies-with-com.md)  
- [La chiamata a un oggetto .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
+ [Chiamata di un oggetto .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
  [Distribuzione di un'applicazione per l'accesso COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

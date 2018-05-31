@@ -15,9 +15,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 52a78e0c3969e879bf2fd1b1f5c41b2caac2ba11
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391121"
 ---
 # <a name="marshaling-strings"></a>Marshalling di stringhe
 Platform invoke copia parametri stringa, convertendoli dal formato .NET Framework (Unicode) al formato non gestito (ANSI) all'occorrenza. Dato che le stringhe gestite non sono modificabili, platform invoke non le copia di nuovo dalla memoria non gestita alla memoria gestita quando la funzione restituisce il controllo.  
@@ -39,7 +40,7 @@ Platform invoke copia parametri stringa, convertendoli dal formato .NET Framewor
   
 ## <a name="see-also"></a>Vedere anche  
  [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md)  
- [Tipi di dati di Platform Invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
+ [Tipi di dati platform invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
  [Marshalling di classi, strutture e unioni](marshaling-classes-structures-and-unions.md)  
  [Marshalling di matrici di tipi](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))  
  [Esempi vari di marshalling](https://msdn.microsoft.com/library/a915c948-54e9-4d0f-a525-95a77fd8ed70(v=vs.100))

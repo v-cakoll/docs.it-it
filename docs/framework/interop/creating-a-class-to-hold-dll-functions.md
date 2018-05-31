@@ -14,16 +14,17 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 09088d1ac0a8312ee5832a5f3bc0547e6654de93
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387062"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>Creazione di una classe che contenga le funzioni di DLL
 Il wrapping di una funzione di DLL frequentemente usata in una classe gestita è un modo efficace per incapsulare la funzionalità della piattaforma. Anche se non è obbligatorio in tutti i casi, è preferibile fornire un wrapper di classe, perché la definizione delle funzioni di DLL è un'attività complessa e soggetta a errori. In caso di programmazione in C# o in Visual Basic, è necessario dichiarare le funzioni di DLL in una classe o in un modulo Visual Basic.  
   
  All'interno di una classe si definisce un metodo statico per ogni funzione di DLL che si vuole chiamare. La definizione può includere informazioni aggiuntive, come il set di caratteri o la convenzione di chiamata usata per passare gli argomenti del metodo. Se si omettono queste informazioni, verranno usate le impostazioni predefinite. Per un elenco completo delle opzioni di dichiarazione e delle relative impostazioni predefinite, vedere [Creazione di prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
   
- Una volta eseguito il wrapping, è possibile chiamare i metodi sulla classe, come si chiamano metodi statici su qualsiasi altra classe. Con platform invoke, la funzione esportata sottostante viene gestita automaticamente.  
+ Una volta effettuato il wrapping è possibile chiamare i metodi della classe, così come si chiamano i metodi statici di qualsiasi altra classe. Con platform invoke, la funzione esportata sottostante viene gestita automaticamente.  
   
  Quando si progetta una classe gestita che supporti platform invoke, è necessario tenere in considerazione le relazioni tra le classi e le funzioni di DLL. Ad esempio, è possibile eseguire queste operazioni:  
   

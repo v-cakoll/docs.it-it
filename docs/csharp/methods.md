@@ -3,13 +3,14 @@ title: Metodi - Guida a C#
 description: Panoramica dei metodi e dei parametri e dei valori restituiti dei metodi
 author: rpetrusha
 ms.author: ronpet
-ms.date: 10/26/2016
+ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 6a99ccc0157b044eb1a9ed7189de94ca69225d1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9d78ecfc3911cf959333c098a66614239609c4e
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457956"
 ---
 # <a name="methods"></a>Metodi #
 
@@ -80,7 +81,7 @@ Quando si esegue una chiamata a un metodo è anche possibile usare *argomenti de
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
  <a name="inherited"></a>
- ##<a name="inherited-and-overridden-methods"></a>Metodi ereditati e sottoposti a override ##
+ ## <a name="inherited-and-overridden-methods"></a>Metodi ereditati e sottoposti a override ##
 
 Oltre ai membri definiti in modo esplicito in un tipo, un tipo eredita i membri definiti nelle relative classi base. Poiché tutti i tipi del sistema di tipi gestiti ereditano direttamente o indirettamente dalla classe <xref:System.Object>, tutti i tipi di ereditano i relativi membri, ad esempio <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType> e <xref:System.Object.ToString>. L'esempio seguente definisce una classe `Person`, crea l'istanza di due oggetti `Person` e chiama il metodo `Person.Equals` per determinare se i due oggetti sono uguali. Il metodo `Equals`, tuttavia, non è definito nella classe `Person`; viene ereditato da <xref:System.Object>.
 
@@ -258,7 +259,7 @@ Se si contrassegna un metodo con il modificatore [async](language-reference/keyw
 > [!NOTE]
 > Un metodo async viene restituito al chiamante quando rileva il primo oggetto atteso che non è ancora completo o raggiunge la fine del metodo async, qualunque si verifichi prima.
 
-Un metodo asincrono può avere un tipo restituito <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> o `void`. Il tipo restituito `void` viene usato principalmente per definire i gestori eventi in cui è necessario un tipo restituito `void`. Un metodo asincrono che restituisce `void` non può essere atteso e il chiamante di un metodo che restituisce void non può intercettare le eccezioni generate dal metodo. Questa limitazione verrà risolta al rilascio di C# 7.0 per consentire a un metodo asincrono [ di restituire qualsiasi tipo attività](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
+Un metodo asincrono può avere un tipo restituito <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> o `void`. Il tipo restituito `void` viene usato principalmente per definire i gestori eventi in cui è necessario un tipo restituito `void`. Un metodo asincrono che restituisce `void` non può essere atteso e il chiamante di un metodo che restituisce void non può intercettare le eccezioni generate dal metodo. A partire da C# 7.0, un metodo asincrono può avere [qualsiasi tipo restituito di tipo attività](./whats-new/csharp-7.md#generalized-async-return-types).
 
 Nell'esempio seguente `DelayAsync` è un metodo asincrono con un'istruzione return che restituisce un valore Integer. Poiché si tratta di un metodo asincrono, la dichiarazione del metodo deve avere un tipo restituito di `Task<int>`. Poiché il tipo restituito è `Task<int>`, la valutazione dell'espressione `await` in `DoSomethingAsync` genera un numero intero come dimostra l'istruzione `int result = await delayTask` seguente.
 

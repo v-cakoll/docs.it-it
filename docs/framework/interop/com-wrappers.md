@@ -13,9 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57483f099bb71a1ab685cedf148d4343c12983dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390523"
 ---
 # <a name="com-wrappers"></a>Wrapper COM
 COM è diverso dal modello a oggetti .NET Framework per diversi aspetti importanti:  
@@ -37,5 +38,5 @@ Cenni preliminari sul wrapper COM
  [Interoperabilità COM avanzata](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))  
  [Runtime Callable Wrapper](runtime-callable-wrapper.md)  
  [COM Callable Wrapper](com-callable-wrapper.md)  
- [Personalizzazione di wrapper Standard](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
+ [Personalizzazione di wrapper standard](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
  [Procedura: Personalizzare Runtime Callable Wrapper](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))

@@ -1,5 +1,5 @@
 ---
-title: Equivalenza dei tipi e tipi di interoperabilità incorporati
+title: Equivalenza del tipo e tipi di interoperabilità incorporati
 ms.date: 03/30/2017
 helpviewer_keywords:
 - type equivalence
@@ -11,11 +11,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e3eeba609349bb9d5b7c68e15e0e0e6ff3f1b7ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390933"
 ---
-# <a name="type-equivalence-and-embedded-interop-types"></a>Equivalenza dei tipi e tipi di interoperabilità incorporati
+# <a name="type-equivalence-and-embedded-interop-types"></a>Equivalenza del tipo e tipi di interoperabilità incorporati
 
 A partire dal [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Common Language Runtime supporta l'incorporamento di informazioni sui tipi COM direttamente negli assembly gestiti, anziché richiedere agli assembly gestiti di ottenere informazioni sui tipi COM dagli assembly di interoperabilità. Dato che le informazioni sui tipi incorporate includono solo i tipi e membri che vengono effettivamente usati da un assembly gestito, due assembly gestiti potrebbero avere viste diverse dello stesso tipo COM. Ogni assembly gestito a un oggetto <xref:System.Type> diverso per rappresentare la vista specifica del tipo COM. Common Language Runtime supporta l'equivalenza del tipo tra queste viste diverse per interfacce, strutture, enumerazioni e delegati.
 
@@ -32,9 +33,9 @@ Equivalenza del tipo significa che è possibile eseguire il cast di un oggetto C
 
 - I tipi hanno la stessa identità, come descritto nella sezione successiva.
 
-- Entrambi i tipi sono idonei per l'equivalenza del tipo, come descritto nel [dei tipi COM di contrassegnare per l'equivalenza del tipo](#marking-com-types-for-type-equivalence) sezione.
+- Entrambi i tipi sono idonei per l'equivalenza del tipo, come descritto nella sezione [Contrassegno dei tipi COM per l'equivalenza del tipo](#marking-com-types-for-type-equivalence).
 
-### <a name="type-identity"></a>Identità del tipo
+### <a name="type-identity"></a>Identità dei tipi
 
 Due tipi vengono considerati aventi la stessa identità quando i relativi ambiti e identità corrispondono, in altre parole, se ognuno ha l'attributo <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> e i due attributi hanno proprietà <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> e <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> corrispondenti. Il confronto per <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> non applica la distinzione tra maiuscole e minuscole.
 
@@ -55,5 +56,5 @@ Se un tipo non ha l'attributo <xref:System.Runtime.InteropServices.TypeIdentifie
 ## <a name="see-also"></a>Vedere anche
 
 <xref:System.Type.IsEquivalentTo%2A>  
-[Utilizzo di tipi COM nel codice gestito](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+[Uso dei tipi COM nel codice gestito](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
 [Importazione di una libreria dei tipi come assembly](importing-a-type-library-as-an-assembly.md)  

@@ -21,9 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398209"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Creazione di prototipi nel codice gestito
 Questo argomento descrive come accedere alle funzioni non gestite e introduce diversi campi attributo che annotano la definizione di metodo nel codice gestito. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md).  
@@ -97,7 +98,7 @@ using namespace System::Runtime::InteropServices;
 ### <a name="platform-invoke-examples"></a>Esempi di platform invoke  
  Gli esempi di platform invoke in questa sezione illustrano l'uso dell'attributo `RegistryPermission` con i modificatori di percorso stack.  
   
- Nell'esempio di codice seguente, il <xref:System.Security.Permissions.SecurityAction> `Assert`, `Deny`, e `PermitOnly` modificatori vengono ignorati.  
+ Nell'esempio di codice seguente i modificatori <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny` e `PermitOnly` vengono ignorati.  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -225,7 +226,7 @@ interface IDemandStubsItf
  [Specifica di un punto di ingresso](specifying-an-entry-point.md)  
  [Specifica di un set di caratteri](specifying-a-character-set.md)  
  [Esempi di platform invoke](platform-invoke-examples.md)  
- [Considerazioni sulla sicurezza di Platform Invoke](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
+ [Platform invoke (considerazioni sulla sicurezza)](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
  [Identificazione delle funzioni nelle DLL](identifying-functions-in-dlls.md)  
  [Creazione di una classe che contenga le funzioni DLL](creating-a-class-to-hold-dll-functions.md)  
  [Chiamata a una funzione di DLL](calling-a-dll-function.md)

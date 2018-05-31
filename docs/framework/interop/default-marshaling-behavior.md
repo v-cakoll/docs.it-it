@@ -13,9 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
 ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457400"
 ---
 # <a name="default-marshaling-behavior"></a>comportamento predefinito del marshalling
 Il marshalling di interoperabilità opera sulle regole che stabiliscono il comportamento dei dati associati a parametri del metodo durante il passaggio tra memoria gestita e non gestita. Queste regole predefinite controllano tali attività di marshalling come le trasformazioni dei tipi di dati, il fatto che un oggetto chiamato possa modificare i dati passati e restituire tali modifiche al chiamante e le circostanze in cui il gestore di marshalling fornisce ottimizzazioni delle prestazioni.  
@@ -43,7 +44,7 @@ BSTR MethodOne (BSTR b) {
  Il runtime usa sempre il metodo **CoTaskMemFree** per liberare memoria. Se la memoria che si sta usando non è stata allocata con il metodo **CoTaskMemAlloc**, è necessario usare un tipo **IntPtr** e liberare la memoria manualmente mediante il metodo appropriato. Analogamente, è possibile fare in modo che la memoria non venga liberata automaticamente in situazioni in cui la memoria non deve mai essere liberata, ad esempio quando si usa la funzione **GetCommandLine** da Kernel32.dll, che restituisce un puntatore alla memoria del kernel. Per informazioni dettagliate su come liberare manualmente la memoria, vedere [Esempio di buffer](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Marshalling predefinito per le classi  
- È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per effettuare il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia di classe con un'interfaccia di propria scelta, vedere [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface).  
+ È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per effettuare il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia di classe con un'altra interfaccia, vedere [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>Passaggio di classi a COM  
  Quando una classe gestita viene passata a COM, il marshalling di interoperabilità esegue automaticamente il wrapping della classe con un proxy COM e passa l'interfaccia di classe creata dal proxy alla chiamata al metodo COM. Il proxy delega quindi tutte le chiamate sull'interfaccia di classe all'oggetto gestito. Il proxy espone anche altre interfacce non implementate in modo esplicito dalla classe. Il proxy implementa automaticamente interfacce come **IUnknown** e **IDispatch** per conto della classe.  
@@ -345,7 +346,7 @@ interface _Graphics {
 }  
 ```  
   
- Le stesse regole usate per effettuare il marshalling di valori e riferimenti nelle chiamate di platform invoke vengono usate per effettuare il marshalling tramite le interfacce COM. Ad esempio, quando un'istanza del tipo di valore `Point` viene passata da .NET Framework a COM, `Point` viene passato mediante valore. Se il tipo di valore `Point` viene passato mediante riferimento, viene passato un puntatore a un oggetto `Point` nello stack. Il marshalling di interoperabilità non supporta livelli superiori di riferimento indiretto (**punto** \* \*) in entrambe le direzioni.  
+ Le stesse regole usate per effettuare il marshalling di valori e riferimenti nelle chiamate di platform invoke vengono usate per effettuare il marshalling tramite le interfacce COM. Ad esempio, quando un'istanza del tipo di valore `Point` viene passata da .NET Framework a COM, `Point` viene passato mediante valore. Se il tipo di valore `Point` viene passato mediante riferimento, viene passato un puntatore a un oggetto `Point` nello stack. Il gestore marshalling di interoperabilità non supporta livelli superiori di riferimento indiretto (**Point**\*\*) in entrambe le direzioni.  
   
 > [!NOTE]
 >  Le strutture con valore di enumerazione <xref:System.Runtime.InteropServices.LayoutKind> impostato su **Explicit** non possono essere usate nell'interoperabilità COM perché la libreria dei tipi esportata non può esprimere un layout esplicito.  

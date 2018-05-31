@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b05ac1016710109110c3ff9d0d318a71fe0827f1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393150"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshalling predefinito per le matrici
 In un'applicazione costituita interamente da codice gestito Common Language Runtime passa i tipi di matrice come parametri In/Out. Il gestore di marshalling di interoperabilità invece passa una matrice come parametro In per impostazione predefinita.  
@@ -41,9 +42,9 @@ In un'applicazione costituita interamente da codice gestito Common Language Runt
   
 |Tipo di matrice gestita|Tipo di elemento|Classifica|Limite inferiore|Notazione della firma|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|Specificato dal tipo.|Specificata dalla priorità.|Specificato facoltativamente dai limiti.|*tipo di* **[** *n*,*m* **]**|  
+|**ELEMENT_TYPE_ARRAY**|Specificato dal tipo.|Specificata dalla priorità.|Specificato facoltativamente dai limiti.|*type* **[** *n*,*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|Sconosciuto|Sconosciuto|Sconosciuto|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|Specificato dal tipo.|1|0|*tipo di* **[** *n* **]**|  
+|**ELEMENT_TYPE_SZARRAY**|Specificato dal tipo.|1|0|*type* **[** *n* **]**|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Matrici non gestite  

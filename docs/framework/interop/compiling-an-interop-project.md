@@ -13,9 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a6099764fb98604726da99ef71b9c82e9a931bd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388502"
 ---
 # <a name="compiling-an-interop-project"></a>Compilazione di un progetto di interoperabilità
 I progetti di interoperabilità COM che fanno riferimento a uno o più assembly contenenti tipi COM importati vengono compilati come qualunque altro progetto gestito. È possibile fare riferimento agli assembly di interoperabilità in un ambiente di sviluppo quale Visual Studio oppure da un compilatore da riga di comando. In entrambi i casi, perché la compilazione sia corretta, l'assembly di interoperabilità deve trovarsi nella stessa directory degli altri file di progetto.  
@@ -40,7 +41,7 @@ I progetti di interoperabilità COM che fanno riferimento a uno o più assembly 
 ## <a name="see-also"></a>Vedere anche  
  [Esposizione di componenti COM a .NET Framework](exposing-com-components.md)  
  [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../standard/language-independence-and-language-independent-components.md)  
- [Utilizzo di tipi COM nel codice gestito](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+ [Uso dei tipi COM nel codice gestito](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
  [Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
  [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
  [Importazione di una libreria dei tipi come assembly](importing-a-type-library-as-an-assembly.md)

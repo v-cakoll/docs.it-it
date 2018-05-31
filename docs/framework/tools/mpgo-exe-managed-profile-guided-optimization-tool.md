@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410020"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (strumento per l'ottimizzazione guidata da profilo gestito)
 Lo strumento per l'ottimizzazione guidata da profilo gestito (Mpgo.exe) è uno strumento da riga di comando che usa scenari comuni dell'utente finale per ottimizzare gli assembly di immagini native creati dal [generatore di immagini native (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). Attraverso questo strumento è possibile eseguire scenari di training che generano dati di profilatura, Il [generatore di immagini native (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) usa questi dati per ottimizzare gli assembly di applicazioni di immagini native generati. Uno scenario di training è un'esecuzione di test di un uso previsto dell'applicazione. Mpgo.exe è disponibile in Visual Studio Ultimate 2012 e versioni successive. A partire da [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], è possibile utilizzare Mpgo.exe anche per ottimizzare le app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  

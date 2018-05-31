@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 744ce1f2810eee025f071cafaa71e473b6ed4c50
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392853"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedura: configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione
 L'attivazione senza registrazione per i componenti basati su .NET Framework risulta solo leggermente più complessa rispetto a quella per i componenti COM. La configurazione richiede due manifesti:  
@@ -36,7 +37,7 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     Per informazioni sugli elementi del manifesto e i relativi attributi, vedere [manifesti dell'applicazione](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx).  
+     Per informazioni sugli elementi del manifesto e sui relativi attributi, vedere [Application Manifests](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx) (Manifesti delle applicazioni).  
   
 3.  Identificare il proprietario del manifesto. Nell'esempio seguente il proprietario del file manifesto è `myComApp` versione 1.  
   
@@ -76,7 +77,7 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
 5.  Salvare il file manifesto assegnando un nome a questo. Il nome di un manifesto dell'applicazione è costituito dal nome dell'eseguibile dell'assembly seguito dall'estensione manifest. Il nome file del manifesto dell'applicazione per myComApp.exe, ad esempio, è myComApp.exe.manifest.  
   
- Un manifesto dell'applicazione può essere installato nella stessa directory dell'applicazione COM. In alternativa, può essere aggiunto come risorsa al file EXE dell'applicazione. Per ulteriori informazioni, per ulteriori informazioni, vedere [sugli assembly Side-by-Side](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx).  
+ Un manifesto dell'applicazione può essere installato nella stessa directory dell'applicazione COM. In alternativa, può essere aggiunto come risorsa al file EXE dell'applicazione. Per altre informazioni, vedere [About Side-by-Side Assemblies](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx) (Informazioni sugli assembly side-by-side).  
   
 #### <a name="to-create-a-component-manifest"></a>Per creare un manifesto del componente  
   
@@ -173,6 +174,6 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
 ## <a name="see-also"></a>Vedere anche  
  [Interoperabilità COM senza registrazione](registration-free-com-interop.md)  
- [Requisiti per l'interoperabilità COM senza registrazione](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))  
- [Configurazione di componenti COM per l'attivazione senza registrazione](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))  
+ [Requisiti per l'interoperabilità COM senza registrazione](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))  
+ [Configurazione di componenti COM per l'attivazione senza registrazione](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))  
  [Registration-Free Activation of .NET-Based Components: A Walkthrough](https://msdn.microsoft.com/library/ms973915.aspx) (Procedura dettagliata per l'attivazione senza registrazione di componenti basati su .NET)

@@ -12,12 +12,13 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed2a4b91608306021ce510098eaf044520cbb089
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391456"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshalling di diversi tipi di matrici
-Una matrice è un tipo di riferimento nel codice gestito che contiene uno o più elementi dello stesso tipo. Anche se le matrici sono tipi di riferimento, vengono passate come parametri in alle funzioni non gestite. Questo comportamento non è coerente con il modo in cui le matrici gestite vengono passate agli oggetti gestiti, ovvero come parametri in/out. Per ulteriori informazioni, vedere [copia e blocco](copying-and-pinning.md).  
+Una matrice è un tipo di riferimento nel codice gestito che contiene uno o più elementi dello stesso tipo. Anche se le matrici sono tipi di riferimento, vengono passate come parametri in alle funzioni non gestite. Questo comportamento non è coerente con il modo in cui le matrici gestite vengono passate agli oggetti gestiti, ovvero come parametri in/out. Per altri dettagli, vedere [Copia e blocco](copying-and-pinning.md).  
   
  La tabella seguente elenca le opzioni di marshalling delle matrici e ne descrive l'utilizzo.  
   
@@ -85,7 +86,7 @@ Una matrice è un tipo di riferimento nel codice gestito che contiene uno o più
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib. dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) è una libreria non gestita personalizzata contenente implementazioni per le funzioni elencate in precedenza e due variabili di struttura **MYPOINT** e **MYPERSON**. Le strutture contengono gli elementi seguenti:  
+ [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) è una libreria non gestita personalizzata contenente implementazioni per le funzioni elencate in precedenza e due variabili di struttura, ovvero **MYPOINT** e **MYPERSON**. Le strutture contengono gli elementi seguenti:  
   
 ```  
 typedef struct _MYPOINT  
@@ -115,5 +116,5 @@ typedef struct _MYPERSON
   
 ## <a name="see-also"></a>Vedere anche  
  [Marshalling di matrici di tipi](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))  
- [Tipi di dati di Platform Invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
+ [Tipi di dati platform invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
  [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md)

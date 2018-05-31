@@ -15,26 +15,27 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: 0d42a37b2e84c310569666771ded38e5feca3608
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513139"
 ---
 # <a name="how-to-install-and-uninstall-services"></a>Procedura: installare e disinstallare servizi
-Se si sta sviluppando un servizio Windows con .NET Framework, è possibile installare rapidamente l'applicazione di servizio tramite un'utilità della riga di comando denominata InstallUtil.exe. Se uno sviluppatore vuole rilasciare un servizio Windows che gli utenti possono installare e disinstallare, può usare InstallShield. Vedere [la distribuzione di Windows Installer](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).  
+Se si sta sviluppando un servizio Windows con .NET Framework, è possibile installare rapidamente l'applicazione di servizio tramite un'utilità della riga di comando denominata InstallUtil.exe. Se uno sviluppatore vuole rilasciare un servizio Windows che gli utenti possono installare e disinstallare, può usare InstallShield. Vedere [Distribuzione con Windows Installer](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).  
   
 > [!WARNING]
->  Se si vuole disinstallare un servizio dal computer, non seguire i passaggi di questo articolo. In alternativa, individuare il programma o il pacchetto software è installato il servizio e quindi scegliere **Aggiungi/Rimuovi programmi** nel Pannello di controllo per disinstallare tale programma. Si noti che molti servizi sono parte integrante di Windows. Se vengono rimossi, il sistema potrebbe diventare instabile.  
+>  Se si vuole disinstallare un servizio dal computer, non seguire i passaggi di questo articolo. Individuare invece il programma o il pacchetto software che ha installato il servizio e quindi scegliere **Installazione applicazioni** nel Pannello di controllo per disinstallare tale programma. Si noti che molti servizi sono parte integrante di Windows. Se vengono rimossi, il sistema potrebbe diventare instabile.  
   
- Per usare i passaggi descritti in questo articolo, è necessario prima aggiungere un programma di installazione del servizio al servizio Windows. Vedere [procedura dettagliata: creazione di un'applicazione in Progettazione componenti del servizio](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
+ Per usare i passaggi descritti in questo articolo, è necessario prima aggiungere un programma di installazione del servizio al servizio Windows. Vedere [Procedura dettagliata: Creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
   
  I progetti del servizio Windows non possono essere eseguiti direttamente dall'ambiente di sviluppo di Visual Studio premendo F5, perché è necessario installare il servizio prima dell'esecuzione del progetto.  
   
 > [!TIP]
->  È possibile avviare **Esplora Server** e verificare che il servizio è stato installato o disinstallato. Per ulteriori informazioni, vedere Procedura: accedere e inizializzare Esplora Server-Esplora Database.  
+>  È possibile avviare **Esplora server** e verificare che il servizio sia stato installato o disinstallato. Per altre informazioni, vedere Procedura: Accedere e inizializzare Esplora server-Esplora database.  
   
 ### <a name="to-install-your-service-manually"></a>Per installare il servizio manualmente  
   
-1.  Di Windows **avviare** menu o **avviare** scegliere **Visual Studio** , **Visual Studio Tools**, **Developer Prompt dei comandi**.  
+1.  Nel menu **Start** di Windows o nella schermata **Start** scegliere **Visual Studio**, **Strumenti di Visual Studio**, **Prompt dei comandi per gli sviluppatori**.  
   
      Verrà visualizzato un prompt dei comandi di Visual Studio.  
   
@@ -46,11 +47,11 @@ Se si sta sviluppando un servizio Windows con .NET Framework, è possibile insta
     installutil <yourproject>.exe  
     ```  
   
-     Se si usa il prompt dei comandi di Visual Studio, InstallUtil.exe sarà nel percorso di sistema. In caso contrario, è possibile aggiungerlo al percorso o usare il percorso completo per richiamarlo. Questo strumento viene installato con .NET Framework e il percorso è `%WINDIR%\Microsoft.NET\Framework[64]\<framework_version>`. Ad esempio, per la versione a 32 bit di .NET Framework 4 o 4.5.*, se la directory di installazione di Windows è C:\Windows, il percorso è `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`. Per la versione a 64 bit di .NET Framework 4 o 4.5. \*, il percorso predefinito è `C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe`.  
+     Se si usa il prompt dei comandi di Visual Studio, InstallUtil.exe sarà nel percorso di sistema. In caso contrario, è possibile aggiungerlo al percorso o usare il percorso completo per richiamarlo. Questo strumento viene installato con .NET Framework e il percorso è `%WINDIR%\Microsoft.NET\Framework[64]\<framework_version>`. Ad esempio, per la versione a 32 bit di .NET Framework 4 o 4.5.*, se la directory di installazione di Windows è C:\Windows, il percorso è `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`. Per la versione a 64 bit di .NET Framework 4 o 4.5.\*, il percorso predefinito è `C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe`.  
   
 ### <a name="to-uninstall-your-service-manually"></a>Per disinstallare il servizio manualmente  
   
-1.  Di Windows **avviare** menu o **avviare** scegliere **Visual Studio**, **Visual Studio Tools**, **Developer Prompt dei comandi**.  
+1.  Nel menu **Start** di Windows o nella schermata **Start** scegliere **Visual Studio**, **Strumenti di Visual Studio**, **Prompt dei comandi per gli sviluppatori**.  
   
      Verrà visualizzato un prompt dei comandi di Visual Studio.  
   
@@ -60,7 +61,7 @@ Se si sta sviluppando un servizio Windows con .NET Framework, è possibile insta
     installutil /u <yourproject>.exe  
     ```  
   
-3.  In alcuni casi, dopo avere eliminato il file eseguibile di un servizio, è possibile che il servizio sia ancora presente nel Registro di sistema. In tal caso, utilizzare il comando [sc delete](http://technet.microsoft.com/library/cc742045.aspx) per rimuovere la voce per il servizio dal Registro di sistema.  
+3.  In alcuni casi, dopo avere eliminato il file eseguibile di un servizio, è possibile che il servizio sia ancora presente nel Registro di sistema. In tal caso, usare il comando [sc delete](http://technet.microsoft.com/library/cc742045.aspx) per rimuovere la voce per il servizio dal Registro di sistema.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

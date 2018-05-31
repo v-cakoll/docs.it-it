@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21f7b0d56a788b4161fb7e99899b4dd15a434152
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394966"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 Quando un client COM chiama un oggetto .NET, Common Language Runtime crea l'oggetto gestito e un COM Callable Wrapper (CCW) per l'oggetto. Incapaci di fare riferimento diretto a un oggetto .NET, i client COM usano il CCW come un proxy per l'oggetto gestito.  
@@ -38,12 +39,12 @@ Accesso a oggetti .NET tramite COM Callable Wrapper
   
 ## <a name="simulating-com-interfaces"></a>Simulazione di interfacce COM
 
-CCW espone tutte pubblico, interfacce visibili a COM, i tipi di dati e valori restituiti ai client COM in modo che sia coerente con l'applicazione COM di interazione basata sull'interfaccia. Per un client COM, richiamare i metodi di un oggetto .NET Framework non è diverso dal richiamare i metodi di un oggetto COM.  
+CCW espone ai client COM tutti i tipi di dati, i valori restituiti e le interfacce pubbliche visibili a COM in modo conforme al meccanismo di interazione COM basato sulle interfacce. Per un client COM, richiamare i metodi di un oggetto .NET Framework non è diverso dal richiamare i metodi di un oggetto COM.  
   
  Per assicurare questo approccio naturale, il CCW crea interfacce COM tradizionali quali **IUnknown** e **IDispatch**. Come mostrato nella figura seguente, il CCW mantiene un solo riferimento all'oggetto .NET di cui esegue il wrapping. Il client COM e l'oggetto .NET interagiscono tramite il proxy e lo stub del CCW.  
   
  ![Interfacce COM](./media/ccwwithinterfaces.gif "ccwwithinterfaces")  
-Interfacce COM e COM callable wrapper  
+Interfacce COM e COM Callable Wrapper  
   
  Oltre a esporre le interfacce che sono esplicitamente implementate da una classe dell'ambiente gestito, .NET Framework fornisce per l'oggetto un'implementazione delle interfacce COM elencate nella tabella che segue. Una classe .NET può eseguire l'override del comportamento predefinito fornendo la propria implementazione di queste interfacce. Il runtime, tuttavia, fornisce sempre l'implementazione delle interfacce **IUnknown** e **IDispatch**.  
   
@@ -60,15 +61,15 @@ Interfacce COM e COM callable wrapper
   
 |Interfaccia|Descrizione|  
 |---------------|-----------------|  
-|I (\_*classname*) interfaccia di classe|Interfaccia, esposta dal runtime e non definita esplicitamente, che espone tutte le interfacce, i metodi, le proprietà e i campi pubblici esplicitamente esposti su un oggetto gestito.|  
+|Interfaccia della classe (\_*nomeclasse*)|Interfaccia, esposta dal runtime e non definita esplicitamente, che espone tutte le interfacce, i metodi, le proprietà e i campi pubblici esplicitamente esposti su un oggetto gestito.|  
 |**IConnectionPoint** e **IconnectionPointContainer**|Interfaccia per oggetti che originano eventi basati su delegati (un'interfaccia per la registrazione di sottoscrittori di eventi).|  
 |**IdispatchEx**|Interfaccia fornita dal runtime se la classe implementa **IExpando**. L'interfaccia **IDispatchEx** è un'estensione dell'interfaccia **IDispatch** che, diversamente da **IDispatch**, consente l'enumerazione, l'aggiunta, l'eliminazione e la chiamata dei membri con distinzione tra maiuscole e minuscole.|  
 |**IEnumVARIANT**|Interfaccia per classi Collection che enumera gli oggetti della raccolta se la classe implementa **IEnumerable**.|  
   
 ## <a name="introducing-the-class-interface"></a>Introduzione all'interfaccia della classe  
- L'interfaccia della classe, che non è definita esplicitamente nel codice gestito, è un'interfaccia che espone tutte le proprietà, i campi, gli eventi e i metodi pubblici esplicitamente esposti dall'oggetto .NET. Tale interfaccia può essere duale o solo dispatch. L'interfaccia della classe riceve il nome dalla classe .NET stessa, preceduto da un carattere di sottolineatura. Per la classe Mammal, ad esempio, l'interfaccia della classe è \_Mammal.  
+ L'interfaccia della classe, che non è definita esplicitamente nel codice gestito, è un'interfaccia che espone tutte le proprietà, i campi, gli eventi e i metodi pubblici esplicitamente esposti dall'oggetto .NET. Tale interfaccia può essere duale o solo dispatch. L'interfaccia della classe riceve il nome dalla classe .NET stessa, preceduto da un carattere di sottolineatura. Per la classe Mammal, ad esempio, l'interfaccia della classe sarà \_Mammal.  
   
- Per le classi derivate, l'interfaccia della classe espone anche tutti i metodi, le proprietà e i campi pubblici della classe base. La classe derivata espone anche un'interfaccia della classe per ciascuna classe base. Ad esempio, se la classe Mammal estende la classe MammalSuperclass, che a sua volta estende System. Object, l'oggetto espone oggetti .NET ai client COM tre classe interfacce denominate \_Mammal, \_MammalSuperclass, e \_oggetto.  
+ Per le classi derivate, l'interfaccia della classe espone anche tutti i metodi, le proprietà e i campi pubblici della classe base. La classe derivata espone anche un'interfaccia della classe per ciascuna classe base. Ad esempio, se la classe Mammal estende la classe MammalSuperclass, che a sua volta estende la classe System.Object, l'oggetto .NET espone ai client COM tre interfacce della classe denominate \_Mammal, \_MammalSuperclass e \_Object.  
   
  Si consideri ad esempio la classe .NET seguente:  
   
@@ -147,7 +148,7 @@ public class LoanApp : IExplicit {
   
  Il valore **ClassInterfaceType.None** impedisce la generazione dell'interfaccia della classe quando i metadati della classe vengono esportati in una libreria dei tipi. Nel precedente esempio, i client COM possono accedere alla classe `LoanApp` solo tramite l'interfaccia `IExplicit`.  
   
-### <a name="avoid-caching-dispatch-identifiers-dispids"></a>Evitare la memorizzazione nella cache degli identificatori dispatch (DISPID)
+### <a name="avoid-caching-dispatch-identifiers-dispids"></a>Evitare la memorizzazione nella cache degli identificatori dispatch (DispId)
  L'uso dell'interfaccia della classe è ammissibile per i client basati su script, i client Microsoft Visual Basic 6.0 o qualsiasi client ad associazione tardiva che non inserisce nella cache i DispId dei membri di interfaccia. I DispId identificano i membri di interfaccia per abilitare l'associazione tardiva.  
   
  Per l'interfaccia della classe, la generazione dei DispId è basata sulla posizione dei membri nell'interfaccia. Se si cambia l'ordine dei membri e si esporta la classe in una libreria dei tipi, si altereranno i DispId generati nell'interfaccia della classe.  

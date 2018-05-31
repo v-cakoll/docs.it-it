@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32ee3babe054d55a45cc8826843252dba6aa2be7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390250"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilità COM senza registrazione
 L'interoperabilità COM senza registrazione consente di attivare un componente senza usare il Registro di sistema di Windows per memorizzare informazioni sugli assembly. Anziché registrare un componente su un computer durante la distribuzione, vengono creati file manifesto di tipo Win32 contenenti informazioni sull'associazione e sull'attivazione in fase di progettazione. L'attivazione di un oggetto è controllata da tali file manifesto, anziché da chiavi del Registro di sistema.  
@@ -44,11 +45,11 @@ L'interoperabilità COM senza registrazione consente di attivare un componente s
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>Configurazione di componenti COM per l'attivazione senza registrazione  
   
-1.  Affinché un componente COM partecipi all'attivazione senza registrazione è necessario distribuirlo come assembly side-by-side. Gli assembly side-by-side non sono gestiti.  Per ulteriori informazioni, vedere [Using Side-by-side Assemblies](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
+1.  Affinché un componente COM partecipi all'attivazione senza registrazione è necessario distribuirlo come assembly side-by-side. Gli assembly side-by-side non sono gestiti.  Per altre informazioni, vedere [Using Side-by-side Assemblies](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx) (Uso di assembly side-by-side) in MSDN Library.  
   
      Per usare gli assembly side-by-side COM, uno sviluppatore di applicazioni basate su .NET deve fornire un manifesto dell'applicazione che contenga le informazioni di associazione e attivazione. Il supporto per gli assembly side-by-side è integrato nel sistema operativo Windows XP. Il runtime COM, supportato dal sistema operativo, esegue l'analisi di un manifesto dell'applicazione per informazioni sull'attivazione quando il componente attivato non è presente nel Registro di sistema.  
   
-     L'attivazione senza registrazione è facoltativa per i componenti COM installati in Windows XP. Per istruzioni dettagliate sull'aggiunta di un assembly side-by-side a un'applicazione, vedere [Using Side-by-side Assemblies](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
+     L'attivazione senza registrazione è facoltativa per i componenti COM installati in Windows XP. Per istruzioni dettagliate sull'aggiunta di un assembly side-by-side a un'applicazione, vedere [Using Side-by-side Assemblies](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx) (Uso di assembly side-by-side) in MSDN Library.  
   
     > [!NOTE]
     >  L'esecuzione side-by-side è una funzionalità di .NET Framework che consente di eseguire contemporaneamente sullo stesso computer più versioni del runtime e più versioni delle applicazioni e dei componenti che usano una versione del runtime. L'esecuzione side-by-side e gli assembly side-by-side sono meccanismi diversi per fornire la funzionalità side-by-side.  

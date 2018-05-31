@@ -9,71 +9,72 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: 3c8382d2e425d11dc8aa8b22e361b3cc5637744f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516217"
 ---
 # <a name="how-to-start-services"></a>Procedura: avviare servizi
-Dopo l'installazione di un servizio, è necessario avviarlo. Avvio delle chiamate di <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metodo nella classe del servizio. In genere, il <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metodo definisce le operazioni che il servizio eseguirà. Dopo l'avvio di un servizio rimane attivo fino a quando non è sospeso o interrotto manualmente.  
+Dopo l'installazione di un servizio, è necessario avviarlo. Con l'avvio viene chiamato il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> per la classe del servizio. In genere, il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> definisce le operazioni utili che verranno eseguite dal servizio. Dopo l'avvio, un servizio rimane attivo fino a quando non viene sospeso o arrestato manualmente.  
   
- Servizi possono essere impostati per avviare automaticamente o manualmente. Verrà avviato un servizio che viene avviato automaticamente quando il computer in cui è installato è stato riavviato oppure prima attivato. Un utente deve avviare un servizio che viene avviato manualmente.  
+ I servizi possono essere configurati per l'avvio automatico o manuale. Un servizio con avvio automatico verrà avviato in seguito al riavvio o alla prima accensione del computer in cui è installato. Un utente deve avviare un servizio con avvio manuale.  
   
 > [!NOTE]
->  Per impostazione predefinita, i servizi creati con Visual Studio sono impostati per l'avvio manuale.  
+>  Per impostazione predefinita, i servizi creati con Visual Studio vengono impostati per l'avvio manuale.  
   
- Esistono diversi modi, è possibile avviare manualmente un servizio, ovvero da **Esplora Server**, dal **Gestione controllo servizi**, o dal codice utilizzando un componente denominato il <xref:System.ServiceProcess.ServiceController>.  
+ Esistono diversi modi per avviare manualmente un servizio, ovvero da **Esplora server**, da **Gestione controllo servizi** o dal codice usando un componente denominato <xref:System.ServiceProcess.ServiceController>.  
   
- Impostare il <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> proprietà la <xref:System.ServiceProcess.ServiceInstaller> classe per determinare se un servizio deve essere avviato manualmente o automaticamente.  
+ Per determinare se un servizio deve essere avviato manualmente o automaticamente, è possibile impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> per la classe <xref:System.ServiceProcess.ServiceInstaller>.  
   
-### <a name="to-specify-how-a-service-should-start"></a>Per specificare la modalità in cui deve iniziare un servizio  
+### <a name="to-specify-how-a-service-should-start"></a>Per specificare come avviare un servizio  
   
-1.  Dopo aver creato il servizio, aggiungere i programmi di installazione necessari per tale. Per ulteriori informazioni, vedere [procedura: aggiungere programmi di installazione per l'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  Dopo aver creato il servizio, aggiungere i programmi di installazione necessari. Per altre informazioni, vedere [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-2.  Nella finestra di progettazione, fare clic sul programma di installazione per il servizio in uso.  
+2.  Nella finestra di progettazione fare clic sul programma di installazione per il servizio in uso.  
   
-3.  Nel **proprietà** finestra, impostare il <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> proprietà su uno dei seguenti:  
+3.  Nella finestra **Proprietà** impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> su uno dei valori seguenti:  
   
-    |Per avviare il servizio|Impostare questo valore|  
+    |Per installare il servizio|Impostare questo valore|  
     |----------------------------------|--------------------|  
-    |Quando si riavvia il computer|**Automatico**|  
-    |Avvio del servizio da parte di un'azione esplicita dell'utente|**Manuale**|  
+    |Al riavvio del computer|**Automatic**|  
+    |Quando un'azione esplicita dell'utente avvia il servizio|**Manual**|  
   
     > [!TIP]
-    >  Per impedire che il servizio venga avviato, è possibile impostare il <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> proprietà **disabilitato**. Se si desidera riavviare un server più volte e si desidera risparmiare tempo evitando i servizi che normalmente inizia avvio, è possibile farlo.  
+    >  Per impedire del tutto l'avvio del servizio, è possibile impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> su **Disabled**. Ciò può essere utile se si prevede di dover riavviare un server più volte e si vuole risparmiare tempo evitando l'avvio dei servizi che verrebbero normalmente avviati.  
   
     > [!NOTE]
-    >  Queste e altre proprietà può essere modificato dopo l'installazione del servizio.  
+    >  Queste e altre proprietà possono essere modificate dopo l'installazione del servizio.  
   
-     Esistono diversi modi, è possibile avviare un servizio che ha relativo <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> processo impostata su **manuale** : da **Esplora Server**, dal **Gestione controllo servizi di Windows**, o dal codice. È importante notare che non tutti questi metodi viene avviato effettivamente il servizio nel contesto del **Gestione controllo servizi**; **Esplora server** e metodi a livello di codice di avvio del servizio modificano effettivamente il controller.  
+     Esistono diversi modi per avviare un servizio con il processo <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> impostato su **Manual**, ovvero da **Esplora server**, da **Gestione controllo servizi** o dal codice. È importante notare che non tutti questi metodi avviano effettivamente il servizio nel contesto di **Gestione controllo servizi**. **Esplora server** e i metodi a livello di codice di avvio del servizio modificano effettivamente il controller.  
   
-### <a name="to-manually-start-a-service-from-server-explorer"></a>Per avviare manualmente un servizio da Esplora Server  
+### <a name="to-manually-start-a-service-from-server-explorer"></a>Per avviare manualmente un servizio da Esplora server  
   
-1.  In **Esplora Server**, aggiungere il server desiderato, se non è già elencato. Per ulteriori informazioni, vedere Procedura: accedere e inizializzare Esplora Server-Esplora Database.  
+1.  In **Esplora server** aggiungere il server desiderato, se non è già elencato. Per altre informazioni, vedere Procedura: Accedere e inizializzare Esplora server-Esplora database.  
   
-2.  Espandere il **servizi** nodo, quindi individuare il servizio che si desidera avviare.  
+2.  Espandere il nodo **Servizi** e quindi individuare il servizio che si vuole avviare.  
   
-3.  Il nome del servizio di mouse e scegliere **avviare**.  
+3.  Fare clic con il pulsante destro del mouse sul nome del servizio e quindi scegliere **Avvia**.  
   
 ### <a name="to-manually-start-a-service-from-services-control-manager"></a>Per avviare manualmente un servizio da Gestione controllo servizi  
   
-1.  Aprire il **Gestione controllo servizi** effettuando una delle operazioni seguenti:  
+1.  Aprire **Gestione controllo servizi** eseguendo una delle operazioni seguenti:  
   
-    -   In Windows XP e 2000 Professional, fare doppio clic su **risorse del Computer** sul desktop e quindi fare clic su **Gestisci**. Nella finestra di dialogo che viene visualizzato, espandere il **servizi e applicazioni** nodo.  
+    -   In Windows XP e 2000 Professional fare clic con il pulsante destro del mouse su **Risorse del computer** e quindi scegliere **Gestisci**. Nella finestra di dialogo visualizzata espandere il nodo **Servizi e applicazioni**.  
   
          \- oppure -  
   
-    -   In Windows Server 2003 e Windows 2000 Server, fare clic su **avviare**, scegliere **programmi**, fare clic su **strumenti di amministrazione**, quindi fare clic su **servizi**.  
+    -   In Windows Server 2003 e Windows 2000 Server fare clic su **Start**, scegliere **Programmi**, fare clic su **Strumenti di amministrazione** e quindi fare clic su **Servizi**.  
   
         > [!NOTE]
-        >  In Windows NT versione 4.0, è possibile aprire questa finestra di dialogo **Pannello di controllo**.  
+        >  In Windows NT versione 4.0 è possibile aprire questa finestra di dialogo dal **Pannello di controllo**.  
   
-     Viene visualizzato il servizio nel **servizi** sezione della finestra.  
+     Il servizio dovrebbe essere a questo punto elencato nella sezione **Servizi** della finestra.  
   
-2.  Selezionare il servizio nell'elenco, pulsante destro del mouse e quindi fare clic su **avviare**.  
+2.  Fare clic con il pulsante destro del mouse sul servizio dopo averlo selezionato nell'elenco e quindi scegliere **Avvia**.  
   
 ### <a name="to-manually-start-a-service-from-code"></a>Per avviare manualmente un servizio da codice  
   
-1.  Creare un'istanza di <xref:System.ServiceProcess.ServiceController> classe e configurarlo per interagire con il servizio che si desidera amministrare.  
+1.  Creare un'istanza della classe <xref:System.ServiceProcess.ServiceController> e configurarla per interagire con il servizio che si vuole amministrare.  
   
 2.  Chiamare il metodo <xref:System.ServiceProcess.ServiceController.Start%2A> per avviare il servizio.  
   

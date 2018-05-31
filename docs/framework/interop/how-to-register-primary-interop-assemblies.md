@@ -9,9 +9,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f54d77be130d57c39319e81d58ad5af7815e548
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390861"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Procedura: registrare assembly di interoperabilità primari
 È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per effettuare il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia di classe con un'altra interfaccia, vedere [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md).  

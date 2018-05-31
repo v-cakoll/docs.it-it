@@ -3,11 +3,12 @@ title: Esercitazione introduttiva sulle classi - Guide introduttive locali per C
 description: Creare il primo programma C# ed esplorare i concetti della programmazione orientata a oggetti
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 5d3363a34fb684985b3b060dce2784090f25a1b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a951c84396e187b5ef1a832705b7722f818c990b
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457333"
 ---
 # <a name="introduction-to-classes"></a>Introduzione alle classi
 

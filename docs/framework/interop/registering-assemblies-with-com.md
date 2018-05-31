@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b92f36488dec113dcffffac3e6cdc0c26a690b5b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389161"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrazione di assembly presso COM
 È possibile eseguire uno strumento da riga di comando denominato [Assembly Registration Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) per registrare o annullare la registrazione di un assembly per l'uso con COM. Regasm.exe aggiunge informazioni sulla classe al Registro di sistema, così che i client COM possano usare la classe di .NET Framework in modo trasparente. La classe <xref:System.Runtime.InteropServices.RegistrationServices> fornisce funzionalità equivalenti.  
@@ -45,5 +46,5 @@ ms.lasthandoff: 05/04/2018
 ## <a name="see-also"></a>Vedere anche  
  [Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)  
  [Procedura: fare riferimento a tipi .NET da COM](how-to-reference-net-types-from-com.md)  
- [La chiamata a un oggetto .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
+ [Chiamata di un oggetto .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
  [Distribuzione di un'applicazione per l'accesso COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

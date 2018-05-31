@@ -7,11 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 24d0f1366a8e4309bbfb5b548af7407de50eaf76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1733f3fc66d79dafb9bc6f983773f043be6c1006
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483473"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Test di una libreria di classi con .NET Core in Visual Studio 2017
 
@@ -24,12 +25,12 @@ Per creare un progetto unit test, seguire questa procedura:
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. In **Esplora soluzioni** aprire il menu di scelta rapida per il nodo della soluzione **ClassLibraryProjects** e selezionare **Aggiungi** > **Nuovo progetto**.
 
-1. Nella finestra di dialogo **Aggiungi nuovo progetto** selezionare il nodo **Visual C#**. Selezionare quindi il nodo **.NET Core** seguito dal modello di progetto **Progetto unit test (.NET Core)**. Nella casella di testo **Nome** immettere "StringLibraryTest" come nome del progetto. Selezionare **OK** per creare il progetto unit test.
+1. Nella finestra di dialogo **Aggiungi nuovo progetto** selezionare il nodo **Visual C#**. Selezionare quindi il nodo **.NET Core** seguito dal modello di progetto **Progetto di test MSTest (.NET Core)**. Nella casella di testo **Nome** immettere "StringLibraryTest" come nome del progetto. Selezionare **OK** per creare il progetto unit test.
 
    ![Finestra di dialogo Aggiungi nuovo progetto](./media/testing-library-with-visual-studio/testproject.png)
 
    > [!NOTE]  
-   > Oltre a un progetto Unit Test, è possibile usare Visual Studio anche per creare un progetto xUnit test per .NET Core.
+   > Oltre a un progetto di test MSTest, è possibile usare Visual Studio anche per creare un progetto di test xUnit per .NET Core.
 
 1. Visual Studio crea il progetto e apre il file *UnitTest1.cs* nella finestra del codice.
 
@@ -53,12 +54,12 @@ Per creare un progetto unit test, seguire questa procedura:
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
 1. In **Esplora soluzioni** aprire il menu di scelta rapida per il nodo della soluzione **ClassLibraryProjects** e selezionare **Aggiungi** > **Nuovo progetto**.
 
-1. Nella finestra di dialogo **Aggiungi nuovo progetto** selezionare il nodo **Visual Basic**. Selezionare quindi il nodo **.NET Core** seguito dal modello di progetto **Progetto unit test (.NET Core)**. Nella casella di testo **Nome** immettere "StringLibraryTest" come nome del progetto. Selezionare **OK** per creare il progetto unit test.
+1. Nella finestra di dialogo **Aggiungi nuovo progetto** selezionare il nodo **Visual Basic**. Selezionare quindi il nodo **.NET Core** seguito dal modello di progetto **Progetto di test MSTest (.NET Core)**. Nella casella di testo **Nome** immettere "StringLibraryTest" come nome del progetto. Selezionare **OK** per creare il progetto unit test.
 
    ![Finestra di dialogo Aggiungi nuovo progetto](./media/testing-library-with-visual-studio/vb-testproject.png)
 
    > [!NOTE]  
-   > Oltre a un progetto Unit Test, è possibile usare Visual Studio anche per creare un progetto xUnit test per .NET Core.
+   > Oltre a un progetto di test MSTest, è possibile usare Visual Studio anche per creare un progetto di test xUnit per .NET Core.
 
 1. Visual Studio crea il progetto e apre il file *UnitTest1.vb* nella finestra del codice.
 

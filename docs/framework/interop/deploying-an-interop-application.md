@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4689c52dee84e2a310f0ddb39d0874c273081bb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389418"
 ---
 # <a name="deploying-an-interop-application"></a>Distribuzione di una applicazione di interoperabilità
 Un'applicazione di interoperabilità in genere include un assembly client .NET, uno o più assembly di interoperabilità che rappresentano librerie dei tipi COM distinte e uno o più componenti COM registrati. Visual Studio e [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] forniscono strumenti per importare e convertire una libreria dei tipi in un assembly di interoperabilità, come illustrato in [Importing a Type Library as an Assembly](importing-a-type-library-as-an-assembly.md) (Importazione di una libreria dei tipi come assembly). Un'applicazione di interoperabilità può essere distribuita in due modi:  
@@ -48,5 +49,5 @@ Struttura delle directory e voci del Registro di sistema per una distribuzione p
 ## <a name="see-also"></a>Vedere anche  
  [Esposizione di componenti COM a .NET Framework](exposing-com-components.md)  
  [Importazione di una libreria dei tipi come assembly](importing-a-type-library-as-an-assembly.md)  
- [Utilizzo di tipi COM nel codice gestito](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+ [Uso dei tipi COM nel codice gestito](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
  [Compilazione di un progetto di interoperabilità](compiling-an-interop-project.md)

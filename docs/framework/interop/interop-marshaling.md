@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1995c367039591c086054a086f2107e4a88ecefb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395369"
 ---
 # <a name="interop-marshaling"></a>Marshalling di interoperabilità
 <a name="top"></a> Il marshalling di interoperabilità determina il passaggio di dati in argomenti di metodo e i valori restituiti tra memoria gestita e non gestita durante le chiamate. Il marshalling di interoperabilità è un'attività di run-time eseguita dal servizio di marshalling di Common Language Runtime.  
@@ -81,7 +82,7 @@ Processo di marshalling nello stesso apartment
 |MTA (predefinito)|MTA<br /><br /> STA|Marshalling di interoperabilità.<br /><br /> Marshalling di interoperabilità e COM.|  
 |STA|MTA<br /><br /> STA|Marshalling di interoperabilità e COM.<br /><br /> Marshalling di interoperabilità.|  
   
- Quando un client gestito e un server non gestito si trovano nello stesso apartment, tutto il marshalling dei dati viene eseguito dal servizio di marshalling di interoperabilità. Tuttavia, quando il client e il server vengono inizializzati in apartment diversi, è necessario anche il marshalling COM. L'illustrazione riportata di seguito mostra gli elementi di una chiamata su diversi apartment.  
+ Quando un client gestito e un server non gestito si trovano nello stesso apartment, tutto il marshalling dei dati viene effettuato dal servizio di marshalling di interoperabilità. Tuttavia, quando il client e il server vengono inizializzati in apartment diversi, è necessario anche il marshalling COM. L'illustrazione riportata di seguito mostra gli elementi di una chiamata su diversi apartment.  
   
  ![Marshalling COM](./media/singleprocessmultapt.gif "singleprocessmultapt")  
 Chiamata su diversi apartment tra un client .NET e un oggetto COM  
@@ -135,7 +136,7 @@ Passaggio dei riferimenti attraverso i limiti dell'host e del processo
  ![SOAP o TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
 Chiamate remote attraverso i firewall mediante SOAP o la classe TcpChannel  
   
- Alcune chiamate non gestiti è possibile incanalare tramite SOAP, ad esempio le chiamate tra i componenti serviti e COM.  
+ È possibile incanalare tramite SOAP alcune chiamate non gestite, ad esempio quelle tra i componenti serviti e COM.  
   
  [Torna all'inizio](#top)  
   

@@ -13,18 +13,19 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: baa5b9f250fe7117838f936b09b050ba500b7209
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389044"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualificazione di tipi .NET per l'interoperabilità
 Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tenere presenti i requisiti di interoperabilità COM in fase di progettazione. Rispettando le linee guida seguenti, è possibile ottenere una facile integrazione tra i tipi gestiti (classi, interfacce, strutture ed enumerazioni) e i tipi COM:  
   
 -   Le classi devono implementare le interfacce in modo esplicito.  
   
-     Anche se l'interoperabilità COM fornisce un meccanismo per generare automaticamente un'interfaccia contenente tutti i membri della classe e i membri della relativa classe di base, è decisamente preferibile fornire interfacce esplicite. L'interfaccia generata automaticamente è detta interfaccia di classe. Per istruzioni, vedere [Introduzione all'interfaccia di classe](com-callable-wrapper.md#introducing-the-class-interface).  
+     Anche se l'interoperabilità COM fornisce un meccanismo per generare automaticamente un'interfaccia contenente tutti i membri della classe e i membri della relativa classe di base, è decisamente preferibile fornire interfacce esplicite. L'interfaccia generata automaticamente è detta interfaccia di classe. Per informazioni, vedere [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
-     È possibile utilizzare Visual Basic, c# e C++ per incorporare le definizioni di interfaccia nel codice, invece di utilizzare Strumentazione gestione Windows (IDL, Interface Definition Language) o l'equivalente. Per informazioni dettagliate sulla sintassi, vedere la documentazione relativa al linguaggio.  
+     Per incorporare le definizioni di interfaccia nel codice, è possibile usare Visual Basic, C# e C++ invece del linguaggio di definizione dell'interfaccia (IDL, Interface Definition Language) o di soluzioni equivalenti. Per informazioni dettagliate sulla sintassi, vedere la documentazione relativa al linguaggio.  
   
 -   I tipi gestiti devono essere pubblici.  
   
@@ -49,6 +50,6 @@ Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tener
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
  [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Introduzione all'interfaccia di classe](com-callable-wrapper.md#introducing-the-class-interface)  
+ [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface)  
  [Applicazione di attributi di interoperabilità](../../../docs/framework/interop/applying-interop-attributes.md)  
  [Preparazione di un assembly per COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

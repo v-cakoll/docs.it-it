@@ -4,11 +4,12 @@ description: Informazioni sulla terminologia relativa a pacchetti, metapacchetti
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 915ccadbb4d2cca50fd1caa53d90aa05d83d9378
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472802"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pacchetti, metapacchetti e framework
 
@@ -96,9 +97,10 @@ Tra i framework e i pacchetti è presente una relazione bidirezionale. La prima 
 
 La seconda parte della relazione è la selezione delle risorse. I pacchetti possono contenere risorse per più framework. Dato un riferimento a un set di pacchetti e/o metapacchetti, il framework è necessario per determinare quale risorsa deve essere selezionata, ad esempio `net46` o `netstandard1.3`. È importante selezionare la risorsa corretta. Ad esempio, è improbabile che una risorsa `net46` sia compatibile con .NET Framework 4.0 o .NET Core 1.0.
 
-![Composizione dei framework basati su pacchetti](./media/packages/package-framework.png)
 
-La relazione è illustrata nella figura precedente. L'*API* identifica il *framework* come destinazione e lo definisce. Il *framework* viene usato per la *selezione delle risorse*. La *risorsa* fornisce l'API.
+La relazione è illustrata nella figura seguente. L'*API* identifica il *framework* come destinazione e lo definisce. Il *framework* viene usato per la *selezione delle risorse*. La *risorsa* fornisce l'API.
+
+![Composizione dei framework basati su pacchetti](./media/packages/package-framework.png)
 
 I due principali framework basati su pacchetti usati con .NET Core sono i seguenti:
 

@@ -14,51 +14,52 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: faece1d7ee752e4c17f39027ff8a97fc95ed451b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514360"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Procedura: aggiungere programmi di installazione all'applicazione di servizio
-Visual Studio fornisce componenti di installazione che è possono installare le risorse associate alle applicazioni di servizio. Componenti di installazione registrano un singolo servizio sul sistema in cui viene installato e Gestione controllo servizi di informare che il servizio esista. Quando si lavora con un'applicazione di servizio, è possibile selezionare un collegamento nella finestra proprietà per aggiungere automaticamente i programmi di installazione appropriati per il progetto.  
+Visual Studio include componenti di installazione che consentono di installare le risorse associate alle applicazioni di servizio. I componenti di installazione registrano un singolo servizio nel sistema in cui viene installato e informazione Gestione controllo servizi dell'esistenza del servizio. Quando si lavora con un'applicazione di servizio, è possibile selezionare un collegamento nella finestra Proprietà per aggiungere automaticamente i programmi di installazione appropriati al progetto.  
   
 > [!NOTE]
->  I valori delle proprietà per il servizio vengono copiati dalla classe di servizio per la classe installer. Se si aggiornano i valori delle proprietà nella classe del servizio, essi non vengono aggiornate automaticamente nel programma di installazione.  
+>  I valori delle proprietà per il servizio vengono copiati dalla classe del servizio alla classe del programma di installazione. Se si aggiornano i valori delle proprietà nella classe del servizio, essi non vengono aggiornati automaticamente nel programma di installazione.  
   
- Quando si aggiunge un programma di installazione per il progetto, una nuova classe (che, per impostazione predefinita, denominato `ProjectInstaller`) viene creato nel progetto e le istanze della corretta installazione di componenti vengono creati all'interno di esso. Questa classe funge da punto centrale per tutti i componenti di installazione dal progetto. Ad esempio, se si aggiunge un secondo servizio all'applicazione e fare clic sul collegamento Aggiungi programma di installazione, una seconda classe di installazione non viene creata; al contrario, il componente di installazione aggiuntivi necessari per il secondo servizio viene aggiunto alla classe esistente.  
+ Quando si aggiunge un programma di installazione al progetto, nel progetto viene creata una nuova classe (denominata `ProjectInstaller` per impostazione predefinita) e all'interno di tale classe vengono create le istanze dei componenti di installazione appropriati. Questa classe funge da punto centrale per tutti i componenti di installazione richiesti dal progetto. Ad esempio, se si aggiunge un secondo servizio all'applicazione e si fa clic sul collegamento Aggiungi programma di installazione, non viene creata una seconda classe per il programma di installazione, ma il componente di installazione aggiuntivo necessario per il secondo servizio viene invece aggiunto alla classe esistente.  
   
- Non è necessario codice specifico all'interno di programmi di installazione per installare correttamente i servizi. Tuttavia, in alcuni casi potrebbe essere necessario modificare il contenuto dei programmi di installazione se è necessario aggiungere funzionalità speciali per il processo di installazione.  
+ Non è necessario codice specifico all'interno dei programmi di installazione per installare correttamente i servizi. Tuttavia, in alcuni casi potrebbe essere necessario modificare il contenuto dei programmi di installazione se è necessario aggiungere funzionalità speciali al processo di installazione.  
   
 > [!NOTE]
 >  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-add-installers-to-your-service-application"></a>Per aggiungere i programmi di installazione all'applicazione di servizio  
+### <a name="to-add-installers-to-your-service-application"></a>Per aggiungere programmi di installazione all'applicazione di servizio  
   
-1.  In **Esplora**, accesso **progettazione** visualizzazione per il servizio per il quale si desidera aggiungere un componente di installazione.  
+1.  In **Esplora soluzioni** accedere alla visualizzazione **Progettazione** per il servizio per il quale si vuole aggiungere un componente di installazione.  
   
-2.  Fare clic sull'icona della finestra di progettazione per selezionare il servizio stesso, anziché il suo contenuto.  
+2.  Fare clic sullo sfondo della finestra di progettazione per selezionare il servizio anziché il suo contenuto.  
   
-3.  Con la finestra di progettazione in cui lo stato attivo, mouse e quindi fare clic su **Aggiungi programma di installazione**.  
+3.  Nella finestra di progettazione fare clic con il pulsante destro del mouse e scegliere **Aggiungi programma di installazione**.  
   
-     Una nuova classe, `ProjectInstaller`e due componenti di installazione, <xref:System.ServiceProcess.ServiceProcessInstaller> e <xref:System.ServiceProcess.ServiceInstaller>, vengono aggiunti al progetto e i valori delle proprietà per il servizio vengono copiati i componenti.  
+     Al progetto vengono aggiunti una nuova classe `ProjectInstaller` e due componenti di installazione, <xref:System.ServiceProcess.ServiceProcessInstaller> e <xref:System.ServiceProcess.ServiceInstaller>, quindi i valori delle proprietà per il servizio vengono copiati nei componenti.  
   
-4.  Fare clic sul <xref:System.ServiceProcess.ServiceInstaller> componente e verificare che il valore della <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> proprietà è impostata sullo stesso valore come il <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> proprietà del servizio stesso.  
+4.  Fare clic sul componente <xref:System.ServiceProcess.ServiceInstaller> e verificare che il valore della proprietà <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> sia impostato sullo stesso valore della proprietà <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> del servizio stesso.  
   
-5.  Per determinare come verrà avviato il servizio, scegliere il <xref:System.ServiceProcess.ServiceInstaller> componente e impostare il <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> proprietà sul valore appropriato.  
+5.  Per determinare come verrà avviato il servizio, fare clic sul componente <xref:System.ServiceProcess.ServiceInstaller> e impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> sul valore appropriato.  
   
     |Valore|Risultato|  
     |-----------|------------|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Il servizio deve essere avviato manualmente dopo l'installazione. Per ulteriori informazioni, vedere [procedura: avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md).|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Il servizio verrà avviato automaticamente ogni volta che il riavvio del computer.|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Il servizio deve essere avviato manualmente dopo l'installazione. Per altre informazioni, vedere [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md).|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Il servizio verrà avviato automaticamente a ogni riavvio del computer.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|Impossibile avviare il servizio.|  
   
-6.  Per determinare il contesto di sicurezza in cui verrà eseguito il servizio, scegliere il <xref:System.ServiceProcess.ServiceProcessInstaller> componente e impostare i valori di proprietà appropriata. Per ulteriori informazioni, vedere [procedura: specificare il contesto di sicurezza per i servizi](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
+6.  Per determinare il contesto di sicurezza in cui verrà eseguito il servizio, fare clic sul componente <xref:System.ServiceProcess.ServiceProcessInstaller> e impostare i valori di proprietà appropriati. Per altre informazioni, vedere [Procedura: Specificare il contesto di sicurezza per i servizi](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
   
-7.  Eseguire l'override di metodi per il quale è necessario eseguire un'elaborazione personalizzata.  
+7.  Eseguire l'override degli eventuali metodi che richiedono un'elaborazione personalizzata.  
   
-8.  Eseguire i passaggi da 1 a 7 per ogni servizio aggiuntive nel progetto.  
+8.  Eseguire i passaggi da 1 a 7 per ogni servizio aggiuntivo nel progetto.  
   
     > [!NOTE]
-    >  Per ogni servizio aggiuntiva nel progetto, è necessario aggiungere un ulteriore <xref:System.ServiceProcess.ServiceInstaller> componente per il progetto `ProjectInstaller` classe. Il <xref:System.ServiceProcess.ServiceProcessInstaller> componente aggiunto nel passaggio 3. funziona con tutti i programmi di installazione singolo servizio nel progetto.  
+    >  Per ogni servizio aggiuntivo nel progetto, è necessario aggiungere un ulteriore componente <xref:System.ServiceProcess.ServiceInstaller> alla classe `ProjectInstaller` del progetto. Il componente <xref:System.ServiceProcess.ServiceProcessInstaller> aggiunto nel passaggio 3 funziona con tutti i programmi di installazione dei singoli servizi nel progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

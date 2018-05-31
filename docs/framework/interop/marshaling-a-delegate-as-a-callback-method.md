@@ -13,9 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ff875f2807a14493ab81a9e354b5c4dcdf3d5feb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389383"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Marshalling di un delegato come metodo di callback
 Questo esempio dimostra come passare delegati a una funzione non gestita che prevede puntatori a funzione. Un delegato è una classe che può contenere un riferimento a un metodo ed è equivalente a un puntatore a una funzione indipendente dai tipi o a una funzione di callback.  
@@ -53,5 +54,5 @@ Questo esempio dimostra come passare delegati a una funzione non gestita che pre
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempi vari di marshalling](https://msdn.microsoft.com/library/a915c948-54e9-4d0f-a525-95a77fd8ed70(v=vs.100))  
- [Tipi di dati di Platform Invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
+ [Tipi di dati platform invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
  [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md)

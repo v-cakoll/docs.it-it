@@ -13,9 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3c4d38b60f349f0ecb87204cb980dd6681a8cc9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388700"
 ---
 # <a name="msgbox-sample"></a>Esempio di MsgBox
 Questo esempio illustra come passare i tipi stringa per valore come parametri in e quando usare i campi <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> e <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>.  
@@ -45,7 +46,7 @@ Questo esempio illustra come passare i tipi stringa per valore come parametri in
   
 ## <a name="see-also"></a>Vedere anche  
  [Marshalling di stringhe](marshaling-strings.md)  
- [Tipi di dati di Platform Invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
+ [Tipi di dati platform invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
  [Marshalling predefinito per le stringhe](default-marshaling-for-strings.md)  
  [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md)  
  [Specifica di un set di caratteri](specifying-a-character-set.md)
