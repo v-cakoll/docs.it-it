@@ -4,11 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 8db9f37e4fa8df63060982857d457c9e1ce90f60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4adbdd7099dfc1c5ef13d5bbb4370ae2f14aba1e
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696780"
 ---
 # <a name="development-environment-for-docker-apps"></a>Ambiente di sviluppo per le app di Docker
 
@@ -23,7 +24,7 @@ Se si preferisce un editor leggero, multipiattaforma supportare qualsiasi lingua
 > [!NOTE]
 > Per scaricare codice di Visual Studio, visitare <https://code.visualstudio.com/download>.
 
-Per scaricare Docker per Mac e Windows, visitare <http://www.docker.com/products/docker>.
+Per scaricare Docker per Mac e Windows, visitare <https://www.docker.com/products/docker>.
 
 ### <a name="visual-studio-with-docker-tools"></a>Visual Studio con strumenti di Docker
 
@@ -37,15 +38,10 @@ Quando si utilizza Visual Studio 2015 è possibile installare gli strumenti di c
 È possibile sviluppare applicazioni di Docker e gli strumenti di Microsoft con i linguaggi più recenti. Di seguito è riportato un elenco iniziale, ma non si è limitati a esso:
 
 -   .NET core e ASP.NET Core
-
 -   Node.js
-
 -   Golang
-
 -   Java
-
 -   Ruby
-
 -   Python
 
 In pratica, è possibile utilizzare un moderno linguaggio supportato da Docker in Linux o Windows.
