@@ -2,11 +2,12 @@
 title: 'Procedura: effettuare più richieste Web in parallelo tramite Async e Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 1b98a0f29409fa49af1c9c8f7c91f2170981f7cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728443"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Procedura: effettuare più richieste Web in parallelo tramite Async e Await (Visual Basic)
 In un metodo asincrono le attività vengono avviate al momento della creazione. Il [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operatore viene applicato all'attività in corrispondenza del punto nel metodo in cui è Impossibile continuare l'elaborazione fino al completamento dell'attività. Spesso un'attività viene messa in attesa al momento della creazione, come illustrato nell'esempio seguente.  
@@ -39,7 +40,7 @@ Dim result = Await myTask
   
  Ad esempio un altro che inizia a più attività contemporaneamente, vedere [procedura: estendere la Async Walkthrough mediante tramite Task. whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
- È possibile scaricare il codice per l'esempio da [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=254906) (Esempi di codice per sviluppatori).  
+ È possibile scaricare il codice per l'esempio da [Developer Code Samples](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) (Esempi di codice per sviluppatori).  
   
 ### <a name="to-set-up-the-project"></a>Per impostare il progetto  
   
