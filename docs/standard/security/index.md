@@ -1,57 +1,48 @@
 ---
-title: Sicurezza in .NET Framework
-ms.custom: ''
-ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
+title: Sicurezza in .NET
+ms.date: 06/04/2018
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
-- .NET Framework, security
-- security [.NET Framework], about security
-- application development [.NET Framework], security
+- .NET, security
+- security [.NET], about security
+- application development [.NET], security
 - security [.NET Framework]
+- security [.NET]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-caps.latest.revision: 37
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7f8600da624ff75ce2dbd5c417f886d6b3b1ac37
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0e60f463d5a691cb84a30c169e471aa905b2db17
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728589"
 ---
-# <a name="security-in-the-net-framework"></a><span data-ttu-id="62026-102">Sicurezza in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="62026-102">Security in the .NET Framework</span></span>
-<span data-ttu-id="62026-103">Common Language Runtime e .NET Framework forniscono numerosi servizi e classi utili che consentono agli sviluppatori di scrivere in modo semplice codice sicuro e consentono agli amministratori di sistema di personalizzare le autorizzazioni concesse al codice per l'accesso alle risorse protette.</span><span class="sxs-lookup"><span data-stu-id="62026-103">The common language runtime and the .NET Framework provide many useful classes and services that enable developers to easily write secure code and enable system administrators to customize the permissions granted to code so that it can access protected resources.</span></span> <span data-ttu-id="62026-104">In Common Language Runtime e .NET Framework sono inoltre disponibili servizi e classi che semplificano l'uso della crittografia e della protezione basata sui ruoli.</span><span class="sxs-lookup"><span data-stu-id="62026-104">In addition, the runtime and the .NET Framework provide useful classes and services that facilitate the use of cryptography and role-based security.</span></span>  
+# <a name="security-in-net"></a><span data-ttu-id="326d6-102">Sicurezza in .NET</span><span class="sxs-lookup"><span data-stu-id="326d6-102">Security in .NET</span></span>
+<span data-ttu-id="326d6-103">Common language runtime e .NET forniscono numerosi servizi che consentono agli sviluppatori di scrivere codice sicuro e consentono agli amministratori di sistema di personalizzare le autorizzazioni concesse al codice in modo che possa accedere facilmente e classi utili risorse protette.</span><span class="sxs-lookup"><span data-stu-id="326d6-103">The common language runtime and the .NET provide many useful classes and services that enable developers to easily write secure code and enable system administrators to customize the permissions granted to code so that it can access protected resources.</span></span> <span data-ttu-id="326d6-104">Inoltre, il runtime e .NET forniscono classi utili e servizi che semplificano l'uso della crittografia e della sicurezza basata sui ruoli.</span><span class="sxs-lookup"><span data-stu-id="326d6-104">In addition, the runtime and the .NET provide useful classes and services that facilitate the use of cryptography and role-based security.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="62026-105">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="62026-105">In This Section</span></span>  
- [<span data-ttu-id="62026-106">Modifiche della sicurezza</span><span class="sxs-lookup"><span data-stu-id="62026-106">Security Changes</span></span>](../../../docs/framework/security/security-changes.md)  
- <span data-ttu-id="62026-107">Descrive importanti modifiche al sistema di sicurezza di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="62026-107">Describes important changes to the .NET Framework security system.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="326d6-105">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="326d6-105">In This Section</span></span>  
+
+ [<span data-ttu-id="326d6-106">Concetti chiave sulla sicurezza</span><span class="sxs-lookup"><span data-stu-id="326d6-106">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)  
+ <span data-ttu-id="326d6-107">Fornisce una panoramica sulle funzionalità di protezione di Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="326d6-107">Provides an overview of common language runtime security features.</span></span> <span data-ttu-id="326d6-108">Questa sezione è di particolare interesse per gli sviluppatori e gli amministratori di sistema.</span><span class="sxs-lookup"><span data-stu-id="326d6-108">This section is of interest to developers and system administrators.</span></span>  
   
- [<span data-ttu-id="62026-108">Concetti chiave sulla sicurezza</span><span class="sxs-lookup"><span data-stu-id="62026-108">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)  
- <span data-ttu-id="62026-109">Fornisce una panoramica sulle funzionalità di protezione di Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="62026-109">Provides an overview of common language runtime security features.</span></span> <span data-ttu-id="62026-110">Questa sezione è di particolare interesse per gli sviluppatori e gli amministratori di sistema.</span><span class="sxs-lookup"><span data-stu-id="62026-110">This section is of interest to developers and system administrators.</span></span>  
+ [<span data-ttu-id="326d6-109">Sicurezza basata sui ruoli</span><span class="sxs-lookup"><span data-stu-id="326d6-109">Role-Based Security</span></span>](../../../docs/standard/security/role-based-security.md)  
+ <span data-ttu-id="326d6-110">Illustra come scrivere codice tenendo conto della protezione basata sui ruoli.</span><span class="sxs-lookup"><span data-stu-id="326d6-110">Describes how to interact with role-based security in your code.</span></span> <span data-ttu-id="326d6-111">Questa sezione è di particolare interesse per gli sviluppatori.</span><span class="sxs-lookup"><span data-stu-id="326d6-111">This section is of interest to developers.</span></span>  
   
- [<span data-ttu-id="62026-111">Sicurezza basata sui ruoli</span><span class="sxs-lookup"><span data-stu-id="62026-111">Role-Based Security</span></span>](../../../docs/standard/security/role-based-security.md)  
- <span data-ttu-id="62026-112">Illustra come scrivere codice tenendo conto della protezione basata sui ruoli.</span><span class="sxs-lookup"><span data-stu-id="62026-112">Describes how to interact with role-based security in your code.</span></span> <span data-ttu-id="62026-113">Questa sezione è di particolare interesse per gli sviluppatori.</span><span class="sxs-lookup"><span data-stu-id="62026-113">This section is of interest to developers.</span></span>  
+ [<span data-ttu-id="326d6-112">Modello di crittografia</span><span class="sxs-lookup"><span data-stu-id="326d6-112">Cryptography Model</span></span>](../../../docs/standard/security/cryptography-model.md)  
+ <span data-ttu-id="326d6-113">Viene fornita una panoramica di servizi di crittografia forniti da .NET.</span><span class="sxs-lookup"><span data-stu-id="326d6-113">Provides an overview of cryptographic services provided by .NET.</span></span> <span data-ttu-id="326d6-114">Questa sezione è di particolare interesse per gli sviluppatori.</span><span class="sxs-lookup"><span data-stu-id="326d6-114">This section is of interest to developers.</span></span>  
   
- [<span data-ttu-id="62026-114">Modello di crittografia</span><span class="sxs-lookup"><span data-stu-id="62026-114">Cryptography Model</span></span>](../../../docs/standard/security/cryptography-model.md)  
- <span data-ttu-id="62026-115">Fornisce una panoramica sui servizi di crittografia forniti da .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="62026-115">Provides an overview of cryptographic services provided by the .NET Framework.</span></span> <span data-ttu-id="62026-116">Questa sezione è di particolare interesse per gli sviluppatori.</span><span class="sxs-lookup"><span data-stu-id="62026-116">This section is of interest to developers.</span></span>  
+ [<span data-ttu-id="326d6-115">Linee guida per la generazione di codice sicuro</span><span class="sxs-lookup"><span data-stu-id="326d6-115">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)  
+ <span data-ttu-id="326d6-116">Vengono descritte alcune delle procedure consigliate per la creazione di applicazioni .NET affidabili.</span><span class="sxs-lookup"><span data-stu-id="326d6-116">Describes some of the best practices for creating reliable .NET applications.</span></span> <span data-ttu-id="326d6-117">Questa sezione è di particolare interesse per gli sviluppatori.</span><span class="sxs-lookup"><span data-stu-id="326d6-117">This section is of interest to developers.</span></span>  
   
- [<span data-ttu-id="62026-117">Linee guida per la generazione di codice sicuro</span><span class="sxs-lookup"><span data-stu-id="62026-117">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)  
- <span data-ttu-id="62026-118">Descrive alcune delle procedure consigliate per la creazione di applicazioni .NET Framework affidabili.</span><span class="sxs-lookup"><span data-stu-id="62026-118">Describes some of the best practices for creating reliable .NET Framework applications.</span></span> <span data-ttu-id="62026-119">Questa sezione è di particolare interesse per gli sviluppatori.</span><span class="sxs-lookup"><span data-stu-id="62026-119">This section is of interest to developers.</span></span>  
+ [<span data-ttu-id="326d6-118">Linee guida per la creazione di codice sicuro applicabili al codice non gestito</span><span class="sxs-lookup"><span data-stu-id="326d6-118">Secure Coding Guidelines for Unmanaged Code</span></span>](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
+ <span data-ttu-id="326d6-119">Descrive alcune procedure consigliate e alcuni problemi di sicurezza in relazione alle chiamate di codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="326d6-119">Describes some of the best practices and security concerns when calling unmanaged code.</span></span>  
   
- [<span data-ttu-id="62026-120">Linee guida per la creazione di codice sicuro applicabili al codice non gestito</span><span class="sxs-lookup"><span data-stu-id="62026-120">Secure Coding Guidelines for Unmanaged Code</span></span>](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
- <span data-ttu-id="62026-121">Descrive alcune procedure consigliate e alcuni problemi di sicurezza in relazione alle chiamate di codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="62026-121">Describes some of the best practices and security concerns when calling unmanaged code.</span></span>  
-  
- [<span data-ttu-id="62026-122">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="62026-122">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)  
- <span data-ttu-id="62026-123">Descrive come è possibile implementare l'identità basata sulle richieste nelle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="62026-123">Describes how you can implement claims-based identity in your applications.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="62026-124">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="62026-124">Related Sections</span></span>  
- [<span data-ttu-id="62026-125">Guida di sviluppo</span><span class="sxs-lookup"><span data-stu-id="62026-125">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
- <span data-ttu-id="62026-126">Viene fornita una guida per tutte le aree e attività principali per lo sviluppo di applicazioni, quali la creazione, la configurazione, il debug, la sicurezza e la distribuzione dell'applicazione e informazioni su programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.</span><span class="sxs-lookup"><span data-stu-id="62026-126">Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application, and information about dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>
+ [<span data-ttu-id="326d6-120">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="326d6-120">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)  
+ <span data-ttu-id="326d6-121">Descrive come è possibile implementare l'identità basata sulle richieste nelle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="326d6-121">Describes how you can implement claims-based identity in your applications.</span></span>  
+
+<span data-ttu-id="326d6-122">[Modifiche della sicurezza](../../../docs/framework/security/security-changes.md) descrive importanti modifiche al sistema di sicurezza di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="326d6-122">[Security Changes](../../../docs/framework/security/security-changes.md) Describes important changes to the .NET Framework security system.</span></span>
+
+## <a name="related-sections"></a><span data-ttu-id="326d6-123">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="326d6-123">Related Sections</span></span>  
+ [<span data-ttu-id="326d6-124">Guida di sviluppo</span><span class="sxs-lookup"><span data-stu-id="326d6-124">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
+ <span data-ttu-id="326d6-125">Viene fornita una guida per tutte le aree e attività principali per lo sviluppo di applicazioni, quali la creazione, la configurazione, il debug, la sicurezza e la distribuzione dell'applicazione e informazioni su programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.</span><span class="sxs-lookup"><span data-stu-id="326d6-125">Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application, and information about dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>
