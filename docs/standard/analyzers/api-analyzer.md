@@ -3,13 +3,14 @@ title: Analizzatore di API .NET
 description: Informazioni su come l'analizzatore di API .NET consente di rilevare API deprecate e problemi di compatibilità della piattaforma.
 author: oliag
 ms.author: mairaw
-ms.date: 01/30/2018
+ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ac0e777e1df837ff7e9fbe185c462f56765e47bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696884"
 ---
 # <a name="net-api-analyzer"></a>Analizzatore di API .NET
 
@@ -70,11 +71,11 @@ L'eliminazione globale è il modo consigliato per garantire la coerenza di utili
 
 ## <a name="discovering-cross-platform-issues"></a>Individuazione dei problemi relativi alle API multipiattaforma
 
-Come per le API deprecate, l'analizzatore identifica tutte le API che non sono multipiattaforma. Ad esempio, <xref:System.Console.WindowWidth?displayProperty=nameWithType> funziona in Windows, ma non in Linux e macOS. L'ID di diagnostica viene visualizzato nella finestra **Elenco errori**. Per eliminare l'avviso, è possibile fare clic con il pulsante destro del mouse e scegliere **Azioni rapide e refactoring**. Diversamente dai casi di deprecazione per i quali sono disponibili due opzioni (continuare a usare il membro deprecato ed eliminare gli avvisi oppure non usarlo affatto), se si sviluppa codice solo per determinate piattaforme, è possibile eliminare tutti gli avvisi per tutte le altre piattaforme in cui non si prevede di eseguire il codice. A tale scopo, è sufficiente modificare il file di progetto e aggiungere la proprietà `PlatformCompatIgnore` che elenca tutte le piattaforme da ignorare. I valori accettati sono `Linux`, `MacOSX` e `Windows`.
+Come per le API deprecate, l'analizzatore identifica tutte le API che non sono multipiattaforma. Ad esempio, <xref:System.Console.WindowWidth?displayProperty=nameWithType> funziona in Windows, ma non in Linux e macOS. L'ID di diagnostica viene visualizzato nella finestra **Elenco errori**. Per eliminare l'avviso, è possibile fare clic con il pulsante destro del mouse e scegliere **Azioni rapide e refactoring**. Diversamente dai casi di deprecazione per i quali sono disponibili due opzioni (continuare a usare il membro deprecato ed eliminare gli avvisi oppure non usarlo affatto), se si sviluppa codice solo per determinate piattaforme, è possibile eliminare tutti gli avvisi per tutte le altre piattaforme in cui non si prevede di eseguire il codice. A tale scopo, è sufficiente modificare il file di progetto e aggiungere la proprietà `PlatformCompatIgnore` che elenca tutte le piattaforme da ignorare. I valori accettati sono `Linux`, `macOS` e `Windows`.
 
 ```xml
 <PropertyGroup>
-    <PlatformCompatIgnore>Linux;MacOS</PlatformCompatIgnore>
+    <PlatformCompatIgnore>Linux;macOS</PlatformCompatIgnore>
 </PropertyGroup>
 ```
 

@@ -2,11 +2,12 @@
 title: Novità di C# 7.2
 description: Panoramica delle nuove funzionalità in C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: b813bf5b38ef17986b21e928c9c86e583174c7d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a74afd7f073daa46328d60149e2dd90207420a80
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566189"
 ---
 # <a name="whats-new-in-c-72"></a>Novità di C# 7.2
 
@@ -15,7 +16,7 @@ Il tema centrale di questa versione è l'uso più efficiente dei tipi valore, ev
 
 Le funzionalità rimanenti sono piccole e utili.
 
-C# 7.2 usa l'elemento di configurazione per la [selezione della versione del linguaggio](csharp-7-1.md#language-version-selection) per selezionare la versione del linguaggio del compilatore.
+C# 7.2 usa l'elemento di configurazione per la [selezione della versione del linguaggio](../language-reference/configure-language-version.md) per selezionare la versione del linguaggio del compilatore.
 
 Le nuove funzionalità relative al linguaggio in questa versione sono:
 

@@ -3,12 +3,13 @@ title: Comando dotnet add package - Interfaccia della riga di comando di .NET Co
 description: Il comando 'dotnet add package' offre un'opzione utile per aggiungere un riferimento al pacchetto NuGet in un progetto.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/11/2017
-ms.openlocfilehash: fd3704bbb941835421d78e19f196fa52b3767c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 31dda9dbb101238b3a33d8b0d9a17765744480e0
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696299"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Riepilogo
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]`
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
 ## <a name="description"></a>Descrizione
 
@@ -30,7 +31,7 @@ Il comando `dotnet add package` offre un'opzione utile per aggiungere riferiment
 
 Ad esempio, l'aggiunta di `Newtonsoft.Json` a *ToDo.csproj* determina un output simile all'esempio seguente:
 
-```
+```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\projects\ToDo\ToDo.csproj...
@@ -62,10 +63,6 @@ Riferimento al pacchetto da aggiungere.
 
 Stampa una breve guida per il comando.
 
-`-v|--version <VERSION>`
-
-Versione del pacchetto.
-
 `-f|--framework <FRAMEWORK>`
 
 Aggiunge un riferimento al pacchetto solo quando la destinazione è un [framework](../../standard/frameworks.md) specifico.
@@ -74,13 +71,17 @@ Aggiunge un riferimento al pacchetto solo quando la destinazione è un [framewor
 
 Aggiunge un riferimento al pacchetto senza eseguire l'anteprima del ripristino e il controllo di compatibilità.
 
+`--package-directory <PACKAGE_DIRECTORY>`
+
+Ripristina il pacchetto nella directory specificata.
+
 `-s|--source <SOURCE>`
 
 Usa un'origine di pacchetto NuGet specifica durante l'operazione di ripristino.
 
-`--package-directory <PACKAGE_DIRECTORY>`
+`-v|--version <VERSION>`
 
-Ripristina il pacchetto nella directory specificata.
+Versione del pacchetto.
 
 ## <a name="examples"></a>Esempi
 
