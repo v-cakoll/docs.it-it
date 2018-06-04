@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9df41a404c091bb76490d762b55580c36cf33f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728680"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Esempio di espressione regolare: ricerca di HREF
 Nell'esempio riportato di seguito viene cercata una stringa di input e vengono visualizzati tutti i valori href="…" e le relative posizioni nella stringa.  
@@ -43,9 +44,9 @@ Nell'esempio riportato di seguito viene cercata una stringa di input e vengono v
 |`\s*`|Trovare la corrispondenza di zero o più spazi vuoti.|  
 |`=`|Corrisponde al segno di uguale.|  
 |`\s*`|Trovare la corrispondenza di zero o più spazi vuoti.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|Senza l'assegnazione del risultato a un gruppo acquisito, corrisponde a uno degli elementi seguenti:<br /> <ul><li><p>Una virgoletta o un apostrofo, seguito da zero o più occorrenze di qualsiasi carattere diverso dai primi, seguito da una virgoletta o un apostrofo. Il gruppo denominato `1` è incluso in questo modello.</p></li><li><p>Uno o più caratteri diversi dallo spazio vuoto. Il gruppo denominato `1` è incluso in questo modello.</p></li></ul>|  
+|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Senza l'assegnazione del risultato a un gruppo acquisito, corrisponde a uno degli elementi seguenti:<br /> <ul><li><p>Una virgoletta o un apostrofo, seguito da zero o più occorrenze di qualsiasi carattere diverso dai primi, seguito da una virgoletta o un apostrofo. Il gruppo denominato `1` è incluso in questo modello.</p></li><li><p>Uno o più caratteri diversi dallo spazio vuoto. Il gruppo denominato `1` è incluso in questo modello.</p></li></ul>|  
 |`(?<1>[^"']*)`|Assegnare zero o più occorrenze di qualsiasi carattere diverso da una virgoletta o un apostrofo al gruppo di acquisizione denominato `1`.|  
-|`"(?<1>\S+)`|Assegnare uno o più caratteri diversi da spazi vuoti al gruppo di acquisizione denominato `1`.|  
+|`(?<1>\S+)`|Assegnare uno o più caratteri diversi da spazi vuoti al gruppo di acquisizione denominato `1`.|  
   
 ## <a name="match-result-class"></a>Classe di risultati di corrispondenza  
  I risultati della ricerca vengono archiviati nella classe <xref:System.Text.RegularExpressions.Match>, che offre l'accesso a tutte le sottostringhe estratte dalla ricerca. Tale classe memorizza anche la stringa cercata e l'espressione regolare usata, pertanto è possibile chiamare il metodo <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> per eseguire un'altra ricerca a partire dal punto in cui è terminata quella più recente.  
