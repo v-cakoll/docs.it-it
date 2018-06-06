@@ -6,11 +6,12 @@ helpviewer_keywords:
 - .NET Framework [Visual Basic], reference
 - .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-ms.openlocfilehash: 969aed5e98c0017f34d57d3999292c10163b4385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a949fa6554316ebd2b4abd90e512f4a8496f874
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805412"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>Informazioni di riferimento su .NET Framework (Visual Basic)
 In questo argomento vengono forniti collegamenti a informazioni su come lavorare con i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] libreria di classi.  
@@ -31,5 +32,5 @@ In questo argomento vengono forniti collegamenti a informazioni su come lavorare
  [Esempi di .NET Framework](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
  Vengono forniti collegamenti ad applicazioni di esempio che illustrano le tecnologie .NET Framework.  
   
- [Libreria di classi .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ [Browser API .NET](../../../api/index.md)  
  Fornisce la sintassi, esempi di codice e informazioni correlate per ogni classe negli spazi dei nomi .NET Framework.
