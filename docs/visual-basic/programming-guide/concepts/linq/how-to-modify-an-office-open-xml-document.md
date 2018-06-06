@@ -2,16 +2,17 @@
 title: 'Procedura: modificare un documento Office Open XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 97e754f37580af990b1aaa64f389de5cbce91d60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d4ecdf89606190eed16b5374a5e43421d1260b7
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753393"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Procedura: modificare un documento Office Open XML (Visual Basic)
 In questo argomento viene presentato un esempio in cui viene aperto, modificato e salvato un documento Office Open XML.  
   
- Per altre informazioni su Office Open XML, vedere [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Per ulteriori informazioni su Office Open XML, vedere [Eric White Blog](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene ricercato il primo elemento del paragrafo nel documento. Viene recuperato il testo dal paragrafo e quindi vengono eliminate tutte le sequenze di testo nel paragrafo. Viene creata una nuova sequenza di testo costituita dal testo del primo paragrafo convertito in lettere maiuscole. L'XML modificato viene quindi serializzato nel package Open XML e viene chiuso.  
