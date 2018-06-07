@@ -2,11 +2,12 @@
 title: 'Presentazione di F #'
 description: 'Esaminare alcune delle funzionalità chiave di F # in questa presentazione con esempi di codice di linguaggio di programmazione.'
 ms.date: 02/28/2018
-ms.openlocfilehash: 2ce251b90d5c202996e0b1673e8f7f378a38af5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63c38d59376a148c439482fcf47488fc72b7b8aa
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753487"
 ---
 # <a name="tour-of-f"></a>Presentazione di F # #
 
@@ -54,11 +55,11 @@ A partire da F # 4.1, è inoltre possibile creare `struct` Tuple.  Questi anche 
 
 ## <a name="pipelines-and-composition"></a>Le pipeline e composizione
 
-Inviare tramite pipe gli operatori (`|>`, `<|`, `||>`, `<||`, `|||>`, `<|||`) e gli operatori di composizione (`>>` e `<<`) vengono utilizzate spesso durante l'elaborazione dati in F #.  Questi operatori sono funzioni che consentono di stabilire "pipeline" delle funzioni in modo flessibile.  Nell'esempio seguente illustra come è possibile sfruttare questi operatori per compilare una semplice pipeline funzionale.
+Inviare tramite pipe gli operatori, ad esempio `|>` si utilizzano diffusamente durante l'elaborazione dati in F #. Questi operatori sono funzioni che consentono di stabilire "pipeline" delle funzioni in modo flessibile. Nell'esempio seguente illustra come è possibile sfruttare questi operatori per compilare una semplice pipeline funzionale:
 
-[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L300)]
+[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-L'esempio precedente apportata usare molte funzionalità di F #, incluse le funzioni di elaborazione di elenco, le funzioni di prima classe, e [applicazione parziale](language-reference/functions/index.md#partial-application-of-arguments).  Anche se una conoscenza approfondita di ognuno di questi concetti può diventare piuttosto avanzata, dovrebbe essere chiaro come facilmente utilizzare funzioni per elaborare i dati durante la compilazione di pipeline.
+L'esempio precedente apportata usare molte funzionalità di F #, incluse le funzioni l'elaborazione di elenco, le funzioni di prima classe, e [applicazione parziale](language-reference/functions/index.md#partial-application-of-arguments). Anche se una conoscenza approfondita di ognuno di questi concetti può diventare piuttosto avanzata, dovrebbe essere chiaro come facilmente utilizzare funzioni per elaborare i dati durante la compilazione di pipeline.
 
 ## <a name="lists-arrays-and-sequences"></a>Elenchi, matrici e sequenze
 
