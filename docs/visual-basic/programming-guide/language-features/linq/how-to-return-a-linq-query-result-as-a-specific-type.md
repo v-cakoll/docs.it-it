@@ -9,18 +9,19 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: e0b7e402fba4fb51afb60ad0ae7698bd4947b2f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c3a10ed901832846da058018a91349be0c2495b
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827085"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Procedura: restituire un risultato di query LINQ come tipo specifico (Visual Basic)
 Language-Integrated Query (LINQ) rende più semplice accedere alle informazioni di database ed eseguire query. Per impostazione predefinita, le query LINQ restituiscono un elenco di oggetti come un tipo anonimo. È inoltre possibile specificare che la query restituisca un elenco di un tipo specifico usando il `Select` clausola.  
   
  Nell'esempio seguente viene illustrato come creare una nuova applicazione che esegue query su un database di SQL Server e vengono proiettati i risultati come un tipo denominato specifico. Per ulteriori informazioni, vedere [tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) e [clausola Select](../../../../visual-basic/language-reference/queries/select-clause.md).  
   
- Gli esempi in questo argomento usano il database di esempio Northwind. Se non si dispone di esempio Northwind nel computer di sviluppo, è possibile scaricarlo dal [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) sito Web. Per istruzioni, vedere [download dei database di esempio](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Gli esempi in questo argomento usano il database di esempio Northwind. Se non è il database nel computer di sviluppo, è possibile scaricare da Microsoft Download Center. Per istruzioni, vedere [download dei database di esempio](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

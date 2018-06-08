@@ -12,18 +12,19 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: c0c00c15756ab4d488096d4311bb47986a5eb25e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 617bb62f9009c507658b5d1262657cb4dfa860e9
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827111"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Procedura: modificare dati in un database utilizzando LINQ (Visual Basic)
 Language-Integrated Query (LINQ) in query rendono più semplice accedere alle informazioni di database e modificare i valori presenti nel database.  
   
  Nell'esempio seguente viene illustrato come creare una nuova applicazione che recupera e aggiorna le informazioni in un database di SQL Server.  
   
- Gli esempi in questo argomento usano il database di esempio Northwind. Se non si dispone di esempio Northwind nel computer di sviluppo, è possibile scaricarlo dal [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) sito Web. Per istruzioni, vedere [download dei database di esempio](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Gli esempi in questo argomento usano il database di esempio Northwind. Se non è il database nel computer di sviluppo, è possibile scaricare da Microsoft Download Center. Per istruzioni, vedere [download dei database di esempio](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ### <a name="to-create-a-connection-to-a-database"></a>Per creare una connessione a un database  
   

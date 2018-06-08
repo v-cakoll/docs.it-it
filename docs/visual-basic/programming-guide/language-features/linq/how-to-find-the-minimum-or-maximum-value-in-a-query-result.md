@@ -14,18 +14,19 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: d074ff135258dbc35b16c698fa6fc8eff0edf0be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1b997272bc65a3702353f1f7db02fa330a19c21
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826890"
 ---
 # <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Procedura: trovare il valore minimo o massimo in un risultato di query utilizzando LINQ (Visual Basic)
 Language-Integrated Query (LINQ) rende più semplice accedere alle informazioni di database ed eseguire query.  
   
  Nell'esempio seguente viene illustrato come creare una nuova applicazione che esegue query su un database di SQL Server. Nell'esempio vengono determinati i valori minimo e massimi per i risultati utilizzando il `Aggregate` e `Group By` clausole. Per ulteriori informazioni, vedere [clausola Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md) e [Group By Clause](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
- Gli esempi in questo argomento usano il database di esempio Northwind. Se non si dispone di esempio Northwind nel computer di sviluppo, è possibile scaricarlo dal [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) sito Web. Per istruzioni, vedere [download dei database di esempio](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Gli esempi in questo argomento usano il database di esempio Northwind. Se non è il database nel computer di sviluppo, è possibile scaricare da Microsoft Download Center. Per istruzioni, vedere [download dei database di esempio](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
