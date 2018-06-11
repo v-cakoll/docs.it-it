@@ -3,11 +3,12 @@ title: System.Delegate e la parola chiave `delegate`
 description: Informazioni sulle classi di .NET Framework che supportano i delegati e sul mapping tra queste classi e la parola chiave "delegate".
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827300"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate e la parola chiave `delegate`
 
@@ -77,10 +78,8 @@ Gli sviluppatori che vogliono usare il metodo `List.Sort()` devono definire un m
 Si supponga di voler ordinare un elenco di stringhe in base alla lunghezza. La funzione di confronto potrebbe essere la seguente:
 
 ```csharp
-private static int CompareLength(string left, string right)
-{
-    return left.Length.CompareTo(right.Length);
-}
+private static int CompareLength(string left, string right) =>
+    left.Length.CompareTo(right.Length);
 ```
 
 Il metodo viene dichiarato come metodo privato. Va bene. Può essere opportuno evitare che questo metodo sia parte dell'interfaccia pubblica. Può comunque essere usato come metodo di confronto se collegato a un delegato. Il codice chiamante avrà questo metodo associato all'elenco di destinazione dell'oggetto delegato e potrà accedere usando quel delegato.
