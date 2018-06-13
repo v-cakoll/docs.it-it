@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 619a28d2382aa9cc3130a3130c07fa1e283119e4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437915"
 ---
 # <a name="idebuggerthreadcontrol-interface"></a>Interfaccia IDebuggerThreadControl
 Fornisce metodi per notificare all'host di blocco e sblocco dei thread per i servizi di debug.  

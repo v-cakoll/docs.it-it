@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0945a4b32a155e99e0402dfcdcc826d1eff3eb4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442020"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>Metodo IHostTaskManager::ReverseEnterRuntime
 Notifica all'host che è in corso una chiamata a common language runtime (CLR) dal codice non gestito.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744525"
 ---
 # <a name="add-ins-and-extensibility"></a>Componenti aggiuntivi ed estensibilità
 <a name="top"></a> I componenti aggiuntivi forniscono funzionalità o servizi estesi per un'applicazione host. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre un modello di programmazione che gli sviluppatori possono usare per sviluppare componenti aggiuntivi e attivarli nella propria applicazione host. Ciò avviene attraverso la costruzione di una pipeline di comunicazione tra l'host e il componente aggiuntivo. Il modello viene implementato usando i tipi inclusi negli spazi dei nomi <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>e <xref:System.AddIn.Contract> .  

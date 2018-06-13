@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 449546a0f774a241efd035190d43de103199edbf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436806"
 ---
 # <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a>Metodo ICorConfiguration::SetDebuggerThreadControl
 Imposta l'interfaccia di callback che i servizi di debug verranno chiamato quando i thread di runtime (CLR) di linguaggio comuni sono bloccati e non bloccato per il debug.  

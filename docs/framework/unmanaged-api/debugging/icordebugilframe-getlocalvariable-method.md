@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3424646337c3f90f15d991f3f669a296bf11d8ef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413007"
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>Metodo ICorDebugILFrame::GetLocalVariable
 Ottiene il valore della variabile locale specificata in questo stack frame di Microsoft intermediate language (MSIL).  
