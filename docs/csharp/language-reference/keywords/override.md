@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280153"
 ---
 # <a name="override-c-reference"></a><span data-ttu-id="3e0c9-102">override (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="3e0c9-102">override (C# Reference)</span></span>
 <span data-ttu-id="3e0c9-103">Il modificatore `override` è necessario per estendere o modificare l'implementazione astratta o virtuale di un metodo, una proprietà, un indicizzatore o un evento ereditato.</span><span class="sxs-lookup"><span data-stu-id="3e0c9-103">The `override` modifier is required to extend or modify the abstract or virtual implementation of an inherited method, property, indexer, or event.</span></span>  

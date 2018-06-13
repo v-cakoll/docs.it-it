@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266155"
 ---
 # <a name="namespace-keywords-c-reference"></a><span data-ttu-id="33ffc-102">Parole chiave per spazi dei nomi (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="33ffc-102">Namespace Keywords (C# Reference)</span></span>
 <span data-ttu-id="33ffc-103">Questa sezione descrive le parole chiave e gli operatori che sono associati all'uso degli spazi dei nomi:</span><span class="sxs-lookup"><span data-stu-id="33ffc-103">This section describes the keywords and operators that are associated with using namespaces:</span></span>  

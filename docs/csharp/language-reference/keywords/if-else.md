@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218754"
 ---
 # <a name="if-else-c-reference"></a><span data-ttu-id="9128e-102">if-else (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="9128e-102">if-else (C# Reference)</span></span>
 <span data-ttu-id="9128e-103">Un'istruzione `if` identifica quale istruzione eseguire in base al valore di un'espressione `Boolean` .</span><span class="sxs-lookup"><span data-stu-id="9128e-103">An `if` statement identifies which statement to run based on the value of a `Boolean` expression.</span></span> <span data-ttu-id="9128e-104">Nell'esempio seguente la variabile `Boolean` `result` viene impostata su `true` e quindi archiviata nell'istruzione `if` .</span><span class="sxs-lookup"><span data-stu-id="9128e-104">In the following example, the `Boolean` variable `result` is set to `true` and then checked in the `if` statement.</span></span> <span data-ttu-id="9128e-105">L'output è `The condition is true`.</span><span class="sxs-lookup"><span data-stu-id="9128e-105">The output is `The condition is true`.</span></span>  

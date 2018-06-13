@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265801"
 ---
 # <a name="try-catch-finally-c-reference"></a><span data-ttu-id="fa751-102">try...catch...finally (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="fa751-102">try-catch-finally (C# Reference)</span></span>
 <span data-ttu-id="fa751-103">Le parole chiave `catch` e `finally` vengono in genere usate insieme per rilevare e usare le risorse in un blocco `try`, gestire situazioni anomale in un blocco `catch` e liberare le risorse nel blocco `finally`.</span><span class="sxs-lookup"><span data-stu-id="fa751-103">A common usage of `catch` and `finally` together is to obtain and use resources in a `try` block, deal with exceptional circumstances in a `catch` block, and release the resources in the `finally` block.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219336"
 ---
 # <a name="decimal-c-reference"></a><span data-ttu-id="85335-102">decimal (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="85335-102">decimal (C# Reference)</span></span>
 <span data-ttu-id="85335-103">La parola chiave `decimal` indica un tipo di dati a 128 bit.</span><span class="sxs-lookup"><span data-stu-id="85335-103">The `decimal` keyword indicates a 128-bit data type.</span></span> <span data-ttu-id="85335-104">Rispetto ad altri tipi a virgola mobile, il tipo `decimal` è caratterizzato da una maggiore precisione e da un intervallo minore, che lo rendono appropriato per calcoli finanziari e monetari.</span><span class="sxs-lookup"><span data-stu-id="85335-104">Compared to other floating-point types, the `decimal` type has more precision and a smaller range, which makes it appropriate for financial and monetary calculations.</span></span> <span data-ttu-id="85335-105">Nella tabella riportata di seguito vengono indicati l'intervallo approssimativo e il grado di precisione del tipo `decimal`.</span><span class="sxs-lookup"><span data-stu-id="85335-105">The approximate range and precision for the `decimal` type are shown in the following table.</span></span>  

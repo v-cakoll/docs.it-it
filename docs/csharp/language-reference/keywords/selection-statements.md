@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267368"
 ---
 # <a name="selection-statements-c-reference"></a><span data-ttu-id="79adc-102">Istruzioni di selezione (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="79adc-102">Selection Statements (C# Reference)</span></span>
 <span data-ttu-id="79adc-103">Con un'istruzione di selezione il controllo del programma viene trasferito a un flusso specifico a seconda che una determinata condizione sia `true` o meno.</span><span class="sxs-lookup"><span data-stu-id="79adc-103">A selection statement causes the program control to be transferred to a specific flow based upon whether a certain condition is `true` or not.</span></span>  
