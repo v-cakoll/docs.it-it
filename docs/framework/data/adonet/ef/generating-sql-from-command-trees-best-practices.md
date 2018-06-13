@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760193"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Procedure consigliate per la generazione di SQL dagli alberi dei comandi
 Gli alberi dei comandi di query di output sono molto simili alle query esprimibili in SQL. Per generare SQL da un albero dei comandi di output, tuttavia i writer del provider devono affrontare alcune difficoltà comuni. In questo argomento vengono illustrate tali difficoltà, mentre nell'argomento successivo il provider di esempio mostra come risolverle.  

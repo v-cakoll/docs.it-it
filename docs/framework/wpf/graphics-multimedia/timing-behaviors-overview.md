@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566324"
 ---
 # <a name="timing-behaviors-overview"></a>Cenni preliminari sui comportamenti temporali
 In questo argomento vengono descritti i comportamenti temporali delle animazioni e di altri <xref:System.Windows.Media.Animation.Timeline> oggetti.  

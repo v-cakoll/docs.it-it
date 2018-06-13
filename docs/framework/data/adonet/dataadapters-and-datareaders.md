@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758100"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter e DataReader
 È possibile utilizzare ADO.NET **DataReader** per recuperare un flusso forward-only in sola lettura di dati da un database. Vengono restituiti all'esecuzione della query e vengono archiviati nel buffer di rete nel client fino a quando non ne fanno richiesta utilizzando il **lettura** metodo il **DataReader**. Utilizzo di **DataReader** può aumentare le prestazioni dell'applicazione per il recupero dei dati non appena è disponibile e (per impostazione predefinita) archiviando solo una riga alla volta in memoria, riducendo l'overhead di sistema.  

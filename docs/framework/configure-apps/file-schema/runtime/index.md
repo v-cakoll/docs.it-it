@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747951"
 ---
 # <a name="runtime-settings-schema"></a>Schema delle impostazioni di runtime
 Le impostazioni di runtime vengono usate da Common Language Runtime per configurare le applicazioni destinate a .NET Framework.  

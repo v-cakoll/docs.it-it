@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759036"
 ---
 # <a name="inferring-relationships"></a>Deduzione di relazioni
 Se a un elemento inferito come tabella è associato un elemento figlio a sua volta inferito come tabella, tra le due tabelle verrà creato un tipo <xref:System.Data.DataRelation>. Una nuova colonna con un nome di **ParentTableName_Id** verranno aggiunti alla tabella creata per l'elemento padre e la tabella creata per l'elemento figlio. Il **ColumnMapping** della colonna identity verrà impostata su **MappingType**. La colonna sarà una chiave primaria con incremento automatico per la tabella padre e verrà utilizzata per il **DataRelation** tra le due tabelle. Il tipo di dati della colonna identity aggiunta sarà **System. Int32**, a differenza del tipo di dati di tutte le altre colonne inferite, che è **System. String**. Oggetto <xref:System.Data.ForeignKeyConstraint> con **DeleteRule** = **Cascade** verrà creata anche usando la nuova colonna nelle tabelle padre e figlio.  

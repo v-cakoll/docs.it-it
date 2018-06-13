@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567588"
 ---
 # <a name="manipulating-strings-in-net"></a>Modifica di stringhe in .NET
 .NET offre un insieme completo di routine che consentono di creare, confrontare e modificare stringhe in modo efficiente, nonché di analizzare rapidamente elevate quantità di testo e dati per cercare, rimuovere e sostituire pattern di testo.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603717"
 ---
 # <a name="handles-clause-visual-basic"></a>Clausola Handles (Visual Basic)
 Dichiara che una routine gestisce un evento specificato.  

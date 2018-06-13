@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749098"
 ---
 # <a name="ltpolicyimportersgt"></a>&lt;policyImporters&gt;
 Questo elemento di configurazione specifica tutte le unità di importazione dei criteri che controllano l'importazione di asserzioni di criteri personalizzate relative alle associazioni. Ogni elemento figlio è un elemento <`policyImporter`> che viene usato per la ricerca di asserzioni di criteri personalizzati sulle funzionalità di associazione e per allegare un elemento di associazione personalizzato che implementa le funzionalità richieste dall'asserzione.  

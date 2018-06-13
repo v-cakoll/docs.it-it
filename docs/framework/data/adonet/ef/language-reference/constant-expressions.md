@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762517"
 ---
 # <a name="constant-expressions"></a>Espressioni costanti
 Un'espressione costante è costituita da un valore costante. I valori costanti vengono convertiti direttamente in espressioni costanti dell'albero dei comandi, senza conversione nel client. Questo vale anche per le espressioni che hanno come risultato un valore costante. È pertanto possibile prevedere il comportamento dell'origine dati per tutte le espressioni che contengono costanti. Il comportamento risultante può essere diverso da quello in CLR.  
