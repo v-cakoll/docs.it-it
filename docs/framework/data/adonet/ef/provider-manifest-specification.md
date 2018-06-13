@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767141"
 ---
 # <a name="provider-manifest-specification"></a><span data-ttu-id="db2e2-102">Specifica del manifesto del provider</span><span class="sxs-lookup"><span data-stu-id="db2e2-102">Provider Manifest Specification</span></span>
 <span data-ttu-id="db2e2-103">Questa sezione illustra come un provider dell'archivio dati può supportare i tipi e le funzioni di tale archivio.</span><span class="sxs-lookup"><span data-stu-id="db2e2-103">This section discusses how a data store provider can support the types and functions in the data store.</span></span>  

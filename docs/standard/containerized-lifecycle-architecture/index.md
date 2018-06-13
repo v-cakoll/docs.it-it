@@ -6,9 +6,10 @@ ms.author: wiwagn
 ms.date: 09/22/2017
 ms.openlocfilehash: 8d1062aaea85cf810fa07b36252974eceb227c43
 ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32768281"
 ---
 # <a name="introduction-to-containers-and-docker"></a><span data-ttu-id="7fc7e-103">Introduzione ai contenitori e a Docker</span><span class="sxs-lookup"><span data-stu-id="7fc7e-103">Introduction to containers and Docker</span></span>
 
