@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172019"
 ---
 # <a name="as-c-reference"></a><span data-ttu-id="584a0-102">as (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="584a0-102">as (C# Reference)</span></span>
 <span data-ttu-id="584a0-103">È possibile usare l'operatore `as` per eseguire determinati tipi di conversioni tra tipi di riferimenti compatibili o [tipi nullable](../../../csharp/programming-guide/nullable-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="584a0-103">You can use the `as` operator to perform certain types of conversions between compatible reference types or [nullable types](../../../csharp/programming-guide/nullable-types/index.md).</span></span> <span data-ttu-id="584a0-104">Il codice seguente illustra un esempio.</span><span class="sxs-lookup"><span data-stu-id="584a0-104">The following code shows an example.</span></span>  

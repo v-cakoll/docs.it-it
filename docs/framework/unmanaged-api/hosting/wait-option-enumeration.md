@@ -1,14 +1,6 @@
 ---
 title: Enumerazione WAIT_OPTION
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - WAIT_OPTION
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 962fc293-8ded-4b3b-90ce-2c21a4f1b244
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 143c191592efe8cfea8049f0dd5dc05a5bd4192f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: fb37394799db39baa406ef332066d5ebb2dbf19d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441929"
 ---
-# <a name="waitoption-enumeration"></a><span data-ttu-id="ae2e2-102">Enumerazione WAIT_OPTION</span><span class="sxs-lookup"><span data-stu-id="ae2e2-102">WAIT_OPTION Enumeration</span></span>
-<span data-ttu-id="ae2e2-103">Contiene valori che indicano che l'azione di un host deve avere se l'operazione richiesta da common language runtime (CLR) Blocca.</span><span class="sxs-lookup"><span data-stu-id="ae2e2-103">Contains values that indicate the action a host should take if an operation requested by the common language runtime (CLR) blocks.</span></span>  
+# <a name="waitoption-enumeration"></a><span data-ttu-id="36ea0-102">Enumerazione WAIT_OPTION</span><span class="sxs-lookup"><span data-stu-id="36ea0-102">WAIT_OPTION Enumeration</span></span>
+<span data-ttu-id="36ea0-103">Contiene valori che indicano che l'azione di un host deve avere se l'operazione richiesta da common language runtime (CLR) Blocca.</span><span class="sxs-lookup"><span data-stu-id="36ea0-103">Contains values that indicate the action a host should take if an operation requested by the common language runtime (CLR) blocks.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ae2e2-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ae2e2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="36ea0-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="36ea0-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -47,25 +36,25 @@ typedef enum {
 } WAIT_OPTION;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ae2e2-105">Membri</span><span class="sxs-lookup"><span data-stu-id="ae2e2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="36ea0-105">Membri</span><span class="sxs-lookup"><span data-stu-id="36ea0-105">Members</span></span>  
   
-|<span data-ttu-id="ae2e2-106">Membro</span><span class="sxs-lookup"><span data-stu-id="ae2e2-106">Member</span></span>|<span data-ttu-id="ae2e2-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ae2e2-107">Description</span></span>|  
+|<span data-ttu-id="36ea0-106">Membro</span><span class="sxs-lookup"><span data-stu-id="36ea0-106">Member</span></span>|<span data-ttu-id="36ea0-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="36ea0-107">Description</span></span>|  
 |------------|-----------------|  
-|`WAIT_ALERTABLE`|<span data-ttu-id="ae2e2-108">Notifica all'host che l'attività deve essere riattivata se Common Language Runtime chiama il [IHostTask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) metodo.</span><span class="sxs-lookup"><span data-stu-id="ae2e2-108">Notifies the host that the task should be awakened if the CLR calls the [IHostTask::Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) method.</span></span>|  
-|`WAIT_MSGPUMP`|<span data-ttu-id="ae2e2-109">Notifica all'host che è necessario il message pump sul thread del sistema operativo corrente se il thread si blocca.</span><span class="sxs-lookup"><span data-stu-id="ae2e2-109">Notifies the host that it must pump messages on the current OS thread if the thread becomes blocked.</span></span> <span data-ttu-id="ae2e2-110">Il runtime specifica questo valore solo su un <xref:System.Threading.ApartmentState.STA> thread.</span><span class="sxs-lookup"><span data-stu-id="ae2e2-110">The runtime specifies this value only on an <xref:System.Threading.ApartmentState.STA> thread.</span></span>|  
-|`WAIT_NOTINDEADLOCK`|<span data-ttu-id="ae2e2-111">Notifica all'host che la richiesta di sincronizzazione specificata non può essere interrotta da un host.</span><span class="sxs-lookup"><span data-stu-id="ae2e2-111">Notifies the host that the specified synchronization request cannot be broken by a host.</span></span> <span data-ttu-id="ae2e2-112">Vale a dire l'host non può restituire `HOST_E_DEADLOCK`.</span><span class="sxs-lookup"><span data-stu-id="ae2e2-112">That is, the host cannot return `HOST_E_DEADLOCK`.</span></span>|  
+|`WAIT_ALERTABLE`|<span data-ttu-id="36ea0-108">Notifica all'host che l'attività deve essere riattivata se Common Language Runtime chiama il [IHostTask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) metodo.</span><span class="sxs-lookup"><span data-stu-id="36ea0-108">Notifies the host that the task should be awakened if the CLR calls the [IHostTask::Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) method.</span></span>|  
+|`WAIT_MSGPUMP`|<span data-ttu-id="36ea0-109">Notifica all'host che è necessario il message pump sul thread del sistema operativo corrente se il thread si blocca.</span><span class="sxs-lookup"><span data-stu-id="36ea0-109">Notifies the host that it must pump messages on the current OS thread if the thread becomes blocked.</span></span> <span data-ttu-id="36ea0-110">Il runtime specifica questo valore solo su un <xref:System.Threading.ApartmentState.STA> thread.</span><span class="sxs-lookup"><span data-stu-id="36ea0-110">The runtime specifies this value only on an <xref:System.Threading.ApartmentState.STA> thread.</span></span>|  
+|`WAIT_NOTINDEADLOCK`|<span data-ttu-id="36ea0-111">Notifica all'host che la richiesta di sincronizzazione specificata non può essere interrotta da un host.</span><span class="sxs-lookup"><span data-stu-id="36ea0-111">Notifies the host that the specified synchronization request cannot be broken by a host.</span></span> <span data-ttu-id="36ea0-112">Vale a dire l'host non può restituire `HOST_E_DEADLOCK`.</span><span class="sxs-lookup"><span data-stu-id="36ea0-112">That is, the host cannot return `HOST_E_DEADLOCK`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ae2e2-113">Note</span><span class="sxs-lookup"><span data-stu-id="ae2e2-113">Remarks</span></span>  
- <span data-ttu-id="ae2e2-114">Il [IHostTaskManager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) e [SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) entrambi i metodi accettano un parametro di questo tipo.</span><span class="sxs-lookup"><span data-stu-id="ae2e2-114">The [IHostTaskManager::Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) and [IHostTaskManager::SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) methods both take a parameter of this type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="36ea0-113">Note</span><span class="sxs-lookup"><span data-stu-id="36ea0-113">Remarks</span></span>  
+ <span data-ttu-id="36ea0-114">Il [IHostTaskManager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) e [SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) entrambi i metodi accettano un parametro di questo tipo.</span><span class="sxs-lookup"><span data-stu-id="36ea0-114">The [IHostTaskManager::Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) and [IHostTaskManager::SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) methods both take a parameter of this type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ae2e2-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ae2e2-115">Requirements</span></span>  
- <span data-ttu-id="ae2e2-116">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ae2e2-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="36ea0-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="36ea0-115">Requirements</span></span>  
+ <span data-ttu-id="36ea0-116">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="36ea0-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ae2e2-117">**Intestazione:** Mscoree. H</span><span class="sxs-lookup"><span data-stu-id="ae2e2-117">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="36ea0-117">**Intestazione:** Mscoree. H</span><span class="sxs-lookup"><span data-stu-id="36ea0-117">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ae2e2-118">**Libreria:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ae2e2-118">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="36ea0-118">**Libreria:** Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="36ea0-118">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ae2e2-119">**Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ae2e2-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="36ea0-119">**Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36ea0-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ae2e2-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ae2e2-120">See Also</span></span>  
- [<span data-ttu-id="ae2e2-121">Enumerazioni di hosting</span><span class="sxs-lookup"><span data-stu-id="ae2e2-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="36ea0-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="36ea0-120">See Also</span></span>  
+ [<span data-ttu-id="36ea0-121">Enumerazioni di hosting</span><span class="sxs-lookup"><span data-stu-id="36ea0-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

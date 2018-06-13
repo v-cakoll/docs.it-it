@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: creare un oggetto Pen'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,29 +10,25 @@ helpviewer_keywords:
 - pens [Windows Forms], creating
 - Pen object
 ms.assetid: 7fbea8b7-7ac1-4413-9c17-733a850381e3
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95954960db8534844820d14869273de1c44a51e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aff1771af12a9f59127a9f21f4b692d6214c457d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520978"
 ---
-# <a name="how-to-create-a-pen"></a><span data-ttu-id="46f02-102">Procedura: creare un oggetto Pen</span><span class="sxs-lookup"><span data-stu-id="46f02-102">How to: Create a Pen</span></span>
-<span data-ttu-id="46f02-103">Questo esempio viene creato un <xref:System.Drawing.Pen> oggetto.</span><span class="sxs-lookup"><span data-stu-id="46f02-103">This example creates a <xref:System.Drawing.Pen> object.</span></span>  
+# <a name="how-to-create-a-pen"></a><span data-ttu-id="88c94-102">Procedura: creare un oggetto Pen</span><span class="sxs-lookup"><span data-stu-id="88c94-102">How to: Create a Pen</span></span>
+<span data-ttu-id="88c94-103">Questo esempio viene creato un <xref:System.Drawing.Pen> oggetto.</span><span class="sxs-lookup"><span data-stu-id="88c94-103">This example creates a <xref:System.Drawing.Pen> object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="46f02-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="46f02-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="88c94-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="88c94-104">Example</span></span>  
  [!code-cpp[System.Drawing.ConceptualHowTos#3](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#3)]
  [!code-csharp[System.Drawing.ConceptualHowTos#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#3)]
  [!code-vb[System.Drawing.ConceptualHowTos#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#3)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="46f02-105">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="46f02-105">Robust Programming</span></span>  
- <span data-ttu-id="46f02-106">Dopo aver terminato di utilizzare gli oggetti che utilizzano risorse di sistema, ad esempio <xref:System.Drawing.Pen> oggetti, è necessario chiamare <xref:System.Drawing.Pen.Dispose%2A> su di essi.</span><span class="sxs-lookup"><span data-stu-id="46f02-106">After you have finished using objects that consume system resources, such as <xref:System.Drawing.Pen> objects, you should call <xref:System.Drawing.Pen.Dispose%2A> on them.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="88c94-105">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="88c94-105">Robust Programming</span></span>  
+ <span data-ttu-id="88c94-106">Dopo aver terminato di utilizzare gli oggetti che utilizzano risorse di sistema, ad esempio <xref:System.Drawing.Pen> oggetti, è necessario chiamare <xref:System.Drawing.Pen.Dispose%2A> su di essi.</span><span class="sxs-lookup"><span data-stu-id="88c94-106">After you have finished using objects that consume system resources, such as <xref:System.Drawing.Pen> objects, you should call <xref:System.Drawing.Pen.Dispose%2A> on them.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46f02-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="46f02-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="88c94-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="88c94-107">See Also</span></span>  
  <xref:System.Drawing.Pen>  
- [<span data-ttu-id="46f02-108">Introduzione alla programmazione grafica</span><span class="sxs-lookup"><span data-stu-id="46f02-108">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [<span data-ttu-id="46f02-109">Penne, linee e rettangoli in GDI+</span><span class="sxs-lookup"><span data-stu-id="46f02-109">Pens, Lines, and Rectangles in GDI+</span></span>](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)
+ [<span data-ttu-id="88c94-108">Introduzione alla programmazione grafica</span><span class="sxs-lookup"><span data-stu-id="88c94-108">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [<span data-ttu-id="88c94-109">Penne, linee e rettangoli in GDI+</span><span class="sxs-lookup"><span data-stu-id="88c94-109">Pens, Lines, and Rectangles in GDI+</span></span>](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)

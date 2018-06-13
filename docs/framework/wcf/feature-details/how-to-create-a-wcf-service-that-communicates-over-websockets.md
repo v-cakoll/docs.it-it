@@ -1,31 +1,20 @@
 ---
 title: 'Procedura: creare un servizio WCF che comunica tramite WebSockets'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99d091e5ef0998a3818609b7d52ecd62a609eeb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 197db0b81565b93c753ad3ecfb716e4d07ea1d0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493777"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a><span data-ttu-id="3d4b9-102">Procedura: creare un servizio WCF che comunica tramite WebSockets</span><span class="sxs-lookup"><span data-stu-id="3d4b9-102">How to: Create a WCF Service that Communicates over WebSockets</span></span>
-<span data-ttu-id="3d4b9-103">I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-103">WCF services and clients can use the <xref:System.ServiceModel.NetHttpBinding> binding to communicate over WebSockets.</span></span>  <span data-ttu-id="3d4b9-104">La tecnologia WebSockets viene usata quando <xref:System.ServiceModel.NetHttpBinding> determina che il contratto di servizio definisce un contratto di callback.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-104">WebSockets will be used when the <xref:System.ServiceModel.NetHttpBinding> determines the service contract defines a callback contract.</span></span> <span data-ttu-id="3d4b9-105">In questo argomento viene descritto come implementare un servizio e un client WCF in cui viene usato l'oggetto <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-105">This topic describes how to implement a WCF service and client that uses the <xref:System.ServiceModel.NetHttpBinding> to communicate over WebSockets.</span></span>  
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a><span data-ttu-id="c4d58-102">Procedura: creare un servizio WCF che comunica tramite WebSockets</span><span class="sxs-lookup"><span data-stu-id="c4d58-102">How to: Create a WCF Service that Communicates over WebSockets</span></span>
+<span data-ttu-id="c4d58-103">I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.</span><span class="sxs-lookup"><span data-stu-id="c4d58-103">WCF services and clients can use the <xref:System.ServiceModel.NetHttpBinding> binding to communicate over WebSockets.</span></span>  <span data-ttu-id="c4d58-104">La tecnologia WebSockets viene usata quando <xref:System.ServiceModel.NetHttpBinding> determina che il contratto di servizio definisce un contratto di callback.</span><span class="sxs-lookup"><span data-stu-id="c4d58-104">WebSockets will be used when the <xref:System.ServiceModel.NetHttpBinding> determines the service contract defines a callback contract.</span></span> <span data-ttu-id="c4d58-105">In questo argomento viene descritto come implementare un servizio e un client WCF in cui viene usato l'oggetto <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.</span><span class="sxs-lookup"><span data-stu-id="c4d58-105">This topic describes how to implement a WCF service and client that uses the <xref:System.ServiceModel.NetHttpBinding> to communicate over WebSockets.</span></span>  
   
-### <a name="define-the-service"></a><span data-ttu-id="3d4b9-106">Definire il servizio</span><span class="sxs-lookup"><span data-stu-id="3d4b9-106">Define the Service</span></span>  
+### <a name="define-the-service"></a><span data-ttu-id="c4d58-106">Definire il servizio</span><span class="sxs-lookup"><span data-stu-id="c4d58-106">Define the Service</span></span>  
   
-1.  <span data-ttu-id="3d4b9-107">Definire un contratto di callback</span><span class="sxs-lookup"><span data-stu-id="3d4b9-107">Define a callback contract</span></span>  
+1.  <span data-ttu-id="c4d58-107">Definire un contratto di callback</span><span class="sxs-lookup"><span data-stu-id="c4d58-107">Define a callback contract</span></span>  
   
     ```csharp  
     [ServiceContract]  
@@ -36,9 +25,9 @@ ms.lasthandoff: 12/22/2017
         }  
     ```  
   
-     <span data-ttu-id="3d4b9-108">Questo contratto sarà implementato dall'applicazione client per consentire al servizio di restituire i messaggi al client.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-108">This contract will be implemented by the client application to allow the service to send messages back to the client.</span></span>  
+     <span data-ttu-id="c4d58-108">Questo contratto sarà implementato dall'applicazione client per consentire al servizio di restituire i messaggi al client.</span><span class="sxs-lookup"><span data-stu-id="c4d58-108">This contract will be implemented by the client application to allow the service to send messages back to the client.</span></span>  
   
-2.  <span data-ttu-id="3d4b9-109">Definire il contratto di servizio e specificare l'interfaccia `IStockQuoteCallback` come contratto di callback.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-109">Define the service contract and specify the `IStockQuoteCallback` interface as the callback contract.</span></span>  
+2.  <span data-ttu-id="c4d58-109">Definire il contratto di servizio e specificare l'interfaccia `IStockQuoteCallback` come contratto di callback.</span><span class="sxs-lookup"><span data-stu-id="c4d58-109">Define the service contract and specify the `IStockQuoteCallback` interface as the callback contract.</span></span>  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -49,7 +38,7 @@ ms.lasthandoff: 12/22/2017
         }  
     ```  
   
-3.  <span data-ttu-id="3d4b9-110">Implementare il contratto di servizio</span><span class="sxs-lookup"><span data-stu-id="3d4b9-110">Implement the service contract.</span></span>  
+3.  <span data-ttu-id="c4d58-110">Implementare il contratto di servizio</span><span class="sxs-lookup"><span data-stu-id="c4d58-110">Implement the service contract.</span></span>  
   
     ```  
     public class StockQuoteService : IStockQuoteService  
@@ -70,9 +59,9 @@ ms.lasthandoff: 12/22/2017
         }  
     ```  
   
-     <span data-ttu-id="3d4b9-111">L'operazione del servizio `StartSendingQuotes` viene implementata come chiamata asincrona.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-111">The service operation `StartSendingQuotes` is implemented as an asynchronous call.</span></span> <span data-ttu-id="3d4b9-112">Si recupera il canale di callback usando `OperationContext` e, se il canale è aperto, si effettua una chiamata asincrona sul canale di callback.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-112">We retrieve the callback channel using the `OperationContext` and if the channel is open, we make an async call on the callback channel.</span></span>  
+     <span data-ttu-id="c4d58-111">L'operazione del servizio `StartSendingQuotes` viene implementata come chiamata asincrona.</span><span class="sxs-lookup"><span data-stu-id="c4d58-111">The service operation `StartSendingQuotes` is implemented as an asynchronous call.</span></span> <span data-ttu-id="c4d58-112">Si recupera il canale di callback usando `OperationContext` e, se il canale è aperto, si effettua una chiamata asincrona sul canale di callback.</span><span class="sxs-lookup"><span data-stu-id="c4d58-112">We retrieve the callback channel using the `OperationContext` and if the channel is open, we make an async call on the callback channel.</span></span>  
   
-4.  <span data-ttu-id="3d4b9-113">Configurare il servizio</span><span class="sxs-lookup"><span data-stu-id="3d4b9-113">Configure the service</span></span>  
+4.  <span data-ttu-id="c4d58-113">Configurare il servizio</span><span class="sxs-lookup"><span data-stu-id="c4d58-113">Configure the service</span></span>  
   
     ```xml  
     <configuration>  
@@ -101,11 +90,11 @@ ms.lasthandoff: 12/22/2017
     </configuration>  
     ```  
   
-     <span data-ttu-id="3d4b9-114">Il file di configurazione del servizio si basa sugli endpoint predefiniti di WCF.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-114">The service’s configuration file relies on WCF’s default endpoints.</span></span> <span data-ttu-id="3d4b9-115">La sezione `<protocolMapping>` viene usata per specificare che `NetHttpBinding` deve essere usato per gli endpoint predefiniti creati.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-115">The `<protocolMapping>` section is used to specify that the `NetHttpBinding` should be used for the default endpoints created.</span></span>  
+     <span data-ttu-id="c4d58-114">Il file di configurazione del servizio si basa sugli endpoint predefiniti di WCF.</span><span class="sxs-lookup"><span data-stu-id="c4d58-114">The service’s configuration file relies on WCF’s default endpoints.</span></span> <span data-ttu-id="c4d58-115">La sezione `<protocolMapping>` viene usata per specificare che `NetHttpBinding` deve essere usato per gli endpoint predefiniti creati.</span><span class="sxs-lookup"><span data-stu-id="c4d58-115">The `<protocolMapping>` section is used to specify that the `NetHttpBinding` should be used for the default endpoints created.</span></span>  
   
-### <a name="define-the-client"></a><span data-ttu-id="3d4b9-116">Definire il client</span><span class="sxs-lookup"><span data-stu-id="3d4b9-116">Define the Client</span></span>  
+### <a name="define-the-client"></a><span data-ttu-id="c4d58-116">Definire il client</span><span class="sxs-lookup"><span data-stu-id="c4d58-116">Define the Client</span></span>  
   
-1.  <span data-ttu-id="3d4b9-117">Implementare il contratto di callback.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-117">Implement the callback contract.</span></span>  
+1.  <span data-ttu-id="c4d58-117">Implementare il contratto di callback.</span><span class="sxs-lookup"><span data-stu-id="c4d58-117">Implement the callback contract.</span></span>  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -117,9 +106,9 @@ ms.lasthandoff: 12/22/2017
             }  
     ```  
   
-     <span data-ttu-id="3d4b9-118">L'operazione del contratto di callback viene implementata come metodo asincrono.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-118">The callback contract operation is implemented as an asynchronous method.</span></span>  
+     <span data-ttu-id="c4d58-118">L'operazione del contratto di callback viene implementata come metodo asincrono.</span><span class="sxs-lookup"><span data-stu-id="c4d58-118">The callback contract operation is implemented as an asynchronous method.</span></span>  
   
-    1.  <span data-ttu-id="3d4b9-119">Implementare il codice del client.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-119">Implement the client code.</span></span>  
+    1.  <span data-ttu-id="c4d58-119">Implementare il codice del client.</span><span class="sxs-lookup"><span data-stu-id="c4d58-119">Implement the client code.</span></span>  
   
         ```csharp  
         class Program  
@@ -142,9 +131,9 @@ ms.lasthandoff: 12/22/2017
         }  
         ```  
   
-         <span data-ttu-id="3d4b9-120">L'oggetto CallbackHandler viene ripetuto di seguito per maggiore chiarezza.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-120">The CallbackHandler is repeated here for clarity.</span></span> <span data-ttu-id="3d4b9-121">L'applicazione client crea un nuovo oggetto InstanceContext e specifica l'implementazione dell'interfaccia di callback.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-121">The client application creates a new InstanceContext and specifies the implementation of the callback interface.</span></span> <span data-ttu-id="3d4b9-122">Successivamente, crea un'istanza della classe proxy che invia un riferimento all'oggetto InstanceContext appena creato.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-122">Next it creates an instance of the proxy class sending a reference to the newly created InstanceContext.</span></span> <span data-ttu-id="3d4b9-123">Quando il client chiama il servizio, quest'ultimo chiamerà il client mediante il contratto di callback specificato.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-123">When the client calls the service, the service will call the client using the callback contract specified.</span></span>  
+         <span data-ttu-id="c4d58-120">L'oggetto CallbackHandler viene ripetuto di seguito per maggiore chiarezza.</span><span class="sxs-lookup"><span data-stu-id="c4d58-120">The CallbackHandler is repeated here for clarity.</span></span> <span data-ttu-id="c4d58-121">L'applicazione client crea un nuovo oggetto InstanceContext e specifica l'implementazione dell'interfaccia di callback.</span><span class="sxs-lookup"><span data-stu-id="c4d58-121">The client application creates a new InstanceContext and specifies the implementation of the callback interface.</span></span> <span data-ttu-id="c4d58-122">Successivamente, crea un'istanza della classe proxy che invia un riferimento all'oggetto InstanceContext appena creato.</span><span class="sxs-lookup"><span data-stu-id="c4d58-122">Next it creates an instance of the proxy class sending a reference to the newly created InstanceContext.</span></span> <span data-ttu-id="c4d58-123">Quando il client chiama il servizio, quest'ultimo chiamerà il client mediante il contratto di callback specificato.</span><span class="sxs-lookup"><span data-stu-id="c4d58-123">When the client calls the service, the service will call the client using the callback contract specified.</span></span>  
   
-    2.  <span data-ttu-id="3d4b9-124">Configurare il client</span><span class="sxs-lookup"><span data-stu-id="3d4b9-124">Configure the client</span></span>  
+    2.  <span data-ttu-id="c4d58-124">Configurare il client</span><span class="sxs-lookup"><span data-stu-id="c4d58-124">Configure the client</span></span>  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  
@@ -169,10 +158,10 @@ ms.lasthandoff: 12/22/2017
         </configuration>  
         ```  
   
-         <span data-ttu-id="3d4b9-125">Per la configurazione del client è sufficiente specificare l'endpoint lato client usando `NetHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-125">There is nothing special you need to do in the client configuration, just specify the client side endpoint using the `NetHttpBinding`.</span></span>  
+         <span data-ttu-id="c4d58-125">Per la configurazione del client è sufficiente specificare l'endpoint lato client usando `NetHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="c4d58-125">There is nothing special you need to do in the client configuration, just specify the client side endpoint using the `NetHttpBinding`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3d4b9-126">Esempio</span><span class="sxs-lookup"><span data-stu-id="3d4b9-126">Example</span></span>  
- <span data-ttu-id="3d4b9-127">Di seguito è riportato il codice completo usato in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="3d4b9-127">The following is the complete code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="c4d58-126">Esempio</span><span class="sxs-lookup"><span data-stu-id="c4d58-126">Example</span></span>  
+ <span data-ttu-id="c4d58-127">Di seguito è riportato il codice completo usato in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="c4d58-127">The following is the complete code used in this topic.</span></span>  
   
 ```csharp  
 // IStockQuoteService.cs  
@@ -329,6 +318,6 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3d4b9-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3d4b9-128">See Also</span></span>  
- [<span data-ttu-id="3d4b9-129">Operazioni sincrone e asincrone</span><span class="sxs-lookup"><span data-stu-id="3d4b9-129">Synchronous and Asynchronous Operations</span></span>](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
- [<span data-ttu-id="3d4b9-130">Uso di NetHttpBinding</span><span class="sxs-lookup"><span data-stu-id="3d4b9-130">Using the NetHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)
+## <a name="see-also"></a><span data-ttu-id="c4d58-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c4d58-128">See Also</span></span>  
+ [<span data-ttu-id="c4d58-129">Operazioni sincrone e asincrone</span><span class="sxs-lookup"><span data-stu-id="c4d58-129">Synchronous and Asynchronous Operations</span></span>](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
+ [<span data-ttu-id="c4d58-130">Uso di NetHttpBinding</span><span class="sxs-lookup"><span data-stu-id="c4d58-130">Using the NetHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)
