@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9812fa4248533ccb898c98082e42e288c091f776
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420586"
 ---
 # <a name="icordebugtypeenumnext-method"></a>Metodo ICorDebugTypeEnum::Next
 Ottiene il numero di istanze di "ICorDebugType" specificate da `celt` nell'enumerazione, a partire dalla posizione corrente.  

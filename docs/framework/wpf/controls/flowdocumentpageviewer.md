@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551227"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
 Il <xref:System.Windows.Controls.FlowDocumentPageViewer> controllo consente di visualizzare <xref:System.Windows.Documents.FlowDocument> contenuto per ogni pagina. Si differenzia il <xref:System.Windows.Controls.FlowDocumentScrollViewer>, che presenta <xref:System.Windows.Documents.FlowDocument> contenuto in un visualizzatore a scorrimento.  

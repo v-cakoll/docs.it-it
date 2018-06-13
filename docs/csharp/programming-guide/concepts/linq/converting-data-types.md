@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335822"
 ---
 # <a name="converting-data-types-c"></a>Conversione di tipi di dati (C#)
 I metodi di conversione modificano il tipo degli oggetti di input.  

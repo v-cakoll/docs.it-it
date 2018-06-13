@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517965"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Spline di tipo Cardinal in GDI+
 Spline di tipo cardinal è una sequenza di curve individuali unite per formare una curva più grande. Spline è specificata da una matrice di punti e un parametro di tensione. Spline di tipo cardinal passa per ogni punto della matrice. Esistono alcun angoli acuti e apportare alcuna modifica improvviso la tensione della curva. Nella figura seguente viene illustrato un set di punti e di una spline di tipo cardinal che attraversa ogni punto nel set.  

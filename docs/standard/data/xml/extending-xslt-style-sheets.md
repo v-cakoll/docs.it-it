@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568823"
 ---
 # <a name="extending-xslt-style-sheets"></a>Estensione di fogli di stile XSLT
 Contenuto della sezione vengono descritti i diversi metodi per estendere la funzionalità XSLT. È possibile aggiungere oggetti o parametri di estensione usando la classe <xref:System.Xml.Xsl.XsltArgumentList>. È quindi possibile richiamare gli oggetti o i parametri di estensione dal foglio di stile. Inoltre, è possibile incorporare blocchi di script nel foglio di stile usando l'elemento `msxsl:script`.  
