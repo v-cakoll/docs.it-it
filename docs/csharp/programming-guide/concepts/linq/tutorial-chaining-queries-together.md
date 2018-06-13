@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323710"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>Esercitazione: Concatenamento di query (C#)
 In questa esercitazione viene illustrato il modello di elaborazione correlato al concatenamento di query. Il concatenamento di query costituisce una parte fondamentale nella scrittura delle trasformazioni funzionali. È quindi importante comprendere esattamente il funzionamento delle query concatenate.  

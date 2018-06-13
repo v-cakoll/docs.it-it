@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755331"
 ---
 # <a name="transports"></a>Trasporti
 Il livello di trasporto è al livello più basso dello stack dei canali. I trasporti principali usati in Windows Communication Foundation (WCF) sono HTTP, HTTPS, TCP e Named Pipes. Contenuto della sezione sono elencati tutti gli elementi di configurazione che consentono di configurare tipi di trasporti diversi.  

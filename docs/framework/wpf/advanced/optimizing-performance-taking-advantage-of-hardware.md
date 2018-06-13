@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547254"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Ottimizzazione delle prestazioni: sfruttare appieno l'hardware
 Architettura interna di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] presenta due pipeline di rendering, hardware e software. In questo argomento fornisce informazioni su queste pipeline di rendering che consentono di prendere decisioni relative all'ottimizzazione delle prestazioni delle applicazioni.  

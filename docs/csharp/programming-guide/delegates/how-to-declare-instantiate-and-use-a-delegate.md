@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333973"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Procedura: dichiarare un delegato, crearne un'istanza e utilizzarlo (Guida per programmatori C#)
 In C# 1.0 e versioni successive i delegati possono essere dichiarati come illustrato nell'esempio seguente.  

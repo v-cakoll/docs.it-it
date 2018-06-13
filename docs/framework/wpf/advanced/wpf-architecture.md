@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549646"
 ---
 # <a name="wpf-architecture"></a>Architettura WPF
 In questo argomento fornisce una presentazione introduttiva della gerarchia di classi Windows Presentation Foundation (WPF). Viene illustrata la maggior parte dei sottosistemi principali di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]e ne vengono descritte le modalità di interazione. Vengono inoltre forniti i dettagli relativi ad alcune scelte effettuate dagli architetti di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  

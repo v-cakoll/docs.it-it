@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315763"
 ---
 # <a name="cloning-vs-attaching-c"></a>Clonazione e Collegamento (C#)
 Se quando si aggiungono oggetti <xref:System.Xml.Linq.XNode> (incluso <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute> a un nuovo albero XML, il nuovo contenuto non ha elementi padre, gli oggetti vengono semplicemente collegati all'albero. Se il nuovo contenuto include già elementi padre e fa parte di un altro albero XML viene duplicato. Il nuovo contesto duplicato viene quindi collegato all'albero XML.  

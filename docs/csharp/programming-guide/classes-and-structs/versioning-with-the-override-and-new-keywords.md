@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327551"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Controllo delle versioni con le parole chiave Override e New (Guida per programmatori C#)
 Il linguaggio C# è progettato in modo che il controllo delle versioni tra le classi [di base](../../../csharp/language-reference/keywords/base.md) e le classi derivate in diverse librerie possa svilupparsi e mantenere la compatibilità con le versioni precedenti. Ciò significa ad esempio che l'introduzione di un nuovo membro in una classe [di base](../../../csharp/language-reference/keywords/class.md) con lo stesso nome di un membro in una classe derivata è completamente supportata da C# e non causa comportamenti imprevisti. Significa inoltre che una classe deve dichiarare in modo esplicito se un metodo deve eseguire l'override di un metodo ereditato o se si tratta di un nuovo metodo che consente di nascondere un metodo ereditato con nome simile.  

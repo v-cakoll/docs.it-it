@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548987"
 ---
 # <a name="propertypath-xaml-syntax"></a>Sintassi XAML di PropertyPath
 Il <xref:System.Windows.PropertyPath> oggetto supporta un inline complessa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sintassi per l'impostazione di varie proprietà che accettano il <xref:System.Windows.PropertyPath> tipo come valore. Questo argomento viene descritto il <xref:System.Windows.PropertyPath> sintassi quando viene applicato a una sintassi di animazione e l'associazione.  

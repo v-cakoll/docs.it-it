@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321535"
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>Programmazione LINQ to XML avanzata (C#)
 Contenuto della sezione vengono fornite informazioni che saranno applicabili solo a sviluppatori esperti in specifici scenari di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

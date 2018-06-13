@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329235"
 ---
 # <a name="ltcgt-c-programming-guide"></a>&lt;c&gt; (Guida per programmatori C#)
 ## <a name="syntax"></a>Sintassi  
