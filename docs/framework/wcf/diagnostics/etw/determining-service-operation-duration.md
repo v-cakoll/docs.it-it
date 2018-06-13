@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804963"
 ---
 # <a name="determining-service-operation-duration"></a><span data-ttu-id="ce6d3-102">Determinazione della durata dell'operazione del servizio</span><span class="sxs-lookup"><span data-stu-id="ce6d3-102">Determining service operation duration</span></span>
 <span data-ttu-id="ce6d3-103">Se la traccia analitica è abilitata in un'applicazione Windows Communication Foundation (WCF), la durata dell'esecuzione per un'operazione del servizio può essere facilmente determinata esaminando il registro eventi.</span><span class="sxs-lookup"><span data-stu-id="ce6d3-103">If analytic tracing is enabled in a Windows Communication Foundation (WCF) application, the duration of execution for a service operation can easily be determined by examining the event log.</span></span>  <span data-ttu-id="ce6d3-104">In questo argomento viene descritto come determinare la quantità di tempo richiesta per il completamento di un'operazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="ce6d3-104">This topic demonstrates how to determine the amount of time a service operation takes to complete.</span></span>  

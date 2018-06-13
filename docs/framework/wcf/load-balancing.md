@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807525"
 ---
 # <a name="load-balancing"></a><span data-ttu-id="be81f-102">Bilanciamento del carico</span><span class="sxs-lookup"><span data-stu-id="be81f-102">Load Balancing</span></span>
 <span data-ttu-id="be81f-103">Un modo per aumentare la capacità delle applicazioni di Windows Communication Foundation (WCF) consiste nella scalabilità orizzontale distribuendole in una farm di server con bilanciamento del carico.</span><span class="sxs-lookup"><span data-stu-id="be81f-103">One way to increase the capacity of Windows Communication Foundation (WCF) applications is to scale them out by deploying them into a load-balanced server farm.</span></span> <span data-ttu-id="be81f-104">Le applicazioni WCF possono essere con carico bilanciato utilizzando bilanciamento tecniche, tra cui servizi di bilanciamento del carico software, ad esempio Windows Network Load Balancing standard nonché carico basato su hardware appositi dispositivi.</span><span class="sxs-lookup"><span data-stu-id="be81f-104">WCF applications can be load balanced using standard load balancing techniques, including software load balancers such as Windows Network Load Balancing as well as hardware-based load balancing appliances.</span></span>  

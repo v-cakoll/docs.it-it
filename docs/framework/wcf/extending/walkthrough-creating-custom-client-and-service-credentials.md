@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808484"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a><span data-ttu-id="a6895-102">Procedura: creare credenziali client e del servizio personalizzate</span><span class="sxs-lookup"><span data-stu-id="a6895-102">Walkthrough: Creating Custom Client and Service Credentials</span></span>
 <span data-ttu-id="a6895-103">In questo argomento viene illustrato come implementare credenziali client e del servizio personalizzate e come utilizzare credenziali personalizzate dal codice dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="a6895-103">This topic shows how to implement custom client and service credentials and how to use custom credentials from application code.</span></span>  

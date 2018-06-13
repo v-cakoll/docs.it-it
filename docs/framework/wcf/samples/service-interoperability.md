@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809732"
 ---
 # <a name="service-interoperability"></a><span data-ttu-id="d55b4-102">Interoperabilità dei servizi</span><span class="sxs-lookup"><span data-stu-id="d55b4-102">Service Interoperability</span></span>
 <span data-ttu-id="d55b4-103">In questa sezione è contenuti esempi che illustrano l'interazione tra Windows Communication Foundation (WCF) e altre tecnologie del servizio.</span><span class="sxs-lookup"><span data-stu-id="d55b4-103">This section contains samples that demonstrate interaction between Windows Communication Foundation (WCF) and other service technologies.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803453"
 ---
 # <a name="custom-credential-and-credential-validation"></a><span data-ttu-id="9f717-102">Credenziale personalizzata e convalida della credenziale</span><span class="sxs-lookup"><span data-stu-id="9f717-102">Custom Credential and Credential Validation</span></span>
 <span data-ttu-id="9f717-103">Sicurezza in Windows Communication Foundation (WCF) si basa sullo scambio di credenziali tra servizi e client.</span><span class="sxs-lookup"><span data-stu-id="9f717-103">Security in Windows Communication Foundation (WCF) is based on the exchange of credentials between services and clients.</span></span> <span data-ttu-id="9f717-104">La maggior parte degli scenari di sicurezza può essere soddisfatta usando tipi di credenziali comuni, ad esempio Windows (Kerberos), nome utente e password e certificati.</span><span class="sxs-lookup"><span data-stu-id="9f717-104">Most security scenarios can be satisfied using common credential types, such as Windows (Kerberos), username and passwords, and certificates.</span></span> <span data-ttu-id="9f717-105">Tuttavia, se è necessario un nuovo tipo di credenziale, negli argomenti di questa sezione viene illustrato come gestire e convalidare nuovi tipi.</span><span class="sxs-lookup"><span data-stu-id="9f717-105">However, if a new type of credential is required, the topics in this section explain how to handle and validate new types.</span></span>  

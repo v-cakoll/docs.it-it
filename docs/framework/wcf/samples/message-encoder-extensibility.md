@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804199"
 ---
 # <a name="message-encoder-extensibility"></a><span data-ttu-id="fdee4-102">Estensibilità del codificatore di messaggi</span><span class="sxs-lookup"><span data-stu-id="fdee4-102">Message Encoder Extensibility</span></span>
 <span data-ttu-id="fdee4-103">Contenuto della sezione sono inclusi esempi che descrivono la codifica di messaggi personalizzata.</span><span class="sxs-lookup"><span data-stu-id="fdee4-103">This section contains samples that demonstrate custom message encoding.</span></span>  

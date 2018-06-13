@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805054"
 ---
 # <a name="nettcpbinding"></a><span data-ttu-id="0eabb-102">NetTCPBinding</span><span class="sxs-lookup"><span data-stu-id="0eabb-102">NetTCPBinding</span></span>
 <span data-ttu-id="0eabb-103">In questa sezione è contenuti esempi che illustrano l'utilizzo dell'associazione TCP in Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="0eabb-103">This section contains samples that demonstrate using TCP binding in Windows Communication Foundation (WCF).</span></span>  

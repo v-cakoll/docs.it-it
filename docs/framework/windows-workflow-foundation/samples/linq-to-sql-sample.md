@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806718"
 ---
 # <a name="linq-to-sql-sample"></a><span data-ttu-id="08cf9-102">LINQ to SQL esempio</span><span class="sxs-lookup"><span data-stu-id="08cf9-102">LINQ to SQL Sample</span></span>
 <span data-ttu-id="08cf9-103">In questo esempio viene illustrato come creare un'attività per l'uso di entità di query LINQ to SQL da tabelle nei database SQL Server.</span><span class="sxs-lookup"><span data-stu-id="08cf9-103">This sample demonstrates how to create an activity to use LINQ to SQL query entities from tables in SQL Server databases.</span></span>  

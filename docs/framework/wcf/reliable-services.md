@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803754"
 ---
 # <a name="reliable-services"></a><span data-ttu-id="1f086-102">Servizi affidabili</span><span class="sxs-lookup"><span data-stu-id="1f086-102">Reliable Services</span></span>
 <span data-ttu-id="1f086-103">Le code e sessioni affidabili rappresentano le funzionalità di Windows Communication Foundation (WCF) che implementano la messaggistica affidabile.</span><span class="sxs-lookup"><span data-stu-id="1f086-103">Queues and reliable sessions are the Windows Communication Foundation (WCF) features that implement reliable messaging.</span></span> <span data-ttu-id="1f086-104">Questo argomento illustra le funzionalità di messaggistica affidabile di WCF.</span><span class="sxs-lookup"><span data-stu-id="1f086-104">This topic explains the reliable messaging features of WCF.</span></span>  

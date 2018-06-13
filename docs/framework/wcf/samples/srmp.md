@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805499"
 ---
 # <a name="srmp"></a><span data-ttu-id="64d76-102">SRMP</span><span class="sxs-lookup"><span data-stu-id="64d76-102">SRMP</span></span>
 <span data-ttu-id="64d76-103">In questo esempio viene illustrato come eseguire comunicazioni transazionali in coda usando Accodamento messaggi (MSMQ) su HTTP.</span><span class="sxs-lookup"><span data-stu-id="64d76-103">This sample demonstrates how to perform transacted queued communication by using Message Queuing (MSMQ) over HTTP.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807879"
 ---
 # <a name="custom-wsdl-publication"></a><span data-ttu-id="c69a3-102">Pubblicazione WSDL personalizzata</span><span class="sxs-lookup"><span data-stu-id="c69a3-102">Custom WSDL Publication</span></span>
 <span data-ttu-id="c69a3-103">Nell'esempio viene illustrato come eseguire le seguenti operazioni:</span><span class="sxs-lookup"><span data-stu-id="c69a3-103">This sample demonstrates how to:</span></span>  

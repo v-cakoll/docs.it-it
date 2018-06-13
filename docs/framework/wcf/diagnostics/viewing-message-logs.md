@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33802977"
 ---
 # <a name="viewing-message-logs"></a><span data-ttu-id="15148-102">Visualizzazione dei log dei messaggi</span><span class="sxs-lookup"><span data-stu-id="15148-102">Viewing Message Logs</span></span>
 <span data-ttu-id="15148-103">In questo argomento viene illustrato come visualizzare i log dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="15148-103">This topic describes how you can view message logs.</span></span>  

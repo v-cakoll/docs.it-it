@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806770"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a><span data-ttu-id="c08d3-102">Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi</span><span class="sxs-lookup"><span data-stu-id="c08d3-102">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>
 <span data-ttu-id="c08d3-103">In questo argomento viene illustrato il formato dei dati di traccia, come visualizzarlo e gli approcci che usano Service Trace Viewer per risolvere i problemi dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="c08d3-103">This topic describes the format of trace data, how to view it, and approaches that use the Service Trace Viewer to troubleshoot your application.</span></span>  

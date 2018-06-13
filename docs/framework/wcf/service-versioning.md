@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809690"
 ---
 # <a name="service-versioning"></a><span data-ttu-id="d209f-102">Controllo delle versioni dei servizi</span><span class="sxs-lookup"><span data-stu-id="d209f-102">Service Versioning</span></span>
 <span data-ttu-id="d209f-103">Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro ciclo di vita, potrebbe essere necessario cambiare i servizi (e gli endpoint che espongono) per molteplici ragioni, ad esempio perché cambiano le esigenze aziendali, i requisiti IT o per risolvere altri problemi.</span><span class="sxs-lookup"><span data-stu-id="d209f-103">After initial deployment, and potentially several times during their lifetime, services (and the endpoints they expose) may need to be changed for a variety of reasons, such as changing business needs, information technology requirements, or to address other issues.</span></span> <span data-ttu-id="d209f-104">Ogni modifica introduce una nuova versione del servizio.</span><span class="sxs-lookup"><span data-stu-id="d209f-104">Each change introduces a new version of the service.</span></span> <span data-ttu-id="d209f-105">In questo argomento viene illustrato come controllare la versione di Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="d209f-105">This topic explains how to consider versioning in Windows Communication Foundation (WCF).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807788"
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a><span data-ttu-id="04fa4-102">Risoluzione dei problemi relativi all'esercitazione introduttiva</span><span class="sxs-lookup"><span data-stu-id="04fa4-102">Troubleshooting the Getting Started Tutorial</span></span>
 <span data-ttu-id="04fa4-103">In questo argomento vengono elencati i problemi più comuni che possono verificarsi durante l'Esercitazione introduttiva e le relative soluzioni.</span><span class="sxs-lookup"><span data-stu-id="04fa4-103">This topic lists the most common problems encountered when working through the Getting Started Tutorial and how to resolve them.</span></span>  

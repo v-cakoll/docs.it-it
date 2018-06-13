@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803124"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a><span data-ttu-id="3f982-102">Pool di connessioni OLE DB, ODBC e Oracle</span><span class="sxs-lookup"><span data-stu-id="3f982-102">OLE DB, ODBC, and Oracle Connection Pooling</span></span>
 <span data-ttu-id="3f982-103">Il pool di connessioni consente di migliorare notevolmente le prestazioni e di aumentare la scalabilità dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="3f982-103">Pooling connections can significantly enhance the performance and scalability of your application.</span></span> <span data-ttu-id="3f982-104">Questa sezione descrive il pool di connessioni per i provider di dati .NET Framework per OLE DB, ODBC e Oracle.</span><span class="sxs-lookup"><span data-stu-id="3f982-104">This section discusses connection pooling for the .NET Framework data providers for OLE DB, ODBC and Oracle.</span></span>  

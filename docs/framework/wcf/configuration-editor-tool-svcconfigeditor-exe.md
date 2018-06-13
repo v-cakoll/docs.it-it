@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809875"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a><span data-ttu-id="142d1-102">Strumento Editor di configurazione (SvcConfigEditor.exe)</span><span class="sxs-lookup"><span data-stu-id="142d1-102">Configuration Editor Tool (SvcConfigEditor.exe)</span></span>
 <span data-ttu-id="142d1-103">L'Editor di configurazione dei servizi di Windows Communication Foundation (WCF), ovvero il file SvcConfigEditor.exe, consente ad amministratori e sviluppatori di creare e modificare le impostazioni di configurazione dei servizi WCF tramite un'interfaccia utente grafica (GUI).</span><span class="sxs-lookup"><span data-stu-id="142d1-103">The Windows Communication Foundation (WCF) Service Configuration Editor (SvcConfigEditor.exe) allows administrators and developers to create and modify configuration settings for WCF services using a graphical user interface.</span></span> <span data-ttu-id="142d1-104">Con questo strumento è possibile gestire le impostazioni di associazioni, comportamenti, servizi e diagnostica WCF senza la necessità di modificare direttamente i file di configurazione XML.</span><span class="sxs-lookup"><span data-stu-id="142d1-104">With this tool, you can manage settings for WCF bindings, behaviors, services, and diagnostics without having to directly edit XML configuration files.</span></span>  

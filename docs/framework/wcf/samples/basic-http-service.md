@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808858"
 ---
 # <a name="basic-http-service"></a><span data-ttu-id="d4e60-102">Servizio HTTP di base</span><span class="sxs-lookup"><span data-stu-id="d4e60-102">Basic HTTP Service</span></span>
 <span data-ttu-id="d4e60-103">In questo esempio viene illustrato come implementare un servizio basato su RPC su HTTP, - noto come servizio "POX" (Plain Old XML): tramite il modello di programmazione REST di Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="d4e60-103">This sample demonstrates how to implement an HTTP-based, RPC-based service - popularly referred to as "POX" (Plain Old XML) service – using the Windows Communication Foundation (WCF) REST Programming model.</span></span> <span data-ttu-id="d4e60-104">Questo esempio è costituito da due componenti: un servizio HTTP WCF indipendente (Service.cs) e un'applicazione console (Program.cs) che crea il servizio ed effettua chiamate ad esso.</span><span class="sxs-lookup"><span data-stu-id="d4e60-104">This sample consists of two components: a self-hosted WCF HTTP service (Service.cs) and a console application (Program.cs) that creates the service and makes calls to it.</span></span>  

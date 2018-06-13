@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803280"
 ---
 # <a name="configuring-services"></a><span data-ttu-id="4a72f-102">Configurazione dei servizi</span><span class="sxs-lookup"><span data-stu-id="4a72f-102">Configuring Services</span></span>
 <span data-ttu-id="4a72f-103">Dopo aver progettato e implementato il contratto di servizio, è possibile configurare il servizio.</span><span class="sxs-lookup"><span data-stu-id="4a72f-103">Once you have designed and implemented your service contract, you are ready to configure your service.</span></span> <span data-ttu-id="4a72f-104">Questa è la fase in cui si definisce e si personalizza il modo in cui il servizio viene esposto ai client, inclusa l'indicazione dell'indirizzo, del trasporto e della codifica dei messaggi usata per inviare e ricevere messaggi e del tipo di sicurezza richiesto.</span><span class="sxs-lookup"><span data-stu-id="4a72f-104">This is where you define and customize how your service is exposed to clients, including specifying the address where it can be found, the transport and message encoding it uses to send and receive messages, and the type of security it requires.</span></span>  
