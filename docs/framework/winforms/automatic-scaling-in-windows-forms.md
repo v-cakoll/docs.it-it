@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529883"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Ridimensionamento automatico in Windows Form
 Con il ridimensionamento automatico, un form e i relativi controlli, progettati su un computer con una determinata risoluzione dello schermo o tipo di carattere del sistema, possono essere visualizzati correttamente su un altro computer con una risoluzione dello schermo o tipo di carattere del sistema diverso. Questa funzionalità assicura che il form e i controlli vengano ridimensionati in modo coerente con le finestre native e le altre applicazioni presenti sia sui computer degli utenti che su quelli di altri sviluppatori. Il supporto di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per il ridimensionamento automatico e gli stili di visualizzazione consente alle applicazioni [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] di avere sempre un aspetto coerente, se confrontate con le applicazioni Windows native sul computer di ogni utente.

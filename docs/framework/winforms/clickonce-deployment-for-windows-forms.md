@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529537"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Distribuzione ClickOnce per Windows Form
 Gli argomenti riportati di seguito descrivono la tecnologia [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], usata per semplificare la distribuzione delle applicazioni Windows Form ai computer client.  

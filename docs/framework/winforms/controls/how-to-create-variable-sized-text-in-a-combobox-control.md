@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533231"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Procedura: creare testo di dimensioni variabili in un controllo ComboBox
 Questo esempio viene illustrato il disegno personalizzato di testo in un <xref:System.Windows.Forms.ComboBox> controllo. Quando un elemento soddisfa determinati criteri, viene creato in un carattere di dimensioni maggiori e rosso.  

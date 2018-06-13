@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528220"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treeview-node"></a>Procedura: associare un menu di scelta rapida a un nodo di TreeView
 Windows Form <xref:System.Windows.Forms.TreeView> controllo Visualizza una gerarchia di nodi, simile ai file e cartelle vengono visualizzati nel riquadro sinistro della finestra di Esplora risorse. Impostando il <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> proprietà, è possibile fornire operazioni sensibili al contesto per l'utente quando sono destro la <xref:System.Windows.Forms.TreeView> controllo. Associando un <xref:System.Windows.Forms.ContextMenuStrip> componente con singoli <xref:System.Windows.Forms.TreeNode> elementi, è possibile aggiungere un livello di funzionalità del menu di scelta rapida per personalizzato il <xref:System.Windows.Forms.TreeView> controlli.  

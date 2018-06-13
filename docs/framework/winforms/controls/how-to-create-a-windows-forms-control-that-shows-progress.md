@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531430"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento
 L'esempio di codice seguente visualizza un controllo personalizzato denominato `FlashTrackBar` che può essere usato per visualizzare all'utente il livello o lo stato di avanzamento di un'applicazione. Usa una sfumatura per rappresentare visivamente lo stato di avanzamento.  

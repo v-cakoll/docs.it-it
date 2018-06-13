@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532507"
 ---
 # <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>Procedura: visualizzare elementi secondari nelle colonne con il controllo ListView Windows Form
 Windows Form <xref:System.Windows.Forms.ListView> controllo può visualizzare testo aggiuntivo, o elementi secondari, per ogni elemento nella visualizzazione dettagli. La prima colonna Visualizza il testo dell'elemento, ad esempio il numero di un dipendente. Il secondo, terzo le colonne successive visualizzano il primo, secondo e successivi elementi secondari associati.  

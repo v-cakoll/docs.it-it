@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534180"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Procedura: impostare il renderer ToolStrip in fase di esecuzione
 È possibile personalizzare l'aspetto del controllo <xref:System.Windows.Forms.ToolStrip> mediante la creazione di una classe `ProfessionalColorTable` personalizzata.  

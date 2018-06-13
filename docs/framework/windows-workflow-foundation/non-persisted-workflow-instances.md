@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516750"
 ---
 # <a name="non-persisted-workflow-instances"></a>Istanze del flusso di lavoro non persistenti
 Quando viene creata una nuova istanza di un flusso di lavoro che mantiene persistente lo stato in <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, nell'host del servizio viene creata una voce per il servizio specifico nell'archivio di istanze. Successivamente, quando l'istanza del flusso di lavoro viene resa persistente per la prima volta, in <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> viene archiviato lo stato dell'istanza corrente. Se il flusso di lavoro è ospitato nel servizio Attivazione processo Windows, anche i dati della distribuzione del servizio vengono scritti nell'archivio di istanze quando l'istanza è stata resa persistente per la prima volta.  

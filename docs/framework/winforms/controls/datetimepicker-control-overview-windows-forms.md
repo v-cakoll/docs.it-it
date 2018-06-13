@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528352"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>Cenni preliminari sul controllo DateTimePicker (Windows Form)
 Windows Form <xref:System.Windows.Forms.DateTimePicker> controllo consente all'utente di selezionare un singolo elemento da un elenco di date o ore. Quando utilizzato per rappresentare una data, viene visualizzato in due parti: un elenco a discesa con una data rappresentata in testo e una griglia in cui viene visualizzata quando si fa clic su freccia in giù accanto all'elenco. Aspetto della griglia di <xref:System.Windows.Forms.MonthCalendar> controllo, che può essere utilizzato per la selezione di più date. Per ulteriori informazioni sul <xref:System.Windows.Forms.MonthCalendar> di controllo, vedere [Cenni preliminari sul controllo MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).  

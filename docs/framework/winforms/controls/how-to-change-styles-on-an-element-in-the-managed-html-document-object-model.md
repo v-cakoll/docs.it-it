@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531251"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Procedura: modificare gli stili di un elemento nel Document Object Model HTML gestito
 È possibile utilizzare gli stili HTML per controllare l'aspetto di un documento e i relativi elementi. <xref:System.Windows.Forms.HtmlDocument> e <xref:System.Windows.Forms.HtmlElement> supportano <xref:System.Windows.Forms.HtmlElement.Style%2A> le proprietà che accettano stringhe di formato seguente:  

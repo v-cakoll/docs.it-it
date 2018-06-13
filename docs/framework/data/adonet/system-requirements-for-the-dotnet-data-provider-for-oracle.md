@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363518"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Requisiti di sistema per il provider di dati.NET Framework per Oracle
 Per usare il provider di dati .NET Framework per Oracle, è necessario disporre di Microsoft Data Access Components (MDAC) 2.6 o versione successiva. Si consiglia l'uso di MDAC 2.8 SP1.  

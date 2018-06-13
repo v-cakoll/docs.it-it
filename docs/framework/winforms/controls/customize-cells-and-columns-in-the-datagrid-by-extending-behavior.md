@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529133"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Procedura: personalizzare celle e colonne nel controllo DataGridView di Windows Form estendendone il comportamento e l'aspetto
 Il controllo <xref:System.Windows.Forms.DataGridView> offre diversi metodi per personalizzare l'aspetto e il comportamento mediante proprietà, eventi e classi correlate. In alcune situazioni è possibile che i requisiti relativi alle celle non possano essere soddisfatti mediante le funzioni fornite. In questi casi per estendere le funzionalità è possibile creare una propria classe <xref:System.Windows.Forms.DataGridViewCell> personalizzata.  

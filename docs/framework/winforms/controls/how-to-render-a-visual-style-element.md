@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537621"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>Procedura: eseguire il rendering di un elemento dello stile visivo
 Il <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> espone lo spazio dei nomi <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> elementi (UI) supportati dagli stili dell'interfaccia utente gli oggetti che rappresentano l'utente di Windows. In questo argomento viene illustrato come utilizzare il <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> classe per eseguire il rendering di <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> che rappresenta il **Disconnetti** e **Arresta** pulsanti del menu Start.  

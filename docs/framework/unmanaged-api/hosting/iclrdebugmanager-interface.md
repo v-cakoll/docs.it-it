@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d123177bf9f1b5eee1a2ba4d9b7f2042ddc07aa2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434939"
 ---
 # <a name="iclrdebugmanager-interface"></a>Interfaccia ICLRDebugManager
 Fornisce metodi che consentono a un host associare un set di attività con un identificatore e un nome descrittivo.  

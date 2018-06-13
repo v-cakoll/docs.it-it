@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531297"
 ---
 # <a name="how-to-implement-a-custom-layout-engine"></a>Procedura: implementare un motore di layout personalizzato
 Esempio di codice seguente viene illustrato come creare un motore di layout personalizzato che esegue un layout di flusso. Implementa un pannello di controllo denominato `DemoFlowPanel`, che esegue l'override di <xref:System.Windows.Forms.Control.LayoutEngine%2A> proprietà per fornire un'istanza del `DemoFlowLayout` classe.  

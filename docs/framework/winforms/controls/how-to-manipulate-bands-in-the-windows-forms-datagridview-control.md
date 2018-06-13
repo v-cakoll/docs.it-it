@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532344"
 ---
 # <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Procedura: modificare bande nel controllo DataGridView di Windows Form
 L'esempio di codice seguente presenta vari modi per modificare righe e colonne di <xref:System.Windows.Forms.DataGridView> mediante le proprietà della classe <xref:System.Windows.Forms.DataGridViewBand> da cui derivano le classi <xref:System.Windows.Forms.DataGridViewRow> e <xref:System.Windows.Forms.DataGridViewColumn>.  

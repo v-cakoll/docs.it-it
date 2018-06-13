@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519581"
 ---
 # <a name="workflow-security"></a>Sicurezza del flusso di lavoro
 Windows Workflow Foundation (WF) è integrato con varie tecnologie diverse, ad esempio Microsoft SQL Server e Windows Communication Foundation (WCF). L'interazione con queste tecnologie può introdurre problemi di sicurezza nel flusso di lavoro, se eseguito in modo errato.  

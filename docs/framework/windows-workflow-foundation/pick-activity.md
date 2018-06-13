@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520315"
 ---
 # <a name="pick-activity"></a>Attività di selezione
 L'attività <xref:System.Activities.Statements.Pick> semplifica la modellazione di un set di trigger di eventi seguiti dai relativi gestori corrispondenti.  Un'attività <xref:System.Activities.Statements.Pick> contiene una raccolta di attività <xref:System.Activities.Statements.PickBranch> in cui ogni attività <xref:System.Activities.Statements.PickBranch> è un'associazione tra un'attività <xref:System.Activities.Statements.PickBranch.Trigger%2A> e un'attività <xref:System.Activities.Statements.PickBranch.Action%2A>.  In fase di esecuzione, i trigger per tutti i rami vengono eseguiti in parallelo.  Quando un trigger viene completato, viene eseguita l'azione corrispondente e tutti gli altri trigger vengono annullati.  Il comportamento dell'attività [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] di <xref:System.Activities.Statements.Pick> è simile all'attività [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] di <xref:System.Workflow.Activities.ListenActivity>.  

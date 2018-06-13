@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529720"
 ---
 # <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Procedura: aggiungere elementi per il perfezionamento di ToolStripMenuItems
 È possibile migliorare l'utilizzabilità di <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.ContextMenuStrip> controlli nei modi seguenti:  

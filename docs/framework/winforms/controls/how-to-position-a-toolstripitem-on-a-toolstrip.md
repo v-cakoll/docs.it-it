@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531586"
 ---
 # <a name="how-to-position-a-toolstripitem-on-a-toolstrip"></a>Procedura: posizionare un oggetto ToolStripItem su un oggetto ToolStrip
 È possibile spostare o aggiungere un <xref:System.Windows.Forms.ToolStripItem> verso sinistra o destra di un <xref:System.Windows.Forms.ToolStrip>.  

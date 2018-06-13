@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640417"
 ---
 # <a name="use-39filegetobject39-instead-of-39fileget39-when-using-argument-of-type-39object39"></a>Utilizzare &#39;FileGetObject&#39; anziché &#39;FileGet&#39; quando si usano argomenti di tipo &#39;oggetto&#39;
 Il metodo `FileGet` include un argomento di tipo `Object`. Per evitare ambiguità, è opportuno usare`FileGetObject` invece di `FileGet` .  

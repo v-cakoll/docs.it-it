@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522395"
 ---
 # <a name="how-to-rotate-colors"></a>Procedura: ruotare i colori
 Rotazione in uno spazio colore quadridimensionale è difficile da visualizzare. È possibile rendere più semplice per visualizzare la rotazione, supponendo di mantenere uno dei componenti di colore predefiniti. Si supponga di mantenere il componente alfa pari a 1 (completamente opaco). È quindi possibile visualizzare uno spazio tridimensionale colore degli assi del rosso, verde e blu come illustrato nella figura seguente.  

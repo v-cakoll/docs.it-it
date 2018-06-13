@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532743"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Procedura: visualizzare le barre di scorrimento nel controllo RichTextBox Windows Form
 Per impostazione predefinita, Windows Form <xref:System.Windows.Forms.RichTextBox> controllo vengono visualizzate barre di scorrimento orizzontale e verticale in base alle esigenze. Esistono sette valori possibili per il <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> proprietà del <xref:System.Windows.Forms.RichTextBox> controllo, che sono descritte nella tabella seguente.  

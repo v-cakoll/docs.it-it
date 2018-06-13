@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535451"
 ---
 # <a name="linklabel-control-windows-forms"></a>Controllo LinkLabel (Windows Form)
 Windows Form `LinkLabel` controllo consente di aggiungere collegamenti ipertestuali alle applicazioni Windows Form. È possibile utilizzare il `LinkLabel` controllo per tutti gli elementi che è possibile utilizzare il <xref:System.Windows.Forms.Label> controllare per; è inoltre possibile impostare una parte del testo come un collegamento a un oggetto o una pagina Web.  

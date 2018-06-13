@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531193"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Procedura: visualizzare immagini in celle del controllo DataGridView di Windows Form
 Un'immagine o un grafico è uno dei valori che è possibile visualizzare in una riga di dati. Spesso, questi elementi grafici assumono la forma di fotografia di un dipendente o un logo aziendale.  

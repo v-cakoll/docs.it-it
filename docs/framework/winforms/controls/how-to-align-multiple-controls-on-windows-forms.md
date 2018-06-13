@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528590"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Procedura: allineare più controlli in Windows Form
 Per standardizzare il layout dell'interfaccia utente (UI) di un'applicazione basata su Windows, è possibile posizionare gruppi di controlli con un unico comando.  

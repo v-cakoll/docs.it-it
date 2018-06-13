@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fe360a50038f49fdea1528c8c520dc893b258057
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427086"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a>Metodo ISymUnmanagedVariable::GetAddressField2
 Ottiene il secondo campo dell'indirizzo per la variabile. Il significato dipende dal tipo di indirizzo.  

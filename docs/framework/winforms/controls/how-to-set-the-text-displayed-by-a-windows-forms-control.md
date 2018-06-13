@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535613"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Procedura: impostare il testo visualizzato da un controllo di Windows Form
 I controlli Windows Form in genere visualizzano il testo relativo alla funzione principale del controllo. Un controllo <xref:System.Windows.Forms.Button>, ad esempio, solitamente visualizza una didascalia indicante l'azione che verrà eseguita quando si sceglie il pulsante. Per tutti i controlli, il testo può essere impostato o restituito mediante la proprietà <xref:System.Windows.Forms.Control.Text%2A>. È possibile modificare il tipo di carattere usando la proprietà <xref:System.Windows.Forms.Control.Font%2A>. È anche possibile impostare il testo nella finestra di progettazione.  Vedere anche [procedura: creare accesso chiavi per Windows Form controlli usando la finestra di progettazione](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [come: impostare il testo visualizzato da un controllo Form Windows mediante la finestra di progettazione](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [come: impostare l'immagine Visualizzato da un controllo utilizzando la finestra di progettazione Windows Form](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).  

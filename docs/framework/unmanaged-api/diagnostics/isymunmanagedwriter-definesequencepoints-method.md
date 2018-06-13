@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1dc87b201638bab974c59722a69300977b14cf08
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426936"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>Metodo ISymUnmanagedWriter::DefineSequencePoints
 Definisce un gruppo di punti di sequenza nel metodo corrente. Ogni riga e colonna iniziale definisce l'inizio di un'istruzione all'interno di un metodo. Ogni riga e colonna finale definisce la fine di un'istruzione all'interno di un metodo. Le matrici devono essere ordinate in ordine crescente di offset. L'offset viene sempre misurato dall'inizio del metodo, in byte.  

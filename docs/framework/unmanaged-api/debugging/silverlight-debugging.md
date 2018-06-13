@@ -9,9 +9,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 80cee666a05432099a380a5ac547a5ca28698c31
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436033"
 ---
 # <a name="silverlight-debugging"></a>Debug Silverlight
 Gli argomenti in questa sezione descrivono l'ambiente e le interfacce forniti da Common Language Runtime (CLR) per supportare il debug delle applicazioni basate su Silverlight in esecuzione nel sistema operativo Windows o sulla piattaforma Macintosh.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532412"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>Procedura: rendere invisibile il controllo in fase di esecuzione
 Vi sono casi quando si potrebbe desiderare di creare un controllo utente che non è visibile in fase di esecuzione. Ad esempio, potrebbe essere invisibile tranne quando l'avviso è stato emissione di un controllo che una sveglia. A tal fine, impostare il <xref:System.Windows.Forms.Control.Visible%2A> proprietà. Se il <xref:System.Windows.Forms.Control.Visible%2A> proprietà `true`, il controllo verrà visualizzato come di consueto. Se `false`, il controllo verrà nascosto. Anche se il controllo del codice può comunque eseguire invisibili, non sarà in grado di interagire con il controllo tramite l'interfaccia utente. Se si desidera creare un controllo invisibile in grado di rispondere all'input (ad esempio, clic del mouse) dell'utente, è necessario creare un controllo trasparente. Per ulteriori informazioni, vedere [assegnazione di uno sfondo trasparente al controllo](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md).  

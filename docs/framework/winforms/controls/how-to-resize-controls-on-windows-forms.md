@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533926"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Procedura: ridimensionare i controlli di un Windows Form
 È possibile ridimensionare singoli controlli e per ridimensionare più controlli del tipo uguale o diverso, ad esempio <xref:System.Windows.Forms.Button> e <xref:System.Windows.Forms.GroupBox> controlli.  

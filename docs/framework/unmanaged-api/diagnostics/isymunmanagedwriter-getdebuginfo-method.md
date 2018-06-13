@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c1e9a2261ab5fd06e0514efdddf8a8e952a6e3d1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426900"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>Metodo ISymUnmanagedWriter::GetDebugInfo
 Restituisce le informazioni necessarie per un compilatore per scrivere la voce di directory di debug nell'intestazione del file (PE) eseguibile portabile. Il writer di simboli compila tutti i campi, ad eccezione di `TimeDateStamp` e `PointerToRawData`. (Il compilatore è responsabile dell'impostazione di questi due campi in modo appropriato).  
