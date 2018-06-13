@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546097"
 ---
 # <a name="storing-ink"></a>Memorizzazione dell'input penna
 Il <xref:System.Windows.Ink.StrokeCollection.Save%2A> metodi forniscono supporto per l'archiviazione input penna come input penna serializzato formato (ISF). I costruttori per la <xref:System.Windows.Ink.StrokeCollection> classe forniscono il supporto per la lettura dei dati di input penna.  

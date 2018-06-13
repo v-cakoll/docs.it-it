@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ac69bab45ccd39b6a055fe4d2f74950ab47da779
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447032"
 ---
 # <a name="imetadataimportfindfield-method"></a>Metodo IMetaDataImport::FindField
 Ottiene un puntatore al FieldDef token per il campo che è racchiuso da specificato <xref:System.Type> e con la firma di nome e i metadati specificata.  

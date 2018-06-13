@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397104"
 ---
 # <a name="ltassemblygt-element-net-native"></a>Elemento &lt;Assembly&gt; (.NET Native)
 Applica i criteri di reflection di runtime a tutti i tipi in un determinato assembly.  

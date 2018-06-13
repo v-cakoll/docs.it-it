@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534251"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>Procedura: rispondere alla selezione dei pulsanti di Windows Form
 L'utilizzo di base di un Windows Form <xref:System.Windows.Forms.Button> controllo consiste nell'esecuzione di codice quando si fa clic sul pulsante.  

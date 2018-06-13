@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552714"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>Procedura: utilizzare la proprietà BetweenShowDelay
 In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> proprietà temporale in modo che le descrizioni comandi visualizzate rapidamente, quasi alcun ritardo, ovvero quando si sposta il puntatore del mouse da una descrizione comandi direttamente a un altro.  

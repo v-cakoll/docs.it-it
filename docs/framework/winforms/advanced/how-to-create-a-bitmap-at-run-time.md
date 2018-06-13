@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520640"
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>Procedura: creare un oggetto Bitmap in fase di esecuzione
 In questo esempio viene creato e disegnato un <xref:System.Drawing.Bitmap> dell'oggetto e lo visualizza in un Windows Form esistenti <xref:System.Windows.Forms.PictureBox> controllo.  

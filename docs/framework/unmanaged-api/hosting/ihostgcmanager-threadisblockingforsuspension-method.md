@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 85921156860f52eb2a898e6be356e191c2a4f02d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439270"
 ---
 # <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a>Metodo IHostGCManager::ThreadIsBlockingForSuspension
 Notifica all'host che il thread da cui è stata effettuata la chiamata al metodo per essere bloccato per una garbage collection.  

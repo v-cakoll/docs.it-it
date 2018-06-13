@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550098"
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>Procedura: salvare in modo permanente e ripristinare le proprietà con ambito applicazione tra le sessioni di un'applicazione
 In questo esempio viene illustrato come rendere persistenti le proprietà dell'ambito di applicazione quando un'applicazione viene arrestato e come ripristinare le proprietà dell'ambito di applicazione quando un'applicazione è successiva avvio.  

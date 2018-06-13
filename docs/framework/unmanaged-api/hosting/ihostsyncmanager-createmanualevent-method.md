@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ecf53606dd12b517d9ec31ab25f98452d35bdf98
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443445"
 ---
 # <a name="ihostsyncmanagercreatemanualevent-method"></a>Metodo IHostSyncManager::CreateManualEvent
 Crea un oggetto evento di reimpostazione manuale.  

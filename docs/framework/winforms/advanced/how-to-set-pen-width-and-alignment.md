@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522282"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Procedura: impostare la larghezza e l'allineamento di un oggetto Pen
 Quando si crea un <xref:System.Drawing.Pen>, è possibile fornire la larghezza della penna come uno degli argomenti del costruttore. È inoltre possibile modificare la larghezza della penna con il <xref:System.Drawing.Pen.Width%2A> proprietà la <xref:System.Drawing.Pen> classe.  

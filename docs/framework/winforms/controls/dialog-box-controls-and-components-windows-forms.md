@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527210"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Controlli e componenti della finestra di dialogo (Windows Form)
 I controlli e i componenti Windows Form riportati di seguito determinano la visualizzazione di finestre di dialogo standard. Per altre informazioni sulle funzioni disponibili in ogni finestra di dialogo, usare i relativi collegamenti.  

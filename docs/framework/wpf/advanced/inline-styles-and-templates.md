@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545888"
 ---
 # <a name="inline-styles-and-templates"></a>Stili e modelli inline
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce <xref:System.Windows.Style> oggetti e oggetti modello (<xref:System.Windows.FrameworkTemplate> sottoclassi) come un modo per definire l'aspetto visivo di un elemento nelle risorse, in modo che possono essere utilizzati più volte. Per questo motivo, gli attributi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] che accettano i tipi <xref:System.Windows.Style> e <xref:System.Windows.FrameworkTemplate> quasi sempre dei riferimenti alle risorse per gli stili e modelli anziché definirne di nuovi inline.  

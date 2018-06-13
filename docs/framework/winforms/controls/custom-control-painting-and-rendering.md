@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526051"
 ---
 # <a name="custom-control-painting-and-rendering"></a>Disegno e rendering di controlli personalizzati
 Disegno personalizzato di controlli è una delle molte attività complesse semplificata da .NET Framework. Durante la creazione di un controllo personalizzato, sono disponibili molte opzioni riguardanti l'aspetto grafico. Se si sta creando un controllo da cui eredita il `Control`, è necessario fornire codice che consente la rappresentazione grafica di eseguire il rendering del controllo. Se si sta creando un controllo utente ereditando dalla classe di `UserControl`, o da uno dei controlli Windows Form, è possibile eseguire l'override della rappresentazione grafica standard e fornire il proprio codice di grafica. Se si desidera fornire per il rendering personalizzate per i controlli costitutivi di un `UserControl` si esegue la creazione, le opzioni sono più limitate, ma consentono ancora un'ampia gamma di possibilità grafiche per i controlli e le applicazioni.  

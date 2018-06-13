@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549591"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procedura: creare un componente aggiuntivo che costituisce un'interfaccia utente
 In questo esempio viene illustrato come creare un componente aggiuntivo che è un Windows Presentation Foundation (WPF) che è ospitato da un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazione autonoma.  

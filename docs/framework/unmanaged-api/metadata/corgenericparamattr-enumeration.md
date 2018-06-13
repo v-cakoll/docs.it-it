@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9d56be8c6f224010da22803894524299c0d376ba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443538"
 ---
 # <a name="corgenericparamattr-enumeration"></a>Enumerazione CorGenericParamAttr
 Contiene valori che descrivono il <xref:System.Type> parametri per i tipi generici, come utilizzati nelle chiamate a [IMetaDataEmit2:: DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  

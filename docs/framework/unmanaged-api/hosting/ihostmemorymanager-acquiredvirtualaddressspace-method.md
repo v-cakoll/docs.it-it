@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d93c50968192a7789cbf08968d7ec272c9775d6f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438513"
 ---
 # <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a>Metodo IHostMemoryManager::AcquiredVirtualAddressSpace
 Notifica all'host che common language runtime (CLR) ha acquisito la memoria specificata dal sistema operativo.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534908"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>Procedura: spostare i ToolStripMenuItems
 In fase di progettazione, è possibile spostare menu di primo livello e i relativi elementi in un'altra posizione <xref:System.Windows.Forms.MenuStrip>. È inoltre possibile spostare singole voci di menu tra menu di primo livello o modificare la posizione delle voci di menu all'interno di un menu.  

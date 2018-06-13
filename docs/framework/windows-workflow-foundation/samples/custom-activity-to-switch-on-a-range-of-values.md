@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517069"
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>Attività personalizzata per il passaggio in base a un intervallo di valori
 In questo esempio viene illustrato come creare un'attività personalizzata che estende l'uso di <xref:System.Activities.Statements.Switch%601>. Un'istruzione <xref:System.Activities.Statements.Switch%601> convenzionale consente il passaggio in base a un singolo valore. Esistono tuttavia scenari aziendali in cui il passaggio di un'attività deve basarsi su un intervallo di valori. Ad esempio, un'attività potrebbe eseguire un'azione quando il valore su cui si basa il passaggio è compreso tra 1 e 5, un'altra azione quando il valore è compreso tra 6 e 10 e un'azione predefinita per tutti gli altri valori. Questa attività personalizzata abilita esattamente tale scenario.  

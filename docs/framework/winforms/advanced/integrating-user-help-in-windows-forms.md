@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527223"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Integrazione della Guida dell'utente in Windows Form
 Un aspetto fondamentale, ma spesso trascurato, di compilazione di applicazioni basate su Windows è il sistema di Guida in linea, che viene in cui gli utenti per assistenza nell'utilizzo. Windows Form supportano due diversi tipi di Guida, fornito dal [HelpProvider (componente)](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md). Il primo prevede la visualizzazione di un file della Guida HTML o HTML Help 1. *x* o successiva. Il secondo può visualizzare breve "Che cos'è questa"-digitare Help sui singoli controlli; Ciò è particolarmente utile nelle finestre di dialogo. Entrambi i tipi di Guida utilizzabile nello stesso form.  

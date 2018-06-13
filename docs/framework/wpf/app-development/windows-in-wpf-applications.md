@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550777"
 ---
 # <a name="windows-in-wpf-applications"></a>Finestre delle applicazioni WPF
 Gli utenti interagiscono con le applicazioni di windows. La funzione principale di una finestra consiste nell'ospitare e visualizzare il contenuto. Il tipo di contenuto che un host della finestra dipende dal tipo di dati utilizzati nell'applicazione, che può includere supporti, pagine di Extensible Application Markup Language (XAML), pagine Web, documenti, le tabelle del database e i record e informazioni di sistema.  

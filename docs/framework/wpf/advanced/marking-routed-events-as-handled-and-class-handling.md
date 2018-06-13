@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549409"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Impostazione degli eventi indirizzati come gestiti e gestione delle classi
 I gestori per un evento indirizzato possono contrassegnare l'evento come gestito all'interno dei dati dell'evento. La gestione dell'evento abbrevia efficacemente la route. La gestione delle classi è un concetto di programmazione supportato dagli eventi indirizzati. Un gestore classi ha l'opportunità di gestire un evento indirizzato specifico a livello di classe con un gestore richiamato prima di qualsiasi gestore istanze in qualsiasi istanza di classe.  
