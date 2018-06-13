@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215349"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a><span data-ttu-id="14110-102">-target:library (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="14110-102">-target:library (C# Compiler Options)</span></span>
 <span data-ttu-id="14110-103">L'opzione **-target:library** consente la creazione da parte del compilatore di una libreria di collegamento dinamico (DLL), anziché di un file eseguibile (EXE).</span><span class="sxs-lookup"><span data-stu-id="14110-103">The **-target:library** option causes the compiler to create a dynamic-link library (DLL) rather than an executable file (EXE).</span></span>  

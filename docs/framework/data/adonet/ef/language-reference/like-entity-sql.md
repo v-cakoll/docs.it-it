@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763040"
 ---
 # <a name="like-entity-sql"></a><span data-ttu-id="d5d7c-102">LIKE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="d5d7c-102">LIKE (Entity SQL)</span></span>
 <span data-ttu-id="d5d7c-103">Determina se un oggetto `String` di caratteri specifico corrisponde a un criterio specificato.</span><span class="sxs-lookup"><span data-stu-id="d5d7c-103">Determines whether a specific character `String` matches a specified pattern.</span></span>  

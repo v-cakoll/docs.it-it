@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762845"
 ---
 # <a name="how-to-call-custom-database-functions"></a><span data-ttu-id="f3a63-102">Procedura: chiamare funzioni di database personalizzate</span><span class="sxs-lookup"><span data-stu-id="f3a63-102">How to: Call Custom Database Functions</span></span>
 <span data-ttu-id="f3a63-103">In questo argomento viene descritto come chiamare funzioni personalizzate definite nel database dall'interno di query LINQ to Entities.</span><span class="sxs-lookup"><span data-stu-id="f3a63-103">This topic describes how to call custom functions that are defined in the database from within LINQ to Entities queries.</span></span>  

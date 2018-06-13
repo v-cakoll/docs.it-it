@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337587"
 ---
 # <a name="interfaces-c-programming-guide"></a><span data-ttu-id="47d06-102">Interfacce (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="47d06-102">Interfaces (C# Programming Guide)</span></span>
 <span data-ttu-id="47d06-103">Un'interfaccia contiene le definizioni per un gruppo di funzionalità correlate che possono essere implementate da una [classe](../../../csharp/language-reference/keywords/class.md) o uno [struct](../../../csharp/language-reference/keywords/struct.md).</span><span class="sxs-lookup"><span data-stu-id="47d06-103">An interface contains definitions for a group of related functionalities that a [class](../../../csharp/language-reference/keywords/class.md) or a [struct](../../../csharp/language-reference/keywords/struct.md) can implement.</span></span>  
