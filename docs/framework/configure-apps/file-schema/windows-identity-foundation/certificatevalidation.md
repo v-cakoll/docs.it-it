@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756059"
 ---
 # <a name="ltcertificatevalidationgt"></a><span data-ttu-id="6f42f-102">&lt;certificateValidation&gt;</span><span class="sxs-lookup"><span data-stu-id="6f42f-102">&lt;certificateValidation&gt;</span></span>
 <span data-ttu-id="6f42f-103">Controlla le impostazioni che utilizzano gestori di token per convalidare i certificati.</span><span class="sxs-lookup"><span data-stu-id="6f42f-103">Controls the settings that token handlers use to validate certificates.</span></span> <span data-ttu-id="6f42f-104">Queste impostazioni vengono ignorate se un gestore specifico è configurato con il proprio servizio di convalida.</span><span class="sxs-lookup"><span data-stu-id="6f42f-104">These settings are overridden if a specific handler is configured with its own validator.</span></span>  

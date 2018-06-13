@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743053"
 ---
 # <a name="ltnameentrygt-element"></a><span data-ttu-id="f83dc-102">&lt;nameEntry&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="f83dc-102">&lt;nameEntry&gt; Element</span></span>
 <span data-ttu-id="f83dc-103">Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in modo da poter associare più nomi descrittivi a una classe.</span><span class="sxs-lookup"><span data-stu-id="f83dc-103">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266689"
 ---
 # <a name="partial-type-c-reference"></a><span data-ttu-id="c5332-102">parziale (Tipo) (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="c5332-102">partial (Type) (C# Reference)</span></span>
 <span data-ttu-id="c5332-103">Le definizioni di tipi parziali consentono la suddivisione in più file della definizione di una classe, una struttura o un'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="c5332-103">Partial type definitions allow for the definition of a class, struct, or interface to be split into multiple files.</span></span>  

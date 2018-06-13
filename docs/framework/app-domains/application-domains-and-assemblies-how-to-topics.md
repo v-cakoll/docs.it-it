@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743095"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a><span data-ttu-id="28843-102">Argomenti relativi alle procedure per domini applicazione e assembly</span><span class="sxs-lookup"><span data-stu-id="28843-102">Application Domains and Assemblies How-to Topics</span></span>
 <span data-ttu-id="28843-103">Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella documentazione concettuale per la programmazione con domini applicazione e assembly.</span><span class="sxs-lookup"><span data-stu-id="28843-103">The following sections contain links to all How-to topics found in the conceptual documentation for programming with application domains and assemblies.</span></span>  

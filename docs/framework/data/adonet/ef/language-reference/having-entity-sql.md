@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764385"
 ---
 # <a name="having-entity-sql"></a><span data-ttu-id="bf7a8-102">HAVING (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="bf7a8-102">HAVING (Entity SQL)</span></span>
 <span data-ttu-id="bf7a8-103">Specifica una condizione di ricerca per un gruppo o un'aggregazione.</span><span class="sxs-lookup"><span data-stu-id="bf7a8-103">Specifies a search condition for a group or an aggregate.</span></span>  

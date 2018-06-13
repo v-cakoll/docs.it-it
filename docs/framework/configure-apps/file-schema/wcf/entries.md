@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746709"
 ---
 # <a name="ltentriesgt"></a><span data-ttu-id="d4f0b-102">&lt;Voci&gt;</span><span class="sxs-lookup"><span data-stu-id="d4f0b-102">&lt;entries&gt;</span></span>
 <span data-ttu-id="d4f0b-103">Voce di routing contenente i mapping tra i filtri di routing e gli endpoint di destinazione ai quali inviare i messaggi quando viene trovata una corrispondenza di filtro.</span><span class="sxs-lookup"><span data-stu-id="d4f0b-103">A routing entry that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  

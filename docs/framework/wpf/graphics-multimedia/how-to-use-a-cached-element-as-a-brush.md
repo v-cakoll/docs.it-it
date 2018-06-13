@@ -1,40 +1,29 @@
 ---
 title: 'Procedura: utilizzare un elemento memorizzato nella cache come pennello'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - BitmapCache [WPF], using
 - cached element [WPF], use as a brush
 - BitmapCacheBrush [WPF], using
 - CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f463c15855e267a4c246625a8d06e627852f48a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c43c4ecbefe99d6e38766705378d85d92ecc5729
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561524"
 ---
-# <a name="how-to-use-a-cached-element-as-a-brush"></a><span data-ttu-id="23232-102">Procedura: utilizzare un elemento memorizzato nella cache come pennello</span><span class="sxs-lookup"><span data-stu-id="23232-102">How to: Use a Cached Element as a Brush</span></span>
-<span data-ttu-id="23232-103">Utilizzare la <xref:System.Windows.Media.BitmapCacheBrush> classe per riutilizzare un elemento memorizzato nella cache in modo efficiente.</span><span class="sxs-lookup"><span data-stu-id="23232-103">Use the <xref:System.Windows.Media.BitmapCacheBrush> class to reuse a cached element efficiently.</span></span> <span data-ttu-id="23232-104">Per memorizzare nella cache un elemento, creare una nuova istanza di <xref:System.Windows.Media.BitmapCache> classe e assegnarla alla proprietà dell'elemento <xref:System.Windows.UIElement.CacheMode%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="23232-104">To cache an element, create a new instance of the <xref:System.Windows.Media.BitmapCache> class and assign it to the element's <xref:System.Windows.UIElement.CacheMode%2A> property.</span></span>  
+# <a name="how-to-use-a-cached-element-as-a-brush"></a><span data-ttu-id="12844-102">Procedura: utilizzare un elemento memorizzato nella cache come pennello</span><span class="sxs-lookup"><span data-stu-id="12844-102">How to: Use a Cached Element as a Brush</span></span>
+<span data-ttu-id="12844-103">Utilizzare la <xref:System.Windows.Media.BitmapCacheBrush> classe per riutilizzare un elemento memorizzato nella cache in modo efficiente.</span><span class="sxs-lookup"><span data-stu-id="12844-103">Use the <xref:System.Windows.Media.BitmapCacheBrush> class to reuse a cached element efficiently.</span></span> <span data-ttu-id="12844-104">Per memorizzare nella cache un elemento, creare una nuova istanza di <xref:System.Windows.Media.BitmapCache> classe e assegnarla alla proprietà dell'elemento <xref:System.Windows.UIElement.CacheMode%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="12844-104">To cache an element, create a new instance of the <xref:System.Windows.Media.BitmapCache> class and assign it to the element's <xref:System.Windows.UIElement.CacheMode%2A> property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="23232-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="23232-105">Example</span></span>  
- <span data-ttu-id="23232-106">Esempio di codice seguente viene illustrato come riutilizzare un elemento memorizzato nella cache.</span><span class="sxs-lookup"><span data-stu-id="23232-106">The following code example shows how to reuse a cached element.</span></span> <span data-ttu-id="23232-107">L'elemento memorizzato nella cache è un <xref:System.Windows.Controls.Image> controllo che visualizza un'immagine di grandi dimensioni.</span><span class="sxs-lookup"><span data-stu-id="23232-107">The cached element is an <xref:System.Windows.Controls.Image> control that displays a large image.</span></span> <span data-ttu-id="23232-108">Il <xref:System.Windows.Controls.Image> verrà memorizzato nella cache come bitmap utilizzando il <xref:System.Windows.Media.BitmapCache> classe e la cache viene riutilizzata assegnandola a un <xref:System.Windows.Media.BitmapCacheBrush>.</span><span class="sxs-lookup"><span data-stu-id="23232-108">The <xref:System.Windows.Controls.Image> control is cached as a bitmap by using the <xref:System.Windows.Media.BitmapCache> class, and the cache is reused by assigning it to a <xref:System.Windows.Media.BitmapCacheBrush>.</span></span> <span data-ttu-id="23232-109">Il pennello viene assegnato allo sfondo di venticinque pulsanti per visualizzare un efficiente riutilizzo.</span><span class="sxs-lookup"><span data-stu-id="23232-109">The brush is assigned to the background of twenty-five buttons to show efficient reuse.</span></span>  
+## <a name="example"></a><span data-ttu-id="12844-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="12844-105">Example</span></span>  
+ <span data-ttu-id="12844-106">Esempio di codice seguente viene illustrato come riutilizzare un elemento memorizzato nella cache.</span><span class="sxs-lookup"><span data-stu-id="12844-106">The following code example shows how to reuse a cached element.</span></span> <span data-ttu-id="12844-107">L'elemento memorizzato nella cache è un <xref:System.Windows.Controls.Image> controllo che visualizza un'immagine di grandi dimensioni.</span><span class="sxs-lookup"><span data-stu-id="12844-107">The cached element is an <xref:System.Windows.Controls.Image> control that displays a large image.</span></span> <span data-ttu-id="12844-108">Il <xref:System.Windows.Controls.Image> verrà memorizzato nella cache come bitmap utilizzando il <xref:System.Windows.Media.BitmapCache> classe e la cache viene riutilizzata assegnandola a un <xref:System.Windows.Media.BitmapCacheBrush>.</span><span class="sxs-lookup"><span data-stu-id="12844-108">The <xref:System.Windows.Controls.Image> control is cached as a bitmap by using the <xref:System.Windows.Media.BitmapCache> class, and the cache is reused by assigning it to a <xref:System.Windows.Media.BitmapCacheBrush>.</span></span> <span data-ttu-id="12844-109">Il pennello viene assegnato allo sfondo di venticinque pulsanti per visualizzare un efficiente riutilizzo.</span><span class="sxs-lookup"><span data-stu-id="12844-109">The brush is assigned to the background of twenty-five buttons to show efficient reuse.</span></span>  
   
  [!code-xaml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
   
-## <a name="see-also"></a><span data-ttu-id="23232-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="23232-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="12844-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="12844-110">See Also</span></span>  
  <xref:System.Windows.Media.BitmapCache>  
  <xref:System.Windows.Media.BitmapCacheBrush>  
  <xref:System.Windows.UIElement.CacheMode%2A>  
- [<span data-ttu-id="23232-111">Procedura: Migliorare le prestazioni di rendering memorizzando nella cache un elemento</span><span class="sxs-lookup"><span data-stu-id="23232-111">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)
+ [<span data-ttu-id="12844-111">Procedura: Migliorare le prestazioni di rendering memorizzando nella cache un elemento</span><span class="sxs-lookup"><span data-stu-id="12844-111">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755162"
 ---
 # <a name="ltsystemwebgt-element-web-settings"></a><span data-ttu-id="d0790-102">&lt;System. Web&gt; elemento (impostazioni Web)</span><span class="sxs-lookup"><span data-stu-id="d0790-102">&lt;system.web&gt; Element (Web Settings)</span></span>
 <span data-ttu-id="d0790-103">Contiene informazioni su come il livello di hosting ASP.NET gestisce il comportamento a livello di processo.</span><span class="sxs-lookup"><span data-stu-id="d0790-103">Contains information about how the ASP.NET hosting layer manages process-wide behavior.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269168"
 ---
 # <a name="stackalloc-c-reference"></a><span data-ttu-id="f61e4-102">stackalloc (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="f61e4-102">stackalloc (C# Reference)</span></span>
 <span data-ttu-id="f61e4-103">La parola chiave `stackalloc` viene usata in un contesto di codice unsafe per allocare un blocco di memoria nello stack.</span><span class="sxs-lookup"><span data-stu-id="f61e4-103">The `stackalloc` keyword is used in an unsafe code context to allocate a block of memory on the stack.</span></span>

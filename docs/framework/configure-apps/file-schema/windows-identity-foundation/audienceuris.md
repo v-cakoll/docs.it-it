@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755994"
 ---
 # <a name="ltaudienceurisgt"></a><span data-ttu-id="574ff-102">&lt;audienceUris&gt;</span><span class="sxs-lookup"><span data-stu-id="574ff-102">&lt;audienceUris&gt;</span></span>
 <span data-ttu-id="574ff-103">Specifica il set di URI accettabili identificatori delle relying party (RP).</span><span class="sxs-lookup"><span data-stu-id="574ff-103">Specifies the set of URIs that are acceptable identifiers of the relying party (RP).</span></span> <span data-ttu-id="574ff-104">Token non verranno accettati, a meno che hanno come ambito per uno dei gruppi di destinatari consentiti gli URI.</span><span class="sxs-lookup"><span data-stu-id="574ff-104">Tokens will not be accepted unless they are scoped for one of the allowed audience URIs.</span></span>  

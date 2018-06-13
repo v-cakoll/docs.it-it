@@ -1,38 +1,25 @@
 ---
 title: 'Procedura: creare uno StackPanel'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - StackPanel control [WPF], creating
 ms.assetid: e7ce65cb-720a-4bb6-95b6-286b74488a58
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9226ac10e4f221cc381b7c59179b2667e20aa757
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 30f24d8dba7c09271a5957822439af6b64e05aca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553027"
 ---
-# <a name="how-to-create-a-stackpanel"></a><span data-ttu-id="c8d78-102">Procedura: creare uno StackPanel</span><span class="sxs-lookup"><span data-stu-id="c8d78-102">How to: Create a StackPanel</span></span>
-<span data-ttu-id="c8d78-103">In questo esempio viene illustrato come creare un <xref:System.Windows.Controls.StackPanel>.</span><span class="sxs-lookup"><span data-stu-id="c8d78-103">This example shows how to create a <xref:System.Windows.Controls.StackPanel>.</span></span>  
+# <a name="how-to-create-a-stackpanel"></a><span data-ttu-id="c5f35-102">Procedura: creare uno StackPanel</span><span class="sxs-lookup"><span data-stu-id="c5f35-102">How to: Create a StackPanel</span></span>
+<span data-ttu-id="c5f35-103">In questo esempio viene illustrato come creare un <xref:System.Windows.Controls.StackPanel>.</span><span class="sxs-lookup"><span data-stu-id="c5f35-103">This example shows how to create a <xref:System.Windows.Controls.StackPanel>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c8d78-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="c8d78-104">Example</span></span>  
- <span data-ttu-id="c8d78-105">Oggetto <xref:System.Windows.Controls.StackPanel> consente di sovrapposizione di elementi in una direzione specificata.</span><span class="sxs-lookup"><span data-stu-id="c8d78-105">A <xref:System.Windows.Controls.StackPanel> allows you to stack elements in a specified direction.</span></span> <span data-ttu-id="c8d78-106">Utilizzando le proprietà definite su <xref:System.Windows.Controls.StackPanel>, il contenuto può fluire in verticale, ovvero l'impostazione predefinita, orizzontalmente o verticalmente.</span><span class="sxs-lookup"><span data-stu-id="c8d78-106">By using properties that are defined on <xref:System.Windows.Controls.StackPanel>, content can flow both vertically, which is the default setting, or horizontally.</span></span>  
+## <a name="example"></a><span data-ttu-id="c5f35-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="c5f35-104">Example</span></span>  
+ <span data-ttu-id="c5f35-105">Oggetto <xref:System.Windows.Controls.StackPanel> consente di sovrapposizione di elementi in una direzione specificata.</span><span class="sxs-lookup"><span data-stu-id="c5f35-105">A <xref:System.Windows.Controls.StackPanel> allows you to stack elements in a specified direction.</span></span> <span data-ttu-id="c5f35-106">Utilizzando le proprietà definite su <xref:System.Windows.Controls.StackPanel>, il contenuto può fluire in verticale, ovvero l'impostazione predefinita, orizzontalmente o verticalmente.</span><span class="sxs-lookup"><span data-stu-id="c5f35-106">By using properties that are defined on <xref:System.Windows.Controls.StackPanel>, content can flow both vertically, which is the default setting, or horizontally.</span></span>  
   
- <span data-ttu-id="c8d78-107">Nell'esempio riportato in uno stack verticale cinque <xref:System.Windows.Controls.TextBlock> controlli, ognuno con un altro <xref:System.Windows.Controls.Border> e <xref:System.Windows.Controls.Border.Background%2A>, utilizzando <xref:System.Windows.Controls.StackPanel>.</span><span class="sxs-lookup"><span data-stu-id="c8d78-107">The following example vertically stacks five <xref:System.Windows.Controls.TextBlock> controls, each with a different <xref:System.Windows.Controls.Border> and <xref:System.Windows.Controls.Border.Background%2A>, by using <xref:System.Windows.Controls.StackPanel>.</span></span> <span data-ttu-id="c8d78-108">Gli elementi figlio che non hanno alcuna specificato <xref:System.Windows.FrameworkElement.Width%2A> adattata per riempire la finestra padre; tuttavia, gli elementi figlio che dispone di un oggetto specificato <xref:System.Windows.FrameworkElement.Width%2A>, è centrato all'interno della finestra.</span><span class="sxs-lookup"><span data-stu-id="c8d78-108">The child elements that have no specified <xref:System.Windows.FrameworkElement.Width%2A> stretch to fill the parent window; however, the child elements that have a specified <xref:System.Windows.FrameworkElement.Width%2A>, are centered within the window.</span></span>  
+ <span data-ttu-id="c5f35-107">Nell'esempio riportato in uno stack verticale cinque <xref:System.Windows.Controls.TextBlock> controlli, ognuno con un altro <xref:System.Windows.Controls.Border> e <xref:System.Windows.Controls.Border.Background%2A>, utilizzando <xref:System.Windows.Controls.StackPanel>.</span><span class="sxs-lookup"><span data-stu-id="c5f35-107">The following example vertically stacks five <xref:System.Windows.Controls.TextBlock> controls, each with a different <xref:System.Windows.Controls.Border> and <xref:System.Windows.Controls.Border.Background%2A>, by using <xref:System.Windows.Controls.StackPanel>.</span></span> <span data-ttu-id="c5f35-108">Gli elementi figlio che non hanno alcuna specificato <xref:System.Windows.FrameworkElement.Width%2A> adattata per riempire la finestra padre; tuttavia, gli elementi figlio che dispone di un oggetto specificato <xref:System.Windows.FrameworkElement.Width%2A>, è centrato all'interno della finestra.</span><span class="sxs-lookup"><span data-stu-id="c5f35-108">The child elements that have no specified <xref:System.Windows.FrameworkElement.Width%2A> stretch to fill the parent window; however, the child elements that have a specified <xref:System.Windows.FrameworkElement.Width%2A>, are centered within the window.</span></span>  
   
- <span data-ttu-id="c8d78-109">La direzione predefinita dello stack in un <xref:System.Windows.Controls.StackPanel> è verticale.</span><span class="sxs-lookup"><span data-stu-id="c8d78-109">The default stack direction in a <xref:System.Windows.Controls.StackPanel> is vertical.</span></span> <span data-ttu-id="c8d78-110">Al controllo di flusso contenuto in un <xref:System.Windows.Controls.StackPanel>, utilizzare il <xref:System.Windows.Controls.StackPanel.Orientation%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="c8d78-110">To control content flow in a <xref:System.Windows.Controls.StackPanel>, use the <xref:System.Windows.Controls.StackPanel.Orientation%2A> property.</span></span> <span data-ttu-id="c8d78-111">È possibile controllare l'allineamento orizzontale tramite la <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="c8d78-111">You can control horizontal alignment by using the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property.</span></span>  
+ <span data-ttu-id="c5f35-109">La direzione predefinita dello stack in un <xref:System.Windows.Controls.StackPanel> è verticale.</span><span class="sxs-lookup"><span data-stu-id="c5f35-109">The default stack direction in a <xref:System.Windows.Controls.StackPanel> is vertical.</span></span> <span data-ttu-id="c5f35-110">Al controllo di flusso contenuto in un <xref:System.Windows.Controls.StackPanel>, utilizzare il <xref:System.Windows.Controls.StackPanel.Orientation%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="c5f35-110">To control content flow in a <xref:System.Windows.Controls.StackPanel>, use the <xref:System.Windows.Controls.StackPanel.Orientation%2A> property.</span></span> <span data-ttu-id="c5f35-111">È possibile controllare l'allineamento orizzontale tramite la <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="c5f35-111">You can control horizontal alignment by using the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property.</span></span>  
   
 ```xaml  
 <Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" WindowTitle="StackPanel Sample">  
@@ -56,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 </Page>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c8d78-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c8d78-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c5f35-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c5f35-112">See Also</span></span>  
  <xref:System.Windows.Controls.StackPanel>  
- [<span data-ttu-id="c8d78-113">Cenni preliminari sugli elementi Panel</span><span class="sxs-lookup"><span data-stu-id="c8d78-113">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="c8d78-114">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="c8d78-114">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)
+ [<span data-ttu-id="c5f35-113">Cenni preliminari sugli elementi Panel</span><span class="sxs-lookup"><span data-stu-id="c5f35-113">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [<span data-ttu-id="c5f35-114">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="c5f35-114">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)

@@ -1,14 +1,6 @@
 ---
 title: Metodo ICLRRuntimeHost::UnloadAppDomain
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeHost.UnloadAppDomain
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 571912bc-3429-4ff8-8eb2-ea993ffbd901
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 481f701ae4db15b66596c3af89c2e7aff7a28f88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c7dba595953a305c9da33e255676c4b2dcae7a96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435582"
 ---
-# <a name="iclrruntimehostunloadappdomain-method"></a><span data-ttu-id="e938c-102">Metodo ICLRRuntimeHost::UnloadAppDomain</span><span class="sxs-lookup"><span data-stu-id="e938c-102">ICLRRuntimeHost::UnloadAppDomain Method</span></span>
-<span data-ttu-id="e938c-103">Scarica la classe gestita <xref:System.AppDomain> che corrisponde all'identificatore numerico specificato.</span><span class="sxs-lookup"><span data-stu-id="e938c-103">Unloads the managed <xref:System.AppDomain> that corresponds to the specified numeric identifier.</span></span>  
+# <a name="iclrruntimehostunloadappdomain-method"></a><span data-ttu-id="dbf6a-102">Metodo ICLRRuntimeHost::UnloadAppDomain</span><span class="sxs-lookup"><span data-stu-id="dbf6a-102">ICLRRuntimeHost::UnloadAppDomain Method</span></span>
+<span data-ttu-id="dbf6a-103">Scarica la classe gestita <xref:System.AppDomain> che corrisponde all'identificatore numerico specificato.</span><span class="sxs-lookup"><span data-stu-id="dbf6a-103">Unloads the managed <xref:System.AppDomain> that corresponds to the specified numeric identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e938c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e938c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dbf6a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="dbf6a-104">Syntax</span></span>  
   
 ```  
 HRESULT UnloadAppDomain(  
@@ -47,35 +36,35 @@ HRESULT UnloadAppDomain(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e938c-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="e938c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="dbf6a-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="dbf6a-105">Parameters</span></span>  
  `dwAppDomainId`  
- <span data-ttu-id="e938c-106">[in] L'identificatore numerico del dominio applicazione da scaricare.</span><span class="sxs-lookup"><span data-stu-id="e938c-106">[in] The numeric identifier of the application domain to unload.</span></span>  
+ <span data-ttu-id="dbf6a-106">[in] L'identificatore numerico del dominio applicazione da scaricare.</span><span class="sxs-lookup"><span data-stu-id="dbf6a-106">[in] The numeric identifier of the application domain to unload.</span></span>  
   
  `fWaitUntilDone`  
- <span data-ttu-id="e938c-107">[in] `true` per indicare che common language runtime (CLR) deve attendere finché termina l'esecuzione del thread dell'applicazione corrente prima di tentare di scaricare il dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="e938c-107">[in] `true` to indicate that the common language runtime( CLR) must wait until it has finished executing the application's current thread before attempting to unload the application domain.</span></span>  
+ <span data-ttu-id="dbf6a-107">[in] `true` per indicare che common language runtime (CLR) deve attendere finché termina l'esecuzione del thread dell'applicazione corrente prima di tentare di scaricare il dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="dbf6a-107">[in] `true` to indicate that the common language runtime( CLR) must wait until it has finished executing the application's current thread before attempting to unload the application domain.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e938c-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="e938c-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="dbf6a-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="dbf6a-108">Return Value</span></span>  
   
-|<span data-ttu-id="e938c-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e938c-109">HRESULT</span></span>|<span data-ttu-id="e938c-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e938c-110">Description</span></span>|  
+|<span data-ttu-id="dbf6a-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="dbf6a-109">HRESULT</span></span>|<span data-ttu-id="dbf6a-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="dbf6a-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="e938c-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="e938c-111">S_OK</span></span>|<span data-ttu-id="e938c-112">`UnloadAppDomain`stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="e938c-112">`UnloadAppDomain` returned successfully.</span></span>|  
-|<span data-ttu-id="e938c-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="e938c-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="e938c-114">CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="e938c-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="e938c-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="e938c-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="e938c-116">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="e938c-116">The call timed out.</span></span>|  
-|<span data-ttu-id="e938c-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="e938c-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="e938c-118">Il chiamante non dispone del blocco.</span><span class="sxs-lookup"><span data-stu-id="e938c-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="e938c-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="e938c-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="e938c-120">Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="e938c-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="e938c-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e938c-121">E_FAIL</span></span>|<span data-ttu-id="e938c-122">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="e938c-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="e938c-123">Se un metodo restituisce E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="e938c-123">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="e938c-124">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="e938c-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="dbf6a-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="dbf6a-111">S_OK</span></span>|<span data-ttu-id="dbf6a-112">`UnloadAppDomain` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="dbf6a-112">`UnloadAppDomain` returned successfully.</span></span>|  
+|<span data-ttu-id="dbf6a-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="dbf6a-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="dbf6a-114">CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="dbf6a-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="dbf6a-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="dbf6a-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="dbf6a-116">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="dbf6a-116">The call timed out.</span></span>|  
+|<span data-ttu-id="dbf6a-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="dbf6a-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="dbf6a-118">Il chiamante non dispone del blocco.</span><span class="sxs-lookup"><span data-stu-id="dbf6a-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="dbf6a-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="dbf6a-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="dbf6a-120">Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="dbf6a-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="dbf6a-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="dbf6a-121">E_FAIL</span></span>|<span data-ttu-id="dbf6a-122">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="dbf6a-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="dbf6a-123">Se un metodo restituisce E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="dbf6a-123">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="dbf6a-124">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="dbf6a-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e938c-125">Note</span><span class="sxs-lookup"><span data-stu-id="e938c-125">Remarks</span></span>  
- <span data-ttu-id="e938c-126">È possibile ottenere l'identificatore numerico del dominio dell'applicazione in cui è in esecuzione il thread corrente chiamando [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span><span class="sxs-lookup"><span data-stu-id="e938c-126">You can get the numeric identifier of the application domain in which the current thread is executing by calling [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span></span> <span data-ttu-id="e938c-127">L'identificatore corrisponde al <xref:System.AppDomain.Id%2A> proprietà di gestito <xref:System.AppDomain> tipo.</span><span class="sxs-lookup"><span data-stu-id="e938c-127">This identifier corresponds to the <xref:System.AppDomain.Id%2A> property of the managed <xref:System.AppDomain> type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dbf6a-125">Note</span><span class="sxs-lookup"><span data-stu-id="dbf6a-125">Remarks</span></span>  
+ <span data-ttu-id="dbf6a-126">È possibile ottenere l'identificatore numerico del dominio dell'applicazione in cui è in esecuzione il thread corrente chiamando [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span><span class="sxs-lookup"><span data-stu-id="dbf6a-126">You can get the numeric identifier of the application domain in which the current thread is executing by calling [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span></span> <span data-ttu-id="dbf6a-127">L'identificatore corrisponde al <xref:System.AppDomain.Id%2A> proprietà di gestito <xref:System.AppDomain> tipo.</span><span class="sxs-lookup"><span data-stu-id="dbf6a-127">This identifier corresponds to the <xref:System.AppDomain.Id%2A> property of the managed <xref:System.AppDomain> type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e938c-128">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e938c-128">Requirements</span></span>  
- <span data-ttu-id="e938c-129">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e938c-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dbf6a-128">Requisiti</span><span class="sxs-lookup"><span data-stu-id="dbf6a-128">Requirements</span></span>  
+ <span data-ttu-id="dbf6a-129">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dbf6a-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e938c-130">**Intestazione:** Mscoree. H</span><span class="sxs-lookup"><span data-stu-id="e938c-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="dbf6a-130">**Intestazione:** Mscoree. H</span><span class="sxs-lookup"><span data-stu-id="dbf6a-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e938c-131">**Libreria:** inclusa come risorsa in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e938c-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="dbf6a-131">**Libreria:** inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="dbf6a-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e938c-132">**Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e938c-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dbf6a-132">**Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dbf6a-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e938c-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e938c-133">See Also</span></span>  
- [<span data-ttu-id="e938c-134">Interfaccia ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="e938c-134">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="dbf6a-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dbf6a-133">See Also</span></span>  
+ [<span data-ttu-id="dbf6a-134">Interfaccia ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="dbf6a-134">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
