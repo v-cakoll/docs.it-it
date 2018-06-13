@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762715"
 ---
 # <a name="inferring-element-text"></a><span data-ttu-id="f9fe1-102">Deduzione del testo dell'elemento</span><span class="sxs-lookup"><span data-stu-id="f9fe1-102">Inferring Element Text</span></span>
 <span data-ttu-id="f9fe1-103">Se un elemento contiene testo e non contiene elementi figlio da inferire come tabelle, ad esempio (elementi con attributi) o elementi ripetuti, una nuova colonna con il nome **TableName_Text** verranno aggiunti alla tabella inferita per l'elemento.</span><span class="sxs-lookup"><span data-stu-id="f9fe1-103">If an element contains text and has no child elements to be inferred as tables (such as elements with attributes or repeated elements), a new column with the name **TableName_Text** will be added to the table that is inferred for the element.</span></span> <span data-ttu-id="f9fe1-104">Il testo contenuto nell'elemento viene aggiunto a una riga della tabella e archiviato nella nuova colonna.</span><span class="sxs-lookup"><span data-stu-id="f9fe1-104">The text contained in the element will be added to a row in the table and stored in the new column.</span></span> <span data-ttu-id="f9fe1-105">Il **ColumnMapping** della nuova colonna verrà impostata su **MappingType**.</span><span class="sxs-lookup"><span data-stu-id="f9fe1-105">The **ColumnMapping** property of the new column will be set to **MappingType.SimpleContent**.</span></span>  

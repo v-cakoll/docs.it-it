@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745266"
 ---
 # <a name="trace-and-debug-settings-schema"></a><span data-ttu-id="cc014-102">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="cc014-102">Trace and Debug Settings Schema</span></span>
 <span data-ttu-id="cc014-103">Le impostazioni di traccia e debug specificano i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="cc014-103">Trace and debug settings specify trace listeners that collect, store, and route messages, and the level where a trace switch is set.</span></span>  

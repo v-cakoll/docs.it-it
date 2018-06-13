@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745474"
 ---
 # <a name="ltprefercominsteadofmanagedremotinggt-element"></a><span data-ttu-id="78ee6-102">&lt;PreferComInsteadOfManagedRemoting&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="78ee6-102">&lt;PreferComInsteadOfManagedRemoting&gt; Element</span></span>
 <span data-ttu-id="78ee6-103">Specifica se il runtime utilizzerà l'interoperabilità COM anziché remoti per tutte le chiamate tra i limiti del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="78ee6-103">Specifies whether the runtime will use COM interop instead of remoting for all calls across application domain boundaries.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745370"
 ---
 # <a name="walkthrough-using-client-application-services"></a><span data-ttu-id="e3cb1-102">Procedura dettagliata: utilizzo di servizi delle applicazioni client</span><span class="sxs-lookup"><span data-stu-id="e3cb1-102">Walkthrough: Using Client Application Services</span></span>
 <span data-ttu-id="e3cb1-103">Questo argomento descrive come creare un'applicazione Windows che usa i servizi delle applicazioni client per autenticare gli utenti e recuperare impostazioni e ruoli utente.</span><span class="sxs-lookup"><span data-stu-id="e3cb1-103">This topic describes how to create a Windows application that uses client application services to authenticate users and retrieve user roles and settings.</span></span>  
