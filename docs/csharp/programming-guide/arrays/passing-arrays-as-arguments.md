@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315516"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Passaggio di matrici come argomenti (Guida per programmatori C#)
 Le matrici possono essere passate come argomenti ai parametri di metodo. Le matrici, infatti, sono tipi di parametri e il metodo può quindi modificare il valore degli elementi.  

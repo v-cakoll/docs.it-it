@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316322"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>Aggiunta di elementi, attributi e nodi a un albero XML (C#)
 È possibile aggiungere contenuto (elementi, attributi, commenti, istruzioni di elaborazione, testo e CDATA) a un albero XML esistente.  
