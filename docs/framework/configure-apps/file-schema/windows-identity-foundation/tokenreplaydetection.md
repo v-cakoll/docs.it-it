@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755227"
 ---
 # <a name="lttokenreplaydetectiongt"></a><span data-ttu-id="d5e46-102">&lt;tokenReplayDetection&gt;</span><span class="sxs-lookup"><span data-stu-id="d5e46-102">&lt;tokenReplayDetection&gt;</span></span>
 <span data-ttu-id="d5e46-103">Abilita rilevamento riproduzione token e specifica l'ora di scadenza per i token.</span><span class="sxs-lookup"><span data-stu-id="d5e46-103">Enables token replay detection and specifies the expiration time for tokens.</span></span>  

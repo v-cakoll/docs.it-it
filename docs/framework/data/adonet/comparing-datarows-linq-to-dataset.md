@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756280"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a><span data-ttu-id="3df01-102">Confronto di DataRows (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="3df01-102">Comparing DataRows (LINQ to DataSet)</span></span>
 <span data-ttu-id="3df01-103">In [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] sono definiti diversi operatori sui set per confrontare gli elementi di origine e verificarne l'uguaglianza.</span><span class="sxs-lookup"><span data-stu-id="3df01-103">[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] defines various set operators to compare source elements to see if they are equal.</span></span> <span data-ttu-id="3df01-104">Gli operatori sui set disponibili in [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sono i seguenti:</span><span class="sxs-lookup"><span data-stu-id="3df01-104">[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] provides the following set operators:</span></span>  

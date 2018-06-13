@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753586"
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a><span data-ttu-id="eb7cb-102">&lt;servicePointManager&gt; elemento (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="eb7cb-102">&lt;servicePointManager&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="eb7cb-103">Configura le connessioni alle risorse di rete.</span><span class="sxs-lookup"><span data-stu-id="eb7cb-103">Configures connections to network resources.</span></span>  

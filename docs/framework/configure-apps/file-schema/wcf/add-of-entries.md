@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744980"
 ---
 # <a name="ltaddgt-of-ltentriesgt"></a><span data-ttu-id="5f84b-102">&lt;add&gt; di &lt;entries&gt;</span><span class="sxs-lookup"><span data-stu-id="5f84b-102">&lt;add&gt; of &lt;entries&gt;</span></span>
 <span data-ttu-id="5f84b-103">Rappresenta una voce di routing che esegue il mapping di un filtro a un endpoint client definito in precedenza.</span><span class="sxs-lookup"><span data-stu-id="5f84b-103">Represents a routing entry that maps a filter to a client endpoint that was previously defined.</span></span> <span data-ttu-id="5f84b-104">I messaggi che corrispondono a questo filtro verranno inviati a questa destinazione.</span><span class="sxs-lookup"><span data-stu-id="5f84b-104">Messages matching this filter will be sent to this destination.</span></span>  

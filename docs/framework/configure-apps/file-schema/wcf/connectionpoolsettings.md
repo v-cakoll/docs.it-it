@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748152"
 ---
 # <a name="ltconnectionpoolsettingsgt"></a><span data-ttu-id="1f9c0-102">&lt;connectionPoolSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="1f9c0-102">&lt;connectionPoolSettings&gt;</span></span>
 <span data-ttu-id="1f9c0-103">Specifica impostazioni aggiuntive del pool di connessioni per un'associazione con named pipe.</span><span class="sxs-lookup"><span data-stu-id="1f9c0-103">Specifies additional connection pool settings for a Named Pipe binding.</span></span>  

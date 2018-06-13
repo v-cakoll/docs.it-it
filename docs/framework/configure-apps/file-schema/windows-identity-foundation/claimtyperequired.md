@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754954"
 ---
 # <a name="ltclaimtyperequiredgt"></a><span data-ttu-id="fb0ae-102">&lt;claimTypeRequired&gt;</span><span class="sxs-lookup"><span data-stu-id="fb0ae-102">&lt;claimTypeRequired&gt;</span></span>
 <span data-ttu-id="fb0ae-103">Specifica il set di attestazioni necessarie per i token di sicurezza in ingresso.</span><span class="sxs-lookup"><span data-stu-id="fb0ae-103">Specifies the set of required claims for incoming security tokens.</span></span>  

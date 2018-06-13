@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744395"
 ---
 # <a name="manipulations-and-inertia-overview"></a><span data-ttu-id="64c6a-102">Informazioni generali sulle modifiche e sull'inerzia</span><span class="sxs-lookup"><span data-stu-id="64c6a-102">Manipulations and Inertia Overview</span></span>
 <span data-ttu-id="64c6a-103">Le *modifiche* consentono agli utenti di spostare, ruotare e ridimensionare elementi dell'interfaccia utente tramite *modificatori*.</span><span class="sxs-lookup"><span data-stu-id="64c6a-103">*Manipulations* enable users to move, rotate, and resize user interface (UI) elements by using *manipulators*.</span></span> <span data-ttu-id="64c6a-104">Un manipolatore può essere un mouse, uno stilo (in uno scenario abilitato per il tocco) o un dito.</span><span class="sxs-lookup"><span data-stu-id="64c6a-104">A manipulator represents a mouse or (in a touch-enabled scenario) a stylus or a finger.</span></span>  
