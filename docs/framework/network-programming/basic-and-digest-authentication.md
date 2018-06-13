@@ -1,12 +1,6 @@
 ---
 title: Autenticazione di base e del digest
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -25,21 +19,20 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 7ca66a65c05da3d515358c0fdb26682fa4ec1438
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: fc061065caa4dad878a2a9b45e98ecb0d419d18b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398222"
 ---
-# <a name="basic-and-digest-authentication"></a><span data-ttu-id="2630e-102">Autenticazione di base e del digest</span><span class="sxs-lookup"><span data-stu-id="2630e-102">Basic and Digest Authentication</span></span>
-<span data-ttu-id="2630e-103">L'implementazione <xref:System.Net> dell'autenticazione di base e digest è conforme alla specifica RFC2617 - HTTP Authentication: Basic and Digest Authentication, disponibile in lingua inglese sul sito Web del World Wide Web Consortium all'indirizzo www.w3.org.</span><span class="sxs-lookup"><span data-stu-id="2630e-103">The <xref:System.Net> implementation of basic and digest authentication complies with RFC2617 – HTTP Authentication: Basic and Digest Authentication (available on the World Wide Web Consortium's Web site at www.w3.org).</span></span>  
+# <a name="basic-and-digest-authentication"></a><span data-ttu-id="05c17-102">Autenticazione di base e del digest</span><span class="sxs-lookup"><span data-stu-id="05c17-102">Basic and Digest Authentication</span></span>
+<span data-ttu-id="05c17-103">L'implementazione <xref:System.Net> dell'autenticazione di base e digest è conforme alla specifica RFC2617 - HTTP Authentication: Basic and Digest Authentication, disponibile in lingua inglese sul sito Web del World Wide Web Consortium all'indirizzo www.w3.org.</span><span class="sxs-lookup"><span data-stu-id="05c17-103">The <xref:System.Net> implementation of basic and digest authentication complies with RFC2617 – HTTP Authentication: Basic and Digest Authentication (available on the World Wide Web Consortium's Web site at www.w3.org).</span></span>  
   
- <span data-ttu-id="2630e-104">Per poter usare l'autenticazione di base e digest in un'applicazione, è necessario che vengano specificati un nome utente e una password nella proprietà <xref:System.Net.WebRequest.Credentials%2A> dell'oggetto <xref:System.Net.WebRequest> usato per richiedere dati da Internet, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="2630e-104">To use basic and digest authentication, an application must provide a user name and password in the <xref:System.Net.WebRequest.Credentials%2A> property of the <xref:System.Net.WebRequest> object that it uses to request data from the Internet, as shown in the following example.</span></span>  
+ <span data-ttu-id="05c17-104">Per poter usare l'autenticazione di base e digest in un'applicazione, è necessario che vengano specificati un nome utente e una password nella proprietà <xref:System.Net.WebRequest.Credentials%2A> dell'oggetto <xref:System.Net.WebRequest> usato per richiedere dati da Internet, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="05c17-104">To use basic and digest authentication, an application must provide a user name and password in the <xref:System.Net.WebRequest.Credentials%2A> property of the <xref:System.Net.WebRequest> object that it uses to request data from the Internet, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -54,8 +47,8 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 ```  
   
 > [!CAUTION]
->  <span data-ttu-id="2630e-105">I dati inviati con l'autenticazione di base o digest non sono crittografati, pertanto possono essere visti da un antagonista.</span><span class="sxs-lookup"><span data-stu-id="2630e-105">Data sent with Basic and Digest Authentication is not encrypted, so the data can be seen by an adversary.</span></span> <span data-ttu-id="2630e-106">Le credenziali di autenticazione di base (nome utente e password) vengono inoltre inviate in testo non crittografato e possono essere intercettate.</span><span class="sxs-lookup"><span data-stu-id="2630e-106">Additionally, Basic Authentication credentials (user name and password) are sent in the clear and can be intercepted.</span></span>  
+>  <span data-ttu-id="05c17-105">I dati inviati con l'autenticazione di base o digest non sono crittografati, pertanto possono essere visti da un antagonista.</span><span class="sxs-lookup"><span data-stu-id="05c17-105">Data sent with Basic and Digest Authentication is not encrypted, so the data can be seen by an adversary.</span></span> <span data-ttu-id="05c17-106">Le credenziali di autenticazione di base (nome utente e password) vengono inoltre inviate in testo non crittografato e possono essere intercettate.</span><span class="sxs-lookup"><span data-stu-id="05c17-106">Additionally, Basic Authentication credentials (user name and password) are sent in the clear and can be intercepted.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2630e-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2630e-107">See Also</span></span>  
- [<span data-ttu-id="2630e-108">Autenticazione NTLM e Kerberos</span><span class="sxs-lookup"><span data-stu-id="2630e-108">NTLM and Kerberos Authentication</span></span>](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
- [<span data-ttu-id="2630e-109">Autenticazione Internet</span><span class="sxs-lookup"><span data-stu-id="2630e-109">Internet Authentication</span></span>](../../../docs/framework/network-programming/internet-authentication.md)
+## <a name="see-also"></a><span data-ttu-id="05c17-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="05c17-107">See Also</span></span>  
+ [<span data-ttu-id="05c17-108">Autenticazione NTLM e Kerberos</span><span class="sxs-lookup"><span data-stu-id="05c17-108">NTLM and Kerberos Authentication</span></span>](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
+ [<span data-ttu-id="05c17-109">Autenticazione Internet</span><span class="sxs-lookup"><span data-stu-id="05c17-109">Internet Authentication</span></span>](../../../docs/framework/network-programming/internet-authentication.md)

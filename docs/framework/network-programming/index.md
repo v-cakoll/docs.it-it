@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397897"
 ---
 # <a name="network-programming-in-the-net-framework"></a><span data-ttu-id="293b0-102">Programmazione di rete in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="293b0-102">Network Programming in the .NET Framework</span></span>
 <span data-ttu-id="293b0-103">Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, estendibile e gestita, di servizi Internet che possono essere integrati nelle applicazioni in modo rapido e semplice.</span><span class="sxs-lookup"><span data-stu-id="293b0-103">The Microsoft .NET Framework provides a layered, extensible, and managed implementation of Internet services that can be quickly and easily integrated into your applications.</span></span> <span data-ttu-id="293b0-104">Le applicazioni di rete possono essere compilate su protocolli modulari per usufruire automaticamente di nuovi protocolli Internet oppure possono utilizzare un'implementazione gestita dell'interfaccia Windows Sockets per utilizzare la rete a livello di socket.</span><span class="sxs-lookup"><span data-stu-id="293b0-104">Your network applications can build on pluggable protocols to automatically take advantage of new Internet protocols, or they can use a managed implementation of the Windows socket interface to work with the network on the socket level.</span></span>  
