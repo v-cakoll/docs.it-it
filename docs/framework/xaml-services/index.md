@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566834"
 ---
 # <a name="xaml-services"></a>Servizi XAML
 In questo argomento vengono descritte le funzionalità di un set di tecnologie noto come XAML di .NET Framework di servizi. La maggior parte dei servizi e le API descritte si trovano nell'assembly System. XAML, che è un assembly è stato introdotto con la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] set di assembly di .NET core. I servizi includono lettori e writer, le classi dello schema e supporto dello schema, le factory, assegnazione di attributi di classi, supporto intrinseco del linguaggio XAML e altre funzionalità del linguaggio XAML.  

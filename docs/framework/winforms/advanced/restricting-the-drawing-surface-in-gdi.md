@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523923"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>Limitazione della superficie di disegno in GDI+
 Il ritaglio implica la restrizione di disegno per un determinato rettangolo o un'area. Nella figura seguente mostra la stringa "Hello" troncato a un'area a forma di cuore.  

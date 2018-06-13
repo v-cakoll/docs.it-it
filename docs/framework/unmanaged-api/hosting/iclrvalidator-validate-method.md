@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b2ad9ef473a498804e5b3ac0469b5b68697c49f5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439173"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>Metodo ICLRValidator::Validate
 Convalida il file eseguibile portabile (PE) o Microsoft intermediate language (MSIL) nel file specificato.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569057"
 ---
 # <a name="node-sets-in-transformations"></a>Set di nodi nelle trasformazioni
 I set di nodi sono uno dei quattro tipi di dati principali restituiti dalle espressioni XPath (XML Path Language). Un set di nodi, ovvero una raccolta di nodi non ordinati senza duplicati e creati in base all'ordine con cui sono riportati del documento, può essere assegnato a una variabile in un foglio di stile.  

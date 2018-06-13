@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 480fedc8ae63ffa3222a74e39297cc64b6812e97
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444491"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>Metodo IMetaDataEmit::DefinePinvokeMap
 Imposta le funzionalità di firma PInvoke del metodo a cui fa riferimento il token specificato.  

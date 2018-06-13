@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564378"
 ---
 # <a name="xclassmodifier-directive"></a>Direttiva x:ClassModifier
 Modifica il comportamento di compilazione XAML quando `x:Class` viene inoltre fornita. In particolare, anziché creare un elemento parziale `class` che ha un `Public` (impostazione predefinita), livello di accesso fornito `x:Class` viene creato con un `NotPublic` livello di accesso. Questo comportamento influenza il livello di accesso per la classe nell'assembly generati.  

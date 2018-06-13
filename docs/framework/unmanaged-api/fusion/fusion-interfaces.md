@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434893"
 ---
 # <a name="fusion-interfaces"></a>Interfacce Fusion
 Questa sezione descrive le interfacce non gestite utilizzate dall'API Fusion per accedere alle proprietà di risorse dell'applicazione e per individuare le versioni corrette di tali risorse per l'applicazione.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603951"
 ---
 # <a name="of-clause-visual-basic"></a>Clausola Of (Visual Basic)
 Introduce un `Of` clausola che identifica un *parametro di tipo* su un *generico* classe, struttura, interfaccia, delegato o stored procedure. Per informazioni sui tipi generici, vedere [tipi generici in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
