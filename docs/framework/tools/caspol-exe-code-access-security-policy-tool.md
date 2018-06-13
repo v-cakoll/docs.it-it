@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410098"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)
 Lo strumento Criteri di sicurezza dall'accesso di codice (Caspol.exe) consente a utenti e amministratori di modificare i criteri di sicurezza definiti a livello di computer, di utente e di azienda.  

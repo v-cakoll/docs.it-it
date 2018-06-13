@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605017"
 ---
 # <a name="module-statement"></a>Istruzione Module
 Dichiara il nome di un modulo e introduce la definizione di variabili, proprietà, eventi ed procedure che comprende il modulo.  

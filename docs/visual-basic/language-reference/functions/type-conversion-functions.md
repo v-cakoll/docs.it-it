@@ -86,6 +86,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605082"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funzioni di conversione del tipo (Visual Basic)
 Queste funzioni vengono compilate inline, ovvero che la conversione di codice fa parte del codice che valuta l'espressione. A volte non sussiste alcuna chiamata a una stored procedure per eseguire la conversione, che migliora le prestazioni. Ogni funzione forza un'espressione al tipo di dati specifico.  

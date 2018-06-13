@@ -17,9 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ef6fb76ca25a1255393b66c52d82cb94df2b48b2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411902"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>Metodo ICorDebugComObjectValue::GetCachedInterfacePointers
 Ottiene i puntatori a interfaccia raw memorizzati nella cache sul corrente runtime callable wrapper (RCW).  

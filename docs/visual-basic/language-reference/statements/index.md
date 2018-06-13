@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602788"
 ---
 # <a name="statements-visual-basic"></a>Istruzioni (Visual Basic)
 Gli argomenti di questa sezione contengono tabelle con le istruzioni eseguibili e di dichiarazione di Visual Basic e con elenchi importanti applicabili a numerose istruzioni.  

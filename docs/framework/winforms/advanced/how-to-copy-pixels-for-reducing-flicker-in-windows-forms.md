@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522044"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Procedura: copiare i pixel per ridurre lo sfarfallio in Windows Form
 Quando si aggiunge un'animazione a un simbolo semplice, gli utenti possono verificarsi in alcuni casi lo sfarfallio o altri effetti visivi indesiderati. Un modo per limitare questo problema è necessario utilizzare un processo "bitblt" sull'oggetto grafico. BitBlt è il "blocchi di bit trasferimento" di dati relativi al colore da un'origine a un rettangolo di pixel a un rettangolo di destinazione di pixel.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518502"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Ambito e visibilità della definizione di attività
 In modo analogo all'ambito e alla visibilità di un oggetto, per ambito di definizione e visibilità di attività si intende la capacità di altri oggetti o attività di accedere ai membri dell'attività stessa. La definizione di attività viene eseguita tramite le implementazioni seguenti.  

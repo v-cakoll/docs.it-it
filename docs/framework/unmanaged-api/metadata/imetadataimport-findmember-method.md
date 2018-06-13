@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 79c9a54a44ae1751cb8b1b57379ccfd6485f6e6b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448191"
 ---
 # <a name="imetadataimportfindmember-method"></a>Metodo IMetaDataImport::FindMember
 Ottiene un puntatore al MemberDef token di campo o metodo incluso dall'oggetto <xref:System.Type> e con la firma di nome e i metadati specificata.  

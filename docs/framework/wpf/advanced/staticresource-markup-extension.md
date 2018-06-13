@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547199"
 ---
 # <a name="staticresource-markup-extension"></a>Estensione del markup StaticResource
 Fornisce un valore per uno [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attributo di proprietà per la ricerca di un riferimento a una risorsa già definita. Il comportamento di ricerca per tale risorsa è analogo alla ricerca in fase di caricamento, che cercherà le risorse che sono state caricate in precedenza dal markup corrente [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pagina nonché altre origini di applicazione e genererà il valore di risorsa come il valore della proprietà degli oggetti in fase di esecuzione.  

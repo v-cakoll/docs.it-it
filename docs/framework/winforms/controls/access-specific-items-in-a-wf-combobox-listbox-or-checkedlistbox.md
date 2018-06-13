@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523569"
 ---
 # <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedura: accedere a elementi specifici di un controllo ComboBox, ListBox o CheckedListBox Windows Form
 Accesso a elementi specifici in una casella combinata, una casella di riepilogo o casella di riepilogo è un'attività essenziale. Consente di determinare a livello di codice che cos'è un elenco in qualsiasi posizione specificata.  

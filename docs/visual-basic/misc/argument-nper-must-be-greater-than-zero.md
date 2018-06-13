@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601192"
 ---
 # <a name="argument-39nper39-must-be-greater-than-zero"></a>Argomento &#39;NPer&#39; deve essere maggiore di zero
 La funzione `NPer` , che restituisce un valore `Double` che specifica il numero di periodi per un'annualità in base a pagamenti periodici fissi e a un tasso di interesse fisso, richiede un argomento maggiore di zero.  

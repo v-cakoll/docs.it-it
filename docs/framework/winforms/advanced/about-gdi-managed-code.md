@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518813"
 ---
 # <a name="about-gdi-managed-code"></a>Informazioni sul codice gestito GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è la parte del sistema operativo Windows che fornisce grafica vettoriale bidimensionale, immagini e funzionalità tipografiche. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] migliora [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (la Graphics Device Interface inclusa con le versioni precedenti di Windows) aggiungendo nuove funzionalità e ottimizzando quelle esistenti.  

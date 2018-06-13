@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604003"
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>Impossibile scrivere il file temporaneo perché il percorso temporaneo non è disponibile
 Visual Basic non è stato possibile determinare il percorso in cui sono archiviati i file temporanei.  

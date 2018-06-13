@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602762"
 ---
 # <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a>Valore di tipo &#39;type1&#39; non può essere convertito in &#39;type2&#39;
 Valore di tipo 'type1' non può essere convertito in 'type2'. È possibile utilizzare la proprietà 'Value' per ottenere il valore di stringa del primo elemento di '\<ElementoPadre >'.  

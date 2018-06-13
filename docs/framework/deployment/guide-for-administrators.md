@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394332"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guida alla distribuzione di .NET Framework per amministratori
 In questo articolo dettagliato vengono descritte le modalità in cui un amministratore di sistema può distribuire [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e le relative dipendenze di sistema attraverso una rete usando Microsoft System Center Configuration Manager. L'articolo presuppone che tutti i computer client di destinazione soddisfino i requisiti minimi per .NET Framework. Per un elenco di requisiti software e hardware per l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], vedere [Requisiti di sistema di .NET Framework](../../../docs/framework/get-started/system-requirements.md).  

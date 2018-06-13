@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396805"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Procedura: definire un metodo generico tramite reflection emit
 La prima procedura illustra come creare un metodo generico semplice con due parametri di tipo e come applicare a questi ultimi vincoli speciali, di interfaccia e di classe.  

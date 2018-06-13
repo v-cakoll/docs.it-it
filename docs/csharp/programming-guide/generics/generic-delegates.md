@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332907"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Delegati generici (Guida per programmatori C#)
 Un [delegato](../../../csharp/language-reference/keywords/delegate.md) può definire i propri parametri di tipo. Il codice che fa riferimento al delegato generico può specificare l'argomento tipo per creare un tipo costruito chiuso, proprio come per la creazione di un'istanza di una classe generica o la chiamata di un metodo generico, come mostrato nell'esempio seguente:  

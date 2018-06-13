@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522269"
 ---
 # <a name="how-to-print-a-windows-form"></a>Procedura: stampare un Windows Form
 Come parte del processo di sviluppo, in genere verrà da stampare una copia di Windows Form. Esempio di codice seguente viene illustrato come stampare una copia del modulo corrente utilizzando il <xref:System.Drawing.Graphics.CopyFromScreen%2A> metodo.  
