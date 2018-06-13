@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da1aab48e2eef229bb31e9443a5549c3f9fbc621
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455302"
 ---
 # <a name="icorprofilerinfo6-interface"></a>Interfaccia ICorProfilerInfo6
 [Supportato in .NET Framework 4.6 e versioni successive]  

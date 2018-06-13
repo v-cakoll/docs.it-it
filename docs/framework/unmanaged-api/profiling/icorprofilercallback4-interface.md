@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8bcddc143cacc3df016e6b8dd7907a67354c4311
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455742"
 ---
 # <a name="icorprofilercallback4-interface"></a>Interfaccia ICorProfilerCallback4
 Fornisce metodi di callback che usa common language runtime (CLR) per comunicare informazioni al profiler.  
