@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808839"
 ---
 # <a name="securing-services"></a>Protezione dei servizi
 Sicurezza di un servizio Windows Communication Foundation (WCF) è costituito da due requisiti principali: protezione del trasferimento e autorizzazione. (Un terzo requisito, controllo degli eventi di sicurezza, viene descritto in [controllo](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) In sintesi, la protezione del trasferimento include l'autenticazione (verifica dell'identità del servizio e del client), la riservatezza (crittografia del messaggio) e l'integrità (apposizione della firma digitale per il rilevamento di eventuali manomissioni). L'autorizzazione rappresenta il controllo dell'accesso alle risorse che consente la lettura di un file, ad esempio, solo a utenti autorizzati. Uso delle funzionalità di WCF, i due requisiti principali vengono implementati facilmente.  

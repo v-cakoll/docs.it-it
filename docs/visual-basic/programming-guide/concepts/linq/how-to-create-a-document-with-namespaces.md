@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643078"
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Procedura: creare un documento con spazi dei nomi (LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come creare un documento con spazi dei nomi in Visual Basic.  
