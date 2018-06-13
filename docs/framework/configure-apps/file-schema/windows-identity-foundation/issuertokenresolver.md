@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758581"
 ---
 # <a name="ltissuertokenresolvergt"></a><span data-ttu-id="b38ed-102">&lt;issuerTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="b38ed-102">&lt;issuerTokenResolver&gt;</span></span>
 <span data-ttu-id="b38ed-103">Registra il resolver del token dell'autorità di certificazione che viene utilizzato dai gestori nella raccolta di gestori di token.</span><span class="sxs-lookup"><span data-stu-id="b38ed-103">Registers the issuer token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="b38ed-104">Il resolver del token dell'autorità di certificazione viene utilizzato per risolvere il token di firma di token in arrivo e messaggi.</span><span class="sxs-lookup"><span data-stu-id="b38ed-104">The issuer token resolver is used to resolve the signing token on incoming tokens and messages.</span></span>  

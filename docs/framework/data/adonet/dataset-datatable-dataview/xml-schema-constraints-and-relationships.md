@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759842"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a><span data-ttu-id="1f4a9-102">Vincoli e relazioni di XML Schema</span><span class="sxs-lookup"><span data-stu-id="1f4a9-102">XML Schema Constraints and Relationships</span></span>
 <span data-ttu-id="1f4a9-103">In uno schema di XML Schema definition language (XSD), è possibile specificare vincoli (univoci, vincoli key e keyref) e le relazioni (mediante il **msdata: Relationship** annotazione).</span><span class="sxs-lookup"><span data-stu-id="1f4a9-103">In an XML Schema definition language (XSD) schema, you can specify constraints (unique, key, and keyref constraints) and relationships (using the **msdata:Relationship** annotation).</span></span> <span data-ttu-id="1f4a9-104">In questo argomento viene spiegato come vengono interpretati i vincoli e le relazioni specificati in XML Schema per generare il tipo <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="1f4a9-104">This topic explains how the constraints and relationships specified in an XML Schema are interpreted to generate the <xref:System.Data.DataSet>.</span></span>  
