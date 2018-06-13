@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33212368"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a><span data-ttu-id="43561-104">Testing unità in .NET Core e .NET Standard</span><span class="sxs-lookup"><span data-stu-id="43561-104">Unit Testing in .NET Core and .NET Standard</span></span>
 

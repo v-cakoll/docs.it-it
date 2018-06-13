@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219245"
 ---
 # <a name="float-c-reference"></a><span data-ttu-id="bb5c9-102">float (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="bb5c9-102">float (C# Reference)</span></span>
 <span data-ttu-id="bb5c9-103">La parola chiave `float` indica un tipo semplice che archivia valori a virgola mobile a 32 bit.</span><span class="sxs-lookup"><span data-stu-id="bb5c9-103">The `float` keyword signifies a simple type that stores 32-bit floating-point values.</span></span> <span data-ttu-id="bb5c9-104">Nella tabella riportata di seguito sono indicati l'intervallo approssimativo e il grado di precisione del tipo `float`.</span><span class="sxs-lookup"><span data-stu-id="bb5c9-104">The following table shows the precision and approximate range for the `float` type.</span></span>  

@@ -1,51 +1,40 @@
 ---
 title: 'Procedura: creare un arco ellittico'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], elliptical arcs
 - elliptical arcs [WPF], creating
 - arcs [WPF], elliptical
 ms.assetid: 3dcfe502-3485-45de-99fb-d53a1367c484
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e11f3e0035c00bbc280b658c0931d57c37524f93
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b8aab2f2d79b1158adb006049b27a9f15575216
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560890"
 ---
-# <a name="how-to-create-an-elliptical-arc"></a><span data-ttu-id="df7af-102">Procedura: creare un arco ellittico</span><span class="sxs-lookup"><span data-stu-id="df7af-102">How to: Create an Elliptical Arc</span></span>
-<span data-ttu-id="df7af-103">In questo esempio viene illustrato come disegnare un arco ellittico. Per creare un arco ellittico, utilizzare il <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, e <xref:System.Windows.Media.ArcSegment> classi.</span><span class="sxs-lookup"><span data-stu-id="df7af-103">This example shows how to draw an elliptical arc. To create an elliptical arc, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.ArcSegment> classes.</span></span>  
+# <a name="how-to-create-an-elliptical-arc"></a><span data-ttu-id="32c43-102">Procedura: creare un arco ellittico</span><span class="sxs-lookup"><span data-stu-id="32c43-102">How to: Create an Elliptical Arc</span></span>
+<span data-ttu-id="32c43-103">In questo esempio viene illustrato come disegnare un arco ellittico. Per creare un arco ellittico, utilizzare il <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, e <xref:System.Windows.Media.ArcSegment> classi.</span><span class="sxs-lookup"><span data-stu-id="32c43-103">This example shows how to draw an elliptical arc. To create an elliptical arc, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.ArcSegment> classes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="df7af-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="df7af-104">Example</span></span>  
- <span data-ttu-id="df7af-105">Negli esempi seguenti, un arco ellittico viene tracciato dal (10, 100) a (200,100).</span><span class="sxs-lookup"><span data-stu-id="df7af-105">In the following examples, an elliptical arc is drawn from (10,100) to (200,100).</span></span> <span data-ttu-id="df7af-106">L'arco ha un <xref:System.Windows.Media.ArcSegment.Size%2A> di 100 per 50 pixel indipendenti dal dispositivo, un <xref:System.Windows.Media.ArcSegment.RotationAngle%2A> di 45 gradi, un <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> l'impostazione di `true`e un <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> di <xref:System.Windows.Media.SweepDirection.Counterclockwise>.</span><span class="sxs-lookup"><span data-stu-id="df7af-106">The arc has a <xref:System.Windows.Media.ArcSegment.Size%2A> of 100 by 50 device-independent pixels, a <xref:System.Windows.Media.ArcSegment.RotationAngle%2A> of 45 degrees, an <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> setting of `true`, and a <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> of <xref:System.Windows.Media.SweepDirection.Counterclockwise>.</span></span>  
+## <a name="example"></a><span data-ttu-id="32c43-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="32c43-104">Example</span></span>  
+ <span data-ttu-id="32c43-105">Negli esempi seguenti, un arco ellittico viene tracciato dal (10, 100) a (200,100).</span><span class="sxs-lookup"><span data-stu-id="32c43-105">In the following examples, an elliptical arc is drawn from (10,100) to (200,100).</span></span> <span data-ttu-id="32c43-106">L'arco ha un <xref:System.Windows.Media.ArcSegment.Size%2A> di 100 per 50 pixel indipendenti dal dispositivo, un <xref:System.Windows.Media.ArcSegment.RotationAngle%2A> di 45 gradi, un <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> l'impostazione di `true`e un <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> di <xref:System.Windows.Media.SweepDirection.Counterclockwise>.</span><span class="sxs-lookup"><span data-stu-id="32c43-106">The arc has a <xref:System.Windows.Media.ArcSegment.Size%2A> of 100 by 50 device-independent pixels, a <xref:System.Windows.Media.ArcSegment.RotationAngle%2A> of 45 degrees, an <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> setting of `true`, and a <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> of <xref:System.Windows.Media.SweepDirection.Counterclockwise>.</span></span>  
   
- <span data-ttu-id="df7af-107">[xaml]</span><span class="sxs-lookup"><span data-stu-id="df7af-107">[xaml]</span></span>  
+ <span data-ttu-id="32c43-107">[xaml]</span><span class="sxs-lookup"><span data-stu-id="32c43-107">[xaml]</span></span>  
   
- <span data-ttu-id="df7af-108">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], è possibile utilizzare la sintassi degli attributi per descrivere un percorso.</span><span class="sxs-lookup"><span data-stu-id="df7af-108">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you can use attribute syntax to describe a path.</span></span>  
+ <span data-ttu-id="32c43-108">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], è possibile utilizzare la sintassi degli attributi per descrivere un percorso.</span><span class="sxs-lookup"><span data-stu-id="32c43-108">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you can use attribute syntax to describe a path.</span></span>  
   
  [!code-xaml[GeometrySample#56](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/geometryattributesyntaxexample.xaml#56)]  
   
- <span data-ttu-id="df7af-109">[xaml]</span><span class="sxs-lookup"><span data-stu-id="df7af-109">[xaml]</span></span>  
+ <span data-ttu-id="32c43-109">[xaml]</span><span class="sxs-lookup"><span data-stu-id="32c43-109">[xaml]</span></span>  
   
- <span data-ttu-id="df7af-110">(Si noti che la sintassi di attributo crea effettivamente una <xref:System.Windows.Media.StreamGeometry>, una versione leggera di un <xref:System.Windows.Media.PathGeometry>.</span><span class="sxs-lookup"><span data-stu-id="df7af-110">(Note that this attribute syntax actually creates a <xref:System.Windows.Media.StreamGeometry>, a lighter-weight version of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="df7af-111">Per altre informazioni, vedere la pagina [Sintassi di markup del tracciato](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md).</span><span class="sxs-lookup"><span data-stu-id="df7af-111">For more information, see the [Path Markup Syntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) page.)</span></span>  
+ <span data-ttu-id="32c43-110">(Si noti che la sintassi di attributo crea effettivamente una <xref:System.Windows.Media.StreamGeometry>, una versione leggera di un <xref:System.Windows.Media.PathGeometry>.</span><span class="sxs-lookup"><span data-stu-id="32c43-110">(Note that this attribute syntax actually creates a <xref:System.Windows.Media.StreamGeometry>, a lighter-weight version of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="32c43-111">Per altre informazioni, vedere la pagina [Sintassi di markup del tracciato](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md).</span><span class="sxs-lookup"><span data-stu-id="32c43-111">For more information, see the [Path Markup Syntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) page.)</span></span>  
   
- <span data-ttu-id="df7af-112">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], è possibile creare un arco ellittico anche in modo esplicito con il tag object.</span><span class="sxs-lookup"><span data-stu-id="df7af-112">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can also draw an elliptical arc by explicitly using object tags.</span></span> <span data-ttu-id="df7af-113">Di seguito è equivalente alla precedente [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup.</span><span class="sxs-lookup"><span data-stu-id="df7af-113">The following is equivalent to the preceding [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup.</span></span>  
+ <span data-ttu-id="32c43-112">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], è possibile creare un arco ellittico anche in modo esplicito con il tag object.</span><span class="sxs-lookup"><span data-stu-id="32c43-112">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can also draw an elliptical arc by explicitly using object tags.</span></span> <span data-ttu-id="32c43-113">Di seguito è equivalente alla precedente [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup.</span><span class="sxs-lookup"><span data-stu-id="32c43-113">The following is equivalent to the preceding [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup.</span></span>  
   
  [!code-xaml[GeometrySample#36](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#36)]  
   
- <span data-ttu-id="df7af-114">Questo esempio fa parte di un esempio più esaustivo.</span><span class="sxs-lookup"><span data-stu-id="df7af-114">This example is part of a larger sample.</span></span> <span data-ttu-id="df7af-115">Per l'esempio completo, vedere il [geometrie esempio](http://go.microsoft.com/fwlink/?LinkID=159989).</span><span class="sxs-lookup"><span data-stu-id="df7af-115">For the complete sample, see the [Geometries Sample](http://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
+ <span data-ttu-id="32c43-114">Questo esempio fa parte di un esempio più esaustivo.</span><span class="sxs-lookup"><span data-stu-id="32c43-114">This example is part of a larger sample.</span></span> <span data-ttu-id="32c43-115">Per l'esempio completo, vedere il [geometrie esempio](http://go.microsoft.com/fwlink/?LinkID=159989).</span><span class="sxs-lookup"><span data-stu-id="32c43-115">For the complete sample, see the [Geometries Sample](http://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df7af-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="df7af-116">See Also</span></span>  
- [<span data-ttu-id="df7af-117">Creare una curva di Bézier quadratica</span><span class="sxs-lookup"><span data-stu-id="df7af-117">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [<span data-ttu-id="df7af-118">Creare una curva di Bézier cubica</span><span class="sxs-lookup"><span data-stu-id="df7af-118">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)
+## <a name="see-also"></a><span data-ttu-id="32c43-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="32c43-116">See Also</span></span>  
+ [<span data-ttu-id="32c43-117">Creare una curva di Bézier quadratica</span><span class="sxs-lookup"><span data-stu-id="32c43-117">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
+ [<span data-ttu-id="32c43-118">Creare una curva di Bézier cubica</span><span class="sxs-lookup"><span data-stu-id="32c43-118">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)

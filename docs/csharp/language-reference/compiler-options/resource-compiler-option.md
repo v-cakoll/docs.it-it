@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215466"
 ---
 # <a name="-resource-c-compiler-options"></a><span data-ttu-id="3256c-102">-resource (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="3256c-102">-resource (C# Compiler Options)</span></span>
 <span data-ttu-id="3256c-103">Incorpora la risorsa specificata nel file di output.</span><span class="sxs-lookup"><span data-stu-id="3256c-103">Embeds the specified resource into the output file.</span></span>  

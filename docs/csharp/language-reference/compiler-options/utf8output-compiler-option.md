@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213259"
 ---
 # <a name="-utf8output-c-compiler-options"></a><span data-ttu-id="a6a54-102">-utf8output (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="a6a54-102">-utf8output (C# Compiler Options)</span></span>
 <span data-ttu-id="a6a54-103">L'opzione **-utf8output** visualizza l'output del compilatore tramite la codifica UTF-8.</span><span class="sxs-lookup"><span data-stu-id="a6a54-103">The **-utf8output** option displays compiler output using UTF-8 encoding.</span></span>  

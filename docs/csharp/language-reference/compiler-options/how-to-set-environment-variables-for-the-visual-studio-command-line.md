@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214991"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a><span data-ttu-id="9559a-102">Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="9559a-102">How to: Set Environment Variables for the Visual Studio Command Line</span></span>
 

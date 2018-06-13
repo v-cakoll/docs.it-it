@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33211989"
 ---
 # <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a><span data-ttu-id="548a9-103">Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="548a9-103">Building a class library with C# and .NET Core in Visual Studio 2017</span></span>
 
