@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213662"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a><span data-ttu-id="1be4f-103">Gestione delle dipendenze con .NET Core SDK 1.0</span><span class="sxs-lookup"><span data-stu-id="1be4f-103">Managing dependencies with .NET Core SDK 1.0</span></span>
 

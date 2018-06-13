@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214039"
 ---
 # <a name="-unsafe-c-compiler-options"></a><span data-ttu-id="3dd8c-102">-unsafe (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="3dd8c-102">-unsafe (C# Compiler Options)</span></span>
 <span data-ttu-id="3dd8c-103">L'opzione del compilatore **-unsafe** consente la compilazione del codice che usa la parola chiave [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="3dd8c-103">The **-unsafe** compiler option allows code that uses the [unsafe](../../../csharp/language-reference/keywords/unsafe.md) keyword to compile.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213640"
 ---
 # <a name="-nologo-c-compiler-options"></a><span data-ttu-id="cb907-102">-nologo (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="cb907-102">-nologo (C# Compiler Options)</span></span>
 <span data-ttu-id="cb907-103">L'opzione **-nologo** disattiva la visualizzazione del messaggio di accesso all'avvio del compilatore e dei messaggi informativi durante la compilazione.</span><span class="sxs-lookup"><span data-stu-id="cb907-103">The **-nologo** option suppresses display of the sign-on banner when the compiler starts up and display of informational messages during compiling.</span></span>  

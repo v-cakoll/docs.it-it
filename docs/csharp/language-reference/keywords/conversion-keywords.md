@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213948"
 ---
 # <a name="conversion-keywords-c-reference"></a><span data-ttu-id="ae1d5-102">Parole chiave di conversione (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="ae1d5-102">Conversion Keywords (C# Reference)</span></span>
 <span data-ttu-id="ae1d5-103">Questa sezione descrive le parole chiave usate nelle conversioni dei tipi:</span><span class="sxs-lookup"><span data-stu-id="ae1d5-103">This section describes keywords used in type conversions:</span></span>  

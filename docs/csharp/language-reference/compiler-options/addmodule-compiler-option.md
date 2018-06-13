@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215771"
 ---
 # <a name="-addmodule-c-compiler-options"></a><span data-ttu-id="98ed6-102">-addmodule (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="98ed6-102">-addmodule (C# Compiler Options)</span></span>
 <span data-ttu-id="98ed6-103">Questa opzione aggiunge un modulo creato con l'opzione target:module nella compilazione in corso.</span><span class="sxs-lookup"><span data-stu-id="98ed6-103">This option adds a module that was created with the target:module switch to the current compilation.</span></span>  
