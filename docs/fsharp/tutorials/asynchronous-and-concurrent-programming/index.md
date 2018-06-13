@@ -5,6 +5,7 @@ ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/18/2017
+ms.locfileid: "25726588"
 ---
 # <a name="asynchronous-and-concurrent-programming-in-f"></a><span data-ttu-id="4f43e-101">Programmazione asincrona e simultanea in F #</span><span class="sxs-lookup"><span data-stu-id="4f43e-101">Asynchronous and Concurrent Programming in F#</span></span> #
 

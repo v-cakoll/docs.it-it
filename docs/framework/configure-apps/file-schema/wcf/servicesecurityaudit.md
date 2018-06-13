@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751181"
 ---
 # <a name="ltservicesecurityauditgt"></a><span data-ttu-id="10187-102">&lt;serviceSecurityAudit&gt;</span><span class="sxs-lookup"><span data-stu-id="10187-102">&lt;serviceSecurityAudit&gt;</span></span>
 <span data-ttu-id="10187-103">Specifica impostazioni che abilitano controllo di eventi di sicurezza durante le operazioni del servizio.</span><span class="sxs-lookup"><span data-stu-id="10187-103">Specifies settings that enable auditing of security events during service operations.</span></span>  

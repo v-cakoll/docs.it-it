@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216180"
 ---
 # <a name="contextual-keywords-c-reference"></a><span data-ttu-id="f5693-102">Parole chiave contestuali (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="f5693-102">Contextual Keywords (C# Reference)</span></span>
 <span data-ttu-id="f5693-103">Una parola chiave contestuale viene usata per conferire un significato particolare nel codice, ma non è una parola riservata in C#.</span><span class="sxs-lookup"><span data-stu-id="f5693-103">A contextual keyword is used to provide a specific meaning in the code, but it is not a reserved word in C#.</span></span> <span data-ttu-id="f5693-104">Questa sezione presenta le seguenti parole chiave contestuali:</span><span class="sxs-lookup"><span data-stu-id="f5693-104">The following contextual keywords are introduced in this section:</span></span>  

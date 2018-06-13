@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269614"
 ---
 # <a name="out-generic-modifier-c-reference"></a><span data-ttu-id="ec44a-102">out (Modificatore generico) (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="ec44a-102">out (Generic Modifier) (C# Reference)</span></span>
 <span data-ttu-id="ec44a-103">Per i parametri di tipo generico, la parola chiave `out` specifica che il parametro di tipo è covariante.</span><span class="sxs-lookup"><span data-stu-id="ec44a-103">For generic type parameters, the `out` keyword specifies that the type parameter is covariant.</span></span> <span data-ttu-id="ec44a-104">È possibile usare la parola chiave `out` in interfacce e delegati generici.</span><span class="sxs-lookup"><span data-stu-id="ec44a-104">You can use the `out` keyword in generic interfaces and delegates.</span></span>  

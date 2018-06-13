@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754519"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a><span data-ttu-id="d8fdb-102">&lt;aggiungere&gt; elemento per bypasslist (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="d8fdb-102">&lt;add&gt; Element for bypasslist (Network Settings)</span></span>
 <span data-ttu-id="d8fdb-103">Aggiunge un indirizzo IP o nome DNS all'elenco di esclusione proxy.</span><span class="sxs-lookup"><span data-stu-id="d8fdb-103">Adds an IP address or DNS name to the proxy bypass list.</span></span>  

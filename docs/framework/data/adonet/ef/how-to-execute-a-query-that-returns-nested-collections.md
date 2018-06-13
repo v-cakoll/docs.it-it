@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761773"
 ---
 # <a name="how-to-execute-a-query-that-returns-nested-collections"></a><span data-ttu-id="7251d-102">Procedura: eseguire una query che restituisce raccolte annidate</span><span class="sxs-lookup"><span data-stu-id="7251d-102">How to: Execute a Query that Returns Nested Collections</span></span>
 <span data-ttu-id="7251d-103">In questo argomento viene illustrato come eseguire un comando su un modello concettuale usando un oggetto <xref:System.Data.EntityClient.EntityCommand> e come recuperare i risultati della raccolta annidata usando un oggetto <xref:System.Data.EntityClient.EntityDataReader>.</span><span class="sxs-lookup"><span data-stu-id="7251d-103">This shows how to execute a command against a conceptual model by using an <xref:System.Data.EntityClient.EntityCommand> object, and how to retrieve the nested collection results by using an <xref:System.Data.EntityClient.EntityDataReader>.</span></span>  

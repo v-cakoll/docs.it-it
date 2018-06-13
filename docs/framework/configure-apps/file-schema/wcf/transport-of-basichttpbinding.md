@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751269"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a><span data-ttu-id="d17fd-102">&lt;transport&gt; di &lt;basicHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="d17fd-102">&lt;transport&gt; of &lt;basicHttpBinding&gt;</span></span>
 <span data-ttu-id="d17fd-103">Definisce proprietà che controllano i parametri di autenticazione per il trasporto HTTP.</span><span class="sxs-lookup"><span data-stu-id="d17fd-103">Defines properties that control authentication parameters for the HTTP transport.</span></span>  

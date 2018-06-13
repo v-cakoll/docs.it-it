@@ -1,65 +1,52 @@
 ---
 title: Windows Form
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5949bebe91767539c230ba166f9389f09dc2392b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: bb785860ed3cccbd93273805e5f2bada2f5f9c34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542249"
 ---
-# <a name="windows-forms"></a><span data-ttu-id="fcda6-102">Windows Form</span><span class="sxs-lookup"><span data-stu-id="fcda6-102">Windows Forms</span></span>
-<span data-ttu-id="fcda6-103">I form sono l'unità base di un'applicazione e di conseguenza è fondamentale fare molta attenzione alla loro funzione e progettazione.</span><span class="sxs-lookup"><span data-stu-id="fcda6-103">As forms are the base unit of your application, it is essential that you give some thought to their function and design.</span></span> <span data-ttu-id="fcda6-104">Un form è una sorta di foglio o di lavagna pulita, in cui uno sviluppatore inserisce controlli, al fine di creare un'interfaccia utente e un codice per la modifica dei dati.</span><span class="sxs-lookup"><span data-stu-id="fcda6-104">A form is ultimately a blank slate that you, as a developer, enhance with controls to create a user interface and with code to manipulate data.</span></span> <span data-ttu-id="fcda6-105">A tal fine, Visual Studio offre un ambiente di sviluppo integrato (IDE) per semplificare la scrittura di codice, nonché un controllo rich impostare scritta con la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fcda6-105">To that end, Visual Studio provides you with an integrated development environment (IDE) to aid in writing code, as well as a rich control set written with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="fcda6-106">Completando la funzionalità di tali controlli con il codice creato, è possibile sviluppare velocemente e senza difficoltà le soluzioni desiderate.</span><span class="sxs-lookup"><span data-stu-id="fcda6-106">By complementing the functionality of these controls with your code, you can easily and quickly develop the solutions you need.</span></span>  
+# <a name="windows-forms"></a><span data-ttu-id="b79dc-102">Windows Form</span><span class="sxs-lookup"><span data-stu-id="b79dc-102">Windows Forms</span></span>
+<span data-ttu-id="b79dc-103">I form sono l'unità base di un'applicazione e di conseguenza è fondamentale fare molta attenzione alla loro funzione e progettazione.</span><span class="sxs-lookup"><span data-stu-id="b79dc-103">As forms are the base unit of your application, it is essential that you give some thought to their function and design.</span></span> <span data-ttu-id="b79dc-104">Un form è una sorta di foglio o di lavagna pulita, in cui uno sviluppatore inserisce controlli, al fine di creare un'interfaccia utente e un codice per la modifica dei dati.</span><span class="sxs-lookup"><span data-stu-id="b79dc-104">A form is ultimately a blank slate that you, as a developer, enhance with controls to create a user interface and with code to manipulate data.</span></span> <span data-ttu-id="b79dc-105">A tal fine, Visual Studio offre un ambiente di sviluppo integrato (IDE) per semplificare la scrittura di codice, nonché un controllo rich impostare scritta con la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b79dc-105">To that end, Visual Studio provides you with an integrated development environment (IDE) to aid in writing code, as well as a rich control set written with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="b79dc-106">Completando la funzionalità di tali controlli con il codice creato, è possibile sviluppare velocemente e senza difficoltà le soluzioni desiderate.</span><span class="sxs-lookup"><span data-stu-id="b79dc-106">By complementing the functionality of these controls with your code, you can easily and quickly develop the solutions you need.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fcda6-107">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="fcda6-107">In This Section</span></span>  
- [<span data-ttu-id="fcda6-108">Guida introduttiva a Windows Form</span><span class="sxs-lookup"><span data-stu-id="fcda6-108">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
- <span data-ttu-id="fcda6-109">Fornisce collegamenti ad argomenti che illustrano come sfruttare Windows Form per visualizzare dati, gestire gli input degli utenti e distribuire le applicazioni in modo semplice e con meccanismi di sicurezza più avanzata.</span><span class="sxs-lookup"><span data-stu-id="fcda6-109">Provides links to topics about how to harness the power of Windows Forms to display data, handle user input, and deploy your applications easily and with more robust security.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="b79dc-107">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="b79dc-107">In This Section</span></span>  
+ [<span data-ttu-id="b79dc-108">Guida introduttiva a Windows Form</span><span class="sxs-lookup"><span data-stu-id="b79dc-108">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
+ <span data-ttu-id="b79dc-109">Fornisce collegamenti ad argomenti che illustrano come sfruttare Windows Form per visualizzare dati, gestire gli input degli utenti e distribuire le applicazioni in modo semplice e con meccanismi di sicurezza più avanzata.</span><span class="sxs-lookup"><span data-stu-id="b79dc-109">Provides links to topics about how to harness the power of Windows Forms to display data, handle user input, and deploy your applications easily and with more robust security.</span></span>  
   
- [<span data-ttu-id="fcda6-110">Miglioramento delle applicazioni Windows Form</span><span class="sxs-lookup"><span data-stu-id="fcda6-110">Enhancing Windows Forms Applications</span></span>](../../../docs/framework/winforms/advanced/index.md)  
- <span data-ttu-id="fcda6-111">Fornisce collegamenti ad argomenti che illustrano come migliorare i Windows Form con una serie di funzionalità.</span><span class="sxs-lookup"><span data-stu-id="fcda6-111">Provides links to topics about how to enhance your Windows Forms with a variety of features.</span></span>  
+ [<span data-ttu-id="b79dc-110">Miglioramento delle applicazioni Windows Form</span><span class="sxs-lookup"><span data-stu-id="b79dc-110">Enhancing Windows Forms Applications</span></span>](../../../docs/framework/winforms/advanced/index.md)  
+ <span data-ttu-id="b79dc-111">Fornisce collegamenti ad argomenti che illustrano come migliorare i Windows Form con una serie di funzionalità.</span><span class="sxs-lookup"><span data-stu-id="b79dc-111">Provides links to topics about how to enhance your Windows Forms with a variety of features.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="fcda6-112">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="fcda6-112">Related Sections</span></span>  
- [<span data-ttu-id="fcda6-113">Controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="fcda6-113">Windows Forms Controls</span></span>](../../../docs/framework/winforms/controls/index.md)  
- <span data-ttu-id="fcda6-114">Contiene collegamenti ad argomenti che descrivono i controlli Windows Form e come implementarli.</span><span class="sxs-lookup"><span data-stu-id="fcda6-114">Contains links to topics that describe Windows Forms controls and show how to implement them.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="b79dc-112">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="b79dc-112">Related Sections</span></span>  
+ [<span data-ttu-id="b79dc-113">Controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="b79dc-113">Windows Forms Controls</span></span>](../../../docs/framework/winforms/controls/index.md)  
+ <span data-ttu-id="b79dc-114">Contiene collegamenti ad argomenti che descrivono i controlli Windows Form e come implementarli.</span><span class="sxs-lookup"><span data-stu-id="b79dc-114">Contains links to topics that describe Windows Forms controls and show how to implement them.</span></span>  
   
- [<span data-ttu-id="fcda6-115">Data binding in Windows Form</span><span class="sxs-lookup"><span data-stu-id="fcda6-115">Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- <span data-ttu-id="fcda6-116">Contiene collegamenti ad argomenti che descrivono l'architettura di data binding di Windows Form.</span><span class="sxs-lookup"><span data-stu-id="fcda6-116">Contains links to topics that describe the Windows Forms data-binding architecture.</span></span>  
+ [<span data-ttu-id="b79dc-115">Data binding in Windows Form</span><span class="sxs-lookup"><span data-stu-id="b79dc-115">Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ <span data-ttu-id="b79dc-116">Contiene collegamenti ad argomenti che descrivono l'architettura di data binding di Windows Form.</span><span class="sxs-lookup"><span data-stu-id="b79dc-116">Contains links to topics that describe the Windows Forms data-binding architecture.</span></span>  
   
- [<span data-ttu-id="fcda6-117">Cenni preliminari sulla grafica</span><span class="sxs-lookup"><span data-stu-id="fcda6-117">Graphics Overview</span></span>](../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
- <span data-ttu-id="fcda6-118">Illustra come creare grafica e testo e come modificare immagini grafiche come se fossero oggetti usando l'implementazione avanzata dell'interfaccia di progettazione grafica (GDI, graphics design interface) di Windows.</span><span class="sxs-lookup"><span data-stu-id="fcda6-118">Discusses how to create graphics, draw text, and manipulate graphical images as objects using the advanced implementation of the Windows graphics design interface.</span></span>  
+ [<span data-ttu-id="b79dc-117">Cenni preliminari sulla grafica</span><span class="sxs-lookup"><span data-stu-id="b79dc-117">Graphics Overview</span></span>](../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
+ <span data-ttu-id="b79dc-118">Illustra come creare grafica e testo e come modificare immagini grafiche come se fossero oggetti usando l'implementazione avanzata dell'interfaccia di progettazione grafica (GDI, graphics design interface) di Windows.</span><span class="sxs-lookup"><span data-stu-id="b79dc-118">Discusses how to create graphics, draw text, and manipulate graphical images as objects using the advanced implementation of the Windows graphics design interface.</span></span>  
   
- [<span data-ttu-id="fcda6-119">Sicurezza e distribuzione di ClickOnce</span><span class="sxs-lookup"><span data-stu-id="fcda6-119">ClickOnce Security and Deployment</span></span>](/visualstudio/deployment/clickonce-security-and-deployment)  
- <span data-ttu-id="fcda6-120">Illustra i principi della distribuzione ClickOnce.</span><span class="sxs-lookup"><span data-stu-id="fcda6-120">Discusses the principles of ClickOnce deployment.</span></span>  
+ [<span data-ttu-id="b79dc-119">Sicurezza e distribuzione di ClickOnce</span><span class="sxs-lookup"><span data-stu-id="b79dc-119">ClickOnce Security and Deployment</span></span>](/visualstudio/deployment/clickonce-security-and-deployment)  
+ <span data-ttu-id="b79dc-120">Illustra i principi della distribuzione ClickOnce.</span><span class="sxs-lookup"><span data-stu-id="b79dc-120">Discusses the principles of ClickOnce deployment.</span></span>  
   
- [<span data-ttu-id="fcda6-121">Differenze tra la programmazione Windows Form/MFC</span><span class="sxs-lookup"><span data-stu-id="fcda6-121">Windows Forms/MFC Programming Differences</span></span>](/cpp/dotnet/windows-forms-mfc-programming-differences)  
- <span data-ttu-id="fcda6-122">Illustra le differenze tra applicazioni MFC e Windows Form.</span><span class="sxs-lookup"><span data-stu-id="fcda6-122">Discusses the differences between MFC applications and Windows Forms.</span></span>  
+ [<span data-ttu-id="b79dc-121">Differenze tra la programmazione Windows Form/MFC</span><span class="sxs-lookup"><span data-stu-id="b79dc-121">Windows Forms/MFC Programming Differences</span></span>](/cpp/dotnet/windows-forms-mfc-programming-differences)  
+ <span data-ttu-id="b79dc-122">Illustra le differenze tra applicazioni MFC e Windows Form.</span><span class="sxs-lookup"><span data-stu-id="b79dc-122">Discusses the differences between MFC applications and Windows Forms.</span></span>  
   
- [<span data-ttu-id="fcda6-123">Accesso ai dati in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="fcda6-123">Accessing data in Visual Studio</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- <span data-ttu-id="fcda6-124">Illustra come inserire la funzionalità di accesso ai dati nelle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="fcda6-124">Discusses incorporating data access functionality into your applications.</span></span>  
+ [<span data-ttu-id="b79dc-123">Accesso ai dati in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="b79dc-123">Accessing data in Visual Studio</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)  
+ <span data-ttu-id="b79dc-124">Illustra come inserire la funzionalità di accesso ai dati nelle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="b79dc-124">Discusses incorporating data access functionality into your applications.</span></span>  
   
- [<span data-ttu-id="fcda6-125">Applicazioni Windows Form</span><span class="sxs-lookup"><span data-stu-id="fcda6-125">Windows Forms Applications</span></span>](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
- <span data-ttu-id="fcda6-126">Illustra il processo di debug delle applicazioni create con il modello di progetto Applicazione Windows e le modalità di modifica delle configurazioni di debug e rilascio.</span><span class="sxs-lookup"><span data-stu-id="fcda6-126">Discusses the process of debugging applications created with the Windows Application project template, as well as how to change the Debug and Release configurations.</span></span>  
+ [<span data-ttu-id="b79dc-125">Applicazioni Windows Form</span><span class="sxs-lookup"><span data-stu-id="b79dc-125">Windows Forms Applications</span></span>](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
+ <span data-ttu-id="b79dc-126">Illustra il processo di debug delle applicazioni create con il modello di progetto Applicazione Windows e le modalità di modifica delle configurazioni di debug e rilascio.</span><span class="sxs-lookup"><span data-stu-id="b79dc-126">Discusses the process of debugging applications created with the Windows Application project template, as well as how to change the Debug and Release configurations.</span></span>  
   
- [<span data-ttu-id="fcda6-127">Distribuzione di applicazioni, servizi e componenti</span><span class="sxs-lookup"><span data-stu-id="fcda6-127">Deploying Applications, Services, and Components</span></span>](https://msdn.microsoft.com/library/wtzawcsz)  
- <span data-ttu-id="fcda6-128">Descrive il processo di distribuzione di un'applicazione o di un componente pronti per l'installazione su altri computer.</span><span class="sxs-lookup"><span data-stu-id="fcda6-128">Describes the process by which you distribute a finished application or component to be installed on other computers.</span></span>  
+ [<span data-ttu-id="b79dc-127">Distribuzione di applicazioni, servizi e componenti</span><span class="sxs-lookup"><span data-stu-id="b79dc-127">Deploying Applications, Services, and Components</span></span>](https://msdn.microsoft.com/library/wtzawcsz)  
+ <span data-ttu-id="b79dc-128">Descrive il processo di distribuzione di un'applicazione o di un componente pronti per l'installazione su altri computer.</span><span class="sxs-lookup"><span data-stu-id="b79dc-128">Describes the process by which you distribute a finished application or component to be installed on other computers.</span></span>  
   
- [<span data-ttu-id="fcda6-129">Compilazione di applicazioni console</span><span class="sxs-lookup"><span data-stu-id="fcda6-129">Building Console Applications</span></span>](../../../docs/standard/building-console-apps.md)  
- <span data-ttu-id="fcda6-130">Descrive i concetti fondamentali della creazione di un'applicazione console mediante la classe <xref:System.Console>.</span><span class="sxs-lookup"><span data-stu-id="fcda6-130">Describes the basics of creating a console application using the <xref:System.Console> class.</span></span>
+ [<span data-ttu-id="b79dc-129">Compilazione di applicazioni console</span><span class="sxs-lookup"><span data-stu-id="b79dc-129">Building Console Applications</span></span>](../../../docs/standard/building-console-apps.md)  
+ <span data-ttu-id="b79dc-130">Descrive i concetti fondamentali della creazione di un'applicazione console mediante la classe <xref:System.Console>.</span><span class="sxs-lookup"><span data-stu-id="b79dc-130">Describes the basics of creating a console application using the <xref:System.Console> class.</span></span>
