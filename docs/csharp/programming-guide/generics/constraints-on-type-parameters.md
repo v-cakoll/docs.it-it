@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457366"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a><span data-ttu-id="a06d5-102">Vincoli sui parametri di tipo (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="a06d5-102">Constraints on type parameters (C# Programming Guide)</span></span>
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472516"
 ---
 # <a name="c-compiler-options"></a><span data-ttu-id="82b6b-102">Opzioni del compilatore C#</span><span class="sxs-lookup"><span data-stu-id="82b6b-102">C# Compiler Options</span></span>
 <span data-ttu-id="82b6b-103">Tramite il compilatore vengono generati file eseguibili (con estensione exe), librerie a collegamento dinamico (con estensione dll) o moduli di codice (con estensione netmodule).</span><span class="sxs-lookup"><span data-stu-id="82b6b-103">The compiler produces executable (.exe) files, dynamic-link libraries (.dll), or code modules (.netmodule).</span></span>  
