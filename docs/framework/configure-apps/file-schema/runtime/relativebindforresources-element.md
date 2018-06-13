@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752299"
 ---
 # <a name="ltrelativebindforresourcesgt-element"></a><span data-ttu-id="e3a54-102">&lt;relativeBindForResources&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="e3a54-102">&lt;relativeBindForResources&gt; Element</span></span>
 <span data-ttu-id="e3a54-103">Ottimizza le ricerche degli assembly satellite.</span><span class="sxs-lookup"><span data-stu-id="e3a54-103">Optimizes the probe for satellite assemblies.</span></span>  
