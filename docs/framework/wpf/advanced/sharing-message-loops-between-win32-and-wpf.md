@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548815"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Condivisione dei cicli di messaggi tra Win32 e WPF
 In questo argomento viene descritto come implementare un ciclo di messaggi per l'interoperabilità con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], tramite l'utilizzo esistente messaggio esposizione del ciclo in <xref:System.Windows.Threading.Dispatcher> oppure creando un ciclo di messaggi separati sul [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] lato del codice di interoperabilità.  

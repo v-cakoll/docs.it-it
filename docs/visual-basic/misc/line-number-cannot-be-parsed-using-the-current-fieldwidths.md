@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637918"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>Riga &lt;numero&gt; non può essere analizzato utilizzando FieldWidths corrente
 La riga specificata non può essere analizzata perché i relativi campi hanno larghezze diverse da quelle specificate.  

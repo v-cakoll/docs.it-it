@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9ec44d4c2757555c74fe7fc27c26cc5fc87c4517
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426687"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>Metodo ISymUnmanagedWriter::SetUserEntryPoint
 Specifica il metodo definito dall'utente che è il punto di ingresso per questo modulo. Ad esempio, questo punto di ingresso potrebbe essere il metodo dell'utente principale invece stub generato dal compilatore prima del form principale.  

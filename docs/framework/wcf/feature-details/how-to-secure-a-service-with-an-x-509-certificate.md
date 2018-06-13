@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493042"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procedura: proteggere un servizio con un certificato X.509
 La protezione di un servizio con un certificato X.509 è una tecnica di base che utilizzano la maggior parte dei binding in Windows Communication Foundation (WCF). In questo argomento vengono illustrati i passaggi di configurazione di un servizio indipendente con un certificato X.509.  

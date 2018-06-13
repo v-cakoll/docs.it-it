@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520055"
 ---
 # <a name="c-expressions"></a>Espressioni C#
 A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], le espressioni c# sono supportate in Windows Workflow Foundation (WF). I nuovi progetti di flusso di lavoro C# creati in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] e destinati a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usano le espressioni C# mentre i progetti di flusso di lavoro di Visual Basic usano le espressioni Visual Basic. I progetti di flusso di lavoro [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] esistenti che usano espressioni Visual Basic possono essere migrati a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], indipendentemente dal linguaggio del progetto, e sono supportati. In questo argomento viene fornita una panoramica sulle espressioni C# in [!INCLUDE[wf1](../../../includes/wf1-md.md)].  

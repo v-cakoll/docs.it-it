@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574820"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Inferenza degli schemi da documenti XML
 In questo argomento viene descritto come usare la classe <xref:System.Xml.Schema.XmlSchemaInference> per inferire uno schema XSD (XML Schema Definition Language) dalla struttura di un documento XML.  

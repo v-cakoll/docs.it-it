@@ -17,9 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 315bd78f660e093ecbf65224bd09a9b4f44300b5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420934"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>Metodo ICorDebugILFrame3::GetReturnValueForILOffset
 Ottiene un oggetto "ICorDebugValue" che incapsula il valore restituito di una funzione.  

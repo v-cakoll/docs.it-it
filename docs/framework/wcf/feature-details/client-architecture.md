@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494091"
 ---
 # <a name="client-architecture"></a>Architettura client
 Le applicazioni utilizzano oggetti client di Windows Communication Foundation (WCF) per richiamare operazioni del servizio. In questo argomento vengono illustrati gli oggetti client WCF, i canali client WCF e le relative relazioni con l'architettura del canale sottostante. Per una panoramica di base degli oggetti client WCF, vedere [panoramica dei Client WCF](../../../../docs/framework/wcf/wcf-client-overview.md). Per ulteriori informazioni sul livello di canale, vedere [estendendo il livello del canale](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  

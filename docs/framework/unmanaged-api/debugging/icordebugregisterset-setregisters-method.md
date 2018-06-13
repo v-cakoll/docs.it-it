@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6f577302c9b75f3f6cbe3f7ca8d551c9186c397
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420316"
 ---
 # <a name="icordebugregistersetsetregisters-method"></a>Metodo ICorDebugRegisterSet::SetRegisters
 `SetRegisters` non è implementata in .NET Framework versione 2.0. Non chiamare questo metodo.  

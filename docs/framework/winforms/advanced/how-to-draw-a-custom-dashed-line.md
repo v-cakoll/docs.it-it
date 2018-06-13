@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521615"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>Procedura: disegnare una linea tratteggiata personalizzata
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce diversi stili di tratteggio elencati nel <xref:System.Drawing.Drawing2D.DashStyle> enumerazione. Se questi stili di tratteggio standard non sono adatti alle proprie esigenze, è possibile creare un motivo a tratteggio personalizzato.  

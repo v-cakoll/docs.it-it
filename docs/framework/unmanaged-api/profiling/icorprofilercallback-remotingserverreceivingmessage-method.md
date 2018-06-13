@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c1874b5bea465eb31bcaad2d912b90d35cfc711b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454104"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>Metodo ICorProfilerCallback::RemotingServerReceivingMessage
 Notifica al profiler che il processo ha ricevuto una richiesta di attivazione o la chiamata di metodo remoto.  

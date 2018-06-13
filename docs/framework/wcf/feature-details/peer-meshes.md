@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493337"
 ---
 # <a name="peer-meshes"></a>Mesh del peer
 Oggetto *mesh* è una raccolta denominata (un grafico interconnesso) di nodi peer che possono comunicare tra loro e sono identificati da un ID mesh univoco. Ogni nodo è connesso a più nodi. In una rete ben collegata, vi è un percorso tra due nodi qualsiasi, con un numero di hop relativamente basso tra i nodi situati alle estremità della rete e la rete rimarrà collegata anche se alcuni nodi o connessioni non vanno a buon fine. I nodi attivi nella mesh pubblicano le informazioni sugli endpoint con un ID mesh corrispondente così che gli altri peer possano trovarli.  

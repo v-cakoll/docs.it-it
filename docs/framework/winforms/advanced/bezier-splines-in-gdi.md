@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517573"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;Bézier Bézier in GDI+
 Una spline di Bézier è una curva specificata da quattro punti: due punti finali (p1 e p2) e due punti di controllo (c1 e c2). La curva inizia p1 e p2 termina. La curva non passano attraverso i punti di controllo, ma i punti di controllo di agire come grado attirare l'attenzione, estrarre la curva in determinate direzioni e che influenzano il modo di che curvatura. Nella figura seguente mostra una curva di Bézier insieme ai relativi punti di controllo e di endpoint.  

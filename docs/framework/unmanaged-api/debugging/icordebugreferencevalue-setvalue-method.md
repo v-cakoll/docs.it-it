@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f0c06f9b04c5f15171464b93dc93765625d6f19
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418142"
 ---
 # <a name="icordebugreferencevaluesetvalue-method"></a>Metodo ICorDebugReferenceValue::SetValue
 Imposta l'indirizzo di memoria specificata. Ovvero, questo metodo imposta ICorDebugReferenceValue in modo che punti a un oggetto.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493476"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Procedura: creare un servizio HTTP Web WCF
 Windows Communication Foundation (WCF) consente di creare un servizio che espone un endpoint Web. Gli endpoint Web inviano dati in XML o JSON, senza SOAP envelope. In questo argomento viene dimostrato come esporre un endpoint di questo tipo.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636848"
 ---
 # <a name="can39t-perform-requested-operation-visual-basic"></a>Possono&#39;t eseguire l'operazione richiesta (Visual Basic)
 Non è possibile eseguire un'operazione perché potrebbe invalidare lo stato corrente del progetto. Ad esempio, è possibile che si sia tentato di modificare codice che è in esecuzione.  
