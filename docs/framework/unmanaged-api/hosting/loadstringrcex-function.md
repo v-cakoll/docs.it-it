@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 38c942b9a94c83f5a3316cf3ae3ccbbad2b0ec69
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444317"
 ---
 # <a name="loadstringrcex-function"></a>Funzione LoadStringRCEx
 Converte un valore HRESULT a un messaggio di errore appropriato per le impostazioni cultura specificate.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561391"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Procedura: controllare un oggetto MediaElement (Play, Pause, Stop, Volume e Speed)
 Nell'esempio seguente viene illustrato come controllare la riproduzione dei supporti tramite un <xref:System.Windows.Controls.MediaElement>. Nell'esempio viene creato un lettore multimediale semplice che consente di riprodurre, sospendere, arrestare e andare avanti e indietro nei supporti, nonché modificare il rapporto di velocità e volume.  

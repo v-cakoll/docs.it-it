@@ -45,6 +45,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397767"
 ---
 # <a name="reliability-best-practices"></a>Procedure consigliate per l'ottimizzazione dell'affidabilità
 Le regole seguenti relative all'affidabilità riguardano specificamente SQL Server, ma sono valide anche per qualsiasi applicazione server basata su host. È molto importante che nei server, ad esempio SQL Server, non si verifichino problemi di perdita di risorse e arresto.  Non è tuttavia possibile ottenere questo risultato scrivendo codice di annullamento per ogni metodo che modifica lo stato di un oggetto.  L'obiettivo da raggiungere non è quello di scrivere codice gestito completamente affidabile, in grado di eseguire il ripristino da qualsiasi errore in qualunque posizione tramite codice di annullamento.  Sarebbe un'attività estremamente impegnativa con scarse probabilità di successo.  Common Language Runtime (CLR) non è sempre in grado di offrire garanzie sufficienti per il codice gestito per consentire di scrivere codice perfetto.  Inoltre, a differenza di ASP.NET, SQL Server usa un solo processo che non può essere riciclato senza disattivare il database per un periodo di tempo eccessivamente lungo.  

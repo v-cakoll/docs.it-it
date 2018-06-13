@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560838"
 ---
 # <a name="how-to-animate-the-size-of-an-arcsegment"></a>Procedura: animare la proprietà Size di un ArcSegment
 In questo esempio viene illustrato come animare la <xref:System.Windows.Media.ArcSegment.Size%2A> proprietà di un <xref:System.Windows.Media.ArcSegment>.  

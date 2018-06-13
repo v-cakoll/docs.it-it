@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561027"
 ---
 # <a name="how-to-apply-a-transform-to-a-bitmapimage"></a>Procedura: applicare un oggetto Transform a un oggetto BitmapImage
 In questo esempio viene illustrato come applicare un <xref:System.Windows.Media.Transform> per un <xref:System.Windows.Media.Imaging.BitmapImage>.  

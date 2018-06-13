@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559678"
 ---
 # <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>Procedura: creare un oggetto LineSegment in un oggetto PathGeometry
 Questo esempio illustra come creare un segmento di linea. Per creare un segmento di linea, utilizzare il <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, e <xref:System.Windows.Media.LineSegment> classi.  

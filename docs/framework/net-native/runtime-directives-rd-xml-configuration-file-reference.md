@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397273"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Riferimento a file di configurazione di direttive di runtime (rd.xml)
 Un file di direttive di runtime (rd.xml) è un file di configurazione XML che specifica se gli elementi del programma designato sono disponibili per la reflection. Ecco un esempio di un file di direttive di runtime:  

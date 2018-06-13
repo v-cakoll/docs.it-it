@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398118"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>Attraversamento NAT con IPv6 e Teredo
 Sono stati introdotti miglioramenti per il supporto dell'attraversamento NAT (Network Address Translation). Queste modifiche sono progettate per l'uso con IPv6 e Teredo, ma sono applicabili anche ad altre tecnologie di tunneling IP. Questi miglioramenti hanno effetti sulle classi in <xref:System.Net> e sugli spazi dei nomi correlati.  

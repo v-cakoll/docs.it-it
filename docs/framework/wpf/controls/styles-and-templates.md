@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553368"
 ---
 # <a name="styles-and-templates"></a>Stili e modelli
 Lo stile di Windows Presentation Foundation (WPF) e i modelli fa riferimento a un gruppo di funzionalità (stili, modelli, trigger e storyboard) che consente a un'applicazione, documento o finestra di progettazione dell'interfaccia utente di creare applicazioni visivamente accattivanti e per standardizzare un aspetto particolare per il prodotto.  

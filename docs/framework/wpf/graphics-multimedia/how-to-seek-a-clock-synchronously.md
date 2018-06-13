@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559856"
 ---
 # <a name="how-to-seek-a-clock-synchronously"></a>Procedura: cercare un orologio in modalità sincrona
 Utilizzare il <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> metodo per la ricerca di un orologio in un punto specifico in modo sincrono. Nell'esempio riportato di seguito viene illustrato il <xref:System.Windows.Media.Animation.ClockController.Seek%2A> e <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> metodi di un <xref:System.Windows.Media.Animation.ClockController>.  

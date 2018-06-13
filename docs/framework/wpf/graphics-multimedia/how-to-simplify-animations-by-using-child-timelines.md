@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561673"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Procedura: semplificare le animazioni utilizzando oggetti Timeline figlio
 In questo esempio viene illustrato come semplificare le animazioni utilizzando figlio <xref:System.Windows.Media.Animation.ParallelTimeline> oggetti. Oggetto <xref:System.Windows.Media.Animation.Storyboard> è un tipo di <xref:System.Windows.Media.Animation.Timeline> che fornisce informazioni per le sequenze in essa contenute. Utilizzare un <xref:System.Windows.Media.Animation.Storyboard> per fornire informazioni, incluse le informazioni oggetto e proprietà di destinazione degli oggetti timeline.  
