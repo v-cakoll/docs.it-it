@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766296"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a><span data-ttu-id="e7f47-102">Differenze tra Entity SQL e Transact-SQL</span><span class="sxs-lookup"><span data-stu-id="e7f47-102">How Entity SQL Differs from Transact-SQL</span></span>
 <span data-ttu-id="e7f47-103">In questo argomento vengono descritte le differenze tra [!INCLUDE[esql](../../../../../../includes/esql-md.md)] e [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e7f47-103">This topic describes the differences between [!INCLUDE[esql](../../../../../../includes/esql-md.md)] and [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span></span>  

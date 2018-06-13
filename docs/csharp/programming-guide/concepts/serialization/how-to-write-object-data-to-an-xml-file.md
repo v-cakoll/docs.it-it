@@ -1,26 +1,18 @@
 ---
 title: 'Procedura: Scrivere i dati di un oggetto in un file XML (C#)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f43075c0b4d04ff935e7a29ed270b348209d17b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c8bfd00452cee63456bc3bf64ccf4a0c61aa06e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320548"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-c"></a><span data-ttu-id="0cb82-102">Procedura: Scrivere i dati di un oggetto in un file XML (C#)</span><span class="sxs-lookup"><span data-stu-id="0cb82-102">How to: Write Object Data to an XML File (C#)</span></span>
-<span data-ttu-id="0cb82-103">Questo esempio scrive l'oggetto da una classe in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="0cb82-103">This example writes the object from a class to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  
+# <a name="how-to-write-object-data-to-an-xml-file-c"></a><span data-ttu-id="4721e-102">Procedura: Scrivere i dati di un oggetto in un file XML (C#)</span><span class="sxs-lookup"><span data-stu-id="4721e-102">How to: Write Object Data to an XML File (C#)</span></span>
+<span data-ttu-id="4721e-103">Questo esempio scrive l'oggetto da una classe in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="4721e-103">This example writes the object from a class to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0cb82-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="0cb82-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="4721e-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="4721e-104">Example</span></span>  
   
 ```csharp  
 public class XMLWrite  
@@ -52,24 +44,24 @@ public class XMLWrite
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="0cb82-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="0cb82-105">Compiling the Code</span></span>  
- <span data-ttu-id="0cb82-106">La classe deve avere un costruttore public senza parametri.</span><span class="sxs-lookup"><span data-stu-id="0cb82-106">The class must have a public constructor without parameters.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="4721e-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="4721e-105">Compiling the Code</span></span>  
+ <span data-ttu-id="4721e-106">La classe deve avere un costruttore public senza parametri.</span><span class="sxs-lookup"><span data-stu-id="4721e-106">The class must have a public constructor without parameters.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="0cb82-107">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="0cb82-107">Robust Programming</span></span>  
- <span data-ttu-id="0cb82-108">Le seguenti condizioni possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="0cb82-108">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="4721e-107">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="4721e-107">Robust Programming</span></span>  
+ <span data-ttu-id="4721e-108">Le seguenti condizioni possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="4721e-108">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="0cb82-109">La classe da serializzare non ha un costruttore pubblico senza parametri.</span><span class="sxs-lookup"><span data-stu-id="0cb82-109">The class being serialized does not have a public, parameterless constructor.</span></span>  
+-   <span data-ttu-id="4721e-109">La classe da serializzare non ha un costruttore pubblico senza parametri.</span><span class="sxs-lookup"><span data-stu-id="4721e-109">The class being serialized does not have a public, parameterless constructor.</span></span>  
   
--   <span data-ttu-id="0cb82-110">Il file esiste ed è di sola lettura (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="0cb82-110">The file exists and is read-only (<xref:System.IO.IOException>).</span></span>  
+-   <span data-ttu-id="4721e-110">Il file esiste ed è di sola lettura (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="4721e-110">The file exists and is read-only (<xref:System.IO.IOException>).</span></span>  
   
--   <span data-ttu-id="0cb82-111">Percorso del file troppo lungo (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="0cb82-111">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>  
+-   <span data-ttu-id="4721e-111">Percorso del file troppo lungo (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="4721e-111">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   <span data-ttu-id="0cb82-112">Il disco è pieno (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="0cb82-112">The disk is full (<xref:System.IO.IOException>).</span></span>  
+-   <span data-ttu-id="4721e-112">Il disco è pieno (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="4721e-112">The disk is full (<xref:System.IO.IOException>).</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="0cb82-113">Sicurezza di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="0cb82-113">.NET Framework Security</span></span>  
- <span data-ttu-id="0cb82-114">Questo esempio crea un nuovo file, se il file non esiste.</span><span class="sxs-lookup"><span data-stu-id="0cb82-114">This example creates a new file, if the file does not already exist.</span></span> <span data-ttu-id="0cb82-115">Se un'applicazione deve creare un file, deve avere accesso `Create` alla cartella.</span><span class="sxs-lookup"><span data-stu-id="0cb82-115">If an application needs to create a file, that application needs `Create` access for the folder.</span></span> <span data-ttu-id="0cb82-116">Se il file esiste già, per l'applicazione è sufficiente l'accesso `Write`, un privilegio di livello inferiore.</span><span class="sxs-lookup"><span data-stu-id="0cb82-116">If the file already exists, the application needs only `Write` access, a lesser privilege.</span></span> <span data-ttu-id="0cb82-117">Se possibile, è più sicuro creare il file durante la distribuzione e concedere l'accesso `Read` a un unico file, anziché l'accesso `Create` a una cartella.</span><span class="sxs-lookup"><span data-stu-id="0cb82-117">Where possible, it is more secure to create the file during deployment, and only grant `Read` access to a single file, rather than `Create` access for a folder.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="4721e-113">Sicurezza di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="4721e-113">.NET Framework Security</span></span>  
+ <span data-ttu-id="4721e-114">Questo esempio crea un nuovo file, se il file non esiste.</span><span class="sxs-lookup"><span data-stu-id="4721e-114">This example creates a new file, if the file does not already exist.</span></span> <span data-ttu-id="4721e-115">Se un'applicazione deve creare un file, deve avere accesso `Create` alla cartella.</span><span class="sxs-lookup"><span data-stu-id="4721e-115">If an application needs to create a file, that application needs `Create` access for the folder.</span></span> <span data-ttu-id="4721e-116">Se il file esiste già, per l'applicazione è sufficiente l'accesso `Write`, un privilegio di livello inferiore.</span><span class="sxs-lookup"><span data-stu-id="4721e-116">If the file already exists, the application needs only `Write` access, a lesser privilege.</span></span> <span data-ttu-id="4721e-117">Se possibile, è più sicuro creare il file durante la distribuzione e concedere l'accesso `Read` a un unico file, anziché l'accesso `Create` a una cartella.</span><span class="sxs-lookup"><span data-stu-id="4721e-117">Where possible, it is more secure to create the file during deployment, and only grant `Read` access to a single file, rather than `Create` access for a folder.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0cb82-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0cb82-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4721e-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4721e-118">See Also</span></span>  
  <xref:System.IO.StreamWriter>  
- [<span data-ttu-id="0cb82-119">Procedura: Leggere dati oggetto in un file XML (C#)</span><span class="sxs-lookup"><span data-stu-id="0cb82-119">How to: Read Object Data from an XML File (C#)</span></span>](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- [<span data-ttu-id="0cb82-120">Serializzazione (C#)</span><span class="sxs-lookup"><span data-stu-id="0cb82-120">Serialization (C# )</span></span>](../../../../csharp/programming-guide/concepts/serialization/index.md)
+ [<span data-ttu-id="4721e-119">Procedura: Leggere dati oggetto in un file XML (C#)</span><span class="sxs-lookup"><span data-stu-id="4721e-119">How to: Read Object Data from an XML File (C#)</span></span>](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+ [<span data-ttu-id="4721e-120">Serializzazione (C#)</span><span class="sxs-lookup"><span data-stu-id="4721e-120">Serialization (C# )</span></span>](../../../../csharp/programming-guide/concepts/serialization/index.md)

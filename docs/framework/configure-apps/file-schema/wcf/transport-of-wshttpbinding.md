@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767583"
 ---
 # <a name="lttransportgt-of-ltwshttpbindinggt"></a><span data-ttu-id="adb3b-102">&lt;transport&gt; di &lt;wsHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="adb3b-102">&lt;transport&gt; of &lt;wsHttpBinding&gt;</span></span>
 <span data-ttu-id="adb3b-103">Definisce le impostazioni di autenticazione per il trasporto HTTP.</span><span class="sxs-lookup"><span data-stu-id="adb3b-103">Defines authentication settings for the HTTP transport.</span></span>  

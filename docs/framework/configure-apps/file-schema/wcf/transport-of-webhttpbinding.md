@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767460"
 ---
 # <a name="lttransportgt-of-ltwebhttpbindinggt"></a><span data-ttu-id="4917f-102">&lt;transport&gt; di &lt;webHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="4917f-102">&lt;transport&gt; of &lt;webHttpBinding&gt;</span></span>
 <span data-ttu-id="4917f-103">Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint del servizio configurato per ricevere richieste HTTP.</span><span class="sxs-lookup"><span data-stu-id="4917f-103">Defines the transport-level security settings for a service endpoint configured to receive HTTP requests.</span></span>  

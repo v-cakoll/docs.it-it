@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767076"
 ---
 # <a name="ltudptransportsettingsgt-of-ltudpannouncementendpointgt"></a><span data-ttu-id="c0847-102">&lt;udpTransportSettings&gt; di &lt;udpAnnouncementEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="c0847-102">&lt;udpTransportSettings&gt; of &lt;udpAnnouncementEndpoint&gt;</span></span>
 <span data-ttu-id="c0847-103">Questo elemento di configurazione espone le impostazioni di trasporto UDP per [ \<udpAnnoucementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md).</span><span class="sxs-lookup"><span data-stu-id="c0847-103">This configuration element exposes UDP transport settings for [\<udpAnnoucementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md).</span></span>  

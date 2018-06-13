@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765256"
 ---
 # <a name="constructing-types-entity-sql"></a><span data-ttu-id="39636-102">Costruzione di tipi (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="39636-102">Constructing Types (Entity SQL)</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="39636-103"> sono disponibili tre tipi di costruttori: costruttori di riga, costruttori di tipi denominati e i costruttori di raccolte.</span><span class="sxs-lookup"><span data-stu-id="39636-103"> provides three kinds of constructors: row constructors, named type constructors, and collection constructors.</span></span>  

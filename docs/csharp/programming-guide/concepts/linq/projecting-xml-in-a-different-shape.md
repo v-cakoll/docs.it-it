@@ -1,33 +1,25 @@
 ---
 title: Proiezione di XML in una forma diversa (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 54eb890e37634362af715c132bfe43b7addb20b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e9d555dadea1ddd8720ef2548136f9bf9fb833c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340424"
 ---
-# <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="00678-102">Proiezione di XML in una forma diversa (C#)</span><span class="sxs-lookup"><span data-stu-id="00678-102">Projecting XML in a Different Shape (C#)</span></span>
-<span data-ttu-id="00678-103">In questo argomento viene illustrato un esempio di proiezione del codice XML in una forma diversa da quella del codice XML di origine.</span><span class="sxs-lookup"><span data-stu-id="00678-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
+# <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="1da1b-102">Proiezione di XML in una forma diversa (C#)</span><span class="sxs-lookup"><span data-stu-id="1da1b-102">Projecting XML in a Different Shape (C#)</span></span>
+<span data-ttu-id="1da1b-103">In questo argomento viene illustrato un esempio di proiezione del codice XML in una forma diversa da quella del codice XML di origine.</span><span class="sxs-lookup"><span data-stu-id="1da1b-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
   
- <span data-ttu-id="00678-104">Molte trasformazioni XML tipiche sono costituite da query concatenate, come nel caso di questo esempio.</span><span class="sxs-lookup"><span data-stu-id="00678-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="00678-105">Non è infrequente iniziare con un qualche tipo di codice XML, proiettare i risultati intermedi come raccolte di tipi anonimi o con nome e infine proiettare i risultati nuovamente nel codice XML in una forma completamente diverso rispetto al codice XML di origine.</span><span class="sxs-lookup"><span data-stu-id="00678-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
+ <span data-ttu-id="1da1b-104">Molte trasformazioni XML tipiche sono costituite da query concatenate, come nel caso di questo esempio.</span><span class="sxs-lookup"><span data-stu-id="1da1b-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="1da1b-105">Non è infrequente iniziare con un qualche tipo di codice XML, proiettare i risultati intermedi come raccolte di tipi anonimi o con nome e infine proiettare i risultati nuovamente nel codice XML in una forma completamente diverso rispetto al codice XML di origine.</span><span class="sxs-lookup"><span data-stu-id="1da1b-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="00678-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="00678-106">Example</span></span>  
- <span data-ttu-id="00678-107">In questo esempio viene elaborato un documento WordprocessingML, recuperandone i nodi dei paragrafi da un documento WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="00678-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="00678-108">Vengono inoltre identificati lo stile e il testo di ciascun paragrafo.</span><span class="sxs-lookup"><span data-stu-id="00678-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="00678-109">Infine il codice XML viene proiettato con una forma diversa.</span><span class="sxs-lookup"><span data-stu-id="00678-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="00678-110">Questo esempio si basa su esempi precedenti di questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="00678-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="00678-111">La nuova istruzione usata per la proiezione è indicata nei commenti del codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="00678-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="1da1b-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="1da1b-106">Example</span></span>  
+ <span data-ttu-id="1da1b-107">In questo esempio viene elaborato un documento WordprocessingML, recuperandone i nodi dei paragrafi da un documento WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="1da1b-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="1da1b-108">Vengono inoltre identificati lo stile e il testo di ciascun paragrafo.</span><span class="sxs-lookup"><span data-stu-id="1da1b-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="1da1b-109">Infine il codice XML viene proiettato con una forma diversa.</span><span class="sxs-lookup"><span data-stu-id="1da1b-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="1da1b-110">Questo esempio si basa su esempi precedenti di questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="1da1b-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="1da1b-111">La nuova istruzione usata per la proiezione è indicata nei commenti del codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="1da1b-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="00678-112">Per istruzioni sulla creazione del documento di origine di questo esempio, vedere [Creazione del documento Office Open XML di origine (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="00678-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="1da1b-112">Per istruzioni per la creazione del documento di origine di questo esempio, vedere [Creazione del documento Office Open XML di origine (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="1da1b-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="00678-113">In questo esempio vengono usate classi dell'assembly WindowsBase</span><span class="sxs-lookup"><span data-stu-id="00678-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="00678-114">e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="00678-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="1da1b-113">In questo esempio vengono usate classi dell'assembly WindowsBase</span><span class="sxs-lookup"><span data-stu-id="1da1b-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="1da1b-114">e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1da1b-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -171,7 +163,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="00678-115">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="00678-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="1da1b-115">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="1da1b-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -238,10 +230,10 @@ class Program
 </Root>  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="00678-116">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="00678-116">Next Steps</span></span>  
- <span data-ttu-id="00678-117">Nell'esempio successivo viene eseguita una query per individuare tutto il testo in un documento di Word:</span><span class="sxs-lookup"><span data-stu-id="00678-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="1da1b-116">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="1da1b-116">Next Steps</span></span>  
+ <span data-ttu-id="1da1b-117">Nell'esempio successivo viene eseguita una query per individuare tutto il testo in un documento di Word:</span><span class="sxs-lookup"><span data-stu-id="1da1b-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
   
--   [<span data-ttu-id="00678-118">Ricerca di testo nei documenti di Word (C#)</span><span class="sxs-lookup"><span data-stu-id="00678-118">Finding Text in Word Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+-   [<span data-ttu-id="1da1b-118">Ricerca di testo nei documenti di Word (C#)</span><span class="sxs-lookup"><span data-stu-id="1da1b-118">Finding Text in Word Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a><span data-ttu-id="00678-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="00678-119">See Also</span></span>  
- [<span data-ttu-id="00678-120">Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)</span><span class="sxs-lookup"><span data-stu-id="00678-120">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="1da1b-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1da1b-119">See Also</span></span>  
+ [<span data-ttu-id="1da1b-120">Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)</span><span class="sxs-lookup"><span data-stu-id="1da1b-120">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764398"
 ---
 # <a name="working-with-data-definition-language"></a><span data-ttu-id="bded2-102">Utilizzo di Data Definition Language</span><span class="sxs-lookup"><span data-stu-id="bded2-102">Working with Data Definition Language</span></span>
 <span data-ttu-id="bded2-103">A partire dal [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] versione 4, il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supporta il linguaggio di definizione dei dati (DDL).</span><span class="sxs-lookup"><span data-stu-id="bded2-103">Starting with the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] version 4, the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supports data definition language (DDL).</span></span> <span data-ttu-id="bded2-104">Ciò consente di creare o eliminare un'istanza di database in base alla stringa di connessione e ai metadati del modello di archiviazione (SSDL).</span><span class="sxs-lookup"><span data-stu-id="bded2-104">This allows you to create or delete a database instance based on the connection string and the metadata of the storage (SSDL) model.</span></span>  

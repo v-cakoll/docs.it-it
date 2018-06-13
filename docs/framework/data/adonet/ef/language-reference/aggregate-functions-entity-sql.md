@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765581"
 ---
 # <a name="aggregate-functions-entity-sql"></a><span data-ttu-id="a1dae-102">Funzioni di aggregazione (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="a1dae-102">Aggregate Functions (Entity SQL)</span></span>
 <span data-ttu-id="a1dae-103">Un'aggregazione è un construct di linguaggio che condensa una raccolta in un scalare come parte di un'operazione di gruppo.</span><span class="sxs-lookup"><span data-stu-id="a1dae-103">An aggregate is a language construct that condenses a collection into a scalar as a part of a group operation.</span></span> <span data-ttu-id="a1dae-104">Le aggregazioni [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono disponibili in due formati:</span><span class="sxs-lookup"><span data-stu-id="a1dae-104">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] aggregates come in two forms:</span></span>  

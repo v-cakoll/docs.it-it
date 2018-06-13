@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765360"
 ---
 # <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a><span data-ttu-id="90402-102">Esempi di sintassi di query basate sul metodo: ordinamento (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="90402-102">Method-Based Query Syntax Examples: Ordering (LINQ to DataSet)</span></span>
 <span data-ttu-id="90402-103">Negli esempi di questo argomento viene illustrato come usare i metodi <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Reverse%2A> e <xref:System.Linq.Enumerable.ThenBy%2A> per eseguire una query su <xref:System.Data.DataSet> e ordinare i risultati usando la sintassi delle query basate su metodo.</span><span class="sxs-lookup"><span data-stu-id="90402-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.OrderBy%2A>,  <xref:System.Linq.Enumerable.Reverse%2A>, and <xref:System.Linq.Enumerable.ThenBy%2A> methods to query a <xref:System.Data.DataSet> and order the results using the method query syntax.</span></span>  
