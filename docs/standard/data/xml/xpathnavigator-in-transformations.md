@@ -1,40 +1,30 @@
 ---
 title: XPathNavigator nelle trasformazioni
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c492d470fe29041f32039d98ecb854e18f40423c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 76cfa51c7d434a6dfdcdc1e6852779decaa601e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570464"
 ---
-# <a name="xpathnavigator-in-transformations"></a><span data-ttu-id="fa2be-102">XPathNavigator nelle trasformazioni</span><span class="sxs-lookup"><span data-stu-id="fa2be-102">XPathNavigator in Transformations</span></span>
-<span data-ttu-id="fa2be-103">La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un accesso casuale di sola lettura ai dati ed è progettata per essere usata come input per XSLT (Extensible Stylesheet Language for Transformations).</span><span class="sxs-lookup"><span data-stu-id="fa2be-103">The <xref:System.Xml.XPath.XPathNavigator> class provides read-only random access to data and is designed for use as an input to Extensible Stylesheet Language for Transformations (XSLT).</span></span> <span data-ttu-id="fa2be-104">Viene implementata su <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> e <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="fa2be-104">It is implemented on the <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, and <xref:System.Xml.XmlDocument>.</span></span> <span data-ttu-id="fa2be-105"><xref:System.Xml.XPath.XPathNavigator> è basato sul modello di dati W3C (World Wide Web Consortium) secondo la descrizione fornita nella sezione 5 della raccomandazione XML Path Language (XPath) (informazioni in lingua inglese).</span><span class="sxs-lookup"><span data-stu-id="fa2be-105">The <xref:System.Xml.XPath.XPathNavigator> is based upon the World Wide Web Consortium (W3C) Data Model as described in section 5 of the XML Path Language (XPath) recommendation.</span></span>  
+# <a name="xpathnavigator-in-transformations"></a><span data-ttu-id="f1d81-102">XPathNavigator nelle trasformazioni</span><span class="sxs-lookup"><span data-stu-id="f1d81-102">XPathNavigator in Transformations</span></span>
+<span data-ttu-id="f1d81-103">La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un accesso casuale di sola lettura ai dati ed è progettata per essere usata come input per XSLT (Extensible Stylesheet Language for Transformations).</span><span class="sxs-lookup"><span data-stu-id="f1d81-103">The <xref:System.Xml.XPath.XPathNavigator> class provides read-only random access to data and is designed for use as an input to Extensible Stylesheet Language for Transformations (XSLT).</span></span> <span data-ttu-id="f1d81-104">Viene implementata su <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> e <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="f1d81-104">It is implemented on the <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, and <xref:System.Xml.XmlDocument>.</span></span> <span data-ttu-id="f1d81-105"><xref:System.Xml.XPath.XPathNavigator> è basato sul modello di dati W3C (World Wide Web Consortium) secondo la descrizione fornita nella sezione 5 della raccomandazione XML Path Language (XPath) (informazioni in lingua inglese).</span><span class="sxs-lookup"><span data-stu-id="f1d81-105">The <xref:System.Xml.XPath.XPathNavigator> is based upon the World Wide Web Consortium (W3C) Data Model as described in section 5 of the XML Path Language (XPath) recommendation.</span></span>  
   
- <span data-ttu-id="fa2be-106"><xref:System.Xml.XPath.XPathNavigator> definisce un modello di cursore per qualsiasi archivio e fornisce query XPath rapide e di sola lettura per qualsiasi archivio dati.</span><span class="sxs-lookup"><span data-stu-id="fa2be-106">The <xref:System.Xml.XPath.XPathNavigator> defines a cursor model over any store and provides fast, read-only XPath queries over any data store.</span></span> <span data-ttu-id="fa2be-107"><xref:System.Xml.XPath.XPathNavigator> è inoltre la classe da usare per l'esecuzione di iterazioni sui frammenti di albero risultato.</span><span class="sxs-lookup"><span data-stu-id="fa2be-107">The <xref:System.Xml.XPath.XPathNavigator> is also the class to use for iterating over result tree fragments.</span></span>  
+ <span data-ttu-id="f1d81-106"><xref:System.Xml.XPath.XPathNavigator> definisce un modello di cursore per qualsiasi archivio e fornisce query XPath rapide e di sola lettura per qualsiasi archivio dati.</span><span class="sxs-lookup"><span data-stu-id="f1d81-106">The <xref:System.Xml.XPath.XPathNavigator> defines a cursor model over any store and provides fast, read-only XPath queries over any data store.</span></span> <span data-ttu-id="f1d81-107"><xref:System.Xml.XPath.XPathNavigator> è inoltre la classe da usare per l'esecuzione di iterazioni sui frammenti di albero risultato.</span><span class="sxs-lookup"><span data-stu-id="f1d81-107">The <xref:System.Xml.XPath.XPathNavigator> is also the class to use for iterating over result tree fragments.</span></span>  
   
- <span data-ttu-id="fa2be-108">L'API consente di ottenere informazioni dal nodo corrente nell'archivio e di spostare i nodi collegati.</span><span class="sxs-lookup"><span data-stu-id="fa2be-108">The API enables you to get information from the current node in the store and move to connected nodes.</span></span> <span data-ttu-id="fa2be-109"><xref:System.Xml.XPath.XPathNavigator> è un modello di tipo cursore che esegue l'attraversamento di un archivio usando un set di metodi **Move**.</span><span class="sxs-lookup"><span data-stu-id="fa2be-109">The <xref:System.Xml.XPath.XPathNavigator> is a cursor style model that performs traversal over a store using a set of **Move** methods.</span></span> <span data-ttu-id="fa2be-110"><xref:System.Xml.XPath.XPathNavigator> viene sempre posizionato su un nodo.</span><span class="sxs-lookup"><span data-stu-id="fa2be-110">The <xref:System.Xml.XPath.XPathNavigator> is always positioned on a node.</span></span> <span data-ttu-id="fa2be-111">Qualsiasi metodo **Move** che abbia esito negativo lascia <xref:System.Xml.XPath.XPathNavigator> invariato.</span><span class="sxs-lookup"><span data-stu-id="fa2be-111">Any **Move** method that fails leaves the <xref:System.Xml.XPath.XPathNavigator> unchanged.</span></span>  
+ <span data-ttu-id="f1d81-108">L'API consente di ottenere informazioni dal nodo corrente nell'archivio e di spostare i nodi collegati.</span><span class="sxs-lookup"><span data-stu-id="f1d81-108">The API enables you to get information from the current node in the store and move to connected nodes.</span></span> <span data-ttu-id="f1d81-109"><xref:System.Xml.XPath.XPathNavigator> è un modello di tipo cursore che esegue l'attraversamento di un archivio usando un set di metodi **Move**.</span><span class="sxs-lookup"><span data-stu-id="f1d81-109">The <xref:System.Xml.XPath.XPathNavigator> is a cursor style model that performs traversal over a store using a set of **Move** methods.</span></span> <span data-ttu-id="f1d81-110"><xref:System.Xml.XPath.XPathNavigator> viene sempre posizionato su un nodo.</span><span class="sxs-lookup"><span data-stu-id="f1d81-110">The <xref:System.Xml.XPath.XPathNavigator> is always positioned on a node.</span></span> <span data-ttu-id="f1d81-111">Qualsiasi metodo **Move** che abbia esito negativo lascia <xref:System.Xml.XPath.XPathNavigator> invariato.</span><span class="sxs-lookup"><span data-stu-id="f1d81-111">Any **Move** method that fails leaves the <xref:System.Xml.XPath.XPathNavigator> unchanged.</span></span>  
   
- <span data-ttu-id="fa2be-112"><xref:System.Xml.XPath.XPathNavigator> è la classe da usare per l'esecuzione di iterazioni sui frammenti di albero risultato.</span><span class="sxs-lookup"><span data-stu-id="fa2be-112">The <xref:System.Xml.XPath.XPathNavigator> is the class to use for iterating over result tree fragments.</span></span> <span data-ttu-id="fa2be-113">Nell'esempio di codice seguente viene illustrata la creazione di un frammento di albero risultato all'interno di un foglio di stile, chiamando la funzione con il parametro, `fragment`, che contiene l'XML</span><span class="sxs-lookup"><span data-stu-id="fa2be-113">The following code sample creates a result tree fragment within a style sheet by calling the function with the parameter, `fragment`, which contains XML.</span></span>  
+ <span data-ttu-id="f1d81-112"><xref:System.Xml.XPath.XPathNavigator> è la classe da usare per l'esecuzione di iterazioni sui frammenti di albero risultato.</span><span class="sxs-lookup"><span data-stu-id="f1d81-112">The <xref:System.Xml.XPath.XPathNavigator> is the class to use for iterating over result tree fragments.</span></span> <span data-ttu-id="f1d81-113">Nell'esempio di codice seguente viene illustrata la creazione di un frammento di albero risultato all'interno di un foglio di stile, chiamando la funzione con il parametro, `fragment`, che contiene l'XML</span><span class="sxs-lookup"><span data-stu-id="f1d81-113">The following code sample creates a result tree fragment within a style sheet by calling the function with the parameter, `fragment`, which contains XML.</span></span>  
   
-## <a name="testxsl"></a><span data-ttu-id="fa2be-114">test.xsl</span><span class="sxs-lookup"><span data-stu-id="fa2be-114">test.xsl</span></span>  
+## <a name="testxsl"></a><span data-ttu-id="f1d81-114">test.xsl</span><span class="sxs-lookup"><span data-stu-id="f1d81-114">test.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -67,13 +57,13 @@ ms.lasthandoff: 12/23/2017
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a><span data-ttu-id="fa2be-115">test.xml</span><span class="sxs-lookup"><span data-stu-id="fa2be-115">test.xml</span></span>  
+## <a name="testxml"></a><span data-ttu-id="f1d81-115">test.xml</span><span class="sxs-lookup"><span data-stu-id="f1d81-115">test.xml</span></span>  
   
 ```xml  
 <root>Some text</root>  
 ```  
   
- <span data-ttu-id="fa2be-116">Nell'esempio seguente vengono usati il foglio di stile **test.xsl** e i dati di input **test.xml**.</span><span class="sxs-lookup"><span data-stu-id="fa2be-116">The following code uses the **test.xsl** style sheet and **test.xml** input data.</span></span>  
+ <span data-ttu-id="f1d81-116">Nell'esempio seguente vengono usati il foglio di stile **test.xsl** e i dati di input **test.xml**.</span><span class="sxs-lookup"><span data-stu-id="f1d81-116">The following code uses the **test.xsl** style sheet and **test.xml** input data.</span></span>  
   
 ```vb  
 Imports System  
@@ -119,12 +109,12 @@ public class sample
 }  
 ```  
   
-## <a name="output"></a><span data-ttu-id="fa2be-117">Output</span><span class="sxs-lookup"><span data-stu-id="fa2be-117">Output</span></span>  
- <span data-ttu-id="fa2be-118">Il risultato della trasformazione è riportato nel file **out.xml**:</span><span class="sxs-lookup"><span data-stu-id="fa2be-118">The result of the transformation is found in the file **out.xml**:</span></span>  
+## <a name="output"></a><span data-ttu-id="f1d81-117">Output</span><span class="sxs-lookup"><span data-stu-id="f1d81-117">Output</span></span>  
+ <span data-ttu-id="f1d81-118">Il risultato della trasformazione è riportato nel file **out.xml**:</span><span class="sxs-lookup"><span data-stu-id="f1d81-118">The result of the transformation is found in the file **out.xml**:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fa2be-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fa2be-119">See Also</span></span>  
- [<span data-ttu-id="fa2be-120">Implementazione del processore XSLT da parte della classe XslTransform</span><span class="sxs-lookup"><span data-stu-id="fa2be-120">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a><span data-ttu-id="f1d81-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f1d81-119">See Also</span></span>  
+ [<span data-ttu-id="f1d81-120">Implementazione del processore XSLT da parte della classe XslTransform</span><span class="sxs-lookup"><span data-stu-id="f1d81-120">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
