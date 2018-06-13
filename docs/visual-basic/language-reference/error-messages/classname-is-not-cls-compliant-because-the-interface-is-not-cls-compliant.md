@@ -1,44 +1,36 @@
 ---
-title: "&#39; &lt;classname&gt;&#39; non è conforme a CLS perché l'interfaccia &#39;&lt; InterfaceName&gt;&#39; implements non è conforme a CLS"
+title: "&#39;&lt;ClassName&gt; &#39; non è conforme a CLS perché l'interfaccia &#39; &lt;interfacename&gt; &#39; , implements non è conforme a CLS"
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc40029
 - vbc40029
 helpviewer_keywords:
 - BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f1f0d1e1f54b6b667431ceae2e346a4118c5b1a8
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 4dda0e16a94f43cdb3deeff16fabdd1b10b62526
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588494"
 ---
-# <a name="39ltclassnamegt39-is-not-cls-compliant-because-the-interface-39ltinterfacenamegt39-it-implements-is-not-cls-compliant"></a><span data-ttu-id="4c0de-102">&#39; &lt;classname&gt;&#39; non è conforme a CLS perché l'interfaccia &#39;&lt; InterfaceName&gt;&#39; implements non è conforme a CLS</span><span class="sxs-lookup"><span data-stu-id="4c0de-102">&#39;&lt;classname&gt;&#39; is not CLS-compliant because the interface &#39;&lt;interfacename&gt;&#39; it implements is not CLS-compliant</span></span>
-<span data-ttu-id="4c0de-103">Una classe o interfaccia è contrassegnata come `<CLSCompliant(True)>` quando deriva da o implementa un tipo contrassegnato come `<CLSCompliant(False)>` o non è contrassegnata.</span><span class="sxs-lookup"><span data-stu-id="4c0de-103">A class or interface is marked as `<CLSCompliant(True)>` when it derives from or implements a type that is marked as `<CLSCompliant(False)>` or is not marked.</span></span>  
+# <a name="39ltclassnamegt39-is-not-cls-compliant-because-the-interface-39ltinterfacenamegt39-it-implements-is-not-cls-compliant"></a><span data-ttu-id="24865-102">&#39;&lt;ClassName&gt; &#39; non è conforme a CLS perché l'interfaccia &#39; &lt;interfacename&gt; &#39; , implements non è conforme a CLS</span><span class="sxs-lookup"><span data-stu-id="24865-102">&#39;&lt;classname&gt;&#39; is not CLS-compliant because the interface &#39;&lt;interfacename&gt;&#39; it implements is not CLS-compliant</span></span>
+<span data-ttu-id="24865-103">Una classe o interfaccia è contrassegnata come `<CLSCompliant(True)>` quando deriva da o implementa un tipo contrassegnato come `<CLSCompliant(False)>` o non è contrassegnata.</span><span class="sxs-lookup"><span data-stu-id="24865-103">A class or interface is marked as `<CLSCompliant(True)>` when it derives from or implements a type that is marked as `<CLSCompliant(False)>` or is not marked.</span></span>  
   
- <span data-ttu-id="4c0de-104">Per una classe o un'interfaccia è compatibile con il [indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../../standard/language-independence-and-language-independent-components.md) (CLS), la gerarchia di ereditarietà deve essere conforme.</span><span class="sxs-lookup"><span data-stu-id="4c0de-104">For a class or interface to be compliant with the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), its entire inheritance hierarchy must be compliant.</span></span> <span data-ttu-id="4c0de-105">Ciò significa che ogni tipo da cui eredita, direttamente o indirettamente, deve essere conforme.</span><span class="sxs-lookup"><span data-stu-id="4c0de-105">That means every type from which it inherits, directly or indirectly, must be compliant.</span></span> <span data-ttu-id="4c0de-106">Analogamente, se una classe implementa una o più interfacce, esse devono essere tutte conformi nelle relative gerarchie di ereditarietà.</span><span class="sxs-lookup"><span data-stu-id="4c0de-106">Similarly, if a class implements one or more interfaces, they must all be compliant throughout their inheritance hierarchies.</span></span>  
+ <span data-ttu-id="24865-104">Per una classe o un'interfaccia è compatibile con il [indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../../standard/language-independence-and-language-independent-components.md) (CLS), la gerarchia di ereditarietà deve essere conforme.</span><span class="sxs-lookup"><span data-stu-id="24865-104">For a class or interface to be compliant with the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), its entire inheritance hierarchy must be compliant.</span></span> <span data-ttu-id="24865-105">Ciò significa che ogni tipo da cui eredita, direttamente o indirettamente, deve essere conforme.</span><span class="sxs-lookup"><span data-stu-id="24865-105">That means every type from which it inherits, directly or indirectly, must be compliant.</span></span> <span data-ttu-id="24865-106">Analogamente, se una classe implementa una o più interfacce, esse devono essere tutte conformi nelle relative gerarchie di ereditarietà.</span><span class="sxs-lookup"><span data-stu-id="24865-106">Similarly, if a class implements one or more interfaces, they must all be compliant throughout their inheritance hierarchies.</span></span>  
   
- <span data-ttu-id="4c0de-107">Quando <xref:System.CLSCompliantAttribute> viene applicato a un elemento di programmazione, il parametro `isCompliant` dell'attributo viene impostato su `True` o `False` per indicare la conformità o la non conformità.</span><span class="sxs-lookup"><span data-stu-id="4c0de-107">When you apply the <xref:System.CLSCompliantAttribute> to a programming element, you set the attribute's `isCompliant` parameter to either `True` or `False` to indicate compliance or noncompliance.</span></span> <span data-ttu-id="4c0de-108">L'impostazione predefinita per questo parametro non è disponibile, quindi è necessario specificare un valore.</span><span class="sxs-lookup"><span data-stu-id="4c0de-108">There is no default for this parameter, and you must supply a value.</span></span>  
+ <span data-ttu-id="24865-107">Quando <xref:System.CLSCompliantAttribute> viene applicato a un elemento di programmazione, il parametro `isCompliant` dell'attributo viene impostato su `True` o `False` per indicare la conformità o la non conformità.</span><span class="sxs-lookup"><span data-stu-id="24865-107">When you apply the <xref:System.CLSCompliantAttribute> to a programming element, you set the attribute's `isCompliant` parameter to either `True` or `False` to indicate compliance or noncompliance.</span></span> <span data-ttu-id="24865-108">L'impostazione predefinita per questo parametro non è disponibile, quindi è necessario specificare un valore.</span><span class="sxs-lookup"><span data-stu-id="24865-108">There is no default for this parameter, and you must supply a value.</span></span>  
   
- <span data-ttu-id="4c0de-109">Se a un elemento non viene applicato <xref:System.CLSCompliantAttribute> , l'elemento non sarà considerato conforme.</span><span class="sxs-lookup"><span data-stu-id="4c0de-109">If you do not apply the <xref:System.CLSCompliantAttribute> to an element, it is considered to be noncompliant.</span></span>  
+ <span data-ttu-id="24865-109">Se a un elemento non viene applicato <xref:System.CLSCompliantAttribute> , l'elemento non sarà considerato conforme.</span><span class="sxs-lookup"><span data-stu-id="24865-109">If you do not apply the <xref:System.CLSCompliantAttribute> to an element, it is considered to be noncompliant.</span></span>  
   
- <span data-ttu-id="4c0de-110">Per impostazione predefinita, si tratta di un messaggio di avviso.</span><span class="sxs-lookup"><span data-stu-id="4c0de-110">By default, this message is a warning.</span></span> <span data-ttu-id="4c0de-111">Per informazioni su come nascondere gli avvisi o considerarli come errori, vedere [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="4c0de-111">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="24865-110">Per impostazione predefinita, si tratta di un messaggio di avviso.</span><span class="sxs-lookup"><span data-stu-id="24865-110">By default, this message is a warning.</span></span> <span data-ttu-id="24865-111">Per informazioni su come nascondere gli avvisi o considerarli come errori, vedere [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="24865-111">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="4c0de-112">**ID errore:** BC40029</span><span class="sxs-lookup"><span data-stu-id="4c0de-112">**Error ID:** BC40029</span></span>  
+ <span data-ttu-id="24865-112">**ID errore:** BC40029</span><span class="sxs-lookup"><span data-stu-id="24865-112">**Error ID:** BC40029</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="4c0de-113">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="4c0de-113">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="24865-113">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="24865-113">To correct this error</span></span>  
   
--   <span data-ttu-id="4c0de-114">Se è necessaria la conformità a CLS, definire il tipo all'interno di uno schema di implementazione o una gerarchia di ereditarietà diversi.</span><span class="sxs-lookup"><span data-stu-id="4c0de-114">If you require CLS compliance, define this type within a different inheritance hierarchy or implementation scheme.</span></span>  
+-   <span data-ttu-id="24865-114">Se è necessaria la conformità a CLS, definire il tipo all'interno di uno schema di implementazione o una gerarchia di ereditarietà diversi.</span><span class="sxs-lookup"><span data-stu-id="24865-114">If you require CLS compliance, define this type within a different inheritance hierarchy or implementation scheme.</span></span>  
   
--   <span data-ttu-id="4c0de-115">Se è necessario che questo tipo resti all'interno dello schema di implementazione o della gerarchia di ereditarietà corrente, rimuovere <xref:System.CLSCompliantAttribute> dalla relativa definizione o contrassegnarlo come `<CLSCompliant(False)>`.</span><span class="sxs-lookup"><span data-stu-id="4c0de-115">If you require that this type remain within its current inheritance hierarchy or implementation scheme, remove the <xref:System.CLSCompliantAttribute> from its definition or mark it as `<CLSCompliant(False)>`.</span></span>  
+-   <span data-ttu-id="24865-115">Se è necessario che questo tipo resti all'interno dello schema di implementazione o della gerarchia di ereditarietà corrente, rimuovere <xref:System.CLSCompliantAttribute> dalla relativa definizione o contrassegnarlo come `<CLSCompliant(False)>`.</span><span class="sxs-lookup"><span data-stu-id="24865-115">If you require that this type remain within its current inheritance hierarchy or implementation scheme, remove the <xref:System.CLSCompliantAttribute> from its definition or mark it as `<CLSCompliant(False)>`.</span></span>  
   
  
