@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649396"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
 Oggetto *routine generica*, denominati anche un *metodo generico*, non è una procedura definita con almeno un parametro di tipo. In questo modo il codice adattare i tipi di dati ai propri requisiti ogni volta che viene chiamata la routine chiamante.  

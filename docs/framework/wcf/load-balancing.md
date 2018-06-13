@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807525"
 ---
 # <a name="load-balancing"></a>Bilanciamento del carico
 Un modo per aumentare la capacità delle applicazioni di Windows Communication Foundation (WCF) consiste nella scalabilità orizzontale distribuendole in una farm di server con bilanciamento del carico. Le applicazioni WCF possono essere con carico bilanciato utilizzando bilanciamento tecniche, tra cui servizi di bilanciamento del carico software, ad esempio Windows Network Load Balancing standard nonché carico basato su hardware appositi dispositivi.  

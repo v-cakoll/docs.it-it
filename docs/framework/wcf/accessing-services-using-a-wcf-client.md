@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810109"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Accesso ai servizi tramite client WCF
 Dopo aver creato un servizio, il passaggio successivo consiste nel creare un proxy client WCF. Un'applicazione client usa il proxy client WCF per comunicare con il servizio. Le applicazioni client importano di norma i metadati del servizio per generare codice client WCF che può essere usato per richiamare il servizio.  

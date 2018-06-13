@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804979"
 ---
 # <a name="conceptual-overview"></a>Panoramica dei concetti
 In questo argomento riepiloga le informazioni su Windows Communication Foundation (WCF) sistema e le classi che ne supportano l'utilizzo di messaggistica.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806461"
 ---
 # <a name="wcf-service-publishing"></a>Pubblicazione servizio WCF
 Pubblicazione servizio Windows Communication Foundation (WCF) consente di dall'ambiente di sviluppo iniziale fornito da Host servizio WCF e Client di prova WCF per effettiva distribuzione dell'applicazione in un ambiente di produzione a scopo di test. Prima si esegue il commit a un piano di distribuzione finale, è possibile usare pubblicazione servizio Windows Communication Foundation (WCF) per verificare che il servizio WCF eseguito correttamente e sia pronto per la pubblicazione. È inoltre possibile distribuire le librerie di servizio WCF in diverse posizioni di destinazione per il test.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648733"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Procedura: scrivere un metodo di estensione (Visual Basic)
 Metodi di estensione consentono di aggiungere metodi alla classe esistente. Il metodo di estensione può essere chiamato come se fosse un'istanza di tale classe.  

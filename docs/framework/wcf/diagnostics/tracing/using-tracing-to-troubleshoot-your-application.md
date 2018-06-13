@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809157"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Utilizzo delle tracce per risolvere i problemi di un'applicazione
 Contenuto della sezione vengono illustrati vari argomenti che descrivono come è possibile utilizzare le tracce per risolvere i problemi di un'applicazione.  

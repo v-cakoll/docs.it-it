@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805564"
 ---
 # <a name="custom-demux"></a>Demux personalizzato
 Questo esempio viene illustrato come le intestazioni del messaggio MSMQ possono eseguire il mapping a diverse operazioni del servizio in modo che Windows Communication Foundation (WCF) servizi che utilizzano <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> non sono limitati all'uso di un'operazione di servizio come dimostrato nel [ Accodamento messaggi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) e [Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) esempi.  

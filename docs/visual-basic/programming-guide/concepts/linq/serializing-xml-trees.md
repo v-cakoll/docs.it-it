@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645343"
 ---
 # <a name="serializing-xml-trees-visual-basic"></a>Serializzazione di alberi XML (Visual Basic)
 Per serializzazione di un albero XML si intende la generazione di codice XML dall'albero XML. È possibile eseguire la serializzazione in un file, in un'implementazione concreta della classe <xref:System.IO.TextWriter> o in un'implementazione concreta di un oggetto <xref:System.Xml.XmlWriter>.  

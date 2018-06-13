@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804625"
 ---
 # <a name="bindings-and-binding-elements"></a>Associazioni ed elementi di associazione
 Le associazioni sono raccolte di elementi di configurazione speciale, chiamati *gli elementi di associazione*, vengono esaminati dal runtime del servizio ogni volta che un client o viene creato l'endpoint del servizio. Il tipo e l'ordine degli elementi di un'associazione determinano la scelta e l'ordine di sovrapposizione dei canali di protocollo e di trasporto dello stack di canali di un endpoint.  

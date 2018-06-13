@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648876"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Procedura: dichiarare una variabile oggetto e assegnarle un oggetto in Visual Basic
 Si dichiara una variabile del [tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md) specificando `As Object` in un [Dim (istruzione)](../../../../visual-basic/language-reference/statements/dim-statement.md). Assegnare un oggetto a tale variabile inserendo l'oggetto dopo il segno di uguale (`=`) in una clausola di istruzione o l'inizializzazione di assegnazione.  

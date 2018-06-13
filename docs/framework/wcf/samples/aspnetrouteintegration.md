@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804404"
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 Questo esempio viene illustrato come ospitare un servizio REST di Windows Communication Foundation (WCF) mediante route ASP.NET. Il [servizio risorse di base](../../../../docs/framework/wcf/samples/basic-resource-service.md) esempio viene illustrata una versione indipendente di questo scenario e ne illustra l'implementazione del servizio in modo approfondito. Questo argomento descrive la funzionalità di integrazione ASP.NET. Per ulteriori informazioni sul Routing di ASP.NET, vedere <xref:System.Web.Routing>.  

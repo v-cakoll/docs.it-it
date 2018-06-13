@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655136"
 ---
 # <a name="procedures-in-visual-basic"></a>Routine in Visual Basic
 Un *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istruzione di dichiarazione (`Function`, `Sub`, `Operator`, `Get`, `Set`) e un corrispondente `End` dichiarazione. Tutte le istruzioni eseguibili in Visual Basic devono trovarsi nella stessa routine.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809518"
 ---
 # <a name="soap-and-http-endpoints"></a>Endpoint SOAP e HTTP
 In questo esempio viene illustrato come implementare un servizio basato su RPC e come esporlo nel formato SOAP e il formato "Plain Old XML" (POX) utilizzando il modello di programmazione Web WCF. Vedere il [servizio HTTP di base](../../../../docs/framework/wcf/samples/basic-http-service.md) per ulteriori dettagli sul binding HTTP per il servizio. Questo esempio si concentra sui dettagli che riguardano l'esposizione dello stesso servizio su SOAP e HTTP tramite associazioni diverse.  

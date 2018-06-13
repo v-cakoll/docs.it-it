@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808432"
 ---
 # <a name="wcf-client-overview"></a>Panoramica dei client WCF
 In questa sezione viene descritto cosa fare le applicazioni client, come configurare, creare e usare un client Windows Communication Foundation (WCF) e come proteggere le applicazioni client.  

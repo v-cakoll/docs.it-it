@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804199"
 ---
 # <a name="message-encoder-extensibility"></a>Estensibilità del codificatore di messaggi
 Contenuto della sezione sono inclusi esempi che descrivono la codifica di messaggi personalizzata.  

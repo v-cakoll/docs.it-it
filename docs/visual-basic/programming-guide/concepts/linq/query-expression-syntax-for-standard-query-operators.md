@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648606"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>Sintassi delle espressioni di query per gli operatori Query Standard (Visual Basic)
 Alcuni degli operatori di query standard utilizzate più di frequente dedicate sintassi della parola chiave del linguaggio Visual Basic che consente loro di essere chiamata come parte di un *espressione di query*. Un'espressione di query rappresenta un modo diverso e più leggibile per esprimere una query rispetto alla sintassi equivalente *basata su metodo*. Le clausole di espressione di query vengono convertite in chiamate ai metodi di query in fase di compilazione.  

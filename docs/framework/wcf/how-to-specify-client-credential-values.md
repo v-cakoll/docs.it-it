@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806649"
 ---
 # <a name="how-to-specify-client-credential-values"></a>Procedura: specificare valori di credenziali client
 Utilizza Windows Communication Foundation (WCF), il servizio può specificare la modalità di autenticazione di un client al servizio. Ad esempio, un servizio può stabilire che il client venga autenticato con un certificato.  

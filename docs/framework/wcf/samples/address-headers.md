@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803790"
 ---
 # <a name="address-headers"></a>Intestazioni di indirizzo
 Nell'esempio delle intestazioni di indirizzo viene illustrato come i client possano passare parametri per riferimento a un servizio utilizzando Windows Communication Foundation (WCF).  

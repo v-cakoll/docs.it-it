@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803674"
 ---
 # <a name="guidelines-and-best-practices"></a>Linee guida e suggerimenti
 In questa sezione contiene argomenti che forniscono le linee guida per la creazione di applicazioni Windows Communication Foundation (WCF).  

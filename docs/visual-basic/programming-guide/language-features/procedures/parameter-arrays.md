@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652377"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Matrici di parametri (Visual Basic)
 In genere, è possibile chiamare una routine con più argomenti di specifica la dichiarazione di routine. Quando è necessario un numero indefinito di argomenti, è possibile dichiarare un *matrice di parametri*, che consente una routine di accettare una matrice di valori per un parametro. Non è necessario conoscere il numero di elementi nella matrice di parametri quando si definisce la procedura. Le dimensioni della matrice vengano determinata singolarmente per ogni chiamata alla procedura.  

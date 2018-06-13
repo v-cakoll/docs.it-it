@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805993"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Concetti di base del flusso di lavoro di Windows
 Nello sviluppo del flusso di lavoro in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] vengono usati concetti che potrebbero essere nuovi per alcuni sviluppatori. In questo argomento vengono descritti alcuni dei concetti e la relativa implementazione.  

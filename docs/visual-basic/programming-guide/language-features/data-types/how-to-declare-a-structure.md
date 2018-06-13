@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650027"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Procedura: dichiarare una struttura (Visual Basic)
 Iniziare con una dichiarazione di struttura di [istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md), e terminano con il `End` `Structure` istruzione. Tra queste due istruzioni è necessario dichiarare almeno un *elemento*. Gli elementi possono essere di qualsiasi tipo di dati, ma almeno uno deve essere una variabile non condivisa o un evento e non condiviso.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652922"
 ---
 # <a name="-main"></a>-principale
 Specifica la classe o il modulo che contiene la procedura `Sub Main`.  

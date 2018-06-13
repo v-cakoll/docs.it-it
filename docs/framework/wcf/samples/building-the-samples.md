@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806955"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Generazione degli esempi Windows Communication Foundation
 Gli esempi di Windows Communication Foundation (WCF) possono essere compilati utilizzando Visual Studio 2010 o tramite il **msbuild** comando dalla riga di comando. Entrambe le procedure sono descritte in questo argomento.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647201"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Procedura: dichiarare eventi personalizzati per proteggere la memoria (Visual Basic)
 Quando è importante che un'applicazione mantenere l'utilizzo della memoria basso, esistono diverse circostanze. Eventi personalizzati consentono all'applicazione di utilizzare la memoria solo per gli eventi che gestisce.  

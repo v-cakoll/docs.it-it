@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647891"
 ---
 # <a name="loop-structures-visual-basic"></a>Strutture di ciclo (Visual Basic)
 Visual Basic cicli (strutture) consentono di eseguire ripetutamente una o più righe di codice. È possibile ripetere le istruzioni in una struttura di ciclo finché una condizione è `True`, fino a quando non è una condizione `False`, un numero di volte o una volta per ogni elemento specificato in una raccolta.  

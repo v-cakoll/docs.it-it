@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649113"
 ---
 # <a name="object-variables-in-visual-basic"></a>Variabili oggetto in Visual Basic
 Oltre ad archiviare i valori direttamente, una variabile può fare riferimento a un oggetto. Si assegna un oggetto a una variabile per gli stessi motivi che si assegna un valore a una variabile:  
