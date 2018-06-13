@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745097"
 ---
 # <a name="startup-settings-schema"></a><span data-ttu-id="d7e78-102">Schema delle impostazioni di avvio</span><span class="sxs-lookup"><span data-stu-id="d7e78-102">Startup Settings Schema</span></span>
 <span data-ttu-id="d7e78-103">Le impostazioni di avvio specificano la versione di Common Language Runtime che deve essere eseguita dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d7e78-103">Startup settings specify the version of the common language runtime that should run the application.</span></span>  

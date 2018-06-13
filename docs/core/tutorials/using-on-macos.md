@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218286"
 ---
 # <a name="getting-started-with-net-core-on-macos"></a><span data-ttu-id="1c587-103">Introduzione a .NET Core su macOS</span><span class="sxs-lookup"><span data-stu-id="1c587-103">Getting started with .NET Core on macOS</span></span>
 

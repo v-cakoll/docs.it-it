@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217139"
 ---
 # <a name="dynamic-c-reference"></a><span data-ttu-id="dc103-102">dynamic (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="dc103-102">dynamic (C# Reference)</span></span>
 <span data-ttu-id="dc103-103">`dynamic` abilita le operazioni in cui il tipo appare per ignorare il controllo del tipo in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="dc103-103">The `dynamic` type enables the operations in which it occurs to bypass compile-time type checking.</span></span> <span data-ttu-id="dc103-104">Queste operazioni vengono risolte in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="dc103-104">Instead, these operations are resolved at run time.</span></span> <span data-ttu-id="dc103-105">Il tipo `dynamic` semplifica l'accesso alle API COM, ad esempio le API di automazione di Office, e anche ad API dinamiche come le librerie di IronPython e al modello DOM (Document Object Model) HTML.</span><span class="sxs-lookup"><span data-stu-id="dc103-105">The `dynamic` type simplifies access to COM APIs such as the Office Automation APIs, and also to dynamic APIs such as IronPython libraries, and to the HTML Document Object Model (DOM).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748906"
 ---
 # <a name="ltprotocolmappinggt"></a><span data-ttu-id="72b4f-102">&lt;protocolMapping&gt;</span><span class="sxs-lookup"><span data-stu-id="72b4f-102">&lt;protocolMapping&gt;</span></span>
 <span data-ttu-id="72b4f-103">Rappresenta una sezione di configurazione per la definizione di un set di mapping del protocollo predefinito tra gli schemi di protocollo di trasporto (ad esempio, http, net.tcp, NET. pipe, e così via) e le associazioni WCF.</span><span class="sxs-lookup"><span data-stu-id="72b4f-103">Represents a configuration section for defining a set of default protocol mapping between transport protocol schemes (e.g., http, net.tcp, net.pipe, etc.) and WCF bindings.</span></span> <span data-ttu-id="72b4f-104">Quando si creano endpoint predefiniti in fase di esecuzione, Windows Communication Foundation (WCF) analizza i mapping configurati e determina l'associazione da usare per un particolare indirizzo di base.</span><span class="sxs-lookup"><span data-stu-id="72b4f-104">When creating default endpoints at runtime, Windows Communication Foundation (WCF) looks at the configured mappings and decides on which binding to use for a particular based address.</span></span>  

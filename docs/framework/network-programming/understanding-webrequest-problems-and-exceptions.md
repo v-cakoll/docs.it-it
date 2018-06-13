@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398066"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a><span data-ttu-id="77dd9-102">Informazioni su problemi ed eccezioni di WebRequest</span><span class="sxs-lookup"><span data-stu-id="77dd9-102">Understanding WebRequest Problems and Exceptions</span></span>
 <span data-ttu-id="77dd9-103"><xref:System.Net.WebRequest> e le relative classi derivate (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, e <xref:System.Net.FileWebRequest>) generano eccezioni per segnalare una condizione anomala.</span><span class="sxs-lookup"><span data-stu-id="77dd9-103"><xref:System.Net.WebRequest> and its derived classes (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, and <xref:System.Net.FileWebRequest>) throw exceptions to signal an abnormal condition.</span></span> <span data-ttu-id="77dd9-104">In alcuni casi la risoluzione di questi problemi non è scontata.</span><span class="sxs-lookup"><span data-stu-id="77dd9-104">Sometimes the resolution of these problems is not obvious.</span></span>  
