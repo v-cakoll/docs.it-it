@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213497"
 ---
 # <a name="ascending-c-reference"></a><span data-ttu-id="4a77a-102">ascending (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="4a77a-102">ascending (C# Reference)</span></span>
 <span data-ttu-id="4a77a-103">La parola chiave contestuale `ascending` viene usata nella [clausola orderby](../../../csharp/language-reference/keywords/orderby-clause.md) nelle espressioni di query per specificare l'ordinamento dal più piccolo al più grande.</span><span class="sxs-lookup"><span data-stu-id="4a77a-103">The `ascending` contextual keyword is used in the [orderby clause](../../../csharp/language-reference/keywords/orderby-clause.md) in query expressions to specify that the sort order is from smallest to largest.</span></span> <span data-ttu-id="4a77a-104">Dato che `ascending` è l'ordinamento predefinito non è necessario specificarlo.</span><span class="sxs-lookup"><span data-stu-id="4a77a-104">Because `ascending` is the default sort order, you do not have to specify it.</span></span>  

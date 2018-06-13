@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741841"
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a><span data-ttu-id="8a68d-102">&lt;defaultHttpCachePolicy&gt; elemento (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="8a68d-102">&lt;defaultHttpCachePolicy&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="8a68d-103">Indica se la memorizzazione nella cache HTTP è attivo e viene descritto il valore predefinito di criteri di memorizzazione nella cache.</span><span class="sxs-lookup"><span data-stu-id="8a68d-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  

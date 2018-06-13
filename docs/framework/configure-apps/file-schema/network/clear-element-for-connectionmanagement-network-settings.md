@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741984"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="a8f2a-102">&lt;deselezionare&gt; elemento per connectionManagement (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="a8f2a-102">&lt;clear&gt; Element for connectionManagement (Network Settings)</span></span>
 <span data-ttu-id="a8f2a-103">Cancella l'elenco di gestione connessione.</span><span class="sxs-lookup"><span data-stu-id="a8f2a-103">Clears the connection management list.</span></span>  

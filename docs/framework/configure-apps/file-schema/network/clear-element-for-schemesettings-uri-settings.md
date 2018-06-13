@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742523"
 ---
 # <a name="ltcleargt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="ab954-102">&lt;deselezionare&gt; elemento per schemeSettings (impostazioni Uri)</span><span class="sxs-lookup"><span data-stu-id="ab954-102">&lt;clear&gt; Element for schemeSettings (Uri Settings)</span></span>
 <span data-ttu-id="ab954-103">Cancella tutte le impostazioni di schema esistenti.</span><span class="sxs-lookup"><span data-stu-id="ab954-103">Clears all existing scheme settings.</span></span>  

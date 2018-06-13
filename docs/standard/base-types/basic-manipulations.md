@@ -1,42 +1,32 @@
 ---
 title: 'Procedura: Eseguire modifiche di base delle stringhe in .NET Framework'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - strings [.NET Framework], examples
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
-caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8d3d5351a0a639a3f0b674640bcaaf7321ca0d76
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2e8c6c3f9b7ec418fdbf6365a3e7d90fe65e9caa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567185"
 ---
-# <a name="how-to-perform-basic-string-manipulations-in-net"></a><span data-ttu-id="5b43e-102">Procedura: Eseguire modifiche di base delle stringhe in .NET</span><span class="sxs-lookup"><span data-stu-id="5b43e-102">How to: Perform Basic String Manipulations in .NET</span></span>
-<span data-ttu-id="5b43e-103">Nell'esempio seguente vengono usati alcuni dei metodi descritti nell'argomento [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md) per costruire una classe con la quale modificare le stringhe, come può avvenire in un'applicazione reale.</span><span class="sxs-lookup"><span data-stu-id="5b43e-103">The following example uses some of the methods discussed in the [Basic String Operations](../../../docs/standard/base-types/basic-string-operations.md) topics to construct a class that performs string manipulations in a manner that might be found in a real-world application.</span></span> <span data-ttu-id="5b43e-104">Nella classe `MailToData` vengono archiviati il nome e l'indirizzo di un utente in proprietà separate e viene usato un modo per combinare i campi `City`, `State` e `Zip` in una singola stringa da visualizzare all'utente.</span><span class="sxs-lookup"><span data-stu-id="5b43e-104">The `MailToData` class stores the name and address of an individual in separate properties and provides a way to combine the `City`, `State`, and `Zip` fields into a single string for display to the user.</span></span> <span data-ttu-id="5b43e-105">Questa classe consente anche all'utente di immettere la città, lo stato e il codice postale ZIP (Stati Uniti) sotto forma di singola stringa. L'applicazione automaticamente analizza la singola stringa e immette le informazioni corrette nella proprietà corrispondente.</span><span class="sxs-lookup"><span data-stu-id="5b43e-105">Furthermore, the class allows the user to enter the city, state, and ZIP Code information as a single string; the application automatically parses the single string and enters the proper information into the corresponding property.</span></span>  
+# <a name="how-to-perform-basic-string-manipulations-in-net"></a><span data-ttu-id="c6367-102">Procedura: Eseguire modifiche di base delle stringhe in .NET</span><span class="sxs-lookup"><span data-stu-id="c6367-102">How to: Perform Basic String Manipulations in .NET</span></span>
+<span data-ttu-id="c6367-103">Nell'esempio seguente vengono usati alcuni dei metodi descritti nell'argomento [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md) per costruire una classe con la quale modificare le stringhe, come può avvenire in un'applicazione reale.</span><span class="sxs-lookup"><span data-stu-id="c6367-103">The following example uses some of the methods discussed in the [Basic String Operations](../../../docs/standard/base-types/basic-string-operations.md) topics to construct a class that performs string manipulations in a manner that might be found in a real-world application.</span></span> <span data-ttu-id="c6367-104">Nella classe `MailToData` vengono archiviati il nome e l'indirizzo di un utente in proprietà separate e viene usato un modo per combinare i campi `City`, `State` e `Zip` in una singola stringa da visualizzare all'utente.</span><span class="sxs-lookup"><span data-stu-id="c6367-104">The `MailToData` class stores the name and address of an individual in separate properties and provides a way to combine the `City`, `State`, and `Zip` fields into a single string for display to the user.</span></span> <span data-ttu-id="c6367-105">Questa classe consente anche all'utente di immettere la città, lo stato e il codice postale ZIP (Stati Uniti) sotto forma di singola stringa. L'applicazione automaticamente analizza la singola stringa e immette le informazioni corrette nella proprietà corrispondente.</span><span class="sxs-lookup"><span data-stu-id="c6367-105">Furthermore, the class allows the user to enter the city, state, and ZIP Code information as a single string; the application automatically parses the single string and enters the proper information into the corresponding property.</span></span>  
   
- <span data-ttu-id="5b43e-106">Per semplicità, in questo esempio viene usata un'applicazione console con un'interfaccia della riga di comando.</span><span class="sxs-lookup"><span data-stu-id="5b43e-106">For simplicity, this example uses a console application with a command-line interface.</span></span>  
+ <span data-ttu-id="c6367-106">Per semplicità, in questo esempio viene usata un'applicazione console con un'interfaccia della riga di comando.</span><span class="sxs-lookup"><span data-stu-id="c6367-106">For simplicity, this example uses a console application with a command-line interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5b43e-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="5b43e-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c6367-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="c6367-107">Example</span></span>  
  [!code-csharp[Conceptual.String.BasicOps#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/basicops.cs#1)]
  [!code-vb[Conceptual.String.BasicOps#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/basicops.vb#1)]  
   
- <span data-ttu-id="5b43e-108">Dopo aver eseguito il codice precedente, all'utente viene chiesto di immettere nome e indirizzo.</span><span class="sxs-lookup"><span data-stu-id="5b43e-108">When the preceding code is executed, the user is asked to enter his or her name and address.</span></span> <span data-ttu-id="5b43e-109">L'applicazione inserisce le informazioni nelle proprietà corrette e visualizza le informazioni all'utente, creando una singola stringa che contiene la città, lo stato e il codice postale ZIP (Stati Uniti).</span><span class="sxs-lookup"><span data-stu-id="5b43e-109">The application places the information in the appropriate properties and displays the information back to the user, creating a single string that displays the city, state, and ZIP Code information.</span></span>  
+ <span data-ttu-id="c6367-108">Dopo aver eseguito il codice precedente, all'utente viene chiesto di immettere nome e indirizzo.</span><span class="sxs-lookup"><span data-stu-id="c6367-108">When the preceding code is executed, the user is asked to enter his or her name and address.</span></span> <span data-ttu-id="c6367-109">L'applicazione inserisce le informazioni nelle proprietà corrette e visualizza le informazioni all'utente, creando una singola stringa che contiene la città, lo stato e il codice postale ZIP (Stati Uniti).</span><span class="sxs-lookup"><span data-stu-id="c6367-109">The application places the information in the appropriate properties and displays the information back to the user, creating a single string that displays the city, state, and ZIP Code information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b43e-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5b43e-110">See Also</span></span>  
- [<span data-ttu-id="5b43e-111">Operazioni di base su stringhe</span><span class="sxs-lookup"><span data-stu-id="5b43e-111">Basic String Operations</span></span>](../../../docs/standard/base-types/basic-string-operations.md)
+## <a name="see-also"></a><span data-ttu-id="c6367-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c6367-110">See Also</span></span>  
+ [<span data-ttu-id="c6367-111">Operazioni di base su stringhe</span><span class="sxs-lookup"><span data-stu-id="c6367-111">Basic String Operations</span></span>](../../../docs/standard/base-types/basic-string-operations.md)

@@ -1,42 +1,36 @@
 ---
 title: Introduzione a .NET
 description: Vengono elencati diversi articoli introduttivi a .NET dal punto di vista del linguaggio e della piattaforma.
-keywords: .NET, Introduzione, C#, F#, Visual Basic
 author: cartermp
 ms.author: mairaw
 ms.date: 05/01/2017
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8b394b9b176b95aeb658b97e6b18b99f7750b8ee
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 341cea349984afd404c2a3b79e864e016fc6a95c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571995"
 ---
-# <a name="get-started"></a><span data-ttu-id="31ee2-104">Introduzione</span><span class="sxs-lookup"><span data-stu-id="31ee2-104">Get Started</span></span>
+# <a name="get-started"></a><span data-ttu-id="9a112-103">Introduzione</span><span class="sxs-lookup"><span data-stu-id="9a112-103">Get Started</span></span>
 
-<span data-ttu-id="31ee2-105">Per iniziare a usare .NET, sono disponibili vari metodi.</span><span class="sxs-lookup"><span data-stu-id="31ee2-105">There are a number of ways to get started with .NET.</span></span>  <span data-ttu-id="31ee2-106">Poiché .NET è una piattaforma di grandi dimensioni, sono disponibili più articoli in questa documentazione che mostrano com'è possibile iniziare a usare .NET. Ogni articolo tratta un aspetto diverso.</span><span class="sxs-lookup"><span data-stu-id="31ee2-106">Because .NET is a massive platform, there are multiple articles in this documentation which show how you can get started with .NET, each from a different perspective.</span></span>
+<span data-ttu-id="9a112-104">Per iniziare a usare .NET, sono disponibili vari metodi.</span><span class="sxs-lookup"><span data-stu-id="9a112-104">There are a number of ways to get started with .NET.</span></span>  <span data-ttu-id="9a112-105">Poiché .NET è una piattaforma di grandi dimensioni, sono disponibili più articoli in questa documentazione che mostrano com'è possibile iniziare a usare .NET. Ogni articolo tratta un aspetto diverso.</span><span class="sxs-lookup"><span data-stu-id="9a112-105">Because .NET is a massive platform, there are multiple articles in this documentation which show how you can get started with .NET, each from a different perspective.</span></span>
 
-## <a name="get-started-using-net-languages"></a><span data-ttu-id="31ee2-107">Introduzione all'uso dei linguaggi .NET</span><span class="sxs-lookup"><span data-stu-id="31ee2-107">Get started using .NET languages</span></span>
+## <a name="get-started-using-net-languages"></a><span data-ttu-id="9a112-106">Introduzione all'uso dei linguaggi .NET</span><span class="sxs-lookup"><span data-stu-id="9a112-106">Get started using .NET languages</span></span>
 
-* <span data-ttu-id="31ee2-108">Gli articoli di [introduzione a C#](../csharp/getting-started/index.md) e le [esercitazioni su C#](../csharp/tutorials/index.md) forniscono una serie di metodi per iniziare a usare C#.</span><span class="sxs-lookup"><span data-stu-id="31ee2-108">The [C# Getting Started](../csharp/getting-started/index.md) articles and [C# Tutorials](../csharp/tutorials/index.md) provide a number of ways to get started in a C#-centric way.</span></span>
+* <span data-ttu-id="9a112-107">Gli articoli di [introduzione a C#](../csharp/getting-started/index.md) e le [esercitazioni su C#](../csharp/tutorials/index.md) forniscono una serie di metodi per iniziare a usare C#.</span><span class="sxs-lookup"><span data-stu-id="9a112-107">The [C# Getting Started](../csharp/getting-started/index.md) articles and [C# Tutorials](../csharp/tutorials/index.md) provide a number of ways to get started in a C#-centric way.</span></span>
 
-* <span data-ttu-id="31ee2-109">Le esercitazioni [introduttive con F#](../fsharp/tutorials/getting-started/index.md) offrono tre metodi principali per l'uso di F#: con Visual Studio, Visual Studio Code o gli strumenti da riga di comando.</span><span class="sxs-lookup"><span data-stu-id="31ee2-109">The [F# Getting Started](../fsharp/tutorials/getting-started/index.md) tutorials provide three primary ways you can use F#: with Visual Studio, Visual Studio Code, or command-line tools.</span></span>
+* <span data-ttu-id="9a112-108">Le esercitazioni [introduttive con F#](../fsharp/tutorials/getting-started/index.md) offrono tre metodi principali per l'uso di F#: con Visual Studio, Visual Studio Code o gli strumenti da riga di comando.</span><span class="sxs-lookup"><span data-stu-id="9a112-108">The [F# Getting Started](../fsharp/tutorials/getting-started/index.md) tutorials provide three primary ways you can use F#: with Visual Studio, Visual Studio Code, or command-line tools.</span></span>
 
-* <span data-ttu-id="31ee2-110">Gli articoli di [introduzione a Visual Basic](../visual-basic/getting-started/index.md) forniscono guide per l'uso di Visual Basic in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="31ee2-110">The [Visual Basic Getting Started](../visual-basic/getting-started/index.md) articles provide guides for using Visual Basic in Visual Studio.</span></span>
+* <span data-ttu-id="9a112-109">Gli articoli di [introduzione a Visual Basic](../visual-basic/getting-started/index.md) forniscono guide per l'uso di Visual Basic in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9a112-109">The [Visual Basic Getting Started](../visual-basic/getting-started/index.md) articles provide guides for using Visual Basic in Visual Studio.</span></span>
 
-## <a name="get-started-using-net-core"></a><span data-ttu-id="31ee2-111">Attività iniziali con .NET Core</span><span class="sxs-lookup"><span data-stu-id="31ee2-111">Get started using .NET Core</span></span>
+## <a name="get-started-using-net-core"></a><span data-ttu-id="9a112-110">Attività iniziali con .NET Core</span><span class="sxs-lookup"><span data-stu-id="9a112-110">Get started using .NET Core</span></span>
 
-* <span data-ttu-id="31ee2-112">[Introduzione a .NET Core](../core/get-started.md) fornisce una panoramica di articoli che illustrano come iniziare a usare .NET Core su diversi sistemi operativi e con diversi strumenti.</span><span class="sxs-lookup"><span data-stu-id="31ee2-112">[Getting Started with .NET Core](../core/get-started.md) provides an overview of articles which show how to get started with .NET Core on different operating systems and using different tools.</span></span>
+* <span data-ttu-id="9a112-111">[Introduzione a .NET Core](../core/get-started.md) fornisce una panoramica di articoli che illustrano come iniziare a usare .NET Core su diversi sistemi operativi e con diversi strumenti.</span><span class="sxs-lookup"><span data-stu-id="9a112-111">[Getting Started with .NET Core](../core/get-started.md) provides an overview of articles which show how to get started with .NET Core on different operating systems and using different tools.</span></span>
 
-* <span data-ttu-id="31ee2-113">Le [esercitazioni di .NET Core](../core/tutorials/index.md) descrivono vari metodi per iniziare a usare .NET Core con il sistema operativo e gli strumenti preferiti.</span><span class="sxs-lookup"><span data-stu-id="31ee2-113">The [.NET Core Tutorials](../core/tutorials/index.md) detail a number of ways you can get started with .NET Core using your operating system and tooling of choice.</span></span>
+* <span data-ttu-id="9a112-112">Le [esercitazioni di .NET Core](../core/tutorials/index.md) descrivono vari metodi per iniziare a usare .NET Core con il sistema operativo e gli strumenti preferiti.</span><span class="sxs-lookup"><span data-stu-id="9a112-112">The [.NET Core Tutorials](../core/tutorials/index.md) detail a number of ways you can get started with .NET Core using your operating system and tooling of choice.</span></span>
 
-## <a name="get-started-using-docker-on-net-framework"></a><span data-ttu-id="31ee2-114">Attività iniziali con Docker in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="31ee2-114">Get started using Docker on .NET Framework</span></span>
+## <a name="get-started-using-docker-on-net-framework"></a><span data-ttu-id="9a112-113">Attività iniziali con Docker in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="9a112-113">Get started using Docker on .NET Framework</span></span>
 
-<span data-ttu-id="31ee2-115">L'articolo [Docker su .NET Framework](../framework/docker/index.md) illustra come usare .NET Framework nei contenitori Docker di Windows.</span><span class="sxs-lookup"><span data-stu-id="31ee2-115">[Docker on .NET Framework](../framework/docker/index.md) shows how you can use .NET Framework on Windows Docker containers.</span></span>
+<span data-ttu-id="9a112-114">L'articolo [Docker su .NET Framework](../framework/docker/index.md) illustra come usare .NET Framework nei contenitori Docker di Windows.</span><span class="sxs-lookup"><span data-stu-id="9a112-114">[Docker on .NET Framework](../framework/docker/index.md) shows how you can use .NET Framework on Windows Docker containers.</span></span>

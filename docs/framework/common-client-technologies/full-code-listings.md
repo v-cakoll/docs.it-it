@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742023"
 ---
 # <a name="full-code-listings"></a><span data-ttu-id="9f78c-102">Listati di codice completi</span><span class="sxs-lookup"><span data-stu-id="9f78c-102">Full Code Listings</span></span>
 <span data-ttu-id="9f78c-103">Questo argomento contiene il listato di codice completo per un'applicazione che usa le [modifiche e i processori a inerzia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md).</span><span class="sxs-lookup"><span data-stu-id="9f78c-103">This topic contains the entire code listing for an application that uses [Manipulations and Inertia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) processors.</span></span>  

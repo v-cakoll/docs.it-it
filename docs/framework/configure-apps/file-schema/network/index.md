@@ -20,6 +20,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742614"
 ---
 # <a name="network-settings-schema"></a><span data-ttu-id="afb1b-102">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="afb1b-102">Network Settings Schema</span></span>
 <span data-ttu-id="afb1b-103">Tramite le impostazioni di rete viene specificata la modalità di connessione a Internet di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="afb1b-103">Network settings specify how the .NET Framework connects to the Internet.</span></span> <span data-ttu-id="afb1b-104">La tabella seguente descrive la funzione di ogni elemento di configurazione figlio dell'[elemento \<system.Net> (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).</span><span class="sxs-lookup"><span data-stu-id="afb1b-104">The following table describes the function of each child configuration element under the [\<system.Net> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).</span></span>  
