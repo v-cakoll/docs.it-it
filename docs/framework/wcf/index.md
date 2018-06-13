@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804271"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a><span data-ttu-id="c6230-102">Sviluppo di applicazioni orientate ai servizi con WCF</span><span class="sxs-lookup"><span data-stu-id="c6230-102">Developing Service-Oriented Applications with WCF</span></span>
 <span data-ttu-id="c6230-103">In questa sezione della documentazione vengono fornite informazioni su Windows Communication Foundation (WCF), un modello di programmazione unificato per la compilazione di applicazioni orientate ai servizi.</span><span class="sxs-lookup"><span data-stu-id="c6230-103">This section of the documentation provides information about Windows Communication Foundation (WCF), which is a unified programming model for building service-oriented applications.</span></span> <span data-ttu-id="c6230-104">Consente agli sviluppatori di compilare soluzioni transazionali protette e affidabili in grado di integrarsi a piattaforme diverse e interagire con investimenti esistenti.</span><span class="sxs-lookup"><span data-stu-id="c6230-104">It enables developers to build secure, reliable, transacted solutions that integrate across platforms and interoperate with existing investments.</span></span>

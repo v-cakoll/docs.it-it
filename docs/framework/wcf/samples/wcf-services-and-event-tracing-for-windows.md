@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809833"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a><span data-ttu-id="6de4a-102">Servizi WCF e traccia eventi per Windows</span><span class="sxs-lookup"><span data-stu-id="6de4a-102">WCF Services and Event Tracing for Windows</span></span>
 <span data-ttu-id="6de4a-103">In questo esempio viene illustrato come utilizzare la traccia analitica in Windows Communication Foundation (WCF) per generare eventi in traccia eventi per Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="6de4a-103">This sample demonstrates how to use the analytic tracing in Windows Communication Foundation (WCF) to emit events in Event Tracing for Windows (ETW).</span></span> <span data-ttu-id="6de4a-104">Le tracce analitiche sono eventi generati in punti chiave nello stack di WCF che consentono la risoluzione dei problemi dei servizi WCF in ambiente di produzione.</span><span class="sxs-lookup"><span data-stu-id="6de4a-104">The analytic traces are events emitted at key points in the WCF stack that allow troubleshooting of WCF services in production environment.</span></span>  

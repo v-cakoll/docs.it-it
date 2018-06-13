@@ -1,30 +1,21 @@
 ---
 title: 'Procedura: recuperare una raccolta di elementi (LINQ to XML) (Visual Basic)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2269f9de-8fb9-4666-b8a1-a4e754fa6a81
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a3d8cc558191b1ad672660e0d9ada4c4653cd1a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7ebc33ec8d1901ecb795f63b2fd9812d1acba347
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640170"
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a><span data-ttu-id="b1a19-102">Procedura: recuperare una raccolta di elementi (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1a19-102">How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="b1a19-103">In questo argomento viene illustrato il metodo <xref:System.Xml.Linq.XContainer.Elements%2A>,</span><span class="sxs-lookup"><span data-stu-id="b1a19-103">This topic demonstrates the <xref:System.Xml.Linq.XContainer.Elements%2A> method.</span></span> <span data-ttu-id="b1a19-104">che consente di recuperare una raccolta degli elementi figlio di un elemento.</span><span class="sxs-lookup"><span data-stu-id="b1a19-104">This method retrieves a collection of the child elements of an element.</span></span>  
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a><span data-ttu-id="f389c-102">Procedura: recuperare una raccolta di elementi (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f389c-102">How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="f389c-103">In questo argomento viene illustrato il metodo <xref:System.Xml.Linq.XContainer.Elements%2A>,</span><span class="sxs-lookup"><span data-stu-id="f389c-103">This topic demonstrates the <xref:System.Xml.Linq.XContainer.Elements%2A> method.</span></span> <span data-ttu-id="f389c-104">che consente di recuperare una raccolta degli elementi figlio di un elemento.</span><span class="sxs-lookup"><span data-stu-id="f389c-104">This method retrieves a collection of the child elements of an element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b1a19-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="b1a19-105">Example</span></span>  
- <span data-ttu-id="b1a19-106">In questo esempio vengono scorsi gli elementi figlio dell'elemento `purchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="b1a19-106">This example iterates through the child elements of the `purchaseOrder` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="f389c-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="f389c-105">Example</span></span>  
+ <span data-ttu-id="f389c-106">In questo esempio vengono scorsi gli elementi figlio dell'elemento `purchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="f389c-106">This example iterates through the child elements of the `purchaseOrder` element.</span></span>  
   
- <span data-ttu-id="b1a19-107">Questo esempio usa il documento XML seguente: [File XML di esempio: ordine di acquisto tipico (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="b1a19-107">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="f389c-107">Questo esempio usa il documento XML seguente: [File XML di esempio: ordine di acquisto tipico (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="f389c-107">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -37,7 +28,7 @@ For Each el As XElement In childElements
 Next  
 ```  
   
- <span data-ttu-id="b1a19-108">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="b1a19-108">This example produces the following output.</span></span>  
+ <span data-ttu-id="f389c-108">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="f389c-108">This example produces the following output.</span></span>  
   
 ```  
 Name: Address  
@@ -46,5 +37,5 @@ Name: DeliveryNotes
 Name: Items  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b1a19-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b1a19-109">See Also</span></span>  
- [<span data-ttu-id="b1a19-110">Assi LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1a19-110">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="f389c-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f389c-109">See Also</span></span>  
+ [<span data-ttu-id="f389c-110">Assi LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f389c-110">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
