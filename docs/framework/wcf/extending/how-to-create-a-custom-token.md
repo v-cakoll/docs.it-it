@@ -15,6 +15,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809209"
 ---
 # <a name="how-to-create-a-custom-token"></a><span data-ttu-id="48783-102">Procedura: creare un token personalizzato</span><span class="sxs-lookup"><span data-stu-id="48783-102">How to: Create a Custom Token</span></span>
 <span data-ttu-id="48783-103">Questo argomento illustra come creare un token di sicurezza personalizzato utilizzando la classe <xref:System.IdentityModel.Tokens.SecurityToken> e come integrarlo in un provider e un autenticatore di token di sicurezza personalizzati.</span><span class="sxs-lookup"><span data-stu-id="48783-103">This topic shows how to create a custom security token using the <xref:System.IdentityModel.Tokens.SecurityToken> class, and how to integrate it with a custom security token provider and authenticator.</span></span> <span data-ttu-id="48783-104">Per un esempio di codice completo, vedere il [Token personalizzato](../../../../docs/framework/wcf/samples/custom-token.md) esempio.</span><span class="sxs-lookup"><span data-stu-id="48783-104">For a complete code example see the [Custom Token](../../../../docs/framework/wcf/samples/custom-token.md) sample.</span></span>  

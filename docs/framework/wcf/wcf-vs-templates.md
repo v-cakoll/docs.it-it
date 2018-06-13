@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810018"
 ---
 # <a name="wcf-visual-studio-templates"></a><span data-ttu-id="95a99-102">Modelli di Visual Studio WCF</span><span class="sxs-lookup"><span data-stu-id="95a99-102">WCF Visual Studio Templates</span></span>
 <span data-ttu-id="95a99-103">Modelli di Visual Studio di Windows Communication Foundation (WCF) sono progetto predefiniti e modelli di elemento che è possibile usare in Visual Studio per compilare rapidamente i servizi WCF e le relative applicazioni.</span><span class="sxs-lookup"><span data-stu-id="95a99-103">Windows Communication Foundation (WCF) Visual Studio templates are predefined project and item templates you can use in Visual Studio to quickly build WCF services and surrounding applications.</span></span>  
