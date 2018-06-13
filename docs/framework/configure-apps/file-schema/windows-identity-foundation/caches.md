@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755214"
 ---
 # <a name="ltcachesgt"></a><span data-ttu-id="6de3d-102">&lt;Memorizza nella cache&gt;</span><span class="sxs-lookup"><span data-stu-id="6de3d-102">&lt;caches&gt;</span></span>
 <span data-ttu-id="6de3d-103">Registra le cache usate per i token di sessione e il rilevamento riproduzione token.</span><span class="sxs-lookup"><span data-stu-id="6de3d-103">Registers the caches used for session tokens and token replay detection.</span></span>  

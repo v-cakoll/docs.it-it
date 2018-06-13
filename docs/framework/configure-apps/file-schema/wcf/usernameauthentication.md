@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754863"
 ---
 # <a name="ltusernameauthenticationgt"></a><span data-ttu-id="d844a-102">&lt;userNameAuthentication&gt;</span><span class="sxs-lookup"><span data-stu-id="d844a-102">&lt;userNameAuthentication&gt;</span></span>
 <span data-ttu-id="d844a-103">Specifica le credenziali di un servizio in base a nome utente e password.</span><span class="sxs-lookup"><span data-stu-id="d844a-103">Specifies a service's credentials based on user name and password.</span></span>  

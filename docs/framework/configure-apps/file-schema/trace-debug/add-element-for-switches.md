@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747454"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a><span data-ttu-id="169de-102">&lt;aggiungere&gt; elemento per &lt;switch&gt;</span><span class="sxs-lookup"><span data-stu-id="169de-102">&lt;add&gt; Element for &lt;switches&gt;</span></span>
 <span data-ttu-id="169de-103">Specifica il livello in cui viene impostata un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="169de-103">Specifies the level where a trace switch is set.</span></span>  

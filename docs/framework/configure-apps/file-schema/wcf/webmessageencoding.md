@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755266"
 ---
 # <a name="ltwebmessageencodinggt"></a><span data-ttu-id="5d0a6-102">&lt;webMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="5d0a6-102">&lt;webMessageEncoding&gt;</span></span>
 <span data-ttu-id="5d0a6-103">Consente alle codifiche di messaggi XML di testo normale e JSON (JavaScript Object Notation) e al contenuto binario "non elaborato" di essere letti e scritti quando vengono usati in un'associazione Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="5d0a6-103">Enables plain-text XML, JavaScript Object Notation (JSON) message encodings and "raw" binary content to be read and written when used in a Windows Communication Foundation (WCF) binding.</span></span>  

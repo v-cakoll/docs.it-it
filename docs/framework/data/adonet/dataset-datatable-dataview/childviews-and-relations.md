@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755383"
 ---
 # <a name="childviews-and-relations"></a><span data-ttu-id="98473-102">Oggetti ChildView e relazioni</span><span class="sxs-lookup"><span data-stu-id="98473-102">ChildViews and Relations</span></span>
 <span data-ttu-id="98473-103">Se esiste una relazione tra le tabelle di un tipo <xref:System.Data.DataSet>, è possibile creare un tipo <xref:System.Data.DataView> contenente le righe della tabella figlio correlata usando il metodo <xref:System.Data.DataRowView.CreateChildView%2A> di <xref:System.Data.DataRowView> per le righe della tabella padre.</span><span class="sxs-lookup"><span data-stu-id="98473-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="98473-104">Ad esempio, il codice seguente consente di visualizzare **categorie** e le relative **prodotti** in ordine alfabetico per **CategoryName** e **ProductName** .</span><span class="sxs-lookup"><span data-stu-id="98473-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  

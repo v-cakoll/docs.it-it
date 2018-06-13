@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265687"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="78097-102">Operatore | (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="78097-102">| Operator (C# Reference)</span></span>
 <span data-ttu-id="78097-103">Gli operatori `|` binari sono predefiniti per i tipi integrali e `bool`.</span><span class="sxs-lookup"><span data-stu-id="78097-103">Binary `|` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="78097-104">Per i tipi integrali, `|` calcola l'operatore OR bit per bit dei relativi operandi.</span><span class="sxs-lookup"><span data-stu-id="78097-104">For integral types, `|` computes the bitwise OR of its operands.</span></span> <span data-ttu-id="78097-105">Per gli operandi `bool`, `|` calcola l'operatore OR logico dei relativi operandi, ovvero, il risultato è `false` se e solo se entrambi gli operandi sono `false`.</span><span class="sxs-lookup"><span data-stu-id="78097-105">For `bool` operands, `|` computes the logical OR of its operands; that is, the result is `false` if and only if both its operands are `false`.</span></span>  

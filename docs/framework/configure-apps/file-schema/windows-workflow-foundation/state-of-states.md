@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756852"
 ---
 # <a name="ltstategt-of-ltstatesgt"></a><span data-ttu-id="6d868-102">&lt;lo stato&gt; di &lt;stati&gt;</span><span class="sxs-lookup"><span data-stu-id="6d868-102">&lt;state&gt; of &lt;states&gt;</span></span>
 <span data-ttu-id="6d868-103">Elemento di configurazione contenente lo stato dell'attività sottoscritta per la quale deve essere generato un record di rilevamento.</span><span class="sxs-lookup"><span data-stu-id="6d868-103">A configuration element that contains the state of the subscribed activity for which a tracking record should be emitted.</span></span>  

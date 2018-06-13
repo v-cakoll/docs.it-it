@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756202"
 ---
 # <a name="association-set-end"></a><span data-ttu-id="9f253-102">entità finale del set di associazioni</span><span class="sxs-lookup"><span data-stu-id="9f253-102">association set end</span></span>
 <span data-ttu-id="9f253-103">Un *fine del set di associazioni* identifica il [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) e [set di entità](../../../../docs/framework/data/adonet/entity-set.md) alla fine di un [set di associazioni](../../../../docs/framework/data/adonet/association-set.md).</span><span class="sxs-lookup"><span data-stu-id="9f253-103">An *association set end* identifies the [entity type](../../../../docs/framework/data/adonet/entity-type.md) and the [entity set](../../../../docs/framework/data/adonet/entity-set.md) at the end of an [association set](../../../../docs/framework/data/adonet/association-set.md).</span></span> <span data-ttu-id="9f253-104">Le entità finali del set di associazioni sono definite come parte di un set di associazioni. Un set di associazioni deve disporre esattamente di due entità finali.</span><span class="sxs-lookup"><span data-stu-id="9f253-104">Association set ends are defined as part of an association set; an association set must have exactly two association set ends.</span></span>  
