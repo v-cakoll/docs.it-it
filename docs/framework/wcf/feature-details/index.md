@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494709"
 ---
 # <a name="wcf-feature-details"></a>Dettagli delle funzionalità di WCF
 Windows Communication Foundation (WCF) consente di esercitare un controllo esteso sulle funzioni di messaggistica di un'applicazione. Negli argomenti contenuti in questa sezione vengono descritte in dettaglio le funzionalità disponibili. Per ulteriori informazioni sulla programmazione di base, vedere [programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md).  

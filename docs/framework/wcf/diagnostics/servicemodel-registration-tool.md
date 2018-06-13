@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473396"
 ---
 # <a name="servicemodel-registration-tool"></a>Strumento di registrazione di ServiceModel
 Lo strumento di registrazione di ServiceModel è uno strumento della riga di comando che consente di gestire la registrazione di ServiceModel su un determinato computer. Per ulteriori informazioni su questo strumento, vedere [strumento di registrazione ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md).

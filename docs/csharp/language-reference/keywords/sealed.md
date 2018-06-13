@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172123"
 ---
 # <a name="sealed-c-reference"></a>sealed (Riferimenti per C#)
 Quando applicato a una classe, il modificatore `sealed` impedisce che altre classi ereditino da esso. Nell'esempio seguente, la classe `B` eredita dalla classe `A`, ma nessuna classe può ereditare dalla classe `B`.  

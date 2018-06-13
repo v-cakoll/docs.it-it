@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 43dc5f77d28535b8f0f000cf10323384e58e8148
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450011"
 ---
 # <a name="metadata-global-static-functions"></a>Funzioni statiche globali dei metadati
 A partire dal [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], la documentazione per il `_Cor*`, `CoInitialize*`, `CoUninitialize*`, e `CoEEShutDownCOM` funzioni, che riguardano l'hosting, si trova in [funzioni di Hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md). Non esistono funzioni statiche globali che riguardano i metadati.  

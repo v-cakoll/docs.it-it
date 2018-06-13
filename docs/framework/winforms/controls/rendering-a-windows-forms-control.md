@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541388"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Rendering di un controllo Windows Form
 Per il rendering si intende il processo di creazione di una rappresentazione visiva sullo schermo dell'utente. Windows Form utilizza [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (la nuova libreria grafica di Windows) per il rendering. Le classi gestite che forniscono accesso a [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] presenti il <xref:System.Drawing?displayProperty=nameWithType> dello spazio dei nomi e i relativi sottospazi dei nomi.  

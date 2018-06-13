@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4c77edfff640f796dd3f345eaeb4728830c5f4c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449144"
 ---
 # <a name="imetadataemit-interface"></a>Interfaccia IMetaDataEmit
 Fornisce metodi per creare, modificare e salvare i metadati sull'assembly nell'ambito attualmente definito. I metadati possono essere archiviato in memoria o salvati su disco.  

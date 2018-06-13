@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a11e9919dc1338c4b67c3c4b0f082e330c29d9eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445082"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>Metodo IMetaDataEmit::DefineCustomAttribute
 Crea una definizione per un attributo personalizzato con la firma dei metadati specificato, per collegare l'oggetto specificato e ottiene un token per tale definizione di attributo personalizzato.  

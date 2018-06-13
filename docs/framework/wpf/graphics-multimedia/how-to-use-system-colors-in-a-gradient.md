@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562180"
 ---
 # <a name="how-to-use-system-colors-in-a-gradient"></a>Procedura: utilizzare i colori di sistema in una sfumatura
 Per utilizzare un colore di sistema in una sfumatura, si utilizza il  *\<SystemColor >* colore e  *\<SystemColor >* ColorKey proprietà statiche della <xref:System.Windows.SystemColors> classe per ottenere un riferimento al colore, in cui  *\<SystemColor >* è il nome del colore di sistema desiderato. Utilizzare il  *\<SystemColor >* ColorKey proprietà quando si desidera creare un riferimento dinamico viene aggiornato automaticamente quando cambia il tema del sistema. In caso contrario, utilizzare il  *\<SystemColor >* proprietà dei colori.  

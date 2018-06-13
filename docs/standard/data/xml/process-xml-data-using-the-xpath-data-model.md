@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569955"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>Elaborazione di dati XML con il modello di dati XPath
 Lo spazio dei nomi <xref:System.Xml?displayProperty=nameWithType> fornisce una rappresentazione programmatica in memoria di documenti, frammenti, nodi o set di nodi XML usando la classe <xref:System.Xml.XmlDocument> o la classe <xref:System.Xml.XPath.XPathDocument>.  
