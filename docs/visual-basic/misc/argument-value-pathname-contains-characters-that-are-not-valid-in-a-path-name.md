@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599190"
 ---
 # <a name="argument-value-39ltpathnamegt39-contains-characters-that-are-not-valid-in-a-path-name"></a>Valore dell'argomento &#39; &lt;pathname&gt; &#39; contiene caratteri non validi in un nome di percorso
 Il nome di un percorso contiene uno più caratteri non validi.  

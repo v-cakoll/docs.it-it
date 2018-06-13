@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636565"
 ---
 # <a name="get-not-supported-at-run-time"></a>Get non supportato in fase di esecuzione
 Si è provato a leggere una proprietà in fase di esecuzione che è accessibile solo in fase di progettazione.  

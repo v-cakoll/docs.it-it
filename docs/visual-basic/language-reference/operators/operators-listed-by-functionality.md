@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599063"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>Elenco degli operatori per funzionalità (Visual Basic)
 Vedere una delle categorie elencate di seguito, o aprire questa parte della tabella della Guida del contenuto per visualizzare un elenco alfabetico di operatori di Visual Basic.  
