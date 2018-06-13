@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 711c85b930617632d69497e4a9cf0a74360d27f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415107"
 ---
 # <a name="icordebugcodeenumnext-method"></a>Metodo ICorDebugCodeEnum::Next
 Ottiene il numero specificato di istanze di "ICorDebugCode" dell'enumerazione, a partire dalla posizione corrente.  

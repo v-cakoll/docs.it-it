@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529441"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Procedura dettagliata: creazione di un form Master-Details mediante due controlli DataGridView Windows Form
 Uno degli scenari più comuni per l'utilizzo di <xref:System.Windows.Forms.DataGridView> controllo è il *master-Details* form, in cui viene visualizzata una relazione padre-figlio tra due tabelle di database. La selezione di righe nella tabella master, la tabella di dettagli per l'aggiornamento con i dati figlio corrispondente.  

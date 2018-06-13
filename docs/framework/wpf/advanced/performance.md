@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546084"
 ---
 # <a name="performance"></a>Prestazioni
 Per prestazioni ottimali delle applicazioni massime progettazione applicazione e la conoscenza delle procedure consigliate per necessaria [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] lo sviluppo di applicazioni. Negli argomenti di questa sezione vengono fornite informazioni aggiuntive sulla compilazione ad alte prestazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni.  

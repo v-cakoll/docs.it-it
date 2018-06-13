@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7deab95db2e7ccfd167f3158f0f008c6b077a012
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416439"
 ---
 # <a name="icordebugobjectvalueisvalueclass-method"></a>Metodo ICorDebugObjectValue::IsValueClass
 Ottiene un valore che indica se il valore di questo oggetto è un tipo di valore.  

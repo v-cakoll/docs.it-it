@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf6d4acb7d1156babbd698201c5aea2810644db8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415402"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>Metodo ICorDebugManagedCallback2::DestroyConnection
 Notifica al debugger che la connessione specificata è stata terminata.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541070"
 ---
 # <a name="collecting-ink"></a>Raccolta di input penna
 La raccolta di input penna è una delle funzionalità principali della piattaforma [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md). In questo argomento illustra i metodi per la raccolta di input penna in Windows Presentation Foundation (WPF).  

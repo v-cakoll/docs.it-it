@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754132"
 ---
 # <a name="ltclientviagt"></a>&lt;clientVia&gt;
 Specifica l'URI per il quale creare il canale del trasporto. Per altre informazioni, vedere <xref:System.ServiceModel.Description.ClientViaBehavior>.  

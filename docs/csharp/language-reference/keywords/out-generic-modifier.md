@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269614"
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (Modificatore generico) (Riferimenti per C#)
 Per i parametri di tipo generico, la parola chiave `out` specifica che il parametro di tipo è covariante. È possibile usare la parola chiave `out` in interfacce e delegati generici.  

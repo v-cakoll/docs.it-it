@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542249"
 ---
 # <a name="windows-forms"></a>Windows Form
 I form sono l'unità base di un'applicazione e di conseguenza è fondamentale fare molta attenzione alla loro funzione e progettazione. Un form è una sorta di foglio o di lavagna pulita, in cui uno sviluppatore inserisce controlli, al fine di creare un'interfaccia utente e un codice per la modifica dei dati. A tal fine, Visual Studio offre un ambiente di sviluppo integrato (IDE) per semplificare la scrittura di codice, nonché un controllo rich impostare scritta con la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Completando la funzionalità di tali controlli con il codice creato, è possibile sviluppare velocemente e senza difficoltà le soluzioni desiderate.  

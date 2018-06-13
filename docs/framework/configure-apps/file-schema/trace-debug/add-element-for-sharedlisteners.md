@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752611"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;aggiungere&gt; elemento per &lt;sharedListeners&gt;
 Aggiunge un listener alla raccolta `sharedListeners`. `sharedListeners` è una raccolta di listener che qualsiasi [ \<origine >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) o [ \<traccia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) possono fare riferimento.  Per impostazione predefinita, nei listener di `sharedListeners` insieme non vengono inseriti in un `Listeners` insieme. Devono essere aggiunti in base al nome per il [ \<origine >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) o [ \<traccia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Non è possibile ottenere i listener `sharedListeners` insieme nel codice in fase di esecuzione.  

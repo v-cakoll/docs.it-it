@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541333"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Callback e convalida delle proprietà di dipendenza
 Questo argomento descrive come creare proprietà di dipendenza usando le implementazioni personalizzate alternative per funzionalità correlate alle proprietà, ad esempio la determinazione della convalida, i callback richiamati ogni volta che il valore effettivo della proprietà viene modificato e l'override delle possibili influenze esterne sulla determinazione del valore. In questo argomento vengono anche presentati scenari in cui è possibile espandere i comportamenti predefiniti del sistema di proprietà usando queste tecniche.  

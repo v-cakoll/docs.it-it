@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410390"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Strumento per la generazione e la modifica di manifesti)
 Lo Strumento per la generazione e la modifica di manifesti (Mage.exe) è uno strumento da riga di comando che supporta la creazione e la modifica dei manifesti di applicazione e di distribuzione. In quanto strumento da riga di comando, Mage.exe può essere eseguito sia da script batch sia da altre applicazioni basate su Windows, incluse le applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .  

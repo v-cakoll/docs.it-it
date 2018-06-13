@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530393"
 ---
 # <a name="how-to-customize-colors-in-toolstrip-applications"></a>Procedura: personalizzare colori nelle applicazioni ToolStrip
 È possibile personalizzare l'aspetto di <xref:System.Windows.Forms.ToolStrip> tramite la classe <xref:System.Windows.Forms.ToolStripProfessionalRenderer> per usare colori personalizzati.  

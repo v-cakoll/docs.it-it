@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550219"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>Procedura: decorare gli elementi figlio di un riquadro
 In questo esempio viene illustrato come associare a livello di codice uno strumento decorativo visuale agli elementi figlio di un oggetto specificato <xref:System.Windows.Controls.Panel>.  

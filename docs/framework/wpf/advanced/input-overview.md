@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549529"
 ---
 # <a name="input-overview"></a>Cenni preliminari sull'input
 <a name="introduction"></a> Il sottosistema [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un'[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] potente che consente di ottenere input da vari dispositivi, inclusi mouse, tastiera, tocco e stilo. Questo argomento descrive i servizi forniti da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e illustra l'architettura dei sistemi di input.  

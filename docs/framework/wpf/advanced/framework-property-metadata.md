@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547462"
 ---
 # <a name="framework-property-metadata"></a>Metadati delle proprietà del framework
 Per le proprietà degli elementi oggetto considerati situati a livello di framework WPF nell'architettura di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono segnalate le opzioni di metadati delle proprietà del framework. In generale, la designazione a livello di framework WPF implica che funzionalità quali il rendering, il data binding e i miglioramenti del sistema di proprietà vengano gestite dalle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di presentazione di [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] e dai file eseguibili. Questi sistemi eseguono una query sui metadati delle proprietà del framework per determinare le caratteristiche specifiche delle funzionalità di particolari proprietà dell'elemento.  

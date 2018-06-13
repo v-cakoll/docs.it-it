@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537362"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Cenni preliminari sull'utilizzo di controlli in Windows Form
 In questo argomento vengono descritti gli elementi fondamentali di un'applicazione Windows Form e fornisce un esempio semplice che utilizza i controlli e gestisce gli eventi in un'applicazione Windows Form.  

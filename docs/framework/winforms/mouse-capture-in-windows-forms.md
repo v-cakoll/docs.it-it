@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538408"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Mouse capture in Windows Form
 *Passa il mouse capture* fa riferimento a in presenza di un controllo dell'input del mouse tutti i comandi. Quando un controllo ha acquisito il mouse, riceve l'input del mouse o meno il puntatore si trova all'interno dei bordi.  

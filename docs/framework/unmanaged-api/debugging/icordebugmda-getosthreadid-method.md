@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20833624b4b853a1a56964e11a25f446c6b39053
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414713"
 ---
 # <a name="icordebugmdagetosthreadid-method"></a>Metodo ICorDebugMDA::GetOSThreadId
 Ottiene l'identificatore del thread del sistema operativo (sistema operativo) su cui l'assistente al debug gestito (MDA) rappresentato da [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) è in esecuzione.  

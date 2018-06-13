@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216180"
 ---
 # <a name="contextual-keywords-c-reference"></a>Parole chiave contestuali (Riferimenti per C#)
 Una parola chiave contestuale viene usata per conferire un significato particolare nel codice, ma non è una parola riservata in C#. Questa sezione presenta le seguenti parole chiave contestuali:  

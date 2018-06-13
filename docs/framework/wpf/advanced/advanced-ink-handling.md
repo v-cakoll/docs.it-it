@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539029"
 ---
 # <a name="advanced-ink-handling"></a>Gestione avanzata dell'input penna
 Il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene fornito con il <xref:System.Windows.Controls.InkCanvas>, e un elemento è possibile inserire nell'applicazione per avviare subito la raccolta e visualizzare input penna. Tuttavia, se il <xref:System.Windows.Controls.InkCanvas> controllo non fornisce un livello sufficiente di controllo, è possibile mantenere il controllo a un livello superiore personalizzando la propria raccolta di input penna e classi per il rendering di input penna utilizzando <xref:System.Windows.Input.StylusPlugIns>.  
