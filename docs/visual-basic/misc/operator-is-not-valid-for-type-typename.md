@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638531"
 ---
 # <a name="operator-is-not-valid-for-type-39lttypenamegt39"></a>Operatore non è valido per il tipo &#39; &lt;typename&gt;&#39;
 Un operatore non è appropriato per i tipi.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804713"
 ---
 # <a name="significant-traces"></a>Tracce significative
 In questo argomento vengono elencate alcune delle tracce principali generate da Windows Communication Foundation (WCF).  

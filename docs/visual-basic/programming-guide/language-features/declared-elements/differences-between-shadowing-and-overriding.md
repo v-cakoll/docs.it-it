@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649633"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Differenze tra shadowing e override (Visual Basic)
 Quando si definisce una classe che eredita da una classe base, a volte si desidera ridefinire uno o più degli elementi nella classe derivata della classe base. Shadowing e override sono entrambi disponibili per questo scopo.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640606"
 ---
 # <a name="target-folder-is-a-file"></a>La cartella di destinazione è un file
 Si sta specificando un file durante il tentativo di eseguire un'azione correlata a una cartella.  

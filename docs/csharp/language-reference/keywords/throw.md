@@ -16,6 +16,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457495"
 ---
 # <a name="throw-c-reference"></a>throw (Riferimenti per C#)
 Segnala l'occorrenza di un'eccezione durante l'esecuzione del programma.  

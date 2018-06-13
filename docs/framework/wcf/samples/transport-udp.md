@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808416"
 ---
 # <a name="transport-udp"></a>Trasporto UDP
 L'esempio trasporto UDP illustra come implementare unicast e multicast come un trasporto personalizzato di Windows Communication Foundation (WCF) UDP. L'esempio descrive la procedura consigliata per la creazione di un trasporto personalizzato in WCF, utilizzando il framework del canale e seguendo le procedure consigliate WCF. I passaggi per creare un trasporto personalizzato sono i seguenti:  

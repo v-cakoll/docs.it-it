@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644303"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Procedura dettagliata: implementazione dell'ereditarietà con gli oggetti COM (Visual Basic)
 È possibile derivare classi Visual Basic da `Public` classi di oggetti COM, anche quelli creati in versioni precedenti di Visual Basic. Le proprietà e metodi delle classi ereditate da oggetti COM possono essere sottoposto a override o sottoposti a overload solo come proprietà e metodi di qualsiasi altra classe di base possono essere sottoposto a override o di overload. Ereditarietà dagli oggetti COM è utile quando si dispone di una libreria di classe esistente che non si desidera ricompilare.  
