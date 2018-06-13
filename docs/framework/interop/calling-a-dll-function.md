@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387133"
 ---
 # <a name="calling-a-dll-function"></a><span data-ttu-id="35edb-102">Chiamata a una funzione di DLL</span><span class="sxs-lookup"><span data-stu-id="35edb-102">Calling a DLL Function</span></span>
 <span data-ttu-id="35edb-103">Anche se le chiamate a funzioni di DLL non gestite sono quasi identiche alle chiamate ad altro codice gestito, esistono alcune differenze che possono rendere apparentemente poco chiaro l'uso delle funzioni di DLL.</span><span class="sxs-lookup"><span data-stu-id="35edb-103">Although calling unmanaged DLL functions is nearly identical to calling other managed code, there are differences that can make DLL functions seem confusing at first.</span></span> <span data-ttu-id="35edb-104">In questa sezione vengono presentati argomenti che descrivono alcuni aspetti meno comuni delle chiamate.</span><span class="sxs-lookup"><span data-stu-id="35edb-104">This section introduces topics that describe some of the unusual calling-related issues.</span></span>  

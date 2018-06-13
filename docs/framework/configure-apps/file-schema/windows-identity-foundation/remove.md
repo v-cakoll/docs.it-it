@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755077"
 ---
 # <a name="ltremovegt"></a><span data-ttu-id="d4302-102">&lt;remove&gt;</span><span class="sxs-lookup"><span data-stu-id="d4302-102">&lt;remove&gt;</span></span>
 <span data-ttu-id="d4302-103">Rimuove il gestore di token di sicurezza specificato dalla raccolta di gestori di token.</span><span class="sxs-lookup"><span data-stu-id="d4302-103">Removes the specified security token handler from the token handler collection.</span></span>  

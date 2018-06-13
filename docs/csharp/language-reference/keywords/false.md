@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214212"
 ---
 # <a name="false-c-reference"></a><span data-ttu-id="28566-102">false (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="28566-102">false (C# Reference)</span></span>
 <span data-ttu-id="28566-103">Usato come operatore di overload o come valore letterale:</span><span class="sxs-lookup"><span data-stu-id="28566-103">Used as an overloaded operator or as a literal:</span></span>  

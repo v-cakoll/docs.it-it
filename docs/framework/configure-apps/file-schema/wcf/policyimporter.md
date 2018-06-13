@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753027"
 ---
 # <a name="ltpolicyimportergt"></a><span data-ttu-id="b37eb-102">&lt;policyImporter&gt;</span><span class="sxs-lookup"><span data-stu-id="b37eb-102">&lt;policyImporter&gt;</span></span>
 <span data-ttu-id="b37eb-103">Specifica un'unità di importazione dei criteri che controlla l'importazione di asserzioni di criteri personalizzati sulle associazioni.</span><span class="sxs-lookup"><span data-stu-id="b37eb-103">Specifies a policy importer that controls the import of custom policy assertions about bindings.</span></span>  
