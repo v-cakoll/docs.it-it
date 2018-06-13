@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388056"
 ---
 # <a name="pinvokestackimbalance-mda"></a>MDA pInvokeStackImbalance
 L'assistente al debug gestito `pInvokeStackImbalance` viene attivato quando CLR rileva che la profondità dello stack dopo una chiamata PInvoke non corrisponde a quella prevista, in base alla convenzione di chiamata specificata nell'attributo <xref:System.Runtime.InteropServices.DllImportAttribute> e alla dichiarazione dei parametri nella firma gestita.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365696"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Procedura: creare un servizio dati tramite un'origine dati ADO.NET Entity Framework (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] espone i dati di entità come servizio dati. Questi dati di entità viene eseguiti il [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] quando l'origine dati è un database relazionale. In questo argomento viene illustrato come creare un [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-basato sul modello di dati in un'applicazione Web di Visual Studio che si basa su un database esistente e Usa questo modello di dati per creare un nuovo servizio dati.  

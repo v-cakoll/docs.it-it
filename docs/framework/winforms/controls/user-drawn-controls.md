@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542197"
 ---
 # <a name="user-drawn-controls"></a>Controlli creati dall'utente
 .NET Framework offre la possibilità di sviluppare facilmente controlli personalizzati. È possibile creare un controllo utente, che è un set standard di controlli di raggruppati dal codice, oppure è possibile progettare un controllo personalizzato da zero backup. È anche possibile utilizzare l'ereditarietà per creare un controllo che eredita da un controllo esistente e aggiungere estenderne le funzionalità intrinseche. Il meccanismo adottato, .NET Framework fornisce la funzionalità per creare un'interfaccia grafica personalizzata per qualsiasi controllo creato.  

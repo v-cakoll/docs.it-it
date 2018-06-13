@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365605"
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Integrazione di risorse come partecipanti a una transazione
 Ogni risorsa che partecipa a una transazione viene gestita dalla gestione risorse, le cui azioni vengono coordinate dalla gestione transazioni. La coordinazione si basa sull'invio di notifiche ai partecipanti che hanno utilizzato la gestione transazioni per integrarsi nella transazione.  

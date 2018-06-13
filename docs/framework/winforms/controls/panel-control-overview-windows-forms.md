@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539348"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Cenni preliminari sul controllo Panel (Windows Form)
 Windows Form <xref:System.Windows.Forms.Panel> controlli vengono utilizzati per fornire un raggruppamento identificabile per altri controlli. In genere, utilizzare i pannelli di suddividere un form dalla funzione. Ad esempio, potrebbe essere un modulo d'ordine che specifica le opzioni di spedizione, ad esempio quali notturno vettore da usare. Raggruppamento di tutte le opzioni in un pannello concede all'utente un'indicazione visiva logica. In fase di progettazione tutti i controlli possono essere spostati facilmente, quando si sposta il <xref:System.Windows.Forms.Panel> controllare tutti i controlli in esso contenuti, troppo spostano. I controlli raggruppati in un pannello è possibile accedere tramite il relativo <xref:System.Windows.Forms.Control.Controls%2A> proprietà. Questa proprietà restituisce una raccolta di <xref:System.Windows.Forms.Control> istanze, pertanto è necessario eseguire il cast di un controllo in genere recuperate in questo modo al relativo tipo specifico.  

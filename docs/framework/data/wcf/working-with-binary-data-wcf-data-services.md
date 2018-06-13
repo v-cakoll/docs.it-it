@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365371"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Utilizzo di dati binari (WCF Data Services)
 Il [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client consente di recuperare e aggiornare i dati binari da un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed in uno dei modi seguenti:  

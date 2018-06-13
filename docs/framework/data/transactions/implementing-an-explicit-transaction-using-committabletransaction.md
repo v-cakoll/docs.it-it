@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365683"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementazione di una transazione esplicita utilizzando CommittableTransaction
 A differenza della classe <xref:System.Transactions.CommittableTransaction>, che consente di utilizzare le transazioni in modo implicito, la classe <xref:System.Transactions.TransactionScope> consente di utilizzare le transazioni in modo esplicito. Questa classe è utile nelle applicazioni che utilizzano la stessa transazione per più chiamate di funzione o di thread. A differenza della classe <xref:System.Transactions.TransactionScope>, il writer di applicazione deve chiamare in modo specifico i metodi <xref:System.Transactions.CommittableTransaction.Commit%2A> e <xref:System.Transactions.Transaction.Rollback%2A>, rispettivamente per interrompere la transazione o per eseguirne il commit.  

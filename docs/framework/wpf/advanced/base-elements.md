@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539465"
 ---
 # <a name="base-elements"></a>Elementi di base
 Quattro classi principali<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, e <xref:System.Windows.FrameworkContentElement>-implementare una percentuale sostanziale delle funzionalità elemento comuni disponibili nella programmazione WPF. Queste quattro classi sono definite in questo SDK come le classi di elemento di base.  

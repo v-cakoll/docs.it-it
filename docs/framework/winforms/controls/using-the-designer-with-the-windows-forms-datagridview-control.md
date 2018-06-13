@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539825"
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Utilizzo della finestra di progettazione con il controllo DataGridView di Windows Form
 Visual Studio fornisce il supporto per il `DataGridView` controllo che consente di eseguire numerose attività di impostazione senza scrivere codice. Tali attività includono il controllo a un'origine dati, la modifica delle colonne utilizzato per visualizzare i dati di associazione e a regolare l'aspetto e il comportamento di base del controllo.  

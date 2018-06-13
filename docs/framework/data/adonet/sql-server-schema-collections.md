@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361055"
 ---
 # <a name="sql-server-schema-collections"></a>Raccolte di schemi SQL Server
 Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta di schemi comuni, supporta la raccolta di schemi aggiuntivi. Le raccolte di schemi variano leggermente in base alla versione di SQL Server usata. Per determinare l'elenco delle raccolte di schemi supportati, chiamare il **GetSchema** metodo senza argomenti oppure con il nome di raccolta di schemi "MetaDataCollections". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco delle raccolte di schemi supportati, il numero delle restrizioni supportate da ciascuna raccolta e il numero di parti identificatore usate.  

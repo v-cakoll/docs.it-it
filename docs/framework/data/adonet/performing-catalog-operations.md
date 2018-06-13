@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362064"
 ---
 # <a name="performing-catalog-operations"></a>Esecuzione di operazioni di catalogo
 Per eseguire un comando per modificare un database o catalogo, ad esempio l'istruzione CREATE TABLE o CREATE PROCEDURE, creare un **comando** utilizzando le istruzioni SQL appropriate e un **connessione** oggetto. Eseguire il comando con il **ExecuteNonQuery** metodo il **comando** oggetto.  

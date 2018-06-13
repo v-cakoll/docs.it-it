@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538379"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>Controllo PrintPreviewDialog (Windows Form)
 Il controllo `PrintPreviewDialog` Windows Form è una finestra di dialogo preconfigurata che consente di visualizzare un documento così come verrà stampato e costituisce una semplice soluzione, utilizzabile nell'applicazione basata su Windows creata, per evitare di configurare una propria finestra di dialogo. Il controllo contiene pulsanti per la stampa, l'ingrandimento, la visualizzazione di una o più pagine e la chiusura della finestra di dialogo.  

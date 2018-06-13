@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539789"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Unione delle voci di menu nel controllo MenuStrip Windows Form
 Se si dispone di un'applicazione con interfaccia a documenti multipli (MDI), è possibile unire le voci di menu o interi menu del form figlio nel menu del form padre.  

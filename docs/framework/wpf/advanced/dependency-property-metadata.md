@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541697"
 ---
 # <a name="dependency-property-metadata"></a>Metadati delle proprietà di dipendenza
 Il sistema di proprietà di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] include un sistema di segnalazione dei metadati che va al di là di ciò che è possibile segnalare riguardo una proprietà tramite la reflection o le caratteristiche generali di [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. I metadati di una proprietà di dipendenza possono anche essere assegnati in modo univoco dalla classe che definisce una proprietà di dipendenza, possono essere modificati quando la proprietà di dipendenza viene aggiunta a una classe diversa ed è possibile eseguirne specificatamente l'override tramite tutte le classi derivate che ereditano la proprietà di dipendenza dalla classe di base in fase di definizione.  

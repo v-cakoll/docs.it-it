@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ca1e594250c5447e6a2313843095010739a0cadb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436650"
 ---
 # <a name="icorthreadpoolcorbindiocompletioncallback-method"></a>Metodo ICorThreadpool::CorBindIoCompletionCallback
 Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.  

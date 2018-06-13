@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541924"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Cenni preliminari sulle funzionalità bidirezionali di WPF
 A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ha molte funzionalità che supportano lo sviluppo rapido di contenuto bidirezionale, ad esempio, misto dati da sinistra a destra e a destra per sinistra nello stesso documento. Allo stesso tempo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] crea un'esperienza eccellente per gli utenti che richiedono funzionalità bidirezionali come l'arabo ed ebraico gli utenti.  

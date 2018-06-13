@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363204"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Gestione della concorrenza con DependentTransaction
 Il metodo <xref:System.Transactions.Transaction> consente di clonare un oggetto <xref:System.Transactions.Transaction.DependentClone%2A>. L'unico scopo di questo metodo è impedire il commit della transazione mentre altri blocchi di codice (ad esempio un thread di lavoro) stanno agendo su di essa. Quando le operazioni eseguite all'interno della transazione clonata sono state completate e il sistema è pronto ad eseguirne il commit, la transazione clonata può utilizzare il metodo <xref:System.Transactions.DependentTransaction.Complete%2A> per informare il creatore della transazione originale in merito. In questo modo è possibile preservare la coerenza e la correttezza dei dati.  

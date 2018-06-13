@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554898"
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Procedura: ordinare una colonna GridView quando si fa clic su un'intestazione
 In questo esempio viene illustrato come creare un <xref:System.Windows.Controls.ListView> controllo che implementa un <xref:System.Windows.Controls.GridView> consente di visualizzare la modalità e ordina il contenuto quando un utente fa clic su un'intestazione di colonna.  

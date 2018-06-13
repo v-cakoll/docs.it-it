@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 648d705f21b23feb740e1791c8f32a707b985df2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442663"
 ---
 # <a name="ihosttaskmanagersleep-method"></a>Metodo IHostTaskManager::Sleep
 Notifica all'host che l'attività corrente verrà sospeso.  

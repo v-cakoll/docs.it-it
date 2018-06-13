@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542051"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Cenni preliminari sul controllo ToolStrip (Windows Form)
 Windows Form <xref:System.Windows.Forms.ToolStrip> controllo e le classi associate forniscono un framework comune per combinare gli elementi dell'interfaccia utente nelle barre degli strumenti, barre di stato e menu. <xref:System.Windows.Forms.ToolStrip> controlli offrono esperienze in fase di progettazione che includono l'attivazione sul posto e la modifica, layout personalizzato e il raggruppamento verticale/orizzontale, ovvero la capacità delle barre degli strumenti di condividere lo spazio orizzontale o verticale.  

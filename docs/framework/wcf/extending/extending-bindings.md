@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485799"
 ---
 # <a name="extending-bindings"></a>Estensione delle associazioni
 Le associazioni specificano il trasporto, la codifica e il protocollo necessari per connettersi a un endpoint. Le estensioni di associazione e le associazioni personalizzate implementano le funzionalità personalizzate di comunicazione necessarie per supportare le funzionalità dell'applicazione.  

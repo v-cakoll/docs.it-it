@@ -17,6 +17,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955953"
 ---
 # <a name="synchronous-server-socket-example"></a>Esempio di socket server sincrono
 Il programma di esempio seguente crea un server che riceve le richieste di connessione dai client. Il server viene compilato con un socket sincrono, quindi l'esecuzione dell'applicazione server viene sospesa durante l'attesa di una connessione da un client. L'applicazione riceve una stringa dal client, visualizza la stringa nella console e quindi la restituisce al client. La stringa del client deve contenere la stringa "\<EOF>" per segnalare la fine del messaggio.  

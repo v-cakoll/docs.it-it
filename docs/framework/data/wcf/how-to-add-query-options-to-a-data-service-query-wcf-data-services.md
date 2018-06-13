@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363230"
 ---
 # <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Procedura: aggiungere opzioni di query a una query del servizio dati (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di eseguire query su un servizio dati da un'applicazione client basata su .NET Framework usando le classi del servizio dati client generate. Il modo più semplice per conseguire questo risultato consiste nel creare un 'espressione di query LINQ (Language Integrated Query) con le opzioni query desiderate. È inoltre possibile chiamare una serie di metodi di query LINQ per creare una query equivalente. È infine possibile usare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> per aggiungere opzioni query a una query. In ciascuno di questi casi l'URI generato dal client include il set di entità richiesto con le opzioni query selezionate applicate. Per ulteriori informazioni, vedere [l'esecuzione di query del servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

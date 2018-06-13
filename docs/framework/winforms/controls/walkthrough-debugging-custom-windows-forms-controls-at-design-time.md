@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542038"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Procedura dettagliata: debug di controlli di Windows Form personalizzati in fase di progettazione
 Quando si crea un controllo personalizzato, si sarà spesso che sia necessario eseguire il debug il comportamento in fase di progettazione. Ciò vale soprattutto per la creazione di una finestra di progettazione personalizzata per il controllo personalizzato. Per informazioni dettagliate, vedere [procedura dettagliata: creazione di un Windows Form controllo che accetta vantaggio di Visual Studio in fase di progettazione funzionalità](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  

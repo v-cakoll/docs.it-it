@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365527"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapping del tipo SQL-CLR
 In LINQ to SQL viene eseguito il mapping del modello di dati di un database relazionale a un modello a oggetti espresso nel linguaggio di programmazione desiderato. Quando viene eseguita l'applicazione, LINQ to SQL converte in SQL le query LINQ (Language Integrated Query) nel modello a oggetti e le invia al database per l'esecuzione. Quando il database restituisce i risultati, questi vengono nuovamente convertiti da LINQ to SQL in oggetti che è possibile usare nel linguaggio di programmazione desiderato.  

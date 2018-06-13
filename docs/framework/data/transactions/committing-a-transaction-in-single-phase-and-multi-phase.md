@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362818"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Commit di una transazione in monofase e multifase
 Ogni risorsa utilizzata in una transazione viene gestita dalla gestione risorse (in seguito indicato con la sigla GR), le cui azioni vengono coordinate dalla gestione transazioni (in seguito indicato con la sigla GT). Il [l'integrazione di risorse come partecipanti in una transazione](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) argomento viene illustrato come una risorsa (o più risorse) possono essere integrate in una transazione. Questo argomento descrive invece come coordinare il commit di una transazione fra le risorse integrate.  

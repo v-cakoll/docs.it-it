@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364477"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool di connessioni SQL Server (ADO.NET)
 Generalmente, la connessione a un server database comporta passaggi che richiedono molto tempo. È necessario, infatti, stabilire un canale fisico, ad esempio un socket oppure una named pipe. Deve verificarsi l'handshake iniziale con il server, deve essere analizzata l'informazione sulla stringa di connessione, la connessione deve essere autenticata dal server, sono necessarie verifiche per l'inserimento in un elenco nella transazione corrente e così via.  

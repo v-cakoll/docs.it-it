@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542874"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>Procedure relative al trascinamento della selezione
 Gli esempi seguenti illustrano come eseguire attività comuni utilizzando il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework di trascinamento e rilascio.  

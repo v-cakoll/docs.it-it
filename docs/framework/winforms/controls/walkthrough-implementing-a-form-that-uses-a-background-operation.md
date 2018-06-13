@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542080"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Procedura dettagliata: implementazione di un form che utilizza un'operazione in background
 Se si esegue un'operazione che richiederà molto tempo per completare, e per evitare l'interfaccia utente (UI) di rispondere o "blocco", è possibile utilizzare la <xref:System.ComponentModel.BackgroundWorker> classe per eseguire l'operazione in un altro thread.  

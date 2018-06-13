@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540319"
 ---
 # <a name="data-and-data-objects"></a>Dati e oggetti dati
 I dati trasferiti come parte di un'operazione di trascinamento e rilascio viene archiviati in un oggetto dati.  Concettualmente, un oggetto dati è costituito da uno o più delle seguenti coppie di:  

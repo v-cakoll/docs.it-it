@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361284"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gestione delle autorizzazioni con stored procedure in SQL Server
 Per creare più linee di difesa intorno al database, è possibile implementare tutto l'accesso ai dati tramite stored procedure o funzioni definite dall'utente. Revocare o negare tutte le autorizzazioni per gli oggetti sottostanti, ad esempio tabelle, e concedere autorizzazioni EXECUTE sulle stored procedure. In questo modo viene creato un perimetro di sicurezza efficace intorno ai dati e agli oggetti di database.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b1e652588d27521a04015228e86eb9af9c53346e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440814"
 ---
 # <a name="stackoverflowinfo-structure"></a>Struttura StackOverflowInfo
 Archivia il tipo di overflow che si sono verificati e informazioni sull'eccezione generata a causa dell'overflow.  

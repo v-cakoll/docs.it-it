@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542158"
 ---
 # <a name="toolstrip-control-architecture"></a>Architettura del controllo ToolStrip
 Il <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.ToolStripItem> classi forniscono un sistema flessibile ed estendibile per la visualizzazione di elementi della barra degli strumenti, stato e menu. Queste classi sono contenute nel <xref:System.Windows.Forms> dello spazio dei nomi e sono tutti in genere denominati con il prefisso "ToolStrip" (ad esempio <xref:System.Windows.Forms.ToolStripOverflow>) o con il suffisso "Strip" (ad esempio <xref:System.Windows.Forms.MenuStrip>).  

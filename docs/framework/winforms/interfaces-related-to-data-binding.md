@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541846"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Interfacce correlate al data binding
 Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] è possibile creare molte strutture dati diverse per soddisfare le esigenze di associazione dell'applicazione e dei dati in uso. Si consiglia di creare classi che forniscono o usano dati in Windows Forms. Questi oggetti possono offrire diversi livelli di funzionalità e complessità, dal data binding, all'offerta di supporto in fase di progettazione, al controllo degli errori, alla notifica delle modifiche o anche al supporto per un annullamento strutturato delle modifiche apportate ai dati.  

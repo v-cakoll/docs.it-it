@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365170"
 ---
 # <a name="data-binding"></a>Data binding
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta l'associazione ai controlli comuni, ad esempio i controlli griglia. In particolare, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definisce i modelli di base per l'associazione a una griglia dei dati e la gestione dell'associazione master-Details, sia per quanto riguarda visualizzazione e aggiornamento.  

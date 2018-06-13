@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542262"
 ---
 # <a name="using-keyboard-events"></a>Utilizzo degli eventi di tastiera
 La maggioranza dei programmi di Windows Form elabora gli input della tastiera tramite gestione dei relativi eventi. Questo argomento fornisce una panoramica degli eventi di tastiera, inclusi dettagli su quando usare ogni evento e sui dati forniti per ogni evento.  Vedere anche [panoramica dei gestori eventi (Windows Form)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Cenni preliminari sugli eventi (Windows Form)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  

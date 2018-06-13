@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360478"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Query su singola tabella (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] le query funzionano sulle origini dati che implementano il <xref:System.Collections.Generic.IEnumerable%601> interfaccia o <xref:System.Linq.IQueryable%601> interfaccia. Il <xref:System.Data.DataTable> classe non implementa l'interfaccia, è necessario chiamare il <xref:System.Data.DataTableExtensions.AsEnumerable%2A> metodo se si desidera utilizzare il <xref:System.Data.DataTable> come origine nel `From` clausola di un [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] query.  

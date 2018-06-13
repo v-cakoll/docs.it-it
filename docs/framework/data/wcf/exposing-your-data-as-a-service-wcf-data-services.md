@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363564"
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>Esposizione dei dati come un servizio (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] si integra con Visual Studio che consentono di definire più facilmente i servizi per esporre i dati come [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Creazione di un servizio dati che espone un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed prevede i passaggi di base seguenti:  

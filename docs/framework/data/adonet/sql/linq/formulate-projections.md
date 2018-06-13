@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364948"
 ---
 # <a name="formulate-projections"></a>Formulare proiezioni
 Gli esempi seguenti illustrano il modo in cui `select` istruzione nel linguaggio c# e `Select` istruzione in Visual Basic può essere combinata con altre funzionalità per formare proiezioni della query.  

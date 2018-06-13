@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365644"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Esecuzione di query sul servizio dati (WCF Data Services)
 La libreria client di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di eseguire query su un servizio dati mediante i modelli di programmazione comuni di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], compreso il linguaggio LINQ (Language Integrated Query). La libreria client traduce una query, definita nel client come un'istanza della classe <xref:System.Data.Services.Client.DataServiceQuery%601>, in un messaggio di richiesta HTTP GET. La libreria riceve il messaggio di risposta e lo converte in istanze di classi del servizio dati client. Queste classi vengono rilevate dall'oggetto <xref:System.Data.Services.Client.DataServiceContext> a cui appartiene <xref:System.Data.Services.Client.DataServiceQuery%601>.  

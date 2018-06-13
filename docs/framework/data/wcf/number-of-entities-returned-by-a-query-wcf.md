@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364999"
 ---
 # <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Procedura: determinare il numero di entità restituite da una query (WCF Data Services)
 Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è possibile determinare il numero di entità specificate nel set di entità dall'URI di una query. Il conteggio può essere incluso insieme al risultato della query o come valore integer. Per ulteriori informazioni, vedere [l'esecuzione di query del servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360350"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Caricamento posticipato e immediato
 Quando si esegue una query per un oggetto, si recupera in effetti solo l'oggetto richiesto. Il *correlati* oggetti non vengono recuperati contemporaneamente. (Per ulteriori informazioni, vedere [l'esecuzione di query tra relazioni](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Non è possibile verificare che gli oggetti correlati non siano già stati caricati, perché un tentativo di accedervi produce una richiesta che ne comporta il recupero.  

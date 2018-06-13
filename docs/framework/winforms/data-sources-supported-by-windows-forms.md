@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541177"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Origini dati supportate da Windows Form
 In genere, l'associazione dati è stato utilizzato all'interno delle applicazioni di sfruttare i dati archiviati nei database. Con l'associazione di dati di Windows Form, è possibile accedere ai dati dal database, nonché i dati in altre strutture, ad esempio matrici e raccolte, purché siano stati soddisfatti determinati requisiti minimi.  

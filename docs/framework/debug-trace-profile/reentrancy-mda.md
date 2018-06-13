@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387861"
 ---
 # <a name="reentrancy-mda"></a>rientranza (MDA)
 L'assistente al debug gestito `reentrancy` viene attivato quando viene effettuato un tentativo di transizione da codice nativo a codice gestito nei casi in cui un precedente passaggio da codice gestito a nativo non è stato eseguito mediante una transizione ordinata.  

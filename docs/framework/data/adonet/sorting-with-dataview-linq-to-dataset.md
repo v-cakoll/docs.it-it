@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365904"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Ordinamento con DataView (LINQ to DataSet)
 La possibilità di ordinare i dati in base a criteri specifici e quindi di presentarli a un client tramite un controllo dell'interfaccia utente rappresenta un aspetto importante del data binding. Con <xref:System.Data.DataView> è possibile ordinare i dati e restituire righe di dati ordinate in base a criteri specifici in diversi modi. Oltre alla relativa stringa basata su funzionalità, di ordinamento <xref:System.Data.DataView> consente inoltre di utilizzare [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] espressioni per i criteri di ordinamento. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] le espressioni consentono per le operazioni di ordinamento molto più complesse e potenti rispetto a ordinamento basato su stringa. In questo argomento vengono descritti entrambi gli approcci all'ordinamento tramite <xref:System.Data.DataView>.  

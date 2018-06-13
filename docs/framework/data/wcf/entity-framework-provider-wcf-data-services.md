@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365028"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Provider Entity Framework (WCF Data Services)
 Analogamente a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], ADO.NET Entity Framework è basato su Entity Data Model, un tipo di modello entità-relazione. Entity Framework traduce le operazioni eseguite sulla relativa implementazione di Entity Data Model, che viene chiamato il *modello concettuale*, in operazioni equivalenti su un'origine dati. Ciò rende Entity Framework il provider ideale per i servizi dati basati su dati relazionali, consentendo inoltre l'uso di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] da parte di qualsiasi database che disponga di un provider di dati con supporto per Entity Framework. Per un elenco delle origini dati che supportano attualmente Entity Framework, vedere [i provider di terze parti per Entity Framework](http://go.microsoft.com/fwlink/?LinkId=143699).  

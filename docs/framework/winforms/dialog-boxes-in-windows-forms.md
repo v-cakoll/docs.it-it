@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539903"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Finestre di dialogo in Windows Form
 Le finestre di dialogo sono usate per interagire con l'utente e recuperare informazioni. Detto semplicemente, una finestra di dialogo è un form con la proprietà dell'enumerazione <xref:System.Windows.Forms.FormBorderStyle> impostata su `FixedDialog`. È possibile costruire la propria finestre di dialogo personalizzate usando Progettazione Windows Form in Visual Studio. Per personalizzare le finestre di dialogo in base a esigenze specifiche, aggiungere controlli come `Label`, `Textbox` e `Button`. Il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] include anche finestre di dialogo predefinite, ad esempio **Apri File** e finestre di messaggio, è possibile adattare le proprie applicazioni. Per ulteriori informazioni, vedere [componenti e controlli della finestra di dialogo](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  

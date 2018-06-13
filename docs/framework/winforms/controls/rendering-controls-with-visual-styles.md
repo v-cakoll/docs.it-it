@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540904"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Rendering dei controlli con stili visivi
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] offre supporto per il rendering dei controlli e di altri elementi dell'interfaccia utente (UI) di Windows usando gli stili di visualizzazione nei sistemi operativi che li supportano. Questo argomento illustra i diversi livelli di supporto di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per il rendering dei controlli e di altri elementi dell'interfaccia utente con lo stile di visualizzazione corrente del sistema operativo.  

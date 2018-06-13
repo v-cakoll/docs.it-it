@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365410"
 ---
 # <a name="sql-server-express-user-instances"></a>Connessione alle istanze utente di SQL Server Express
 In Microsoft SQL Server Express Edition (SQL Server Express) è supportata la funzionalità istanze utente, disponibile solo quando si usa il provider di dati .NET Framework per SQL Server (`SqlClient`). Un'istanza utente è un'istanza distinta del motore di database di SQL Server Express generata da un'istanza padre. Le istanze utente consentono agli utenti non amministratori di collegarsi e connettersi ai database SQL Server Express dai propri computer locali. Ogni istanza viene eseguita nel contesto di sicurezza del singolo utente, a livello di un'istanza per ogni utente.  

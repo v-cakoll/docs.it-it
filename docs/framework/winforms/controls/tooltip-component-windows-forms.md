@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538783"
 ---
 # <a name="tooltip-component-windows-forms"></a>Componente ToolTip (Windows Form)
 Il componente <xref:System.Windows.Forms.ToolTip> di Windows Form visualizza un testo quando l'utente posiziona il puntatore sui controlli. Una descrizione comando può essere associata a qualsiasi controllo. Questo controllo, ad esempio, può essere usato se si desidera risparmiare spazio in un form, visualizzando una piccola icona su un pulsante e usando una descrizione comando per illustrare la funzione del pulsante.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540368"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Procedura: esplorare dati in Windows Form
 In un'applicazione Windows, il modo più semplice per spostarsi tra i record in un'origine dati è associare un <xref:System.Windows.Forms.BindingSource> componente per l'origine dati e quindi associare i controlli per il <xref:System.Windows.Forms.BindingSource>. È quindi possibile utilizzare il metodo di spostamento incorporate nel <xref:System.Windows.Forms.BindingSource> tali un <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> e <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Con questi metodi vengono adattate le <xref:System.Windows.Forms.BindingSource.Position%2A> e <xref:System.Windows.Forms.BindingSource.Current%2A> le proprietà del <xref:System.Windows.Forms.BindingSource> in modo appropriato. È inoltre possibile trovare un elemento e impostarlo come elemento corrente impostando la <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà.  

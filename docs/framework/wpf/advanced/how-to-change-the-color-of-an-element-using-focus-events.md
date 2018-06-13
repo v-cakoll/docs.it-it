@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543114"
 ---
 # <a name="how-to-change-the-color-of-an-element-using-focus-events"></a>Procedura: modificare il colore di un elemento utilizzando eventi di stato attivo
 In questo esempio viene illustrato come modificare il colore di un elemento quando riceve e perde lo stato attivo tramite il <xref:System.Windows.UIElement.GotFocus> e <xref:System.Windows.UIElement.LostFocus> eventi.  

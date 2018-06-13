@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541096"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Procedura: gestire gli input da tastiera a livello di form
 Windows Form consente di gestire i messaggi della tastiera a livello di form, prima che i messaggi raggiungano un controllo. Questo argomento illustra come completare questa attività.  

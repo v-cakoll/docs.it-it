@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365138"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurazione del servizio dati (WCF Data Services)
 Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], è possibile creare servizi dati che espongono [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. I dati di questi feed possono provenire da una varietà di origini dati. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] utilizza i provider di dati per esporre i dati come un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Tra tali provider sono inclusi un provider di [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], un provider di reflection e un set di interfacce del provider di servizio dati personalizzate. L'implementazione del provider definisce il modello di dati per il servizio. Per ulteriori informazioni, vedere [provider di servizi dati](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  

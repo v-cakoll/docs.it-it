@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542610"
 ---
 # <a name="fonts-wpf"></a>Tipi di carattere (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] include il supporto per una presentazione dettagliata dell'utilizzo di testo [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] i tipi di carattere. Un pacchetto di esempio di [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipi di carattere è incluso il [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].  

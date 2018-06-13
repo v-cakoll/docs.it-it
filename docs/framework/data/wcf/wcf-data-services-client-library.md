@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365514"
 ---
 # <a name="wcf-data-services-client-library"></a>Libreria client WCF Data Services
 Un'applicazione può interagire con un servizio dati basato su [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] quando è in grado di inviare una richiesta HTTP e di elaborare il feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] restituito da un servizio dati. Questa interoperabilità consente di accedere ai servizi basati su [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] da un'ampia gamma di applicazioni Web. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] include librerie client che consentono di programmare quando usano [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed da .NET Framework o le applicazioni basate su Silverlight.  

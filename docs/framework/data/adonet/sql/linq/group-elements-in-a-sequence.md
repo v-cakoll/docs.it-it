@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364503"
 ---
 # <a name="group-elements-in-a-sequence"></a>Raggruppare elementi in una sequenza
 L'operatore <xref:System.Linq.Enumerable.GroupBy%2A> consente di raggruppare gli elementi di una sequenza. Negli esempi riportati di seguito viene usato il database Northwind.  

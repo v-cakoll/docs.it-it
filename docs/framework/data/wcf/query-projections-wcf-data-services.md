@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365722"
 ---
 # <a name="query-projections-wcf-data-services"></a>Proiezioni di query (WCF Data Services)
 Proiezione fornisce un meccanismo di [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] per ridurre la quantità di dati nel feed restituito da una query specificando che solo determinate proprietà di un'entità vengano restituite nella risposta. Per ulteriori informazioni, vedere [OData: opzione Select System Query ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  
