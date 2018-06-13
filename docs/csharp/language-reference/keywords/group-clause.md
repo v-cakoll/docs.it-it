@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217484"
 ---
 # <a name="group-clause-c-reference"></a>Clausola group (Riferimento C#)
 La clausola `group` restituisce una sequenza di oggetti <xref:System.Linq.IGrouping%602> che contengono zero o più elementi corrispondenti al valore chiave per il gruppo. Ad esempio, è possibile raggruppare una sequenza di stringhe in base alla prima lettera di ogni stringa. In questo caso, la prima lettera è la chiave con tipo [char](../../../csharp/language-reference/keywords/char.md) e viene archiviata nella proprietà `Key` di ogni oggetto <xref:System.Linq.IGrouping%602>. Il compilatore deduce automaticamente il tipo della chiave.  

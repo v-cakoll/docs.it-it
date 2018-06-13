@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269661"
 ---
 # <a name="statement-keywords-c-reference"></a>Parole chiave per le istruzioni (Riferimenti per C#)
 Le istruzioni sono istruzioni per i programmi. Tranne che nei casi descritti negli argomenti a cui viene fatto riferimento nella tabella seguente, le istruzioni sono eseguite in sequenza. Nella tabella seguente sono elencate le parole chiave per le istruzioni C#. Per altre informazioni sulle istruzioni che non sono espresse con alcuna parola chiave, vedere [Istruzioni](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  

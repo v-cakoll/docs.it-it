@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527499"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Procedura: creare form figlio MDI
 Form figlio MDI sono un elemento fondamentale di [Multiple-Document Interface (MDI) Applications](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), come questi moduli sono il fulcro dell'interazione dell'utente.  

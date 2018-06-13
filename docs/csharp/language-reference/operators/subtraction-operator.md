@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271072"
 ---
 # <a name="--operator-c-reference"></a>Operatore - (Riferimenti per C#)
 L'operatore `-` ha la funzione di operatore unario o binario.  
