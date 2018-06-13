@@ -1,32 +1,23 @@
 ---
 title: Refactoring tramite una funzione pura (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7a8114dcfde7adbbdb1016bae4f2916dc28b6854
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe1ad3b189891a1655e014dc49dac00c79507a7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645015"
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a><span data-ttu-id="21cb3-102">Refactoring tramite una funzione pura (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="21cb3-102">Refactoring Using a Pure Function (Visual Basic)</span></span>
-<span data-ttu-id="21cb3-103">Nell'esempio seguente effettua il refactoring nell'esempio precedente, [Refactoring tramite un metodo di estensione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)per l'uso di una funzione pura In questo esempio, il codice per trovare il testo di un paragrafo viene spostato il metodo statico puro `ParagraphText`.</span><span class="sxs-lookup"><span data-stu-id="21cb3-103">The following example refactors the previous example, [Refactoring Using an Extension Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a><span data-ttu-id="75358-102">Refactoring tramite una funzione pura (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75358-102">Refactoring Using a Pure Function (Visual Basic)</span></span>
+<span data-ttu-id="75358-103">Nell'esempio seguente effettua il refactoring nell'esempio precedente, [Refactoring tramite un metodo di estensione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)per l'uso di una funzione pura In questo esempio, il codice per trovare il testo di un paragrafo viene spostato il metodo statico puro `ParagraphText`.</span><span class="sxs-lookup"><span data-stu-id="75358-103">The following example refactors the previous example, [Refactoring Using an Extension Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="21cb3-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="21cb3-104">Example</span></span>  
- <span data-ttu-id="21cb3-105">In questo esempio viene elaborato un documento WordprocessingML, recuperandone i nodi dei paragrafi da un documento WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="21cb3-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="21cb3-106">Viene inoltre identificato lo stile di ciascun paragrafo.</span><span class="sxs-lookup"><span data-stu-id="21cb3-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="21cb3-107">Questo esempio si basa su esempi precedenti di questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="21cb3-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="21cb3-108">Il codice oggetto del refactoring è indicato nei commenti del codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="21cb3-108">The refactored code is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="75358-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="75358-104">Example</span></span>  
+ <span data-ttu-id="75358-105">In questo esempio viene elaborato un documento WordprocessingML, recuperandone i nodi dei paragrafi da un documento WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="75358-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="75358-106">Viene inoltre identificato lo stile di ciascun paragrafo.</span><span class="sxs-lookup"><span data-stu-id="75358-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="75358-107">Questo esempio si basa su esempi precedenti di questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="75358-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="75358-108">Il codice oggetto del refactoring è indicato nei commenti del codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="75358-108">The refactored code is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="21cb3-109">Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [l'origine documento Office Open XML (Visual Basic) di creazione](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="21cb3-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="75358-109">Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [l'origine documento Office Open XML (Visual Basic) di creazione](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="75358-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="21cb3-110">In questo esempio vengono usate classi dell'assembly WindowsBase</span><span class="sxs-lookup"><span data-stu-id="21cb3-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="21cb3-111">e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="21cb3-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="75358-110">In questo esempio vengono usate classi dell'assembly WindowsBase</span><span class="sxs-lookup"><span data-stu-id="75358-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="75358-111">e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="75358-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -156,7 +147,7 @@ Module Module1
 End Module   
 ```  
   
- <span data-ttu-id="21cb3-112">L'output ottenuto con questo esempio è uguale a quello ottenuto prima del refactoring:</span><span class="sxs-lookup"><span data-stu-id="21cb3-112">This example produces the same output as before the refactoring:</span></span>  
+ <span data-ttu-id="75358-112">L'output ottenuto con questo esempio è uguale a quello ottenuto prima del refactoring:</span><span class="sxs-lookup"><span data-stu-id="75358-112">This example produces the same output as before the refactoring:</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -176,12 +167,12 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-### <a name="next-steps"></a><span data-ttu-id="21cb3-113">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="21cb3-113">Next Steps</span></span>  
- <span data-ttu-id="21cb3-114">Nell'esempio seguente viene illustrato come proiettare il codice XML in una forma diversa:</span><span class="sxs-lookup"><span data-stu-id="21cb3-114">The next example shows how to project XML into a different shape:</span></span>  
+### <a name="next-steps"></a><span data-ttu-id="75358-113">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="75358-113">Next Steps</span></span>  
+ <span data-ttu-id="75358-114">Nell'esempio seguente viene illustrato come proiettare il codice XML in una forma diversa:</span><span class="sxs-lookup"><span data-stu-id="75358-114">The next example shows how to project XML into a different shape:</span></span>  
   
--   [<span data-ttu-id="21cb3-115">Proiettando XML in una forma diversa (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="21cb3-115">Projecting XML in a Different Shape (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+-   [<span data-ttu-id="75358-115">Proiettando XML in una forma diversa (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75358-115">Projecting XML in a Different Shape (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a><span data-ttu-id="21cb3-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="21cb3-116">See Also</span></span>  
- [<span data-ttu-id="21cb3-117">Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="21cb3-117">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [<span data-ttu-id="21cb3-118">Refactoring tramite un metodo di estensione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="21cb3-118">Refactoring Using an Extension Method (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
- [<span data-ttu-id="21cb3-119">Refactoring in funzioni Pure (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="21cb3-119">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a><span data-ttu-id="75358-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="75358-116">See Also</span></span>  
+ [<span data-ttu-id="75358-117">Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75358-117">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [<span data-ttu-id="75358-118">Refactoring tramite un metodo di estensione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75358-118">Refactoring Using an Extension Method (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+ [<span data-ttu-id="75358-119">Refactoring in funzioni Pure (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75358-119">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

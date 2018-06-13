@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807759"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a><span data-ttu-id="73cb3-102">Esempio di feed di diagnostica autonomo</span><span class="sxs-lookup"><span data-stu-id="73cb3-102">Stand-Alone Diagnostics Feed Sample</span></span>
 <span data-ttu-id="73cb3-103">In questo esempio viene illustrato come creare un feed di diffusione con Windows Communication Foundation (WCF) RSS/Atom.</span><span class="sxs-lookup"><span data-stu-id="73cb3-103">This sample demonstrates how to create an RSS/Atom feed for syndication with Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="73cb3-104">È un programma "Hello World" di base che illustra le nozioni di base del modello a oggetti e configurarlo in un servizio Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="73cb3-104">It is a basic "Hello World" program that shows the basics of the object model and how to set it up on a Windows Communication Foundation (WCF) service.</span></span>  

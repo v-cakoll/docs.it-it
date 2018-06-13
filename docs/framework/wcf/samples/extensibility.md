@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805382"
 ---
 # <a name="extensibility"></a><span data-ttu-id="38d1e-102">Estendibilità</span><span class="sxs-lookup"><span data-stu-id="38d1e-102">Extensibility</span></span>
 <span data-ttu-id="38d1e-103">In questa sezione è contenuti esempi relativi all'estensibilità personalizzata e altre funzionalità di Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="38d1e-103">This section contains samples that deal with custom extensibility and other features of Windows Communication Foundation (WCF).</span></span>  

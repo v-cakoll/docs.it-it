@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804713"
 ---
 # <a name="significant-traces"></a><span data-ttu-id="d1ede-102">Tracce significative</span><span class="sxs-lookup"><span data-stu-id="d1ede-102">Significant Traces</span></span>
 <span data-ttu-id="d1ede-103">In questo argomento vengono elencate alcune delle tracce principali generate da Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="d1ede-103">This topic lists some of the major traces emitted by Windows Communication Foundation (WCF).</span></span>  

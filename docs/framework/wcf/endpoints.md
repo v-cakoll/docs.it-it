@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803394"
 ---
 # <a name="windows-communication-foundation-endpoints"></a><span data-ttu-id="6163d-102">Endpoint di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="6163d-102">Windows Communication Foundation Endpoints</span></span>
 <span data-ttu-id="6163d-103">Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) viene eseguita mediante il *endpoint* del servizio.</span><span class="sxs-lookup"><span data-stu-id="6163d-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="6163d-104">Gli endpoint forniscono ai client l'accesso alle funzionalità che offre un servizio WCF.</span><span class="sxs-lookup"><span data-stu-id="6163d-104">Endpoints provide clients access to the functionality that a WCF service offers.</span></span>  

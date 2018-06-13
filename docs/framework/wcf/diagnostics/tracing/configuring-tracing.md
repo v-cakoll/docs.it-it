@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807368"
 ---
 # <a name="configuring-tracing"></a><span data-ttu-id="a3656-102">Configurazione delle funzionalità di traccia</span><span class="sxs-lookup"><span data-stu-id="a3656-102">Configuring Tracing</span></span>
 <span data-ttu-id="a3656-103">In questo argomento viene illustrato come attivare la funzionalità di traccia, configurare origini di traccia affinché vengano create tracce e impostati livelli di traccia, impostare traccia e propagazione di attività per supportare la correlazione tra tracce end-to-end e configurare i listener di traccia affinché accedano alle tracce.</span><span class="sxs-lookup"><span data-stu-id="a3656-103">This topic describes how you can enable tracing, configure trace sources to emit traces and set trace levels, set activity tracing and propagation to support end-to-end trace correlation, and set trace listeners to access traces.</span></span>  

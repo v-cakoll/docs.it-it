@@ -1,11 +1,6 @@
 ---
 title: -/filealign
 ms.date: 03/10/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - sections compiler option [Visual Basic]
 - alignment compiler option [Visual Basic]
@@ -16,34 +11,35 @@ helpviewer_keywords:
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26ff29f00f00d3ea5dbbd0bbf01df4d7858771d0
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: cf9c854060e5254cedc6c1004ac3e4f25fbdbbd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650667"
 ---
-# <a name="-filealign"></a><span data-ttu-id="5d5ba-102">-/filealign</span><span class="sxs-lookup"><span data-stu-id="5d5ba-102">-filealign</span></span>
-<span data-ttu-id="5d5ba-103">Specifica la posizione di allineamento per le sezioni del file di output.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-103">Specifies where to align the sections of the output file.</span></span>  
+# <a name="-filealign"></a><span data-ttu-id="cb705-102">-/filealign</span><span class="sxs-lookup"><span data-stu-id="cb705-102">-filealign</span></span>
+<span data-ttu-id="cb705-103">Specifica la posizione di allineamento per le sezioni del file di output.</span><span class="sxs-lookup"><span data-stu-id="cb705-103">Specifies where to align the sections of the output file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5d5ba-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5d5ba-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cb705-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="cb705-104">Syntax</span></span>  
   
 ```  
 -filealign:number  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="5d5ba-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="5d5ba-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="cb705-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="cb705-105">Arguments</span></span>  
  `number`  
- <span data-ttu-id="5d5ba-106">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-106">Required.</span></span> <span data-ttu-id="5d5ba-107">Un valore che specifica l'allineamento delle sezioni nel file di output.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-107">A value that specifies the alignment of sections in the output file.</span></span> <span data-ttu-id="5d5ba-108">I valori validi sono 512, 1024, 2048, 4096 e 8192.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-108">Valid values are 512, 1024, 2048, 4096, and 8192.</span></span> <span data-ttu-id="5d5ba-109">I valori sono in byte.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-109">These values are in bytes.</span></span>  
+ <span data-ttu-id="cb705-106">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="cb705-106">Required.</span></span> <span data-ttu-id="cb705-107">Un valore che specifica l'allineamento delle sezioni nel file di output.</span><span class="sxs-lookup"><span data-stu-id="cb705-107">A value that specifies the alignment of sections in the output file.</span></span> <span data-ttu-id="cb705-108">I valori validi sono 512, 1024, 2048, 4096 e 8192.</span><span class="sxs-lookup"><span data-stu-id="cb705-108">Valid values are 512, 1024, 2048, 4096, and 8192.</span></span> <span data-ttu-id="cb705-109">I valori sono in byte.</span><span class="sxs-lookup"><span data-stu-id="cb705-109">These values are in bytes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5d5ba-110">Note</span><span class="sxs-lookup"><span data-stu-id="5d5ba-110">Remarks</span></span>  
- <span data-ttu-id="5d5ba-111">È possibile utilizzare il `-filealign` opzione per specificare l'allineamento delle sezioni nel file di output.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-111">You can use the `-filealign` option to specify the alignment of sections in your output file.</span></span> <span data-ttu-id="5d5ba-112">Le sezioni sono blocchi di memoria contigua in un file eseguibile portabile (PE) che contiene dati o codice.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-112">Sections are blocks of contiguous memory in a Portable Executable (PE) file that contains either code or data.</span></span> <span data-ttu-id="5d5ba-113">Il `-filealign` opzione consente di compilare l'applicazione con un allineamento non standard, la maggior parte degli sviluppatori non è necessario utilizzare questa opzione.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-113">The `-filealign` option lets you compile your application with a nonstandard alignment; most developers do not need to use this option.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cb705-110">Note</span><span class="sxs-lookup"><span data-stu-id="cb705-110">Remarks</span></span>  
+ <span data-ttu-id="cb705-111">È possibile utilizzare il `-filealign` opzione per specificare l'allineamento delle sezioni nel file di output.</span><span class="sxs-lookup"><span data-stu-id="cb705-111">You can use the `-filealign` option to specify the alignment of sections in your output file.</span></span> <span data-ttu-id="cb705-112">Le sezioni sono blocchi di memoria contigua in un file eseguibile portabile (PE) che contiene dati o codice.</span><span class="sxs-lookup"><span data-stu-id="cb705-112">Sections are blocks of contiguous memory in a Portable Executable (PE) file that contains either code or data.</span></span> <span data-ttu-id="cb705-113">Il `-filealign` opzione consente di compilare l'applicazione con un allineamento non standard, la maggior parte degli sviluppatori non è necessario utilizzare questa opzione.</span><span class="sxs-lookup"><span data-stu-id="cb705-113">The `-filealign` option lets you compile your application with a nonstandard alignment; most developers do not need to use this option.</span></span>  
   
- <span data-ttu-id="5d5ba-114">Ogni sezione è allineata a un limite che è un multiplo pari di `-filealign` valore.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-114">Each section is aligned on a boundary that is a multiple of the `-filealign` value.</span></span> <span data-ttu-id="5d5ba-115">Non vi è alcun valore predefinito fisso.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-115">There is no fixed default.</span></span> <span data-ttu-id="5d5ba-116">Se `-filealign` non viene specificato, il compilatore rileva un valore predefinito in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-116">If `-filealign` is not specified, the compiler picks a default at compile time.</span></span>  
+ <span data-ttu-id="cb705-114">Ogni sezione è allineata a un limite che è un multiplo pari di `-filealign` valore.</span><span class="sxs-lookup"><span data-stu-id="cb705-114">Each section is aligned on a boundary that is a multiple of the `-filealign` value.</span></span> <span data-ttu-id="cb705-115">Non vi è alcun valore predefinito fisso.</span><span class="sxs-lookup"><span data-stu-id="cb705-115">There is no fixed default.</span></span> <span data-ttu-id="cb705-116">Se `-filealign` non viene specificato, il compilatore rileva un valore predefinito in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="cb705-116">If `-filealign` is not specified, the compiler picks a default at compile time.</span></span>  
   
- <span data-ttu-id="5d5ba-117">Specifica le dimensioni della sezione, è possibile modificare le dimensioni del file di output.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-117">By specifying the section size, you can change the size of the output file.</span></span> <span data-ttu-id="5d5ba-118">La modifica delle dimensioni della sezione può essere utile per i programmi che verranno eseguiti su dispositivi di piccole dimensioni.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-118">Modifying section size may be useful for programs that will run on smaller devices.</span></span>  
+ <span data-ttu-id="cb705-117">Specifica le dimensioni della sezione, è possibile modificare le dimensioni del file di output.</span><span class="sxs-lookup"><span data-stu-id="cb705-117">By specifying the section size, you can change the size of the output file.</span></span> <span data-ttu-id="cb705-118">La modifica delle dimensioni della sezione può essere utile per i programmi che verranno eseguiti su dispositivi di piccole dimensioni.</span><span class="sxs-lookup"><span data-stu-id="cb705-118">Modifying section size may be useful for programs that will run on smaller devices.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5d5ba-119">Il `-filealign` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando.</span><span class="sxs-lookup"><span data-stu-id="5d5ba-119">The `-filealign` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
+>  <span data-ttu-id="cb705-119">Il `-filealign` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando.</span><span class="sxs-lookup"><span data-stu-id="cb705-119">The `-filealign` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5d5ba-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5d5ba-120">See Also</span></span>  
- [<span data-ttu-id="5d5ba-121">Compilatore della riga di comando di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5d5ba-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+## <a name="see-also"></a><span data-ttu-id="cb705-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cb705-120">See Also</span></span>  
+ [<span data-ttu-id="cb705-121">Compilatore della riga di comando di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cb705-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)

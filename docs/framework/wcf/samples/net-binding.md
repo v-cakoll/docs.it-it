@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805954"
 ---
 # <a name="net-binding"></a><span data-ttu-id="c45eb-102">Associazione Net</span><span class="sxs-lookup"><span data-stu-id="c45eb-102">Net Binding</span></span>
 <span data-ttu-id="c45eb-103">Contenuto della sezione sono inclusi esempi che illustrano l'utilizzo di attributi di associazione di rete di un elemento dell'endpoint.</span><span class="sxs-lookup"><span data-stu-id="c45eb-103">This section contains samples that demonstrate using network binding attributes of an endpoint element.</span></span>  
