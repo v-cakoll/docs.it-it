@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266581"
 ---
 # <a name="out-c-reference"></a><span data-ttu-id="ca911-102">out (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="ca911-102">out (C# Reference)</span></span>
 <span data-ttu-id="ca911-103">È possibile usare la parola chiave `out` in due contesti:</span><span class="sxs-lookup"><span data-stu-id="ca911-103">You can use the `out` keyword in two contexts:</span></span>

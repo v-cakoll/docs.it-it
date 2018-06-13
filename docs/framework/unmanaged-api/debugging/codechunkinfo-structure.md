@@ -1,14 +1,6 @@
 ---
 title: CodeChunkInfo Structure1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CodeChunkInfo
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 0f482454-8517-48de-ba7a-d7aedab13bb5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d7b3b858d645f01f58ba0b67465b22dd05282656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6e3d138700ef06da7b40a88a768a41f3ffcb38eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403240"
 ---
-# <a name="codechunkinfo-structure1"></a><span data-ttu-id="66733-102">CodeChunkInfo Structure1</span><span class="sxs-lookup"><span data-stu-id="66733-102">CodeChunkInfo Structure1</span></span>
-<span data-ttu-id="66733-103">Rappresenta un singolo blocco di codice in memoria.</span><span class="sxs-lookup"><span data-stu-id="66733-103">Represents a single chunk of code in memory.</span></span>  
+# <a name="codechunkinfo-structure1"></a><span data-ttu-id="b3a21-102">CodeChunkInfo Structure1</span><span class="sxs-lookup"><span data-stu-id="b3a21-102">CodeChunkInfo Structure1</span></span>
+<span data-ttu-id="b3a21-103">Rappresenta un singolo blocco di codice in memoria.</span><span class="sxs-lookup"><span data-stu-id="b3a21-103">Represents a single chunk of code in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="66733-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="66733-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b3a21-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b3a21-104">Syntax</span></span>  
   
 ```  
 typedef struct _CodeChunkInfo {  
@@ -46,26 +35,26 @@ typedef struct _CodeChunkInfo {
 } CodeChunkInfo;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="66733-105">Membri</span><span class="sxs-lookup"><span data-stu-id="66733-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b3a21-105">Membri</span><span class="sxs-lookup"><span data-stu-id="b3a21-105">Members</span></span>  
   
-|<span data-ttu-id="66733-106">Membro</span><span class="sxs-lookup"><span data-stu-id="66733-106">Member</span></span>|<span data-ttu-id="66733-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="66733-107">Description</span></span>|  
+|<span data-ttu-id="b3a21-106">Membro</span><span class="sxs-lookup"><span data-stu-id="b3a21-106">Member</span></span>|<span data-ttu-id="b3a21-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b3a21-107">Description</span></span>|  
 |------------|-----------------|  
-|`startAddr`|<span data-ttu-id="66733-108">Oggetto `CORDB_ADDRESS` valore che specifica l'indirizzo iniziale del blocco.</span><span class="sxs-lookup"><span data-stu-id="66733-108">A `CORDB_ADDRESS` value that specifies the starting address of the chunk.</span></span>|  
-|`length`|<span data-ttu-id="66733-109">Le dimensioni in byte, del blocco.</span><span class="sxs-lookup"><span data-stu-id="66733-109">The size, in bytes, of the chunk.</span></span>|  
+|`startAddr`|<span data-ttu-id="b3a21-108">Oggetto `CORDB_ADDRESS` valore che specifica l'indirizzo iniziale del blocco.</span><span class="sxs-lookup"><span data-stu-id="b3a21-108">A `CORDB_ADDRESS` value that specifies the starting address of the chunk.</span></span>|  
+|`length`|<span data-ttu-id="b3a21-109">Le dimensioni in byte, del blocco.</span><span class="sxs-lookup"><span data-stu-id="b3a21-109">The size, in bytes, of the chunk.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="66733-110">Note</span><span class="sxs-lookup"><span data-stu-id="66733-110">Remarks</span></span>  
- <span data-ttu-id="66733-111">Il singolo blocco di codice è un'area di codice nativo che fa parte di un oggetto di codice, ad esempio una funzione.</span><span class="sxs-lookup"><span data-stu-id="66733-111">The single chunk of code is a region of native code that is part of a code object such as a function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b3a21-110">Note</span><span class="sxs-lookup"><span data-stu-id="b3a21-110">Remarks</span></span>  
+ <span data-ttu-id="b3a21-111">Il singolo blocco di codice è un'area di codice nativo che fa parte di un oggetto di codice, ad esempio una funzione.</span><span class="sxs-lookup"><span data-stu-id="b3a21-111">The single chunk of code is a region of native code that is part of a code object such as a function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="66733-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="66733-112">Requirements</span></span>  
- <span data-ttu-id="66733-113">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="66733-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b3a21-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b3a21-112">Requirements</span></span>  
+ <span data-ttu-id="b3a21-113">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b3a21-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="66733-114">**Intestazione:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="66733-114">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="b3a21-114">**Intestazione:** Cordebug. idl</span><span class="sxs-lookup"><span data-stu-id="b3a21-114">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="66733-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="66733-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b3a21-115">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="b3a21-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="66733-116">**Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66733-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b3a21-116">**Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3a21-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="66733-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="66733-117">See Also</span></span>  
- [<span data-ttu-id="66733-118">Metodo GetCodeChunks</span><span class="sxs-lookup"><span data-stu-id="66733-118">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- [<span data-ttu-id="66733-119">Strutture di debug</span><span class="sxs-lookup"><span data-stu-id="66733-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [<span data-ttu-id="66733-120">Debug</span><span class="sxs-lookup"><span data-stu-id="66733-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="b3a21-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b3a21-117">See Also</span></span>  
+ [<span data-ttu-id="b3a21-118">Metodo GetCodeChunks</span><span class="sxs-lookup"><span data-stu-id="b3a21-118">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
+ [<span data-ttu-id="b3a21-119">Strutture di debug</span><span class="sxs-lookup"><span data-stu-id="b3a21-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
+ [<span data-ttu-id="b3a21-120">Debug</span><span class="sxs-lookup"><span data-stu-id="b3a21-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
