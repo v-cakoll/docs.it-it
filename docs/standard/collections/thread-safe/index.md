@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575531"
 ---
 # <a name="thread-safe-collections"></a>Raccolte thread-safe
 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduce lo spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType>, che include diverse classi di raccolta sia thread-safe che scalabili. Più thread possono aggiungere o rimuovere elementi da queste raccolte in modo sicuro ed efficiente, senza richiedere una sincronizzazione aggiuntiva nel codice utente. Quando si scrive nuovo codice, usare le classi di raccolta simultanee ogni volta che la raccolta verrà scritta contemporaneamente su più thread. Se si prevede di leggere solo da una raccolta condivisa, è possibile usare le classi dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. È consigliabile evitare di usare le classi di raccolta 1.0 a meno che non sia necessario definire come destinazione il runtime di .NET Framework versione 1.1 o precedente.  

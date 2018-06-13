@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572970"
 ---
 # <a name="naming-guidelines"></a>Convenzioni di denominazione
 Segue un set di convenzioni di denominazione per lo sviluppo di un framework coerente possibile contribuito a livello di usabilità del framework. Consente al framework di utilizzabile da molti sviluppatori su progetti separati ampiamente. Oltre la coerenza del modulo, nomi degli elementi di framework devono essere facilmente comprensibili e devono indicare la funzione di ogni elemento.  

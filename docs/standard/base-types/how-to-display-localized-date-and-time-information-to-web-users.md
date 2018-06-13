@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578157"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procedura: visualizzare le informazioni su data e ora localizzate agli utenti del Web
 Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni di analisi e formattazione di valori di data e ora non devono essere basate su un formato predefinito, che molto spesso corrisponde al formato delle impostazioni cultura locali del server Web, durante l'interazione con l'utente. Al contrario, i Web Form che gestiscono stringhe di data e ora immesse dall'utente devono analizzare le stringhe tramite le impostazioni cultura preferite dell'utente. Analogamente, i dati di data e ora devono essere visualizzati all'utente in un formato conforme alle impostazioni cultura dell'utente stesso. In questo argomento viene illustrato come eseguire questa operazione.  

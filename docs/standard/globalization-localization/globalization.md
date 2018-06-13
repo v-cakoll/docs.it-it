@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579574"
 ---
 # <a name="globalization"></a>Globalizzazione
 La globalizzazione comporta la progettazione e lo sviluppo di un'app internazionalizzata che supporti interfacce localizzate e dati locali per utenti in più impostazioni cultura. Prima di iniziare la fase di progettazione, è necessario determinare quali impostazioni cultura verranno supportate dall'app. Sebbene un'app sia destinata per impostazione predefinita a singole impostazioni cultura o a una singola area, è possibile progettarla e scriverla in modo che possa essere facilmente estesa agli utenti di altre impostazioni cultura o aree.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 14f4f16a73c50de2d23804f77bca180f4e9827b5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453924"
 ---
 # <a name="functionleave3-function"></a>Funzione FunctionLeave3
 Notifica al profiler che controllo viene restituito da una funzione.  
