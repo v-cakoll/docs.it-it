@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528280"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Procedura: aggiungere funzionalità di ricerca a un controllo ListView
 Spesso quando si lavora con un lungo elenco di elementi in un <xref:System.Windows.Forms.ListView> (controllo), a cui si desidera offrire funzionalità di ricerca per l'utente. Il <xref:System.Windows.Forms.ListView> controllo offre questa funzionalità in due modi diversi: percorso di ricerca e i criteri di testo.  

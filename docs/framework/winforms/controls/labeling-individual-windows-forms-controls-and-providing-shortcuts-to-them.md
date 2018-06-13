@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535515"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida
 I controlli aggiunti a Windows Form hanno proprietà e metodi usati per personalizzare ancora di più l'esperienza utente. Per le applicazioni Windows ben progettate è estremamente importante personalizzare l'interfaccia per soddisfare le esigenze dell'utente.  

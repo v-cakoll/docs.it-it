@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532386"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Procedura: creare un'interfaccia di tipo Esplora risorse in un Windows Form
 In Esplora risorse è una scelta dell'interfaccia utente comune per le applicazioni a causa la conoscenza pronta.  

@@ -21,9 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a375ea586bacc2d3dafe53d493a7467730fae889
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432321"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>Funzione ClrCreateManagedInstance
 Crea un'istanza del tipo gestito specificato.  
