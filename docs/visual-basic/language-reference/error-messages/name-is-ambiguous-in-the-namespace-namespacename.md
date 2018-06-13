@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593590"
 ---
 # <a name="39ltnamegt39-is-ambiguous-in-the-namespace-39ltnamespacenamegt39"></a>&#39;&lt;nome&gt; &#39; è ambiguo nello spazio dei nomi &#39; &lt;NomeSpazioDeiNomi&gt;&#39;
 È stato specificato un nome che è ambiguo ed è quindi in conflitto con un altro nome. Il compilatore Visual Basic non dispone di regole di risoluzione dei conflitti. è necessario risolvere le ambiguità nei nomi manualmente.  

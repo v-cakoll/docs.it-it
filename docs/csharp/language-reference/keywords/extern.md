@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172293"
 ---
 # <a name="extern-c-reference"></a>extern (Riferimenti per C#)
 Il modificatore `extern` consente di dichiarare un metodo implementato esternamente. Il modificatore `extern` viene utilizzato in genere con l'attributo `DllImport` quando si effettua una chiamata in codice non gestito tramite i servizi di interoperabilità. In questo caso, anche il metodo deve essere dichiarato come `static`, come illustrato nell'esempio seguente:  

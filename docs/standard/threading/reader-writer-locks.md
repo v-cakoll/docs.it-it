@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586373"
 ---
 # <a name="reader-writer-locks"></a>Blocchi in lettura/scrittura
 La classe <xref:System.Threading.ReaderWriterLockSlim> consente a più thread di leggere una risorsa contemporaneamente, ma richiede a un thread di rimanere in attesa di un blocco esclusivo per poter scrivere nella risorsa.  

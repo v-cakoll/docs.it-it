@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593967"
 ---
 # <a name="too-many-files"></a>Troppi file.
 Più file sono stati creati nella directory radice di permesso dal sistema operativo o sono stati aperti più file rispetto al numero specificato nel **file =** nel file CONFIG. File SYS.  

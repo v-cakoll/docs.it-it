@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588054"
 ---
 # <a name="how-to-search-data-in-a-datarepeater-control-visual-studio"></a>Procedura: cercare dati in un controllo DataRepeater (Visual Studio)
 Quando si utilizza un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controllo contenente molti record, è possibile consentire agli utenti di ricerca per un record specifico. Invece di cercare i dati nel controllo stesso, è possibile implementare una ricerca eseguendo una query sottostante <xref:System.Windows.Forms.BindingSource>. Se l'elemento viene trovato, è possibile utilizzare il <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CurrentItemIndex%2A> proprietà selezionare l'elemento e scorrerlo nella visualizzazione.  

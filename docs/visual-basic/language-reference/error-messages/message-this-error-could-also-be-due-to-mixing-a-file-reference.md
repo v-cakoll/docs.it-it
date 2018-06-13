@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588337"
 ---
 # <a name="ltmessagegt-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-39ltassemblynamegt39"></a>&lt;messaggio&gt; questo errore potrebbe anche essere dovuta alla combinazione di un riferimento al file con un riferimento progetto all'assembly &#39; &lt;assemblyname&gt;&#39;
 \<messaggio > Questo errore potrebbe anche essere dovuta alla combinazione di un riferimento al file con un riferimento progetto all'assembly '\<NomeAssembly >. In questo caso, provare a sostituire il riferimento file a '\<assemblyfilename >' nel progetto '\<nomeprogetto1 >' con un riferimento al progetto '\<nomeprogetto2 >'.  

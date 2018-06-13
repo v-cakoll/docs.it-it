@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589547"
 ---
 # <a name="how-to-enable-tabbing-between-shapes-visual-studio"></a>Procedura: abilitare la tabulazione tra forme (Visual Studio)
 I controlli Line e shape non hanno `TabStop` o `TabIndex` proprietà, ma è ancora possibile abilitare la tabulazione tra di essi. Nell'esempio seguente, premendo CTRL sia le chiavi della scheda verrà scheda tra due forme. solo il tasto TAB verrà scheda tra i pulsanti.  

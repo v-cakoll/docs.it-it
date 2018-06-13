@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586670"
 ---
 # <a name="file-already-open"></a>File già aperto
 In alcuni casi un file deve essere chiusi prima di un altro `FileOpen` oppure può avvenire in un'altra operazione. Di seguito sono riportate le cause possibili dell'errore:  

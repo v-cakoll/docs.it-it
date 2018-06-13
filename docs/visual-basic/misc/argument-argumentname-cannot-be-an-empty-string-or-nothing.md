@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598127"
 ---
 # <a name="argument-ltargumentnamegt-cannot-be-an-empty-string-or-nothing"></a>Argomento &lt;NomeArgomento&gt; non può essere una stringa vuota o Nothing
 L'argomento richiede un valore diverso da una stringa vuota ("") o `Nothing`. È possibile che il valore non sia stato calcolato correttamente.  

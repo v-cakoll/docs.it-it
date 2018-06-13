@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589867"
 ---
 # <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a>Procedura: visualizzare i dati associati in un controllo DataRepeater (Visual Studio)
 L'utilizzo più comune del <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controllo consiste nel visualizzare i dati associati da un database o un'altra origine dati.  

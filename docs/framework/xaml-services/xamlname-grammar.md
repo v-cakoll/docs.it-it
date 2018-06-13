@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561891"
 ---
 # <a name="xamlname-grammar"></a>Grammatica XamlName
 Grammatica XamlName è una grammatica specifica è definita nella specifica del linguaggio XAML [MS-XAML], che viene riprodotto di seguito per praticità.  

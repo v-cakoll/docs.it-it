@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51878f0334afe52608b60ca540e49c86fded148e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418045"
 ---
 # <a name="icordebugthreadgetappdomain-method"></a>Metodo ICorDebugThread::GetAppDomain
 Ottiene un puntatore a interfaccia per il dominio applicazione in cui è attualmente in esecuzione ICorDebugThread.  

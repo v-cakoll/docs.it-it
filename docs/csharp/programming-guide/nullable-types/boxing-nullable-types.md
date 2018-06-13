@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334756"
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>Conversione boxing di tipi nullable (Guida per programmatori C#)
 Gli oggetti basati su tipi nullable sono boxed solo se l'oggetto è diverso da null. Se <xref:System.Nullable%601.HasValue%2A> è `false`, il riferimento all'oggetto viene assegnato a `null` anziché alla conversione boxing. Ad esempio:  

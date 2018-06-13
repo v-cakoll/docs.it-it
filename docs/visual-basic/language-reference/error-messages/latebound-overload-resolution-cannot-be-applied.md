@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589880"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Risoluzione dell'overload con associazione tardiva non è possibile applicare a &#39; &lt;nomeroutine&gt; &#39; perché l'istanza di accesso è un tipo di interfaccia
 Il compilatore sta provando a risolvere un riferimento a una proprietà di overload o una routine, ma il riferimento non riesce perché è un argomento di tipo `Object` e l'oggetto che fa riferimento il tipo di dati di un'interfaccia. Il `Object` argomento induce il compilatore per risolvere il riferimento come ad associazione tardiva.  

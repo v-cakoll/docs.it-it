@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586490"
 ---
 # <a name="class-39ltclassnamegt39-cannot-be-found"></a>Classe &#39; &lt;classname&gt; &#39; non è stato trovato
 Classe\<NomeClasse >' non è stato trovato. Questa condizione è in genere il risultato di un "Microsoft.VisualBasic.dll" non corrispondente.  
