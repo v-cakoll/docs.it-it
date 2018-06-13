@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604341"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 Fa sì che la classe corrente o l'interfaccia da cui ereditare attributi, le variabili, proprietà, procedure e gli eventi di un'altra classe o un set di interfacce.  

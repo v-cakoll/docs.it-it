@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635045"
 ---
 # <a name="method-or-data-member-not-found"></a>Impossibile trovare il metodo o il membro dati
 Il metodo o un membro dati a cui si è tentato di accedere non è stato trovato.  

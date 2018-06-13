@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604783"
 ---
 # <a name="queries-visual-basic"></a>Query (Visual Basic)
 Visual Basic consente di creare [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] espressioni nel codice.  
