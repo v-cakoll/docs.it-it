@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519925"
 ---
 # <a name="property-promotion-activity"></a>Attività di promozione proprietà
 In questo esempio viene fornita una soluzione end-to-end che integra direttamente la funzionalità di promozione <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> nella creazione di flussi di lavoro. Vengono forniti inoltre una raccolta di elementi di configurazione, attività ed estensioni del flusso di lavoro che semplificano l'uso della funzionalità di promozione. Nell'esempio è contenuto infine un semplice flusso di lavoro che dimostra come usare la raccolta.  

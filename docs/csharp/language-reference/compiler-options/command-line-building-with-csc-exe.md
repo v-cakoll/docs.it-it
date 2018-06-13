@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218059"
 ---
 # <a name="command-line-build-with-cscexe"></a>Compilazione dalla riga di comando con csc.exe
 È possibile richiamare il compilatore C# digitando il nome del relativo file eseguibile (*csc.exe*) da un prompt dei comandi.

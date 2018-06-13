@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533741"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Procedura: impostare l'immagine visualizzata da un controllo Windows Form
 Vari controlli Windows Form consente di visualizzare immagini. Queste immagini possono essere le icone che illustrano la finalità del controllo, ad esempio un'icona del dischetto su un pulsante indica il **salvare** comando. In alternativa, le icone possono essere immagini di sfondo per fornire il controllo, l'aspetto e il comportamento desiderato.  

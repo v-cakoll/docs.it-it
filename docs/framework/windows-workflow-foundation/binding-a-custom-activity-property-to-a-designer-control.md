@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513549"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Associazione di una proprietà di attività personalizzata a un controllo di progettazione
 L'associazione di un controllo di progettazione casella di testo a un argomento di un'attività è abbastanza semplice; d'altra parte, l'associazione di un controllo di progettazione complesso (quale una casella combinata) a un argomento di un'attività può risultare problematica. In questo argomento viene illustrato come associare un argomento di un'attività a un controllo casella combinata in un ActivityDesigner personalizzato.  

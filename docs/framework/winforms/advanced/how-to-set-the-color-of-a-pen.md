@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522382"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>Procedura: impostare il colore di un oggetto Pen
 Questo esempio viene modificato il colore di pre-esistente <xref:System.Drawing.Pen> oggetto  

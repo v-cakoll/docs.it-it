@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523888"
 ---
 # <a name="graphics-paths-in-gdi"></a>Percorsi di oggetti Graphics in GDI+
 I percorsi sono costituiti dalla combinazione di linee, rettangoli e curve semplici. Ricorda di [Cenni preliminari sulla grafica vettoriale](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) i seguenti blocchi predefiniti si sono rivelati a essere più utili per il disegno di immagini:  

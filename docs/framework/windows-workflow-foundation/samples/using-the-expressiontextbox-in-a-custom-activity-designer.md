@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516786"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Utilizzo di ExpressionTextBox in un ActivityDesigner personalizzato
 In questo esempio viene illustrato come usare l'oggetto <xref:System.Activities.Presentation.View.ExpressionTextBox> in un ActivityDesigner personalizzato. L'attività personalizzata, `MultiAssign`, assegna due valori stringa a due variabili di stringa. Alcuni controlli <xref:System.Activities.Presentation.View.ExpressionTextBox> vengono associati a oggetti <xref:System.Activities.InArgument> mentre altri a oggetti <xref:System.Activities.OutArgument>.  

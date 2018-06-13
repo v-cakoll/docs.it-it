@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516565"
 ---
 # <a name="transaction-convoy-scope"></a>Ambito di istruzioni della transazione
 In questo esempio viene illustrato come creare un modello di attività di messaggistica di una serie di istruzioni parallele insieme a un oggetto <xref:System.ServiceModel.Activities.TransactedReceiveScope> per modellare un protocollo in cui possono verificarsi diverse operazioni in qualsiasi ordine, tutte nella stessa transazione. In questo esempio viene inoltre illustrato in che modo <xref:System.ServiceModel.Activities.TransactedReceiveScope> crea automaticamente una nuova transazione quando non ne viene propagata una al server, in modo che il client non utilizzi alcuna transazione.  

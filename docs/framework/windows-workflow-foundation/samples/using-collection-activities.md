@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516597"
 ---
 # <a name="using-collection-activities"></a>Utilizzo delle attività di raccolta
 In questo esempio viene illustrato come usare le attività della raccolta (<xref:System.Activities.Statements.AddToCollection%601>, <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601> e <xref:System.Activities.Statements.RemoveFromCollection%601>) con una classe che implementa l'interfaccia <xref:System.Collections.ICollection> e come creare un'attività personalizzata che scorre una raccolta per stampare il contenuto di ogni elemento nella raccolta. L'attività personalizzata, denominata `PrintCollection`, stampa nella console i membri degli elementi di una raccolta denominata `Numbers`.  

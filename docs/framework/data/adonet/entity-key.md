@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764996"
 ---
 # <a name="entity-key"></a>chiave di entità
 Un *chiave di entità* è un [proprietà](../../../../docs/framework/data/adonet/property.md) o un set di proprietà di un [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) utilizzati per determinare l'identità. Le proprietà che costituiscono una chiave di entità vengono scelte in fase di progettazione. I valori delle proprietà chiave di entità devono identificare in modo univoco un'istanza del tipo di entità all'interno di un [set di entità](../../../../docs/framework/data/adonet/entity-set.md) in fase di esecuzione. Le proprietà che costituiscono una chiave di entità devono essere scelte per garantire univocità delle istanze in un set di entità.  

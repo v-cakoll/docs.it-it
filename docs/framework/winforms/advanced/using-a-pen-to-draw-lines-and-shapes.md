@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524342"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>Utilizzo di un oggetto Pen per creare linee e forme
 Utilizzare [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` oggetti per creare segmenti di linea, curve e le strutture delle forme. In questa sezione, *riga* fa riferimento a uno di questi, salvo per indicare solo un segmento di linea. Impostare le proprietà di un oggetto pen per controllare il colore, larghezza, l'allineamento e stile delle linee disegnate con quella penna.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516609"
 ---
 # <a name="transaction-activities-in-wf"></a>Attività di transazione in WF
 In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] sono disponibili numerose attività fornite dal sistema per la modellazione delle transazioni, la compensazione e l'annullamento. Questi modelli di programmazione consentono al flusso di lavoro di proseguire esecuzione nel caso di modifiche nella logica di business e durante la gestione degli errori. Per ulteriori informazioni sulle transazioni, compensazione e l'annullamento, vedere [transazioni](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md), [compensazione](../../../docs/framework/windows-workflow-foundation/compensation.md), e [annullamento](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  

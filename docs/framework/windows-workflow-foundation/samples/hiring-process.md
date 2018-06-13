@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519763"
 ---
 # <a name="hiring-process"></a>Processo di assunzione
 In questo esempio viene illustrato come implementare un processo aziendale tramite attività di messaggistica e due flussi di lavoro ospitati come servizi flusso di lavoro e appartenenti all'infrastruttura IT di una società fittizia denominata Contoso, Inc.  

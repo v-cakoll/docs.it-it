@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61014e067b2afb8b7e4be0488ed6a3c7f1bd6fc4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420700"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>Metodo ICorDebugVariableHome::GetSlotIndex
 Ottiene l'indice dello slot gestito di una variabile locale.  

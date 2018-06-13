@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521554"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>Ritaglio e ridimensionamento di immagini in GDI+
 È possibile utilizzare il <xref:System.Drawing.Graphics.DrawImage%2A> metodo la <xref:System.Drawing.Graphics> classe per creare e posizionare immagini vettoriali e raster immagini. <xref:System.Drawing.Graphics.DrawImage%2A> è un metodo di overload, pertanto vi sono diversi modi, è possibile fornire argomenti.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358879"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Provider di servizi dati (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] supporta più modelli di provider per l'esposizione dei dati come un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. In questo argomento vengono fornite le informazioni che consentono di scegliere il provider di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] più adatto all'origine dati usata.  

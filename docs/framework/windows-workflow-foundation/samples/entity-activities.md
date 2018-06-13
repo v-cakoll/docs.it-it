@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519136"
 ---
 # <a name="entity-activities"></a>Attività dell'entità
 In questo esempio viene illustrato come utilizzare ADO.NET Entity Framework con Windows Workflow Foundation per semplificare l'accesso ai dati.  

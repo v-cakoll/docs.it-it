@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 145b4d00f5ceac621274b010e8220a63319e1425
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420921"
 ---
 # <a name="icordebugobjectvalue2-interface1"></a>ICorDebugObjectValue2 Interface1
 Estende l'interfaccia "ICorDebugObjectValue" per supportare l'ereditarietà ed esegue l'override.  

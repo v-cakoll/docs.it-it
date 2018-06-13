@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520042"
 ---
 # <a name="corporate-purchase-process"></a>Processo di acquisto aziendale
 In questo esempio viene illustrato come creare un semplice processo di acquisto basato su richieste di proposte (RDP) con la selezione automatica della proposta migliore. Vengono combinati gli oggetti <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> e <xref:System.Activities.Statements.ForEach%601>, nonché un'attività personalizzata per creare un flusso di lavoro che rappresenta il processo.  

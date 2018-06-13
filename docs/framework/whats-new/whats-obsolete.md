@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514450"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Elementi obsoleti nella libreria di classi .NET Framework
 .NET Framework cambia nel corso del tempo. In ogni nuova versione vengono aggiunti nuovi tipi e membri dei tipi che forniscono nuove funzionalità. Anche i tipi esistenti e i relativi membri cambiano nel tempo. Alcuni tipi, ad esempio, perdono di importanza in quanto la tecnologia che supportano viene sostituita da una nuova tecnologia, e alcuni metodi vengono sostituiti da altri più nuovi che sono più adatti o più completi in termini di funzionalità.  
