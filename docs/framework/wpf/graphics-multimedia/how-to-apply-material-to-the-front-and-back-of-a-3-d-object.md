@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559734"
 ---
 # <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>Procedura: applicare un oggetto Material alle parti anteriore e posteriore di un oggetto tridimensionale
 Nell'esempio seguente viene illustrato come applicare un <xref:System.Windows.Media.Media3D.Material> nella parte anteriore e posteriore di un oggetto 3D dell'oggetto e animare l'oggetto per visualizzare entrambi i lati dell'oggetto. Il <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> proprietà di un <xref:System.Windows.Media.Media3D.GeometryModel3D> viene utilizzato per applicare un colore rosso <xref:System.Windows.Media.Brush> per il lato anteriore dell'oggetto e <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> proprietà del <xref:System.Windows.Media.Media3D.GeometryModel3D> viene utilizzato per applicare un blu <xref:System.Windows.Media.Brush> al lato posteriore dell'oggetto. Il codice riportato di seguito viene illustrata l'applicazione dei materiali all'oggetto:  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525902"
 ---
 # <a name="structure-of-the-graphics-interface"></a>Struttura dell'interfaccia grafica
 L'interfaccia di classe gestita a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] contiene circa 60 classi, 50 enumerazioni e strutture di 8. Il <xref:System.Drawing.Graphics> classe costituisce la base di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funzionalità; si tratta della classe che disegna effettivamente linee, curve, figure, immagini e testo.  

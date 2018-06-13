@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555789"
 ---
 # <a name="menu"></a>Menu
 Oggetto <xref:System.Windows.Controls.Menu> è un controllo che consente l'organizzazione gerarchica degli elementi associati a comandi e gestori eventi. Ogni <xref:System.Windows.Controls.Menu> può contenere più <xref:System.Windows.Controls.MenuItem> controlli. Ogni <xref:System.Windows.Controls.MenuItem> può richiamare un comando o richiamare un `Click` gestore dell'evento. Oggetto <xref:System.Windows.Controls.MenuItem> può anche avere più <xref:System.Windows.Controls.MenuItem> gli elementi figlio, creando un sottomenu.  

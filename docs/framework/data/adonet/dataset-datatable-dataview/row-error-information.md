@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767193"
 ---
 # <a name="row-error-information"></a>Informazioni sugli errori di riga
 Per evitare di dover rispondere agli errori delle righe mentre si modificano i valori di una <xref:System.Data.DataTable>, è possibile aggiungere alla riga le informazioni sugli errori per un uso successivo. A questo scopo, l'oggetto <xref:System.Data.DataRow> fornisce una proprietà <xref:System.Data.DataRow.RowError%2A> su ciascuna riga. Aggiunta di dati per il **RowError** proprietà di un **DataRow** imposta il <xref:System.Data.DataRow.HasErrors%2A> proprietà del **DataRow** a **true**. Se il **DataRow** fa parte di un **DataTable**, e **DataRow. HasErrors** è **true**, **DataTable. HasErrors** anche la proprietà è **true**. Questo vale anche il **DataSet** a cui il **DataTable** appartiene. Verifica degli errori, è possibile controllare il **HasErrors** proprietà per determinare se le informazioni di errore sono stato aggiunto alle righe. Se **HasErrors** è **true**, è possibile utilizzare il <xref:System.Data.DataTable.GetErrors%2A> metodo il **DataTable** per restituire ed esaminare solo le righe con errori, come illustrato nell'esempio seguente.  

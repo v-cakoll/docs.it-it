@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758799"
 ---
 # <a name="dataviews"></a>DataView
 Un oggetto <xref:System.Data.DataView> consente di creare diverse visualizzazioni dei dati archiviati in un oggetto <xref:System.Data.DataTable>. Questa funzionalità è usata spesso nelle applicazioni di associazione dati. Utilizzando un **DataView**, è possibile esporre i dati in una tabella con diversi tipi di ordinamento ed è possibile filtrare i dati dello stato o in base a un'espressione di filtro di riga.  

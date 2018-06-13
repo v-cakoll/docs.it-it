@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748841"
 ---
 # <a name="ltsystemservicemodelactivationgt"></a>&lt;system.serviceModel.activation&gt;
 Questa sezione di configurazione rappresenta le impostazioni di configurazione per lo strumento SMSvcHost.exe. Gli elementi di configurazione che possono essere configurati nel file SMSvcHost.exe.config. In particolare, include tutte le impostazioni che devono essere configurate a livello di computer.  

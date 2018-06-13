@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761610"
 ---
 # <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>Compilazione di un dataset mediante uno o più oggetti REF CURSOR
 Nell'esempio Visual Basic seguente viene eseguita una stored procedure PL/SQL che restituisce due parametri REF CURSOR e consente la compilazione di un tipo <xref:System.Data.DataSet> con le righe restituite.  

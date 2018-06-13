@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759270"
 ---
 # <a name="redirecting-assembly-versions"></a>Reindirizzamento delle versioni di assembly
 È possibile reindirizzare i riferimenti delle associazioni in fase di compilazione agli assembly di .NET Framework, di terze parti o specifici dell'app. È possibile reindirizzare l'app per l'uso di una diversa versione di un assembly in diversi modi: con i criteri editore, tramite un file di configurazione dell'app o mediante il file di configurazione del computer. In questo articolo viene illustrato il funzionamento dell'associazione di assembly in .NET Framework e come può essere configurato.  

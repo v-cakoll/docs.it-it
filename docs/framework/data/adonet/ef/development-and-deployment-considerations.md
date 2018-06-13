@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760346"
 ---
 # <a name="development-and-deployment-considerations"></a>Considerazioni sullo sviluppo e sulla distribuzione
 Negli argomenti inclusi in questa sezione vengono affrontati problemi relativi allo sviluppo o alla distribuzione di un'applicazione basata su ADO.NET Entity Framework.  

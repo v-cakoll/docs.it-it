@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557355"
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>Procedura: animare un punto utilizzando fotogrammi chiave
 In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> classe animare un <xref:System.Windows.Point>.  

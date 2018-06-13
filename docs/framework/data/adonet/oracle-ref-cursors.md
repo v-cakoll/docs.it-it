@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758724"
 ---
 # <a name="oracle-ref-cursors"></a>Oggetti REF CURSOR Oracle
 Il Provider di dati .NET Framework per Oracle supporta Oracle **REF CURSOR** tipo di dati. Quando si usa il provider di dati per usare il tipo di dati REF CURSOR Oracle, considerare i seguenti comportamenti.  

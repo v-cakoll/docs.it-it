@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528145"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: aggiungere e rimuovere colonne nel controllo DataGridView di Windows Form utilizzando Progettazione Windows Form
 Windows Form <xref:System.Windows.Forms.DataGridView> controllo deve contenere colonne per visualizzare i dati. Se si prevede di popolare il controllo manualmente, è necessario aggiungere le colonne. In alternativa, è possibile associare il controllo a un'origine dati, che genera l'errore e popola le colonne automaticamente. Se l'origine dati contiene più colonne che si desidera visualizzare, è possibile rimuovere le colonne non desiderate.  

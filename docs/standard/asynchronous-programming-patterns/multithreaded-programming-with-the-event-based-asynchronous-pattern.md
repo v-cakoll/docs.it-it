@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567302"
 ---
 # <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a>Programmazione multithreading con il modello asincrono basato su eventi
 È possibile esporre funzionalità asincrone al codice client in molti modi. Il modello asincrono basato su eventi determina il modo consigliato per la presentazione del comportamento asincrono da parte delle classi.  

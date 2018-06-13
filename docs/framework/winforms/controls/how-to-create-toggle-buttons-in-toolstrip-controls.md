@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530381"
 ---
 # <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Procedura: creare pulsanti interruttore nei controlli ToolStrip
 Quando un utente fa clic su un interruttore, appaiono incassato e mantiene tale aspetto fino a quando l'utente fa clic sul pulsante nuovo.  

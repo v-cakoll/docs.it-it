@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561430"
 ---
 # <a name="how-to-animate-a-rectangle"></a>Procedura: animare un rettangolo
 Questo esempio illustra come animare le modifiche apportate alle dimensioni e alla posizione di un rettangolo.  

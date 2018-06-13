@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750531"
 ---
 # <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a>Elemento &lt;clientCertificate&gt; di &lt;clientCredentials&gt;
 Definisce un certificato X.509 utilizzato dal client per autenticare un servizio.  

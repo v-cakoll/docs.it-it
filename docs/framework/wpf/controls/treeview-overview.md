@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557784"
 ---
 # <a name="treeview-overview"></a>Cenni preliminari sul controllo TreeView
 Il <xref:System.Windows.Controls.TreeView> controllo consente di visualizzare le informazioni in una struttura gerarchica tramite nodi comprimibili. Questo argomento vengono presentate le <xref:System.Windows.Controls.TreeView> e <xref:System.Windows.Controls.TreeViewItem> controlla e alcuni semplici esempi del loro utilizzo.  

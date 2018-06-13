@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757642"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Manipolazione di dati in un oggetto DataTable
 Dopo aver creato un tipo <xref:System.Data.DataTable> in un tipo <xref:System.Data.DataSet>, è possibile usarlo esattamente come una tabella in un database. È possibile aggiungere, visualizzare, modificare ed eliminare i dati della tabella, monitorare errori ed eventi ed eseguire query nei dati della tabella. Quando si modificano i dati in un **DataTable**, è inoltre possibile verificare se le modifiche sono accurate e stabilire se a livello di programmazione accettare o rifiutare le modifiche.  

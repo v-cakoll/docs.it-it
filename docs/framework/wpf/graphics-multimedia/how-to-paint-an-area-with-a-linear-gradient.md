@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560877"
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Procedura: disegnare un'area con una sfumatura lineare
 In questo esempio viene illustrato come utilizzare la <xref:System.Windows.Media.LinearGradientBrush> classe per disegnare un'area con una sfumatura lineare. Nell'esempio seguente, il <xref:System.Windows.Shapes.Shape.Fill%2A> di un <xref:System.Windows.Shapes.Rectangle> di disegno con sfumatura lineare diagonale che effettua la transizione da giallo a rosso blu per verde limone.  

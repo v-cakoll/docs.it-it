@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761246"
 ---
 # <a name="viewing-data-in-a-datatable"></a>Visualizzazione di dati in un oggetto DataTable
 È possibile accedere al contenuto di un <xref:System.Data.DataTable> utilizzando il **righe** e **colonne** insiemi di **DataTable**. È inoltre possibile utilizzare il <xref:System.Data.DataTable.Select%2A> per restituire subset di dati in un **DataTable** in base ai criteri compresi i criteri di ricerca, ordinamento e lo stato della riga. Inoltre, è possibile utilizzare il <xref:System.Data.DataRowCollection.Find%2A> metodo il **DataRowCollection** durante la ricerca di una particolare riga mediante un valore di chiave primaria.  

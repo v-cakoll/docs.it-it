@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534612"
 ---
 # <a name="webbrowser-security"></a>Sicurezza dei controlli WebBrowser
 Il <xref:System.Windows.Forms.WebBrowser> controllo è progettato per funzionare con attendibilità totale. Il contenuto HTML visualizzato nel controllo può provenire da server Web esterno e può contenere codice non gestito sotto forma di controlli Web o script. Se si utilizza il <xref:System.Windows.Forms.WebBrowser> controllo in questo caso, il controllo è non meno sicuro rispetto a Internet Explorer, ma gestito <xref:System.Windows.Forms.WebBrowser> controllo non impedisce tale codice non gestito in esecuzione.  

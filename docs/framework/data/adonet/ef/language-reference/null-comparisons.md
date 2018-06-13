@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761272"
 ---
 # <a name="null-comparisons"></a>Confronti Null
 Un valore `null` nell'origine dati indica che il valore è sconosciuto. Nella query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] è possibile verificare la presenza di valori Null in modo che alcuni calcoli o confronti vengano eseguiti solo sulle righe che includono dati validi, ovvero non NULL. Tuttavia, la semantica dei valori Null di CLR può differire da quella dell'origine dati. La maggior parte dei database usa una versione della logica con tre valori per la gestione dei confronti di valori Null. Vale a dire un confronto con un valore null non restituisce `true` o `false`, viene restituito `unknown`. Spesso, ma non sempre, si tratta di un'implementazione di valori Null ANSI.  

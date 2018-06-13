@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528713"
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Differenze tra i controlli DataGridView e DataGrid di Windows Form
 Il <xref:System.Windows.Forms.DataGridView> è un nuovo controllo che sostituisce il <xref:System.Windows.Forms.DataGrid> controllo. Il <xref:System.Windows.Forms.DataGridView> controllo fornisce diverse funzionalità di base e avanzate che non sono presenti nel <xref:System.Windows.Forms.DataGrid> controllo. Inoltre, l'architettura del <xref:System.Windows.Forms.DataGridView> controllo rende molto più semplice estendere e personalizzare più il <xref:System.Windows.Forms.DataGrid> controllo.  

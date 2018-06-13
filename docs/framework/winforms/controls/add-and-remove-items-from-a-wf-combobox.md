@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527187"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedura: aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox Windows Form
 Gli elementi possono essere aggiunti a una casella combinata di Windows Form, casella di riepilogo o casella di riepilogo in diversi modi, in quanto questi controlli possono essere associati a un'ampia gamma di origini dati. Tuttavia, in questo argomento viene illustrato il metodo più semplice e non richiede supporta l'associazione dati. Gli elementi visualizzati in genere sono stringhe. Tuttavia, qualsiasi oggetto può essere utilizzato. Il testo che viene visualizzato nel controllo è il valore restituito dell'oggetto `ToString` metodo.  

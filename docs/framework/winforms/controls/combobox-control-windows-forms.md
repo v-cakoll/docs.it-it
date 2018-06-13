@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524534"
 ---
 # <a name="combobox-control-windows-forms"></a>Controllo ComboBox (Windows Form)
 Windows Form `ComboBox` controllo viene utilizzato per visualizzare i dati in una casella combinata a discesa. Per impostazione predefinita, il `ComboBox` verrà visualizzato un controllo in due parti: la parte superiore è una casella di testo che consente all'utente di digitare una voce di elenco. La seconda parte è una casella di riepilogo che consente di visualizzare un elenco di elementi da cui l'utente può selezionare uno.  

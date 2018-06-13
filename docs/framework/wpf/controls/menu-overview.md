@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557602"
 ---
 # <a name="menu-overview"></a>Cenni preliminari sulla classe Menu
 La <xref:System.Windows.Controls.Menu> classe consente di organizzare gli elementi associati a comandi e gestori eventi in ordine gerarchico. Ogni <xref:System.Windows.Controls.Menu> elemento contiene una raccolta di <xref:System.Windows.Controls.MenuItem> elementi.  

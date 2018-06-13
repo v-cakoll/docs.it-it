@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760466"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Aggiunta di colonne a un oggetto DataTable
 Oggetto <xref:System.Data.DataTable> contiene una raccolta di <xref:System.Data.DataColumn> oggetti a cui fa riferimento il **colonne** proprietà della tabella. Tale raccolta di colonne, insieme a eventuali vincoli, consente di definire lo schema, o struttura, della tabella.  
