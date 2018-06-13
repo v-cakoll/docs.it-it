@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544395"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Procedura: capovolgere un oggetto UIElement orizzontalmente o verticalmente
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media.ScaleTransform> scorrere un <xref:System.Windows.UIElement> orizzontalmente o verticalmente. In questo esempio, un <xref:System.Windows.Controls.Button> controllo (un tipo di <xref:System.Windows.UIElement>) viene capovolta applicando un <xref:System.Windows.Media.ScaleTransform> al relativo <xref:System.Windows.UIElement.RenderTransform%2A> proprietà.  

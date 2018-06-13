@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543693"
 ---
 # <a name="how-to-recognize-application-gestures"></a>Procedura: riconoscere i movimenti dell'applicazione
 Nell'esempio riportato di seguito viene illustrato come cancellare l'input penna quando un utente apporta una <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> movimento in un <xref:System.Windows.Controls.InkCanvas>. Questo esempio si presuppone un <xref:System.Windows.Controls.InkCanvas>, denominato `inkCanvas1`, viene dichiarata nel file XAML.  

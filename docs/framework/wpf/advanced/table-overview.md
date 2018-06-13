@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549370"
 ---
 # <a name="table-overview"></a>Cenni preliminari sull'elemento Table
 <xref:System.Windows.Documents.Table> è un elemento a livello di blocco che supporta la presentazione basata su griglia flusso del contenuto del documento. La flessibilità di questo elemento lo rende molto utile, ma al contempo ne complica la comprensione e l'uso corretto.  

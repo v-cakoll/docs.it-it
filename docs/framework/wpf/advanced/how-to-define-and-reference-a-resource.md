@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543494"
 ---
 # <a name="how-to-define-and-reference-a-resource"></a>Procedura: definire e fare riferimento a una risorsa
 In questo esempio viene illustrato come definire una risorsa e di farvi riferimento tramite un attributo in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

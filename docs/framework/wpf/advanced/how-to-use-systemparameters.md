@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544635"
 ---
 # <a name="how-to-use-systemparameters"></a>Procedura: Usare SystemParameters
 In questo esempio viene illustrato come accedere e utilizzare le proprietà di <xref:System.Windows.SystemParameters> per applicare uno stile o personalizzare un pulsante.  

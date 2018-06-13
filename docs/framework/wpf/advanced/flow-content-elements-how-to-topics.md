@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546374"
 ---
 # <a name="flow-content-elements-how-to-topics"></a>Argomenti sulle procedure relative a elementi di contenuto del flusso
 Negli argomenti di questa sezione viene descritto come eseguire attività comuni utilizzando i vari elementi del flusso di contenuto e le funzionalità correlate.  

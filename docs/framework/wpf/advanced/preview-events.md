@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546136"
 ---
 # <a name="preview-events"></a>Eventi di anteprima
 Gli eventi di anteprima, noti anche come eventi di tunneling, sono gli eventi indirizzati in cui la direzione della route viene trasferito dalla radice dell'applicazione verso l'elemento che ha generato l'evento e viene restituito come origine dati di evento. Non tutti gli scenari supportano o richiedono eventi di anteprima. In questo argomento vengono descritte le situazioni in cui sono presenti tali eventi, come applicazioni o componenti deve essere gestita, e i casi in cui la creazione di eventi di anteprima in componenti personalizzati o classi potrebbe essere appropriata.  

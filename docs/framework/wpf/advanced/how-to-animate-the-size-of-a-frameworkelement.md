@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543985"
 ---
 # <a name="how-to-animate-the-size-of-a-frameworkelement"></a>Procedura: aggiungere un'animazione alle dimensioni di un oggetto FrameworkElement
 Per aggiungere un'animazione le dimensioni di un <xref:System.Windows.FrameworkElement>, è possibile aggiungere un'animazione relativo <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> proprietà o utilizzare un oggetto animato <xref:System.Windows.Media.ScaleTransform>.  

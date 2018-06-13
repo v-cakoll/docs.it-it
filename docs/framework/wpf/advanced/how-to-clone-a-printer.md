@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544203"
 ---
 # <a name="how-to-clone-a-printer"></a>Procedura: duplicare una stampante
 A un certo punto, la maggior parte delle aziende acquisterà più stampanti dello stesso modello. In genere, questi vengono installati con le impostazioni di configurazione praticamente identico. Installazione di ogni stampante può richiedere molto tempo e soggetta a errori. Il <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> spazio dei nomi e il <xref:System.Printing.PrintServer.InstallPrintQueue%2A> classe esposta con Microsoft .NET Framework consente di installare immediatamente qualsiasi numero di code di stampa aggiuntive che vengono clonati da una coda di stampa esistente.  

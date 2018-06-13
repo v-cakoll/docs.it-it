@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547823"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic e la gestione degli eventi WPF
 Per la lingua di Microsoft Visual Basic .NET in particolare, è possibile utilizzare la specifica della lingua `Handles` (parola chiave) per associare i gestori di eventi con istanze, anziché associare gestori di eventi con gli attributi o usando il <xref:System.Windows.UIElement.AddHandler%2A> metodo. Tuttavia, la tecnica `Handles` per collegare gestori alle istanze presenta alcuni limiti, in quanto la sintassi `Handles` non è in grado di supportare alcune delle funzioni degli eventi indirizzati specifiche del sistema di eventi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  

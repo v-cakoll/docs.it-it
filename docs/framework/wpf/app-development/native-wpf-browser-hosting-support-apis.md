@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550020"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>API native WPF per il supporto dell'hosting del browser
 Hosting di [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] applicazioni nei browser Web mediante un server di documenti attivi (anche noto come DocObject) registrato l'Host di WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] può attivare e direttamente integrare con un documento attivo. Per l'hosting di XBAP e documenti XAML separati nei browser Mozilla, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] fornisce un plug-in NPAPI, che fornisce un ambiente di hosting simile di [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] server documenti attivi come [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] does. Tuttavia, il modo più semplice pratico per ospitare XBAP e XAML dei documenti in altri browser e applicazioni autonome tramite il controllo Web Browser di Internet Explorer. Il controllo Web Browser fornisce l'ambiente di hosting server documenti attivi complesso, ma include anche un host separato personalizzare, estendere tale ambiente e comunicare direttamente con l'oggetto documento attivo corrente.  

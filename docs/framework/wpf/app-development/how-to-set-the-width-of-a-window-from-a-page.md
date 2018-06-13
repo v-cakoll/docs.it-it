@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545992"
 ---
 # <a name="how-to-set-the-width-of-a-window-from-a-page"></a>Procedura: impostare la larghezza di una finestra da una pagina
 In questo esempio viene illustrato come impostare la larghezza della finestra da un <xref:System.Windows.Controls.Page>.  

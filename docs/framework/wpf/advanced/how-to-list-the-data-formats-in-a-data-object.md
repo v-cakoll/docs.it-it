@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543481"
 ---
 # <a name="how-to-list-the-data-formats-in-a-data-object"></a>Procedura: elencare i formati dati in un oggetto dati
 Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Windows.DataObject.GetFormats%2A> overload del metodo get di una matrice di stringhe indicano ogni formato di dati che è disponibile in un oggetto dati.  

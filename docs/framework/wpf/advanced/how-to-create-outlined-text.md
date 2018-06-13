@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544965"
 ---
 # <a name="how-to-create-outlined-text"></a>Procedura: creare testo con contorni
 Nella maggior parte dei casi, quando si aggiungono ornamenti per le stringhe di testo il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] un'applicazione, si utilizza il testo un insieme di caratteri discreti, o icone. Ad esempio, è possibile creare un pennello sfumato lineare e applicarlo al <xref:System.Windows.Controls.Control.Foreground%2A> proprietà di un <xref:System.Windows.Controls.TextBox> oggetto. Quando si visualizzano o si modifica la casella di testo, il pennello sfumato lineare viene applicato automaticamente al set di caratteri nella stringa di testo corrente.  

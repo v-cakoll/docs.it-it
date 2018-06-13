@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547762"
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Procedura: aprire un file rilasciato in un controllo RichTextBox
 In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, e <xref:System.Windows.Documents.FlowDocument> tutti i controlli sono incorporate funzionalità di trascinamento e rilascio. La funzionalità incorporata consente di trascinamento e rilascio del testo all'interno e tra i controlli. Tuttavia, non consente l'apertura di un file eliminando il file nel controllo. Questi controlli inoltre contrassegnano gli eventi di trascinamento e rilascio come gestito. Di conseguenza, per impostazione predefinita, è possibile aggiungere i propri gestori eventi per fornire la funzionalità di apertura file rilasciati.  

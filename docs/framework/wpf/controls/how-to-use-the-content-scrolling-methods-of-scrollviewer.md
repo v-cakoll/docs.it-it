@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552766"
 ---
 # <a name="how-to-use-the-content-scrolling-methods-of-scrollviewer"></a>Procedura: utilizzare i metodi di scorrimento del contenuto di ScrollViewer
 In questo esempio viene illustrato come utilizzare i metodi di scorrimento di <xref:System.Windows.Controls.ScrollViewer> elemento. Questi metodi consentono lo scorrimento incrementale del contenuto, tramite la riga o pagina, in un <xref:System.Windows.Controls.ScrollViewer>.  

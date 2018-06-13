@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552779"
 ---
 # <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a>Procedura: utilizzare un menu di scelta rapida personalizzato con un oggetto TextBox
 In questo esempio viene illustrato come definire e implementare un menu di scelta rapida personalizzato semplice per un <xref:System.Windows.Controls.TextBox>.  
