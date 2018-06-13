@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957911"
 ---
 # <a name="when-to-deploy-windows-containers-to-service-fabric"></a><span data-ttu-id="abd84-103">Quando distribuire i contenitori di Windows a Service Fabric</span><span class="sxs-lookup"><span data-stu-id="abd84-103">When to deploy Windows Containers to Service Fabric</span></span>
 

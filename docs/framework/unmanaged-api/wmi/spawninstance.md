@@ -2,10 +2,6 @@
 title: Funzione SpawnInstance (riferimenti alle API non gestite)
 description: La funzione SpawnInstance crea una nuova istanza della classe.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnInstance
 api_location:
@@ -20,21 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68508f3000e7f4ac481f940ef4c715366c37125c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460462"
 ---
-# <a name="spawninstance-function"></a><span data-ttu-id="d4489-103">Funzione SpawnInstance</span><span class="sxs-lookup"><span data-stu-id="d4489-103">SpawnInstance function</span></span>
-<span data-ttu-id="d4489-104">Crea una nuova istanza di una classe.</span><span class="sxs-lookup"><span data-stu-id="d4489-104">Creates a new instance of a class.</span></span>    
+# <a name="spawninstance-function"></a><span data-ttu-id="60da3-103">Funzione SpawnInstance</span><span class="sxs-lookup"><span data-stu-id="60da3-103">SpawnInstance function</span></span>
+<span data-ttu-id="60da3-104">Crea una nuova istanza di una classe.</span><span class="sxs-lookup"><span data-stu-id="60da3-104">Creates a new instance of a class.</span></span>    
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="d4489-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d4489-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="60da3-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="60da3-105">Syntax</span></span>  
   
 ```  
 HRESULT SpawnInstance (
@@ -44,48 +38,48 @@ HRESULT SpawnInstance (
    [out] IWbemClassObject**  ppNewInstance); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="d4489-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="d4489-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="60da3-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="60da3-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="d4489-107">[in] Questo parametro è inutilizzato.</span><span class="sxs-lookup"><span data-stu-id="d4489-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="60da3-107">[in] Questo parametro è inutilizzato.</span><span class="sxs-lookup"><span data-stu-id="60da3-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="d4489-108">[in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.</span><span class="sxs-lookup"><span data-stu-id="d4489-108">[in] A pointer to an [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.</span></span>
+<span data-ttu-id="60da3-108">[in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.</span><span class="sxs-lookup"><span data-stu-id="60da3-108">[in] A pointer to an [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.</span></span>
 
 `lFlags`  
-<span data-ttu-id="d4489-109">[in] Riservato.</span><span class="sxs-lookup"><span data-stu-id="d4489-109">[in] Reserved.</span></span> <span data-ttu-id="d4489-110">Questo parametro deve essere 0.</span><span class="sxs-lookup"><span data-stu-id="d4489-110">This parameter must be 0.</span></span>
+<span data-ttu-id="60da3-109">[in] Riservato.</span><span class="sxs-lookup"><span data-stu-id="60da3-109">[in] Reserved.</span></span> <span data-ttu-id="60da3-110">Questo parametro deve essere 0.</span><span class="sxs-lookup"><span data-stu-id="60da3-110">This parameter must be 0.</span></span>
 
 `ppNewInstance`  
-<span data-ttu-id="d4489-111">[out] Riceve il puntatore a una nuova istanza della classe.</span><span class="sxs-lookup"><span data-stu-id="d4489-111">[out] Receives the pointer to the new instance of the class.</span></span> <span data-ttu-id="d4489-112">Se si verifica un errore, non è un nuovo oggetto restituito, e `ppNewInstance` è invariato a sinistra.</span><span class="sxs-lookup"><span data-stu-id="d4489-112">If an error occurs, a new object is not returned, and `ppNewInstance` is left unmodified.</span></span>
+<span data-ttu-id="60da3-111">[out] Riceve il puntatore a una nuova istanza della classe.</span><span class="sxs-lookup"><span data-stu-id="60da3-111">[out] Receives the pointer to the new instance of the class.</span></span> <span data-ttu-id="60da3-112">Se si verifica un errore, non è un nuovo oggetto restituito, e `ppNewInstance` è invariato a sinistra.</span><span class="sxs-lookup"><span data-stu-id="60da3-112">If an error occurs, a new object is not returned, and `ppNewInstance` is left unmodified.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="d4489-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="d4489-113">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="60da3-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="60da3-113">Return value</span></span>
 
-<span data-ttu-id="d4489-114">I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="d4489-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="60da3-114">I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="60da3-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="d4489-115">Costante</span><span class="sxs-lookup"><span data-stu-id="d4489-115">Constant</span></span>  |<span data-ttu-id="d4489-116">Valore</span><span class="sxs-lookup"><span data-stu-id="d4489-116">Value</span></span>  |<span data-ttu-id="d4489-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d4489-117">Description</span></span>  |
+|<span data-ttu-id="60da3-115">Costante</span><span class="sxs-lookup"><span data-stu-id="60da3-115">Constant</span></span>  |<span data-ttu-id="60da3-116">Valore</span><span class="sxs-lookup"><span data-stu-id="60da3-116">Value</span></span>  |<span data-ttu-id="60da3-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="60da3-117">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | <span data-ttu-id="d4489-118">0x80041020</span><span class="sxs-lookup"><span data-stu-id="d4489-118">0x80041020</span></span> | <span data-ttu-id="d4489-119">`ptr`non è una definizione di classe valido e non può generare nuove istanze.</span><span class="sxs-lookup"><span data-stu-id="d4489-119">`ptr` is not a valid class definition and cannot spawn new instances.</span></span> <span data-ttu-id="d4489-120">È incompleto o non è stato registrato con WMI chiamando [PutClassWmi](putclasswmi.md).</span><span class="sxs-lookup"><span data-stu-id="d4489-120">Either it is incomplete or it has not been registered with Windows Management by calling [PutClassWmi](putclasswmi.md).</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="d4489-121">0x80041006</span><span class="sxs-lookup"><span data-stu-id="d4489-121">0x80041006</span></span> | <span data-ttu-id="d4489-122">Memoria insufficiente è disponibile per completare l'operazione.</span><span class="sxs-lookup"><span data-stu-id="d4489-122">Not enough memory is available to complete the operation.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="d4489-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="d4489-123">0x80041008</span></span> | <span data-ttu-id="d4489-124">`ppNewClass` è `null`.</span><span class="sxs-lookup"><span data-stu-id="d4489-124">`ppNewClass` is `null`.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="d4489-125">0</span><span class="sxs-lookup"><span data-stu-id="d4489-125">0</span></span> | <span data-ttu-id="d4489-126">La chiamata di funzione è stata completata.</span><span class="sxs-lookup"><span data-stu-id="d4489-126">The function call was successful.</span></span>  |
+| `WBEM_E_INCOMPLETE_CLASS` | <span data-ttu-id="60da3-118">0x80041020</span><span class="sxs-lookup"><span data-stu-id="60da3-118">0x80041020</span></span> | <span data-ttu-id="60da3-119">`ptr` non è una definizione di classe valido e non può generare nuove istanze.</span><span class="sxs-lookup"><span data-stu-id="60da3-119">`ptr` is not a valid class definition and cannot spawn new instances.</span></span> <span data-ttu-id="60da3-120">È incompleto o non è stato registrato con WMI chiamando [PutClassWmi](putclasswmi.md).</span><span class="sxs-lookup"><span data-stu-id="60da3-120">Either it is incomplete or it has not been registered with Windows Management by calling [PutClassWmi](putclasswmi.md).</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="60da3-121">0x80041006</span><span class="sxs-lookup"><span data-stu-id="60da3-121">0x80041006</span></span> | <span data-ttu-id="60da3-122">Memoria insufficiente è disponibile per completare l'operazione.</span><span class="sxs-lookup"><span data-stu-id="60da3-122">Not enough memory is available to complete the operation.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="60da3-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="60da3-123">0x80041008</span></span> | <span data-ttu-id="60da3-124">`ppNewClass` è `null`.</span><span class="sxs-lookup"><span data-stu-id="60da3-124">`ppNewClass` is `null`.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="60da3-125">0</span><span class="sxs-lookup"><span data-stu-id="60da3-125">0</span></span> | <span data-ttu-id="60da3-126">La chiamata di funzione è stata completata.</span><span class="sxs-lookup"><span data-stu-id="60da3-126">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="d4489-127">Note</span><span class="sxs-lookup"><span data-stu-id="d4489-127">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="60da3-127">Note</span><span class="sxs-lookup"><span data-stu-id="60da3-127">Remarks</span></span>
 
-<span data-ttu-id="d4489-128">Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject:: SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) metodo.</span><span class="sxs-lookup"><span data-stu-id="d4489-128">This function wraps a call to the [IWbemClassObject::SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="60da3-128">Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject:: SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) metodo.</span><span class="sxs-lookup"><span data-stu-id="60da3-128">This function wraps a call to the [IWbemClassObject::SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) method.</span></span>
 
-<span data-ttu-id="d4489-129">`ptr`deve essere una definizione di classe ottenuta dalla gestione di Windows.</span><span class="sxs-lookup"><span data-stu-id="d4489-129">`ptr` must be a class definition obtained from Windows Management.</span></span> <span data-ttu-id="d4489-130">Si noti che la generazione di un'istanza da un'istanza è supportata ma l'istanza restituita è vuota. È quindi possibile utilizzare la definizione di classe per creare nuove istanze.</span><span class="sxs-lookup"><span data-stu-id="d4489-130">(Note that spawning an instance from an instance is supported but the returned instance is empty.) You then use this class definition to create new instances.</span></span> <span data-ttu-id="d4489-131">Una chiamata al [PutInstanceWmi](putinstancewmi.md) è la funzione se si prevede di scrivere l'istanza di gestione di Windows.</span><span class="sxs-lookup"><span data-stu-id="d4489-131">A call to the [PutInstanceWmi](putinstancewmi.md) function is required if you intend to write the instance to Windows Management.</span></span>
-
-
+<span data-ttu-id="60da3-129">`ptr` deve essere una definizione di classe ottenuta dalla gestione di Windows.</span><span class="sxs-lookup"><span data-stu-id="60da3-129">`ptr` must be a class definition obtained from Windows Management.</span></span> <span data-ttu-id="60da3-130">Si noti che la generazione di un'istanza da un'istanza è supportata ma l'istanza restituita è vuota. È quindi possibile utilizzare la definizione di classe per creare nuove istanze.</span><span class="sxs-lookup"><span data-stu-id="60da3-130">(Note that spawning an instance from an instance is supported but the returned instance is empty.) You then use this class definition to create new instances.</span></span> <span data-ttu-id="60da3-131">Una chiamata al [PutInstanceWmi](putinstancewmi.md) è la funzione se si prevede di scrivere l'istanza di gestione di Windows.</span><span class="sxs-lookup"><span data-stu-id="60da3-131">A call to the [PutInstanceWmi](putinstancewmi.md) function is required if you intend to write the instance to Windows Management.</span></span>
 
 
-<span data-ttu-id="d4489-132">Il nuovo oggetto restituito `ppNewClass` diventa automaticamente una sottoclasse dell'oggetto corrente.</span><span class="sxs-lookup"><span data-stu-id="d4489-132">The new object returned in `ppNewClass` automatically becomes a subclass of the current object.</span></span> <span data-ttu-id="d4489-133">Impossibile eseguire l'override di questo comportamento.</span><span class="sxs-lookup"><span data-stu-id="d4489-133">This behavior cannot be overridden.</span></span> <span data-ttu-id="d4489-134">Non vi è alcun altro metodo per cui è possono creare le sottoclassi (classi derivate).</span><span class="sxs-lookup"><span data-stu-id="d4489-134">There is no other method by which subclasses (derived classes) can be created.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="d4489-135">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d4489-135">Requirements</span></span>  
- <span data-ttu-id="d4489-136">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4489-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+
+<span data-ttu-id="60da3-132">Il nuovo oggetto restituito `ppNewClass` diventa automaticamente una sottoclasse dell'oggetto corrente.</span><span class="sxs-lookup"><span data-stu-id="60da3-132">The new object returned in `ppNewClass` automatically becomes a subclass of the current object.</span></span> <span data-ttu-id="60da3-133">Impossibile eseguire l'override di questo comportamento.</span><span class="sxs-lookup"><span data-stu-id="60da3-133">This behavior cannot be overridden.</span></span> <span data-ttu-id="60da3-134">Non vi è alcun altro metodo per cui è possono creare le sottoclassi (classi derivate).</span><span class="sxs-lookup"><span data-stu-id="60da3-134">There is no other method by which subclasses (derived classes) can be created.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="60da3-135">Requisiti</span><span class="sxs-lookup"><span data-stu-id="60da3-135">Requirements</span></span>  
+ <span data-ttu-id="60da3-136">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="60da3-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d4489-137">**Intestazione:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="d4489-137">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="60da3-137">**Intestazione:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="60da3-137">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="d4489-138">**Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="d4489-138">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="60da3-138">**Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="60da3-138">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d4489-139">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d4489-139">See also</span></span>  
-[<span data-ttu-id="d4489-140">WMI e i contatori delle prestazioni (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="d4489-140">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="60da3-139">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="60da3-139">See also</span></span>  
+[<span data-ttu-id="60da3-140">WMI e i contatori delle prestazioni (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="60da3-140">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

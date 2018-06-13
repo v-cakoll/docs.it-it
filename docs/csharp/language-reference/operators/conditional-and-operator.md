@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171915"
 ---
 # <a name="ampamp-operator-c-reference"></a><span data-ttu-id="6c9a4-102">&amp;&amp; Operatore (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="6c9a4-102">&amp;&amp; Operator (C# Reference)</span></span>
 <span data-ttu-id="6c9a4-103">L'operatore AND condizionale (`&&`) esegue un AND logico sugli operandi `bool`, ma valuta il secondo operando solo se necessario.</span><span class="sxs-lookup"><span data-stu-id="6c9a4-103">The conditional-AND operator (`&&`) performs a logical-AND of its `bool` operands, but only evaluates its second operand if necessary.</span></span>  

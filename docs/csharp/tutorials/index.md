@@ -8,6 +8,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955992"
 ---
 # <a name="c-tutorials"></a><span data-ttu-id="e397e-103">Esercitazioni su C#</span><span class="sxs-lookup"><span data-stu-id="e397e-103">C# Tutorials</span></span>
 

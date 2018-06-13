@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958011"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a><span data-ttu-id="ff494-103">Scelta delle piattaforme di calcolo di Azure per le applicazioni basate sul contenitore</span><span class="sxs-lookup"><span data-stu-id="ff494-103">Choosing Azure compute platforms for container-based applications</span></span>
 

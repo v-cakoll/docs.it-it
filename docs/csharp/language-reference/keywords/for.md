@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34306527"
 ---
 # <a name="for-c-reference"></a><span data-ttu-id="d5998-102">for (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="d5998-102">for (C# reference)</span></span>
 
