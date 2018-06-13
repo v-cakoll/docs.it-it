@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757060"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Creazione di un oggetto DataTable da un oggetto DataView
 Una volta recuperati i dati da un'origine dati e compilato un tipo <xref:System.Data.DataTable>, è possibile ordinare, filtrare o limitare i dati restituiti senza doverli recuperare nuovamente. Questo è reso possibile dalla classe <xref:System.Data.DataView>. Inoltre, se è necessario creare un nuovo <xref:System.Data.DataTable> dal <xref:System.Data.DataView>, è possibile utilizzare il <xref:System.Data.DataView.ToTable%2A> metodo per copiare tutte le righe e colonne oppure un subset dei dati in un nuovo <xref:System.Data.DataTable>. Il metodo <xref:System.Data.DataView.ToTable%2A> fornisce gli overload per:  

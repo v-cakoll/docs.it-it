@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504890"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Tipi supportati dal serializzatore dei contratti dati
 Windows Communication Foundation (WCF) usa il <xref:System.Runtime.Serialization.DataContractSerializer> come motore di serializzazione predefinito per convertire i dati in XML e convertire XML in dati. <xref:System.Runtime.Serialization.DataContractSerializer> è progettato per serializzare tipi di *contratto dati* . Supporta tuttavia molti altri tipi che possono essere considerati come tipi dotati di un contratto dati implicito. Nell'elenco seguente sono riportati tutti i tipi serializzabili:  

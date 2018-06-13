@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531131"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Procedura: associare dati al controllo DataGridView di Windows Form
 Il controllo <xref:System.Windows.Forms.DataGridView> supporta il modello di data binding standard di Windows Form che consente l'associazione a un'ampia gamma di origini dati. Nella maggior parte dei casi, tuttavia, l'associazione verrà eseguita a un componente <xref:System.Windows.Forms.BindingSource> che gestisce i dettagli dell'interazione con l'origine dati. Il componente <xref:System.Windows.Forms.BindingSource> può rappresentare qualsiasi origine dati di Windows Form e offre una notevole flessibilità per la scelta o la modifica del percorso dei dati. Per ulteriori informazioni sulle origini dati supportate dal <xref:System.Windows.Forms.DataGridView> di controllo, vedere [Cenni preliminari sul controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  

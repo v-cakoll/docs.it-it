@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502947"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Sessione affidabile di associazione personalizzata su HTTPS
 In questo esempio viene illustrato l'utilizzo della sicurezza del trasporto SSL con le sessioni affidabili. Le sessioni affidabili implementano il protocollo WS-RM (WS-Reliable Messaging). È possibile ottenere una sessione affidabile protetta componendo WS-Security su sessioni affidabili. Tuttavia, è anche possibile scegliere di utilizzare la sicurezza del trasporto HTTP con SSL.  

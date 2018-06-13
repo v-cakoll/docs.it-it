@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e2a0352f52bd617738e6d7cfe33b4d7acdb6da0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427658"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfo-interface"></a>Interfaccia ISymUnmanagedReaderSymbolSearchInfo
 Fornisce metodi per ottenere informazioni sui simboli di ricerca. Ottenere questa interfaccia chiamando `QueryInterface` su un oggetto che implementa il [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interfaccia.  

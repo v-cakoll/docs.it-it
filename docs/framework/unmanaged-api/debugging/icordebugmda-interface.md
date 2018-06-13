@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 550b39445dfe4d97e712e9a4c73aa0f497b3fce5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420966"
 ---
 # <a name="icordebugmda-interface"></a>Interfaccia ICorDebugMDA
 Rappresenta un messaggio relativo all'assistente al debug gestito (MDA, Managed Debugging Assistant).  

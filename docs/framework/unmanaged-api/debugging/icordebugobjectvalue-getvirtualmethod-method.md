@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 09db41c71ef21ed6422785d3127c11af08420110
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417378"
 ---
 # <a name="icordebugobjectvaluegetvirtualmethod-method"></a>Metodo ICorDebugObjectValue::GetVirtualMethod
 `GetVirtualMethod` non è implementata in questa versione di .NET Framework.  

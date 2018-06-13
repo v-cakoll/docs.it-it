@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e8aa71a79bee45d5a8e1f3448c781e6ba1ec605
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414138"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>Metodo ICorDebugManagedCallback::EditAndContinueRemap
 Questo metodo è stato deprecato. Notifica al debugger che è stato inviato un evento relativo all'ambiente di sviluppo integrato (IDE).  

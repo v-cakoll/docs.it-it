@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9030319ca12aafcf452e3ecd816fc269f0abfc0e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417515"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>Metodo ICorDebugThread::GetActiveChain
 Ottiene un puntatore a interfaccia a catena dello stack (più recente) attiva per questo oggetto ICorDebugThread.  

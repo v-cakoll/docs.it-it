@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537310"
 ---
 # <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>Procedura: aggiungere una colonna non associata a un controllo DataGridView di Windows Form associato ai dati
 I dati visualizzati nel controllo <xref:System.Windows.Forms.DataGridView> in genere provengono da un'origine dati di qualche tipo, ma è possibile visualizzare una colonna di dati di origine diversa. Questo tipo di colonna è detto colonna non associata. Le colonne non associate possono assumere molte forme. Spesso vengono usate per fornire accesso ai dettagli di una riga di dati.  

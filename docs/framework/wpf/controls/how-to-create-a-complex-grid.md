@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553595"
 ---
 # <a name="how-to-create-a-complex-grid"></a>Procedura: creare una griglia complessa
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Controls.Grid> per creare layout simile a un calendario mensile.  

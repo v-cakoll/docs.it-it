@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dcb276e6fba6a1b46b6be630804dc6f07c211b86
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420508"
 ---
 # <a name="icordebugstepperisactive-method"></a>Metodo ICorDebugStepper::IsActive
 Ottiene un valore che indica se ICorDebugStepper è attualmente in esecuzione un passaggio.  

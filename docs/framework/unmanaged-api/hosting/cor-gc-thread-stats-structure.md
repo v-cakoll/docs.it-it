@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 24a386fe82bbd004954924a573c090af7f58824a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431828"
 ---
 # <a name="corgcthreadstats-structure"></a>Struttura COR_GC_THREAD_STATS
 Contiene le statistiche per ogni thread relative alla garbage collection.  

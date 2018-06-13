@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9114799b87d39333ff9da66429dc1ea99ec2131c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413430"
 ---
 # <a name="icordebughandlevaluedispose-method"></a>Metodo ICorDebugHandleValue::Dispose
 Rilascia l'handle di cui fa riferimento l'oggetto ICorDebugHandleValue senza rilasciare esplicitamente il puntatore di interfaccia.  

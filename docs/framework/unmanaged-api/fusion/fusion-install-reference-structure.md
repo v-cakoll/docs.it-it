@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4685d1a23fdf1874817522a16ccd428d81acd1ac
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433230"
 ---
 # <a name="fusioninstallreference-structure"></a>Struttura FUSION_INSTALL_REFERENCE
 Rappresenta un riferimento da un'applicazione a un assembly che l'applicazione è installata nella global assembly cache.  

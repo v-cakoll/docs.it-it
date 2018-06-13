@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529604"
 ---
 # <a name="bindingsource-component-overview"></a>Cenni preliminari sul componente BindingSource
 Il componente <xref:System.Windows.Forms.BindingSource> è progettato per semplificare il processo di associazione di controlli a un'origine dati sottostante. Il componente <xref:System.Windows.Forms.BindingSource> funge da canale e da origine dati per altri controlli a cui associarli. Fornisce un'astrazione della connessione dati del form passando i comandi all'elenco dei dati sottostante. Inoltre, è possibile aggiungervi dati direttamente, in modo che il componente stesso funga da origine dati.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 26423837c173b5f18282a8aa480ae92ecc452489
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435654"
 ---
 # <a name="iclrassemblyidentitymanagergetprobingassembliesfromreference-method"></a>Metodo ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference
 Ottiene un [ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md) enumeratore per le identità di assembly a cui fa riferimento l'assembly con il tipo di identità specificato.  

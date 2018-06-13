@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db2f30001e050c1f312613c794388ffaa99d3b17
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414486"
 ---
 # <a name="icordebugmodulegetfunctionfromrva-method"></a>Metodo ICorDebugModule::GetFunctionFromRVA
 Questo metodo non è stato implementato nella versione corrente di .NET Framework.  

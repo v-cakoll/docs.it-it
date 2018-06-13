@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 677db647320ff4014b791502b7ac1b261378c8dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419530"
 ---
 # <a name="icordebugmutabledatatarget-interface"></a>Interfaccia ICorDebugMutableDataTarget
 Estende il [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) interfaccia per supportare le destinazioni dati modificabili.  

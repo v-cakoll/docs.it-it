@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ad05d2f6226d570fc854fb48575851dd718e410
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418197"
 ---
 # <a name="icordebugstepper2setjmc-method"></a>Metodo ICorDebugStepper2::SetJMC
 Imposta un valore che specifica se ICorDebugStepper passo solo nel codice creato dallo sviluppatore di un'applicazione. Questo processo è noto anche come my (JMC) il debug del codice.  

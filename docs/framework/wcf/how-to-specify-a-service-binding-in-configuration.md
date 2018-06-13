@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499999"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Procedura: specificare un'associazione al servizio in configurazione
 In questo esempio viene definito un contratto `ICalculator` per un servizio calcolatrice di base, il servizio viene implementato nella classe `CalculatorService`, quindi l'endpoint relativo viene configurato nel file Web.config dove viene specificato che il servizio utilizza <xref:System.ServiceModel.BasicHttpBinding>. Per una descrizione di come configurare questo servizio utilizzando il codice anziché una configurazione, vedere [procedura: specificare un'associazione al servizio nel codice](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  

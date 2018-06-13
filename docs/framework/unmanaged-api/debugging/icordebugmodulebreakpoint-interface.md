@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c04d5f779306a67e389f768cefdf633f3d72f0ee
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416137"
 ---
 # <a name="icordebugmodulebreakpoint-interface1"></a>ICorDebugModuleBreakpoint Interface1
 Fornisce l'accesso a moduli specifici. Questa interfaccia è una sottoclasse dell'interfaccia ICorDebugBreakpoint.  

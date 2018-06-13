@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413280"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>Metodo ICorDebugEval2::NewParameterizedArray
 Alloca una nuova matrice del tipo di elemento specificato e le dimensioni.  

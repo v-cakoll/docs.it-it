@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489573"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Procedura: creare un contratto request/reply
 Un contratto di tipo request/reply specifica un metodo che restituisce una risposta La replica deve essere inviata e correlata alla richiesta in base ai termini di questo contratto. Anche se il metodo non restituisce alcuna risposta (`void` in C# o `Sub` in Visual Basic), nell'infrastruttura viene creato e inviato un messaggio vuoto al chiamante. Per impedire l'invio di un messaggio di risposta vuoto, utilizzare un contratto unidirezionale per l'operazione.  

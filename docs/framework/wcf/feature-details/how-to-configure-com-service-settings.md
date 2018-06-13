@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490104"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Procedura: configurare le impostazioni del servizio COM+
 Quando l'interfaccia di un'applicazione viene aggiunta o rimossa usando lo strumento di configurazione del servizio COM+, la configurazione del servizio Web viene aggiornata nel file di configurazione dell'applicazione. Nella modalità di COM+, il file config si trova nella Directory radice dell'applicazione (%PROGRAMFILES%\ComPlus Applications\\{appid} è l'impostazione predefinita). In entrambe le modalità di hosting Web il file Web.config è posizionato nella directory vroot specificata.  

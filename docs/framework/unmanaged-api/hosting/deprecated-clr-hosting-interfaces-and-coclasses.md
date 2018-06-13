@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f6c20a69894c95086dbd813601ac8811ab4f337
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429224"
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>Interfacce di hosting CLR deprecate e coclassi
 In questa sezione vengono descritte le interfacce non gestite host consente di integrare common language runtime (CLR) nelle versioni 1.0 e 1.1 di .NET Framework nelle applicazioni. Queste interfacce forniscono metodi per un host configurare e caricare il runtime in un processo.  

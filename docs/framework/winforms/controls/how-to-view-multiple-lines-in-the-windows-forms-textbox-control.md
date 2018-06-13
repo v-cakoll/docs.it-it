@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538567"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Procedura: visualizzare più righe nel controllo TextBox Windows Form
 Per impostazione predefinita, Windows Form <xref:System.Windows.Forms.TextBox> controllo Visualizza una singola riga di testo e non visualizzare le barre di scorrimento. Se il testo è maggiore dello spazio disponibile, è visibile solo una parte del testo. È possibile modificare questo comportamento predefinito impostando il <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, e <xref:System.Windows.Forms.TextBox.ScrollBars%2A> proprietà sui valori appropriati.  

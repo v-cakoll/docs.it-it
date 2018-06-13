@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 653dd933066898c1954cfbcc57c0c0493e47b4be
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428612"
 ---
 # <a name="isymunmanagedwriter5closemaptokenstosourcespans-method"></a>Metodo ISymUnmanagedWriter5::CloseMapTokensToSourceSpans
 Chiudere la sezione di dati personalizzati speciali per le informazioni di mapping span di token all'origine. Dopo che è stato chiuso, è possibile aggiungere alcun altre informazioni di mapping.  

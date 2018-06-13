@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547485"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Procedura: gestire l'evento ContextMenuOpening
 Il <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento può essere gestito in un'applicazione per modificare un contesto menu esistente prima di visualizzare o eliminare il menu che sarebbe altrimenti visualizzato impostando il <xref:System.Windows.RoutedEventArgs.Handled%2A> proprietà `true` nei dati dell'evento. La ragione più comune per l'impostazione <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true` dati dell'evento consiste nella sostituzione menu interamente con un nuovo <xref:System.Windows.Controls.ContextMenu> dell'oggetto, che talvolta richiede l'annullamento dell'operazione e avviare una nuova apertura. Se si scrivono i gestori per il <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento, è necessario essere consapevoli dei problemi di temporizzazione tra un <xref:System.Windows.Controls.ContextMenu> controllo e il servizio è responsabile dell'apertura e la posizione del menu di scelta rapida per i controlli in generale. In questo argomento vengono illustrate alcune delle tecniche di codice per diversi menu di scelta rapida aprire scenari e viene illustrato un caso in cui il problema di temporizzazione entra in gioco.  

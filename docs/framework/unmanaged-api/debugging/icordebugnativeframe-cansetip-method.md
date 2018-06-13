@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93c8256ae95108f0800b56869d67570c4e42202e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416897"
 ---
 # <a name="icordebugnativeframecansetip-method"></a>Metodo ICorDebugNativeFrame::CanSetIP
 Ottiene un valore HRESULT che indica se è possibile impostare il puntatore all'istruzione (IP) alla posizione di offset specificata in codice nativo.  

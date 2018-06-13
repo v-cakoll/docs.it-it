@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e15bab136540c73f8e1cff0e6bb52ec1d6c0063
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426224"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>Metodo ISymUnmanagedMethod::GetSourceStartEnd
 Ottiene le posizioni di documento di inizio e di fine per l'origine di questo metodo. La prima posizione di matrice è l'inizio e la seconda è la fine.  

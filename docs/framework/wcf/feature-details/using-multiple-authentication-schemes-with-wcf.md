@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498446"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Uso di vari schemi di autenticazione con WCF
 Con WCF è ora possibile specificare più schemi di autenticazione in un singolo endpoint. Inoltre, i servizi ospitati dal Web possono ereditare le relative impostazioni di autenticazione direttamente da IIS. Nei servizi self-hosted è possibile specificare gli schemi di autenticazione da usare. Per ulteriori informazioni sulla configurazione delle impostazioni di autenticazione in IIS, vedere [autenticazione IIS](http://go.microsoft.com/fwlink/?LinkId=232458)  

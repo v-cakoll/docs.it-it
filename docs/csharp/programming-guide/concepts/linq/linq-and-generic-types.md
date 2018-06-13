@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327737"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ e tipi generici (C#)
 Le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sono basate su tipi generici introdotti nella versione 2.0 di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Non è necessaria una conoscenza approfondita dei generics per poter iniziare a scrivere le query. È tuttavia importante comprendere due concetti di base:  

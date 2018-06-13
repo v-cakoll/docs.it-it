@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d62f4f8a34123bcd3f0cbe56f1c1b958bcaa6ef2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413372"
 ---
 # <a name="icordebugframegetcallee-method"></a>Metodo ICorDebugFrame::GetCallee
 Ottiene un puntatore all'oggetto ICorDebugFrame nella catena che ha chiamato il frame corrente.  

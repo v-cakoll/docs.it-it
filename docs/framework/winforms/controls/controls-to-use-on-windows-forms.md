@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529723"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Controlli da usare in Windows Form
 Il seguente è un elenco alfabetico di controlli e componenti che possono essere usati in Windows Form. Oltre ai controlli Windows Form illustrati in questa sezione, è possibile aggiungere controlli ActiveX e personalizzati a Windows Form. Se il controllo necessario non è elencato qui, è possibile crearlo. Per informazioni dettagliate, vedere [Sviluppo di controlli Windows Form in fase di progettazione](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Per altre informazioni sulla scelta del controllo necessario, vedere [Controlli Windows Form per funzione](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
