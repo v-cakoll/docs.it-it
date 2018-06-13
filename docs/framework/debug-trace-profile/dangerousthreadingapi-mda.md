@@ -1,13 +1,6 @@
 ---
 title: MDA dangerousThreadingAPI
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - suspending threads
 - DangerousThreadingAPI MDA
@@ -17,40 +10,38 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b7c4e7f5612cb6a46f16b6e42327e8430d548e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 02f16bd9560346cca9b24d4e5b8e760fdb3afd18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357313"
 ---
-# <a name="dangerousthreadingapi-mda"></a><span data-ttu-id="0e21a-102">MDA dangerousThreadingAPI</span><span class="sxs-lookup"><span data-stu-id="0e21a-102">dangerousThreadingAPI MDA</span></span>
-<span data-ttu-id="0e21a-103">L'assistente al debug gestito `dangerousThreadingAPI` viene attivato quando il metodo <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> viene chiamato per un thread diverso da quello attuale.</span><span class="sxs-lookup"><span data-stu-id="0e21a-103">The `dangerousThreadingAPI` managed debugging assistant (MDA) is activated when the <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> method is called on a thread other than the current thread.</span></span>  
+# <a name="dangerousthreadingapi-mda"></a><span data-ttu-id="84f1f-102">MDA dangerousThreadingAPI</span><span class="sxs-lookup"><span data-stu-id="84f1f-102">dangerousThreadingAPI MDA</span></span>
+<span data-ttu-id="84f1f-103">L'assistente al debug gestito `dangerousThreadingAPI` viene attivato quando il metodo <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> viene chiamato per un thread diverso da quello attuale.</span><span class="sxs-lookup"><span data-stu-id="84f1f-103">The `dangerousThreadingAPI` managed debugging assistant (MDA) is activated when the <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> method is called on a thread other than the current thread.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="0e21a-104">Sintomi</span><span class="sxs-lookup"><span data-stu-id="0e21a-104">Symptoms</span></span>  
- <span data-ttu-id="0e21a-105">Un'applicazione non risponde o si blocca per un tempo imprecisato.</span><span class="sxs-lookup"><span data-stu-id="0e21a-105">An application is unresponsive or hangs indefinitely.</span></span> <span data-ttu-id="0e21a-106">È possibile che i dati del sistema e dell'applicazione rimangano in uno stato non prevedibile temporaneamente o anche dopo la chiusura di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="0e21a-106">System or application data might be left in an unpredictable state temporarily or even after an application has been shut down.</span></span> <span data-ttu-id="0e21a-107">Alcune operazioni non vengono completate come previsto.</span><span class="sxs-lookup"><span data-stu-id="0e21a-107">Some operations are not completing as expected.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="84f1f-104">Sintomi</span><span class="sxs-lookup"><span data-stu-id="84f1f-104">Symptoms</span></span>  
+ <span data-ttu-id="84f1f-105">Un'applicazione non risponde o si blocca per un tempo imprecisato.</span><span class="sxs-lookup"><span data-stu-id="84f1f-105">An application is unresponsive or hangs indefinitely.</span></span> <span data-ttu-id="84f1f-106">È possibile che i dati del sistema e dell'applicazione rimangano in uno stato non prevedibile temporaneamente o anche dopo la chiusura di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="84f1f-106">System or application data might be left in an unpredictable state temporarily or even after an application has been shut down.</span></span> <span data-ttu-id="84f1f-107">Alcune operazioni non vengono completate come previsto.</span><span class="sxs-lookup"><span data-stu-id="84f1f-107">Some operations are not completing as expected.</span></span>  
   
- <span data-ttu-id="0e21a-108">I sintomi possono variare ampiamente a causa della casualità implicita nel problema.</span><span class="sxs-lookup"><span data-stu-id="0e21a-108">Symptoms can vary widely due to the randomness inherent to the problem.</span></span>  
+ <span data-ttu-id="84f1f-108">I sintomi possono variare ampiamente a causa della casualità implicita nel problema.</span><span class="sxs-lookup"><span data-stu-id="84f1f-108">Symptoms can vary widely due to the randomness inherent to the problem.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="0e21a-109">Causa</span><span class="sxs-lookup"><span data-stu-id="0e21a-109">Cause</span></span>  
- <span data-ttu-id="0e21a-110">Un thread viene sospeso in modo asincrono da un altro thread tramite il metodo <xref:System.Threading.Thread.Suspend%2A>.</span><span class="sxs-lookup"><span data-stu-id="0e21a-110">A thread is asynchronously suspended by another thread using the <xref:System.Threading.Thread.Suspend%2A> method.</span></span> <span data-ttu-id="0e21a-111">Non c'è modo di stabilire se sia sicuro sospendere un altro thread che potrebbe avere un'operazione in corso.</span><span class="sxs-lookup"><span data-stu-id="0e21a-111">There is no way to determine when it is safe to suspend another thread which might be in the middle of an operation.</span></span> <span data-ttu-id="0e21a-112">La sospensione del thread può causare il danneggiamento dei dati o l'interruzione di invariabili.</span><span class="sxs-lookup"><span data-stu-id="0e21a-112">Suspending the thread can result in the corruption of data or the breaking of invariants.</span></span> <span data-ttu-id="0e21a-113">Se un thread viene sospeso e non viene mai ripreso tramite il metodo <xref:System.Threading.Thread.Resume%2A>, l'applicazione può bloccarsi per un tempo imprecisato, danneggiando i dati.</span><span class="sxs-lookup"><span data-stu-id="0e21a-113">Should a thread be placed into a suspended state and never resumed using the <xref:System.Threading.Thread.Resume%2A> method, the application can hang indefinitely and possibly damage application data.</span></span> <span data-ttu-id="0e21a-114">Questi metodi sono stati contrassegnati come obsoleti.</span><span class="sxs-lookup"><span data-stu-id="0e21a-114">These methods have been marked as obsolete.</span></span>  
+## <a name="cause"></a><span data-ttu-id="84f1f-109">Causa</span><span class="sxs-lookup"><span data-stu-id="84f1f-109">Cause</span></span>  
+ <span data-ttu-id="84f1f-110">Un thread viene sospeso in modo asincrono da un altro thread tramite il metodo <xref:System.Threading.Thread.Suspend%2A>.</span><span class="sxs-lookup"><span data-stu-id="84f1f-110">A thread is asynchronously suspended by another thread using the <xref:System.Threading.Thread.Suspend%2A> method.</span></span> <span data-ttu-id="84f1f-111">Non c'è modo di stabilire se sia sicuro sospendere un altro thread che potrebbe avere un'operazione in corso.</span><span class="sxs-lookup"><span data-stu-id="84f1f-111">There is no way to determine when it is safe to suspend another thread which might be in the middle of an operation.</span></span> <span data-ttu-id="84f1f-112">La sospensione del thread può causare il danneggiamento dei dati o l'interruzione di invariabili.</span><span class="sxs-lookup"><span data-stu-id="84f1f-112">Suspending the thread can result in the corruption of data or the breaking of invariants.</span></span> <span data-ttu-id="84f1f-113">Se un thread viene sospeso e non viene mai ripreso tramite il metodo <xref:System.Threading.Thread.Resume%2A>, l'applicazione può bloccarsi per un tempo imprecisato, danneggiando i dati.</span><span class="sxs-lookup"><span data-stu-id="84f1f-113">Should a thread be placed into a suspended state and never resumed using the <xref:System.Threading.Thread.Resume%2A> method, the application can hang indefinitely and possibly damage application data.</span></span> <span data-ttu-id="84f1f-114">Questi metodi sono stati contrassegnati come obsoleti.</span><span class="sxs-lookup"><span data-stu-id="84f1f-114">These methods have been marked as obsolete.</span></span>  
   
- <span data-ttu-id="0e21a-115">Se le primitive di sincronizzazione si trovano nel thread di destinazione, vi rimarranno durante la sospensione,</span><span class="sxs-lookup"><span data-stu-id="0e21a-115">If synchronization primitives are held by the target thread, they remain held during suspension.</span></span> <span data-ttu-id="0e21a-116">con la possibilità di un deadlock se un altro thread, ad esempio quello che esegue il metodo <xref:System.Threading.Thread.Suspend%2A>, tenta di acquisire un blocco sulla primitiva.</span><span class="sxs-lookup"><span data-stu-id="0e21a-116">This can lead to deadlocks should another thread, for example the thread performing the <xref:System.Threading.Thread.Suspend%2A>, attempt to acquire a lock on the primitive.</span></span> <span data-ttu-id="0e21a-117">In questa situazione, il problema si manifesta sotto forma di deadlock.</span><span class="sxs-lookup"><span data-stu-id="0e21a-117">In this situation, the problem manifests itself as a deadlock.</span></span>  
+ <span data-ttu-id="84f1f-115">Se le primitive di sincronizzazione si trovano nel thread di destinazione, vi rimarranno durante la sospensione,</span><span class="sxs-lookup"><span data-stu-id="84f1f-115">If synchronization primitives are held by the target thread, they remain held during suspension.</span></span> <span data-ttu-id="84f1f-116">con la possibilità di un deadlock se un altro thread, ad esempio quello che esegue il metodo <xref:System.Threading.Thread.Suspend%2A>, tenta di acquisire un blocco sulla primitiva.</span><span class="sxs-lookup"><span data-stu-id="84f1f-116">This can lead to deadlocks should another thread, for example the thread performing the <xref:System.Threading.Thread.Suspend%2A>, attempt to acquire a lock on the primitive.</span></span> <span data-ttu-id="84f1f-117">In questa situazione, il problema si manifesta sotto forma di deadlock.</span><span class="sxs-lookup"><span data-stu-id="84f1f-117">In this situation, the problem manifests itself as a deadlock.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="0e21a-118">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="0e21a-118">Resolution</span></span>  
- <span data-ttu-id="0e21a-119">Evitare progettazioni che richiedano l'uso di <xref:System.Threading.Thread.Suspend%2A> e <xref:System.Threading.Thread.Resume%2A>.</span><span class="sxs-lookup"><span data-stu-id="0e21a-119">Avoid designs that require the use of <xref:System.Threading.Thread.Suspend%2A> and <xref:System.Threading.Thread.Resume%2A>.</span></span> <span data-ttu-id="0e21a-120">Per l'interazione tra thread, usare le primitive di sincronizzazione, ad esempio <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex> o l'istruzione C# `lock`.</span><span class="sxs-lookup"><span data-stu-id="0e21a-120">For cooperation between threads, use synchronization primitives such as <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex>, or the C# `lock` statement.</span></span> <span data-ttu-id="0e21a-121">Se è necessario usare questi metodi, ridurre il periodo di tempo e la quantità di codice eseguito quando il thread si trova in uno stato di sospensione.</span><span class="sxs-lookup"><span data-stu-id="0e21a-121">If you must use these methods, reduce the window of time and minimize the amount of code that executes while the thread is in a suspended state.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="84f1f-118">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="84f1f-118">Resolution</span></span>  
+ <span data-ttu-id="84f1f-119">Evitare progettazioni che richiedano l'uso di <xref:System.Threading.Thread.Suspend%2A> e <xref:System.Threading.Thread.Resume%2A>.</span><span class="sxs-lookup"><span data-stu-id="84f1f-119">Avoid designs that require the use of <xref:System.Threading.Thread.Suspend%2A> and <xref:System.Threading.Thread.Resume%2A>.</span></span> <span data-ttu-id="84f1f-120">Per l'interazione tra thread, usare le primitive di sincronizzazione, ad esempio <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex> o l'istruzione C# `lock`.</span><span class="sxs-lookup"><span data-stu-id="84f1f-120">For cooperation between threads, use synchronization primitives such as <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex>, or the C# `lock` statement.</span></span> <span data-ttu-id="84f1f-121">Se è necessario usare questi metodi, ridurre il periodo di tempo e la quantità di codice eseguito quando il thread si trova in uno stato di sospensione.</span><span class="sxs-lookup"><span data-stu-id="84f1f-121">If you must use these methods, reduce the window of time and minimize the amount of code that executes while the thread is in a suspended state.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="0e21a-122">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="0e21a-122">Effect on the Runtime</span></span>  
- <span data-ttu-id="0e21a-123">L'assistente al debug gestito non ha alcun effetto su CLR.</span><span class="sxs-lookup"><span data-stu-id="0e21a-123">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="0e21a-124">Si limita a generare un report dei dati relativi alle operazioni di threading dannose.</span><span class="sxs-lookup"><span data-stu-id="0e21a-124">It only reports data about dangerous threading operations.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="84f1f-122">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="84f1f-122">Effect on the Runtime</span></span>  
+ <span data-ttu-id="84f1f-123">L'assistente al debug gestito non ha alcun effetto su CLR.</span><span class="sxs-lookup"><span data-stu-id="84f1f-123">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="84f1f-124">Si limita a generare un report dei dati relativi alle operazioni di threading dannose.</span><span class="sxs-lookup"><span data-stu-id="84f1f-124">It only reports data about dangerous threading operations.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="0e21a-125">Output</span><span class="sxs-lookup"><span data-stu-id="0e21a-125">Output</span></span>  
- <span data-ttu-id="0e21a-126">L'assistente al debug gestito identifica il metodo di threading dannoso che ha causato l'attivazione dell'assistente stesso.</span><span class="sxs-lookup"><span data-stu-id="0e21a-126">The MDA identifies the dangerous threading method that caused it to be activated.</span></span>  
+## <a name="output"></a><span data-ttu-id="84f1f-125">Output</span><span class="sxs-lookup"><span data-stu-id="84f1f-125">Output</span></span>  
+ <span data-ttu-id="84f1f-126">L'assistente al debug gestito identifica il metodo di threading dannoso che ha causato l'attivazione dell'assistente stesso.</span><span class="sxs-lookup"><span data-stu-id="84f1f-126">The MDA identifies the dangerous threading method that caused it to be activated.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="0e21a-127">Configurazione</span><span class="sxs-lookup"><span data-stu-id="0e21a-127">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="84f1f-127">Configurazione</span><span class="sxs-lookup"><span data-stu-id="84f1f-127">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -60,8 +51,8 @@ ms.lasthandoff: 12/22/2017
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="0e21a-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="0e21a-128">Example</span></span>  
- <span data-ttu-id="0e21a-129">Il codice di esempio seguente illustra una chiamata al metodo <xref:System.Threading.Thread.Suspend%2A> che causa l'attivazione di `dangerousThreadingAPI`.</span><span class="sxs-lookup"><span data-stu-id="0e21a-129">The following code example demonstrates a call to the <xref:System.Threading.Thread.Suspend%2A> method that causes the activation of the `dangerousThreadingAPI`.</span></span>  
+## <a name="example"></a><span data-ttu-id="84f1f-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="84f1f-128">Example</span></span>  
+ <span data-ttu-id="84f1f-129">Il codice di esempio seguente illustra una chiamata al metodo <xref:System.Threading.Thread.Suspend%2A> che causa l'attivazione di `dangerousThreadingAPI`.</span><span class="sxs-lookup"><span data-stu-id="84f1f-129">The following code example demonstrates a call to the <xref:System.Threading.Thread.Suspend%2A> method that causes the activation of the `dangerousThreadingAPI`.</span></span>  
   
 ```  
 using System.Threading;  
@@ -76,7 +67,7 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0e21a-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0e21a-130">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="84f1f-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="84f1f-130">See Also</span></span>  
  <xref:System.Threading.Thread>  
- [<span data-ttu-id="0e21a-131">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="0e21a-131">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="0e21a-132">Istruzione lock</span><span class="sxs-lookup"><span data-stu-id="0e21a-132">lock Statement</span></span>](~/docs/csharp/language-reference/keywords/lock-statement.md)
+ [<span data-ttu-id="84f1f-131">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="84f1f-131">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="84f1f-132">Istruzione lock</span><span class="sxs-lookup"><span data-stu-id="84f1f-132">lock Statement</span></span>](~/docs/csharp/language-reference/keywords/lock-statement.md)

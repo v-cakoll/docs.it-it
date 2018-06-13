@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268996"
 ---
 # <a name="new-constraint-c-reference"></a><span data-ttu-id="6febd-102">Vincolo new (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="6febd-102">new Constraint (C# Reference)</span></span>
 <span data-ttu-id="6febd-103">Il vincolo `new` specifica che qualsiasi argomento di tipo in una dichiarazione di classe generica deve avere un costruttore pubblico senza parametri.</span><span class="sxs-lookup"><span data-stu-id="6febd-103">The `new` constraint specifies that any type argument in a generic class declaration must have a public parameterless constructor.</span></span> <span data-ttu-id="6febd-104">Per usare il vincolo new, il tipo non può essere astratto.</span><span class="sxs-lookup"><span data-stu-id="6febd-104">To use the new constraint, the type cannot be abstract.</span></span>  
