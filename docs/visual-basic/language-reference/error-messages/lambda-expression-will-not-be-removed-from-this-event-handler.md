@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590167"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>L'espressione lambda non verrà rimossa da questo gestore eventi
 Espressione lambda non vengono rimosse da questo gestore eventi. Assegnare l'espressione lambda a una variabile e utilizzare tale variabile per aggiungere e rimuovere l'evento.  

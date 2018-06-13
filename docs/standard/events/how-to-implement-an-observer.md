@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574855"
 ---
 # <a name="how-to-implement-an-observer"></a>Procedura: Implementare un elemento Observer
 Lo schema progettuale degli observer richiede una divisione tra un observer, che si registra per le notifiche, e un provider, che monitora i dati e invia notifiche a uno o più observer. Questo argomento descrive come creare un observer. Un argomento correlato, [Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md), descrive come creare un provider.  

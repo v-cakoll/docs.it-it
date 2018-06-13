@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571943"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Procedura: Aprire e accodare un file di log
 <xref:System.IO.StreamWriter> e <xref:System.IO.StreamReader> scrivono e leggono i caratteri nei flussi. L'esempio di codice seguente apre il file `log.txt` per l'input oppure crea il file, se non esiste già, e aggiunge le informazioni alla fine del file. Il contenuto del file viene quindi scritto nell'output standard per la visualizzazione. In alternativa a questo esempio, è possibile archiviare le informazioni come un'unica stringa o matrice di stringhe e usare il metodo <xref:System.IO.File.WriteAllText%2A> o <xref:System.IO.File.WriteAllLines%2A> per ottenere la stessa funzionalità.  

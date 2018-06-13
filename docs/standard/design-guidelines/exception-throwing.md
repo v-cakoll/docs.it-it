@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573721"
 ---
 # <a name="exception-throwing"></a>Generazione di eccezioni
 Linee guida che generano eccezioni descritte in questa sezione richiedono una buona definizione del significato di errore di esecuzione. Errore di esecuzione si verifica ogni volta che un membro non è stato progettato per (quali il nome del membro implica). Ad esempio, se il `OpenFile` metodo non può restituire un handle di file aperto al chiamante, viene considerato un errore di esecuzione.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312092"
 ---
 # <a name="classes-c-programming-guide"></a>Classi (Guida per programmatori C#)
 Una *classe* è un costrutto che consente di creare tipi personalizzati raggruppando insieme variabili di altri tipi, metodi e eventi. Una classe è simile a un progetto. Definisce i dati e il comportamento di un tipo. Se la classe non è dichiarata come statica, il codice client può creare *istanze* della classe. Queste istanze sono *oggetti* che vengono assegnati a una variabile. L'istanza di una classe rimane in memoria fino a quando tutti i riferimenti non escono dall'ambito. In questa fase, CLR la contrassegna come idonea per Garbage Collection. Se la classe viene dichiarata come [statica](../../../csharp/language-reference/keywords/static.md), non è possibile creare istanze e il codice client può accedervi solo tramite la classe stessa. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  

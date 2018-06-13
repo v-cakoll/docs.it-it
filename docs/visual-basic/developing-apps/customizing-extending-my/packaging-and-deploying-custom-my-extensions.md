@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591859"
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Assemblaggio e distribuzione personalizzata delle estensioni My (Visual Basic)
 Visual Basic fornisce un modo semplice per la distribuzione personalizzata `My` estensioni spazio dei nomi utilizzando modelli di Visual Studio. Se si sta creando un modello di progetto per il quale il `My` le estensioni sono parte integrante del nuovo tipo di progetto, è possibile includere personalizzato `My` codice di estensione con il progetto quando si esporta il modello. Per ulteriori informazioni sull'esportazione di modelli di progetto, vedere [procedura: creare modelli di progetto](/visualstudio/ide/how-to-create-project-templates).  

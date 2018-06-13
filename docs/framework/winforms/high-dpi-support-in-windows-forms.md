@@ -14,6 +14,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483541"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Supporto per valori DPI elevato in Windows Form
 

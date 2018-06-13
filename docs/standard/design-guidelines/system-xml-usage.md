@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572814"
 ---
 # <a name="systemxml-usage"></a>Utilizzo di System.Xml
 In questa sezione discute relativo all'utilizzo di diversi tipi che si trovano <xref:System.Xml?displayProperty=nameWithType> gli spazi dei nomi che può essere usato per rappresentare i dati XML.  

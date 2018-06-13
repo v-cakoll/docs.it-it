@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589009"
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a>Espressione di tipo &lt;tipo&gt; non è disponibile per query
 Espressione di tipo \<tipo > non è disponibile per query. Assicurarsi che non manchi un'importazione di riferimento e/o dello spazio dei nomi di assembly per il provider LINQ.  

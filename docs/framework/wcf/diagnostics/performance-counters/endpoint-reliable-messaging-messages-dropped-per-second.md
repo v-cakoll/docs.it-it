@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472284"
 ---
 # <a name="endpoint-reliable-messaging-messages-dropped-per-second"></a>Endpoint: messaggi di messaggistica affidabile rilasciati al secondo
 Nome contatore: sessioni di messaggistica affidabile rilasciate al secondo.  

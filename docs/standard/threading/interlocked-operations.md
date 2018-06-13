@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589971"
 ---
 # <a name="interlocked-operations"></a>Operazioni interlocked
 La classe <xref:System.Threading.Interlocked> fornisce metodi per la sincronizzazione dell'accesso a una variabile condivisa da più thread. I thread di processi differenti possono usare questo meccanismo se la variabile si trova nella memoria condivisa. Le operazioni con interlock sono atomiche, ovvero un'intera operazione costituisce un'unità che non può essere interrotta da un'altra operazione con interlock nella stessa variabile. Questa caratteristica è importante nei sistemi operativi con multithreading preemptive in cui un thread può essere sospeso dopo il caricamento di un valore da un indirizzo di memoria, ma prima che sia possibile modificarlo e memorizzarlo.  

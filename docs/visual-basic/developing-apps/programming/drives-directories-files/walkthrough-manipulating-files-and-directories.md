@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592509"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procedura dettagliata: modifica di file e directory in Visual Basic
 Questa procedura dettagliata offre un'introduzione ai principi di base degli elementi I/O di file in Visual Basic. Descrive come creare una piccola applicazione in cui vengono elencati ed esaminati i file di testo di una directory. Per ogni file di testo selezionato, l'applicazione specifica gli attributi di file e la prima riga del contenuto. È disponibile un'opzione per la scrittura di informazioni in un file di log.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575824"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Procedura: definire e utilizzare provider di formati numerici personalizzati
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]offre ampio controllo sulla rappresentazione di stringa dei valori numerici. e supporta le funzionalità seguenti per la personalizzazione del formato di tali valori:  

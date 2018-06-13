@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234678"
 ---
 # <a name="delegate-statement"></a>Istruzione Delegate
 Usato per dichiarare un delegato. Un delegato è un tipo di riferimento che fa riferimento a un `Shared` metodo di un tipo o a un metodo di istanza di un oggetto. Qualsiasi routine con parametri e tipi restituiti corrispondenti può essere utilizzato per creare un'istanza della classe delegata. La procedura può quindi in un secondo momento richiamata mediante l'istanza del delegato.  

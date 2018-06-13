@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592366"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Partitioner personalizzati per PLINQ e TPL
 Per parallelizzare un'operazione in un'origine dati, è essenziale *partizionare* l'origine in più sezioni a cui è possibile accedere contemporaneamente da più thread. PLINQ e Task Parallel Library (TPL) forniscono partitioner predefiniti che funzionano in modo trasparente quando si scrive una query o un ciclo <xref:System.Threading.Tasks.Parallel.ForEach%2A> parallelo. Per scenari più avanzati, è possibile collegare il proprio partitioner.  

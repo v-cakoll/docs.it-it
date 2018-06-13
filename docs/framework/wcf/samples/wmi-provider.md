@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807306"
 ---
 # <a name="wmi-provider"></a>Provider WMI
 In questo esempio viene illustrato come raccogliere dati dai servizi Windows Communication Foundation (WCF) in fase di esecuzione usando il provider di Strumentazione gestione Windows (WMI) incorporato in WCF. Viene inoltre illustrato come aggiungere un oggetto WMI definito dall'utente a un servizio. L'esempio attiva il provider WMI per il [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) e viene illustrato come raccogliere dati di `ICalculator` servizio in fase di esecuzione.  

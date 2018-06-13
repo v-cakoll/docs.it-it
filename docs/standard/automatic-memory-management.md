@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572073"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 Gestione automatica della memoria è uno dei servizi offerti da Common Language Runtime durante l'[esecuzione gestita](../../docs/standard/managed-execution-process.md). L'allocazione e il rilascio di memoria per un'applicazione vengono gestiti da Garbage Collector di Common Language Runtime. Agli sviluppatori non viene quindi richiesta la scrittura di codice per eseguire attività di gestione della memoria quando si sviluppano applicazioni gestite. La gestione automatica della memoria consente di evitare che si verifichino i problemi consueti legati alla gestione della memoria, quale la mancata liberazione di un oggetto e il conseguente spreco di memoria allocata ma non più referenziabile o il tentativo di accesso alla memoria per un oggetto già liberato. In questa sezione viene descritta la modalità utilizzata dal Garbage Collector per l'allocazione e il rilascio di memoria.  

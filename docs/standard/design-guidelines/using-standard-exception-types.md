@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574595"
 ---
 # <a name="using-standard-exception-types"></a>Utilizzo di tipi di eccezioni standard
 In questa sezione descrive le eccezioni standard fornite dal Framework e i dettagli del loro utilizzo. L'elenco non è completo. Consultare la documentazione di riferimento di .NET Framework per l'utilizzo di altri tipi di eccezione di Framework.  

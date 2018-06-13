@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569954"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>Convalida XDR con XmlSchemaCollection
 Se lo schema XDR (XML-Data Reduced) rispetto al quale si esegue la convalida è archiviato in **XmlSchemaCollection**, sarà associato all'URI dello spazio dei nomi specificato quando lo schema è stato aggiunto alla raccolta. **XmlValidatingReader** associa l'URI dello spazio dei nomi nel documento XML allo schema che corrisponde a quell'URI nella raccolta.  

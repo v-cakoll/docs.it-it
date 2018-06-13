@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591742"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Costanti ed enumerazioni (Visual Basic)
 Visual Basic fornisce una serie di costanti ed enumerazioni per gli sviluppatori predefinite. Costanti di archiviano i valori che rimangono costanti durante l'esecuzione di un'applicazione. Le enumerazioni offrono un modo pratico per usare i set di costanti correlate e per associare i valori delle costanti ai nomi.  

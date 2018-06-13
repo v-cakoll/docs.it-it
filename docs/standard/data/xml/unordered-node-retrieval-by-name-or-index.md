@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572941"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Recupero di nodi non ordinati in base al nome o all'indice
 **XmlNamedNodeMap** è descritto nella specifica W3C (World Wide Web Consortium) come NamedNodeMap. La sua funzione è quella di gestire un set di nodi non ordinato con la capacità di fare riferimento ai nodi in base al nome o all'indice. L'unico modo per accedere a un oggetto **XmlNamedNodeMap** è con la restituzione di un oggetto **XmlNamedNodeMap** tramite un metodo o una proprietà. Sono disponibili tre metodi o proprietà che restituiscono **XmlNamedNodeMap**:  

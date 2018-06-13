@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593204"
 ---
 # <a name="object-or-class-does-not-support-the-set-of-events"></a>L'oggetto o la classe non supporta il set di eventi
 Si è tentato di utilizzare un `WithEvents` variabile con un componente che non può fungere da un'origine evento per il set specificato di eventi. Ad esempio, si desidera elaborare gli eventi di un oggetto, quindi creare un altro oggetto che `Implements` il primo oggetto. Sebbene si pensi che è stato possibile sink degli eventi dall'oggetto implementato, questo non è sempre il caso. `Implements` implementa solo un'interfaccia per i metodi e proprietà. `WithEvents` non è supportata per private `UserControls`, perché le informazioni sul tipo necessarie generare il `ObjectEvent` non è disponibile in fase di esecuzione.  

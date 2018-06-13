@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568017"
 ---
 # <a name="copying-document-fragments"></a>Copia di frammenti di documenti
 È possibile creare un nodo **XmlDocumentFragment**, quindi aggiungere nodi sotto di esso. Quando viene inserito **XmlDocumentFragment** con il metodo **InsertNode**, il nodo **XmlDocumentFragment** non viene copiato, ma i nodi figlio vengono inseriti nel modello DOM XML.  

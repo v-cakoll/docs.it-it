@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567237"
 ---
 # <a name="using-an-asynccallback-delegate-and-state-object"></a>Utilizzo di un oggetto di stato e di un delegato AsyncCallback
 Quando si usa un delegato <xref:System.AsyncCallback> per elaborare i risultati dell'operazione asincrona in un thread separato, è possibile usare un oggetto di stato per passare le informazioni tra i metodi di callback e per recuperare un risultato finale. In questo argomento viene illustrata tale pratica analizzando ulteriormente l'esempio descritto in [Uso di un delegato AsyncCallback per terminare un'operazione asincrona](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  

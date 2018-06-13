@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576116"
 ---
 # <a name="dependency-properties"></a>Proprietà di dipendenza
 Una proprietà di dipendenza (DP) è una proprietà normale che archivia il valore in un archivio di proprietà anziché archiviare i dati in una variabile di tipo (campo), ad esempio.  

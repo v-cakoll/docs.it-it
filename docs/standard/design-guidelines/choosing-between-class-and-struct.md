@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573581"
 ---
 # <a name="choosing-between-class-and-struct"></a>Scelta tra classi e struct
 Una delle decisioni di progettazione di base che deve affrontare ogni finestra di progettazione di framework è di progettare un tipo come una classe (un tipo di riferimento) o uno struct (un tipo di valore). Buona conoscenza delle differenze nel comportamento dei tipi di riferimento e tipi di valore è essenziale per effettuare questa scelta.  
