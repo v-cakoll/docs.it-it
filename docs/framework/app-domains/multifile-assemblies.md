@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742510"
 ---
 # <a name="multifile-assemblies"></a><span data-ttu-id="c90da-102">Assembly su più file</span><span class="sxs-lookup"><span data-stu-id="c90da-102">Multifile Assemblies</span></span>
 <span data-ttu-id="c90da-103">È possibile creare assembly su più file usando i compilatori da riga di comando o [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] con Visual C++.</span><span class="sxs-lookup"><span data-stu-id="c90da-103">You can create multifile assemblies using command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] with Visual C++.</span></span> <span data-ttu-id="c90da-104">Un file all'interno dell'assembly deve contenere il manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="c90da-104">One file in the assembly must contain the assembly manifest.</span></span> <span data-ttu-id="c90da-105">Un assembly che avvia un'applicazione deve inoltre contenere un punto di ingresso, ad esempio un metodo Main o WinMain.</span><span class="sxs-lookup"><span data-stu-id="c90da-105">An assembly that starts an application must also contain an entry point, such as a Main or WinMain method.</span></span>  
