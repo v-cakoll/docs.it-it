@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401330"
 ---
 # <a name="use-caching-in-ui-automation"></a>Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente
 > [!NOTE]

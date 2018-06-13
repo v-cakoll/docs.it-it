@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399058"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflection in .NET Framework
 Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System.Type?displayProperty=nameWithType>, consentono di ottenere informazioni sugli [assembly](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) caricati e sui tipi in essi definiti, ad esempio [classi](http://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9), [interfacce](http://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5) e [tipi di valori](http://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). È anche possibile usare la reflection per creare istanze di tipi in fase di esecuzione, richiamarle e accedervi. Per argomenti su aspetti specifici di reflection, vedere [Argomenti correlati](#related_topics) al termine di questa panoramica.  

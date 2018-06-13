@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399821"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Creazione di file di risorse per applicazioni desktop
 È possibile includere risorse, ad esempio stringhe, immagini o dati di oggetti, all'interno di file di risorse per renderli facilmente disponibili per l'applicazione. In .NET Framework è possibile creare file di risorse in cinque modi diversi:  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c8c61cc12e438c0786b6e093b8bb1ea288a42e3a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401167"
 ---
 # <a name="icordebugchainismanaged-method"></a>Metodo ICorDebugChain::IsManaged
 Ottiene un valore che indica se la catena è in esecuzione il codice gestito.  

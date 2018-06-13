@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318588"
 ---
 # <a name="creating-xml-trees-c"></a>Creazione di strutture ad albero XML (C#)
 Una delle attività più comuni di XML è la creazione di un albero XML. In questa sezione vengono descritti diversi modi per crearle.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 749ec14af7bffee87afbe5c0705a6ddf68da5fd8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406494"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>Metodo ICLRDataTarget::GetPointerSize
 Ottiene le dimensioni, in byte, del tipo di puntatore utilizzata dal processo di destinazione. Questo metodo viene chiamato dai servizi di accesso dati di common language runtime.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 130ba2864537f017bd3037412d742d887df1ae68
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405727"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>Metodo ICLRDataTarget::GetTLSValue
 Ottiene un valore dall'archiviazione locale di thread (TLS) del thread nel processo di destinazione specificato. Questo metodo viene chiamato da servizi di accesso dati di common language runtime (CLR).  

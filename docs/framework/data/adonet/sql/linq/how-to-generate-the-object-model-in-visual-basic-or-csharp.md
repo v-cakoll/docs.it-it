@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360393"
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Procedura: generare il modello a oggetti in Visual Basic o C# #
 In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene eseguito il mapping di un modello a oggetti nel linguaggio di programmazione in uso a un database relazionale. Due strumenti sono disponibili per la generazione automatica di un modello di Visual Basic o c# dai metadati di un database esistente.  

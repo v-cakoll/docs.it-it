@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399113"
 ---
 # <a name="wif-session-management"></a>Gestione delle sessioni WIF
 Quando un client tenta di accedere per la prima volta a una risorsa protetta ospitata da una relying party, deve prima di tutto autenticarsi in un servizio token di sicurezza considerato attendibile dalla relying party. Il servizio token di sicurezza rilascia quindi un token di sicurezza al client. Il client presenta questo token alla relying party, che quindi concede al client l'accesso alla risorsa protetta. Non si vuole, tuttavia, che il client debba eseguire una nuova autenticazione nel servizio token di sicurezza per ogni richiesta, in particolare perché potrebbe anche non trovarsi nello stesso computer o nello stesso dominio della relying party. Windows Identity Foundation (WIF) fa invece in modo che il client e la relying party stabiliscano una sessione nella quale il client usa un token di sicurezza della sessione per autenticarsi nella relying party per tutte le richieste successive alla prima. La relying party può usare questo token di sicurezza della sessione, archiviato all'interno di un cookie, per ricostruire l'oggetto <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> del client.  

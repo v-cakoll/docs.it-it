@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65925b7dafb9e89433253d68327c488365674963
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406278"
 ---
 # <a name="constants-unmanaged-api-reference"></a>Costanti (riferimenti alle API non gestite)
 Questo argomento descrive il tipo di linguaggio, fornitore di linguaggio e costanti di tipo di documento che sono definite in CorSym.idl.  

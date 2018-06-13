@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399019"
 ---
 # <a name="using-the-codedom"></a>Utilizzo di CodeDOM
 Con CodeDOM vengono offerti tipi che rappresentano molti tipi comuni di elementi di codice sorgente. È possibile progettare un programma che compili un modello di codice sorgente usando elementi CodeDOM per assemblare un grafico di oggetti. Da tale grafico è possibile produrre codice sorgente in uno dei linguaggi di programmazione supportati tramite un generatore di codice CodeDOM. CodeDOM può anche essere usato per compilare codice sorgente in un assembly binario.  

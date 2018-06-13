@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361773"
 ---
 # <a name="debugging-support"></a>Supporto per il debug
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornisce supporto per il debug generale per [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetti.  Vedere anche [debug LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.110\)) o [debug LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.120\)).  

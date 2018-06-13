@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398704"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerazioni sulla sicurezza in relazione alla reflection
 La reflection consente di ottenere informazioni su tipi e membri e di accedere ai membri, vale a dire chiamare metodi e costruttori, ottenere e impostare valori di proprietà, aggiungere e rimuovere gestori eventi e così via. L'uso della reflection per ottenere informazioni su tipi e membri non presenta limitazioni. L'intero codice può usare la reflection per eseguire le attività seguenti:  

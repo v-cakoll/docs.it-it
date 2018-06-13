@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73697fdd19f2492aabdc0d76e8c1a27c917c85f1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405538"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>Metodo ICLRDataTarget::SetThreadContext
 Imposta il contesto corrente del thread specificato nel processo di destinazione. Questo metodo viene chiamato da servizi di accesso dati di common language runtime (CLR).  
