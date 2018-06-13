@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751828"
 ---
 # <a name="ltnetnamedpipebindinggt"></a><span data-ttu-id="22115-102">&lt;netNamedPipeBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="22115-102">&lt;netNamedPipeBinding&gt;</span></span>
 <span data-ttu-id="22115-103">Definisce un'associazione che è protetta, affidabile, ottimizzata per le comunicazioni tra processi nel computer.</span><span class="sxs-lookup"><span data-stu-id="22115-103">Defines a binding that is secure, reliable, optimized for on-machine cross process communication.</span></span> <span data-ttu-id="22115-104">Per impostazione predefinita, genera uno stack di comunicazione in fase di esecuzione con WS-ReliableMessaging per affidabilità, sicurezza del trasporto per la sicurezza del trasferimento, named pipe per il recapito dei messaggi e codifica binaria dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="22115-104">By default, it generates a runtime communication stack with WS-ReliableMessaging for reliability, transport security for transfer security, named pipes for message delivery, and binary message encoding.</span></span>  

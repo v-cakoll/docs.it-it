@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752351"
 ---
 # <a name="ltendpointextensionsgt"></a><span data-ttu-id="c315b-102">&lt;endpointExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="c315b-102">&lt;endpointExtensions&gt;</span></span>
 <span data-ttu-id="c315b-103">Contenuto della sezione viene registrato un nuovo endpoint standard nella sezione delle estensioni di un file di configurazione di un computer o di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="c315b-103">This section registers a new standard endpoint in the extensions section in a machine or application configuration file.</span></span> <span data-ttu-id="c315b-104">È possibile aggiungere un endpoint standard a questa raccolta usando la parola chiave `add` e impostando l'attributo `type` dell'elemento sul tipo di endpoint, nonché l'attributo `name` sul nome dell'endpoint standard.</span><span class="sxs-lookup"><span data-stu-id="c315b-104">You can add a standard endpoint to this collection by using the `add` keyword, and setting the `type` attribute of the element to the endpoint type, as well as the `name` attribute to the name of the standard endpoint.</span></span>  
