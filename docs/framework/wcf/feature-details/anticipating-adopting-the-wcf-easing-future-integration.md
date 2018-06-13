@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489596"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Preparazione all'adozione di Windows Communication Foundation: facilitare l'integrazione futura
 Se si utilizza ASP.NET oggi e preveda l'utilizzo di WCF in futuro, questo argomento fornisce indicazioni per assicurare il funzionano dei nuovi servizi Web ASP.NET bene con applicazioni WCF.  

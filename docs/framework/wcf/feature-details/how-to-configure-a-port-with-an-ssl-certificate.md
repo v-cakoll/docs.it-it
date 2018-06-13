@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494829"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procedura: configurare una porta con un certificato SSL
 Quando si crea un servizio indipendente di Windows Communication Foundation (WCF) con il <xref:System.ServiceModel.WSHttpBinding> che utilizza la protezione del trasporto di classi, è inoltre necessario configurare una porta con un certificato X.509. Se non si intende creare un servizio indipendente, è possibile ospitare il servizio in Internet Information Services (IIS). Per altre informazioni, vedere [sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  

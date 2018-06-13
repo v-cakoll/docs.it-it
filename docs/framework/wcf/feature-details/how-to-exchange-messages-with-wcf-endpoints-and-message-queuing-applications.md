@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491079"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Procedura: scambiare messaggi con endpoint WCF e con applicazioni del sistema di accodamento dei messaggi
 È possibile integrare le applicazioni di Accodamento messaggi (MSMQ) esistenti con le applicazioni di Windows Communication Foundation (WCF) utilizzando l'associazione di integrazione MSMQ per convertire i messaggi MSMQ in e da messaggi WCF. In questo modo è possibile chiamare applicazioni MSMQ riceventi dai client WCF, nonché chiamare servizi WCF da applicazioni MSMQ mittenti.  

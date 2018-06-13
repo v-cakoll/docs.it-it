@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492011"
 ---
 # <a name="partial-trust"></a>Attendibilità parziale
 A partire da [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)], i chiamanti parzialmente attendibili possono accedere a tipi e metodi pubblici implementati in <xref:System.ServiceModel>, <xref:System.Runtime.Serialization>e <xref:System.ServiceModel.Web>. In questa sezione vengono descritti gli scenari supportati per l'utilizzo di Windows Communication Foundation (WCF) all'interno di un'applicazione parzialmente attendibile, nonché il sottoinsieme limitato delle funzionalità WCF disponibili per le applicazioni in esecuzione con la sicurezza dall'accesso di codice ridotta (CA) autorizzazioni.  

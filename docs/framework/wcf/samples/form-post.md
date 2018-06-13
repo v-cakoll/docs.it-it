@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503763"
 ---
 # <a name="form-post"></a>Invio del form
 In questo esempio viene descritto come estendere il modello di programmazione WCF REST per supportare i nuovi formati delle richieste in entrata. Nell'esempio è inoltre inclusa l'implementazione di un formattatore in grado di deserializzare una richiesta da un invio di form HTML in un tipo di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Nell'esempio viene infine usato un modello T4 per la restituzione di una pagina HTML, il quale fornisce il form HTML che gli utenti possono usare per eseguire il postback al servizio WCF REST.  

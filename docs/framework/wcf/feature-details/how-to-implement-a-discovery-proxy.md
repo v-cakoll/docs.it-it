@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496712"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Procedura: implementare un proxy di individuazione
 In questo argomento viene illustrato come implementare un proxy di individuazione. Per ulteriori informazioni sulle funzionalità di individuazione in Windows Communication Foundation (WCF), vedere [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). È possibile implementare un proxy di individuazione creando una classe che estende la classe astratta <xref:System.ServiceModel.Discovery.DiscoveryProxy>. In questo esempio vengono definite e utilizzate altre classi di supporto. `OnResolveAsyncResult`, `OnFindAsyncResult` e `AsyncResult`. Queste classi implementano l'interfaccia <xref:System.IAsyncResult>. Per ulteriori informazioni <xref:System.IAsyncResult> vedere [interfaccia IAsyncResult](xref:System.IAsyncResult).

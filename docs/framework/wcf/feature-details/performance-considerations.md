@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490835"
 ---
 # <a name="performance-considerations"></a>Considerazioni sulle prestazioni
 Le considerazioni sulle prestazioni sono sempre importanti in caso di generazione di applicazioni. Contenuto della sezione sono contenute voci relative a prestazioni e protezione.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490747"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Procedura: usare più token di sicurezza dello stesso tipo
 -   In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 un messaggio del client contiene solo un token di un determinato tipo. Nella nuova versione, i messaggi del client possono contenere più token di uno stesso tipo. In questo argomento viene illustrato come includere più token dello stesso tipo in un messaggio del client.  

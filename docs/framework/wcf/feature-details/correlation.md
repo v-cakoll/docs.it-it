@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491283"
 ---
 # <a name="correlation"></a>Correlazione
 Nel caso in cui le applicazioni del servizio flusso di lavoro comunichino con gli altri servizi, è importante che i messaggi vengano inviati all'istanza del flusso di lavoro appropriata. La correlazione fornisce il meccanismo adibito a tale scopo. Gli argomenti in questa sezione forniscono una panoramica della correlazione e del relativo utilizzo in vari scenari del servizio flusso di lavoro.  

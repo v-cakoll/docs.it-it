@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495424"
 ---
 # <a name="exporting-and-importing-metadata"></a>Esportazione e importazione di metadati
 In Windows Communication Foundation (WCF), l'esportazione dei metadati è il processo di descrivere gli endpoint di servizio e quindi proiettarli in una rappresentazione parallela standardizzata che i client possono usare per comprendere come utilizzare il servizio. L'importazione dei metadati del servizio è il processo di generazione di istanze o parti di <xref:System.ServiceModel.Description.ServiceEndpoint> dai metadati del servizio.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494150"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Procedura: esporre un contratto a client SOAP e Web
 Per impostazione predefinita, Windows Communication Foundation (WCF) rende disponibili endpoint solo ai client SOAP. In [procedura: creare un servizio HTTP Web di WCF base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), un endpoint diventa disponibile per i client non SOAP. Possono verificarsi casi in cui si desidera rendere lo stesso contratto disponibile in entrambi i modi, come endpoint Web e come endpoint SOAP. In questo argomento viene illustrato un esempio di come ottenere tale risultato.  

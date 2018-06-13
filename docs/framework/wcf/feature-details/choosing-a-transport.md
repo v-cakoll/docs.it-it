@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495535"
 ---
 # <a name="choosing-a-transport"></a>Scelta di un trasporto
 In questo argomento vengono descritti i criteri per scegliere tra tre trasporti principali che sono inclusi in Windows Communication Foundation (WCF): HTTP, TCP e named pipe. WCF include anche un Microsoft message queuing (noto anche come MSMQ) del trasporto, ma in questo documento non viene esaminata Accodamento messaggi.  

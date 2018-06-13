@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491488"
 ---
 # <a name="durable-duplex-correlation"></a>Correlazione duplex durevole
 La correlazione duplex durevole, nota anche come correlazione di callback, risulta utile se un servizio flusso di lavoro dispone del requisito adatto a inviare un callback al chiamante iniziale. A differenza del duplex WCF, il callback si può verificare in qualsiasi momento nel futuro e non è legato allo stesso canale o al canale di durata. L'unico requisito è costituito dal fatto che il chiamante dispone di un endpoint attivo in ascolto del messaggio di callback. In questo modo due servizi flusso di lavoro possono comunicare in una conversazione prolungata. In questo argomento vengono forniti cenni preliminari sulla correlazione duplex durevole.  

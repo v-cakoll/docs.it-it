@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508774"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Membri obsoleti in .NET Framework
 Nelle tabelle di questo articolo sono elencati i tipi obsoleti in .NET Framework 4.5 e versioni successive, organizzati per assembly. Usare i seguenti collegamenti per vedere un elenco di membri obsoleti e le alternative consigliate in ogni assembly. In questo argomento non vengono elencati i membri di tipi obsoleti. Per un elenco dei tipi obsoleti, vedere [Tipi obsoleti](../../../docs/framework/whats-new/obsolete-types.md).  

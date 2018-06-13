@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498062"
 ---
 # <a name="supported-deployment-scenarios"></a>Scenari di distribuzione supportati
 Il sottoinsieme delle funzionalità di Windows Communication Foundation (WCF) supportate per l'utilizzo in applicazioni parzialmente attendibili è progettato per soddisfare i requisiti di alcuni scenari, ma non tutti, per l'utilizzo di WCF. Nel server, WCF soddisfa i requisiti a livello di Internet condiviso ai provider di hosting che eseguono applicazioni di terze parti nel [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] autorizzazione di attendibilità media impostata per ragioni di sicurezza. Nel client, il supporto di attendibilità parziale di WCF è progettato per soddisfare i requisiti di tecnologie di distribuzione, ad esempio [distribuzione ClickOnce](http://go.microsoft.com/fwlink/?LinkId=83712) o [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]della tecnologia applicazione Browser XAML, che consentono di semplici e sicure distribuzione di applicazioni desktop da siti non attendibili.  

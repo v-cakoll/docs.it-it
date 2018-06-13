@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 009f1482de6e1daea21766300b4fb6a3ab0ffc8c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432288"
 ---
 # <a name="corgcstats-structure"></a>Struttura COR_GC_STATS
 Fornisce informazioni statistiche sul meccanismo di garbage collection di common language runtime (CLR).  

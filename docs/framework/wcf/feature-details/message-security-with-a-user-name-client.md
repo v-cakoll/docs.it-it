@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495132"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Protezione dei messaggi tramite client con tipo di credenziale UserName
 Nella figura seguente viene illustrato un servizio Windows Communication Foundation (WCF) e un client protetto tramite sicurezza a livello di messaggio. Il servizio viene autenticato con un certificato X.509. Il client esegue l'autenticazione utilizzando un nome utente e una password.  

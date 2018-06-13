@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492125"
 ---
 # <a name="data-member-default-values"></a>Valori predefiniti dei membri dati
 Nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tipi hanno un concetto di *i valori predefiniti*. Ad esempio, per i tipi di riferimento il valore predefinito è `null` mentre per un tipo Integer è zero. Talvolta, quando un membro dati è impostato sul relativo valore predefinito, conviene ometterlo dai dati serializzati. Infatti, poiché il membro ha un valore predefinito, non occorre serializzare un valore effettivo. Ciò risulta vantaggioso in termini di prestazioni.  

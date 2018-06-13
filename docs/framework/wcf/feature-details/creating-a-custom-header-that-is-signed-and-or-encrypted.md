@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490695"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Creazione di un'intestazione personalizzata che viene firmata e- o crittografati
 Quando si chiama un servizio non WCF tramite un client WCF, è talvolta necessario usare intestazioni SOAP personalizzate. In WCF è presente un bug di canonizzazione che impedisce l'uso di intestazioni personalizzate firmate e crittografate con un servizio non WCF. Il problema è causato dalla canonizzazione errata degli spazi dei nomi XML predefiniti ed è significativo solo in caso di chiamata di servizi non WCF con intestazioni personalizzate firmate e/o crittografate.  Quando il servizio riceve il messaggio che contiene l'intestazione firmata e/o crittografata non è in grado di verificare la firma. Questa soluzione evita il bug di canonizzazione, consente l'interoperabilità con i servizi non WCF, ma non impedisce l'interoperabilità con i servizi WCF.  

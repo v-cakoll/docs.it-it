@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496227"
 ---
 # <a name="routing-service"></a>Servizio di routing
 Il servizio di routing è un intermediario SOAP generico che funge da router dei messaggi. La funzionalità principale del servizio di routing consiste nella capacità di indirizzare messaggi in base al relativo contenuto, il che rende possibile l'inoltro di un messaggio a un endpoint client in base a un valore presente all'interno del messaggio stesso, nell'intestazione o nel corpo.  

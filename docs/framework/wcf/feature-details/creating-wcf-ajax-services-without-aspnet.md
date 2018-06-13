@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490357"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>Creazione di servizi WCF AJAX senza ASP.NET
 Servizi AJAX Windows Communication Foundation (WCF) sono accessibili da qualsiasi pagina Web compatibile con JavaScript, senza necessità di ASP.NET AJAX. In questo argomento viene descritto come creare un servizio WCF.  

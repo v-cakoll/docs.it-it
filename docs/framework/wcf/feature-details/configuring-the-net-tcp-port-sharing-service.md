@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489518"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Configurazione del servizio di condivisione delle porte Net.TCP
 I servizi indipendenti che usano il trasporto Net.TCP possono controllare diverse impostazioni avanzate, quali esempio `ListenBacklog` e `MaxPendingAccepts`, che regolano il comportamento del socket TCP sottostante usato per la comunicazione di rete. Tuttavia, queste impostazioni per ogni socket si applicano solo al livello di associazione, se l'associazione del trasporto ha disattivato la condivisione delle porte, che è attivata per impostazione predefinita.  

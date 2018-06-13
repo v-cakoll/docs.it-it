@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582485"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>Strumento XML Schema Definition e serializzazione XML
 Lo strumento XML Schema Definition ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) viene installato insieme agli strumenti .NET Framework come parte di Windows® Software Development Kit (SDK). Lo strumento è progettato principalmente per due scopi:  

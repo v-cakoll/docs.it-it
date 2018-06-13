@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491813"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>Procedura: creare un contratto Windows Communication Foundation con una classe
 La strategia ottimale di creazione di un contratto Windows Communication Foundation (WCF) consiste nell'utilizzare un'interfaccia. Per altre informazioni, vedere [procedura: definire un contratto di servizio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Un'alternativa, illustrata qui, consiste nel creare una classe e quindi nell'applicare l'attributo <xref:System.ServiceModel.ServiceContractAttribute> direttamente alla classe e l'attributo <xref:System.ServiceModel.OperationContractAttribute> a ognuno dei metodi nella classe che fanno parte del contratto.  

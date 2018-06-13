@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490152"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Procedura: accedere ai servizi con un contratto duplex
 Una funzionalità di Windows Communication Foundation (WCF) è la possibilità di creare un servizio che utilizza un modello di messaggistica duplex. Questo modello consente a un servizio di comunicare con il client tramite un callback. In questo argomento vengono illustrati i passaggi per creare un client WCF in una classe client che implementa l'interfaccia di callback.  

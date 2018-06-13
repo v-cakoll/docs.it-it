@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494781"
 ---
 # <a name="message-security-with-a-windows-client"></a>Protezione dei messaggi con un client Windows
 Questo scenario vengono illustrati un client Windows Communication Foundation (WCF) e i server protetti dalla modalità di sicurezza dei messaggi. Il client e il servizio vengono autenticati utilizzando le credenziali di Windows.  

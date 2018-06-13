@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492544"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>Procedura: importare metadati negli endpoint del servizio
 In questo argomento viene descritto come importare i metadati in una raccolta di endpoint del servizio e utilizzare il servizio definito nel [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md). In questo argomento viene inoltre illustrato come creare un'applicazione client che importa metadati dal servizio e quindi chiama il metodo `Add` sul servizio.  

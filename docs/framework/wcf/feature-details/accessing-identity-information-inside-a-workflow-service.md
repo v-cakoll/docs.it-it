@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491975"
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>Accesso alle informazioni sull'identità in un servizio del flusso di lavoro
 Per accedere alle informazioni di identità in un servizio del flusso di lavoro, è necessario implementare l'interfaccia <xref:System.ServiceModel.Activities.IReceiveMessageCallback> in una proprietà di esecuzione personalizzata. Nel metodo <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> è possibile accedere all'elemento <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> per accedere alle informazioni di identità. In questo argomento viene descritta l'implementazione della proprietà di esecuzione e di un'attività personalizzata che esporrà tale proprietà all'attività <xref:System.ServiceModel.Activities.Receive> in fase di esecuzione.  L'attività personalizzata implementerà lo stesso comportamento di un <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` attività, ad eccezione che, quando un <xref:System.ServiceModel.Activities.Receive> viene posizionato all'interno, il <xref:System.ServiceModel.Activities.IReceiveMessageCallback> verrà chiamato e verranno recuperate le informazioni di identità.  

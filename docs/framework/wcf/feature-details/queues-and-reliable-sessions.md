@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494670"
 ---
 # <a name="queues-and-reliable-sessions"></a>Code e sessioni affidabili
 Le code e sessioni affidabili rappresentano le funzionalità di Windows Communication Foundation (WCF) che implementano la messaggistica affidabile. Gli argomenti contenuti in questa sezione descrivono le funzionalità di messaggistica affidabile di WCF.  

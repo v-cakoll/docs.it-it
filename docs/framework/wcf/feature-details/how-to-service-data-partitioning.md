@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491802"
 ---
 # <a name="how-to-service-data-partitioning"></a>Procedura: partizionamento dei dati del servizio
 In questo argomento vengono descritti i passaggi di base necessari per partizionare messaggi tra più istanze dello stesso servizio di destinazione. Il partizionamento dei dati del servizio viene in genere utilizzato quando è necessario ridimensionare un servizio per fornire un livello migliore di qualità del servizio o gestire richieste da diversi clienti in modo specifico. I messaggi da un valore elevato o ai clienti di "Oro", ad esempio, potrebbe essere necessario per l'elaborazione una priorità più alta rispetto ai messaggi da un cliente standard.  

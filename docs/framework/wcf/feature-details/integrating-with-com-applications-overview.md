@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493396"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Panoramica sull'integrazione con applicazioni COM
 Windows Communication Foundation (WCF) offre allo sviluppatore del codice gestito con un ambiente completo per la creazione di applicazioni connesse. Tuttavia, se si dispone di un investimento sostanziale nel codice non gestito basato su COM e non si desidera eseguire la migrazione, è possibile comunque integrare servizi Web WCF direttamente nel codice esistente usando il moniker del servizio WCF. Il moniker servizio può essere usato da un'ampia gamma di ambienti di sviluppo basati su COM, ad esempio Office VBA, Visual Basic 6.0 o Visual C++ 6.0.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495632"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procedura: creare un'associazione personalizzata usando SecurityBindingElement
 Windows Communication Foundation (WCF) include diverse associazioni fornite dal sistema che possono essere configurate ma non forniscono totale flessibilità durante la configurazione di tutte le opzioni di protezione supportati da WCF. In questo argomento viene illustrato come creare direttamente un'associazione personalizzata di singoli elementi di associazione e vengono evidenziate alcune impostazioni di sicurezza che è possibile specificare durante la creazione di tale associazione. Per ulteriori informazioni sulla creazione di associazioni personalizzate, vedere [estensione delle associazioni](../../../../docs/framework/wcf/extending/extending-bindings.md).  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498124"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Trasporti in Windows Communication Foundation
 Il livello di trasporto è al livello più basso dello stack dei canali. I trasporti principali usati in Windows Communication Foundation (WCF) sono HTTP, HTTPS, TCP e named pipe. Negli argomenti di questa sezione vengono fornite informazioni sulla scelta fra questi trasporti, la configurazione del trasporto e l'impostazione delle proprietà di ottimizzazione.  

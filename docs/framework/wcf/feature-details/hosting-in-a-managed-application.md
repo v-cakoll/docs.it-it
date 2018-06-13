@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489742"
 ---
 # <a name="hosting-in-a-managed-application"></a>Hosting in un'applicazione gestita
 Servizi Windows Communication Foundation (WCF) possono essere ospitati in qualsiasi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dell'applicazione. Il self-hosting dei servizi è l'opzione di hosting più flessibile, poiché richiede la distribuzione di un'infrastruttura minima. Tuttavia, è anche l'opzione meno solida, poiché le applicazioni gestite non forniscono la funzionalità di gestione di altre opzioni di hosting in WCF, ad esempio Internet Information Services (IIS) e i servizi Windows e hosting avanzati.  

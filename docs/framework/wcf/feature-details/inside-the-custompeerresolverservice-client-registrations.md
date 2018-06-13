@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494056"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService: registrazioni client
 Ogni nodo della rete pubblica le informazioni sull'endpoint relative nel servizio resolver tramite la funzione `Register`. Il servizio resolver archivia queste informazioni come record di registrazione. Questo record contiene un identificatore univoco (RegistrationID) e informazioni sull'endpoint (PeerNodeAddress) per il nodo.  

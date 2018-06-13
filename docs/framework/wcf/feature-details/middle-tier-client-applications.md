@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493494"
 ---
 # <a name="middle-tier-client-applications"></a>Applicazioni client di livello intermedio
 In questo argomento vengono illustrati alcuni aspetti specifici per le applicazioni client di livello intermedio che usano Windows Communication Foundation (WCF).  

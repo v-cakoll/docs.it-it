@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490773"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Procedura: creare un contratto unidirezionale
 In questo argomento vengono illustrati i passaggi di base per creare metodi che utilizzano un contratto unidirezionale. Tali metodi richiamano operazioni in un servizio Windows Communication Foundation (WCF) da un client, ma non prevede una risposta. Questo tipo di contratto può essere utilizzato, ad esempio, per pubblicare notifiche a numerosi sottoscrittori. È anche possibile utilizzare contratti unidirezionali durante la creazione di un contratto duplex (bidirezionale) che consente ai client e ai server di comunicare fra loro indipendentemente in modo che uno sia in grado di avviare chiamate all'altro. In particolare, questo può consentire al server di eseguire chiamate unidirezionali al client che vengono trattate da quest'ultimo come eventi. Per informazioni dettagliate sulla specifica di metodi bidirezionali, vedere la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> e la classe <xref:System.ServiceModel.OperationContractAttribute>.  

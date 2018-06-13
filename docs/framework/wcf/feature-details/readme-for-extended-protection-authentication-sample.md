@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495080"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>File Leggimi sull'esempio relativo alla protezione estesa per l'autenticazione
 La protezione estesa è un'iniziativa di sicurezza per impedire attacchi man-in-the-middle (MITM) in cui un utente malintenzionato (il "man-in-the-middle"), intercetta le credenziali del client e li utilizza per accedere alle risorse protette nel server di destinazione del client.  

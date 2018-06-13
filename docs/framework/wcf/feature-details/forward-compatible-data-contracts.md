@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492206"
 ---
 # <a name="forward-compatible-data-contracts"></a>Contratti dati compatibili con versioni successive
 Una funzionalità di Windows Communication Foundation (WCF) è di sistema di contratti dati che i contratti può evolversi nel tempo in modo da non causare interruzioni. Ovvero, un client con una versione precedente di un contratto dati può comunicare con un servizio dotato di una versione più recente dello stesso contratto dati, oppure un client con una versione più recente di un contratto dati può comunicare con un client dotato di una versione precedente dello stesso contratto dati. Per altre informazioni, vedere [procedure consigliate: controllo delle versioni del contratto dati](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

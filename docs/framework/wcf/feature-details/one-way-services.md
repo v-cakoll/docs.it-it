@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494374"
 ---
 # <a name="one-way-services"></a>Servizi unidirezionali
 Il comportamento predefinito di un'operazione del servizio segue il modello request-reply, in base al quale il client resta in attesa del messaggio di risposta, anche se l'operazione del servizio è rappresentata nel codice come metodo `void`. Con un'operazione unidirezionale, viene invece trasmesso solo un messaggio. Il destinatario non invia un messaggio di risposta, né il mittente ne aspetta uno.  

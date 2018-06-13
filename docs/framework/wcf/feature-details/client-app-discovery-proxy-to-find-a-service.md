@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489697"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Procedura: implementare un'applicazione client che usa il proxy di individuazione per cercare un servizio
 Quello che segue è il terzo di tre argomenti incentrato sull'implementazione di un proxy di individuazione. Nella sezione precedente [procedura: implementare un servizio individuabile che esegue la registrazione al Proxy di individuazione](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), è implementato un servizio WCF che effettua la registrazione con il proxy di individuazione. In questo argomento è creare un client WCF che usa il proxy di individuazione per trovare il servizio WCF.  

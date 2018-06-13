@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500597"
 ---
 # <a name="standard-endpoints"></a>Endpoint standard
 Gli endpoint vengono definiti specificando un indirizzo, un'associazione e un contratto. Altri parametri che è possibile impostare su un endpoint includono la configurazione di comportamento, le intestazioni e gli URI di ascolto.  Per determinati tipi di endpoint tali valori non cambiano. Gli endpoint di scambio dei metadati utilizzano ad esempio sempre il contratto <xref:System.ServiceModel.Description.IMetadataExchange>. Altri endpoint, quali <xref:System.ServiceModel.Description.WebHttpEndpoint>, richiedono sempre un comportamento di endpoint specificato. L'usabilità di un endpoint può essere migliorata grazie a endpoint con valori predefiniti per le proprietà di endpoint di uso comune. Gli endpoint standard consentono a uno sviluppatore di definire un endpoint che dispone di valori predefiniti o in cui una o più proprietà di endpoint non cambiano.  Questi endpoint consentono di utilizzare tale endpoint senza dovere specificare informazioni di natura statica. Gli endpoint standard possono essere utilizzati per endpoint infrastruttura ed endpoint applicazione.  

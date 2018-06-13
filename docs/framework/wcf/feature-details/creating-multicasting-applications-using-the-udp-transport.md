@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490425"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Creazione di applicazioni multicasting usando il trasporto UDP
 Le applicazioni multicasting inviano piccoli messaggi a numerosi destinatari contemporaneamente senza la necessità di stabilire connessioni punto a punto. In queste applicazioni viene data più importanza alla velocità che all'affidabilità. In altre parole, è più importante inviare dati in modo tempestivo che garantire l'effettiva ricezione degli specifici messaggi. In WCF è ora previsto il supporto della scrittura di applicazioni multicasting con <xref:System.ServiceModel.UdpBinding>. Questo trasporto è utile negli scenari in cui un servizio deve spedire contemporaneamente piccoli messaggi a una serie di client. Un'applicazione di teleborsa è un esempio di servizio di questo tipo.  

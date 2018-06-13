@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494176"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Protezione dei messaggi con certificati reciproci
 Lo scenario seguente viene illustrato un servizio Windows Communication Foundation (WCF) e un client protetto usando la modalità sicurezza messaggio. Il client e il servizio sono autenticati mediante certificati.  
