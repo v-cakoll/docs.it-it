@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528531"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Procedura: visualizzare giorni specifici in grassetto con il controllo MonthCalendar Windows Form
 Windows Form <xref:System.Windows.Forms.MonthCalendar> controllo può visualizzare i giorni in grassetto, come date singolare o ripetute. È possibile farlo per evidenziarne date speciali, ad esempio le festività e i fine settimana.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547027"
 ---
 # <a name="how-to-implement-icommandsource"></a>Procedura: implementare ICommandSource
 In questo esempio viene illustrato come creare un comando di origine mediante l'implementazione <xref:System.Windows.Input.ICommandSource>.  Un comando di origine è un oggetto che sa come richiamare un comando.  Il <xref:System.Windows.Input.ICommandSource> interfaccia espone tre membri: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, e <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> è il comando che verrà richiamato. Il <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> è un tipo di dati definito dall'utente che viene passato dall'origine del comando per il metodo che gestisce il comando. Il <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> è l'oggetto che viene eseguito il comando.  

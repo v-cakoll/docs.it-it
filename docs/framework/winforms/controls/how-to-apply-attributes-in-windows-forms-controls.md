@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529636"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Procedura: applicare attributi nei controlli Windows Form
 Per sviluppare componenti e controlli che interagiscano correttamente con l'ambiente di progettazione ed eseguire correttamente in fase di esecuzione, è necessario applicare correttamente gli attributi alle classi e membri.  

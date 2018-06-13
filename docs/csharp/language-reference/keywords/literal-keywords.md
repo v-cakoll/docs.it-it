@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265762"
 ---
 # <a name="literal-keywords-c-reference"></a>Parole chiave letterali (Riferimenti per C#)
 C# usa le parole chiave seguenti:  

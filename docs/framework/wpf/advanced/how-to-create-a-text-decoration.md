@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545409"
 ---
 # <a name="how-to-create-a-text-decoration"></a>Procedura: creare un effetto di testo
 Oggetto <xref:System.Windows.TextDecoration> oggetto è un visual ornamenti, è possibile aggiungere testo. Sono disponibili quattro tipi di effetti del testo: sottolineato, linea di base, barrato e linea sopra. L'esempio seguente mostra la posizione delle decorazioni di testo rispetto al testo.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545363"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Procedura: aggiungere la gestione di classi per un evento indirizzato
 Gli eventi indirizzati possono essere gestiti tramite gestori di classi o gestori di istanza su qualsiasi nodo specificato nella route. Gestori di classi vengono richiamati prima e utilizzabile da implementazioni della classe per eliminare gli eventi dalla gestione di istanze o introdurre altri comportamenti specifici degli eventi per gli eventi che appartengono a classi di base. In questo esempio vengono illustrate due tecniche strettamente correlate per l'implementazione di gestori di classi.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216037"
 ---
 # <a name="global-c-reference"></a>global (Riferimenti per C#)
 La parola chiave contestuale `global`, se posta prima dell'operatore [::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md), fa riferimento allo spazio dei nomi globale, ovvero lo spazio dei nomi predefinito per qualsiasi programma C#, che è altrimenti senza nome. Per altre informazioni, vedere [Procedura: Usare l'alias dello spazio dei nomi globale](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).  

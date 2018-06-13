@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526367"
 ---
 # <a name="fontdialog-component-windows-forms"></a>Componente FontDialog (Windows Form)
 Il componente di Windows Form <xref:System.Windows.Forms.FontDialog> è una finestra di dialogo preconfigurata. Ha lo stesso **carattere** la finestra di dialogo esposta dal sistema operativo Windows. Il componente eredita il <xref:System.Windows.Forms.CommonDialog> classe.  

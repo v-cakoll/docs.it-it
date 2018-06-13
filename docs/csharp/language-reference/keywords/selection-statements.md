@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267368"
 ---
 # <a name="selection-statements-c-reference"></a>Istruzioni di selezione (Riferimenti per C#)
 Con un'istruzione di selezione il controllo del programma viene trasferito a un flusso specifico a seconda che una determinata condizione sia `true` o meno.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545818"
 ---
 # <a name="resources-wpf"></a>Risorse (WPF)
 Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'interno dell'applicazione. WPF supporta diversi tipi di risorse. Queste risorse sono principalmente due tipi di risorse: XAML risorse e i file di dati di risorsa. Sono esempi di risorse XAML pennelli e stili. File di dati di risorse sono file di dati non eseguibili necessarie per un'applicazione.  

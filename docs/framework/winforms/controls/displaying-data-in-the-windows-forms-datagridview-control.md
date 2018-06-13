@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529428"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Visualizzazione di dati nel controllo DataGridView Windows Form
 Il `DataGridView` controllo viene utilizzato per visualizzare i dati da un'ampia gamma di origini dati esterne. In alternativa, è possibile aggiungere righe e colonne al controllo e popolare manualmente i dati.  

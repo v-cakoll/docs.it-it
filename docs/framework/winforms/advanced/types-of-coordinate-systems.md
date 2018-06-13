@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529753"
 ---
 # <a name="types-of-coordinate-systems"></a>Tipi di sistemi di coordinate
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] utilizza tre spazi di coordinate: world, pagina e dispositivo. Coordinate sono le coordinate usate per modellare un particolare ambiente grafico e le coordinate passate ai metodi in .NET Framework. Le coordinate di pagina può fare riferimento al sistema di coordinate utilizzato da un'area di disegno, ad esempio un form o controllo. Le coordinate di dispositivo vengono utilizzate dal dispositivo fisico da disegnare, ad esempio una schermata o un foglio di carta. Quando si effettua una chiamata `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, passati per i punti di <xref:System.Drawing.Graphics.DrawLine%2A> metodo:`(0, 0)` e `(160, 80)`, sono nello spazio delle coordinate world. Prima di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possibile tracciare le linee sullo schermo, le coordinate passano attraverso una sequenza di trasformazioni. Una trasformazione, ossia la trasformazione globale, converte le coordinate complessive alle coordinate di pagina e un'altra trasformazione, ossia la trasformazione della pagina, converte le coordinate di pagina in coordinate dispositivo.  
