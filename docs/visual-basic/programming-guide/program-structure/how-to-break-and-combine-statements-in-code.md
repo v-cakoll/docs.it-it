@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651018"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Procedura: Interrompere e combinare istruzioni nel codice (Visual Basic)
 Quando si scrive codice, è possibile creare in alcuni casi istruzioni molto lunghe che richiedono uno scorrimento orizzontale nell'Editor di codice. Anche se ciò non influiscono sulla modalità di esecuzione del codice, rende difficile per se stessi o altri utenti leggere il codice come appare sul monitor. In questi casi, è consigliabile suddividere una lunga istruzione in più righe.  

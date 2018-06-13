@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653017"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Compilazione condizionale in Visual Basic
 In *compilazione condizionale*, determinati blocchi di codice in un programma vengono compilati in modo selettivo, mentre gli altri vengono ignorati.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656139"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Dichiarazione di variabili in Visual Basic
 Si dichiara una variabile per specificare il nome e le caratteristiche. Istruzione di dichiarazione delle variabili è di [Dim (istruzione)](../../../../visual-basic/language-reference/statements/dim-statement.md). La posizione e il contenuto è possibile determinare le caratteristiche della variabile.  

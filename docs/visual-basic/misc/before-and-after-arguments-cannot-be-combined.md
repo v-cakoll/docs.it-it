@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636679"
 ---
 # <a name="39before39-and-39after39-arguments-cannot-be-combined"></a>&#39;Prima di&#39; e &#39;dopo&#39; argomenti non possono essere combinati
 Un elenco di argomenti include gli argomenti `Before` e `After` , che si escludono reciprocamente.  

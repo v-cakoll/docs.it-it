@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636715"
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a>Una o più cartelle nel percorso di destinazione non esistono
 Una o più directory fornite nel percorso di destinazione non esistono. Ciò può essere dovuto a un'analisi non corretta di un percorso, in particolare se si fornisce un percorso relativo.  

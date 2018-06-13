@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635906"
 ---
 # <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>File&#39;s aprire installarne modalità&#39;impostata su un valore valido
 Il valore specificato per la modalità di apertura del file non è valido. La tabella seguente illustra i valori validi per l'enumerazione <xref:Microsoft.VisualBasic.OpenMode> .  

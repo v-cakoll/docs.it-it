@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656223"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Procedura: richiamare il compilatore da riga di comando (Visual Basic)
 È possibile richiamare il compilatore della riga di comando digitando il nome del file eseguibile nella riga di comando, noto anche come finestra MS-DOS. Se esegue la compilazione dal prompt dei comandi di Windows predefinito, è necessario digitare il percorso completo del file eseguibile. Per eseguire l'override di questo comportamento predefinito, è possibile utilizzare il prompt dei comandi di Visual Studio, oppure modificare la variabile di ambiente PATH. Entrambi consentono di eseguire la compilazione da qualsiasi directory digitando il nome del compilatore.  

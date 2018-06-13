@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652152"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Routine Main in Visual Basic
 Ogni applicazione di Visual Basic deve contenere una routine denominata `Main`. Questa procedura viene utilizzata come punto di partenza e controllo generale per l'applicazione. Le chiamate di .NET Framework la `Main` procedura quando è stata caricata l'applicazione ed è pronta per passare il controllo a esso. A meno che non si sta creando un'applicazione Windows Forms, è necessario scrivere il `Main` procedure per le applicazioni eseguite nel proprio.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652578"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Parole chiave come nomi di elementi nel codice (Visual Basic)
 Qualsiasi elemento del programma, ad esempio una variabile, una classe o membro, può avere lo stesso nome di una parola chiave riservata. Ad esempio, è possibile creare una variabile denominata `Loop`. Tuttavia, per fare riferimento alla versione di esso, che ha lo stesso nome con restrizioni `Loop` (parola chiave), è necessario farlo precedere da una stringa di qualificazione completo o racchiuderlo tra parentesi quadre (`[ ]`), come illustrato nell'esempio seguente.  

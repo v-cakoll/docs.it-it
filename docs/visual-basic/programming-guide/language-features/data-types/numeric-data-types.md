@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654203"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Tipi di dati numerici (Visual Basic)
 Visual Basic fornisce diversi *tipi di dati numerici* per gestire i numeri in diverse rappresentazioni. *Integrale* tipi rappresentano solo numeri interi (positivi, negativi e zero), e *non integrali* tipi rappresentano numeri con entrambi numero intero e frazione.  

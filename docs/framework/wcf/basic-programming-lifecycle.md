@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803692"
 ---
 # <a name="basic-programming-lifecycle"></a>Ciclo di vita della programmazione di base
 Windows Communication Foundation (WCF) consente alle applicazioni di comunicare se si trovino nello stesso computer, in Internet o su diverse piattaforme applicative. In questo argomento vengono delineate le attività necessarie per compilare un'applicazione WCF. Per un'applicazione di esempio funzionante, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md).  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655212"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Procedura: confrontare una stringa con un modello (Visual Basic)
 Se si desidera determinare se un'espressione del [tipo di dati String](../../../../visual-basic/language-reference/data-types/string-data-type.md) soddisfa un modello, è possibile utilizzare il [operatore Like](../../../../visual-basic/language-reference/operators/like-operator.md).  

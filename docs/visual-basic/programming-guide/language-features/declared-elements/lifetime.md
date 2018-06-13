@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654229"
 ---
 # <a name="lifetime-in-visual-basic"></a>Durata in Visual Basic
 Il *durata* di un elemento dichiarato è il periodo di tempo durante il quale essa è disponibile per l'utilizzo. Le variabili sono gli unici elementi che hanno una durata. A tale scopo, il compilatore considera i parametri di routine e funzione restituisce come case speciale di variabili. La durata di una variabile rappresenta il periodo di tempo durante i quali può contenere un valore. Il valore può cambiare nel corso della sua durata, ma contiene sempre un valore.  

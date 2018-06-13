@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634846"
 ---
 # <a name="device-unavailable"></a>Dispositivo non disponibile
 La connessione di rete è stata persa o il dispositivo a cui si tenta di accedere è offline o non esiste.  

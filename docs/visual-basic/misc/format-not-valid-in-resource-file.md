@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636132"
 ---
 # <a name="format-not-valid-in-resource-file"></a>Formato del file di risorse non valido
 Un file di risorse nel progetto non segue il formato standard per un file di risorse di Windows o una mancata corrispondenza tra il file di risorse e il progetto di Visual Basic.  

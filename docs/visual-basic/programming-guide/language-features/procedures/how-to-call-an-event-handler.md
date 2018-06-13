@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652682"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Procedura: chiamare un gestore eventi in Visual Basic
 Un *evento* è un'azione o un'occorrenza, ad esempio un mouse fare clic su un limite di credito è stato superato o: riconosciuto da un componente del programma, e per cui è possibile scrivere codice per rispondere. Un *gestore dell'evento* è il codice scritto in risposta a un evento.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635606"
 ---
 # <a name="code-resource-lock-error"></a>Errore di blocco risorsa codice
 È stata effettuata una chiamata a una routine in una risorsa codice. La risorsa codice è stata trovata, ma si è verificato un errore quando si è tentato di bloccare la risorsa, forse perché è in uso.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651756"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensioni di matrice in Visual Basic
 Oggetto *dimensione* indica una direzione in cui è possibile variare la specifica di elementi della matrice. Matrice contenente le vendite totali per ogni giorno del mese ha una dimensione (giorno del mese). Matrice contenente le vendite totali per reparto per ogni giorno del mese ha due dimensioni (il numero di reparto e il giorno del mese). Il numero di dimensioni è una matrice viene chiamato il relativo *rank*.  

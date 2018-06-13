@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654330"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Considerazioni sull'overload di routine (Visual Basic)
 Quando si esegue l'overload di una stored procedure, è necessario utilizzare un altro *firma* per ogni versione di overload. In genere significa che ogni versione è necessario specificare un elenco di parametri diversi. Per ulteriori informazioni, vedere "Firma diversa" in [overload di routine](./procedure-overloading.md).  

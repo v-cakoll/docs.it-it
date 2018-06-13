@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654794"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Espressioni lambda (Visual Basic)
 Oggetto *espressione lambda* è una funzione o subroutine senza un nome che può essere utilizzato ogni volta che un delegato è valido. Espressioni lambda possono essere funzioni o subroutine e possono essere a riga singola o multilinea. È possibile passare valori dall'ambito corrente a un'espressione lambda.  
