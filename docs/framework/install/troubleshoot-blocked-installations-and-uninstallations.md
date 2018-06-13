@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394507"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a><span data-ttu-id="d08ad-102">Risolvere i problemi relativi alle installazioni e disinstallazioni bloccate di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="d08ad-102">Troubleshoot blocked .NET Framework installations and uninstallations</span></span>
 
