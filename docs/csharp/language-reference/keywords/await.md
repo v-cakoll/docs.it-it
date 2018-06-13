@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218920"
 ---
 # <a name="await-c-reference"></a><span data-ttu-id="c7a78-102">await (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="c7a78-102">await (C# Reference)</span></span>
 <span data-ttu-id="c7a78-103">L'operatore `await` viene applicato a un'attività in un metodo asincrono per inserire un punto di sospensione nell'esecuzione del metodo fino al completamento dell'attività di cui si è in attesa.</span><span class="sxs-lookup"><span data-stu-id="c7a78-103">The `await` operator is applied to a task in an asynchronous method to insert a suspension point in the execution of the method until the awaited task completes.</span></span> <span data-ttu-id="c7a78-104">L'attività rappresenta il lavoro attualmente in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="c7a78-104">The task represents ongoing work.</span></span>  

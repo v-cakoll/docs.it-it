@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216109"
 ---
 # <a name="get-c-reference"></a><span data-ttu-id="0a5b8-102">get (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="0a5b8-102">get (C# Reference)</span></span>
 

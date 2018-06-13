@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216135"
 ---
 # <a name="-nostdlib-c-compiler-options"></a><span data-ttu-id="94a94-102">-nostdlib (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="94a94-102">-nostdlib (C# Compiler Options)</span></span>
 <span data-ttu-id="94a94-103">**-nostdlib** impedisce l'importazione di mscorlib.dll, che definisce l'intero spazio dei nomi di sistema.</span><span class="sxs-lookup"><span data-stu-id="94a94-103">**-nostdlib** prevents the import of mscorlib.dll, which defines the entire System namespace.</span></span>  

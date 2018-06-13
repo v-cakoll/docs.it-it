@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762650"
 ---
 # <a name="foreign-key-property"></a><span data-ttu-id="40f91-102">proprietà di chiave esterna</span><span class="sxs-lookup"><span data-stu-id="40f91-102">foreign key property</span></span>
 <span data-ttu-id="40f91-103">Oggetto *proprietà di chiave esterna* in Entity Data Model (EDM) è un tipo primitivo [proprietà](../../../../docs/framework/data/adonet/property.md) (o un set di proprietà di tipo primitivo) in un [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) che contiene il [chiave di entità](../../../../docs/framework/data/adonet/entity-key.md) di un altro tipo di entità.</span><span class="sxs-lookup"><span data-stu-id="40f91-103">A *foreign key property* in the Entity Data Model (EDM) is a primitive type [property](../../../../docs/framework/data/adonet/property.md) (or a set of primitive type properties) on an [entity type](../../../../docs/framework/data/adonet/entity-type.md) that contains the [entity key](../../../../docs/framework/data/adonet/entity-key.md) of another entity type.</span></span>  

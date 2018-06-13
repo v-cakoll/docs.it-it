@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219232"
 ---
 # <a name="discards---c-guide"></a><span data-ttu-id="d299a-103">Variabili discard - Guida di C#</span><span class="sxs-lookup"><span data-stu-id="d299a-103">Discards - C# Guide</span></span>
 

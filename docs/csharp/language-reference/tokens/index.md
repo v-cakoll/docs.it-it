@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282116"
 ---
 # <a name="c-special-characters"></a><span data-ttu-id="cfc84-102">Caratteri speciali di C#</span><span class="sxs-lookup"><span data-stu-id="cfc84-102">C# Special Characters</span></span>
 

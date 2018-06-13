@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271072"
 ---
 # <a name="--operator-c-reference"></a><span data-ttu-id="6c173-102">Operatore - (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="6c173-102">- Operator (C# Reference)</span></span>
 <span data-ttu-id="6c173-103">L'operatore `-` ha la funzione di operatore unario o binario.</span><span class="sxs-lookup"><span data-stu-id="6c173-103">The `-` operator can function as either a unary or a binary operator.</span></span>  

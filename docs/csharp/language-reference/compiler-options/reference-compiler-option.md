@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218176"
 ---
 # <a name="-reference-c-compiler-options"></a><span data-ttu-id="5c32f-102">-reference (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="5c32f-102">-reference (C# Compiler Options)</span></span>
 <span data-ttu-id="5c32f-103">Con l'opzione **-reference** il compilatore importa nel progetto corrente le informazioni sui tipi [public](../../../csharp/language-reference/keywords/public.md) disponibili nel file specificato e consente quindi di fare riferimento ai metadati dai file di assembly specificati.</span><span class="sxs-lookup"><span data-stu-id="5c32f-103">The **-reference** option causes the compiler to import [public](../../../csharp/language-reference/keywords/public.md) type information in the specified file into the current project, thus enabling you to reference metadata from the specified assembly files.</span></span>  

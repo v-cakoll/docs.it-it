@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218748"
 ---
 # <a name="-out-c-compiler-options"></a><span data-ttu-id="2c8e6-102">-out (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="2c8e6-102">-out (C# Compiler Options)</span></span>
 <span data-ttu-id="2c8e6-103">L'opzione **-out** specifica il nome del file di output.</span><span class="sxs-lookup"><span data-stu-id="2c8e6-103">The **-out** option specifies the name of the output file.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216024"
 ---
 # <a name="add-c-reference"></a><span data-ttu-id="6656f-102">add (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="6656f-102">add (C# Reference)</span></span>
 <span data-ttu-id="6656f-103">La parola chiave contestuale `add` viene usata per definire una funzione di accesso a eventi personalizzata che viene chiamata quando il codice client sottoscrive l'[evento](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="6656f-103">The `add` contextual keyword is used to define a custom event accessor that is invoked when client code subscribes to your [event](../../../csharp/language-reference/keywords/event.md).</span></span> <span data-ttu-id="6656f-104">Se si specifica una funzione di accesso `add` personalizzata, è necessario specificare anche una funzione di accesso [remove](../../../csharp/language-reference/keywords/remove.md).</span><span class="sxs-lookup"><span data-stu-id="6656f-104">If you supply a custom `add` accessor, you must also supply a [remove](../../../csharp/language-reference/keywords/remove.md) accessor.</span></span>  

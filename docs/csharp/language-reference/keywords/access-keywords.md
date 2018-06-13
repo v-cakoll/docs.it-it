@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216038"
 ---
 # <a name="access-keywords-c-reference"></a><span data-ttu-id="af832-102">Parole chiave per l'accesso (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="af832-102">Access Keywords (C# Reference)</span></span>
 <span data-ttu-id="af832-103">In questa sezione vengono presentate le parole chiave per l'accesso seguenti:</span><span class="sxs-lookup"><span data-stu-id="af832-103">This section introduces the following access keywords:</span></span>  

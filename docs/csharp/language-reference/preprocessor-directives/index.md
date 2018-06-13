@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279919"
 ---
 # <a name="c-preprocessor-directives"></a><span data-ttu-id="d3eec-102">Direttive per il preprocessore C#</span><span class="sxs-lookup"><span data-stu-id="d3eec-102">C# preprocessor directives</span></span>
 <span data-ttu-id="d3eec-103">Questa sezione contiene informazioni sulle seguenti direttive per il preprocessore C#:</span><span class="sxs-lookup"><span data-stu-id="d3eec-103">This section contains information about the following C# preprocessor directives:</span></span>

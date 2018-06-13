@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267288"
 ---
 # <a name="void-c-reference"></a><span data-ttu-id="e72e6-102">void (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="e72e6-102">void (C# Reference)</span></span>
 <span data-ttu-id="e72e6-103">Quando viene usato come tipo restituito per un metodo `void` specifica che il metodo non restituisce un valore.</span><span class="sxs-lookup"><span data-stu-id="e72e6-103">When used as the return type for a method, `void` specifies that the method doesn't return a value.</span></span>
