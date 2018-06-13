@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d9a716244c779a25ad75c9db37aade0524e9e740
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442917"
 ---
 # <a name="unmanaged-api-reference"></a>Riferimenti alle API non gestite
 Questa sezione include informazioni sulle API non gestite che possono essere usate da applicazioni correlate a codice gestito, ad esempio host di runtime, compilatori, disassembler, soluzioni di offuscamento, debugger e profiler.  

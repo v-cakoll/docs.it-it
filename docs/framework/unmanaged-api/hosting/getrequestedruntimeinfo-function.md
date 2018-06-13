@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f37be8e3d2e92147e9f13954ab64396062ade2d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434981"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>Funzione GetRequestedRuntimeInfo
 Ottiene informazioni di versione e la directory di common language runtime (CLR) richiesto da un'applicazione.  

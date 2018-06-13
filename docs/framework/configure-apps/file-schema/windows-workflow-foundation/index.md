@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352489"
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Schema di configurazione di Windows Workflow Foundation
 Gli elementi di configurazione di Windows Workflow Foundation (WF) consentono di configurare le applicazioni del flusso di lavoro. Per un'applicazione flusso di lavoro, è anche possibile configurare il rilevamento e la traccia. Per altre informazioni sul rilevamento e la traccia, vedere [Rilevamento e traccia del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Per i servizi del flusso di lavoro, è inoltre possibile utilizzare gli elementi di configurazione di Windows Communication Foundation (WCF). Per ulteriori informazioni su WCF, vedere [Schema di configurazione WCF](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  

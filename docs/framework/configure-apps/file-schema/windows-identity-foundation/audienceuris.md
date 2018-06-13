@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755994"
 ---
 # <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
 Specifica il set di URI accettabili identificatori delle relying party (RP). Token non verranno accettati, a meno che hanno come ambito per uno dei gruppi di destinatari consentiti gli URI.  

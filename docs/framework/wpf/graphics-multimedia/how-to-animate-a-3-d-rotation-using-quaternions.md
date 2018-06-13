@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556939"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a>Procedura: aggiungere un'animazione a una rotazione tridimensionale tramite quaternioni
 In questo esempio viene illustrato come aggiungere un'animazione a una rotazione di un oggetto 3D tramite quaternioni.  

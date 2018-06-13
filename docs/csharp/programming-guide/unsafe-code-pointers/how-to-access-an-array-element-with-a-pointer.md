@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332039"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>Procedura: accedere a un elemento di matrice mediante un puntatore (Guida per programmatori C#)
 In un contesto non sicuro è possibile accedere a un elemento in memoria usando l'accesso all'elemento mediante puntatore, come illustrato nell'esempio seguente:  

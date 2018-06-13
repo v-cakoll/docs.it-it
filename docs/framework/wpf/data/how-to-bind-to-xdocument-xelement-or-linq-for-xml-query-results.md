@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556692"
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>Procedura: eseguire l'associazione ai risultati di una query XDocument, XElement o LINQ to XML
 In questo esempio viene illustrato come associare i dati XML da un <xref:System.Windows.Controls.ItemsControl> utilizzando <xref:System.Xml.Linq.XDocument>.  

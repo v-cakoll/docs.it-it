@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362627"
 ---
 # <a name="query-examples"></a>Esempi di query
 In questa sezione vengono forniti esempi di Visual Basic e c# di tipico [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query. Gli sviluppatori che usano Visual Studio è possono trovare ulteriori esempi in una soluzione di esempio disponibile nella sezione esempi. Per ulteriori informazioni, vedere [esempi](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359933"
 ---
 # <a name="creating-the-object-model"></a>Creazione del modello a oggetti
 È possibile creare un modello a oggetti da un database esistente e usare il modello nello stato predefinito. È anche possibile personalizzare molti aspetti del modello e il relativo comportamento.  

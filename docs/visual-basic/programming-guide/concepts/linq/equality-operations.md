@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640221"
 ---
 # <a name="equality-operations-visual-basic"></a>Operazioni di uguaglianza (Visual Basic)
 Due sequenze i cui elementi corrispondenti sono uguali e che hanno lo stesso numero di elementi sono considerate uguali.  
