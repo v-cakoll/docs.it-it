@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522757"
 ---
 # <a name="how-to-align-drawn-text"></a>Procedura: allineare il testo creato
 Quando si esegue il disegno personalizzato, è spesso necessario allineare al centro il testo disegnato su un form o controllo. Per facilitare l'allineamento del testo disegnato con il <xref:System.Drawing.Graphics.DrawString%2A> o <xref:System.Windows.Forms.TextRenderer.DrawText%2A> metodi di creazione dell'oggetto di formattazione corretta e impostando il flag di formato appropriati.  

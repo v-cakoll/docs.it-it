@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b546d65e2c3cf498c80e19cc7236a6e424515577
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405926"
 ---
 # <a name="icordebugboxvalue-interface1"></a>ICorDebugBoxValue Interface1
 Sottoclasse di "ICorDebugHeapValue" che rappresenta un oggetto di classe di valore boxed.  

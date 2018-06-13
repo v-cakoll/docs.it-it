@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520383"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Anti-aliasing con linee e curve
 Quando si utilizza [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare una linea, si forniscono i punti iniziale e finale della riga, ma non è necessario fornire le informazioni sui singoli pixel della riga. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funziona in combinazione con il software dei driver di visualizzazione per determinare quali pixel verrà attivato per visualizzare la riga in un particolare dispositivo di visualizzazione.  

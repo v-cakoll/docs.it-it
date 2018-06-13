@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522109"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>Ellissi e archi in GDI+
 È possibile tracciare ellissi e archi utilizzando il <xref:System.Drawing.Graphics.DrawEllipse%2A> e <xref:System.Drawing.Graphics.DrawArc%2A> metodi di <xref:System.Drawing.Graphics> classe.  

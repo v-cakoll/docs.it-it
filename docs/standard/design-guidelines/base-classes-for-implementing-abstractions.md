@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571508"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Classi base per l'implementazione di astrazioni
 In teoria, una classe diventa una classe di base quando un'altra classe è derivata da esso. Ai fini di questa sezione, tuttavia, una classe di base è una classe progettata principalmente per fornire un'astrazione comune o per le altre classi di riutilizzare alcuni implementazione predefinita tramite ereditarietà. Classi di base si trovano in genere all'interno di gerarchie di ereditarietà, tra un'astrazione alla radice di una gerarchia e diverse implementazioni personalizzate nella parte inferiore.  

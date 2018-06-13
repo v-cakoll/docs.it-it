@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523084"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Procedura: creare una raccolta di caratteri privata
 Il <xref:System.Drawing.Text.PrivateFontCollection> classe eredita la <xref:System.Drawing.Text.FontCollection> classe base astratta. È possibile utilizzare un <xref:System.Drawing.Text.PrivateFontCollection> oggetto per mantenere un set di caratteri specifico per l'applicazione. Un insieme di caratteri privata può includere i caratteri di sistema installati, nonché i tipi di carattere che non sono stati installati nel computer. Per aggiungere un file di caratteri a un insieme di caratteri privata, chiamare il <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> metodo di un <xref:System.Drawing.Text.PrivateFontCollection> oggetto.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522572"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>Supporto delle operazioni di trascinamento della selezione e degli Appunti
 È possibile abilitare le operazioni di trascinamento all'interno di applicazioni per Windows mediante la gestione di una serie di eventi, in particolare gli eventi <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave> e <xref:System.Windows.Forms.Control.DragDrop>.  

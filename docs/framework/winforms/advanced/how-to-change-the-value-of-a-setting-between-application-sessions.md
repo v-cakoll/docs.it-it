@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523410"
 ---
 # <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a>Procedura: modificare il valore di un'impostazione tra le sessioni dell'applicazione
 In alcuni casi, si potrebbe voler modificare il valore di un'impostazione tra le sessioni dell'applicazione dopo aver compilato e distribuito l'applicazione. Potrebbe ad esempio, si desidera modificare una stringa di connessione in modo che punti al percorso del database corretto. Poiché gli strumenti di progettazione non sono disponibili dopo aver compilato e distribuito l'applicazione, è necessario modificare il valore dell'impostazione manualmente nel file.  

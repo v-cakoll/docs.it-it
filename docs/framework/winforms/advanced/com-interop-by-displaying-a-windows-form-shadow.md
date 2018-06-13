@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519717"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Procedura: supportare l'interoperabilità COM visualizzando un Windows Form con il metodo ShowDialog
 È possibile risolvere i problemi di interoperabilità di Component Object Model (COM) visualizzando il Windows Form in un ciclo di messaggi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] creato usando il metodo <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>.  

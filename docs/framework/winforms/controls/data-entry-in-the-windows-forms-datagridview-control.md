@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526820"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Immissione di dati nel controllo DataGridView Windows Form
 Il `DataGridView` controllo fornisce diverse funzionalità che consentono modificare la modalità di aggiungere o modificare i dati nel controllo. Ad esempio, è possibile rendere immissione di dati più efficiente fornendo i valori predefiniti per le nuove righe e dagli avvisi agli utenti quando si verificano errori.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521638"
 ---
 # <a name="how-to-crop-and-scale-images"></a>Procedura: ritagliare e adattare immagini
 Il <xref:System.Drawing.Graphics> classe sono disponibili numerosi <xref:System.Drawing.Graphics.DrawImage%2A> metodi, alcuni dei quali dispongono di parametri dei rettangoli di origine e di destinazione che è possibile usare per ritagliare e adattare le immagini.  

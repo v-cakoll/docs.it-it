@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520656"
 ---
 # <a name="constructing-and-drawing-paths"></a>Costruzione e creazione di percorsi
 Un percorso è una sequenza di primitive grafiche (linee, rettangoli, curve, testo e così via) che può essere modificato e visualizzato come una singola unità. Un percorso può essere suddiviso in *figure* che sono aperti o chiusi. Una figura può contenere diverse primitive.  

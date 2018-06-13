@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743810"
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>Procedura: implementare l'accesso utente con i servizi dell'applicazione client
 È possibile usare i servizi delle applicazioni client per convalidare gli utenti tramite un servizio profili [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] esistente. Per informazioni su come configurare il servizio di profili [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], vedere l'argomento relativo all[Uso dell'autenticazione basata su modulo con Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  

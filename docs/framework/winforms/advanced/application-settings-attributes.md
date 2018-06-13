@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518349"
 ---
 # <a name="application-settings-attributes"></a>Attributi delle impostazioni delle applicazioni
 L'architettura Impostazioni applicazione fornisce numerosi attributi che è possono applicare la classe wrapper di impostazioni o alle singole proprietà. Questi attributi vengono esaminati in fase di esecuzione dall'infrastruttura di impostazioni applicazione, spesso in modo specifico il provider di impostazioni, per personalizzare il funzionamento alle esigenze dichiarate del wrapper personalizzato.  

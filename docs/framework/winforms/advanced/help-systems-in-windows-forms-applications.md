@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520721"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Sistemi di Guida nelle applicazioni Windows Forms
 Uno di sicuramente, uno sviluppatore di applicazioni, gli utenti è un sistema di Guida competente. Si tratta di dove si attiverà quando essi o disorientanti. Fornire un sistema di Guida in un'applicazione basata su Windows viene eseguita facilmente tramite il [HelpProvider (componente)](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md).  
