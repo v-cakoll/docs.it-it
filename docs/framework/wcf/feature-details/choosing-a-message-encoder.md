@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494862"
 ---
 # <a name="choosing-a-message-encoder"></a>Scelta di un codificatore di messaggi
 In questo argomento vengono descritti i criteri per la scelta tra i codificatori di messaggi che sono inclusi in Windows Communication Foundation (WCF): binario, testo e Message Transmission Optimization Mechanism (MTOM).  

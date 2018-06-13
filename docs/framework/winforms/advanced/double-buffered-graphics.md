@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524066"
 ---
 # <a name="double-buffered-graphics"></a>Grafica a doppio buffer
 Lo sfarfallio è un problema comune della programmazione della grafica. Le operazioni di grafica che richiedono più operazioni complesse di disegno possono causare lo sfarfallio o altri gravi problemi delle immagini sottoposte a rendering. Per risolvere questi problemi, .NET Framework fornisce l'accesso al doppio buffer.  

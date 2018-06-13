@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574517"
 ---
 # <a name="extension-methods"></a>Metodi di estensione
 Metodi di estensione rappresentano una funzionalità del linguaggio che consente di metodi statici per chiamare utilizzando la sintassi di chiamata del metodo di istanza. Questi metodi devono accettare almeno un parametro, che rappresenta l'istanza che è il metodo su cui operare.  

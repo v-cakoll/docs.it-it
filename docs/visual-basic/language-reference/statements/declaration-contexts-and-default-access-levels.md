@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605446"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Contesti delle dichiarazioni e livelli di accesso predefiniti (Visual Basic)
 Questo argomento descrive i tipi di Visual Basic possono essere dichiarati all'interno di altri tipi e cosa i livelli di accesso per impostazione predefinita se non diversamente specificato.  

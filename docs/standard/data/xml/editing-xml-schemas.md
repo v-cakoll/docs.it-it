@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577215"
 ---
 # <a name="editing-xml-schemas"></a>Modifica di schemi XML
 La modifica di uno schema XML rappresenta una delle funzionalità più importanti del modello SOM (Schema Object Model). È possibile usare tutte le proprietà del modello SOM precedenti alla compilazione dello schema per modificare i valori esistenti in uno schema XML. Sarà quindi possibile ricompilare lo schema XML per riflettere le modifiche.  

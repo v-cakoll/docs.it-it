@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494816"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Procedura: recuperare metadati e implementare un servizio conforme
 Spesso i servizi non vengono progettati e implementati dalla stessa persona. Negli ambienti dove le applicazioni interoperative svolgono un ruolo importante, i contratti possono essere progettati o descritti in WSDL (Web Services Description Language) e uno sviluppatore deve implementare un servizio che sia conforme al contratto fornito. È anche possibile eseguire la migrazione di un servizio esistente per Windows Communication Foundation (WCF) ma mantiene il formato wire. I contratti duplex richiedono inoltre ai chiamanti di implementare anche un contratto di callback.  

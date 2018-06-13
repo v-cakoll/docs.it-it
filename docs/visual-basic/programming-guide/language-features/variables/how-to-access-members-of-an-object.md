@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650921"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Procedura: accedere ai membri di un oggetto (Visual Basic)
 Quando si dispone di una variabile oggetto che fa riferimento a un oggetto, spesso si desidera lavorare con i membri di tale oggetto, ad esempio i relativi metodi, proprietà, campi ed eventi. Ad esempio, dopo aver creato un nuovo <xref:System.Windows.Forms.Form> dell'oggetto, è possibile impostare il relativo <xref:System.Windows.Forms.Control.Text%2A> chiamata o proprietà relativo <xref:System.Windows.Forms.Control.Focus%2A> (metodo).  

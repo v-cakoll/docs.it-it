@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f6a3d425d4c2ae2146723a6acfc5ab9893f0fe0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438441"
 ---
 # <a name="ihostmemorymanagerreleasedvirtualaddressspace-method"></a>Metodo IHostMemoryManager::ReleasedVirtualAddressSpace
 Notifica all'host che common language runtime (CLR) ha terminato di utilizzare la memoria specificata.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650803"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Procedura: dichiarare enumerazioni (Visual Basic)
 Per creare un'enumerazione con la `Enum` istruzione nella sezione delle dichiarazioni di una classe o modulo. È possibile dichiarare un'enumerazione con un metodo. Per specificare il livello di accesso appropriato, utilizzare `Private`, `Protected`, `Friend`, o `Public`.  

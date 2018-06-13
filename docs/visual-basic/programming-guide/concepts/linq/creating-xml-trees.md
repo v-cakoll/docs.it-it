@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643499"
 ---
 # <a name="creating-xml-trees-visual-basic"></a>Creazione di alberi XML (Visual Basic)
 Una delle attività più comuni di XML è la creazione di un albero XML. In questa sezione vengono descritti diversi modi per crearle.  

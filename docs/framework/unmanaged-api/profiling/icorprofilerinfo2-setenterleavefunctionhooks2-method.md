@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 52988378ff4df0bb03e15c9a4b25efbcd6c318f9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457726"
 ---
 # <a name="icorprofilerinfo2setenterleavefunctionhooks2-method"></a>Metodo ICorProfilerInfo2::SetEnterLeaveFunctionHooks2
 Specifica di funzioni implementate dal profiler venga chiamata per le versioni aggiornate del "Immettere", "lasciare" e "tailcall" hook delle funzioni gestite.  

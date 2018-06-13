@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523086"
 ---
 # <a name="how-to-use-hit-testing-with-a-region"></a>Procedura: eseguire l'hit testing utilizzando una regione
 Lo scopo del processo di hit testing consiste nel determinare se il cursore è posizionato su un oggetto specificato, ad esempio un'icona o di un pulsante.  

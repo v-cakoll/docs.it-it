@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bce005a677dcb74c176a6dddfb2726f6b1fd0e8a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436907"
 ---
 # <a name="igchostcollect-method"></a>Metodo IGCHost::Collect
 Forza una raccolta per la generazione specificata, indipendentemente dallo stato dell'operazione di garbage collection corrente.  

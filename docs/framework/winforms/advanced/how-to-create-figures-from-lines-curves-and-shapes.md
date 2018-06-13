@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521856"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Procedura: creare figure da linee, curve e forme
 Per creare una figura, costruire un <xref:System.Drawing.Drawing2D.GraphicsPath>e quindi chiamare i metodi, ad esempio <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> e <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, per aggiungere le primitive al percorso.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573423"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries"></a>Procedura: aggiungere o rimuovere voci dell'elenco di controllo di accesso (ACL)
 Per aggiungere o rimuovere le voci dell'elenco di controllo di accesso (ACL) a o da un file, l'oggetto <xref:System.Security.AccessControl.FileSecurity> o <xref:System.Security.AccessControl.DirectorySecurity> deve essere recuperato dal file o dalla directory, modificato e quindi riapplicato al file o alla directory.  

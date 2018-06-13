@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565850"
 ---
 # <a name="xname-directive"></a>Direttiva x:Name
 Identifica in modo univoco gli elementi XAML in un namescope XAML. Ambiti dei nomi XAML e i relativi modelli di univocità possono essere applicate agli oggetti, un'istanza quando Framework forniscono le API o implementare comportamenti che accedono a creato XAML oggetto grafico in fase di esecuzione.  
