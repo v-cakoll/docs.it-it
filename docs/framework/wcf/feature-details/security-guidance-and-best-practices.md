@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497503"
 ---
 # <a name="security-guidance-and-best-practices"></a>Materiale sussidiario di sicurezza e procedure consigliate
 Negli argomenti di questa sezione offrono indicazioni e concetti da tenere presente durante la creazione di applicazioni di Windows Communication Foundation (WCF). Per ulteriori informazioni su Windows Server AppFabric e protezione, vedere [sicurezza modello per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

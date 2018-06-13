@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588174"
 ---
 # <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;espressione&gt; &#39; non può essere utilizzato come vincolo di tipo
 Un elenco di vincoli comprende un'espressione che non rappresenta un vincolo valido per un parametro di tipo.  

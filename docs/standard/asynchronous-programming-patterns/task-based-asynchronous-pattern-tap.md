@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579015"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Modello asincrono basato su attività (TAP)
 Il modello asincrono basato su attività (TAP) è basato sui tipi <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nello spazio dei nomi <xref:System.Threading.Tasks?displayProperty=nameWithType>, che vengono usati per rappresentare le operazioni asincrone arbitrarie. TAP è il modello di progettazione asincrono consigliato per le nuove attività di sviluppo.  

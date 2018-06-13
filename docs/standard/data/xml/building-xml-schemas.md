@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576822"
 ---
 # <a name="building-xml-schemas"></a>Compilazione di XML Schema
 Le classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType> sono associate alle strutture definite nella raccomandazione W3C (World Wide Web Consortium) XML Schema e possono essere usate per compilare schemi XML in memoria.  

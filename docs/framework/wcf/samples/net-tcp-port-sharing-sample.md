@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506467"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Esempio di condivisione delle porte Net.TCP
 Il protocollo TCP/IP utilizza un numero a 16 bit, definito porta, per differenziare le connessioni a più applicazioni di rete che sono in esecuzione nello stesso computer. Se un'applicazione è in ascolto su una porta, tutto il traffico TCP per quella porta viene indirizzato a tale applicazione. Su quella porta non possono essere contemporaneamente in ascolto altre applicazioni.  

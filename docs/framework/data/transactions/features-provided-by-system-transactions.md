@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365930"
 ---
 # <a name="features-provided-by-systemtransactions"></a>Funzionalità offerte da System.Transactions
 Questa sezione descrive come utilizzare le funzionalità fornite dallo spazio dei nomi <xref:System.Transactions> per scrivere applicazioni transazionali e gestori di risorse personalizzati. In particolare, questa sezione descrive come creare una transazione (locale o distribuita) e come integrarvi una o più risorse.  

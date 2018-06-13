@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576432"
 ---
 # <a name="names-of-namespaces"></a>Nomi di spazi dei nomi
 Come con altre linee guida di denominazione, l'obiettivo per la denominazione degli spazi dei nomi consiste nel creare chiarezza sufficiente per il programmatore utilizzando il framework di sapere immediatamente che cos'è probabilmente il contenuto dello spazio dei nomi. Il modello seguente specifica la regola generale per la denominazione degli spazi dei nomi:  

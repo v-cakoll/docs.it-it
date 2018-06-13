@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508878"
 ---
 # <a name="transacted-batching"></a>Batch transazionale.
 Questo esempio dimostra come raggruppare letture transazionali usando Accodamento messaggi (MSMQ). Il batch transazionale è una funzionalità di ottimizzazione delle prestazioni per le letture transazionali nella comunicazione in coda.  

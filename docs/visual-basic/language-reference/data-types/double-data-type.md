@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590264"
 ---
 # <a name="double-data-type-visual-basic"></a>Tipo di dati Double (Visual Basic)
 Contiene con segno IEEE a 64 bit (8 byte) e con precisione doppia numeri a virgola mobile in un intervallo compreso tra - 1.79769313486231570 e + 308 e - 4, 94065645841246544E-324 per i valori negativi e tra 4, 94065645841246544E-324 e 1.79769313486231570 e + 308 per valori positivi. Numeri a precisione doppia archiviano un'approssimazione di un numero reale.  

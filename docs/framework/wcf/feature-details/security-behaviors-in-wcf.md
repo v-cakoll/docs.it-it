@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508644"
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportamenti di sicurezza in WCF
 In Windows Communication Foundation (WCF), comportamenti modificano il comportamento di run-time a livello di servizio o a livello di endpoint. (Per ulteriori informazioni sui comportamenti in generale, vedere [che specifica il comportamento di Run-Time servizio](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportamenti di sicurezza* consentono di controllare le credenziali, l'autenticazione, autorizzazione e i registri di controllo. I comportamenti possono essere utilizzati tramite programmazione o mediante configurazione. In questo argomento viene descritto come configurare i comportamenti relativi alle funzioni di sicurezza elencati di seguito:  

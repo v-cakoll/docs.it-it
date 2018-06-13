@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508579"
 ---
 # <a name="using-message-contracts"></a>Utilizzo dei contratti di messaggio
 In genere quando si compilano applicazioni di Windows Communication Foundation (WCF), gli sviluppatori prestare particolare attenzione alle strutture di dati e alle problematiche di serializzazione e non sono necessario preoccuparsi della struttura dei messaggi in cui sono trasportati i dati. Per queste applicazioni, la creazione dei contratti dati per i parametri o dei valori restituiti è semplice. (Per altre informazioni, vedere [che specifica di trasferimento dei dati nei contratti di servizio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  

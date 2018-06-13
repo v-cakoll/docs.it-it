@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326228"
 ---
 # <a name="variance-in-delegates-c"></a>Varianza nei delegati (C#)
 In .NET framework 3.5 è stato introdotto il supporto della varianza per la corrispondenza delle firme del metodo con i tipi di delegati in tutti i delegati in C#. Ciò significa che è possibile assegnare ai delegati non solo i metodi con firme corrispondenti, ma anche i metodi che restituiscono più tipi derivati (covarianza) o accettano parametri con meno tipi derivati (controvarianza) rispetto a quelli specificati dal tipo di delegato. Sono inclusi sia i delegati generici che quelli non generici.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766309"
 ---
 # <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a>Mapping di funzioni canoniche del modello concettuale a funzioni SQL Server
 In questo argomento viene descritto il mapping delle funzioni canoniche del modello concettuale alle corrispondenti funzioni SQL Server.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504185"
 ---
 # <a name="default-message-contract"></a>Impostazione predefinita dei contratti di messaggio
 L'esempio Impostazione predefinita dei contratti di messaggio illustra un servizio in cui un messaggio personalizzato definito dall'utente viene passato da e verso le operazioni del servizio. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un'interfaccia come servizio tipizzato. Anziché le singole operazioni del servizio per l'addizione, sottrazione, moltiplicazione e divisione utilizzato nel [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md), in questo esempio passa un messaggio personalizzato che contiene entrambi gli operandi e l'operatore e restituisce il risultato del calcolo aritmetico.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590238"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>L'espressione è un valore, quindi non può essere la destinazione di un'assegnazione
 Un'istruzione tenta di assegnare un valore a un'espressione. È possibile assegnare un valore solo a una variabile scrivibile, una proprietà o un elemento della matrice in fase di esecuzione. Nell'esempio seguente viene illustrato come questo errore può verificarsi.  

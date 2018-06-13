@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590712"
 ---
 # <a name="short-data-type-visual-basic"></a>Tipo di dati short (Visual Basic)
 Contiene valori integer a 16 bit (2 byte) in un intervallo compreso tra -32.768 e 32.767.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496045"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Modalità di mapping del modello a oggetti di diffusione WCF ad Atom e RSS
 Quando si sviluppa un servizio di diffusione di Windows Communication Foundation (WCF), vengono creati feed ed elementi utilizzando le classi seguenti:  

@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 996352637f34b0b6c0d12e611a6d9e70ab85230e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461760"
 ---
 # <a name="profiling-enumerations"></a>Enumerazioni di profilatura
 Questa sezione descrive le enumerazioni non gestite usate dall'API di profilatura.  

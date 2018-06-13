@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502728"
 ---
 # <a name="workflow-services-overview"></a>Panoramica dei servizi flusso di lavoro
 Servizi flusso di lavoro sono servizi basati su WCF implementati mediante flussi di lavoro. Servizi flusso di lavoro sono flussi di lavoro che usano le attività di messaggistica per inviare e ricevere messaggi di Windows Communication Foundation (WCF). .NET Framework 4.5 introduce una serie di attività di messaggistica che consentono di inviare e ricevere messaggi da un flusso di lavoro. Per ulteriori informazioni sulle attività di messaggistica e come possono essere utilizzati per implementare modelli di scambio di messaggi diversi, vedere [attività di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
