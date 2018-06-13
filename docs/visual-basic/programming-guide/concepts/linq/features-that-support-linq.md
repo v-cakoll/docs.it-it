@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643900"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Funzionalità di Visual Basic che supportano LINQ
 Il nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] si riferisce alla tecnologia in Visual Basic che supporta la sintassi della query e altri costrutti linguaggio direttamente nel linguaggio. Con [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], non è necessario imparare un nuovo linguaggio di query su un'origine dati esterna. È possibile eseguire query sui dati in database relazionali, archivi XML o gli oggetti utilizzando Visual Basic. Questa integrazione delle funzionalità di query nel linguaggio consente di controllo in fase di compilazione per gli errori di sintassi e indipendenza dai tipi. Questa integrazione garantisce inoltre che si conosce già la maggior parte delle informazioni necessarie per poter scrivere query complesse in Visual Basic.  

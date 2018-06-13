@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641475"
 ---
 # <a name="set-not-permitted"></a>Set non consentito
 Si è provato a modificare una proprietà le cui impostazioni non possono essere configurate in fase di esecuzione oppure possono essere configurate solo in determinate condizioni. Ad esempio, si è tentato di modificare le impostazioni della proprietà `Appearance`, `ControlBox`,`MinButton`o `MaxButton` per il form in fase di esecuzione oppure di impostare la proprietà `Visible` su `False` per l'ultimo sottomenu visibile di un menu padre.  

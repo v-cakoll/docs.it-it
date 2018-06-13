@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638343"
 ---
 # <a name="set-not-supported-at-run-time"></a>Set non supportato in fase di esecuzione
 Si è provato a impostare o modificare una proprietà il cui valore può essere impostato solo in fase di progettazione.  

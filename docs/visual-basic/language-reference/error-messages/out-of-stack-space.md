@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593285"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Spazio dello stack insufficiente (Visual Basic)
 Lo stack è un'area di lavoro di memoria aumenta e si ridotta dinamicamente con le richieste del programma in esecuzione. Sono stati superati i limiti.  

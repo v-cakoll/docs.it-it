@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582756"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Procedura: utilizzare SpinLock per la sincronizzazione di basso livello
 L'esempio seguente illustra come usare un oggetto <xref:System.Threading.SpinLock>.  

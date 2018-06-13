@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637612"
 ---
 # <a name="expression-39ltnamegt39-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a>Espressione &#39; &lt;nome&gt; &#39; non è una procedura, ma si presenta come destinazione di una chiamata di routine
 È stata eseguita una chiamata di routine a un'espressione che non è una routine.  

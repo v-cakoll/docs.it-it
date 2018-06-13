@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642795"
 ---
 # <a name="unable-to-sink-events-of-object-because-the-object-is-already-firing-events-to-the-maximum-number-of-event-receivers-it-supports"></a>Non è possibile notificare tramite sink gli eventi dell'oggetto perché questo sta già generando eventi per il numero massimo di riceventi supportato
 È stato superato il numero massimo di ricevitori di eventi supportati dall'oggetto.  

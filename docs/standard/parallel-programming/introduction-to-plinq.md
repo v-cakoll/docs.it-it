@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592301"
 ---
 # <a name="introduction-to-plinq"></a>Introduzione a PLINQ
 ## <a name="what-is-a-parallel-query"></a>Che cos'è una query parallela?  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594446"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Spazio di stringa insufficiente (Visual Basic)
 Con Visual Basic, è possibile utilizzare stringhe molto grandi. Tuttavia, i requisiti di altri programmi e la modalità di utilizzo con le stringhe possono comunque causare questo errore.  

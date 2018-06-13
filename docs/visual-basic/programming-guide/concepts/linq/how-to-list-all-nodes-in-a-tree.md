@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643751"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Procedura: elencare tutti i nodi in una struttura (Visual Basic)
 A volte risulta utile elencare tutti i nodi di un albero, ad esempio quando si desidera identificare gli effetti esatti di una proprietà o metodo sull'albero. Uno degli approcci disponibili per elencare tutti i nodi in formato testuale consiste nel generare un'espressione XPath che identifica in modo esatto e specifico qualsiasi nodo nell'albero.  
