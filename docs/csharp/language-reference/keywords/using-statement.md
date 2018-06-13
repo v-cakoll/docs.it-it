@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285743"
 ---
 # <a name="using-statement-c-reference"></a><span data-ttu-id="9584d-102">Istruzione using (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="9584d-102">using Statement (C# Reference)</span></span>
 <span data-ttu-id="9584d-103">Offre una comoda sintassi che verifica l'uso corretto degli oggetti <xref:System.IDisposable>.</span><span class="sxs-lookup"><span data-stu-id="9584d-103">Provides a convenient syntax that ensures the correct use of <xref:System.IDisposable> objects.</span></span>  

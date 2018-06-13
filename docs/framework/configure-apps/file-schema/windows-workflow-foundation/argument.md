@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756319"
 ---
 # <a name="ltargumentgt"></a><span data-ttu-id="47ee0-102">&lt;Argomento&gt;</span><span class="sxs-lookup"><span data-stu-id="47ee0-102">&lt;argument&gt;</span></span>
 <span data-ttu-id="47ee0-103">Elemento di configurazione che rappresenta un argomento associato a una query sullo stato dell'attività.</span><span class="sxs-lookup"><span data-stu-id="47ee0-103">A configuration element that represents an argument associated with an activity state query.</span></span>  

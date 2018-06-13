@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218108"
 ---
 # <a name="how-to-compare-strings-in-c"></a><span data-ttu-id="6d66b-103">Come confrontare stringhe in C#</span><span class="sxs-lookup"><span data-stu-id="6d66b-103">How to compare strings in C#</span></span> #
 
