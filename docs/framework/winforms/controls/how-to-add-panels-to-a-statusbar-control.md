@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: aggiungere pannelli a un controllo StatusBar'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,31 +10,27 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 044fffa06a3900e64e66f5f87f259e34340f4959
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fa5246d76e09091350a5d5276f2c06824b9906d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527625"
 ---
-# <a name="how-to-add-panels-to-a-statusbar-control"></a><span data-ttu-id="b75b7-102">Procedura: aggiungere pannelli a un controllo StatusBar</span><span class="sxs-lookup"><span data-stu-id="b75b7-102">How to: Add Panels to a StatusBar Control</span></span>
+# <a name="how-to-add-panels-to-a-statusbar-control"></a><span data-ttu-id="a3b7d-102">Procedura: aggiungere pannelli a un controllo StatusBar</span><span class="sxs-lookup"><span data-stu-id="a3b7d-102">How to: Add Panels to a StatusBar Control</span></span>
 > [!IMPORTANT]
->  <span data-ttu-id="b75b7-103">Il <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> controlli sostituire e aggiungere funzionalità a di <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controlli; tuttavia, il <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> vengono mantenuti per compatibilità con le versioni precedenti e per utilizzo futuro, se si Scegliere.</span><span class="sxs-lookup"><span data-stu-id="b75b7-103">The <xref:System.Windows.Forms.StatusStrip> and <xref:System.Windows.Forms.ToolStripStatusLabel> controls replace and add functionality to the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls; however, the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls are retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="a3b7d-103">Il <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> controlli sostituire e aggiungere funzionalità a di <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controlli; tuttavia, il <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> vengono mantenuti per compatibilità con le versioni precedenti e per utilizzo futuro, se si Scegliere.</span><span class="sxs-lookup"><span data-stu-id="a3b7d-103">The <xref:System.Windows.Forms.StatusStrip> and <xref:System.Windows.Forms.ToolStripStatusLabel> controls replace and add functionality to the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls; however, the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls are retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="b75b7-104">L'area programmabile all'interno di un [controllo StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) controllo è costituito da istanze del <xref:System.Windows.Forms.StatusBarPanel> classe.</span><span class="sxs-lookup"><span data-stu-id="b75b7-104">The programmable area within a [StatusBar Control](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) control consists of instances of the <xref:System.Windows.Forms.StatusBarPanel> class.</span></span> <span data-ttu-id="b75b7-105">Questi vengono aggiunti tramite le aggiunte per la <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> classe.</span><span class="sxs-lookup"><span data-stu-id="b75b7-105">These are added through additions to the <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> class.</span></span>  
+ <span data-ttu-id="a3b7d-104">L'area programmabile all'interno di un [controllo StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) controllo è costituito da istanze del <xref:System.Windows.Forms.StatusBarPanel> classe.</span><span class="sxs-lookup"><span data-stu-id="a3b7d-104">The programmable area within a [StatusBar Control](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) control consists of instances of the <xref:System.Windows.Forms.StatusBarPanel> class.</span></span> <span data-ttu-id="a3b7d-105">Questi vengono aggiunti tramite le aggiunte per la <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> classe.</span><span class="sxs-lookup"><span data-stu-id="a3b7d-105">These are added through additions to the <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> class.</span></span>  
   
-### <a name="to-add-panels-to-a-status-bar"></a><span data-ttu-id="b75b7-106">Per aggiungere pannelli a una barra di stato</span><span class="sxs-lookup"><span data-stu-id="b75b7-106">To add panels to a status bar</span></span>  
+### <a name="to-add-panels-to-a-status-bar"></a><span data-ttu-id="a3b7d-106">Per aggiungere pannelli a una barra di stato</span><span class="sxs-lookup"><span data-stu-id="a3b7d-106">To add panels to a status bar</span></span>  
   
-1.  <span data-ttu-id="b75b7-107">In una routine, creare pannelli della barra di stato aggiungendoli al file il <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.</span><span class="sxs-lookup"><span data-stu-id="b75b7-107">In a procedure, create status-bar panels by adding them to the <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.</span></span> <span data-ttu-id="b75b7-108">Specificare le impostazioni di proprietà per singoli pannelli utilizzando il relativo indice passato tramite la <xref:System.Windows.Forms.StatusBar.Panels%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="b75b7-108">Specify property settings for individual panels by using its index passed through the <xref:System.Windows.Forms.StatusBar.Panels%2A> property.</span></span>  
+1.  <span data-ttu-id="a3b7d-107">In una routine, creare pannelli della barra di stato aggiungendoli al file il <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.</span><span class="sxs-lookup"><span data-stu-id="a3b7d-107">In a procedure, create status-bar panels by adding them to the <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.</span></span> <span data-ttu-id="a3b7d-108">Specificare le impostazioni di proprietà per singoli pannelli utilizzando il relativo indice passato tramite la <xref:System.Windows.Forms.StatusBar.Panels%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="a3b7d-108">Specify property settings for individual panels by using its index passed through the <xref:System.Windows.Forms.StatusBar.Panels%2A> property.</span></span>  
   
-     <span data-ttu-id="b75b7-109">Nell'esempio di codice riportato di seguito, il percorso impostato per la posizione dell'icona è il **documenti** cartella.</span><span class="sxs-lookup"><span data-stu-id="b75b7-109">In the following code example, the path set for the location of the icon is the **My Documents** folder.</span></span> <span data-ttu-id="b75b7-110">Questo percorso viene utilizzato perché è possibile presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows sarà inclusa in questa cartella.</span><span class="sxs-lookup"><span data-stu-id="b75b7-110">This location is used because you can assume that most computers running the Windows operating system will include this folder.</span></span> <span data-ttu-id="b75b7-111">Questa scelta consente anche agli utenti con livelli di accesso di sistema minimi eseguire in modo sicuro l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b75b7-111">Choosing this location also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="b75b7-112">L'esempio seguente richiede un form con un <xref:System.Windows.Forms.StatusBar> controllo già aggiunto.</span><span class="sxs-lookup"><span data-stu-id="b75b7-112">The following example requires a form with a <xref:System.Windows.Forms.StatusBar> control already added.</span></span>  
+     <span data-ttu-id="a3b7d-109">Nell'esempio di codice riportato di seguito, il percorso impostato per la posizione dell'icona è il **documenti** cartella.</span><span class="sxs-lookup"><span data-stu-id="a3b7d-109">In the following code example, the path set for the location of the icon is the **My Documents** folder.</span></span> <span data-ttu-id="a3b7d-110">Questo percorso viene utilizzato perché è possibile presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows sarà inclusa in questa cartella.</span><span class="sxs-lookup"><span data-stu-id="a3b7d-110">This location is used because you can assume that most computers running the Windows operating system will include this folder.</span></span> <span data-ttu-id="a3b7d-111">Questa scelta consente anche agli utenti con livelli di accesso di sistema minimi eseguire in modo sicuro l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="a3b7d-111">Choosing this location also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="a3b7d-112">L'esempio seguente richiede un form con un <xref:System.Windows.Forms.StatusBar> controllo già aggiunto.</span><span class="sxs-lookup"><span data-stu-id="a3b7d-112">The following example requires a form with a <xref:System.Windows.Forms.StatusBar> control already added.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="b75b7-113">Il <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> è una raccolta in base zero, il codice deve procedere di conseguenza.</span><span class="sxs-lookup"><span data-stu-id="b75b7-113">The <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> is a zero-based collection, so code should proceed accordingly.</span></span>  
+    >  <span data-ttu-id="a3b7d-113">Il <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> è una raccolta in base zero, il codice deve procedere di conseguenza.</span><span class="sxs-lookup"><span data-stu-id="a3b7d-113">The <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> is a zero-based collection, so code should proceed accordingly.</span></span>  
   
     ```vb  
     Public Sub CreateStatusBarPanels()  
@@ -131,11 +120,11 @@ ms.lasthandoff: 01/19/2018
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="b75b7-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b75b7-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a3b7d-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a3b7d-114">See Also</span></span>  
  <xref:System.Windows.Forms.StatusBar>  
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [<span data-ttu-id="b75b7-115">La finestra di dialogo Editor della raccolta</span><span class="sxs-lookup"><span data-stu-id="b75b7-115">Collection Editor Dialog Box</span></span>](http://msdn.microsoft.com/library/53fb3aad-bffa-4da5-ac89-8438e6fc803c)  
- [<span data-ttu-id="b75b7-116">Procedura: Impostare la dimensione dei pannelli della barra di stato</span><span class="sxs-lookup"><span data-stu-id="b75b7-116">How to: Set the Size of Status-Bar Panels</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
- [<span data-ttu-id="b75b7-117">Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione</span><span class="sxs-lookup"><span data-stu-id="b75b7-117">Walkthrough: Updating Status Bar Information at Run Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
- [<span data-ttu-id="b75b7-118">Procedura: Individuare il pannello selezionato nel controllo StatusBar di Windows Form</span><span class="sxs-lookup"><span data-stu-id="b75b7-118">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- [<span data-ttu-id="b75b7-119">Cenni preliminari sul controllo StatusBar</span><span class="sxs-lookup"><span data-stu-id="b75b7-119">StatusBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+ [<span data-ttu-id="a3b7d-115">Finestra di dialogo Editor della raccolta</span><span class="sxs-lookup"><span data-stu-id="a3b7d-115">Collection Editor Dialog Box</span></span>](http://msdn.microsoft.com/library/53fb3aad-bffa-4da5-ac89-8438e6fc803c)  
+ [<span data-ttu-id="a3b7d-116">Procedura: Impostare la dimensione dei pannelli della barra di stato</span><span class="sxs-lookup"><span data-stu-id="a3b7d-116">How to: Set the Size of Status-Bar Panels</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
+ [<span data-ttu-id="a3b7d-117">Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione</span><span class="sxs-lookup"><span data-stu-id="a3b7d-117">Walkthrough: Updating Status Bar Information at Run Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
+ [<span data-ttu-id="a3b7d-118">Procedura: Individuare il pannello selezionato nel controllo StatusBar di Windows Form</span><span class="sxs-lookup"><span data-stu-id="a3b7d-118">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
+ [<span data-ttu-id="a3b7d-119">Cenni preliminari sul controllo StatusBar</span><span class="sxs-lookup"><span data-stu-id="a3b7d-119">StatusBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
