@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743420"
 ---
 # <a name="assembly-security-considerations"></a><span data-ttu-id="cbe30-102">Considerazioni sulla sicurezza degli assembly</span><span class="sxs-lookup"><span data-stu-id="cbe30-102">Assembly Security Considerations</span></span>
 <a name="top"></a> <span data-ttu-id="cbe30-103">Quando si compila un assembly, è possibile specificare un set di autorizzazioni necessarie per consentirne l'esecuzione.</span><span class="sxs-lookup"><span data-stu-id="cbe30-103">When you build an assembly, you can specify a set of permissions that the assembly requires to run.</span></span> <span data-ttu-id="cbe30-104">Se sussistano o meno le autorizzazioni per l'utilizzo di un assembly lo si evince dalle evidenze.</span><span class="sxs-lookup"><span data-stu-id="cbe30-104">Whether certain permissions are granted or not granted to an assembly is based on evidence.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767427"
 ---
 # <a name="ltclaimtypegt"></a><span data-ttu-id="6fc34-102">&lt;ClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="6fc34-102">&lt;claimType&gt;</span></span>
 <span data-ttu-id="6fc34-103">Specifica una singola attestazione obbligatorio o facoltativa per i token di sicurezza in ingresso.</span><span class="sxs-lookup"><span data-stu-id="6fc34-103">Specifies a single optional or required claim for incoming security tokens.</span></span>  

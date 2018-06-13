@@ -1,13 +1,6 @@
 ---
 title: Definizione di un evento nei controlli Windows Form
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,17 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 900d4d402c905f10ec7db98421adcb0bc7f46048
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 552f2b8441ae5323f55f236fabb9f50f8f8b5ab0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524033"
 ---
-# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="a30e9-102">Definizione di un evento nei controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="a30e9-102">Defining an Event in Windows Forms Controls</span></span>
-<span data-ttu-id="a30e9-103">Per ulteriori informazioni sulla definizione di eventi personalizzati, vedere [eventi](../../../../docs/standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="a30e9-103">For details about defining custom events, see [Events](../../../../docs/standard/events/index.md).</span></span> <span data-ttu-id="a30e9-104">Se si definisce un evento che non presenta dati associati, usare il tipo base per i dati dell'evento, <xref:System.EventArgs>, e usare <xref:System.EventHandler> come delegato dell'evento.</span><span class="sxs-lookup"><span data-stu-id="a30e9-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="a30e9-105">Per eseguire è comunque per definire un membro evento e protected `On` *EventName* metodo che genera l'evento.</span><span class="sxs-lookup"><span data-stu-id="a30e9-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
+# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="55702-102">Definizione di un evento nei controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="55702-102">Defining an Event in Windows Forms Controls</span></span>
+<span data-ttu-id="55702-103">Per ulteriori informazioni sulla definizione di eventi personalizzati, vedere [eventi](../../../../docs/standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="55702-103">For details about defining custom events, see [Events](../../../../docs/standard/events/index.md).</span></span> <span data-ttu-id="55702-104">Se si definisce un evento che non presenta dati associati, usare il tipo base per i dati dell'evento, <xref:System.EventArgs>, e usare <xref:System.EventHandler> come delegato dell'evento.</span><span class="sxs-lookup"><span data-stu-id="55702-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="55702-105">Per eseguire è comunque per definire un membro evento e protected `On` *EventName* metodo che genera l'evento.</span><span class="sxs-lookup"><span data-stu-id="55702-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
   
- <span data-ttu-id="a30e9-106">Il frammento di codice seguente illustra come il controllo personalizzato `FlashTrackBar` definisce un evento personalizzato, `ValueChanged`.</span><span class="sxs-lookup"><span data-stu-id="a30e9-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="a30e9-107">Per il codice completo per il `FlashTrackBar` di esempio, vedere il [procedura: creare un Windows Form controllo che mostra lo stato di avanzamento](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span><span class="sxs-lookup"><span data-stu-id="a30e9-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
+ <span data-ttu-id="55702-106">Il frammento di codice seguente illustra come il controllo personalizzato `FlashTrackBar` definisce un evento personalizzato, `ValueChanged`.</span><span class="sxs-lookup"><span data-stu-id="55702-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="55702-107">Per il codice completo per il `FlashTrackBar` di esempio, vedere il [procedura: creare un Windows Form controllo che mostra lo stato di avanzamento](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span><span class="sxs-lookup"><span data-stu-id="55702-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
   
 ```vb  
 Option Explicit  
@@ -88,7 +77,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a30e9-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a30e9-108">See Also</span></span>  
- [<span data-ttu-id="a30e9-109">Eventi dei controlli di Windows Form</span><span class="sxs-lookup"><span data-stu-id="a30e9-109">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
- [<span data-ttu-id="a30e9-110">Eventi</span><span class="sxs-lookup"><span data-stu-id="a30e9-110">Events</span></span>](../../../../docs/standard/events/index.md)  
- [<span data-ttu-id="a30e9-111">Eventi</span><span class="sxs-lookup"><span data-stu-id="a30e9-111">Events</span></span>](../../../../docs/standard/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="55702-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="55702-108">See Also</span></span>  
+ [<span data-ttu-id="55702-109">Eventi dei controlli di Windows Form</span><span class="sxs-lookup"><span data-stu-id="55702-109">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [<span data-ttu-id="55702-110">Eventi</span><span class="sxs-lookup"><span data-stu-id="55702-110">Events</span></span>](../../../../docs/standard/events/index.md)  
+ [<span data-ttu-id="55702-111">Eventi</span><span class="sxs-lookup"><span data-stu-id="55702-111">Events</span></span>](../../../../docs/standard/events/index.md)
