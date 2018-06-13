@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388619"
 ---
 # <a name="identifying-functions-in-dlls"></a><span data-ttu-id="5b970-102">Identificazione delle funzioni nelle DLL</span><span class="sxs-lookup"><span data-stu-id="5b970-102">Identifying Functions in DLLs</span></span>
 <span data-ttu-id="5b970-103">L'identità di una funzione di una DLL è costituita dagli elementi seguenti:</span><span class="sxs-lookup"><span data-stu-id="5b970-103">The identity of a DLL function consists of the following elements:</span></span>  
