@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538728"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>Procedura: accedere a raccolte con chiavi in Windows Form
 -   È possibile accedere a singoli elementi dell'insieme dalla chiave. Questa funzionalità è stata aggiunta a molte classi di raccolta che vengono in genere utilizzate dalle applicazioni Windows Form. Nell'elenco seguente sono illustrate alcune delle classi di raccolte che sono accessibili raccolte con chiave:  

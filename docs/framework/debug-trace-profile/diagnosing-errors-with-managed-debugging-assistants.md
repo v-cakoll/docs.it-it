@@ -36,6 +36,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392320"
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Diagnostica degli errori tramite gli assistenti al debug gestito
 Gli assistenti al debug gestito sono strumenti per il debug da usare insieme a CLR (Common Language Runtime) per fornire informazioni sullo stato del runtime. Gli assistenti generano messaggi informativi su eventi di runtime che non possono essere intercettati in altro modo. È possibile usare gli assistenti al debug gestito per isolare bug di applicazione difficili da individuare, che si verificano durante la transizione tra codice gestito e non gestito. È possibile abilitare o disabilitare tutti gli assistenti al debug gestito aggiungendo una chiave al Registro di sistema di Windows oppure impostando una variabile di ambiente. Le impostazioni di configurazione dell'applicazione permettono di abilitare assistenti al debug gestito specifici. È possibile definire impostazioni di configurazione aggiuntive per alcuni singoli assistenti al debug gestito nel file di configurazione dell'applicazione. Poiché questi file di configurazione sono analizzati durante il caricamento del runtime, è necessario abilitare l'assistente al debug gestito prima dell'avvio dell'applicazione gestita. Non è possibile abilitarlo per applicazioni già avviate.  

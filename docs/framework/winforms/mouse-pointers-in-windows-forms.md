@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539517"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Puntatori del mouse in Windows Form
 Il puntatore del mouse *puntatore*, talvolta detto, il cursore è una bitmap che specifica un punto di stato attivo nella schermata per l'input dell'utente con il mouse. In questo argomento viene fornita una panoramica del puntatore del mouse in Windows Form e vengono descritti alcuni modi per modificare e controllare il puntatore del mouse.  

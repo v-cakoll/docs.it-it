@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535646"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedura: ordinare il contenuto di un controllo ComboBox, ListBox o CheckedListBox Windows Form
 Controlli Windows Form ordinamento non viene eseguito quando sono associati a dati. Per visualizzare i dati ordinati, utilizzare un'origine dati che supporta l'ordinamento e quindi chiedere l'origine dati di ordinamento. Origini dati che supportano l'ordinamento sono viste di dati, gestori di visualizzazioni dati e matrici ordinate.  

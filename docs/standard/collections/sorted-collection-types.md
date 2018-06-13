@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569821"
 ---
 # <a name="sorted-collection-types"></a>Tipi di raccolta ordinati
 La classe <xref:System.Collections.SortedList?displayProperty=nameWithType> e le classi generiche <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> e <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> sono simili alla classe <xref:System.Collections.Hashtable> e alla classe generica <xref:System.Collections.Generic.Dictionary%602> in quanto implementano l'interfaccia <xref:System.Collections.IDictionary>, ma gestiscono l'ordinamento degli elementi in base alla chiave e non hanno la caratteristica di inserimento e recupero O(1) propria delle tabelle hash. Le tre classi hanno diverse funzionalità in comune:  

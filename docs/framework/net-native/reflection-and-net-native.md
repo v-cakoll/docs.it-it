@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392866"
 ---
 # <a name="reflection-and-net-native"></a>Reflection e .NET Native
 In .NET Framework, lo sviluppo gestito supporta la metaprogrammazione attraverso l'API di reflection. La reflection consente di controllare gli oggetti in un'applicazione, chiamare metodi su oggetti individuati tramite ispezione, generare nuovi tipi in fase di esecuzione e supporta molti altri scenari di codice dinamico. Supporta anche la serializzazione e la deserializzazione, che consente di mantenere e successivamente ripristinare i valori dei campi di un oggetto. Tutti questi scenari richiedono che il compilatore JIT just-in-time di .NET Framework generi codice nativo basato sui metadati disponibili.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391651"
 ---
 # <a name="deploying-net-framework-applications"></a>Distribuzione di applicazioni .NET Framework
 Questa sezione della documentazione di .NET Framework contiene informazioni essenziali per la distribuzione delle applicazioni .NET Framework, incluse le linee guida per il caricamento degli assembly, la risoluzione dei riferimenti all'assembly e il miglioramento delle prestazioni dell'applicazione con la generazione delle immagini native.  

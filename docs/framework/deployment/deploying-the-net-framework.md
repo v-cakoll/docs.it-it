@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391407"
 ---
 # <a name="deploying-the-net-framework"></a>Distribuzione di .NET Framework
 Questa sezione della documentazione di .NET Framework fornisce informazioni destinate agli sviluppatori che vogliono installare .NET Framework con le proprie applicazioni e agli amministratori che vogliono distribuire .NET Framework in una rete. Questa sezione tratta anche i problemi di attivazione e riavvio associati alla distribuzione e descrive come monitorare lo stato dell'installazione di .NET Framework.  

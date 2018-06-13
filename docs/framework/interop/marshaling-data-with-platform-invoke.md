@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391316"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshalling dei dati con platform invoke
 Per chiamare le funzioni esportate da una libreria non gestita, un'applicazione .NET Framework richiede un prototipo di funzione nel codice gestito che rappresenta la funzione non gestita. Per creare un prototipo che abiliti PInvoke per effettuare il marshalling dei dati in modo corretto, è necessario eseguire le operazioni seguenti:  

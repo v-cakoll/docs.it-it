@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f191c31ec5333fbea52c298f477c8c624beb92b2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424508"
 ---
 # <a name="icorpublishenumgetcount-method"></a>Metodo ICorPublishEnum::GetCount
 Ottiene il numero di elementi nell'enumerazione.  

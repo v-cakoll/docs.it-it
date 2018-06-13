@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392629"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>Sicurezza e campi di matrice pubblici di sola lettura
 Non utilizzare mai i campi di matrice pubblici di sola lettura da librerie gestite per definire il comportamento del limite o la sicurezza delle applicazioni, poiché i campi di matrice pubblici di sola lettura possono essere modificati.  

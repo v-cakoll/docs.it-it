@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539737"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Procedura: rispondere alla selezione di controlli CheckBox Windows Form
 Ogni volta che un utente fa clic su un Windows Form <xref:System.Windows.Forms.CheckBox> (controllo), il <xref:System.Windows.Forms.Control.Click> si verifica l'evento. È possibile programmare l'applicazione esegua un'azione a seconda dello stato della casella di controllo.  

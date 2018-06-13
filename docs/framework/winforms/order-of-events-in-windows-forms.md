@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538472"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Ordine degli eventi in Windows Form
 L'ordine in cui gli eventi vengono generati nelle applicazioni Windows Forms è di particolare interesse per gli sviluppatori interessati alla gestione di ciascuno di questi eventi a turno. Quando una situazione richiede una precisa gestione degli eventi, ad esempio quando si riprogettano parti del form, è necessaria la conoscenza dell'ordine esatto in cui vengono generati gli eventi in fase di esecuzione. Questo argomento contiene alcune informazioni dettagliate sull'ordine degli eventi durante le varie fasi importanti nella durata delle applicazioni e dei controlli. Per informazioni dettagliate sull'ordine degli eventi di input del mouse, vedere [gli eventi del Mouse in Windows Form](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Per una panoramica degli eventi in Windows Form, vedere [Cenni preliminari sugli eventi](../../../docs/framework/winforms/events-overview-windows-forms.md). Per informazioni dettagliate sulla creazione di gestori eventi, vedere [panoramica dei gestori eventi](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  

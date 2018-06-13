@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538236"
 ---
 # <a name="treeview-control-windows-forms"></a>Controllo TreeView (Windows Form)
 Il controllo `TreeView` Windows Form visualizza una gerarchia di nodi, come i file e le cartelle visualizzati nel riquadro sinistro della funzionalità Esplora risorse nei sistemi operativi Windows.  

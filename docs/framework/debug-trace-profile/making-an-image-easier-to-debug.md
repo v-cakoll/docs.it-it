@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391046"
 ---
 # <a name="making-an-image-easier-to-debug"></a>Semplificazione del debug di un'immagine
 Quando si compila codice non gestito, è possibile configurare un'immagine eseguibile per il debug impostando le opzioni dell'IDE o della riga di comando. Ad esempio, è possibile usare l'opzione della riga di comando /**Zi** in Visual C++ per richiedere di generare file di simboli di debug (file con estensione pdb). In modo analogo, l'opzione della riga di comando /**Od** indica al compilatore di disabilitare l'ottimizzazione. Il codice risultante viene eseguito più lentamente, ma è più semplice eseguirne il debug all'occorrenza.  

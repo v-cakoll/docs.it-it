@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542337"
 ---
 # <a name="flow-content"></a>Contenuto del flusso
 Gli elementi di contenuto di flusso forniscono i blocchi predefiniti per la creazione di contenuto di flusso appropriato per l'hosting in un <xref:System.Windows.Documents.FlowDocument>.  

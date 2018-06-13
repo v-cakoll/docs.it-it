@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394043"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>Informazioni sullo spazio dei nomi System.Net.PeerToPeer.Collaboration
 Lo spazio dei nomi <xref:System.Net.PeerToPeer.Collaboration> offre classi e API che consentono di implementare attività di collaborazione peer usando l'infrastruttura di collaborazione peer-to-peer.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537876"
 ---
 # <a name="windows-forms-coordinates"></a>Coordinate di Windows Form
 Il sistema di coordinate per un Windows Form è basato su coordinate dispositivo e l'unità di misura quando si disegna in Windows Form di base è l'unità di dispositivo (in genere, il pixel). I punti nella schermata sono descritti da coppie di coordinate x e y, con le coordinate x aumenta a destra e le coordinate y aumentano dall'alto verso il basso. Il percorso dell'origine, rispetto allo schermo, può variare a seconda se si specifica le coordinate dello schermo o client.  

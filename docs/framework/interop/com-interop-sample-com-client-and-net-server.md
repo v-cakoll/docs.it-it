@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389555"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>Esempio di interoperabilità: client COM e server .NET
 Questo esempio illustra l'interazione di un [Client COM](#cpconcominteropsamplecomclientnetserveranchor1) e di un [server .NET](#cpconcominteropsamplecomclientnetserveranchor2) per l'esecuzione di calcoli per un mutuo. In questo esempio il client crea e chiama un'istanza della classe gestita `Loan`, passa quattro argomenti, uno dei quali uguale a zero, all'istanza e visualizza i calcoli. Diversi esempi di codice di questo esempio vengono presentati in vari punti della sezione.  

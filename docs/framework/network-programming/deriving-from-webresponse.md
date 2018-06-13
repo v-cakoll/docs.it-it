@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395814"
 ---
 # <a name="deriving-from-webresponse"></a>Derivazione da WebResponse
 La classe <xref:System.Net.WebResponse> è una classe base astratta che fornisce metodi e proprietà di base per creare un risposta specifica del protocollo adatta al modello di protocollo di collegamento di .NET Framework. Le applicazioni che usano la classe <xref:System.Net.WebRequest> per richiedere i dati dalle risorse ricevono le risposte in **WebResponse**. I discendenti specifici del protocollo **WebResponse** devono implementare i membri astratti della classe **WebResponse**.  
