@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457216"
 ---
 # <a name="-operator-c-reference"></a>Operatore ?: (Riferimenti per C#)
 L'operatore condizionale (`?:`), noto come operatore condizionale ternario, restituisce uno di due valori in base al valore di un'espressione booleana. Di seguito è riportata la sintassi per l'operatore condizionale.  
