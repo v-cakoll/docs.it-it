@@ -1,53 +1,43 @@
 ---
-title: "Convalida di relazioni tra attività"
-ms.custom: 
+title: Convalida di relazioni tra attività
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6f11a34e-ed67-4bce-88ce-7e96bbb4d052
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 93cb5e93791c001e3795408a4c6b77be772f26e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6dd0e6a7b48444073ebae378e21c1b45977a1f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515108"
 ---
-# <a name="activity-relationships-validation"></a><span data-ttu-id="b84cc-102">Convalida di relazioni tra attività</span><span class="sxs-lookup"><span data-stu-id="b84cc-102">Activity Relationships Validation</span></span>
-<span data-ttu-id="b84cc-103">Il presente esempio è costituito da tre attività, `CreateCity`, `CreateState` e `CreateCountry`.</span><span class="sxs-lookup"><span data-stu-id="b84cc-103">This sample consists of three activities, `CreateCity`, `CreateState`, and `CreateCountry`.</span></span> <span data-ttu-id="b84cc-104">`CreateCity` deve trovarsi all'interno di un'attività `CreateState` e `CreateState` deve trovarsi all'interno di un'attività `CreateCountry`.</span><span class="sxs-lookup"><span data-stu-id="b84cc-104">`CreateCity` must be inside a `CreateState` activity, and `CreateState` must be inside a `CreateCountry` activity.</span></span> <span data-ttu-id="b84cc-105">Ai fini di questo esempio, la logica di convalida è nel codice per l'attività `CreateState` e in XAML per l'attività `CreateCity`.</span><span class="sxs-lookup"><span data-stu-id="b84cc-105">For the purpose of this sample, the validation logic is in code for the `CreateState` activity, and in XAML for the `CreateCity` activity.</span></span> <span data-ttu-id="b84cc-106">Entrambi i vincoli presentano lo stesso comportamento.</span><span class="sxs-lookup"><span data-stu-id="b84cc-106">Both constraints have the same behavior.</span></span>  
+# <a name="activity-relationships-validation"></a><span data-ttu-id="89596-102">Convalida di relazioni tra attività</span><span class="sxs-lookup"><span data-stu-id="89596-102">Activity Relationships Validation</span></span>
+<span data-ttu-id="89596-103">Il presente esempio è costituito da tre attività, `CreateCity`, `CreateState` e `CreateCountry`.</span><span class="sxs-lookup"><span data-stu-id="89596-103">This sample consists of three activities, `CreateCity`, `CreateState`, and `CreateCountry`.</span></span> <span data-ttu-id="89596-104">`CreateCity` deve trovarsi all'interno di un'attività `CreateState` e `CreateState` deve trovarsi all'interno di un'attività `CreateCountry`.</span><span class="sxs-lookup"><span data-stu-id="89596-104">`CreateCity` must be inside a `CreateState` activity, and `CreateState` must be inside a `CreateCountry` activity.</span></span> <span data-ttu-id="89596-105">Ai fini di questo esempio, la logica di convalida è nel codice per l'attività `CreateState` e in XAML per l'attività `CreateCity`.</span><span class="sxs-lookup"><span data-stu-id="89596-105">For the purpose of this sample, the validation logic is in code for the `CreateState` activity, and in XAML for the `CreateCity` activity.</span></span> <span data-ttu-id="89596-106">Entrambi i vincoli presentano lo stesso comportamento.</span><span class="sxs-lookup"><span data-stu-id="89596-106">Both constraints have the same behavior.</span></span>  
   
- <span data-ttu-id="b84cc-107">[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fornisce le tre attività di supporto seguenti che consentono allo sviluppatore di convalidare relazioni tra attività.</span><span class="sxs-lookup"><span data-stu-id="b84cc-107">The [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] provides the following three helper activities that allow the developer to validate relationships between activities:</span></span>  
+ <span data-ttu-id="89596-107">[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fornisce le tre attività di supporto seguenti che consentono allo sviluppatore di convalidare relazioni tra attività.</span><span class="sxs-lookup"><span data-stu-id="89596-107">The [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] provides the following three helper activities that allow the developer to validate relationships between activities:</span></span>  
   
  <xref:System.Activities.Validation.GetParentChain>  
- <span data-ttu-id="b84cc-108">Viene fornita la raccolta di tutte le attività che appartengono all'elemento padre del nodo corrente.</span><span class="sxs-lookup"><span data-stu-id="b84cc-108">Provides the collection of all activities that belong to the parent of the current node</span></span>  
+ <span data-ttu-id="89596-108">Viene fornita la raccolta di tutte le attività che appartengono all'elemento padre del nodo corrente.</span><span class="sxs-lookup"><span data-stu-id="89596-108">Provides the collection of all activities that belong to the parent of the current node</span></span>  
   
  <xref:System.Activities.Validation.GetChildSubtree>  
- <span data-ttu-id="b84cc-109">Viene fornita la raccolta di tutte le attività che appartengono al sottoalbero, escluso il nodo corrente.</span><span class="sxs-lookup"><span data-stu-id="b84cc-109">Provides the collection of all activities that belong to the sub-tree of the current node, excluding the current node</span></span>  
+ <span data-ttu-id="89596-109">Viene fornita la raccolta di tutte le attività che appartengono al sottoalbero, escluso il nodo corrente.</span><span class="sxs-lookup"><span data-stu-id="89596-109">Provides the collection of all activities that belong to the sub-tree of the current node, excluding the current node</span></span>  
   
  <xref:System.Activities.Validation.GetWorkflowTree>  
- <span data-ttu-id="b84cc-110">Viene fornita la raccolta di tutte le attività nello stesso albero del nodo corrente.</span><span class="sxs-lookup"><span data-stu-id="b84cc-110">Provides the collection of all activities in the same tree as the current node</span></span>  
+ <span data-ttu-id="89596-110">Viene fornita la raccolta di tutte le attività nello stesso albero del nodo corrente.</span><span class="sxs-lookup"><span data-stu-id="89596-110">Provides the collection of all activities in the same tree as the current node</span></span>  
   
- <span data-ttu-id="b84cc-111">Nell'esempio, un'attività <xref:System.Activities.Statements.ForEach%601> viene usata per esaminare la raccolta restituita da <xref:System.Activities.Validation.GetParentChain>.</span><span class="sxs-lookup"><span data-stu-id="b84cc-111">In the sample, a <xref:System.Activities.Statements.ForEach%601> activity is used to walk through the collection returned by <xref:System.Activities.Validation.GetParentChain>.</span></span> <span data-ttu-id="b84cc-112">Per ogni elemento nella raccolta, il tipo viene confrontato con `CreateCountry` (o `CreateState` se è in corso la convalida di `CreateCity`) e quando viene trovata una corrispondenza il flag del risultato viene impostato su `true`.</span><span class="sxs-lookup"><span data-stu-id="b84cc-112">For every element in the collection, its type is compared to `CreateCountry` (or `CreateState` if `CreateCity` is being validated), and when a match is found the result flag is set to `true`.</span></span> <span data-ttu-id="b84cc-113">Infine, viene usato <xref:System.Activities.Validation.AssertValidation> per generare un errore di convalida se il flag del risultato viene impostato su `false`.</span><span class="sxs-lookup"><span data-stu-id="b84cc-113">Finally, an <xref:System.Activities.Validation.AssertValidation> is used to generate a validation error if the result flag is set to `false`.</span></span>  
+ <span data-ttu-id="89596-111">Nell'esempio, un'attività <xref:System.Activities.Statements.ForEach%601> viene usata per esaminare la raccolta restituita da <xref:System.Activities.Validation.GetParentChain>.</span><span class="sxs-lookup"><span data-stu-id="89596-111">In the sample, a <xref:System.Activities.Statements.ForEach%601> activity is used to walk through the collection returned by <xref:System.Activities.Validation.GetParentChain>.</span></span> <span data-ttu-id="89596-112">Per ogni elemento nella raccolta, il tipo viene confrontato con `CreateCountry` (o `CreateState` se è in corso la convalida di `CreateCity`) e quando viene trovata una corrispondenza il flag del risultato viene impostato su `true`.</span><span class="sxs-lookup"><span data-stu-id="89596-112">For every element in the collection, its type is compared to `CreateCountry` (or `CreateState` if `CreateCity` is being validated), and when a match is found the result flag is set to `true`.</span></span> <span data-ttu-id="89596-113">Infine, viene usato <xref:System.Activities.Validation.AssertValidation> per generare un errore di convalida se il flag del risultato viene impostato su `false`.</span><span class="sxs-lookup"><span data-stu-id="89596-113">Finally, an <xref:System.Activities.Validation.AssertValidation> is used to generate a validation error if the result flag is set to `false`.</span></span>  
   
-### <a name="to-use-this-sample"></a><span data-ttu-id="b84cc-114">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="b84cc-114">To use this sample</span></span>  
+### <a name="to-use-this-sample"></a><span data-ttu-id="89596-114">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="89596-114">To use this sample</span></span>  
   
-1.  <span data-ttu-id="b84cc-115">Aprire la soluzione di esempio ContainmentValidation.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b84cc-115">Open the ContainmentValidation.sln sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="89596-115">Aprire la soluzione di esempio ContainmentValidation.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="89596-115">Open the ContainmentValidation.sln sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="b84cc-116">Compilare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="b84cc-116">Build the solution.</span></span>  
+2.  <span data-ttu-id="89596-116">Compilare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="89596-116">Build the solution.</span></span>  
   
-3.  <span data-ttu-id="b84cc-117">Premere CTRL+F5 per avviare il programma.</span><span class="sxs-lookup"><span data-stu-id="b84cc-117">Press CTRL + F5 to launch the program.</span></span>  
+3.  <span data-ttu-id="89596-117">Premere CTRL+F5 per avviare il programma.</span><span class="sxs-lookup"><span data-stu-id="89596-117">Press CTRL + F5 to launch the program.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="b84cc-118">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="b84cc-118">The samples may already be installed on your computer.</span></span> <span data-ttu-id="b84cc-119">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="b84cc-119">Check for the following (default) directory before continuing:</span></span>  
+>  <span data-ttu-id="89596-118">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="89596-118">The samples may already be installed on your computer.</span></span> <span data-ttu-id="89596-119">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="89596-119">Check for the following (default) directory before continuing:</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="b84cc-120">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="b84cc-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b84cc-121">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="b84cc-121">This sample is located in the following directory:</span></span>  
+>  <span data-ttu-id="89596-120">Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="89596-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="89596-121">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="89596-121">This sample is located in the following directory:</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ActivityRelationships`
