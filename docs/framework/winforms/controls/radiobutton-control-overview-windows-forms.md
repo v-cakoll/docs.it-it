@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540079"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Cenni preliminari sul controllo RadioButton (Windows Form)
 Windows Form <xref:System.Windows.Forms.RadioButton> controlli presentano all'utente un set di due o più opzioni si escludono a vicenda. Mentre i pulsanti di opzione e caselle di controllo sembra funzionare in modo analogo, sussiste una differenza importante: quando un utente seleziona un pulsante di opzione, non è possibile selezionare anche altri pulsanti di opzione nello stesso gruppo. Al contrario, è possibile selezionare un numero qualsiasi di caselle di controllo. Definizione di un gruppo di pulsanti di opzione indica all'utente, "Di seguito è un insieme di opzioni da cui è possibile scegliere una sola".  

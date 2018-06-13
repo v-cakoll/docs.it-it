@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551934"
 ---
 # <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>Procedura: scegliere tra StackPanel e DockPanel
 In questo esempio viene illustrato come scegliere tra l'utilizzo di un <xref:System.Windows.Controls.StackPanel> o <xref:System.Windows.Controls.DockPanel> per lo stack di contenuto in un <xref:System.Windows.Controls.Panel>.  

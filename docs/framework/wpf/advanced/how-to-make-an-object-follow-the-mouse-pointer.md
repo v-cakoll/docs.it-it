@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543872"
 ---
 # <a name="how-to-make-an-object-follow-the-mouse-pointer"></a>Procedura: fare in modo che un oggetto segua il puntatore del mouse
 In questo esempio viene illustrato come modificare le dimensioni di un oggetto quando si sposta il puntatore del mouse sullo schermo.  

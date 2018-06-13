@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538965"
 ---
 # <a name="getting-started-with-windows-forms"></a>Guida introduttiva a Windows Form
 Con Windows Form, è possibile creare potenti applicazioni basate su Windows. Gli argomenti seguenti descrivono approfondita come sfruttare la potenza di Windows Form per visualizzare i dati, l'input dell'utente di gestire e distribuire facilmente le applicazioni con sicurezza avanzata.  
