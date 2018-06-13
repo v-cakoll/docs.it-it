@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393617"
 ---
 # <a name="invalidcercall-mda"></a>MDA invalidCERCall
 L'assistente al debug gestito `invalidCERCall` viene attivato quando all'interno del grafico delle aree a esecuzione vincolata è presente una chiamata a un metodo che non include alcun contratto di affidabilità o che include un contratto eccessivamente debole. Un contratto debole è un contratto che dichiara che il peggior stato di danneggiamento ha un ambito più vasto rispetto all'istanza passata alla chiamata, ovvero lo stato di <xref:System.AppDomain> o del processo può risultare danneggiato o il risultato non è sempre calcolabile in modo deterministico quando la chiamata avviene all'interno di un'area a esecuzione vincolata.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d2284a311f8355b65f312112db9cddd458517b46
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433892"
 ---
 # <a name="iclrtaskgetmemstats-method"></a>Metodo ICLRTask::GetMemStats
 Ottiene informazioni sull'utilizzo di memoria statistiche correlate all'attività che corrente [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) istanza.  

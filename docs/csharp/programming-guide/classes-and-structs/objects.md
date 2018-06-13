@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324675"
 ---
 # <a name="objects-c-programming-guide"></a>Oggetti (Guida per programmatori C#)
 Una definizione di classe o struct è simile a un progetto iniziale in cui vengono specificate le funzionalità del tipo. Un oggetto è essenzialmente un blocco di memoria che è stato allocato e configurato in base al progetto iniziale. Un programma può creare molti oggetti della stessa classe. Gli oggetti, definiti anche istanze, possono essere archiviati in una variabile denominata o in una matrice o raccolta. Il codice client è il codice che usa queste variabili per chiamare i metodi e accedere alle proprietà pubbliche dell'oggetto. In un linguaggio orientato a oggetti come C#, il programma tipico è costituito da più oggetti che interagiscono dinamicamente.  

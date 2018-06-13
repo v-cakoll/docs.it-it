@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766036"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Forma degli alberi dei comandi
 Il modulo di generazione SQL è responsabile della generazione di una query SQL specifica di back-end basata su una determinata espressione dell'albero dei comandi della query di input. Questa sezione descrive le caratteristiche, le proprietà e la forma degli alberi dei comandi di query.  

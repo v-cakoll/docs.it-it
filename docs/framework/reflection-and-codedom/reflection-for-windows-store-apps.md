@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398791"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflection in .NET Framework per applicazioni Windows Store
 A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], in .NET Framework è incluso un set di tipi e membri di reflection che possono essere utilizzati nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Questi tipi e membri sono disponibili nella versione completa di .NET Framework, nonché in [.NET per app di Windows Store](http://go.microsoft.com/fwlink/?LinkID=225700). In questo documento vengono illustrate le differenze principali tra questi e le relative controparti in .NET Framework 4 e versioni precedenti.  

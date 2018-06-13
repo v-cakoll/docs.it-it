@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 68698aab0fd0872c6e6f67e4ec531ab0226e784f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401953"
 ---
 # <a name="closeassembly-method"></a>Metodo CloseAssembly
 Consente di finalizzare le operazioni di assembly. Chiamare questo metodo prima di iniziare un nuovo assembly o il modulo non associato.  

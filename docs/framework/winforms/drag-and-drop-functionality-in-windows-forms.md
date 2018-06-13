@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539400"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funzionalità di trascinamento della selezione in Windows Form
 Windows Forms include un set di metodi, eventi e classi che implementano il comportamento di trascinamento e rilascio. Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione in Windows Forms.  Vedere anche [operazioni di trascinamento e rilascio e supporto per gli Appunti](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  

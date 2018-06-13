@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61f1938b114aee6d9084ccc68dce123b4924d1fc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439468"
 ---
 # <a name="ihostiocompletionmanagersetminthreads-method"></a>Metodo IHostIoCompletionManager::SetMinThreads
 Imposta il numero minimo di thread che l'host deve assegnare fino al completamento dei / o.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766634"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Metodi LINQ supportati e non supportati (LINQ to Entities)
 Contenuto della sezione vengono fornite informazioni sugli operatori di query standard LINQ (Language Integrated Query) supportati o non supportati nelle query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Numerosi operatori di query standard LINQ dispongono di una versione di overload che accetta un argomento integer. L'argomento integer corrisponde a un indice in base zero nella sequenza di cui si sta usando, un <xref:System.Collections.Generic.IEqualityComparer%601>, o <xref:System.Collections.Generic.IComparer%601>. Se non specificato diversamente, queste versioni di overload degli operatori di query standard LINQ non sono supportate e quando si tenta di usarle viene generata un'eccezione.  

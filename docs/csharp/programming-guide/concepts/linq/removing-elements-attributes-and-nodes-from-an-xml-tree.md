@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339969"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Rimozione di elementi, attributi e nodi da un albero XML (C#)
 È possibile modificare un albero XML, rimuovendo elementi, attributi e altri tipi di nodi.  

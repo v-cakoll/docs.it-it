@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6236d6b5349a9c2a528a85559c0cbc02c8da381
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401716"
 ---
 # <a name="icordebugassemblygetcodebase-method"></a>Metodo ICorDebugAssembly::GetCodeBase
 Questo metodo non è implementato nella versione corrente di .NET Framework.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: be778fed910b2cbdbf5e9ae7754abae437ef6bec
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433734"
 ---
 # <a name="iclrcontrolsetappdomainmanagertype-method"></a>Metodo ICLRControl::SetAppDomainManagerType
 Imposta un tipo derivato da <xref:System.AppDomainManager> come tipo di gestione dominio applicazione.  
