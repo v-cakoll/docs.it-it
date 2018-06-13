@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573090"
 ---
 # <a name="virtual-members"></a>Membri virtuali
 Membri virtuali possono essere sottoposto a override, modificandone il comportamento della sottoclasse. Sono molto simili ai callback in termini di estensibilità che forniscono, ma sono migliori in termini di prestazioni di esecuzione e il consumo di memoria. Inoltre, i membri virtuali sono più naturali in scenari che richiedono la creazione di un particolare tipo di un tipo esistente (specializzazione).  

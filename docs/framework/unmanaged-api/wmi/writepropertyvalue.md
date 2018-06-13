@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6aafb918616d27cf6289a8747f3336b2e813beb6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461084"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue (funzione)
 Scrive un numero specificato di byte a una proprietà identificata da un handle di proprietà.

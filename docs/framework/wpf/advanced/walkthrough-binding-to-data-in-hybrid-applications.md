@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549279"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procedura dettagliata: associazione ai dati in applicazioni ibride
 Associazione di un'origine dati a un controllo è essenziale per fornire agli utenti l'accesso ai dati sottostanti, se si utilizza [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Questa procedura dettagliata viene illustrato come utilizzare l'associazione dati in applicazioni ibride che includono entrambi [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controlli.  

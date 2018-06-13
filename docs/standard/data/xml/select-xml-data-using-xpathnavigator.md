@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572122"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>Selezione di dati XML con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usato per selezionare un set di nodi in un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> usando un'espressione XPath. È possibile scorrere il set di nodi dopo averlo selezionato.  

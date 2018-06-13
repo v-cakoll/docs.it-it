@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0cfac1304a3d60a418065e4fc2994705548eeac3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458438"
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a>Metodo ICorProfilerInfo2::GetGenerationBounds
 Ottiene le aree di memoria, ovvero i segmenti dell'heap, che costituiscono le diverse generazioni di Garbage Collection.  

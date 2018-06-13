@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567819"
 ---
 # <a name="creating-new-strings-in-net"></a>Creazione di nuove stringhe in .NET
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] consente di creare stringhe usando una semplice assegnazione, oltre a eseguire l'overload del costruttore di classe per supportare la creazione di stringhe tramite una serie di parametri diversi. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornisce diversi metodi nella classe <xref:System.String?displayProperty=nameWithType> per creare nuovi oggetti stringa combinando più stringhe, matrici di stringhe o oggetti.  

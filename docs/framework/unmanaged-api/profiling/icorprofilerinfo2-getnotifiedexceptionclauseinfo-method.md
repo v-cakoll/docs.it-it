@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 07606bf58709f088db486e0263e5cb519ab5b4cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456667"
 ---
 # <a name="icorprofilerinfo2getnotifiedexceptionclauseinfo-method"></a>Metodo ICorProfilerInfo2::GetNotifiedExceptionClauseInfo
 Ottiene informazioni sull'indirizzo e il frame nativi per la clausola di eccezione (`catch`/`finally`/`filter`) che sta per essere eseguito o si è appena stato eseguito.  

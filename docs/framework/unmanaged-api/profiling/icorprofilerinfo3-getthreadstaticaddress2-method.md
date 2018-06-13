@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a51d88af20b3abbbe2f80134473ec1ba1b7a4b17
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454548"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>Metodo ICorProfilerInfo3::GetThreadStaticAddress2
 Ottiene l'indirizzo del campo statico a livello di thread specificato che è nell'ambito del dominio dell'applicazione e del thread specificati.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572840"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Input alla classe XslCompiledTransform
 Il metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> accetta tre tipi di input per il documento di origine: un oggetto che implementa l'interfaccia <xref:System.Xml.XPath.IXPathNavigable>, un oggetto <xref:System.Xml.XmlReader> che legge il documento di origine o un URI della stringa.  

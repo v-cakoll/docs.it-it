@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b11cf0fadc9142ee291115cf9f0d84e6429834fb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455117"
 ---
 # <a name="imethodmalloc-interface"></a>Interfaccia IMethodMalloc
 Fornisce un metodo per allocare memoria per un nuovo corpo della funzione Microsoft intermediate language (MSIL).  

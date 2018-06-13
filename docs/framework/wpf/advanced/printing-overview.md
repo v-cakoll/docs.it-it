@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549578"
 ---
 # <a name="printing-overview"></a>Cenni preliminari sulla stampa
 Con Microsoft .NET Framework, gli sviluppatori di applicazioni mediante Windows Presentation Foundation (WPF) hanno un ampio set nuovo di stampa e sistema di gestione stampa [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], alcuni dei miglioramenti apportati al sistema di stampa sono anche disponibili agli sviluppatori che creano applicazioni [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e a quelli che usano codice non gestito. Questa nuova funzionalità è basata sul nuovo formato di file [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] e sul percorso di stampa [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  

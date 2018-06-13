@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 581f42dc83622712dbb30ef556a481388bafe259
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455572"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>Profilatura (riferimenti alle API non gestite)
 L'API di profilatura consente a un profiler monitorare l'esecuzione di un programma da common language runtime (CLR).  
