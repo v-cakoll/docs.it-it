@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171793"
 ---
 # <a name="ltlt-operator-c-reference"></a><span data-ttu-id="41490-102">Operatore &lt;&lt;= (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="41490-102">&lt;&lt;= Operator (C# Reference)</span></span>
 <span data-ttu-id="41490-103">Operatore di assegnazione di spostamento a sinistra.</span><span class="sxs-lookup"><span data-stu-id="41490-103">The left-shift assignment operator.</span></span>  

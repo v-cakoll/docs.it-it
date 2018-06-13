@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171806"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="b760c-102">Operatore || (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="b760c-102">|| Operator (C# Reference)</span></span>
 <span data-ttu-id="b760c-103">L'operatore OR condizionale (`||`) esegue un'operazione OR logica sui propri operandi `bool`.</span><span class="sxs-lookup"><span data-stu-id="b760c-103">The conditional-OR operator (`||`) performs a logical-OR of its `bool` operands.</span></span> <span data-ttu-id="b760c-104">Se il primo operando restituisce `true`, il secondo operando non viene valutato.</span><span class="sxs-lookup"><span data-stu-id="b760c-104">If the first operand evaluates to `true`, the second operand isn't evaluated.</span></span> <span data-ttu-id="b760c-105">Se il primo operando restituisce `false`, il secondo operando determina se l'espressione OR nel suo complesso restituisce `true` o `false`.</span><span class="sxs-lookup"><span data-stu-id="b760c-105">If the first operand evaluates to `false`, the second operator determines whether the OR expression as a whole evaluates to `true` or `false`.</span></span>  
