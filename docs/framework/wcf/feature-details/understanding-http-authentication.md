@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500142"
 ---
 # <a name="understanding-http-authentication"></a>Informazioni sull'autenticazione HTTP
 L'autenticazione è il processo che consente di stabilire se un client è idoneo per accedere a una risorsa. Il protocollo HTTP supporta l'autenticazione come mezzo per negoziare l'accesso a una risorsa protetta.  

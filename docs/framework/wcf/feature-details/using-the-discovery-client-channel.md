@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499747"
 ---
 # <a name="using-the-discovery-client-channel"></a>Utilizzo del canale client di individuazione
 In fase di scrittura di un'applicazione client WCF è necessario conoscere l'indirizzo endpoint del servizio che si sta chiamando. In molti casi l'indirizzo endpoint di un servizio non è noto in anticipo o l'indirizzo del servizio cambia con il tempo. Il canale client di individuazione consente di scrivere un'applicazione client WCF, descrivere il servizio che si desidera chiamare e il canale client invia automaticamente una richiesta del probe. Quando un servizio risponde, il canale client di individuazione recupera l'indirizzo endpoint per il servizio dalla risposta del probe e lo utilizza per chiamare il servizio.  

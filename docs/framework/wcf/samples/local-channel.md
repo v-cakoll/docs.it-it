@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501507"
 ---
 # <a name="local-channel"></a>Canale locale
 Canale locale è un canale di trasporto di Windows Communication Foundation (WCF) che viene utilizzato per la comunicazione nello stesso dominio dell'applicazione. È utile negli scenari in cui il client e il servizio sono in esecuzione nello stesso dominio applicazione e l'overhead dello stack di canali WCF tipico (serializzazione e deserializzazione di messaggi) deve essere evitato.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499311"
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>Procedura: implementare un contratto di servizio di Windows Communication Foundation
 Questa è la seconda delle sei attività necessarie per creare un servizio Windows Communication Foundation (WCF) di base e un client in grado di chiamare il servizio. Per una panoramica delle sette attività, vedere il [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md) argomento.  

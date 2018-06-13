@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541564"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUID di cartella nota per percorsi personalizzati della finestra di dialogo File.
 Si utilizza un <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] cartella nota quando si aggiungono cartelle di un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> insieme. Nota GUID della cartella non tra maiuscole e minuscole e vengono definiti nel file KnownFolders il [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  

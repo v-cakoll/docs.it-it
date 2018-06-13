@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502546"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Data binding in un client Windows Presentation Foundation
 In questo esempio viene illustrato come usare un data binding in un client Windows Presentation Foundation (WPF). L'esempio Usa un servizio Windows Communication Foundation (WCF) che genera casualmente una matrice di album da restituire al client. Ogni album è dotato di un nome, di un prezzo e di un elenco di tracce. Le tracce dell'album sono dotate di un nome e di una durata. Le informazioni restituite dal servizio viene automaticamente associate all'interfaccia utente (UI) fornito dal client Windows Presentation Foundation (WPF).  

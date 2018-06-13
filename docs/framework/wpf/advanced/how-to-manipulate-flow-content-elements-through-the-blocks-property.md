@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544550"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Procedura: modificare elementi di contenuto del flusso tramite la proprietà Blocks
 Questi esempi vengono illustrate alcune delle operazioni più comuni che possono essere eseguite su elementi di contenuto di flusso tramite il **blocchi** proprietà. Questa proprietà viene utilizzata per aggiungere e rimuovere elementi da <xref:System.Windows.Documents.BlockCollection>. Gli elementi di contenuto del flusso che presentano un **blocchi** proprietà includono:  

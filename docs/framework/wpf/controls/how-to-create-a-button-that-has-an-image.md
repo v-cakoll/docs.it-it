@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550940"
 ---
 # <a name="how-to-create-a-button-that-has-an-image"></a>Procedura: creare un pulsante con un'immagine
 In questo esempio viene illustrato come includere un'immagine in un <xref:System.Windows.Controls.Button>.  

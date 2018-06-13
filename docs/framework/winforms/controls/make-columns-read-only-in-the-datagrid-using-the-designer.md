@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537505"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: rendere le colonne di sola lettura nel controllo DataGridView di Windows Form utilizzando la finestra di progettazione
 Per impostazione predefinita, gli utenti possono modificare il testo e i dati numerici visualizzati in Windows Form <xref:System.Windows.Forms.DataGridView> controllo. Se si desidera visualizzare i dati non adatto per la modifica, è necessario apportare le colonne che contengono i dati di sola lettura. Per informazioni su come impostare il controllo interamente di sola lettura, vedere [procedura: impedire l'aggiunta delle righe e eliminazione in cui il controllo Windows Form DataGridView usando la finestra di progettazione](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md).  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544498"
 ---
 # <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>Procedura: Usare un oggetto ResourceDictionary per gestire le risorse di tipo stringa localizzabili
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.ResourceDictionary> alle risorse di stringa localizzabile pacchetto per le applicazioni Windows Presentation Foundation (WPF).  
