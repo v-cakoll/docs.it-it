@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579496"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilizzo del modello asincrono basato su attività
 Quando si usa il modello asincrono basato su attività (TAP, Task-based Asynchronous Pattern) per lavorare con operazioni asincrone, è possibile usare i callback per ottenere un'attesa non bloccante.  Per le attività, è possibile ottenere questo risultato tramite metodi come <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Il supporto asincrono basato sul linguaggio nasconde i callback consentendo alle operazioni asincrone di essere in attesa all'interno di un normale flusso di controllo e il codice generato dal compilatore fornisce lo stesso livello di supporto delle API.  

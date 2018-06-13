@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593730"
 ---
 # <a name="39ltmethodnamegt39-has-multiple-definitions-with-identical-signatures"></a>&#39;&lt;NomeMetodo&gt; &#39; dispone di più definizioni con firme identiche
 Oggetto `Function` o `Sub` dichiarazione di routine utilizza l'elenco di procedure identiche nome e l'argomento di una dichiarazione precedente. Una possibile causa è un tentativo di eseguire l'overload di routine originale. Le routine di overload devono avere elenchi di argomenti diverso.  

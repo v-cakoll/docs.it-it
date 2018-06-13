@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591755"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Task Parallel Library e programmazione asincrona .NET Framework tradizionale
 .NET Framework offre i due modelli standard seguenti per eseguire operazioni asincrone di solo I/O e di solo calcolo:  

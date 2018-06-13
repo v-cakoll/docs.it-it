@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579275"
 ---
 # <a name="recoverable-xslt-errors"></a>Errori XSLT risolvibili
 Nella raccomandazione W3C, XSL Transformations (XSLT) Version 1.0, sono incluse aree in cui il provider dell'implementazione può decidere come gestire una determinata situazione. Queste aree si considerano come aree di comportamento discretionary. Nella sezione 7.3 Creating Processing Instructions della raccomandazione XSLT 1.0, ad esempio, viene specificato che la creazione di nodi diversi da nodi di tipo text durante la creazione di un'istanza del contenuto di `xsl:processing-instruction` costituisce un errore. Per alcuni problemi, la raccomandazione XSLT 1.0 fornisce una linea d'azione nel caso in cui il processore tenti di risolvere l'errore. Per l'errore illustrato nella sezione 7.3 viene spiegato che il problema può essere risolto ignorando i nodi e il relativo contenuto.  

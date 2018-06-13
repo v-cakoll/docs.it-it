@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508718"
 ---
 # <a name="security-protocols"></a>Protocolli di sicurezza
 I protocolli di sicurezza dei servizi Web forniscono meccanismi di sicurezza che soddisfano qualsiasi requisito di sicurezza aziendale esistente relativo alla messaggistica. In questa sezione vengono descritti i dettagli di Windows Communication Foundation (WCF) (implementati nel <xref:System.ServiceModel.Channels.SecurityBindingElement>) per servizi Web seguenti protocolli di sicurezza.  

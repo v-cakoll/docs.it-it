@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593262"
 ---
 # <a name="this-key-is-already-associated-with-an-element-of-this-collection"></a>Questa chiave è già associata a un elemento della raccolta
 La chiave specificata per un membro della raccolta definisce già un altro membro della raccolta. Una chiave è una stringa specificata nel `Add` metodo che identifica in modo univoco un membro specifico della raccolta.  

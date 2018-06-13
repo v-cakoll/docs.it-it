@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592340"
 ---
 # <a name="version-tolerant-serialization"></a>Serializzazione indipendente dalla versione
 Nelle versioni 1.0 e 1.1 di .NET Framework, la creazione di tipi serializzabili riutilizzabili da una versione di un'applicazione alla versione successiva risultava problematica. Se un tipo veniva modificato aggiungendo campi aggiuntivi, si verificavano i seguenti problemi:  

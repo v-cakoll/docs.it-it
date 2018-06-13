@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365462"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Materializzazione di oggetti (WCF Data Services)
 Quando si utilizza il **Aggiungi riferimento al servizio** finestra di dialogo per utilizzare un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed in un'applicazione client basata su .NET Framework, le classi di dati equivalenti vengono generate per ogni tipo di entità nel modello di dati esposto dal feed. Per ulteriori informazioni, vedere [la generazione della libreria Client del servizio dati](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). I dati di entità restituiti da una query vengono materializzati in un'istanza di una delle classi del servizio dati client generate. Per informazioni sulle opzioni di unione e la risoluzione di identità per gli oggetti rilevati, vedere [gestione del contesto del servizio dati](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  

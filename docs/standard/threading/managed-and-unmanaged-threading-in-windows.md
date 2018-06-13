@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591690"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gestito e non gestito in Windows
 La gestione di tutti i thread viene eseguita tramite la classe <xref:System.Threading.Thread> , inclusi i thread creati da Common Language Runtime e quelli creati all'esterno dell'ambiente di esecuzione che accedono all'ambiente gestito per eseguire il codice. L'ambiente di esecuzione monitora tutti i thread nei relativi processi che abbiano eseguito codice nell'ambiente di esecuzione gestito. Non tiene traccia di altri thread. I thread possono accedere all'ambiente di esecuzione gestito tramite l'interoperabilità COM (perché il runtime espone gli oggetti gestiti come oggetti COM all'ambiente non gestito), la funzione [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) COM e la funzionalità platform invoke.  
