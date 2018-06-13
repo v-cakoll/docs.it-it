@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752442"
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a><span data-ttu-id="4cacd-102">&lt;system.Net&gt; elemento (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="4cacd-102">&lt;system.Net&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="4cacd-103">Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="4cacd-103">Contains settings that specify how the .NET Framework connects to the network.</span></span>  

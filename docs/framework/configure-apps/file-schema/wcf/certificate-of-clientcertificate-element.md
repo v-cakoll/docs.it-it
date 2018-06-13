@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753391"
 ---
 # <a name="ltcertificategt-of-ltclientcertificategt-element"></a><span data-ttu-id="919fd-102">Elemento &lt;certificate&gt; di &lt;clientCertificate&gt;</span><span class="sxs-lookup"><span data-stu-id="919fd-102">&lt;certificate&gt; of &lt;clientCertificate&gt; Element</span></span>
 <span data-ttu-id="919fd-103">Specifica un certificato X.509 usato per firmare e crittografare messaggi.</span><span class="sxs-lookup"><span data-stu-id="919fd-103">Specifies an X.509 certificate used to sign and encrypt messages.</span></span>  

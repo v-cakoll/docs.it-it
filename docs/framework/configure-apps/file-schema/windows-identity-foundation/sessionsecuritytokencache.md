@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755045"
 ---
 # <a name="ltsessionsecuritytokencachegt"></a><span data-ttu-id="813e2-102">&lt;sessionSecurityTokenCache&gt;</span><span class="sxs-lookup"><span data-stu-id="813e2-102">&lt;sessionSecurityTokenCache&gt;</span></span>
 <span data-ttu-id="813e2-103">Registra una cache per i token di sessione con un servizio o una raccolta di gestore del token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="813e2-103">Registers a cache for session tokens with a service or a security token handler collection.</span></span>  

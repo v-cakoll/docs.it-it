@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334860"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a><span data-ttu-id="c97ca-102">File system e Registro di sistema (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="c97ca-102">File System and the Registry (C# Programming Guide)</span></span>
 <span data-ttu-id="c97ca-103">Gli argomenti seguenti illustrano come usare C# e .NET Framework per eseguire varie operazioni di base su file e cartelle e nel Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="c97ca-103">The following topics show how to use C# and the .NET Framework to perform various basic operations on files, folders, and the Registry.</span></span>  

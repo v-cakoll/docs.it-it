@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757905"
 ---
 # <a name="managing-dataviews"></a><span data-ttu-id="88f8e-102">Gestione di oggetti DataView</span><span class="sxs-lookup"><span data-stu-id="88f8e-102">Managing DataViews</span></span>
 <span data-ttu-id="88f8e-103">È possibile usare un tipo <xref:System.Data.DataViewManager> per gestire le impostazioni di visualizzazione per tutte le tabelle di un tipo <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="88f8e-103">You can use a <xref:System.Data.DataViewManager> to manage view settings for all the tables in a <xref:System.Data.DataView>.</span></span> <span data-ttu-id="88f8e-104">Se si dispone di un controllo che si desidera associare a più tabelle, ad esempio una griglia che consente di passare le relazioni, un **DataViewManager** è ideale.</span><span class="sxs-lookup"><span data-stu-id="88f8e-104">If you have a control that you want to bind to multiple tables, such as a grid that navigates relationships, a **DataViewManager** is ideal.</span></span>  

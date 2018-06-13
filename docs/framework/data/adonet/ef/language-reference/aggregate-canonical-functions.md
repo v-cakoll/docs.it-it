@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761935"
 ---
 # <a name="aggregate-canonical-functions"></a><span data-ttu-id="55da7-102">Funzioni di aggregazione canoniche</span><span class="sxs-lookup"><span data-stu-id="55da7-102">Aggregate Canonical Functions</span></span>
 
