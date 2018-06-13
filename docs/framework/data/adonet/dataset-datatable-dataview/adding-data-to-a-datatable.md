@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767128"
 ---
 # <a name="adding-data-to-a-datatable"></a>Aggiunta di dati a un oggetto DataTable
 Una volta creata una <xref:System.Data.DataTable> e definita la relativa struttura tramite colonne e vincoli, è possibile aggiungere nuove righe di dati alla tabella. Per aggiungere una nuova riga, dichiarare una nuova variabile come tipo <xref:System.Data.DataRow>. Un nuovo **DataRow** oggetto viene restituito quando si chiama il <xref:System.Data.DataTable.NewRow%2A> metodo. Il **DataTable** crea quindi il **DataRow** oggetto basato sulla struttura della tabella, come definito dal <xref:System.Data.DataColumnCollection>.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340021"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Procedura: intercettare un'eccezione non CLS
 Alcuni linguaggi .NET, inclusi C++ /CLI, consentono agli oggetti di generare eccezioni che non derivano da <xref:System.Exception>. Tali eccezioni sono chiamate *eccezioni non CLS* o *non eccezioni*. In Visual C# non è possibile generare eccezioni non CLS, ma è possibile rilevarle in due modi:  

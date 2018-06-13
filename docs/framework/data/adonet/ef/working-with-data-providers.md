@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765695"
 ---
 # <a name="working-with-data-providers"></a>Utilizzo di provider di dati
 Negli argomenti di questa sezione vengono illustrati i servizi e i provider di dati che consentono di trasformare le query su un modello concettuale in query native su un'origine dati supportata da Entity Framework.  

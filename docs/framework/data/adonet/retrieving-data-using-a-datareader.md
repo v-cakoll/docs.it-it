@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353260"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Recupero di dati tramite un oggetto DataReader
 Recupero di dati mediante un **DataReader** comporta la creazione di un'istanza del **comando** oggetto e quindi creando un **DataReader** chiamando  **Command. ExecuteReader** per recuperare righe da un'origine dati. Nell'esempio seguente viene illustrato l'utilizzo un **DataReader** in `reader` rappresenta un DataReader valido e `command` rappresenta un oggetto Command valido.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340684"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactoring con una funzione pura (C#)
 Nell'esempio seguente viene eseguito il refactoring dell'esempio precedente, [Refactoring con un metodo di estensione (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), per usare una funzione pure. In questo esempio il codice per individuare il testo di un paragrafo viene spostato nel metodo statico pure `ParagraphText`.  

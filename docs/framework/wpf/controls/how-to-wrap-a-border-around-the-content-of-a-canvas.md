@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551791"
 ---
 # <a name="how-to-wrap-a-border-around-the-content-of-a-canvas"></a>Procedura: disporre un bordo intorno al contenuto di un'area di disegno
 In questo esempio viene illustrato come eseguire il wrapping di un <xref:System.Windows.Controls.Canvas> elemento con un <xref:System.Windows.Controls.Border>.  

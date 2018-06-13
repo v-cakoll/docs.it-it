@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361527"
 ---
 # <a name="how-to-bracket-data-submissions-by-using-transactions"></a>Procedura: racchiudere tra parentesi quadre gli invii di dati utilizzando transazioni
 È possibile usare <xref:System.Transactions.TransactionScope> per raggruppare gli invii al database. Per ulteriori informazioni, vedere [il supporto delle transazioni](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md).  

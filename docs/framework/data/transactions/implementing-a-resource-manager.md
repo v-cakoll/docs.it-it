@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363263"
 ---
 # <a name="implementing-a-resource-manager"></a>Implementazione della gestione risorse
 Ogni risorsa utilizzata in una transazione viene gestita dalla gestione risorse, le cui azioni vengono coordinate dalla gestione transazioni. I gestori di risorse collaborano con la gestione transazioni allo scopo di garantire atomicità e isolamento all'applicazione. Alcuni esempi di gestori di risorse sono le code di messaggi durevoli, le tabelle hash in memoria e Microsoft SQL Server.  

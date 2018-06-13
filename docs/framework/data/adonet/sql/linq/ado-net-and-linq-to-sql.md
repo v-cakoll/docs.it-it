@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363649"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET e LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fa parte il [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] famiglia di tecnologie. e si basa sui servizi forniti dal modello provider [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]. È pertanto possibile combinare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] codice con esistente [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] applicazioni ed eseguire la migrazione corrente [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] soluzioni a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Nell'illustrazione seguente viene fornita una panoramica della relazione.  

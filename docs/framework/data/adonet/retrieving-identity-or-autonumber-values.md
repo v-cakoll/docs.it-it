@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357151"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Recupero di identità o di valori numerati automaticamente
 Per chiave primaria di un database relazionale si intende una colonna o una combinazione di colonne che contengono sempre valori univoci. Se si conosce il valore della chiave primaria, è possibile individuare la riga che lo contiene. Nei motori dei database relazionali, ad esempio SQL Server, Oracle e Microsoft Access/Jet, è supportata la creazione di colonne a incremento automatico che è possibile impostare come chiavi primarie. Tali valori vengono generati dal server quando si aggiungono righe a una tabella. In SQL Server viene impostata la proprietà Identity di una colonna, in Oracle viene creata una sequenza, mentre in Microsoft Access viene creata una colonna Contatore.  

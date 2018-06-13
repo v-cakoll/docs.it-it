@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357209"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>Procedura: connettere un'entità esistente a DataServiceContext (WCF Data Services)
 Quando un'entità già esistente in un servizio dati, il [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client consente di connettere un oggetto che rappresenta l'entità direttamente il <xref:System.Data.Services.Client.DataServiceContext> senza prima eseguire una query. Per ulteriori informazioni, vedere [l'aggiornamento del servizio dati](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554377"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Procedura: associare una visualizzazione struttura ad albero a dati di profondità non determinabile
 Talvolta potrebbe essere quando si desidera associare un <xref:System.Windows.Controls.TreeView> a un'origine dati di profondità non è noto.  Ciò può verificarsi quando i dati sono ricorsivi, ad esempio un file system, in cui le cartelle possono contenere cartelle, o struttura organizzativa di una società, in cui i dipendenti hanno altri dipendenti diretti.  

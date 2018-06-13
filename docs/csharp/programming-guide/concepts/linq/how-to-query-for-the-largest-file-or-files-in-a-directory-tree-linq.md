@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325357"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Procedura: eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ) (C#)
 Questo esempio illustra cinque query relative alla dimensione dei file in byte:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766322"
 ---
 # <a name="walkthrough-sql-generation"></a>Procedura dettagliata: generazione SQL
 In questo argomento viene illustrato come modalità di generazione SQL nel [Provider di esempio](http://go.microsoft.com/fwlink/?LinkId=180616). Nella query Entity SQL seguente viene usato il modello incluso nel provider di esempio:  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526578"
 ---
 # <a name="how-to-read-image-metadata"></a>Procedura: leggere i metadati delle immagini
 Alcuni file di immagine contengono metadati che è possibile leggere per determinare le caratteristiche dell'immagine. Ad esempio, una foto digitale potrebbe contenere metadati che è possibile leggere per determinare la marca e modello della fotocamera utilizzata per acquisire l'immagine. Con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile leggere i metadati esistenti e ai file di immagine, è anche possibile scrivere nuovi metadati.  
