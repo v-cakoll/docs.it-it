@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218985"
 ---
 # <a name="-errorreport-c-compiler-options"></a><span data-ttu-id="be4c0-102">-errorreport (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="be4c0-102">-errorreport (C# Compiler Options)</span></span>
 <span data-ttu-id="be4c0-103">Questa opzione rappresenta un modo pratico per segnalare a Microsoft un errore del compilatore interno C#.</span><span class="sxs-lookup"><span data-stu-id="be4c0-103">This option provides a convenient way to report a C# internal compiler error to Microsoft.</span></span>  

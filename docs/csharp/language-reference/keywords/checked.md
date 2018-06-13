@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216609"
 ---
 # <a name="checked-c-reference"></a><span data-ttu-id="ebf6a-102">checked (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="ebf6a-102">checked (C# Reference)</span></span>
 <span data-ttu-id="ebf6a-103">La parola chiave `checked` viene usata per abilitare in modo esplicito il controllo dell'overflow per le conversioni e le operazioni aritmetiche di tipo integrale.</span><span class="sxs-lookup"><span data-stu-id="ebf6a-103">The `checked` keyword is used to explicitly enable overflow checking for integral-type arithmetic operations and conversions.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271029"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="8529d-103">.</span><span class="sxs-lookup"><span data-stu-id="8529d-103">.</span></span> <span data-ttu-id="8529d-104">Operatore (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="8529d-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="8529d-105">L'operatore punto (`.`) viene usato per l'accesso ai membri.</span><span class="sxs-lookup"><span data-stu-id="8529d-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="8529d-106">L'operatore punto specifica un membro di un tipo o di uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="8529d-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="8529d-107">Ad esempio, viene usato per accedere a metodi specifici all'interno delle librerie di classi .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="8529d-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>  

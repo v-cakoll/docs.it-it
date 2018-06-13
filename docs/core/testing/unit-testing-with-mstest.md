@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216096"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a><span data-ttu-id="60ee9-103">Testing unità di C# con MSTest e .NET Core</span><span class="sxs-lookup"><span data-stu-id="60ee9-103">Unit testing C# with MSTest and .NET Core</span></span>
 

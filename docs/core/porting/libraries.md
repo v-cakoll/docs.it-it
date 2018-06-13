@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218358"
 ---
 # <a name="porting-to-net-core---libraries"></a><span data-ttu-id="6902d-103">Portabilità in .NET Core - Librerie</span><span class="sxs-lookup"><span data-stu-id="6902d-103">Porting to .NET Core - Libraries</span></span>
 
