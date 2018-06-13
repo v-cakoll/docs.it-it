@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511677"
 ---
 # <a name="designing-workflows"></a>Progettazione di flussi di lavoro
 Negli argomenti di questa sezione vengono descritti i paradigmi di controllo del flusso usati nello sviluppo del flusso di lavoro.  

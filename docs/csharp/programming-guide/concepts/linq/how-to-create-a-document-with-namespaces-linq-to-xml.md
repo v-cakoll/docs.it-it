@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330691"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Procedura: creare un documento con spazi dei nomi (C#) (LINQ to XML)
 In questo argomento viene illustrato come creare documenti con spazi dei nomi.  

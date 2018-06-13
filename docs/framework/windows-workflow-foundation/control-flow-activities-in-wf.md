@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512999"
 ---
 # <a name="control-flow-activities-in-wf"></a>Attività del flusso di controllo in WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] offre diverse attività per il controllo del flusso di esecuzione all'interno di un flusso di lavoro. Alcune di queste attività (ad esempio `Switch` e `If`) implementano strutture di controllo del flusso simili a quelle degli ambienti, ad esempio Visual c#, mentre altri di programmazione (ad esempio `Pick`) modellano nuove strutture di programmazione.  

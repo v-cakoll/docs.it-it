@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325370"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Esempio che genera parti di documento Office Open XML (C#)
 In questo argomento viene illustrato come aprire un documento Office Open XML e accedere a parti del documento.  

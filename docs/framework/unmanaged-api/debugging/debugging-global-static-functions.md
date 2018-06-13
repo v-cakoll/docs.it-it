@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2403d736d031aab52525fc12b5071e764a8bde1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406451"
 ---
 # <a name="debugging-global-static-functions"></a>Funzioni statiche globali di debug
 Questa sezione descrive le funzioni statiche globali non gestite usate dall'API di debug.  

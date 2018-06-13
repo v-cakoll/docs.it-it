@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8fb1ae367c30bb038bfe25961e91f02f172f486c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405756"
 ---
 # <a name="corheapinfo-structure"></a>Struttura COR_HEAPINFO
 Fornisce informazioni generali sull'heap di Garbage Collection, specificando anche se è enumerabile.  

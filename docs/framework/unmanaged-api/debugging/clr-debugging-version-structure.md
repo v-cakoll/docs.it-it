@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4be232ab557d582f3521b8775108c004b5a3dd78
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403305"
 ---
 # <a name="clrdebuggingversion-structure"></a>Struttura CLR_DEBUGGING_VERSION
 Definisce la versione del prodotto di Common Language Runtime (CLR) per fini di debug.  

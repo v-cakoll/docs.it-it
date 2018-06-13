@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513484"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>Sospensione e ripresa di un flusso di lavoro
 I flussi di lavoro verranno sospesi e ripresi in risposta ad attività di segnalibro e di blocco, ad esempio <xref:System.Activities.Statements.Delay>, ma un flusso di lavoro può anche essere sospeso, scaricato e ripreso in modo esplicito tramite la persistenza.  

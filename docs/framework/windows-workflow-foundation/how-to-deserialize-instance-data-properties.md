@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514052"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>Procedura: deserializzare le proprietà dei dati dell'istanza
 È possibile che si presentino situazioni in cui un utente o un amministratore del flusso di lavoro desideri esaminare manualmente lo stato di un'istanza persistente del flusso di lavoro. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> fornisce una visualizzazione sulla tabella delle istanze che espone le quattro colonne indicate di seguito:  

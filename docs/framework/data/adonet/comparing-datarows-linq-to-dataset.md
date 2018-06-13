@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756280"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>Confronto di DataRows (LINQ to DataSet)
 In [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] sono definiti diversi operatori sui set per confrontare gli elementi di origine e verificarne l'uguaglianza. Gli operatori sui set disponibili in [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sono i seguenti:  

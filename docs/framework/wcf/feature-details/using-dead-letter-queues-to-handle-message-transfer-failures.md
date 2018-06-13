@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504081"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Uso di code di messaggi non recapitabili per gestire errori di trasferimento dei messaggi
 È possibile che i messaggi in coda non vengano recapitati. Tali messaggi con errori vengono registrati in una coda di messaggi non recapitabili. Il mancato recapito può essere dovuto a errori della rete, all'eliminazione di una coda, a una coda completa, a un errore di autenticazione o alla scadenza del tempo disponibile per il recapito.  
