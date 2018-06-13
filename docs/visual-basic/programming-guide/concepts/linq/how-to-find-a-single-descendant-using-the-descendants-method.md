@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642846"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Procedura: trovare un singolo discendente con il metodo Descendants (Visual Basic)
 È possibile usare il metodo <xref:System.Xml.Linq.XContainer.Descendants%2A> dell'asse per scrivere rapidamente codice per trovare un singolo elemento con un nome univoco. Questa tecnica è particolarmente utile quando si desidera trovare un particolare discendente con un nome specifico. È possibile scrivere il codice per spostarsi fino all'elemento desiderato, ma risulta in genere più veloce e semplice scrivere il codice usando l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806832"
 ---
 # <a name="activity"></a>Attività
 In questo argomento descrive le tracce di attività nel modello di traccia di Windows Communication Foundation (WCF). Le attività sono unità di elaborazione che consentono all'utente di restringere l'ambito di un errore e quindi di individuarne le cause con maggiore facilità. Gli errori che si verificano nella stessa attività sono correlati in modo diretto. Si consideri ad esempio il caso di un'operazione che non riesce poiché la decrittografia di un messaggio ha avuto esito negativo. Le tracce relative alla non riuscita dell'operazione e della decrittografia del messaggio vengono visualizzate entrambe nella stessa attività, evidenziando in questo modo una correlazione diretta fra i due eventi di errore.  

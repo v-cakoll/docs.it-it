@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647336"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Tipi di dati vari (Visual Basic)
 Visual Basic fornisce diversi tipi di dati che non sono orientati verso i numeri o caratteri. In alternativa, occuparsi di dati speciali, ad esempio Sì/no valori, valori data/ora e oggetto indirizzi.  

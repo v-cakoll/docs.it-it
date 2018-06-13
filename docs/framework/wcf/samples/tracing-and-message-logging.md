@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807983"
 ---
 # <a name="tracing-and-message-logging"></a>Traccia e registrazione dei messaggi
 In questo esempio viene illustrato come attivare la traccia e la registrazione dei messaggi. Le tracce risultante e i log dei messaggi vengono visualizzati utilizzando il [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647111"
 ---
 # <a name="error-types-visual-basic"></a>Tipi di errore (Visual Basic)
 In Visual Basic, gli errori (chiamato anche *eccezioni*) rientrano in una delle tre categorie: errori di sintassi, errori di run-time e gli errori di logica.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638871"
 ---
 # <a name="named-argument-not-found-visual-basic"></a>Impossibile trovare l'argomento denominato (Visual Basic)
 Non è possibile usare un argomento denominato in una chiamata di routine a meno che non sia visualizzato nella definizione della routine. È stato specificato un argomento denominato, ma la routine non è stata definita per accettare un argomento con lo stesso nome.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637066"
 ---
 # <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>Impossibile convertire il valore iniziale di tipo &#39; &lt;type1&gt; &#39; e valore di incremento di tipo &#39; &lt;type2&gt; &#39; in un tipo comune
 Il valori del controllo `For...Next` specificati sono di tipi diversi e quindi non sono validi perché non possono essere convertiti in un tipo comune.  

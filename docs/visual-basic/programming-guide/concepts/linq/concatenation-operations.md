@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643350"
 ---
 # <a name="concatenation-operations-visual-basic"></a>Operazioni di concatenazione (Visual Basic)
 Il termine concatenazione descrive l'operazione che consiste nell'accodare una sequenza a un'altra sequenza.  

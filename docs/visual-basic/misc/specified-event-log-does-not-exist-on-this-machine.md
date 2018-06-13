@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638703"
 ---
 # <a name="specified-event-log-does-not-exist-on-this-machine"></a>Il log eventi specificato non esiste sul computer in uso
 Si è provato ad accedere a un log eventi che non esiste in questo computer.  

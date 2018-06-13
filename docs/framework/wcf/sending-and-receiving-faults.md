@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807707"
 ---
 # <a name="sending-and-receiving-faults"></a>Invio e ricezione degli errori
 Gli errori SOAP trasportano informazioni sulla condizione di errore da un servizio a un client e, nel caso duplex, da un client a un servizio in modo interoperativo. In genere, un servizio definisce un contenuto di errore personalizzato e specifica quali operazioni possono restituirlo. (Per ulteriori informazioni, vedere [definizione e gli errori specifica](../../../docs/framework/wcf/defining-and-specifying-faults.md).) In questo argomento vengono descritti il modo in cui un servizio o un client duplex può inviare tali errori quando si verifica la condizione di errore corrispondente e la modalità con cui un'applicazione client o server gestisce tali errori. Per una panoramica di gestione degli errori in applicazioni Windows Communication Foundation (WCF), vedere [specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655610"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Procedura dettagliata: Persistenza di un oggetto in Visual Studio (Visual Basic)
 Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefiniti in fase di progettazione, tutti i valori immessi in fase di esecuzione vengono persi quando l'oggetto viene eliminato. È possibile usare la serializzazione per rendere persistenti i dati di un oggetto tra le istanze, consentendo di archiviare i valori e di recuperarli alla successiva creazione di un'istanza dell'oggetto.  

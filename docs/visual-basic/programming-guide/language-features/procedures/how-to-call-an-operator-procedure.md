@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649968"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Procedura: chiamare una routine di operatore (Visual Basic)
 Utilizzare il simbolo dell'operatore in un'espressione per chiamare una routine di operatore. Nel caso di un operatore di conversione, si chiama il [funzione CType](../../../../visual-basic/language-reference/functions/ctype-function.md) per convertire un valore da un tipo di dati.  

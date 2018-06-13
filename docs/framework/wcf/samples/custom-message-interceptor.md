@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806318"
 ---
 # <a name="custom-message-interceptor"></a>Intercettore dei messaggi personalizzati
 In questo esempio viene illustrato l'utilizzo del modello di estensibilità del canale. In particolare, viene illustrato come implementare un elemento di associazione personalizzato che crea channel factory e listener del canale per intercettare tutti i messaggi in ingresso e in uscita in un particolare punto nello stack di runtime. L'esempio include anche un client e un server che illustrano l'utilizzo di queste factory personalizzate.  

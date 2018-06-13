@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648668"
 ---
 # <a name="visual-basic-language-specification"></a>Specifica del linguaggio Visual Basic
 La specifica del linguaggio Visual Basic è l'origine autorevole per le risposte a tutte le domande sulla grammatica di Visual Basic e la sintassi. Contiene informazioni dettagliate sul linguaggio, inclusi molti punti non trattati nella documentazione di riferimento di Visual Basic.  

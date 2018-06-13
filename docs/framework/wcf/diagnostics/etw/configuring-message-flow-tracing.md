@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804846"
 ---
 # <a name="configuring-message-flow-tracing"></a>Configurazione della traccia del flusso di messaggi
 Quando è abilitata la traccia di attività di Windows Communication Foundation (WCF), ID attività End-To-End vengono assegnate alle attività logiche in tutto lo stack WCF. In [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] è ora disponibile una versione con prestazioni superiori di questa funzionalità utilizzabile con Event Tracing for Windows (ETW) denominata traccia del flusso di messaggi. Se abilitati, gli ID di attività end-to-end vengono raccolti dai messaggi in ingresso o assegnati a tali messaggi se vuoti e vengono propagati in tutti gli eventi di traccia generati successivamente alla decodifica del messaggio da parte del canale. I clienti possono utilizzare questa funzionalità per ricostruire flussi di messaggi con i log di traccia dai vari servizi dopo la decodifica.  

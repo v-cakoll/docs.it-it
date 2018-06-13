@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646166"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>Directory di File (Visual Basic) e LINQ
 Molte operazioni del file system sono essenzialmente query e quindi particolarmente adatte all'approccio LINQ.  

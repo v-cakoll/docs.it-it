@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640492"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>La cartella di origine e la cartella di destinazione sono uguali
 Si è provato a copiare o spostare un file, ma la directory di origine e di destinazione sono uguali. Ciò può essere dovuto a un'analisi non corretta di un percorso del file.  

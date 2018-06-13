@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648619"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Procedura: convertire una stringa in una matrice di caratteri in Visual Basic
 Talvolta è utile disporre di dati relativi ai caratteri di una stringa e le posizioni dei caratteri all'interno della stringa, ad esempio quando si analizza una stringa. Questo esempio viene illustrato come è possibile ottenere una matrice di caratteri in una stringa chiamando la stringa <xref:System.String.ToCharArray%2A> metodo.  

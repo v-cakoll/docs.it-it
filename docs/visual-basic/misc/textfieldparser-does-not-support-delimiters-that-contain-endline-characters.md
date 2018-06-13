@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641341"
 ---
 # <a name="textfieldparser-does-not-support-delimiters-that-contain-endline-characters"></a>TextFieldParser non supporta i delimitatori che contengono caratteri di fine riga
 È stato fornito un delimitatore che contiene un carattere di fine riga, ma la `TextFieldParser` non supporta delimitatori che contengono caratteri di fine riga.  

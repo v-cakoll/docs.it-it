@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655863"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Oggetti e classi in Visual Basic
 Un *oggetto* è una combinazione di codice e dati che è possibile considerare come singola unità. Un oggetto può essere una parte di un'applicazione, ad esempio un controllo o un form. Anche un'intera applicazione può essere un oggetto.
