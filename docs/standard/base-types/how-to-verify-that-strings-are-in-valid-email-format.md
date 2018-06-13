@@ -25,6 +25,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172341"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a><span data-ttu-id="eb941-102">Procedura: Verificare che le stringhe siano in formato di posta elettronica valido</span><span class="sxs-lookup"><span data-stu-id="eb941-102">How to: Verify that Strings Are in Valid Email Format</span></span>
 <span data-ttu-id="eb941-103">L'esempio seguente usa un'espressione regolare per verificare la validità del formato di posta elettronica di una stringa.</span><span class="sxs-lookup"><span data-stu-id="eb941-103">The following example uses a regular expression to verify that a string is in valid email format.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172516"
 ---
 # <a name="double-c-reference"></a><span data-ttu-id="021de-102">double (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="021de-102">double (C# Reference)</span></span>
 <span data-ttu-id="021de-103">La parola chiave `double` indica un tipo semplice che archivia valori a virgola mobile a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="021de-103">The `double` keyword signifies a simple type that stores 64-bit floating-point values.</span></span> <span data-ttu-id="021de-104">Nella tabella riportata di seguito sono indicati l'intervallo approssimativo e il grado di precisione del tipo `double`.</span><span class="sxs-lookup"><span data-stu-id="021de-104">The following table shows the precision and approximate range for the `double` type.</span></span>  

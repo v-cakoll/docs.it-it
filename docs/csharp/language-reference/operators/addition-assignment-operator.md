@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171879"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="14b71-102">Operatore += (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="14b71-102">+= Operator (C# Reference)</span></span>
 <span data-ttu-id="14b71-103">Operatore di assegnazione di addizione.</span><span class="sxs-lookup"><span data-stu-id="14b71-103">The addition assignment operator.</span></span>  
