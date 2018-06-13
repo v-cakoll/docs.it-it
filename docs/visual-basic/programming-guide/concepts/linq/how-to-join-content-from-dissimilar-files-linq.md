@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643536"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Procedura: unire contenuto da file dissimili (LINQ) (Visual Basic)
 In questo esempio viene illustrato come eseguire un join di dati da due file con valori delimitati da virgole che condividono un valore comune usato come una chiave corrispondente. Questa tecnica può essere utile se è necessario combinare dati provenienti da due fogli di calcolo, o da un foglio di calcolo e da un file con un altro formato, in un nuovo file. È possibile modificare l'esempio in modo che funzioni con qualsiasi tipo di testo strutturato.  

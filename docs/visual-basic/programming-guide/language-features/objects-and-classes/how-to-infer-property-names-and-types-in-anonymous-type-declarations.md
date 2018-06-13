@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653312"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Procedura: dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo (Visual Basic)
 I tipi anonimi non offrono alcun meccanismo per specificare direttamente i tipi di dati delle proprietà. I tipi di tutte le proprietà vengono dedotti. Nell'esempio seguente, i tipi di `Name` e `Price` vengono dedotti direttamente dai valori usati per inizializzarli.  

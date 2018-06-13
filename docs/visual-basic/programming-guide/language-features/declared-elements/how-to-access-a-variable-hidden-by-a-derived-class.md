@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648047"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Procedura: accedere a una variabile nascosta da una classe derivata (Visual Basic)
 Quando il codice in una classe derivata accede a una variabile, il compilatore risolve in genere il riferimento alla versione accessibile più vicino, vale a dire la versione accessibile i minor numero di passaggi di derivazione con le versioni precedenti dalla classe. Se la variabile è definita nella classe derivata, il codice accede normalmente tale definizione.  

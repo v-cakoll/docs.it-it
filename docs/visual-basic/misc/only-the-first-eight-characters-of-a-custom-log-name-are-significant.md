@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639402"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a>Solo i primi otto caratteri di un nome di log personalizzato sono significativi
 Durante la verifica dei nomi di log eventi per l'univocità, vengono considerati solo i primi otto caratteri. La condivisione dei primi otto caratteri dei log eventi può causare un conflitto.  

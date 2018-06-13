@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645954"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Parte relativa allo stile di un documento WordprocessingML
 In questo argomento è illustrato un esempio della parte di stile del documento WordprocessingML di Office Open XML.  

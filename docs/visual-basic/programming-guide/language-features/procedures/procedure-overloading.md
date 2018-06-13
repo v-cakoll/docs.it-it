@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653914"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Overload della routine (Visual Basic)
 *L'overload* significa che una stored procedure che sia necessario definirlo in più versioni, utilizzando lo stesso nome ma gli elenchi di parametri diversi. Lo scopo dell'overload consiste nel definire più versioni strettamente correlate di una stored procedure senza la necessità di distinguere per nome. Questo caso variando l'elenco di parametri.  

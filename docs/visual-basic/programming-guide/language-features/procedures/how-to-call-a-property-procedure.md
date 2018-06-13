@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654817"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Procedura: chiamare una routine di proprietà (Visual Basic)
 Per chiamare una routine di proprietà per archiviare un valore nella proprietà o recuperarne il valore. Si accede alla proprietà allo stesso modo accedere a una variabile.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654739"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Influenza delle impostazioni cultura sulle stringhe in Visual Basic
 Questa pagina della Guida viene illustrato come Visual Basic utilizza informazioni sulle impostazioni cultura per eseguire confronti e le conversioni di stringa.  

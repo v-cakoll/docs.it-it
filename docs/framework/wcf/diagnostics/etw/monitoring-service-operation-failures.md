@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803767"
 ---
 # <a name="monitoring-service-operation-failures"></a>Monitoraggio di errori relativi alle operazioni del servizio
 Se la traccia analitica è abilitata per un'applicazione, è possibile monitorare gli errori del servizio facilmente nel visualizzatore eventi.  Questo argomento illustra come determinare quando un'operazione del servizio non riesce e come determinare ciò che ha provocato l'errore.  

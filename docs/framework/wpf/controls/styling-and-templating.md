@@ -20,6 +20,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457758"
 ---
 # <a name="styling-and-templating"></a>Applicazione di stili e modelli
 Gli stili e i modelli di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono un insieme di funzionalità (stili, modelli, trigger e storyboard) che gli sviluppatori e i progettisti usano per creare effetti visivamente accattivanti e per conferire al prodotto un aspetto coerente. Gli sviluppatori e i progettisti possono personalizzare ampiamente l'aspetto a livello di applicazione, ma l'uso di un modello di stili e modelli definito è fondamentale per consentire la manutenzione e la condivisione dell'aspetto all'interno di un'applicazione e tra più applicazioni. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre questo modello.  

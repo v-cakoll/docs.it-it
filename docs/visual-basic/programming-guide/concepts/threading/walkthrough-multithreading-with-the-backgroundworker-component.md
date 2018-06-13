@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654291"
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>Procedura dettagliata: Multithreading con il componente BackgroundWorker (Visual Basic)
 Questa procedura dettagliata spiega come creare un'applicazione Windows Form multithreading che cerca le occorrenze di una parola in un file di testo. Illustra quanto segue:  

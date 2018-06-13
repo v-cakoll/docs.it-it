@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648072"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Strutture di controllo annidate (Visual Basic)
 È possibile inserire le istruzioni di controllo all'interno di altre istruzioni di controllo, ad esempio un `If...Then...Else` blocco all'interno di un `For...Next` ciclo. Un'istruzione di controllo posizionata all'interno di un'altra istruzione di controllo è detta *nidificata*.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655342"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relazioni tra i tipi nelle operazioni di query (Visual Basic)
 Le variabili utilizzate [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query operazioni sono fortemente tipizzate e devono essere compatibili tra loro. Tipizzazione forte viene utilizzata nell'origine dati, nella query stessa e nell'esecuzione della query. Nella figura seguente identifica i termini utilizzati per descrivere un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. Per ulteriori informazioni sulle parti di una query, vedere [operazioni di Query di base (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  

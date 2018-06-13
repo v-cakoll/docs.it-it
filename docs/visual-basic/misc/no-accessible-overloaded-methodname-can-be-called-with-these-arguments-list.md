@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637987"
 ---
 # <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-ltlistgt"></a>Di overload non accessibile &#39; &lt;NomeMetodo&gt; &#39; può essere chiamato con questi argomenti: &lt;elenco&gt;
 Viene chiamato un metodo di overload, ma non è possibile associare alcun metodo all'elenco di argomenti forniti.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653118"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Procedura: nascondere una variabile con lo stesso nome di un'altra variabile (Visual Basic)
 È possibile nascondere una variabile da *shadowing* , vale a dire ridefinirla con una variabile con lo stesso nome. È possibile nascondere la variabile che si desidera nascondere in due modi:  

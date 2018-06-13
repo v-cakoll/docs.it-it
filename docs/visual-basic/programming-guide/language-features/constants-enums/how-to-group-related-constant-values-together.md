@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646404"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>Procedura: raggruppare i valori delle costanti correlate (Visual Basic)
 Un'enumerazione è il modo migliore per raggruppare le costanti correlate. Per creare un'enumerazione con la `Enum` istruzione nella sezione delle dichiarazioni di una classe o un modulo. Per ulteriori informazioni, vedere [procedura: dichiarare un'enumerazione](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).  

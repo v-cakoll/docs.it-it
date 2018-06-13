@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652565"
 ---
 # <a name="sub-procedures-visual-basic"></a>Routine Sub (Visual Basic)
 Un `Sub` stored procedure è una serie di istruzioni di Visual Basic racchiuse tra il `Sub` e `End Sub` istruzioni. Il `Sub` routine esegue un'attività e quindi restituisce il controllo al codice chiamante, ma non restituisce un valore al codice chiamante.  

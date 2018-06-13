@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647150"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>Recupero del testo dei paragrafi (Visual Basic)
 Questo esempio si basa sull'esempio precedente, [il recupero di paragrafi e i relativi stili (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Questo nuovo esempio consente di recuperare il testo di ciascun paragrafo sotto forma di stringa.  

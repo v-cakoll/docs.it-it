@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648905"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Utilizzo di spazi dei nomi globali (Visual Basic) (LINQ to XML)
 Una delle funzionalità chiave dei valori letterali XML in Visual Basic è la possibilità di dichiarare spazi dei nomi XML usando il `Imports` istruzione. Tramite questa funzionalità, è possibile dichiarare uno spazio dei nomi XML che usa un prefisso oppure uno spazio dei nomi XML predefinito.  

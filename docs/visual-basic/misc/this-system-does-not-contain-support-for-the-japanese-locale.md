@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639858"
 ---
 # <a name="this-system-does-not-contain-support-for-the-japanese-locale"></a>Il sistema non dispone del supporto per le impostazioni locali giapponesi
 Si sta provando a usare il membro di enumerazione `VbStrConv.Japanese` , ma il sistema non supporta le impostazioni locali per il giapponese.  

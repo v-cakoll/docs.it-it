@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803595"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Associazioni di Windows Communication Foundation
 Le associazioni specificano come un endpoint del servizio Windows Communication Foundation (WCF) comunica con altri endpoint. In parole semplici, un'associazione deve specificare il trasporto (ad esempio HTTP o TCP) da utilizzare. Le associazioni consentono inoltre di impostare altre caratteristiche, ad esempio la protezione e il supporto delle transazioni.  

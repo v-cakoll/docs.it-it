@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549620"
 ---
 # <a name="collections-c"></a>Raccolte (C#)
 Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È possibile raggruppare gli oggetti in due modi: creando matrici di oggetti e creando raccolte di oggetti.  

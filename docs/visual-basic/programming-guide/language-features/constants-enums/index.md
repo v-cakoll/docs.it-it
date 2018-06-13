@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646392"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Costanti ed enumerazioni in Visual Basic
 Le costanti consentono di usare nomi significativi al posto di un valore che non cambia. Archiviano i valori che, come suggerisce il nome, rimangono costanti durante l'esecuzione di un'applicazione. È possibile usare le costanti per specificare nomi descrittivi, anziché numeri, rendendo il codice più leggibile.  

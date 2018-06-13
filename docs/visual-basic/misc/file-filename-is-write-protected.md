@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636552"
 ---
 # <a name="file-39ltfilenamegt39-is-write-protected"></a>File &#39; &lt;filename&gt; &#39; è protetto da scrittura
 Il file su cui si sta tentando di scrivere è protetto da scrittura e non può essere modificato.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649048"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Procedura: chiamare una routine che non restituisce un valore (Visual Basic)
 Oggetto `Sub` routine non ha restituito un valore al codice chiamante. Si chiama in modo esplicito con un'istruzione di chiamata autonoma. È possibile effettuare la chiamata utilizzando semplicemente il nome all'interno di un'espressione.  

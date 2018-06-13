@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647930"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Procedura: assegnare una matrice a un'altra matrice (Visual Basic)
 Poiché le matrici sono oggetti, è possibile utilizzare le istruzioni di assegnazione, come altri tipi di oggetto. Una variabile di matrice contiene un puntatore ai dati che costituiscono gli elementi della matrice e le informazioni di classificazione e la lunghezza e un'assegnazione di copia solo l'indicatore di misura.  

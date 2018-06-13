@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639497"
 ---
 # <a name="you-must-specify-a-path-that-is-under-the-current-folder-or-one-of-its-sub-folders"></a>È necessario specificare un percorso che si trova nella cartella corrente o in una delle relative sottocartelle
 Il percorso specificato non è presente nella directory corrente. Può trattarsi del risultato di un'analisi non corretta dei percorsi dei file quando si specifica un percorso relativo.  

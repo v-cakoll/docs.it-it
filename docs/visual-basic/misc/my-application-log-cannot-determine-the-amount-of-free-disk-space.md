@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636591"
 ---
 # <a name="myapplicationlog-cannot-determine-the-amount-of-free-disk-space"></a>My.Application.Log non è in grado di determinare la quantità di spazio disponibile su disco
 La classe <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> non è in grado di determinare la quantità di spazio disponibile su disco.  
