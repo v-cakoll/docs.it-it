@@ -1,13 +1,7 @@
 ---
 title: 'Procedura: implementare un client del modello asincrono basato su eventi'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,34 +18,28 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 21a858c1-3c99-4904-86ee-0d17b49804fa
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f8069072f5d917d4ef169a1aed8854ae3139016d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a6363bc5900c797ebd3422430f368bf2668d3364
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567276"
 ---
-# <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a><span data-ttu-id="aad34-102">Procedura: implementare un client del modello asincrono basato su eventi</span><span class="sxs-lookup"><span data-stu-id="aad34-102">How to: Implement a Client of the Event-based Asynchronous Pattern</span></span>
-<span data-ttu-id="aad34-103">L'esempio di codice seguente mostra come usare un componente che aderisce a quanto indicato in [Panoramica del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).</span><span class="sxs-lookup"><span data-stu-id="aad34-103">The following code example demonstrates how to use a component that adheres to the [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).</span></span> <span data-ttu-id="aad34-104">Il form per questo esempio usa il componente `PrimeNumberCalculator` descritto in [Procedura: Implementare un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).</span><span class="sxs-lookup"><span data-stu-id="aad34-104">The form for this example uses the `PrimeNumberCalculator` component described in [How to: Implement a Component That Supports the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).</span></span>  
+# <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a><span data-ttu-id="840bd-102">Procedura: implementare un client del modello asincrono basato su eventi</span><span class="sxs-lookup"><span data-stu-id="840bd-102">How to: Implement a Client of the Event-based Asynchronous Pattern</span></span>
+<span data-ttu-id="840bd-103">L'esempio di codice seguente mostra come usare un componente che aderisce a quanto indicato in [Panoramica del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).</span><span class="sxs-lookup"><span data-stu-id="840bd-103">The following code example demonstrates how to use a component that adheres to the [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).</span></span> <span data-ttu-id="840bd-104">Il form per questo esempio usa il componente `PrimeNumberCalculator` descritto in [Procedura: Implementare un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).</span><span class="sxs-lookup"><span data-stu-id="840bd-104">The form for this example uses the `PrimeNumberCalculator` component described in [How to: Implement a Component That Supports the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).</span></span>  
   
- <span data-ttu-id="aad34-105">Quando si esegue un progetto che usa questo esempio, viene visualizzato un form "Calcolatrice di numeri primi" con una griglia e due pulsanti: **Avvia nuova attività** e **Annulla**.</span><span class="sxs-lookup"><span data-stu-id="aad34-105">When you run a project that uses this example, you will see a "Prime Number Calculator" form with a grid and two buttons: **Start New Task** and **Cancel**.</span></span> <span data-ttu-id="aad34-106">È possibile fare clic sul pulsante **Avvia nuova attività** più volte in successione. Per ogni clic, un'operazione asincrona avvierà un calcolo per determinare se un numero di test generato in modo casuale è un numero primo.</span><span class="sxs-lookup"><span data-stu-id="aad34-106">You can click the **Start New Task** button several times in succession, and for each click, an asynchronous operation will begin a computation to determine if a randomly generated test number is prime.</span></span> <span data-ttu-id="aad34-107">Il form visualizzerà periodicamente l'avanzamento e i risultati incrementali.</span><span class="sxs-lookup"><span data-stu-id="aad34-107">The form will periodically display progress and incremental results.</span></span> <span data-ttu-id="aad34-108">A ogni operazione viene assegnato un ID attività univoco.</span><span class="sxs-lookup"><span data-stu-id="aad34-108">Each operation is assigned a unique task ID.</span></span> <span data-ttu-id="aad34-109">Il risultato del calcolo viene visualizzato nella colonna **Risultato**. Se il numero di test non è un numero primo, viene contrassegnato come **Composito** e ne viene visualizzato il primo divisore.</span><span class="sxs-lookup"><span data-stu-id="aad34-109">The result of the computation is displayed in the **Result** column; if the test number is not prime, it is labeled as **Composite,** and its first divisor is displayed.</span></span>  
+ <span data-ttu-id="840bd-105">Quando si esegue un progetto che usa questo esempio, viene visualizzato un form "Calcolatrice di numeri primi" con una griglia e due pulsanti: **Avvia nuova attività** e **Annulla**.</span><span class="sxs-lookup"><span data-stu-id="840bd-105">When you run a project that uses this example, you will see a "Prime Number Calculator" form with a grid and two buttons: **Start New Task** and **Cancel**.</span></span> <span data-ttu-id="840bd-106">È possibile fare clic sul pulsante **Avvia nuova attività** più volte in successione. Per ogni clic, un'operazione asincrona avvierà un calcolo per determinare se un numero di test generato in modo casuale è un numero primo.</span><span class="sxs-lookup"><span data-stu-id="840bd-106">You can click the **Start New Task** button several times in succession, and for each click, an asynchronous operation will begin a computation to determine if a randomly generated test number is prime.</span></span> <span data-ttu-id="840bd-107">Il form visualizzerà periodicamente l'avanzamento e i risultati incrementali.</span><span class="sxs-lookup"><span data-stu-id="840bd-107">The form will periodically display progress and incremental results.</span></span> <span data-ttu-id="840bd-108">A ogni operazione viene assegnato un ID attività univoco.</span><span class="sxs-lookup"><span data-stu-id="840bd-108">Each operation is assigned a unique task ID.</span></span> <span data-ttu-id="840bd-109">Il risultato del calcolo viene visualizzato nella colonna **Risultato**. Se il numero di test non è un numero primo, viene contrassegnato come **Composito** e ne viene visualizzato il primo divisore.</span><span class="sxs-lookup"><span data-stu-id="840bd-109">The result of the computation is displayed in the **Result** column; if the test number is not prime, it is labeled as **Composite,** and its first divisor is displayed.</span></span>  
   
- <span data-ttu-id="aad34-110">Qualsiasi operazione in sospeso può essere annullata con il pulsante **Annulla**.</span><span class="sxs-lookup"><span data-stu-id="aad34-110">Any pending operation can be canceled with the **Cancel** button.</span></span> <span data-ttu-id="aad34-111">È possibile eseguire più selezioni.</span><span class="sxs-lookup"><span data-stu-id="aad34-111">Multiple selections can be made.</span></span>  
+ <span data-ttu-id="840bd-110">Qualsiasi operazione in sospeso può essere annullata con il pulsante **Annulla**.</span><span class="sxs-lookup"><span data-stu-id="840bd-110">Any pending operation can be canceled with the **Cancel** button.</span></span> <span data-ttu-id="840bd-111">È possibile eseguire più selezioni.</span><span class="sxs-lookup"><span data-stu-id="840bd-111">Multiple selections can be made.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="aad34-112">La maggior parte dei numeri non sarà un numero primo.</span><span class="sxs-lookup"><span data-stu-id="aad34-112">Most numbers will not be prime.</span></span> <span data-ttu-id="aad34-113">Se non è stato trovato alcun numero primo dopo il completamento di diverse operazioni, avviare semplicemente altre attività e si finirà certamente per trovare alcuni numeri primi.</span><span class="sxs-lookup"><span data-stu-id="aad34-113">If you have not found a prime number after several completed operations, simply start more tasks, and eventually you will find some prime numbers.</span></span>  
+>  <span data-ttu-id="840bd-112">La maggior parte dei numeri non sarà un numero primo.</span><span class="sxs-lookup"><span data-stu-id="840bd-112">Most numbers will not be prime.</span></span> <span data-ttu-id="840bd-113">Se non è stato trovato alcun numero primo dopo il completamento di diverse operazioni, avviare semplicemente altre attività e si finirà certamente per trovare alcuni numeri primi.</span><span class="sxs-lookup"><span data-stu-id="840bd-113">If you have not found a prime number after several completed operations, simply start more tasks, and eventually you will find some prime numbers.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="aad34-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="aad34-114">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="840bd-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="840bd-114">Example</span></span>  
  [!code-csharp[System.ComponentModel.AsyncOperationManager#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#10)]
  [!code-vb[System.ComponentModel.AsyncOperationManager#10](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#10)]  
   
-## <a name="see-also"></a><span data-ttu-id="aad34-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aad34-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="840bd-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="840bd-115">See Also</span></span>  
  <xref:System.ComponentModel.AsyncOperation>  
  <xref:System.ComponentModel.AsyncOperationManager>  
  <xref:System.Windows.Forms.WindowsFormsSynchronizationContext>

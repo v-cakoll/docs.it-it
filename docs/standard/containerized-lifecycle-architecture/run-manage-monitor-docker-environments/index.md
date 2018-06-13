@@ -6,9 +6,10 @@ ms.author: wiwagn
 ms.date: 09/22/2017
 ms.openlocfilehash: 1bd1abccb55fe9f837b024cc0f61eea71d3b64c5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567926"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a><span data-ttu-id="594a2-103">Eseguire, gestire e monitorare ambienti di produzione Docker</span><span class="sxs-lookup"><span data-stu-id="594a2-103">Run, manage, and monitor Docker production environments</span></span>
 

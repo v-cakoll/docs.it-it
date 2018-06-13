@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759543"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a><span data-ttu-id="4dbf8-102">Configurazione dei parametri e tipi di dati dei parametri</span><span class="sxs-lookup"><span data-stu-id="4dbf8-102">Configuring Parameters and Parameter Data Types</span></span>
 <span data-ttu-id="4dbf8-103">Gli oggetti comando usano i parametri per passare valori a istruzioni o stored procedure SQL, fornendo la verifica e la convalida dei tipi.</span><span class="sxs-lookup"><span data-stu-id="4dbf8-103">Command objects use parameters to pass values to SQL statements or stored procedures, providing type checking and validation.</span></span> <span data-ttu-id="4dbf8-104">A differenza del testo dei comandi, l'input dei parametri viene trattato come valore letterale, non come codice eseguibile.</span><span class="sxs-lookup"><span data-stu-id="4dbf8-104">Unlike command text, parameter input is treated as a literal value, not as executable code.</span></span> <span data-ttu-id="4dbf8-105">In questo modo è possibile difendersi da attacchi SQL injection, in cui l'autore di un attacco inserisce un comando che compromette la sicurezza del server in un'istruzione SQL.</span><span class="sxs-lookup"><span data-stu-id="4dbf8-105">This helps guard against "SQL injection" attacks, in which an attacker inserts a command that compromises security on the server into an SQL statement.</span></span>  
