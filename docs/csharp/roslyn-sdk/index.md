@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358981"
 ---
 # <a name="the-net-compiler-platform-sdk"></a><span data-ttu-id="81b1d-103">.NET Compiler Platform SDK</span><span class="sxs-lookup"><span data-stu-id="81b1d-103">The .NET Compiler Platform SDK</span></span>
 

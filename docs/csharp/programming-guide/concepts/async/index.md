@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339099"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a><span data-ttu-id="3b081-102">Programmazione asincrona con async e await (C#)</span><span class="sxs-lookup"><span data-stu-id="3b081-102">Asynchronous programming with async and await (C#)</span></span>
 <span data-ttu-id="3b081-103">È possibile evitare colli di bottiglia nelle prestazioni e migliorare la risposta generale dell'applicazione utilizzando la programmazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="3b081-103">You can avoid performance bottlenecks and enhance the overall responsiveness of your application by using asynchronous programming.</span></span> <span data-ttu-id="3b081-104">Le tecniche tradizionali per la scrittura di applicazioni asincrone, tuttavia, possono essere complesse, rendendone difficile la scrittura, il debug e la gestione.</span><span class="sxs-lookup"><span data-stu-id="3b081-104">However, traditional techniques for writing asynchronous applications can be complicated, making them difficult to write, debug, and maintain.</span></span>  

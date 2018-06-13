@@ -1,14 +1,6 @@
 ---
 title: Metodo ICorDebugCode::CreateBreakpoint
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugCode.CreateBreakpoint
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 46842618-0fe4-480b-871c-82fba82d23d9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 211435025fe06eff180244430138be9d42c5eb86
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1173091a5f2d8814747c93f827150afe39b8b309
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399121"
 ---
-# <a name="icordebugcodecreatebreakpoint-method"></a><span data-ttu-id="f75d5-102">Metodo ICorDebugCode::CreateBreakpoint</span><span class="sxs-lookup"><span data-stu-id="f75d5-102">ICorDebugCode::CreateBreakpoint Method</span></span>
-<span data-ttu-id="f75d5-103">Crea un punto di interruzione in questo segmento di codice in corrispondenza dell'offset specificato.</span><span class="sxs-lookup"><span data-stu-id="f75d5-103">Creates a breakpoint in this code segment at the specified offset.</span></span>  
+# <a name="icordebugcodecreatebreakpoint-method"></a><span data-ttu-id="d2f75-102">Metodo ICorDebugCode::CreateBreakpoint</span><span class="sxs-lookup"><span data-stu-id="d2f75-102">ICorDebugCode::CreateBreakpoint Method</span></span>
+<span data-ttu-id="d2f75-103">Crea un punto di interruzione in questo segmento di codice in corrispondenza dell'offset specificato.</span><span class="sxs-lookup"><span data-stu-id="d2f75-103">Creates a breakpoint in this code segment at the specified offset.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f75d5-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f75d5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d2f75-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d2f75-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateBreakpoint (  
@@ -47,26 +36,26 @@ HRESULT CreateBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f75d5-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f75d5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d2f75-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d2f75-105">Parameters</span></span>  
  `offset`  
- <span data-ttu-id="f75d5-106">[in] Offset da cui creare il punto di interruzione.</span><span class="sxs-lookup"><span data-stu-id="f75d5-106">[in] The offset at which to create the breakpoint.</span></span>  
+ <span data-ttu-id="d2f75-106">[in] Offset da cui creare il punto di interruzione.</span><span class="sxs-lookup"><span data-stu-id="d2f75-106">[in] The offset at which to create the breakpoint.</span></span>  
   
  `ppBreakpoint`  
- <span data-ttu-id="f75d5-107">[out] Un puntatore all'indirizzo di un oggetto "ICorDebugFunctionBreakpoint" che rappresenta il punto di interruzione.</span><span class="sxs-lookup"><span data-stu-id="f75d5-107">[out] A pointer to the address of an "ICorDebugFunctionBreakpoint" object that represents the breakpoint.</span></span>  
+ <span data-ttu-id="d2f75-107">[out] Un puntatore all'indirizzo di un oggetto "ICorDebugFunctionBreakpoint" che rappresenta il punto di interruzione.</span><span class="sxs-lookup"><span data-stu-id="d2f75-107">[out] A pointer to the address of an "ICorDebugFunctionBreakpoint" object that represents the breakpoint.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f75d5-108">Note</span><span class="sxs-lookup"><span data-stu-id="f75d5-108">Remarks</span></span>  
- <span data-ttu-id="f75d5-109">Prima che il punto di interruzione è attivo, deve essere aggiunta all'oggetto processo.</span><span class="sxs-lookup"><span data-stu-id="f75d5-109">Before the breakpoint is active, it must be added to the process object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d2f75-108">Note</span><span class="sxs-lookup"><span data-stu-id="d2f75-108">Remarks</span></span>  
+ <span data-ttu-id="d2f75-109">Prima che il punto di interruzione è attivo, deve essere aggiunta all'oggetto processo.</span><span class="sxs-lookup"><span data-stu-id="d2f75-109">Before the breakpoint is active, it must be added to the process object.</span></span>  
   
- <span data-ttu-id="f75d5-110">Se questo codice è codice Microsoft intermediate language (MSIL) ed è un just-in-time (JIT)-versione nativa compilata del codice, il punto di interruzione verrà applicato anche il codice compilato tramite JIT.</span><span class="sxs-lookup"><span data-stu-id="f75d5-110">If this code is Microsoft intermediate language (MSIL) code, and there is a just-in-time (JIT)-compiled, native version of the code, the breakpoint will be applied in the JIT-compiled code as well.</span></span> <span data-ttu-id="f75d5-111">(Lo stesso vale se il codice compilato tramite JIT in un secondo momento.)</span><span class="sxs-lookup"><span data-stu-id="f75d5-111">(The same is true if the code is JIT-compiled later.)</span></span>  
+ <span data-ttu-id="d2f75-110">Se questo codice è codice Microsoft intermediate language (MSIL) ed è un just-in-time (JIT)-versione nativa compilata del codice, il punto di interruzione verrà applicato anche il codice compilato tramite JIT.</span><span class="sxs-lookup"><span data-stu-id="d2f75-110">If this code is Microsoft intermediate language (MSIL) code, and there is a just-in-time (JIT)-compiled, native version of the code, the breakpoint will be applied in the JIT-compiled code as well.</span></span> <span data-ttu-id="d2f75-111">(Lo stesso vale se il codice compilato tramite JIT in un secondo momento.)</span><span class="sxs-lookup"><span data-stu-id="d2f75-111">(The same is true if the code is JIT-compiled later.)</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f75d5-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f75d5-112">Requirements</span></span>  
- <span data-ttu-id="f75d5-113">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f75d5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d2f75-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d2f75-112">Requirements</span></span>  
+ <span data-ttu-id="d2f75-113">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d2f75-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f75d5-114">**Intestazione:** CorDebug.idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="f75d5-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d2f75-114">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="d2f75-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f75d5-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f75d5-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d2f75-115">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="d2f75-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f75d5-116">**Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f75d5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d2f75-116">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2f75-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f75d5-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f75d5-117">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d2f75-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d2f75-117">See Also</span></span>  
  
