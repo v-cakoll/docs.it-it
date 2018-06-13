@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742244"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a><span data-ttu-id="2e781-102">Inoltro dei tipi in Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="2e781-102">Type Forwarding in the Common Language Runtime</span></span>
 <span data-ttu-id="2e781-103">L'inoltro dei tipi consente di spostare un tipo in un altro assembly senza dover ricompilare le applicazioni in cui viene utilizzato l'assembly originale.</span><span class="sxs-lookup"><span data-stu-id="2e781-103">Type forwarding allows you to move a type to another assembly without having to recompile applications that use the original assembly.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742088"
 ---
 # <a name="how-to-unload-an-application-domain"></a><span data-ttu-id="5299d-102">Procedura: Scaricare un dominio dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="5299d-102">How to: Unload an Application Domain</span></span>
 <span data-ttu-id="5299d-103">Dopo aver usato un dominio dell'applicazione, scaricare il dominio usando il metodo <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5299d-103">When you have finished using an application domain, unload it using the <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="5299d-104">Il metodo **Unload** consente di chiudere normalmente il dominio dell'applicazione specificato.</span><span class="sxs-lookup"><span data-stu-id="5299d-104">The **Unload** method gracefully shuts down the specified application domain.</span></span> <span data-ttu-id="5299d-105">Durante il processo di scaricamento, nessun nuovo thread può accedere al dominio dell'applicazione e tutte le strutture dei dati specifiche del dominio dell'applicazione vengono liberate.</span><span class="sxs-lookup"><span data-stu-id="5299d-105">During the unloading process, no new threads can access the application domain, and all application domain–specific data structures are freed.</span></span>  
