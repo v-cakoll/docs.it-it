@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746475"
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="f1bee-102">Elemento &lt;peer&gt; di &lt;clientCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="f1bee-102">&lt;peer&gt; of &lt;clientCredentials&gt; Element</span></span>
 <span data-ttu-id="f1bee-103">Specifica le credenziali usate per l'autenticazione di client peer-to-peer.</span><span class="sxs-lookup"><span data-stu-id="f1bee-103">Specifies credentials used when authenticating peer-to-peer clients.</span></span>  

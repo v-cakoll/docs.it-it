@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745708"
 ---
 # <a name="ltcompatsortnlsversiongt-element"></a><span data-ttu-id="81df6-102">&lt;CompatSortNLSVersion&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="81df6-102">&lt;CompatSortNLSVersion&gt; Element</span></span>
 <span data-ttu-id="81df6-103">Specifica che nel runtime devono essere utilizzati ordinamenti legacy quando si eseguono confronti di stringhe.</span><span class="sxs-lookup"><span data-stu-id="81df6-103">Specifies that the runtime should use legacy sort orders when performing string comparisons.</span></span>  

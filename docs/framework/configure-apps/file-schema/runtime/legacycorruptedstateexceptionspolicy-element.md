@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744616"
 ---
 # <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a><span data-ttu-id="88e11-102">&lt;legacyCorruptedStateExceptionsPolicy&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="88e11-102">&lt;legacyCorruptedStateExceptionsPolicy&gt; Element</span></span>
 <span data-ttu-id="88e11-103">Specifica se common language runtime consente al codice gestito rilevare le violazioni di accesso e le altre eccezioni stato danneggiato.</span><span class="sxs-lookup"><span data-stu-id="88e11-103">Specifies whether the common language runtime allows managed code to catch access violations and other corrupted state exceptions.</span></span>  

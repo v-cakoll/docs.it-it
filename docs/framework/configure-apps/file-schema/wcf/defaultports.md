@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747174"
 ---
 # <a name="ltdefaultportsgt"></a><span data-ttu-id="8014d-102">&lt;defaultPorts&gt;</span><span class="sxs-lookup"><span data-stu-id="8014d-102">&lt;defaultPorts&gt;</span></span>
 <span data-ttu-id="8014d-103">Raccolta di porte predefinite in cui sono elencati gli endpoint di comunicazione predefiniti sui quali l'applicazione client è in ascolto.</span><span class="sxs-lookup"><span data-stu-id="8014d-103">A collection of default ports listing the default communications endpoints that the client application listens to.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742822"
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a><span data-ttu-id="05f20-102">&lt;connectionManagement&gt; elemento (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="05f20-102">&lt;connectionManagement&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="05f20-103">Specifica il numero massimo di connessioni a un host di rete.</span><span class="sxs-lookup"><span data-stu-id="05f20-103">Specifies the maximum number of connections to a network host.</span></span>  

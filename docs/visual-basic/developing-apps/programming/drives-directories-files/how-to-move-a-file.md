@@ -1,65 +1,56 @@
 ---
 title: 'Procedura: spostare un file in Visual Basic'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96c6d1d89c0dfe4720637202b42414047e96f146
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 95a7deeec7c5f5d997a99ba9aa4bae8d7f972b5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587293"
 ---
-# <a name="how-to-move-a-file-in-visual-basic"></a><span data-ttu-id="0056c-102">Procedura: spostare un file in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0056c-102">How to: Move a File in Visual Basic</span></span>
-<span data-ttu-id="0056c-103">Il metodo `My.Computer.FileSystem.MoveFile` consente di spostare un file in una cartella diversa.</span><span class="sxs-lookup"><span data-stu-id="0056c-103">The `My.Computer.FileSystem.MoveFile` method can be used to move a file to another folder.</span></span> <span data-ttu-id="0056c-104">Se la struttura di destinazione non esiste, verrà creata.</span><span class="sxs-lookup"><span data-stu-id="0056c-104">If the target structure does not exist, it will be created.</span></span>  
+# <a name="how-to-move-a-file-in-visual-basic"></a><span data-ttu-id="f7968-102">Procedura: spostare un file in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f7968-102">How to: Move a File in Visual Basic</span></span>
+<span data-ttu-id="f7968-103">Il metodo `My.Computer.FileSystem.MoveFile` consente di spostare un file in una cartella diversa.</span><span class="sxs-lookup"><span data-stu-id="f7968-103">The `My.Computer.FileSystem.MoveFile` method can be used to move a file to another folder.</span></span> <span data-ttu-id="f7968-104">Se la struttura di destinazione non esiste, verrà creata.</span><span class="sxs-lookup"><span data-stu-id="f7968-104">If the target structure does not exist, it will be created.</span></span>  
   
-### <a name="to-move-a-file"></a><span data-ttu-id="0056c-105">Per spostare un file</span><span class="sxs-lookup"><span data-stu-id="0056c-105">To move a file</span></span>  
+### <a name="to-move-a-file"></a><span data-ttu-id="f7968-105">Per spostare un file</span><span class="sxs-lookup"><span data-stu-id="f7968-105">To move a file</span></span>  
   
--   <span data-ttu-id="0056c-106">Per spostare il file, usare il metodo `MoveFile` , specificando il nome e il percorso del file di origine e del file di destinazione.</span><span class="sxs-lookup"><span data-stu-id="0056c-106">Use the `MoveFile` method to move the file, specifying the file name and location for both the source file and the target file.</span></span> <span data-ttu-id="0056c-107">In questo esempio il file `test.txt` viene spostato da `TestDir1` a `TestDir2`.</span><span class="sxs-lookup"><span data-stu-id="0056c-107">This example moves the file named `test.txt` from `TestDir1` to `TestDir2`.</span></span> <span data-ttu-id="0056c-108">Si noti che il nome del file di destinazione viene specificato anche se corrisponde al nome del file di origine.</span><span class="sxs-lookup"><span data-stu-id="0056c-108">Note that the target file name is specified even though it is the same as the source file name.</span></span>  
+-   <span data-ttu-id="f7968-106">Per spostare il file, usare il metodo `MoveFile` , specificando il nome e il percorso del file di origine e del file di destinazione.</span><span class="sxs-lookup"><span data-stu-id="f7968-106">Use the `MoveFile` method to move the file, specifying the file name and location for both the source file and the target file.</span></span> <span data-ttu-id="f7968-107">In questo esempio il file `test.txt` viene spostato da `TestDir1` a `TestDir2`.</span><span class="sxs-lookup"><span data-stu-id="f7968-107">This example moves the file named `test.txt` from `TestDir1` to `TestDir2`.</span></span> <span data-ttu-id="f7968-108">Si noti che il nome del file di destinazione viene specificato anche se corrisponde al nome del file di origine.</span><span class="sxs-lookup"><span data-stu-id="f7968-108">Note that the target file name is specified even though it is the same as the source file name.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_1.vb)]  
   
-### <a name="to-move-a-file-and-rename-it"></a><span data-ttu-id="0056c-109">Per spostare un file e rinominarlo</span><span class="sxs-lookup"><span data-stu-id="0056c-109">To move a file and rename it</span></span>  
+### <a name="to-move-a-file-and-rename-it"></a><span data-ttu-id="f7968-109">Per spostare un file e rinominarlo</span><span class="sxs-lookup"><span data-stu-id="f7968-109">To move a file and rename it</span></span>  
   
--   <span data-ttu-id="0056c-110">Per spostare il file, usare il metodo `MoveFile` , specificando il nome e il percorso del file di origine, il percorso di destinazione e il nome che si desidera assegnare al file di destinazione.</span><span class="sxs-lookup"><span data-stu-id="0056c-110">Use the `MoveFile` method to move the file, specifying the source file name and location, the target location, and the new name at the target location.</span></span> <span data-ttu-id="0056c-111">In questo esempio il file `test.txt` viene spostato da `TestDir1` a `TestDir2` e viene rinominato `nexttest.txt`.</span><span class="sxs-lookup"><span data-stu-id="0056c-111">This example moves the file named `test.txt` from `TestDir1` to `TestDir2` and renames it `nexttest.txt`.</span></span>  
+-   <span data-ttu-id="f7968-110">Per spostare il file, usare il metodo `MoveFile` , specificando il nome e il percorso del file di origine, il percorso di destinazione e il nome che si desidera assegnare al file di destinazione.</span><span class="sxs-lookup"><span data-stu-id="f7968-110">Use the `MoveFile` method to move the file, specifying the source file name and location, the target location, and the new name at the target location.</span></span> <span data-ttu-id="f7968-111">In questo esempio il file `test.txt` viene spostato da `TestDir1` a `TestDir2` e viene rinominato `nexttest.txt`.</span><span class="sxs-lookup"><span data-stu-id="f7968-111">This example moves the file named `test.txt` from `TestDir1` to `TestDir2` and renames it `nexttest.txt`.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#25](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_2.vb)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="0056c-112">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="0056c-112">Robust Programming</span></span>  
- <span data-ttu-id="0056c-113">Le seguenti condizioni possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="0056c-113">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="f7968-112">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="f7968-112">Robust Programming</span></span>  
+ <span data-ttu-id="f7968-113">Le seguenti condizioni possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="f7968-113">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="0056c-114">Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="0056c-114">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
+-   <span data-ttu-id="f7968-114">Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="f7968-114">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
   
--   <span data-ttu-id="0056c-115">Il percorso non è valido in quanto è `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="0056c-115">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
+-   <span data-ttu-id="f7968-115">Il percorso non è valido in quanto è `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="f7968-115">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   <span data-ttu-id="0056c-116">`destinationFileName` è `Nothing` o una stringa vuota (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="0056c-116">`destinationFileName` is `Nothing` or an empty string (<xref:System.ArgumentNullException>).</span></span>  
+-   <span data-ttu-id="f7968-116">`destinationFileName` è `Nothing` o una stringa vuota (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="f7968-116">`destinationFileName` is `Nothing` or an empty string (<xref:System.ArgumentNullException>).</span></span>  
   
--   <span data-ttu-id="0056c-117">Il file di origine non è valido o non esiste (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="0056c-117">The source file is not valid or does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
+-   <span data-ttu-id="f7968-117">Il file di origine non è valido o non esiste (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="f7968-117">The source file is not valid or does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
   
--   <span data-ttu-id="0056c-118">Il percorso complessivo corrisponde a una directory esistente, il file di destinazione esiste e `overwrite` è impostato su `False`, un file con lo stesso nome è già in uso nella directory di destinazione oppure l'utente non dispone di autorizzazioni sufficienti per accedere al file (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="0056c-118">The combined path points to an existing directory, the destination file exists and `overwrite` is set to `False`, a file in the target directory with the same name is in use, or the user does not have sufficient permissions to access the file (<xref:System.IO.IOException>).</span></span>  
+-   <span data-ttu-id="f7968-118">Il percorso complessivo corrisponde a una directory esistente, il file di destinazione esiste e `overwrite` è impostato su `False`, un file con lo stesso nome è già in uso nella directory di destinazione oppure l'utente non dispone di autorizzazioni sufficienti per accedere al file (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="f7968-118">The combined path points to an existing directory, the destination file exists and `overwrite` is set to `False`, a file in the target directory with the same name is in use, or the user does not have sufficient permissions to access the file (<xref:System.IO.IOException>).</span></span>  
   
--   <span data-ttu-id="0056c-119">Il nome di un file o di una directory nel percorso contiene i due punti (:) o ha un formato non valido (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="0056c-119">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
+-   <span data-ttu-id="f7968-119">Il nome di un file o di una directory nel percorso contiene i due punti (:) o ha un formato non valido (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="f7968-119">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
--   <span data-ttu-id="0056c-120">`showUI` è impostato su `True`, `onUserCancel` è impostato su `ThrowException`e l'utente ha annullato l'operazione oppure si è verificato un errore di I/O non specificato (<xref:System.OperationCanceledException>).</span><span class="sxs-lookup"><span data-stu-id="0056c-120">`showUI` is set to `True`, `onUserCancel` is set to `ThrowException`, and either the user has cancelled the operation or an unspecified I/O error occurs (<xref:System.OperationCanceledException>).</span></span>  
+-   <span data-ttu-id="f7968-120">`showUI` è impostato su `True`, `onUserCancel` è impostato su `ThrowException`e l'utente ha annullato l'operazione oppure si è verificato un errore di I/O non specificato (<xref:System.OperationCanceledException>).</span><span class="sxs-lookup"><span data-stu-id="f7968-120">`showUI` is set to `True`, `onUserCancel` is set to `ThrowException`, and either the user has cancelled the operation or an unspecified I/O error occurs (<xref:System.OperationCanceledException>).</span></span>  
   
--   <span data-ttu-id="0056c-121">La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="0056c-121">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
+-   <span data-ttu-id="f7968-121">La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="f7968-121">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   <span data-ttu-id="0056c-122">L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="0056c-122">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
+-   <span data-ttu-id="f7968-122">L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="f7968-122">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
   
--   <span data-ttu-id="0056c-123">L'utente non ha le autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="0056c-123">The user does not have required permission (<xref:System.UnauthorizedAccessException>).</span></span>  
+-   <span data-ttu-id="f7968-123">L'utente non ha le autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="f7968-123">The user does not have required permission (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0056c-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0056c-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f7968-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f7968-124">See Also</span></span>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>  
- [<span data-ttu-id="0056c-125">Procedura: rinominare un file</span><span class="sxs-lookup"><span data-stu-id="0056c-125">How to: Rename a File</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
- [<span data-ttu-id="0056c-126">Procedura: creare una copia di un file in una directory diversa</span><span class="sxs-lookup"><span data-stu-id="0056c-126">How to: Create a Copy of a File in a Different Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
- [<span data-ttu-id="0056c-127">Procedura: analizzare percorsi di file</span><span class="sxs-lookup"><span data-stu-id="0056c-127">How to: Parse File Paths</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+ [<span data-ttu-id="f7968-125">Procedura: rinominare un file</span><span class="sxs-lookup"><span data-stu-id="f7968-125">How to: Rename a File</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
+ [<span data-ttu-id="f7968-126">Procedura: creare una copia di un file in una directory diversa</span><span class="sxs-lookup"><span data-stu-id="f7968-126">How to: Create a Copy of a File in a Different Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
+ [<span data-ttu-id="f7968-127">Procedura: analizzare percorsi di file</span><span class="sxs-lookup"><span data-stu-id="f7968-127">How to: Parse File Paths</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

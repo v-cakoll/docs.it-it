@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767635"
 ---
 # <a name="ltuserdefinedtypesgt"></a><span data-ttu-id="43b2c-102">&lt;userDefinedTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="43b2c-102">&lt;userDefinedTypes&gt;</span></span>
 <span data-ttu-id="43b2c-103">Questa sezione contiene una raccolta degli elementi `userDefinedType`.</span><span class="sxs-lookup"><span data-stu-id="43b2c-103">This section contains a collection of `userDefinedType` elements.</span></span>  

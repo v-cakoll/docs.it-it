@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748243"
 ---
 # <a name="ltknowncertificatesgt"></a><span data-ttu-id="73a4e-102">&lt;knownCertificates&gt;</span><span class="sxs-lookup"><span data-stu-id="73a4e-102">&lt;knownCertificates&gt;</span></span>
 <span data-ttu-id="73a4e-103">Rappresenta una raccolta di certificati X.509 che vengono forniti per autenticare credenziali di sicurezza pubblicate da un servizio token di sicurezza (STS, Security Token Service).</span><span class="sxs-lookup"><span data-stu-id="73a4e-103">Represents a collection of X.509 certificates that are provided to authenticate security credentials issued from a Security Token Service (STS).</span></span>  

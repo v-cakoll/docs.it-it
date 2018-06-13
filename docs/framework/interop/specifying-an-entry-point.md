@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388833"
 ---
 # <a name="specifying-an-entry-point"></a><span data-ttu-id="9d8de-102">Specifica di un punto di ingresso</span><span class="sxs-lookup"><span data-stu-id="9d8de-102">Specifying an Entry Point</span></span>
 <span data-ttu-id="9d8de-103">Un punto di ingresso identifica la posizione di una funzione in una DLL.</span><span class="sxs-lookup"><span data-stu-id="9d8de-103">An entry point identifies the location of a function in a DLL.</span></span> <span data-ttu-id="9d8de-104">All'interno di un progetto gestito, il nome originale o il punto di ingresso ordinale di una funzione di destinazione identifica tale funzione attraverso il limite di interoperabilità.</span><span class="sxs-lookup"><span data-stu-id="9d8de-104">Within a managed project, the original name or ordinal entry point of a target function identifies that function across the interoperation boundary.</span></span> <span data-ttu-id="9d8de-105">È anche possibile mappare il punto di ingresso a un nome diverso, rinominando in effetti la funzione.</span><span class="sxs-lookup"><span data-stu-id="9d8de-105">Further, you can map the entry point to a different name, effectively renaming the function.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749543"
 ---
 # <a name="lttokenrequestparametersgt"></a><span data-ttu-id="58b36-102">&lt;tokenRequestParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="58b36-102">&lt;tokenRequestParameters&gt;</span></span>
 <span data-ttu-id="58b36-103">Questo elemento di configurazione contiene elementi figlio che possono essere usati per specificare elementi XML aggiuntivi da inviare nel corpo del messaggio al servizio token di sicurezza quando viene richiesto un token.</span><span class="sxs-lookup"><span data-stu-id="58b36-103">This configuration element contains child elements that can be used to specify additional XML elements to be sent in the message body to the Security Token Service when requesting a token.</span></span>  

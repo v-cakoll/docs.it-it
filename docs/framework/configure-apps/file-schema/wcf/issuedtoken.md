@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750233"
 ---
 # <a name="ltissuedtokengt"></a><span data-ttu-id="425e5-102">&lt;issuedToken&gt;</span><span class="sxs-lookup"><span data-stu-id="425e5-102">&lt;issuedToken&gt;</span></span>
 <span data-ttu-id="425e5-103">Specifica un token personalizzato usato per autenticare un client presso un servizio.</span><span class="sxs-lookup"><span data-stu-id="425e5-103">Specifies a custom token used to authenticate a client to a service.</span></span>  
