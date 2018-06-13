@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766920"
 ---
 # <a name="ltunrecognizedpolicyassertiongt"></a><span data-ttu-id="4a891-102">&lt;unrecognizedPolicyAssertion&gt;</span><span class="sxs-lookup"><span data-stu-id="4a891-102">&lt;unrecognizedPolicyAssertion&gt;</span></span>
 <span data-ttu-id="4a891-103">Rappresenta un elemento di associazione che specifica l'asserzione di criteri.</span><span class="sxs-lookup"><span data-stu-id="4a891-103">Represents a binding element that specifies policy assertion.</span></span> <span data-ttu-id="4a891-104">Questo elemento non ha attributo e è presente come un'opzione vuota.</span><span class="sxs-lookup"><span data-stu-id="4a891-104">This element has no attribute and is present as an empty switch.</span></span>  

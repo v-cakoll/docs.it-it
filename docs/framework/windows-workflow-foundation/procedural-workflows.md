@@ -1,29 +1,19 @@
 ---
 title: Flussi di lavoro procedurali
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 10cf83264fbdc2ed3dc088c11865c630c0b8f4f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cd97c8ccaae74e4275f809502ac0a4d3c2f042a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515229"
 ---
-# <a name="procedural-workflows"></a><span data-ttu-id="312aa-102">Flussi di lavoro procedurali</span><span class="sxs-lookup"><span data-stu-id="312aa-102">Procedural Workflows</span></span>
-<span data-ttu-id="312aa-103">Nei flussi di lavoro procedurali vengono usati metodi di controllo del flusso simili a quelli dei linguaggi procedurali.</span><span class="sxs-lookup"><span data-stu-id="312aa-103">Procedural workflows use flow-control methods similar to those found in procedural languages.</span></span> <span data-ttu-id="312aa-104">Tra questi costrutti sono inclusi `While` e `If`.</span><span class="sxs-lookup"><span data-stu-id="312aa-104">These constructs include `While` and `If`.</span></span> <span data-ttu-id="312aa-105">Questi flussi di lavoro possono essere creati liberamente usando altre attività di controllo del flusso quale <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Sequence>.</span><span class="sxs-lookup"><span data-stu-id="312aa-105">These workflows can be freely composed using other flow control activities such as <xref:System.Activities.Statements.Flowchart> and <xref:System.Activities.Statements.Sequence>.</span></span>  
+# <a name="procedural-workflows"></a><span data-ttu-id="9666d-102">Flussi di lavoro procedurali</span><span class="sxs-lookup"><span data-stu-id="9666d-102">Procedural Workflows</span></span>
+<span data-ttu-id="9666d-103">Nei flussi di lavoro procedurali vengono usati metodi di controllo del flusso simili a quelli dei linguaggi procedurali.</span><span class="sxs-lookup"><span data-stu-id="9666d-103">Procedural workflows use flow-control methods similar to those found in procedural languages.</span></span> <span data-ttu-id="9666d-104">Tra questi costrutti sono inclusi `While` e `If`.</span><span class="sxs-lookup"><span data-stu-id="9666d-104">These constructs include `While` and `If`.</span></span> <span data-ttu-id="9666d-105">Questi flussi di lavoro possono essere creati liberamente usando altre attività di controllo del flusso quale <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Sequence>.</span><span class="sxs-lookup"><span data-stu-id="9666d-105">These workflows can be freely composed using other flow control activities such as <xref:System.Activities.Statements.Flowchart> and <xref:System.Activities.Statements.Sequence>.</span></span>  
   
-## <a name="controlling-execution-flow"></a><span data-ttu-id="312aa-106">Controllo del flusso di esecuzione</span><span class="sxs-lookup"><span data-stu-id="312aa-106">Controlling Execution Flow</span></span>  
- <span data-ttu-id="312aa-107">La libreria di attività del flusso di lavoro dispone di attività per modellare la maggior parte dei metodi di controllo del flusso usati nei linguaggi procedurali,</span><span class="sxs-lookup"><span data-stu-id="312aa-107">The workflow activity library has activities for modeling most flow-control methods used in procedural languages.</span></span> <span data-ttu-id="312aa-108">Sono inclusi:</span><span class="sxs-lookup"><span data-stu-id="312aa-108">These include:</span></span>  
+## <a name="controlling-execution-flow"></a><span data-ttu-id="9666d-106">Controllo del flusso di esecuzione</span><span class="sxs-lookup"><span data-stu-id="9666d-106">Controlling Execution Flow</span></span>  
+ <span data-ttu-id="9666d-107">La libreria di attività del flusso di lavoro dispone di attività per modellare la maggior parte dei metodi di controllo del flusso usati nei linguaggi procedurali,</span><span class="sxs-lookup"><span data-stu-id="9666d-107">The workflow activity library has activities for modeling most flow-control methods used in procedural languages.</span></span> <span data-ttu-id="9666d-108">Sono inclusi:</span><span class="sxs-lookup"><span data-stu-id="9666d-108">These include:</span></span>  
   
 -   <xref:System.Activities.Statements.While>  
   
@@ -41,10 +31,10 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Activities.Statements.Pick>  
   
- <span data-ttu-id="312aa-109">Per utilizzare le attività di controllo di flusso, trascinamento della selezione dal **attività** casella degli strumenti in un'attività composta nella finestra di progettazione.</span><span class="sxs-lookup"><span data-stu-id="312aa-109">To use flow control activities, drag and drop them from the **Activity** toolbox into a composite activity inside the designer window.</span></span>  
+ <span data-ttu-id="9666d-109">Per utilizzare le attività di controllo di flusso, trascinamento della selezione dal **attività** casella degli strumenti in un'attività composta nella finestra di progettazione.</span><span class="sxs-lookup"><span data-stu-id="9666d-109">To use flow control activities, drag and drop them from the **Activity** toolbox into a composite activity inside the designer window.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="312aa-110">Se si usa [!INCLUDE[dublin](../../../includes/dublin-md.md)] per ospitare i flussi di lavoro in una Web farm, le istanze verranno spostate da AppFabric tra server di AppFabric differenti.</span><span class="sxs-lookup"><span data-stu-id="312aa-110">If using the [!INCLUDE[dublin](../../../includes/dublin-md.md)] to host workflows on a Web farm, AppFabric will move instances between different AppFabric servers.</span></span> <span data-ttu-id="312aa-111">È necessario quindi che le risorse possano essere condivise tra tutti i nodi.</span><span class="sxs-lookup"><span data-stu-id="312aa-111">This requires that the resources are able to be shared between all nodes.</span></span>  <span data-ttu-id="312aa-112">Nessuna delle attività predefinite del flusso di lavoro di .NET 4 contiene operazioni di accesso alle risorse locali.</span><span class="sxs-lookup"><span data-stu-id="312aa-112">None of the default NET 4 workflow activities contain any operations that access local resources.</span></span> <span data-ttu-id="312aa-113">Poiché AppFabric non offre alcun meccanismo per contrassegnare un flusso di lavoro come non spostabile, uno sviluppatore non deve creare attività personalizzate che non vengono eseguite correttamente quando un flusso di lavoro viene spostato.</span><span class="sxs-lookup"><span data-stu-id="312aa-113">Since AppFabric does not offer any mechanism to mark a workflow as immovable, a developer must not create custom activities that fail when a workflow is moved.</span></span>  
+>  <span data-ttu-id="9666d-110">Se si usa [!INCLUDE[dublin](../../../includes/dublin-md.md)] per ospitare i flussi di lavoro in una Web farm, le istanze verranno spostate da AppFabric tra server di AppFabric differenti.</span><span class="sxs-lookup"><span data-stu-id="9666d-110">If using the [!INCLUDE[dublin](../../../includes/dublin-md.md)] to host workflows on a Web farm, AppFabric will move instances between different AppFabric servers.</span></span> <span data-ttu-id="9666d-111">È necessario quindi che le risorse possano essere condivise tra tutti i nodi.</span><span class="sxs-lookup"><span data-stu-id="9666d-111">This requires that the resources are able to be shared between all nodes.</span></span>  <span data-ttu-id="9666d-112">Nessuna delle attività predefinite del flusso di lavoro di .NET 4 contiene operazioni di accesso alle risorse locali.</span><span class="sxs-lookup"><span data-stu-id="9666d-112">None of the default NET 4 workflow activities contain any operations that access local resources.</span></span> <span data-ttu-id="9666d-113">Poiché AppFabric non offre alcun meccanismo per contrassegnare un flusso di lavoro come non spostabile, uno sviluppatore non deve creare attività personalizzate che non vengono eseguite correttamente quando un flusso di lavoro viene spostato.</span><span class="sxs-lookup"><span data-stu-id="9666d-113">Since AppFabric does not offer any mechanism to mark a workflow as immovable, a developer must not create custom activities that fail when a workflow is moved.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="312aa-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="312aa-114">See Also</span></span>  
- [<span data-ttu-id="312aa-115">Flussi di lavoro del diagramma di flusso</span><span class="sxs-lookup"><span data-stu-id="312aa-115">Flowchart Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)
+## <a name="see-also"></a><span data-ttu-id="9666d-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9666d-114">See Also</span></span>  
+ [<span data-ttu-id="9666d-115">Flussi di lavoro del diagramma di flusso</span><span class="sxs-lookup"><span data-stu-id="9666d-115">Flowchart Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)

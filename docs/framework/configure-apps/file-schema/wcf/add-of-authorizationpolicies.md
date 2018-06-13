@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753954"
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a><span data-ttu-id="0f3a1-102">&lt;add&gt; di &lt;authorizationPolicies&gt;</span><span class="sxs-lookup"><span data-stu-id="0f3a1-102">&lt;add&gt; of &lt;authorizationPolicies&gt;</span></span>
 <span data-ttu-id="0f3a1-103">Specifica i criteri di autorizzazione per la trasformazione di attestazioni.</span><span class="sxs-lookup"><span data-stu-id="0f3a1-103">Specifies an authorization policy for claim transformation.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214589"
 ---
 # <a name="-recurse-c-compiler-options"></a><span data-ttu-id="ee5a0-102">-recurse (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="ee5a0-102">-recurse (C# Compiler Options)</span></span>
 <span data-ttu-id="ee5a0-103">L'opzione -recurse consente di compilare i file del codice sorgente in tutte le directory figlio della directory specificata (dir) o della directory del progetto.</span><span class="sxs-lookup"><span data-stu-id="ee5a0-103">The -recurse option enables you to compile source code files in all child directories of either the specified directory (dir) or of the project directory.</span></span>  
