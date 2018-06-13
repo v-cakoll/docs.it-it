@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525214"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Procedura: individuare le modifiche degli attributi di formattazione nel controllo RichTextBox Windows Form
 Un utilizzo comune di Windows Form <xref:System.Windows.Forms.RichTextBox> controllo formattazione del testo con attributi, ad esempio le opzioni di tipo di carattere o gli stili dei paragrafi. L'applicazione potrebbe essere necessario tenere traccia delle modifiche per la visualizzazione di una barra degli strumenti, come in molte applicazioni di elaborazione testi di formattazione del testo.  

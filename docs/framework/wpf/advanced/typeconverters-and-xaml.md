@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549682"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter e XAML
 Questo argomento illustra lo scopo della conversione del tipo string come funzionalità generale del linguaggio XAML. In .NET Framework, il <xref:System.ComponentModel.TypeConverter> classe funge da parte dell'implementazione per una classe personalizzata gestita che può essere utilizzata come valore della proprietà di attributo XAML uno scopo specifico. Se si scrive una classe personalizzata e si desidera che le istanze della classe per essere utilizzabile come valori di attributo impostabile XAML, si potrebbe essere necessario applicare un <xref:System.ComponentModel.TypeConverterAttribute> alla classe, scrivere un oggetto personalizzato <xref:System.ComponentModel.TypeConverter> classe, o entrambi.  

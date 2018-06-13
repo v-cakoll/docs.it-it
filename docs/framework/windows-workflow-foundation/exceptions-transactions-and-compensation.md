@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512210"
 ---
 # <a name="exceptions-transactions-and-compensation"></a>Eccezioni, transazioni e compensazione
 [!INCLUDE[wf1](../../../includes/wf1-md.md)] offre diversi meccanismi differenti per la gestione di condizioni di errore di runtime nei flussi di lavoro, all'interno dei quali è possibile usare una combinazione di gestori di eccezioni, transazioni, annullamento e compensazione per gestire e risolvere normalmente condizioni di errore.  

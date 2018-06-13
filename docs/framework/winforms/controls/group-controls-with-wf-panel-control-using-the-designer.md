@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525623"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Procedura: raggruppare i controlli con il controllo Panel di Windows Form nella finestra di progettazione
 Windows Form <xref:System.Windows.Forms.Panel> controlli vengono utilizzati per raggruppare altri controlli. Vi sono tre motivi per i controlli di gruppo. Raggruppamento di elementi di form per un'interfaccia utente deselezionare; visivo un vantaggio è a livello di codice raggruppamento di pulsanti di opzione, ad esempio; l'ultimo si per spostare i controlli in un'unità in fase di progettazione.  

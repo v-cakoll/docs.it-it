@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522188"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>Procedura: disegnare una linea con riempimento a trama
 Anziché disegnare una riga con un colore a tinta unita, è possibile disegnare una riga con una trama. Per disegnare linee e curve con una trama, creare un <xref:System.Drawing.TextureBrush> dell'oggetto e passare tale <xref:System.Drawing.TextureBrush> l'oggetto in un <xref:System.Drawing.Pen.%23ctor%2A> costruttore. La bitmap associata al pennello trama viene utilizzata per affiancare il piano (in modo invisibile) e quando la penna Disegna una linea o una curva, il tratto di penna vengono evidenziati alcuni pixel della trama affiancata.  

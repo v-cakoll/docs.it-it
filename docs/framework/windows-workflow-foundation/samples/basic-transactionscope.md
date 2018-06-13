@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516802"
 ---
 # <a name="basic-transactionscope"></a>TransactionScope di base
 Questo esempio è costituito da quattro scenari che vengono eseguiti illustrando come annidare istanze di <xref:System.Activities.Statements.TransactionScope>. Nel primo scenario viene illustrato l'annidamento di un'attività di terze parti di cui l'autore non dispone di informazioni sulla modalità di costruzione. Nel secondo e nel terzo scenario viene illustrato come vengono rispettati timeout, mentre nello scenario finale viene illustrata l'impostazione di <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A>.  

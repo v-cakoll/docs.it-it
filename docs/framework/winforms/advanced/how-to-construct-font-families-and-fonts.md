@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520890"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Procedura: creare caratteri e gruppi di caratteri
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] i caratteri con lo stesso carattere tipografico ma stili diversi in famiglie di caratteri. Ad esempio, la famiglia contiene i caratteri seguenti:  

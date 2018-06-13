@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524400"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>Controllo FlowLayoutPanel (Windows Form)
 Il controllo `FlowLayoutPanel` dispone i contenuti in una direzione di flusso orizzontale o verticale. Il contenuto può andare a capo da una riga a quella successiva o da una colonna a quella successiva. In alternativa, è possibile troncare il contenuto invece di usare il ritorno a capo.  

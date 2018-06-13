@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520214"
 ---
 # <a name="tracking-events-reference"></a>Riferimento agli eventi di rilevamento
 Durante l'esecuzione, un flusso di lavoro di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] genera eventi di rilevamento durante le varie fasi della durata. L'host può sottoscrivere questi eventi e mantenersi aggiornato sullo stato di avanzamento del flusso di lavoro per tutta la durata. Gli eventi di rilevamento generati vengono descritti in questa sezione.  

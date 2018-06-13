@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552045"
 ---
 # <a name="frame"></a>Frame
 Il <xref:System.Windows.Controls.Frame> controllo supporta la navigazione all'interno del contenuto. <xref:System.Windows.Controls.Frame> può essere ospitata da un elemento radice, ad esempio <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, o come un'isola all'interno di un albero del contenuto a cui appartiene un elemento radice.  

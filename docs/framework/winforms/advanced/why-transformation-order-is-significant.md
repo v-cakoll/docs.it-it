@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526077"
 ---
 # <a name="why-transformation-order-is-significant"></a>Importanza dell'ordine delle trasformazioni
 Un singolo <xref:System.Drawing.Drawing2D.Matrix> oggetto è possibile archiviare una singola trasformazione o una sequenza di trasformazioni. Quest'ultimo viene chiamato una trasformazione composta. La matrice di una trasformazione composta viene ottenuta moltiplicando le matrici delle trasformazioni singoli.  

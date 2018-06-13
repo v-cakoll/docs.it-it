@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525588"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>Controllo CheckedListBox (Windows Form)
 Windows Form `CheckedListBox` controllo Visualizza un elenco di elementi, ad esempio il <xref:System.Windows.Forms.ListBox> controllo e può inoltre contenere un segno di spunta accanto agli elementi nell'elenco.  

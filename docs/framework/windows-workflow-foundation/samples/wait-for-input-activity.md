@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518996"
 ---
 # <a name="wait-for-input-activity"></a>Attività WaitForInput
 In questo esempio viene illustrato come creare segnalibri denominati in un flusso di lavoro. Windows Workflow Foundation (WF) non fornisce un'attività per la creazione dichiarativa del segnalibro. Pertanto, quando si desidera creare un segnalibro nel flusso di lavoro, è necessario scrivere un'attività personalizzata. L'attività `WaitForInput` definita in questo esempio fornisce questa funzionalità, in modo che gli utenti possano creare segnalibri in modo dichiarativo all'interno di un flusso di lavoro.  

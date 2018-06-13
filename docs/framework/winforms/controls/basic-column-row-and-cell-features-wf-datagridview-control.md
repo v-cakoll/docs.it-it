@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525494"
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form
 Molti comportamenti di base `DataGridView` celle, righe e colonne possono essere modificate impostando singole proprietà. Negli argomenti di questa sezione vengono descritti molti dei più comunemente utilizzate queste funzionalità.  
