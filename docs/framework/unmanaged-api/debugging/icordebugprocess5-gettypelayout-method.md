@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 16da3948d89febc12a72ef54fbc060689a3964c4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423247"
 ---
 # <a name="icordebugprocess5gettypelayout-method"></a>Metodo ICorDebugProcess5::GetTypeLayout
 Ottiene informazioni sul layout di un oggetto in memoria in base al relativo identificatore di tipo.  

@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 762b23af9eb6282a26d9b0430132023c9f76d1f6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431480"
 ---
 # <a name="fusion-structures"></a>Strutture Fusion
 In questa sezione descrive le strutture non gestite utilizzate dall'API Fusion.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556068"
 ---
 # <a name="scrollviewer"></a>ScrollViewer
 Il <xref:System.Windows.Controls.ScrollViewer> controllo crea un'area scorrevole in cui è possibile scorrere il contenuto orizzontalmente o verticalmente.  

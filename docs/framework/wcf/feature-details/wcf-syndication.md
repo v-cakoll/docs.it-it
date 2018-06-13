@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499167"
 ---
 # <a name="wcf-syndication"></a>Diffusione WCF
 Windows Communication Foundation (WCF) fornisce il supporto per operare con facilità i feed di diffusione in Atom, RSS o in altri formati personalizzati, che consente di leggere e il crearli, nonché esporli in un endpoint del servizio. Negli argomenti di questa sezione viene descritto dettagliatamente tale modello di programmazione per la diffusione.  

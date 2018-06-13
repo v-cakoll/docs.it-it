@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d88e9279f70c36fd8a9c626972e33305cded5fb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424391"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>Metodo ISymUnmanagedMethod::GetOffset
 Restituisce l'offset all'interno del metodo che corrisponde a una posizione specifica all'interno di un documento.  

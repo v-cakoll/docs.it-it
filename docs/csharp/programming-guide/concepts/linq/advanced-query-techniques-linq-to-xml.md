@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326316"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>Tecniche di query avanzate (LINQ to XML) (C#)
 Contenuto della sezione vengono forniti esempi di tecniche di query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] più avanzate.  

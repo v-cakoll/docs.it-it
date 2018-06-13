@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557966"
 ---
 # <a name="animation-and-timing-system-overview"></a>Cenni preliminari sull'animazione e sul sistema di temporizzazione
 Questo argomento viene descritto l'utilizzo di animazione, il sistema di temporizzazione <xref:System.Windows.Media.Animation.Timeline>, e <xref:System.Windows.Media.Animation.Clock> classi per l'animazione di proprietà.  

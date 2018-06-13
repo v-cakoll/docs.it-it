@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460489"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Aggiungere un riferimento al servizio in un progetto di subset portabili
 I progetti di subset portabili consentono ai programmatori di assembly .NET di gestire un unico albero di origine e compilare il sistema supportando comunque più implementazioni di .NET (desktop, Silverlight, Windows Phone e XBOX). Solo i progetti di subset portabili fanno riferimento a librerie portabili .NET che rappresentano un assembly di .NET framework che può essere usato in qualsiasi implementazione di .NET.  

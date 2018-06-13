@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386948"
 ---
 # <a name="developing-web-applications-with-aspnet"></a>Sviluppo di applicazioni Web con ASP.NET
 ASP.NET è una tecnologia .NET Framework per la creazione di applicazioni Web. I collegamenti seguenti vengono forniti per praticità:  

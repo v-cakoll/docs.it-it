@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498644"
 ---
 # <a name="operating-system-resources-required-by-wcf"></a>Risorse del sistema operativo richieste da WCF
 Windows Communication Foundation (WCF) dipende da diverse risorse fornite dal sistema operativo alla funzione. Nella tabella seguente vengono elencate tali risorse.  

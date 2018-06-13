@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749283"
 ---
 # <a name="ltcertificategt-for-ltidentitygt"></a>&lt;certificate&gt; di &lt;identity&gt;
 Specifica un certificato X.509 usato per convalidare un server presso un client.  

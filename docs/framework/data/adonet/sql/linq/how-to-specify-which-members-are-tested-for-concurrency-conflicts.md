@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362426"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Procedura: specificare per quali membri viene eseguito il test dei conflitti di concorrenza
 Applicare una delle tre enumerazioni al [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> proprietà in un <xref:System.Data.Linq.Mapping.ColumnAttribute> attributo per specificare quali membri devono essere inclusi nell'aggiornamento verifica il rilevamento dei conflitti di concorrenza ottimistica.  

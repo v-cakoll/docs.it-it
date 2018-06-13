@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589097"
 ---
 # <a name="decrypting-data"></a>Decrittografia di dati
 La decrittografia è l'inverso della crittografia. Per la crittografia a chiave privata è necessario conoscere sia la chiave che il valore di inizializzazione usati per crittografare i dati. Per la crittografia a chiave pubblica, è necessario conoscere sia la chiave pubblica (se i dati sono stati crittografati mediante la chiave privata) che la chiave privata (se i dati sono stati crittografati mediante la chiave pubblica).  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef5888c33e9532e5fc132fe571d59699d6f80c49
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425176"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>Metodo ISymUnmanagedReader::GetMethodByVersion
 Ottiene un metodo del lettore di simboli, dato un token di metodo e un numero di versione di modifica e copia. Numeri di versione iniziano da 1 e vengono incrementati ogni volta che il metodo viene modificato in seguito a un'operazione di modifica e copia.  

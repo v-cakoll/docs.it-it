@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576295"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Delegati generici per la modifica di matrici ed elenchi
 Questo argomento offre una panoramica dei delegati generici per conversioni, predicati di ricerca e azioni da eseguire sugli elementi di una matrice o di una raccolta.  

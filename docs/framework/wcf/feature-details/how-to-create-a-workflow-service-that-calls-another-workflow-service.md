@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497191"
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Procedura: creare un servizio flusso di lavoro che chiama un altro servizio flusso di lavoro
 Per un servizio di flusso di lavoro è talvolta necessario ottenere informazioni da un altro servizio analogo.  In questo argomento viene illustrato come eseguire chiamate tra servizi di flusso di lavoro. Verranno creati due servizi di flusso di lavoro: uno che dispone di un metodo che inverte la stringa di input e l'altro che converte la stringa di input in caratteri maiuscoli dopo aver invertito la stringa utilizzata dal primo servizio.  

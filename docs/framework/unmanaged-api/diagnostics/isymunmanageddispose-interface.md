@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 973fc35bb99bea6b3302760763069b9df6c548e4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424404"
 ---
 # <a name="isymunmanageddispose-interface"></a>Interfaccia ISymUnmanagedDispose
 Elimina le risorse non gestite.  

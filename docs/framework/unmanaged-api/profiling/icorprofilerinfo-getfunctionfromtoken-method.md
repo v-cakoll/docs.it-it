@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eb894e3f52d28ce419ddda90f9fc0ac0e8dce022
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461942"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a>Metodo ICorProfilerInfo::GetFunctionFromToken
 Ottiene l'ID di una funzione. Questo metodo è obsoleto in .NET Framework versione 2.0. Utilizzare il [ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) metodo invece.  

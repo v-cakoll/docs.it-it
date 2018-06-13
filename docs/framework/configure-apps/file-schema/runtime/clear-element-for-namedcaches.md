@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745513"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;deselezionare&gt; elemento per &lt;namedCaches&gt;
 Cancella tutti `namedCache` voci di `namedCaches` insieme per una cache in memoria.  

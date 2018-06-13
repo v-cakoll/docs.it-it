@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387104"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>Esempio di interoperabilità COM: client .NET e server COM
 Questo esempio illustra come un [client .NET](#cpconcominteropsamplenetclientcomserveranchor1), compilato per accedere a un [server COM](#cpconcominteropsamplenetclientcomserveranchor2), crea un'istanza di una coclasse COM e chiama membri della classe per eseguire calcoli relativi a un mutuo.  

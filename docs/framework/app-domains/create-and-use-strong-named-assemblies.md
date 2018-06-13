@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744642"
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Creazione e utilizzo degli assembly con nome sicuro
 <a name="top"></a> Un nome sicuro è costituito dall'identità dell'assembly, corrispondente al nome semplice in formato testo, al numero di versione e alle informazioni sulle impostazioni cultura eventualmente disponibili, nonché da una chiave pubblica e da una firma digitale. Questo nome viene generato da un file di assembly usando la chiave privata corrispondente. Il file di assembly contiene il manifesto dell'assembly, che include i nomi e gli hash di tutti i file che costituiscono l'assembly.  
