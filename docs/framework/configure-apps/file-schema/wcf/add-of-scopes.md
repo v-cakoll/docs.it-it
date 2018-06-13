@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745799"
 ---
 # <a name="ltaddgt-of-ltscopesgt"></a><span data-ttu-id="3bafc-102">&lt;add&gt; di &lt;scopes&gt;</span><span class="sxs-lookup"><span data-stu-id="3bafc-102">&lt;add&gt; of &lt;scopes&gt;</span></span>
 <span data-ttu-id="3bafc-103">Aggiunge URI di ambito personalizzato che è possibile usare per filtrare gli endpoint di servizio durante l'esecuzione di query.</span><span class="sxs-lookup"><span data-stu-id="3bafc-103">Adds a custom scope Uri that can be used to filter service endpoints during query.</span></span>  

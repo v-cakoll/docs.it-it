@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749426"
 ---
 # <a name="ltthrowunobservedtaskexceptionsgt-element"></a><span data-ttu-id="19aac-102">&lt;ThrowUnobservedTaskExceptions&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="19aac-102">&lt;ThrowUnobservedTaskExceptions&gt; Element</span></span>
 <span data-ttu-id="19aac-103">Specifica se le eccezioni di attività non gestite devono comportare l'arresto di un processo in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="19aac-103">Specifies whether unhandled task exceptions should terminate a running process.</span></span>  

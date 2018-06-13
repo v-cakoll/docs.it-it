@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746553"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="7ad86-102">&lt;rimuovere&gt; elemento per &lt;listener&gt; per &lt;traccia&gt;</span><span class="sxs-lookup"><span data-stu-id="7ad86-102">&lt;remove&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
 <span data-ttu-id="7ad86-103">Rimuove un listener di **listener** insieme.</span><span class="sxs-lookup"><span data-stu-id="7ad86-103">Removes a listener from the **Listeners** collection.</span></span>  

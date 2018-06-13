@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750752"
 ---
 # <a name="ltroutinggt-of-ltservicebehaviorgt"></a><span data-ttu-id="5f003-102">&lt;routing&gt; di &lt;serviceBehavior&gt;</span><span class="sxs-lookup"><span data-stu-id="5f003-102">&lt;routing&gt; of &lt;serviceBehavior&gt;</span></span>
 <span data-ttu-id="5f003-103">Fornisce l'accesso in fase di esecuzione al servizio di routing per consentire la modifica dinamica della configurazione di routing.</span><span class="sxs-lookup"><span data-stu-id="5f003-103">Provides run-time access to the routing service to allow dynamic modification of the routing configuration.</span></span>  

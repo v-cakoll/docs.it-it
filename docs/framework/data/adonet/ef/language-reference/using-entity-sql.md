@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762338"
 ---
 # <a name="using-entity-sql"></a><span data-ttu-id="e54fb-102">USING (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e54fb-102">USING (Entity SQL)</span></span>
 <span data-ttu-id="e54fb-103">Specifica gli spazi dei nomi usati in un'espressione di query.</span><span class="sxs-lookup"><span data-stu-id="e54fb-103">Specifies namespaces used in a query expression.</span></span>  

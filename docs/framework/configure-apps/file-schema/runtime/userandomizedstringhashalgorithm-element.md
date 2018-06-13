@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746085"
 ---
 # <a name="ltuserandomizedstringhashalgorithmgt-element"></a><span data-ttu-id="dd549-102">&lt;UseRandomizedStringHashAlgorithm&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="dd549-102">&lt;UseRandomizedStringHashAlgorithm&gt; Element</span></span>
 <span data-ttu-id="dd549-103">Determina se common language runtime calcola il codice hash per le stringhe in una base di un dominio di applicazione.</span><span class="sxs-lookup"><span data-stu-id="dd549-103">Determines whether the common language runtime calculates hash codes for strings on a per application domain basis.</span></span>  

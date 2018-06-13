@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395960"
 ---
 # <a name="how-to-configure-network-tracing"></a><span data-ttu-id="276cf-102">Procedura: Configurare la traccia di rete</span><span class="sxs-lookup"><span data-stu-id="276cf-102">How to: Configure Network Tracing</span></span>
 <span data-ttu-id="276cf-103">Nel file di configurazione del computer o dell'applicazione sono contenute le impostazioni che determinano il formato e il contenuto delle tracce di rete.</span><span class="sxs-lookup"><span data-stu-id="276cf-103">The application or computer configuration file holds the settings that determine the format and content of network traces.</span></span> <span data-ttu-id="276cf-104">Prima di eseguire questa procedura, assicurarsi che la funzionalità di traccia sia abilitata.</span><span class="sxs-lookup"><span data-stu-id="276cf-104">Before performing this procedure, be sure tracing is enabled.</span></span> <span data-ttu-id="276cf-105">Per informazioni su come abilitare la traccia di rete, vedere [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md).</span><span class="sxs-lookup"><span data-stu-id="276cf-105">For information about enabling tracing, see [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759621"
 ---
 # <a name="oracle-data-type-mappings"></a><span data-ttu-id="0ba4b-102">Mapping dei tipi di dati Oracle</span><span class="sxs-lookup"><span data-stu-id="0ba4b-102">Oracle Data Type Mappings</span></span>
 <span data-ttu-id="0ba4b-103">Nella tabella seguente sono elencati i tipi di dati Oracle e i relativi mapping al tipo <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="0ba4b-103">The following table lists Oracle data types and their mappings to the <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  

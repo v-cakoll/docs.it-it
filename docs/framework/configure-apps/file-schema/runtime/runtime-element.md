@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748672"
 ---
 # <a name="ltruntimegt-element"></a><span data-ttu-id="f75c3-102">&lt;runtime&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="f75c3-102">&lt;runtime&gt; Element</span></span>
 <span data-ttu-id="f75c3-103">Fornisce informazioni utilizzate da common language runtime per configurare le applicazioni.</span><span class="sxs-lookup"><span data-stu-id="f75c3-103">Provides information used by the common language runtime to configure applications.</span></span>  

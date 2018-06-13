@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758126"
 ---
 # <a name="how-to-create-a-publisher-policy"></a><span data-ttu-id="2dd25-102">Procedura: creare criteri editore</span><span class="sxs-lookup"><span data-stu-id="2dd25-102">How to: Create a Publisher Policy</span></span>
 <span data-ttu-id="2dd25-103">I fornitori di assembly è possono indicare che le applicazioni devono utilizzare una versione più recente di un assembly con l'inclusione di un file dei criteri editore con l'assembly aggiornato.</span><span class="sxs-lookup"><span data-stu-id="2dd25-103">Vendors of assemblies can state that applications should use a newer version of an assembly by including a publisher policy file with the upgraded assembly.</span></span> <span data-ttu-id="2dd25-104">File dei criteri editore specifica il reindirizzamento di assembly e le impostazioni di base di codice e Usa lo stesso formato del file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="2dd25-104">The publisher policy file specifies assembly redirection and code base settings, and uses the same format as an application configuration file.</span></span> <span data-ttu-id="2dd25-105">File dei criteri editore viene compilato in un assembly e inserito in global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="2dd25-105">The publisher policy file is compiled into an assembly and placed in the global assembly cache.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762455"
 ---
 # <a name="typed-datasets"></a><span data-ttu-id="48ac0-102">Dataset tipizzati</span><span class="sxs-lookup"><span data-stu-id="48ac0-102">Typed DataSets</span></span>
 <span data-ttu-id="48ac0-103">Oltre all'accesso ad associazione tardiva ai valori tramite variabili tipizzate in modo debole, nel tipo <xref:System.Data.DataSet> è disponibile l'accesso ai dati tramite una metafora tipizzata in modo sicuro.</span><span class="sxs-lookup"><span data-stu-id="48ac0-103">Along with late bound access to values through weakly typed variables, the <xref:System.Data.DataSet> provides access to data through a strongly typed metaphor.</span></span> <span data-ttu-id="48ac0-104">Tabelle e colonne che fanno parte di **DataSet** sono accessibili mediante nomi descrittivi e variabili fortemente tipizzate.</span><span class="sxs-lookup"><span data-stu-id="48ac0-104">Tables and columns that are part of the **DataSet** can be accessed using user-friendly names and strongly typed variables.</span></span>  

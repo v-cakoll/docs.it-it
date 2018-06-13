@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767180"
 ---
 # <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a><span data-ttu-id="68be3-102">Procedura: eseguire una query Entity SQL con parametri tramite EntityCommand</span><span class="sxs-lookup"><span data-stu-id="68be3-102">How to: Execute a Parameterized Entity SQL Query Using EntityCommand</span></span>
 <span data-ttu-id="68be3-103">In questo argomento viene illustrato come eseguire un [!INCLUDE[esql](../../../../../includes/esql-md.md)] query con parametri usando un <xref:System.Data.EntityClient.EntityCommand> oggetto.</span><span class="sxs-lookup"><span data-stu-id="68be3-103">This topic shows how to execute an [!INCLUDE[esql](../../../../../includes/esql-md.md)] query that has parameters by using an <xref:System.Data.EntityClient.EntityCommand> object.</span></span>  

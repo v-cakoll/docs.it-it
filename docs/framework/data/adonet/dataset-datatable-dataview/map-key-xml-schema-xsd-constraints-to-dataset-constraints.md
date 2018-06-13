@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757866"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="5cb8c-102">Mapping tra vincoli di chiave XML Schema (XSD) e vincoli di dataset</span><span class="sxs-lookup"><span data-stu-id="5cb8c-102">Map key XML Schema (XSD) Constraints to DataSet Constraints</span></span>
 <span data-ttu-id="5cb8c-103">In uno schema, è possibile specificare un vincolo di chiave su un elemento o attributo mediante la **chiave** elemento.</span><span class="sxs-lookup"><span data-stu-id="5cb8c-103">In a schema, you can specify a key constraint on an element or attribute using the **key** element.</span></span> <span data-ttu-id="5cb8c-104">È necessario che nell'elemento o nell'attributo per cui viene specificato il vincolo siano presenti valori univoci in qualsiasi istanza dello schema e che non sia presente alcun valore null.</span><span class="sxs-lookup"><span data-stu-id="5cb8c-104">The element or attribute on which a key constraint is specified must have unique values in any schema instance, and cannot have null values.</span></span>  

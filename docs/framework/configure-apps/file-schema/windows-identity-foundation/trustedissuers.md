@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757470"
 ---
 # <a name="lttrustedissuersgt"></a><span data-ttu-id="7c3f5-102">&lt;trustedIssuers&gt;</span><span class="sxs-lookup"><span data-stu-id="7c3f5-102">&lt;trustedIssuers&gt;</span></span>
 <span data-ttu-id="7c3f5-103">Consente di configurare l'elenco di certificati di autorità emittenti attendibili utilizzati dal Registro di sistema di nome dell'autorità di certificazione basata sulla configurazione (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).</span><span class="sxs-lookup"><span data-stu-id="7c3f5-103">Configures the list of trusted issuer certificates used by the configuration-based issuer name registry (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).</span></span>  

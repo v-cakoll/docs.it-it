@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761701"
 ---
 # <a name="in-entity-sql"></a><span data-ttu-id="f0610-102">IN (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f0610-102">IN (Entity SQL)</span></span>
 <span data-ttu-id="f0610-103">Determina se un valore corrisponde a qualsiasi valore in una raccolta.</span><span class="sxs-lookup"><span data-stu-id="f0610-103">Determines whether a value matches any value in a collection.</span></span>  

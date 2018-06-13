@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748659"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="c7bc8-102">&lt;deselezionare&gt; elemento per &lt;listener&gt; per &lt;traccia&gt;</span><span class="sxs-lookup"><span data-stu-id="c7bc8-102">&lt;clear&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
 <span data-ttu-id="c7bc8-103">Cancella la raccolta `Listeners` per una traccia.</span><span class="sxs-lookup"><span data-stu-id="c7bc8-103">Clears the `Listeners` collection for trace.</span></span>  

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755637"
 ---
 # <a name="ltsystemservicemodelgt-of-workflow"></a><span data-ttu-id="68152-102">&lt;System. ServiceModel&gt; del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="68152-102">&lt;system.serviceModel&gt; of workflow</span></span>
 <span data-ttu-id="68152-103">Contenuto della sezione di configurazione sono contenuti tutti gli elementi di configurazione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="68152-103">This configuration section contains all the workflow configuration elements.</span></span>  

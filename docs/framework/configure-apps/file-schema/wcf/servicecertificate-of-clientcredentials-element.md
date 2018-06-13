@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750245"
 ---
 # <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="399ee-102">Elemento &lt;serviceCertificate&gt; di &lt;clientCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="399ee-102">&lt;serviceCertificate&gt; of &lt;clientCredentials&gt; Element</span></span>
 <span data-ttu-id="399ee-103">Specifica un certificato da usare per l'autenticazione di un servizio presso il client.</span><span class="sxs-lookup"><span data-stu-id="399ee-103">Specifies a certificate to use when authenticating a service to the client.</span></span>  

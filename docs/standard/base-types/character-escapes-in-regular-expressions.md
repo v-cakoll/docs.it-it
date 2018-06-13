@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569908"
 ---
 # <a name="character-escapes-in-regular-expressions"></a><span data-ttu-id="b45b2-102">Caratteri di escape nelle espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="b45b2-102">Character Escapes in Regular Expressions</span></span>
 <span data-ttu-id="b45b2-103">La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="b45b2-103">The backslash (\\) in a regular expression indicates one of the following:</span></span>  

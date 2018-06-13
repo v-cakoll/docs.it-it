@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749098"
 ---
 # <a name="ltpolicyimportersgt"></a><span data-ttu-id="2880d-102">&lt;policyImporters&gt;</span><span class="sxs-lookup"><span data-stu-id="2880d-102">&lt;policyImporters&gt;</span></span>
 <span data-ttu-id="2880d-103">Questo elemento di configurazione specifica tutte le unità di importazione dei criteri che controllano l'importazione di asserzioni di criteri personalizzate relative alle associazioni.</span><span class="sxs-lookup"><span data-stu-id="2880d-103">This configuration element specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span> <span data-ttu-id="2880d-104">Ogni elemento figlio è un elemento <`policyImporter`> che viene usato per la ricerca di asserzioni di criteri personalizzati sulle funzionalità di associazione e per allegare un elemento di associazione personalizzato che implementa le funzionalità richieste dall'asserzione.</span><span class="sxs-lookup"><span data-stu-id="2880d-104">Each child element is a <`policyImporter`> that is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>  

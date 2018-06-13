@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753469"
 ---
 # <a name="ltendtoendtracinggt"></a><span data-ttu-id="5ba54-102">&lt;endToEndTracing&gt;</span><span class="sxs-lookup"><span data-stu-id="5ba54-102">&lt;endToEndTracing&gt;</span></span>
 <span data-ttu-id="5ba54-103">Elemento di configurazione che consente di abilitare e disabilitare aspetti diversi di traccia end-to-end durante l'esecuzione di un'applicazione di servizio.</span><span class="sxs-lookup"><span data-stu-id="5ba54-103">A configuration element that allows you to enable and disable different aspects of end-to-end tracing during the running of a service application.</span></span>  

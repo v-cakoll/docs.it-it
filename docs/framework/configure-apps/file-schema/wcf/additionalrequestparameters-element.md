@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746527"
 ---
 # <a name="ltadditionalrequestparametersgt-element"></a><span data-ttu-id="fa832-102">Elemento &lt;additionalRequestParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="fa832-102">&lt;additionalRequestParameters&gt; element</span></span>
 <span data-ttu-id="fa832-103">Contiene una raccolta di elementi di configurazione che specificano parametri di richiesta aggiuntivi.</span><span class="sxs-lookup"><span data-stu-id="fa832-103">This contains a collection of configuration elements that specify additional request parameters.</span></span>  
