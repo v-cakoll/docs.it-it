@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500978"
 ---
 # <a name="wcf-and-net-framework-client-profile"></a>WCF e .NET Framework Client Profile
 [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)] è una versione semplice e pratica della versione completa di .Net Framework progettata per i client che non necessitano dell'intero framework. Windows Communication Foundation non è completamente supportato dal framework client.  

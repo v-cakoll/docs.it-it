@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497945"
 ---
 # <a name="using-metadata"></a>Uso di metadati
 I metadati del servizio contengono una descrizione leggibile dal computer del servizio. In essi sono incluse le descrizioni degli endpoint del servizio, delle associazioni, dei contratti, delle operazioni e dei messaggi. Possono essere utilizzati per vari scopi, tra cui la generazione automatica di un client per l'utilizzo del servizio, l'implementazione della descrizione del servizio e l'aggiornamento dinamico dell'associazione per un client.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495996"
 ---
 # <a name="accessing-services-using-a-client"></a>Accesso ai servizi tramite client
 Le applicazioni client devono creare, configurare e usare oggetti client o canale WCF per comunicare con i servizi. Il [panoramica dei Client WCF](../../../../docs/framework/wcf/wcf-client-overview.md) argomento viene fornita una panoramica degli oggetti e passaggi coinvolti nella creazione di oggetti client e il canale di base e il relativo utilizzo.  

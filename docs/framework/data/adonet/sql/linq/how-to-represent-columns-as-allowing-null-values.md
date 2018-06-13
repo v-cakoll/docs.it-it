@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355977"
 ---
 # <a name="how-to-represent-columns-as-allowing-null-values"></a>Procedura: rappresentare colonne per l'accettazione di valori Null
 Utilizzare il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> proprietà il <xref:System.Data.Linq.Mapping.ColumnAttribute> attributo per specificare che la colonna di database associata può contenere valori null.  

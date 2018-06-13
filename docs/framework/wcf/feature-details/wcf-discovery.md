@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497958"
 ---
 # <a name="wcf-discovery"></a>WCF Discovery
 Windows Communication Foundation (WCF) fornisce il supporto per abilitare i servizi di essere individuabile in fase di esecuzione in una modalità interoperativa utilizzando il protocollo WS-Discovery. Servizi WCF possono annunciare la disponibilità alla rete tramite un messaggio multicast o a un server proxy di individuazione. Le applicazioni client possono eseguire ricerche nella rete o in un server proxy di individuazione per trovare servizi che soddisfano un set di criteri. Negli argomenti di questa sezione viene fornita una panoramica e viene proposta una descrizione dettagliata del modello di programmazione per questa funzionalità.  

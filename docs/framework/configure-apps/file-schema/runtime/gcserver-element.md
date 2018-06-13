@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745019"
 ---
 # <a name="ltgcservergt-element"></a>&lt;gcServer&gt; elemento
 Specifica se Common Language Runtime esegue Garbage Collection per server.  

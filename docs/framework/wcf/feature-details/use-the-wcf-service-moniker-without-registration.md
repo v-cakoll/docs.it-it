@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497971"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Procedura: usare il moniker servizio di Windows Communication Foundation senza registrazione
 Per connettersi e comunicare con un servizio Windows Communication Foundation (WCF), un'applicazione client WCF deve avere i dettagli del contratto di servizio, l'indirizzo del servizio e la configurazione dell'associazione.  

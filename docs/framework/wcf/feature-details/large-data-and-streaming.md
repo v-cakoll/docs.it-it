@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496562"
 ---
 # <a name="large-data-and-streaming"></a>Dati di grandi dimensioni e flussi
 Windows Communication Foundation (WCF) è un'infrastruttura di comunicazioni basate su XML. Poiché i dati XML in genere è codificati in formato testo standard definito nel [specifica XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)connesse, gli architetti e sviluppatori di sistemi in genere riguardano il footprint di trasmissione (o dimensioni) di messaggi inviati tra la rete e la codifica basata su testo XML comporta problemi speciali per il trasferimento efficiente di dati binari.  

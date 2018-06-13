@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509034"
 ---
 # <a name="wcf-discovery-object-model"></a>Modello a oggetti WCF Discovery
 WCF Discovery è costituito da un set di tipi che forniscono un modello di programmazione unificato che consente di scrivere servizi individuabili al runtime e client in grado di trovare e utilizzare tali servizi.  

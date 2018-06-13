@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563467"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>Gestione di xml:space in XAML
 Il `xml:space` attributo è un attributo basato su XML che dichiara il comportamento di elaborazione degli spazi vuoti significativi all'interno di un elemento dell'oggetto. Questo comportamento è pertinente per tutto il contenuto (testo interno) all'interno dell'elemento in cui `xml:space` viene dichiarato e definisce l'ambito per gli elementi figlio.  

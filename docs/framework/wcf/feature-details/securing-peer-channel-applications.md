@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497555"
 ---
 # <a name="securing-peer-channel-applications"></a>Protezione di applicazioni del canale peer
 Analogamente alle altre associazioni in [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` ha la protezione attivata per impostazione predefinita e offre la protezione basata sul trasporto e/o sui messaggi. In questo argomento vengono illustrati questi due tipi di sicurezza. Il tipo di sicurezza viene specificato dal tag della modalità di sicurezza nella specifica dell'associazione (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode` ).  

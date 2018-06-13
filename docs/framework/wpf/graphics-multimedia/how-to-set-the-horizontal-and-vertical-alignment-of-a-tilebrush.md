@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563597"
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Procedura: impostare l'allineamento orizzontale e verticale di un TileBrush
 Questo esempio spiega come controllare l'allineamento orizzontale e verticale del contenuto in una tessera. Per controllare l'allineamento orizzontale e verticale di un <xref:System.Windows.Media.TileBrush>, utilizzare il relativo <xref:System.Windows.Media.TileBrush.AlignmentX%2A> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> proprietà.  

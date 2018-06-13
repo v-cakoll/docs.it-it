@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547879"
 ---
 # <a name="the-ink-threading-model"></a>Modello di threading dell'input penna
 Uno dei vantaggi dell'input penna di Tablet PC è che sensazione di scrittura con carta e penna regolare.  A tale scopo, la penna di Tablet PC raccoglie dati di input a una velocità maggiore rispetto a un mouse ed esegue il rendering dell'input penna mentre l'utente scrive.  Thread di interfaccia utente dell'applicazione non è sufficiente per la raccolta dei dati della penna e input penna di rendering, in quanto può essere bloccato.  Per risolvere il problema, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione utilizza due thread aggiuntivi quando un utente scrive input penna.  

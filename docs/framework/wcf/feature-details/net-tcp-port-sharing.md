@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497152"
 ---
 # <a name="nettcp-port-sharing"></a>Condivisione delle porte Net.TCP
 Windows Communication Foundation (WCF) fornisce un nuovo protocollo di rete basata su TCP (net.tcp://) per la comunicazione ad alte prestazioni. WCF introduce inoltre un nuovo componente di sistema, il servizio condivisione porte NET che consente le porte Net. TCP per la condivisione tra più processi utente.  
