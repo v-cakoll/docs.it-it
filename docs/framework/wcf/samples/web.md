@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805113"
 ---
 # <a name="web"></a><span data-ttu-id="8f6bf-102">Web</span><span class="sxs-lookup"><span data-stu-id="8f6bf-102">Web</span></span>
 <span data-ttu-id="8f6bf-103">Contenuto della sezione sono inclusi esempi ospitati sul Web.</span><span class="sxs-lookup"><span data-stu-id="8f6bf-103">This section contains Web-hosted samples.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805041"
 ---
 # <a name="message-security-binding"></a><span data-ttu-id="1eccd-102">Associazioni di sicurezza ai messaggi</span><span class="sxs-lookup"><span data-stu-id="1eccd-102">Message Security Binding</span></span>
 <span data-ttu-id="1eccd-103">In questa sezione è inclusi esempi che illustrano l'associazione di sicurezza di messaggi in servizi di Windows in WCF.</span><span class="sxs-lookup"><span data-stu-id="1eccd-103">This section contains samples that demonstrate message security binding in Windows Services in WCF.</span></span>  
