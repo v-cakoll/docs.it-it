@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803582"
 ---
 # <a name="deploying-services"></a><span data-ttu-id="6ee19-102">Distribuzione di servizi</span><span class="sxs-lookup"><span data-stu-id="6ee19-102">Deploying Services</span></span>
 <span data-ttu-id="6ee19-103">In questo argomento viene descritto come è possibile distribuire un'applicazione Windows Communication Foundation (WCF) in un ambiente di runtime.</span><span class="sxs-lookup"><span data-stu-id="6ee19-103">This topic describes how you can deploy a Windows Communication Foundation (WCF) application to a run-time environment.</span></span>  

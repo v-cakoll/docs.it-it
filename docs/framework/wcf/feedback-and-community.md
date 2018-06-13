@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810161"
 ---
 # <a name="feedback-and-community"></a><span data-ttu-id="38bbc-102">Feedback e community</span><span class="sxs-lookup"><span data-stu-id="38bbc-102">Feedback and Community</span></span>
 <span data-ttu-id="38bbc-103">Grazie per commenti e dubbi su Windows Communication Foundation (WCF) o [!INCLUDE[infocard](../../../includes/infocard-md.md)] documentazione.</span><span class="sxs-lookup"><span data-stu-id="38bbc-103">We appreciate your comments and concerns about the Windows Communication Foundation (WCF) or [!INCLUDE[infocard](../../../includes/infocard-md.md)] documentation.</span></span> <span data-ttu-id="38bbc-104">Nella parte inferiore di ogni pagina della documentazione SDK è presente la frase "Invia commenti su questo argomento a Microsoft".</span><span class="sxs-lookup"><span data-stu-id="38bbc-104">On the bottom of every page in the SDK is the sentence "Send comments about this topic to Microsoft."</span></span> <span data-ttu-id="38bbc-105">Fare clic sul collegamento "Commenti" per inviare idee o suggerimenti sull'argomento specifico.</span><span class="sxs-lookup"><span data-stu-id="38bbc-105">Click the "comments" link to send your views or suggestions about the specific topic.</span></span>  

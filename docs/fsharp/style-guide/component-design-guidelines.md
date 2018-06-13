@@ -7,6 +7,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458086"
 ---
 # <a name="f-component-design-guidelines"></a><span data-ttu-id="50949-103">Indicazioni per la progettazione di componenti F #</span><span class="sxs-lookup"><span data-stu-id="50949-103">F# component design guidelines</span></span>
 

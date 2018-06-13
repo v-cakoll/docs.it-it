@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549620"
 ---
 # <a name="collections-c"></a><span data-ttu-id="90e68-102">Raccolte (C#)</span><span class="sxs-lookup"><span data-stu-id="90e68-102">Collections (C#)</span></span>
 <span data-ttu-id="90e68-103">Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati.</span><span class="sxs-lookup"><span data-stu-id="90e68-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="90e68-104">È possibile raggruppare gli oggetti in due modi: creando matrici di oggetti e creando raccolte di oggetti.</span><span class="sxs-lookup"><span data-stu-id="90e68-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>  

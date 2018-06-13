@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803595"
 ---
 # <a name="windows-communication-foundation-bindings"></a><span data-ttu-id="a3b56-102">Associazioni di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="a3b56-102">Windows Communication Foundation Bindings</span></span>
 <span data-ttu-id="a3b56-103">Le associazioni specificano come un endpoint del servizio Windows Communication Foundation (WCF) comunica con altri endpoint.</span><span class="sxs-lookup"><span data-stu-id="a3b56-103">Bindings specify how a Windows Communication Foundation (WCF) service endpoint communicates with other endpoints.</span></span> <span data-ttu-id="a3b56-104">In parole semplici, un'associazione deve specificare il trasporto (ad esempio HTTP o TCP) da utilizzare.</span><span class="sxs-lookup"><span data-stu-id="a3b56-104">At its most basic, a binding must specify the transport (for example, HTTP or TCP) to use.</span></span> <span data-ttu-id="a3b56-105">Le associazioni consentono inoltre di impostare altre caratteristiche, ad esempio la protezione e il supporto delle transazioni.</span><span class="sxs-lookup"><span data-stu-id="a3b56-105">You can also set other characteristics, such as security and transaction support, through bindings.</span></span>  
