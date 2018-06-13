@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217643"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a><span data-ttu-id="f8624-103">Organizzazione e test di progetti con la riga di comando di .NET Core</span><span class="sxs-lookup"><span data-stu-id="f8624-103">Organizing and testing projects with the .NET Core command line</span></span>
 

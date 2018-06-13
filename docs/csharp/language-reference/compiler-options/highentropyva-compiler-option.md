@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216678"
 ---
 # <a name="-highentropyva-c-compiler-options"></a><span data-ttu-id="3c201-102">-highentropyva (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="3c201-102">-highentropyva (C# Compiler Options)</span></span>
 <span data-ttu-id="3c201-103">L'opzione del compilatore **-highentropyva** indica al kernel di Windows se un particolare eseguibile supporta la funzionalità ASLR (Address Space Layout Randomization) a entropia elevata.</span><span class="sxs-lookup"><span data-stu-id="3c201-103">The **-highentropyva** compiler option tells the Windows kernel whether a particular executable supports high entropy Address Space Layout Randomization (ASLR).</span></span>  

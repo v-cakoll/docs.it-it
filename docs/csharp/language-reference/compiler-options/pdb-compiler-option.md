@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217428"
 ---
 # <a name="-pdb-c-compiler-options"></a><span data-ttu-id="30d29-102">-pdb (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="30d29-102">-pdb (C# Compiler Options)</span></span>
 <span data-ttu-id="30d29-103">L'opzione del compilatore **-pdb** consente di specificare il nome e il percorso del file dei simboli di debug.</span><span class="sxs-lookup"><span data-stu-id="30d29-103">The **-pdb** compiler option specifies the name and location of the debug symbols file.</span></span>  

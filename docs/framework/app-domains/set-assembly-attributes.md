@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752201"
 ---
 # <a name="setting-assembly-attributes"></a><span data-ttu-id="67ddc-102">Impostazione degli attributi dell'assembly</span><span class="sxs-lookup"><span data-stu-id="67ddc-102">Setting Assembly Attributes</span></span>
 <span data-ttu-id="67ddc-103">Gli attributi dell'assembly sono valori che forniscono informazioni relative a un assembly.</span><span class="sxs-lookup"><span data-stu-id="67ddc-103">Assembly attributes are values that provide information about an assembly.</span></span> <span data-ttu-id="67ddc-104">Tali attributi sono suddivisi nei seguenti gruppi di informazioni:</span><span class="sxs-lookup"><span data-stu-id="67ddc-104">The attributes are divided into the following sets of information:</span></span>  

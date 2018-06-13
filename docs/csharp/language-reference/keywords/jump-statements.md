@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265220"
 ---
 # <a name="jump-statements-c-reference"></a><span data-ttu-id="dd446-102">Istruzioni di spostamento (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="dd446-102">Jump Statements (C# Reference)</span></span>
 <span data-ttu-id="dd446-103">Le diramazioni vengono eseguite usando istruzioni di salto che provocano l'immediato trasferimento del controllo del programma.</span><span class="sxs-lookup"><span data-stu-id="dd446-103">Branching is performed using jump statements, which cause an immediate transfer of the program control.</span></span> <span data-ttu-id="dd446-104">Nelle istruzioni di salto vengono usate le parole chiave seguenti:</span><span class="sxs-lookup"><span data-stu-id="dd446-104">The following keywords are used in jump statements:</span></span>  

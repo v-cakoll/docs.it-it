@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756072"
 ---
 # <a name="ltfaultpropagationquerygt"></a><span data-ttu-id="10ed6-102">&lt;faultPropagationQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="10ed6-102">&lt;faultPropagationQuery&gt;</span></span>
 <span data-ttu-id="10ed6-103">Rappresenta una query usata per rilevare la gestione degli errori che si verificano all'interno di un'attività.</span><span class="sxs-lookup"><span data-stu-id="10ed6-103">Represents a query that is used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="10ed6-104">Questo evento si verifica ogni volta che un FaultHandler elabora un errore.</span><span class="sxs-lookup"><span data-stu-id="10ed6-104">This event occurs each time a FaultHandler processes a fault.</span></span> <span data-ttu-id="10ed6-105">È necessario usare tale query per rilevare la gestione degli errori che si verificano all'interno di un'attività.</span><span class="sxs-lookup"><span data-stu-id="10ed6-105">You should use such query to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="10ed6-106">La query è necessaria affinché un partecipante del rilevamento sottoscriva i record di propagazione degli errori.</span><span class="sxs-lookup"><span data-stu-id="10ed6-106">The query is necessary for a  tracking participant to subscribe to fault propagation records.</span></span>  

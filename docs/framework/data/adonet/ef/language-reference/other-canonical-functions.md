@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761207"
 ---
 # <a name="other-canonical-functions"></a><span data-ttu-id="25603-102">Altre funzioni matematiche</span><span class="sxs-lookup"><span data-stu-id="25603-102">Other Canonical Functions</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="25603-103"> include funzioni canoniche non classificate come bit per bit, di aggregazione, matematiche, di data e ora o per i valori stringa.</span><span class="sxs-lookup"><span data-stu-id="25603-103"> includes canonical functions not classified as bitwise, aggregate, math, date/time, or string.</span></span>  

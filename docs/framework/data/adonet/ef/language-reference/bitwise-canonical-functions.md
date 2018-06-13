@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761194"
 ---
 # <a name="bitwise-canonical-functions"></a><span data-ttu-id="9dbce-102">Funzioni canoniche bit per bit</span><span class="sxs-lookup"><span data-stu-id="9dbce-102">Bitwise Canonical Functions</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="9dbce-103"> include funzioni canoniche bit per bit.</span><span class="sxs-lookup"><span data-stu-id="9dbce-103"> includes bitwise canonical functions.</span></span>  

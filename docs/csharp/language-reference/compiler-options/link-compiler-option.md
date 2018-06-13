@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217207"
 ---
 # <a name="-link-c-compiler-options"></a><span data-ttu-id="7f038-102">-link (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="7f038-102">-link (C# Compiler Options)</span></span>
 <span data-ttu-id="7f038-103">Indica al compilatore di rendere disponibili al progetto in fase di compilazione le informazioni sui tipi COM presenti negli assembly specificati.</span><span class="sxs-lookup"><span data-stu-id="7f038-103">Causes the compiler to make COM type information in the specified assemblies available to the project that you are currently compiling.</span></span>  

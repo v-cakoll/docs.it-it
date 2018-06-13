@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755461"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a><span data-ttu-id="b5da1-102">Procedura: individuare assembly mediante DEVPATH</span><span class="sxs-lookup"><span data-stu-id="b5da1-102">How to: Locate Assemblies by Using DEVPATH</span></span>
 <span data-ttu-id="b5da1-103">Gli sviluppatori desiderano assicurarsi che funzioni correttamente in un assembly condiviso che viene compilato con più applicazioni.</span><span class="sxs-lookup"><span data-stu-id="b5da1-103">Developers might want to make sure that a shared assembly they are building works correctly with multiple applications.</span></span> <span data-ttu-id="b5da1-104">Anziché inserire continuamente l'assembly nella global assembly cache durante il ciclo di sviluppo, lo sviluppatore può creare una variabile di ambiente DEVPATH che punta alla directory di output di compilazione per l'assembly.</span><span class="sxs-lookup"><span data-stu-id="b5da1-104">Instead of continually putting the assembly in the global assembly cache during the development cycle, the developer can create a DEVPATH environment variable that points to the build output directory for the assembly.</span></span>  
