@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213223"
 ---
 # <a name="exception-handling-statements-c-reference"></a>Istruzioni di gestione delle eccezioni (Riferimenti per C#)
 C# viene offre supporto predefinito per la gestione di situazioni anomale, denominate eccezioni, che possono verificarsi durante l'esecuzione di un programma. Queste eccezioni vengono gestite da codice esterno rispetto al normale flusso di controllo.  

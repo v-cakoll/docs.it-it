@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c8f4cffd718fffa9145e1082092ecec45b80a2ec
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451059"
 ---
 # <a name="corprfmisc-enumeration"></a>Enumerazione COR_PRF_MISC
 Contiene valori costanti che specificano identificatori speciali.  

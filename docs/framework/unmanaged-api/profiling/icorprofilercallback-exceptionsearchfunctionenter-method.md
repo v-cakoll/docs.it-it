@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 48af2d4738d09a3b3701e0b4d6bf18209bffa6d8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450772"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>Metodo ICorProfilerCallback::ExceptionSearchFunctionEnter
 Notifica al profiler che la fase di ricerca di gestione delle eccezioni ha iniziato la ricerca di una funzione per trovare un gestore per l'eccezione corrente.  

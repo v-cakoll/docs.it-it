@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570603"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Linee guida di progettazione delle eccezioni
 Eccezioni presenta numerosi vantaggi rispetto alla segnalazione errori basato sul valore restituito. Progettazione di framework valido consente lo sviluppatore di applicazioni i vantaggi delle eccezioni. In questa sezione vengono illustrati i vantaggi delle eccezioni e vengono fornite linee guida per il loro utilizzo in modo efficace.  

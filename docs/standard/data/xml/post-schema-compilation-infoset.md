@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569629"
 ---
 # <a name="post-schema-compilation-infoset"></a>Post-Schema Compilation Infoset (PSCI, infoset sulla compilazione post-schema)
 Nel documento [World Wide Web Consortium (W3C) XML Schema Recommendation](https://www.w3.org/XML/Schema) viene illustrato il set di informazioni (infoset) che deve essere esposto per la convalida pre-schema e la compilazione post-schema. Il modello SOM (Schema Object Model) XML visualizza questa esposizione prima e dopo che venga chiamato il metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>.  

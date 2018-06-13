@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564136"
 ---
 # <a name="xmembers-directive"></a>Direttiva x:Members
 Contiene un set di membri che sono definiti nel markup, che si applicano alle X:Class dell'elemento padre.  

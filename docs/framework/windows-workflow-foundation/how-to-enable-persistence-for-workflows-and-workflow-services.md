@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514418"
 ---
 # <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Procedura: abilitare la persistenza per i flussi di lavoro e i relativi servizi
 In questo argomento viene descritto come abilitare la persistenza dei flussi di lavoro e dei servizi flusso di lavoro.  

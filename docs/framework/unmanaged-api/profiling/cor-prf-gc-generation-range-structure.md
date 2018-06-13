@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1f4c8e9a7ce5eddde18c1266cb724d5c3b0d5f41
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450321"
 ---
 # <a name="corprfgcgenerationrange-structure"></a>Struttura COR_PRF_GC_GENERATION_RANGE
 Descrive un intervallo, ovvero un blocco, di memoria sottoposto a Garbage Collection.  

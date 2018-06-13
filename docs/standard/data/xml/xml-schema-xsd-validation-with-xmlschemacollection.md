@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572197"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Convalida XSD (XML Schema) con XmlSchemaCollection
 È possibile usare il tipo <xref:System.Xml.Schema.XmlSchemaCollection> per convalidare un documento XML in base a schemi XSD (XML Schema Definition Language). Il tipo <xref:System.Xml.Schema.XmlSchemaCollection> migliora le prestazioni archiviando gli schemi nella raccolta in modo che non vengano caricati in memoria ogni volta che viene eseguita la convalida. Se lo schema esiste nella raccolta di schemi, l'attributo `schemaLocation` verrà usato per cercare lo schema nella raccolta.  

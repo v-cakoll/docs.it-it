@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568528"
 ---
 # <a name="node-collections-in-namednodemaps-and-nodelists"></a>Raccolte di nodi in NamedNodeMaps e NodeLists
 È possibile recuperare un set di nodi e inserirlo in una raccolta ordinata o non ordinata. Quando si inserisce un set di nodi in una raccolta non ordinata, tale set viene chiamato NamedNodeMap dal W3C; in questo tipo di raccolta è possibile recuperare i dati in base al nome o all'indice. L'inserimento di un set di nodi in una raccolta ordinata viene denominato NodeList dal W3C e i dati possono essere recuperati tramite un indice con base zero. NamedNodeMaps e NodeLists sono descritti dal W3C. Le implementazioni in Microsoft .NET Framework per NamedNodeMap sono **XmlNamedNodeMap** e NodeList viene implementato da **XmlNodeList**.  

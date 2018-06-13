@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d82952e34195ee813d4cd0217c904a5253859f99
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445108"
 ---
 # <a name="iceegengenerateceefile-method"></a>Metodo ICeeGen::GenerateCeeFile
 Genera un file di base di codice che contiene il codice base attualmente caricato in [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfaccia.  

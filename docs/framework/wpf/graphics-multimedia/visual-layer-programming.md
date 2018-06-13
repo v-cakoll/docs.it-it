@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561735"
 ---
 # <a name="visual-layer-programming"></a>Programmazione a livello visivo
 Il <xref:System.Windows.Media.Visual> oggetto è un core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oggetto, il cui ruolo primario è di fornire supporto per il rendering. Controlli dell'interfaccia utente, ad esempio <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.TextBox>, derivare la <xref:System.Windows.Media.Visual> e come utilizzarla per mantenere i dati di rendering.  
