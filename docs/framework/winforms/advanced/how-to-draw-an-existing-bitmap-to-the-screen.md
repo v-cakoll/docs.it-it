@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522320"
 ---
 # <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Procedura: disegnare una bitmap esistente sullo schermo
 Nella schermata, è possibile creare facilmente un'immagine esistente. È necessario innanzitutto creare un <xref:System.Drawing.Bitmap> oggetto utilizzando il costruttore di bitmap che accetta un nome file, <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>. Questo costruttore accetta immagini con vari formati di file, tra cui BMP, GIF, JPEG, PNG e TIFF. Dopo aver creato il <xref:System.Drawing.Bitmap> dell'oggetto, quindi passare tale <xref:System.Drawing.Bitmap> dell'oggetto per il <xref:System.Drawing.Graphics.DrawImage%2A> metodo di un <xref:System.Drawing.Graphics> oggetto.  

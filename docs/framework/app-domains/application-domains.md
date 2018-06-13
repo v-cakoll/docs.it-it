@@ -19,6 +19,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34233951"
 ---
 # <a name="application-domains"></a>Domini applicazione
 I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di isolamento tra le applicazioni. Windows, ad esempio, usa i processi per isolare le applicazioni. L'isolamento è necessario per garantire che il codice in esecuzione in un'applicazione non interferisca con altre applicazioni non correlate.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542574"
 ---
 # <a name="drag-and-drop"></a>Trascinamento e rilascio
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un'infrastruttura di rilascio che supporta il trascinamento dei dati all'interno sia estremamente flessibile [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni, nonché altri [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applicazioni.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493195"
 ---
 # <a name="correlation-overview"></a>Panoramica della correlazione
 La correlazione è il meccanismo che consente di correlare i messaggi del servizio flusso di lavoro l'uno all'altro o allo stato dell'istanza dell'applicazione, ad esempio una risposta a una richiesta iniziale o un particolare ID dell'ordine allo stato persistente di un flusso di lavoro di elaborazione di un ordine. In questo argomento vengono forniti cenni preliminari sulla correlazione. Gli altri argomenti in questa sezione forniscono informazioni aggiuntive per ogni tipo di correlazione.  

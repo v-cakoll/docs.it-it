@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542236"
 ---
 # <a name="windows-forms-security"></a>Sicurezza di Windows Form
 Windows Form dispongono di un modello di sicurezza è basata su codice (sicurezza livelli sono impostati per il codice, indipendentemente dall'utente che esegue il codice). Si tratta di oltre agli schemi di sicurezza eventualmente già installati nel sistema. Sono inclusi quelli nel browser (ad esempio, la sicurezza basata sull'area in Internet Explorer) o il sistema operativo (ad esempio, la sicurezza basata su credenziali di Windows NT).  

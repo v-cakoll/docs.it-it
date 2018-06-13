@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534300"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Procedura: creare una casella di testo Password con il controllo TextBox Windows Form
 Una casella della password è una casella di testo di Windows Form che consente di visualizzare caratteri segnaposto mentre l'utente digita una stringa.  

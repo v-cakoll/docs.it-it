@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496637"
 ---
 # <a name="messaging-protocols"></a>Protocolli di messaggistica
 Lo stack dei canali Windows Communication Foundation (WCF) utilizza canali di codifica e trasporto per trasformare le rappresentazioni interne dei messaggi nel relativo formato di trasmissione e inviarlo tramite un determinato trasporto. Il trasporto più comunemente utilizzato per garantire l'interoperabilità dei servizi Web è il protocollo HTTP, mentre le codifiche utilizzate dai servizi Web sono in genere SOAP 1.1 basato su XML, SOAP 1.2 e il protocollo MTOM (Message Transmission Optimization Mechanism, meccanismo di ottimizzazione della trasmissione dei messaggi).  

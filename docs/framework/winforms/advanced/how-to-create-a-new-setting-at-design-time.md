@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523767"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Procedura: creare una nuova impostazione in fase di progettazione
 È possibile creare una nuova impostazione in fase di progettazione tramite Progettazione impostazioni. Progettazione impostazioni è un'interfaccia di stile di griglia che consente di creare nuove impostazioni e specificare le proprietà per tali impostazioni. È necessario specificare nome, valore, tipo e ambito per le nuove impostazioni. Dopo aver creata un'impostazione, è accessibile nel codice.  

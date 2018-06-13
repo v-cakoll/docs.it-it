@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543719"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Procedura: Eseguire l'override dei metadati per una proprietà di dipendenza
 Questo esempio viene illustrato come eseguire l'override di metadati di proprietà di dipendenza predefinito provengono da una classe ereditata, chiamando il <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> (metodo) e fornendo i metadati specifici del tipo.  

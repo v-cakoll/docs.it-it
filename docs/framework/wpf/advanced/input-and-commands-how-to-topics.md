@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544288"
 ---
 # <a name="input-and-commands-how-to-topics"></a>Procedure relative all'input e ai comandi
 Negli argomenti di questa sezione viene descritto come utilizzare l'infrastruttura di input e comandi in Windows Presentation Foundation (WPF).  

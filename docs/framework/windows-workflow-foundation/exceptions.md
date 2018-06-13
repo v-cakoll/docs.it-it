@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520159"
 ---
 # <a name="exceptions"></a>Eccezioni
 I flussi di lavoro possono usare l'attività <xref:System.Activities.Statements.TryCatch> per gestire le eccezioni generate durante l'esecuzione di un flusso di lavoro. Queste eccezioni possono essere gestite o generate una seconda volta usando l'attività <xref:System.Activities.Statements.Rethrow>. Le attività della sezione <xref:System.Activities.Statements.TryCatch.Finally%2A> vengono eseguite quando viene completata la sezione <xref:System.Activities.Statements.TryCatch.Try%2A> o <xref:System.Activities.Statements.TryCatch.Catches%2A>. I flussi di lavoro ospitato da un <xref:System.Activities.WorkflowApplication> istanza consente inoltre di <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> gestore eventi per gestire le eccezioni non gestite da un <xref:System.Activities.Statements.TryCatch> attività.  

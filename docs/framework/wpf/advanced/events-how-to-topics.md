@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543527"
 ---
 # <a name="events-how-to-topics"></a>Procedure relative agli eventi
 Negli argomenti di questa sezione viene descritto come utilizzare gli eventi in WPF.  

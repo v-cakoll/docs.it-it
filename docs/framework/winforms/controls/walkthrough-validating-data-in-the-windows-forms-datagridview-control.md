@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540963"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Procedura dettagliata: convalida di dati nel controllo DataGridView Windows Form
 Quando si visualizza la funzionalità di immissione di dati agli utenti, è spesso necessario convalidare i dati immessi nel form. La <xref:System.Windows.Forms.DataGridView> classe fornisce un modo pratico per eseguire la convalida prima di dati vengono eseguito il commit nell'archivio dati. È possibile convalidare i dati mediante la gestione di <xref:System.Windows.Forms.DataGridView.CellValidating> evento, viene generato dal <xref:System.Windows.Forms.DataGridView> quando cambia la cella corrente.  

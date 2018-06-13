@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98a83a64a692955d5627e891e7fb3a3ef6f53476
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442569"
 ---
 # <a name="cornativelinkflags-enumeration"></a>Enumerazione CorNativeLinkFlags
 Fornisce valori di flag usati dal linker durante il collegamento del codice nativo.  
