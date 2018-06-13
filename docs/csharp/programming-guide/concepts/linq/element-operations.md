@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317447"
 ---
 # <a name="element-operations-c"></a><span data-ttu-id="9868f-102">Operazioni sugli elementi (C#)</span><span class="sxs-lookup"><span data-stu-id="9868f-102">Element Operations (C#)</span></span>
 <span data-ttu-id="9868f-103">Le operazioni sugli elementi restituiscono un singolo elemento specifico di una sequenza.</span><span class="sxs-lookup"><span data-stu-id="9868f-103">Element operations return a single, specific element from a sequence.</span></span>  

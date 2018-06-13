@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751441"
 ---
 # <a name="ltreliablesessiongt"></a><span data-ttu-id="0d8ad-102">&lt;reliableSession&gt;</span><span class="sxs-lookup"><span data-stu-id="0d8ad-102">&lt;reliableSession&gt;</span></span>
 <span data-ttu-id="0d8ad-103">Definisce l'impostazione per WS-Reliable Messaging.</span><span class="sxs-lookup"><span data-stu-id="0d8ad-103">Defines setting for WS-Reliable Messaging.</span></span> <span data-ttu-id="0d8ad-104">Quando questo elemento viene aggiunto a un'associazione personalizzata, il canale risultante può supportare assicurazioni di recapito una volta esatta.</span><span class="sxs-lookup"><span data-stu-id="0d8ad-104">When this element is added to a custom binding, the resulting channel can support exactly-once delivery assurances.</span></span>  

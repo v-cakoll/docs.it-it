@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267909"
 ---
 # <a name="integral-types-table-c-reference"></a><span data-ttu-id="8808e-102">Tabella dei tipi integrali (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="8808e-102">Integral Types Table (C# Reference)</span></span>
 <span data-ttu-id="8808e-103">La tabella seguente elenca le dimensioni e gli intervalli dei tipi integrali, che costituiscono un sottoinsieme dei tipi semplici.</span><span class="sxs-lookup"><span data-stu-id="8808e-103">The following table shows the sizes and ranges of the integral types, which constitute a subset of simple types.</span></span>  

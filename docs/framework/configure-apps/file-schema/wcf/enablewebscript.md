@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751896"
 ---
 # <a name="ltenablewebscriptgt"></a><span data-ttu-id="eb849-102">&lt;enableWebScript&gt;</span><span class="sxs-lookup"><span data-stu-id="eb849-102">&lt;enableWebScript&gt;</span></span>
 <span data-ttu-id="eb849-103">Questo elemento attiva il comportamento dell'endpoint che rende possibile l'uso del servizio da pagine Web ASP.NET AJAX.</span><span class="sxs-lookup"><span data-stu-id="eb849-103">This element enables the endpoint behavior that makes it possible to consume the service from ASP.NET AJAX web pages.</span></span>  

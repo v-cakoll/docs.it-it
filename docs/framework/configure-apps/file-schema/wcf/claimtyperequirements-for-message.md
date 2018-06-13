@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754545"
 ---
 # <a name="ltclaimtyperequirementsgt-for-ltmessagegt"></a><span data-ttu-id="5376f-102">&lt;claimTypeRequirements&gt; di &lt;message&gt;</span><span class="sxs-lookup"><span data-stu-id="5376f-102">&lt;claimTypeRequirements&gt; for &lt;message&gt;</span></span>
 <span data-ttu-id="5376f-103">Specifica una raccolta di tipi di attestazione obbligatori.</span><span class="sxs-lookup"><span data-stu-id="5376f-103">Specifies a collection of required claim types.</span></span>  
