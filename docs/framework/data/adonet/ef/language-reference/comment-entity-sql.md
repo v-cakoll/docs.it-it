@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764164"
 ---
 # <a name="---comment-entity-sql"></a><span data-ttu-id="31ead-102">-- (commento) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="31ead-102">-- (Comment) (Entity SQL)</span></span>
 <span data-ttu-id="31ead-103">Le query[!INCLUDE[esql](../../../../../../includes/esql-md.md)] possono contenere commenti.</span><span class="sxs-lookup"><span data-stu-id="31ead-103">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] queries can contain comments.</span></span> <span data-ttu-id="31ead-104">Due trattini (`--`) indicano l'inizio di una riga di commento.</span><span class="sxs-lookup"><span data-stu-id="31ead-104">Two dashes (`--`) start a comment line.</span></span>  

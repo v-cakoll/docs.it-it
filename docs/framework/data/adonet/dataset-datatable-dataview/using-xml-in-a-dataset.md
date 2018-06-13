@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760333"
 ---
 # <a name="using-xml-in-a-dataset"></a><span data-ttu-id="d2cfa-102">Utilizzo di XML in un dataset</span><span class="sxs-lookup"><span data-stu-id="d2cfa-102">Using XML in a DataSet</span></span>
 <span data-ttu-id="d2cfa-103">ADO.NET consente di compilare un tipo <xref:System.Data.DataSet> con i dati contenuti in un flusso o documento XML.</span><span class="sxs-lookup"><span data-stu-id="d2cfa-103">With ADO.NET you can fill a <xref:System.Data.DataSet> from an XML stream or document.</span></span> <span data-ttu-id="d2cfa-104">È possibile usare il flusso o il documento XML per fornire al tipo <xref:System.Data.DataSet> dati o informazioni relative allo schema oppure entrambi.</span><span class="sxs-lookup"><span data-stu-id="d2cfa-104">You can use the XML stream or document to supply to the <xref:System.Data.DataSet> either data, schema information, or both.</span></span> <span data-ttu-id="d2cfa-105">Le informazioni fornite dal flusso o documento XML possono essere combinate con i dati o le informazioni relative allo schema già presenti nel tipo <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="d2cfa-105">The information supplied from the XML stream or document can be combined with existing data or schema information already present in the <xref:System.Data.DataSet>.</span></span>  

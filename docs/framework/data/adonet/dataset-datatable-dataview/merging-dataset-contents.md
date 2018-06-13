@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763670"
 ---
 # <a name="merging-dataset-contents"></a><span data-ttu-id="8c9d6-102">Unione di contenuti di dataset</span><span class="sxs-lookup"><span data-stu-id="8c9d6-102">Merging DataSet Contents</span></span>
 <span data-ttu-id="8c9d6-103">È possibile usare il metodo <xref:System.Data.DataSet.Merge%2A> per unire il contenuto di un oggetto <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o una matrice <xref:System.Data.DataRow> in un `DataSet` esistente.</span><span class="sxs-lookup"><span data-stu-id="8c9d6-103">You can use the <xref:System.Data.DataSet.Merge%2A> method to merge the contents of a <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, or <xref:System.Data.DataRow> array into an existing `DataSet`.</span></span> <span data-ttu-id="8c9d6-104">L'unione di nuovi dati in un `DataSet` esistente è influenzata da diversi fattori e opzioni.</span><span class="sxs-lookup"><span data-stu-id="8c9d6-104">Several factors and options affect how new data is merged into an existing `DataSet`.</span></span>  

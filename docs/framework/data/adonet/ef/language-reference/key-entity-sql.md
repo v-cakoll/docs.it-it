@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760557"
 ---
 # <a name="key-entity-sql"></a><span data-ttu-id="f0f2b-102">KEY (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f0f2b-102">KEY (Entity SQL)</span></span>
 <span data-ttu-id="f0f2b-103">Estrae la chiave di un riferimento o di un'espressione di entità.</span><span class="sxs-lookup"><span data-stu-id="f0f2b-103">Extracts the key of a reference or of an entity expression.</span></span>  

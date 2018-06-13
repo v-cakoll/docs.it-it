@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755942"
 ---
 # <a name="ltx509securitytokenhandlerrequirementgt"></a><span data-ttu-id="028cf-102">&lt;x509SecurityTokenHandlerRequirement&gt;</span><span class="sxs-lookup"><span data-stu-id="028cf-102">&lt;x509SecurityTokenHandlerRequirement&gt;</span></span>
 <span data-ttu-id="028cf-103">Fornisce la configurazione facoltativa per il <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> classe o classi derivate.</span><span class="sxs-lookup"><span data-stu-id="028cf-103">Provides optional configuration for the <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> class or derived classes.</span></span>  

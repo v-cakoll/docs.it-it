@@ -5,6 +5,7 @@ ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/18/2017
+ms.locfileid: "25726538"
 ---
 # <a name="f-tutorials"></a><span data-ttu-id="a9f0a-101">Esercitazioni su F#</span><span class="sxs-lookup"><span data-stu-id="a9f0a-101">F# Tutorials</span></span>
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760271"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a><span data-ttu-id="9e366-102">Riepilogo del processo di inferenza dello schema dataset</span><span class="sxs-lookup"><span data-stu-id="9e366-102">Summary of the DataSet Schema Inference Process</span></span>
 <span data-ttu-id="9e366-103">Il processo di inferenza determina innanzitutto, sulla base del documento XML, quali elementi verranno inferiti come tabelle.</span><span class="sxs-lookup"><span data-stu-id="9e366-103">The inference process first determines, from the XML document, which elements will be inferred as tables.</span></span> <span data-ttu-id="9e366-104">Sulla base delle rimanenti informazioni XML, il processo di inferenza consente quindi di determinare le colonne per tali tabelle.</span><span class="sxs-lookup"><span data-stu-id="9e366-104">From the remaining XML, the inference process determines the columns for those tables.</span></span> <span data-ttu-id="9e366-105">Nel caso di tabelle annidate, gli oggetti <xref:System.Data.DataRelation> e <xref:System.Data.ForeignKeyConstraint> vengono generati dal processo di inferenza.</span><span class="sxs-lookup"><span data-stu-id="9e366-105">For nested tables, the inference process generates nested <xref:System.Data.DataRelation> and <xref:System.Data.ForeignKeyConstraint> objects.</span></span>  

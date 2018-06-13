@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765984"
 ---
 # <a name="select-entity-sql"></a><span data-ttu-id="e7157-102">SELECT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e7157-102">SELECT (Entity SQL)</span></span>
 <span data-ttu-id="e7157-103">Specifica gli elementi restituiti da una query.</span><span class="sxs-lookup"><span data-stu-id="e7157-103">Specifies the elements returned by a query.</span></span>  

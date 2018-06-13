@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758074"
 ---
 # <a name="ltsecuritytokenhandlersgt"></a><span data-ttu-id="66c0e-102">&lt;securityTokenHandlers&gt;</span><span class="sxs-lookup"><span data-stu-id="66c0e-102">&lt;securityTokenHandlers&gt;</span></span>
 <span data-ttu-id="66c0e-103">Specifica una raccolta di gestori di token di sicurezza che sono registrati con l'endpoint.</span><span class="sxs-lookup"><span data-stu-id="66c0e-103">Specifies a collection of security token handlers that are registered with the endpoint.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760531"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a><span data-ttu-id="adf9f-102">Procedura: eseguire una query che restituisce tipi complessi</span><span class="sxs-lookup"><span data-stu-id="adf9f-102">How to: Execute a Query that Returns Complex Types</span></span>
 <span data-ttu-id="adf9f-103">In questo argomento viene illustrato come eseguire una query [!INCLUDE[esql](../../../../../includes/esql-md.md)] che restituisce oggetti del tipo di entità contenenti una proprietà di un tipo complesso.</span><span class="sxs-lookup"><span data-stu-id="adf9f-103">This topic shows how to execute an [!INCLUDE[esql](../../../../../includes/esql-md.md)] query that returns entity type objects that contain a property of a complex type.</span></span>  

@@ -1,70 +1,59 @@
 ---
 title: Utilizzo di codificatori e decodificatori di immagini nel codice gestito GDI+
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - image encoders [Windows Forms], using
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 084e8ff21e308cc20b633719dd31809b96b3c79a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2e51587209cb4df41ea1fd18ce5c2088ee07a2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524501"
 ---
-# <a name="using-image-encoders-and-decoders-in-managed-gdi"></a><span data-ttu-id="46c03-102">Utilizzo di codificatori e decodificatori di immagini nel codice gestito GDI+</span><span class="sxs-lookup"><span data-stu-id="46c03-102">Using Image Encoders and Decoders in Managed GDI+</span></span>
-<span data-ttu-id="46c03-103">Il <xref:System.Drawing> spazio dei nomi fornisce il <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classi per l'archiviazione e la modifica di immagini.</span><span class="sxs-lookup"><span data-stu-id="46c03-103">The <xref:System.Drawing> namespace provides the <xref:System.Drawing.Image> and <xref:System.Drawing.Bitmap> classes for storing and manipulating images.</span></span> <span data-ttu-id="46c03-104">Utilizzando i codificatori in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile scrivere le immagini dalla memoria su disco.</span><span class="sxs-lookup"><span data-stu-id="46c03-104">By using image encoders in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you can write images from memory to disk.</span></span> <span data-ttu-id="46c03-105">Utilizzando i decodificatori di immagini in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile caricare immagini dal disco nella memoria.</span><span class="sxs-lookup"><span data-stu-id="46c03-105">By using image decoders in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you can load images from disk into memory.</span></span> <span data-ttu-id="46c03-106">Un decodificatore converte i dati in un <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap> oggetto in un formato di file di disco designato.</span><span class="sxs-lookup"><span data-stu-id="46c03-106">An encoder translates the data in an <xref:System.Drawing.Image> or <xref:System.Drawing.Bitmap> object into a designated disk file format.</span></span> <span data-ttu-id="46c03-107">Un decodificatore converte i dati in un file su disco per il formato richiesto dal <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> oggetti.</span><span class="sxs-lookup"><span data-stu-id="46c03-107">A decoder translates the data in a disk file to the format required by the <xref:System.Drawing.Image> and <xref:System.Drawing.Bitmap> objects.</span></span>  
+# <a name="using-image-encoders-and-decoders-in-managed-gdi"></a><span data-ttu-id="93bee-102">Utilizzo di codificatori e decodificatori di immagini nel codice gestito GDI+</span><span class="sxs-lookup"><span data-stu-id="93bee-102">Using Image Encoders and Decoders in Managed GDI+</span></span>
+<span data-ttu-id="93bee-103">Il <xref:System.Drawing> spazio dei nomi fornisce il <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classi per l'archiviazione e la modifica di immagini.</span><span class="sxs-lookup"><span data-stu-id="93bee-103">The <xref:System.Drawing> namespace provides the <xref:System.Drawing.Image> and <xref:System.Drawing.Bitmap> classes for storing and manipulating images.</span></span> <span data-ttu-id="93bee-104">Utilizzando i codificatori in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile scrivere le immagini dalla memoria su disco.</span><span class="sxs-lookup"><span data-stu-id="93bee-104">By using image encoders in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you can write images from memory to disk.</span></span> <span data-ttu-id="93bee-105">Utilizzando i decodificatori di immagini in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile caricare immagini dal disco nella memoria.</span><span class="sxs-lookup"><span data-stu-id="93bee-105">By using image decoders in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you can load images from disk into memory.</span></span> <span data-ttu-id="93bee-106">Un decodificatore converte i dati in un <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap> oggetto in un formato di file di disco designato.</span><span class="sxs-lookup"><span data-stu-id="93bee-106">An encoder translates the data in an <xref:System.Drawing.Image> or <xref:System.Drawing.Bitmap> object into a designated disk file format.</span></span> <span data-ttu-id="93bee-107">Un decodificatore converte i dati in un file su disco per il formato richiesto dal <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> oggetti.</span><span class="sxs-lookup"><span data-stu-id="93bee-107">A decoder translates the data in a disk file to the format required by the <xref:System.Drawing.Image> and <xref:System.Drawing.Bitmap> objects.</span></span>  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="46c03-108">dispone di codificatori e decodificatori che supportano i seguenti tipi di file incorporati:</span><span class="sxs-lookup"><span data-stu-id="46c03-108"> has built-in encoders and decoders that support the following file types:</span></span>  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="93bee-108"> dispone di codificatori e decodificatori che supportano i seguenti tipi di file incorporati:</span><span class="sxs-lookup"><span data-stu-id="93bee-108"> has built-in encoders and decoders that support the following file types:</span></span>  
   
--   <span data-ttu-id="46c03-109">BMP</span><span class="sxs-lookup"><span data-stu-id="46c03-109">BMP</span></span>  
+-   <span data-ttu-id="93bee-109">BMP</span><span class="sxs-lookup"><span data-stu-id="93bee-109">BMP</span></span>  
   
--   <span data-ttu-id="46c03-110">GIF</span><span class="sxs-lookup"><span data-stu-id="46c03-110">GIF</span></span>  
+-   <span data-ttu-id="93bee-110">GIF</span><span class="sxs-lookup"><span data-stu-id="93bee-110">GIF</span></span>  
   
--   <span data-ttu-id="46c03-111">JPEG</span><span class="sxs-lookup"><span data-stu-id="46c03-111">JPEG</span></span>  
+-   <span data-ttu-id="93bee-111">JPEG</span><span class="sxs-lookup"><span data-stu-id="93bee-111">JPEG</span></span>  
   
--   <span data-ttu-id="46c03-112">PNG</span><span class="sxs-lookup"><span data-stu-id="46c03-112">PNG</span></span>  
+-   <span data-ttu-id="93bee-112">PNG</span><span class="sxs-lookup"><span data-stu-id="93bee-112">PNG</span></span>  
   
--   <span data-ttu-id="46c03-113">TIFF</span><span class="sxs-lookup"><span data-stu-id="46c03-113">TIFF</span></span>  
+-   <span data-ttu-id="93bee-113">TIFF</span><span class="sxs-lookup"><span data-stu-id="93bee-113">TIFF</span></span>  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="46c03-114">dispone di decodificatori incorporati che supportano i tipi di file seguenti:</span><span class="sxs-lookup"><span data-stu-id="46c03-114"> also has built-in decoders that support the following file types:</span></span>  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="93bee-114"> sono inoltre decodificatori incorporati che supportano i tipi di file seguenti:</span><span class="sxs-lookup"><span data-stu-id="93bee-114"> also has built-in decoders that support the following file types:</span></span>  
   
--   <span data-ttu-id="46c03-115">WMF</span><span class="sxs-lookup"><span data-stu-id="46c03-115">WMF</span></span>  
+-   <span data-ttu-id="93bee-115">WMF</span><span class="sxs-lookup"><span data-stu-id="93bee-115">WMF</span></span>  
   
--   <span data-ttu-id="46c03-116">EMF</span><span class="sxs-lookup"><span data-stu-id="46c03-116">EMF</span></span>  
+-   <span data-ttu-id="93bee-116">EMF</span><span class="sxs-lookup"><span data-stu-id="93bee-116">EMF</span></span>  
   
--   <span data-ttu-id="46c03-117">ICONA</span><span class="sxs-lookup"><span data-stu-id="46c03-117">ICON</span></span>  
+-   <span data-ttu-id="93bee-117">ICONA</span><span class="sxs-lookup"><span data-stu-id="93bee-117">ICON</span></span>  
   
- <span data-ttu-id="46c03-118">Gli argomenti seguenti descrivono i codificatori e decodificatori in modo più dettagliato:</span><span class="sxs-lookup"><span data-stu-id="46c03-118">The following topics discuss encoders and decoders in more detail:</span></span>  
+ <span data-ttu-id="93bee-118">Gli argomenti seguenti descrivono i codificatori e decodificatori in modo più dettagliato:</span><span class="sxs-lookup"><span data-stu-id="93bee-118">The following topics discuss encoders and decoders in more detail:</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="46c03-119">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="46c03-119">In This Section</span></span>  
- [<span data-ttu-id="46c03-120">Procedura: Elencare i codificatori installati</span><span class="sxs-lookup"><span data-stu-id="46c03-120">How to: List Installed Encoders</span></span>](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
- <span data-ttu-id="46c03-121">Viene descritto come elencare i codificatori disponibili in un computer.</span><span class="sxs-lookup"><span data-stu-id="46c03-121">Describes how to list the encoders available on a computer.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="93bee-119">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="93bee-119">In This Section</span></span>  
+ [<span data-ttu-id="93bee-120">Procedura: Elencare i codificatori installati</span><span class="sxs-lookup"><span data-stu-id="93bee-120">How to: List Installed Encoders</span></span>](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
+ <span data-ttu-id="93bee-121">Viene descritto come elencare i codificatori disponibili in un computer.</span><span class="sxs-lookup"><span data-stu-id="93bee-121">Describes how to list the encoders available on a computer.</span></span>  
   
- [<span data-ttu-id="46c03-122">Procedura: Elencare i decodificatori installati</span><span class="sxs-lookup"><span data-stu-id="46c03-122">How to: List Installed Decoders</span></span>](../../../../docs/framework/winforms/advanced/how-to-list-installed-decoders.md)  
- <span data-ttu-id="46c03-123">Viene descritto come elencare i decodificatori disponibili in un computer.</span><span class="sxs-lookup"><span data-stu-id="46c03-123">Describes how to list the decoders available on a computer.</span></span>  
+ [<span data-ttu-id="93bee-122">Procedura: Elencare i decodificatori installati</span><span class="sxs-lookup"><span data-stu-id="93bee-122">How to: List Installed Decoders</span></span>](../../../../docs/framework/winforms/advanced/how-to-list-installed-decoders.md)  
+ <span data-ttu-id="93bee-123">Viene descritto come elencare i decodificatori disponibili in un computer.</span><span class="sxs-lookup"><span data-stu-id="93bee-123">Describes how to list the decoders available on a computer.</span></span>  
   
- [<span data-ttu-id="46c03-124">Procedura: Determinare i parametri supportati da un codificatore</span><span class="sxs-lookup"><span data-stu-id="46c03-124">How to: Determine the Parameters Supported by an Encoder</span></span>](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
- <span data-ttu-id="46c03-125">Viene illustrato come elencare le <xref:System.Drawing.Imaging.EncoderParameters> supportati da un codificatore.</span><span class="sxs-lookup"><span data-stu-id="46c03-125">Describes how to list the <xref:System.Drawing.Imaging.EncoderParameters> supported by an encoder.</span></span>  
+ [<span data-ttu-id="93bee-124">Procedura: Determinare i parametri supportati da un codificatore</span><span class="sxs-lookup"><span data-stu-id="93bee-124">How to: Determine the Parameters Supported by an Encoder</span></span>](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
+ <span data-ttu-id="93bee-125">Viene illustrato come elencare le <xref:System.Drawing.Imaging.EncoderParameters> supportati da un codificatore.</span><span class="sxs-lookup"><span data-stu-id="93bee-125">Describes how to list the <xref:System.Drawing.Imaging.EncoderParameters> supported by an encoder.</span></span>  
   
- [<span data-ttu-id="46c03-126">Procedura: Convertire un'immagine BMP in un'immagine PNG</span><span class="sxs-lookup"><span data-stu-id="46c03-126">How to: Convert a BMP image to a PNG image</span></span>](../../../../docs/framework/winforms/advanced/how-to-convert-a-bmp-image-to-a-png-image.md)  
- <span data-ttu-id="46c03-127">Viene descritto come salvare un'immagine in un formato di immagine diverso.</span><span class="sxs-lookup"><span data-stu-id="46c03-127">Describes how to save a image in a different image format.</span></span>  
+ [<span data-ttu-id="93bee-126">Procedura: Convertire un'immagine BMP in un'immagine PNG</span><span class="sxs-lookup"><span data-stu-id="93bee-126">How to: Convert a BMP image to a PNG image</span></span>](../../../../docs/framework/winforms/advanced/how-to-convert-a-bmp-image-to-a-png-image.md)  
+ <span data-ttu-id="93bee-127">Viene descritto come salvare un'immagine in un formato di immagine diverso.</span><span class="sxs-lookup"><span data-stu-id="93bee-127">Describes how to save a image in a different image format.</span></span>  
   
- [<span data-ttu-id="46c03-128">Procedura: Impostare il livello di compressione JPEG</span><span class="sxs-lookup"><span data-stu-id="46c03-128">How to: Set JPEG Compression Level</span></span>](../../../../docs/framework/winforms/advanced/how-to-set-jpeg-compression-level.md)  
- <span data-ttu-id="46c03-129">Viene descritto come modificare il livello di qualità di un'immagine.</span><span class="sxs-lookup"><span data-stu-id="46c03-129">Describes how to change the quality level of an image.</span></span>  
+ [<span data-ttu-id="93bee-128">Procedura: Impostare il livello di compressione JPEG</span><span class="sxs-lookup"><span data-stu-id="93bee-128">How to: Set JPEG Compression Level</span></span>](../../../../docs/framework/winforms/advanced/how-to-set-jpeg-compression-level.md)  
+ <span data-ttu-id="93bee-129">Viene descritto come modificare il livello di qualità di un'immagine.</span><span class="sxs-lookup"><span data-stu-id="93bee-129">Describes how to change the quality level of an image.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="46c03-130">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="46c03-130">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="93bee-130">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="93bee-130">Reference</span></span>  
  <xref:System.Drawing.Image>  
   
  <xref:System.Drawing.Bitmap>  
@@ -75,7 +64,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Drawing.Imaging.Encoder>  
   
-## <a name="related-sections"></a><span data-ttu-id="46c03-131">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="46c03-131">Related Sections</span></span>  
- [<span data-ttu-id="46c03-132">Informazioni sul codice gestito GDI+</span><span class="sxs-lookup"><span data-stu-id="46c03-132">About GDI+ Managed Code</span></span>](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
+## <a name="related-sections"></a><span data-ttu-id="93bee-131">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="93bee-131">Related Sections</span></span>  
+ [<span data-ttu-id="93bee-132">Informazioni sul codice gestito GDI+</span><span class="sxs-lookup"><span data-stu-id="93bee-132">About GDI+ Managed Code</span></span>](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
   
- [<span data-ttu-id="46c03-133">Immagini, bitmap e metafile</span><span class="sxs-lookup"><span data-stu-id="46c03-133">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+ [<span data-ttu-id="93bee-133">Immagini, bitmap e metafile</span><span class="sxs-lookup"><span data-stu-id="93bee-133">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767310"
 ---
 # <a name="ltbehaviorsgt-of-workflow"></a><span data-ttu-id="2c4c6-102">&lt;i comportamenti&gt; del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="2c4c6-102">&lt;behaviors&gt; of workflow</span></span>
 <span data-ttu-id="2c4c6-103">Questo elemento contiene il **serviceBehaviors** insieme.</span><span class="sxs-lookup"><span data-stu-id="2c4c6-103">This element contains the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="2c4c6-104">Ogni elemento della raccolta definisce elementi di comportamento utilizzati dai servizi flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="2c4c6-104">Each element in the collection defines behavior elements consumed by workflow services.</span></span> <span data-ttu-id="2c4c6-105">Ogni elemento di comportamento è identificato dal relativo univoco **nome** attributo.</span><span class="sxs-lookup"><span data-stu-id="2c4c6-105">Each behavior element is identified by its unique **name** attribute.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761870"
 ---
 # <a name="lt-less-than-or-equal-to-entity-sql"></a><span data-ttu-id="e9460-102">&lt;= (minore o uguale a) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e9460-102">&lt;= (Less Than or Equal To) (Entity SQL)</span></span>
 <span data-ttu-id="e9460-103">Consente di confrontare due espressioni per determinare se l'espressione a sinistra ha un valore minore o uguale a quella a destra.</span><span class="sxs-lookup"><span data-stu-id="e9460-103">Compares two expressions to determine whether the left expression has a value less than or equal to the right expression.</span></span>  

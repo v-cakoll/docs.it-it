@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756813"
 ---
 # <a name="complex-type"></a><span data-ttu-id="9b5f3-102">tipo complesso</span><span class="sxs-lookup"><span data-stu-id="9b5f3-102">complex type</span></span>
 <span data-ttu-id="9b5f3-103">Oggetto *tipo complesso* è un modello per la definizione di proprietà dettagliate e strutturate sui [tipi di entità](../../../../docs/framework/data/adonet/entity-type.md) o su altri tipi complessi.</span><span class="sxs-lookup"><span data-stu-id="9b5f3-103">A *complex type* is a template for defining rich, structured properties on [entity types](../../../../docs/framework/data/adonet/entity-type.md) or on other complex types.</span></span> <span data-ttu-id="9b5f3-104">Ogni modello contiene quanto segue:</span><span class="sxs-lookup"><span data-stu-id="9b5f3-104">Each template contains the following:</span></span>  

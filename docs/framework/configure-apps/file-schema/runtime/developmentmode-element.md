@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745500"
 ---
 # <a name="ltdevelopmentmodegt-element"></a><span data-ttu-id="32302-102">&lt;developmentMode&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="32302-102">&lt;developmentMode&gt; Element</span></span>
 <span data-ttu-id="32302-103">Specifica se il runtime cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.</span><span class="sxs-lookup"><span data-stu-id="32302-103">Specifies whether the runtime searches for assemblies in directories specified by the DEVPATH environment variable.</span></span>  

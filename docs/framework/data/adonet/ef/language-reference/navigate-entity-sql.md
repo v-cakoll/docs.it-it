@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764736"
 ---
 # <a name="navigate-entity-sql"></a><span data-ttu-id="77316-102">NAVIGATE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="77316-102">NAVIGATE (Entity SQL)</span></span>
 <span data-ttu-id="77316-103">Consente di eseguire la navigazione nella relazione stabilita tra le entità.</span><span class="sxs-lookup"><span data-stu-id="77316-103">Navigates over the relationship established between entities.</span></span>  

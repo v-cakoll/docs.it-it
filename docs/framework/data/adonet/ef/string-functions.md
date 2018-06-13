@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766478"
 ---
 # <a name="string-functions"></a><span data-ttu-id="ac404-102">Funzioni stringa</span><span class="sxs-lookup"><span data-stu-id="ac404-102">String Functions</span></span>
 <span data-ttu-id="ac404-103">Il provider di dati .NET Framework per SQL Server (SqlClient) fornisce funzioni `String` che eseguono operazioni in un input `String` e restituiscono un risultato di tipo `String` o un valore numerico.</span><span class="sxs-lookup"><span data-stu-id="ac404-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides `String` functions that perform operations on an input `String` and return a `String` or numeric value result.</span></span> <span data-ttu-id="ac404-104">Tali funzioni si trovano nello spazio dei nomi SqlServer, disponibile quando si usa SqlClient.</span><span class="sxs-lookup"><span data-stu-id="ac404-104">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="ac404-105">Una proprietà dello spazio dei nomi del provider consente a Entity Framework di individuare il prefisso usato dal provider per costrutti specifici, ad esempio tipi e funzioni.</span><span class="sxs-lookup"><span data-stu-id="ac404-105">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.</span></span>  

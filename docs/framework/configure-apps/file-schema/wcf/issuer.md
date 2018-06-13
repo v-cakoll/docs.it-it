@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750557"
 ---
 # <a name="ltissuergt"></a><span data-ttu-id="3fce7-102">&lt;Autorità di certificazione&gt;</span><span class="sxs-lookup"><span data-stu-id="3fce7-102">&lt;issuer&gt;</span></span>
 <span data-ttu-id="3fce7-103">Specifica il servizio token di sicurezza (STS, Security Token Service) che emette token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="3fce7-103">Specifies the Security Token Service (STS) that issues security tokens.</span></span>  

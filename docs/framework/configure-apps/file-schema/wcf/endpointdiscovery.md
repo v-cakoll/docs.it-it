@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754249"
 ---
 # <a name="ltendpointdiscoverygt"></a><span data-ttu-id="b60a0-102">&lt;endpointDiscovery&gt;</span><span class="sxs-lookup"><span data-stu-id="b60a0-102">&lt;endpointDiscovery&gt;</span></span>
 <span data-ttu-id="b60a0-103">Specifica le varie impostazioni di individuazione per un endpoint, quali l'individuazione, gli ambiti e le eventuali estensioni personalizzate ai relativi metadati.</span><span class="sxs-lookup"><span data-stu-id="b60a0-103">Specifies the various discovery settings for an endpoint, such as its discoverability, scopes, and any custom extensions to its metadata.</span></span>  

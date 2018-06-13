@@ -1,14 +1,6 @@
 ---
 title: Metodo ICorDebugType::GetFirstTypeParameter
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugType.GetFirstTypeParameter
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 35bb594f-af6a-4349-83fe-e98702674e03
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e963553bfeac2d659de8fc460a938d2d523b53e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6d6754d7a8224249582df56ab674932f065f581d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421671"
 ---
-# <a name="icordebugtypegetfirsttypeparameter-method"></a><span data-ttu-id="9a8a3-102">Metodo ICorDebugType::GetFirstTypeParameter</span><span class="sxs-lookup"><span data-stu-id="9a8a3-102">ICorDebugType::GetFirstTypeParameter Method</span></span>
-<span data-ttu-id="9a8a3-103">Ottiene un puntatore a interfaccia ICorDebugType che rappresenta il primo <xref:System.Type> parametro del tipo rappresentato da questo `ICorDebugType`.</span><span class="sxs-lookup"><span data-stu-id="9a8a3-103">Gets an interface pointer to an ICorDebugType that represents the first <xref:System.Type> parameter of the type represented by this `ICorDebugType`.</span></span>  
+# <a name="icordebugtypegetfirsttypeparameter-method"></a><span data-ttu-id="107e9-102">Metodo ICorDebugType::GetFirstTypeParameter</span><span class="sxs-lookup"><span data-stu-id="107e9-102">ICorDebugType::GetFirstTypeParameter Method</span></span>
+<span data-ttu-id="107e9-103">Ottiene un puntatore a interfaccia ICorDebugType che rappresenta il primo <xref:System.Type> parametro del tipo rappresentato da questo `ICorDebugType`.</span><span class="sxs-lookup"><span data-stu-id="107e9-103">Gets an interface pointer to an ICorDebugType that represents the first <xref:System.Type> parameter of the type represented by this `ICorDebugType`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a8a3-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9a8a3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="107e9-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="107e9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFirstTypeParameter (  
@@ -46,18 +35,18 @@ HRESULT GetFirstTypeParameter (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9a8a3-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="9a8a3-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="107e9-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="107e9-105">Parameters</span></span>  
  `value`  
- <span data-ttu-id="9a8a3-106">[out] Un puntatore all'indirizzo di un `ICorDebugType` oggetto che rappresenta il primo parametro.</span><span class="sxs-lookup"><span data-stu-id="9a8a3-106">[out] A pointer to the address of an `ICorDebugType` object that represents the first parameter.</span></span>  
+ <span data-ttu-id="107e9-106">[out] Un puntatore all'indirizzo di un `ICorDebugType` oggetto che rappresenta il primo parametro.</span><span class="sxs-lookup"><span data-stu-id="107e9-106">[out] A pointer to the address of an `ICorDebugType` object that represents the first parameter.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9a8a3-107">Note</span><span class="sxs-lookup"><span data-stu-id="9a8a3-107">Remarks</span></span>  
- <span data-ttu-id="9a8a3-108">`GetFirstTypeParameter`può essere chiamato in casi in cui le informazioni aggiuntive sul tipo include al massimo un parametro di tipo.</span><span class="sxs-lookup"><span data-stu-id="9a8a3-108">`GetFirstTypeParameter` can be called in cases where the additional information about the type involves, at most, one type parameter.</span></span> <span data-ttu-id="9a8a3-109">In particolare, può essere utilizzato se il tipo è un ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF o ELEMENT_TYPE_PTR, come indicato dal [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) metodo.</span><span class="sxs-lookup"><span data-stu-id="9a8a3-109">In particular, it can be used if the type is an ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF, or ELEMENT_TYPE_PTR, as indicated by the [ICorDebugType::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="107e9-107">Note</span><span class="sxs-lookup"><span data-stu-id="107e9-107">Remarks</span></span>  
+ <span data-ttu-id="107e9-108">`GetFirstTypeParameter` può essere chiamato in casi in cui le informazioni aggiuntive sul tipo prevede al massimo un parametro di tipo.</span><span class="sxs-lookup"><span data-stu-id="107e9-108">`GetFirstTypeParameter` can be called in cases where the additional information about the type involves, at most, one type parameter.</span></span> <span data-ttu-id="107e9-109">In particolare, può essere utilizzato se il tipo è un ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF o ELEMENT_TYPE_PTR, come indicato dal [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) metodo.</span><span class="sxs-lookup"><span data-stu-id="107e9-109">In particular, it can be used if the type is an ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF, or ELEMENT_TYPE_PTR, as indicated by the [ICorDebugType::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a8a3-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9a8a3-110">Requirements</span></span>  
- <span data-ttu-id="9a8a3-111">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a8a3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="107e9-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="107e9-110">Requirements</span></span>  
+ <span data-ttu-id="107e9-111">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="107e9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a8a3-112">**Intestazione:** CorDebug.idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="9a8a3-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="107e9-112">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="107e9-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9a8a3-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9a8a3-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="107e9-113">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="107e9-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9a8a3-114">**Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a8a3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="107e9-114">**Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="107e9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

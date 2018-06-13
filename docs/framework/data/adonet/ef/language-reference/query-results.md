@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762322"
 ---
 # <a name="query-results"></a><span data-ttu-id="c0b4a-102">Risultati delle query</span><span class="sxs-lookup"><span data-stu-id="c0b4a-102">Query Results</span></span>
 <span data-ttu-id="c0b4a-103">Dopo che una query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] è stata convertita in un albero dei comandi ed eseguita, i risultati della query vengono in genere restituiti in una delle forme seguenti:</span><span class="sxs-lookup"><span data-stu-id="c0b4a-103">After a [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query is converted to command trees and executed, the query results are usually returned as one of the following:</span></span>  

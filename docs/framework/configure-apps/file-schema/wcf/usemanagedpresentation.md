@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755292"
 ---
 # <a name="ltusemanagedpresentationgt"></a><span data-ttu-id="150e1-102">&lt;useManagedPresentation&gt;</span><span class="sxs-lookup"><span data-stu-id="150e1-102">&lt;useManagedPresentation&gt;</span></span>
 <span data-ttu-id="150e1-103">Elemento di associazione usato per comunicare con un servizio token di sicurezza CardSpace che supporta il profilo CardSpace di WS-Trust.</span><span class="sxs-lookup"><span data-stu-id="150e1-103">A binding element used to communicate with a CardSpace Security Token Service that supports the CardSpace profile of WS-Trust.</span></span> <span data-ttu-id="150e1-104">Questo elemento non ha attributo e è presente come un'opzione vuota.</span><span class="sxs-lookup"><span data-stu-id="150e1-104">This element has no attribute and is present as an empty switch.</span></span>  

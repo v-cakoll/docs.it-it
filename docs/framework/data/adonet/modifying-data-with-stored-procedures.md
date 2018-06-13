@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758159"
 ---
 # <a name="modifying-data-with-stored-procedures"></a><span data-ttu-id="f793c-102">Modifica di dati con stored procedure</span><span class="sxs-lookup"><span data-stu-id="f793c-102">Modifying Data with Stored Procedures</span></span>
 <span data-ttu-id="f793c-103">Le stored procedure possono accettare dati come parametri di input e possono restituire dati come parametri di output, set di risultati o valori restituiti.</span><span class="sxs-lookup"><span data-stu-id="f793c-103">Stored procedures can accept data as input parameters and can return data as output parameters, result sets, or return values.</span></span> <span data-ttu-id="f793c-104">Nell'esempio seguente vengono illustrati l'invio e la ricezione di parametri di input, parametri di output e valori restituiti in ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="f793c-104">The sample below illustrates how ADO.NET sends and receives input parameters, output parameters, and return values.</span></span> <span data-ttu-id="f793c-105">Viene inserito un nuovo record in una tabella in cui la colonna della chiave primaria è una colonna Identity di un database SQL Server.</span><span class="sxs-lookup"><span data-stu-id="f793c-105">The example inserts a new record into a table where the primary key column is an identity column in a SQL Server database.</span></span>  
