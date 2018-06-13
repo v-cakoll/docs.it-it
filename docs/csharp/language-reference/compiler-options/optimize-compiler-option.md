@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33212462"
 ---
 # <a name="-optimize-c-compiler-options"></a><span data-ttu-id="aaa52-102">-optimize (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="aaa52-102">-optimize (C# Compiler Options)</span></span>
 <span data-ttu-id="aaa52-103">L'opzione **-optimize** abilita o disabilita le ottimizzazioni eseguite dal compilatore per ridurre le dimensioni del file di output e aumentarne la velocità e l'efficienza.</span><span class="sxs-lookup"><span data-stu-id="aaa52-103">The **-optimize** option enables or disables optimizations performed by the compiler to make your output file smaller, faster, and more efficient.</span></span>  

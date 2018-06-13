@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214092"
 ---
 # <a name="-bugreport-c-compiler-options"></a><span data-ttu-id="8eb9f-102">-bugreport (opzioni del compilatore C#s)</span><span class="sxs-lookup"><span data-stu-id="8eb9f-102">-bugreport (C# Compiler Options)</span></span>
 <span data-ttu-id="8eb9f-103">Specifica che le informazioni di debug devono essere inserite in un file per analisi successive.</span><span class="sxs-lookup"><span data-stu-id="8eb9f-103">Specifies that debug information should be placed in a file for later analysis.</span></span>  
