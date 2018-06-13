@@ -1,31 +1,21 @@
 ---
 title: 'Procedura: generare file di testo dal file XML (Visual Basic)'
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 14d70da183a1dd179d9e3665de2aba0195e37148
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6b9e816fc61a583e8ea07045127b895480c03147
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642779"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a><span data-ttu-id="11b96-102">Procedura: generare file di testo dal file XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="11b96-102">How to: Generate Text Files from XML (Visual Basic)</span></span>
-<span data-ttu-id="11b96-103">In questo esempio viene illustrato come generare un file CSV con valori delimitati da virgole da un file XML.</span><span class="sxs-lookup"><span data-stu-id="11b96-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a><span data-ttu-id="d38e6-102">Procedura: generare file di testo dal file XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d38e6-102">How to: Generate Text Files from XML (Visual Basic)</span></span>
+<span data-ttu-id="d38e6-103">In questo esempio viene illustrato come generare un file CSV con valori delimitati da virgole da un file XML.</span><span class="sxs-lookup"><span data-stu-id="d38e6-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="11b96-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="11b96-104">Example</span></span>  
- <span data-ttu-id="11b96-105">La versione Visual Basic viene usata codice procedurale per aggregare la raccolta di stringhe in un'unica stringa.</span><span class="sxs-lookup"><span data-stu-id="11b96-105">The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.</span></span>  
+## <a name="example"></a><span data-ttu-id="d38e6-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="d38e6-104">Example</span></span>  
+ <span data-ttu-id="d38e6-105">La versione Visual Basic viene usata codice procedurale per aggregare la raccolta di stringhe in un'unica stringa.</span><span class="sxs-lookup"><span data-stu-id="d38e6-105">The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.</span></span>  
   
- <span data-ttu-id="11b96-106">Nell'esempio viene usato il documento XML seguente: [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="11b96-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="d38e6-106">Nell'esempio viene usato il documento XML seguente: [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="d38e6-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -52,7 +42,7 @@ Next
 Console.WriteLine(sb.ToString())  
 ```  
   
- <span data-ttu-id="11b96-107">L'output del codice è il seguente:</span><span class="sxs-lookup"><span data-stu-id="11b96-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="d38e6-107">L'output del codice è il seguente:</span><span class="sxs-lookup"><span data-stu-id="d38e6-107">This code produces the following output:</span></span>  
   
 ```  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
@@ -61,5 +51,5 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="11b96-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="11b96-108">See Also</span></span>  
- [<span data-ttu-id="11b96-109">Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="11b96-109">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d38e6-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d38e6-108">See Also</span></span>  
+ [<span data-ttu-id="d38e6-109">Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d38e6-109">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

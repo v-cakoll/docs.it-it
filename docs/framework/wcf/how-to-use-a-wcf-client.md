@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803806"
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="a1f7a-102">Procedura: usare un client di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="a1f7a-102">How to: Use a Windows Communication Foundation Client</span></span>
 <span data-ttu-id="a1f7a-103">Questa è l'ultima delle sei attività necessarie per creare un'applicazione di Windows Communication Foundation (WCF) di base.</span><span class="sxs-lookup"><span data-stu-id="a1f7a-103">This is the last of six tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="a1f7a-104">Per una panoramica di tutte e sei le attività, vedere il [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md) argomento.</span><span class="sxs-lookup"><span data-stu-id="a1f7a-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
