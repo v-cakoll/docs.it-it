@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541057"
 ---
 # <a name="creating-an-ink-input-control"></a>Creazione di un controllo di input penna
 È possibile creare un controllo personalizzato che in modo dinamico e statico esegue il rendering di input penna. Vale a dire, eseguire il rendering come un utente consente di disegnare un tratto, causando l'input "flusso" tablet PC e visualizzarlo dopo che viene aggiunto al controllo, tramite la penna di Tablet PC, incollato dagli Appunti o caricato da un file. Per eseguire il rendering dinamico, è necessario utilizzare il controllo un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Per eseguire il rendering statico, è necessario eseguire l'override dei metodi di eventi dello stilo (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, e <xref:System.Windows.UIElement.OnStylusUp%2A>) per raccogliere <xref:System.Windows.Input.StylusPoint> dati, creare tratti e aggiungerli a un <xref:System.Windows.Controls.InkPresenter> (che esegue il rendering dell'input penna in del controllo).  

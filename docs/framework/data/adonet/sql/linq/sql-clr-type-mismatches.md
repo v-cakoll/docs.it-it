@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365670"
 ---
 # <a name="sql-clr-type-mismatches"></a>Tipi SQL-CLR non corrispondenti
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consente di automatizzare la maggior parte delle operazioni di conversione tra il modello a oggetti e SQL Server. Alcune situazioni impediscono tuttavia che la conversione venga eseguita esattamente. Tali chiavi mancate corrispondenze tra i tipi di common language runtime (CLR) e i tipi di database di SQL Server sono riepilogate nelle sezioni seguenti. È possibile trovare altre informazioni sui mapping di tipo specifico e traduzione funzione [Mapping dei tipi CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) e [tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  

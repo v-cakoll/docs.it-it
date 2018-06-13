@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366008"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Provider di reflection (WCF Data Services)
 Oltre a consentire l'esposizione di dati da un modello tramite Entity Framework, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è in grado di esporre dati non definiti rigidamente in un modello basato su entità. Il provider di reflection espone i dati nelle classi che restituiscono i tipi che implementano l'interfaccia <xref:System.Linq.IQueryable%601>. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa la reflection per dedurre un modello di dati per queste classi e può convertire le query basate sull'indirizzo eseguite sulle risorse in query basate su LINQ (Language-Integrated Query) eseguite sui tipi <xref:System.Linq.IQueryable%601> esposti.  

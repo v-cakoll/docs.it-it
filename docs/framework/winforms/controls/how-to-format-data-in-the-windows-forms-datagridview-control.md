@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538861"
 ---
 # <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Procedura: formattare i dati nel controllo DataGridView di Windows Form
 Le procedure seguenti illustrano la formattazione di base di valori di cella utilizzando il <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> proprietà di un <xref:System.Windows.Forms.DataGridView> controllo e di colonne specifiche in un controllo. Per informazioni sulla formattazione di dati avanzati, vedere [procedura: personalizzare la formattazione dei dati nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
