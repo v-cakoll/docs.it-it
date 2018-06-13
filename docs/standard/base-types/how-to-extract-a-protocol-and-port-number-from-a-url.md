@@ -20,6 +20,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32768476"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a><span data-ttu-id="2058a-102">Procedura: Estrarre un protocollo e un numero di porta da un URL</span><span class="sxs-lookup"><span data-stu-id="2058a-102">How to: Extract a Protocol and Port Number from a URL</span></span>
 <span data-ttu-id="2058a-103">L'esempio seguente estrae un protocollo e un numero di porta da un URL.</span><span class="sxs-lookup"><span data-stu-id="2058a-103">The following example extracts a protocol and port number from a URL.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765555"
 ---
 # <a name="comparison-semantics-entity-sql"></a><span data-ttu-id="41508-102">Semantica di confronto (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="41508-102">Comparison Semantics (Entity SQL)</span></span>
 <span data-ttu-id="41508-103">L'esecuzione di uno degli operatori [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguenti comporta un confronto tra istanze di tipi:</span><span class="sxs-lookup"><span data-stu-id="41508-103">Performing any of the following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators involves comparison of type instances:</span></span>  

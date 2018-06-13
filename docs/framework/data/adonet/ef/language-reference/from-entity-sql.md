@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765815"
 ---
 # <a name="from-entity-sql"></a><span data-ttu-id="c2a3e-102">FROM (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="c2a3e-102">FROM (Entity SQL)</span></span>
 <span data-ttu-id="c2a3e-103">Specifica la raccolta usata nelle [selezionare](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) istruzioni.</span><span class="sxs-lookup"><span data-stu-id="c2a3e-103">Specifies the collection used in [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) statements.</span></span>  

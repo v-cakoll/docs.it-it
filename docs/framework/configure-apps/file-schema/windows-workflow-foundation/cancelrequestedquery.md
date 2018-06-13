@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767037"
 ---
 # <a name="ltcancelrequestedquerygt"></a><span data-ttu-id="90e5c-102">&lt;cancelRequestedQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="90e5c-102">&lt;cancelRequestedQuery&gt;</span></span>
 <span data-ttu-id="90e5c-103">Rappresenta una query usata per rilevare richieste di annullamento di un'attività figlio da parte dell'attività padre.</span><span class="sxs-lookup"><span data-stu-id="90e5c-103">Represents a query that is used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="90e5c-104">La query è necessaria affinché un partecipante del rilevamento esegua la sottoscrizione per annullare oggetti record richiesti.</span><span class="sxs-lookup"><span data-stu-id="90e5c-104">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>  
