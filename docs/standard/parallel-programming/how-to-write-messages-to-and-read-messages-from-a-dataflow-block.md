@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583240"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Procedura: scrivere messaggi in un blocco di flussi di dati e leggere messaggi da un blocco di flussi di dati
 In questo documento viene descritto come utilizzare la libreria del flusso di dati TPL per scrivere messaggi in un blocco di flussi di dati e per leggerli da quest'ultimo. La libreria del flusso di dati TPL fornisce sia metodi sincroni sia asincroni per la lettura e scrittura di messaggi da e in un blocco di flussi di dati. In questo documento viene utilizzata la classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>. Mediante la classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> i messaggi vengono inseriti nel buffer; inoltre, essa viene utilizzata sia come origine sia come destinazione dei messaggi.  

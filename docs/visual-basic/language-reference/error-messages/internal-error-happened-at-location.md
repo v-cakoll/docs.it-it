@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586169"
 ---
 # <a name="internal-error-happened-at-ltlocationgt"></a>Si è verificato un errore interno in &lt;percorso&gt;
 Si è verificato un errore interno. La riga in cui si è verificato è contenuta nel messaggio di errore.  

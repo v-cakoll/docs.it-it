@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596655"
 ---
 # <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a>Impossibile ottenere i nomi delle porte seriali a causa di un errore di sistema interno
 Si è verificato un errore interno quando è stata chiamata la proprietà `My.Computer.Ports.SerialPortNames`.  

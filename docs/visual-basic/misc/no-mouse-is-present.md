@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637863"
 ---
 # <a name="no-mouse-is-present"></a>Mouse non presente
 È stata chiamata una delle proprietà dell'oggetto `My.Computer.Mouse` , ma nel computer non è installato alcun mouse o porta del mouse.  

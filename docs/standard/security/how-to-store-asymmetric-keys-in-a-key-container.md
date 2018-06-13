@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588856"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Procedura: archiviare chiavi asimmetriche in un contenitore di chiavi
 Le chiavi private asimmetriche non devono essere mai archiviate in modalità verbatim o in testo normale nel computer locale. Se è necessario archiviare una chiave privata, è opportuno usare un contenitore di chiavi. Per altre informazioni sui contenitori di chiavi, vedere[Informazioni sui contenitori di chiavi RSA a livello di computer e utente](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  

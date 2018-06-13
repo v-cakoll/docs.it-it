@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596057"
 ---
 # <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>Tipo del parametro &#39; &lt;parametername&gt; &#39; non è conforme a CLS
 Una stored procedure è contrassegnata come `<CLSCompliant(True)>` ma dichiara un parametro con un tipo contrassegnato come `<CLSCompliant(False)>`, non è contrassegnata o non si qualifica in quanto è un tipo non conforme.  

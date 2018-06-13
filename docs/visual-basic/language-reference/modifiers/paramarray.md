@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597360"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
 Specifica che un parametro di routine accetta una matrice facoltativa di elementi del tipo specificato. `ParamArray` può essere utilizzato solo sull'ultimo parametro di un elenco di parametri.  

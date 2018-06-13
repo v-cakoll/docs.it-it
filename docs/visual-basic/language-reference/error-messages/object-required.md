@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593714"
 ---
 # <a name="object-required-visual-basic"></a>Oggetto necessario (Visual Basic)
 I riferimenti a proprietà e metodi richiedono spesso un qualificatore di oggetto esplicito. Si tratta di un caso simile.  

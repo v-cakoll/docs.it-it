@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586754"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Elaborazione di unità, directory e file (Visual Basic)
 È possibile usare Visual Basic per elaborare unità, cartelle e file con l'oggetto `My.Computer.FileSystem` che offre prestazioni migliori ed è più semplice da usare rispetto ai metodi tradizionali, ad esempio le funzioni `FileOpen` e `Write`, che sono tuttavia ancora disponibili. Le sezioni seguenti descrivono questi metodi in dettaglio.  

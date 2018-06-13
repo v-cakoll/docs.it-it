@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594913"
 ---
 # <a name="overflow-visual-basic-error"></a>Overflow (errore Visual Basic)
 Un valore letterale rappresenta un valore oltre i limiti del tipo di dati a cui è assegnato.  

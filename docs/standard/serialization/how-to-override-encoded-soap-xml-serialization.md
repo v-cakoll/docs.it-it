@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585840"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>Procedura: eseguire l'override della serializzazione XML con codifica SOAP
 [Esempio di codice](#tskhowtooverrideencodedsoapxmlserializationanchor1)  

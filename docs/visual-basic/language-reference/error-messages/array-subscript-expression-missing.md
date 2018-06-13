@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583864"
 ---
 # <a name="array-subscript-expression-missing"></a>Espressione di indice di matrice mancante
 Inizializzazione di una matrice esclude uno o più indici che definiscono i limiti della matrice. Ad esempio, l'istruzione potrebbe contenere l'espressione `myArray (5,5,,10)`, che esclude il terzo indice.  
