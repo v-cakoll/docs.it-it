@@ -1,14 +1,6 @@
 ---
 title: Interfaccia ICorDebugILFrame4
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugILFrame4
 api_location:
@@ -18,43 +10,40 @@ api_type:
 ms.assetid: 1e739183-3e05-49e5-846f-4075256e41de
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 66e4ba870319a1c60419ab794088a41eb9c4db3e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3b57289e1d96a56bc4ab5cb8c07cbcac4b1d98b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416579"
 ---
-# <a name="icordebugilframe4-interface"></a><span data-ttu-id="99c53-102">Interfaccia ICorDebugILFrame4</span><span class="sxs-lookup"><span data-stu-id="99c53-102">ICorDebugILFrame4 Interface</span></span>
-<span data-ttu-id="99c53-103">[Supportato in .NET Framework 4.5.2 e versioni successive]</span><span class="sxs-lookup"><span data-stu-id="99c53-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilframe4-interface"></a><span data-ttu-id="71ce9-102">Interfaccia ICorDebugILFrame4</span><span class="sxs-lookup"><span data-stu-id="71ce9-102">ICorDebugILFrame4 Interface</span></span>
+<span data-ttu-id="71ce9-103">[Supportato in .NET Framework 4.5.2 e versioni successive]</span><span class="sxs-lookup"><span data-stu-id="71ce9-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="99c53-104">Fornisce metodi che consentono di accedere alle variabili locali e al codice in uno stack frame del codice in linguaggio intermedio.</span><span class="sxs-lookup"><span data-stu-id="99c53-104">Provides methods that allow you to access the local variables and code in a stack frame of intermediate language (IL) code.</span></span> <span data-ttu-id="99c53-105">L'accesso del debugger a variabili e codice aggiunti nella strumentazione del profiler ReJIT viene specificato da un parametro.</span><span class="sxs-lookup"><span data-stu-id="99c53-105">A parameter specifies whether the debugger has access to variables and code added in profiler ReJIT instrumentation.</span></span>  
+ <span data-ttu-id="71ce9-104">Fornisce metodi che consentono di accedere alle variabili locali e al codice in uno stack frame del codice in linguaggio intermedio.</span><span class="sxs-lookup"><span data-stu-id="71ce9-104">Provides methods that allow you to access the local variables and code in a stack frame of intermediate language (IL) code.</span></span> <span data-ttu-id="71ce9-105">L'accesso del debugger a variabili e codice aggiunti nella strumentazione del profiler ReJIT viene specificato da un parametro.</span><span class="sxs-lookup"><span data-stu-id="71ce9-105">A parameter specifies whether the debugger has access to variables and code added in profiler ReJIT instrumentation.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="99c53-106">Metodi</span><span class="sxs-lookup"><span data-stu-id="99c53-106">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="71ce9-106">Metodi</span><span class="sxs-lookup"><span data-stu-id="71ce9-106">Methods</span></span>  
   
-|<span data-ttu-id="99c53-107">Metodo</span><span class="sxs-lookup"><span data-stu-id="99c53-107">Method</span></span>|<span data-ttu-id="99c53-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="99c53-108">Description</span></span>|  
+|<span data-ttu-id="71ce9-107">Metodo</span><span class="sxs-lookup"><span data-stu-id="71ce9-107">Method</span></span>|<span data-ttu-id="71ce9-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="71ce9-108">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="99c53-109">Metodo EnumerateLocalVariablesEx</span><span class="sxs-lookup"><span data-stu-id="99c53-109">EnumerateLocalVariablesEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)|<span data-ttu-id="99c53-110">Restituisce un elenco delle variabili locali disponibili nel frame corrente.</span><span class="sxs-lookup"><span data-stu-id="99c53-110">Returns a list of the local variables available in the current frame.</span></span>|  
-|[<span data-ttu-id="99c53-111">Metodo GetCodeEx</span><span class="sxs-lookup"><span data-stu-id="99c53-111">GetCodeEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)|<span data-ttu-id="99c53-112">Restituisce il codice eseguito da questo stack frame.</span><span class="sxs-lookup"><span data-stu-id="99c53-112">Returns the code that this stack frame is running.</span></span>|  
-|[<span data-ttu-id="99c53-113">Metodo GetLocalVariableEx</span><span class="sxs-lookup"><span data-stu-id="99c53-113">GetLocalVariableEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)|<span data-ttu-id="99c53-114">Restituisce il valore di una variabile locale nel frame del linguaggio intermedio.</span><span class="sxs-lookup"><span data-stu-id="99c53-114">Returns the value of a local variable in the IL frame.</span></span>|  
+|[<span data-ttu-id="71ce9-109">Metodo EnumerateLocalVariablesEx</span><span class="sxs-lookup"><span data-stu-id="71ce9-109">EnumerateLocalVariablesEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)|<span data-ttu-id="71ce9-110">Restituisce un elenco delle variabili locali disponibili nel frame corrente.</span><span class="sxs-lookup"><span data-stu-id="71ce9-110">Returns a list of the local variables available in the current frame.</span></span>|  
+|[<span data-ttu-id="71ce9-111">Metodo GetCodeEx</span><span class="sxs-lookup"><span data-stu-id="71ce9-111">GetCodeEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)|<span data-ttu-id="71ce9-112">Restituisce il codice eseguito da questo stack frame.</span><span class="sxs-lookup"><span data-stu-id="71ce9-112">Returns the code that this stack frame is running.</span></span>|  
+|[<span data-ttu-id="71ce9-113">Metodo GetLocalVariableEx</span><span class="sxs-lookup"><span data-stu-id="71ce9-113">GetLocalVariableEx Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)|<span data-ttu-id="71ce9-114">Restituisce il valore di una variabile locale nel frame del linguaggio intermedio.</span><span class="sxs-lookup"><span data-stu-id="71ce9-114">Returns the value of a local variable in the IL frame.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="99c53-115">Note</span><span class="sxs-lookup"><span data-stu-id="99c53-115">Remarks</span></span>  
- <span data-ttu-id="99c53-116">Questi metodi offrono funzionalità aggiuntive oltre a quelle fornite dal [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md), [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md), e [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) metodi.</span><span class="sxs-lookup"><span data-stu-id="99c53-116">These methods offer functionality in addition to that provided by the [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md), [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md), and [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) methods.</span></span> <span data-ttu-id="99c53-117">Ogni metodo include un parametro `flags` che specifica se le variabili locali aggiuntive o il codice definito dalla richiesta ReJIT di un profiler sono visibili.</span><span class="sxs-lookup"><span data-stu-id="99c53-117">Each method includes a `flags` parameter that specifies whether additional local variables or code defined by a profiler's ReJIT request are visible.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="71ce9-115">Note</span><span class="sxs-lookup"><span data-stu-id="71ce9-115">Remarks</span></span>  
+ <span data-ttu-id="71ce9-116">Questi metodi offrono funzionalità aggiuntive oltre a quelle fornite dal [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md), [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md), e [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) metodi.</span><span class="sxs-lookup"><span data-stu-id="71ce9-116">These methods offer functionality in addition to that provided by the [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md), [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md), and [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) methods.</span></span> <span data-ttu-id="71ce9-117">Ogni metodo include un parametro `flags` che specifica se le variabili locali aggiuntive o il codice definito dalla richiesta ReJIT di un profiler sono visibili.</span><span class="sxs-lookup"><span data-stu-id="71ce9-117">Each method includes a `flags` parameter that specifies whether additional local variables or code defined by a profiler's ReJIT request are visible.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="99c53-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="99c53-118">Requirements</span></span>  
- <span data-ttu-id="99c53-119">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="99c53-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71ce9-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="71ce9-118">Requirements</span></span>  
+ <span data-ttu-id="71ce9-119">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="71ce9-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="99c53-120">**Intestazione:** CorDebug.idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="99c53-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="71ce9-120">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="71ce9-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="99c53-121">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="99c53-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="71ce9-121">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="71ce9-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="99c53-122">**Versioni di .NET framework:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99c53-122">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="71ce9-122">**Versioni di .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71ce9-122">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="99c53-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="99c53-123">See Also</span></span>  
- [<span data-ttu-id="99c53-124">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="99c53-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="99c53-125">Debug</span><span class="sxs-lookup"><span data-stu-id="99c53-125">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="71ce9-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="71ce9-123">See Also</span></span>  
+ [<span data-ttu-id="71ce9-124">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="71ce9-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [<span data-ttu-id="71ce9-125">Debug</span><span class="sxs-lookup"><span data-stu-id="71ce9-125">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

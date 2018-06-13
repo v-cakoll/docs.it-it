@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334350"
 ---
 # <a name="namespaces-c-programming-guide"></a><span data-ttu-id="ef603-102">Spazi dei nomi (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="ef603-102">Namespaces (C# Programming Guide)</span></span>
 <span data-ttu-id="ef603-103">Gli spazi dei nomi vengono usati frequentemente nella programmazione C# in due modi.</span><span class="sxs-lookup"><span data-stu-id="ef603-103">Namespaces are heavily used in C# programming in two ways.</span></span> <span data-ttu-id="ef603-104">Primo, .NET Framework usa gli spazi dei nomi per organizzare numerose classi, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="ef603-104">First, the .NET Framework uses namespaces to organize its many classes, as follows:</span></span>  

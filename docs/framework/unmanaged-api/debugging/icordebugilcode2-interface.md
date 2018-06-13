@@ -1,14 +1,6 @@
 ---
 title: Interfaccia ICorDebugILCode2
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugILCode2
 api_location:
@@ -18,40 +10,37 @@ api_type:
 ms.assetid: f9dc2afd-df8a-464d-bdbf-5af0a1d4bf85
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f126d92cebe3261dc92b89cbf66bbcff5fd8808e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1982226e90792d4bbda1cb023d80dec96fcb2060
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418106"
 ---
-# <a name="icordebugilcode2-interface"></a><span data-ttu-id="0ff4d-102">Interfaccia ICorDebugILCode2</span><span class="sxs-lookup"><span data-stu-id="0ff4d-102">ICorDebugILCode2 Interface</span></span>
-<span data-ttu-id="0ff4d-103">[Supportato in .NET Framework 4.5.2 e versioni successive]</span><span class="sxs-lookup"><span data-stu-id="0ff4d-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcode2-interface"></a><span data-ttu-id="a97b9-102">Interfaccia ICorDebugILCode2</span><span class="sxs-lookup"><span data-stu-id="a97b9-102">ICorDebugILCode2 Interface</span></span>
+<span data-ttu-id="a97b9-103">[Supportato in .NET Framework 4.5.2 e versioni successive]</span><span class="sxs-lookup"><span data-stu-id="a97b9-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="0ff4d-104">Estende logicamente il [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) interfaccia da fornire metodi che restituiscono il token per la firma di variabile locale di una funzione ed eseguire il mapping di linguaggio intermedio instrumentato del profiler (IL) che viene eseguito l'offset di linguaggio intermedio del metodo originale viene eseguito l'offset.</span><span class="sxs-lookup"><span data-stu-id="0ff4d-104">Logically extends the [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) interface to provide methods that return the token for a function's local variable signature, and that map a profiler's instrumented intermediate language (IL) offsets to original method IL offsets.</span></span>  
+ <span data-ttu-id="a97b9-104">Estende logicamente il [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) interfaccia da fornire metodi che restituiscono il token per la firma di variabile locale di una funzione ed eseguire il mapping di linguaggio intermedio instrumentato del profiler (IL) che viene eseguito l'offset di linguaggio intermedio del metodo originale viene eseguito l'offset.</span><span class="sxs-lookup"><span data-stu-id="a97b9-104">Logically extends the [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) interface to provide methods that return the token for a function's local variable signature, and that map a profiler's instrumented intermediate language (IL) offsets to original method IL offsets.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0ff4d-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="0ff4d-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="a97b9-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="a97b9-105">Methods</span></span>  
   
-|<span data-ttu-id="0ff4d-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="0ff4d-106">Method</span></span>|<span data-ttu-id="0ff4d-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0ff4d-107">Description</span></span>|  
+|<span data-ttu-id="a97b9-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="a97b9-106">Method</span></span>|<span data-ttu-id="a97b9-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a97b9-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0ff4d-108">Metodo GetInstrumentedILMap</span><span class="sxs-lookup"><span data-stu-id="0ff4d-108">GetInstrumentedILMap Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)|<span data-ttu-id="0ff4d-109">Restituisce una mappa dagli offset IL instrumentati dal profiler agli offset IL elaborati con il metodo originale per l'istanza corrente.</span><span class="sxs-lookup"><span data-stu-id="0ff4d-109">Returns a map from profiler instrumented IL offsets to original method IL offsets for this instance.</span></span>|  
-|[<span data-ttu-id="0ff4d-110">Metodo GetLocalVarSigToken</span><span class="sxs-lookup"><span data-stu-id="0ff4d-110">GetLocalVarSigToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getlocalvarsigtoken-method.md)|<span data-ttu-id="0ff4d-111">Ottiene il token di metadati per la firma di una variabile locale della funzione rappresentata da questa istanza.</span><span class="sxs-lookup"><span data-stu-id="0ff4d-111">Gets the metadata token for the local variable signature for the function that is represented by this instance.</span></span>|  
+|[<span data-ttu-id="a97b9-108">Metodo GetInstrumentedILMap</span><span class="sxs-lookup"><span data-stu-id="a97b9-108">GetInstrumentedILMap Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)|<span data-ttu-id="a97b9-109">Restituisce una mappa dagli offset IL instrumentati dal profiler agli offset IL elaborati con il metodo originale per l'istanza corrente.</span><span class="sxs-lookup"><span data-stu-id="a97b9-109">Returns a map from profiler instrumented IL offsets to original method IL offsets for this instance.</span></span>|  
+|[<span data-ttu-id="a97b9-110">Metodo GetLocalVarSigToken</span><span class="sxs-lookup"><span data-stu-id="a97b9-110">GetLocalVarSigToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getlocalvarsigtoken-method.md)|<span data-ttu-id="a97b9-111">Ottiene il token di metadati per la firma di una variabile locale della funzione rappresentata da questa istanza.</span><span class="sxs-lookup"><span data-stu-id="a97b9-111">Gets the metadata token for the local variable signature for the function that is represented by this instance.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0ff4d-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="0ff4d-112">Requirements</span></span>  
- <span data-ttu-id="0ff4d-113">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0ff4d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a97b9-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a97b9-112">Requirements</span></span>  
+ <span data-ttu-id="a97b9-113">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a97b9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0ff4d-114">**Intestazione:** CorDebug.idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="0ff4d-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a97b9-114">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="a97b9-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0ff4d-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0ff4d-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a97b9-115">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="a97b9-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0ff4d-116">**Versioni di .NET framework:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ff4d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="a97b9-116">**Versioni di .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a97b9-116">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0ff4d-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0ff4d-117">See Also</span></span>  
- [<span data-ttu-id="0ff4d-118">Interfaccia ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="0ff4d-118">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)  
- [<span data-ttu-id="0ff4d-119">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="0ff4d-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="0ff4d-120">Debug</span><span class="sxs-lookup"><span data-stu-id="0ff4d-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="a97b9-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a97b9-117">See Also</span></span>  
+ [<span data-ttu-id="a97b9-118">Interfaccia ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="a97b9-118">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)  
+ [<span data-ttu-id="a97b9-119">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="a97b9-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [<span data-ttu-id="a97b9-120">Debug</span><span class="sxs-lookup"><span data-stu-id="a97b9-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
