@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603925"
 ---
 # <a name="argument-39per39-is-not-valid"></a>Argomento &#39;Per&#39; non è valido
 Un argomento fornito per `Per`, che deve essere un oggetto `Double` che specifica il periodo di pagamento compreso tra 1 e `NPer`, non è valido.  

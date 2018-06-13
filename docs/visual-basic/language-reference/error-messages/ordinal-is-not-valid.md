@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593603"
 ---
 # <a name="ordinal-is-not-valid"></a>Ordinale non valido
 La chiamata a una libreria di collegamento dinamico (DLL) indica di usare un numero anziché un nome di stored procedure, tramite il `#num` sintassi. Questo errore sono le seguenti cause possibili:  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605004"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Precedenza tra gli operatori in Visual Basic
 Quando vengono eseguite operazioni diverse in un'espressione, ogni parte viene valutata e risolta in un ordine predeterminato definito *precedenza degli operatori*.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590782"
 ---
 # <a name="single-data-type-visual-basic"></a>Tipo di dati Single (Visual Basic)
 Contiene con segno a 32 bit IEEE (4 byte) e con precisione singola numeri a virgola mobile compresi nell'intervallo da - 3, 4028235E + 38 e-1, 401298E-45 per i valori negativi e tra 1, 401298E-45 a 3, 4028235E + 38 per i valori positivi. Numeri a precisione singola archiviano un'approssimazione di un numero reale.  
