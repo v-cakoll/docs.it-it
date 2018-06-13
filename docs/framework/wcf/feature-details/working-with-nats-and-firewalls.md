@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508103"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Uso di conversioni NAT e firewall
 Fra il client e il server di una connessione di rete spesso non esiste un percorso diretto di comunicazione. I pacchetti vengono filtrati, instradati, analizzati e trasformati sia nei computer endpoint sia nei computer intermedi della rete. Le conversioni Network Address Translation (NAT) e i firewall sono esempi di applicazioni intermedie che in genere partecipano a una comunicazione di rete.  

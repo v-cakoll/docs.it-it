@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508821"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipi obsoleti in .NET Framework
 <a name="introduction"></a> Le tabelle in questo articolo elencano i tipi obsoleti in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], organizzati per assembly. Usare i seguenti collegamenti per vedere un elenco di tipi obsoleti e le alternative consigliate in ogni assembly. Poiché questi tipi sono obsoleti, lo sono anche tutti i relativi membri. Per un elenco di altri membri obsoleti nella libreria di classi .NET Framework, vedere [Membri obsoleti](../../../docs/framework/whats-new/obsolete-members.md).  

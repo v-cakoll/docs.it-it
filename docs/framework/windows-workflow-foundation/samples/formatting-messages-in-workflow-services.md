@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513786"
 ---
 # <a name="formatting-messages-in-workflow-services"></a>Formattazione di messaggi nei servizi flusso di lavoro
 In questo esempio viene illustrato come tipi utente diversi possono essere usati nelle attività di messaggistica (servizi WF). Il servizio di esempio è un semplice servizio di approvazione spese ed espone tre operazioni. `ApproveExpense` accetta un tipo di contratto dati e mostra come usare i tipi noti. L'operazione restituisce `true` o `false` in base all'ammontare della spesa. `ApprovePO` accetta un tipo XmlSerializer e restituisce `true` o `false` in base all'ammontare della spesa.`ApprovedVendor` accetta un tipo di contratto di messaggio e restituisce `true` o `false` se il fornitore è presente nell'elenco dei fornitori approvati o se la richiesta proviene dal reparto finanziario (il reparto finanziario può usare qualsiasi fornitore).  

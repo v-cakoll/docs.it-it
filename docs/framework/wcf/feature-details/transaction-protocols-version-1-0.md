@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506696"
 ---
 # <a name="transaction-protocols-version-10"></a>Protocolli di transazione versione 1.0
 Windows Communication Foundation (WCF) versione 1 implementa la versione 1.0 dei protocolli WS-Atomic Transaction e WS-Coordination. Per ulteriori informazioni sulla versione 1.1, vedere [protocolli di transazione](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  

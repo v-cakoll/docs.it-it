@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512600"
 ---
 # <a name="configuring-activity-validation"></a>Configurazione della convalida di attività
 La convalida delle attività consente agli autori e agli utenti di attività di identificare e segnalare errori nella configurazione di un'attività prima della relativa esecuzione. Windows Workflow Foundation (WF) fornisce tre tipi di convalida delle attività seguenti:  

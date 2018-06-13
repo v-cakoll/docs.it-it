@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507097"
 ---
 # <a name="transport-security-overview"></a>Panoramica sulla sicurezza del trasporto
 Meccanismi di sicurezza del trasporto in Windows Communication Foundation (WCF) dipendono l'associazione e un trasporto in uso. Ad esempio, quando si utilizza la classe <xref:System.ServiceModel.WSHttpBinding>, il trasporto è HTTP e il meccanismo principale per la sicurezza del trasporto è SSL (Secure Sockets Layer) su HTTP, comunemente noto come HTTP. In questo argomento vengono illustrati i meccanismi di sicurezza di trasporto principali utilizzati nelle associazioni fornite dal sistema di WCF.  

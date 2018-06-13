@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502677"
 ---
 # <a name="self-host"></a>Servizio indipendente
 In questo esempio viene illustrato come implementare un servizio indipendente in un'applicazione console. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md). Il file di configurazione del servizio è stato rinominato da Web.config a App.config ed è stato modificato per configurare un indirizzo di base utilizzato dall'host. Il codice sorgente del servizio è stato modificato per implementare una funzione `Main` statica che crea e apre un host del servizio che fornisce l'indirizzo di base configurato. L'implementazione del servizio è stata modificata per scrivere l'output nella console per ogni operazione. Il client non è stato modificato, a parte la configurazione dell'indirizzo dell'endpoint corretto del servizio.  

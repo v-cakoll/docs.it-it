@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508841"
 ---
 # <a name="chunking-channel"></a>Chunking del canale
 Quando si inviano messaggi di grandi dimensioni utilizzando Windows Communication Foundation (WCF), è spesso opportuno limitare la quantità di memoria utilizzata per memorizzare nel buffer i messaggi. Una possibile soluzione è di trasmettere il corpo del messaggio (presupponendo che il grosso dei dati è contenuto nel corpo). Tuttavia alcuni protocolli richiedono la memorizzazione nel buffer del messaggio intero. Due esempi sono rappresentati dai protocolli di messaggistica affidabile e di sicurezza. Un'altra possibile soluzione è di suddividere il messaggio in messaggi più piccoli, chiamati blocchi, inviare quei blocchi uno alla volta e ricostruire il messaggio originale sul lato ricevente. L'applicazione stessa può eseguire questa suddivisione in blocchi e ricostruzione oppure può usare un canale personalizzato per eseguire queste operazioni. Nell'esempio relativo al canale per la suddivisione in blocchi viene illustrato come è possibile usare un protocollo personalizzato o un canale su più livelli per suddividere in blocchi e ricostruire i messaggi di grandi dimensioni.  

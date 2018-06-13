@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513309"
 ---
 # <a name="rehosting-the-workflow-designer"></a>Riallocazione dell'utilità di progettazione del flusso di lavoro
 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] può essere ospitato nuovamente in ambienti esterni a [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] per creare, modificare e monitorare i flussi di lavoro.  

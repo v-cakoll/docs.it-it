@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501694"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilizzo della rappresentazione con la protezione del trasporto
 *Rappresentazione* si intende la capacità di un'applicazione server di assumere l'identità del client. In genere i servizi utilizzano la rappresentazione al momento della convalida dell'accesso alle risorse. L'applicazione server è in esecuzione tramite un account del servizio ma quando il server accetta una connessione client, rappresenta il client. In questo modo i controlli di accesso vengono eseguiti utilizzando le credenziali client. La protezione del trasporto è un meccanismo utilizzato sia per il passaggio delle credenziali che per la protezione della comunicazione tramite quelle credenziali. In questo argomento viene descritto l'utilizzo sicurezza del trasporto in Windows Communication Foundation (WCF) con la funzionalità della rappresentazione. Per ulteriori informazioni sulla rappresentazione mediante la sicurezza dei messaggi, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514160"
 ---
 # <a name="bookmarks"></a>Segnalibri
 In questo esempio viene illustrato come scrivere un'attività personalizzata che crea un segnalibro per ricevere input esterno. L'esempio include anche un'applicazione console di base che usa l'attività personalizzata in un flusso di lavoro e mostra come individuare e riprendere segnalibri associati a un'istanza del flusso di lavoro in esecuzione. Per altre informazioni sui segnalibri, vedere [segnalibri](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).  

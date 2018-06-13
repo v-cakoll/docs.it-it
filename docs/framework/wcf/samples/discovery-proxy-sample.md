@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503184"
 ---
 # <a name="discovery-proxy-sample"></a>Esempio relativo al proxy di individuazione
 Questo esempio mostra come creare un'implementazione di un proxy di individuazione per archiviare informazioni sui servizi esistenti e come i client possono eseguire una query su tale proxy per ricevere informazioni. L'esempio è costituito da tre progetti:  
