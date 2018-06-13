@@ -1,14 +1,6 @@
 ---
 title: Metodo ICorDebugThread::SetDebugState
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugThread.SetDebugState
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 6382bdf6-d488-4952-b653-cb09b6e1c6c2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f2754caf11f89358b3e81e6324835d5b2e12f17e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ada120b9cb4100bfadff83d96e0226f911958bf7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420765"
 ---
-# <a name="icordebugthreadsetdebugstate-method"></a><span data-ttu-id="26c63-102">Metodo ICorDebugThread::SetDebugState</span><span class="sxs-lookup"><span data-stu-id="26c63-102">ICorDebugThread::SetDebugState Method</span></span>
-<span data-ttu-id="26c63-103">Imposta i flag che descrivono lo stato di debug di ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="26c63-103">Sets flags that describe the debugging state of this ICorDebugThread.</span></span>  
+# <a name="icordebugthreadsetdebugstate-method"></a><span data-ttu-id="4056a-102">Metodo ICorDebugThread::SetDebugState</span><span class="sxs-lookup"><span data-stu-id="4056a-102">ICorDebugThread::SetDebugState Method</span></span>
+<span data-ttu-id="4056a-103">Imposta i flag che descrivono lo stato di debug di ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="4056a-103">Sets flags that describe the debugging state of this ICorDebugThread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26c63-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="26c63-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4056a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4056a-104">Syntax</span></span>  
   
 ```  
 HRESULT SetDebugState (  
@@ -46,18 +35,18 @@ HRESULT SetDebugState (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="26c63-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="26c63-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4056a-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="4056a-105">Parameters</span></span>  
  `state`  
- <span data-ttu-id="26c63-106">[in] Combinazione bit per bit dei valori di enumerazione CorDebugThreadState che specificano lo stato di debug di questo thread.</span><span class="sxs-lookup"><span data-stu-id="26c63-106">[in] A bitwise combination of CorDebugThreadState enumeration values that specify the debugging state of this thread.</span></span>  
+ <span data-ttu-id="4056a-106">[in] Combinazione bit per bit dei valori di enumerazione CorDebugThreadState che specificano lo stato di debug di questo thread.</span><span class="sxs-lookup"><span data-stu-id="4056a-106">[in] A bitwise combination of CorDebugThreadState enumeration values that specify the debugging state of this thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="26c63-107">Note</span><span class="sxs-lookup"><span data-stu-id="26c63-107">Remarks</span></span>  
- <span data-ttu-id="26c63-108">`SetDebugState`Imposta lo stato di debug corrente del thread.</span><span class="sxs-lookup"><span data-stu-id="26c63-108">`SetDebugState` sets the current debug state of the thread.</span></span> <span data-ttu-id="26c63-109">(Lo "stato di debug corrente" rappresenta lo stato di debug se il processo continua, non lo stato attuale). Il valore normale è THREAD_RUNNING.</span><span class="sxs-lookup"><span data-stu-id="26c63-109">(The "current debug state" represents the debug state if the process were to be continued, not the actual current state.) The normal value for this is THREAD_RUNNING.</span></span> <span data-ttu-id="26c63-110">Solo il debugger può incidere lo stato di debug di un thread.</span><span class="sxs-lookup"><span data-stu-id="26c63-110">Only the debugger can affect the debug state of a thread.</span></span> <span data-ttu-id="26c63-111">Gli stati di debug ultimo attraverso continua, pertanto se si desidera mantenere un thread THREAD_SUSPEND più continua, è possibile impostarla una sola volta e successivamente non è necessario preoccuparsene.</span><span class="sxs-lookup"><span data-stu-id="26c63-111">Debug states do last across continues, so if you want to keep a thread THREAD_SUSPENDed over multiple continues, you can set it once and thereafter not have to worry about it.</span></span> <span data-ttu-id="26c63-112">Sospensione di thread e riprendere il processo può provocare deadlock, anche se è in genere improbabile.</span><span class="sxs-lookup"><span data-stu-id="26c63-112">Suspending threads and resuming the process can cause deadlocks, though it's usually unlikely.</span></span> <span data-ttu-id="26c63-113">Si tratta di una qualità intrinseca dei thread e processi e da progettazione.</span><span class="sxs-lookup"><span data-stu-id="26c63-113">This is an intrinsic quality of threads and processes and is by-design.</span></span> <span data-ttu-id="26c63-114">Un debugger in modo asincrono può interrompere e riprendere i thread per interrompere il deadlock.</span><span class="sxs-lookup"><span data-stu-id="26c63-114">A debugger can asynchronously break and resume the threads to break the deadlock.</span></span> <span data-ttu-id="26c63-115">Se lo stato del thread utente include USER_UNSAFE_POINT, il thread può bloccare un'operazione di garbage collection (GC).</span><span class="sxs-lookup"><span data-stu-id="26c63-115">If the thread's user state includes USER_UNSAFE_POINT, then the thread may block a garbage collection (GC).</span></span> <span data-ttu-id="26c63-116">Ciò significa che il thread sospeso è più facile di causare un deadlock.</span><span class="sxs-lookup"><span data-stu-id="26c63-116">This means the suspended thread has a much higher chance of causing a deadlock.</span></span> <span data-ttu-id="26c63-117">Questo potrebbe non influire sulle già in coda gli eventi di debug.</span><span class="sxs-lookup"><span data-stu-id="26c63-117">This may not affect debug events already queued.</span></span> <span data-ttu-id="26c63-118">Pertanto, un debugger deve svuotare la coda degli eventi intero (chiamando [ICorDebugController:: HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) prima della sospensione o ripresa di thread.</span><span class="sxs-lookup"><span data-stu-id="26c63-118">Thus a debugger should drain the entire event queue (by calling [ICorDebugController::HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) before suspending or resuming threads.</span></span> <span data-ttu-id="26c63-119">In caso contrario, può ottenere eventi in un thread che ritiene di che avere già sospeso.</span><span class="sxs-lookup"><span data-stu-id="26c63-119">Else it may get events on a thread that it believes it has already suspended.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4056a-107">Note</span><span class="sxs-lookup"><span data-stu-id="4056a-107">Remarks</span></span>  
+ <span data-ttu-id="4056a-108">`SetDebugState` Imposta lo stato di debug corrente del thread.</span><span class="sxs-lookup"><span data-stu-id="4056a-108">`SetDebugState` sets the current debug state of the thread.</span></span> <span data-ttu-id="4056a-109">(Lo "stato di debug corrente" rappresenta lo stato di debug se il processo continua, non lo stato attuale). Il valore normale è THREAD_RUNNING.</span><span class="sxs-lookup"><span data-stu-id="4056a-109">(The "current debug state" represents the debug state if the process were to be continued, not the actual current state.) The normal value for this is THREAD_RUNNING.</span></span> <span data-ttu-id="4056a-110">Solo il debugger può incidere lo stato di debug di un thread.</span><span class="sxs-lookup"><span data-stu-id="4056a-110">Only the debugger can affect the debug state of a thread.</span></span> <span data-ttu-id="4056a-111">Gli stati di debug ultimo attraverso continua, pertanto se si desidera mantenere un thread THREAD_SUSPEND più continua, è possibile impostarla una sola volta e successivamente non è necessario preoccuparsene.</span><span class="sxs-lookup"><span data-stu-id="4056a-111">Debug states do last across continues, so if you want to keep a thread THREAD_SUSPENDed over multiple continues, you can set it once and thereafter not have to worry about it.</span></span> <span data-ttu-id="4056a-112">Sospensione di thread e riprendere il processo può provocare deadlock, anche se è in genere improbabile.</span><span class="sxs-lookup"><span data-stu-id="4056a-112">Suspending threads and resuming the process can cause deadlocks, though it's usually unlikely.</span></span> <span data-ttu-id="4056a-113">Si tratta di una qualità intrinseca dei thread e processi e da progettazione.</span><span class="sxs-lookup"><span data-stu-id="4056a-113">This is an intrinsic quality of threads and processes and is by-design.</span></span> <span data-ttu-id="4056a-114">Un debugger in modo asincrono può interrompere e riprendere i thread per interrompere il deadlock.</span><span class="sxs-lookup"><span data-stu-id="4056a-114">A debugger can asynchronously break and resume the threads to break the deadlock.</span></span> <span data-ttu-id="4056a-115">Se lo stato del thread utente include USER_UNSAFE_POINT, il thread può bloccare un'operazione di garbage collection (GC).</span><span class="sxs-lookup"><span data-stu-id="4056a-115">If the thread's user state includes USER_UNSAFE_POINT, then the thread may block a garbage collection (GC).</span></span> <span data-ttu-id="4056a-116">Ciò significa che il thread sospeso è più facile di causare un deadlock.</span><span class="sxs-lookup"><span data-stu-id="4056a-116">This means the suspended thread has a much higher chance of causing a deadlock.</span></span> <span data-ttu-id="4056a-117">Questo potrebbe non influire sulle già in coda gli eventi di debug.</span><span class="sxs-lookup"><span data-stu-id="4056a-117">This may not affect debug events already queued.</span></span> <span data-ttu-id="4056a-118">Pertanto, un debugger deve svuotare la coda degli eventi intero (chiamando [ICorDebugController:: HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) prima della sospensione o ripresa di thread.</span><span class="sxs-lookup"><span data-stu-id="4056a-118">Thus a debugger should drain the entire event queue (by calling [ICorDebugController::HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) before suspending or resuming threads.</span></span> <span data-ttu-id="4056a-119">In caso contrario, può ottenere eventi in un thread che ritiene di che avere già sospeso.</span><span class="sxs-lookup"><span data-stu-id="4056a-119">Else it may get events on a thread that it believes it has already suspended.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="26c63-120">Requisiti</span><span class="sxs-lookup"><span data-stu-id="26c63-120">Requirements</span></span>  
- <span data-ttu-id="26c63-121">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="26c63-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4056a-120">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4056a-120">Requirements</span></span>  
+ <span data-ttu-id="4056a-121">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4056a-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="26c63-122">**Intestazione:** CorDebug.idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="26c63-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4056a-122">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="4056a-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="26c63-123">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="26c63-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4056a-123">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="4056a-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="26c63-124">**Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="26c63-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="4056a-124">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4056a-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
