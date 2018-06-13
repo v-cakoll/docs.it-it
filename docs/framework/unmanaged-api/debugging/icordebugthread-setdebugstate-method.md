@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ada120b9cb4100bfadff83d96e0226f911958bf7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420765"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>Metodo ICorDebugThread::SetDebugState
 Imposta i flag che descrivono lo stato di debug di ICorDebugThread.  

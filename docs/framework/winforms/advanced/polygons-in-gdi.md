@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525847"
 ---
 # <a name="polygons-in-gdi"></a>Poligoni in GDI+
 Un poligono è una forma chiusa con tre o più lati. Ad esempio, un triangolo è un poligono con tre lati, un rettangolo è un poligono con quattro lati e un pentagono è un poligono con cinque lati. Nell'illustrazione seguente molti poligoni.  

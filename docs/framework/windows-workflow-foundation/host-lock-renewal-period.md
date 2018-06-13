@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513718"
 ---
 # <a name="host-lock-renewal-period"></a>Host Lock Renewal Period
 Il **Host Lock Renewal Period** proprietà dell'archivio di istanze del flusso di lavoro SQL consente di specificare il periodo di tempo entro il quale l'host rinnova il blocco su un'istanza del flusso di lavoro. Il blocco rimane valido per Host Lock Renewal Period + 30 secondi. Se l'host non riesce a rinnovare il blocco (ovvero estende il lease) entro questo periodo di tempo, il blocco scade e il provider di persistenza sblocca l'istanza. Il valore di questa proprietà è di tipo TimeSpan nel formato "hh". Il valore minimo consentito è "00: 00:01" (1 secondo). Il valore predefinito di questa proprietà è "00: 00:30" (30 secondi).  

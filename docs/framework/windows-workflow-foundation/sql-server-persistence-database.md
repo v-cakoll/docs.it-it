@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514664"
 ---
 # <a name="sql-server-persistence-database"></a>Database di persistenza SQL Server
 Contenuto della sezione vengono forniti dettagli su viste di database pubbliche supportate dall'archivio di istanze del flusso di lavoro SQL e viene descritto come deserializzare le proprietà di dati di istanza primitive e come eseguire query per istanze non persistenti.  

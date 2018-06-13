@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524703"
 ---
 # <a name="lines-curves-and-shapes"></a>Linee, curve e forme
 La grafica vettoriale di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] viene usato per disegnare linee, curve e per disegnare il riempimento di forme.  

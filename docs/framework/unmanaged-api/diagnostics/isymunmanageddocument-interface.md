@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f75e517890275b90523dc42cdac3a83d871beac7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427202"
 ---
 # <a name="isymunmanageddocument-interface"></a>Interfaccia ISymUnmanagedDocument
 Rappresenta un documento al quale fa riferimento un archivio di simboli. Un documento viene definito da un uniform resource locator (URL) e un GUID del tipo di documento. È possibile individuare il documento indipendentemente dalla modalità di archiviazione utilizzando l'URL e il GUID di tipo di documento. È possibile archiviare l'origine del documento nell'archivio di simboli e recuperata mediante questa interfaccia.  
