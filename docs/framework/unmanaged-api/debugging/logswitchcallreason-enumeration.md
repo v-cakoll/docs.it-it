@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6fe5710f1be0bfa4e651668e2469c3551ad79261
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423832"
 ---
 # <a name="logswitchcallreason-enumeration"></a>Enumerazione LogSwitchCallReason
 Indica l'operazione che è stata eseguita su un'opzione di debug/traccia.  

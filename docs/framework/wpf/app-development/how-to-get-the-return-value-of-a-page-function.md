@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545269"
 ---
 # <a name="how-to-get-the-return-value-of-a-page-function"></a>Procedura: ottenere il valore restituito di una funzione di pagina
 Questo esempio illustra come ottenere il risultato restituito da una funzione di pagina.  

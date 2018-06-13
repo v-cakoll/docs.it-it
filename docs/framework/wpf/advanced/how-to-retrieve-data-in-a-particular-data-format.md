@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545107"
 ---
 # <a name="how-to-retrieve-data-in-a-particular-data-format"></a>Procedura: recuperare dati in un formato dati particolare
 Nell'esempio seguente viene illustrato come recuperare i dati da un oggetto dati in un formato specificato.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359315"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Inserimento di un'immagine da un file
 È possibile scrivere un oggetto binario di grandi dimensioni (BLOB, Binary Large Object) in un database come dati binari o come dati di tipo carattere, a seconda del tipo di campo dell'origine dati. BLOB è un termine generico che si riferisce ai tipi di dati `text`, `ntext` e `image`, che in genere contengono documenti e immagini.  

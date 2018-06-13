@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328864"
 ---
 # <a name="how-to-use-operator-overloading-to-create-a-complex-number-class-c-programming-guide"></a>Procedura: utilizzare l'overload degli operatori per creare una classe di numeri complessi (Guida per programmatori C#)
 Questo esempio mostra come usare l'overload degli operatori per creare una classe di numeri complessi `Complex` che definisce un'addizione complessa. Il programma mostra la parte reale e quella immaginaria dei numeri e il risultato dell'addizione usando un override del metodo `ToString`.  

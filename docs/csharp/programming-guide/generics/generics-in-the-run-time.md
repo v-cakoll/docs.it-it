@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334535"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Generics nel runtime (Guida per programmatori C#)
 Quando un tipo o un metodo generico viene compilato in Microsoft Intermediate Language (MSIL), contiene metadati che lo identificano come contenente parametri di tipo. L'uso di MSIL per un tipo generico differisce a seconda che il parametro di tipo sia un tipo valore o un tipo riferimento.  
