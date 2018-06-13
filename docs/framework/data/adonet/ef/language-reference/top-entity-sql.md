@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764658"
 ---
 # <a name="top-entity-sql"></a><span data-ttu-id="e10d2-102">TOP (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e10d2-102">TOP (Entity SQL)</span></span>
 <span data-ttu-id="e10d2-103">La clausola SELECT può includere una sottoclausola TOP facoltativa dopo il modificatore ALL/DISTINCT facoltativo.</span><span class="sxs-lookup"><span data-stu-id="e10d2-103">The SELECT clause can have an optional TOP sub-clause following the optional ALL/DISTINCT modifier.</span></span> <span data-ttu-id="e10d2-104">La sottoclausola TOP specifica che verrà restituito solo il primo rowset del risultato della query.</span><span class="sxs-lookup"><span data-stu-id="e10d2-104">The TOP sub-clause specifies that only the first set of rows will be returned from the query result.</span></span>  

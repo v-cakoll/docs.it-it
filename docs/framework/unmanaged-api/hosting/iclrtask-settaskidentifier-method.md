@@ -1,14 +1,6 @@
 ---
 title: Metodo ICLRTask::SetTaskIdentifier
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTask.SetTaskIdentifier
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: bdb7f047-1e90-40fc-9e3b-d44a16509073
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9ace5b7b0153e9e019b56ebc2b7f5df0c5ed91d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 05a561c54f2d004d073fdfffffdb59cb2b5189e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435680"
 ---
-# <a name="iclrtasksettaskidentifier-method"></a><span data-ttu-id="cf032-102">Metodo ICLRTask::SetTaskIdentifier</span><span class="sxs-lookup"><span data-stu-id="cf032-102">ICLRTask::SetTaskIdentifier Method</span></span>
-<span data-ttu-id="cf032-103">Indica a common language runtime (CLR) per associare il valore dell'identificatore specificato con l'attività rappresentata dall'oggetto corrente [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) istanza.</span><span class="sxs-lookup"><span data-stu-id="cf032-103">Instructs the common language runtime (CLR) to associate the specified identifier value with the task represented by the current [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance.</span></span>  
+# <a name="iclrtasksettaskidentifier-method"></a><span data-ttu-id="bd9d3-102">Metodo ICLRTask::SetTaskIdentifier</span><span class="sxs-lookup"><span data-stu-id="bd9d3-102">ICLRTask::SetTaskIdentifier Method</span></span>
+<span data-ttu-id="bd9d3-103">Indica a common language runtime (CLR) per associare il valore dell'identificatore specificato con l'attività rappresentata dall'oggetto corrente [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) istanza.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-103">Instructs the common language runtime (CLR) to associate the specified identifier value with the task represented by the current [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf032-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="cf032-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bd9d3-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bd9d3-104">Syntax</span></span>  
   
 ```  
 HRESULT SetTaskIdentifier (  
@@ -46,35 +35,35 @@ HRESULT SetTaskIdentifier (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cf032-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="cf032-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="bd9d3-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="bd9d3-105">Parameters</span></span>  
  `Asked`  
- <span data-ttu-id="cf032-106">[in] Identificatore univoco per common language runtime associare l'attività rappresentata dall'oggetto corrente `ICLRTask` istanza.</span><span class="sxs-lookup"><span data-stu-id="cf032-106">[in] The unique identifier for the common language runtime to associate with the task represented by the current `ICLRTask` instance.</span></span>  
+ <span data-ttu-id="bd9d3-106">[in] Identificatore univoco per common language runtime associare l'attività rappresentata dall'oggetto corrente `ICLRTask` istanza.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-106">[in] The unique identifier for the common language runtime to associate with the task represented by the current `ICLRTask` instance.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cf032-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="cf032-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bd9d3-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="bd9d3-107">Return Value</span></span>  
   
-|<span data-ttu-id="cf032-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="cf032-108">HRESULT</span></span>|<span data-ttu-id="cf032-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cf032-109">Description</span></span>|  
+|<span data-ttu-id="bd9d3-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bd9d3-108">HRESULT</span></span>|<span data-ttu-id="bd9d3-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="bd9d3-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="cf032-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="cf032-110">S_OK</span></span>|<span data-ttu-id="cf032-111">`SetTaskIdentifier`stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="cf032-111">`SetTaskIdentifier` returned successfully.</span></span>|  
-|<span data-ttu-id="cf032-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="cf032-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="cf032-113">CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="cf032-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="cf032-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="cf032-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="cf032-115">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="cf032-115">The call timed out.</span></span>|  
-|<span data-ttu-id="cf032-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="cf032-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="cf032-117">Il chiamante non dispone del blocco.</span><span class="sxs-lookup"><span data-stu-id="cf032-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="cf032-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="cf032-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="cf032-119">Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="cf032-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="cf032-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="cf032-120">E_FAIL</span></span>|<span data-ttu-id="cf032-121">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="cf032-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="cf032-122">Quando un metodo viene restituito E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="cf032-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="cf032-123">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="cf032-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="bd9d3-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="bd9d3-110">S_OK</span></span>|<span data-ttu-id="bd9d3-111">`SetTaskIdentifier` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-111">`SetTaskIdentifier` returned successfully.</span></span>|  
+|<span data-ttu-id="bd9d3-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="bd9d3-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="bd9d3-113">CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="bd9d3-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="bd9d3-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="bd9d3-115">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-115">The call timed out.</span></span>|  
+|<span data-ttu-id="bd9d3-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="bd9d3-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="bd9d3-117">Il chiamante non dispone del blocco.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="bd9d3-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="bd9d3-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="bd9d3-119">Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="bd9d3-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="bd9d3-120">E_FAIL</span></span>|<span data-ttu-id="bd9d3-121">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="bd9d3-122">Quando un metodo viene restituito E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="bd9d3-123">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cf032-124">Note</span><span class="sxs-lookup"><span data-stu-id="cf032-124">Remarks</span></span>  
- <span data-ttu-id="cf032-125">L'host è possibile associare un'attività per consentire l'integrazione CLR e l'host in un ambiente di debug di un identificatore.</span><span class="sxs-lookup"><span data-stu-id="cf032-125">The host can associate an identifier with a task to help integrate the CLR and the host in a debugging environment.</span></span> <span data-ttu-id="cf032-126">L'identificatore non ha significato per CLR.</span><span class="sxs-lookup"><span data-stu-id="cf032-126">The identifier has no meaning for the CLR.</span></span> <span data-ttu-id="cf032-127">CLR passa insieme a un'applicazione del debugger.</span><span class="sxs-lookup"><span data-stu-id="cf032-127">The CLR passes it along to a debugger application.</span></span> <span data-ttu-id="cf032-128">Il debugger può utilizzare questo identificatore per associare uno stack di chiamate CLR a uno stack di chiamate di host e abilitare le rispettive informazioni di analisi unificazione quando viene visualizzato nell'interfaccia utente del debugger.</span><span class="sxs-lookup"><span data-stu-id="cf032-128">The debugger can use this identifier to associate a CLR call stack with a host call stack, and enable their respective trace information to be unified when viewed in the debugger's user interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bd9d3-124">Note</span><span class="sxs-lookup"><span data-stu-id="bd9d3-124">Remarks</span></span>  
+ <span data-ttu-id="bd9d3-125">L'host è possibile associare un'attività per consentire l'integrazione CLR e l'host in un ambiente di debug di un identificatore.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-125">The host can associate an identifier with a task to help integrate the CLR and the host in a debugging environment.</span></span> <span data-ttu-id="bd9d3-126">L'identificatore non ha significato per CLR.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-126">The identifier has no meaning for the CLR.</span></span> <span data-ttu-id="bd9d3-127">CLR passa insieme a un'applicazione del debugger.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-127">The CLR passes it along to a debugger application.</span></span> <span data-ttu-id="bd9d3-128">Il debugger può utilizzare questo identificatore per associare uno stack di chiamate CLR a uno stack di chiamate di host e abilitare le rispettive informazioni di analisi unificazione quando viene visualizzato nell'interfaccia utente del debugger.</span><span class="sxs-lookup"><span data-stu-id="bd9d3-128">The debugger can use this identifier to associate a CLR call stack with a host call stack, and enable their respective trace information to be unified when viewed in the debugger's user interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cf032-129">Requisiti</span><span class="sxs-lookup"><span data-stu-id="cf032-129">Requirements</span></span>  
- <span data-ttu-id="cf032-130">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf032-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bd9d3-129">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bd9d3-129">Requirements</span></span>  
+ <span data-ttu-id="bd9d3-130">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bd9d3-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cf032-131">**Intestazione:** Mscoree. H</span><span class="sxs-lookup"><span data-stu-id="cf032-131">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="bd9d3-131">**Intestazione:** Mscoree. H</span><span class="sxs-lookup"><span data-stu-id="bd9d3-131">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="cf032-132">**Libreria:** inclusa come risorsa in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cf032-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bd9d3-132">**Libreria:** inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="bd9d3-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cf032-133">**Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf032-133">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bd9d3-133">**Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bd9d3-133">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cf032-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cf032-134">See Also</span></span>  
- [<span data-ttu-id="cf032-135">Interfaccia ICLRTask</span><span class="sxs-lookup"><span data-stu-id="cf032-135">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [<span data-ttu-id="cf032-136">Interfaccia ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="cf032-136">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [<span data-ttu-id="cf032-137">Interfaccia IHostTask</span><span class="sxs-lookup"><span data-stu-id="cf032-137">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [<span data-ttu-id="cf032-138">Interfaccia IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="cf032-138">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bd9d3-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bd9d3-134">See Also</span></span>  
+ [<span data-ttu-id="bd9d3-135">Interfaccia ICLRTask</span><span class="sxs-lookup"><span data-stu-id="bd9d3-135">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
+ [<span data-ttu-id="bd9d3-136">Interfaccia ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="bd9d3-136">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
+ [<span data-ttu-id="bd9d3-137">Interfaccia IHostTask</span><span class="sxs-lookup"><span data-stu-id="bd9d3-137">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
+ [<span data-ttu-id="bd9d3-138">Interfaccia IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="bd9d3-138">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

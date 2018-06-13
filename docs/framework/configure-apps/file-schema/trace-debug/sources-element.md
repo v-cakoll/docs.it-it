@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752702"
 ---
 # <a name="ltsourcesgt-element"></a><span data-ttu-id="729ce-102">&lt;origini&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="729ce-102">&lt;sources&gt; Element</span></span>
 <span data-ttu-id="729ce-103">Specifica le origini di traccia che avviano i messaggi di traccia.</span><span class="sxs-lookup"><span data-stu-id="729ce-103">Specifies trace sources that initiate tracing messages.</span></span>  

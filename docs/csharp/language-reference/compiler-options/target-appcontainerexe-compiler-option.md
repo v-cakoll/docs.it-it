@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216739"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a><span data-ttu-id="d33e0-102">-target:appcontainerexe (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="d33e0-102">-target:appcontainerexe (C# Compiler Options)</span></span>
 <span data-ttu-id="d33e0-103">Se si usa l'opzione del compilatore **-target:appcontainerexe**, il compilatore crea un file eseguibile Windows (con estensione exe) che deve essere eseguito in un contenitore di app.</span><span class="sxs-lookup"><span data-stu-id="d33e0-103">If you use the **-target:appcontainerexe** compiler option, the compiler creates a Windows executable (.exe) file that must be run in an app container.</span></span> <span data-ttu-id="d33e0-104">Questa opzione equivale a [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), ma è progettata per le app [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d33e0-104">This option is equivalent to [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) but is designed for [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] apps.</span></span>  

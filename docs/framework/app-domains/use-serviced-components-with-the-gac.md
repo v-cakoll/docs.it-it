@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753352"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a><span data-ttu-id="a72d2-102">Utilizzo dei componenti serviti con la Global Assembly Cache</span><span class="sxs-lookup"><span data-stu-id="a72d2-102">Using Serviced Components with the Global Assembly Cache</span></span>
 <span data-ttu-id="a72d2-103">È consigliabile inserire nella Global Assembly Cache i componenti serviti (componenti COM+ di codice gestito).</span><span class="sxs-lookup"><span data-stu-id="a72d2-103">Serviced components (managed code COM+ components) should be put in the Global Assembly Cache.</span></span> <span data-ttu-id="a72d2-104">In alcuni scenari, ma non in tutti, la gestione dei componenti serviti non inclusi nella Global Assembly Cache può essere eseguita da Common Language Runtime e dai servizi COM+.</span><span class="sxs-lookup"><span data-stu-id="a72d2-104">In some scenarios, the Common Language Runtime and COM+ Services can handle serviced components that are not in the Global Assembly Cache; in other scenarios, they cannot.</span></span> <span data-ttu-id="a72d2-105">Questo caso viene illustrato negli scenari seguenti:</span><span class="sxs-lookup"><span data-stu-id="a72d2-105">The following scenarios illustrate this:</span></span>  

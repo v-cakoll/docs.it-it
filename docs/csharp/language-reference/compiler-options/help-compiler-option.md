@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33210977"
 ---
 # <a name="-help---c-compiler-options"></a><span data-ttu-id="3042d-103">-help, -?</span><span class="sxs-lookup"><span data-stu-id="3042d-103">-help, -?</span></span> <span data-ttu-id="3042d-104">(Opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="3042d-104">(C# Compiler Options)</span></span>
 <span data-ttu-id="3042d-105">Questa opzione invia un elenco di opzioni del compilatore e una breve descrizione di ogni opzione a stdout.</span><span class="sxs-lookup"><span data-stu-id="3042d-105">This option sends a listing of compiler options, and a brief description of each option, to stdout.</span></span>  

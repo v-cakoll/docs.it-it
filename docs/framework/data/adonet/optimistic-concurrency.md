@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766228"
 ---
 # <a name="optimistic-concurrency"></a><span data-ttu-id="985b5-102">Concorrenza ottimistica</span><span class="sxs-lookup"><span data-stu-id="985b5-102">Optimistic Concurrency</span></span>
 <span data-ttu-id="985b5-103">In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento di dati in un database: la concorrenza ottimistica e la concorrenza pessimistica.</span><span class="sxs-lookup"><span data-stu-id="985b5-103">In a multiuser environment, there are two models for updating data in a database: optimistic concurrency and pessimistic concurrency.</span></span> <span data-ttu-id="985b5-104">L'oggetto <xref:System.Data.DataSet> è stato progettato per favorire l'uso della concorrenza ottimistica per attività di lunga durata, quali la gestione in remoto dei dati e l'interazione con i dati.</span><span class="sxs-lookup"><span data-stu-id="985b5-104">The <xref:System.Data.DataSet> object is designed to encourage the use of optimistic concurrency for long-running activities, such as remoting data and interacting with data.</span></span>  

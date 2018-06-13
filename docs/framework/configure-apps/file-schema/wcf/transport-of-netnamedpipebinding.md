@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753144"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a><span data-ttu-id="064d6-102">&lt;transport&gt; di &lt;netNamedPipeBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="064d6-102">&lt;transport&gt; of &lt;netNamedPipeBinding&gt;</span></span>
 <span data-ttu-id="064d6-103">Definisce le impostazioni di sicurezza del trasporto per una named pipe.</span><span class="sxs-lookup"><span data-stu-id="064d6-103">Defines the transport security settings for a named pipe.</span></span>  

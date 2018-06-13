@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751308"
 ---
 # <a name="ltnethttpsbindinggt"></a><span data-ttu-id="171d0-102">&lt;netHttpsBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="171d0-102">&lt;netHttpsBinding&gt;</span></span>
 <span data-ttu-id="171d0-103">Rappresenta un'associazione che un servizio Windows Communication Foundation (WCF) è possibile utilizzare per configurare ed esporre endpoint che sono in grado di comunicare tramite HTTPS.</span><span class="sxs-lookup"><span data-stu-id="171d0-103">Represents a binding that a Windows Communication Foundation (WCF) service can use to configure and expose endpoints that are able to communicate over HTTPS.</span></span> <span data-ttu-id="171d0-104">Nel caso di un contratto duplex, verrà usato Web Sockets. In caso contrario, verrà usato HTTPS.</span><span class="sxs-lookup"><span data-stu-id="171d0-104">When used with a duplex contract, Web Sockets will be used, otherwise HTTPS will be used.</span></span>  
