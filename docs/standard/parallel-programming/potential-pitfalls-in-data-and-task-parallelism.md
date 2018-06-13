@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592392"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Problemi potenziali nel parallelismo di dati e attività
 In molti casi, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> possono offrire miglioramenti significativi delle prestazioni nei normali cicli sequenziali. Le operazioni necessarie per parallelizzare il ciclo comportano tuttavia delle complessità che possono determinare problemi che in un codice sequenziale sono meno frequenti o addirittura assenti. In questo argomento sono elencati alcuni suggerimenti da tenere presenti quando si scrivono cicli paralleli.  

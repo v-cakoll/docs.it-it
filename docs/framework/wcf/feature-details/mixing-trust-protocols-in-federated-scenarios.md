@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494463"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Combinazione di protocolli trust in scenari federati
 In alcuni scenari i client federati comunicano con un servizio e con un servizio token di sicurezza che non hanno la stessa versione Trust. Il WSDL del servizio può contenere un'asserzione `RequestSecurityTokenTemplate` con elementi WS-Trust di versioni diverse rispetto al servizio token di sicurezza. In questi casi, un client Windows Communication Foundation (WCF) converte gli elementi di WS-Trust ricevuti dal `RequestSecurityTokenTemplate` in base alla versione trust servizio token di sicurezza. WCF gestisce le versioni trust non corrispondenti solo per le associazioni standard. Tutti i parametri dell'algoritmo standard riconosciuti da WCF fanno parte dell'associazione standard. In questo argomento viene descritto il comportamento WCF con varie impostazioni di trust tra il servizio e il servizio token di sicurezza.  

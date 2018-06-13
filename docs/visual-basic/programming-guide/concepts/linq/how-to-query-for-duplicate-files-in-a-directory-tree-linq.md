@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643176"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Procedura: eseguire una Query per i file duplicati in un albero di Directory (LINQ) (Visual Basic)
 Talvolta i file con lo stesso nome possono trovarsi in più di una cartella. Ad esempio, nella cartella di installazione di Visual Studio diverse cartelle hanno un file readme.htm. In questo esempio viene illustrato come eseguire una query per trovare tali nomi di file duplicati in una cartella radice specificata. Nel secondo esempio viene illustrato come eseguire una query per trovare i file con dimensioni e ora di creazione corrispondenti.  

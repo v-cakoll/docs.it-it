@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587358"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>Le etichette che sono numeri devono essere seguite da un segno di due punti
 Numeri di riga seguono le stesse regole degli altri tipi di etichette e devono contenere due punti.  

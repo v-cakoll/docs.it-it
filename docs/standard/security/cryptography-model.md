@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587456"
 ---
 # <a name="net-framework-cryptography-model"></a>Modello di crittografia di .NET Framework
 .NET Framework fornisce le implementazioni di numerosi algoritmi di crittografia standard. Questi algoritmi sono facili da usare e le loro proprietà predefinite sono il più sicure possibile. Inoltre, il modello di crittografia di .NET Framework di ereditarietà degli oggetti, progettazione tramite flusso e configurazione è estremamente estendibile.  

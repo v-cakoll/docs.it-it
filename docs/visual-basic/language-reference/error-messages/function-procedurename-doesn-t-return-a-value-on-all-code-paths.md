@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589984"
 ---
 # <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Funzione &#39; &lt;nomeroutine&gt; &#39; &#39;t restituisce un valore in tutti i percorsi del codice
 Funzione '\<nomeroutine >' non restituisce un valore per tutti i percorsi di codice. Probabilmente manca un'istruzione 'Return'.  

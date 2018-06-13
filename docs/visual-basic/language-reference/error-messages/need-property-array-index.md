@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594780"
 ---
 # <a name="need-property-array-index"></a>Necessario indice della matrice di proprietà
 Questo valore della proprietà è costituito da una matrice, non da un unico valore. Non è stato specificato alcun indice per la matrice di proprietà a cui si sta tentando di accedere.  

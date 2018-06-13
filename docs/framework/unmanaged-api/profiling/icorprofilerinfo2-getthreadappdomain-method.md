@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 690dbb5659ce991b7c4921fbd85c246da54eff0a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453041"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>Metodo ICorProfilerInfo2::GetThreadAppDomain
 Ottiene l'ID del dominio dell'applicazione in cui il thread specificato è attualmente in esecuzione codice.  

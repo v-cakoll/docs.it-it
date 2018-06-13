@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593220"
 ---
 # <a name="no-accessible-39main39-method-with-an-appropriate-signature-was-found-in-39ltnamegt39"></a>Non accessibile &#39;principale&#39; metodo con una firma appropriata è stato trovato &#39; &lt;nome&gt;&#39;
 Applicazioni della riga di comando devono avere un `Sub Main` definito. `Main` deve essere dichiarata come `Public Shared` se è definito in una classe o come `Public` se definita in un modulo.  

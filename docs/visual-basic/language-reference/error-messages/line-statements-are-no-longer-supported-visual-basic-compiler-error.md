@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587879"
 ---
 # <a name="39line39-statements-are-no-longer-supported-visual-basic-compiler-error"></a>&#39;Riga&#39; istruzioni non sono più supportate (errore del compilatore Visual Basic)
 Istruzioni a riga non sono più supportate. È disponibile come funzionalità dei / o file `Microsoft.VisualBasic.FileSystem.LineInput` e la funzionalità grafica è disponibile come `System.Drawing.Graphics.DrawLine`.  

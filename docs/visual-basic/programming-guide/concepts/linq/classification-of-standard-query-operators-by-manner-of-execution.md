@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644011"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Classificazione degli operatori di Query Standard in base alla modalità di esecuzione (Visual Basic)
 Le implementazioni LINQ to Objects dei metodi degli operatori di query standard vengono eseguite in due modi principali: implementazione immediata o posticipata. Gli operatori di query che usano l'esecuzione posticipata possono essere anche suddivisi in due categorie: di flusso e non di flusso. Se si conosce la modalità di esecuzione dei vari operatori di query, sarà più facile capire i risultati che si ottengono da una determinata query. Ciò è particolarmente vero se l'origine dei dati viene modificata oppure se si sta creando una query su un'altra query. Questo argomento classifica gli operatori di query standard in base alla relativa modalità di esecuzione.  

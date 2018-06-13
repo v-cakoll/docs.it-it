@@ -31,6 +31,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592431"
 ---
 # <a name="cryptographic-services"></a>servizi crittografici
 <a name="top"></a> Le reti pubbliche, ad esempio Internet, non offrono comunicazioni sicure tra entità. Le comunicazioni su tali reti possono essere lette o addirittura modificate da terze parti non autorizzate. La crittografia aiuta a proteggere i dati dalla visualizzazione, offre modalità per rilevare se i dati sono stati modificati e aiuta a offrire una modalità di comunicazione sicura su canali altrimenti non sicuri. Ad esempio, è possibile crittografare i dati usando un algoritmo di crittografia, trasmesso in stato crittografato e quindi decrittografato dal destinatario designato. Se una terza parte intercetta i dati crittografati, la decrittografia risulterà difficile.  

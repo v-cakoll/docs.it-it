@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591807"
 ---
 # <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Copia il valore di &#39;ByRef&#39; parametro &#39; &lt;parametername&gt; &#39; nell'argomento corrispondente viene convertito dal tipo &#39; &lt;NomeTipo1&gt; &#39; al tipo &#39; &lt;in NomeTipo2&gt;&#39;
 Una routine viene chiamata con un argomento che viene ampliato al tipo di parametro corrispondente e la conversione dal parametro per l'argomento è di restrizione.  

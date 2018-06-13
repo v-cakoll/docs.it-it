@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592223"
 ---
 # <a name="introducing-xml-serialization"></a>Introduzione alla serializzazione XML
 La serializzazione è il processo di conversione di un oggetto in un formato che può essere agevolmente trasportato. Ad esempio, è possibile serializzare un oggetto e trasferirlo via Internet tramite protocollo HTTP tra un client e un server. Viceversa, la deserializzazione ricostruisce l'oggetto dal flusso.  
