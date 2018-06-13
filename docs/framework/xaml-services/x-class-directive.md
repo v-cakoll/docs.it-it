@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566808"
 ---
 # <a name="xclass-directive"></a>Direttiva x:Class
 Consente di configurare la compilazione del markup XAML per l'aggiunta di classi parziali tra markup e code-behind. La classe parziale del codice è definita in un file di codice in un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] language, mentre la classe parziale di markup viene in genere creata dalla generazione del codice durante la compilazione XAML.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557446"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Procedura: eseguire l'associazione a dati XML tramite un oggetto XMLDataProvider e query XPath
 In questo esempio viene illustrato come associare a [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] dati utilizzando un <xref:System.Windows.Data.XmlDataProvider>.  

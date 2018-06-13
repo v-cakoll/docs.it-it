@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362899"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>Procedura: utilizzare funzioni definite dall'utente con valori di tabella
 Una funzione con valori di tabella restituisce un unico rowset, a differenza delle stored procedure che possono restituire forme di più risultati. Poiché il tipo restituito di una funzione con valori di tabella è `Table`, è possibile usare tale funzione in un punto qualsiasi del codice SQL in cui possa essere usata una tabella. È inoltre possibile gestire la funzione con valori di tabella esattamente come una tabella.  

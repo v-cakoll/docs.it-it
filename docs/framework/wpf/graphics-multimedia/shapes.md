@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562193"
 ---
 # <a name="shapes"></a>Forme
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce il supporto per il disegno di forme di base utilizzando il <xref:System.Windows.Shapes.Shape> classe. Gli oggetti Shape derivano da <xref:System.Windows.FrameworkElement> e di conseguenza, fanno parte del sistema di layout e possono essere disegnati utilizzando semplicemente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

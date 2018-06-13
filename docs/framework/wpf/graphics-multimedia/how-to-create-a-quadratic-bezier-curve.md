@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558891"
 ---
 # <a name="how-to-create-a-quadratic-bezier-curve"></a>Procedura: creare una curva di Bezier quadratica
 In questo esempio viene illustrato come creare una curva di Bézier quadratica.  Per creare una curva di Bézier quadratica, utilizzare il <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, e <xref:System.Windows.Media.QuadraticBezierSegment> classi.  

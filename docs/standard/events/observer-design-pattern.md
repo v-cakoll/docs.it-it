@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578123"
 ---
 # <a name="observer-design-pattern"></a>Modello di progettazione observer
 Lo schema progettuale osservatore consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider. È appropriato per qualsiasi scenario che richieda la notifica basata su push. Lo schema definisce un *provider* (anche noto come *oggetto* o *osservabile*) e zero, uno o più *osservatori*. Gli osservatori effettuano la registrazione con il provider e ogni volta che si verifica una condizione, un evento o un cambiamento di stato predefinito, il provider invia automaticamente una notifica a tutti gli osservatori chiamando uno dei relativi metodi. In questa chiamata al metodo, il provider può anche fornire informazioni sullo stato corrente degli osservatori. In .NET Framework, lo schema progettuale osservatore viene applicato implementando le interfacce generiche <xref:System.IObservable%601?displayProperty=nameWithType> e <xref:System.IObserver%601?displayProperty=nameWithType>. Il parametro di tipo generico rappresenta il tipo che fornisce le informazioni di notifica.  

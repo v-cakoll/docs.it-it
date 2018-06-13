@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362527"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Creazione di ruoli applicazione in SQL Server
 I ruoli applicazione consentono di assegnare autorizzazioni a un'applicazione anziché a un ruolo o a un utente del database. Gli utenti possono connettersi al database, attivare il ruolo applicazione e assumere le autorizzazioni concesse all'applicazione. Le autorizzazioni concesse al ruolo applicazione sono effettive per la durata della connessione.  

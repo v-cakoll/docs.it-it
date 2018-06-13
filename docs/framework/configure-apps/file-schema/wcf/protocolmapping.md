@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748906"
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
 Rappresenta una sezione di configurazione per la definizione di un set di mapping del protocollo predefinito tra gli schemi di protocollo di trasporto (ad esempio, http, net.tcp, NET. pipe, e così via) e le associazioni WCF. Quando si creano endpoint predefiniti in fase di esecuzione, Windows Communication Foundation (WCF) analizza i mapping configurati e determina l'associazione da usare per un particolare indirizzo di base.  

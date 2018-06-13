@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556809"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>Procedura: animare un oggetto lungo un percorso (animazione Matrix con accumulazione offset)
 In questo esempio viene illustrato come utilizzare la <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> classe animare un oggetto lungo un percorso e che l'animazione vengono accumulati all'offset valori durante la ripetizione.  

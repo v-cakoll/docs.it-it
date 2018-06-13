@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561014"
 ---
 # <a name="how-to-animate-a-property-without-using-a-storyboard"></a>Procedura: animare una proprietà senza utilizzare uno storyboard
 In questo esempio viene illustrato un modo per applicare un'animazione a una proprietà senza usare un <xref:System.Windows.Media.Animation.Storyboard>.  

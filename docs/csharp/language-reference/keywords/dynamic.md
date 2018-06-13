@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217139"
 ---
 # <a name="dynamic-c-reference"></a>dynamic (Riferimenti per C#)
 `dynamic` abilita le operazioni in cui il tipo appare per ignorare il controllo del tipo in fase di compilazione. Queste operazioni vengono risolte in fase di esecuzione. Il tipo `dynamic` semplifica l'accesso alle API COM, ad esempio le API di automazione di Office, e anche ad API dinamiche come le librerie di IronPython e al modello DOM (Document Object Model) HTML.  

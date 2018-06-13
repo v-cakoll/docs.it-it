@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561660"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Procedura: eseguire il rendering in un intervallo per frame tramite CompositionTarget
 Il motore delle animazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre molte funzionalità per la creazione di animazioni basate su fotogrammi. Esistono tuttavia scenari di applicazione in cui è necessario un controllo con granularità più fine sul rendering per fotogramma. Il <xref:System.Windows.Media.CompositionTarget> oggetto offre la possibilità di creare animazioni personalizzate basate su un callback per frame.  

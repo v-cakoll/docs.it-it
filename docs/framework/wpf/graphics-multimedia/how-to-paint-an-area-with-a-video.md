@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560777"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Procedura: disegnare un'area con un video
 In questo esempio viene illustrato come disegnare un'area con i supporti. Un modo per disegnare un'area con i supporti consiste nell'utilizzare un <xref:System.Windows.Controls.MediaElement> insieme a un <xref:System.Windows.Media.VisualBrush>. Utilizzare il <xref:System.Windows.Controls.MediaElement> per caricare e riprodurre i contenuti multimediali e quindi utilizzarla per impostare il <xref:System.Windows.Media.VisualBrush.Visual%2A> proprietà del <xref:System.Windows.Media.VisualBrush>. È quindi possibile utilizzare il <xref:System.Windows.Media.VisualBrush> per disegnare un'area con i supporti caricati.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517978"
 ---
 # <a name="dynamic-arguments"></a>Argomenti dinamici
 In questo esempio viene illustrato come implementare un'attività per la quale gli argomenti sono definiti dal consumer dell'attività anziché dall'autore dell'attività. Questa operazione viene eseguita tramite l'override del modo in cui i metadati dell'attività vengono costruiti dal runtime.  

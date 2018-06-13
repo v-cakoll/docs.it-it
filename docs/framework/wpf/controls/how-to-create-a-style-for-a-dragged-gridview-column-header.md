@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554573"
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>Procedura: creare uno stile per un'intestazione di colonna GridView trascinata
 In questo esempio viene illustrato come modificare l'aspetto di un elemento trascinato <xref:System.Windows.Controls.GridViewColumnHeader> quando l'utente modifica la posizione di una colonna.  

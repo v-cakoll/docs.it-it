@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559814"
 ---
 # <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a>Procedura: verificare l'uguaglianza e la disuguaglianza di strutture Point4D
 Questo esempio viene illustrato come testare <xref:System.Windows.Media.Media3D.Point4D> strutture di uguaglianza e disuguaglianza.  

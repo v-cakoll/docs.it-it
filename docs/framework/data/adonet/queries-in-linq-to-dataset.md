@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362351"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Query in LINQ to DataSet
 Una query è un'espressione che recupera dati da un'origine dati. Le query sono in genere espresse in un linguaggio di query specializzato, ad esempio SQL per i database relazionali e XQuery per XML. Gli sviluppatori hanno dovuto pertanto imparare un nuovo linguaggio di query per ogni tipo di origine dati o formato dati usato per le query. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] offre un modello più semplice e coerente per l'uso dei dati con tutti i vari tipi di origini e formati dati. In una query [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] vengono sempre usati oggetti di programmazione.  
