@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395161"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Esecuzione side-by-side in .NET Framework
 L'esecuzione side-by-side consente di eseguire più versioni di un'applicazione o di un componente sullo stesso computer. È possibile disporre contemporaneamente sullo stesso computer di più versioni di Common Language Runtime e di più versioni di applicazioni e componenti che usano una versione runtime.  

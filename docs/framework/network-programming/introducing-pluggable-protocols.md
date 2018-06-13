@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396390"
 ---
 # <a name="introducing-pluggable-protocols"></a>Introduzione ai protocolli di collegamento
 Microsoft .NET Framework offre un'implementazione a livelli, estendibile e gestita di servizi Internet che possono essere integrati rapidamente e facilmente nelle applicazioni. Le classi di accesso a Internet negli spazi dei nomi <xref:System.Net> e <xref:System.Net.Sockets> possono essere usate per implementare applicazioni basate sul Web e basate su Internet.  

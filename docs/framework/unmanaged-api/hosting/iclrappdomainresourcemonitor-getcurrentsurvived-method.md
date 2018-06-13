@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7c179ba23be07e8ff77e1397ed753d4287b22440
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435285"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>Metodo ICLRAppDomainResourceMonitor::GetCurrentSurvived
 Ottiene il numero di byte esclusi l'ultima procedura completa di garbage collection bloccante e che fa riferimento il dominio applicazione corrente.  

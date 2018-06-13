@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528347"
 ---
 # <a name="vector-graphics-overview"></a>Cenni preliminari sulla grafica vettoriale
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Consente di disegnare linee, rettangoli e altre forme in un sistema di coordinate. È possibile scegliere tra un'ampia gamma di sistemi di coordinate, ma il sistema di coordinate è l'origine nell'angolo superiore sinistro con l'asse x a destra e l'asse y rivolta verso il basso. L'unità di misura nel sistema di coordinate predefinito è il pixel.  

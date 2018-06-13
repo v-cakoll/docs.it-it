@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289269"
 ---
 # <a name="line-c-reference"></a>#line (Riferimenti per C#)
 `#line` consente di modificare il numero di riga del compilatore e, facoltativamente, l'output del nome del file per gli errori e gli avvisi. Nell'esempio seguente viene illustrata la modalità di segnalazione di due avvisi associati a numeri di riga. La direttiva `#line 200` forza l'impostazione del numero di riga su 200 (anche se l'impostazione predefinita è 7) e, fino alla successiva direttiva #line, il nome file viene indicato come "Special". La direttiva #line predefinita reimposta la numerazione predefinita delle righe, con il conteggio delle righe rinumerate dalla direttiva precedente.  

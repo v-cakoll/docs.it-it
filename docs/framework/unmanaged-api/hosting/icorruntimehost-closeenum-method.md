@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 961fd6693d3a70f28fdfba8635452d4f4d943fc4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437196"
 ---
 # <a name="icorruntimehostcloseenum-method"></a>Metodo ICorRuntimeHost::CloseEnum
 Reimposta un enumeratore di dominio fino all'inizio dell'elenco di domini.  

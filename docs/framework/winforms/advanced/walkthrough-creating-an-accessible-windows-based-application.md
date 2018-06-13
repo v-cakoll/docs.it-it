@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529623"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procedura dettagliata: creazione di un'applicazione Windows ad Accesso facilitato
 La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda. Molti governi hanno norme relative all'accessibilità per l'acquisto del software. Il logo Certified for Windows include requisiti di accessibilità. È stato stimato che solo negli Stati Uniti risiedono 30 milioni di persone, molte delle quali potenziali clienti, interessate all'accessibilità del software.  

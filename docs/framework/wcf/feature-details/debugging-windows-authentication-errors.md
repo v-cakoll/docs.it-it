@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495873"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debug degli errori di autenticazione di Windows
 Quando si utilizza l'autenticazione di Windows come meccanismo di sicurezza, i processi di sicurezza vengono gestiti dall'interfaccia SSPI (Security Support Provider Interface). Quando si verificano errori di sicurezza a livello SSPI, essi vengono rese disponibili da Windows Communication Foundation (WCF). In questo argomento viene fornito un framework e un insieme di domande per facilitare la diagnosi degli errori.  
