@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550894"
 ---
 # <a name="gridsplitter"></a>GridSplitter
 Il <xref:System.Windows.Controls.GridSplitter> ridistribuisce lo spazio tra le colonne o righe di un <xref:System.Windows.Controls.Grid> controllo.  
