@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33479817"
 ---
 # <a name="systemservicemodelchannelspeernodeopened"></a>System.ServiceModel.Channels.PeerNodeOpened
 Una nuova connessione con un router adiacente è stata aperta correttamente.  

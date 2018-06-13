@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8232691c697c51b5a480a68c6d952f294a63460
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460227"
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next (funzione)
 Recupera il qualificatore di un'enumerazione che ha avviato con una chiamata al successivo il [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) (funzione).   

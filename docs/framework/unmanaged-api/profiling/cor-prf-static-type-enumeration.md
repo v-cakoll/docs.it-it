@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fc610f4cc34b256867396a3390d5ccd0822f6454
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450388"
 ---
 # <a name="corprfstatictype-enumeration"></a>Enumerazione COR_PRF_STATIC_TYPE
 Indica se un campo è statico e, in tal caso, la qualità statica che si applica al campo. Questi valori possono essere combinati utilizzando l'operatore OR bit per indicare che il campo ha più qualità statiche diverse.  

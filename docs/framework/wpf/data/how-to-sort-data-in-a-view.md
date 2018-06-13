@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556757"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>Procedura: ordinare i dati in una visualizzazione
 In questo esempio viene descritto come ordinare i dati in una vista.  

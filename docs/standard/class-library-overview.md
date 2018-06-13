@@ -44,6 +44,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577306"
 ---
 # <a name="net-class-library-overview"></a>Panoramica della libreria di classi .NET
 Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore che consentono di velocizzare e ottimizzare il processo di sviluppo e di accedere alle funzionalità di sistema. Per facilitare l'interoperabilità tra i linguaggi, la maggior parte dei tipi .NET è conforme a CLS e può pertanto essere usata da qualsiasi linguaggio di programmazione dotato di compilatore conforme alle specifiche CLS.  
