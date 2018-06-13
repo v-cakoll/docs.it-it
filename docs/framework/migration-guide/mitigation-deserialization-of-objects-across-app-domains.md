@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389461"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a><span data-ttu-id="1956b-102">Mitigazione: deserializzazione di oggetti tra domini app</span><span class="sxs-lookup"><span data-stu-id="1956b-102">Mitigation: Deserialization of Objects Across App Domains</span></span>
 <span data-ttu-id="1956b-103">In alcuni casi, quando in un'applicazione vengono utilizzati due o più domini applicazione con diverse basi di applicazione, il tentativo di deserializzare gli oggetti nel contesto di chiamata logico dei domini applicazione comporta la generazione di un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="1956b-103">In some cases, when an app uses two or more app domains with different application bases, the attempt to deserialize objects in the logical call context across app domains throws an exception.</span></span>  
