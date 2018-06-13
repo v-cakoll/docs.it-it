@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 403815f38e0ce85d34d97f17b0af23246b5507e7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401908"
 ---
 # <a name="debugging-coclasses"></a>Coclassi di debug
 Questa sezione descrive le coclassi non gestite usate dall'API di debug.  

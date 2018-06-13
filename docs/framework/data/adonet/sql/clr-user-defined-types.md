@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357582"
 ---
 # <a name="clr-user-defined-types"></a>Tipi definiti dall'utente CLR
 In Microsoft SQL Server viene fornito il supporto per i tipi definiti dall'utente implementati con CLR (Common Language Runtime) Microsoft .NET Framework. Il CLR è integrato in SQL Server e consente di estendere il sistema di tipi del database. Gli UDT forniscono l'estensibilità utenti nel sistema di tipi di dati di SQL Server e la capacità di definire tipi strutturati complessi.  

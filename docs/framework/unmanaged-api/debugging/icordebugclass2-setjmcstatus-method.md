@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d234e01e3d47a64b9a001591ee2b61074eea8afb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403394"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>Metodo ICorDebugClass2::SetJMCStatus
 Per ogni metodo della classe, imposta un valore che indica se il metodo è codice definito dall'utente.  

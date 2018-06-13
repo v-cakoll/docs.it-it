@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5ed9645c5111e7260010df74554825ffd8d427e8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402145"
 ---
 # <a name="getscope2-method"></a>Metodo GetScope2
 Ottiene un ambito di importazione.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408151"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Linee guida per la creazione di codice sicuro applicabili al codice non gestito
 Alcuni codici di libreria devono chiamare codice non gestito (ad esempio, le API del codice nativo, come Win32). Poiché questo comporta il superamento del perimetro di sicurezza per il codice gestito, è necessaria la dovuta attenzione. Se il codice è indipendente dalla sicurezza, sia il proprio codice sia il codice da cui viene chiamato devono avere l'autorizzazione per codice non gestito (<xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> specificato).  

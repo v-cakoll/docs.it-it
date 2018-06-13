@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402028"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Prompt dei comandi per gli sviluppatori per Visual Studio
 Il prompt dei comandi per gli sviluppatori per Visual Studio imposta automaticamente le variabili di ambiente che consentono di usare facilmente gli strumenti di .NET Framework. Il prompt dei comandi per gli sviluppatori viene installato con le versioni complete o della Community di Visual Studio. Non viene installato con le versioni Express di Visual Studio.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d124ce5dd38bed7eb439a055ff9e30a75efe5891
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400744"
 ---
 # <a name="freewin32resblob-method"></a>Metodo FreeWin32ResBlob
 Rilascia le risorse associate e il blob di risorse Win32.  

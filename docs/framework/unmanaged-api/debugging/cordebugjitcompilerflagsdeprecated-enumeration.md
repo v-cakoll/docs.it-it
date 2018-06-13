@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ca206f0da69eddd3e98b599f2813fa7985daf057
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404131"
 ---
 # <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a>Enumerazione CorDebugJITCompilerFlagsDeprecated
 Questa enumerazione è obsoleta. Utilizzare il `CORDEBUG_JIT_DEFAULT` appartenente il [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumerazione invece.  

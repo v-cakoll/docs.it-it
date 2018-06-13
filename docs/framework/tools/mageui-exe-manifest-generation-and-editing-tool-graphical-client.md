@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404953"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)
 MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando Mage.exe, ma con un'interfaccia utente basata su Windows. Con questo strumento è possibile creare, modificare e firmare manifesti di distribuzione e di applicazione. I nuovi manifesti creati con MageUI.exe sono destinati a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. È necessario usare versioni precedenti di MageUI.exe per le versioni precedenti di .NET Framework. In caso di aggiunta o rimozione di assembly da un manifesto o di apposizione di una nuova firma a manifesti esistenti, MageUI.exe non aggiorna il manifesto per destinarlo a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Per altre informazioni, vedere [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  

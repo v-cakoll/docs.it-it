@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400692"
 ---
 # <a name="getting-started-with-wif"></a>Guida introduttiva a WIF
 -   [Creazione della prima applicazione Web ASP.NET che può riconoscere attestazioni](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
