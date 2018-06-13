@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cbe94aa67c9cf9ac587b7fca9f5cbeca4870506b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437209"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>Metodo IGCHost::SetGCStartupLimits
 Imposta le dimensioni del segmento e la dimensione massima per la generazione 0.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397715"
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>Procedura: Richiedere dati con la classe WebRequest
 La procedura seguente descrive i passaggi necessari per richiedere una risorsa da un server, ad esempio, una pagina Web o un file. La risorsa deve essere identificata da un URI.  

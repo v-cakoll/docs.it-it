@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546266"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Procedura: navigare in avanti o indietro nella cronologia di navigazione
 In questo esempio viene illustrato come spostarsi in avanti o indietro per le voci nella cronologia di navigazione.  

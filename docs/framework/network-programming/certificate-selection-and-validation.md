@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396792"
 ---
 # <a name="certificate-selection-and-validation"></a>Selezione e convalida dei certificati
 Le classi <xref:System.Net> supportano diversi modi per selezionare e convalidare <xref:System.Security.Cryptography.X509Certificates> per le connessioni SSL (Secure Socket Layer). Un client può selezionare uno o più certificati per autenticarsi a un server, mentre un server può richiedere che un certificato client abbia uno o più attributi specifici per l'autenticazione.  

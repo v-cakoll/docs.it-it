@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396961"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretazione della traccia di rete
 Quando la traccia di rete è abilitata, può essere usata per acquisire le chiamate effettuate dall'applicazione a diversi membri della classe <xref:System.Net>. L'output di queste chiamate può essere simile agli esempi seguenti.  

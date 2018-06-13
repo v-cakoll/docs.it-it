@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396413"
 ---
 # <a name="net-performance-tips"></a>Suggerimenti sulle prestazioni .NET
 Il termine *prestazioni* si riferisce in genere alla velocità di esecuzione di un programma. In alcuni casi, è possibile aumentare la velocità di esecuzione seguendo determinate regole di base nel codice sorgente. In alcuni programmi, è importante esaminare attentamente il codice e usare i profiler per verificare che venga eseguito il più velocemente possibile. In altri programmi, non è necessario eseguire questa ottimizzazione perché il codice viene eseguito con una velocità ragionevole così com'è scritto. In questo articolo sono elencate alcune aree in cui si verificano comunemente problemi di prestazioni e vengono proposti suggerimenti per migliorarle, oltre a collegamenti ad altri argomenti dedicati alle prestazioni. Per altre informazioni sulla pianificazione e la misurazione delle prestazioni, vedere [Prestazioni](../../../docs/framework/performance/index.md)  

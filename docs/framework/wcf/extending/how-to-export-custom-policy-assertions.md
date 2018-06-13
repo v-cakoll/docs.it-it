@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488218"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Procedura: esportare asserzioni di criteri personalizzate
 Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoint del servizio. Le applicazioni del servizio possono utilizzare asserzioni di criteri personalizzate nei metadati del servizio per comunicare informazioni sulla personalizzazione di endpoint, associazione e contratto all'applicazione client. È possibile utilizzare Windows Communication Foundation (WCF) per esportare asserzioni in espressioni di criteri allegate alle associazioni WSDL nell'endpoint, operazione o negli oggetti messaggio, a seconda delle funzionalità o requisiti da che comunicare.  

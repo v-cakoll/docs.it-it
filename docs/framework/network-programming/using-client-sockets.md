@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395947"
 ---
 # <a name="using-client-sockets"></a>Uso di socket client
 Prima di poter avviare una conversazione tramite un <xref:System.Net.Sockets.Socket>, è necessario creare una pipe di dati tra l'applicazione e il dispositivo remoto. Anche se esistono altre famiglie di indirizzi di rete e protocolli, questo esempio mostra come creare una connessione TCP/IP a un servizio remoto.  
