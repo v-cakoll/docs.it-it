@@ -1,13 +1,6 @@
 ---
 title: 'Procedura: rispondere alla selezione dei pulsanti di Windows Form'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,27 +15,23 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28b0467c8b589882fe5afd7e884d0de55d8ca564
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14a880c34f163dc6fece44c24d377822a741b0f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534251"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a><span data-ttu-id="0a011-102">Procedura: rispondere alla selezione dei pulsanti di Windows Form</span><span class="sxs-lookup"><span data-stu-id="0a011-102">How to: Respond to Windows Forms Button Clicks</span></span>
-<span data-ttu-id="0a011-103">L'utilizzo di base di un Windows Form <xref:System.Windows.Forms.Button> controllo consiste nell'esecuzione di codice quando si fa clic sul pulsante.</span><span class="sxs-lookup"><span data-stu-id="0a011-103">The most basic use of a Windows Forms <xref:System.Windows.Forms.Button> control is to run some code when the button is clicked.</span></span>  
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a><span data-ttu-id="30b78-102">Procedura: rispondere alla selezione dei pulsanti di Windows Form</span><span class="sxs-lookup"><span data-stu-id="30b78-102">How to: Respond to Windows Forms Button Clicks</span></span>
+<span data-ttu-id="30b78-103">L'utilizzo di base di un Windows Form <xref:System.Windows.Forms.Button> controllo consiste nell'esecuzione di codice quando si fa clic sul pulsante.</span><span class="sxs-lookup"><span data-stu-id="30b78-103">The most basic use of a Windows Forms <xref:System.Windows.Forms.Button> control is to run some code when the button is clicked.</span></span>  
   
- <span data-ttu-id="0a011-104">Fare clic su un <xref:System.Windows.Forms.Button> controllo genera anche un numero di altri eventi, ad esempio il <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, e <xref:System.Windows.Forms.Control.MouseUp> eventi.</span><span class="sxs-lookup"><span data-stu-id="0a011-104">Clicking a <xref:System.Windows.Forms.Button> control also generates a number of other events, such as the <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, and <xref:System.Windows.Forms.Control.MouseUp> events.</span></span> <span data-ttu-id="0a011-105">Se si prevede di collegare gestori eventi per questi eventi correlati, assicurarsi che le relative azioni non sono in conflitto.</span><span class="sxs-lookup"><span data-stu-id="0a011-105">If you intend to attach event handlers for these related events, be sure that their actions do not conflict.</span></span> <span data-ttu-id="0a011-106">Ad esempio, se facendo clic sul pulsante Cancella le informazioni che l'utente è tipizzata in una casella di testo, posizionando il puntatore del mouse sul pulsante dovrebbe non visualizzare una descrizione comandi che contiene queste informazioni ora-inesistente.</span><span class="sxs-lookup"><span data-stu-id="0a011-106">For example, if clicking the button clears information that the user has typed in a text box, pausing the mouse pointer over the button should not display a tool tip with that now-nonexistent information.</span></span>  
+ <span data-ttu-id="30b78-104">Fare clic su un <xref:System.Windows.Forms.Button> controllo genera anche un numero di altri eventi, ad esempio il <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, e <xref:System.Windows.Forms.Control.MouseUp> eventi.</span><span class="sxs-lookup"><span data-stu-id="30b78-104">Clicking a <xref:System.Windows.Forms.Button> control also generates a number of other events, such as the <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, and <xref:System.Windows.Forms.Control.MouseUp> events.</span></span> <span data-ttu-id="30b78-105">Se si prevede di collegare gestori eventi per questi eventi correlati, assicurarsi che le relative azioni non sono in conflitto.</span><span class="sxs-lookup"><span data-stu-id="30b78-105">If you intend to attach event handlers for these related events, be sure that their actions do not conflict.</span></span> <span data-ttu-id="30b78-106">Ad esempio, se facendo clic sul pulsante Cancella le informazioni che l'utente è tipizzata in una casella di testo, posizionando il puntatore del mouse sul pulsante dovrebbe non visualizzare una descrizione comandi che contiene queste informazioni ora-inesistente.</span><span class="sxs-lookup"><span data-stu-id="30b78-106">For example, if clicking the button clears information that the user has typed in a text box, pausing the mouse pointer over the button should not display a tool tip with that now-nonexistent information.</span></span>  
   
- <span data-ttu-id="0a011-107">Se l'utente tenta di fare doppio clic su di <xref:System.Windows.Forms.Button> (controllo), verranno elaborati separatamente ogni clic; vale a dire, il controllo non supporta l'evento di doppio clic.</span><span class="sxs-lookup"><span data-stu-id="0a011-107">If the user attempts to double-click the <xref:System.Windows.Forms.Button> control, each click will be processed separately; that is, the control does not support the double-click event.</span></span>  
+ <span data-ttu-id="30b78-107">Se l'utente tenta di fare doppio clic su di <xref:System.Windows.Forms.Button> (controllo), verranno elaborati separatamente ogni clic; vale a dire, il controllo non supporta l'evento di doppio clic.</span><span class="sxs-lookup"><span data-stu-id="30b78-107">If the user attempts to double-click the <xref:System.Windows.Forms.Button> control, each click will be processed separately; that is, the control does not support the double-click event.</span></span>  
   
-### <a name="to-respond-to-a-button-click"></a><span data-ttu-id="0a011-108">Per rispondere a un clic del pulsante</span><span class="sxs-lookup"><span data-stu-id="0a011-108">To respond to a button click</span></span>  
+### <a name="to-respond-to-a-button-click"></a><span data-ttu-id="30b78-108">Per rispondere a un clic del pulsante</span><span class="sxs-lookup"><span data-stu-id="30b78-108">To respond to a button click</span></span>  
   
--   <span data-ttu-id="0a011-109">Il pulsante `Click` <xref:System.EventHandler> scrivere il codice da eseguire.</span><span class="sxs-lookup"><span data-stu-id="0a011-109">In the button's `Click` <xref:System.EventHandler> write the code to run.</span></span> <span data-ttu-id="0a011-110">`Button1_Click`deve essere associato al controllo.</span><span class="sxs-lookup"><span data-stu-id="0a011-110">`Button1_Click` must be bound to the control.</span></span> <span data-ttu-id="0a011-111">Per ulteriori informazioni, vedere [procedura: creare gestori eventi in fase di esecuzione per Windows Form](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="0a011-111">For more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span></span>  
+-   <span data-ttu-id="30b78-109">Il pulsante `Click` <xref:System.EventHandler> scrivere il codice da eseguire.</span><span class="sxs-lookup"><span data-stu-id="30b78-109">In the button's `Click` <xref:System.EventHandler> write the code to run.</span></span> <span data-ttu-id="30b78-110">`Button1_Click` deve essere associato al controllo.</span><span class="sxs-lookup"><span data-stu-id="30b78-110">`Button1_Click` must be bound to the control.</span></span> <span data-ttu-id="30b78-111">Per ulteriori informazioni, vedere [procedura: creare gestori eventi in fase di esecuzione per Windows Form](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="30b78-111">For more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -66,7 +55,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="0a011-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0a011-112">See Also</span></span>  
- [<span data-ttu-id="0a011-113">Panoramica sul controllo Button</span><span class="sxs-lookup"><span data-stu-id="0a011-113">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [<span data-ttu-id="0a011-114">Modalità di selezione di un controllo Button di Windows Form</span><span class="sxs-lookup"><span data-stu-id="0a011-114">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [<span data-ttu-id="0a011-115">Controllo Button</span><span class="sxs-lookup"><span data-stu-id="0a011-115">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="30b78-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="30b78-112">See Also</span></span>  
+ [<span data-ttu-id="30b78-113">Panoramica sul controllo Button</span><span class="sxs-lookup"><span data-stu-id="30b78-113">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [<span data-ttu-id="30b78-114">Modalità di selezione di un controllo Button di Windows Form</span><span class="sxs-lookup"><span data-stu-id="30b78-114">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [<span data-ttu-id="30b78-115">Controllo Button</span><span class="sxs-lookup"><span data-stu-id="30b78-115">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

@@ -1,75 +1,62 @@
 ---
 title: 'Procedura dettagliata: hosting di controlli Windows Form in WPF tramite XAML'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 49d5a998cfa9465bc17a6acd2a459a6ef2c28cff
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b55a51a7ca16416b6963c57395da2f2a88a55648
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548584"
 ---
-# <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a><span data-ttu-id="15eab-102">Procedura dettagliata: hosting di controlli Windows Form in WPF tramite XAML</span><span class="sxs-lookup"><span data-stu-id="15eab-102">Walkthrough: Hosting a Windows Forms Control in WPF by Using XAML</span></span>
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="15eab-103"> offre numerosi controlli con un insieme di funzionalità completo.</span><span class="sxs-lookup"><span data-stu-id="15eab-103"> provides many controls with a rich feature set.</span></span> <span data-ttu-id="15eab-104">Tuttavia, può talvolta si desidera utilizzare [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ai controlli del [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pagine.</span><span class="sxs-lookup"><span data-stu-id="15eab-104">However, you may sometimes want to use [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls on your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pages.</span></span> <span data-ttu-id="15eab-105">Ad esempio, è possibile un investimento sostanziale esistente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli o si può disporre di un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controllo che fornisce funzionalità univoche.</span><span class="sxs-lookup"><span data-stu-id="15eab-105">For example, you may have a substantial investment in existing [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls, or you may have a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control that provides unique functionality.</span></span>  
+# <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a><span data-ttu-id="26d09-102">Procedura dettagliata: hosting di controlli Windows Form in WPF tramite XAML</span><span class="sxs-lookup"><span data-stu-id="26d09-102">Walkthrough: Hosting a Windows Forms Control in WPF by Using XAML</span></span>
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="26d09-103"> offre numerosi controlli con un insieme di funzionalità completo.</span><span class="sxs-lookup"><span data-stu-id="26d09-103"> provides many controls with a rich feature set.</span></span> <span data-ttu-id="26d09-104">Tuttavia, può talvolta si desidera utilizzare [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ai controlli del [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pagine.</span><span class="sxs-lookup"><span data-stu-id="26d09-104">However, you may sometimes want to use [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls on your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pages.</span></span> <span data-ttu-id="26d09-105">Ad esempio, è possibile un investimento sostanziale esistente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli o si può disporre di un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controllo che fornisce funzionalità univoche.</span><span class="sxs-lookup"><span data-stu-id="26d09-105">For example, you may have a substantial investment in existing [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls, or you may have a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control that provides unique functionality.</span></span>  
   
- <span data-ttu-id="15eab-106">Questa procedura dettagliata viene illustrato come ospitare un controllo Windows Form <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> control per un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pagina tramite [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="15eab-106">This walkthrough shows you how to host a Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> control on a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] page by using [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span>  
+ <span data-ttu-id="26d09-106">Questa procedura dettagliata viene illustrato come ospitare un controllo Windows Form <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> control per un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pagina tramite [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="26d09-106">This walkthrough shows you how to host a Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> control on a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] page by using [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span>  
   
- <span data-ttu-id="15eab-107">Per un elenco di codice completo delle attività illustrate in questa procedura dettagliata, vedere [ospita un controllo Windows Form in WPF by Using XAML Sample](http://go.microsoft.com/fwlink/?LinkID=160000).</span><span class="sxs-lookup"><span data-stu-id="15eab-107">For a complete code listing of the tasks shown in this walkthrough, see [Hosting a Windows Forms Control in WPF by Using XAML Sample](http://go.microsoft.com/fwlink/?LinkID=160000).</span></span>  
+ <span data-ttu-id="26d09-107">Per un elenco di codice completo delle attività illustrate in questa procedura dettagliata, vedere [ospita un controllo Windows Form in WPF by Using XAML Sample](http://go.microsoft.com/fwlink/?LinkID=160000).</span><span class="sxs-lookup"><span data-stu-id="26d09-107">For a complete code listing of the tasks shown in this walkthrough, see [Hosting a Windows Forms Control in WPF by Using XAML Sample](http://go.microsoft.com/fwlink/?LinkID=160000).</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="15eab-108">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="15eab-108">Prerequisites</span></span>  
- <span data-ttu-id="15eab-109">Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="15eab-109">You need the following components to complete this walkthrough:</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="26d09-108">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="26d09-108">Prerequisites</span></span>  
+ <span data-ttu-id="26d09-109">Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="26d09-109">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]<span data-ttu-id="15eab-110">.</span><span class="sxs-lookup"><span data-stu-id="15eab-110">.</span></span>  
+-   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]<span data-ttu-id="26d09-110">.</span><span class="sxs-lookup"><span data-stu-id="26d09-110">.</span></span>  
   
-## <a name="hosting-the-windows-forms-control"></a><span data-ttu-id="15eab-111">Hosting del controllo Windows Forms</span><span class="sxs-lookup"><span data-stu-id="15eab-111">Hosting the Windows Forms Control</span></span>  
+## <a name="hosting-the-windows-forms-control"></a><span data-ttu-id="26d09-111">Hosting del controllo Windows Forms</span><span class="sxs-lookup"><span data-stu-id="26d09-111">Hosting the Windows Forms Control</span></span>  
   
-#### <a name="to-host-the-maskedtextbox-control"></a><span data-ttu-id="15eab-112">Per ospitare il controllo MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="15eab-112">To host the MaskedTextBox control</span></span>  
+#### <a name="to-host-the-maskedtextbox-control"></a><span data-ttu-id="26d09-112">Per ospitare il controllo MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="26d09-112">To host the MaskedTextBox control</span></span>  
   
-1.  <span data-ttu-id="15eab-113">Creare un progetto di applicazione WPF denominato `HostingWfInWpfWithXaml`.</span><span class="sxs-lookup"><span data-stu-id="15eab-113">Create a WPF Application project named `HostingWfInWpfWithXaml`.</span></span>  
+1.  <span data-ttu-id="26d09-113">Creare un progetto di applicazione WPF denominato `HostingWfInWpfWithXaml`.</span><span class="sxs-lookup"><span data-stu-id="26d09-113">Create a WPF Application project named `HostingWfInWpfWithXaml`.</span></span>  
   
-2.  <span data-ttu-id="15eab-114">Aggiungere riferimenti agli assembly indicati di seguito.</span><span class="sxs-lookup"><span data-stu-id="15eab-114">Add references to the following assemblies.</span></span>  
+2.  <span data-ttu-id="26d09-114">Aggiungere riferimenti agli assembly indicati di seguito.</span><span class="sxs-lookup"><span data-stu-id="26d09-114">Add references to the following assemblies.</span></span>  
   
-    -   <span data-ttu-id="15eab-115">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="15eab-115">WindowsFormsIntegration</span></span>  
+    -   <span data-ttu-id="26d09-115">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="26d09-115">WindowsFormsIntegration</span></span>  
   
-    -   <span data-ttu-id="15eab-116">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="15eab-116">System.Windows.Forms</span></span>  
+    -   <span data-ttu-id="26d09-116">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="26d09-116">System.Windows.Forms</span></span>  
   
-3.  <span data-ttu-id="15eab-117">Aprire MainWindow. XAML nel [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="15eab-117">Open MainWindow.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
+3.  <span data-ttu-id="26d09-117">Aprire MainWindow. XAML nel [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="26d09-117">Open MainWindow.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
   
-4.  <span data-ttu-id="15eab-118">Nel <xref:System.Windows.Window> elemento, aggiungere il seguente mapping dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="15eab-118">In the <xref:System.Windows.Window> element, add the following namespace mapping.</span></span> <span data-ttu-id="15eab-119">Il `wf` mapping dello spazio dei nomi stabilisce un riferimento all'assembly che contiene il controllo Windows Form.</span><span class="sxs-lookup"><span data-stu-id="15eab-119">The `wf` namespace mapping establishes a reference to the assembly that contains the Windows Forms control.</span></span>  
+4.  <span data-ttu-id="26d09-118">Nel <xref:System.Windows.Window> elemento, aggiungere il seguente mapping dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="26d09-118">In the <xref:System.Windows.Window> element, add the following namespace mapping.</span></span> <span data-ttu-id="26d09-119">Il `wf` mapping dello spazio dei nomi stabilisce un riferimento all'assembly che contiene il controllo Windows Form.</span><span class="sxs-lookup"><span data-stu-id="26d09-119">The `wf` namespace mapping establishes a reference to the assembly that contains the Windows Forms control.</span></span>  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  <span data-ttu-id="15eab-120">Nel <xref:System.Windows.Controls.Grid> elemento aggiungere il codice XAML seguente.</span><span class="sxs-lookup"><span data-stu-id="15eab-120">In the <xref:System.Windows.Controls.Grid> element add the following XAML.</span></span>  
+5.  <span data-ttu-id="26d09-120">Nel <xref:System.Windows.Controls.Grid> elemento aggiungere il codice XAML seguente.</span><span class="sxs-lookup"><span data-stu-id="26d09-120">In the <xref:System.Windows.Controls.Grid> element add the following XAML.</span></span>  
   
-     <span data-ttu-id="15eab-121">Il <xref:System.Windows.Forms.MaskedTextBox> controllo viene creato come elemento figlio di <xref:System.Windows.Forms.Integration.WindowsFormsHost> controllo.</span><span class="sxs-lookup"><span data-stu-id="15eab-121">The <xref:System.Windows.Forms.MaskedTextBox> control is created as a child of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control.</span></span>  
+     <span data-ttu-id="26d09-121">Il <xref:System.Windows.Forms.MaskedTextBox> controllo viene creato come elemento figlio di <xref:System.Windows.Forms.Integration.WindowsFormsHost> controllo.</span><span class="sxs-lookup"><span data-stu-id="26d09-121">The <xref:System.Windows.Forms.MaskedTextBox> control is created as a child of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control.</span></span>  
   
      [!code-xaml[HostingWfInWpfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWpfWithXaml/CSharp/HostingWfInWpf/Window1.xaml#3)]  
   
-6.  <span data-ttu-id="15eab-122">Premere F5 per compilare ed eseguire l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="15eab-122">Press F5 to build and run the application.</span></span>  
+6.  <span data-ttu-id="26d09-122">Premere F5 per compilare ed eseguire l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="26d09-122">Press F5 to build and run the application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15eab-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="15eab-123">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="26d09-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="26d09-123">See Also</span></span>  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [<span data-ttu-id="15eab-124">WPF Designer</span><span class="sxs-lookup"><span data-stu-id="15eab-124">WPF Designer</span></span>](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
- [<span data-ttu-id="15eab-125">Procedura dettagliata: hosting di controlli Windows Form in WPF</span><span class="sxs-lookup"><span data-stu-id="15eab-125">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)  
- [<span data-ttu-id="15eab-126">Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF</span><span class="sxs-lookup"><span data-stu-id="15eab-126">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [<span data-ttu-id="15eab-127">Procedura dettaglia: hosting di un controllo WPF composito in Windows Form</span><span class="sxs-lookup"><span data-stu-id="15eab-127">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
- [<span data-ttu-id="15eab-128">Controlli Windows Form e controlli WPF equivalenti</span><span class="sxs-lookup"><span data-stu-id="15eab-128">Windows Forms Controls and Equivalent WPF Controls</span></span>](../../../../docs/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls.md)  
- [<span data-ttu-id="15eab-129">Hosting di un controllo Windows Form in WPF tramite XAML Sample</span><span class="sxs-lookup"><span data-stu-id="15eab-129">Hosting a Windows Forms Control in WPF by Using XAML Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160000)
+ [<span data-ttu-id="26d09-124">WPF Designer</span><span class="sxs-lookup"><span data-stu-id="26d09-124">WPF Designer</span></span>](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [<span data-ttu-id="26d09-125">Procedura dettagliata: hosting di controlli Windows Form in WPF</span><span class="sxs-lookup"><span data-stu-id="26d09-125">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)  
+ [<span data-ttu-id="26d09-126">Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF</span><span class="sxs-lookup"><span data-stu-id="26d09-126">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [<span data-ttu-id="26d09-127">Procedura dettaglia: hosting di un controllo WPF composito in Windows Form</span><span class="sxs-lookup"><span data-stu-id="26d09-127">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
+ [<span data-ttu-id="26d09-128">Controlli Windows Form e controlli WPF equivalenti</span><span class="sxs-lookup"><span data-stu-id="26d09-128">Windows Forms Controls and Equivalent WPF Controls</span></span>](../../../../docs/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls.md)  
+ [<span data-ttu-id="26d09-129">Hosting di un controllo Windows Form in WPF tramite XAML Sample</span><span class="sxs-lookup"><span data-stu-id="26d09-129">Hosting a Windows Forms Control in WPF by Using XAML Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160000)

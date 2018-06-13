@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398235"
 ---
 # <a name="specifying-a-character-set"></a><span data-ttu-id="7f479-102">Specifica di un set di caratteri</span><span class="sxs-lookup"><span data-stu-id="7f479-102">Specifying a Character Set</span></span>
 <span data-ttu-id="7f479-103">Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> controlla il marshalling delle stringhe e determina in che modo la funzionalità platform invoke trova i nomi di funzione in una DLL.</span><span class="sxs-lookup"><span data-stu-id="7f479-103">The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field controls string marshaling and determines how platform invoke finds function names in a DLL.</span></span> <span data-ttu-id="7f479-104">Questo argomento descrive entrambi i comportamenti.</span><span class="sxs-lookup"><span data-stu-id="7f479-104">This topic describes both behaviors.</span></span>  
