@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595046"
 ---
 # <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a>Non è possibile creare assembly con nome sicuro dal file di chiave &#39; &lt;filename&gt;&#39;: &lt;errore&gt;
 Impossibile creare un assembly con nome sicuro dal file di chiave specificato.  

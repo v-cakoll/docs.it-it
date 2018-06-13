@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586130"
 ---
 # <a name="identifier-expected"></a>È previsto un identificatore
 Un elemento di programmazione che non è un nome di elemento dichiarato riconoscibile si verifica dove il contesto richiede un nome di elemento. Una possibile causa è un attributo è stato specificato in un punto diverso rispetto all'inizio dell'istruzione.  

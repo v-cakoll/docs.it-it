@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584579"
 ---
 # <a name="error-creating-win32-resources-lterror-messagegt"></a>Errore durante la creazione di risorse Win32: &lt;messaggio di errore&gt;
 Il compilatore Visual Basic chiama Assembly Linker (Al.exe, definito anche Alink) per generare un assembly con un manifesto. Il linker ha rilevato un errore nella creazione di una risorsa in memoria. Potrebbe trattarsi di un problema di ambiente o di memoria insufficiente nel computer.  

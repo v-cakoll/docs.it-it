@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635187"
 ---
 # <a name="cannot-delete-a-registry-hive"></a>Impossibile eliminare un sottoalbero di hive dal Registro di sistema
 Si è provato a eliminare un hive del Registro di sistema. Gli hive sono chiavi del Registro di sistema di livello superiore, ad esempio `HKEY_CURRENT_USER` e `HKEY_LOCAL_MACHINE`, e non possono essere eliminati.  

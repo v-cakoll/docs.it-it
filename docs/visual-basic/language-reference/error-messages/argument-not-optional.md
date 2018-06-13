@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585116"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Argomento non facoltativo (Visual Basic)
 Il numero e tipi di argomenti devono corrispondere a quelli previsti. È un numero errato di argomenti oppure un argomento omesso non è facoltativo. Un argomento può essere omesso solo da una chiamata a una routine definita dall'utente se è stata dichiarata `Optional` nella definizione della routine.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595826"
 ---
 # <a name="xml-entity-references-are-not-supported"></a>Riferimenti a entità XML non supportati
 Un riferimento all'entità (ad esempio, `©`) che non è definito nella specifica XML 1.0 è inclusa come un valore per un valore letterale XML specifica. Solo `&`, `"`, `<`, `>`, e `'` riferimenti a entità XML sono supportati nei valori letterali XML.  

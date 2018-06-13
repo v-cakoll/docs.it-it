@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587433"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>La clausola Handles richiede una variabile WithEvents definita nel tipo che la contiene o in uno dei relativi tipi di base
 Non è stato fornito un `WithEvents` variabile il `Handles` clausola. Il `Handles` provoca una parola chiave alla fine di una dichiarazione di routine per gestire gli eventi generati da una variabile oggetto dichiarata con la `WithEvents` (parola chiave).  

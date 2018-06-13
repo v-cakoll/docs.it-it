@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635159"
 ---
 # <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>Riga &lt;numero&gt; non è possibile leggere perché supera la dimensione massima consentita.
 Impossibile leggere la riga perché supera la dimensione massima consentita per le righe. In genere questo significa che nel file sono presenti virgolette di apertura, ma non virgolette di chiusura.  

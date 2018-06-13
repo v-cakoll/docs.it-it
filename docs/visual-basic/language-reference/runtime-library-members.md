@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604588"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Membri della libreria di runtime di Visual Basic
 Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, costanti ed enumerazioni che costituiscono la libreria di runtime di Visual Basic. Questi membri raccolta forniscono procedure, le proprietà e valori costanti che è possibile utilizzare nel codice. Ogni modulo e la classe rappresenta una particolare categoria di funzionalità.  

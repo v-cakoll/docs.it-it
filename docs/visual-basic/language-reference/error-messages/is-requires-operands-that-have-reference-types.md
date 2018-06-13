@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585580"
 ---
 # <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a>&#39;È&#39; richiede operandi che hanno tipi di riferimento, ma questo operando ha tipo di valore &#39; &lt;typename&gt;&#39;
 Il `Is` operatore di confronto determina se due variabili oggetto fanno riferimento alla stessa istanza. Questo confronto non è definito per i tipi di valore.  

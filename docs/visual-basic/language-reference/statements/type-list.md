@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605290"
 ---
 # <a name="type-list-visual-basic"></a>Elenco dei tipi (Visual Basic)
 Specifica il *parametri di tipo* per un *generico* elemento di programmazione. Più parametri sono separati da virgole. Di seguito è la sintassi per un parametro di tipo.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580523"
 ---
 # <a name="parallel-diagnostic-tools"></a>Strumenti di diagnostica in parallelo
 Visual Studio fornisce supporto completo per il debug e la profilatura di applicazioni multithread.  

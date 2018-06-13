@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585360"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> è una primitiva di sincronizzazione che sblocca i thread in attesa dopo che è stata segnalata un certo numero di volte. <xref:System.Threading.CountdownEvent> è progettato per gli scenari in cui altrimenti sarebbe necessario usare <xref:System.Threading.ManualResetEvent> o <xref:System.Threading.ManualResetEventSlim> e diminuire manualmente una variabile prima di segnalare l'evento. In uno scenario di fork/join, ad esempio, è sufficiente creare una classe <xref:System.Threading.CountdownEvent> con un conteggio di segnali pari a 5 e quindi avviare cinque elementi di lavoro nel pool di thread e fare in modo che ogni elemento di lavoro chiami <xref:System.Threading.CountdownEvent.Signal%2A> quando viene completato. Ogni chiamata a <xref:System.Threading.CountdownEvent.Signal%2A> riduce il conteggio di segnali di 1. Nel thread principale la chiamata a <xref:System.Threading.CountdownEvent.Wait%2A> verrà bloccata finché il conteggio dei segnali sarà pari a zero.  

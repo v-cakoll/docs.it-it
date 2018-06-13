@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584771"
 ---
 # <a name="39ltfunctionnamegt39-is-not-declared-smart-devicevisual-basic-compiler-error"></a>&#39;&lt;nomefunzione&gt; &#39; non è dichiarato (Smart Device/Visual Basic errore del compilatore)
 <`functionname`> non è dichiarato. La funzionalità di I/O dei file è in genere disponibile nello spazio dei nomi `Microsoft.VisualBasic` , ma non è supportata dalla versione di destinazione di .NET Compact Framework.  

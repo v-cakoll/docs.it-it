@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605056"
 ---
 # <a name="parameter-list-visual-basic"></a>Elenco dei parametri (Visual Basic)
 Specifica i parametri di che una procedura prevista quando viene chiamato. Più parametri sono separati da virgole. Di seguito è la sintassi per un parametro.  

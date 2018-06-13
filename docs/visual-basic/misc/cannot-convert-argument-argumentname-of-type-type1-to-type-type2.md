@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635133"
 ---
 # <a name="cannot-convert-argument-39ltargumentnamegt39-of-type-39lttype1gt39-to-type-39lttype2gt39"></a>Impossibile convertire l'argomento &#39; &lt;NomeArgomento&gt; &#39; di tipo &#39; &lt;type1&gt; &#39; digitare &#39; &lt;type2&gt;&#39;
 Un'operazione di conversione prova a convertire un argomento in un tipo incompatibile.  
