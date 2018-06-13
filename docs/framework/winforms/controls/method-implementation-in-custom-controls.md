@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538113"
 ---
 # <a name="method-implementation-in-custom-controls"></a>Implementazione dei metodi nei controlli personalizzati
 Un metodo viene implementato in un controllo nello stesso modo in cui avviene in qualsiasi altro componente.  

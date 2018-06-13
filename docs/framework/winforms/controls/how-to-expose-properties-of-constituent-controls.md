@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532633"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Procedura: esporre le proprietà dei controlli costitutivi
 I controlli che costituiscono un controllo composito sono detti *controlli costitutivi*. Questi controlli sono generalmente dichiarati privati e pertanto non è possibile accedere dallo sviluppatore. Se si desidera rendere disponibili le proprietà di questi controlli per gli utenti futuri, è necessario esporre all'utente. La proprietà di un controllo che costituiscono viene esposta la creazione di una proprietà nel controllo utente e usando il `get` e `set` funzioni di accesso di tale proprietà per rendere effettiva la modifica nella proprietà private del controllo che lo costituiscono.  

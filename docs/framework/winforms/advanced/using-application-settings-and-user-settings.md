@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523842"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Utilizzo delle impostazioni applicazione e delle impostazioni utente
 A partire da .NET Framework 2.0, è possibile creare e accedere ai valori che sono persistenti tra le sessioni di esecuzione dell'applicazione. Questi valori sono denominati *impostazioni*. Le impostazioni possono rappresentare le preferenze dell'utente o informazioni importanti, l'applicazione devono utilizzare. Ad esempio, è possibile creare una serie di impostazioni per archiviare le preferenze utente per la combinazione di colori di un'applicazione. Oppure è possibile archiviare la stringa di connessione che specifica un database che utilizza l'applicazione. Impostazioni consentono di mantenere le informazioni essenziali per l'applicazione all'esterno del codice e creare i profili che archiviano le preferenze di singoli utenti.  

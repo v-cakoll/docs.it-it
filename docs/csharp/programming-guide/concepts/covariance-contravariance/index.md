@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334087"
 ---
 # <a name="covariance-and-contravariance-c"></a>Covarianza e controvarianza (C#)
 In C#, covarianza e controvarianza abilitano la conversione implicita del riferimento per i tipi di matrice, i tipi delegati e gli argomenti di tipo generico. La covarianza mantiene la compatibilità dell'assegnazione e la controvarianza la inverte.  

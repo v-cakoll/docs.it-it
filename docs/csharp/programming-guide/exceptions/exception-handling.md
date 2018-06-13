@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337487"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Gestione delle eccezioni (Guida per programmatori C#)
 I programmatori C# usano un blocco [try](../../../csharp/language-reference/keywords/try-catch.md) per creare partizioni di codice in cui potrebbe essere rilevata un'eccezione. I blocchi [catch](../../../csharp/language-reference/keywords/try-catch.md) associati vengono usati per gestire tutte le eccezioni risultanti. Un blocco [finally](../../../csharp/language-reference/keywords/try-finally.md) contiene il codice eseguito, indipendentemente dal fatto che venga generata o meno un'eccezione nel blocco `try`, ad esempio il codice relativo al rilascio delle risorse allocate nel blocco `try`. Un blocco `try` richiede uno o più blocchi `catch` associati, un blocco `finally` o entrambi.  

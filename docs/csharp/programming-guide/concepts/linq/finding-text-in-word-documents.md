@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333928"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Ricerca di testo nei documenti di Word (C#)
 In questo argomento le query precedenti vengono estese in modo da individuare tutte le occorrenze di una stringa nel documento.  

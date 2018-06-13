@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338637"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procedura dettagliata: programmazione di Office (C# e Visual Basic)
 Visual Studio offre funzionalità di C# e Visual Basic che migliorano la programmazione di Microsoft Office. Tra le utili funzionalità di C# sono disponibili gli argomenti denominati e facoltativi e i valori restituiti di tipo `dynamic`. Nella programmazione COM è possibile omettere la parola chiave `ref` e accedere alle proprietà indicizzate. Le funzionalità di Visual Basic includono le proprietà implementate automaticamente, le istruzioni nelle espressioni lambda e gli inizializzatori di insieme.

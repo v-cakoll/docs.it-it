@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336638"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Utilizzo del tipo dinamico (Guida per programmatori C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] introduce un nuovo tipo, `dynamic`. Il tipo è statico, ma un oggetto di tipo `dynamic` ignora il controllo del tipo statico. Nella maggior parte dei casi, funziona come se disponesse del tipo `object`. In fase di compilazione, si presume che un elemento tipizzato come `dynamic`dynamic supporti qualsiasi operazione. Non è pertanto importante se l'oggetto ottiene il valore da un'API COM, da un linguaggio dinamico quale IronPython, dal modello DOM (Document Object Model) HTML, dalla reflection o da un altro elemento del programma. Se, tuttavia, il codice non è valido, vengono intercettati errori in fase di esecuzione.  
