@@ -1,37 +1,28 @@
 ---
 title: 'Esempio: gestione delle eccezioni durante il data binding'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2714d53426bfee22b3d83d76b766816d9bc9d60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c4b73ed36d3334e983b960ce972292a190bad85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393588"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a><span data-ttu-id="7018f-102">Esempio: gestione delle eccezioni durante il data binding</span><span class="sxs-lookup"><span data-stu-id="7018f-102">Example: Handling Exceptions When Binding Data</span></span>
+# <a name="example-handling-exceptions-when-binding-data"></a><span data-ttu-id="109de-102">Esempio: gestione delle eccezioni durante il data binding</span><span class="sxs-lookup"><span data-stu-id="109de-102">Example: Handling Exceptions When Binding Data</span></span>
 > [!NOTE]
->  <span data-ttu-id="7018f-103">In questo argomento si fa riferimento a .NET Native Developer Preview, ovvero la versione preliminare del software,</span><span class="sxs-lookup"><span data-stu-id="7018f-103">This topic refers to the .NET Native Developer Preview, which is pre-release software.</span></span> <span data-ttu-id="7018f-104">che è possibile scaricare dal [sito Web di Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=394611) (è necessaria la registrazione).</span><span class="sxs-lookup"><span data-stu-id="7018f-104">You can download the preview from the [Microsoft Connect website](http://go.microsoft.com/fwlink/?LinkId=394611) (requires registration).</span></span>  
+>  <span data-ttu-id="109de-103">In questo argomento si fa riferimento a .NET Native Developer Preview, ovvero la versione preliminare del software,</span><span class="sxs-lookup"><span data-stu-id="109de-103">This topic refers to the .NET Native Developer Preview, which is pre-release software.</span></span> <span data-ttu-id="109de-104">che è possibile scaricare dal [sito Web di Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=394611) (è necessaria la registrazione).</span><span class="sxs-lookup"><span data-stu-id="109de-104">You can download the preview from the [Microsoft Connect website](http://go.microsoft.com/fwlink/?LinkId=394611) (requires registration).</span></span>  
   
- <span data-ttu-id="7018f-105">L'esempio seguente illustra come risolvere un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) generata quando un'app compilata con la catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)] prova ad associare i dati.</span><span class="sxs-lookup"><span data-stu-id="7018f-105">The following example shows how to resolve a [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) exception that is thrown when an app compiled with the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain tries to bind data.</span></span> <span data-ttu-id="7018f-106">Queste sono le informazioni sull'eccezione:</span><span class="sxs-lookup"><span data-stu-id="7018f-106">Here’s the exception information:</span></span>  
+ <span data-ttu-id="109de-105">L'esempio seguente illustra come risolvere un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) generata quando un'app compilata con la catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)] prova ad associare i dati.</span><span class="sxs-lookup"><span data-stu-id="109de-105">The following example shows how to resolve a [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) exception that is thrown when an app compiled with the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain tries to bind data.</span></span> <span data-ttu-id="109de-106">Queste sono le informazioni sull'eccezione:</span><span class="sxs-lookup"><span data-stu-id="109de-106">Here’s the exception information:</span></span>  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
 App.ViewModels.MainPageVM  
 ```  
   
- <span data-ttu-id="7018f-107">Questo è lo stack di chiamate associato:</span><span class="sxs-lookup"><span data-stu-id="7018f-107">Here's the associated call stack:</span></span>  
+ <span data-ttu-id="109de-107">Questo è lo stack di chiamate associato:</span><span class="sxs-lookup"><span data-stu-id="109de-107">Here's the associated call stack:</span></span>  
   
 ```  
 Reflection::Execution::ReflectionDomainSetupImplementation.CreateNonInvokabilityException+0x238  
@@ -47,27 +38,27 @@ Windows_UI_Xaml!DirectUI::PropertyAccessPathStep::GetValue+0x31
 Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113  
 ```  
   
-## <a name="what-was-the-app-doing"></a><span data-ttu-id="7018f-108">Che cosa stava eseguendo l'app?</span><span class="sxs-lookup"><span data-stu-id="7018f-108">What was the app doing?</span></span>  
- <span data-ttu-id="7018f-109">Alla base dello stack, i frame dello spazio dei nomi [Windows.UI.Xaml](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) indicano che il motore di rendering XAML era in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="7018f-109">At the base of the stack, frames from the [Windows.UI.Xaml](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) namespace indicate that the XAML rendering engine was running.</span></span>   <span data-ttu-id="7018f-110">L'uso del metodo <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> indica una ricerca basata su reflection del valore di una proprietà sul tipo di cui sono stati rimossi i metadati.</span><span class="sxs-lookup"><span data-stu-id="7018f-110">The use of the <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> method indicates a reflection-based lookup of a property’s value on the type whose metadata was removed.</span></span>  
+## <a name="what-was-the-app-doing"></a><span data-ttu-id="109de-108">Che cosa stava eseguendo l'app?</span><span class="sxs-lookup"><span data-stu-id="109de-108">What was the app doing?</span></span>  
+ <span data-ttu-id="109de-109">Alla base dello stack, i frame dello spazio dei nomi [Windows.UI.Xaml](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) indicano che il motore di rendering XAML era in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="109de-109">At the base of the stack, frames from the [Windows.UI.Xaml](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) namespace indicate that the XAML rendering engine was running.</span></span>   <span data-ttu-id="109de-110">L'uso del metodo <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> indica una ricerca basata su reflection del valore di una proprietà sul tipo di cui sono stati rimossi i metadati.</span><span class="sxs-lookup"><span data-stu-id="109de-110">The use of the <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> method indicates a reflection-based lookup of a property’s value on the type whose metadata was removed.</span></span>  
   
- <span data-ttu-id="7018f-111">Il primo passaggio per la fornitura di una direttiva di metadati consiste nell'aggiunta di metadati `serialize` per il tipo che ne rende accessibili le proprietà:</span><span class="sxs-lookup"><span data-stu-id="7018f-111">The first step in providing a metadata directive would be to add `serialize` metadata for the type so that its properties are all accessible:</span></span>  
+ <span data-ttu-id="109de-111">Il primo passaggio per la fornitura di una direttiva di metadati consiste nell'aggiunta di metadati `serialize` per il tipo che ne rende accessibili le proprietà:</span><span class="sxs-lookup"><span data-stu-id="109de-111">The first step in providing a metadata directive would be to add `serialize` metadata for the type so that its properties are all accessible:</span></span>  
   
 ```xml  
 <Type Name="App.ViewModels.MainPageVM" Serialize="Required Public" />  
 ```  
   
-## <a name="is-this-an-isolated-case"></a><span data-ttu-id="7018f-112">Si tratta di un caso isolato?</span><span class="sxs-lookup"><span data-stu-id="7018f-112">Is this an isolated case?</span></span>  
- <span data-ttu-id="7018f-113">In questo scenario, se il data binding contiene metadati incompleti per `ViewModel`, potrebbe contenerne anche per altri.</span><span class="sxs-lookup"><span data-stu-id="7018f-113">In this scenario, if data binding has incomplete metadata for one `ViewModel`, it may for others, too.</span></span>  <span data-ttu-id="7018f-114">Se il codice è strutturato in modo che i modelli di visualizzazione dell'app siano tutti nello spazio dei nomi `App.ViewModels`, è possibile usare una direttiva di runtime più generale:</span><span class="sxs-lookup"><span data-stu-id="7018f-114">If the code is structured in a way that the app’s view models are all in the `App.ViewModels` namespace, you could use a more general runtime directive:</span></span>  
+## <a name="is-this-an-isolated-case"></a><span data-ttu-id="109de-112">Si tratta di un caso isolato?</span><span class="sxs-lookup"><span data-stu-id="109de-112">Is this an isolated case?</span></span>  
+ <span data-ttu-id="109de-113">In questo scenario, se il data binding contiene metadati incompleti per `ViewModel`, potrebbe contenerne anche per altri.</span><span class="sxs-lookup"><span data-stu-id="109de-113">In this scenario, if data binding has incomplete metadata for one `ViewModel`, it may for others, too.</span></span>  <span data-ttu-id="109de-114">Se il codice è strutturato in modo che i modelli di visualizzazione dell'app siano tutti nello spazio dei nomi `App.ViewModels`, è possibile usare una direttiva di runtime più generale:</span><span class="sxs-lookup"><span data-stu-id="109de-114">If the code is structured in a way that the app’s view models are all in the `App.ViewModels` namespace, you could use a more general runtime directive:</span></span>  
   
 ```xml  
 <Namespace Name="App.ViewModels " Serialize="Required Public" />  
 ```  
   
-## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a><span data-ttu-id="7018f-115">Il codice può essere riscritto per escludere l'uso della reflection?</span><span class="sxs-lookup"><span data-stu-id="7018f-115">Could the code be rewritten to not use reflection?</span></span>  
- <span data-ttu-id="7018f-116">Il data binding ha un elevato livello di reflection, pertanto la modifica del codice per impedire la reflection non è consentita.</span><span class="sxs-lookup"><span data-stu-id="7018f-116">Because data binding is reflection-intensive, changing the code to avoid reflection isn’t feasible.</span></span>  
+## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a><span data-ttu-id="109de-115">Il codice può essere riscritto per escludere l'uso della reflection?</span><span class="sxs-lookup"><span data-stu-id="109de-115">Could the code be rewritten to not use reflection?</span></span>  
+ <span data-ttu-id="109de-116">Il data binding ha un elevato livello di reflection, pertanto la modifica del codice per impedire la reflection non è consentita.</span><span class="sxs-lookup"><span data-stu-id="109de-116">Because data binding is reflection-intensive, changing the code to avoid reflection isn’t feasible.</span></span>  
   
- <span data-ttu-id="7018f-117">Tuttavia, sono disponibili dei metodi per specificare `ViewModel` nella pagina XAML in modo che la catena di strumenti possa associare le associazioni di proprietà al tipo corretto durante la compilazione e mantenere i metadati senza usare una direttiva di runtime.</span><span class="sxs-lookup"><span data-stu-id="7018f-117">However, there are ways to specify the `ViewModel` to the XAML page so that the tool chain can associate property bindings with the correct type at compile time and keep the metadata without using a runtime directive.</span></span>  <span data-ttu-id="7018f-118">È ad esempio possibile applicare l'attributo [Windows.UI.Xaml.Data.BindableAttribute](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) alle proprietà.</span><span class="sxs-lookup"><span data-stu-id="7018f-118">For example, you could apply the [Windows.UI.Xaml.Data.BindableAttribute](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) attribute on properties.</span></span> <span data-ttu-id="7018f-119">In questo modo il compilatore XAML genera le informazioni di ricerca necessarie ed evita la richiesta di una direttiva di runtime nel file Default.rd.xml.</span><span class="sxs-lookup"><span data-stu-id="7018f-119">This causes the XAML compiler to generate the required lookup information and avoids requiring a runtime directive in the Default.rd.xml file.</span></span>  
+ <span data-ttu-id="109de-117">Tuttavia, sono disponibili dei metodi per specificare `ViewModel` nella pagina XAML in modo che la catena di strumenti possa associare le associazioni di proprietà al tipo corretto durante la compilazione e mantenere i metadati senza usare una direttiva di runtime.</span><span class="sxs-lookup"><span data-stu-id="109de-117">However, there are ways to specify the `ViewModel` to the XAML page so that the tool chain can associate property bindings with the correct type at compile time and keep the metadata without using a runtime directive.</span></span>  <span data-ttu-id="109de-118">È ad esempio possibile applicare l'attributo [Windows.UI.Xaml.Data.BindableAttribute](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) alle proprietà.</span><span class="sxs-lookup"><span data-stu-id="109de-118">For example, you could apply the [Windows.UI.Xaml.Data.BindableAttribute](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) attribute on properties.</span></span> <span data-ttu-id="109de-119">In questo modo il compilatore XAML genera le informazioni di ricerca necessarie ed evita la richiesta di una direttiva di runtime nel file Default.rd.xml.</span><span class="sxs-lookup"><span data-stu-id="109de-119">This causes the XAML compiler to generate the required lookup information and avoids requiring a runtime directive in the Default.rd.xml file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7018f-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7018f-120">See Also</span></span>  
- [<span data-ttu-id="7018f-121">Introduzione</span><span class="sxs-lookup"><span data-stu-id="7018f-121">Getting Started</span></span>](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [<span data-ttu-id="7018f-122">Esempio: Risoluzione dei problemi di programmazione dinamica</span><span class="sxs-lookup"><span data-stu-id="7018f-122">Example: Troubleshooting Dynamic Programming</span></span>](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+## <a name="see-also"></a><span data-ttu-id="109de-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="109de-120">See Also</span></span>  
+ [<span data-ttu-id="109de-121">Introduzione</span><span class="sxs-lookup"><span data-stu-id="109de-121">Getting Started</span></span>](../../../docs/framework/net-native/getting-started-with-net-native.md)  
+ [<span data-ttu-id="109de-122">Esempio: Risoluzione dei problemi di programmazione dinamica</span><span class="sxs-lookup"><span data-stu-id="109de-122">Example: Troubleshooting Dynamic Programming</span></span>](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

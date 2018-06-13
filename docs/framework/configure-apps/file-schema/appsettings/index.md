@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743771"
 ---
 # <a name="app-settings-schema"></a><span data-ttu-id="4a53c-102">Schema impostazioni applicazione</span><span class="sxs-lookup"><span data-stu-id="4a53c-102">App Settings schema</span></span>
 

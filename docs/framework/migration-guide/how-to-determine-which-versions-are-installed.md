@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391638"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a><span data-ttu-id="84e37-102">Procedura: Determinare le versioni di .NET Framework installate</span><span class="sxs-lookup"><span data-stu-id="84e37-102">How to: Determine which .NET Framework versions are installed</span></span>
 

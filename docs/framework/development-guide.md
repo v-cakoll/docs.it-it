@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391098"
 ---
 # <a name="net-framework-development-guide"></a><span data-ttu-id="d4872-102">Guida di sviluppo per .NET Framework</span><span class="sxs-lookup"><span data-stu-id="d4872-102">.NET Framework Development Guide</span></span>
 <span data-ttu-id="d4872-103">Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere e distribuire app .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d4872-103">This section explains how to create, configure, debug, secure, and deploy your .NET Framework apps.</span></span> <span data-ttu-id="d4872-104">In questa sezione vengono fornite informazioni sulle aree tecnologiche, ad esempio programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.</span><span class="sxs-lookup"><span data-stu-id="d4872-104">The section also provides information about technology areas such as dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>  

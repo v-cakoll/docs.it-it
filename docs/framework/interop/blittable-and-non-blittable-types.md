@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392291"
 ---
 # <a name="blittable-and-non-blittable-types"></a><span data-ttu-id="384a0-102">tipi copiabili e non copiabili</span><span class="sxs-lookup"><span data-stu-id="384a0-102">Blittable and Non-Blittable Types</span></span>
 <span data-ttu-id="384a0-103">La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memoria gestita sia in quella non gestita e non richiede quindi una gestione particolare tramite il gestore di marshalling di interoperabilità.</span><span class="sxs-lookup"><span data-stu-id="384a0-103">Most data types have a common representation in both managed and unmanaged memory and do not require special handling by the interop marshaler.</span></span> <span data-ttu-id="384a0-104">Questi tipi sono definiti *copiabili da BLT*, poiché non richiedono la conversione quando vengono passati tra codice gestito e codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="384a0-104">These types are called *blittable types* because they do not require conversion when they are passed between managed and unmanaged code.</span></span>  

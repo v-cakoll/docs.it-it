@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744850"
 ---
 # <a name="ltappdomainmanagerassemblygt-element"></a><span data-ttu-id="e2f1a-102">&lt;appDomainManagerAssembly&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="e2f1a-102">&lt;appDomainManagerAssembly&gt; Element</span></span>
 <span data-ttu-id="e2f1a-103">Specifica l'assembly che fornisce il gestore di dominio dell'applicazione per il dominio applicazione predefinito nel processo.</span><span class="sxs-lookup"><span data-stu-id="e2f1a-103">Specifies the assembly that provides the application domain manager for the default application domain in the process.</span></span>  

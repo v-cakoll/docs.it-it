@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392448"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a><span data-ttu-id="c6001-102">Modifiche apportate allo spazio dei nomi System.Uri nella versione 2.0</span><span class="sxs-lookup"><span data-stu-id="c6001-102">Changes to the System.Uri namespace in Version 2.0</span></span>
 <span data-ttu-id="c6001-103">Alla classe <xref:System.Uri?displayProperty=nameWithType> sono state apportate alcune modifiche</span><span class="sxs-lookup"><span data-stu-id="c6001-103">Several changes were made to the <xref:System.Uri?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="c6001-104">allo scopo di correggerne il comportamento nonché di aumentarne le possibilità d'utilizzo e il livello di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="c6001-104">These changes fixed incorrect behavior, enhanced usability, and enhanced security.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391316"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a><span data-ttu-id="8f6bb-102">Marshalling dei dati con platform invoke</span><span class="sxs-lookup"><span data-stu-id="8f6bb-102">Marshaling Data with Platform Invoke</span></span>
 <span data-ttu-id="8f6bb-103">Per chiamare le funzioni esportate da una libreria non gestita, un'applicazione .NET Framework richiede un prototipo di funzione nel codice gestito che rappresenta la funzione non gestita.</span><span class="sxs-lookup"><span data-stu-id="8f6bb-103">To call functions exported from an unmanaged library, a .NET Framework application requires a function prototype in managed code that represents the unmanaged function.</span></span> <span data-ttu-id="8f6bb-104">Per creare un prototipo che abiliti PInvoke per effettuare il marshalling dei dati in modo corretto, è necessario eseguire le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="8f6bb-104">To create a prototype that enables platform invoke to marshal data correctly, you must do the following:</span></span>  

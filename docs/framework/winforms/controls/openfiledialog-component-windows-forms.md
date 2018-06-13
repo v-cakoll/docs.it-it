@@ -1,48 +1,37 @@
 ---
 title: Componente OpenFileDialog (Windows Form)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Open File dialog box
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee8666ca70d12e1198e34a11dcd429568e07201e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba04b904930f2393022ea4ca6276cef95e51d833
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539952"
 ---
-# <a name="openfiledialog-component-windows-forms"></a><span data-ttu-id="48357-102">Componente OpenFileDialog (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="48357-102">OpenFileDialog Component (Windows Forms)</span></span>
-<span data-ttu-id="48357-103">Il componente di Windows Form <xref:System.Windows.Forms.OpenFileDialog> è una finestra di dialogo preconfigurata.</span><span class="sxs-lookup"><span data-stu-id="48357-103">The Windows Forms <xref:System.Windows.Forms.OpenFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="48357-104">Ha lo stesso **Apri** la finestra di dialogo esposta dal sistema operativo Windows.</span><span class="sxs-lookup"><span data-stu-id="48357-104">It is the same **Open File** dialog box exposed by the Windows operating system.</span></span> <span data-ttu-id="48357-105">Il componente eredita dalla classe <xref:System.Windows.Forms.CommonDialog>.</span><span class="sxs-lookup"><span data-stu-id="48357-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  
+# <a name="openfiledialog-component-windows-forms"></a><span data-ttu-id="e3de6-102">Componente OpenFileDialog (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="e3de6-102">OpenFileDialog Component (Windows Forms)</span></span>
+<span data-ttu-id="e3de6-103">Il componente di Windows Form <xref:System.Windows.Forms.OpenFileDialog> è una finestra di dialogo preconfigurata.</span><span class="sxs-lookup"><span data-stu-id="e3de6-103">The Windows Forms <xref:System.Windows.Forms.OpenFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="e3de6-104">Ha lo stesso **Apri** la finestra di dialogo esposta dal sistema operativo Windows.</span><span class="sxs-lookup"><span data-stu-id="e3de6-104">It is the same **Open File** dialog box exposed by the Windows operating system.</span></span> <span data-ttu-id="e3de6-105">Il componente eredita dalla classe <xref:System.Windows.Forms.CommonDialog>.</span><span class="sxs-lookup"><span data-stu-id="e3de6-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="48357-106">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="48357-106">In This Section</span></span>  
- [<span data-ttu-id="48357-107">Cenni preliminari sul componente OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="48357-107">OpenFileDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
- <span data-ttu-id="48357-108">Introduce i concetti generali relativi al componente<xref:System.Windows.Forms.OpenFileDialog>, che consente di visualizzare una finestra di dialogo preconfigurata tramite la quale gli utenti possono aprire i file.</span><span class="sxs-lookup"><span data-stu-id="48357-108">Introduces the general concepts of the <xref:System.Windows.Forms.OpenFileDialog> component, which allows you to display a pre-configured dialog box that users can use to open files.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e3de6-106">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="e3de6-106">In This Section</span></span>  
+ [<span data-ttu-id="e3de6-107">Cenni preliminari sul componente OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="e3de6-107">OpenFileDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="e3de6-108">Introduce i concetti generali relativi al componente<xref:System.Windows.Forms.OpenFileDialog>, che consente di visualizzare una finestra di dialogo preconfigurata tramite la quale gli utenti possono aprire i file.</span><span class="sxs-lookup"><span data-stu-id="e3de6-108">Introduces the general concepts of the <xref:System.Windows.Forms.OpenFileDialog> component, which allows you to display a pre-configured dialog box that users can use to open files.</span></span>  
   
- [<span data-ttu-id="48357-109">Procedura: Aprire file con il componente OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="48357-109">How to: Open Files Using the OpenFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/how-to-open-files-using-the-openfiledialog-component.md)  
- <span data-ttu-id="48357-110">Illustra come aprire un file mediante un'istanza del componente <xref:System.Windows.Forms.OpenFileDialog> in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="48357-110">Explains how to open a file at run time via an instance of the <xref:System.Windows.Forms.OpenFileDialog> component.</span></span>  
+ [<span data-ttu-id="e3de6-109">Procedura: Aprire file con il componente OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="e3de6-109">How to: Open Files Using the OpenFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/how-to-open-files-using-the-openfiledialog-component.md)  
+ <span data-ttu-id="e3de6-110">Illustra come aprire un file mediante un'istanza del componente <xref:System.Windows.Forms.OpenFileDialog> in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="e3de6-110">Explains how to open a file at run time via an instance of the <xref:System.Windows.Forms.OpenFileDialog> component.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="48357-111">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="48357-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e3de6-111">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="e3de6-111">Reference</span></span>  
  <xref:System.Windows.Forms.OpenFileDialog>  
- <span data-ttu-id="48357-112">Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.OpenFileDialog> e sui relativi membri.</span><span class="sxs-lookup"><span data-stu-id="48357-112">Provides reference information on the <xref:System.Windows.Forms.OpenFileDialog> class and its members.</span></span>  
+ <span data-ttu-id="e3de6-112">Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.OpenFileDialog> e sui relativi membri.</span><span class="sxs-lookup"><span data-stu-id="e3de6-112">Provides reference information on the <xref:System.Windows.Forms.OpenFileDialog> class and its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="48357-113">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="48357-113">Related Sections</span></span>  
- [<span data-ttu-id="48357-114">Controlli e componenti della finestra di dialogo</span><span class="sxs-lookup"><span data-stu-id="48357-114">Dialog-Box Controls and Components</span></span>](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- <span data-ttu-id="48357-115">Descrive un set di controlli e componenti che consentono agli utenti di eseguire interazioni standard con l'applicazione o il sistema.</span><span class="sxs-lookup"><span data-stu-id="48357-115">Describes a set of controls and components that allow users to perform standard interactions with the application or system.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="e3de6-113">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="e3de6-113">Related Sections</span></span>  
+ [<span data-ttu-id="e3de6-114">Controlli e componenti della finestra di dialogo</span><span class="sxs-lookup"><span data-stu-id="e3de6-114">Dialog-Box Controls and Components</span></span>](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ <span data-ttu-id="e3de6-115">Descrive un set di controlli e componenti che consentono agli utenti di eseguire interazioni standard con l'applicazione o il sistema.</span><span class="sxs-lookup"><span data-stu-id="e3de6-115">Describes a set of controls and components that allow users to perform standard interactions with the application or system.</span></span>  
   
- [<span data-ttu-id="48357-116">Controlli da usare in Windows Form</span><span class="sxs-lookup"><span data-stu-id="48357-116">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="48357-117">Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.</span><span class="sxs-lookup"><span data-stu-id="48357-117">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+ [<span data-ttu-id="e3de6-116">Controlli da usare in Windows Form</span><span class="sxs-lookup"><span data-stu-id="e3de6-116">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="e3de6-117">Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.</span><span class="sxs-lookup"><span data-stu-id="e3de6-117">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- <span data-ttu-id="48357-118">[Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575) (Codice di base per le finestre di dialogo di Windows Form)</span><span class="sxs-lookup"><span data-stu-id="48357-118">[Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575)</span></span>  
- <span data-ttu-id="48357-119">Descrive i controlli di finestra di dialogo di Windows Form, i componenti e il codice necessario per lo svolgimento delle relative funzioni di base.</span><span class="sxs-lookup"><span data-stu-id="48357-119">Discusses the Windows Forms dialog box controls and components and the code necessary for executing their basic functions.</span></span> <span data-ttu-id="48357-120">Si tratta di un articolo tecnico della MSDN Online Library.</span><span class="sxs-lookup"><span data-stu-id="48357-120">(MSDN Online Library technical article)</span></span>
+ <span data-ttu-id="e3de6-118">[Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575) (Codice di base per le finestre di dialogo di Windows Form)</span><span class="sxs-lookup"><span data-stu-id="e3de6-118">[Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575)</span></span>  
+ <span data-ttu-id="e3de6-119">Descrive i controlli di finestra di dialogo di Windows Form, i componenti e il codice necessario per lo svolgimento delle relative funzioni di base.</span><span class="sxs-lookup"><span data-stu-id="e3de6-119">Discusses the Windows Forms dialog box controls and components and the code necessary for executing their basic functions.</span></span> <span data-ttu-id="e3de6-120">Si tratta di un articolo tecnico della MSDN Online Library.</span><span class="sxs-lookup"><span data-stu-id="e3de6-120">(MSDN Online Library technical article)</span></span>

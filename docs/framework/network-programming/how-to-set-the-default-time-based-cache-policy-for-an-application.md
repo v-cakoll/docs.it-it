@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396672"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a><span data-ttu-id="61a7f-102">Procedura: Impostare criteri di cache predefiniti basati sull'ora per un'applicazione</span><span class="sxs-lookup"><span data-stu-id="61a7f-102">How to: Set the Default Time-Based Cache Policy for an Application</span></span>
 <span data-ttu-id="61a7f-103">I criteri di cache basati sul tempo predefiniti consentono di definire il comportamento della cache per un'applicazione in base alle intestazioni inviate con la risorsa memorizzata nella cache e al comportamento della cache definito nelle sezioni 13 e 14 del documento RFC 2616, disponibile all'indirizzo [http://www.ietf.org](http://www.ietf.org/). Questo è il comportamento della cache appropriato per la maggior parte delle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="61a7f-103">The default time-based cache policy allows an application to have its cache behavior defined by the headers sent with the cached resource and the cache behavior defined in sections 13 and 14 of RFC 2616, available at [http://www.ietf.org](http://www.ietf.org/). This is the appropriate cache behavior for most applications.</span></span>  

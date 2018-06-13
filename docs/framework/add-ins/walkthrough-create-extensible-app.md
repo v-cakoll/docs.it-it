@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744824"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a><span data-ttu-id="1e248-102">Procedura dettagliata: creazione di un'applicazione estendibile</span><span class="sxs-lookup"><span data-stu-id="1e248-102">Walkthrough: Creating an Extensible Application</span></span>
 <span data-ttu-id="1e248-103">Questa procedura dettagliata viene descritto come creare una pipeline per un componente aggiuntivo che esegue funzioni calcolatrice semplice.</span><span class="sxs-lookup"><span data-stu-id="1e248-103">This walkthrough describes how to create a pipeline for an add-in that performs simple calculator functions.</span></span> <span data-ttu-id="1e248-104">Viene illustrato uno scenario reale; invece, vengono illustrate le funzionalità di base di una pipeline e un componente aggiuntivo può come fornire servizi per un host.</span><span class="sxs-lookup"><span data-stu-id="1e248-104">It does not demonstrate a real-world scenario; rather, it demonstrates the basic functionality of a pipeline and how an add-in can provide services for a host.</span></span>  
