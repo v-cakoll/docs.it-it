@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eac378a48900d5820ad35587a6d269648ef99a77
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428899"
 ---
 # <a name="corgcstattypes-enumeration"></a>Enumerazione COR_GC_STAT_TYPES
 Specifica le statistiche devono essere registrati per una garbage collection.  

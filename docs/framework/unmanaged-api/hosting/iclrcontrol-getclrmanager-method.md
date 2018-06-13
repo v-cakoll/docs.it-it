@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f375afde247c3a9b95e1220df747d3f2b95e2840
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436429"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>Metodo ICLRControl::GetCLRManager
 Ottiene un puntatore a interfaccia a un'istanza di uno dei tipi di gestione, che l'host può utilizzare per configurare common language runtime (CLR).  

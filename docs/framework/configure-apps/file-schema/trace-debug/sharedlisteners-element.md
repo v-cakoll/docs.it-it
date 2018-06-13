@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745575"
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt; elemento
 Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di traccia.  Questi listener non ricevono le tracce per impostazione predefinita e non è possibile recuperare questi listener in fase di esecuzione. I listener identificati come condivisi possono essere aggiunti alle origini o le tracce in base al nome.  

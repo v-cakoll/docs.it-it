@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744382"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Procedura: installare un assembly nella Global Assembly Cache
 Esistono due modi per installare un assembly con nome sicuro nella Global Assembly Cache:  

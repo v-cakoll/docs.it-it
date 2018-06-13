@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65fbf0bf42f7312ad80b61bf452b62a4d0ff93c9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436124"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>Metodo ICLRGCManager2::SetGCStartupLimitsEx
 Imposta le dimensioni di un segmento di garbage collection e la dimensione massima della generazione del sistema di garbage collection 0.  

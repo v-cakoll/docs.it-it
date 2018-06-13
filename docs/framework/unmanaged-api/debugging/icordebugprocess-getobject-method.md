@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84b6edf122aa3d6d942e06c9f5c7dd13b0bfa19e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416393"
 ---
 # <a name="icordebugprocessgetobject-method"></a>Metodo ICorDebugProcess::GetObject
 Questo metodo non è stato implementato.  

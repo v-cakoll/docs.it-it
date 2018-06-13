@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389405"
 ---
 # <a name="mitigation-product-versioning"></a>Mitigazione: Controllo delle versioni del prodotto
 In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e versioni successive, il controllo delle versioni del prodotto è cambiato rispetto alle versioni precedenti di .NET Framework (.NET Framework 4, 4.5, 4.5.1 e 4.5.2).  

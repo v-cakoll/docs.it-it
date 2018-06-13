@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755097"
 ---
 # <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
 Imposta il tipo di attestazione che specifica il <xref:System.Security.Principal.IIdentity.Name%2A> proprietà. Il tipo di attestazione utilizzato per la ricerca per un <xref:System.Security.Claims.Claim> nella raccolta di <xref:System.Security.Claims.ClaimsIdentity> gli oggetti restituiti dal <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> metodo di questo gestore del token. Il valore dell'attestazione corrispondente viene impostato come il nome del <xref:System.Security.Principal.IIdentity> generato da questo gestore del token.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507823"
 ---
 # <a name="message-security-over-message-queuing"></a>Sicurezza dei messaggi nell'accodamento messaggi
 In questo esempio viene illustrato come implementare un'applicazione che utilizza WS-Security con l'autenticazione del certificato X.509v3 per il client e che richiede l'autenticazione del server utilizzando il certificato X.509v3 del server su MSMQ. La sicurezza dei messaggi a volte è più efficace per garantire che i messaggi nell'archivio MSMQ siano crittografati e l'applicazione può eseguire direttamente l'autenticazione del messaggio.  

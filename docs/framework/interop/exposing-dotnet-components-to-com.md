@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387432"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Esposizione di componenti .NET Framework a COM
 La scrittura di un tipo .NET e l'utilizzo di tale tipo dal codice non gestito sono attività distinte per gli sviluppatori. Questa sezione offre diversi suggerimenti per la scrittura di un codice gestito che interagisce con i client COM:  

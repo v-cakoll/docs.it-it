@@ -21,9 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0b30cc2c499644ffc97a734e1554e4e352b34af
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431890"
 ---
 # <a name="coeeshutdowncom-function"></a>Funzione CoEEShutDownCOM
 Impone a common language runtime (CLR) per rilasciare tutti i puntatori di interfaccia, contiene all'interno di runtime callable wrapper (RCW). Questo ha l'effetto di rilascio di tutte le cache RCW. Questa funzione globale è deprecata nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Utilizzare invece il punto di ingresso per una specifica del runtime.  

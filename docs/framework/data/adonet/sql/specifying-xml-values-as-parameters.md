@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355298"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Specifica di valori XML come parametri
 Se una query richiede un parametro il cui valore è una stringa XML, è possibile fornire tale valore utilizzando un'istanza di **SqlXml** tipo di dati. Non esistono effettivamente alcun trucchi; Colonne XML in SQL Server accettano i valori dei parametri nel esattamente come altri tipi di dati.  

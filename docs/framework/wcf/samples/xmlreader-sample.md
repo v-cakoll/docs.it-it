@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506888"
 ---
 # <a name="xmlreader-sample"></a>Esempio di XmlReader
 L'esempio di XmlReader illustra l'elaborazione del corpo di un messaggio utilizzando una classe <xref:System.Xml.XmlReader>. L'esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa un servizio di calcolatrice. Un'operazione del servizio aggiuntiva, `Sum`, è stata aggiunta; essa accetta messaggi che contengono una matrice di valori da sommare. Il servizio legge il messaggio utilizzando una classe <xref:System.Xml.XmlReader>.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fce759877ad5e3c9041344647781da07ad19a45a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430894"
 ---
 # <a name="hosttype-enumeration"></a>Enumerazione HOST_TYPE
 Contiene valori che specificano il tipo di host che esegue un'applicazione.  

@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3b8dd67cb7dff4bec5bab192a08461ef13fcbd9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436358"
 ---
 # <a name="iclrdomainmanager-interface"></a>Interfaccia ICLRDomainManager
 Consente all'host specificare la gestione del dominio applicazione che verrà utilizzata per inizializzare il dominio applicazione predefinito e per specificare le proprietà di inizializzazione.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365969"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Considerazioni su LINQ (WCF Data Services)
 In questo argomento vengono fornite informazioni sulla modalità con cui le query LINQ vengono composte ed eseguite quando si usa il client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e sulle limitazioni dell'utilizzo di LINQ per eseguire una query su un servizio dati che implementa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Per ulteriori informazioni sulla composizione e l'esecuzione di query su un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basato su servizio dati, vedere [una query al servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
