@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336398"
 ---
 # <a name="methods-c-programming-guide"></a>Metodi (Guida per programmatori C#)
 Un metodo è un blocco di codice che contiene una serie di istruzioni. Un programma fa in modo che le istruzioni vengano eseguite chiamando il metodo e specificando gli argomenti del metodo obbligatori. In C#, ogni istruzione eseguita viene attuata nel contesto di un metodo. Il metodo principale è il punto di ingresso per ogni applicazione C# e viene chiamato da Common Language Runtime (CLR) quando viene avviato il programma.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760245"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Caricamento delle informazioni dello schema di dataset da XML
 Lo schema di un <xref:System.Data.DataSet> (relative tabelle, colonne, relazioni e vincoli) possono essere definiti a livello di codice creati il **riempimento** o **FillSchema** metodi di un <xref:System.Data.Common.DataAdapter>, o caricato da un Documento XML. Per caricare **set di dati** informazioni sullo schema da un documento XML, è possibile utilizzare il **ReadXmlSchema** o **InferXmlSchema** metodo il **setdidati**. **ReadXmlSchema** consente di caricare o inferire **set di dati** informazioni sullo schema dal documento contenente schema XML Schema definition language (XSD) o un documento XML con XML Schema inline. **InferXmlSchema** consente di inferire lo schema dal documento XML, ignorando alcuni spazi dei nomi XML specificato.  

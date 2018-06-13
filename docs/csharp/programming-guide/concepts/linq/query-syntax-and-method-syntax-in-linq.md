@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336352"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Sintassi di query e sintassi di metodi in LINQ (C#)
 La maggior parte delle query presenti nella documentazione di Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) sono scritte usando la sintassi di query dichiarativa di LINQ. Tuttavia, la sintassi di query deve essere convertita in chiamate al metodo per Common Language Runtime (CLR) di .NET quando il codice viene compilato. Queste chiamate al metodo richiamano gli operatori query standard, che hanno nomi come `Where`, `Select`, `GroupBy`, `Join`, `Max` e `Average`. È possibile chiamarli direttamente usando la sintassi di metodo anziché la sintassi di query.  

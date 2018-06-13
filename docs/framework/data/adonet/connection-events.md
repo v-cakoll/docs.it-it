@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758158"
 ---
 # <a name="connection-events"></a>Eventi di connessione
 Tutti i provider di dati .NET Framework dispongono di **connessione** oggetti con due eventi che è possibile utilizzare per recuperare i messaggi informativi da un'origine dati o per determinare se lo stato di un **connessione** è modificato. Nella tabella seguente vengono descritti gli eventi del **connessione** oggetto.  

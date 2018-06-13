@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752819"
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt; elemento
 Determina se data e ora di metodi di analisi utilizzare un set di regole adattato per analizzare le stringhe di data che contengono un giorno, mese, ora e indicatore AM/PM.  

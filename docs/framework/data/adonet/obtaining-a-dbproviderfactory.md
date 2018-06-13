@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759465"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Recupero di un oggetto DbProviderFactory
 Il processo di recupero di un oggetto <xref:System.Data.Common.DbProviderFactory> implica il passaggio delle informazioni su un provider di dati alla classe <xref:System.Data.Common.DbProviderFactories>. Sulla base di queste informazioni, il metodo <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> crea una factory del provider fortemente tipizzata. Ad esempio, per creare un oggetto <xref:System.Data.SqlClient.SqlClientFactory>, è possibile passare a `GetFactory` una stringa contenente il nome del provider specificato come "System.Data.SqlClient". L'altro overload di `GetFactory` accetta un oggetto <xref:System.Data.DataRow>. Dopo aver creato la factory del provider, è quindi possibile usarne i metodi per creare altri oggetti. I metodi di un oggetto `SqlClientFactory` includono <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>e <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592119"
 ---
 # <a name="string-data-type-visual-basic"></a>Tipo di dati String (Visual Basic)
 Contiene le sequenze di punti di codice di (2 byte) senza segno a 16 bit tale intervallo compreso tra 0 e 65535. Ogni *punto di codice*, o codice di carattere, rappresenta un singolo carattere Unicode. Una stringa può contenere da 0 a due miliardi (2 ^ 31) caratteri Unicode.  

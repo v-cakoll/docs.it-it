@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762780"
 ---
 # <a name="dataview-performance"></a>Prestazioni di DataView
 In questo argomento vengono illustrati i vantaggi, in termini di prestazioni, associati all'utilizzo dei metodi <xref:System.Data.DataView.Find%2A> e <xref:System.Data.DataView.FindRows%2A> della classe <xref:System.Data.DataView> e della memorizzazione nella cache di un oggetto <xref:System.Data.DataView> in un'applicazione Web.  

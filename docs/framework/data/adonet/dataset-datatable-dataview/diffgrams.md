@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760034"
 ---
 # <a name="diffgrams"></a>DiffGram
 DiffGram è un formato XML che consente di identificare le versioni correnti e originali degli elementi di dati. Il formato DiffGram viene usato dal tipo <xref:System.Data.DataSet> per caricare e conservare il contenuto e per serializzare tale contenuto in modo da consentirne il trasporto tramite una connessione di rete. Quando un <xref:System.Data.DataSet> viene scritto come DiffGram, DiffGram viene compilato con tutte le informazioni necessarie per ricreare accuratamente il contenuto, anche se non lo schema del <xref:System.Data.DataSet>, inclusi i valori di colonna da entrambe le **originale** e **corrente** ordine delle righe, informazioni sugli errori di riga e le versioni di riga.  

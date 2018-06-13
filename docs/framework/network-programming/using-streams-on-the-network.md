@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397546"
 ---
 # <a name="using-streams-on-the-network"></a>Uso di flussi nella rete
 Le risorse di rete sono rappresentate in .NET Framework come flussi. Grazie alla possibilità di gestire i flussi in modo generico, .NET Framework offre le opportunità seguenti:  

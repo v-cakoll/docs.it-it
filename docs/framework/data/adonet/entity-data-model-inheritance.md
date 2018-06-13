@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765269"
 ---
 # <a name="entity-data-model-inheritance"></a>Entity Data Model: ereditarietà
 Entity Data Model (EDM) supporta l'ereditarietà per [tipi di entità](../../../../docs/framework/data/adonet/entity-type.md). L'ereditarietà in EDM è analoga all'ereditarietà per le classi nei linguaggi di programmazione orientati a oggetti. Come con le classi nei linguaggi orientati a oggetti, in un modello concettuale è possibile definire un tipo di entità (un *tipo derivato*) che eredita da un altro tipo di entità (il *tipo di base*). Tuttavia, a differenza delle classi nella programmazione orientata a oggetti, in un modello concettuale il tipo derivato eredita sempre tutte le [proprietà](../../../../docs/framework/data/adonet/property.md) e [le proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md) del tipo di base. Non è possibile eseguire l'override delle proprietà ereditate in un tipo derivato.  

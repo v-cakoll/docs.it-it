@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590829"
 ---
 # <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Il primo operando in un file binario &#39;se&#39; espressione deve essere nullable o un tipo di riferimento
 Un `If` espressione può accettare due o tre argomenti. Quando si inviano solo due argomenti, il primo argomento deve essere un tipo riferimento o un tipo nullable. Se il primo argomento restituisce un valore diverso da `Nothing`, viene restituito il relativo valore. Se il primo argomento restituisce `Nothing`verrà restituito il secondo argomento.  

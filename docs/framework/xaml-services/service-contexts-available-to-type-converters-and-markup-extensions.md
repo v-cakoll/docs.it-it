@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566170"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Contesti di servizio disponibili per convertitori di tipi ed estensioni di markup
 Gli autori dei tipi che supportano gli utilizzi di convertitori di tipi e estensioni di markup devono spesso disporre di informazioni contestuali sulla posizione di utilizzo nel markup o nella struttura dell'oggetto grafico circostante. Le informazioni potrebbero essere necessarie per garantire che venga creata correttamente un'istanza dell'oggetto fornito o che vengano definiti i riferimenti dell'oggetto agli oggetti esistenti nell'oggetto grafico. In caso di utilizzo dei servizi XAML di .NET Framework, il contesto eventualmente necessario viene esposto come serie di interfacce del servizio. Nel codice di supporto del convertitore di tipi o dell'estensione di markup può essere eseguita una query per un servizio usando il contesto di un provider di servizi disponibile e passato da <xref:System.Xaml.XamlObjectWriter> o da tipi correlati. Il contesto dello schema XAML è disponibile direttamente attraverso uno di questi servizi. In questo argomento viene illustrato come accedere ai contesti di servizio da un'implementazione del convertitore di valori e vengono elencati i servizi generalmente disponibili e i relativi ruoli.  

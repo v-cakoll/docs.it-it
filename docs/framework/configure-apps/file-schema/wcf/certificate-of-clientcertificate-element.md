@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753391"
 ---
 # <a name="ltcertificategt-of-ltclientcertificategt-element"></a>Elemento &lt;certificate&gt; di &lt;clientCertificate&gt;
 Specifica un certificato X.509 usato per firmare e crittografare messaggi.  

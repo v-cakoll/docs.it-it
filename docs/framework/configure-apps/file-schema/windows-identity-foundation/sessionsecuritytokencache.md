@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755045"
 ---
 # <a name="ltsessionsecuritytokencachegt"></a>&lt;sessionSecurityTokenCache&gt;
 Registra una cache per i token di sessione con un servizio o una raccolta di gestore del token di sicurezza.  

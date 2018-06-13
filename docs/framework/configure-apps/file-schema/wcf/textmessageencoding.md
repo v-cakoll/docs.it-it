@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753482"
 ---
 # <a name="lttextmessageencodinggt"></a>&lt;textMessageEncoding&gt;
 Specifica le impostazioni di codifica e controllo di versione dei messaggi XML basati sul testo.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396818"
 ---
 # <a name="deriving-from-webrequest"></a>Derivazione da WebRequest
 La classe <xref:System.Net.WebRequest> è una classe base astratta che fornisce metodi e proprietà di base per creare un gestore richieste specifico del protocollo adatto al modello di protocollo di collegamento di .NET Framework. Le applicazioni che usano la classe **WebRequest** possono richiedere i dati usando qualsiasi protocollo supportato senza dover specificare il protocollo usato.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754610"
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;add&gt; di &lt;filters&gt;
 Filtro XPath che specifica il tipo di messaggio da registrare.  
