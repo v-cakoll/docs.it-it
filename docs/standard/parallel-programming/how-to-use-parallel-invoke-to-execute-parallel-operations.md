@@ -1,13 +1,7 @@
 ---
 title: 'Procedura: utilizzare Parallel.Invoke per eseguire operazioni in parallelo'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,38 +9,34 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 942ba120fa5273f84ac3d0a51e276223de5f5484
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4ad4b5e005ddd7bbd598a9da3032574eb2ba7dd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580884"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a><span data-ttu-id="76fe5-102">Procedura: utilizzare Parallel.Invoke per eseguire operazioni in parallelo</span><span class="sxs-lookup"><span data-stu-id="76fe5-102">How to: Use Parallel.Invoke to Execute Parallel Operations</span></span>
-<span data-ttu-id="76fe5-103">Questo esempio mostra come parallelizzare le operazioni usando <xref:System.Threading.Tasks.Parallel.Invoke%2A> in Task Parallel Library.</span><span class="sxs-lookup"><span data-stu-id="76fe5-103">This example shows how to parallelize operations by using <xref:System.Threading.Tasks.Parallel.Invoke%2A> in the Task Parallel Library.</span></span> <span data-ttu-id="76fe5-104">Vengono eseguite tre operazioni in un'origine dati condivisa.</span><span class="sxs-lookup"><span data-stu-id="76fe5-104">Three operations are performed on a shared data source.</span></span> <span data-ttu-id="76fe5-105">Poiché nessuna delle operazioni modifica l'origine, possono essere eseguite in parallelo in modo semplice.</span><span class="sxs-lookup"><span data-stu-id="76fe5-105">Because none of the operations modifies the source, they can be executed in parallel in a straightforward manner.</span></span>  
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a><span data-ttu-id="2e4d2-102">Procedura: utilizzare Parallel.Invoke per eseguire operazioni in parallelo</span><span class="sxs-lookup"><span data-stu-id="2e4d2-102">How to: Use Parallel.Invoke to Execute Parallel Operations</span></span>
+<span data-ttu-id="2e4d2-103">Questo esempio mostra come parallelizzare le operazioni usando <xref:System.Threading.Tasks.Parallel.Invoke%2A> in Task Parallel Library.</span><span class="sxs-lookup"><span data-stu-id="2e4d2-103">This example shows how to parallelize operations by using <xref:System.Threading.Tasks.Parallel.Invoke%2A> in the Task Parallel Library.</span></span> <span data-ttu-id="2e4d2-104">Vengono eseguite tre operazioni in un'origine dati condivisa.</span><span class="sxs-lookup"><span data-stu-id="2e4d2-104">Three operations are performed on a shared data source.</span></span> <span data-ttu-id="2e4d2-105">Poiché nessuna delle operazioni modifica l'origine, possono essere eseguite in parallelo in modo semplice.</span><span class="sxs-lookup"><span data-stu-id="2e4d2-105">Because none of the operations modifies the source, they can be executed in parallel in a straightforward manner.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="76fe5-106">Questa documentazione usa espressioni lambda per definire delegati in TPL.</span><span class="sxs-lookup"><span data-stu-id="76fe5-106">This documentation uses lambda expressions to define delegates in TPL.</span></span> <span data-ttu-id="76fe5-107">Se non si ha familiarità con le espressioni lambda in C# o Visual Basic, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).</span><span class="sxs-lookup"><span data-stu-id="76fe5-107">If you are not familiar with lambda expressions in C# or Visual Basic, see [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).</span></span>  
+>  <span data-ttu-id="2e4d2-106">Questa documentazione usa espressioni lambda per definire delegati in TPL.</span><span class="sxs-lookup"><span data-stu-id="2e4d2-106">This documentation uses lambda expressions to define delegates in TPL.</span></span> <span data-ttu-id="2e4d2-107">Se non si ha familiarità con le espressioni lambda in C# o Visual Basic, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).</span><span class="sxs-lookup"><span data-stu-id="2e4d2-107">If you are not familiar with lambda expressions in C# or Visual Basic, see [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="76fe5-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="76fe5-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2e4d2-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="2e4d2-108">Example</span></span>  
  [!code-csharp[TPL_Parallel#06](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallelinvoke.cs#06)]
  [!code-vb[TPL_Parallel#06](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/parallelinvoke.vb#06)]  
   
- <span data-ttu-id="76fe5-109">Si noti che con <xref:System.Threading.Tasks.Parallel.Invoke%2A>, basta indicare le azioni che si desidera eseguire simultaneamente e il runtime gestisce tutti i dettagli di pianificazione dei thread, tra cui l'adattamento automatico al numero di core nel computer host.</span><span class="sxs-lookup"><span data-stu-id="76fe5-109">Note that with <xref:System.Threading.Tasks.Parallel.Invoke%2A>, you simply express which actions you want to run concurrently, and the runtime handles all thread scheduling details, including scaling automatically to the number of cores on the host computer.</span></span>  
+ <span data-ttu-id="2e4d2-109">Si noti che con <xref:System.Threading.Tasks.Parallel.Invoke%2A>, basta indicare le azioni che si desidera eseguire simultaneamente e il runtime gestisce tutti i dettagli di pianificazione dei thread, tra cui l'adattamento automatico al numero di core nel computer host.</span><span class="sxs-lookup"><span data-stu-id="2e4d2-109">Note that with <xref:System.Threading.Tasks.Parallel.Invoke%2A>, you simply express which actions you want to run concurrently, and the runtime handles all thread scheduling details, including scaling automatically to the number of cores on the host computer.</span></span>  
   
- <span data-ttu-id="76fe5-110">Questo esempio parallelizza le operazioni, ma non i dati.</span><span class="sxs-lookup"><span data-stu-id="76fe5-110">This example parallelizes the operations, not the data.</span></span> <span data-ttu-id="76fe5-111">Come approccio alternativo, è possibile parallelizzare le query LINQ usando PLINQ ed eseguire le query in sequenza.</span><span class="sxs-lookup"><span data-stu-id="76fe5-111">As an alternate approach, you can parallelize the LINQ queries by using PLINQ and run the queries sequentially.</span></span> <span data-ttu-id="76fe5-112">In alternativa, è possibile parallelizzare i dati usando PLINQ.</span><span class="sxs-lookup"><span data-stu-id="76fe5-112">Alternatively, you could parallelize the data by using PLINQ.</span></span> <span data-ttu-id="76fe5-113">Un'altra possibilità consiste nel parallelizzare sia le query che le attività.</span><span class="sxs-lookup"><span data-stu-id="76fe5-113">Another option is to parallelize both the queries and the tasks.</span></span> <span data-ttu-id="76fe5-114">Anche se il sovraccarico risultante potrebbe comportare problemi di prestazioni nei computer host con un numero relativamente basso di processori, la scalabilità sarebbe decisamente migliore nei computer con molti processori.</span><span class="sxs-lookup"><span data-stu-id="76fe5-114">Although the resulting overhead might degrade performance on host computers with relatively few processors, it would scale much better on computers with many processors.</span></span>  
+ <span data-ttu-id="2e4d2-110">Questo esempio parallelizza le operazioni, ma non i dati.</span><span class="sxs-lookup"><span data-stu-id="2e4d2-110">This example parallelizes the operations, not the data.</span></span> <span data-ttu-id="2e4d2-111">Come approccio alternativo, è possibile parallelizzare le query LINQ usando PLINQ ed eseguire le query in sequenza.</span><span class="sxs-lookup"><span data-stu-id="2e4d2-111">As an alternate approach, you can parallelize the LINQ queries by using PLINQ and run the queries sequentially.</span></span> <span data-ttu-id="2e4d2-112">In alternativa, è possibile parallelizzare i dati usando PLINQ.</span><span class="sxs-lookup"><span data-stu-id="2e4d2-112">Alternatively, you could parallelize the data by using PLINQ.</span></span> <span data-ttu-id="2e4d2-113">Un'altra possibilità consiste nel parallelizzare sia le query che le attività.</span><span class="sxs-lookup"><span data-stu-id="2e4d2-113">Another option is to parallelize both the queries and the tasks.</span></span> <span data-ttu-id="2e4d2-114">Anche se il sovraccarico risultante potrebbe comportare problemi di prestazioni nei computer host con un numero relativamente basso di processori, la scalabilità sarebbe decisamente migliore nei computer con molti processori.</span><span class="sxs-lookup"><span data-stu-id="2e4d2-114">Although the resulting overhead might degrade performance on host computers with relatively few processors, it would scale much better on computers with many processors.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="76fe5-115">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="76fe5-115">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2e4d2-115">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="2e4d2-115">Compiling the Code</span></span>  
   
--   <span data-ttu-id="76fe5-116">Copiare e incollare l'esempio completo in un progetto di Microsoft Visual Studio 2010 e premere F5.</span><span class="sxs-lookup"><span data-stu-id="76fe5-116">Copy and paste the entire example into a Microsoft Visual Studio 2010 project and press F5.</span></span>  
+-   <span data-ttu-id="2e4d2-116">Copiare e incollare l'esempio completo in un progetto di Microsoft Visual Studio 2010 e premere F5.</span><span class="sxs-lookup"><span data-stu-id="2e4d2-116">Copy and paste the entire example into a Microsoft Visual Studio 2010 project and press F5.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="76fe5-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="76fe5-117">See Also</span></span>  
- [<span data-ttu-id="76fe5-118">Programmazione parallela</span><span class="sxs-lookup"><span data-stu-id="76fe5-118">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)  
- [<span data-ttu-id="76fe5-119">Procedura: Annullare un'attività e i relativi figli</span><span class="sxs-lookup"><span data-stu-id="76fe5-119">How to: Cancel a Task and Its Children</span></span>](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)  
- [<span data-ttu-id="76fe5-120">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="76fe5-120">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a><span data-ttu-id="2e4d2-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2e4d2-117">See Also</span></span>  
+ [<span data-ttu-id="2e4d2-118">Programmazione parallela</span><span class="sxs-lookup"><span data-stu-id="2e4d2-118">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)  
+ [<span data-ttu-id="2e4d2-119">Procedura: Annullare un'attività e i relativi figli</span><span class="sxs-lookup"><span data-stu-id="2e4d2-119">How to: Cancel a Task and Its Children</span></span>](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)  
+ [<span data-ttu-id="2e4d2-120">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="2e4d2-120">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

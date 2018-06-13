@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584202"
 ---
 # <a name="developing-applications-with-visual-basic"></a><span data-ttu-id="36b8d-102">Sviluppo di applicazioni con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="36b8d-102">Developing Applications with Visual Basic</span></span>
 <span data-ttu-id="36b8d-103">In questa sezione viene illustrata la documentazione su concetti che riguardano il linguaggio Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="36b8d-103">This section covers conceptual documentation for the Visual Basic language.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582821"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a><span data-ttu-id="ba971-103">Informazioni sull'autorizzazione in microservizi .NET e applicazioni Web</span><span class="sxs-lookup"><span data-stu-id="ba971-103">About authorization in .NET microservices and web applications</span></span>
 
