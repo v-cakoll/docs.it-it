@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585502"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Procedura: specificare un'utilità di pianificazione in un blocco di flussi di dati
 In questo documento viene illustrato come associare una specifica utilità di pianificazione delle attività quando si utilizza il flusso di dati nell'applicazione. Nell'esempio viene utilizzata la classe <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> in un'applicazione Windows Form per visualizzare quando le attività del lettore sono attive e quando invece lo è una del writer. Viene inoltre utilizzato il metodo <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> per consentire a un blocco di flussi di dati l'esecuzione nel thread dell'interfaccia utente.
