@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555912"
 ---
 # <a name="how-to-use-the-image-element"></a>Procedura: utilizzare l'elemento Image
 In questo esempio viene illustrato come includere immagini in un'applicazione utilizzando il <xref:System.Windows.Controls.Image> elemento.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556965"
 ---
 # <a name="how-to-implement-binding-validation"></a>Procedura: implementare la convalida dell'associazione
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> e un trigger di stile per fornire indicazioni visive per informare l'utente quando viene immesso un valore non valido, in base a una regola di convalida personalizzata.  

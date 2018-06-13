@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557108"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Procedure dettagliate: creazione di un pulsante personalizzato a cui è stata aggiunta un'animazione
 Come suggerisce il nome, è molto utile per offrire esperienze di presentazione avanzata per i clienti Windows Presentation Foundation (WPF). Queste procedure viene illustrato come personalizzare l'aspetto e comportamento di un pulsante (animazioni incluse). Questa personalizzazione viene eseguita utilizzando uno stile e il modello in modo che è possibile applicare facilmente questo pulsante personalizzato a tutti i pulsanti nell'applicazione. Nella figura seguente mostra il pulsante personalizzato che verrà creato.  

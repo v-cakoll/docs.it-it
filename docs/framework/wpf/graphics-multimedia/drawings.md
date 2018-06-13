@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556036"
 ---
 # <a name="drawings"></a>Oggetti Drawing
 <xref:System.Windows.Media.Drawing> gli oggetti vengono utilizzati per creare in modo efficace le forme, immagini o testo. Disegni vengono utilizzati quando si disegna con un <xref:System.Windows.Media.DrawingBrush> o di programmazione con <xref:System.Windows.Media.Visual> oggetti.  
