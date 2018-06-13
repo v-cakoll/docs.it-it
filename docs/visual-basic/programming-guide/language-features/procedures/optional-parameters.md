@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651609"
 ---
 # <a name="optional-parameters-visual-basic"></a>Parametri facoltativi (Visual Basic)
 È possibile specificare che un parametro di routine è facoltativo e non è necessario fornire alcun argomento quando la routine viene chiamata. *Parametri facoltativi* sono indicate con la `Optional` parola chiave nella definizione della routine. È necessario attenersi alle regole che seguono:  
