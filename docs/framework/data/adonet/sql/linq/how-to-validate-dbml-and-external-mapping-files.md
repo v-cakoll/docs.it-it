@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362162"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Procedura: convalidare file di mapping esterni e DBML
 I file di mapping esterno e i file con estensione dbml modificati devono essere convalidati in base alle rispettive definizioni dello schema. In questo argomento fornisce agli utenti di Visual Studio con i passaggi per implementare il processo di convalida.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565545"
 ---
 # <a name="whitespace-processing-in-xaml"></a>Elaborazione degli spazi vuoti in XAML
 Le regole del linguaggio per XAML definiscono la modalità di elaborazione degli spazi vuoti significativi tramite l'implementazione di un processore [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] . In questo argomento vengono illustrate queste regole del linguaggio XAML, nonché la gestione degli spazi vuoti aggiuntivi definita dall'implementazione [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] del processore XAML e del writer XAML per la serializzazione.  

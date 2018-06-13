@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362028"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Procedura: associare dati utilizzando un'origine dati del progetto (WCF Data Services)
 È possibile creare origini dati basate sugli oggetti dati generati in un'applicazione client di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Quando si aggiunge un riferimento a un servizio dati tramite il **Aggiungi riferimento al servizio** finestra di dialogo, un'origine dati del progetto viene creata con le classi di dati client generate. Per ogni set di entità esposto dal servizio dati viene creata un'origine dati. È possibile creare form che visualizzano i dati dal servizio mediante il trascinamento di questi elementi di origine dati dal **origini dati** finestra nella finestra di progettazione. Questi elementi diventeranno controlli associati all'origine dati. Durante l'esecuzione, l'origine dati è associata a un'istanza di <xref:System.Data.Services.Client.DataServiceCollection%601> (classe), che viene riempita con gli oggetti restituiti da una query al servizio dati. Per ulteriori informazioni, vedere [Binding di dati a controlli](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

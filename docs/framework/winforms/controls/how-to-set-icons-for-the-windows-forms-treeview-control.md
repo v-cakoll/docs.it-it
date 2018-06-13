@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536485"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Procedura: impostare icone per il controllo TreeView Windows Form
 Windows Form <xref:System.Windows.Forms.TreeView> controllo può visualizzare icone accanto a ogni nodo. Le icone vengono posizionate immediatamente a sinistra del testo del nodo. Per visualizzare queste icone, è necessario associare la visualizzazione albero con un <xref:System.Windows.Forms.ImageList> controllo. Per ulteriori informazioni sugli elenchi di immagini, vedere [componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) e [procedura: aggiungere o rimuovere immagini con il componente ImageList di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  

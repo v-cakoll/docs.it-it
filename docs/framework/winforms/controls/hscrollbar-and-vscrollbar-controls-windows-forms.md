@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533153"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>Controlli HScrollBar e VScrollBar (Windows Form)
 I controlli barra di scorrimento di Windows Form vengono usati per semplificare la consultazione di lunghi elenchi di elementi o di grandi quantità di dati mediante lo scorrimento orizzontale o verticale all'interno di un'applicazione o di un controllo. Le barre di scorrimento rappresentano un elemento comune dell'interfaccia Windows.  

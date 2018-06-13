@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356738"
 ---
 # <a name="oracletypes"></a>OracleTypes
 Il provider di dati .NET Framework per Oracle include varie strutture necessarie per usare i tipi di dati Oracle. Tra queste sono inclusi i tipi  <xref:System.Data.OracleClient.OracleNumber> e <xref:System.Data.OracleClient.OracleString>.  

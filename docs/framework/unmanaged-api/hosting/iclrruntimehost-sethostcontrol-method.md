@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 46cfaa5870d7bbc7edcbe438ddf57fe5f70ad938
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434965"
 ---
 # <a name="iclrruntimehostsethostcontrol-method"></a>Metodo ICLRRuntimeHost::SetHostControl
 Imposta il puntatore a interfaccia che common language runtime (CLR) consente di ottenere l'implementazione dell'host di [interfaccia IHostControl](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md).  

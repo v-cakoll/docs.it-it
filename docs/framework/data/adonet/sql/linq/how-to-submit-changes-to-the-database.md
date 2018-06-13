@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362886"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>Procedura: inviare modifiche al database
 Indipendentemente da quante modifiche si apportano agli oggetti, queste vengono applicate solo alle repliche in memoria. Le modifiche non vengono apportate ai dati effettivi nel database e non saranno trasmesse al server finché non si chiama in modo esplicito <xref:System.Data.Linq.DataContext.SubmitChanges%2A> su <xref:System.Data.Linq.DataContext>.  

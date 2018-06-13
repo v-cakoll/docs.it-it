@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356513"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Procedura: aggiungere, modificare ed eliminare entità (Entity Framework)
 Con il [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] librerie client, è possibile creare, aggiornare ed eliminare dati di entità in un servizio dati eseguendo azioni equivalenti sugli oggetti nel <xref:System.Data.Services.Client.DataServiceContext>. Per ulteriori informazioni, vedere [l'aggiornamento del servizio dati](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

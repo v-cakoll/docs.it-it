@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528619"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>Cenni preliminari sul componente HelpProvider (Windows Form)
 Windows Form [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) componente viene utilizzato per associare un file di Guida HTML Help 1. x (un file. chm creato con HTML Help Workshop o un file con estensione htm) con l'applicazione di Windows. È possibile fornire la Guida in diversi modi:  

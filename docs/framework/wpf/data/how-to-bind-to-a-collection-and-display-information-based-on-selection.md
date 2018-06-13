@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557409"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Procedura: eseguire l'associazione di una raccolta e visualizzare informazioni in base alla selezione effettuata
 In un semplice scenario master-Details, è necessario un controllo con associazione a dati <xref:System.Windows.Controls.ItemsControl> , ad esempio un <xref:System.Windows.Controls.ListBox>. In base alla selezione utente, visualizzare ulteriori informazioni sull'elemento selezionato. In questo esempio viene illustrato come implementare questo scenario.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532607"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Procedura: visualizzare collegamenti ipertestuali con il controllo RichTextBox Windows Form
 Windows Form <xref:System.Windows.Forms.RichTextBox> controllo può visualizzare i collegamenti Web colorati e sottolineati. È possibile scrivere codice che apre una finestra del browser che mostra il sito Web specificato nel testo del collegamento quando viene selezionato il collegamento.  

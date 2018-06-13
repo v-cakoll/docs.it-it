@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339748"
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilizzo delle proprietà (Guida per programmatori C#)
 Le proprietà combinano gli aspetti sia dei campi che dei metodi. Per l'utente di un oggetto, una proprietà si presenta come un campo: l'accesso alla proprietà richiede la stessa sintassi. Per il responsabile dell'implementazione di una classe, una proprietà è costituita da uno o due blocchi di codice, che rappresentano una funzione di accesso [get](../../../csharp/language-reference/keywords/get.md) e/o una funzione di accesso [set](../../../csharp/language-reference/keywords/set.md). Il blocco di codice per la funzione di accesso `get` viene eseguito al momento della lettura della proprietà; il blocco di codice per la funzione di accesso `set` viene eseguito quando viene assegnato un nuovo valore alla proprietà. Una proprietà senza una funzione di accesso `set` viene considerata di sola lettura. Una proprietà senza una funzione di accesso `get` viene considerata di sola scrittura. Una proprietà con entrambe le funzioni di accesso è di lettura/scrittura.  

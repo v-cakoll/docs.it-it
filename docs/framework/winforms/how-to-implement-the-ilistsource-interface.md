@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539416"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Procedura: implementare l'interfaccia IListSource
 Implementare il <xref:System.ComponentModel.IListSource> interfaccia per creare una classe associabile che non implementa <xref:System.Collections.IList> ma fornisce un elenco da un altro percorso.  

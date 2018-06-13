@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565689"
 ---
 # <a name="path-animations-overview"></a>Panoramica sulle animazioni tracciato
 <a name="introduction"></a> Questo argomento presenta le animazioni tracciato, che consentono di usare un tracciato geometrico per generare valori di output. Le animazioni tracciato sono utili per lo spostamento e rotazione di oggetti lungo tracciati complessi.  

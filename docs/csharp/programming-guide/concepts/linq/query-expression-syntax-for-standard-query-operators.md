@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339839"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>Sintassi di espressione di query per operatori di query standard (C#)
 Alcuni degli operatori di query standard usati più di frequente dispongono di una sintassi dedicata delle parole chiave per i linguaggi C# che consente di chiamare gli operatori come parte di un'espressione di *query*. Un'espressione di query rappresenta un modo diverso e più leggibile per esprimere una query rispetto alla sintassi equivalente *basata su metodo*. Le clausole di espressione di query vengono convertite in chiamate ai metodi di query in fase di compilazione.  

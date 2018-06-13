@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340112"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)
 In questa esercitazione viene illustrato come applicare l'approccio delle trasformazioni funzionali e LINQ to XML per modificare documenti XML. Negli esempio in C# vengono eseguite query e modificate le informazioni in documenti WordprocessingML di Office Open XML salvati tramite Microsoft Word.  

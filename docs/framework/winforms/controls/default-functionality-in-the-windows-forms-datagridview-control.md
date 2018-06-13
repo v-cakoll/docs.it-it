@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526627"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Funzionalità predefinite nel controllo DataGridView Windows Form
 Windows Form <xref:System.Windows.Forms.DataGridView> controllo offre agli utenti con una quantità significativa di funzionalità predefinite.  

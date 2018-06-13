@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541661"
 ---
 # <a name="data-binding-and-windows-forms"></a>data binding e Windows Form
 Nei Windows Form è possibile effettuare associazioni non solo alle origini dati tradizionali, ma anche a quasi ogni struttura che contiene dati. È possibile effettuare associazioni a una matrice di valori che verranno calcolati in fase di esecuzione, letti da un file o derivati dai valori di altri controlli.  

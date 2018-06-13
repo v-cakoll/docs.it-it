@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349015"
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;add&gt; di &lt;protocolMapping&gt;
 Rappresenta un mapping del protocollo predefinito tra una combinazione di protocollo di trasporto (ad esempio, http, NET. TCP, NET. pipe, e così via) e un'associazione Windows Communication Foundation (WCF). Quando si creano endpoint predefiniti in fase di esecuzione, WCF analizza i mapping configurati e determina l'associazione da usare per un particolare indirizzo di base.  

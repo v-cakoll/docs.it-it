@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353892"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>Procedura: proiettare risultati di query (WCF Data Services)
 La proiezione fornisce un meccanismo per ridurre la quantità di dati restituiti da una query specificando che solo determinate proprietà di un'entità vengano restituite nella risposta. È possibile eseguire proiezioni sui risultati di un [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] query tramite l'utilizzo di `$select` opzione di query o utilizzando il [selezionare](~/docs/csharp/language-reference/keywords/select-clause.md) clausola ([selezionare](~/docs/visual-basic/language-reference/queries/select-clause.md) in Visual Basic) in una query LINQ. Per ulteriori informazioni, vedere [l'esecuzione di query del servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

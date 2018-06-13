@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340645"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Espressioni lambda (Guida per programmatori C#)
 Un'espressione lambda è una [funzione anonima](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) che è possibile utilizzare per creare [delegati](../../../csharp/programming-guide/delegates/using-delegates.md) o tipi di [alberi delle espressioni](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) . Mediante le espressioni lambda è possibile scrivere funzioni locali che possono essere passate come argomenti o restituite come valore delle chiamate di funzione. Le espressioni lambda sono particolarmente utili per la scrittura delle espressioni di query LINQ.  
