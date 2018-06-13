@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549392"
 ---
 # <a name="how-to-c"></a><span data-ttu-id="236c6-103">Procedura (C#)</span><span class="sxs-lookup"><span data-stu-id="236c6-103">How to (C#)</span></span>
 

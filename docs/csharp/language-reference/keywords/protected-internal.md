@@ -7,6 +7,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172241"
 ---
 # <a name="protected-internal-c-reference"></a><span data-ttu-id="7eb92-102">protected internal (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="7eb92-102">protected internal (C# Reference)</span></span>
 <span data-ttu-id="7eb92-103">La combinazione delle parole chiave `protected internal` è un modificatore di accesso ai membri.</span><span class="sxs-lookup"><span data-stu-id="7eb92-103">The `protected internal` keyword combination is a member access modifier.</span></span> <span data-ttu-id="7eb92-104">Un membro protected internal è accessibile dall'assembly corrente o dai tipi che derivano dalla classe che li contiene.</span><span class="sxs-lookup"><span data-stu-id="7eb92-104">A protected internal member is accessible from the current assembly or from types that are derived from the containing class.</span></span> <span data-ttu-id="7eb92-105">Per un confronto di `protected internal` con altri modificatori di accesso, vedere [Livelli di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md).</span><span class="sxs-lookup"><span data-stu-id="7eb92-105">For a comparison of `protected internal` with the other access modifiers, see [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md).</span></span> 

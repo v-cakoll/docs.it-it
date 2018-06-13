@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457216"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="78a48-102">Operatore ?: (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="78a48-102">?: Operator (C# Reference)</span></span>
 <span data-ttu-id="78a48-103">L'operatore condizionale (`?:`), noto come operatore condizionale ternario, restituisce uno di due valori in base al valore di un'espressione booleana.</span><span class="sxs-lookup"><span data-stu-id="78a48-103">The conditional operator (`?:`), commonly known as the ternary conditional operator, returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="78a48-104">Di seguito è riportata la sintassi per l'operatore condizionale.</span><span class="sxs-lookup"><span data-stu-id="78a48-104">Following is the syntax for the conditional operator.</span></span>  
