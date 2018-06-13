@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585515"
 ---
 # <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;Classe&#39; l'istruzione deve terminare con un corrispondente &#39;fine (classe)&#39;
 `Class` viene utilizzato per avviare un `Class` blocco, quindi può comparire solo all'inizio del blocco, con un corrispondente `End Class` istruzione che termina il blocco. È presente una ridondanza `Class` istruzione oppure non è stato terminato il `Class` blocco con `End Class`.  

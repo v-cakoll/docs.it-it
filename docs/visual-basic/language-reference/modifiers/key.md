@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599844"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 Il `Key` (parola chiave) consente di specificare il comportamento per le proprietà di tipi anonimi. Solo le proprietà designate come proprietà chiave utilizzate nei test di uguaglianza tra istanze di tipo anonimo o di calcolo dei valori di codice hash. I valori delle proprietà chiave non possono essere modificati.  

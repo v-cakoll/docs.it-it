@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591677"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms
 Questo documento illustra come creare una rete di blocchi di flussi di dati tramite cui viene eseguita l'elaborazione di immagini in una Windows Forms Application.  

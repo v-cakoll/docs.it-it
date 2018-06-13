@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579158"
 ---
 # <a name="garbage-collection-notifications"></a>Notifiche di Garbage Collection
 In alcune situazioni un'operazione completa di Garbage Collection (cioè di generazione 2) eseguita da Common Language Runtime può influire negativamente sulle prestazioni. Può essere un problema soprattutto con i server che elaborano grandi volumi di richieste. In questo caso, una lunga procedura di Garbage Collection può provocare un timeout delle richieste. Per evitare che venga eseguita una raccolta completa durante un periodo critico, è possibile essere informati che sta per iniziare una Garbage Collection completa e quindi intraprendere un'azione per reindirizzare il carico di lavoro a un'altra istanza del server. È anche possibile indurre manualmente una raccolta, a condizione che l'istanza del server corrente non sia necessaria per elaborare le richieste.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598583"
 ---
 # <a name="pathfile-access-error"></a>Errore di accesso al percorso/file
 Durante un'operazione di accesso ai file o l'accesso al disco, il sistema operativo non può stabilire una connessione tra il percorso e il nome del file.  

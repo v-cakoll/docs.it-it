@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581778"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Procedura: creare oggetti GenericPrincipal e GenericIdentity
 È possibile utilizzare il <xref:System.Security.Principal.GenericIdentity> classe in combinazione con la <xref:System.Security.Principal.GenericPrincipal> classe per creare uno schema di autorizzazione che esista indipendentemente da un dominio di Windows.  

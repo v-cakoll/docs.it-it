@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586347"
 ---
 # <a name="cannot-refer-to-39ltnamegt39-because-it-is-a-member-of-the-value-typed-field-39ltnamegt39-of-class-39ltclassnamegt39-which-has-39systemmarshalbyrefobject39-as-a-base-class"></a>Non è possibile fare riferimento a &#39; &lt;nome&gt; &#39; perché è un membro del campo valori &#39; &lt;nome&gt; &#39; della classe &#39; &lt;classname&gt; &#39;che dispone di &#39;System. MarshalByRefObject&#39; come classe di base
 La `System.MarshalByRefObject` classe consente alle applicazioni che supportano l'accesso remoto agli oggetti limiti del dominio applicazione. I tipi devono ereditare dalla `MarshalByRejectObject` classe quando i limiti del dominio applicazione viene utilizzato il tipo. Lo stato dell'oggetto non deve essere copiato perché i membri dell'oggetto non sono utilizzabili all'esterno del dominio applicazione in cui sono stati creati.  

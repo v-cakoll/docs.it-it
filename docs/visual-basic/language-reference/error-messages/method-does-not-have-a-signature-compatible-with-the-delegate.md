@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593249"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>La firma del metodo non è compatibile con il delegato
 È presente un problema di incompatibilità tra le firme del metodo e il delegato a cui che si sta tentando di utilizzare. L'istruzione `Delegate` definisce i tipi di parametro e i tipi restituiti di una classe delegata. Qualsiasi routine con parametri di tipi compatibili corrispondenti e restituire tipi possono essere utilizzati per creare un'istanza di questo tipo di delegato.  

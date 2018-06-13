@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580127"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>Scelta di NET Core o NET Framework per i contenitori di Docker
 

@@ -34,6 +34,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234727"
 ---
 # <a name="dim-statement-visual-basic"></a>Istruzione Dim (Visual Basic)
 Dichiara e alloca spazio di archiviazione per una o più variabili.  

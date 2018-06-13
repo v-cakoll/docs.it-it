@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591872"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estensione del modello di applicazione Visual Basic
 È possibile aggiungere funzionalità al modello di applicazione eseguendo l'override di `Overridable` i membri del <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Questa tecnica consente di personalizzare il comportamento del modello dell'applicazione e aggiungere chiamate a metodi personalizzati, come l'applicazione viene avviato e arrestato.  

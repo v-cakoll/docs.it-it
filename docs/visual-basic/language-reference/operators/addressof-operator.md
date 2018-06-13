@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597787"
 ---
 # <a name="addressof-operator-visual-basic"></a>Operatore AddressOf (Visual Basic)
 Crea un'istanza di delegato di routine che fa riferimento la procedura specifica.  

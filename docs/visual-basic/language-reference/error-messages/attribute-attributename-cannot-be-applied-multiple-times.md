@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584859"
 ---
 # <a name="attribute-39ltattributenamegt39-cannot-be-applied-multiple-times"></a>Attributo &#39; &lt;attributename&gt; &#39; non può essere applicato più volte
 L'attributo può essere applicato solo una volta. Il `AttributeUsage` attributo determina se un attributo può essere applicato più volte.  

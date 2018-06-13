@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592028"
 ---
 # <a name="examples-of-xml-serialization"></a>Esempi di serializzazione XML
 La serializzazione XML può avere più di una forma, da semplice a complessa. È ad esempio possibile serializzare una classe costituita semplicemente da proprietà e campi pubblici, come illustrato in [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md). Negli esempi di codice riportati di seguito vengono esaminati vari scenari avanzati, nonché come utilizzare la serializzazione XML per generare un flusso XML conforme a un documento XML Schema (XSD) specifico.  

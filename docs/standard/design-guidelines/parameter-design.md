@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578274"
 ---
 # <a name="parameter-design"></a>Progettazione di parametri
 In questa sezione fornisce linee guida generali sulla progettazione di parametro, incluse sezioni con le linee guida per gli argomenti sul controllo. Inoltre, è consigliabile consultare le linee guida descritte [denominazione dei parametri](../../../docs/standard/design-guidelines/naming-parameters.md).  

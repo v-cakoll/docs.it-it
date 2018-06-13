@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598956"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-a-numeric-value"></a>Argomento &#39; &lt;NomeArgomento&gt; &#39; non può essere convertito in un valore numerico
 È stata tentata una conversione di una variabile, ad esempio una stringa, in un valore numerico.  

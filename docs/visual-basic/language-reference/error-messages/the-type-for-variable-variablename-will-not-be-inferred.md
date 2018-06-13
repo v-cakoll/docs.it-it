@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594283"
 ---
 # <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Tipo per la variabile &#39; &lt;variablename&gt; &#39; non riuscita perché è associato a un campo in un ambito contenitore
 Il tipo di variabile '\<variablename >' non verrà dedotto perché associato a un campo in un ambito contenitore. Modificare il nome di '\<variablename >', oppure utilizzare il nome completo (ad esempio, 'Variablename' o 'MyBase').  

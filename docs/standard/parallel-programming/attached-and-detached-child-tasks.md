@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590772"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Attività figlio connesse e disconnesse
 Un'*attività figlio* (o *attività annidata*) è un'istanza <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> creata nel delegato dell'utente di un'altra attività, noto come *attività padre*. Un'attività figlio può essere scollegata o collegata. Un'*attività figlio scollegata* è un'attività eseguita indipendentemente dall'attività padre. Un'*attività figlio collegata* è un'attività annidata creata con l'opzione <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> alla quale l'attività padre non impedisce il collegamento in modo esplicito o per impostazione predefinita. Un'attività può creare un numero qualsiasi di attività figlio collegate e scollegate, limitato solo dalle risorse di sistema.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594120"
 ---
 # <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>Metodi di &#39;System. Nullable (Of T)&#39; non possono essere usati come operandi del &#39;AddressOf&#39; (operatore)
 Un'istruzione utilizza il `AddressOf` operatore con un operando che rappresenta una procedura del <xref:System.Nullable%601> struttura.  

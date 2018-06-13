@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581407"
 ---
 # <a name="serialization-tools"></a>Strumenti per la serializzazione
 In questa sezione vengono fornite informazioni dettagliate sugli strumenti per la serializzazione. È possibile utilizzare tutti gli strumenti dalla riga di comando.  
