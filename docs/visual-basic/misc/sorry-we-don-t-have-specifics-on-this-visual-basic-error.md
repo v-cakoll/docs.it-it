@@ -3044,25 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 44bc5647fe740a4900b99794fe7af907e6328665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231463"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Al momento, non abbiamo&#39;ha informazioni specifiche sull'errore Visual Basic
 Siamo spiacenti, ma non abbiamo informazioni specifiche sull'errore. È possibile cercare il numero dell'errore e il testo del messaggio per trovare informazioni sul Web. In alternativa, è possibile chiedere ad altri sviluppatori che usano uno di questi forum:  
   
- [Linguaggio Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ [Linguaggio Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
  Forum dedicato a domande e discussioni generali della sintassi del linguaggio Visual Basic e del compilatore.  
   
- [Interoperabilità e aggiornamento di Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ [Interoperabilità e aggiornamento di Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
  Forum dedicato a domande e problemi relativi all'aggiornamento a Visual Basic e l'utilizzo delle funzionalità di interoperabilità.  
   
- [IDE di Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ [IDE di Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  Forum dedicato a domande relative all'utilizzo nell'ambiente di Visual Studio.  
   
- [Informazioni generali su Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ [Informazioni generali su Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
  Forum dedicato a domande e problemi relativi a Visual Basic che non sono trattati in altri forum.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
