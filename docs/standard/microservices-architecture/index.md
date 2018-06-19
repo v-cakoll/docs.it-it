@@ -1,14 +1,15 @@
 ---
 title: Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori
-description: Microservizi .NET - Architettura per le applicazioni .NET incluse in contenitori | Parte introduttiva
+description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | I microservizi sono servizi modulari e distribuibili in modo indipendente. I contenitori Docker (per Linux e Windows) semplificano le attività di distribuzione e test riunendo un servizio e le relative dipendenze in una singola unità che viene quindi eseguita in un ambiente isolato.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: d4499384d63f11a1d78d0aa84749aed8ea554794
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/06/2018
+ms.openlocfilehash: 58bb915c825cd69c68b3955573145ae6a1b1a6e4
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231421"
 ---
 ![](./media/cover.png)
 
@@ -26,7 +27,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2017 Microsoft Corporation
+Copyright © 2018 Microsoft Corporation
 
 Tutti i diritti sono riservati. Nessuna parte del contenuto di questo libro può essere riprodotta o trasmessa in qualsiasi forma o con qualsiasi mezzo, senza il permesso scritto dell'editore.
 

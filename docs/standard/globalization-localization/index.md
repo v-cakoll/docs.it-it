@@ -1,25 +1,26 @@
 ---
-title: Globalizzazione e localizzazione di applicazioni .NET Framework
-ms.date: 03/30/2017
+title: Globalizzazione e localizzazione di applicazioni .NET
+ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- international applications [.NET Framework]
-- globalization [.NET Framework], encoding
+- international applications [.NET]
+- globalization [.NET], encoding
 - global applications
 - internationalization
 - world-ready applications
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26c237d082a56d17b2d8493bff52dbac6faca8b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35250999"
 ---
-# <a name="globalizing-and-localizing-net-framework-applications"></a>Globalizzazione e localizzazione di applicazioni .NET Framework
+# <a name="globalizing-and-localizing-net-applications"></a>Globalizzazione e localizzazione di applicazioni .NET
 Lo sviluppo di [applicazioni internazionali](http://msdn.microsoft.com/goglobal/bb978433.aspx), tra cui un'applicazione che può essere localizzata in una o più lingue, include i seguenti tre passaggi: globalizzazione, analisi della localizzabilità e localizzazione.  
   
  [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)  
@@ -37,11 +38,11 @@ Lo sviluppo di [applicazioni internazionali](http://msdn.microsoft.com/goglobal/
   
 -   Restituisce applicazioni localizzate che sono più stabile e con meno bug.  
   
- In .NET Framework viene fornito supporto esteso per lo sviluppo di applicazioni internazionali e localizzate. In particolare, molti membri del tipo nella libreria di classi .NET Framework facilitano la globalizzazione restituendo valori che riflettono le convenzioni delle impostazioni cultura dell'utente o di impostazioni cultura specifiche. Inoltre, .NET Framework supporta gli assembly satellite, che semplificano il processo di localizzazione di un'applicazione.  
+ In .NET viene fornito ampio supporto per lo sviluppo di applicazioni internazionali e localizzate. In particolare, molti membri del tipo nella libreria di classi .NET facilitano la globalizzazione restituendo valori che riflettono le convenzioni delle impostazioni cultura dell'utente o di impostazioni cultura specifiche. .NET supporta inoltre gli assembly satellite che semplificano il processo di localizzazione di un'applicazione.  
   
  Per altre informazioni, vedere la [documentazione sulla globalizzazione](/globalization/).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)  
  Viene descritta la prima fase di creazione di un'applicazione internazionale, che include la progettazione e la codifica di un'applicazione indipendente dalla lingua e dalle impostazioni cultura.  
   
@@ -52,7 +53,7 @@ Lo sviluppo di [applicazioni internazionali](http://msdn.microsoft.com/goglobal/
  Viene illustrata la fase finale della creazione di un'applicazione localizzata, che include la personalizzazione di un'interfaccia utente dell'applicazione per le aree o le impostazioni cultura specifiche.  
   
  [Operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- Viene descritto come utilizzare metodi e classi di .NET Framework definiti come dipendenti dalle impostazioni cultura per impostazione predefinita per ottenere risultati indipendenti dalle impostazioni cultura.  
+ Viene descritto come usare metodi e classi di .NET definiti come dipendenti dalle impostazioni cultura per impostazione predefinita per ottenere risultati indipendenti dalle impostazioni cultura.  
   
  [Procedure consigliate per lo sviluppo di applicazioni internazionali](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
  Vengono forniti alcuni suggerimenti per la globalizzazione, la localizzazione e lo sviluppo di applicazioni ASP.NET internazionali.  
