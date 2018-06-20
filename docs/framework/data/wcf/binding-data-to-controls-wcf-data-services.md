@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 85a50d5425b8eec0166c839440f15e31500f3984
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a38727a638f7764c01db5da6506b705267b7bd6e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365566"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207482"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Associazione di dati a controlli (WCF Data Services)
 Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è possibile associare controlli, quali `ComboBox` e `ListView`, a un'istanza della classe <xref:System.Data.Services.Client.DataServiceCollection%601>. Questa raccolta, che eredita dalla classe <xref:System.Collections.ObjectModel.ObservableCollection%601>, contiene i dati di un feed [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Questa classe rappresenta una raccolta di dati dinamica che fornisce notifiche in caso di aggiunta o rimozione di elementi. Quando si utilizza un'istanza di <xref:System.Data.Services.Client.DataServiceCollection%601> per l'associazione dati, il [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] librerie client gestiscono questi eventi per garantire che gli oggetti rilevati dal <xref:System.Data.Services.Client.DataServiceContext> rimangano sincronizzati con i dati nell'elemento dell'interfaccia utente associato.  
@@ -22,7 +22,7 @@ Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è possibile ass
  La classe <xref:System.Data.Services.Client.DataServiceCollection%601> implementa indirettamente l'interfaccia <xref:System.Collections.Specialized.INotifyCollectionChanged> per avvisare il contesto dell'aggiunta o della rimozione di oggetti dalla raccolta. Gli oggetti del tipo di servizio dati usati con <xref:System.Data.Services.Client.DataServiceCollection%601> devono inoltre implementare l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> per informare l'oggetto <xref:System.Data.Services.Client.DataServiceCollection%601> quando le proprietà di oggetti inclusi nella raccolta di associazioni vengono modificate.  
   
 > [!NOTE]
->  Quando si utilizza il **Aggiungi riferimento al servizio** finestra di dialogo o[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) strumento con il `/dataservicecollection` opzione per generare classi del servizio dati client, le classi di dati generate implementano il <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia. Per ulteriori informazioni, vedere [come: manualmente generare classi servizio dati Client](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
+>  Quando si usa il **Aggiungi riferimento al servizio** finestra di dialogo o il [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) strumento con il `/dataservicecollection` seleziona l'opzione per generare classi del servizio dati client, le classi di dati generate implementano il <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia. Per ulteriori informazioni, vedere [come: manualmente generare classi servizio dati Client](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
   
 ## <a name="creating-the-binding-collection"></a>Creazione della raccolta di associazioni  
  Creare una nuova istanza della classe <xref:System.Data.Services.Client.DataServiceCollection%601> chiamando uno dei metodi del costruttore di classi con un'istanza di <xref:System.Data.Services.Client.DataServiceContext> fornita e facoltativamente un oggetto <xref:System.Data.Services.Client.DataServiceQuery%601> o una query LINQ che al termine dell'esecuzione restituisce un'istanza di <xref:System.Collections.Generic.IEnumerable%601>. Questo <xref:System.Collections.Generic.IEnumerable%601> fornisce l'origine degli oggetti della raccolta di associazioni, che vengono materializzate da un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Per ulteriori informazioni, vedere [materializzazione degli oggetti](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md). Per impostazione predefinita, le modifiche apportate agli oggetti associati e agli elementi inseriti nella raccolta vengono rilevate automaticamente dall'oggetto <xref:System.Data.Services.Client.DataServiceContext>. Se è necessario rilevare manualmente queste modifiche, chiamare uno dei metodi del costruttore che accetta un `trackingMode` parametro e specificare un valore di <xref:System.Data.Services.Client.TrackingMode.None>.  

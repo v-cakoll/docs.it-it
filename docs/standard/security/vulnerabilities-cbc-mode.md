@@ -4,16 +4,16 @@ description: Informazioni su come rilevare e limitare le vulnerabilità di tempo
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: a07acbb943c430f6e26bec44f55a5c84306da513
-ms.sourcegitcommit: 73a662360bbe2f43c19aca1fbcc2565025c60cd8
-ms.translationtype: HT
+ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35327454"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208687"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilità di temporizzazione con decrittografia simmetrica modalità CBC usando il riempimento
 
-Microsoft, in base a ricerca crittografica attualmente nota, ritiene che, ad eccezione di circostanze molto specifiche, non è più sicuro decrittografare i dati crittografati con la modalità Cipher Block Chaining (CBC) di crittografia simmetrica quando è stata riempimento verificabile applicate senza prima verificare l'integrità del testo crittografato.
+Microsoft si ritiene che non è più sicuro decrittografare i dati crittografati con la modalità Cipher Block Chaining (CBC) di crittografia simmetrica se è stato applicato il riempimento verificabile senza prima verificare l'integrità del testo crittografato, ad eccezione di molto specifico circostanze. Questa decisione si basa su ricerca crittografica attualmente nota. 
 
 ## <a name="introduction"></a>Introduzione
 

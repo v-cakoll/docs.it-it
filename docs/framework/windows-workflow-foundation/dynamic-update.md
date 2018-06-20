@@ -2,12 +2,12 @@
 title: Aggiornamento dinamico
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: cfd10e4b93351c607ef270487a12bec19ded4ca8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520357"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207521"
 ---
 # <a name="dynamic-update"></a>Aggiornamento dinamico
 L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso di lavoro un meccanismo per aggiornare la definizione del flusso di lavoro di un'istanza persistente del flusso di lavoro. Può servire a implementare una correzione di bug, nuovi requisiti o per implementare modifiche impreviste. In questo argomento viene fornita una panoramica sulla funzionalità di aggiornamento dinamico introdotta in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -164,7 +164,7 @@ foreach (Guid id in ids)
  Una volta applicato l'aggiornamento dinamico, è possibile riprendere l'istanza del flusso di lavoro. Si noti che è necessario usare la nuova definizione aggiornata e l'oggetto <xref:System.Activities.WorkflowIdentity>.  
   
 > [!NOTE]
->  Per ulteriori informazioni sull'utilizzo di <xref:System.Activities.WorkflowApplication> e <xref:System.Activities.WorkflowIdentity>, vedere[usando WorkflowIdentity e controllo delle versioni](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+>  Per ulteriori informazioni sull'utilizzo di <xref:System.Activities.WorkflowApplication> e <xref:System.Activities.WorkflowIdentity>, vedere [usando WorkflowIdentity e controllo delle versioni](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
  Nell'esempio riportato di seguito, il flusso di lavoro `MortgageWorkflow_v1.1.xaml` dell'esempio precedente è stato compilato e viene caricato e ripreso usando la definizione aggiornata del flusso di lavoro.  
   

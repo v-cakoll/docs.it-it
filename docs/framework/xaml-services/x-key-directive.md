@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: 511721c3ffffb3b80b339c4671ad99e16bafda93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53e89b664b3885bea7d2da8633505488438a1af5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565899"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207547"
 ---
 # <a name="xkey-directive"></a>Direttiva x:Key
 Identifica in modo univoco gli elementi che vengono creati e a cui fa riferimento in un dizionario definite da XAML. Aggiunta di un `x:Key` valore da un elemento oggetto XAML è il modo più comune per identificare una risorsa in un dizionario risorse, ad esempio in un controllo WPF <xref:System.Windows.ResourceDictionary>.  
@@ -73,7 +73,7 @@ Identifica in modo univoco gli elementi che vengono creati e a cui fa riferiment
   
  Chiavi e nomi utilizzano direttive diverse e gli elementi del linguaggio (`x:Key` e `x:Name`) nella definizione XAML di base. Le chiavi e i nomi vengono utilizzati anche in situazioni diverse per la definizione di WPF e l'applicazione di questi concetti. Per informazioni dettagliate, vedere [NameScope XAML WPF](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
   
- Come indicato in precedenza, il valore di una chiave può essere fornito tramite un'estensione di markup e può essere diverso da un valore stringa. Uno scenario di esempio WPF è che il valore di `x:Key` potrebbe essere un[ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Alcuni controlli espongono una chiave di stile di tale tipo per una risorsa di stile personalizzato che influisce sulla parte dell'aspetto e il comportamento del controllo senza sostituirne lo stile. Un esempio di questo tipo di chiave è <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
+ Come indicato in precedenza, il valore di una chiave può essere fornito tramite un'estensione di markup e può essere diverso da un valore stringa. Uno scenario di WPF di esempio che corrisponde al valore della `x:Key` può essere un [ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Alcuni controlli espongono una chiave di stile di tale tipo per una risorsa di stile personalizzato che influisce sulla parte dell'aspetto e il comportamento del controllo senza sostituirne lo stile. Un esempio di questo tipo di chiave è <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
   
  La funzionalità di dizionario unito WPF implica ulteriori considerazioni per l'univocità della chiave e il comportamento di ricerca della chiave. Per altre informazioni, vedere [Dizionari risorse uniti](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
   

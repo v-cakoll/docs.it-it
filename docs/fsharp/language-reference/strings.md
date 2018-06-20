@@ -2,12 +2,12 @@
 title: Stringhe (F#)
 description: "Informazioni su come il tipo 'string' F # rappresenta il testo non modificabile come una sequenza di caratteri Unicode."
 ms.date: 05/16/2016
-ms.openlocfilehash: bdd1d1a542e70bcd95fce51e75d0c1ddffceb008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c08f5b768dd826745e07b8c5726093050ab730
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564859"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207105"
 ---
 # <a name="strings"></a>Stringhe
 
@@ -17,7 +17,7 @@ I collegamenti di riferimento all'API in questo articolo portano a MSDN.  Il rif
 Il `string` tipo rappresenta il testo non modificabile come una sequenza di caratteri Unicode. `string` è un alias per `System.String` in .NET Framework.
 
 ## <a name="remarks"></a>Note
-Valori letterali stringa sono delimitati dal carattere di virgolette doppie ("). Il carattere barra rovesciata (\) viene utilizzato per codificare alcuni caratteri speciali. La barra rovesciata e il carattere successivo insieme sono note come un *sequenza di escape*. Supportato in F # stringa i valori letterali vengono visualizzati nella tabella seguente sequenze di escape.
+Valori letterali stringa sono delimitati dal carattere di virgolette doppie ("). Il carattere barra rovesciata ( \\ ) viene utilizzato per codificare alcuni caratteri speciali. La barra rovesciata e il carattere successivo insieme sono note come un *sequenza di escape*. Supportato in F # stringa i valori letterali vengono visualizzati nella tabella seguente sequenze di escape.
 
 |Carattere|Sequenza di escape|
 |---------|---------------|

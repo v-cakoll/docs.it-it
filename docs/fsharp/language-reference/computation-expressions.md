@@ -2,12 +2,12 @@
 title: Espressioni di calcolo (F#)
 description: 'Informazioni su come creare una semplice sintassi per la scrittura di calcoli in F # che possono essere ordinati in sequenza e combinati con i costrutti del flusso di controllo e le associazioni.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a4ddb3fde284452bc901c5270551611e43742c1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566613"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207433"
 ---
 # <a name="computation-expressions"></a>Espressioni di calcolo
 
@@ -15,6 +15,7 @@ Espressioni di calcolo in F # forniscono una sintassi efficiente per la scrittur
 
 
 ## <a name="built-in-workflows"></a>Flussi di lavoro predefiniti
+
 Le espressioni di sequenza sono un esempio di un'espressione di calcolo, come flussi di lavoro asincroni e le espressioni di query. Per ulteriori informazioni, vedere [sequenze](sequences.md), [flussi di lavoro asincroni](asynchronous-workflows.md), e [espressioni di Query](query-expressions.md).
 
 Alcune funzionalità sono comuni a entrambe le espressioni di sequenza e flussi di lavoro asincroni e viene illustrata la sintassi di base per un'espressione di calcolo:
