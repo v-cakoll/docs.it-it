@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 65428132c885191b62c3b4a76c8937bf8f3f6732
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc5f05ff4ea9f3c2b828cbe37860e1bd241fc604
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522044"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270435"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Procedura: copiare i pixel per ridurre lo sfarfallio in Windows Form
 Quando si aggiunge un'animazione a un simbolo semplice, gli utenti possono verificarsi in alcuni casi lo sfarfallio o altri effetti visivi indesiderati. Un modo per limitare questo problema è necessario utilizzare un processo "bitblt" sull'oggetto grafico. BitBlt è il "blocchi di bit trasferimento" di dati relativi al colore da un'origine a un rettangolo di pixel a un rettangolo di destinazione di pixel.  
@@ -28,7 +28,7 @@ Quando si aggiunge un'animazione a un simbolo semplice, gli utenti possono verif
  Nell'esempio seguente, una forma viene disegnata sul form nel relativo <xref:System.Windows.Forms.Control.Paint> gestore dell'evento. Quindi, <xref:System.Drawing.Graphics.CopyFromScreen%2A> metodo viene utilizzato per duplicare la forma.  
   
 > [!NOTE]
->  L'impostazione della maschera <xref:System.Windows.Forms.Control.DoubleBuffered%2A> proprietà `true` renderà codice basato su grafica il <xref:System.Windows.Forms.Control.Paint> evento essere doppio buffer. Mentre ciò non avrà eventuali miglioramenti delle prestazioni possono essere facilmente distinte quando si utilizza il codice riportato di seguito, è necessario tenere presenti quando si utilizza codice manipolazione grafica più complessi.  
+>  L'impostazione della maschera <xref:System.Windows.Forms.Control.DoubleBuffered%2A> proprietà `true` renderà codice basato su grafica il <xref:System.Windows.Forms.Control.Paint> evento essere doppio buffer. Mentre ciò non avrà alcun miglioramento delle prestazioni apprezzabili quando si utilizza il codice riportato di seguito, è necessario tenere presenti quando si lavora con codice di manipolazione grafica più complesso.  
   
 ## <a name="example"></a>Esempio  
   
