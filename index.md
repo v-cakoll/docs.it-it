@@ -5,12 +5,12 @@ hide_bc: true
 title: Documentazione di .NET
 description: Informazioni su come usare .NET per creare un'ampia gamma di applicazioni su qualsiasi piattaforma con C#, Visual Basic ed F#. Informazioni di riferimento sulle API, codice di esempio, esercitazioni e altro ancora.
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0914320c18818fb9d69fb1e0dbd89c0ec78acd61
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: a62586689d1fe1c3352171fe71d92620269d9a72
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231540"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314905"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -584,7 +584,7 @@ ms.locfileid: "35231540"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://www.visualstudio.com/vs/game-development">
+                                                <a href="https://visualstudio.microsoft.com/vs/game-development">
                                                     <h3>Sviluppo di giochi con Visual Studio</h3>
                                                     <p>Scrivere ed eseguire il debug di giochi usando il motore di gioco preferito con Visual Studio.
                                                     </p>
