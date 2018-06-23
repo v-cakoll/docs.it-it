@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a679a69b5a4cc7076fd2f31a0870d48ef47dd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579665"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314939"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Sviluppo multipiattaforma con la libreria di classi portabile
 Il tipo di progetto Libreria di classi portabile di .NET Framework in Visual Studio consente di creare in modo semplice e veloce app e librerie compatibili con più piattaforme per le piattaforme Microsoft.  
@@ -23,12 +23,12 @@ Il tipo di progetto Libreria di classi portabile di .NET Framework in Visual Stu
   
  Anche dopo aver creato un progetto Libreria di classi portabile in Visual Studio e aver iniziato lo sviluppo, è possibile modificare le piattaforme di destinazione. Visual Studio compilerà la libreria con i nuovi assembly, semplificando l'identificazione delle modifiche da apportare al codice.  
   
- Questo articolo illustra lo sviluppo di app in Visual Studio, ma Microsoft fornisce anche assembly di riferimento per Libreria di classi portabile che è possibile usare per lo sviluppo di app e librerie con altri strumenti, ad esempio Xamarin. Queste app e librerie possono essere usate su qualsiasi runtime basato su .NET Framework o su piattaforme non Microsoft. Per ulteriori informazioni sugli assembly di riferimento, vedere il post di blog [portabile classe libreria (PCL) ora disponibile in tutte le piattaforme](http://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx). Per scaricare gli assembly, vedere [assembly di riferimento portabile della libreria di Microsoft .NET](http://www.microsoft.com/download/details.aspx?id=40727) nel Microsoft Download Center. Per ulteriori informazioni su come usare gli assembly con Xamarin, vedere il post di blog [PCL e delle librerie NuGet di .NET per Xamarin](http://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx).  
+ Questo articolo illustra lo sviluppo di app in Visual Studio, ma Microsoft fornisce anche assembly di riferimento per Libreria di classi portabile che è possibile usare per lo sviluppo di app e librerie con altri strumenti, ad esempio Xamarin. Queste app e librerie possono essere usate su qualsiasi runtime basato su .NET Framework o su piattaforme non Microsoft. Per ulteriori informazioni sugli assembly di riferimento, vedere il post di blog [portabile classe libreria (PCL) ora disponibile su tutte le piattaforme](http://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx). Per scaricare gli assembly, vedere [assembly di riferimento di Microsoft .NET portabile libreria](http://www.microsoft.com/download/details.aspx?id=40727) nel Microsoft Download Center. Per ulteriori informazioni su come usare gli assembly con Xamarin, vedere il post di blog [.NET librerie NuGet PCL e per Xamarin](http://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx).  
   
  In Visual Studio sono disponibili modelli che semplificano lo sviluppo di un progetto Libreria di classi portabile. In base alla versione di Visual Studio in uso, i modelli e i menu disponibili possono variare rispetto a quanto descritto in questo articolo.  
   
 > [!WARNING]
->  Visual Studio 2013 Update 2 include aggiornamenti ai modelli di libreria di classi portabile. Se si dispone di una versione precedente di Visual Studio e Visual Studio 2013 installato nello stesso computer, e si installa l'Update 2, le modifiche di **Framework di destinazione** scelte verranno applicate a entrambe le versioni di Visual Studio.  
+>  Visual Studio 2013 Update 2 include aggiornamenti ai modelli di libreria di classi portabile. Se si dispone di una versione precedente di Visual Studio e Visual Studio 2013 installato nello stesso computer e si installa l'Update 2, le modifiche per il **Framework di destinazione** scelte verranno applicate a entrambe le versioni di Visual Studio.  
   
  In questo argomento  
   
@@ -47,18 +47,18 @@ Il tipo di progetto Libreria di classi portabile di .NET Framework in Visual Stu
   
 |SKU di Visual Studio|Supporto per la creazione di un progetto Libreria di classi portabile|  
 |-----------------------|---------------------------------------------------|  
-|Visual Studio 2010, Professional, Premium o Ultimate|Sì, quando si installa il [strumenti della libreria portabile](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
+|Visual Studio 2010, Professional, Premium o Ultimate|Sì, quando si installa il [Portable Library Tools](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
 |Versioni di Visual Studio Express 2010|No.|  
 |Visual Studio 2012 Professional, Premium o Ultimate|Sì. Per il supporto di Windows Phone 8.0, installare il [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471).|  
 |Versioni di Visual Studio Express 2012|No.|  
-|Visual Studio 2013 Professional, Premium o Ultimate|Sì. Per il supporto di Windows Phone 8.1, installare il [versione più recente di Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/).|  
-|Community di Visual Studio 2013 per Windows|Sì, quando si installa il [versione più recente di Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/), che include l'Update 2.|  
+|Visual Studio 2013 Professional, Premium o Ultimate|Sì. Per il supporto di Windows Phone 8.1, installare il [versione più recente di Visual Studio 2013](https://visualstudio.microsoft.com/vs/older-downloads/).|  
+|Community di Visual Studio 2013 per Windows|Sì, quando si installa il [versione più recente di Visual Studio Community 2013](https://visualstudio.microsoft.com/vs/older-downloads/), che include l'Update 2.|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>Creazione di un progetto Libreria di classi portabile  
- Per creare un progetto Libreria di classi portabile è consigliabile usare uno dei modelli disponibili in Visual Studio. Creare un nuovo progetto e di **nuovo progetto** nella finestra di dialogo **modelli**, selezionare la lingua di destinazione (in c# o Visual Basic) e quindi selezionare una delle piattaforme di destinazione. Sarà possibile selezionare piattaforme aggiuntive nel passaggio successivo.  
+ Per creare un progetto Libreria di classi portabile è consigliabile usare uno dei modelli disponibili in Visual Studio. Creare un nuovo progetto e il **nuovo progetto** nella finestra di dialogo **modelli**, selezionare la lingua di destinazione (in c# o Visual Basic) e quindi selezionare una delle piattaforme di destinazione. Sarà possibile selezionare piattaforme aggiuntive nel passaggio successivo.  
   
- In Visual Studio 2013 Update 2, è possibile scegliere di **libreria di classi (portabile)** modello per la piattaforma per creare una libreria di classi portabile e il linguaggio scelto. Questo modello verrà visualizzato per le piattaforme seguenti:  
+ In Visual Studio 2013 Update 2, è possibile scegliere il **libreria di classi (portabile)** modello per la piattaforma per creare una libreria di classi portabile e il linguaggio scelto. Questo modello verrà visualizzato per le piattaforme seguenti:  
   
 -   Applicazioni Windows Store  
   
@@ -72,11 +72,11 @@ Il tipo di progetto Libreria di classi portabile di .NET Framework in Visual Stu
   
  Questo modello seleziona automaticamente come destinazioni Windows 8.1 e Windows Phone 8.1. Se si crea una libreria che ha come destinazione solo Windows Phone 8.1 o Windows 8.1, sarà possibile modificare le piattaforme di destinazione e aggiungere piattaforme in un momento successivo.  
   
- Se si utilizza Visual Studio 2012 o Visual Studio 2013 senza Update 2, si crea un nuovo progetto e scegliere il **libreria di classi portabile** modello in Visual c# o Visual Basic.  
+ Se si usa Visual Studio 2012 o Visual Studio 2013 senza Update 2, si crea un nuovo progetto e scegliere il **libreria di classi portabile** modello in Visual c# o Visual Basic.  
   
  ![Selezionare il progetto libreria portabile](../../../docs/standard/cross-platform/media/portablelibrary-start.png "PortableLibrary_start")  
   
- Il **Aggiungi libreria di classi portabile** viene visualizzata la finestra di dialogo e sarà possibile selezionare piattaforme aggiuntive. La finestra di dialogo mostrerà avvisi di compatibilità in base alle destinazioni selezionate.  
+ Il **Aggiungi libreria di classi portabile** verrà visualizzata la finestra di dialogo e sarà possibile selezionare piattaforme aggiuntive. La finestra di dialogo mostrerà avvisi di compatibilità in base alle destinazioni selezionate.  
   
  ![Finestra di dialogo di modifica destinazione Framework per VS2013](../../../docs/standard/cross-platform/media/clr-pcl-changeframeworks.png "CLR_PCL_ChangeFrameworks")  
 Finestra di dialogo Aggiungi libreria di classi portabile per Visual Studio 2013 Update 2  
@@ -85,13 +85,13 @@ Finestra di dialogo Aggiungi libreria di classi portabile per Visual Studio 2013
   
 <a name="platforms"></a>   
 ## <a name="target-options"></a>Opzioni di destinazione  
- Quando si crea un progetto Libreria di classi portabile, è possibile scegliere il sistema operativo e la versione di .NET Framework di destinazione. Se si utilizza Visual Studio 2013 e aver installato l'aggiornamento 2 o versioni successive, è possibile scegliere di **libreria di classi (portabile per applicazioni universali)** modello per creare una libreria di classi portabili destinate a Windows 8.1 e Windows Phone 8.1. Nella tabella seguente sono illustrate le destinazioni disponibili in base alla versione di Visual Studio in uso.  
+ Quando si crea un progetto Libreria di classi portabile, è possibile scegliere il sistema operativo e la versione di .NET Framework di destinazione. Se si usa Visual Studio 2013 e aver installato Update 2 o versioni successive, è possibile scegliere il **libreria di classi (portabile per applicazioni universali)** modello per creare una libreria di classi portabili destinate a Windows 8.1 e Windows Phone 8.1. Nella tabella seguente sono illustrate le destinazioni disponibili in base alla versione di Visual Studio in uso.  
   
 |Opzione di destinazione|Visual Studio 2012|Visual Studio 2013|Visual Studio 2013 Update 2 o versioni successive|  
 |-|-|-|-|  
 |.NET Framework|-.NET framework 4 e versioni successive<br /><br /> -.NET framework 4.0.3 e versioni successive<br /><br /> -.NET framework 4.5|-.NET framework 4 e versioni successive<br /><br /> -.NET framework 4.0.3 e versioni successive<br /><br /> : .NET framework 4.5 e versioni successive<br /><br /> -.NET framework 4.5.1|-.NET framework 4<br /><br /> -.NET framework 4.0.3<br /><br /> -.NET framework 4.5<br /><br /> -.NET framework 4.5.1|  
 |Windows Phone|-Windows Phone 7 e versioni successive<br /><br /> -Windows Phone 7.5 e versioni successive<br /><br /> -Windows Phone 8|-Windows Phone 8|-Windows Phone Silverlight 8<br /><br /> -Windows Phone Silverlight 8.1<br /><br /> Per il supporto di Windows Runtime e XAML, selezionare:<br /><br /> -Windows Phone 8.1|  
-|Windows Store|-.NET per applicazioni Windows Store|-Windows App Store (Windows 8) e versioni successive<br /><br /> -Windows App Store (Windows 8.1)|-Windows 8<br /><br /> -Windows 8.1|  
+|Windows Store|-.NET per applicazioni Windows Store|-App di Windows Store (Windows 8) e versioni successive<br /><br /> -Windows App Store (Windows 8.1)|-Windows 8<br /><br /> -Windows 8.1|  
 |-Silverlight|-Silverlight 4 e versioni successive<br /><br /> -Silverlight 5|-Silverlight 5|-Silverlight 5|  
 |Xbox|-Xbox 360|N/D|N/D|  
   
@@ -99,16 +99,16 @@ Finestra di dialogo Aggiungi libreria di classi portabile per Visual Studio 2013
 ## <a name="changing-targets"></a>Modifica delle destinazioni  
  Quando si sceglie un modello di Libreria di classi portabile, le piattaforme di destinazione vengono selezionate automaticamente, ma le impostazioni predefinite varieranno in base alla versione di Visual Studio installata e alle destinazioni selezionate in precedenza. È possibile modificare le piattaforme al momento della creazione del progetto Libreria di classi portabile o anche dopo aver iniziato lo sviluppo del progetto.  
   
- Se si desidera modificare le destinazioni dopo aver creato il progetto, in **Esplora**, aprire il menu di scelta rapida per il progetto libreria di classi portabile (non la soluzione) e quindi scegliere **proprietà** . Nella pagina delle proprietà del progetto, il **libreria** scheda Mostra le piattaforme di destinazione del progetto attualmente.  
+ Se si desidera modificare le destinazioni dopo aver creato il progetto **Esplora soluzioni**, aprire il menu di scelta rapida per il progetto di libreria di classi portabile (non la soluzione) e quindi scegliere **proprietà** . Nella pagina delle proprietà del progetto, il **libreria** scheda Mostra le piattaforme di destinazione del progetto attualmente.  
   
  ![Proprietà del progetto](../../../docs/standard/cross-platform/media/portablelibrary-projectproperties.png "PortableLibrary_ProjectProperties")  
 Pagina delle proprietà di Libreria di classi portabile per Visual Studio 2013 Update 2  
   
- Per aggiungere o rimuovere destinazioni, scegliere il **modifica** pulsante, quindi selezionare e deselezionare le caselle di controllo.  
+ Per aggiungere o rimuovere destinazioni, scegliere il **modifica** pulsante, quindi selezionare e deselezionare le caselle di controllo appropriate.  
   
  Quando si modificano le destinazioni, le API disponibili per lo sviluppo del progetto cambiano in base alla selezione. Visual Studio segnala gli avvisi e gli errori che possono verificarsi in seguito alla modifica delle destinazioni.  
   
- Se si desidera valutare la portabilità degli assembly prima di apportare modifiche in Visual Studio, è possibile utilizzare il [.NET Portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
+ Se si desidera valutare la portabilità degli assembly prima di apportare modifiche in Visual Studio, è possibile usare il [.NET Portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
   
  Le opzioni di menu varieranno in base alla versione di Visual Studio in uso.  
   
@@ -117,7 +117,7 @@ Finestra di dialogo Modifica destinazioni in Visual Studio 2012
   
 <a name="features"></a>   
 ## <a name="supported-features"></a>Funzionalità supportate  
- Nella tabella seguente vengono elencate le funzionalità supportate sulle piattaforme e versioni disponibili. In alcuni casi, Microsoft ha aggiunto supporto con il rilascio di un pacchetto NuGet e il fatto è stato segnalato. Per ulteriori informazioni sui pacchetti NuGet per .NET Framework, vedere [.NET Framework e i rilasci fuori banda](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
+ Nella tabella seguente vengono elencate le funzionalità supportate sulle piattaforme e versioni disponibili. In alcuni casi, Microsoft ha aggiunto supporto con il rilascio di un pacchetto NuGet e il fatto è stato segnalato. Per ulteriori informazioni sui pacchetti NuGet per .NET Framework, vedere [di .NET Framework e rilascio fuori banda](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
 |Funzionalità|.NET Framework|.NET Framework|.NET Framework|Windows Store|Windows Store|Windows Phone Store|Silverlight per Windows Phone|Silverlight per Windows Phone|Silverlight per Windows Phone|Silverlight|Silverlight|Xbox 360|  
 |-------------|--------------------|--------------------|--------------------|-------------------|-------------------|-------------------------|-------------------------------|-------------------------------|-------------------------------|-----------------|-----------------|--------------|  
@@ -141,11 +141,11 @@ Finestra di dialogo Modifica destinazioni in Visual Studio 2012
 |XLINQ||✓|✓|✓|✓|✓|✓|✓|✓|✓|✓|✓|  
   
  ➊ Richiede [Microsoft Async](https://www.nuget.org/packages/Microsoft.Bcl.Async/) pacchetto  
- ➋ Richiede [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) pacchetto  
+ ➋ Richiede [compressione Microsoft](https://www.nuget.org/packages/Microsoft.Bcl.Compression) pacchetto  
  ➌ Richiede [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) pacchetto  
   
 > [!WARNING]
->  Si potrebbero verificare errori quando si fa riferimento il [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) e [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) pacchetti da una libreria portatile usata da un'app di Windows Phone Silverlight 8.1. Per ulteriori informazioni, vedere [compatibilità della piattaforma e ultime modifiche per le app Windows Phone Silverlight 8.1](/previous-versions/windows/apps/dn642084(v=vs.105)).  
+>  Si potrebbero verificare errori quando si fa riferimento il [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) e [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) pacchetti da una libreria portatile usata da un'app di Windows Phone Silverlight 8.1. Per altre informazioni, vedere [compatibilità delle piattaforme e per le app Windows Phone Silverlight 8.1 modifiche di rilievo](/previous-versions/windows/apps/dn642084(v=vs.105)).  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>Tipi e membri supportati  
@@ -159,14 +159,14 @@ Finestra di dialogo Modifica destinazioni in Visual Studio 2012
   
 -   Devono essere utili in un ambiente portabile, specialmente quando i membri di supporto non lo sono.  
   
- Ad esempio, il progetto Libreria di classi portabile contiene tipi correlati all'interfaccia utente solo quando si scelgono come destinazione Windows 8.1 e Windows Phone 8.1. Possono inoltre esistere limitazioni se le piattaforme scelte come destinazione, ad esempio Xbox, .NET Framework 4 e Windows Phone 7, sono state rilasciate prima dell'introduzione di Libreria di classi portabile. .NET Framework rilascia tramite NuGet pacchetti che migliorano il supporto di Libreria di classi portabile per alcune di queste piattaforme precedenti. Per ulteriori informazioni e un elenco di pacchetti NuGet, vedere [.NET Framework e i rilasci fuori banda](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
+ Ad esempio, il progetto Libreria di classi portabile contiene tipi correlati all'interfaccia utente solo quando si scelgono come destinazione Windows 8.1 e Windows Phone 8.1. Possono inoltre esistere limitazioni se le piattaforme scelte come destinazione, ad esempio Xbox, .NET Framework 4 e Windows Phone 7, sono state rilasciate prima dell'introduzione di Libreria di classi portabile. .NET Framework rilascia tramite NuGet pacchetti che migliorano il supporto di Libreria di classi portabile per alcune di queste piattaforme precedenti. Per ulteriori informazioni e un elenco di pacchetti NuGet, vedere [di .NET Framework e rilascio fuori banda](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
- Se un membro è supportato in Libreria di classi portabile e per le destinazioni selezionate, verrà visualizzato nel progetto in IntelliSense. Inoltre, l'icona di libreria di classi portabile ![supportato da Portable Library](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") presenti nelle tabelle dei membri, il [dilibreriadiclassidi.NETFramework](https://msdn.microsoft.com/library/mt472912.aspx) accanto ai membri supportati. La tabella dei membri seguente, ad esempio, mostra che la proprietà <xref:System.String.Chars%2A> nella classe <xref:System.String> è supportata in Libreria di classi portabile:  
+ Se un membro è supportato in Libreria di classi portabile e per le destinazioni selezionate, verrà visualizzato nel progetto in IntelliSense. Inoltre, l'icona di libreria di classi portabile ![supportato da Portable Library](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") nelle tabelle dei membri, è presente il [libreria di classi .NET Framework](https://msdn.microsoft.com/library/mt472912.aspx) accanto ai membri supportati. La tabella dei membri seguente, ad esempio, mostra che la proprietà <xref:System.String.Chars%2A> nella classe <xref:System.String> è supportata in Libreria di classi portabile:  
   
  ![Icona per un membro supportato](../../../docs/standard/cross-platform/media/plibsupportedmemberlist.png "PlibSupportedMemberList")  
 Icona di Libreria di classi portabile  
   
- È inoltre possibile cercare il **informazioni sulla versione** sezione di un argomento di riferimento per un messaggio indicante che un tipo o membro è supportato nel progetto libreria di classi portabile:  
+ È inoltre possibile controllare la **le informazioni sulla versione** sezione di un argomento di riferimento per un messaggio indicante che un tipo o membro è supportato nel progetto libreria di classi portabile:  
   
  ![Informazioni sulla versione di libreria portabile](../../../docs/standard/cross-platform/media/plibversioninformation.png "PlibVersionInformation")  
 Esempio di informazioni sulla versione  
@@ -187,11 +187,11 @@ Esempio di informazioni sulla versione
  Quando si crea un'app Windows Store o Windows Phone che fa riferimento a un assembly Libreria di classi portabile, tutto il necessario per la distribuzione dell'app è incluso nel pacchetto dell'app e non sono necessari ulteriori passaggi.  
   
 ### <a name="deploying-a-net-framework-app"></a>Distribuzione di un'app .NET Framework  
- Quando si distribuisce un'app .NET Framework che fa riferimento a un assembly Libreria di classi portabile, è necessario specificare una dipendenza dalla versione corretta di .NET Framework. Specificando questa dipendenza, ci si assicura che la versione richiesta per l'app sia installata. Se la destinazione è .NET Framework 4 o versioni successive, il computer deve disporre di .NET Framework 4 con un [aggiornare](https://www.microsoft.com/download/details.aspx?id=3556), aggiornamento 4.0.3 per .NET Framework 4 o .NET Framework 4.5.  
+ Quando si distribuisce un'app .NET Framework che fa riferimento a un assembly Libreria di classi portabile, è necessario specificare una dipendenza dalla versione corretta di .NET Framework. Specificando questa dipendenza, ci si assicura che la versione richiesta per l'app sia installata. Se la destinazione di .NET Framework 4 o versioni successive, il computer deve disporre di .NET Framework 4 con un [aggiornare](https://www.microsoft.com/download/details.aspx?id=3556), aggiornamento 4.0.3 per .NET Framework 4 o .NET Framework 4.5.  
   
--   Per creare una dipendenza con la distribuzione ClickOnce: In **Esplora**, scegliere il nodo di progetto per il progetto che si desidera pubblicare. (Si tratta del progetto che fa riferimento al progetto Libreria di classi portabile.) Nella barra dei menu, scegliere **progetto**, **proprietà**, quindi scegliere il **pubblica** scheda. Nel **pubblica** pagina, scegliere **prerequisiti**. Selezionare la versione di .NET Framework richiesta (o l'aggiornamento di .NET Framework 4) come prerequisito.  
+-   Per creare una dipendenza con la distribuzione ClickOnce: In **Esplora soluzioni**, scegliere il nodo del progetto per il progetto che si desidera pubblicare. (Si tratta del progetto che fa riferimento al progetto Libreria di classi portabile.) Nella barra dei menu, scegliere **progetto**, **proprietà**, quindi scegliere il **pubblica** scheda. Nel **pubblica** pagina, scegliere **prerequisiti**. Selezionare la versione di .NET Framework richiesta (o l'aggiornamento di .NET Framework 4) come prerequisito.  
   
--   Per creare una dipendenza con un progetto di installazione: In **Esplora**, scegliere il progetto di installazione. Nella barra dei menu, scegliere **progetto**, **proprietà**, **prerequisiti**. Selezionare la versione di .NET Framework richiesta come prerequisito.  
+-   Per creare una dipendenza con un progetto di installazione: In **Esplora soluzioni**, scegliere il progetto di installazione. Nella barra dei menu, scegliere **Project**, **delle proprietà**, **prerequisiti**. Selezionare la versione di .NET Framework richiesta come prerequisito.  
   
  Per ulteriori informazioni sulla distribuzione di App .NET Framework, vedere [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md).  
   

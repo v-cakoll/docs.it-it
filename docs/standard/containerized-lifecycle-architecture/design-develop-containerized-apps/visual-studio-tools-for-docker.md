@@ -4,36 +4,36 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 05db5cf8e8dc073dd341fbffab619c326b48f136
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62da6a3ff595422e42450cb1341976424acc5a52
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569291"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314711"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Con Visual Studio Tools per Docker (Visual Studio in Windows)
 
-Il flusso di lavoro di sviluppo quando si utilizza Visual Studio Tools per Docker è simile al flusso di lavoro quando si utilizza codice di Visual Studio e Docker CLI (in realtà, cui si basa la stessa di Docker CLI), ma è più facile iniziare, semplifica il processo e offre una maggiore produttività per la compilazione, esecuzione e la composizione di attività. È inoltre in grado di eseguire ed eseguire il debug ai contenitori tramite azioni semplici, ad esempio F5 e Ctrl + F5 da Visual Studio. Ancora più efficace, con 2017 di Visual Studio, oltre alla possibilità di esecuzione e il debug di un singolo contenitore, è anche possibile eseguire e il debug di un gruppo di contenitori (una soluzione completa) nello stesso momento se sono definiti nello stesso file docker compose.yml a livello di soluzione.
+Il flusso di lavoro di sviluppo quando si utilizza Visual Studio Tools per Docker è simile al flusso di lavoro quando si utilizza Visual Studio Code e Docker CLI (in realtà, si basa la stessa di Docker CLI), ma è più facile iniziare, semplifica il processo e offre una maggiore produttività per la compilazione, esecuzione e la composizione di attività. È inoltre in grado di eseguire ed eseguire il debug ai contenitori tramite le operazioni più semplici, ad esempio F5 e Ctrl + F5 da Visual Studio. Ancora più con Visual Studio 2017, oltre a essere in grado di eseguire ed eseguire il debug di un singolo contenitore, è anche possibile eseguire e il debug di un gruppo di contenitori (una soluzione completa) nello stesso momento se sono definiti nello stesso file docker compose.yml a livello di soluzione.
 
 ## <a name="configuring-your-local-environment"></a>Configurazione dell'ambiente locale
 
-Con le versioni più recenti di Docker per Windows, è più semplice che mai, per sviluppare applicazioni di Docker poiché il programma di installazione è semplice, come illustrato nei riferimenti ai seguenti.
+Con le versioni più recenti di Docker per Windows, risulta più semplice che mai, per sviluppare applicazioni Docker perché il programma di installazione è semplice, come illustrato nei riferimenti ai seguenti.
 
 **Altre informazioni:** per ulteriori informazioni sull'installazione di Docker per Windows, passare a <https://docs.docker.com/docker-for-windows/>.
 
-Se si utilizza Visual Studio 2015, è necessario disporre di Update 3 o versione successiva con Visual Studio Tools per Docker.
+Se si usa Visual Studio 2015, è necessario disporre Update 3 o versione successiva con Visual Studio Tools per Docker.
 
-**Altre informazioni:** per istruzioni sull'installazione di Visual Studio, passare alla [ https://www.visualstudio.com/\ edizioni dei prodotti/vs-2015-prodotto](https://www.visualstudio.com/products/vs-2015-product-editions).
+**Altre informazioni:** per istruzioni sull'installazione di Visual Studio, passare alla [ https://visualstudio.microsoft.com/\ edizioni dei prodotti/vs-2015-prodotto](https://visualstudio.microsoft.com/products/vs-2015-product-editions).
 
-Per visualizzare ulteriori informazioni sull'installazione di Visual Studio Tools per Docker, passare a <http://aka.ms/vstoolsfordocker> e <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
+Per visualizzare altre informazioni sull'installazione di Visual Studio Tools per Docker, passare a <http://aka.ms/vstoolsfordocker> e <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
 
-Se si utilizza Visual Studio 2017, il supporto di Docker è già incluso.
+Se si usa Visual Studio 2017, il supporto di Docker è già incluso.
 
 ## <a name="using-docker-tools-in-visual-studio-2015"></a>Utilizzando gli strumenti di Docker in Visual Studio 2015
 
 Visual Studio Tools per Docker offre un sistema coerente per sviluppare e convalidare i ai contenitori di Docker in locale per Linux in un host Linux Docker o macchina virtuale o i contenitori di Windows direttamente in Windows.
 
-Se si usa un singolo contenitore, la prima cosa che occorre per iniziare è per attivare il supporto di Docker nel progetto .NET Core. A tale scopo, fare clic sul file di progetto, come illustrato nella figura 4-25.
+Se si usa un singolo contenitore, per abilitare il supporto di Docker nel progetto .NET Core è la prima cosa che occorre per iniziare. A tale scopo, fare clic sul file di progetto, come illustrato nella figura 4-25.
 
 ![https://i1.visualstudiogallery.msdn.s-msft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/image/file/205468/1/add-docker-support.png](./media/image31.png)
 
@@ -41,13 +41,13 @@ Figura 4-25: l'attivazione del supporto di Docker per il progetto di Visual Stud
 
 ## <a name="using-docker-tools-in-visual-studio-2017"></a>Utilizzando gli strumenti di Docker in Visual Studio 2017
 
-Quando si aggiunge il supporto di Docker per un progetto di servizio nella soluzione (vedere Figura 4-26), Visual Studio è non appena aggiunta di un DockerFile file al progetto, anche aggiunge una sezione di servizio per la soluzione docker compose.yml file (o creare i file se non sono esistere). È un modo semplice per iniziare la composizione della soluzione multicontainer; è quindi possibile aprire i file di docker compose.yml e aggiornarli con funzionalità aggiuntive.
+Quando si aggiunge il supporto di Docker per un progetto di servizio nella soluzione (vedere Figura 4-26), Visual Studio è non appena aggiunta di un DockerFile file al progetto, anche aggiunge una sezione di servizio per la soluzione docker compose.yml file (o creare i file se essi non sono stati esiste). È un modo semplice per iniziare la composizione della soluzione multicontainer; è quindi possibile aprire i file di docker compose.yml e aggiornarle con funzionalità aggiuntive.
 
 ![](./media/image32.png)
 
 Figura 4-26: l'attivazione del supporto di soluzioni di Docker in un progetto di Visual Studio 2017
 
-Questa azione aggiunge non solo DockerFile al progetto, aggiunge anche le righe di configurazione necessarie di codice per un globale compose.yml docker impostato a livello di soluzione.
+Questa azione aggiunge non solo il DockerFile al progetto, aggiunge anche le righe di configurazione necessarie di codice per un globale compose.yml docker impostato a livello di soluzione.
 
 È anche possibile attivare il supporto di Docker quando si crea un progetto ASP.NET Core in Visual Studio 2017, come illustrato nella figura 4-27.
 
@@ -55,15 +55,15 @@ Questa azione aggiunge non solo DockerFile al progetto, aggiunge anche le righe 
 
 Figura 4-27: l'attivazione del supporto di Docker durante la creazione di un progetto
 
-Dopo aver aggiunto il supporto di Docker per la soluzione in Visual Studio, è inoltre verrà visualizzato un nuovo albero di nodi in Esplora soluzioni con i file aggiunti docker-compose.yml, come illustrato nella figura 4-28.
+Dopo aver aggiunto il supporto di Docker per la soluzione in Visual Studio, è inoltre verrà visualizzato un nuovo albero di nodi in Esplora soluzioni con file aggiunti docker-compose.yml, come illustrato nella figura 4-28.
 
 ![](./media/image34.PNG)
 
-Figura 4-28: file compose.yml di docker è ora visualizzato in Esplora soluzioni
+Figura 4-28: file compose.yml docker è ora visualizzato in Esplora soluzioni
 
-È possibile distribuire un multicontainer applicazione utilizzando un file di docker-compose.yml solo quando si esegue docker-comporre; Tuttavia, Visual Studio aggiunge un gruppo di elementi, in modo è possibile eseguire l'override di valori a seconda dell'ambiente (sviluppo e produzione) e l'esecuzione del tipo (release e debug). Questa funzionalità verrà spiegata meglio nei capitoli successivi.
+È possibile distribuire un multicontainer applicazione utilizzando un file docker-compose.yml solo quando si esegue docker-comporre; Tuttavia, Visual Studio aggiunge un gruppo di essi, in modo è possibile eseguire l'override di valori a seconda dell'ambiente (sviluppo e produzione) e l'esecuzione del tipo (release e debug). Questa funzionalità verrà spiegata meglio nei capitoli successivi.
 
-**Altre informazioni:** per ulteriori informazioni sull'implementazione di servizi e l'utilizzo di Visual Studio Tools per Docker, leggere gli articoli seguenti:
+**Altre informazioni:** per altri dettagli di implementazione di servizi e l'utilizzo di Visual Studio Tools per Docker, leggere gli articoli seguenti:
 
 Compilare, eseguire il debug, aggiornare e aggiornare le App in un contenitore Docker locale: [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 

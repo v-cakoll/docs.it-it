@@ -5,26 +5,26 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0018b9f8644ec7d222a416bb5f71a7c61671009e
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529883"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314763"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Ridimensionamento automatico in Windows Form
 Con il ridimensionamento automatico, un form e i relativi controlli, progettati su un computer con una determinata risoluzione dello schermo o tipo di carattere del sistema, possono essere visualizzati correttamente su un altro computer con una risoluzione dello schermo o tipo di carattere del sistema diverso. Questa funzionalità assicura che il form e i controlli vengano ridimensionati in modo coerente con le finestre native e le altre applicazioni presenti sia sui computer degli utenti che su quelli di altri sviluppatori. Il supporto di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per il ridimensionamento automatico e gli stili di visualizzazione consente alle applicazioni [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] di avere sempre un aspetto coerente, se confrontate con le applicazioni Windows native sul computer di ogni utente.
   
-Il ridimensionamento automatico funziona per lo più come previsto in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versione 2.0 e successive. Le modifiche delle combinazioni tipi di carattere tuttavia possono essere problematiche. Per un esempio di come risolvere questo problema, vedere [procedura: rispondere alle modifiche delle combinazioni di tipi di carattere in un'applicazione Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+Il ridimensionamento automatico funziona per lo più come previsto in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versione 2.0 e successive. Le modifiche delle combinazioni tipi di carattere tuttavia possono essere problematiche. Per un esempio di come risolvere questo problema, vedere la sezione [procedura: rispondere alle modifiche delle combinazioni del carattere in un'applicazione Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
   
 ## <a name="need-for-automatic-scaling"></a>Necessità del ridimensionamento automatico  
 Senza ridimensionamento automatico, un'applicazione progettata per un'unica risoluzione dello schermo o tipo di carattere apparirà troppo piccola o troppo grande quando si modifica tale risoluzione o tipo di carattere. Ad esempio, se l'applicazione viene progettata con Tahoma a 9 punti come base, senza regolazione apparirà troppo piccola se eseguita su un computer in cui il tipo di carattere del sistema è Tahoma a 12 punti. Gli elementi di testo, ad esempio titoli, menu, contenuti delle caselle di testo e così via, verranno visualizzati più in piccolo che nelle altre applicazioni. Inoltre, le dimensioni degli elementi dell'interfaccia utente contenenti testo, ad esempio la barra del titolo, i menu e molti controlli, dipendono dal tipo di carattere usato. In questo esempio, tali elementi appariranno anche relativamente più piccoli.
 
-Una situazione analoga si verifica quando un'applicazione è progettata per una determinata risoluzione dello schermo. La risoluzione dello schermo più comune è di 96 punti per pollice (DPI), pari a 100% modalità di visualizzazione, ma display con una risoluzione maggiore supporto 125%, 150%, 200% (quali 120 rispettivamente uguale, 144 DPI 192 e) e versioni successive sono sempre più diffuse. Senza regolazione, un'applicazione, soprattutto una con molti elementi grafici, progettata per un'unica risoluzione apparirà troppo grande o troppo piccola se eseguita con un'altra risoluzione.
+Una situazione analoga si verifica quando un'applicazione è progettata per una determinata risoluzione dello schermo. La risoluzione dello schermo più comune è di 96 punti per pollice (DPI), che è uguale a 100% ridimensionamento schermo, ma display risoluzione maggiore supporto 125%, 150%, 200% (quali 120 rispettivamente uguale, 144 DPI 192 e) e versioni successive stanno diffondendo. Senza regolazione, un'applicazione, soprattutto una con molti elementi grafici, progettata per un'unica risoluzione apparirà troppo grande o troppo piccola se eseguita con un'altra risoluzione.
 
-Il ridimensionamento automatico cerca di risolvere questi problemi ridimensionando automaticamente il form e i controlli figlio in base alle dimensioni del carattere o risoluzione dello schermo relativa. Per supportare il ridimensionamento automatico delle finestre di dialogo, il sistema operativo Windows usa un'unità di misura relativa, chiamata DLU. Una DLU si basa sul tipo di carattere del sistema e la relazione con i pixel può essere determinata attraverso la funzione `GetDialogBaseUnits` di Win32 SDK. Quando un utente cambia il tema usato da Windows, tutte le finestre di dialogo vengono automaticamente adattate di conseguenza. Inoltre, il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] supporta ridimensionamento automatico basato sia in base al tipo di carattere di sistema predefinito o la risoluzione dello schermo. Facoltativamente, il ridimensionamento automatico può essere disabilitato in un'applicazione.
+Il ridimensionamento automatico cerca di risolvere questi problemi ridimensionando automaticamente il form e i controlli figlio in base alle dimensioni del carattere o risoluzione dello schermo relativa. Per supportare il ridimensionamento automatico delle finestre di dialogo, il sistema operativo Windows usa un'unità di misura relativa, chiamata DLU. Una DLU si basa sul tipo di carattere del sistema e la relazione con i pixel può essere determinata attraverso la funzione `GetDialogBaseUnits` di Win32 SDK. Quando un utente cambia il tema usato da Windows, tutte le finestre di dialogo vengono automaticamente adattate di conseguenza. Inoltre, il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] supporta ridimensionamento automatico basato sia il carattere di sistema predefinito o la risoluzione dello schermo. Facoltativamente, il ridimensionamento automatico può essere disabilitato in un'applicazione.
 
-## <a name="original-support-for-automatic-scaling"></a>Supporto originale per il ridimensionamento automatico
+## <a name="original-support-for-automatic-scaling"></a>Supporto originale per la scalabilità automatica
 Le versioni 1.0 e 1.1 di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] supportavano un tipo di ridimensionamento automatico semplice, che dipendeva dal tipo di carattere predefinito di Windows usato per l'interfaccia utente, rappresentato dal valore **DEFAULT_GUI_FONT** di Win32 SDK. Questo tipo di carattere in genere viene modificato solo quando cambia la risoluzione dello schermo. Per implementare il ridimensionamento automatico, veniva usato il meccanismo seguente:
 
 1. In fase di progettazione, la proprietà <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> (ora deprecata) veniva impostata sull'altezza e sulla larghezza del tipo di carattere del sistema predefinito sul computer dello sviluppatore.
@@ -37,19 +37,11 @@ Le versioni 1.0 e 1.1 di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md
 
 Anche se questo meccanismo era sufficiente per la maggior parte degli scopi, tuttavia aveva i seguenti limiti:
 
-- Poiché il <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> proprietà rappresenta la dimensione della linea di base come valori integer, si verificano errori di arrotondamento che diventano evidenti quando un form passa in più risoluzioni.
+- Poiché il <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> proprietà rappresenta la dimensione della linea di base come valori integer, si verificano errori di arrotondamento che diventano evidenti quando un form è visualizzato in sequenza in più risoluzioni.
 
 - Il ridimensionamento automatico era implementato solo nella classe <xref:System.Windows.Forms.Form> e non nella classe <xref:System.Windows.Forms.ContainerControl>. Di conseguenza, i controlli utente venivano ridimensionati in modo corretto solo quando il controllo utente era progettato con la stessa risoluzione del form e veniva inserito nel form in fase di progettazione.
 
 - I form e i controlli figlio potevano essere progettati simultaneamente da più sviluppatori solo se le risoluzioni dei computer erano le stesse. Allo stesso modo, l'ereditarietà di un form dipendeva dalla risoluzione associata al form padre.
-
-> [!NOTE]
-> Con le differenze nella visualizzazione DPI, in particolare in dispositivi moderni 2-in-1, estreme può ancora verificarsi con le versioni più recenti di .NET Framework e Visual Studio. Per risolvere questo problema in un team con schermi DPI diversi, assicurarsi sempre che Visual Studio viene avviato in modalità non-compatibile con DPI, in modo da Progettazione Windows Form basa sempre il calcolo del layout su 96 DPI. A tal fine, è sufficiente impostare la seguente chiave del Registro di sistema per disabilitare il riconoscimento HighDPI Visual Studio:
->
-> ```
-> [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\devenv.exe]
-> "dpiAwareness"=dword:00000000
-> ```
 
 - Non è compatibile con i nuovi gestori di layout introdotti con [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versione 2.0, ad esempio <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel>.
 
@@ -76,7 +68,7 @@ Anche se questo meccanismo è ancora presente in [!INCLUDE[dnprdnshort](../../..
 > [!CAUTION]
 > Non sono supportate combinazioni arbitrarie di DPI e modalità di ridimensionamento dei tipi di carattere. Anche se è possibile ridimensionare un controllo utente con una sola modalità (ad esempio, DPI) e inserirlo in un form con un'altra modalità (Font) senza problemi, tuttavia, se si combinano un form di base in una modalità e un form derivato in un'altra, è possibile che si verifichino risultati imprevisti.
 
-### <a name="automatic-scaling-in-action"></a>Ridimensionamento automatico
+### <a name="automatic-scaling-in-action"></a>Ridimensionamento automatico in azione
 Windows Form usa ora la seguente logica per ridimensionare automaticamente i form e i relativi contenuti:
 
 1. In fase di progettazione, ogni <xref:System.Windows.Forms.ContainerControl> registra la modalità di ridimensionamento e la risoluzione corrente rispettivamente in <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> e <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>.
