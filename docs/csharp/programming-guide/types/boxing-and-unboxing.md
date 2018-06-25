@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 4cf6a81a2738d4aff94089c89fcc39e785127a82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eff5f05aa8b5081069b9e0f2f5f152669afaea18
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336131"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207991"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing e unboxing (Guida per programmatori C#)
 Il boxing è il processo di conversione di un [tipo di valore](../../../csharp/language-reference/keywords/value-types.md) nel tipo `object` o in qualsiasi tipo di interfaccia implementato dal tipo valore. La conversione boxing di un tipo valore in CLR comporta il wrapping del valore in un elemento System.Object e l'archiviazione nell'heap gestito. Mediante la conversione unboxing, invece, il tipo valore viene estratto dall'oggetto. La conversione boxing è implicita; quella unboxing è esplicita. Il concetto di conversione boxing e unboxing è alla base della visione unificata del sistema dei tipi in C#, in base alla quale un valore di qualsiasi tipo può essere considerato come un oggetto.  
@@ -111,10 +111,7 @@ int j = (int) o;
   
 -   [Tipi di riferimento](../../../csharp/language-reference/keywords/reference-types.md)  
   
--   [Tipi di valore](../../../csharp/language-reference/keywords/value-types.md)  
-  
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+-   [Tipi valore](../../../csharp/language-reference/keywords/value-types.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)

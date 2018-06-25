@@ -1,13 +1,14 @@
 ---
 title: Tipi tupla - Guida a C#
-description: Informazioni sui tipi tupla denominati e non denominati in C#
+description: Informazioni sui tipi di tupla denominati e non denominati in C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 5ef8d89f62a30d3d64f7377972e31d9c4d93d41e
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 6c3b6edb0481b8c2e4d92989b605f657aac607fa
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208299"
 ---
 # <a name="c-tuple-types"></a>Tipi tupla in C# #
 
@@ -91,7 +92,8 @@ A partire da C# 7.3, i tipi tupla supportano gli operatori `==` e `!=`. Questi o
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-Esistono diverse regole che rendono più comodi i test di uguaglianza delle tuple. I test di uguaglianza delle tuple eseguono [conversioni con elevazione](/dotnet/csharp/language-reference/language-specification/conversions.md#lifted-conversion-operators) se una delle tuple è una tupla nullable, come illustrato nel codice seguente:
+Esistono diverse regole che rendono più comodi i test di uguaglianza delle tuple. I test di uguaglianza delle tuple eseguono [conversioni con elevazione](/dotnet/csharp/language-reference/language-specification/conversions#lifted-conversion-operators) se una delle tuple è una tupla nullable, come illustrato nel codice seguente:
+
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 

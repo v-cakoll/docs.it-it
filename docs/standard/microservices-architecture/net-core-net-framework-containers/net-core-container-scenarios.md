@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 4e2585d7fdeb89e7267f2615113f819d71236dc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45917a9dbfbd6610c3cca9ab7dcf9f924c329c10
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580172"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314926"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Quando scegliere .NET Core per i contenitori Docker
 
@@ -25,9 +25,9 @@ Chiaramente, se l'obiettivo è creare un'applicazione (applicazione Web o serviz
 
 .NET Core supporta anche macOS come piattaforma di sviluppo. Tuttavia, quando i contenitori vengono distribuiti in un host Docker, l'host deve (attualmente) essere basato su Linux o Windows. In un ambiente di sviluppo, ad esempio, si potrebbe usare una macchina virtuale Linux in esecuzione in un Mac.
 
-[Visual Studio](https://www.visualstudio.com/) fornisce un ambiente di sviluppo integrato (IDE) per Windows e supporta lo sviluppo per Docker. 
+[Visual Studio](https://visualstudio.microsoft.com/) fornisce un ambiente di sviluppo integrato (IDE) per Windows e supporta lo sviluppo per Docker. 
 
-[Visual Studio per Mac](https://www.visualstudio.com/vs/visual-studio-mac/) è un ambiente di sviluppo integrato, un'evoluzione di Xamarin Studio, in esecuzione in macOS e in grado di supportare Docker dalla metà del 2017.
+[Visual Studio per Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/) è un ambiente di sviluppo integrato, un'evoluzione di Xamarin Studio, in esecuzione in macOS e in grado di supportare Docker dalla metà del 2017.
 
 È anche possibile usare [Visual Studio Code](https://code.visualstudio.com/) in macOS, Linux e Windows. Visual Studio Code supporta infatti .NET Core, incluse le funzionalità IntelliSense e di debug. Poiché Visual Studio Code è un editor leggero, è possibile usarlo per sviluppare app in contenitori in Mac in combinazione con l'interfaccia della riga di comando di Docker e gli strumenti dell'interfaccia della riga di comando di [.NET Core](../../../core/tools/index.md). È anche possibile usare .NET Core con la maggior parte degli editor di terze parti, come Sublime Text, Emacs, vi e il progetto OmniSharp open source che fornisce il supporto di IntelliSense per i linguaggi .NET. Oltre agli ambienti di sviluppo integrato e agli editor, è possibile usare l'interfaccia della riga di comando di .NET Core per tutte le piattaforme supportate.
 

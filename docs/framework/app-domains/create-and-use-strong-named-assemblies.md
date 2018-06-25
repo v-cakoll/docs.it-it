@@ -14,15 +14,18 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94659919d4e902f8562e669fbb0f98d6ebc679ab
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7d0ff21ee4846b2f5586317e70ac96f37517621f
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744642"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270500"
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Creazione e utilizzo degli assembly con nome sicuro
 <a name="top"></a> Un nome sicuro è costituito dall'identità dell'assembly, corrispondente al nome semplice in formato testo, al numero di versione e alle informazioni sulle impostazioni cultura eventualmente disponibili, nonché da una chiave pubblica e da una firma digitale. Questo nome viene generato da un file di assembly usando la chiave privata corrispondente. Il file di assembly contiene il manifesto dell'assembly, che include i nomi e gli hash di tutti i file che costituiscono l'assembly.  
+
+> [!WARNING]
+> Non usare i nomi sicuri per la sicurezza, poiché forniscono solo un'identità univoca.
   
  Gli assembly con nome sicuro possono usare solo tipi da altri assembly con nome sicuro. In caso contrario, l'integrità dell'assembly con nome sicuro risulterebbe compromessa.  
   

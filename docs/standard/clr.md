@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7887c1142b721249526a318257149e419affd967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89989b4b7730f4e252dc846377b385cb359dbee1
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572291"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36315121"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Panoramica di CLR (Common Language Runtime)
 
@@ -32,7 +32,7 @@ In .NET Framework viene fornito un ambiente di runtime, denominato Common Langua
 I compilatori e gli strumenti dei linguaggi espongono le funzionalità di Common Language Runtime e consentono di scrivere codice che sfrutta i vantaggi di tale ambiente di esecuzione gestito. Il codice sviluppato tramite un compilatore di linguaggio basato su Common Language Runtime viene definito codice gestito e si avvantaggia di funzionalità quali l'integrazione tra i linguaggi, la gestione delle eccezioni con linguaggi diversi, la sicurezza avanzata, il supporto per il controllo delle versioni e la distribuzione, un modello semplificato per l'interazione tra componenti e servizi di debug e di profilatura.
 
 > [!NOTE]
-> I compilatori e gli strumenti sono in grado di produrre un output che può essere usato da Common Language Runtime perché il sistema di tipi, il formato dei metadati e l'ambiente di runtime (il sistema di esecuzione virtuale) sono tutti definiti da uno standard pubblico, la specifica di ECMA Common Language Infrastructure. Per altre informazioni, vedere [ECMA C# and Common Language Infrastructure Standards](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/) (Specifiche ECMA C# e Common Language Infrastructure).
+> I compilatori e gli strumenti sono in grado di produrre un output che può essere usato da Common Language Runtime perché il sistema di tipi, il formato dei metadati e l'ambiente di runtime (il sistema di esecuzione virtuale) sono tutti definiti da uno standard pubblico, la specifica di ECMA Common Language Infrastructure. Per altre informazioni, vedere [ECMA C# and Common Language Infrastructure Standards](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/) (Specifiche ECMA C# e Common Language Infrastructure).
 
 Per consentire all'ambiente di esecuzione di fornire servizi al codice gestito, è necessario che i compilatori di linguaggio generino metadati che descrivono i tipi, i membri e i riferimenti presenti nel codice. I metadati sono memorizzati con il codice: ogni file eseguibile trasportabile (PE, Portable Executable) caricabile in Common Language Runtime contiene metadati. I metadati vengono usati nell'ambiente di esecuzione per individuare e caricare classi, disporre istanze in memoria, risolvere chiamate di metodo, generare codice nativo, garantire sicurezza e impostare limiti di contesto per la fase di esecuzione.
 

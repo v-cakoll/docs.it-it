@@ -5,12 +5,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: cb039755b7440cbfd1f782cc118d11a03b47da04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 120b6e72a6ab906437c593d6eb33024d1df8f52b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331123"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207965"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Indicizzatori nelle interfacce (Guida per programmatori C#)
 Gli indicizzatori possono essere dichiarati su una [interfaccia](../../../csharp/language-reference/keywords/interface.md). Le funzioni di accesso degli indicizzatori di interfaccia differiscono dalle funzioni di accesso degli indicizzatori di [classe](../../../csharp/language-reference/keywords/class.md) per gli aspetti seguenti:  
@@ -35,7 +35,7 @@ Gli indicizzatori possono essere dichiarati su una [interfaccia](../../../csharp
  Nell'esempio precedente era possibile adottare l'implementazione esplicita del membro dell'interfaccia usando il nome completo del membro dell'interfaccia. Ad esempio:  
   
 ```  
-public string ISomeInterface.this[int index]   
+string ISomeInterface.this[int index]   
 {   
 }   
 ```  
@@ -43,7 +43,7 @@ public string ISomeInterface.this[int index]
  Il nome completo, tuttavia, è necessario soltanto per evitare l'ambiguità quando la classe implementa più di un'interfaccia con la stessa firma di indicizzatore. Se una classe `Employee` implementa, ad esempio, due interfacce, `ICitizen` e `IEmployee`, ed entrambe le interfacce hanno la stessa firma di indicizzatore, sarà necessaria l'implementazione esplicita del membro dell'interfaccia. In altre parole, la dichiarazione di indicizzatore seguente:  
   
 ```  
-public string IEmployee.this[int index]   
+string IEmployee.this[int index]   
 {   
 }   
 ```  
@@ -51,7 +51,7 @@ public string IEmployee.this[int index]
  implementa l'indicizzatore nell'interfaccia `IEmployee`, mentre la dichiarazione seguente:  
   
 ```  
-public string ICitizen.this[int index]
+string ICitizen.this[int index]
 {   
 }   
 ```  

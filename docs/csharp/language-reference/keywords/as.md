@@ -8,17 +8,17 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: 092c30a858df7baeb35bdf28bae53802fb0916d4
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: cc5bb62d94e6999bf9174bd2221fb68e7c711588
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172019"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207972"
 ---
 # <a name="as-c-reference"></a>as (Riferimenti per C#)
 È possibile usare l'operatore `as` per eseguire determinati tipi di conversioni tra tipi di riferimenti compatibili o [tipi nullable](../../../csharp/programming-guide/nullable-types/index.md). Il codice seguente illustra un esempio.  
   
- [!code-csharp[csrefKeywordsOperator#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/as_1.cs)]  
+[!code-csharp[csrefKeywordsOperator#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#1)]
   
 ## <a name="remarks"></a>Note  
  L'operatore `as` è simile a un'operazione cast. Tuttavia, se la conversione non è possibile, `as` restituisce `null` anziché generare un'eccezione. Si consideri l'esempio seguente:  
@@ -36,7 +36,8 @@ expression is type ? (type)expression : (type)null
  Si noti che l'operatore `as` esegue solo conversioni di riferimenti, conversioni nullable e conversioni boxing. L'operatore `as` non può eseguire altre conversioni, ad esempio conversioni definite dall'utente, le quali devono invece essere eseguite tramite le espressioni cast.  
   
 ## <a name="example"></a>Esempio  
- [!code-csharp[csrefKeywordsOperator#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/as_2.cs)]  
+
+[!code-csharp[csrefKeywordsOperator#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#2)]
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

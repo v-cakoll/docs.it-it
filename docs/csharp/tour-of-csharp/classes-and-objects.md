@@ -3,12 +3,12 @@ title: Classi e oggetti in C# - Panoramica del linguaggio C#
 description: Introduzione a C# Leggere questa panoramica su classi, oggetti ed ereditarietà
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1a8c34588cce21f4f4164df57aa8044074c23783
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357342"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298292"
 ---
 # <a name="classes-and-objects"></a>Classi e oggetti
 
@@ -207,7 +207,7 @@ Il programma seguente usa le classi `Expression` per valutare l'espressione `x *
 
 ### <a name="method-overloading"></a>Overload di un metodo
 
-L'*overload* di un metodo consente a più metodi della stessa classe di avere lo stesso nome, purché abbiano firme univoche. Quando si compila una chiamata di un metodo di overload, il compilatore usa la *risoluzione dell'overload* per determinare il metodo specifico da richiamare. La risoluzione dell'overload trova il metodo che meglio corrisponde agli argomenti o segnala un errore se non riesce a trovare alcuna corrispondenza. Nell'esempio seguente viene illustrato il funzionamento effettivo della risoluzione dell'overload. Il commento relativo a ogni chiamata del metodo `Main` mostra il metodo effettivamente richiamato.
+L'*overload* di un metodo consente a più metodi della stessa classe di avere lo stesso nome, purché abbiano firme univoche. Quando si compila una chiamata di un metodo di overload, il compilatore usa la *risoluzione dell'overload* per determinare il metodo specifico da richiamare. La risoluzione dell'overload trova il metodo che meglio corrisponde agli argomenti o segnala un errore se non riesce a trovare alcuna corrispondenza. Nell'esempio seguente viene illustrato il funzionamento effettivo della risoluzione dell'overload. Il commento relativo a ogni chiamata del metodo `UsageExample` mostra il metodo effettivamente richiamato.
 
 [!code-csharp[OverloadUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
 
