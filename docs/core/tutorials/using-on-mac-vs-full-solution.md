@@ -4,12 +4,12 @@ description: Questo argomento descrive il processo di creazione di una soluzione
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: 7423e9aaa861b767c3f3d21c628e17936feacca4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219092"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314698"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac
 
@@ -26,7 +26,7 @@ In questa esercitazione viene illustrato come creare un'applicazione che accetta
 
 - OpenSSL (per .NET Core 1.1): vedere l'argomento [Prerequisiti per .NET Core in Mac](../macos-prerequisites.md).
 - [.NET Core SDK 1.1 o versione successiva](https://www.microsoft.com/net/core#macos)
-- [Visual Studio 2017 per Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
+- [Visual Studio 2017 per Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)
 
 Per altre informazioni sui prerequisiti, vedere [Prerequisiti per .NET Core in Mac](../../core/macos-prerequisites.md). Per informazioni su tutti i requisiti di sistema per Visual Studio 2017 per Mac, vedere [Requisiti di sistema della famiglia di prodotti Visual Studio 2017 per Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
