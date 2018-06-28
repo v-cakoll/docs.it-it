@@ -2,12 +2,12 @@
 title: Generazione di un client WCF dai metadati del servizio
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: bd349099213a7818555a910aac1949999a57a58f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55034868b465b63dca3ca28238d81b348d9d6893
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494017"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027928"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generazione di un client WCF dai metadati del servizio
 In questo argomento viene illustrato come utilizzare le varie opzioni in Svcutil.exe per generare client da documenti dei metadati.  
@@ -20,7 +20,7 @@ In questo argomento viene illustrato come utilizzare le varie opzioni in Svcutil
   
 -   Richiesta DISCO (mediante il [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) dai servizi Web ASP.NET) all'indirizzo fornito.  
   
- Lo strumento Svcutil.exe consente di generare il client in base al WSDL (Web Services Description Language) o al file dei criteri ricevuto dal servizio. Il nome dell’entità utente (UPN) viene generato concatenando il nome utente con "@" e aggiungendo quindi un nome di dominio completo (FQDN). Tuttavia, per gli utenti registrati su Active Directory, questo formato non valido e l'UPN dallo strumento provoca un errore di autenticazione Kerberos con il seguente messaggio di errore: **non è riuscito il tentativo di accesso.** Per risolvere questo problema, è necessario correggere manualmente il file client generato da questo strumento.  
+ Lo strumento Svcutil.exe consente di generare il client in base al WSDL (Web Services Description Language) o al file dei criteri ricevuto dal servizio. Il nome dell'entità utente (UPN) è generato concatenando il nome utente con "\@" e aggiungendo quindi un nome di dominio completo (FQDN). Tuttavia, per gli utenti registrati su Active Directory, questo formato non valido e l'UPN dallo strumento provoca un errore di autenticazione Kerberos con il seguente messaggio di errore: **non è riuscito il tentativo di accesso.** Per risolvere questo problema, è necessario correggere manualmente il file client generato da questo strumento.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
