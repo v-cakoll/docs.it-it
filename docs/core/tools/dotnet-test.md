@@ -3,12 +3,13 @@ title: Comando dotnet test - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet test viene usato per eseguire unit test in un determinato progetto.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: d85ca0bf75baa94e63358bd66d11bc29e8b9284b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 8a10ac9175ee5fcf8649efbb07d8d382ac3afdc7
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696270"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,16 +21,19 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Riepilogo
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
-
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 ```
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
 dotnet test [-h|--help]
 ```
-
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+dotnet test [-h|--help]
+```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
 ```
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
 dotnet test [-h|--help]
@@ -48,11 +52,77 @@ I progetti di test specificano l'applicazione di esecuzione dei test usando un n
 
 `PROJECT`
 
-Specifica un percorso del progetto di test. Se omesso, per impostazione predefinita sarà la directory corrente.
+Percorso del progetto di test. Se non specificato, per impostazione predefinita viene usata la directory corrente.
 
 ## <a name="options"></a>Opzioni
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+
+Usa gli adattatori di test personalizzati dal percorso specificato nell'esecuzione del test.
+
+`--blame`
+
+Esegue i test in modalità di segnalazione degli errori. Questa opzione è utile per isolare i test problematici che causano un arresto anomalo dell'host dei test. Crea un file di output nella directory corrente denominato *Sequence.xml* che acquisisce l'ordine di esecuzione dei test prima dell'arresto anomalo.
+
+`-c|--configuration {Debug|Release}`
+
+Definisce la configurazione di compilazione. Il valore predefinito è `Debug`, ma la configurazione del progetto può eseguire l'override di questa impostazione predefinita dell'SDK.
+
+`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
+
+Abilita l'agente di raccolta dati per l'esecuzione dei test. Per altre informazioni, vedere [Monitoraggio e analisi di esecuzioni dei test](https://aka.ms/vstest-collect).
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+Abilita la modalità di diagnostica per la piattaforma di test e scrive messaggi di diagnostica nel file specificato.
+
+`-f|--framework <FRAMEWORK>`
+
+Cerca i file binari di test per un [framework](../../standard/frameworks.md) specifico.
+
+`--filter <EXPRESSION>`
+
+Filtra i test nel progetto corrente usando l'espressione specificata. Per altre informazioni, vedere la sezione [Dettagli dell'opzione filter](#filter-option-details). Per altre informazioni ed esempi sull'uso del filtro degli unit test selettivi, vedere [Esecuzione di unit test selettivi](../testing/selective-unit-tests.md).
+
+`-h|--help`
+
+Stampa una breve guida per il comando.
+
+`-l|--logger <LoggerUri/FriendlyName>`
+
+Specifica un logger per i risultati di test.
+
+`--no-build`
+
+Non compila il progetto di test prima dell'esecuzione. Imposta anche in modo implicito il flag `--no-restore`.
+
+`--no-restore`
+
+Non esegue un ripristino implicito quando si esegue il comando.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Directory in cui trovare i file binari da eseguire.
+
+`-r|--results-directory <PATH>`
+
+Directory in cui verranno inseriti i risultati del test. Se la directory specificata non esiste, viene creata.
+
+`-s|--settings <SETTINGS_FILE>`
+
+Impostazioni da usare durante l'esecuzione di test.
+
+`-t|--list-tests`
+
+Elenca tutti i test individuati nel progetto corrente.
+
+`-v|--verbosity <LEVEL>`
+
+Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -76,7 +146,7 @@ Cerca i file binari di test per un [framework](../../standard/frameworks.md) spe
 
 `--filter <EXPRESSION>`
 
-Filtra i test nel progetto corrente usando l'espressione specificata. Per altre informazioni, vedere la sezione [Dettagli dell'opzione filter](#filter-option-details). Per altre informazioni e per esempi sull'uso del filtro degli unit test selettivi, vedere [Esecuzione di unit test selettivi](../testing/selective-unit-tests.md).
+Filtra i test nel progetto corrente usando l'espressione specificata. Per altre informazioni, vedere la sezione [Dettagli dell'opzione filter](#filter-option-details). Per altre informazioni ed esempi sull'uso del filtro degli unit test selettivi, vedere [Esecuzione di unit test selettivi](../testing/selective-unit-tests.md).
 
 `-h|--help`
 
@@ -88,7 +158,7 @@ Specifica un logger per i risultati di test.
 
 `--no-build`
 
-Non compila il progetto di test prima di eseguirlo.
+Non compila il progetto di test prima dell'esecuzione. Imposta anche in modo implicito il flag `--no-restore`.
 
 `--no-restore`
 
@@ -100,7 +170,7 @@ Directory in cui trovare i file binari da eseguire.
 
 `-r|--results-directory <PATH>`
 
-Directory in cui verranno inseriti i risultati del test. Se la directory specificata non esiste, verrà creata.
+Directory in cui verranno inseriti i risultati del test. Se la directory specificata non esiste, viene creata.
 
 `-s|--settings <SETTINGS_FILE>`
 
@@ -134,7 +204,7 @@ Cerca i file binari di test per un [framework](../../standard/frameworks.md) spe
 
 `--filter <EXPRESSION>`
 
-Filtra i test nel progetto corrente usando l'espressione specificata. Per altre informazioni, vedere la sezione [Dettagli dell'opzione filter](#filter-option-details). Per altre informazioni e per esempi sull'uso del filtro degli unit test selettivi, vedere [Esecuzione di unit test selettivi](../testing/selective-unit-tests.md).
+Filtra i test nel progetto corrente usando l'espressione specificata. Per altre informazioni, vedere la sezione [Dettagli dell'opzione filter](#filter-option-details). Per altre informazioni ed esempi sull'uso del filtro degli unit test selettivi, vedere [Esecuzione di unit test selettivi](../testing/selective-unit-tests.md).
 
 `-h|--help`
 
@@ -146,7 +216,7 @@ Specifica un logger per i risultati di test.
 
 `--no-build`
 
-Non compila il progetto di test prima di eseguirlo.
+Non compila il progetto di test prima dell'esecuzione.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -185,9 +255,9 @@ Eseguire i test nel progetto `test1`:
 `<property>` è un attributo di `Test Case`. La tabella seguente elenca le proprietà supportate da framework diffusi per unit test:
 
 | Framework di test | Proprietà supportate                                                                                      |
-| :------------: | --------------------------------------------------------------------------------------------------------- |
+| -------------- | --------------------------------------------------------------------------------------------------------- |
 | MSTest         | <ul><li>FullyQualifiedName</li><li>nome</li><li>ClassName</li><li>Priorità</li><li>TestCategory</li></ul> |
-| Xunit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Tratti</li></ul>                                   |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Tratti</li></ul>                                   |
 
 `<operator>` descrive la relazione tra la proprietà e il valore:
 
@@ -203,16 +273,16 @@ Un'espressione senza `<operator>` viene considerata automaticamente come un'oper
 
 Le espressioni possono essere unite con operatori condizionali:
 
-| Operatore | Funzione |
-| :------: | :------: |
-| <code>&#124;</code>      | OR       |
-| `&`      | AND      |
+| Operatore            | Funzione |
+| ------------------- | -------- |
+| <code>&#124;</code> | OR       |
+| `&`                 | AND      |
 
 È possibile racchiudere le espressioni tra parentesi quando si usano gli operatori condizionali (ad esempio, `(Name~TestMethod1) | (Name~TestMethod2)`).
 
-Per altre informazioni e per esempi sull'uso del filtro degli unit test selettivi, vedere [Esecuzione di unit test selettivi](../testing/selective-unit-tests.md).
+Per altre informazioni ed esempi sull'uso del filtro degli unit test selettivi, vedere [Esecuzione di unit test selettivi](../testing/selective-unit-tests.md).
 
 ## <a name="see-also"></a>Vedere anche
 
- [Frameworks e destinazioni](../../standard/frameworks.md)  
- [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)
+[Frameworks e destinazioni](../../standard/frameworks.md)  
+[Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)

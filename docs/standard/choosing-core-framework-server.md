@@ -4,11 +4,12 @@ description: Guida alla scelta dell'implementazione di .NET da prendere in consi
 author: cartermp
 ms.author: mairaw
 ms.date: 03/15/2018
-ms.openlocfilehash: 5626c6c1687fe0b8d558df8772fc69c32981787c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 39d07417a3e901c68dbbd8e9e217fb716edec881
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728719"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Scelta di .NET Core o .NET Framework per le app server
 
@@ -65,7 +66,7 @@ Per installare applicazioni con dipendenze in versioni diverse di .NET, è consi
 
 ## <a name="when-to-choose-net-framework"></a>Quando scegliere .NET Framework
 
-.NET Core offre vantaggi significativi per i nuovi modelli di applicazione e le nuove applicazioni. .NET Framework continua, però, a essere la scelta più ovvia per numerosi scenari esistenti e non viene sostituito da .NET Core per tutte le applicazioni server.
+.NET Core offre vantaggi significativi per i nuovi modelli di applicazione e le nuove applicazioni. .NET Framework, tuttavia, continua a essere la scelta naturale per molti scenari esistenti e di conseguenza non è stato sostituito da .NET Core per tutte le applicazioni server.
 
 ### <a name="current-net-framework-applications"></a>Applicazioni .NET Framework correnti
 

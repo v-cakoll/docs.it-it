@@ -3,26 +3,19 @@ title: Semantica di riferimento con i tipi valore
 description: Informazioni sulle funzionalità del linguaggio che riducono al minimo la copia delle strutture in modo sicuro
 ms.date: 11/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 3c53a426a6adb37f5091e4ad61835fef6c9f7729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0646a7fbc01ed76883fb6b16ce04006049ef054a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566280"
 ---
 # <a name="reference-semantics-with-value-types"></a>Semantica di riferimento con i tipi valore
 
 Un vantaggio dell'uso dei tipi valore è che spesso evitano le allocazioni heap.
 Lo svantaggio è invece che vengono copiati in base al valore. Risulta quindi più difficile ottimizzare gli algoritmi che operano su grandi quantità di dati. Le nuove funzionalità del linguaggio C# 7.2 forniscono meccanismi che abilitano la semantica pass-by-reference con i tipi valore. Usare queste funzionalità con criterio, per ridurre al minimo sia le allocazioni che le operazioni di copia. Questo articolo esamina le nuove funzionalità.
 
-Gran parte del codice di esempio in questo articolo illustra le funzionalità aggiunte in C# 7.2. Per usare tali funzionalità, è necessario configurare il progetto per l'uso di C# 7.2 o versione successiva. È possibile usare Visual Studio per selezionarlo. Per ogni progetto, scegliere **Progetto** dal menu, quindi **Proprietà**. Nella scheda **Compilazione** scegliere **Avanzate**. Da qui, configurare la versione del linguaggio. Scegliere "7.2" o "più recente".  Oppure è possibile modificare il file con estensione *csproj* e aggiungere il nodo seguente:
-
-```XML
-  <PropertyGroup>
-    <LangVersion>7.2</LangVersion>
-  </PropertyGroup>
-```
-
-È possibile usare "7.2" o "latest" come valore.
+Gran parte del codice di esempio in questo articolo illustra le funzionalità aggiunte in C# 7.2. Per usare tali funzionalità, è necessario configurare il progetto per l'uso di C# 7.2 o versione successiva. Per altre informazioni sull'impostazione della versione in lingua, vedere [Configure the language version](language-reference/configure-language-version.md) (Configurare la versione in lingua).
 
 ## <a name="passing-arguments-by-readonly-reference"></a>Passaggio di argomenti per riferimento di sola lettura
 

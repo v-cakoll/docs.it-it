@@ -3,12 +3,13 @@ title: Comando dotnet list reference - Interfaccia della riga di comando di .NET
 description: Il comando dotnet list reference offre un'opzione utile per visualizzare un elenco dei riferimenti da progetto a progetto.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 24cb1124fc3f8707afe727e6a73d35d5dde39937
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 821e6d276af44bf984c8ac1b42b4e954dbe69556
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697183"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
@@ -30,7 +31,7 @@ Il comando `dotnet list reference` offre un'opzione utile per visualizzare un el
 
 `PROJECT`
 
-Specifica il file di progetto da usare per l'elenco dei riferimenti. Se non specificato, il comando cercherà un file di progetto nella directory corrente.
+Specifica il file di progetto da usare per l'elenco dei riferimenti. Se non specificato, il comando cerca un file di progetto nella directory corrente.
 
 ## <a name="options"></a>Opzioni
 

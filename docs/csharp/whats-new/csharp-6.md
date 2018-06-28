@@ -3,12 +3,12 @@ title: Novità di C# 6 - Guida a C#
 description: Informazioni sulle nuove funzionalità di C# versione 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: c23d4f45441451fbf8a2ad2f939bdb1ed6144154
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483489"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34565878"
 ---
 # <a name="whats-new-in-c-6"></a>Novità di C# 6
 
@@ -38,6 +38,8 @@ La versione 6.0 di C# contiene molte funzionalità che consentono agli sviluppat
     - Gli inizializzatori di insieme possono basarsi su metodi di estensione accessibili, oltre ai metodi membro.
 * [Risoluzione dell'overload migliorata](#improved-overload-resolution):
     - Alcuni costrutti che in precedenza generavano chiamate ambigue al metodo ora risolvono correttamente.
+* [Opzione del compilatore `deterministic`](#deterministic-compiler-output):
+    - L'opzione del compilatore deterministic garantisce che le compilazioni successive della stessa origine generino lo stesso output binario.
 
 L'effetto generale di queste funzionalità è che il codice che si scrive è più conciso e anche più leggibile. La sintassi è più semplice e lineare per molte delle procedure più comuni. È più facile visualizzare le finalità di progettazione se la sintassi è più snella. È importante acquisire dimestichezza con queste funzionalità per essere più produttivi, scrivere codice più leggibile e concentrarsi maggiormente sulle funzionalità principali e meno sui costrutti del linguaggio.
 
@@ -388,3 +390,12 @@ Il compilatore precedente non era in grado di distinguere correttamente `Task.Ru
 [!code-csharp[Lambda](../../../samples/snippets/csharp/new-in-6/overloads.cs#Lambda)]
 
 Il compilatore C# 6 determina correttamente che `Task.Run(Func<Task>())` è una scelta migliore.
+
+### <a name="deterministic-compiler-output"></a>Output del compilatore deterministico
+
+L'opzione `-deterministic` indica al compilatore di produrre un assembly di output identico byte per byte per le compilazioni successive degli stessi file di origine.
+
+Per impostazione predefinita, ogni compilazione produce un output univoco in ogni compilazione. Il compilatore aggiunge un timestamp e un GUID generato da numeri casuali. Usare questa opzione se si vuole confrontare l'output byte per byte per garantire coerenza tra le compilazioni.
+
+Per altre informazioni, vedere l'articolo [Opzione del compilatore -deterministic](../language-reference/compiler-options/deterministic-compiler-option.md).
+

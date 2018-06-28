@@ -8,11 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b75429d0de69c60e7c24551bf1d9218e74d0c5ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31d14a8ef6a4b17eea1b9160e811bb92946d775b
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728641"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilità delle applicazioni in .NET Framework
 
@@ -25,7 +26,7 @@ Ogni app è destinata a una versione specifica di .NET Framework, che può esser
 * Indicazione del framework di destinazione in un file di progetto.
 * Applicazione di un <xref:System.Runtime.Versioning.TargetFrameworkAttribute> al codice sorgente.
 
-Durante l'esecuzione in una versione più recente di quella di destinazione, .NET Framework simula la versione di destinazione precedente adottando un comportamento anomalo. In altre parole, l'app viene eseguita nella versione più recente di .NET Framework, ma si comporta come se fosse in esecuzione nella versione precedente. Questo modello di comportamento consente di attenuare molti problemi di compatibilità tra versioni diverse di .NET Framework.
+Durante l'esecuzione in una versione più recente di quella di destinazione, .NET Framework simula la versione di destinazione precedente adottando un comportamento anomalo. In altre parole, l'app viene eseguita nella versione più recente di .NET Framework, ma si comporta come se fosse in esecuzione nella versione precedente. Questo modello di comportamento consente di attenuare molti problemi di compatibilità tra versioni diverse di .NET Framework. La versione di .NET Framework a cui un'applicazione è destinata è determinata dalla versione di destinazione dell'assembly di ingresso per il dominio dell'applicazione in cui viene eseguito il codice. Tutti gli assembly aggiuntivi caricati in quel dominio dell'applicazione sono destinati a tale versione di .NET Framework. Nel caso di un file eseguibile, ad esempio, la versione di .NET Framework a cui l'eseguibile è destinato corrisponde alla modalità di compatibilità in cui vengono eseguiti tutti gli assembly in quel dominio dell'applicazione.
 
 ## <a name="runtime-changes"></a>Modifiche in fase di esecuzione
 

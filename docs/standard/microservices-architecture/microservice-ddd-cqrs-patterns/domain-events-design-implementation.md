@@ -4,11 +4,12 @@ description: 'Architettura di microservizi .NET per le applicazioni .NET incluse
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 424408ca095eadeda33690277dcf38bac923e29f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697196"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventi del dominio: progettazione e implementazione
 
@@ -151,7 +152,7 @@ public abstract class Entity
 
 Per generare un evento, è sufficiente aggiungerlo alla raccolta di eventi dal codice in qualsiasi metodo dell'entità aggregate-root.
 
-Nel codice seguente, parte di [Order agregate-root in eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs), viene illustrato un esempio:
+Nel codice seguente, parte di [Order aggregate-root in eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) (Ordinare aggregate-root in eShopOnContainers), viene illustrato un esempio:
 
 ```csharp
 var orderStartedDomainEvent = new OrderStartedDomainEvent(this, //Order object
@@ -340,7 +341,7 @@ Come illustrato, usare gli eventi del dominio per implementare in modo esplicito
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) (Un modello più efficiente di eventi del dominio)
 
 -   **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (Progettazione efficace degli aggregati, parte II: usare insieme aggregati diversi)
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (Progettazione efficace degli aggregati - parte II: usare insieme aggregati diversi)
 
 -   **Jimmy Bogard. Strengthening your domain: Domain Events**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> * (Rafforzamento del dominio: eventi del dominio)

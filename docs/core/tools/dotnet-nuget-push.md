@@ -3,12 +3,13 @@ title: Comando dotnet nuget push - Interfaccia della riga di comando di .NET Cor
 description: Il comando dotnet nuget push effettua il push di un pacchetto nel server e lo pubblica.
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 090b11646a81859eeadb5fe9d36b43721fc70a5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/01/2018
+ms.openlocfilehash: 8a64f9cdc11d03bed82a132265c3b4e1de290807
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728576"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -20,7 +21,25 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Riepilogo
 
-`dotnet nuget push [<ROOT>] [-s|--source] [-ss|--symbol-source] [-t|--timeout] [-k|--api-key] [-sk|--symbol-api-key] [-d|--disable-buffering] [-n|--no-symbols] [--force-english-output] [-h|--help]`
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+---
 
 ## <a name="description"></a>Descrizione
 
@@ -34,15 +53,41 @@ Specifica il percorso del file del pacchetto di cui eseguire il push.
 
 ## <a name="options"></a>Opzioni
 
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+`-d|--disable-buffering`
+
+Disabilita la memorizzazione nel buffer quando si effettua il push a un server HTTP(S) per ridurre l'utilizzo della memoria.
+
+`--force-english-output`
+
+Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.
+
 `-h|--help`
 
 Stampa una breve guida per il comando.
+
+`-k|--api-key <API_KEY>`
+
+Chiave API per il server.
+
+`-n|--no-symbols`
+
+Non effettua il push dei simboli (anche se presenti).
+
+`--no-service-endpoint`
+
+Non aggiunge "api/v2/package" all'URL di origine.
 
 `-s|--source <SOURCE>`
 
 Specifica l'URL del server. Questa opzione è obbligatoria, a meno che il valore di configurazione `DefaultPushSource` non sia impostato nel file di configurazione NuGet.
 
-`--symbol-source <SOURCE>`
+`-sk|--symbol-api-key <API_KEY>`
+
+Chiave API per il server di simboli.
+
+`-ss|--symbol-source <SOURCE>`
 
 Specifica l'URL del server di simboli.
 
@@ -50,33 +95,91 @@ Specifica l'URL del server di simboli.
 
 Specifica il timeout (in secondi) per il push a un server. Il valore predefinito è 300 secondi (5 minuti). Se si specifica 0 (zero secondi), viene comunque applicato il valore predefinito.
 
-`-k|--api-key <API_KEY>`
-
-Chiave API per il server.
-
-`--symbol-api-key <API_KEY>`
-
-Chiave API per il server di simboli.
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-d|--disable-buffering`
 
 Disabilita la memorizzazione nel buffer quando si effettua il push a un server HTTP(S) per ridurre l'utilizzo della memoria.
 
+`--force-english-output`
+
+Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.
+
+`-h|--help`
+
+Stampa una breve guida per il comando.
+
+`-k|--api-key <API_KEY>`
+
+Chiave API per il server.
+
 `-n|--no-symbols`
 
 Non effettua il push dei simboli (anche se presenti).
 
+`-s|--source <SOURCE>`
+
+Specifica l'URL del server. Questa opzione è obbligatoria, a meno che il valore di configurazione `DefaultPushSource` non sia impostato nel file di configurazione NuGet.
+
+`-sk|--symbol-api-key <API_KEY>`
+
+Chiave API per il server di simboli.
+
+`-ss|--symbol-source <SOURCE>`
+
+Specifica l'URL del server di simboli.
+
+`-t|--timeout <TIMEOUT>`
+
+Specifica il timeout (in secondi) per il push a un server. Il valore predefinito è 300 secondi (5 minuti). Se si specifica 0 (zero secondi), viene comunque applicato il valore predefinito.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-d|--disable-buffering`
+
+Disabilita la memorizzazione nel buffer quando si effettua il push a un server HTTP(S) per ridurre l'utilizzo della memoria.
+
 `--force-english-output`
 
-Forza la visualizzazione di tutto l'output registrato in inglese.
+Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.
+
+`-h|--help`
+
+Stampa una breve guida per il comando.
+
+`-k|--api-key <API_KEY>`
+
+Chiave API per il server.
+
+`-n|--no-symbols`
+
+Non effettua il push dei simboli (anche se presenti).
+
+`-s|--source <SOURCE>`
+
+Specifica l'URL del server. Questa opzione è obbligatoria, a meno che il valore di configurazione `DefaultPushSource` non sia impostato nel file di configurazione NuGet.
+
+`-sk|--symbol-api-key <API_KEY>`
+
+Chiave API per il server di simboli.
+
+`-ss|--symbol-source <SOURCE>`
+
+Specifica l'URL del server di simboli.
+
+`-t|--timeout <TIMEOUT>`
+
+Specifica il timeout (in secondi) per il push a un server. Il valore predefinito è 300 secondi (5 minuti). Se si specifica 0 (zero secondi), viene comunque applicato il valore predefinito.
+
+---
 
 ## <a name="examples"></a>Esempi
 
-Effettua il push di *foo.nupkg* all'origine push predefinita, specificando la chiave API:
+Esegue il push di *foo.nupkg* all'origine push predefinita, specificando una chiave API:
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
 
-Effettua il push di *foo.nupkg* all'origine push personalizzata `http://customsource`, specificando la chiave API:
+Esegue il push di *foo.nupkg* all'origine push personalizzata `http://customsource`, specificando una chiave API:
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
 
@@ -88,7 +191,7 @@ Effettua il push di *foo.symbols.nupkg* all'origine simboli predefinita:
 
 `dotnet nuget push foo.symbols.nupkg`
 
-Effettua il push di *foo.nupkg* all'origine push predefinita, specificando un timeout di 360 secondi:
+Esegue il push di *foo.nupkg* all'origine push predefinita, specificando un timeout di 360 secondi:
 
 `dotnet nuget push foo.nupkg --timeout 360`
 

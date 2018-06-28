@@ -3,12 +3,13 @@ title: Comando dotnet run - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet run offre un modo pratico per eseguire l'applicazione dal codice sorgente.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: b45d6772cabd6be90ea8e8b5da57c16692b20322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 82c6e44e52aa6af7044edf72fd6e57b7614a70f3
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696312"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -20,20 +21,23 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Riepilogo
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 ```
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
 ```
 dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-
 ---
 
 ## <a name="description"></a>Descrizione
@@ -46,7 +50,7 @@ Se il progetto specifica più framework, l'esecuzione di `dotnet run` genera un 
 
 Il comando `dotnet run` viene usato nel contesto dei progetti e non di assembly di compilazione. Se in alternativa si prova a eseguire la DLL di un'applicazione dipendente da framework, è necessario usare [dotnet](dotnet.md) senza un comando. Ad esempio, per eseguire `myapp.dll`, usare:
 
-```
+```console
 dotnet myapp.dll
 ```
 
@@ -58,11 +62,11 @@ Per eseguire l'applicazione, il comando `dotnet run` risolve le dipendenze dell'
 
 ## <a name="options"></a>Opzioni
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--`
 
-Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esecuzione. Tutti gli argomenti dopo questo vengono passati all'applicazione in esecuzione.
+Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esecuzione. Tutti gli argomenti dopo questo delimitatore vengono passati all'applicazione in esecuzione.
 
 `-c|--configuration {Debug|Release}`
 
@@ -74,7 +78,7 @@ Compila ed esegue l'app usando il [framework](../../standard/frameworks.md) spec
 
 `--force`
 
-Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo. Ciò equivale a eliminare *project.assets.json*.
+Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo. La specifica di questo flag equivale all'eliminazione del file *project.assets.json*.
 
 `-h|--help`
 
@@ -86,7 +90,61 @@ Il nome del profilo di avvio, se presente, da usare all'avvio dell'applicazione.
 
 `--no-build`
 
-Non compila il progetto prima dell'esecuzione.
+Non compila il progetto prima dell'esecuzione. Imposta anche in modo implicito il flag `--no-restore`.
+
+`--no-dependencies`
+
+Durante il ripristino di un progetto con riferimenti da progetto a progetto, ripristina il progetto radice e non i riferimenti.
+
+`--no-launch-profile`
+
+Non tenta di usare *launchSettings.json* per configurare l'applicazione.
+
+`--no-restore`
+
+Non esegue un ripristino implicito quando si esegue il comando.
+
+`-p|--project <PATH>`
+
+Specifica il percorso del file di progetto da eseguire: nome della cartella o percorso completo. Se non specificato, per impostazione predefinita il percorso corrisponde alla directory corrente.
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+Specifica il runtime di destinazione per cui ripristinare i pacchetti. Per un elenco degli identificatori di runtime (RID, Runtime Identifier), vedere il [catalogo RID](../rid-catalog.md).
+
+`-v|--verbosity <LEVEL>`
+
+Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`--`
+
+Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esecuzione. Tutti gli argomenti dopo questo delimitatore vengono passati all'applicazione in esecuzione.
+
+`-c|--configuration {Debug|Release}`
+
+Definisce la configurazione di compilazione. Il valore predefinito è `Debug`.
+
+`-f|--framework <FRAMEWORK>`
+
+Compila ed esegue l'app usando il [framework](../../standard/frameworks.md) specificato. Il framework deve essere specificato nel file di progetto.
+
+`--force`
+
+Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo. La specifica di questo flag equivale all'eliminazione del file *project.assets.json*.
+
+`-h|--help`
+
+Stampa una breve guida per il comando.
+
+`--launch-profile <NAME>`
+
+Il nome del profilo di avvio, se presente, da usare all'avvio dell'applicazione. I profili di avvio vengono definiti nel file *launchSettings.json* e in genere vengono denominati `Development`, `Staging` e `Production`. Per altre informazioni, vedere [Working with multiple environments](/aspnet/core/fundamentals/environments) (Utilizzo con più ambienti).
+
+`--no-build`
+
+Non compila il progetto prima dell'esecuzione. Imposta anche in modo implicito il flag `--no-restore`.
 
 `--no-dependencies`
 
@@ -112,7 +170,7 @@ Specifica il runtime di destinazione per cui ripristinare i pacchetti. Per un el
 
 `--`
 
-Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esecuzione. Tutti gli argomenti dopo questo vengono passati all'applicazione in esecuzione.
+Delimita gli argomenti a `dotnet run` dagli argomenti per l'applicazione in esecuzione. Tutti gli argomenti dopo questo delimitatore vengono passati all'applicazione in esecuzione.
 
 `-c|--configuration {Debug|Release}`
 

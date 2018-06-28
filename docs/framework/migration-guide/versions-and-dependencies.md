@@ -1,18 +1,18 @@
 ---
 title: Versioni e dipendenze di .NET Framework
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 05/31/2018
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b3a32e21573ae7f2e59655b191278e4aec7c4ab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 7c2c3ca038508b63533a7e17f6ceb6ebf1ad6842
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457614"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728615"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versioni e dipendenze di .NET Framework
 Ciascuna versione di .NET Framework contiene Common Language Runtime (CLR), librerie di classi di base e altre librerie gestite. Questo argomento descrive le funzionalità principali di .NET Framework in base alla versione, fornisce informazioni sulle versioni CLR sottostanti e sugli ambienti di sviluppo associati, e identifica le versioni installate dal sistema operativo Windows.  
@@ -45,9 +45,13 @@ Ciascuna versione di .NET Framework contiene Common Language Runtime (CLR), libr
 |2.0|2.0|- Generics<br />- Aggiunte di ASP.NET<br />-   [Altro...](http://msdn.microsoft.com/library/t357fb32\(v=vs.80\).aspx)|2005|-|✓ 2008 R2 SP1<br />✓ 2008 SP2<br />✓ 2003|Vedere le [istruzioni](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.1|1.1|- Aggiornamenti di ASP.NET e ADO.NET<br />- Esecuzione side-by-side<br />-   [Altro...](http://msdn.microsoft.com/library/9wtde3k4\(v=vs.80\).aspx)|2003|-|✓ 2003|Vedere le [istruzioni](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.0|1.0|Prima versione di .NET Framework.|Visual Studio .NET|-|-|Vedere le [istruzioni](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
-  
- In generale, non è opportuno disinstallare alcuna versione di .NET Framework presente nel computer, perché un'applicazione usata potrebbe essere basata su una versione specifica e smettere di funzionare se tale versione viene rimossa. È possibile caricare più versioni di .NET Framework contemporaneamente in un computer. Ciò significa che è possibile installare .NET Framework senza dover disinstallare le versioni precedenti. Per altre informazioni, vedere [Introduzione a .NET Framework](../../../docs/framework/get-started/index.md).  
-  
+
+**Note**
+
+<sup>\*</sup>&nbsp;&nbsp;.NET Framework deve essere abilitato per il sistema operativo tramite [Pannello di controllo (per Windows) o Server Manager (per Windows Server)](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel).
+
+ In generale, non è opportuno disinstallare alcuna versione di .NET Framework presente nel computer, perché un'applicazione usata potrebbe essere basata su una versione specifica e smettere di funzionare se tale versione viene rimossa. È possibile caricare più versioni di .NET Framework contemporaneamente in un computer. Ciò significa che è possibile installare .NET Framework senza dover disinstallare le versioni precedenti. Per altre informazioni, vedere [Introduzione a .NET Framework](../../../docs/framework/get-started/index.md).
+
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>Destinazione ed esecuzione di app .NET Framework per la versione 4.5 e successive  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] è un aggiornamento sul posto che sostituisce [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] nel computer. Analogamente, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 e 4.7.1 sono aggiornamenti sul posto di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ovvero usano la stessa versione di runtime, ma le versioni degli assembly vengono aggiornate e includono tipi e membri nuovi. Dopo aver installato uno di questi aggiornamenti, le app [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4.6 o .NET Framework 4.7 dovrebbero continuare a funzionare senza richiedere la ricompilazione. Non è tuttavia vero il contrario. Non è consigliabile eseguire app destinate a una versione successiva di .NET Framework su una versione precedente di .NET Framework. Ad esempio, si consiglia di non eseguire un'app destinata a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Si applicano le linee guida seguenti:  
   

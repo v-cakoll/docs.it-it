@@ -10,11 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: f917d662366dc8ff540cdee6222199fe8f5606c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dfdf14b518582388e655ec5616904928dfd8b5
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696439"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Riferimenti per C#)
 L'istruzione try-catch è costituita da un blocco `try` seguito da una o più clausole `catch`, che specificano i gestori per eccezioni diverse.  
@@ -42,7 +43,7 @@ catch (InvalidCastException e)
   
  È possibile usare più clausole `catch` specifiche nella stessa istruzione try-catch. In questo caso, l'ordine delle clausole `catch` è importante perché le clausole `catch` vengono esaminate nell'ordine specificato. Intercettare le eccezioni più specifiche prima di quelle meno specifiche. Il compilatore provoca un errore se si ordinano i blocchi catch in modo che un blocco successivo non possa mai essere raggiunto.  
   
- Usando gli argomenti `catch`, è possibile filtrare le eccezioni che si desidera gestire.  È inoltre possibile usare un'espressione del predicato che esamini ulteriormente l'eccezione per decidere se gestirla.  Se l'espressione del predicato restituisce false, la ricerca di un gestore prosegue.  
+ Usando gli argomenti `catch`, è possibile filtrare le eccezioni che si desidera gestire.  È anche possibile usare un filtro eccezioni che esamini ulteriormente l'eccezione per decidere se gestirla.  Se il filtro eccezioni restituisce false, la ricerca di un gestore prosegue.  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  
@@ -50,7 +51,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
 }  
 ```  
   
- I filtri eccezioni sono preferibili per l'intercettazione e la rigenerazione (come illustrato di seguito) perché lasciano intatto lo stack.  Se un gestore successivo esegue il dump dello stack, è possibile visualizzare l'origine dell'eccezione, anziché solo l'ultima posizione in cui è stata rigenerata.  Un uso comune delle espressioni di filtro eccezioni è la registrazione.  È possibile creare una funzione predicato che restituisca sempre false da visualizzare anche in un log. È possibile registrare le eccezioni mentre si verificano senza doverle gestire e rigenerare.  
+ I filtri eccezioni sono preferibili per l'intercettazione e la rigenerazione (come illustrato di seguito) perché lasciano intatto lo stack.  Se un gestore successivo esegue il dump dello stack, è possibile visualizzare l'origine dell'eccezione, anziché solo l'ultima posizione in cui è stata rigenerata.  Un uso comune delle espressioni di filtro eccezioni è la registrazione.  È possibile creare un filtro che restituisca sempre false da visualizzare anche in un log. È possibile registrare le eccezioni mentre si verificano senza doverle gestire e rigenerare.  
   
  Un'istruzione [throw](../../../csharp/language-reference/keywords/throw.md) può essere usata in un blocco `catch` per rigenerare l'eccezione intercettata dall'istruzione `catch`. Il seguente esempio estrae le informazioni di origine da un'eccezione <xref:System.IO.IOException> e quindi genera l'eccezione per il metodo padre.  
   
@@ -92,9 +93,19 @@ catch (InvalidCastException e)
     {  
         // Take some action.  
     }  
- }  
+}  
 ```  
-  
+
+> [!NOTE]
+> È anche possibile usare un filtro eccezioni per ottenere un risultato simile in un modo spesso più pulito, che in più non modifichi lo stack, come descritto in precedenza in questo documento. L'esempio seguente presenta un comportamento simile al precedente per i chiamanti. La funzione restituisce `InvalidCastException` al chiamante quando `e.Data` è `null`.
+> 
+> ```csharp
+> catch (InvalidCastException e) when (e.Data != null)   
+> {  
+>     // Take some action.  
+> }
+> ```   
+
  Da un blocco `try` inizializzare solo le variabili dichiarate al suo interno. In caso contrario, è possibile che si verifichi un'eccezione prima del completamento dell'esecuzione del blocco. Nel seguente esempio di codice, la variabile `n` viene inizializzata nel blocco `try`. Un tentativo di usare questa variabile al di fuori del blocco `try` nell'istruzione `Write(n)` genererà un errore del compilatore.  
   
 ```csharp  

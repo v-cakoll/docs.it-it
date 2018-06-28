@@ -3,12 +3,13 @@ title: Comando dotnet nuget locals - Interfaccia della riga di comando di .NET C
 description: Il comando dotnet nuget locals cancella o elenca le risorse NuGet locali, quali cache delle richieste HTTP, cache temporanea o cartella globale dei pacchetti a livello di computer.
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: d0c900a06b00fd5e6b7ad66527c6582483222c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 799acb92d6ab7439e15c23c9f0b7b572c966adda
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696871"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -20,7 +21,10 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Riepilogo
 
-`dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
+```
+dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
+dotnet nuget locals [-h|--help]
+```
 
 ## <a name="description"></a>Descrizione
 
@@ -30,14 +34,18 @@ Il comando `dotnet nuget locals` cancella o elenca risorse NuGet locali presenti
 
 `CACHE_LOCATION`
 
-Uno dei valori seguenti:
+Il percorso della cache da visualizzare o cancellare. Il valore può essere uno dei seguenti:
 
 * `all` - Indica che l'operazione specificata viene applicata a tutti i tipi di cache, ovvero alla cache delle richieste HTTP, alla cache globale dei pacchetti e alla cache temporanea.
-* `http-cache` - Indica che l'operazione specificata viene applicata soltanto alla cache delle richieste HTTP. Le altre posizioni di cache non sono interessate.
-* `global-packages` - Indica che l'operazione specificata viene applicata soltanto alla cache dei pacchetti globale. Le altre posizioni di cache non sono interessate.
-* `temp` - Indica che l'operazione specificata viene applicata soltanto alla cache temporanea. Le altre posizioni di cache non sono interessate.
+* `http-cache` - Indica che l'operazione specificata viene applicata soltanto alla cache delle richieste HTTP. Gli altri percorsi della cache non sono interessati.
+* `global-packages` - Indica che l'operazione specificata viene applicata soltanto alla cache dei pacchetti globale. Gli altri percorsi della cache non sono interessati.
+* `temp` - Indica che l'operazione specificata viene applicata soltanto alla cache temporanea. Gli altri percorsi della cache non sono interessati.
 
 ## <a name="options"></a>Opzioni
+
+`--force-english-output`
+
+Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.
 
 `-h|--help`
 
@@ -49,11 +57,7 @@ L'opzione "clear" consente di eseguire un'operazione di cancellazione sul tipo d
 
 `-l|--list`
 
-L'opzione "list" viene usata per visualizzare la posizione del tipo di cache specificato. 
-
-`--force-english-output`
-
-Forza la visualizzazione dell'output della riga di comando in inglese.
+L'opzione "list" viene usata per visualizzare la posizione del tipo di cache specificato.
 
 ## <a name="examples"></a>Esempi
 
