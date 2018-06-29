@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 011f37cbbfa3eacab92705cd8e4363b36a746cf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ca518e1d98e26755167ec6cf2f67ba9f7295679
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509151"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071331"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)
 Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il codice del modello di servizi da documenti di metadati e documenti di metadati dal codice di modello di servizi.  
@@ -34,7 +34,7 @@ Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il
 > [!CAUTION]
 >  Lo strumento Svcutil sovrascriverà i file esistenti su un disco se i nomi forniti come parametri sono identici. Tali risorse possono includere file di codice, di configurazione o di metadati. Per evitare questo problema durante la generazione di file di codice e di configurazione, utilizzare il commutatore `/mergeConfig`.  
 >   
->  Inoltre, il `/r` e `/ct` sono commutatori per tipi di riferimento per generare contratti dati. Questi commutatori non funzionano in caso di utilizzo di XmlSerializer.  
+>  Inoltre, il `/r` e `/ct` commutatori per tipi di riferimento sono per generare contratti dati. Questi commutatori non funzionano in caso di utilizzo di XmlSerializer.  
   
 ### <a name="timeout"></a>Timeout  
  Lo strumento ha un timeout di 5 minuti nel recupero di metadati.  Questo timeout si applica solo al recupero di metadati sulla rete. Non si applica a qualsiasi elaborazione dei metadati.  
@@ -66,7 +66,7 @@ Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il
  Per un servizio con un endpoint BasicHttpContextbinding, Svcutil.exe genera un BasicHttpBinding con l'attributo `allowCookies` impostato su `true`. I cookie vengono utilizzati come contesto sul server. Se si desidera gestire il contesto sul client quando il servizio utilizza cookie, è possibile modificare la configurazione per utilizzare un elemento di associazione del contesto.  
   
 > [!CAUTION]
->  Lo strumento Svcutil.exe consente di generare il client in base al WSDL o al file dei criteri ricevuto dal servizio. Il nome dell’entità utente (UPN) è generato concatenando nome utente, "@" e un nome di dominio completo (FQDN). Per utenti registrati su Active Directory, questo formato non è tuttavia valido e l’UPN generato dallo strumento provoca un errore di autenticazione Kerberos con il messaggio di errore che “Tentativo di accesso non riuscito”. Per risolvere questo problema è necessario correggere manualmente il file client generato da questo strumento.  
+>  Lo strumento Svcutil.exe consente di generare il client in base al WSDL o al file dei criteri ricevuto dal servizio. Il nome dell'entità utente (UPN) è generato concatenando nome utente, "\@" e un nome di dominio completo (FQDN). Per utenti registrati su Active Directory, questo formato non è tuttavia valido e l’UPN generato dallo strumento provoca un errore di autenticazione Kerberos con il messaggio di errore che “Tentativo di accesso non riuscito”. Per risolvere questo problema è necessario correggere manualmente il file client generato da questo strumento.  
   
  `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`  
   
@@ -96,14 +96,14 @@ Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il
 |/Reference:\<percorso del file >|Fa riferimento a tipi nell'assembly specificato. Quando si generano client, utilizzare questa opzione per specificare assembly che potrebbero contenere tipi che rappresentano i metadati importati.<br /><br /> Non è possibile specificare contratti di messaggio e tipi <xref:System.Xml.Serialization.XmlSerializer> utilizzando questo commutatore.<br /><br /> Se <xref:System.DateTimeOffset> fa riferimento, viene utilizzato questo tipo invece di generare un tipo nuovo. Se l'applicazione viene scritta utilizzando [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], SvcUtil.exe fa automaticamente riferimento a  <xref:System.DateTimeOffset>.<br /><br /> Forma abbreviata: `/r`|  
 |/serializable|Genera classi contrassegnate con Attributo serializzabile.<br /><br /> Forma abbreviata: `/s`|  
 |/serviceContract|Genera codice solo per i contratti di servizio. La classe e la configurazione client non verranno generate.<br /><br /> Forma abbreviata: `/sc`|  
-|/serializer:Auto|Seleziona automaticamente il serializzatore. Questo tentativo di utilizzare il serializzatore dei contratti dati e utilizza XmlSerializer se l'operazione non riesce.<br /><br /> Forma abbreviata: `/ser`|  
+|/serializer:Auto|Seleziona automaticamente il serializzatore. Questa operazione tenta di utilizzare il serializzatore dei contratti dati e utilizza XmlSerializer se il problema persiste.<br /><br /> Forma abbreviata: `/ser`|  
 |/serializer:DataContractSerializer|Genera tipi di dati che utilizzano DataContract Serializer per la serializzazione e la deserializzazione.<br /><br /> Forma abbreviata: `/ser:DataContractSerializer`|  
 |/serializer:XmlSerializer|Genera tipi di dati che utilizzano <xref:System.Xml.Serialization.XmlSerializer> per la serializzazione e la deserializzazione.<br /><br /> Forma abbreviata: `/ser:XmlSerializer`|  
 |/targetClientVersion|Specifica a quale versione di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] è destinata l'applicazione. I valori validi sono `Version30` e `Version35`. Il valore predefinito è `Version30`.<br /><br /> Forma abbreviata: `/tcv`<br /><br /> `Version30`: utilizzare `/tcv:Version30` se si sta generando codice per client che utilizzano [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].<br /><br /> `Version35`: utilizzare `/tcv:Version35` se si sta generando codice per client che utilizzano [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Se si utilizza `/tcv:Version35` con il commutatore `/async`, vengono generati entrambi metodi asincroni sia basati su eventi che su delegati/callback. Viene inoltre abilitato il supporto per dataset abilitati da LINQ e <xref:System.DateTimeOffset>.|  
-|/wrapped|Controlla se viene utilizzata una combinazione di maiuscole e minuscole speciale per i documenti in stile document-literal con parametri sottoposti a wrapping. Utilizzare il **/ wrapping** passare con il [Service Model Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) strumento per specificare le maiuscole e minuscole normale.|  
+|/wrapped|Controlla se viene utilizzata una combinazione di maiuscole e minuscole speciale per i documenti in stile document-literal con parametri sottoposti a wrapping. Utilizzare la **/ incapsulati** passare con il [Service Model Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per specificare la distinzione tra minuscole normale.|  
   
 > [!NOTE]
->  Quando l'associazione al servizio è una delle associazioni fornite dal sistema (vedere [associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md)) e <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> proprietà è impostata su `None` o `Sign`, Svcutil genera un file di configurazione tramite il [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) elemento anziché l'elemento previsto fornito dal sistema. Ad esempio, se il servizio utilizza l'elemento `<wsHttpBinding>` con `ProtectionLevel` impostato su `Sign`, la configurazione generata ha `<customBinding>` nella sezione delle associazioni anziché `<wsHttpBinding>`. Per ulteriori informazioni sui livelli di protezione, vedere [livello di protezione delle informazioni sui](../../../docs/framework/wcf/understanding-protection-level.md).  
+>  Quando l'associazione al servizio è una delle associazioni fornite dal sistema (vedere [associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md)) e il <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> viene impostata su `None` o `Sign`, Svcutil genera un file di configurazione tramite il [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) elemento anziché l'elemento previsto fornito dal sistema. Ad esempio, se il servizio utilizza l'elemento `<wsHttpBinding>` con `ProtectionLevel` impostato su `Sign`, la configurazione generata ha `<customBinding>` nella sezione delle associazioni anziché `<wsHttpBinding>`. Per ulteriori informazioni sui livelli di protezione, vedere [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 ### <a name="metadata-export"></a>Esportazione dei metadati  
  Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di dati in assembly compilati. Per esportare metadati per un servizio, è necessario utilizzare l'opzione `/serviceName` per specificare il servizio che si desidera esportare. Per esportare tutti i tipi di contratto dati all'interno di un assembly, utilizzare l'opzione `/dataContractOnly`. Per impostazione predefinita, i metadati vengono esportati per tutti i contratti di servizio negli assembly di input.  
@@ -164,7 +164,7 @@ Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il
 > [!NOTE]
 >  Un codice di serializzazione pregenerato può essere utilizzato solamente nelle applicazioni client e non nei servizi.  
   
- Svcutil.exe può generare il codice di serializzazione C# necessario dagli assembly compilati per l’applicazione, migliorando le prestazioni all'avvio per queste applicazioni. Per ulteriori informazioni, vedere [procedura: migliorare l'avvio del tempo di applicazioni Client WCF usando XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
+ Svcutil.exe può generare il codice di serializzazione C# necessario dagli assembly compilati per l’applicazione, migliorando le prestazioni all'avvio per queste applicazioni. Per altre informazioni, vedere [procedura: migliorare l'avvio del tempo di applicazioni Client WCF usando XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 > [!NOTE]
 >  Svcutil.exe genera soltanto codice per tipi utilizzati dai Contratti di Servizio che si trovano negli assembly di input.  
@@ -180,7 +180,7 @@ Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il
 |/Reference:\<percorso del file >|Aggiunge l'assembly specificato al set di assembly utilizzato per la risoluzione di riferimenti del tipo.<br /><br /> Forma abbreviata: `/r`|  
 |/excludeType:\<tipo >|Specifica il nome completo o il nome completo dell’assembly del tipo da escludere dall’esportazione o convalida.<br /><br /> Forma abbreviata: `/et`|  
 |/out:\<file>|Specifica il nome file per il codice generato. Questa opzione è ignorata quando più assembly vengono passati come input allo strumento.<br /><br /> Impostazione predefinita: derivata dal nome dell'assembly.<br /><br /> Forma abbreviata: `/o`|  
-|/UseSerializerForFaults|Specifica che il <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` deve essere utilizzato per la lettura e scrittura degli errori, anziché il valore predefinito <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|/UseSerializerForFaults|Specifica che il <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` deve essere utilizzato per la lettura e la scrittura degli errori, anziché il valore predefinito <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="examples"></a>Esempi  
  Il comando seguente consente di generare il codice client da un servizio in esecuzione o da documenti di metadati online.  

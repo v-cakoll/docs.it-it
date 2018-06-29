@@ -2,12 +2,12 @@
 title: Protocolli di messaggistica
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: c900c8fde8b13b4766fb245de2bab46b5601f135
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d188c79d3879ef383d24f56c81d66973266636bc
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496637"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072722"
 ---
 # <a name="messaging-protocols"></a>Protocolli di messaggistica
 Lo stack dei canali Windows Communication Foundation (WCF) utilizza canali di codifica e trasporto per trasformare le rappresentazioni interne dei messaggi nel relativo formato di trasmissione e inviarlo tramite un determinato trasporto. Il trasporto più comunemente utilizzato per garantire l'interoperabilità dei servizi Web è il protocollo HTTP, mentre le codifiche utilizzate dai servizi Web sono in genere SOAP 1.1 basato su XML, SOAP 1.2 e il protocollo MTOM (Message Transmission Optimization Mechanism, meccanismo di ottimizzazione della trasmissione dei messaggi).  
@@ -170,7 +170,7 @@ punto di distribuzione|http://schemas.microsoft.com/net/2006/06/duplex|
  B3221: Quando configurato per l'utilizzo di WS-Addressing 2004/08, gli endpoint WCF viene fatta distinzione tra le proprietà dei riferimenti e i parametri di riferimento.  
   
 ### <a name="message-exchange-patterns"></a>Modelli di scambio dei messaggi  
- La sequenza dei messaggi coinvolti nella chiamata all'operazione del servizio Web è detta il *MEP*. I modelli di scambio supporta WCF unidirezionale, request/reply e duplex messaggio. Questa sezione descrive i requisiti della specifica WS-Addressing che definiscono il modo in cui il modello di scambio dei messaggi usato influisce sull'elaborazione dei messaggi.  
+ La sequenza dei messaggi coinvolti nella chiamata all'operazione del servizio Web è detta il *lo scambio di messaggi*. I modelli di scambio supporta WCF unidirezionale, request/reply e duplex messaggio. Questa sezione descrive i requisiti della specifica WS-Addressing che definiscono il modo in cui il modello di scambio dei messaggi usato influisce sull'elaborazione dei messaggi.  
   
  Contenuto della sezione, il richiedente invia il primo messaggio e il risponditore riceve il primo messaggio.  
   
@@ -190,13 +190,13 @@ punto di distribuzione|http://schemas.microsoft.com/net/2006/06/duplex|
 #### <a name="request-reply"></a>Request/Reply  
  Quando un endpoint WCF è configurato per un messaggio con un determinato `Action` per seguire il modello request/reply, l'endpoint WCF attiene ai comportamenti e requisiti di seguito. Se non specificato diversamente, i comportamenti e le regole riguardano per entrambe le versioni di WS-Addressing supportate in WCF:  
   
--   R3321: Il richiedente deve includere nella richiesta `wsa:To`, `wsa:Action`, `wsa:MessageID`, nonché le intestazioni di tutti i parametri di riferimento o riferimento proprietà (o entrambi) specificati nel riferimento endpoint.  
+-   R3321: Il richiedente deve includere nella richiesta `wsa:To`, `wsa:Action`, `wsa:MessageID`, nonché le intestazioni di tutti i parametri di riferimento o riferimento a proprietà (o entrambi) specificati nel riferimento a endpoint.  
   
 -   R3322: quando si utilizza la specifica WS-Addressing 2004/08, nella richiesta deve essere incluso anche l'elemento `ReplyTo`.  
   
 -   R3323: Quando si utilizza WS-Addressing 1.0 e `ReplyTo` non è presente nella richiesta, un riferimento all'endpoint predefinito con la proprietà [address] uguale a "http://www.w3.org/2005/08/addressing/anonymous" viene usato.  
   
--   R3324: Il richiedente deve includere `wsa:To`, `wsa:Action`, e `wsa:RelatesTo` intestazioni nel messaggio di risposta, nonché le intestazioni di tutti i parametri di riferimento riferimento proprietà (o entrambi) specificato per il `ReplyTo` riferimento dell'endpoint nel richiesta.  
+-   R3324: Il richiedente deve includere `wsa:To`, `wsa:Action`, e `wsa:RelatesTo` intestazioni nel messaggio di risposta, nonché le intestazioni per tutti i parametri di riferimento o riferimento a proprietà (o entrambe) specificato dal `ReplyTo` riferimento dell'endpoint nel richiesta.  
   
 ### <a name="web-services-addressing-faults"></a>Errori di indirizzamento dei servizi Web  
  R3411: WCF produce gli errori seguenti definiti da WS-Addressing 2004/08.  
@@ -315,11 +315,11 @@ punto di distribuzione|http://schemas.microsoft.com/net/2006/06/duplex|
   
 -   R3531: se a un endpoint è associata un'alternativa criteri avente un'asserzione di criteri `<wsaw10:UsingAddressing/>`, l'elemento`wsdl:port`corrispondente può contenere un elemento figlio`<wsa10:EndpointReference …/>`.  
   
--   R3532: Se un `wsdl:port` contiene un elemento figlio `<wsa10:EndpointReference …/>`, `wsa10:EndpointReference/wsa10:Address` valore dell'elemento figlio deve corrispondere al valore del `@address` attributo di pari livello `wsdl:port` / `wsdl:location` elemento.  
+-   R3532: Se un `wsdl:port` contiene un elemento figlio `<wsa10:EndpointReference …/>`, la `wsa10:EndpointReference/wsa10:Address` valore dell'elemento figlio deve corrispondere al valore della `@address` attributo di pari livello `wsdl:port` / `wsdl:location` elemento.  
   
 -   R3533: se a un endpoint è associata un'alternativa criteri avente un'asserzione di criteri `<wsap:UsingAddressing/>`, l'elemento`wsdl:port`corrispondente può contenere un elemento figlio`<wsa:EndpointReference …/>`.  
   
--   R3534: Se un `wsdl:port` contiene un elemento figlio `<wsa:EndpointReference …/>`, `wsa:EndpointReference/wsa:Address` valore dell'elemento figlio deve corrispondere al valore del `@address` attributo di pari livello `wsdl:port` / `wsdl:location` elemento.  
+-   R3534: Se un `wsdl:port` contiene un elemento figlio `<wsa:EndpointReference …/>`, la `wsa:EndpointReference/wsa:Address` valore dell'elemento figlio deve corrispondere al valore della `@address` attributo di pari livello `wsdl:port` / `wsdl:location` elemento.  
   
 ### <a name="composition-with-ws-security"></a>Integrazione con WS-Security  
  Secondo le sezioni di WS-ADDR e WS-ADDR10 relative alle considerazioni sulla sicurezza, è consigliabile firmare tutte le intestazioni dei messaggi di indirizzamento insieme al corpo del messaggio, in modo da associarli fra loro.  
@@ -415,7 +415,7 @@ Content-Length: 0
   
     5.  Generare una nuova parte MIME binaria avente un contenuto formato dagli elementi seguenti: dati binari decodificati a partire dai caratteri sostituiti elaborati come dati in base 64, intestazione Content-ID come da passaggio 4b, intestazione Content- Transfer-Encoding come da passaggio 4c e intestazione Content-Type come da passaggio 4d, se presente.  
   
-    6.  Aggiungere un attributo `href` all'elemento `xop:Include` con il valore cid: uri derivato dal valore dell'intestazione Content-ID generato nel passaggio 4b. Rimuovere il tipo di inclusione "\<" e ">" caratteri, escape-URL la stringa restante e aggiungere il prefisso `cid:`. La suddetta conversione, da eseguire in base ai documenti RFC1738 e RFC2396, deve riguardare almeno il set di caratteri seguente, ma può essere applicata anche ad altri caratteri.  
+    6.  Aggiungere un attributo `href` all'elemento `xop:Include` con il valore cid: uri derivato dal valore dell'intestazione Content-ID generato nel passaggio 4b. Rimuovere il tipo di inclusione "\<" e ">" caratteri escape-URL la stringa restante e aggiungere il prefisso `cid:`. La suddetta conversione, da eseguire in base ai documenti RFC1738 e RFC2396, deve riguardare almeno il set di caratteri seguente, ma può essere applicata anche ad altri caratteri.  
   
         ```  
         Hexadecimal 00-1F , 7F, 20, "<" | ">" | "#" | "%" | <">  
@@ -452,7 +452,7 @@ Content-Length: 0
   
 -   R4132: un'intestazione Content-Type HTTP deve contenere un parametro di tipo avente il valore `application/xop+xml` compreso fra virgolette doppie.  
   
- La necessità di utilizzare le virgolette doppie non è esplicita nel documento RFC 2387, il testo osserva che tutti i parametri più probabile che contengono il tipo di supporto multipart/related riservata caratteri, ad esempio "@" or "/" ed è pertanto necessario utilizzando le virgolette doppie.  
+ Mentre la necessità di utilizzare le virgolette doppie non è esplicita nel documento RFC 2387, il testo osserva che probabilmente tutti i parametri di tipo di supporto multipart/related contengono caratteri riservati, ad esempio "\@" o "/" ed è pertanto necessario virgolette doppie contrassegni.  
   
 -   R4133: un'intestazione Content-Type HTTP deve presentare un parametro start con il valore dell'intestazione Content-ID della parte MIME contenente l'elemento SOAP 1.x Envelope, racchiuso fra virgolette doppie. Se tale parametro viene omesso, la SOAP 1.x envelope deve essere inclusa nella prima parte MIME.  
   
@@ -512,7 +512,7 @@ msg-id    =       [CFWS] "<" id-left "@" id-right ">" [CFWS]
   
  R4143: il valore dell'intestazione Content-ID della parte MIME InfoSet deve attenersi alle regole di definizione dell'elemento `msg-id` indicate nel documento RFC 2822, omettendo le parti `[CFWS]` di prefisso e suffisso.  
   
- Molte implementazioni MIME ridotti i requisiti per il valore compreso fra "\<" e ">" corrisponda a un indirizzo di posta elettronica e utilizzato `absoluteURI` racchiusa tra "\<", ">" oltre all'indirizzo di posta elettronica. Questa versione di WCF utilizza i valori dell'intestazione MIME Content-ID nel formato:  
+ Un numero di implementazioni MIME ridotti i requisiti per il valore compreso "\<" e ">" a un indirizzo di posta elettronica e utilizzato `absoluteURI` racchiusa tra "\<", ">" oltre all'indirizzo di posta elettronica. Questa versione di WCF utilizza i valori dell'intestazione MIME Content-ID nel formato:  
   
 ```  
 Content-ID: <http://tempuri.org/0>   
@@ -535,7 +535,7 @@ mail-address   =     id-left "@" id-right
   
 -   Secondo quanto indicato nella sezione 5 di [XOP]:  
   
--   R4148: Parte SOAP 1.1 Infoset deve contenere l'intestazione Content-Type con supporto tipo application/xop + xml e parametri di tipo = "text/xml" e charset  
+-   R4148: La parte SOAP1.1 Infoset deve contenere l'intestazione Content-Type con supporto tipo application/xop + xml e parametri di tipo = "text/xml" e charset  
   
     ```  
     Content-Type: application/xop+xml;  

@@ -3,13 +3,13 @@ title: Scegliere tra .NET Core e .NET Framework per le app server
 description: Guida alla scelta dell'implementazione di .NET da prendere in considerazione quando si intende creare un'app server in .NET.
 author: cartermp
 ms.author: mairaw
-ms.date: 03/15/2018
-ms.openlocfilehash: 39d07417a3e901c68dbbd8e9e217fb716edec881
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 06/19/2018
+ms.openlocfilehash: a9eaeae515041ee1d99ede5b004ecc85e453de2d
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728719"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298188"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Scelta di .NET Core o .NET Framework per le app server
 
@@ -88,8 +88,6 @@ Esistono tecnologie di .NET Framework non disponibili in .NET Core. Alcune potre
 * Applicazioni Web Form ASP.NET: Web Form ASP.NET è disponibile solo in .NET Framework, di conseguenza non è possibile usare ASP.NET Core per Web Form ASP.NET. Non è inoltre previsto il trasferimento di Web Form ASP.NET in .NET Core.
 
 * Applicazioni Pagine Web ASP.NET: Pagine Web ASP.NET non è incluso in ASP.NET Core. [Razor Pages](/aspnet/core/mvc/razor-pages/) di ASP.NET Core presenta molte somiglianze con Pagine Web.
-
-* Implementazione di server/client ASP.NET SignalR: Attualmente [ASP.NET SignalR](https://github.com/aspnet/SignalR) è disponibile in modalità di anteprima con ASP.NET Core 2.1.
 
 * Implementazione di servizi WCF: anche se è presente una [libreria WCF client](https://github.com/dotnet/wcf) per l'utilizzo di servizi WCF da .NET Core, l'implementazione di server WCF è attualmente disponibile solo in .NET Framework. Questo scenario non è attualmente previsto per .NET Core, ma verrà preso in considerazione per il futuro.
 

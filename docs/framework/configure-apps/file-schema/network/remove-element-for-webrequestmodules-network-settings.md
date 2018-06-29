@@ -13,12 +13,12 @@ ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e20d414b3be41fc175037c6691518adf6a424b69
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 40eda14d4d578f10a77aa06843abd48f58c55f6a
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743027"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073021"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;rimuovere&gt; elemento per webRequestModules (impostazioni di rete)
 Rimuove un modulo di richiesta Web personalizzato dall'applicazione.  
@@ -52,12 +52,12 @@ Rimuove un modulo di richiesta Web personalizzato dall'applicazione.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Specifica i moduli da utilizzare per richiedere informazioni agli host di rete.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Specifica i moduli da utilizzare per richiedere informazioni da host di rete.|  
   
 ## <a name="remarks"></a>Note  
  Il `remove` elemento rimuove il modulo di richiesta Web registrato per il prefisso URI specificato.  
   
- Il valore per il `prefix` attributo deve corrispondere ai caratteri iniziali di un URI valido, ad esempio, "http", o "http://www.contoso.com".  
+ Il valore per il `prefix` attributo deve corrispondere ai caratteri iniziali di un URI valido, ad esempio, "http", o "`http://www.contoso.com` ".  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  

@@ -2,12 +2,12 @@
 title: Selezionare la versione del linguaggio C# - Guida a C#
 description: Configurare il compilatore per eseguire la convalida della sintassi con una versione specifica del compilatore
 ms.date: 05/24/2018
-ms.openlocfilehash: 2056a99544d0cac94bc7cc79e8cd8793b1bcff78
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 9b91e62168ced0f373e1a55def8b279dc64833d8
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566336"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207981"
 ---
 # <a name="select-the-c-language-version"></a>Selezionare la versione del linguaggio C#
 
@@ -88,7 +88,7 @@ Le stringhe speciali `default` e `latest` si risolvono rispettivamente nelle ver
 </Project>
 ```
 
-A questo punto, le compilazioni in tutte le sottodirectory della directory contenente il file useranno la sintassi di C# versione 7.3. Per altre informazioni, vedere l'articolo [Personalizzare la compilazione](/visualstudio/msbuild/customize-your-build.md).
+A questo punto, le compilazioni in tutte le sottodirectory della directory contenente il file useranno la sintassi di C# versione 7.3. Per altre informazioni, vedere l'articolo [Personalizzare la compilazione](/visualstudio/msbuild/customize-your-build).
 
 ## <a name="set-the-langversion-compiler-option"></a>Impostare l'opzione del compilatore langversion
 
