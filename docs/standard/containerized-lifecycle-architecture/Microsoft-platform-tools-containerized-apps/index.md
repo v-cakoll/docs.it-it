@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 02bd144f5bfd64ab3a0b0d30aad642c5c3099c7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b14d361fb93b98de68b828514c7ea72811075fb8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576243"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106191"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Introduzione alla piattaforma e agli strumenti Microsoft per le app in contenitori
 
@@ -59,4 +59,5 @@ Con VSTS gli sviluppatori possono creare una soluzione DevOps incentrata su cont
 In questo modo, Microsoft offre elementi di base completi per un ciclo di vita delle applicazioni Docker in contenitori end-to-end. Tuttavia, si tratta di *una raccolta di prodotti e tecnologie che consente selezione e integrazione con strumenti e processi esistenti in base alle preferenze*. La flessibilità di un ampio approccio con tutta la potenza e la completezza delle funzionalità pone Microsoft in una solida posizione per lo sviluppo di applicazioni Docker in contenitori.
 
 >[!div class="step-by-step"]
-[Indietro] (../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md) [Avanti] (../design-develop-containerized-apps/index.md)
+[Precedente](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+[Successivo](../design-develop-containerized-apps/index.md)

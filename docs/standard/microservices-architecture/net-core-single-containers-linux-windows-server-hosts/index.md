@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per le applicazioni .NET incluse 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f429bc0c6e76c2be2e4f491768a15ab36ecb0d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 662e1af8595c074ee1aeba5ad4d83660b667c1cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591094"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105527"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Distribuzione di applicazioni Web .NET Core basate su singolo contenitore in host di Linux o Windows Nano Server
 
@@ -142,4 +142,5 @@ Potrebbe essere necessario arrestare i processi in esecuzione quando si passa da
 La procedura guidata che aggiunge il supporto per Docker comunica con il processo Docker in esecuzione. La procedura guidata non verrà eseguita correttamente se Docker non è in esecuzione quando si avvia la procedura guidata. Inoltre, la procedura guidata esamina la scelta del contenitore corrente per aggiungere il supporto per Docker corretto. Se si vuole aggiungere il supporto per i contenitori Windows, è necessario eseguire la procedura guidata mentre Docker è in esecuzione con i contenitori Windows configurati. Se si vuole aggiungere il supporto per i contenitori Linux, eseguire la procedura guidata mentre Docker è in esecuzione con i contenitori Linux configurati.
 
 >[!div class="step-by-step"]
-[Precedente] (../docker-application-development-process/docker-app-development-workflow.md) [Successivo] (../containerize-net-framework-applications/index.md)
+[Precedente](../docker-application-development-process/docker-app-development-workflow.md)
+[Successivo](../containerize-net-framework-applications/index.md)

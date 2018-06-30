@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 62da6a3ff595422e42450cb1341976424acc5a52
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: facc295399a7471edfd3e59eb1cc0e90f01ef11b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314711"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104892"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Con Visual Studio Tools per Docker (Visual Studio in Windows)
 
@@ -71,4 +71,5 @@ Distribuire un contenitore di ASP.NET in un host Docker remoto: [https://docs.mi
 
 
 >[!div class="step-by-step"]
-[Precedente] (docker-App-interna-loop-workflow.md) [Avanti] (set-up-windows-containers-with-powershell.md)
+[Precedente](docker-apps-inner-loop-workflow.md)
+[Successivo](set-up-windows-containers-with-powershell.md)

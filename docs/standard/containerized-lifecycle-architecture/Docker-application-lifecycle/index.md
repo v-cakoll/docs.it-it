@@ -4,16 +4,17 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 0093c19830d752d8b425c0a447693316eb6da9b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45a6e2fdf4c1308dc0de9d4eb828e6b3edcd4490
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567783"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106658"
 ---
 # <a name="introduction-to-the-docker-application-life-cycle"></a>Introduzione al ciclo di vita delle applicazioni Docker
  
 Il ciclo di vita delle applicazioni in contenitori è un percorso che inizia con lo sviluppatore. Lo sviluppatore sceglie di implementare i contenitori e Docker per eliminare i conflitti nelle distribuzioni e nelle operazioni IT, offrendo in definitiva a tutti gli utenti flessibilità, produttività end-to-end e velocità maggiori.
 
 >[!div class="step-by-step"]
-[Indietro] (../docker-containers-images-and-registries.md) [Avanti] (containers-foundation-for-devops-collaboration.md)
+[Precedente](../docker-containers-images-and-registries.md)
+[Successivo](containers-foundation-for-devops-collaboration.md)

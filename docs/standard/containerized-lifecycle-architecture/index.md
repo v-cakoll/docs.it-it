@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 8d1062aaea85cf810fa07b36252974eceb227c43
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e9f81c5fecc06b19ebd84cc4b2cc232686768a90
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32768281"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106632"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introduzione ai contenitori e a Docker
 
@@ -33,4 +33,4 @@ In breve, i contenitori offrono vantaggi in termini di isolamento, portabilità,
 
 
 >[!div class="step-by-step"]
-[Avanti] (what-is-docker.md)
+[avanti](what-is-docker.md)

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per le applicazioni .NET incluse 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 91f63343ba2d7458d0d3b03978ac79a3a7e8427a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 185279cb4df70d9896d7e11c995170e7cd214f73
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573646"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106814"
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a>Architettura di applicazioni basate su contenitori e microservizi
 
@@ -31,4 +31,5 @@ In alcune situazioni occorre che più processi vengano eseguiti in un singolo co
 
 
 >[!div class="step-by-step"]
-[Precedente] (../net-core-net-framework-containers/official-net-docker-images.md) [Successivo] (containerize-monolithic-applications.md)
+[Precedente](../net-core-net-framework-containers/official-net-docker-images.md)
+[Successivo](containerize-monolithic-applications.md)
