@@ -9,12 +9,12 @@ ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c8eb7bfc56b4dddaf352477e3817864700460db7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aaafe77a71713b24752ed7db7ec016bfc14eb406
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409981"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140242"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo Hyperlink
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "33409981"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Proprietà di automazione interfaccia utente obbligatorie  
- La tabella seguente elenca le proprietà [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] il cui valore o la cui definizione è particolarmente rilevante per il tipo di controllo Hyperlink. Per ulteriori informazioni su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] proprietà, vedere [proprietà di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ La tabella seguente elenca le proprietà [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] il cui valore o la cui definizione è particolarmente rilevante per il tipo di controllo Hyperlink. Per ulteriori informazioni sul [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] delle proprietà, vedere [proprietà di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
 |Proprietà di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Valore|Note|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -58,9 +58,9 @@ ms.locfileid: "33409981"
   
 |Pattern di controllo/proprietà del pattern|Supporto/valore|Note|  
 |---------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Yes|Tutti i controlli collegamento ipertestuale devono supportare il pattern Invoke.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Sì|Tutti i controlli collegamento ipertestuale devono supportare il pattern Invoke.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|A seconda dei casi|I controlli collegamento ipertestuale devono supportare il pattern di controllo Value quando il collegamento contiene informazioni utili e significative per l'utente.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Ad esempio, "http://www...."|Un URL per un indirizzo Internet o Intranet è un esempio di collegamento ipertestuale contenente informazioni significative per l'utente. Un collegamento a livello di codice, tuttavia, è significativo solo per un'applicazione e non è consigliato per la proprietà Value.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Ad esempio, `"http://www...."`.|Un URL per un indirizzo Internet o Intranet è un esempio di collegamento ipertestuale contenente informazioni significative per l'utente. Un collegamento a livello di codice, tuttavia, è significativo solo per un'applicazione e non è consigliato per la proprietà Value.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventi di automazione interfaccia utente obbligatori  
@@ -68,12 +68,12 @@ ms.locfileid: "33409981"
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Supporto|Note|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Obbligatorio|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|Nessuno|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|Nessuno|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|Nessuno|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Obbligatorio|None|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|None|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|None|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|None|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Automation.ControlType.Hyperlink>  

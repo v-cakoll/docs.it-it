@@ -11,11 +11,12 @@ ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a91775ff9f46eba772a959cfac3115c9720ac5ab
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e9548c6d43824ea5017b73a132eb49444ed6c77
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140190"
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt; elemento (impostazioni di rete)
 Configura il server proxy Hypertext Transfer Protocol (HTTP).  
@@ -37,7 +38,7 @@ Configura il server proxy Hypertext Transfer Protocol (HTTP).
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+ Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
   
@@ -52,7 +53,7 @@ Configura il server proxy Hypertext Transfer Protocol (HTTP).
 |-----------------|---------------------|  
 |[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano il proxy.|  
 |[Modulo](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Aggiunge un nuovo modulo proxy all'applicazione.|  
-|[Proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Definisce un server proxy.|  
+|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Definisce un server proxy.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -81,7 +82,7 @@ Configura il server proxy Hypertext Transfer Protocol (HTTP).
         bypassonlocal="true"  
       />  
       <bypasslist>  
-        <add address="[a-z]+\.contoso\.com" />  
+        <add address="[a-z]+\.contoso\.com$" />  
       </bypasslist>  
     </defaultProxy>  
   </system.net>  
