@@ -1,4 +1,5 @@
 # [I/O di file e di flussi](index.md)
+## [Formati dei percorsi di file nei sistemi Windows](file-path-formats.md)
 ## [Attività di I/O comuni](common-i-o-tasks.md)
 ### [Procedura: Copiare le directory](how-to-copy-directories.md)
 ### [Procedura: Enumerare directory e file](how-to-enumerate-directories-and-files.md)
