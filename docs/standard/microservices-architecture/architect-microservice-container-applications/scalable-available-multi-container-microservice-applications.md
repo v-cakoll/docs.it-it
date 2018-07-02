@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: e8552f79a4196c161ec70d7ea46156215e52db26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aab939af29849ceeef76d6f61b3d4f59d701094c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578885"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105462"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
@@ -135,4 +135,5 @@ Il servizio contenitore di Azure è attualmente disponibile per macchine virtual
 
 
 >[!div class="step-by-step"]
-[Indietro] (resilient-high-availability-microservices.md) [Avanti] (using-azure-service-fabric.md)
+[Precedente](resilient-high-availability-microservices.md)
+[Successivo](using-azure-service-fabric.md)

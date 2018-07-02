@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f1b2b59af96bf28035eeb32eb15eaa4105677cf4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c36ea31ad19b02fb02bc8e7185bfe8687b87764f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578684"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104209"
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Strategie di gestione degli errori parziali
 
@@ -46,4 +46,5 @@ Le strategie di gestione degli errori parziali sono le seguenti.
 
 
 >[!div class="step-by-step"]
-[Indietro] (handle-partial-failure.md) [Avanti] (implement-retries-exponential-backoff.md)
+[Precedente](handle-partial-failure.md)
+[Successivo](implement-retries-exponential-backoff.md)

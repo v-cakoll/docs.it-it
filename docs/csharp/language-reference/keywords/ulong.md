@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - ulong keyword [C#]
 ms.assetid: f2ece624-837a-40cf-92c5-343e7f33397c
-ms.openlocfilehash: 1f291d2dd2706231f018a04f0af86051cef6c28a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96975bcfc270694a59a19e7c40183083dbc5bd98
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288307"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027993"
 ---
 # <a name="ulong-c-reference"></a>ulong (Riferimenti per C#)
 
 La parola chiave `ulong` denota un tipo integrale che archivia valori in base alla dimensione e all'intervallo mostrato nella tabella seguente.  
   
-|Tipo|Intervallo|Dimensione|Tipo .NET Framework|  
+|Tipo|Intervallo|Dimensione|Tipo .NET|  
 |----------|-----------|----------|-------------------------|  
 |`ulong`|Da 0 a 18.446.744.073.709.551.615|Intero senza segno a 64 bit|<xref:System.UInt64?displayProperty=nameWithType>|  
   

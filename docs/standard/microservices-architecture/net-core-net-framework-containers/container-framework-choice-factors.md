@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 0e384fabca88d8ad6f93ae626140fb3d5dcaf971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c45fbb9f26e6cd315e1b623ba2c79d5d038a6919
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589323"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105300"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Tabella decisioni: framework .NET da usare per Docker
 
@@ -58,4 +58,5 @@ Sono molte le funzionalità dell'applicazione che influiscono sulla scelta. Pond
     - Se si usano le API client disponibili per *.NET Core* è anche possibile scegliere tra *contenitori Linux e contenitori Windows*.
 
 >[!div class="step-by-step"]
-[Indietro] (net-framework-container-scenarios.md) [Avanti] (net-container-os-targets.md)
+[Precedente](net-framework-container-scenarios.md)
+[Successivo](net-container-os-targets.md)

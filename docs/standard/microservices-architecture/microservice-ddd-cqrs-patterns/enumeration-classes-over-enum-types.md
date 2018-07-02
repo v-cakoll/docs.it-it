@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 1b2569caa7e7a6a899a6765d2e39d0fff8e37e2f
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: eff87dbfad84ba5521f029064115a5fc54ee574b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251194"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106110"
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>Uso delle classi di enumerazione anziché dei tipi enum
 
@@ -127,4 +127,5 @@ public class CardType : Enumeration
 
 
 >[!div class="step-by-step"]
-[Indietro] (implement-value-objects.md) [Avanti] (domain-model-layer-validations.md)
+[Precedente](implement-value-objects.md)
+[Successivo](domain-model-layer-validations.md)

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7f909c6f81abce80bfdf118112271f1f87254793
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee5dd711484ba7861eedbd9613fda1209736d5b6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571423"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106918"
 ---
 # <a name="implementing-retries-with-exponential-backoff"></a>Implementazione dei tentativi con backoff esponenziale
 
@@ -19,4 +19,5 @@ Esistono molti approcci all'implementazione della logica per i tentativi con bac
 
 
 >[!div class="step-by-step"]
-[Indietro] (partial-failure-strategies.md) [Avanti] (implement-resilient-entity-framework-core-sql-connections.md)
+[Precedente](partial-failure-strategies.md)
+[Successivo](implement-resilient-entity-framework-core-sql-connections.md)

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 0f3b4539156f3ba437c77dea721ca53206d1ed40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6003252d7e87428c7f954b57c3b67a041e3f3b15
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579899"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106476"
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementazione del livello di persistenza dell'infrastruttura con Entity Framework Core
 
@@ -471,4 +471,5 @@ Anche se non è consigliabile restituire espressioni IQueryable da un repository
     
 
 >[!div class="step-by-step"]
-[Indietro] (infrastructure-persistence-layer-design.md) [Avanti] (nosql-database-persistence-infrastructure.md)
+[Precedente](infrastructure-persistence-layer-design.md)
+[Successivo](nosql-database-persistence-infrastructure.md)

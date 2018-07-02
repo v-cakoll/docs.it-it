@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-ms.openlocfilehash: c7d9bb0ee3d59ef3e0cf56d26e73a925fcfb4206
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41ee5ecdae815eaddf8652a4873c060fb8f92bc3
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275291"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028266"
 ---
 # <a name="int-c-reference"></a>int (Riferimenti per C#)
 
 `int` denota un tipo integrale che archivia valori in base alla dimensione e all'intervallo visualizzato nella tabella seguente.  
   
-|Tipo|Intervallo|Dimensione|Tipo .NET Framework|Valore predefinito|  
-|----------|-----------|----------|-------------------------|-------------------|  
-|`int`|da -2.147.483.648 a 2.147.483.647|Valore intero a 32 bit con segno|<xref:System.Int32?displayProperty=nameWithType>|0|  
+|Tipo|Intervallo|Dimensione|Tipo .NET|  
+|----------|-----------|----------|-------------------------|  
+|`int`|da -2.147.483.648 a 2.147.483.647|Valore intero a 32 bit con segno|<xref:System.Int32?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Valori letterali  
  

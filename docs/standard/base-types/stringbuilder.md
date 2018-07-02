@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce2c47b172afee8745cdf5f68323d64dd550ea59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579145"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072956"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Uso della classe StringBuilder in .NET
 L'oggetto <xref:System.String> non è modificabile. Ogni volta che si usa uno dei metodi nella classe <xref:System.String?displayProperty=nameWithType>, si crea un nuovo oggetto stringa in memoria che richiede una nuova allocazione di spazio. In situazioni in cui è necessario modificare ripetutamente una stringa, il sovraccarico associato alla creazione di un nuovo oggetto <xref:System.String> può essere dispendioso. La classe <xref:System.Text.StringBuilder?displayProperty=nameWithType> può essere usata per modificare una stringa senza creare un nuovo oggetto. Ad esempio, l'uso della classe <xref:System.Text.StringBuilder> può migliorare le prestazioni quando si concatenano più stringhe in un ciclo.  
@@ -43,7 +43,7 @@ L'oggetto <xref:System.String> non è modificabile. Ogni volta che si usa uno de
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
 ## <a name="setting-the-capacity-and-length"></a>Impostazione di capacità e lunghezza  
- Anche se <xref:System.Text.StringBuilder> è un oggetto dinamico che consente di espandere il numero di caratteri nella stringa incapsulata, è possibile specificare un valore per il numero massimo di caratteri che può contenere. Questo valore rappresenta la capacità dell'oggetto e non deve essere confuso con la lunghezza della stringa contenuta dall'oggetto <xref:System.Text.StringBuilder>. Ad esempio, è possibile creare una nuova istanza della classe <xref:System.Text.StringBuilder> con la stringa "Hello", che ha una lunghezza pari a 5 caratteri, e specificare che l'oggetto ha una capacità massima di 25 caratteri. Quando si modifica la classe <xref:System.Text.StringBuilder>, le dimensioni non vengono riallocate automaticamente fino a quando non viene raggiunta la capacità specificata. In questo caso, il nuovo spazio viene allocato automaticamente e la capacità viene raddoppiata. È possibile specificare la capacità della classe <xref:System.Text.StringBuilder> usando uno dei costruttori di overload. L'esempio seguente specifica che l'oggetto `MyStringBuilder` può essere espanso fino a un massimo di 25 spazi.  
+ Anche se <xref:System.Text.StringBuilder> è un oggetto dinamico che consente di espandere il numero di caratteri nella stringa incapsulata, è possibile specificare un valore per il numero massimo di caratteri che può contenere. Questo valore rappresenta la capacità dell'oggetto e non deve essere confuso con la lunghezza della stringa contenuta dall'oggetto <xref:System.Text.StringBuilder>. Ad esempio, è possibile creare una nuova istanza della classe <xref:System.Text.StringBuilder> con la stringa "Hello", che ha una lunghezza pari a 5 caratteri, e specificare che l'oggetto ha una capacità massima di 25 caratteri. Quando si modifica la classe <xref:System.Text.StringBuilder>, le dimensioni non vengono riallocate automaticamente fino a quando non viene raggiunta la capacità specificata. In questo caso, il nuovo spazio viene allocato automaticamente e la capacità viene raddoppiata. È possibile specificare la capacità della classe <xref:System.Text.StringBuilder> usando uno dei costruttori di overload. L'esempio seguente specifica che l'oggetto `myStringBuilder` può essere espanso fino a un massimo di 25 spazi.  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
  [!code-csharp[Conceptual.StringBuilder#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#2)]

@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: cbadb13109c51ba53530011a17006b585573f40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e1e1671238d3cc5944bfe53b49f7d0ddd969aff
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576793"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105369"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Creazione dell'interfaccia utente composita basata su microservizi, tra cui la forma visiva dell'interfaccia utente e il layout generato da più microservizi
 
@@ -58,4 +58,5 @@ Per altre informazioni sull'interfaccia utente composita basata sui microservizi
 
 
 >[!div class="step-by-step"]
-[Indietro] (microservices-addressability-service-registry.md) [Avanti] (resilient-high-availability-microservices.md)
+[Precedente](microservices-addressability-service-registry.md)
+[Successivo](resilient-high-availability-microservices.md)

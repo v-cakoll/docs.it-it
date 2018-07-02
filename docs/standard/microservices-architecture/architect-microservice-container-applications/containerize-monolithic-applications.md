@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per le applicazioni .NET incluse 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f5d00c6ce4c965d66937dae3f8e5453883afb4b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e5b7a8202a0af26c8d61e315c3aa8f592ed45d9
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577251"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105923"
 ---
 # <a name="containerizing-monolithic-applications"></a>Inserimento di applicazioni monolitiche nei contenitori
 
@@ -73,4 +73,5 @@ Come illustrato anche nella figura 4-4, il flusso di pubblicazione esegue il pus
 
 
 >[!div class="step-by-step"]
-[Avanti] (index.md) [Indietro] (docker-application-state-data.md)
+[Precedente](index.md)
+[Successivo](docker-application-state-data.md)

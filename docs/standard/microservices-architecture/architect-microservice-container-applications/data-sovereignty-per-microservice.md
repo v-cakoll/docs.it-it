@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: d739cc33dec372f6bd9569c05d034dcd25be8395
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d66f5d40234e689685b1b8c36367cc9dc2fc7c6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577293"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106866"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Sovranità dei dati per microservizio
 
@@ -63,4 +63,5 @@ I microservizi risultano vantaggiosi per DDD perché forniscono limiti reali sot
 
 
 >[!div class="step-by-step"]
-[Indietro] (microservices-architecture.md) [Avanti] (logical-versus-physical-architecture.md)
+[Precedente](microservices-architecture.md)
+[Successivo](logical-versus-physical-architecture.md)

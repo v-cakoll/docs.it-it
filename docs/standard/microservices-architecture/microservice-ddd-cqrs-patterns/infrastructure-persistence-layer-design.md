@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/08/2017
-ms.openlocfilehash: 2b15fcaeaa8934caceaeab963123650354abf291
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9da1020ac5b43971a8f976c518f4537bec866c26
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578917"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105846"
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Progettazione del livello di persistenza dell'infrastruttura
 
@@ -164,4 +164,5 @@ Nelle sezioni successive, viene illustrato come implementare lo schema Specifica
     [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]
-[Indietro] (domain-events-design-implementation.md) [Avanti] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[Precedente](domain-events-design-implementation.md)
+[Successivo](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

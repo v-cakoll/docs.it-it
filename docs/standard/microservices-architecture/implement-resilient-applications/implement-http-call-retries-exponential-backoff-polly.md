@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 66ac57fc824e01f96d6584ab86bb95ba1b0174a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cce1392bb381859e7cad89c9f2518113241ae724
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576981"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106931"
 ---
 # <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a>Implementazione della ripetizione dei tentativi per le chiamate HTTP con backoff esponenziale con Polly
 
@@ -171,4 +171,5 @@ private Policy[] CreatePolicies()
 
 
 >[!div class="step-by-step"]
-[Indietro] (implement-custom-http-call-retries-exponential-backoff.md) [Avanti] (implement-circuit-breaker-pattern.md)
+[Precedente](implement-custom-http-call-retries-exponential-backoff.md)
+[Successivo](implement-circuit-breaker-pattern.md)

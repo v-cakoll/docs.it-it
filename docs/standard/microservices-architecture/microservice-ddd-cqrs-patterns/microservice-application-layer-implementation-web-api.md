@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 9572540f17e5628d7f71c94ee68f7cba17d64d07
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1af8d0290eea26d57f4744bbd6d9819d886d4db4
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207638"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106554"
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Implementazione del livello dell'applicazione di microservizi tramite l'API Web
 
@@ -867,4 +867,5 @@ In modo simile, è possibile implementare altri comportamenti per ulteriori aspe
     [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
 
 >[!div class="step-by-step"]
-[Indietro] (microservice-application-layer-web-api-design.md) [Avanti] (../implement-resilient-applications/index.md)
+[Precedente](microservice-application-layer-web-api-design.md)
+[Successivo](../implement-resilient-applications/index.md)

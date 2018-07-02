@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f77123977a50c30150f5a64cc08c3c217b429ac4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d675ba753903e181c67712e34eea82fed72df0d7
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574686"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105436"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Architettura logica e architettura fisica
 
@@ -37,4 +37,5 @@ In breve, l'architettura logica dei microservizi non deve sempre coincidere con 
 
 
 >[!div class="step-by-step"]
-[Indietro] (data-sovereignty-per-microservice.md) [Avanti] (distributed-data-management.md)
+[Precedente](data-sovereignty-per-microservice.md)
+[Successivo](distributed-data-management.md)

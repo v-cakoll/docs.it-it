@@ -4,12 +4,12 @@ description: Informazioni su come convertire progetti di libreria da .NET Framew
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: 88513eaee35a82d6424fc2218f8cbbe635a8e02c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f1d79623b4ece836732010e76a3c93fbbf8099f
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218358"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028045"
 ---
 # <a name="porting-to-net-core---libraries"></a>Portabilità in .NET Core - Librerie
 
@@ -72,18 +72,6 @@ Usare i limiti di sicurezza forniti dal sistema operativo, ad esempio la virtual
 Analogamente alla sicurezza dall'accesso di codice, la trasparenza della sicurezza consente la separazione del codice in modalità sandbox dal codice critico per la sicurezza in modalità dichiarativa, ma [non è più supportata come limite di sicurezza](~/docs/framework/misc/security-transparent-code.md). Questa funzionalità è ampiamente usata da Silverlight. 
 
 Usare i limiti di sicurezza forniti dal sistema operativo, ad esempio la virtualizzazione, i contenitori o gli account utente, per eseguire i processi con il set di privilegi più ridotto.
-
-### <a name="globaljson"></a>global.json
-
-Il file *global.json* è un file facoltativo che consente di impostare la versione degli strumenti di .NET Core di un progetto. Se si usano compilazioni notturne di .NET Core e si vuole specificare una determinata versione dell'SDK, specificarla con un file *global.json*. Questo file si trova in genere nella directory di lavoro corrente o in una delle relative directory padre. 
-
-```json
-{
-  "sdk": {
-    "version": "2.1.0-preview1-006491"
-  }
-}
-```
 
 ## <a name="converting-a-pcl-project"></a>Conversione di un progetto PCL
 

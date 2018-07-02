@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ce4addefc7b6b1cf82551bf8304b7f06f1614796
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67560cc93b3d147be36a691af440bb78f2315557
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573815"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105005"
 ---
 # <a name="service-oriented-architecture"></a>Architettura orientata ai servizi 
 
@@ -27,4 +27,5 @@ Questa guida fa riferimento ai microservizi, in quanto l'approccio dell'architet
 
 
 >[!div class="step-by-step"]
-[Indietro] (docker-application-state-data.md) [Avanti] (microservices-architecture.md)
+[Precedente](docker-application-state-data.md)
+[Successivo](microservices-architecture.md)

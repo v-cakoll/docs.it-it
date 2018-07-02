@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - uint keyword [C#]
 ms.assetid: e93e42c6-ec72-4b0b-89df-2fd8d36f7a7b
-ms.openlocfilehash: fa0169ad92819cee36832d6c928202eb0dd6733e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ee19688ff0a6687bcf761857958aa2022fdb0c8
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288905"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027811"
 ---
 # <a name="uint-c-reference"></a>uint (Riferimenti per C#)
 
 La parola chiave `uint` rappresenta un tipo integrale che archivia valori in base alla dimensione e all'intervallo mostrato nella tabella seguente.  
   
-|Tipo|Intervallo|Dimensione|Tipo .NET Framework|  
+|Tipo|Intervallo|Dimensione|Tipo .NET|  
 |----------|-----------|----------|-------------------------|  
 |`uint`|Da 0 a 4.294.967.295|Intero senza segno a 32 bit|<xref:System.UInt32?displayProperty=nameWithType>|  
   

@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: a5107e979dc2101380cf848dc574033caf750fd9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cbe4512c8ed89540599d1257046bd080b464165
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592314"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105959"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Progettazione di un'applicazione orientata ai microservizi
 
@@ -195,4 +195,5 @@ Non esiste un metodo infallibile o il giusto schema architetturale per ogni sing
 
 
 >[!div class="step-by-step"]
-[Precedente] (index.md) [Successivo] (data-driven-crud-microservice.md)
+[Precedente](index.md)
+[Successivo](data-driven-crud-microservice.md)

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET contenitori
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 880f99228dbfe7374878b497582ccf540658fc12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3366fa2494615db841b768f9149a070a65da58ee
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578183"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105514"
 ---
 # <a name="key-takeaways"></a>Considerazioni principali
 
@@ -38,4 +38,4 @@ Di seguito sono riportate le considerazioni principali e le conclusioni più imp
 **Agenti di orchestrazione.** Gli agenti di orchestrazione basati su contenitori, come quelli forniti nel servizio contenitore di Azure (Kubernetes, Mesosphere DC/OS e Docker Swarm) e in Azure Service Fabric sono indispensabili per qualsiasi applicazione multicontenitore o basata su microservizi per ambienti di produzione con esigenze elevate in termini di complessità scalabilità in continua evoluzione. Questa guida ha illustrato gli agenti di orchestrazione e il ruolo che hanno nelle soluzioni basate su microservizi e su contenitori. Se le esigenze dell'applicazione indirizzano verso le applicazioni in contenitori complesse, è possibile consultare risorse aggiuntive per acquisire maggiori informazioni sugli agenti di orchestrazione
 
 >[!div class="step-by-step"]
-[Indietro] (secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
+[Precedente](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

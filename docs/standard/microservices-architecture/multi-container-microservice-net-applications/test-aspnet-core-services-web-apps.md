@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per le applicazioni .NET incluse 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: b3aa0d50ba3ab64440ef51201d611177fea78ce4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e06f582677e61209d0b226fc68bca81dfe593e5
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582675"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104400"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Test delle app Web e dei servizi ASP.NET di base
 
@@ -124,4 +124,5 @@ Sono possibili alcuni approcci. Nel file docker-compose.yml usato per distribuir
 Quando l'applicazione Compose è operativa, è possibile sfruttare i punti di interruzione e le eccezioni se si esegue Visual Studio. In alternativa, è possibile eseguire i test di integrazione nella pipeline CI in Visual Studio Team Services o qualsiasi altro sistema di integrazione continua/recapito continuo che supporti i contenitori Docker.
 
 >[!div class="step-by-step"]
-[Indietro] (subscribe-events.md) [Avanti] (../microservice-ddd-cqrs-patterns/index.md)
+[Precedente](subscribe-events.md)
+[Successivo](../microservice-ddd-cqrs-patterns/index.md)
