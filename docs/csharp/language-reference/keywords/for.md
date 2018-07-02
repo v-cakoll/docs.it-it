@@ -1,124 +1,118 @@
 ---
 title: for (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 06/13/2018
 f1_keywords:
 - for
 - for_CSharpKeyword
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 2c099411499c6ca8396c55955bdc634e48caf621
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: beac7727c8ce83d8ea20f0fc578f80ceef3053e7
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34306527"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208010"
 ---
-# <a name="for-c-reference"></a><span data-ttu-id="d5998-102">for (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="d5998-102">for (C# reference)</span></span>
+# <a name="for-c-reference"></a><span data-ttu-id="832f6-102">for (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="832f6-102">for (C# reference)</span></span>
 
-<span data-ttu-id="d5998-103">Usando un ciclo `for`, è possibile eseguire ripetutamente un'istruzione o un blocco di istruzioni fino a quando un'espressione specificata restituisce `false`.</span><span class="sxs-lookup"><span data-stu-id="d5998-103">By using a `for` loop, you can run a statement or a block of statements repeatedly until a specified expression evaluates to `false`.</span></span> <span data-ttu-id="d5998-104">Questo tipo di ciclo è utile per eseguire l'iterazione su matrici e per altre applicazioni in cui si conosce in anticipo quante volte il ciclo deve eseguire l'iterazione.</span><span class="sxs-lookup"><span data-stu-id="d5998-104">This kind of loop is useful for iterating over arrays and for other applications in which you know in advance how many times you want the loop to iterate.</span></span>
-  
-## <a name="example"></a><span data-ttu-id="d5998-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="d5998-105">Example</span></span>
+<span data-ttu-id="832f6-103">L'istruzione `for` esegue un'istruzione o un blocco di istruzioni mentre un'espressione booleana specificata restituisce `true`.</span><span class="sxs-lookup"><span data-stu-id="832f6-103">The `for` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span>
 
-<span data-ttu-id="d5998-106">Nell'esempio seguente il valore `i` viene scritto nella console e viene incrementato di 1 durante ogni iterazione del ciclo:</span><span class="sxs-lookup"><span data-stu-id="d5998-106">In the following example, the value of `i` is written to the console and incremented by 1 during each iteration of the loop:</span></span>
+<span data-ttu-id="832f6-104">In un punto qualsiasi all'interno del blocco dell'istruzione `for` è possibile uscire dal ciclo usando l'istruzione [break](break.md) o passare all'iterazione successiva nel ciclo con l'istruzione [continue](continue.md).</span><span class="sxs-lookup"><span data-stu-id="832f6-104">At any point within the `for` statement block, you can break out of the loop by using the [break](break.md) statement, or step to the next iteration in the loop by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="832f6-105">Si può uscire da un ciclo `for` anche usando l'istruzione [goto](goto.md), [return](return.md) o [throw](throw.md).</span><span class="sxs-lookup"><span data-stu-id="832f6-105">You also can exit a `for` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
   
-[!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]
-  
-<span data-ttu-id="d5998-107">L'[istruzione for](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) nell'esempio precedente esegue le azioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="d5998-107">The [for statement](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) in the previous example performs the following actions:</span></span>
-  
-1.  <span data-ttu-id="d5998-108">Prima viene stabilito il valore iniziale della variabile `i`.</span><span class="sxs-lookup"><span data-stu-id="d5998-108">First, the initial value of variable `i` is established.</span></span> <span data-ttu-id="d5998-109">Questo passaggio viene eseguito una sola volta, indipendentemente da quante volte viene ripetuto il ciclo.</span><span class="sxs-lookup"><span data-stu-id="d5998-109">This step happens only once, regardless of how many times the loop repeats.</span></span> <span data-ttu-id="d5998-110">È possibile pensare all'inizializzazione come a un'operazione che viene eseguita all'esterno del processo di ciclo.</span><span class="sxs-lookup"><span data-stu-id="d5998-110">You can think of this initialization as happening outside the looping process.</span></span>
-  
-2.  <span data-ttu-id="d5998-111">Per valutare la condizione (`i <= 5`), il valore di `i` viene confrontato con 5.</span><span class="sxs-lookup"><span data-stu-id="d5998-111">To evaluate the condition (`i <= 5`), the value of `i` is compared to 5.</span></span>
-  
-    -   <span data-ttu-id="d5998-112">Se `i` è minore o uguale a 5, la condizione restituisce `true` e si verificano le azioni seguenti.</span><span class="sxs-lookup"><span data-stu-id="d5998-112">If `i` is less than or equal to 5, the condition evaluates to `true`, and the following actions occur.</span></span>  
-  
-        1.  <span data-ttu-id="d5998-113">L'istruzione `Console.WriteLine` nel corpo del ciclo visualizza il valore di `i`.</span><span class="sxs-lookup"><span data-stu-id="d5998-113">The `Console.WriteLine` statement in the body of the loop displays the value of `i`.</span></span>  
-  
-        2.  <span data-ttu-id="d5998-114">Il valore di `i` viene incrementato di 1.</span><span class="sxs-lookup"><span data-stu-id="d5998-114">The value of `i` is incremented by 1.</span></span>  
-  
-        3.  <span data-ttu-id="d5998-115">Il ciclo ritorna all'inizio del passaggio 2 per valutare nuovamente la condizione.</span><span class="sxs-lookup"><span data-stu-id="d5998-115">The loop returns to the start of step 2 to evaluate the condition again.</span></span>  
-  
-    -   <span data-ttu-id="d5998-116">Se `i` è maggiore di 5, la condizione restituisce `false` e si esce dal ciclo.</span><span class="sxs-lookup"><span data-stu-id="d5998-116">If `i` is greater than 5, the condition evaluates to `false`, and you exit the loop.</span></span>  
-  
-<span data-ttu-id="d5998-117">Si noti che, se il valore iniziale di `i` è maggiore di 5, il corpo del ciclo non viene eseguito neppure una volta.</span><span class="sxs-lookup"><span data-stu-id="d5998-117">Note that, if the initial value of `i` is greater than 5, the body of the loop doesn't run even once.</span></span>
+## <a name="structure-of-the-for-statement"></a><span data-ttu-id="832f6-106">Struttura dell'istruzione `for`</span><span class="sxs-lookup"><span data-stu-id="832f6-106">Structure of the `for` statement</span></span>
 
-## <a name="sections-of-a-for-statement"></a><span data-ttu-id="d5998-118">Sezioni di un'istruzione for</span><span class="sxs-lookup"><span data-stu-id="d5998-118">Sections of a for statement</span></span>
+<span data-ttu-id="832f6-107">L'istruzione `for` definisce le sezioni *inizializzatore*, *condizione* e *iteratore*:</span><span class="sxs-lookup"><span data-stu-id="832f6-107">The `for` statement defines *initializer*, *condition*, and *iterator* sections:</span></span>
   
-<span data-ttu-id="d5998-119">Ogni [istruzione for](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) definisce le sezioni di *inizializzatore*, *condizione* e *iteratore*.</span><span class="sxs-lookup"><span data-stu-id="d5998-119">Every [for statement](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) defines *initializer*, *condition*, and *iterator* sections.</span></span> <span data-ttu-id="d5998-120">In queste sezioni viene solitamente definito quante volte il ciclo esegue l'iterazione.</span><span class="sxs-lookup"><span data-stu-id="d5998-120">These sections usually determine how many times the loop iterates.</span></span>  
-  
-```csharp  
+```csharp
 for (initializer; condition; iterator)  
     body  
-```  
-  
-<span data-ttu-id="d5998-121">Gli scopi delle sezioni sono i seguenti:</span><span class="sxs-lookup"><span data-stu-id="d5998-121">The sections serve the following purposes:</span></span>
-  
--   <span data-ttu-id="d5998-122">Nella sezione dell'inizializzatore vengono impostate le condizioni iniziali.</span><span class="sxs-lookup"><span data-stu-id="d5998-122">The initializer section sets the initial conditions.</span></span> <span data-ttu-id="d5998-123">Le istruzioni in questa sezione sono eseguite una sola volta, prima che inizi il ciclo.</span><span class="sxs-lookup"><span data-stu-id="d5998-123">The statements in this section run only once, before you enter the loop.</span></span> <span data-ttu-id="d5998-124">Questa sezione può contenere solo una delle due opzioni seguenti.</span><span class="sxs-lookup"><span data-stu-id="d5998-124">The section can contain only one of the following two options.</span></span>  
-  
-    -   <span data-ttu-id="d5998-125">Dichiarazione e inizializzazione di una variabile di ciclo locale, come illustrato nel primo esempio (`int i = 1`).</span><span class="sxs-lookup"><span data-stu-id="d5998-125">The declaration and initialization of a local loop variable, as the first example shows (`int i = 1`).</span></span> <span data-ttu-id="d5998-126">La variabile è locale rispetto al ciclo e non è possibile accedervi dall'esterno del ciclo.</span><span class="sxs-lookup"><span data-stu-id="d5998-126">The variable is local to the loop and can't be accessed from outside the loop.</span></span>  
-  
-    -   <span data-ttu-id="d5998-127">Zero o più istruzioni, ricavate dal seguente elenco, separate da virgole.</span><span class="sxs-lookup"><span data-stu-id="d5998-127">Zero or more statement expressons from the following list, separated by commas.</span></span>  
-  
-        -   <span data-ttu-id="d5998-128">Istruzione di [assegnazione](../../../csharp/language-reference/operators/assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="d5998-128">[assignment](../../../csharp/language-reference/operators/assignment-operator.md) statement</span></span>  
-  
-        -   <span data-ttu-id="d5998-129">Chiamata di un metodo</span><span class="sxs-lookup"><span data-stu-id="d5998-129">invocation of a method</span></span>  
-  
-        -   <span data-ttu-id="d5998-130">Espressione di [incremento](../../../csharp/language-reference/operators/increment-operator.md) in forma prefissa o suffissa, ad esempio `++i` o `i++`</span><span class="sxs-lookup"><span data-stu-id="d5998-130">prefix or postfix [increment](../../../csharp/language-reference/operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>  
-  
-        -   <span data-ttu-id="d5998-131">Espressione di [decremento](../../../csharp/language-reference/operators/decrement-operator.md) in forma prefissa o suffissa, ad esempio `--i` o `i--`</span><span class="sxs-lookup"><span data-stu-id="d5998-131">prefix or postfix [decrement](../../../csharp/language-reference/operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>  
-  
-        -   <span data-ttu-id="d5998-132">Creazione di un oggetto con [new](../../../csharp/language-reference/keywords/new-operator.md)</span><span class="sxs-lookup"><span data-stu-id="d5998-132">creation of an object by using [new](../../../csharp/language-reference/keywords/new-operator.md)</span></span>  
-  
-        -   <span data-ttu-id="d5998-133">Espressione [await](../../../csharp/language-reference/keywords/await.md)</span><span class="sxs-lookup"><span data-stu-id="d5998-133">[await](../../../csharp/language-reference/keywords/await.md) expression</span></span>  
-  
--   <span data-ttu-id="d5998-134">La sezione della condizione contiene un'espressione booleana valutata per determinare se uscire dal ciclo oppure ripeterlo.</span><span class="sxs-lookup"><span data-stu-id="d5998-134">The condition section contains a boolean expression that’s evaluated to determine whether the loop should exit or should run again.</span></span>  
-  
--   <span data-ttu-id="d5998-135">Nella sezione dell'iteratore viene definito cosa accade dopo ogni iterazione del corpo del ciclo.</span><span class="sxs-lookup"><span data-stu-id="d5998-135">The iterator section defines what happens after each iteration of the body of the loop.</span></span> <span data-ttu-id="d5998-136">Questa sezione contiene zero o più delle espressioni di istruzioni seguenti, separate da virgole:</span><span class="sxs-lookup"><span data-stu-id="d5998-136">The iterator section contains zero or more of the following statement expressions, separated by commas:</span></span>  
-  
-    -   <span data-ttu-id="d5998-137">Istruzione di [assegnazione](../../../csharp/language-reference/operators/assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="d5998-137">[assignment](../../../csharp/language-reference/operators/assignment-operator.md) statement</span></span>  
-  
-    -   <span data-ttu-id="d5998-138">Chiamata di un metodo</span><span class="sxs-lookup"><span data-stu-id="d5998-138">invocation of a method</span></span>  
-  
-    -   <span data-ttu-id="d5998-139">Espressione di [incremento](../../../csharp/language-reference/operators/increment-operator.md) in forma prefissa o suffissa, ad esempio `++i` o `i++`</span><span class="sxs-lookup"><span data-stu-id="d5998-139">prefix or postfix [increment](../../../csharp/language-reference/operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>  
-  
-    -   <span data-ttu-id="d5998-140">Espressione di [decremento](../../../csharp/language-reference/operators/decrement-operator.md) in forma prefissa o suffissa, ad esempio `--i` o `i--`</span><span class="sxs-lookup"><span data-stu-id="d5998-140">prefix or postfix [decrement](../../../csharp/language-reference/operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>  
-  
-    -   <span data-ttu-id="d5998-141">Creazione di un oggetto con [new](../../../csharp/language-reference/keywords/new-operator.md)</span><span class="sxs-lookup"><span data-stu-id="d5998-141">creation of an object by using [new](../../../csharp/language-reference/keywords/new-operator.md)</span></span>  
-  
-    -   <span data-ttu-id="d5998-142">Espressione [await](../../../csharp/language-reference/keywords/await.md)</span><span class="sxs-lookup"><span data-stu-id="d5998-142">[await](../../../csharp/language-reference/keywords/await.md) expression</span></span>  
-  
--   <span data-ttu-id="d5998-143">Il corpo del ciclo è costituito da un'istruzione, un'istruzione vuota o un blocco di istruzioni, creato racchiudendo tra parentesi zero o più istruzioni.</span><span class="sxs-lookup"><span data-stu-id="d5998-143">The body of the loop consists of a statement, an empty statement, or a block of statements, which you create by enclosing zero or more statements in braces.</span></span>  
-  
-     <span data-ttu-id="d5998-144">È possibile interrompere un ciclo `for` con la parola chiave [break](../../../csharp/language-reference/keywords/break.md) oppure è possibile usare la parola chiave [continue](../../../csharp/language-reference/keywords/continue.md) per passare all'iterazione successiva.</span><span class="sxs-lookup"><span data-stu-id="d5998-144">You can break out of a `for` loop by using the [break](../../../csharp/language-reference/keywords/break.md) keyword, or you can step to the next iteration by using the [continue](../../../csharp/language-reference/keywords/continue.md) keyword.</span></span> <span data-ttu-id="d5998-145">Si può uscire da un ciclo anche usando l'istruzione [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) o [throw](../../../csharp/language-reference/keywords/throw.md).</span><span class="sxs-lookup"><span data-stu-id="d5998-145">You also can exit any loop by using a [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), or [throw](../../../csharp/language-reference/keywords/throw.md) statement.</span></span>  
-  
-<span data-ttu-id="d5998-146">Il primo esempio in questo argomento mostra il tipo di ciclo `for` più comune, che definisce le opzioni seguenti per le sezioni:</span><span class="sxs-lookup"><span data-stu-id="d5998-146">The first example in this topic shows the most typical kind of `for` loop, which makes the following choices for the sections:</span></span>
-  
--   <span data-ttu-id="d5998-147">L'inizializzatore dichiara e inizializza una variabile di ciclo locale, `i`, che conta le iterazioni del ciclo.</span><span class="sxs-lookup"><span data-stu-id="d5998-147">The initializer declares and initializes a local loop variable, `i`, that maintains a count of the iterations of the loop.</span></span>  
-  
--   <span data-ttu-id="d5998-148">La condizione confronta il valore della variabile del ciclo con il valore finale noto 5.</span><span class="sxs-lookup"><span data-stu-id="d5998-148">The condition checks the value of the loop variable against a known final value, 5.</span></span>  
-  
--   <span data-ttu-id="d5998-149">Nella sezione dell'iteratore viene usata un'istruzione d'incremento in forma suffissa, `i++`, per calcolare ogni iterazione del ciclo.</span><span class="sxs-lookup"><span data-stu-id="d5998-149">The iterator section uses a postfix increment statement, `i++`, to tally each iteration of the loop.</span></span>
+```
 
-## <a name="more-examples"></a><span data-ttu-id="d5998-150">Altri esempi</span><span class="sxs-lookup"><span data-stu-id="d5998-150">More examples</span></span>
+<span data-ttu-id="832f6-108">Tutte le tre sezioni sono facoltative.</span><span class="sxs-lookup"><span data-stu-id="832f6-108">All three sections are optional.</span></span> <span data-ttu-id="832f6-109">Il corpo del ciclo è un'istruzione o un blocco di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="832f6-109">The body of the loop is either a statement or a block of statements.</span></span>
+
+<span data-ttu-id="832f6-110">L'esempio seguente illustra l'istruzione `for` con tutte le sezioni definite:</span><span class="sxs-lookup"><span data-stu-id="832f6-110">The following example shows the `for` statement with all of the sections defined:</span></span>
+
+[!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
+
+### <a name="the-initializer-section"></a><span data-ttu-id="832f6-111">Sezione *inizializzatore*</span><span class="sxs-lookup"><span data-stu-id="832f6-111">The *initializer* section</span></span>
+
+<span data-ttu-id="832f6-112">Le istruzioni nella sezione *inizializzatore* vengono eseguite una sola volta, prima dell'avvio del ciclo.</span><span class="sxs-lookup"><span data-stu-id="832f6-112">The statements in the *initializer* section are executed only once, before entering the loop.</span></span> <span data-ttu-id="832f6-113">La sezione *inizializzatore* può essere costituita da quanto segue:</span><span class="sxs-lookup"><span data-stu-id="832f6-113">The *initializer* section is either of the following:</span></span>
+
+- <span data-ttu-id="832f6-114">Dichiarazione e inizializzazione di una variabile di ciclo locale, non accessibile dall'esterno del ciclo stesso.</span><span class="sxs-lookup"><span data-stu-id="832f6-114">The declaration and initialization of a local loop variable, which can't be accessed from outside the loop.</span></span>
+
+- <span data-ttu-id="832f6-115">Zero o più istruzioni, ricavate dal seguente elenco, separate da virgole:</span><span class="sxs-lookup"><span data-stu-id="832f6-115">Zero or more statement expressions from the following list, separated by commas:</span></span>
+
+  - <span data-ttu-id="832f6-116">Istruzione di [assegnazione](../operators/assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="832f6-116">[assignment](../operators/assignment-operator.md) statement</span></span>
+
+  - <span data-ttu-id="832f6-117">Chiamata di un metodo</span><span class="sxs-lookup"><span data-stu-id="832f6-117">invocation of a method</span></span>  
+
+  - <span data-ttu-id="832f6-118">Espressione di [incremento](../operators/increment-operator.md) in forma prefissa o suffissa, ad esempio `++i` o `i++`</span><span class="sxs-lookup"><span data-stu-id="832f6-118">prefix or postfix [increment](../operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>  
+
+  - <span data-ttu-id="832f6-119">Espressione di [decremento](../operators/decrement-operator.md) in forma prefissa o suffissa, ad esempio `--i` o `i--`</span><span class="sxs-lookup"><span data-stu-id="832f6-119">prefix or postfix [decrement](../operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>  
+
+  - <span data-ttu-id="832f6-120">Creazione di un oggetto con la parola chiave [new](new-operator.md)</span><span class="sxs-lookup"><span data-stu-id="832f6-120">creation of an object by using [new](new-operator.md) keyword</span></span>
+
+  - <span data-ttu-id="832f6-121">Espressione [await](await.md)</span><span class="sxs-lookup"><span data-stu-id="832f6-121">[await](await.md) expression</span></span>
+
+<span data-ttu-id="832f6-122">La sezione *inizializzatore* dell'esempio precedente dichiara e inizializza la variabile di ciclo locale `i`:</span><span class="sxs-lookup"><span data-stu-id="832f6-122">The *initializer* section in the example above declares and initializes the local loop variable `i`:</span></span>
+
+```csharp
+int i = 0
+```
+
+### <a name="the-condition-section"></a><span data-ttu-id="832f6-123">Sezione *condizione*</span><span class="sxs-lookup"><span data-stu-id="832f6-123">The *condition* section</span></span>
+
+<span data-ttu-id="832f6-124">La sezione *condizione*, se presente, deve essere un'espressione booleana.</span><span class="sxs-lookup"><span data-stu-id="832f6-124">The *condition* section, if present, must be a boolean expression.</span></span> <span data-ttu-id="832f6-125">Tale espressione viene valutata prima di ogni iterazione del ciclo.</span><span class="sxs-lookup"><span data-stu-id="832f6-125">That expression is evaluated before every loop iteration.</span></span> <span data-ttu-id="832f6-126">Se la sezione *condizione* non è presente o l'espressione booleana restituisce `true`, viene eseguita la successiva iterazione del ciclo; in caso contrario, si esce dal ciclo.</span><span class="sxs-lookup"><span data-stu-id="832f6-126">If the *condition* section is not present or the boolean expression evaluates to `true`, the next loop iteration is executed; otherwise, the loop is exited.</span></span>
+
+<span data-ttu-id="832f6-127">La sezione *condizione* dell'esempio precedente determina se il ciclo termina in base al valore della variabile di ciclo locale:</span><span class="sxs-lookup"><span data-stu-id="832f6-127">The *condition* section in the example above determines if the loop terminates based on the value of the local loop variable:</span></span>
+
+```csharp
+i < 5
+```
+
+### <a name="the-iterator-section"></a><span data-ttu-id="832f6-128">Sezione *iteratore*</span><span class="sxs-lookup"><span data-stu-id="832f6-128">The *iterator* section</span></span>
+
+<span data-ttu-id="832f6-129">La sezione *iteratore* definisce cosa accade dopo ogni iterazione del corpo del ciclo.</span><span class="sxs-lookup"><span data-stu-id="832f6-129">The *iterator* section defines what happens after each iteration of the body of the loop.</span></span> <span data-ttu-id="832f6-130">Questa sezione contiene zero o più delle espressioni di istruzione seguenti, separate da virgole:</span><span class="sxs-lookup"><span data-stu-id="832f6-130">The *iterator* section contains zero or more of the following statement expressions, separated by commas:</span></span>  
+
+- <span data-ttu-id="832f6-131">Istruzione di [assegnazione](../operators/assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="832f6-131">[assignment](../operators/assignment-operator.md) statement</span></span>
+
+- <span data-ttu-id="832f6-132">Chiamata di un metodo</span><span class="sxs-lookup"><span data-stu-id="832f6-132">invocation of a method</span></span>  
+
+- <span data-ttu-id="832f6-133">Espressione di [incremento](../operators/increment-operator.md) in forma prefissa o suffissa, ad esempio `++i` o `i++`</span><span class="sxs-lookup"><span data-stu-id="832f6-133">prefix or postfix [increment](../operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>  
+
+- <span data-ttu-id="832f6-134">Espressione di [decremento](../operators/decrement-operator.md) in forma prefissa o suffissa, ad esempio `--i` o `i--`</span><span class="sxs-lookup"><span data-stu-id="832f6-134">prefix or postfix [decrement](../operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>  
+
+- <span data-ttu-id="832f6-135">Creazione di un oggetto con la parola chiave [new](new-operator.md)</span><span class="sxs-lookup"><span data-stu-id="832f6-135">creation of an object by using [new](new-operator.md) keyword</span></span>
+
+- <span data-ttu-id="832f6-136">Espressione [await](await.md)</span><span class="sxs-lookup"><span data-stu-id="832f6-136">[await](await.md) expression</span></span>
+
+<span data-ttu-id="832f6-137">La sezione *iteratore* dell'esempio precedente incrementa la variabile di ciclo locale:</span><span class="sxs-lookup"><span data-stu-id="832f6-137">The *iterator* section in the example above increments the local loop variable:</span></span>
+
+```csharp
+i++
+```
+
+## <a name="examples"></a><span data-ttu-id="832f6-138">Esempi</span><span class="sxs-lookup"><span data-stu-id="832f6-138">Examples</span></span>
+
+<span data-ttu-id="832f6-139">L'esempio seguente illustra alcuni utilizzi meno comuni delle sezioni dell'istruzione `for`: assegnazione di un valore a una variabile di ciclo esterna nella sezione *inizializzatore*, chiamata di un metodo sia nella sezione *inizializzatore* che nella sezione *iteratore* e modifica dei valori di due variabili nella sezione *iteratore*.</span><span class="sxs-lookup"><span data-stu-id="832f6-139">The following example illustrates several less common usages of the `for` statement sections: assigning a value to an external loop variable in the *initializer* section, invoking a method in both the *initializer* and the *iterator* sections, and changing the values of two variables in the *iterator* section.</span></span> <span data-ttu-id="832f6-140">Selezionare **Esegui** per eseguire il codice di esempio.</span><span class="sxs-lookup"><span data-stu-id="832f6-140">Select **Run** to run the example code.</span></span> <span data-ttu-id="832f6-141">Dopo l'esecuzione è possibile modificare il codice ed eseguirlo di nuovo.</span><span class="sxs-lookup"><span data-stu-id="832f6-141">After that you can modify the code and run it again.</span></span>
   
-<span data-ttu-id="d5998-151">L'esempio seguente illustra alcuni opzioni meno comuni: assegnazione di un valore a una variabile di ciclo esterno nella sezione dell'inizializzatore, chiamata del metodo `Console.WriteLine` nella sezione dell'inizializzatore e in quella dell'iteratore e modifica dei valori di due variabili nella sezione dell'iteratore.</span><span class="sxs-lookup"><span data-stu-id="d5998-151">The following example illustrates several less common choices: assigning a value to an external loop variable in the initializer section, invoking the `Console.WriteLine` method in both the initializer and the iterator sections, and changing the values of two variables in the iterator section.</span></span>
+[!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
   
-[!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+<span data-ttu-id="832f6-142">L'esempio seguente definisce il ciclo `for` infinito:</span><span class="sxs-lookup"><span data-stu-id="832f6-142">The following example defines the infinite `for` loop:</span></span>
   
-<span data-ttu-id="d5998-152">Tutte le espressioni che definiscono un'istruzione `for` sono facoltative.</span><span class="sxs-lookup"><span data-stu-id="d5998-152">All of the expressions that define a `for` statement are optional.</span></span> <span data-ttu-id="d5998-153">Ad esempio, l'istruzione seguente crea un ciclo infinito:</span><span class="sxs-lookup"><span data-stu-id="d5998-153">For example, the following statement creates an infinite loop:</span></span>
+[!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
   
-[!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="d5998-154">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="d5998-154">C# language specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="832f6-143">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="832f6-143">C# language specification</span></span>  
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
   
-## <a name="see-also"></a><span data-ttu-id="d5998-155">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d5998-155">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="832f6-144">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="832f6-144">See also</span></span>
 
-[<span data-ttu-id="d5998-156">Istruzione for (specifica del linguaggio C#)</span><span class="sxs-lookup"><span data-stu-id="d5998-156">The for statement (C# language specification)</span></span>](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
-[<span data-ttu-id="d5998-157">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="d5998-157">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-[<span data-ttu-id="d5998-158">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="d5998-158">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-[<span data-ttu-id="d5998-159">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="d5998-159">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-[<span data-ttu-id="d5998-160">foreach, in</span><span class="sxs-lookup"><span data-stu-id="d5998-160">foreach, in</span></span>](../../../csharp/language-reference/keywords/foreach-in.md)  
-[<span data-ttu-id="d5998-161">Istruzione for (C++)</span><span class="sxs-lookup"><span data-stu-id="d5998-161">for Statement (C++)</span></span>](/cpp/cpp/for-statement-cpp)  
-[<span data-ttu-id="d5998-162">Istruzioni di iterazione</span><span class="sxs-lookup"><span data-stu-id="d5998-162">Iteration Statements</span></span>](../../../csharp/language-reference/keywords/iteration-statements.md)
+[<span data-ttu-id="832f6-145">Istruzione for (specifica del linguaggio C#)</span><span class="sxs-lookup"><span data-stu-id="832f6-145">The for statement (C# language specification)</span></span>](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
+[<span data-ttu-id="832f6-146">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="832f6-146">C# Reference</span></span>](../index.md)  
+[<span data-ttu-id="832f6-147">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="832f6-147">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+[<span data-ttu-id="832f6-148">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="832f6-148">C# Keywords</span></span>](index.md)  
+[<span data-ttu-id="832f6-149">foreach, in</span><span class="sxs-lookup"><span data-stu-id="832f6-149">foreach, in</span></span>](foreach-in.md)  
+[<span data-ttu-id="832f6-150">Istruzione for (C++)</span><span class="sxs-lookup"><span data-stu-id="832f6-150">for Statement (C++)</span></span>](/cpp/cpp/for-statement-cpp)  
+[<span data-ttu-id="832f6-151">Istruzioni di iterazione</span><span class="sxs-lookup"><span data-stu-id="832f6-151">Iteration Statements</span></span>](iteration-statements.md)
