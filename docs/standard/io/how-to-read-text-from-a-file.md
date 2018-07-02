@@ -1,6 +1,6 @@
 ---
 title: 'Procedura: leggere testo da un file'
-ms.date: 03/30/2017
+ms.date: 06/19/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bb37c5beaaa529ea09fa23f31b55a0d6bc6d510
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7c54e5e55770f3df44819cdf6d2d2c866f7e0fc
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574530"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298162"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Procedura: leggere testo da un file
 Negli esempi seguenti viene illustrato come leggere il testo in modo sincrono e in modo asincrono da un file di testo usando .NET per le applicazioni desktop. In entrambi gli esempi, quando si crea l'istanza della classe <xref:System.IO.StreamReader>, si immette il percorso relativo o assoluto del file. Negli esempi si presuppone che il file denominato TestFile.txt sia nella stessa cartella dell'applicazione.  
   
- Questi esempi di codice non sono applicabili allo sviluppo di applicazioni Windows Store poiché Windows Runtime offre diversi tipi di flussi che leggono e scrivono sui file. Per un esempio che illustra come leggere il testo da un file nel contesto di un'app di Windows Store, vedere [Quickstart: Reading and writing files](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx) (Guida introduttiva: Lettura e scrittura di file). Per esempi che illustrano come eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime, vedere [Procedura: eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
+ Questi esempi di codice non sono applicabili allo sviluppo di applicazioni Windows Store poiché Windows Runtime offre tipi di flusso diversi per la lettura e la scrittura nei file. Per un esempio che illustri come leggere testo da un file in un'app di Windows Store, vedere [Quickstart: Reading and writing files](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh758325(v=win.10)) (Guida introduttiva: Lettura e scrittura di file). Per esempi che illustrino come eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime, vedere [Procedura: Eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example"></a>Esempio  
- Il primo esempio illustra un'operazione di lettura sincrona in un'applicazione console. In questo esempio viene aperto il file di testo usando un lettore del flusso, il contenuto viene copiato in una stringa, che quindi viene data in output alla console.  
+ L'esempio seguente illustra un'operazione di lettura sincrona in un'applicazione console. In questo esempio il file di testo viene aperto tramite un lettore del flusso e il contenuto viene copiato in una stringa, che viene trasmessa come output alla console.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source3.cs#3)]
  [!code-vb[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source3.vb#3)]  
   
 ## <a name="example"></a>Esempio  
- Nel secondo esempio viene illustrata l'operazione di lettura asincrona in un'applicazione Windows Presentation Foundation (WPF).  
+ L'esempio seguente illustra l'operazione di lettura asincrona in un'applicazione Windows Presentation Foundation (WPF).  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source6.cs#6)]
  [!code-vb[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source6.vb#6)]  

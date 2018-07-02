@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 7d2f81ef08892c994163d609a56008c1accadaa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8026ac821dfeed03127c894a5768a4c91b13beb3
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570611"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207173"
 ---
 # <a name="net-class-libraries"></a>Librerie di classi .NET
 
@@ -39,7 +39,7 @@ Quando si crea una libreria portabile,è necessario scegliere una configurazione
 
 Molti sviluppatori di librerie hanno scelto di usare le librerie portabili anziché creare librerie specifiche della piattaforma partendo da un'unica origine e applicando direttive di compilazione condizionale. Esistono [diversi approcci](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) per accedere alle funzionalità specifiche della piattaforma in librerie portabili. La tecnica [bait-and-switch](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) è l'approccio più adottato.
 
-### <a name="net-standard-class-libraries"></a>Librerie di classi .NET Standard
+## <a name="net-standard-class-libraries"></a>Librerie di classi .NET Standard
 
 Le librerie .NET Standard sostituiscono le librerie specifiche della piattaforma e le librerie portatili. Sono specifiche della piattaforma nel senso che espongono tutte le funzionalità della piattaforma sottostante, ad eccezione di piattaforme sintetiche o intersezioni di piattaforme. Sono portatili nel senso che funzionano su tutte le funzioni supportate.
 
@@ -60,6 +60,6 @@ Le piattaforme seguenti supportano le librerie di .NET Standard:
 
 Per altre informazioni, vedere l'argomento [.NET Standard](net-standard.md).
 
-### <a name="mono-class-libraries"></a>Librerie di classi Mono
+## <a name="mono-class-libraries"></a>Librerie di classi Mono
 
 Mono supporta le librerie di classi, inclusi i tre tipi di libreria descritti in precedenza. A ragione, Mono è stato spesso considerato un'implementazione multipiattaforma di Microsoft .NET Framework. In parte perché le librerie .NET Framework specifiche della piattaforma potevano essere eseguite in fase di esecuzione Mono senza modifiche o ricompilazione. Questa caratteristica esisteva prima che fossero create le librerie di classi portabili. Tali librerie risultano quindi una scelta obbligata per consentire la portabilità binaria tra .NET Framework e Mono, nonostante funzionasse solo in una direzione.

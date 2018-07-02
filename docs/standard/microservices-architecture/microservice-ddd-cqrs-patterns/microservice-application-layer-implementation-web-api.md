@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 7c785814c4726dd805ad7b0dccb6a3584118cc65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9572540f17e5628d7f71c94ee68f7cba17d64d07
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579756"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207638"
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Implementazione del livello dell'applicazione di microservizi tramite l'API Web
 
@@ -667,7 +667,7 @@ public class CreateOrderCommandHandler
 
 Questo è il codice che correla i comandi con i gestori comando. Il gestore è solo una semplice classe, ma eredita da RequestHandler&lt;T&gt; e MediatR verifica che venga richiamato con il payload corretto.
 
-## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-meadiatr"></a>Applicazione di problematiche trasversali quando si elaborano i comandi con i comportamenti in MeadiatR
+## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>Applicazione di problematiche trasversali quando si elaborano i comandi con i comportamenti in MediatR
 
 Un aspetto da considerare è la possibilità di applicare problematiche trasversali alla pipeline Mediator. È anche possibile osservare alla fine del codice del modulo di registrazione di Autofac come registra un tipo di comportamento, in particolare una classe LoggingBehavior personalizzata e una classe ValidatorBehavior, ma è anche possibile aggiungere altri comportamenti personalizzati.
 

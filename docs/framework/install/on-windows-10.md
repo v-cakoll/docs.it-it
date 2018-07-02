@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: f069686866c4fd0e8e380af3ef448d282df34801
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf374f9d1fd7e343e5eba868d3f686784428a2d0
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389509"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270448"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Installare .NET Framework in Windows 10 e Windows Server 2016
 
@@ -66,7 +66,7 @@ Le versioni 4.x di .NET Framework sono aggiornamenti sul posto di versioni prece
 
 - Non è possibile installare una versione precedente elencata di .NET Framework nel computer se è già installata una versione successiva.
 
-- Le versioni 4.x di .NET Framework possono essere usate per eseguire le applicazioni create per .NET Framework da 4.0 a tale versione. .NET Framework 4.7, ad esempio, può essere usato per eseguire le applicazioni create per le versioni di .NET Framework da 4.0 a 4.7. La versione più recente (.NET Framework 4.7.1) può essere usata per eseguire le applicazioni create con tutte le versioni di .NET Framework a partire dalla 4.0.
+- Le versioni 4.x di .NET Framework possono essere usate per eseguire le applicazioni create per .NET Framework da 4.0 a tale versione. .NET Framework 4.7, ad esempio, può essere usato per eseguire le applicazioni create per le versioni di .NET Framework da 4.0 a 4.7. La versione più recente (.NET Framework 4.7.2) può essere usata per eseguire le applicazioni create con tutte le versioni di .NET Framework a partire dalla 4.0.
 
 Per un elenco di tutte le versioni di .NET Framework disponibili per il download, vedere la pagina [.NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) (Download di .NET).
 

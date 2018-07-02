@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Microsoft Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: 834c71b92cb1bfd19bdc7fec8a19d3b2a87b74bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582899"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208163"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Scegliere tra app Web tradizionali e a pagina singola
 
@@ -71,10 +71,10 @@ Si noti che in molti casi le applicazioni a pagina singola devono implementare f
 Per creare applicazioni a pagina singola è necessario avere dimestichezza con JavaScript e/o TypeScript e con le tecniche e le librerie della programmazione lato client. Il team deve essere in grado di creare codice JavaScript moderno tramite un framework per applicazioni a pagina singola come Angular.
 
 > ### <a name="references--spa-frameworks"></a>Riferimenti: framework per applicazioni a pagina singola
-> - **AngularJS**  
-> <https://angularjs.org/>
-> - **Comparison of 4 Popular JavaScript Frameworks** (Confronto tra quattro framework JavaScript di grande diffusione)  
-> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
+> - **Angular**  
+> <https://angular.io>
+> - **Confronto tra diversi framework JavaScript**  
+> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
 **L'applicazione deve già esporre un'API per altri client (interni o pubblici)**
 

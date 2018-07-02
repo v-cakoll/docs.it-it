@@ -3,12 +3,12 @@ title: Compilazione di alberi delle espressioni
 description: Informazioni sulle tecniche per la creazione di alberi delle espressioni.
 ms.date: 06/20/2016
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 52e03bd1ea2635d75da6d70af6918b33b64622b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216314"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207189"
 ---
 # <a name="building-expression-trees"></a>Compilazione di alberi delle espressioni
 
@@ -43,10 +43,10 @@ var addition = Expression.Add(one, two);
 Dopo aver creato l'espressione di addizione, è possibile creare l'espressione lambda:
 
 ```csharp
-var lamdba = Expression.Lambda(addition);
+var lambda = Expression.Lambda(addition);
 ```
 
-Si tratta di un'espressione LambdaExpression molto semplice, perché non contiene argomenti.
+Si tratta di un'espressione lambda molto semplice, perché non contiene argomenti.
 Più avanti in questa sezione verrà illustrato come eseguire il mapping degli argomenti ai parametri e compilare espressioni più complesse.
 
 Per le espressioni semplici come questa, è possibile combinare tutte le chiamate in un'unica istruzione:

@@ -16,11 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 665c90ca9950424be21539a83992e1c36dc51ba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dbdb4aa70fcd14a914e1cb1b608260f1e51c1d0
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208219"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Stringhe di formato di data e ora personalizzato
 Una stringa di formato di data e ora definisce la rappresentazione di testo di un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> risultante da un'operazione di formattazione. Può anche definire la rappresentazione di un valore di data e ora richiesto in un'operazione di analisi per convertire correttamente la stringa in una data e ora. Una stringa di formato personalizzata è costituita da uno o più identificatori di formato di data e ora personalizzati. Qualsiasi stringa diversa da una [stringa di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) viene interpretata come stringa di formato di data e ora personalizzato.  
@@ -90,7 +91,7 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
 |"/"|Separatore di data.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|  
 |"*string*"<br /><br /> '*string*'|Delimitatore di stringa letterale.<br /><br /> Altre informazioni: [caratteri letterali](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|  
 |%|Definisce il carattere seguente come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|  
-|\|Il carattere di escape.<br /><br /> Altre informazioni: [caratteri letterali](#Literals) e [Uso del carattere di Escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
+|\\|Il carattere di escape.<br /><br /> Altre informazioni: [caratteri letterali](#Literals) e [Uso del carattere di Escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
 |Qualsiasi altro carattere|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.<br /><br /> Altre informazioni: [caratteri letterali](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|  
   
  Nelle sezioni seguenti vengono fornite altre informazioni su ogni identificatore di formato data e ora personalizzato. Se non specificato diversamente, ogni identificatore genera una rappresentazione di stringa identica, indipendentemente dal fatto che venga usato con un valore <xref:System.DateTime> o con un valore <xref:System.DateTimeOffset>.  

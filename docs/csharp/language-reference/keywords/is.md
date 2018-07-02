@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: c01152d016a852c15ffa1d1c82c16d6795965f31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289217"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208000"
 ---
 # <a name="is-c-reference"></a>is (Riferimenti per C#) #
 
@@ -75,7 +75,7 @@ Quando si usa il criterio del tipo per eseguire i criteri di ricerca, `is` verif
 
 dove *expr* è un'espressione che restituisce un'istanza di un tipo, *type* è il nome del tipo in cui il risultato di *expr* deve essere convertito e *varname* è l'oggetto in cui il risultato di *expr*deve essere convertito se il test `is` è `true`. 
 
-L'espressione `is` è `true` se una delle condizioni seguenti è true:
+L'espressione `is` è `true` se *expr* non è `null` e una delle condizioni seguenti è true:
 
 - *expr* è un'istanza dello stesso tipo di *type*.
 
@@ -85,7 +85,7 @@ L'espressione `is` è `true` se una delle condizioni seguenti è true:
 
 - *expr* è un'istanza di un tipo che implementa l'interfaccia *type*.
 
-Se *exp* è `true` e `is` viene usato con un'istruzione `if`, *varname* viene assegnato e ha un ambito locale solo all'interno dell'istruzione `if`.
+Se *expr* è `true` e `is` viene usato con un'istruzione `if`, *varname* viene assegnato e ha un ambito locale solo all'interno dell'istruzione `if`.
 
 Nell'esempio seguente viene usato il criterio del tipo `is` per specificare l'implementazione di un metodo <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> del tipo.
 

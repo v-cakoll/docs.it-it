@@ -3,26 +3,28 @@ title: Esecuzione di alberi delle espressioni
 description: Informazioni sull'esecuzione di alberi delle espressioni convertendoli in istruzioni eseguibili in linguaggio intermedio (IL, Intermediate Language).
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 54706cd5d8ebe60bb893bc82f05aecddae370602
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218163"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207391"
 ---
 # <a name="executing-expression-trees"></a>Esecuzione di alberi delle espressioni
 
 [Precedente -- Tipi di framework che supportano alberi delle espressioni](expression-classes.md)
 
 Un *albero delle espressioni* è una struttura dei dati che rappresenta il codice.
-Non è codice compilato ed eseguibile. Se si vuole eseguire il codice .NET che è rappresentato da un albero delle espressioni, è necessario convertirlo in istruzioni IL eseguibili. 
+Non è codice compilato ed eseguibile. Se si vuole eseguire il codice .NET che è rappresentato da un albero delle espressioni, è necessario convertirlo in istruzioni IL eseguibili.
+
 ## <a name="lambda-expressions-to-functions"></a>Espressioni lambda per funzioni
-È possibile convertire qualsiasi LambdaExpression o qualsiasi tipo derivato da LambdaExpression in IL eseguibile. Altri tipi di espressioni non possono essere convertiti direttamente in codice. Questa restrizione ha un effetto limitato nella pratica. Le espressioni lambda sono gli unici tipi di espressioni che potrebbero essere eseguite convertendole in linguaggio intermedio eseguibile (IL). (Riflettere su cosa significherebbe eseguire direttamente una `ConstantExpression`. Sarebbe utile?) Un albero delle espressioni che è una `LamdbaExpression` o un tipo derivato da `LambdaExpression` può essere convertito in IL.
+
+È possibile convertire qualsiasi LambdaExpression o qualsiasi tipo derivato da LambdaExpression in IL eseguibile. Altri tipi di espressioni non possono essere convertiti direttamente in codice. Questa restrizione ha un effetto limitato nella pratica. Le espressioni lambda sono gli unici tipi di espressioni che potrebbero essere eseguite convertendole in linguaggio intermedio eseguibile (IL). (Riflettere su cosa significherebbe eseguire direttamente una `ConstantExpression`. Sarebbe utile?) Un albero delle espressioni che è una `LambdaExpression` o un tipo derivato da `LambdaExpression` può essere convertito in IL.
 Il tipo di espressione `Expression<TDelegate>` è l'unico esempio concreto nelle librerie di .NET Core. Viene usato per rappresentare un'espressione che esegue il mapping a qualsiasi tipo delegato. Poiché questo tipo è mappato a un tipo delegato, .NET può esaminare l'espressione e generare IL per un delegato appropriato che corrisponda alla firma dell'espressione lambda. 
 
 Nella maggior parte dei casi, verrà creato un mapping semplice tra un'espressione e il delegato corrispondente. Ad esempio, un albero delle espressioni che è rappresentato da `Expression<Func<int>>` viene convertito in un delegato del tipo `Func<int>`. Per un'espressione lambda con qualsiasi tipo restituito e un elenco di argomenti, esiste un tipo delegato che rappresenta il tipo di destinazione per il codice eseguibile rappresentato dall'espressione lambda.
 
-Il tipo `LamdbaExpression` contiene i membri `Compile` e `CompileToMethod` usati per convertire un albero delle espressioni in codice eseguibile. Il metodo `Compile` crea un delegato. Il metodo `CompileToMethod` aggiorna un oggetto `MethodBuilder` con il linguaggio intermedio che rappresenta l'output compilato dell'albero delle espressioni. Si noti che `CompileToMethod` è disponibile solo nella versione desktop completa di Framework, non su .NET Core Framework.
+Il tipo `LambdaExpression` contiene i membri `Compile` e `CompileToMethod` usati per convertire un albero delle espressioni in codice eseguibile. Il metodo `Compile` crea un delegato. Il metodo `CompileToMethod` aggiorna un oggetto `MethodBuilder` con il linguaggio intermedio che rappresenta l'output compilato dell'albero delle espressioni. Si noti che `CompileToMethod` è disponibile solo nella versione desktop completa di Framework, non su .NET Core.
 
 Facoltativamente, è anche possibile specificare un `DebugInfoGenerator` che riceverà le informazioni di debug del simbolo per l'oggetto delegato generato. Ciò consente di convertire l'albero delle espressioni in un oggetto delegato e di avere informazioni di debug complete sul delegato generato.
 
@@ -35,11 +37,11 @@ var answer = func(); // Invoke Delegate
 Console.WriteLine(answer);
 ```
 
-Si noti che il tipo delegato è basato sul tipo di espressione. Se si vuole usare l'oggetto delegato in modo fortemente tipizzato, è necessario conoscere il tipo restituito e l'elenco di argomenti. Il metodo `LambdaExpression.Compile()` restituisce il tipo `Delegate`. È necessario eseguirne il cast al tipo di delegato corretto affinché gli strumenti in fase di compilazione controllino l'elenco di argomenti del tipo restituito.
+Si noti che il tipo delegato è basato sul tipo di espressione. Se si vuole usare l'oggetto delegato in modo fortemente tipizzato, è necessario conoscere il tipo restituito e l'elenco di argomenti. Il metodo `LambdaExpression.Compile()` restituisce il tipo `Delegate`. È necessario eseguirne il cast al tipo di delegato corretto affinché gli strumenti in fase di compilazione controllino l'elenco di argomenti o il tipo restituito.
 
 ## <a name="execution-and-lifetimes"></a>Esecuzione e durate
 
-Si esegue il codice richiamando il delegato creato durante la chiamata a `LamdbaExpression.Compile()`. È possibile vederlo qui sopra dove `add.Compile()` restituisce un delegato. Richiamando il delegato, la chiamata a `func()` esegue il codice.
+Si esegue il codice richiamando il delegato creato durante la chiamata a `LambdaExpression.Compile()`. È possibile vederlo qui sopra dove `add.Compile()` restituisce un delegato. Richiamando il delegato, la chiamata a `func()` esegue il codice.
 
 Il delegato rappresenta il codice nell'albero delle espressioni. È possibile mantenere il punto di controllo al delegato e richiamarlo in un secondo momento. Non è necessario compilare l'albero delle espressioni ogni volta che si vuole eseguire il codice che rappresenta. Tenere presente che gli alberi delle espressioni non sono modificabili e la compilazione dello stesso albero delle espressioni in un secondo momento creerà un delegato che esegue lo stesso codice.
 

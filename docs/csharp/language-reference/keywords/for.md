@@ -1,113 +1,107 @@
 ---
 title: for (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 06/13/2018
 f1_keywords:
 - for
 - for_CSharpKeyword
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 2c099411499c6ca8396c55955bdc634e48caf621
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: beac7727c8ce83d8ea20f0fc578f80ceef3053e7
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34306527"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208010"
 ---
 # <a name="for-c-reference"></a>for (Riferimenti per C#)
 
-Usando un ciclo `for`, è possibile eseguire ripetutamente un'istruzione o un blocco di istruzioni fino a quando un'espressione specificata restituisce `false`. Questo tipo di ciclo è utile per eseguire l'iterazione su matrici e per altre applicazioni in cui si conosce in anticipo quante volte il ciclo deve eseguire l'iterazione.
-  
-## <a name="example"></a>Esempio
+L'istruzione `for` esegue un'istruzione o un blocco di istruzioni mentre un'espressione booleana specificata restituisce `true`.
 
-Nell'esempio seguente il valore `i` viene scritto nella console e viene incrementato di 1 durante ogni iterazione del ciclo:
+In un punto qualsiasi all'interno del blocco dell'istruzione `for` è possibile uscire dal ciclo usando l'istruzione [break](break.md) o passare all'iterazione successiva nel ciclo con l'istruzione [continue](continue.md). Si può uscire da un ciclo `for` anche usando l'istruzione [goto](goto.md), [return](return.md) o [throw](throw.md).
   
-[!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]
-  
-L'[istruzione for](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) nell'esempio precedente esegue le azioni seguenti:
-  
-1.  Prima viene stabilito il valore iniziale della variabile `i`. Questo passaggio viene eseguito una sola volta, indipendentemente da quante volte viene ripetuto il ciclo. È possibile pensare all'inizializzazione come a un'operazione che viene eseguita all'esterno del processo di ciclo.
-  
-2.  Per valutare la condizione (`i <= 5`), il valore di `i` viene confrontato con 5.
-  
-    -   Se `i` è minore o uguale a 5, la condizione restituisce `true` e si verificano le azioni seguenti.  
-  
-        1.  L'istruzione `Console.WriteLine` nel corpo del ciclo visualizza il valore di `i`.  
-  
-        2.  Il valore di `i` viene incrementato di 1.  
-  
-        3.  Il ciclo ritorna all'inizio del passaggio 2 per valutare nuovamente la condizione.  
-  
-    -   Se `i` è maggiore di 5, la condizione restituisce `false` e si esce dal ciclo.  
-  
-Si noti che, se il valore iniziale di `i` è maggiore di 5, il corpo del ciclo non viene eseguito neppure una volta.
+## <a name="structure-of-the-for-statement"></a>Struttura dell'istruzione `for`
 
-## <a name="sections-of-a-for-statement"></a>Sezioni di un'istruzione for
+L'istruzione `for` definisce le sezioni *inizializzatore*, *condizione* e *iteratore*:
   
-Ogni [istruzione for](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) definisce le sezioni di *inizializzatore*, *condizione* e *iteratore*. In queste sezioni viene solitamente definito quante volte il ciclo esegue l'iterazione.  
-  
-```csharp  
+```csharp
 for (initializer; condition; iterator)  
     body  
-```  
-  
-Gli scopi delle sezioni sono i seguenti:
-  
--   Nella sezione dell'inizializzatore vengono impostate le condizioni iniziali. Le istruzioni in questa sezione sono eseguite una sola volta, prima che inizi il ciclo. Questa sezione può contenere solo una delle due opzioni seguenti.  
-  
-    -   Dichiarazione e inizializzazione di una variabile di ciclo locale, come illustrato nel primo esempio (`int i = 1`). La variabile è locale rispetto al ciclo e non è possibile accedervi dall'esterno del ciclo.  
-  
-    -   Zero o più istruzioni, ricavate dal seguente elenco, separate da virgole.  
-  
-        -   Istruzione di [assegnazione](../../../csharp/language-reference/operators/assignment-operator.md)  
-  
-        -   Chiamata di un metodo  
-  
-        -   Espressione di [incremento](../../../csharp/language-reference/operators/increment-operator.md) in forma prefissa o suffissa, ad esempio `++i` o `i++`  
-  
-        -   Espressione di [decremento](../../../csharp/language-reference/operators/decrement-operator.md) in forma prefissa o suffissa, ad esempio `--i` o `i--`  
-  
-        -   Creazione di un oggetto con [new](../../../csharp/language-reference/keywords/new-operator.md)  
-  
-        -   Espressione [await](../../../csharp/language-reference/keywords/await.md)  
-  
--   La sezione della condizione contiene un'espressione booleana valutata per determinare se uscire dal ciclo oppure ripeterlo.  
-  
--   Nella sezione dell'iteratore viene definito cosa accade dopo ogni iterazione del corpo del ciclo. Questa sezione contiene zero o più delle espressioni di istruzioni seguenti, separate da virgole:  
-  
-    -   Istruzione di [assegnazione](../../../csharp/language-reference/operators/assignment-operator.md)  
-  
-    -   Chiamata di un metodo  
-  
-    -   Espressione di [incremento](../../../csharp/language-reference/operators/increment-operator.md) in forma prefissa o suffissa, ad esempio `++i` o `i++`  
-  
-    -   Espressione di [decremento](../../../csharp/language-reference/operators/decrement-operator.md) in forma prefissa o suffissa, ad esempio `--i` o `i--`  
-  
-    -   Creazione di un oggetto con [new](../../../csharp/language-reference/keywords/new-operator.md)  
-  
-    -   Espressione [await](../../../csharp/language-reference/keywords/await.md)  
-  
--   Il corpo del ciclo è costituito da un'istruzione, un'istruzione vuota o un blocco di istruzioni, creato racchiudendo tra parentesi zero o più istruzioni.  
-  
-     È possibile interrompere un ciclo `for` con la parola chiave [break](../../../csharp/language-reference/keywords/break.md) oppure è possibile usare la parola chiave [continue](../../../csharp/language-reference/keywords/continue.md) per passare all'iterazione successiva. Si può uscire da un ciclo anche usando l'istruzione [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) o [throw](../../../csharp/language-reference/keywords/throw.md).  
-  
-Il primo esempio in questo argomento mostra il tipo di ciclo `for` più comune, che definisce le opzioni seguenti per le sezioni:
-  
--   L'inizializzatore dichiara e inizializza una variabile di ciclo locale, `i`, che conta le iterazioni del ciclo.  
-  
--   La condizione confronta il valore della variabile del ciclo con il valore finale noto 5.  
-  
--   Nella sezione dell'iteratore viene usata un'istruzione d'incremento in forma suffissa, `i++`, per calcolare ogni iterazione del ciclo.
+```
 
-## <a name="more-examples"></a>Altri esempi
+Tutte le tre sezioni sono facoltative. Il corpo del ciclo è un'istruzione o un blocco di istruzioni.
+
+L'esempio seguente illustra l'istruzione `for` con tutte le sezioni definite:
+
+[!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
+
+### <a name="the-initializer-section"></a>Sezione *inizializzatore*
+
+Le istruzioni nella sezione *inizializzatore* vengono eseguite una sola volta, prima dell'avvio del ciclo. La sezione *inizializzatore* può essere costituita da quanto segue:
+
+- Dichiarazione e inizializzazione di una variabile di ciclo locale, non accessibile dall'esterno del ciclo stesso.
+
+- Zero o più istruzioni, ricavate dal seguente elenco, separate da virgole:
+
+  - Istruzione di [assegnazione](../operators/assignment-operator.md)
+
+  - Chiamata di un metodo  
+
+  - Espressione di [incremento](../operators/increment-operator.md) in forma prefissa o suffissa, ad esempio `++i` o `i++`  
+
+  - Espressione di [decremento](../operators/decrement-operator.md) in forma prefissa o suffissa, ad esempio `--i` o `i--`  
+
+  - Creazione di un oggetto con la parola chiave [new](new-operator.md)
+
+  - Espressione [await](await.md)
+
+La sezione *inizializzatore* dell'esempio precedente dichiara e inizializza la variabile di ciclo locale `i`:
+
+```csharp
+int i = 0
+```
+
+### <a name="the-condition-section"></a>Sezione *condizione*
+
+La sezione *condizione*, se presente, deve essere un'espressione booleana. Tale espressione viene valutata prima di ogni iterazione del ciclo. Se la sezione *condizione* non è presente o l'espressione booleana restituisce `true`, viene eseguita la successiva iterazione del ciclo; in caso contrario, si esce dal ciclo.
+
+La sezione *condizione* dell'esempio precedente determina se il ciclo termina in base al valore della variabile di ciclo locale:
+
+```csharp
+i < 5
+```
+
+### <a name="the-iterator-section"></a>Sezione *iteratore*
+
+La sezione *iteratore* definisce cosa accade dopo ogni iterazione del corpo del ciclo. Questa sezione contiene zero o più delle espressioni di istruzione seguenti, separate da virgole:  
+
+- Istruzione di [assegnazione](../operators/assignment-operator.md)
+
+- Chiamata di un metodo  
+
+- Espressione di [incremento](../operators/increment-operator.md) in forma prefissa o suffissa, ad esempio `++i` o `i++`  
+
+- Espressione di [decremento](../operators/decrement-operator.md) in forma prefissa o suffissa, ad esempio `--i` o `i--`  
+
+- Creazione di un oggetto con la parola chiave [new](new-operator.md)
+
+- Espressione [await](await.md)
+
+La sezione *iteratore* dell'esempio precedente incrementa la variabile di ciclo locale:
+
+```csharp
+i++
+```
+
+## <a name="examples"></a>Esempi
+
+L'esempio seguente illustra alcuni utilizzi meno comuni delle sezioni dell'istruzione `for`: assegnazione di un valore a una variabile di ciclo esterna nella sezione *inizializzatore*, chiamata di un metodo sia nella sezione *inizializzatore* che nella sezione *iteratore* e modifica dei valori di due variabili nella sezione *iteratore*. Selezionare **Esegui** per eseguire il codice di esempio. Dopo l'esecuzione è possibile modificare il codice ed eseguirlo di nuovo.
   
-L'esempio seguente illustra alcuni opzioni meno comuni: assegnazione di un valore a una variabile di ciclo esterno nella sezione dell'inizializzatore, chiamata del metodo `Console.WriteLine` nella sezione dell'inizializzatore e in quella dell'iteratore e modifica dei valori di due variabili nella sezione dell'iteratore.
+[!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
   
-[!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+L'esempio seguente definisce il ciclo `for` infinito:
   
-Tutte le espressioni che definiscono un'istruzione `for` sono facoltative. Ad esempio, l'istruzione seguente crea un ciclo infinito:
-  
-[!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
+[!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
@@ -116,9 +110,9 @@ Tutte le espressioni che definiscono un'istruzione `for` sono facoltative. Ad es
 ## <a name="see-also"></a>Vedere anche
 
 [Istruzione for (specifica del linguaggio C#)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
-[Riferimenti per C#](../../../csharp/language-reference/index.md)  
-[Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-[Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
-[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+[Riferimenti per C#](../index.md)  
+[Guida per programmatori C#](../../programming-guide/index.md)  
+[Parole chiave di C#](index.md)  
+[foreach, in](foreach-in.md)  
 [Istruzione for (C++)](/cpp/cpp/for-statement-cpp)  
-[Istruzioni di iterazione](../../../csharp/language-reference/keywords/iteration-statements.md)
+[Istruzioni di iterazione](iteration-statements.md)
