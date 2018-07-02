@@ -120,7 +120,6 @@
 ### [Output pubblicato degli unit test](core/testing/unit-testing-published-output.md)
 ### [Live Unit Testing di progetti .NET Core con Visual Studio](/visualstudio/test/live-unit-testing-start)
 ## [Controllo delle versioni](core/versions/index.md)
-### [Supporto di .NET Core](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
 ## [Catalogo Runtime IDentifier](core/rid-catalog.md)
 ## [Panoramica di .NET Core SDK](core/sdk.md)
