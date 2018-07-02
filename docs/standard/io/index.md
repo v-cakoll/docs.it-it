@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63767a3ba2831ca9cadd9b99998eb871780143e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40eeeab159bdef9fc286374fde8c1c1d3a9f5c2b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579042"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105654"
 ---
 # <a name="file-and-stream-io"></a>I/O di file e di flussi
 I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati da o verso un supporto di archiviazione. In .NET Framework gli spazi dei nomi `System.IO` contengono i tipi che consentono la lettura e la scrittura, sia in modo sincrono che in modo asincrono, su flussi di dati e file. Questi spazi dei nomi contengono anche i tipi che eseguono la compressione e la decompressione dei file e i tipi che consentono la comunicazione tra le pipe e le porte seriali.  
@@ -26,6 +26,8 @@ I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati d
   
 ## <a name="files-and-directories"></a>File e directory  
  È possibile usare i tipi nello spazio dei nomi <xref:System.IO?displayProperty=nameWithType> per interagire con i file e le directory. Ad esempio, è possibile ottenere e impostare le proprietà dei file e delle directory e recuperare le raccolte di file e directory in base ai criteri di ricerca.  
+
+Per le convenzioni di denominazione dei percorsi e i modi in cui esprimere un percorso di file per i sistemi Windows, con la sintassi dei dispositivi DOS supportata in .NET Core 1.1 e versioni successive e .NET Framework 4.6.2 e versioni successive, vedere [Formati dei percorsi di file nei sistemi Windows](file-path-formats.md). 
   
  Di seguito sono riportate alcune classi di file e directory comunemente usate:  
   

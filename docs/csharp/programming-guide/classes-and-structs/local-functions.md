@@ -5,11 +5,12 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d454621f82e499960af4af16b17ac68f3cb5f70f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 208ac3d4a7b803dd081edfd9f5227a779f7cf211
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805620"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funzioni locali (Guida per programmatori C#)
 
@@ -73,7 +74,7 @@ Nell'esempio seguente viene usato un metodo asincrono denominato `GetMultipleAsy
 
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
 
-Come per l'iteratore di metodo, è possibile effettuare il refactoring del codice dell'esempio per eseguire la convalida prima di chiamare il metodo asincrono. Come illustrato dall'output dell'esempio seguente, <xref:System.ArgumentOutOfRangeException> non è stata sottoposta a wrapping in una <x:System.AggregateException>.
+Come per l'iteratore di metodo, è possibile effettuare il refactoring del codice dell'esempio per eseguire la convalida prima di chiamare il metodo asincrono. Come illustrato dall'output dell'esempio seguente, l'eccezione <xref:System.ArgumentOutOfRangeException> non viene sottoposta a wrapping in un'eccezione <xref:System.AggregateException>.
 
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 

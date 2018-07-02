@@ -4,11 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 083d2a8c6a0d1649f8bfb2c21a92fb43381fe9ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb6d412ee91ab8d2c97a4917f23ee914e3fb9068
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805568"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementare attività in background in microservizi con IHostedService e la classe BackgroundService
 
@@ -26,7 +27,7 @@ Si noti la differenza tra `WebHost` e `Host`. Un `WebHost` (classe base che impl
 
 Un `Host` (classe base che implementa `IHost`), tuttavia, è un elemento del tutto nuovo in .NET Core 2.1. In pratica, un `Host` consente di avere un'infrastruttura simile a quella che si ha con `WebHost` (aggiunta di dipendenze, i servizi ospitati e così via), ma in questo caso si avrà un processo semplice e più snello come host, senza elementi correlati a MVC, API Web o funzionalità del server HTTP.
 
-Di conseguenza, è possibile scegliere e creare un processo host specializzato con IHost per gestire i servizi ospitati e nient'altro, ad esempio un microservizio realizzato solo per l'hosting di `IHostedServices`, oppure è possibile in alternativa estendere un `WebHost` esistente di ASP.NET Core, ad esempio un'API Web di ASP.NET Core o un'app MVC già esistenti. 
+Di conseguenza, è possibile scegliere e creare un processo host specializzato con IHost per gestire i servizi ospitati e nient'altro, ad esempio un microservizio realizzato solo per l'hosting di `IHostedServices`, oppure è possibile in alternativa estendere un `WebHost` esistente di ASP.NET Core, ad esempio un'API Web di ASP.NET Core o un'app MVC già esistente. 
 
 Ogni approccio presenta vantaggi e svantaggi in base alle esigenze aziendali e di scalabilità. In sostanza, se le attività in background non hanno nulla a che fare con HTTP (IWebHost), è consigliabile usare IHost, quando disponibile in .NET Core 2.1.
 
@@ -99,7 +100,7 @@ Lo sviluppatore è responsabile della gestione dell'azione di arresto o dei serv
 
 È possibile procedere alla creazione da zero di una classe personalizzata del servizio ospitato e implementare il `IHostedService`, come è necessario fare quando si usa .NET Core 2.0. 
 
-Tuttavia, perché la maggior parte delle attività in background avrà esigenze simili per quanto riguarda la gestione dei token di annullamento e altre operazioni tipiche, .NET Core 2.1 fornirà una classe base astratta molto pratica da cui è possibile derivare, denominata BackgroundService.
+Tuttavia, poiché la maggior parte delle attività in background avrà esigenze simili per quanto riguarda la gestione dei token di annullamento e altre operazioni tipiche, .NET Core 2.1 fornirà una classe di base astratta molto pratica per la derivazione, denominata BackgroundService.
 
 Tale classe esegue il lavoro principale necessario per configurare l'attività in background. Si noti che questa classe sarà disponibile nella libreria .NET Core 2.1, dunque non è necessario scriverla.
 
@@ -193,7 +194,7 @@ public class GracePeriodManagerService : BackgroundService
             {
                 _logger.LogDebug($"GracePeriod task doing background work.");
 
-                // This eShopOnContainers method is quering a database table 
+                // This eShopOnContainers method is querying a database table 
                 // and publishing events into the Event Bus (RabbitMS / ServiceBus)
                 CheckConfirmedGracePeriodOrders();
 

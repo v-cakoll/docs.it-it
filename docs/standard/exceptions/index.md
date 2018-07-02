@@ -1,24 +1,24 @@
 ---
-title: Gestione e generazione di eccezioni
-ms.date: 03/30/2017
+title: Gestione e generazione di eccezioni in .NET
+ms.date: 06/19/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- exceptions [.NET Framework], handling
+- exceptions [.NET], handling
 - runtime, exceptions
 - filtering exceptions
-- errors [.NET Framework], exceptions
-- exceptions [.NET Framework], throwing
-- exceptions [.NET Framework]
+- errors [.NET], exceptions
+- exceptions [.NET], throwing
+- exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b71ffd9bfcfcb048f148ac1a3a418c03b9834ea2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a278940528966e32646a3551b4c133223de9746e
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575453"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298344"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Gestione e generazione di eccezioni in .NET
 
@@ -26,7 +26,7 @@ Le applicazioni devono essere in grado di gestire in modo coerente gli errori ch
 
 ## <a name="exceptions"></a>Eccezioni
 
-Un'eccezione è una condizione di errore o un comportamento imprevisto riscontrato da un programma in esecuzione. Le eccezioni possono essere generate in caso di errori nel codice dell'applicazione o nel codice chiamato (ad esempio una libreria condivisa), in caso di risorse del sistema operativo non disponibili, di condizioni impreviste riscontrate dal runtime (ad esempio codice impossibile da verificare) e così via. L'applicazione è in grado di gestire alcune di queste condizioni, altre no. Sebbene sia possibile gestire gran parte delle eccezioni dell'applicazione, la maggior parte delle eccezioni di runtime risulta ingestibile.
+Un'eccezione è una condizione di errore o un comportamento imprevisto riscontrato da un programma in esecuzione. Eccezioni possono essere generate in caso di errori nel codice dell'applicazione o nel codice chiamato (ad esempio una libreria condivisa), in caso di risorse del sistema operativo non disponibili, di condizioni impreviste riscontrate dal runtime (ad esempio codice impossibile da verificare) e così via. L'applicazione è in grado di gestire alcune di queste condizioni, altre no. Sebbene sia possibile gestire gran parte delle eccezioni dell'applicazione, la maggior parte delle eccezioni di runtime risulta ingestibile.
 
 In .NET un'eccezione è un oggetto che eredita dalla classe <xref:System.Exception?displayProperty=nameWithType>. Le eccezioni vengono generate dalle aree di codice in cui si è verificato un problema. Ogni eccezione viene passata ai livelli superiori dello stack finché non viene gestita dall'applicazione o non si arresta il programma.
 
@@ -42,32 +42,31 @@ In precedenza, il modello di gestione degli errori di un linguaggio si basava su
 
 - È possibile aggiungere codice per la gestione delle eccezioni a un'applicazione per aumentare l'affidabilità dei programmi.
 
-Le eccezioni presentano vantaggi rispetto ad altri metodi di notifica degli errori, quali i codici restituiti. Gli errori vengono sempre rilevati poiché se viene generata un'eccezione e l'eccezione non viene gestita, il runtime termina l'applicazione. I valori non validi non continuano a propagarsi nel sistema quando il codice non riesce a verificare la presenza di un codice di errore restituito. 
+Le eccezioni presentano vantaggi rispetto ad altri metodi di notifica degli errori, quali i codici restituiti. Gli errori vengono sempre rilevati poiché se viene generata un'eccezione e l'eccezione non viene gestita, il runtime termina l'applicazione. I valori non validi non continuano a propagarsi nel sistema quando il codice non riesce a verificare la presenza di un codice di errore restituito.
 
 ## <a name="common-exceptions"></a>Eccezioni comuni
 
 Nella tabella seguente sono elencate alcune eccezioni comuni con esempi di possibili cause.
 
-| Tipo di eccezione | Tipo base | Descrizione | Esempio |
-| -------------- | --------- | ----------- | ------- |
-| <xref:System.Exception> | <xref:System.Object> | Classe base per tutte le eccezioni. | Nessuno (usare una classe derivata di questa eccezione). |
-| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | Generata dal runtime solo quando una matrice viene indicizzata in modo non corretto. | Indicizzazione di una matrice esternamente al relativo intervallo valido: `arr[arr.Length+1]` |
-| <xref:System.NullReferenceException> | <xref:System.Exception> | Generata dal runtime solo quando viene fatto riferimento a un oggetto Null. | `object o = null; o.ToString();` |
-| <xref:System.InvalidOperationException> | <xref:System.Exception> | Generata dai metodi con uno stato non valido. | Chiamata di `Enumerator.GetNext()` dopo la rimozione di un elemento dalla raccolta sottostante. |
-| <xref:System.ArgumentException> | <xref:System.Exception> | Classe base per tutte le eccezioni di argomento. | Nessuno (usare una classe derivata di questa eccezione). |
-| <xref:System.ArgumentNullException> | <xref:System.Exception> | Generata dai metodi che non consentono un argomento Null. | `String s = null; "Calculate".IndexOf (s);` |
-| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | Generata dai metodi che verificano se gli argomenti sono compresi in un determinato intervallo. | `String s = "string"; s.Substring(s.Length+1);` |
+| Tipo di eccezione | Descrizione | Esempio |
+| -------------- | ----------- | ------- |
+| <xref:System.Exception> | Classe base per tutte le eccezioni. | Nessuno (usare una classe derivata di questa eccezione). |
+| <xref:System.IndexOutOfRangeException> | Generata dal runtime solo quando una matrice viene indicizzata in modo non corretto. | Indicizzazione di una matrice esternamente al relativo intervallo valido: <br /> `arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | Generata dal runtime solo quando viene fatto riferimento a un oggetto Null. | `object o = null;` <br /> `o.ToString();` |
+| <xref:System.InvalidOperationException> | Generata dai metodi con uno stato non valido. | Chiamata di `Enumerator.MoveNext()` dopo la rimozione di un elemento dalla raccolta sottostante. |
+| <xref:System.ArgumentException> | Classe base per tutte le eccezioni di argomento. | Nessuno (usare una classe derivata di questa eccezione). |
+| <xref:System.ArgumentNullException> | Generata dai metodi che non consentono un argomento Null. | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
+| <xref:System.ArgumentOutOfRangeException> | Generata dai metodi che verificano se gli argomenti sono compresi in un determinato intervallo. | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Classe e proprietà dell'eccezione](exception-class-and-properties.md)
-* [Procedura: Usare il blocco try/catch per l'intercettazione di eccezioni](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-* [Procedura: Usare eccezioni specifiche in un blocco catch](how-to-use-specific-exceptions-in-a-catch-block.md)
-* [Procedura: Come generare in modo esplicito le eccezioni](how-to-explicitly-throw-exceptions.md)
-* [Procedura: Creare eccezioni definite dall'utente](how-to-create-user-defined-exceptions.md)
-* [Uso di gestori eccezioni filtrati dall'utente](using-user-filtered-exception-handlers.md)
-* [Procedura: Usare blocchi Finally](how-to-use-finally-blocks.md)
-* [Gestione di eccezioni per interoperabilità COM](handling-com-interop-exceptions.md)
-* [Procedure consigliate per le eccezioni](best-practices-for-exceptions.md)
-
-Per altre informazioni sull'uso delle eccezioni in .NET, vedere [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Informazioni per gli sviluppatori sulle eccezioni nel runtime).
+[Classe e proprietà dell'eccezione](exception-class-and-properties.md)  
+[Procedura: Usare il blocco try/catch per l'intercettazione di eccezioni](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
+[Procedura: Usare eccezioni specifiche in un blocco catch](how-to-use-specific-exceptions-in-a-catch-block.md)  
+[Procedura: Come generare in modo esplicito le eccezioni](how-to-explicitly-throw-exceptions.md)  
+[Procedura: Creare eccezioni definite dall'utente](how-to-create-user-defined-exceptions.md)  
+[Uso di gestori eccezioni filtrati dall'utente](using-user-filtered-exception-handlers.md)  
+[Procedura: Usare blocchi Finally](how-to-use-finally-blocks.md)  
+[Gestione di eccezioni per interoperabilità COM](handling-com-interop-exceptions.md)  
+[Procedure consigliate per le eccezioni](best-practices-for-exceptions.md)  
+[What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Tutto quello che ogni sviluppatore deve sapere sulle eccezioni in runtime).

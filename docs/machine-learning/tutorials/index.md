@@ -2,12 +2,12 @@
 title: Esercitazioni di ML.NET
 description: Queste esercitazioni di ML.NET aiutano a creare soluzioni di intelligenza artificiale personalizzate e a integrarle nelle applicazioni .NET.
 ms.date: 06/06/2018
-ms.openlocfilehash: 9e84df5897d846e2ab7dcfbb2823d9e6aad6c9ec
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: 881398e3fda47c0faae2ba3aa9dd43d74fd93cb4
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231375"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298331"
 ---
 # <a name="mlnet-tutorials"></a>Esercitazioni di ML.NET
 

@@ -1,21 +1,22 @@
 ---
-title: Utilizzo di una libreria di classi con .NET Core in Visual Studio 2017
+title: Uso di una libreria .NET Standard in Visual Studio 2017
 description: Informazioni su come chiamare i membri di una libreria di classi con Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 0a7002f2a5dba5a5aad32a83a43a933cd2cc5722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e71001ee8595741119293304190fd9ef4251148
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827313"
 ---
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Utilizzo di una libreria di classi con .NET Core in Visual Studio 2017
+# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Uso di una libreria .NET Standard in Visual Studio 2017
 
-Dopo aver creato una libreria di classi seguendo i passaggi riportati in [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](./library-with-visual-studio.md) o [Compilazione di una libreria di classi Visual Basic con .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md), averla testata in [Test di una libreria di classi .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md) e dopo aver compilato una versione di rilascio della libreria, il passaggio successivo consiste nel rendere tale libreria disponibile ai chiamanti. Questa operazione può essere eseguita in due modi diversi:
+Dopo aver creato una libreria di classi .NET Standard seguendo i passaggi riportati in [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](./library-with-visual-studio.md) o [Compilazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md), dopo averla testata in [Test di una libreria di classi con .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md) e dopo aver compilato una versione di rilascio della libreria, il passaggio successivo consiste nel rendere tale libreria disponibile per i chiamanti. Questa operazione può essere eseguita in due modi diversi:
 
 * Se la libreria verrà usata da una sola soluzione, ad esempio se è un componente di un'unica applicazione di grandi dimensioni, è possibile includerla come progetto all'interno della soluzione.
 
@@ -48,7 +49,7 @@ Dopo aver creato una libreria di classi seguendo i passaggi riportati in [Creazi
 
    [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
 
-   Il codice usa la proprietà [Console.WindowHeight](xref:System.Console.WindowHeight) per determinare il numero di righe della finestra della console. Quando il valore della proprietà [Console.CursorTop](xref:System.Console.CursorTop) è maggiore o uguale al numero di righe della finestra della console, il codice cancella la finestra e visualizza un messaggio.
+   Il codice usa la variabile `row` per mantenere il conteggio del numero di righe di dati scritti nella finestra della console. Ogni volta che è maggiore o uguale a 25, il codice cancella la finestra della console e visualizza un messaggio per l'utente.
 
    Il programma richiede all'utente di immettere una stringa. Indica se la stringa inizia con un carattere maiuscolo. Se l'utente preme INVIO senza immettere una stringa, l'applicazione viene terminata e la finestra della console viene chiusa.
 
@@ -78,7 +79,7 @@ Dopo aver creato una libreria di classi seguendo i passaggi riportati in [Creazi
 
     [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
-   Il codice usa la proprietà [Console.WindowHeight](xref:System.Console.WindowHeight) per determinare il numero di righe della finestra della console. Quando il valore della proprietà [Console.CursorTop](xref:System.Console.CursorTop) è maggiore o uguale al numero di righe della finestra della console, il codice cancella la finestra e visualizza un messaggio.
+   Il codice usa la variabile `row` per mantenere il conteggio del numero di righe di dati scritti nella finestra della console. Ogni volta che è maggiore o uguale a 25, il codice cancella la finestra della console e visualizza un messaggio per l'utente.
 
    Il programma richiede all'utente di immettere una stringa. Indica se la stringa inizia con un carattere maiuscolo. Se l'utente preme INVIO senza immettere una stringa, l'applicazione viene terminata e la finestra della console viene chiusa.
 

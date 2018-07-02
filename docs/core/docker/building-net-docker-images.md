@@ -6,11 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f539efe15ce68a77890538430a170da64ff325e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827339"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Compilazione di immagini Docker per applicazioni .NET Core
 
@@ -47,7 +48,7 @@ Durante lo sviluppo, la compilazione e l'esecuzione di applicazioni nei contenit
     * i file con estensione js e css
 
 
-Il motivo per includere l'output del comando `dotnet publish` nell'immagine di produzione è mantenere il più possibile ridotte le dimensioni.
+Il motivo per includere l'output del comando `dotnet publish` nell'immagine di produzione è mantenerne il più possibile ridotte le dimensioni.
 
 Alcune immagini .NET Core condividono i livelli tra tag diversi, quindi il download del tag più recente è un processo relativamente leggero. Se è già disponibile una versione precedente nel computer in uso, questa architettura consente di ridurre lo spazio su disco necessario.
 
@@ -57,7 +58,7 @@ Quando più applicazioni usano immagini comuni nello stesso computer, la memoria
 
 Per raggiungere gli obiettivi sopra descritti, in [`microsoft/dotnet`](https://hub.docker.com/r/microsoft/dotnet/) sono disponibili varianti delle immagini.
 
-* `microsoft/dotnet:<version>-sdk` (`microsoft/dotnet:2.0.0-sdk`). Questa immagine contiene .NET Core SDK che include gli strumenti .NET Core e quelli dell'interfaccia della riga di comando. Questa immagine è mappata allo **scenario di sviluppo**. Usare questa immagine per operazioni locali di sviluppo, debug e testing unità. Questa immagine può essere usata anche per gli scenari di **compilazione**. L'uso di `microsoft/dotnet:sdk` consente di ottenere sempre la versione più recente.
+* `microsoft/dotnet:<version>-sdk` (`microsoft/dotnet:2.1-sdk`). Questa immagine contiene .NET Core SDK che include gli strumenti .NET Core e quelli dell'interfaccia della riga di comando. Questa immagine è mappata allo **scenario di sviluppo**. Usare questa immagine per operazioni locali di sviluppo, debug e testing unità. Questa immagine può essere usata anche per gli scenari di **compilazione**. L'uso di `microsoft/dotnet:sdk` consente di ottenere sempre la versione più recente.
 
 > [!TIP]
 > In caso di dubbi sulle effettive esigenze, è possibile usare l'immagine `microsoft/dotnet:<version>-sdk`. In quanto immagine "de facto", è progettata per l'uso come contenitore provvisorio (montare il codice sorgente e avviare il contenitore per avviare l'app) e come immagine di base da cui compilare altre immagini.
@@ -79,9 +80,9 @@ Versioni più recenti di ciascuna variante:
 
 ## <a name="samples-to-explore"></a>Esempi da esplorare
 
-* [Questo esempio di Docker per ASP.NET Core](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) illustra un modello di procedura consigliata per la compilazione di immagini Docker per app ASP.NET Core per la produzione. L'esempio usa contenitori sia Linux che Windows.
+* [Questo esempio di Docker per ASP.NET Core](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp) illustra un modello di procedura consigliata per la compilazione di immagini Docker per app ASP.NET Core per la produzione. L'esempio usa contenitori sia Linux che Windows.
 
-* Questo esempio di Docker per .NET Core illustra un modello di procedura consigliata per la [compilazione di immagini Docker per app .NET Core per la produzione](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod).
+* Questo esempio di Docker per .NET Core illustra un modello di procedura consigliata per la [compilazione di immagini Docker per app .NET Core per la produzione](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp).
 
 ## <a name="your-first-aspnet-core-docker-app"></a>La prima app Docker ASP.NET Core
 
@@ -101,9 +102,9 @@ Usa la [funzionalità di compilazione in più fasi di Docker](https://docs.docke
 
 Per compilare ed eseguire, installare gli elementi seguenti:
 
-#### <a name="net-core-20-sdk"></a>.NET Core 2.0 SDK
+#### <a name="net-core-21-sdk"></a>.NET Core 2.1 SDK
 
-* Installare [.NET Core SDK 2.0](https://www.microsoft.com/net/core).
+* Installare [.NET Core SDK 2.1](https://www.microsoft.com/net/core).
 
 * Installare l'editor del codice preferito, se non è già disponibile.
 
@@ -112,7 +113,7 @@ Per compilare ed eseguire, installare gli elementi seguenti:
 
 #### <a name="installing-docker-client"></a>Installazione del client di Docker
 
-Installare [Docker 17.06](https://docs.docker.com/release-notes/docker-ce/) o una versione successiva del client di Docker.
+Installare [Docker 18.03](https://docs.docker.com/release-notes/docker-ce/) o una versione successiva del client di Docker.
 
 Il client di Docker può essere installato in:
 
@@ -136,22 +137,26 @@ Il client di Docker può essere installato in:
 
 ### <a name="getting-the-sample-application"></a>Ottenere l'applicazione di esempio
 
-Il modo più semplice per ottenere l'esempio è clonando il [repository degli esempi](https://github.com/dotnet/dotnet-docker-samples) con Git, seguendo queste istruzioni: 
+Il modo più semplice per ottenere l'esempio è clonando il [repository Docker di .NET Core](https://github.com/dotnet/dotnet-docker) con Git, seguendo le istruzioni seguenti: 
 
 ```console
-git clone https://github.com/dotnet/dotnet-docker-samples/
+git clone https://github.com/dotnet/dotnet-docker
 ```
 
-È anche possibile scaricare il repository (che ha dimensioni contenute) come file ZIP dal repository degli esempi Docker di .NET Core.
+È anche possibile scaricare il repository (che ha dimensioni contenute) come file zip dal repository Docker di .NET Core.
 
 ### <a name="run-the-aspnet-app-locally"></a>Eseguire localmente l'app ASP.NET
 
 Come punto di riferimento, prima di inserire l'applicazione nei contenitori, eseguirla localmente.
 
-È possibile compilare ed eseguire l'applicazione in locale con .NET Core 2.0 SDK tramite i comandi seguenti (le istruzioni presuppongono la radice del repository):
+È possibile compilare ed eseguire l'applicazione in locale con .NET Core 2.1 SDK tramite i comandi seguenti (le istruzioni presuppongono la radice del repository):
 
 ```console
-cd aspnetapp
+cd dotnet-docker
+cd samples
+cd aspnetapp // solution scope where the dockerfile is located
+cd aspnetapp // project scope
+
 dotnet run
 ```
 
@@ -162,7 +167,10 @@ Dopo l'avvio dell'applicazione, visitare **http://localhost:5000** nel Web brows
 È possibile compilare ed eseguire l'esempio in Docker usando contenitori Linux tramite i comandi seguenti (le istruzioni presuppongono la radice del repository):
 
 ```console
-cd aspnetapp
+cd dotnet-docker
+cd samples
+cd aspnetapp // solution scope where the dockerfile is located
+
 docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
@@ -177,7 +185,10 @@ Dopo l'avvio dell'applicazione, visitare **http://localhost:5000** nel Web brows
 È possibile compilare ed eseguire l'esempio in Docker usando contenitori Windows tramite i comandi seguenti (le istruzioni presuppongono la radice del repository):
 
 ```console
-cd aspnetapp
+cd dotnet-docker
+cd samples
+cd aspnetapp // solution scope where the dockerfile is located
+
 docker build -t aspnetapp .
 docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
@@ -215,7 +226,7 @@ Ethernet adapter Ethernet:
 È possibile creare un'applicazione pronta per la distribuzione nell'ambiente di produzione in locale usando il comando [dotnet publish](../tools/dotnet-publish.md).
 
 ```console
-dotnet publish -c release -o published
+dotnet publish -c Release -o published
 ```
 
 > [!NOTE]
@@ -235,10 +246,10 @@ dotnet published/aspnetapp.dll
 
 ### <a name="docker-images-used-in-this-sample"></a>Immagini Docker usate in questo esempio
 
-In questo esempio vengono usate le immagini Docker seguenti
+In questo dockerfile di esempio vengono usate le immagini Docker seguenti.
 
-* `microsoft/aspnetcore-build:2.0`
-* `microsoft/aspnetcore:2.0`
+* `microsoft/dotnet:2.1-sdk`
+* `microsoft/dotnet:2.1-aspnetcore-runtime`
 
 La procedura è stata completata. Sono state eseguite le attività seguenti:
 > [!div class="checklist"]

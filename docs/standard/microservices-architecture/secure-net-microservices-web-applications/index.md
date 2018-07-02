@@ -4,11 +4,12 @@ description: Architettura di microservizi .NET per le applicazioni .NET incluse 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c2c7d692517c6a46225542936e05656db915bf0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106697"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Protezione di microservizi e applicazioni Web .NET
 
@@ -223,7 +224,7 @@ Il middleware di autenticazione con bearer token JWT può supportare anche scena
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Condividere i cookie tra le app**
+-   **Condivisione dei cookie tra applicazioni**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
 
 -   **Introduzione all'identità**
@@ -249,4 +250,5 @@ Il middleware di autenticazione con bearer token JWT può supportare anche scena
 
 
 >[!div class="step-by-step"]
-[Precedente] (../implement-resilient-applications/monitor-app-health.md) [Successivo] (authorization-net-microservices-web-applications.md)
+[Precedente](../implement-resilient-applications/monitor-app-health.md)
+[Successivo](authorization-net-microservices-web-applications.md)

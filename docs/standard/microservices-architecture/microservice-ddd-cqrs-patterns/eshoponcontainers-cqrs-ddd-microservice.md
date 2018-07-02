@@ -4,17 +4,18 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 6be8b52f42e3e37ff03e561af45c46f4dd283d9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa26aa86e09f7a5d390336e460fa0272f76e17a4
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805474"
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Applicazione degli approcci CQRS e CQS in un microservizio DDD in eShopOnContainers
 
 La progettazione del microservizio per gli ordini nell'applicazione di riferimento eShopOnContainers è basata sui principi del modello CQRS. Tuttavia, usa l'approccio più semplice che consiste nella separazione delle query dai comandi e nell'uso dello stesso database per entrambe le azioni.
 
-La sostanza di questi schemi e il punto importante stanno nel fatto che le query sono idempotenti: indipendentemente dal numero di query inviate al sistema, lo stato del sistema non cambia. È anche possibile usare un modello di dati per le "letture" diverso dal modello di dominio per le "scritture" della logica transazionale, sebbene il microservizio degli ordini usi lo stesso database. Ecco perché questo è un approccio CQRS semplificato.
+L'aspetto essenziale di tali modelli e, in questo caso, il punto importante è che le query sono idempotenti: indipendentemente da quante volte si esegue una query in un sistema, lo stato del sistema non viene modificato. È anche possibile usare un modello di dati di "lettura" diverso dal modello di dominio "scritto" dalla logica transazionale, anche se i microservizi di ordinamento usano lo stesso database. Ecco perché questo è un approccio CQRS semplificato.
 
 D'altra parte, lo stato dei comandi che attivano le transazioni e gli aggiornamenti dei dati cambia nel sistema. Con i comandi, occorre prestare attenzione quando si affrontano scenari complessi e regole aziendali in continua evoluzione. Ecco perché le tecniche di progettazione DDD consentono di ottenere un sistema con una modellazione ottimale.
 
@@ -46,7 +47,7 @@ Esiste una sola architettura dell'applicazione: l'architettura del sistema o del
 -   **Greg Young. CQS e CQRS**
     [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young. CQRS Documents (Documenti CQRS)**
+-   **Greg Young. Documenti CQRS**
     [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
 -   **Greg Young. CQRS, Task Based UIs and Event Sourcing (CQRS, interfacce utente basate su attività e determinazione dell'origine degli eventi)**

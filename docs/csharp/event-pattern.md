@@ -3,11 +3,12 @@ title: Schemi di eventi .NET standard
 description: Informazioni sugli schemi di eventi .NET standard e su come creare origini eventi standard e sottoscrivere ed elaborare gli eventi standard nel codice.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 633a90062f2d068cfa050c0aa151885608cc4172
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bd9f71726647966dd1e4426b260484decb048c6
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827248"
 ---
 # <a name="standard-net-event-patterns"></a>Schemi di eventi .NET standard
 
@@ -38,17 +39,7 @@ L'uso di un modello di eventi offre alcuni vantaggi di progettazione. È possibi
 
 Ecco la dichiarazione iniziale di argomenti evento per trovare un file: 
 
-```csharp
-public class FileFoundArgs : EventArgs
-{
-    public string FoundFile { get; }
-
-    public FileFoundArgs(string fileName)
-    {
-        FoundFile = fileName;
-    }
-}
-```
+[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
 
 Anche se questo sembra un tipo di piccole dimensioni e di soli dati, si deve seguire la convenzione e renderlo un tipo riferimento (`class`). Questo significa che l'oggetto argomento sarà passato per riferimento e gli eventuali aggiornamenti ai dati saranno visti da tutti i sottoscrittori. La prima versione è un oggetto non modificabile. È preferibile rendere non modificabili le proprietà nel tipo argomenti evento. In questo modo un sottoscrittore non può modificare i valori prima che un altro sottoscrittore li veda. Esistono però alcune eccezioni, come si vedrà di seguito.  
 
@@ -56,42 +47,21 @@ Ora è necessario creare la dichiarazione di evento nella classe FileSearcher. S
 
 Si compila la classe FileSearcher per cercare i file che corrispondono a uno schema e si genera l'evento corretto quando viene individuata una corrispondenza.
 
-```csharp
-public class FileSearcher
-{
-    public event EventHandler<FileFoundArgs> FileFound;
-
-    public void Search(string directory, string searchPattern)
-    {
-        foreach (var file in Directory.EnumerateFiles(directory, searchPattern))
-        {
-            FileFound?.Invoke(this, new FileFoundArgs(file));
-        }
-    }
-}
-```
+[!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="definining-and-raising-field-like-events"></a>Definizione e generazione di eventi campo
 
 Il modo più semplice per aggiungere un evento alla classe consiste nel dichiarare l'evento come campo pubblico, come illustrato nell'esempio precedente:
 
-```csharp
-public event EventHandler<FileFoundArgs> FileFound;
-```
+[!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
-In questo esempio sembra che venga dichiarato un campo pubblico, una prassi di programmazione a oggetti non corretta. Si desidera proteggere l'accesso ai dati tramite le proprietà o i metodi. Nonostante questa possa sembrare una prassi non corretta, il codice generato dal compilatore crea wrapper che rendono gli oggetti evento accessibili solo in modalità provvisoria. Le uniche operazioni disponibili in un evento simile a un campo sono aggiungere gestori:
+In questo esempio sembra che venga dichiarato un campo pubblico, una prassi di programmazione orientata a oggetti non corretta. Si desidera proteggere l'accesso ai dati tramite le proprietà o i metodi. Nonostante questa possa sembrare una prassi non corretta, il codice generato dal compilatore crea wrapper che rendono gli oggetti evento accessibili solo in modalità provvisoria. Le uniche operazioni disponibili in un evento simile a un campo sono aggiungere gestori:
 
-```csharp
-EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
-    Console.WriteLine(eventArgs.FoundFile);
-lister.FileFound += onFileFound;
-```
+[!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 
 e rimuovere gestori:
 
-```csharp
-lister.FileFound -= onFileFound;
-```
+[!code-csharp[RemoveEventHandler](../../samples/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
 
 Si noti che esiste una variabile locale per il gestore. Se si usasse il corpo della funzione lambda, il metodo remove non funzionerebbe correttamente. Sarebbe un'altra istanza del delegato e tacitamente non farebbe nulla.
 
@@ -113,22 +83,11 @@ Per questo schema il nuovo campo viene inizializzato su `false`. Qualsiasi sotto
 Il secondo schema annullerebbe l'operazione solo se tutti i sottoscrittori volessero annullare l'operazione. In questo schema viene inizializzato il nuovo campo per indicare che l'operazione deve essere annullata e qualsiasi sottoscrittore può cambiarlo per indicare che l'operazione deve continuare.
 Dopo che tutti i sottoscrittori hanno visto l'evento che è stato generato, il componente FileSearcher esamina il valore booleano e interviene. Questo schema comporta un passaggio aggiuntivo: il componente deve sapere se i sottoscrittori hanno visto l'evento. Se non sono presenti sottoscrittori, il campo indicherà erroneamente un annullamento.
 
-Ora si implementerà la prima versione per questo esempio. È necessario aggiungere un campo booleano al tipo FileFoundEventArgs:
+Ora si implementerà la prima versione per questo esempio. È necessario aggiungere un campo booleano denominato `CancelRequested` al tipo `FileFoundArgs`:
 
-```csharp
-public class FileFoundArgs : EventArgs
-{
-    public string FoundFile { get; }
-    public bool CancelRequested { get; set; }
+[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgs "Update event arguments")]
 
-    public FileFoundArgs(string fileName)
-    {
-        FoundFile = fileName;
-    }
-}
-```
-
-Il nuovo campo deve essere inizializzato su false, in modo che non sia annullato senza ragione. Questo è il valore predefinito per un campo booleano, perciò è impostato automaticamente. L'unica modifica ulteriore apportata al componente è controllare il flag dopo la generazione dell'evento per vedere se qualcuno dei sottoscrittori ha richiesto un annullamento:
+Il nuovo campo viene automaticamente inizializzato su `false`, il valore predefinito per un campo booleano, in modo che l'utente non lo annulli accidentalmente. L'unica modifica ulteriore apportata al componente è controllare il flag dopo la generazione dell'evento per vedere se qualcuno dei sottoscrittori ha richiesto un annullamento:
 
 ```csharp
 public void List(string directory, string searchPattern)
@@ -144,7 +103,7 @@ public void List(string directory, string searchPattern)
 ```
 
 Un vantaggio di questo schema è che non si tratta di una modifica sostanziale.
-Nessuno dei sottoscrittori ha richiesto un annullamento prima e neppure ora. Il codice dei sottoscrittori non richiede alcun aggiornamento, a meno che non si voglia supportare il nuovo protocollo di annullamento. L'accoppiamento è molto debole.
+Nessuno dei sottoscrittori ha richiesto un annullamento in precedenza e non lo stanno richiedendo neanche adesso. Il codice dei sottoscrittori non richiede alcun aggiornamento, a meno che non si voglia supportare il nuovo protocollo di annullamento. L'accoppiamento è molto debole.
 
 Aggiorniamo il server di sottoscrizione in modo che richieda un annullamento dopo aver trovato il primo eseguibile:
 
@@ -164,88 +123,25 @@ L'operazione potrebbe rivelarsi piuttosto lunga in una directory con molte sotto
 
 Si inizierà creando la nuova classe EventArgs derivata per la segnalazione della nuova directory e dell'avanzamento. 
 
-```csharp
-internal class SearchDirectoryArgs : EventArgs
-{
-    internal string CurrentSearchDirectory { get; }
-    internal int TotalDirs { get; }
-    internal int CompletedDirs { get; }
-
-    internal SearchDirectoryArgs(string dir, int totalDirs, int completedDirs)
-    {
-        CurrentSearchDirectory = dir;
-        TotalDirs = totalDirs;
-        CompletedDirs = completedDirs;
-    }
-}
-``` 
+[!code-csharp[DirEventArgs](../../samples/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
 
 Anche in questo caso è possibile seguire le indicazioni per creare un tipo di riferimento non modificabile per argomenti evento.
 
-Ora definire l'evento. Questa volta si userà una sintassi diversa. Oltre a usare la sintassi di campo, è possibile creare la proprietà in modo esplicito con gestori di aggiunta e rimozione. In questo esempio il progetto non richiede codice aggiuntivo in tali gestori ma illustra come crearli.
+Ora definire l'evento. Questa volta si userà una sintassi diversa. Oltre a usare la sintassi di campo, è possibile creare la proprietà in modo esplicito con gestori di aggiunta e rimozione. Questo esempio non richiede codice aggiuntivo in tali gestori ma illustra come crearli.
 
-```csharp
-internal event EventHandler<SearchDirectoryArgs> DirectoryChanged
-{
-    add { directoryChanged += value; }
-    remove { directoryChanged -= value; }
-}
-private EventHandler<SearchDirectoryArgs> directoryChanged;
-```
+[!code-csharp[Declare event with add and remove handlers](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
 
-Il codice che si scrive qui rispecchia per molti aspetti quello generato dal compilatore per le definizioni di evento di campo, visto in precedenza. Si crea l'evento usando una sintassi molto simile a quella impiegata per le [proprietà](properties.md). Si noti che i gestori hanno nomi diversi: `add` e `remove`. Questi vengono chiamati per attivare la sottoscrizione all'evento o annullarla. Si noti che è necessario anche dichiarare un campo di backup privato per archiviare la variabile di evento. Viene inizializzata su null.
+Il codice che si scrive qui rispecchia per molti aspetti quello generato dal compilatore per le definizioni di evento di campo viste in precedenza. Si crea l'evento usando una sintassi molto simile a quella impiegata per le [proprietà](properties.md). Si noti che i gestori hanno nomi diversi: `add` e `remove`. Questi vengono chiamati per attivare la sottoscrizione all'evento o annullarla. Si noti che è necessario anche dichiarare un campo di backup privato per archiviare la variabile di evento. Viene inizializzata su null.
 
 Quindi aggiungiamo l'overload del metodo Search() che attraversa le sottodirectory e genera entrambi gli eventi. Il modo più semplice per eseguire questa operazione è usare un argomento predefinito per specificare che si desidera cercare in tutte le directory:
 
-```csharp
-public void Search(string directory, string searchPattern, bool searchSubDirs = false)
-{
-    if (searchSubDirs)
-    {
-        var allDirectories = Directory.GetDirectories(directory, "*.*", SearchOption.AllDirectories);
-        var completedDirs = 0;
-        var totalDirs = allDirectories.Length + 1;
-        foreach (var dir in allDirectories)
-        {
-            directoryChanged?.Invoke(this,
-                new SearchDirectoryArgs(dir, totalDirs, completedDirs++));
-            // Recursively search this child directory:
-            SearchDirectory(dir, searchPattern);
-        }
-        // Include the Current Directory:
-        directoryChanged?.Invoke(this,
-            new SearchDirectoryArgs(directory, totalDirs, completedDirs++));
-        SearchDirectory(directory, searchPattern);
-    }
-    else
-    {
-        SearchDirectory(directory, searchPattern);
-    }
-}
-
-private void SearchDirectory(string directory, string searchPattern)
-{
-    foreach (var file in Directory.EnumerateFiles(directory, searchPattern))
-    {
-        var args = new FileFoundArgs(file);
-        FileFound?.Invoke(this, args);
-        if (args.CancelRequested)
-            break;
-    }
-}
-```
+[!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
 A questo punto è possibile eseguire l'applicazione chiamando l'overload per cercare in tutte le sottodirectory. Non sono presenti sottoscrittori per il nuovo evento `ChangeDirectory`, ma l'uso dell'idioma `?.Invoke()` garantisce il funzionamento corretto.
 
  Aggiungiamo un gestore per scrivere una riga che mostra l'avanzamento nella finestra della console. 
 
-```csharp
-lister.DirectoryChanged += (sender, eventArgs) =>
-{
-    Console.Write($"Entering '{eventArgs.CurrentSearchDirectory}'.");
-    Console.WriteLine($" {eventArgs.CompletedDirs} of {eventArgs.TotalDirs} completed...");
-};
-```
+[!code-csharp[Search](../../samples/csharp/events/Program.cs#Search "Declare event handler")]
 
 Sono stati esaminati schemi che vengono seguiti in tutto l'ecosistema .NET.
 Conoscendo questi schemi e convenzioni è possibile scrivere velocemente codice C# e .NET idiomatico.
