@@ -4,12 +4,12 @@ description: Versioni Linux supportate e dipendenze .NET Core necessarie per lo 
 author: jralexander
 ms.author: johalex
 ms.date: 06/01/2018
-ms.openlocfilehash: 30448d84a8377e27b0606b3bdabdcbac96c048aa
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 62493d45bd5839119fd98adb6db52d8d53ce4de5
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728547"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314822"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Prerequisiti per .NET Core in Linux
 
@@ -197,7 +197,7 @@ Per informazioni sulla registrazione dell'accesso al canale Red Hat .NET, vedere
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Per usare .NET Core 2.1 con Visual Studio, è necessario [installare Visual Studio 2017 15.7 Preview 1 o versione successiva](https://www.visualstudio.com/vs/preview).
+> Per usare .NET Core 2.1 con Visual Studio, è necessario [installare Visual Studio 2017 15.7 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 |Runtime/SDK                  |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04/Linux Mint 18|Ubuntu 14.04/Linux Mint 17|
 |---------------------------------|----------------|----------------|----------------------------|----------------------------|
@@ -253,7 +253,7 @@ Installare .NET Core nelle versioni Debian supportate (64 bit):
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Per usare .NET Core 2.1 con Visual Studio, è necessario [installare Visual Studio 2017 15.7 Preview 1 o versione successiva](https://www.visualstudio.com/vs/preview).
+> Per usare .NET Core 2.1 con Visual Studio, è necessario [installare Visual Studio 2017 15.7 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 |Runtime/SDK                  |Debian 9       |Debian 8       |
 |---------------------------------|---------------|---------------|
@@ -306,7 +306,7 @@ Per installare .NET Core nelle versioni Fedora supportate:
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Per usare .NET Core 2.1 con Visual Studio, è necessario [installare Visual Studio 2017 15.7 Preview 1 o versione successiva](https://www.visualstudio.com/vs/preview).
+> Per usare .NET Core 2.1 con Visual Studio, è necessario [installare Visual Studio 2017 15.7 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 |Runtime/SDK                  |Fedora 27          |Fedora 26             |
 |---------------------------------|-------------------|----------------------|
@@ -363,7 +363,7 @@ Per installare .NET Core per le distribuzioni/versioni di CentOS e Oracle Linux 
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Per usare .NET Core 2.1 con Visual Studio, è necessario [installare Visual Studio 2017 15.7 Preview 1 o versione successiva](https://www.visualstudio.com/vs/preview/).
+> Per usare .NET Core 2.1 con Visual Studio, è necessario [installare Visual Studio 2017 15.7 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 * [Collegamento di installazione](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0) di Runtime di .NET Core 2.1.0
 * [Collegamento di installazione](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300) di .NET Core SDK 2.1.300
@@ -423,7 +423,7 @@ Per installare .NET Core 2.x per le distribuzioni/versioni di SUSE Linux Enterpr
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Per usare .NET Core 2.1 con Visual Studio, è necessario [installare Visual Studio 2017 15.7 Preview 1 o versione successiva](https://www.visualstudio.com/vs/preview).
+> Per usare .NET Core 2.1 con Visual Studio, è necessario [installare Visual Studio 2017 15.7 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 **SUSE Linux Enterprise Server**
 

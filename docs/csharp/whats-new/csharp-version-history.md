@@ -3,12 +3,12 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e659f2438e9785a02f7016e49b78015ad46b9133
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696975"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207534"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C# #
 
@@ -18,9 +18,22 @@ Quali erano le caratteristiche del linguaggio nelle prime versioni e come si è 
 
 Se ci si guarda indietro, ci si rende conto che C# versione 1.0 era molto simile a Java. Come affermato [negli obiettivi di progettazione dichiarati per ECMA](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), C# cercava di essere "un linguaggio orientato a oggetti di utilizzo generico, semplice e moderno".  All'epoca, somigliare molto a Java significava aver raggiunto tali obiettivi di progettazione di allora.
 
-Ma se si guarda ora com'era C# 1.0, la sensazione è di disorientamento. Mancavano le funzionalità asincrone predefinite e alcune delle semplici funzionalità relative ai generics che ora si danno per scontate. In realtà,i generics mancavano completamente.  E [LINQ](../linq/index.md)? Non era ancora disponibile. Ci volevano ancora alcuni anni.
+Ma se si guarda ora com'era C# 1.0, la sensazione è di disorientamento. Mancavano le funzionalità asincrone predefinite e alcune delle semplici funzionalità relative ai generics che ora si danno per scontate. In realtà,i generics mancavano completamente.  E [LINQ](../linq/index.md)? Non era ancora disponibile. Queste aggiunte richiedevano ancora alcuni anni.
 
 Rispetto alla versione odierna, C# versione 1.0 sembra privo di funzionalità e costringeva gli sviluppatori a scrivere codice piuttosto prolisso. Da qualche parte, tuttavia, bisognava cominciare. Per la piattaforma Windows, C# versione 1.0 rappresentava una valida alternativa a Java.
+
+Le principali funzionalità di C# 1.0 includono:
+
+- [Classi](../programming-guide/classes-and-structs/classes.md)
+- [Struct](../programming-guide/classes-and-structs/structs.md)
+- [Interfacce](../programming-guide/interfaces/index.md)
+- [Eventi](../events-overview.md)
+- [Proprietà](../properties.md)
+- [Delegati](../delegates-overview.md)
+- [Espressioni](../programming-guide/statements-expressions-operators/expressions.md)
+- [Istruzioni](../programming-guide/statements-expressions-operators/statements.md)
+- [Attributi](../programming-guide/concepts/attributes/index.md)
+- Valori letterali
 
 ## <a name="c-version-20"></a>C# versione 2.0
 
@@ -33,11 +46,18 @@ Qui le cose iniziano a farsi interessanti. Ecco alcune delle funzionalità princ
 - [Iteratori](../programming-guide/concepts/iterators.md)
 - [Covarianza e controvarianza](../programming-guide/concepts/covariance-contravariance/index.md)
 
-All'inizio C# era un linguaggio orientato a oggetti (OO) piuttosto generico, ma con la versione 2.0 la situazione cambiò con grande rapidità. Dopo aver trovato una posizione stabile, gli sviluppatori di C# hanno affrontato alcuni gravi punti dolenti. E li hanno affrontati alla grande.
+Altre funzionalità di C# 2.0 aggiungevano funzionalità a quelle esistenti:
 
-I generics hanno reso disponibili tipi e metodi in grado di operare su tipi arbitrari, mantenendo comunque l'indipendenza dai tipi. La classe <xref:System.Collections.Generic.List%601>, ad esempio, consente di eseguire un'iterazione attraverso `List<string>` o `List<int>` eseguendo operazioni indipendenti dai tipi su tali stringhe o tali numeri interi. Questo modo di procedere è preferibile alla creazione di eredi `ListInt` o al cast da `Object` per ogni operazione.
+- Accessibilità separata getter/setter
+- Conversioni dei gruppi di metodi (delegati)
+- Classi statiche
+- Inferenza del delegato
 
-Con C# versione 2.0 sono arrivati gli iteratori. In breve, gli iteratori consentono di eseguire l'iterazione attraverso gli elementi di un `List` (o di altri tipi enumerabili) con un ciclo `foreach`. Grazie a questo importantissimo aspetto del linguaggio, la leggibilità del codice e la possibilità di comprenderlo sono migliorate notevolmente.
+All'inizio C# era un linguaggio orientato a oggetti (OO) generico, ma con la versione 2.0 la situazione cambiò con grande rapidità. Dopo aver trovato una posizione stabile, gli sviluppatori di C# hanno affrontato alcuni gravi punti dolenti. E li hanno affrontati alla grande.
+
+Con generics, tipi e metodi è possibile operare su tipi arbitrari, mantenendo comunque l'indipendenza dai tipi. La classe <xref:System.Collections.Generic.List%601>, ad esempio, consente di eseguire un'iterazione attraverso `List<string>` o `List<int>` eseguendo operazioni indipendenti dai tipi su tali stringhe o tali numeri interi. È consigliabile usare i generics anziché creare `ListInt` che deriva da `ArrayList` o eseguire il cast da `Object` per ogni operazione.
+
+Con C# versione 2.0 sono arrivati gli iteratori. In breve, gli iteratori consentono di esaminare tutti gli elementi di un `List` (o di altri tipi enumerabili) con un ciclo `foreach`. La presenza degli iteratori come parte fondamentale del linguaggio ha migliorato notevolmente la leggibilità del codice e la possibilità di comprenderlo.
 
 C#, tuttavia, continuava a correre dietro a Java, che aveva già rilasciato versioni che prevedevano generics e iteratori, ma questa situazione sarebbe cambiata presto. Man mano che procedevano nella loro evoluzione, infatti, i due linguaggi continuarono a differenziarsi.
 
@@ -51,6 +71,9 @@ C# versione 3.0 è stato rilasciato alla fine del 2007, insieme a Visual Studio 
 - [Espressioni lambda](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
 - [Alberi delle espressioni](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
 - [Metodi di estensione](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
+- [Variabili locali tipizzate in modo implicito](../language-reference/keywords/var.md)
+- [Metodi parziali](../language-reference/keywords/partial-method.md)
+- Inizializzatori di oggetto e di insieme
 
 A posteriori, molte di queste funzionalità sembrano inevitabili e inseparabili, perché si fondono l'una con l'altra in modo strategico. Si pensa in genere che la funzionalità killer di questa versione di C# sia l'espressione di query, nota anche come Language-Integrated Query (LINQ),
 
@@ -75,11 +98,11 @@ I tipi di interoperabilità risolvevano un problema di distribuzione. Le covaria
 
 La caratteristica principale è stata l'introduzione della parola chiave `dynamic`. La parola chiave `dynamic` introdotta in C# versione 4.0 offre la possibilità di eseguire l'override del compilatore per la tipizzazione in fase di compilazione. Con la parola chiave dynamic è possibile creare costrutti simili a quelli dei linguaggi tipizzati in modo dinamico, come JavaScript. È possibile creare `dynamic x = "a string"` e quindi aggiungere 6, lasciando decidere al runtime cosa deve succedere dopo.
 
-Questo modo di procedere è suscettibile di errori ma offre anche la possibilità di usare il linguaggio in modo estremamente avanzato.
+L'associazione dinamica è suscettibile di errori ma offre anche la possibilità di usare il linguaggio in modo estremamente avanzato.
 
 ## <a name="c-version-50"></a>C# versione 5.0
 
-C# versione 5.0 è una versione del linguaggio molto specifica. Quasi tutto l'impegno per questa versione è stato indirizzato verso un altro concetto rivoluzionario.  Ecco l'elenco delle funzionalità principali:
+C# versione 5.0 è una versione del linguaggio specifica. Quasi tutto l'impegno per questa versione è stato indirizzato verso un altro concetto rivoluzionario: il modello `async` e `await` per la programmazione asincrona.  Ecco l'elenco delle funzionalità principali:
 
 - [Membri asincroni](../async.md)
 - [Attributi informativi sul chiamante](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
@@ -90,7 +113,7 @@ Ma le vere stelle di questa versione sono `async` e `await`. Con il rilascio di 
 
 ## <a name="c-version-60"></a>C# versione 6.0
 
-Le versioni 3.0 e 5.0 hanno aggiunto a C# funzionalità eccezionali per un linguaggio orientato a oggetti. Con la versione 6.0, anziché una funzionalità killer che attirasse tutta l'attenzione, sono state rilasciate molte funzionalità che hanno fatto la gioia degli utenti del linguaggio. Eccone alcune:
+Le versioni 3.0 e 5.0 hanno aggiunto a C# nuove funzionalità eccezionali per un linguaggio orientato a oggetti. Con la versione 6.0, anziché una funzionalità killer che attirasse tutta l'attenzione, sono state rilasciate molte funzionalità che hanno reso più produttiva la programmazione in C#. Eccone alcune:
 
 - [Importazioni statiche](../language-reference/keywords/using-static.md)
 - [Filtri eccezioni](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
@@ -100,6 +123,11 @@ Le versioni 3.0 e 5.0 hanno aggiunto a C# funzionalità eccezionali per un lingu
 - [Interpolazione di stringhe](../language-reference/tokens/interpolated.md)
 - [Operatore nameof](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
 - [Inizializzatori di indice](csharp-6.md#index-initializers)
+
+Le altre nuove funzionalità includono:
+
+- Await nei blocchi catch e finally
+- Valori predefiniti per le proprietà solo getter
 
 Ognuna di queste funzionalità è interessante in sé, ma osservandole nel loro complesso si scopre uno schema interessante. In questa versione, C# ha eliminato il boilerplate del linguaggio, per rendere il codice più conciso e leggibile. Per gli amanti della pulizia e della semplicità del codice, questa versione del linguaggio rappresenta una vittoria notevole.
 
@@ -116,8 +144,16 @@ La versione principale più recente di C# è la 7.0. Questa versione presenta al
 - [Membri di espressioni corpo espansi](./csharp-7.md#more-expression-bodied-members)
 - [Variabili locali e valori restituiti per riferimento](./csharp-7.md#ref-locals-and-returns)
 
+Altre funzionalità:
+
+- [Variabili discard](../discards.md)
+- [Valori letterali binari](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
+- [Separatori di cifre](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
+- Valori restituiti e variabili locali ref
+- [Espressioni throw](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
+
 Tutte queste caratteristiche offrono nuove utili funzionalità agli sviluppatori, oltre alla possibilità di scrivere codice più pulito che mai. Una funzionalità di particolare rilievo è la possibilità di condensare la dichiarazione di variabili da usare con la parola chiave `out`, consentendo più valori restituiti tramite tupla.
 
-Ma C# è ora destinato a un uso ancora più ampio. .NET Core ora supporta qualsiasi sistema operativo ed è decisamente orientato al cloud e alla portabilità.  Questi obiettivi, insieme alla realizzazione di nuove funzionalità, tengono sicuramente impegnati i progettisti del linguaggio.
+Ma C# è ora destinato a un uso ancora più ampio. .NET Core ora supporta qualsiasi sistema operativo ed è decisamente orientato al cloud e alla portabilità.  Queste nuove funzioni, insieme alla realizzazione di nuove funzionalità, tengono sicuramente impegnati i progettisti del linguaggio.
 
 _Articolo_ [ _originariamente pubblicato nel blog NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, gentilmente concesso da Erik Dietrich e Patrick Smacchia._
