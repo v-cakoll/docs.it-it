@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: dotnet-ml
 ms.devlang: dotnet
 manager: wpickett
-ms.openlocfilehash: 332d9e14bea165992f9f00b048286e185269ea79
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: b7690eb6931f4a491b1a03812fe3f2d8a64cfcd4
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34860661"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207731"
 ---
 # <a name="machine-learning-glossary"></a>Glossario dell'apprendimento automatico
 
@@ -33,7 +33,7 @@ API ML.NET correlate: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Auc?
 
 ## <a name="binary-classification"></a>Classificazione binaria
 
-Un caso di [classificazione](#classification) in cui l'[etichetta](#label) può essere solo una di due classi. Per altre informazioni, vedere l'articolo relativo alla [classificazione binaria](https://en.wikipedia.org/wiki/Binary_classification) su Wikipedia.
+Un caso di [classificazione](#classification) in cui l'[etichetta](#label) può essere solo una di due classi. Per altre informazioni, vedere la sezione [Classificazione binaria](tasks.md#binary-classification) dell'argomento [Attività di apprendimento automatico](tasks.md).
 
 ## <a name="classification"></a>Classificazione
 
@@ -63,7 +63,7 @@ API ML.NET correlate: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.F1Sc
 
 Un parametro di un algoritmo di apprendimento automatico. Alcuni esempi sono il numero di alberi da apprendere in una foresta delle decisioni o la dimensione di incremento in un algoritmo di discesa del gradiente. I valori degli *iperparametri* sono impostati prima di eseguire il training del modello e gestiscono il processo di individuazione dei parametri della funzione di stima, ad esempio i punti di confronto in un albero delle decisioni o i pesi in un modello di regressione lineare. Per altre informazioni, vedere l'articolo relativo agli [iperparametri](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) su Wikipedia.
 
-## <a name="label"></a>Etichetta
+## <a name="label"></a>Label
 
 L'elemento da stimare con il modello di apprendimento automatico. Ad esempio, la razza di un cane o il prezzo di un'azione in futuro.
 
@@ -85,7 +85,7 @@ Tradizionalmente, i parametri per la funzione di stima. Ad esempio, i pesi in un
 
 ## <a name="multiclass-classification"></a>Classificazione multiclasse
 
-Un caso di [classificazione](#classification) in cui l'[etichetta](#label) può essere di tre o più classi. Per altre informazioni, vedere l'articolo relativo alla [classificazione multiclasse](https://en.wikipedia.org/wiki/Multiclass_classification) su Wikipedia.
+Un caso di [classificazione](#classification) in cui l'[etichetta](#label) può essere di tre o più classi. Per altre informazioni, vedere la sezione [Classificazione multiclasse](tasks.md#multiclass-classification) dell'argomento [Attività di apprendimento automatico](tasks.md).
 
 ## <a name="n-gram"></a>N-gramma
 
@@ -113,7 +113,7 @@ API ML.NET correlate: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Nega
 
 ## <a name="regression"></a>Regressione
 
-Un'attività di [apprendimento automatico con supervisione](#supervised-machine-learning) in cui l'output è un valore reale, ad esempio double. Un esempio è la stima dei prezzi delle azioni.
+Un'attività di [apprendimento automatico con supervisione](#supervised-machine-learning) in cui l'output è un valore reale, ad esempio double. Un esempio è la stima dei prezzi delle azioni. Per altre informazioni, vedere la sezione [Regressione](tasks.md#regression) dell'argomento [Attività di apprendimento automatico](tasks.md).
 
 ## <a name="relative-absolute-error"></a>Errore assoluto relativo
 
@@ -137,7 +137,7 @@ Una sottoclasse di apprendimento automatico in cui un modello desiderato stima l
 
 Il processo di identificazione di un [modello](#model) per un determinato training set. Per un modello lineare, rappresenta l'individuazione dei pesi. Per una struttura ad albero, implica l'identificazione dei punti di divisione.
 
-## <a name="transform"></a>Trasformazione
+## <a name="transform"></a>Transform
 
 Un componente della [pipeline](#pipeline) che trasforma i dati, ad esempio da testo a vettori di numeri.
 
