@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cbf0ceb7d5f8e56955f8989e5eb4efba99540bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578027"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948589"
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancoraggi in espressioni regolari
 <a name="top"></a> Gli ancoraggi, o asserzioni atomiche di larghezza zero, specificano una posizione della stringa in cui deve verificarsi una corrispondenza. Quando si usa un ancoraggio nell'espressione di ricerca, il motore delle espressioni regolari non avanza nella stringa né utilizza caratteri, ma cerca una corrispondenza solo nella posizione specificata. Ad esempio, `^` specifica che la corrispondenza deve iniziare all'inizio di una riga o stringa. Di conseguenza, l'espressione regolare `^http:` considera la corrispondenza "http:" solo quando si verifica all'inizio di una riga. La tabella seguente contiene gli ancoraggi supportati dalle espressioni regolari in .NET.  
   
 |Ancoraggio|Descrizione|  
 |------------|-----------------|  
-|`^`|La corrispondenza deve iniziare all'inizio della stringa o della riga. Per altre informazioni, vedere [Inizio di stringa o riga](#Start).|  
-|`$`|La corrispondenza deve verificarsi alla fine della stringa o della riga oppure prima di `\n` alla fine della stringa o della riga. Per altre informazioni, vedere [Fine di stringa o riga](#End).|  
+|`^`|Per impostazione predefinita, la corrispondenza deve verificarsi all'inizio della stringa; in modalità multiriga, deve verificarsi all'inizio della riga. Per altre informazioni, vedere [Inizio di stringa o riga](#Start).|  
+|`$`|Per impostazione predefinita, la corrispondenza deve verificarsi alla fine della stringa oppure prima di `\n` alla fine della stringa; in modalità multiriga, deve verificarsi alla fine della riga oppure prima di `\n` alla fine della riga. Per altre informazioni, vedere [Fine di stringa o riga](#End).|  
 |`\A`|La corrispondenza deve verificarsi solo all'inizio della stringa (nessun supporto per più righe). Per altre informazioni, vedere [Solo inizio di stringa](#StartOnly).|  
 |`\Z`|La corrispondenza deve verificarsi alla fine della stringa o prima di `\n` alla fine della stringa. Per altre informazioni, vedere [Fine di stringa o prima di terminare una nuova riga](#EndOrNOnly).|  
 |`\z`|La corrispondenza deve verificarsi solo alla fine della stringa. Per altre informazioni, vedere [Solo fine di stringa](#EndOnly).|  
@@ -40,7 +40,7 @@ ms.locfileid: "33578027"
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>Inizio di stringa o riga: ^  
- L'ancoraggio `^` specifica che il criterio seguente deve iniziare in corrispondenza della posizione del primo carattere della stringa. Se si usa `^` con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md)), la corrispondenza deve verificarsi all'inizio di ogni riga.  
+ Per impostazione predefinita, l'ancoraggio `^` specifica che il criterio seguente deve iniziare in corrispondenza della posizione del primo carattere della stringa. Se si usa `^` con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md)), la corrispondenza deve verificarsi all'inizio di ogni riga.  
   
  L'esempio seguente usa l'ancoraggio `^` in un'espressione regolare che estrae informazioni sugli anni durante i quali sono esistite alcune squadre di baseball professionale. L'esempio chiama due overload del metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>  
   

@@ -1,5 +1,5 @@
 ---
-title: class (Riferimenti per C#)
+title: Parola chiave class (Riferimenti per C#)
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 20968d2f72195db6d16de1b726c6e946b91ffcd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e64e825e4297ceb432393c7bd145a6cf4fcb2c
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216752"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948511"
 ---
 # <a name="class-c-reference"></a>class (Riferimenti per C#)
 
@@ -21,12 +21,13 @@ Le classi vengono dichiarate usando la parola chiave `class`, come illustrato ne
 ```csharp
 class TestClass
 {
-    // Methods, properties, fields, events, delegates 
+    // Methods, properties, fields, events, delegates
     // and nested classes go here.
 }
 ```
 
 ## <a name="remarks"></a>Note
+
 In C# è consentita solo l'eredità singola. In altre parole, una classe può ereditare l'implementazione solo da una classe di base singola. Una classe può tuttavia implementare più di un'interfaccia. La tabella seguente illustra esempi di ereditarietà di classi e di implementazione di interfacce:
 
 |Ereditarietà|Esempio|
@@ -73,11 +74,13 @@ Una classe può contenere dichiarazioni dei membri seguenti:
 - [Struct](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
 ## <a name="example"></a>Esempio
+
 L'esempio seguente illustra la dichiarazione di campi di classe, costruttori e metodi. Illustra anche la creazione di istanze di oggetti e la stampa dei dati di istanza. In questo esempio vengono dichiarate due classi. La prima classe `Child`, contiene due campi privati (`name` e `age`), due costruttori pubblici e un metodo pubblico. La seconda classe, `StringTest`, viene usata per contenere `Main`.
 
-[!code-csharp[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]
+[!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
 ## <a name="comments"></a>Commenti
+
 Si noti che, nell'esempio precedente, i campi privati (`name` e `age`) sono accessibili solo tramite i metodi pubblici della classe `Child`. Ad esempio, non è possibile stampare il nome del figlio, dal metodo `Main`, usando un'istruzione simile alla seguente:
 
 ```csharp
@@ -91,10 +94,12 @@ I tipi dichiarati all'interno di una classe senza un modificatore di accesso ven
 Infine, si noti che per l'oggetto creato usando il costruttore predefinito (`child3`), il campo age (età) è stato inizializzato su zero per impostazione predefinita.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)
+
+[Riferimenti per C#](../../../csharp/language-reference/index.md)  
+[Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+[Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+[Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)

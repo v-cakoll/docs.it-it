@@ -1,6 +1,6 @@
 ---
 title: comportamento predefinito del marshalling
-ms.date: 03/30/2017
+ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 83bb8b0305e47ca7b354db03c7a9a3dd02f62d41
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457400"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028071"
 ---
 # <a name="default-marshaling-behavior"></a>comportamento predefinito del marshalling
 Il marshalling di interoperabilità opera sulle regole che stabiliscono il comportamento dei dati associati a parametri del metodo durante il passaggio tra memoria gestita e non gestita. Queste regole predefinite controllano tali attività di marshalling come le trasformazioni dei tipi di dati, il fatto che un oggetto chiamato possa modificare i dati passati e restituire tali modifiche al chiamante e le circostanze in cui il gestore di marshalling fornisce ottimizzazioni delle prestazioni.  
@@ -113,7 +113,9 @@ interface DelegateTest : IDispatch {
 ```  
   
  È possibile dereferenziare un puntatore a funzione, così come qualsiasi altro puntatore a funzione non gestito.  
-  
+
+In questo esempio, quando i due delegati sono sottoposti a marshalling come <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>, il risultato è un `int` e un puntatore a un `int`. Dal momento che i tipi delegati sono sottoposti a marshalling, `int` in questo caso rappresenta un puntatore a un void (`void*`), ovvero l'indirizzo del delegato in memoria. In altre parole, questo risultato è specifico per i sistemi Windows a 32 bit, poiché `int` in questo caso rappresenta la dimensione del puntatore a funzione.
+
 > [!NOTE]
 >  Un riferimento al puntatore a funzione a un delegato gestito tramite codice non gestito non impedisce a Common Language Runtime di eseguire un'operazione di Garbage Collection nell'oggetto gestito.  
   

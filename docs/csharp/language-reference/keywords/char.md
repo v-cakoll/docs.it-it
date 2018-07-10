@@ -1,5 +1,5 @@
 ---
-title: char (Riferimenti per C#)
+title: Parola chiave char (Riferimenti per C#)
 ms.date: 07/20/2015
 f1_keywords:
 - char
@@ -7,43 +7,48 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 67efc4b9600d7d722ebbef83819e143506a93c26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea465e240a1d74b3f473316ca63b05bd0ba90777
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219219"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028032"
 ---
 # <a name="char-c-reference"></a>char (Riferimenti per C#)
-La parola chiave `char` è usata per dichiarare un'istanza della struttura <xref:System.Char?displayProperty=nameWithType> usata da .NET Framework per rappresentare un carattere Unicode. Il valore di un oggetto `Char` è un valore numerico (ordinale) a 16 bit.  
-  
- I caratteri Unicode vengono usati per rappresentare la maggior parte delle lingue scritte di tutto il mondo.  
-  
-|Tipo|Intervallo|Dimensione|Tipo .NET Framework|  
-|----------|-----------|----------|-------------------------|  
-|`char`|U+0000 a U+FFFF|Carattere Unicode a 16 bit|<xref:System.Char?displayProperty=nameWithType>|  
-  
-## <a name="literals"></a>Valori letterali  
- Le costanti di tipo `char` possono essere scritte come valori letterali carattere, sequenze di escape esadecimali o rappresentazioni Unicode. È anche possibile eseguire il cast dei codici a caratteri integrali. Nell'esempio seguente vengono inizializzate quattro variabili `char` con lo stesso carattere `X`:  
-  
- [!code-csharp[csrefKeywordsTypes#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/char_1.cs)]  
-  
-## <a name="conversions"></a>Conversioni  
- `char` può essere convertito in modo implicito in [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) o [decimal](../../../csharp/language-reference/keywords/decimal.md). Non è tuttavia disponibile nessuna conversione implicita da altri tipi nel tipo `char`.  
-  
- Il tipo <xref:System.Char?displayProperty=nameWithType> offre diversi metodi statici per usare i valori `char`.  
-  
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Char>  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Tabella dei tipi integrali](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
- [Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md)  
- [Stringhe](../../../csharp/programming-guide/strings/index.md)
+
+La parola chiave `char` è usata per dichiarare un'istanza della struttura <xref:System.Char?displayProperty=nameWithType> usata da .NET Framework per rappresentare un carattere Unicode. Il valore di un oggetto `Char` è un valore numerico (ordinale) a 16 bit.
+
+ I caratteri Unicode vengono usati per rappresentare la maggior parte delle lingue scritte di tutto il mondo.
+
+|Tipo|Intervallo|Dimensione|Tipo .NET|
+|----------|-----------|----------|-------------------------|
+|`char`|U+0000 a U+FFFF|Carattere Unicode a 16 bit|<xref:System.Char?displayProperty=nameWithType>|
+
+## <a name="literals"></a>Valori letterali
+
+Le costanti di tipo `char` possono essere scritte come valori letterali carattere, sequenze di escape esadecimali o rappresentazioni Unicode. È anche possibile eseguire il cast dei codici a caratteri integrali. Nell'esempio seguente vengono inizializzate quattro variabili `char` con lo stesso carattere `X`:
+
+[!code-csharp[csrefKeywordsTypes#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#19)]
+
+## <a name="conversions"></a>Conversioni
+
+`char` può essere convertito in modo implicito in [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) o [decimal](../../../csharp/language-reference/keywords/decimal.md). Non è tuttavia disponibile nessuna conversione implicita da altri tipi nel tipo `char`.
+
+Il tipo <xref:System.Char?displayProperty=nameWithType> offre diversi metodi statici per usare i valori `char`.
+
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Vedere anche
+
+<xref:System.Char>  
+[Riferimenti per C#](../../../csharp/language-reference/index.md)  
+[Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+[Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+[Tabella dei tipi integrali](../../../csharp/language-reference/keywords/integral-types-table.md)  
+[Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+[Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+[Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+[Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md)  
+[Stringhe](../../../csharp/programming-guide/strings/index.md)

@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579457"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106252"
 ---
 # <a name="designing-a-microservice-domain-model"></a>Progettazione di un modello di dominio del microservizio
 
@@ -88,7 +88,7 @@ Gli oggetti valore sono difficili da gestire nei database relazionali e in ORM c
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
 -   **Oggetti valore nello sviluppo basato su test**
-    [*https://leanpub.com/tdd-ebook/read\#oggetti-valore-auto-leanpub*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 -   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Progettazione basata su domini: gestire le complessità nel software).** (Libro. Include una trattazione sugli oggetti valore) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
@@ -133,8 +133,8 @@ Identificare ed eseguire operazioni sulle aggregazioni richiede esperienza e ric
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate (Progettazione efficace degli aggregati - parte I: modellazione di un'aggregazione singola) **
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+-   **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf) (Progettazione efficace degli aggregati - parte I: modellazione di un'aggregazione singola)
 
 -   **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *(Progettazione efficace degli aggregati - parte II: usare insieme aggregati diversi)
@@ -153,4 +153,5 @@ Identificare ed eseguire operazioni sulle aggregazioni richiede esperienza e ric
 
 
 >[!div class="step-by-step"]
-[Precedente] (ddd-oriented-microservice.md) [Successivo] (net-core-microservice-domain-model.md)
+[Precedente](ddd-oriented-microservice.md)
+[Successivo](net-core-microservice-domain-model.md)

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 2adce39561dd2b97910155ebed595a2df7785c11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574673"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104569"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Convalida lato client (convalida nei livelli di presentazione)
 
@@ -29,8 +29,8 @@ L'implementazione della convalida del lato client dipende dalla tipologia di app
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Convalida nelle app per dispositivi mobili in Xamarin
 
--   **Convalidare gli input di testo e visualizzare gli errori**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controlli/testo\_campo/convalidare\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **Convalidare l'input di testo e visualizzare gli errori**
+    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 -   **Richiamata di convalida**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
@@ -65,4 +65,5 @@ In breve, questi sono i concetti più importanti in merito alla convalida:
 
 
 >[!div class="step-by-step"]
-[Indietro] (domain-model-layer-validations.md) [Avanti] (domain-events-design-implementation.md)
+[Precedente](domain-model-layer-validations.md)
+[Successivo](domain-events-design-implementation.md)

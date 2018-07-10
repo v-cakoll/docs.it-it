@@ -1,20 +1,21 @@
 ---
 title: 'Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)'
-ms.date: 07/20/2015
+ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: c6af2c0f90d3ebb69438b670a4f0cecb10d8d2fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 444276f6ad68e988b2dbc2cd7401248a6f5da072
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319169"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071835"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)
+
 In questo esempio viene illustrato come eseguire un join di dati da due file con valori delimitati da virgole che condividono un valore comune usato come una chiave corrispondente. Questa tecnica può essere utile se è necessario combinare dati provenienti da due fogli di calcolo, o da un foglio di calcolo e da un file con un altro formato, in un nuovo file. È possibile modificare l'esempio in modo che funzioni con qualsiasi tipo di testo strutturato.  
   
-### <a name="to-create-the-data-files"></a>Per creare i file di dati  
+## <a name="to-create-the-data-files"></a>Per creare i file di dati
   
-1.  Copiare le righe seguenti in un file denominato scores.csv e salvarlo nella cartella del progetto. Il file rappresenta i dati del foglio di calcolo. La colonna 1 è l'ID studente e le colonne da 2 a 5 sono i punteggi dei test.  
+1.  Copiare le righe seguenti in un file denominato *scores.csv* e salvarlo nella cartella del progetto. Il file rappresenta i dati del foglio di calcolo. La colonna 1 è l'ID studente e le colonne da 2 a 5 sono i punteggi dei test.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -31,7 +32,7 @@ In questo esempio viene illustrato come eseguire un join di dati da due file con
     122, 94, 92, 91, 91  
     ```  
   
-2.  Copiare le righe seguenti in un file denominato names.csv e salvarlo nella cartella del progetto. Il file rappresenta un foglio di calcolo che contiene il cognome, il nome e l'ID degli studenti.  
+2.  Copiare le righe seguenti in un file denominato *names.csv* e salvarlo nella cartella del progetto. Il file rappresenta un foglio di calcolo che contiene il cognome, il nome e l'ID degli studenti.  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,8 +50,12 @@ In questo esempio viene illustrato come eseguire un join di dati da due file con
     ```  
   
 ## <a name="example"></a>Esempio  
-  
-```csharp  
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 class JoinStrings  
 {  
     static void Main()  
@@ -78,7 +83,7 @@ class JoinStrings
             let nameFields = name.Split(',')  
             from id in scores  
             let scoreFields = id.Split(',')  
-            where nameFields[2] == scoreFields[0]  
+            where Convert.ToInt32(nameFields[2]) == Convert.ToInt32(scoreFields[0])
             select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]   
                    + "," + scoreFields[3] + "," + scoreFields[4];  
   
@@ -102,26 +107,32 @@ class JoinStrings
     }  
 }  
 /* Output:  
-Merge two spreadsheets:  
-Adams, 99, 82, 81, 79  
-Fakhouri, 99, 86, 90, 94  
-Feng, 93, 92, 80, 87  
-Garcia, 97, 89, 85, 82  
-Garcia, 35, 72, 91, 70  
-Garcia, 92, 90, 83, 78  
-Mortensen, 88, 94, 65, 91  
-O'Donnell, 75, 84, 91, 39  
-Omelchenko, 97, 92, 81, 60  
-Tucker, 68, 79, 88, 92  
-Tucker, 94, 92, 91, 91  
-Zabokritski, 96, 85, 91, 60  
-12 total names in list  
+Merge two spreadsheets:
+Omelchenko, 97, 92, 81, 60
+O'Donnell, 75, 84, 91, 39
+Mortensen, 88, 94, 65, 91
+Garcia, 97, 89, 85, 82
+Garcia, 35, 72, 91, 70
+Fakhouri, 99, 86, 90, 94
+Feng, 93, 92, 80, 87
+Garcia, 92, 90, 83, 78
+Tucker, 68, 79, 88, 92
+Adams, 99, 82, 81, 79
+Zabokritski, 96, 85, 91, 60
+Tucker, 94, 92, 91, 91
+12 total names in list
  */  
-```  
+```
+
+## <a name="compiling-the-code"></a>Compilazione del codice
+
+Creare e compilare un progetto destinato a una delle opzioni seguenti:
+
+- .NET Framework versione 3.5 con un riferimento a System.Core.dll.
+- .NET Framework versione 4.0 o successiva.
+- .NET Core versione 1.0 o successiva.
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
-  
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
+
  [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
  [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

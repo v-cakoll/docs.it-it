@@ -4,11 +4,12 @@ description: Architettura di microservizi .NET per le applicazioni nei contenito
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: ded2e5399938be25005776963b0310b6a49d0353
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 430fbe3fc6d63fd3b90b578f32b42831c368ba10
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106304"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definizione dell'applicazione a più contenitori con docker-compose.yml 
 
@@ -547,4 +548,5 @@ La conclusione generale è che è possibile compilare l'applicazione allo stesso
 
 
 >[!div class="step-by-step"]
-[Indietro] (data-driven-crud-microservice.md) [Avanti] (database-server-container.md)
+[Precedente](data-driven-crud-microservice.md)
+[Successivo](database-server-container.md)

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET nei conteni
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 5ad5686909c29eba5916cbcc4b7115a16108a004
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 171d9120e4817065ddafc9dfa9caa362694ddeb3
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580403"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105284"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Uso di Azure Key Vault per proteggere i segreti in fase di produzione
 
@@ -68,11 +68,12 @@ In questo esempio, la chiamata ad AddAzureKeyVault viene eseguita alla fine dell
 -   **Configuring data protection**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview) (Configurazione della protezione dati)
 
--   **Key management and lifetime**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings) (Gestione e durata della chiave; impostazioni predefinite di protezione dati)
+-   **Gestione e durata delle chiavi**
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
 -   **Microsoft.Extensions.Configuration.DockerSecrets.** Repository GitHub.
     [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
 
 >[!div class="step-by-step"]
-[Precedente] (developer-app-secrets-storage.md) [Successivo] (../key-takeaways.md)
+[Precedente](developer-app-secrets-storage.md)
+[Successivo](../key-takeaways.md)

@@ -4,16 +4,16 @@ description: Informazioni sulle modifiche di dotnet publish per le distribuzioni
 author: jralexander
 ms.author: kdollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 40d28e81e2ac1b27e7fd89e16d2d906a080fd18b
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 39a23917dec1aba5142839265c555da5c1e6f09c
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697211"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071032"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Roll forward del runtime di distribuzione autonoma
 
-Le [distribuzioni di applicazioni autonome](index.md) .NET Core includono sia le librerie che il runtime .NET Core. A partire da .NET Core SDK 2.1.300 (.NET Core 2.1), le distribuzioni di applicazioni autonome[ pubblicano nel computer il runtime della patch con il numero di versione più alto](https://github.com/dotnet/designs/pull/36). Per impostazione predefinita, [ `dotnet publish` ](../tools/dotnet-publish.md) per una distribuzione autonoma seleziona la versione più recente installata come parte dell'SDK nel computer di pubblicazione. Ciò consente l'esecuzione dell'applicazione distribuita con le correzioni, di sicurezza e di altro tipo, disponibili durante l'esecuzione di `publish`. Per ottenere una nuova patch, l'applicazione deve essere ripubblicata. Le applicazioni autonome vengono create specificando `-r <RID>` nel comando `dotnet publish` o specificando l'[identificatore di runtime](../rid-catalog.md) nel file di progetto (csproj o vbproj) o nella riga di comando.
+Le [distribuzioni di applicazioni autonome](index.md) .NET Core includono sia le librerie che il runtime .NET Core. A partire da .NET Core SDK 2.1.300 (.NET Core 2.1), le distribuzioni di applicazioni autonome [pubblicano nel computer il runtime della patch con il numero di versione più alto](https://github.com/dotnet/designs/pull/36). Per impostazione predefinita, [`dotnet publish`](../tools/dotnet-publish.md) per una distribuzione autonoma seleziona la versione più recente installata come parte dell'SDK nel computer di pubblicazione. Ciò consente l'esecuzione dell'applicazione distribuita con le correzioni, di sicurezza e di altro tipo, disponibili durante l'esecuzione di `publish`. Per ottenere una nuova patch, l'applicazione deve essere ripubblicata. Le applicazioni autonome vengono create specificando `-r <RID>` nel comando `dotnet publish` o specificando l'[identificatore di runtime](../rid-catalog.md) nel file di progetto (csproj o vbproj) o nella riga di comando.
 
 ## <a name="patch-version-roll-forward-overview"></a>Panoramica del roll forward della versione della patch
 
@@ -28,15 +28,15 @@ Le [distribuzioni di applicazioni autonome](index.md) .NET Core includono sia le
 
 L'esecuzione di `restore` all'interno dell'operazione `publish` può essere indesiderata per lo scenario. Per evitare l'esecuzione di `restore` durante la creazione di applicazioni autonome tramite `publish`, eseguire le operazioni seguenti:
 
-* Impostare la proprietà `RuntimeIdentifiers` sull'elenco delimitato da punto e virgola di tutti gli [identificatori di runtime](../rid-catalog.md) da pubblicare
-* Impostare la proprietà `TargetLatestRuntimePatch` su `true`
+* Impostare la proprietà `RuntimeIdentifiers` su un elenco delimitato da punto e virgola di tutti i [RID](../rid-catalog.md) da pubblicare.
+* Impostare la proprietà `TargetLatestRuntimePatch` su `true`.
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>Argomento no-restore con le opzioni di dotnet publish
 
 Se con lo stesso file di progetto si vogliono creare sia applicazioni autonome che [applicazioni dipendenti dal framework](index.md) e si vuole usare l'argomento `--no-restore` con `dotnet publish`, scegliere una delle alternative seguenti:
 
-1. Preferire il comportamento dipendente dal framework. Se l'applicazione è dipendente dal framework, questo è il comportamento predefinito. Se l'applicazione è autonoma e può usare un runtime locale versione 2.1.0 senza patch, impostare `TargetLatestRuntimePatch` su `false` nel file di progetto (csproj o vbproj).
+1. Preferire il comportamento dipendente dal framework. Se l'applicazione è dipendente dal framework, questo è il comportamento predefinito. Se l'applicazione è autonoma e può usare un runtime locale versione 2.1.0 senza patch, impostare `TargetLatestRuntimePatch` su `false` nel file di progetto.
 
-2. Preferire il comportamento autonomo. Se l'applicazione è autonoma, questo è il comportamento predefinito. Se l'applicazione è dipendente dal framework e richiede l'installazione della patch più recente, impostare `TargetLatestRuntimePatch` su `true` nel file di progetto (csproj o vbproj).
+2. Preferire il comportamento autonomo. Se l'applicazione è autonoma, questo è il comportamento predefinito. Se l'applicazione è dipendente dal framework e richiede l'installazione della patch più recente, impostare `TargetLatestRuntimePatch` su `true` nel file di progetto.
 
-3. Assumere il controllo esplicito della versione del framework del runtime impostando `RuntimeFrameworkVersion` sulla versione specifica della patch nel file di progetto (csproj o vbproj).
+3. Assumere il controllo esplicito della versione del framework del runtime impostando `RuntimeFrameworkVersion` sulla versione specifica della patch nel file di progetto.

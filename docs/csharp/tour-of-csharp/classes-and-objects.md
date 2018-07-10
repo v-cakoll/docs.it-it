@@ -3,12 +3,12 @@ title: Classi e oggetti in C# - Panoramica del linguaggio C#
 description: Introduzione a C# Leggere questa panoramica su classi, oggetti ed ereditarietà
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 8e6b327c8391c3a3c97f7806f87dbb9656f0d00d
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298292"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140281"
 ---
 # <a name="classes-and-objects"></a>Classi e oggetti
 
@@ -55,7 +55,7 @@ Di seguito viene fornita una panoramica dei tipi di membri che può contenere un
 
 ## <a name="accessibility"></a>Accessibilità
 
-A ogni membro di una classe è associata una caratteristica di accessibilità, che controlla le aree di testo del programma in grado di accedere al membro. Esistono cinque diverse forme di accessibilità, riepilogate nella tabella seguente.
+A ogni membro di una classe è associata una caratteristica di accessibilità, che controlla le aree di testo del programma in grado di accedere al membro. Esistono sei diverse forme di accessibilità, riepilogate nella tabella seguente.
 
 * `public`
     - Accesso non limitato
@@ -64,7 +64,7 @@ A ogni membro di una classe è associata una caratteristica di accessibilità, c
 * `internal`
     - Accesso limitato all'assembly corrente (file EXE, file DLL e cosi via.)
 * `protected internal`
-    - Accesso limitato alla classe principale o alle classi derivate dalla classe principale
+    - Accesso limitato alla classe principale, alle classi derivate dalla classe principale o alle classi all'interno dello stesso assembly
 * `private`
     - Accesso limitato a questa classe
 * `private protected`

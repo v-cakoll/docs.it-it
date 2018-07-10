@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b41161d1511f7dce975ac5ad916750734972fa3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579873"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948605"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguaggio di espressioni regolari - Riferimento rapido
 <a name="top"></a> Un'espressione regolare è un modello per cui il motore delle espressioni regolari tenta di trovare una corrispondenza nel testo di input. Un modello è costituito da uno o più i valori letterali carattere, operatori o costrutti.  Per una breve introduzione, vedere [Espressioni regolari di .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -93,8 +93,8 @@ ms.locfileid: "33579873"
   
 |Asserzione|Descrizione|Modello|Corrispondenze|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|La corrispondenza deve iniziare all'inizio della stringa o della riga.|`^\d{3}`|"901" in<br /><br /> "901-333-"|  
-|`$`|La corrispondenza deve verificarsi alla fine della stringa o prima di `\n` alla fine della riga o della stringa.|`-\d{3}$`|"-333" in<br /><br /> "-901-333"|  
+|`^`|Per impostazione predefinita, la corrispondenza deve iniziare all'inizio della stringa; in modalità multiriga, deve iniziare all'inizio della riga.|`^\d{3}`|"901" in<br /><br /> "901-333-"|  
+|`$`|Per impostazione predefinita, la corrispondenza deve verificarsi alla fine della stringa oppure prima di `\n` alla fine della stringa; in modalità multiriga, deve verificarsi prima della fine della riga oppure prima di `\n` alla fine della riga.|`-\d{3}$`|"-333" in<br /><br /> "-901-333"|  
 |`\A`|La corrispondenza deve verificarsi all'inizio della stringa.|`\A\d{3}`|"901" in<br /><br /> "901-333-"|  
 |`\Z`|La corrispondenza deve verificarsi alla fine della stringa o prima di `\n` alla fine della stringa.|`-\d{3}\Z`|"-333" in<br /><br /> "-901-333"|  
 |`\z`|La corrispondenza deve verificarsi alla fine della stringa.|`-\d{3}\z`|"-333" in<br /><br /> "-901-333"|  

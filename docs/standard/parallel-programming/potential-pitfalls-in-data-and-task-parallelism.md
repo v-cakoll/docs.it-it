@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da87531ff7f20181e1e5499acb8152d0fbadc8af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d4fd91eccd5e8f3fd6be7c8a63ab1c097002382
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592392"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073229"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Problemi potenziali nel parallelismo di dati e attività
 In molti casi, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> possono offrire miglioramenti significativi delle prestazioni nei normali cicli sequenziali. Le operazioni necessarie per parallelizzare il ciclo comportano tuttavia delle complessità che possono determinare problemi che in un codice sequenziale sono meno frequenti o addirittura assenti. In questo argomento sono elencati alcuni suggerimenti da tenere presenti quando si scrivono cicli paralleli.  
@@ -24,7 +24,7 @@ In molti casi, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=name
  In determinati casi l'esecuzione di un ciclo parallelo potrebbe essere più lenta dell'equivalente sequenziale. La regola generale di base è che per i cicli paralleli con poche iterazioni e con delegati dell'utente veloci raramente si verifica un aumento significativo della velocità di esecuzione. Poiché molti fattori influiscono sulle prestazioni, è comunque consigliabile misurare sempre i risultati effettivi.  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>Evitare di scrivere in percorsi di memoria condivisi  
- Nel codice sequenziale spesso si eseguono operazioni di lettura e scrittura su variabili o campi di classe statici. Tuttavia, ogni volta che più thread eseguono un accesso simultaneo a queste variabili, è molto probabile che si verifichino race condition. Anche se è possibile sincronizzare l'accesso alla variabile mediante l'utilizzo di blocchi, il costo di questa sincronizzazione può influire negativamente sulle prestazioni. È pertanto consigliabile evitare o almeno limitare il più possibile l'accesso allo stato condiviso in un ciclo parallelo. Il modo migliore per eseguire questa operazione è usare gli overload di <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> che usano una variabile <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> per archiviare lo stato thread-local durante l'esecuzione del ciclo. Per ulteriori informazioni, vedere [Procedura: scrivere un ciclo Parallel.For con variabili di thread locali](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [Procedura: scrivere un ciclo Parallel.ForEach con variabili di thread locali](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md).  
+ Nel codice sequenziale spesso si eseguono operazioni di lettura e scrittura su variabili o campi di classe statici. Tuttavia, ogni volta che più thread eseguono un accesso simultaneo a queste variabili, è molto probabile che si verifichino race condition. Anche se è possibile sincronizzare l'accesso alla variabile mediante l'utilizzo di blocchi, il costo di questa sincronizzazione può influire negativamente sulle prestazioni. È pertanto consigliabile evitare o almeno limitare il più possibile l'accesso allo stato condiviso in un ciclo parallelo. Il modo migliore per eseguire questa operazione è usare gli overload di <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> che usano una variabile <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> per archiviare lo stato thread-local durante l'esecuzione del ciclo. Per altre informazioni, vedere [Procedura: Scrivere un ciclo Parallel.For con variabili di thread locali](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [Procedura: Scrivere un ciclo Parallel.ForEach con variabili partition-local](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="avoid-over-parallelization"></a>Evitare parallelizzazioni eccessive  
  L'utilizzo dei cicli paralleli comporta costi di sovraccarico dovuti al partizionamento della raccolta di origine e alla sincronizzazione dei thread di lavoro. I vantaggi della parallelizzazione vengono limitati ulteriormente dal numero di processori nel computer. Non si ottiene alcun aumento di velocità eseguendo più thread con vincoli di calcolo in un unico processore. È pertanto fondamentale evitare la parallelizzazione eccessiva di un ciclo.  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579769"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071864"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking nelle espressioni regolari
 <a name="top"></a> Il backtracking si verifica quando un modello di espressione regolare contiene [quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) facoltativi o [costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)e il motore delle espressioni regolari torna a uno stato salvato in precedenza per continuare la ricerca di una corrispondenza. Il backtracking è fondamentale per la potenza delle espressioni regolari. Consente alle espressioni di essere potenti e flessibili e di cercare una corrispondenza di modelli molto complessi. Questa tecnica presenta tuttavia anche alcuni svantaggi. Il backtracking spesso è il fattore più importante che influisce sulle prestazioni del motore delle espressioni regolari. Fortunatamente, lo sviluppatore è in grado di controllare il comportamento del motore delle espressioni regolari e il modo in cui viene utilizzato il backtracking. In questo argomento viene illustrato il funzionamento del backtracking e il modo in cui può essere controllato.  
@@ -169,7 +169,7 @@ ms.locfileid: "33579769"
 |`[-.\w]*`|Trova la corrispondenza di zero, una o più occorrenze di un trattino, un punto o un carattere alfanumerico.|  
 |`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico.|  
 |`([-.\w]*[0-9A-Z])*`|Trova la corrispondenza di zero o più occorrenze della combinazione di zero o più trattini, punti o caratteri alfanumerici seguiti da un carattere alfanumerico. Equivale al primo gruppo di acquisizione.|  
-|`@`|Trova la corrispondenza di una chiocciola ("@").|  
+|`@`|Trova la corrispondenza di una chiocciola ("\@").|  
   
  Il secondo criterio di espressione regolare, `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, usa un'asserzione lookbehind positiva e viene definito come illustrato nella tabella seguente.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "33579769"
 |`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, il confronto non rileva la distinzione tra maiuscole e minuscole.|  
 |`[-.\w]*`|Trova la corrispondenza di zero o più occorrenze di un trattino, un punto o un carattere alfanumerico.|  
 |`(?<=[0-9A-Z])`|Esegue la ricerca dell'ultimo carattere corrispondente e continua la ricerca della corrispondenza se si tratta di un carattere alfanumerico. Si noti che i caratteri alfanumerici sono un subset del set costituito da punti, trattini e tutti i caratteri alfanumerici.|  
-|`@`|Trova la corrispondenza di una chiocciola ("@").|  
+|`@`|Trova la corrispondenza di una chiocciola ("\@").|  
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>asserzioni lookahead  

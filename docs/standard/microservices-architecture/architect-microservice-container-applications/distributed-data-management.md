@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7d173133ab7c803c7ab48b39c50b02ee4f3b1721
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d079dc7eef2f4abfbdec5a01b4233c8504d449d
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578937"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106489"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemi e soluzioni per la gestione dei dati distribuiti
 
@@ -83,11 +83,11 @@ Per maggiori informazioni sull'uso della comunicazione asincrona, vedere le sezi
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **CAP Theorem**
-    [*https://en.wikipedia.org/wiki/CAP\_teorema*](https://en.wikipedia.org/wiki/CAP_theorem) (Il teorema CAP)
+-   **Teorema CAP**
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **Eventual Consistency**
-    [*https://en.wikipedia.org/wiki/Eventual\_coerenza*](https://en.wikipedia.org/wiki/Eventual_consistency) (Coerenza finale)
+-   **Coerenza finale**
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Data Consistency Primer**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx) (Primer coerenza dati)
@@ -109,4 +109,5 @@ Per maggiori informazioni sull'uso della comunicazione asincrona, vedere le sezi
 
 
 >[!div class="step-by-step"]
-[Indietro] (logical-versus-physical-architecture.md) [Avanti] (identify-microservice-domain-model-boundaries.md)
+[Precedente](logical-versus-physical-architecture.md)
+[Successivo](identify-microservice-domain-model-boundaries.md)

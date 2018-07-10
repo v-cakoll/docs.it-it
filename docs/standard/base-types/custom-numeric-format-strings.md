@@ -1,6 +1,6 @@
 ---
 title: Stringhe di formato numerico personalizzato
-ms.date: 03/30/2017
+ms.date: 06/25/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,16 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa1ab1d9a9ff3d652ce97d4fe7e6d04f744aea98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b9cf18c4893b618d16ef24bab83a19154e19a9c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579236"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106528"
 ---
-# <a name="custom-numeric-format-strings"></a>Stringhe di formato numerico personalizzato
+# <a name="custom-numeric-format-strings"></a>Stringhe in formato numerico personalizzato
+
 È possibile creare una stringa di formato numerico personalizzata costituita da uno o più identificatori numerici personalizzati, per definire la formattazione dei dati numerici. Viene considerata stringa di formato numerico personalizzata qualsiasi stringa di formato che non rientri nella categoria di [stringa di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
+
  Le stringhe di formato numerico personalizzate sono supportate da alcuni overload del metodo `ToString` di tutti i tipi numerici. È ad esempio possibile fornire una stringa di formato numerico ai metodi <xref:System.Int32.ToString%28System.String%29> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> del tipo <xref:System.Int32> . Le stringhe di formato numerico personalizzate sono supportate anche dalla [funzionalità di formattazione composita](../../../docs/standard/base-types/composite-formatting.md) di .NET usata da alcuni metodi `Write` e `WriteLine` delle classi <xref:System.Console> e <xref:System.IO.StreamWriter>, dal metodo <xref:System.String.Format%2A?displayProperty=nameWithType> e dal metodo <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La funzionalità di [interpolazione di stringhe](../../csharp/language-reference/tokens/interpolated.md) supporta anche le stringhe in formato numerico personalizzate.  
   
 > [!TIP]
@@ -45,11 +47,13 @@ ms.locfileid: "33579236"
 |"‰"|Segnaposto per mille|Moltiplica un numero per 1000 e inserisce un simbolo di per mille localizzato nella stringa di risultato.<br /><br /> Ulteriori informazioni: [Identificatore personalizzato "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|Notazione esponenziale|Se è seguito da almeno uno 0 (zero), formatta il risultato usando la notazione esponenziale. L'utilizzo di "E" o "e" indica se il simbolo dell'esponente nella stringa di risultato deve essere, rispettivamente, maiuscolo o minuscolo. Il numero di zeri che seguono il carattere "E" o "e" determina il numero minimo di cifre nell'esponente. Un segno più (+) indica che l'esponente è sempre preceduto da un carattere di segno. Un segno meno (-) indica che solo gli esponenti negativi sono preceduti da un carattere di segno.<br /><br /> Ulteriori informazioni: [Identificatori personalizzati "E" e "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
 |"\\"|Carattere di escape|Fa in modo che il carattere successivo venga interpretato come valore letterale anziché come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [Carattere di escape "\\"](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
-|'*string*'<br /><br /> "*string*"|Delimitatore di stringa letterale|Indica che i caratteri contenuti devono essere copiati nella stringa di risultato senza essere modificati.|68 ("# ' gradi'") -> 68 gradi<br /><br /> 68 ("# ' gradi'") -> 68 gradi|  
+|'*string*'<br /><br /> "*string*"|Delimitatore di stringa letterale|Indica che i caratteri contenuti devono essere copiati nella stringa di risultato senza essere modificati.<br/><br/>Altre informazioni: [caratteri letterali](#character-literals).|68 ("# ' gradi'") -> 68 gradi<br /><br /> 68 ("# ' gradi'") -> 68 gradi|  
 |;|Separatore di sezione|Definisce le sezioni con stringhe di formato separate per numeri positivi, negativi e zero.<br /><br /> Ulteriori informazioni: [Separatore di sezione ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
-|Altro|Tutti gli altri caratteri|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.|68 ("# °") -> 68 °|  
+|Altro|Tutti gli altri caratteri|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.<br/><br/>Altre informazioni: [caratteri letterali](#character-literals).|68 ("# °") -> 68 °|  
   
  Nelle sezioni seguenti vengono fornite informazioni dettagliate su ognuno degli identificatori di formato numerico personalizzati.  
+
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-culture-note.md)] 
   
 <a name="Specifier0"></a>   
 ## <a name="the-0-custom-specifier"></a>Identificatore personalizzato "0"  
@@ -60,7 +64,7 @@ ms.locfileid: "33579236"
  Nell'esempio seguente vengono visualizzati diversi valori formattati usando stringhe di formato personalizzate che includono segnaposto zero.  
   
  [!code-cpp[Formatting.Numeric.Custom#1](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#1)]
- [!code-csharp[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
  [!code-vb[Formatting.Numeric.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#1)]  
   
  [Torna alla tabella](#table)  
@@ -76,13 +80,13 @@ ms.locfileid: "33579236"
  Nell'esempio seguente vengono visualizzati diversi valori formattati usando stringhe di formato personalizzate che includono segnaposto per cifre.  
   
  [!code-cpp[Formatting.Numeric.Custom#2](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#2)]
- [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
  [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]  
   
  Per restituire una stringa di risultato in cui le cifre mancanti o gli zeri iniziali vengono sostituiti da spazi, usare la [funzionalità di formattazione composita](../../../docs/standard/base-types/composite-formatting.md) e specificare una lunghezza di campo, come illustrato nell'esempio seguente.  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [Torna alla tabella](#table)  
@@ -96,7 +100,7 @@ ms.locfileid: "33579236"
  Nell'esempio seguente viene usato l'identificatore di formato "." per definire la posizione del separatore decimale in alcune stringhe di risultato.  
   
  [!code-cpp[Formatting.Numeric.Custom#3](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#3)]
- [!code-csharp[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
  [!code-vb[Formatting.Numeric.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#3)]  
   
  [Torna alla tabella](#table)  
@@ -116,13 +120,13 @@ ms.locfileid: "33579236"
  Nell'esempio seguente viene illustrato l'utilizzo della virgola come separatore di gruppi.  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
- [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
  Nell'esempio seguente viene illustrato l'utilizzo della virgola come identificatore di rappresentazione in scala.  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
- [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
  [!code-vb[Formatting.Numeric.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#5)]  
   
  [Torna alla tabella](#table)  
@@ -134,7 +138,7 @@ ms.locfileid: "33579236"
  Nell'esempio seguente vengono definite diverse stringhe di formato personalizzate che includono l'identificatore personalizzato "%".  
   
  [!code-cpp[Formatting.Numeric.Custom#6](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#6)]
- [!code-csharp[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
  [!code-vb[Formatting.Numeric.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#6)]  
   
  [Torna alla tabella](#table)  
@@ -146,19 +150,19 @@ ms.locfileid: "33579236"
  Nell'esempio seguente viene definita una stringa di formato personalizzata che include l'identificatore personalizzato "‰".  
   
  [!code-cpp[Formatting.Numeric.Custom#9](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#9)]
- [!code-csharp[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
  [!code-vb[Formatting.Numeric.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#9)]  
   
  [Torna alla tabella](#table)  
   
 <a name="SpecifierExponent"></a>   
-## <a name="the-e-and-e-custom-specifiers"></a>Identificatori personalizzati "E" e "e"  
+## <a name="the-e-and-e-custom-specifiers"></a>Identificatori personalizzati "E" ed "e"  
  Se nella stringa di formato è presente una delle stringhe "E", "E+", "E-", "e", "e+" o "e-" immediatamente seguita da almeno uno zero, il numero viene formattato usando la notazione scientifica con una "E" o "e" inserita tra il numero e l'esponente. Il numero di zeri che seguono l'indicatore della notazione scientifica determina il numero minimo di cifre da visualizzare nell'output per l'esponente. I formati "E+" ed "e+" indicano che l'esponente deve essere sempre preceduto da un segno più o meno. I formati "E", "E-", "e" ed "e-" indicano che solo gli esponenti negativi devono essere preceduti da un carattere di segno.  
   
  Nell'esempio seguente vengono formattati alcuni valori numerici usando gli identificatori per notazione scientifica.  
   
  [!code-cpp[Formatting.Numeric.Custom#7](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#7)]
- [!code-csharp[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
  [!code-vb[Formatting.Numeric.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#7)]  
   
  [Torna alla tabella](#table)  
@@ -177,7 +181,7 @@ ms.locfileid: "33579236"
  Nell'esempio seguente viene usato il carattere di escape per evitare che durante l'operazione di formattazione i caratteri "#", "0" e "\\" vengano interpretati come caratteri di escape o identificatori di formato. Negli esempi C# viene usata una barra rovesciata aggiuntiva per garantire che la barra rovesciata venga interpretata come carattere letterale.  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
- [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
  [!code-vb[Formatting.Numeric.Custom#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/escape1.vb#11)]  
   
  [Torna alla tabella](#table)  
@@ -197,11 +201,43 @@ ms.locfileid: "33579236"
  Nell'esempio seguente viene usato l'identificatore di formato ";" per formattare numeri positivi, negativi e zero in modo diverso.  
   
  [!code-cpp[Formatting.Numeric.Custom#8](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#8)]
- [!code-csharp[Formatting.Numeric.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#8)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#8)]
  [!code-vb[Formatting.Numeric.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#8)]  
   
  [Torna alla tabella](#table)  
+
+## <a name="character-literals"></a>Valori letterali carattere  
+ 
+Gli identificatori di formato presenti in una stringa di formato numerico personalizzato vengono sempre interpretati come caratteri di formattazione e mai come caratteri letterali. Sono inclusi i caratteri seguenti:  
+
+- [0](#Specifier0)
+- [\#](#SpecifierD)
+- [%](#SpecifierPct)
+- [‰](#SpecifierPerMille)
+- '
+- [\\](#SpecifierEscape)
+- [.](#SpecifierPt)
+- [,](#SpecifierTh)
+- [E o e](#SpecifierExponent), in base alla posizione nella stringa di formato.
+
+Tutti gli altri caratteri vengono sempre interpretati come valori letterali carattere e in un'operazione di formattazione vengono inclusi senza modifiche nella stringa di risultato.  In un'operazione di analisi questi caratteri devono corrispondere esattamente ai caratteri nella stringa di input. Il confronto tiene conto di maiuscole e minuscole.  
   
+L'esempio seguente illustra un uso comune di unità di carattere letterale (in questo caso migliaia):
+  
+ [!code-csharp-interactive[literal characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/literal2.cs#1)]
+ [!code-vb[literal characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/literal2.vb#1)]  
+  
+ Esistono due modi per indicare che determinati caratteri devono essere interpretati come caratteri letterali e non come caratteri di formattazione, in modo da includerli in una stringa di risultato o eseguirne l'analisi in una stringa di input:  
+  
+- Usando un carattere di escape per un carattere di formattazione. Per altre informazioni, vedere [Carattere di escape "\\"](#SpecifierEscape).
+  
+- Racchiudendo l'intera stringa letterale tra apostrofi.
+
+L'esempio seguente usa entrambi gli approcci per includere i caratteri riservati in una stringa di formato numerico personalizzato.  
+  
+     [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/literal1.cs#1)]
+     [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/literal1.vb#1)]  
+    
 <a name="NotesCustomFormatting"></a>   
 ## <a name="notes"></a>Note  
   
@@ -223,13 +259,13 @@ ms.locfileid: "33579236"
  Nell'esempio seguente vengono illustrate due stringhe di formato numerico personalizzate. In entrambi i casi il segnaposto per le cifre (`#`) consente di visualizzare i dati numerici e tutti gli altri caratteri vengono copiati nella stringa di risultato.  
   
  [!code-cpp[Formatting.Numeric.Custom#10](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/example1.cpp#10)]
- [!code-csharp[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
  [!code-vb[Formatting.Numeric.Custom#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/example1.vb#10)]  
   
  [Torna alla tabella](#table)  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Globalization.NumberFormatInfo>  
+ <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
  [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
  [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [Procedura: Aggiungere zeri iniziali a un numero](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  

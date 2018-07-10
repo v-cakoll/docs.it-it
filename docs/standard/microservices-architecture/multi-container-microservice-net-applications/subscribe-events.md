@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 8ef9f39b0d99db32438e7dcf83318a1aa9054967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592444"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106577"
 ---
 # <a name="subscribing-to-events"></a>Sottoscrizione di eventi
 
@@ -319,8 +319,8 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 -   **Forked eShopOnContainers using NServiceBus (Particular Software)**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers) (eShopOnContainers con fork usando NServiceBus (Software Particular))
 
--   **Event Driven Messaging (Messaggistica basata sugli eventi)**
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **Event Driven Messaging**
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging) (Messaggistica basata su eventi)
 
 -   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/) (Refactoring rispetto alla resilienza: valutazione dell'accoppiamento)
@@ -331,8 +331,8 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 -   **Communicating Between Bounded Contexts**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx) (Comunicazione tra contesti delimitati)
 
--   **Eventual Consistency**
-    [*https://en.wikipedia.org/wiki/Eventual\_coerenza*](https://en.wikipedia.org/wiki/Eventual_consistency) (Coerenza finale)
+-   **Coerenza finale**
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Philip Brown. Strategies for Integrating Bounded Contexts**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/) (Strategie per l'integrazione di contesti delimitati)
@@ -352,8 +352,8 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 -   **Patrick Nommensen. Event-Driven Data Management for Microservices**
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> * (Gestione di dati basati su eventi per microservizi)
 
--   **The CAP Theorem**
-    [*https://en.wikipedia.org/wiki/CAP\_teorema*](https://en.wikipedia.org/wiki/CAP_theorem) (Il teorema CAP)
+-   **Teorema CAP**
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
 -   **What is CAP Theorem?**
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1) (Che cos'è il Teorema CAP)
@@ -367,7 +367,7 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 -   **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed) (CAP dodici anni dopo: come sono cambiate le "regole")
 
--   **Participating in External (DTC) Transactions** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c) (Partecipazione alle transazioni esterne (DTC))
+-   **Participating in External (DTC) Transactions** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)(Partecipazione alle transazioni esterne (DTC))
 
 -   **Bus di servizio di Azure. Brokered Messaging: Duplicate Detection**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25) (Messaggistica negoziata: rilevamento duplicato)
@@ -378,4 +378,5 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 
 
 >[!div class="step-by-step"]
-[Indietro] (rabbitmq-event-bus-development-test-environment.md) [Avanti] (test-aspnet-core-services-web-apps.md)
+[Precedente](rabbitmq-event-bus-development-test-environment.md)
+[Successivo](test-aspnet-core-services-web-apps.md)
