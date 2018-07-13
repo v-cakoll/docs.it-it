@@ -10,7 +10,7 @@ ms.lasthandoff: 05/07/2018
 ms.locfileid: "33807410"
 ---
 # <a name="tcp-activation"></a>Attivazione TCP
-In questo esempio viene illustrato come ospitare un servizio che usa i servizi di attivazione dei processi Windows (WAS) per attivare un servizio che comunica mediante il protocollo net.tcp. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+In questo esempio viene illustrato come ospitare un servizio che usa i servizi di attivazione dei processi Windows (WAS) per attivare un servizio che comunica mediante il protocollo net.tcp. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -142,7 +142,7 @@ Press <ENTER> to terminate client.
   
 1.  Assicurarsi che [!INCLUDE[iisver](../../../../includes/iisver-md.md)] sia installato. Per l'attivazione WAS è necessario l'uso di [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
   
-2.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
      Inoltre, è necessario installare i componenti di attivazione non HTTP di WCF:  
   
@@ -150,9 +150,9 @@ Press <ENTER> to terminate client.
   
     2.  Selezionare **programmi e funzionalità**.  
   
-    3.  Fare clic su **attivare o disattivare la componenti di Windows**.  
+    3.  Fare clic su **attivare i componenti di Windows o disattivare**.  
   
-    4.  Espandere il **Microsoft .NET Framework 3.0** nodo e selezionare il **attivazione Non HTTP di Windows Communication Foundation** funzionalità.  
+    4.  Espandere la **Microsoft .NET Framework 3.0** nodo e selezionare il **attivazione Non HTTP di Windows Communication Foundation** funzionalità.  
   
 3.  Configurare WAS per supportare l'attivazione TCP.  
   
@@ -175,11 +175,11 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  Questo comando è una singola riga di testo. Questo comando abilita l'applicazione /servicemodelsamples per l'accesso tramite entrambi http://localhost/servicemodelsamples e TCP: //localhost/servicemodelsamples.  
+        >  Questo comando è una singola riga di testo. Questo comando consente di accedervi usando sia l'applicazione /servicemodelsamples http://localhost/servicemodelsamples e TCP: //localhost/servicemodelsamples.  
   
 4.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
      Rimuovere l'associazione del sito net.tcp aggiunta per questo esempio.  
   
@@ -206,4 +206,4 @@ Press <ENTER> to terminate client.
         >  Questo comando deve essere digitato come una singola riga di testo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Hosting di AppFabric ed esempi di persistenza](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hosting di AppFabric e salvataggio permanente](http://go.microsoft.com/fwlink/?LinkId=193961)

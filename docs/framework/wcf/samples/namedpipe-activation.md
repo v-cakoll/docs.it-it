@@ -10,7 +10,7 @@ ms.lasthandoff: 05/07/2018
 ms.locfileid: "33806383"
 ---
 # <a name="namedpipe-activation"></a>Attivazione di NamedPipe
-In questo esempio viene dimostrato l'hosting di un servizio che usa WAS (Windows Process Activation Service) per attivare un servizio che comunica su named pipe. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) e richiede [!INCLUDE[wv](../../../../includes/wv-md.md)] per l'esecuzione.  
+In questo esempio viene dimostrato l'hosting di un servizio che usa WAS (Windows Process Activation Service) per attivare un servizio che comunica su named pipe. In questo esempio si basa sul [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) e richiede [!INCLUDE[wv](../../../../includes/wv-md.md)] per l'esecuzione.  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -159,7 +159,7 @@ Press <ENTER> to terminate client.
   
 1.  Assicurarsi che [!INCLUDE[iisver](../../../../includes/iisver-md.md)] sia installato. Per l'attivazione WAS è necessario l'uso di [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
   
-2.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
      Inoltre, è necessario installare i componenti di attivazione non HTTP di WCF:  
   
@@ -167,9 +167,9 @@ Press <ENTER> to terminate client.
   
     2.  Selezionare **programmi e funzionalità**.  
   
-    3.  Fare clic su **attivare o disattivare la componenti di Windows**.  
+    3.  Fare clic su **attivare i componenti di Windows o disattivare**.  
   
-    4.  Espandere il **Microsoft .NET Framework 3.0** nodo e selezionare il **attivazione Non HTTP di Windows Communication Foundation** funzionalità.  
+    4.  Espandere la **Microsoft .NET Framework 3.0** nodo e selezionare il **attivazione Non HTTP di Windows Communication Foundation** funzionalità.  
   
 3.  Configurare il servizio WAS (Windows Process Activation Service) per supportare l'attivazione di named pipe.  
   
@@ -196,7 +196,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Questo comando è una singola riga di testo.  
   
-         Questo comando abilita l'applicazione /servicemodelsamples per l'accesso tramite entrambi http://localhost/servicemodelsamples e TCP: //localhost/servicemodelsamples.  
+         Questo comando consente di accedervi usando sia l'applicazione /servicemodelsamples http://localhost/servicemodelsamples e TCP: //localhost/servicemodelsamples.  
   
 4.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -223,4 +223,4 @@ Press <ENTER> to terminate client.
         >  Questo comando deve essere digitato come una singola riga di testo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Hosting di AppFabric ed esempi di persistenza](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hosting di AppFabric e salvataggio permanente](http://go.microsoft.com/fwlink/?LinkId=193961)
