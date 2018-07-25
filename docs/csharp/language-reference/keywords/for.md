@@ -29,7 +29,7 @@ for (initializer; condition; iterator)
     body  
 ```
 
-Tutte le tre sezioni sono facoltative. Il corpo del ciclo è un'istruzione o un blocco di istruzioni.
+Le tre sezioni sono facoltative. Il corpo del ciclo è un'istruzione o un blocco di istruzioni.
 
 L'esempio seguente illustra l'istruzione `for` con tutte le sezioni definite:
 
