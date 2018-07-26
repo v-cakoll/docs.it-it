@@ -7,11 +7,11 @@ ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: 02b6b3fc9e149f5d1d5d78e310c7df257be983c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218544"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961547"
 ---
 # <a name="learn-docker-basics-with-net-core"></a>Apprendere le nozioni di base di Docker con .NET Core
 
