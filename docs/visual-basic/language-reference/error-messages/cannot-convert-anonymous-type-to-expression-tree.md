@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-ms.openlocfilehash: d43f6ef19591af326d06a4ce21194d8f9fa58c2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f97a0de74428ce42a088644580a78bf8fd99945
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585476"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936802"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>Impossibile convertire il tipo anonimo in un albero delle espressioni. Il tipo anonimo contiene un campo usato nell'inizializzazione di un altro campo.
-Il compilatore non accetta la conversione di un tipo anonimo in un albero delle espressioni quando una proprietà di tipo anonimo viene utilizzata per inizializzare un'altra proprietà di tipo anonimo. Ad esempio, nel codice seguente, `Prop1` viene dichiarato nell'elenco di inizializzazione e quindi utilizzato come valore iniziale per `Prop2`.  
+Il compilatore non accetta la conversione di un tipo anonimo in un albero delle espressioni quando una proprietà del tipo anonimo viene usata per inizializzare un'altra proprietà del tipo anonimo. Ad esempio, nel codice seguente, `Prop1` viene dichiarato nell'elenco di inizializzazione e quindi utilizzato come valore iniziale per `Prop2`.  
   
 ```vb  
 Module M2  
@@ -35,7 +35,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Assegnare il valore iniziale per `Prop1` a una variabile locale. Assegnare la variabile sia `Prop1` e `Prop2`, come illustrato nel codice seguente.  
+-   Assegnare il valore iniziale per `Prop1` a una variabile locale. Assegnare la variabile a entrambe `Prop1` e `Prop2`, come illustrato nel codice seguente.  
   
     ```  
     Sub Main()  
@@ -46,7 +46,8 @@ End Module
     End Sub  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Alberi delle espressioni](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
- [Procedura: Usare alberi delle espressioni per la compilazione di query dinamiche](http://msdn.microsoft.com/library/1e37e0cc-eef3-48bb-8b69-3adabf322735)
+## <a name="see-also"></a>Vedere anche
+
+[Tipi anonimi (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+[Alberi delle espressioni (Visual Basic)](../../programming-guide/concepts/expression-trees/index.md)  
+[Procedura: usare alberi delle espressioni per compilare query dinamiche (Visual Basic)](../../programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)  

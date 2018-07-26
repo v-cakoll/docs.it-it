@@ -9,14 +9,14 @@ ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 045e621f0104c4c958d77d2443c1524b33410b7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650465"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39221023"
 ---
 # <a name="-win32icon"></a>-win32icon
-Inserisce un file ICO nel file di output. Il file ICO rappresenta il file di output in **Esplora File**.  
+Inserisce un file con estensione ICO nel file di output. Il file ICO rappresenta il file di output in **Esplora File**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -28,19 +28,19 @@ Inserisce un file ICO nel file di output. Il file ICO rappresenta il file di out
   
 |Termine|Definizione|  
 |---|---|  
-|`filename`|Il file ico da aggiungere al file di output. Racchiudere il nome del file tra virgolette ("") se contiene uno spazio.|  
+|`filename`|Il file con estensione ico da aggiungere al file di output. Racchiudere il nome file racchiuso tra virgolette ("") se contiene uno spazio.|  
   
 ## <a name="remarks"></a>Note  
- È possibile creare un file ico con il compilatore di risorse (RC) di Microsoft Windows. Il compilatore di risorse viene richiamato quando si compila un programma Visual C++. nel file RC, viene creato un file ico. Il `-win32icon` e `-win32resource` opzioni si escludono a vicenda.  
+ È possibile creare un file con estensione ico con il compilatore di risorse (RC) di Microsoft Windows. Il compilatore di risorse viene richiamato quando si compila un programma in Visual C++. il file RC viene creato un file con estensione ico. Il `-win32icon` e `-win32resource` opzioni si escludono a vicenda.  
   
- Vedere [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) per fare riferimento un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse, o [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) per collegare un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse. Vedere [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) per importare un file. res.  
+ Visualizzare [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) per fare riferimento a un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse, o [-risorse (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) collegare un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse. Visualizzare [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) per importare un file con estensione res.  
   
 |Per impostare - win32icon nell'IDE di Visual Studio|  
 |---|  
 |1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Applicazione** .<br />3.  Modificare il valore di **icona** casella.|  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente Compila `In.vb` e allega un file ico, `Rf.ico`.  
+ Il codice seguente Compila `In.vb` e associa un file con estensione ico, `Rf.ico`.  
   
 ```console
 vbc -win32icon:rf.ico in.vb  

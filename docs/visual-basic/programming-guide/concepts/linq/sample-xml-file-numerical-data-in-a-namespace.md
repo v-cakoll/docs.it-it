@@ -1,12 +1,13 @@
 ---
-title: 'File XML di esempio: Dati numerici in un Namespace1'
+title: 'File XML di esempio: Dati numerici in uno spazio dei nomi1'
 ms.date: 07/20/2015
 ms.assetid: f01cc0a1-fb55-4b42-8380-16f4be47d6f4
 ms.openlocfilehash: 71ff5229d4f2342880bdf50f288355a676b78722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244309"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>File XML di esempio: dati numerici in uno spazio dei nomi
 Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Questo file contiene dati numerici per il calcolo della somma e della media, nonché per il raggruppamento. L'XML si trova in uno spazio dei nomi.  

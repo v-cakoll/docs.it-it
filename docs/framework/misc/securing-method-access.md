@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0d9ddbd6c7b027a7c342f4c14192a7571beb592
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 314ceb86219ce143e84a00392727d610c0779e48
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397884"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243678"
 ---
 # <a name="securing-method-access"></a>Protezione dell'accesso ai metodi
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -30,17 +30,17 @@ ms.locfileid: "33397884"
   
 -   Limitare l'ambito di accessibilità alla classe, all'assembly o alle classi derivate, se possono essere attendibili. Questo è il modo più semplice per limitare l'accesso del metodo. Si noti che, in generale, le classi derivate possono essere meno affidabili rispetto alla classe da cui derivano, anche se in alcuni casi condividono l'identità della classe padre. In particolare, non attribuire attendibilità alla parola chiave **protetti**, che non è necessariamente usata nel contesto di sicurezza.  
   
--   Limitare l'accesso al metodo ai chiamanti di un'identità specificata, in pratica, qualsiasi particolare [evidenza](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (nome sicuro, publisher, zona e così via) desiderato.  
+-   Limitare l'accesso al metodo ai chiamanti di un'identità specificata, in pratica, qualsiasi particolare [evidenza](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (nome sicuro, publisher, zona e così via) scelto.  
   
 -   Limitare l'accesso al metodo ai chiamanti che dispongono delle autorizzazioni selezionate.  
   
- Analogamente, la sicurezza dichiarativa consente di controllare l'ereditarietà delle classi. È possibile utilizzare **InheritanceDemand** per eseguire le operazioni seguenti:  
+ Analogamente, la sicurezza dichiarativa consente di controllare l'ereditarietà delle classi. È possibile usare **InheritanceDemand** per eseguire le operazioni seguenti:  
   
 -   Richiedere le classi derivate per ottenere un'identità o autorizzazione specificata.  
   
 -   Richiedere le classi derivate che eseguono l'override di metodi specifici per ottenere un'identità o autorizzazione specificata.  
   
- L'esempio seguente illustra come proteggere una classe pubblica per l'accesso limitato richiedendo che i chiamanti siano firmati con un nome sicuro specifico. Questo esempio viene utilizzato il <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> con un **richiesta** per il nome sicuro. Per informazioni su come firmare un assembly con un nome sicuro, vedere [creazione e uso degli assembly](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ L'esempio seguente illustra come proteggere una classe pubblica per l'accesso limitato richiedendo che i chiamanti siano firmati con un nome sicuro specifico. Questo esempio Usa la <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> con un **richiesta** per il nome sicuro. Per informazioni su come firmare un assembly con nome sicuro, vedere [creazione e assembly con nome sicuro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -60,9 +60,9 @@ public class Class1
  Usare le dichiarazioni illustrate in questa sezione per impedire l'uso di specifiche classi e metodi, nonché proprietà ed eventi, da parte di codice parzialmente attendibile. Applicando tali dichiarazioni a una classe, è possibile applicare la protezione a tutti i relativi metodi, proprietà ed eventi. Si noti tuttavia che l'accesso al campo non è influenzato dalla protezione dichiarativa. Si noti inoltre che le richieste di collegamento aiutano a proteggere solo dai chiamanti immediati e potrebbero essere comunque soggette ad attacchi.  
   
 > [!NOTE]
->  È stato introdotto un nuovo modello di trasparenza in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Il [codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md) modello consente di identificare il codice sicuro con il <xref:System.Security.SecurityCriticalAttribute> attributo. Il codice critico per la sicurezza richiede che chiamanti ed eredi siano completamente attendibili. Gli assembly in esecuzione con le regole di protezione dell'accesso al codice delle versioni precedenti di .NET Framework possono chiamare gli assembly di livello 2. In questo caso, gli attributi critici per la sicurezza verranno considerati come richieste di collegamento per l'attendibilità totale.  
+>  È stato introdotto un nuovo modello di trasparenza in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Il [codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md) identifica il modello di codice sicuro con il <xref:System.Security.SecurityCriticalAttribute> attributo. Il codice critico per la sicurezza richiede che chiamanti ed eredi siano completamente attendibili. Gli assembly in esecuzione con le regole di protezione dell'accesso al codice delle versioni precedenti di .NET Framework possono chiamare gli assembly di livello 2. In questo caso, gli attributi critici per la sicurezza verranno considerati come richieste di collegamento per l'attendibilità totale.  
   
- Negli assembly con nome sicuro, un [LinkDemand](../../../docs/framework/misc/link-demands.md) viene applicato a tutti i metodi accessibili pubblicamente, proprietà ed eventi per limitare l'uso ai soli chiamanti completamente attendibili. Per disabilitare questa funzionalità, è necessario applicare l'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Di conseguenza, contrassegnare esplicitamente le classi in modo da escludere i chiamanti non attendibili è necessario solo per gli assembly non firmati oppure per gli assembly con questo attributo. È possibile usare queste dichiarazioni per contrassegnare un sottoinsieme di tipi non destinati a chiamanti non attendibili.  
+ Nell'assembly con nome sicuro, un [LinkDemand](../../../docs/framework/misc/link-demands.md) viene applicato a tutti i metodi accessibili pubblicamente, proprietà ed eventi per limitarne l'uso per i chiamanti completamente attendibili. Per disabilitare questa funzionalità, è necessario applicare l'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Di conseguenza, contrassegnare esplicitamente le classi in modo da escludere i chiamanti non attendibili è necessario solo per gli assembly non firmati oppure per gli assembly con questo attributo. È possibile usare queste dichiarazioni per contrassegnare un sottoinsieme di tipi non destinati a chiamanti non attendibili.  
   
  Gli esempi seguenti illustrano come impedire l'uso di classi e membri da parte di codice non attendibile.  
   
@@ -110,7 +110,7 @@ End Class
 ```csharp  
 [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Name="FullTrust")]  
 [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name="FullTrust")]  
-public abstract class CannotCreateInstanceOfMe_CanCastToMe{}  
+public abstract class CannotCreateInstanceOfMe_CanCastToMe {}  
 ```  
   
  Per le funzioni virtuali pubbliche:  
@@ -145,7 +145,7 @@ End Class 'Base2
 ```  
   
 ```csharp  
-abstract class Base2{  
+abstract class Base2 {  
 [System.Security.Permissions.PermissionSetAttribute(  
 System.Security.Permissions.SecurityAction.InheritanceDemand, Name = "FullTrust")]  
 [System.Security.Permissions.PermissionSetAttribute(  
@@ -234,9 +234,9 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Override virtual interni e friend sottoponibile a override da overload  
   
 > [!NOTE]
->  In questa sezione illustra un problema di sicurezza quando si dichiara un metodo come `virtual` e `internal` (`Overloads``Overridable``Friend` in Visual Basic). Questo avviso si applica solo alle versioni 1.0 e 1.1 di .NET Framework, ma non si applica alle versioni successive.  
+>  In questa sezione illustra un problema di sicurezza quando si dichiara un metodo come `virtual` e `internal` (`Overloads``Overridable``Friend` in Visual Basic). Questo avviso si applica solo alle versioni 1.0 e 1.1 di .NET Framework, non è applicabile alle versioni successive.  
   
- Nelle versioni di .NET Framework 1.0 e 1.1, è necessario considerare una sfumatura di accessibilità al sistema di tipi quando si conferma che il codice non è disponibile ad altri assembly. Un metodo dichiarato **virtuale** e **interno** (**Overloads Overridable Friend** in Visual Basic) può eseguire l'override di voce vtable della classe padre e può essere utilizzato solo da all'interno dello stesso assembly in quanto è interno. Tuttavia, l'accessibilità per eseguire l'override è determinata dal **virtuale** (parola chiave) che può essere sottoposto a override da un altro assembly, purché tale codice possa accedere alla stessa classe. Se la possibilità di un override presenta un problema, utilizzare la sicurezza dichiarativa per risolverlo o rimuovere il **virtuale** parola chiave se non è strettamente necessaria.  
+ Nelle versioni 1.0 e 1.1 di .NET Framework, è necessario considerare una sfumatura di accessibilità al sistema di tipi quando si conferma che il codice non è disponibile ad altri assembly. Un metodo dichiarato **virtuale** e **interna** (**Overloads Overridable Friend** in Visual Basic) può eseguire l'override di voce vtable della classe padre e può essere usato solo da nello stesso assembly in quanto è interno. Tuttavia, l'accessibilità per eseguire l'override è determinato dal **virtuale** (parola chiave) che può essere sottoposto a override da un altro assembly, purché tale codice abbia accesso alla stessa classe. Se la possibilità di un override presenta un problema, usare la sicurezza dichiarativa per risolverlo o rimuovere le **virtuale** parola chiave se non è strettamente necessaria.  
   
  Si noti che anche se un compilatore di linguaggio impedisce questi override con un errore di compilazione, è possibile eseguire l'override per il codice scritto con altri compilatori.  
   

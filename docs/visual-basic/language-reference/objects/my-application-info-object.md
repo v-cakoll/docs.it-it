@@ -1,25 +1,25 @@
 ---
-title: Oggetto My.Application.Info
+title: Oggetto My.Application.Info (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Info object
 - My.Application.AssemblyInfo object
 ms.assetid: 2f4782ed-3da2-4d88-b341-0c6f480fb7bb
-ms.openlocfilehash: b8ec231b402dd4079e2912a845bc76603bde55ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dff32eb29e9299274cc137a07fe1b080911ab420
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594595"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198796"
 ---
 # <a name="myapplicationinfo-object"></a>Oggetto My.Application.Info
-Fornisce proprietà per ottenere le informazioni sull'applicazione, ad esempio il numero di versione, descrizione, gli assembly caricati e così via.  
+Fornisce le proprietà per ottenere le informazioni sull'applicazione, ad esempio il numero di versione, descrizione, gli assembly caricati e così via.  
   
 ## <a name="remarks"></a>Note  
- Per informazioni sui metodi e proprietà del `My.Application.Info` , vedere <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
+ Per informazioni sui metodi e proprietà del `My.Application.Info` oggetti, vedere <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
   
 > [!NOTE]
->  È possibile utilizzare le proprietà del <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> classe per ottenere informazioni su un file su disco.  
+>  È possibile usare le proprietà del <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> classe per ottenere informazioni su un file su disco.  
   
 ## <a name="requirements"></a>Requisiti  
  **Namespace:** <xref:Microsoft.VisualBasic.ApplicationServices>  

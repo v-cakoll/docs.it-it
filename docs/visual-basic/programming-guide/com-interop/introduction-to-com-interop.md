@@ -6,49 +6,50 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: 639b621215f25bc1042274a92a21fca2985e5918
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244114"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Introduzione all'interoperabilità COM (Visual Basic)
-Il modello COM (Component Object) consente a un oggetto esporne la funzionalità per gli altri componenti e applicazioni host. Mentre gli oggetti COM sono stati fondamentali della programmazione per molti anni Windows, le applicazioni progettate per common language runtime (CLR) offrono numerosi vantaggi.  
+Il modello COM (Component Object) consente a un oggetto di esporre le proprie funzionalità agli altri componenti e alle applicazioni host. Anche se gli oggetti COM sono state fondamentali per Windows di programmazione per molti anni, le applicazioni progettate per common language runtime (CLR) offrono numerosi vantaggi.  
   
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Infine, le applicazioni sostituiranno quelle sviluppate con COM. Fino ad allora, è possibile utilizzare o creare oggetti COM con Visual Studio. Interoperabilità COM, o *l'interoperabilità COM*, consente di utilizzare gli oggetti COM esistenti durante la fase di transizione per il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] con gradualità.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Infine, le applicazioni sostituiranno quelle sviluppate con COM. Fino ad allora, è possibile usare o creare oggetti COM con Visual Studio. Interoperabilità COM, oppure *interoperabilità COM*, consente di usare oggetti COM esistenti durante la fase di transizione per il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] a proprio piacimento.  
   
- Tramite il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per creare componenti COM, è possibile utilizzare l'interoperabilità COM senza registrazione. Ciò consente di controllare la versione della DLL è abilitato quando sono installato in un computer più versioni e consente agli utenti finali di utilizzare XCOPY o FTP per copiare l'applicazione in una directory appropriata nel computer in cui può essere eseguito. Per ulteriori informazioni, vedere [interoperabilità COM senza registrazione](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
+ Tramite il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per creare componenti COM, è possibile usare l'interoperabilità COM senza registrazione. Ciò consente di controllare la versione della DLL è abilitata quando più di una versione viene installata in un computer e consente agli utenti finali di usare XCOPY o FTP per copiare l'applicazione in una directory appropriata nel computer in cui può essere eseguito. Per altre informazioni, vedere [interoperabilità COM senza registrazione](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
   
 ## <a name="managed-code-and-data"></a>Il codice gestito e dati  
- Il codice sviluppato per il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] è detto *codice gestito*e contiene i metadati utilizzati da CLR. I dati utilizzati dalle [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applicazioni viene chiamato *dati gestiti* perché il runtime gestisce le attività correlate ai dati, ad esempio l'allocazione e il recupero della memoria e dei tipi di controllo. Per impostazione predefinita, Visual Basic .NET utilizza dati e codice gestito, ma è possibile accedere a codice non gestito e i dati di oggetti COM tramite assembly di interoperabilità (descritto più avanti in questa pagina).  
+ Il codice sviluppato per le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] è detta *codice gestito*e contiene i metadati usati da CLR. I dati utilizzati dalle [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applicazioni viene chiamato *managed data* perché il runtime gestisce le attività correlate ai dati ad esempio l'allocazione e il recupero della memoria e dei tipi di controllo. Per impostazione predefinita, Visual Basic .NET Usa codice gestito e i dati, ma è possibile accedere a codice non gestito e i dati di oggetti COM mediante assembly di interoperabilità (descritto più avanti in questa pagina).  
   
 ## <a name="assemblies"></a>Assembly  
- Un assembly costituisce la base di un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dell'applicazione. È una raccolta di funzionalità che vengono compilate, con controllo delle versioni e distribuiti come unità singola implementazione contenente uno o più file. Ogni assembly contiene un manifesto dell'assembly.  
+ Un assembly è il principale blocco predefinito di un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dell'applicazione. È una raccolta di funzionalità che vengono compilate, con controllo delle versioni e distribuiti come unità singola implementazione che contiene uno o più file. Ogni assembly contiene un manifesto dell'assembly.  
   
-## <a name="type-libraries-and-assembly-manifests"></a>Librerie dei tipi e i manifesti dell'Assembly  
- Librerie dei tipi descrivono le caratteristiche di oggetti COM, ad esempio i nomi dei membri e tipi di dati. Manifesti dell'assembly eseguono la stessa funzione per [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applicazioni. Sono incluse le seguenti informazioni:  
+## <a name="type-libraries-and-assembly-manifests"></a>Manifesti dell'Assembly e le librerie dei tipi  
+ Librerie dei tipi descrivono le caratteristiche degli oggetti COM, ad esempio i nomi dei membri e tipi di dati. Manifesti dell'assembly eseguano la stessa funzione per [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applicazioni. Includono le informazioni seguenti:  
   
 -   Identità dell'assembly, versione, impostazioni cultura e firma digitale.  
   
--   File che costituiscono l'implementazione dell'assembly.  
+-   File che compongono l'implementazione dell'assembly.  
   
--   Tipi e risorse che compongono l'assembly. Sono inclusi quelli che vengono esportati da esso.  
+-   Tipi e risorse che compongono l'assembly. Sono inclusi quelli che vengono esportati da quest'ultimo.  
   
--   In fase di compilazione dipendenze da altri assembly.  
+-   Dipendenze in fase di compilazione da altri assembly.  
   
--   Autorizzazioni necessarie per l'assembly venga eseguita correttamente.  
+-   Autorizzazioni necessarie per l'assembly da eseguire in modo corretto.  
   
- Per ulteriori informazioni sugli assembly e manifesti dell'assembly, vedere [assembly e Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ Per altre informazioni sugli assembly e manifesti dell'assembly, vedere [gli assembly e Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
   
-### <a name="importing-and-exporting-type-libraries"></a>Importazione ed esportazione di librerie dei tipi  
- Visual Studio include un'utilità, Tlbimp, che consente di importare le informazioni da una libreria dei tipi in un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dell'applicazione. È possibile generare le librerie dei tipi da assembly tramite l'utilità Tlbexp.  
+### <a name="importing-and-exporting-type-libraries"></a>Importazione ed esportazione delle librerie dei tipi  
+ Visual Studio include un'utilità, Tlbimp, che consente di importare le informazioni da una libreria dei tipi in un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dell'applicazione. È possibile generare le librerie dei tipi da assembly utilizzando l'utilità Tlbexp.  
   
- Per informazioni su Tlbimp e Tlbexp, vedere [Tlbimp.exe (utilità di importazione di tipo libreria)](../../../framework/tools/tlbimp-exe-type-library-importer.md) e [Tlbexp.exe (Type Library Exporter)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
+ Per informazioni su Tlbimp e Tlbexp, vedere [(tipo di libreria utilità di importazione) Tlbimp.exe](../../../framework/tools/tlbimp-exe-type-library-importer.md) e [Tlbexp.exe (Type Library Exporter)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   
 ## <a name="interop-assemblies"></a>Assembly di interoperabilità  
- Assembly di interoperabilità sono [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] gli assembly che bridge tra gestito e codice, membri dell'oggetto COM mapping equivalente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] membri gestiti. Assembly di interoperabilità creati da Visual Basic .NET gestiscono molti dei dettagli relativi all'utilizzo con oggetti COM, ad esempio il marshalling di interoperabilità.  
+ Sono gli assembly di interoperabilità [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] gli assembly che bridge between gestito e codice, membri dell'oggetto COM mapping equivalente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] membri gestiti. Gli assembly di interoperabilità creati da Visual Basic .NET gestiscono molti dei dettagli relativi all'utilizzo con oggetti COM, ad esempio il marshalling di interoperabilità.  
   
 ## <a name="interoperability-marshaling"></a>Il marshalling di interoperabilità  
- Tutti [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applicazioni condividono un set di tipi comuni che consentono l'interoperabilità tra gli oggetti, indipendentemente dal linguaggio di programmazione utilizzato. I parametri e valori restituiti di oggetti COM talvolta utilizzano tipi di dati diversi da quelli usati nel codice gestito. *Il marshalling di interoperabilità* è il processo di creazione del pacchetto parametri e valori restituiti nei tipi di dati equivalente durante lo spostamento da e verso oggetti COM. Per ulteriori informazioni, vedere [marshalling di interoperabilità](../../../framework/interop/interop-marshaling.md).  
+ Tutti i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applicazioni condividono un set di tipi comuni che consentono l'interoperabilità di oggetti, indipendentemente dal linguaggio di programmazione usato. I parametri e valori restituiti di oggetti COM in alcuni casi utilizzano tipi di dati che differiscono da quelli usati nel codice gestito. *Il marshalling di interoperabilità* è il processo di creazione dei pacchetti parametri e valori restituiti nei tipi di dati equivalente durante lo spostamento da e verso oggetti COM. Per altre informazioni, vedere [marshalling di interoperabilità](../../../framework/interop/interop-marshaling.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md)  

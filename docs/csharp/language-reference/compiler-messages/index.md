@@ -7,10 +7,11 @@ helpviewer_keywords:
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
 ms.openlocfilehash: e67e568b67400807ba7a1668acb6b3a36b4c7f22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220789"
 ---
 # <a name="c-compiler-errors"></a>Errori del compilatore C#
 Per alcuni errori del compilatore C# sono disponibili articoli corrispondenti che spiegano il motivo per cui è stato generato l'errore e, in alcuni casi, spiegano come correggerlo. Per sapere se sono disponibili informazioni relative a un particolare messaggio di errore, seguire una di queste procedure.  

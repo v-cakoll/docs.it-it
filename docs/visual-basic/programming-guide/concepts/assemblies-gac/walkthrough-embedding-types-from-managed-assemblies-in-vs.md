@@ -3,11 +3,11 @@ title: 'Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Vi
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
 ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644186"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245475"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)
 Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, è possibile effettuare un accoppiamento debole dei tipi in un'applicazione per ottenere l'indipendenza dalla versione. Ovvero, il programma può essere scritto in modo da usare tipi di più versioni di una libreria gestita senza dover essere ricompilato per ogni versione.  
@@ -56,7 +56,7 @@ Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, 
   
 2.  Nel riquadro **Tipi di progetto** della finestra di dialogo **Nuovo progetto** verificare che sia selezionata l'opzione **Windows**. Selezionare **Libreria di classi** nel riquadro **Modelli**. Nella casella **Nome** digitare `TypeEquivalenceInterface` e quindi fare clic su **OK**. Il nuovo progetto viene creato.  
   
-3.  In **Esplora**, il file Class1. vb e fare clic su **rinominare**. Rinominare il file `ISampleInterface.vb` e premere INVIO. Modificando il nome del file, anche la classe verrà rinominata `ISampleInterface`. Questa classe rappresenterà l'interfaccia pubblica per la classe.  
+3.  Nelle **Esplora soluzioni**, fare doppio clic su file Class1.vb e fare clic su **rinominare**. Rinominare il file `ISampleInterface.vb` e premere INVIO. Modificando il nome del file, anche la classe verrà rinominata `ISampleInterface`. Questa classe rappresenterà l'interfaccia pubblica per la classe.  
   
 4.  Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceInterface e fare clic su **Proprietà**. Fare clic sulla scheda **Compila**. Impostare il percorso di output su un percorso valido nel computer di sviluppo, ad esempio `C:\TypeEquivalenceSample`. Questo percorso verrà usato anche in un passaggio successivo di questa procedura dettagliata.  
   
@@ -81,7 +81,7 @@ Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, 
   
 9. Scegliere **Mostra tutti i file** dal menu **Progetto**.  
   
-10. In **Esplora**, espandere il **progetto** cartella. Fare doppio clic il file AssemblyInfo. vb. Aggiungere il seguente attributo al file.  
+10. Nelle **Esplora soluzioni**, espandere il **My Project** cartella. Fare doppio clic il file AssemblyInfo. vb. Aggiungere il seguente attributo al file.  
   
     ```vb  
     <Assembly: ImportedFromTypeLib("")>  
@@ -101,7 +101,7 @@ Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, 
   
 2.  Nel riquadro **Tipi di progetto** della finestra di dialogo **Nuovo progetto** verificare che sia selezionata l'opzione **Windows**. Selezionare **Libreria di classi** nel riquadro **Modelli**. Nella casella **Nome** digitare `TypeEquivalenceRuntime` e quindi fare clic su **OK**. Il nuovo progetto viene creato.  
   
-3.  In **Esplora**, il file Class1. vb e fare clic su **rinominare**. Rinominare il file `SampleClass.vb` e premere INVIO. Modificando il nome del file, anche la classe verrà rinominata `SampleClass`. Questa classe implementerà l'interfaccia `ISampleInterface`.  
+3.  Nelle **Esplora soluzioni**, fare doppio clic su file Class1.vb e fare clic su **rinominare**. Rinominare il file `SampleClass.vb` e premere INVIO. Modificando il nome del file, anche la classe verrà rinominata `SampleClass`. Questa classe implementerà l'interfaccia `ISampleInterface`.  
   
 4.  Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **Proprietà**. Fare clic sulla scheda **Compila**. Impostare il percorso di output sullo stesso percorso usato nel progetto TypeEquivalenceInterface, ad esempio `C:\TypeEquivalenceSample`.  
   
@@ -155,7 +155,7 @@ Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, 
   
 6.  In **Esplora soluzioni** espandere la cartella **Riferimenti**. Selezionare il riferimento TypeEquivalenceInterface. Nella finestra Proprietà del riferimento TypeEquivalenceInterface impostare la proprietà **Incorpora tipi di interoperabilità** su **True**.  
   
-7.  Aggiungere il codice seguente al file Module1. vb per creare il programma client.  
+7.  Aggiungere il codice seguente nel file Module1.vb per creare il programma client.  
   
     ```vb  
     Imports TypeEquivalenceInterface  

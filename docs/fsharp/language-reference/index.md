@@ -1,17 +1,17 @@
 ---
 title: Riferimenti per il linguaggio F#
-description: 'Trovare informazioni funzionalità del linguaggio F # da questo riferimento a token di lingua, concetti, tipi, espressioni e argomenti costrutto supportati dal compilatore.'
+description: 'Trovare informazioni funzionalità del linguaggio F # da questo riferimento al token delle lingue, i concetti, tipi, le espressioni e gli argomenti supportati dal compilatore costrutto.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 1c25ab4a4936b532a21aed8b2b0202fec1dd7133
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0f0b54ab95e634538fc8511a18aac9d8ee00f26
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566691"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937085"
 ---
 # <a name="f-language-reference"></a>Riferimenti per il linguaggio F#
 
-In questa sezione è un riferimento al linguaggio F #, un linguaggio di programmazione multi-paradigma per .NET. Il linguaggio F# supporta modelli di programmazione funzionali, orientati a oggetti e imperativi.
+In questa sezione è un riferimento al linguaggio F #, un linguaggio di programmazione multi-paradigmatico destinato a .NET. Il linguaggio F# supporta modelli di programmazione funzionali, orientati a oggetti e imperativi.
 
 
 ## <a name="f-tokens"></a>Token F#
@@ -63,7 +63,7 @@ La tabella seguente illustra gli argomenti di riferimento disponibili che descri
 |Titolo|Descrizione|
 |-----|-----------|
 |[Valori](values/index.md)|Descrive i valori, ovvero quantità non modificabili che hanno un tipo specifico. I valori possono essere numeri interi o a virgola mobile, caratteri o testo, elenchi, sequenze, matrici, tuple, unioni discriminate, record, tipi di classe o valori di funzioni.|
-|[Tipi primitivi](primitive-types.md)|Descrive i tipi primitivi fondamentali usati nel linguaggio F#. Specifica anche i tipi .NET corrispondenti e i valori minimi e massimi per ogni tipo.|
+|[Tipi di base](basic-types.md)|Descrive i tipi di base fondamentali usati nel linguaggio F #. Specifica anche i tipi .NET corrispondenti e i valori minimi e massimi per ogni tipo.|
 |[Tipo di unità](unit-type.md)|Descrive il tipo `unit`, ovvero un tipo che indica l'assenza di un valore specifico. Il tipo `unit` ha un solo valore, che funge da segnaposto quando nessun altro valore è presente o necessario.|
 |[Stringhe](strings.md)|Descrive le stringhe in F#. Il tipo `string` rappresenta un testo non modificabile come sequenza di caratteri Unicode. `string` è un alias per `System.String` in .NET Framework.|
 |[Tuple](tuples.md)|Descrive le tuple, ovvero un raggruppamento di valori senza nome, ma ordinati, di tipi potenzialmente diversi.|

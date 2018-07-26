@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 ms.openlocfilehash: f9005a25b99b0a17f8e00f350547aa4bc313c4ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652844"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961021"
 ---
 # <a name="reference-visual-basic"></a>Riferimenti (Visual Basic)
-In questa sezione vengono forniti collegamenti a informazioni di riferimento su diversi aspetti della programmazione di Visual Basic.  
+In questa sezione vengono forniti collegamenti a informazioni di riferimento su diversi aspetti della programmazione in Visual Basic.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Riferimenti per il linguaggio Visual Basic](../../visual-basic/language-reference/index.md)  
@@ -26,7 +26,7 @@ In questa sezione vengono forniti collegamenti a informazioni di riferimento su 
  Fornisce collegamenti a informazioni sull'uso della libreria di classi [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
  [Specifica del linguaggio Visual Basic](../../visual-basic/reference/language-specification/index.md)  
- Vengono forniti collegamenti alla specifica del linguaggio Visual Basic completo, che contiene informazioni dettagliate su tutti gli aspetti del linguaggio.  
+ Vengono forniti collegamenti alle specifiche del linguaggio Visual Basic completa, che contiene informazioni dettagliate su tutti gli aspetti del linguaggio.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
@@ -37,10 +37,10 @@ In questa sezione vengono forniti collegamenti a informazioni di riferimento su 
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Elementi generali dell'interfaccia utente (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Contiene argomenti relativi alle finestre di dialogo e finestre usate in Visual Studio.  
+ Contiene argomenti per le finestre di dialogo e finestre usate in Visual Studio.  
   
  [Strumenti XML in Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  Vengono forniti collegamenti ad argomenti sui vari strumenti XML disponibili in Visual Studio.  
   
  [Automation and Extensibility Reference](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf) (Riferimenti su automazione ed estendibilità)  
- Fornisce collegamenti ad argomenti sull'automazione ed estendibilità in Visual Studio, per i componenti condivisi sia specifico della lingua.
+ Fornisce collegamenti ad argomenti sull'automazione ed estendibilità in Visual Studio per i componenti condivisi sia specifico della lingua.

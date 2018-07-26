@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
 ms.openlocfilehash: 1136bed5d329c5283b4e7b95a5085f3e0db46286
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585541"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198523"
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Accesso alle porte del computer (Visual Basic)
 L'oggetto `My.Computer.Ports` offre una proprietà e un metodo per l'accesso a porte seriali del computer.  

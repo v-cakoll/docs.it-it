@@ -1,15 +1,15 @@
 ---
-title: 'Procedura dettagliata: Incorporamento di informazioni sui tipi da assembly di Microsoft Office in Visual Studio (Visual Basic)'
+title: 'Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office in Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
 ms.openlocfilehash: 6a28e95f9c3cfcc2481c8f4f9f83303648df43cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643822"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244052"
 ---
-# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Procedura dettagliata: Incorporamento di informazioni sui tipi da assembly di Microsoft Office in Visual Studio (Visual Basic)
+# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office in Visual Studio (Visual Basic)
 Se si incorporano informazioni sui tipi in un'applicazione che fa riferimento a oggetti COM, è possibile eliminare la necessità di un assembly di interoperabilità primario (PIA). Inoltre, le informazioni sui tipi incorporate consentono di ottenere l'indipendenza dalla versione per l'applicazione. Ovvero, il programma può essere scritto in modo da usare tipi di più versioni di una libreria COM senza richiedere un assembly di interoperabilità primario specifico per ogni versione. Si tratta di uno scenario comune per le applicazioni che usano gli oggetti delle librerie di Microsoft Office. L'incorporamento di informazioni sui tipi consente l'uso della stessa build di un programma con delle diverse versioni di Microsoft Office in computer diversi senza dover ridistribuire il programma o l'assembly di interoperabilità primario per ogni versione di Microsoft Office.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -29,7 +29,7 @@ Se si incorporano informazioni sui tipi in un'applicazione che fa riferimento a 
   
 3.  Nel riquadro **Tipi di progetto** della finestra di dialogo **Nuovo progetto** verificare che sia selezionata l'opzione **Windows**. Selezionare **Applicazione console** nel riquadro **Modelli**. Nella casella **Nome** immettere `CreateExcelWorkbook`, quindi scegliere il pulsante **OK** . Il nuovo progetto viene creato.  
   
-4.  Aprire il menu di scelta rapida per il progetto CreateExcelWorkbook e quindi scegliere **proprietà**. Scegliere il **riferimenti** scheda. Scegliere il pulsante **Aggiungi**.  
+4.  Aprire il menu di scelta rapida per il progetto CreateExcelWorkbook, quindi scegliere **proprietà**. Scegliere il **riferimenti** scheda. Scegliere il pulsante **Aggiungi**.  
   
 5.  Nella scheda **.NET** scegliere la versione più recente di `Microsoft.Office.Interop.Excel`. Ad esempio, **Microsoft.Office.Interop.Excel 14.0.0.0**. Fare clic sul pulsante **OK** .  
   
@@ -38,7 +38,7 @@ Se si incorporano informazioni sui tipi in un'applicazione che fa riferimento a 
     > [!NOTE]
     >  L'applicazione creata in questa procedura dettagliata viene eseguita con diverse versioni di Microsoft Office grazie alle informazioni incorporate sul tipo di interoperabilità. Se la proprietà `Embed Interop Types` è impostata su `False`, è necessario includere un assembly di interoperabilità primario per ogni versione di Microsoft Office con cui verrà eseguita l'applicazione.  
   
-7.  Aprire il file Module1. vb. Sostituire il codice nel file con il codice seguente:  
+7.  Aprire il file Module1.vb. Sostituire il codice nel file con il codice seguente:  
   
     ```vb  
     Imports Excel = Microsoft.Office.Interop.Excel  

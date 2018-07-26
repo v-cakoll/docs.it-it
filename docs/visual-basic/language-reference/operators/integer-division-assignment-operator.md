@@ -1,5 +1,5 @@
 ---
-title: '\= (operatore)'
+title: '\= Operatore (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - '\='
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: 4ebbf2eca7fb3cd208d979d7f3c77aa106569119
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcfc59efda0627f83713fe9ada24cedc20d823e3
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603561"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198208"
 ---
-# <a name="-operator"></a>\\= (Operatore)
-Divide il valore di una variabile o proprietà per il valore di un'espressione e assegna il risultato di tipo integer per la variabile o proprietà.  
+# <a name="-operator"></a>\\= Operatore
+Divide il valore di una variabile o proprietà per il valore di un'espressione e assegna il risultato di integer alla variabile o proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,23 +29,23 @@ variableorproperty \= expression
   
 ## <a name="parts"></a>Parti  
  `variableorproperty`  
- Obbligatorio. Qualsiasi variabile o proprietà numerica.  
+ Obbligatorio. Qualsiasi variabile numerica o una proprietà.  
   
  `expression`  
  Obbligatorio. Qualsiasi espressione numerica.  
   
 ## <a name="remarks"></a>Note  
- L'elemento sul lato sinistro del `\=` operatore può essere una semplice variabile scalare, una proprietà o un elemento della matrice. La variabile o proprietà non può essere [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ L'elemento sul lato sinistro del `\=` operatore può essere una variabile semplice scalare, una proprietà o un elemento della matrice. La variabile o proprietà non può essere [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Il `\=` operatore divide il valore di una variabile o proprietà alla sua sinistra per il valore alla sua destra e assegna il risultato di tipo integer per la variabile o proprietà alla sua sinistra  
+ Il `\=` operatore divide il valore di una variabile o proprietà alla sua sinistra per il valore alla sua destra e assegna il risultato di integer per la variabile o una proprietà alla sua sinistra  
   
- Per ulteriori informazioni sulla divisione di integer, vedere [\ (operatore) (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).  
+ Per altre informazioni sulla divisione di interi, vedere [\ (operatore) (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).  
   
 ## <a name="overloading"></a>Overload  
- Il `\` operatore può essere *overload*, il che significa che una classe o struttura ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. L'overload di `\` operatore influisce sul comportamento del `\=` operatore. Se il codice utilizza `\=` in una classe o struttura che esegue l'overload `\`, assicurarsi di comprendere il comportamento ridefinito. Per ulteriori informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Il `\` operatore può essere *sottoposto a overload*, il che significa che una classe o struttura può ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. L'overload di `\` operatore influisce sul comportamento del `\=` operatore. Se il codice usi `\=` in una classe o struttura che esegue l'overload `\`, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il `\=` operatore per dividere una `Integer` variabile da un secondo e assegnare l'intero risultato per la prima variabile.  
+ L'esempio seguente usa il `\=` operatore per dividere un `Integer` variabile da un secondo e di assegnare l'intero risultato per la prima variabile.  
   
  [!code-vb[VbVbalrOperators#19](codesnippet/VisualBasic/integer-division-assignment-operator_1.vb)]  
   
