@@ -2,12 +2,12 @@
 title: 'Procedura: creare un contratto request/reply'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 76a3bbb9415a34218896bc561066c7ac4a30e6b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d41973d04fc75f70011505a3361e71e89a05276
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489573"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220984"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Procedura: creare un contratto request/reply
 Un contratto di tipo request/reply specifica un metodo che restituisce una risposta La replica deve essere inviata e correlata alla richiesta in base ai termini di questo contratto. Anche se il metodo non restituisce alcuna risposta (`void` in C# o `Sub` in Visual Basic), nell'infrastruttura viene creato e inviato un messaggio vuoto al chiamante. Per impedire l'invio di un messaggio di risposta vuoto, utilizzare un contratto unidirezionale per l'operazione.  
@@ -25,7 +25,7 @@ Un contratto di tipo request/reply specifica un metodo che restituisce una rispo
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è definito un contratto per un servizio calcolatrice che fornisce metodi `Add` e `Subtract`. Il metodo `Multiply` privato non fa parte del contratto perché non è contrassegnato dalla classe <xref:System.ServiceModel.OperationContractAttribute> e quindi non è accessibile ai client.  
   
-```
+```csharp
 using System.ServiceModel;
 
 [ServiceContract]
@@ -43,7 +43,7 @@ public interface ICalculator
 }
 ```
   
--   Per ulteriori informazioni su come specificare contratti di operazione, vedere la <xref:System.ServiceModel.OperationContractAttribute> classe e il <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> proprietà.  
+-   Per altre informazioni su come specificare contratti di operazione, vedere la <xref:System.ServiceModel.OperationContractAttribute> classi e <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> proprietà.  
   
 -   L'applicazione degli attributi <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> determina la generazione automatica delle definizioni del contratto di servizio in un documento del linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language) dopo la distribuzione del servizio. Il documento viene scaricato aggiungendo l'elemento `?wsdl` all'indirizzo di base HTTP per il servizio, Ad esempio, `http://microsoft/CalculatorService?wsdl`.  
   
