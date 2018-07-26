@@ -1,5 +1,5 @@
 ---
-title: '&lt;SMTP&gt; elemento (impostazioni di rete)'
+title: '&lt;SMTP&gt; (impostazioni di rete)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
@@ -11,14 +11,14 @@ ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 56912e09d24fc83e93a91cc42b1d96dcc68210f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b6e01906c31316cfa8f148ed96944f309517f95
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741893"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874923"
 ---
-# <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; elemento (impostazioni di rete)
+# <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; (impostazioni di rete)
 Consente di configurare il formato di consegna, il metodo di recapito e dall'indirizzo per l'invio di messaggi di posta elettronica.  
   
  \<configuration>  
@@ -45,8 +45,8 @@ Consente di configurare il formato di consegna, il metodo di recapito e dall'ind
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`deliveryFormat`|Specifica il formato di recapito dei messaggi di posta elettronica in uscita. I valori accettabili sono SevenBit e International.|  
-|`deliveryMethod`|Specifica il metodo di recapito dei messaggi di posta elettronica. Valori accettabili sono rete pickupDirectoryFromIis e specifiedPickupDirectory.|  
+|`deliveryFormat`|Specifica il formato di recapito messaggi di posta elettronica in uscita. I valori accettabili sono SevenBit e International.|  
+|`deliveryMethod`|Specifica il metodo di recapito messaggi di posta elettronica. I valori accettabili sono SpecifiedPickupDirectory, PickupDirectoryFromIis e rete.|  
 |`from`|Specifica l'indirizzo del mittente per messaggi di posta elettronica in uscita.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -60,16 +60,16 @@ Consente di configurare il formato di consegna, il metodo di recapito e dall'ind
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[Elemento \<mailSettings> (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Configura opzioni di invio della posta elettronica.|  
+|[Elemento \<mailSettings> (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Consente di configurare le opzioni di invio della posta elettronica.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente specifica i parametri appropriati di SMTP per inviare posta elettronica utilizzando le credenziali di rete predefinite.  
+ Nell'esempio seguente specifica i parametri appropriati di SMTP per inviare posta elettronica usando le credenziali di rete predefinite.  
   
 ```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
+      <smtp deliveryMethod="Network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
         <network  
           host="localhost"  
           port="25"  

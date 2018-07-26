@@ -4,12 +4,12 @@ description: Informazioni sulle nuove funzionalità in .NET Core 2.1.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 241ac0195e5edcd17ac67ea7ea0fac159af97414
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 52fe2d47dbca9bc43c2f1274b0d9e535ba9f9abc
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34826932"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874572"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novità di .NET Core 2.1
 
@@ -218,11 +218,11 @@ L'implementazione dei socket introdotta in .NET Core 2.1 comporta numerosi vanta
 <xref:System.Net.Http.SocketsHttpHandler> è l'implementazione predefinita in .NET Core 2.1. Tuttavia, è possibile configurare l'applicazione per usare la classe <xref:System.Net.Http.HttpClientHandler> precedente chiamando il metodo <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType">:
 
 ```csharp
-AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", false);
+AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);
 ```
 
 ```vb
-AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", False)
+AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 ```
 
 È anche possibile usare una variabile di ambiente per rifiutare esplicitamente l'uso di implementazioni dei socket basate su <xref:System.Net.Http.SocketsHttpHandler>. A tale scopo, impostare `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` su `false` o su 0.

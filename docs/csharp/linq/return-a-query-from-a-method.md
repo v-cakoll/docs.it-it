@@ -3,12 +3,12 @@ title: Ottenere una query da un metodo
 description: Come ottenere una query.
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: 6a1d581c46c7b0b2062859fd60701dd25ea54eea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13f0839f712cb76b34c98157a30315787d300109
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274950"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404158"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Procedura: ottenere una query da un metodo (Guida per programmatori C#)
 In questo esempio viene illustrato come ottenere una query da un metodo come valore restituito e come parametro `out`.  
@@ -18,7 +18,7 @@ In questo esempio viene illustrato come ottenere una query da un metodo come val
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente il primo metodo restituisce una query come valore restituito e il secondo metodo restituisce una query come parametro `out`. Notare che in entrambi i casi è una query che viene restituita, non i risultati della query.  
   
- [!code-csharp[csProgGuideLINQ#80](../../../samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni di query LINQ](index.md)
+ [LINQ (Language-Integrated Query)](index.md)

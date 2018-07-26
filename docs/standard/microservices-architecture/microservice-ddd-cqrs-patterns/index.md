@@ -3,13 +3,13 @@ title: Gestione della complessità aziendale in un microservizio con i modelli D
 description: Architettura di microservizi .NET per le applicazioni .NET incluse in contenitori | Gestione della complessità aziendale in un microservizio con i modelli DDD e CQRS
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: af67f94b2c56f6a1ec794abbf7d3dad0d78033ec
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/06/2018
+ms.openlocfilehash: bc8ff6262436af6eb49a4ef8635d502e80b74b5a
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105758"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874387"
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Gestione della complessità aziendale in un microservizio con i modelli DDD e CQRS
 
@@ -70,5 +70,5 @@ Training per la progettazione DDD
 
 
 >[!div class="step-by-step"]
-[Precedente](../multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
+[Precedente](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)
 [Successivo](apply-simplified-microservice-cqrs-ddd-patterns.md)

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 78e852e2f1894f92e5b43228faedfad0d78981fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79749f5e593fbf4ea282cc5c8000be88098b702f
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364477"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874595"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool di connessioni SQL Server (ADO.NET)
 Generalmente, la connessione a un server database comporta passaggi che richiedono molto tempo. È necessario, infatti, stabilire un canale fisico, ad esempio un socket oppure una named pipe. Deve verificarsi l'handshake iniziale con il server, deve essere analizzata l'informazione sulla stringa di connessione, la connessione deve essere autenticata dal server, sono necessarie verifiche per l'inserimento in un elenco nella transazione corrente e così via.  
   
- In pratica, la maggior parte delle applicazioni usa solo una o alcune configurazioni di connessione. Per questo motivo, durante l'esecuzione dell'applicazione, verranno aperte e chiuse più volte connessioni identiche. Per ridurre al minimo il costo dell'apertura delle connessioni, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] utilizza una tecnica di ottimizzazione denominata *il pool di connessioni*.  
+ In pratica, la maggior parte delle applicazioni usa solo una o alcune configurazioni di connessione. Per questo motivo, durante l'esecuzione dell'applicazione, verranno aperte e chiuse più volte connessioni identiche. Per ridurre al minimo il costo dell'apertura delle connessioni, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Usa una tecnica di ottimizzazione denominata *pool di connessioni*.  
   
- Il pool di connessioni riduce il numero di volte in cui è necessario aprire nuove connessioni. Il *pool* conservi la proprietà della connessione fisica. Gestisce le connessioni mantenendo attivo un set di connessioni attive per ogni configurazione di connessione. Quando un utente chiama `Open` su una connessione, il pool verifica la presenza di una connessione disponibile. Se è disponibile una connessione, il pool la restituisce al chiamante invece di aprirne una nuova. Quando l'applicazione chiama `Close`, il pool restituisce la connessione al set di connessioni attive invece di chiuderla realmente. Una volta restituita al pool, la connessione può essere usata nuovamente nella successiva chiamata `Open`.  
+ Il pool di connessioni riduce il numero di volte in cui è necessario aprire nuove connessioni. Il *pool di connessioni* conserva la proprietà della connessione fisica. Gestisce le connessioni mantenendo attivo un set di connessioni attive per ogni configurazione di connessione. Quando un utente chiama `Open` su una connessione, il pool verifica la presenza di una connessione disponibile. Se è disponibile una connessione, il pool la restituisce al chiamante invece di aprirne una nuova. Quando l'applicazione chiama `Close`, il pool restituisce la connessione al set di connessioni attive invece di chiuderla realmente. Una volta restituita al pool, la connessione può essere usata nuovamente nella successiva chiamata `Open`.  
   
  È possibile raggruppare in pool solo le connessioni che presentano la stessa configurazione. In [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] vengono mantenuti diversi pool contemporaneamente, uno per ogni configurazione. Le connessioni vengono divise in pool in base alla stringa di connessione e, quando si usa la sicurezza integrata, in base all'identità Windows. Le connessioni vengono inserite nei pool anche in base a dove sono inserite in una transazione. Quando si usa un <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, le istanze di <xref:System.Data.SqlClient.SqlCredential> influiscono sul pool di connessioni. Diverse istanze di <xref:System.Data.SqlClient.SqlCredential> useranno pool di connessioni diversi, anche se l'ID utente e la password sono uguali.  
   
@@ -67,13 +67,12 @@ using (SqlConnection connection = new SqlConnection(
  Il pool di connessioni soddisfa le richieste di connessione grazie alla riallocazione delle connessioni rilasciate nel pool. Se le dimensioni massime del pool sono state raggiunte e non è disponibile alcuna connessione usabile, la richiesta viene accodata. Il pool tenta quindi di recuperare le connessioni fino alla scadenza del timeout (l'impostazione predefinita è 15 secondi). Se il pool non è in grado di soddisfare la richiesta prima che scada la connessione, viene generata un'eccezione.  
   
 > [!CAUTION]
->  Al termine dell'uso, si consiglia di chiudere sempre la connessione in modo che possa essere restituita al pool. È possibile farlo tramite il `Close` o `Dispose` metodi del `Connection` dell'oggetto oppure aprendo tutte le connessioni all'interno di una `using` istruzione nel linguaggio c#, o un `Using` istruzione in Visual Basic. Le connessioni che non vengono chiuse in modo esplicito potrebbero non essere aggiunte o restituite al pool. Per altre informazioni, vedere [istruzione using](~/docs/csharp/language-reference/keywords/using-statement.md) oppure [procedura: eliminare una risorsa di sistema](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) per Visual Basic.  
+>  Al termine dell'uso, si consiglia di chiudere sempre la connessione in modo che possa essere restituita al pool. È possibile farlo usando uno di `Close` o `Dispose` metodi del `Connection` dell'oggetto oppure aprendo tutte le connessioni all'interno di un `using` istruzione in c#, o un `Using` istruzione in Visual Basic. Le connessioni che non vengono chiuse in modo esplicito potrebbero non essere aggiunte o restituite al pool. Per altre informazioni, vedere [istruzione using](~/docs/csharp/language-reference/keywords/using-statement.md) oppure [procedura: eliminare una risorsa di sistema](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) per Visual Basic.  
   
 > [!NOTE]
->  Non chiamare `Close` o `Dispose` su un oggetto `Connection`, `DataReader` o su qualsiasi altro oggetto gestito nel metodo `Finalize` della classe. Nei finalizzatori rilasciare solo le risorse non gestite che la classe controlla direttamente. Se nella classe non sono presenti risorse non gestite, non includere un metodo `Finalize` nella relativa definizione della classe. Per ulteriori informazioni, vedere [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  
+>  Non chiamare `Close` o `Dispose` su un oggetto `Connection`, `DataReader` o su qualsiasi altro oggetto gestito nel metodo `Finalize` della classe. Nei finalizzatori rilasciare solo le risorse non gestite che la classe controlla direttamente. Se nella classe non sono presenti risorse non gestite, non includere un metodo `Finalize` nella relativa definizione della classe. Per altre informazioni, vedere [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  
   
-> [!NOTE]
->  Nel server non verranno generati eventi di accesso e di disconnessione quando una connessione viene recuperata dal o restituita al pool di connessioni, in quanto la connessione non è effettivamente chiusa quando viene restituita al pool di connessioni. Per altre informazioni, vedere [Audit Login Event Class](http://msdn2.microsoft.com/library/ms190260.aspx) e [Audit Logout-classe di evento](http://msdn2.microsoft.com/library/ms175827.aspx) nella documentazione Online di SQL Server.  
+Per altre informazioni su eventi associati all'apertura e chiusura delle connessioni, vedere [Audit Login Event Class](/sql/relational-databases/event-classes/audit-login-event-class) e [Audit Logout Event Class](/sql/relational-databases/event-classes/audit-logout-event-class) nella documentazione di SQL Server.  
   
 ## <a name="removing-connections"></a>Rimozione di connessioni  
  Il pool di connessioni rimuove una connessione dopo un periodo di inattività pari a circa 4-8 minuti oppure se rileva che la connessione al server è stata interrotta. Notare che una connessione interrotta può essere rilevata solo dopo che è stato effettuato il tentativo di comunicare con il server. Se viene individuata una connessione al server che non è più attiva, la connessione viene contrassegnata come non valida. Le connessioni non valide vengono rimosse dal pool di connessioni solo quando vengono chiuse o recuperate.  
@@ -125,10 +124,10 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>Ruoli dell'applicazione e pool di connessioni  
- Dopo che un ruolo dell'applicazione SQL Server è stato attivato chiamando la stored procedure di sistema `sp_setapprole`, non è possibile impostare nuovamente il contesto di sicurezza di tale connessione. Se è attivata la creazione di pool, la connessione verrà restituita al pool e si verificherà un errore quando la connessione in pool verrà riutilizzata. Per ulteriori informazioni, vedere l'articolo della Knowledge Base, "[errori dei ruoli applicazione SQL con pool di risorse OLE DB](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
+ Dopo che un ruolo dell'applicazione SQL Server è stato attivato chiamando la stored procedure di sistema `sp_setapprole`, non è possibile impostare nuovamente il contesto di sicurezza di tale connessione. Se è attivata la creazione di pool, la connessione verrà restituita al pool e si verificherà un errore quando la connessione in pool verrà riutilizzata. Per altre informazioni, vedere l'articolo della Knowledge Base "[errori dei ruoli applicazione SQL con pool di risorse OLE DB](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
   
 ### <a name="application-role-alternatives"></a>Alternative ai ruoli applicazione  
- Si consiglia di trarre vantaggio dai meccanismi di sicurezza che è possibile usare al posto dei ruoli applicazione. Per ulteriori informazioni, vedere [creazione di ruoli applicazione in SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
+ Si consiglia di trarre vantaggio dai meccanismi di sicurezza che è possibile usare al posto dei ruoli applicazione. Per altre informazioni, vedere [creazione di ruoli applicazione in SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pool di connessioni](../../../../docs/framework/data/adonet/connection-pooling.md)  
