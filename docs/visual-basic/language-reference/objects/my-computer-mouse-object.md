@@ -1,23 +1,23 @@
 ---
-title: Oggetto My.Computer.Mouse
+title: Oggetto My (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Mouse object
 ms.assetid: da473357-2120-47dd-bd42-c63d695157eb
-ms.openlocfilehash: 899caca985bfdb4deaf148b2d434f62428e2952a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3914870db6d30eb21c997a39cab4db1511e4ee
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593616"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296247"
 ---
 # <a name="mycomputermouse-object"></a>Oggetto My.Computer.Mouse
-Fornisce proprietà per ottenere informazioni sul formato e configurazione del mouse installato nel computer locale.  
+Fornisce le proprietà per ottenere informazioni sul formato e configurazione del mouse installato sul computer locale.  
   
 ## <a name="remarks"></a>Note  
- Per informazioni sui metodi e proprietà del `My.Computer.Mouse` , vedere <xref:Microsoft.VisualBasic.Devices.Mouse>.  
+ Per informazioni sui metodi e proprietà del `My.Computer.Mouse` oggetti, vedere <xref:Microsoft.VisualBasic.Devices.Mouse>.  
   
- Per ulteriori informazioni, vedere [accesso al Mouse](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).  
+ Per altre informazioni, vedere [accesso al Mouse](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
