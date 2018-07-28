@@ -7,14 +7,14 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
 ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654060"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332672"
 ---
 # <a name="string-basics-in-visual-basic"></a>Nozioni fondamentali sulle stringhe in Visual Basic
-Il tipo di dati `String` rappresenta una serie di caratteri, ognuno dei quali, a sua volta, rappresenta un'istanza del tipo di dati `Char`. In questo argomento introduce i concetti di base di stringhe in Visual Basic.  
+Il tipo di dati `String` rappresenta una serie di caratteri, ognuno dei quali, a sua volta, rappresenta un'istanza del tipo di dati `Char`. In questo argomento introduce i concetti di base delle stringhe in Visual Basic.  
   
 ## <a name="string-variables"></a>Variabili di tipo String  
  È possibile assegnare a un'istanza di una stringa un valore letterale che rappresenta una serie di caratteri. Ad esempio:  
@@ -29,7 +29,7 @@ Il tipo di dati `String` rappresenta una serie di caratteri, ognuno dei quali, a
   
  [!code-vb[VbVbalrStrings#65](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_3.vb)]  
   
- L'errore è determinato dal fatto che durante la compilazione la stringa viene considerata terminata dopo il secondo segno di virgolette e il resto della stringa è interpretato come codice. Per risolvere questo problema, Visual Basic vengono interpretati da due virgolette in una stringa letterale come un segno di virgolette nella stringa. L'esempio seguente illustra il modo corretto per inserire le virgolette in una stringa:   
+ L'errore è determinato dal fatto che durante la compilazione la stringa viene considerata terminata dopo il secondo segno di virgolette e il resto della stringa è interpretato come codice. Per risolvere questo problema, Visual Basic interpreta due virgolette in una stringa letterale come un segno di virgolette nella stringa. L'esempio seguente illustra il modo corretto per inserire le virgolette in una stringa:   
   
  [!code-vb[VbVbalrStrings#66](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_4.vb)]  
   
@@ -61,7 +61,7 @@ World]]></xml>.Value
  La variabile `myArray` ora contiene una matrice di istanze di `Char`, ognuna delle quali rappresenta un carattere di `myString`.  
   
 ## <a name="the-immutability-of-strings"></a>Immutabilità delle stringhe  
- È una stringa *non modificabile*, vale a dire che il relativo valore non può essere modificato una volta che è stato creato. Questo non impedisce tuttavia di assegnare più valori a una variabile di tipo String. Si consideri l'esempio seguente:  
+ È una stringa *non modificabile*, vale a dire il relativo valore non può essere modificato una volta che è stato creato. Questo non impedisce tuttavia di assegnare più valori a una variabile di tipo String. Si consideri l'esempio seguente:  
   
  [!code-vb[VbVbalrStrings#69](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_7.vb)]  
   

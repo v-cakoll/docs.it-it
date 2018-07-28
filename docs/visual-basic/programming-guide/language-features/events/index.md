@@ -6,14 +6,14 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: b69615a5cf05427a2bfde82af976cfafb41171b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655271"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332873"
 ---
 # <a name="events-visual-basic"></a>Eventi (Visual Basic)
-Anche se è possibile rappresentare graficamente un progetto di Visual Studio come una serie di procedure eseguite in una sequenza, in realtà, la maggior parte dei programmi sono basato sugli eventi, ovvero il flusso di esecuzione è determinato da occorrenze esterne denominate *eventi*.  
+Sebbene sia possibile rappresentare graficamente un progetto di Visual Studio come una serie di procedure eseguite in sequenza, in realtà, la maggior parte dei programmi sono basata su eventi, vale a dire il flusso di esecuzione è determinato da occorrenze esterne denominate *eventi*.  
   
  Un evento è un segnale che informa un'applicazione che si è verificato qualcosa di importante. Ad esempio, quando un utente fa clic su un controllo in un form, il form può generare un evento `Click` e chiamare una routine che gestisce l'evento. Gli eventi consentono anche le comunicazioni tra attività separate. Si supponga, ad esempio, che un'applicazione esegua un'attività di ordinamento separatamente dall'applicazione principale. Se un utente annulla l'ordinamento, l'applicazione può inviare un evento di annullamento per segnalare la necessità di interrompere il processo di ordinamento.  
   
@@ -55,7 +55,7 @@ Anche se è possibile rappresentare graficamente un progetto di Visual Studio co
   
 -   Non è possibile usare una variabile `WithEvents` come variabile oggetto, ovvero non è possibile dichiararla come `Object`, ma è necessario specificare il nome della classe quando si dichiara la variabile.  
   
--   Poiché gli eventi condivisi non sono collegati a istanze della classe, è possibile utilizzare `WithEvents` per gestire in modo dichiarativo eventi condivisi. In modo analogo, non è possibile usare `WithEvents` o `Handles` per gestire gli eventi da `Structure`. In entrambi i casi, è possibile usare l'istruzione `AddHandler` per gestire tali eventi.  
+-   Poiché eventi condivisi non sono associati a istanze della classe, è possibile utilizzare `WithEvents` per gestire in modo dichiarativo eventi condivisi. In modo analogo, non è possibile usare `WithEvents` o `Handles` per gestire gli eventi da `Structure`. In entrambi i casi, è possibile usare l'istruzione `AddHandler` per gestire tali eventi.  
   
 -   Non è possibile creare matrici di variabili `WithEvents`.  
   
@@ -63,7 +63,7 @@ Anche se è possibile rappresentare graficamente un progetto di Visual Studio co
   
  Anche se la clausola `Handles` rappresenta la modalità standard per associare un evento a un gestore eventi, è limitata all'associazione di eventi a gestori eventi in fase di compilazione.  
   
- In alcuni casi, ad esempio per gli eventi associati al form o controlli, Visual Basic automaticamente associa automaticamente un gestore eventi vuoto e associarlo a un evento. Ad esempio, quando si fa doppio clic su un pulsante di comando in un form in modalità progettazione, Visual Basic crea un gestore eventi vuoto e un `WithEvents` variabile per il pulsante di comando, come nel codice seguente:  
+ In alcuni casi, ad esempio gli eventi associati a form o controlli, Visual Basic automaticamente stub un gestore eventi vuoto e lo associa un evento. Ad esempio, quando si fa doppio clic su un pulsante di comando in un form in modalità progettazione, Visual Basic crea un gestore eventi vuoto e un `WithEvents` variabile per il pulsante di comando, come nel codice seguente:  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   

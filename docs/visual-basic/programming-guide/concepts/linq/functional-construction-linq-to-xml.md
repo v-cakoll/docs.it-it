@@ -3,11 +3,11 @@ title: Costruzione funzionale (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
 ms.openlocfilehash: 360c321f993c8adb17767987060a0edcccad082a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644290"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39333013"
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>Costruzione funzionale (LINQ to XML) (Visual Basic)
 In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è disponibile una potente funzionalità per la creazione di elementi XML, denominata *costruzione funzionale*. Per costruzione funzionale si intende la possibilità di creare una struttura ad albero XML in un'unica istruzione.  
@@ -22,7 +22,7 @@ In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è disponibile una pote
   
  Di seguito è riportato un esempio:  
   
- Queste funzionalità consentono di scrivere codice utilizzando i valori letterali XML per creare un albero XML, nonché di scrivere codice che utilizza i risultati della [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] esegue una query quando si crea un albero XML:  
+ Queste funzionalità consentono di scrivere codice usando i valori letterali XML per creare un albero XML, nonché di scrivere codice che usa i risultati di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] esegue una query quando si crea un albero XML:  
   
 ```vb  
 Dim srcTree As XElement = _  
