@@ -1,14 +1,14 @@
 ---
-title: LINQ (Language-Integrated Query)
-description: Introduzione a LINQ (Language-Integrated Query) in C#
+title: LINQ (Language-Integrated Query) in C#
+description: Introduzione a LINQ (Language-Integrated Query) in C#.
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.openlocfilehash: 4afcc33f39d3b71f97bca358f7c6f8bc57439767
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89630245a33c03851c7607b3b299eb7b9c477177
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290933"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404580"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Language-Integrated Query)
 
@@ -18,37 +18,36 @@ Per uno sviluppatore che scrive query, la parte integrata nel linguaggio più vi
 
 L'esempio seguente mostra l'operazione di query completa. L'operazione completa include la creazione di un'origine dati, la definizione dell'espressione di query e l'esecuzione della query in un'istruzione `foreach`.
 
-[!code-csharp[csProgGuideLINQ#11](../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
+[!code-csharp[csProgGuideLINQ#11](~/samples/snippets/csharp/concepts/linq/index_1.cs)]
 
 ## <a name="query-expression-overview"></a>Panoramica sulle espressioni di query
 
--   Le espressioni di query possono essere usate per eseguire una query e trasformare dati da qualsiasi origine dati abilitata per LINQ. Una sola query, ad esempio, è in grado di recuperare dati da un database SQL e di produrre un flusso XML come output.  
-  
--   Le espressioni di query sono facili da gestire perché usano molti costrutti di linguaggio C# di uso comune.  
-  
--   Le variabili presenti in un'espressione di query sono tutte fortemente tipizzate, anche se in molti casi non è necessario specificare il tipo in modo esplicito perché il compilatore è in grado di dedurlo. Per altre informazioni, vedere [Relazioni tra i tipi nelle operazioni di query LINQ](../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
-  
--   Una query non viene eseguita finché non si esegue l'iterazione della variabile di query, ad esempio in un'istruzione `foreach`. Per altre informazioni, vedere [Introduzione alle query LINQ](../programming-guide/concepts/linq/introduction-to-linq-queries.md).  
-  
--   In fase di compilazione, le espressioni di query vengono convertite in chiamate al metodo dell'operatore query standard secondo le regole definite nella specifica C#. Le query che possono essere espresse usando la sintassi di query possono essere espresse anche usando la sintassi dei metodi. Nella maggior parte dei casi, tuttavia, la sintassi di query è più leggibile e concisa. Per altre informazioni, vedere [Specifiche del linguaggio C#](../language-reference/language-specification/index.md) e [Panoramica degli operatori di query standard](../programming-guide/concepts/linq/standard-query-operators-overview.md).  
-  
--   Come regola di scrittura delle query LINQ, è consigliabile usare la sintassi di query quando possibile e la sintassi dei metodi quando necessario. Tra le due diverse forme non esiste differenza semantica o a livello di prestazioni. Le espressioni di query sono spesso più leggibili delle espressioni equivalenti scritte nella sintassi dei metodi.  
-  
--   Per alcune operazioni di query, ad esempio <xref:System.Linq.Enumerable.Count%2A> o <xref:System.Linq.Enumerable.Max%2A>, non è presente una clausola dell'espressione di query equivalente. Tali espressioni devono quindi essere espresse come chiamata di metodo. La sintassi dei metodi può essere combinata con la sintassi di query in diversi modi. Per altre informazioni, vedere [Sintassi di query e sintassi di metodi in LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
-  
--   Le espressioni di query possono essere compilate in alberi delle espressioni o in delegati, a seconda del tipo al quale viene applicata la query. Le query <xref:System.Collections.Generic.IEnumerable%601> vengono compilate in delegati. Le query <xref:System.Linq.IQueryable> e <xref:System.Linq.IQueryable%601> vengono compilate in alberi delle espressioni. Per altre informazioni, vedere [Alberi delle espressioni](../expression-trees.md).  
+- Le espressioni di query possono essere usate per eseguire una query e trasformare dati da qualsiasi origine dati abilitata per LINQ. Una sola query, ad esempio, è in grado di recuperare dati da un database SQL e di produrre un flusso XML come output.
+
+- Le espressioni di query sono facili da gestire perché usano molti costrutti di linguaggio C# di uso comune.
+
+- Le variabili presenti in un'espressione di query sono tutte fortemente tipizzate, anche se in molti casi non è necessario specificare il tipo in modo esplicito perché il compilatore è in grado di dedurlo. Per altre informazioni, vedere [Relazioni tra i tipi nelle operazioni di query LINQ](../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).
+
+- Una query non viene eseguita finché non si esegue l'iterazione della variabile di query, ad esempio in un'istruzione `foreach`. Per altre informazioni, vedere [Introduzione alle query LINQ](../programming-guide/concepts/linq/introduction-to-linq-queries.md).
+
+- In fase di compilazione, le espressioni di query vengono convertite in chiamate al metodo dell'operatore query standard secondo le regole definite nella specifica C#. Le query che possono essere espresse usando la sintassi di query possono essere espresse anche usando la sintassi dei metodi. Nella maggior parte dei casi, tuttavia, la sintassi di query è più leggibile e concisa. Per altre informazioni, vedere [Specifiche del linguaggio C#](../language-reference/language-specification/index.md) e [Panoramica degli operatori di query standard](../programming-guide/concepts/linq/standard-query-operators-overview.md).
+
+- Come regola di scrittura delle query LINQ, è consigliabile usare la sintassi di query quando possibile e la sintassi dei metodi quando necessario. Tra le due diverse forme non esiste differenza semantica o a livello di prestazioni. Le espressioni di query sono spesso più leggibili delle espressioni equivalenti scritte nella sintassi dei metodi.
+
+- Per alcune operazioni di query, ad esempio <xref:System.Linq.Enumerable.Count%2A> o <xref:System.Linq.Enumerable.Max%2A>, non è presente una clausola dell'espressione di query equivalente. Tali espressioni devono quindi essere espresse come chiamata di metodo. La sintassi dei metodi può essere combinata con la sintassi di query in diversi modi. Per altre informazioni, vedere [Sintassi di query e sintassi di metodi in LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).
+
+- Le espressioni di query possono essere compilate in alberi delle espressioni o in delegati, a seconda del tipo al quale viene applicata la query. Le query <xref:System.Collections.Generic.IEnumerable%601> vengono compilate in delegati. Le query <xref:System.Linq.IQueryable> e <xref:System.Linq.IQueryable%601> vengono compilate in alberi delle espressioni. Per altre informazioni, vedere [Alberi delle espressioni](../expression-trees.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni dettagliate su LINQ, iniziare ad acquisire dimestichezza con alcuni concetti di base nella sezione introduttiva [Nozioni fondamentali sulle espressioni di query](query-expression-basics.md) e quindi leggere la documentazione per la tecnologia LINQ a cui si è interessati:   
--   Documenti XML: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)  
-  
--   ADO.NET Entity Framework: [LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
-  
--   Raccolte, file e stringhe .NET: [LINQ to Objects](../programming-guide/concepts/linq/linq-to-objects.md)
+Per altre informazioni dettagliate su LINQ, iniziare ad acquisire dimestichezza con alcuni concetti di base nella sezione introduttiva [Nozioni fondamentali sulle espressioni di query](query-expression-basics.md) e quindi leggere la documentazione per la tecnologia LINQ a cui si è interessati:
+
+- Documenti XML: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)
+
+- ADO.NET Entity Framework: [LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
+
+- Raccolte, file e stringhe .NET: [LINQ to Objects](../programming-guide/concepts/linq/linq-to-objects.md)
 
 Per approfondire LINQ in generale, vedere [LINQ in C#](linq-in-csharp.md).
 
 Per iniziare a utilizzare LINQ in C#, vedere l'esercitazione [Uso di LINQ](../tutorials/working-with-linq.md).
-
-
