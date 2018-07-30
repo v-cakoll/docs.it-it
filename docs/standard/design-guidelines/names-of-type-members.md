@@ -15,19 +15,19 @@ ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25fe93b63c518f54ee72300f26dfcb3f3ad21d76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/26/2018
 ms.locfileid: "33575349"
 ---
 # <a name="names-of-type-members"></a>Nomi di membri dei tipi
-I tipi sono costituiti da membri: metodi, proprietà, eventi, costruttori e campi. Le sezioni seguenti descrivono le linee guida per la denominazione dei membri di tipo.  
+I tipi sono costituiti da membri: metodi, proprietà, eventi, costruttori e campi. Le sezioni seguenti illustrano le linee guida per assegnare nomi ai membri dei tipi.  
   
 ## <a name="names-of-methods"></a>Nomi dei metodi  
- Poiché i metodi sono il mezzo di un'azione intrapresa, linee guida di progettazione richiedono che i nomi di metodo verbi o frasi di verbo. Di queste indicazioni inoltre viene usato per distinguere i nomi di metodo da nomi di proprietà e il tipo, ovvero sostantivo o aggettivo frasi.  
+ I metodi sono il mezzo per l'esecuzione delle azioni. Pertanto le linee guida di progettazione richiedono che i nomi dei metodi siano verbi o frasi verbali. L'osservazione di questa linea guida è anche utile per distinguere i nomi dei metodi dai nomi delle proprietà e dei tipi, che sono frasi nominali o aggettivali.  
   
- **✓ SI** fornire metodi i nomi di verbi o frasi verbo.  
+ **✓ DO** Assegnare ai metodi nomi corrispondenti a verbi o frasi verbali.  
   
 ```  
 public class String {  
@@ -38,24 +38,24 @@ public class String {
 ```  
   
 ## <a name="names-of-properties"></a>Nomi delle proprietà  
- A differenza di altri membri, è necessario assegnare proprietà sintagma nominale o nomi aggettivali. Ciò avviene perché una proprietà fa riferimento a dati e il nome della proprietà corrisponde a quello. Il sistema Pascal viene sempre utilizzato per i nomi delle proprietà.  
+ A differenza degli altri membri, è necessario assegnare alle proprietà sintagmi nominali o nomi aggettivali. Il motivo è che una proprietà fa riferimento ai dati e il nome della proprietà deve riflettere questo fatto. Per i nomi delle proprietà viene sempre usata la notazione Pascal.  
   
- **✓ SI** nome proprietà tramite un sostantivo, sintagmi nominali o aggettivo.  
+ **✓ DO** Denominare le proprietà con un sostantivo, un sintagma nominale o un aggettivo.  
   
- **X non** dispongono di proprietà che corrispondono al nome dei metodi "Get" come nell'esempio seguente:  
+ **X DO NOT** Definire proprietà il cui nome corrisponde a quello dei metodi "Get", come nell'esempio seguente:  
   
  `public string TextWriter { get {...} set {...} }`  
  `public string GetTextWriter(int value) { ... }`  
   
- Questo modello è in genere indica che la proprietà deve essere effettivamente un metodo.  
+ Questo criterio in genere indica che la proprietà dovrebbe di fatto essere un metodo.  
   
- **✓ SI** nome proprietà della raccolta con una plurale frase che descrive gli elementi nella raccolta invece di usare una frase singola seguita da "List" o "Collection".  
+ **✓ DO** Assegnare alle proprietà raccolta una frase plurale che descrive gli elementi nella raccolta, anziché usare una frase singolare seguita da "List" o "Collection".  
   
- **✓ SI** nome di proprietà booleane con una frase affermativa (`CanSeek` anziché `CantSeek`). Facoltativamente, è possibile anteporre anche le proprietà booleane con "Is", "può" o "Include" ma solo se aggiunge valore.  
+ **✓ DO** Assegnare alle proprietà booleane una frase affermativa (`CanSeek` invece di `CantSeek`). È anche possibile fare iniziare le proprietà booleane con "Is", "Can" o "Has", ma solo se si aggiunge valore.  
   
- **✓ Provare a** assegnare lo stesso nome di tipo a una proprietà.  
+ **✓ CONSIDER** Assegnare a una proprietà lo stesso nome del tipo della proprietà.  
   
- Ad esempio, la proprietà seguente correttamente viene impostato un valore di enumerazione denominato `Color`, pertanto la proprietà è denominata `Color`:  
+ Ad esempio, la proprietà seguente ottiene e imposta correttamente un valore di enumerazione denominato `Color`, pertanto è denominata `Color`:  
   
 ```  
 public enum Color {...}  
@@ -65,42 +65,42 @@ public class Control {
 ```  
   
 ## <a name="names-of-events"></a>Nomi degli eventi  
- Gli eventi si riferiscono sempre a un'azione, un problema o che si è verificato. Pertanto, come con i metodi, eventi sono denominati con i verbi e al tempo di verbi viene utilizzato per indicare l'ora quando viene generato l'evento.  
+ Gli eventi fanno sempre riferimento a un'azione, che può essere in corso o già terminata. Pertanto, come nel caso dei metodi, i nomi degli eventi devono essere verbi e il tempo verbale indica il momento in cui viene generato l'evento.  
   
- **✓ SI** denominare eventi con un verbo o una frase di verbo.  
+ **✓ DO** Assegnare agli eventi nomi corrispondenti a verbi o frasi verbali.  
   
- Gli esempi includono `Clicked`, `Painting`, `DroppedDown`e così via.  
+ Alcuni esempi sono `Clicked`, `Painting` o `DroppedDown`.  
   
- **✓ SI** assegnare un nome di eventi con un concetto di prima e dopo, utilizzando il presente e tempi e coniugazioni passato.  
+ **✓ DO** Assegnare agli eventi nomi che includano il concetto di prima e dopo, usando il presente e il passato.  
   
- Ad esempio, un evento di chiusura che viene generato prima della chiusura di una finestra deve essere chiamato `Closing`, e uno che viene generato dopo la chiusura di finestra deve essere chiamato `Closed`.  
+ Ad esempio, un evento di chiusura generato prima della chiusura di una finestra può essere chiamato `Closing`, mentre uno generato dopo la chiusura della finestra può essere chiamato `Closed`.  
   
- **X non** utilizzare "Before" o "After" prefissi o suffissi per indicare pre- e post-eventi. Usare presente e passato tempi come descritto in precedenza.  
+ **X DO NOT** Usare prefissi o suffissi "Before" o "After" per indicare eventi precedenti o successivi ad altri elementi. Usare il presente e il passato come descritto in precedenza.  
   
- **✓ SI** denominare i gestori di eventi (delegati utilizzati come tipi di eventi) con il suffisso "EventHandler", come illustrato nell'esempio seguente:  
+ **✓ DO** Assegnare ai gestori dell'evento (delegati usati come tipi di eventi) il suffisso "EventHandler", come illustrato nell'esempio seguente:  
   
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
   
- **✓ SI** utilizzare due parametri denominati `sender` e `e` nei gestori eventi.  
+ **✓ DO** Usare due parametri denominati `sender` e `e` nei gestori dell'evento.  
   
- Il parametro mittente rappresenta l'oggetto che ha generato l'evento. Il parametro mittente è in genere di tipo `object`, anche se è possibile utilizzare un tipo più specifico.  
+ Il parametro sender rappresenta l'oggetto che ha generato l'evento. Il parametro sender è in genere di tipo `object`, anche se è possibile usare un tipo più specifico.  
   
- **✓ SI** nome evento classi di argomenti con il suffisso "EventArgs".  
+ **✓ DO** Denominare le classi di argomenti dell'evento con il suffisso "EventArgs".  
   
 ## <a name="names-of-fields"></a>Nomi dei campi  
- Le convenzioni di denominazione per campo si applicano ai campi statici pubblici e protetti. I campi interni e privati non coperti dalle linee guida e i campi di istanza pubblici o protetti non sono consentiti dal [indicazioni per la progettazione di membro](../../../docs/standard/design-guidelines/member.md).  
+ Le linee guida per i nomi dei campi si applicano ai campi statici pubblici e protetti. I campi interni e privati non sono descritti in queste linee guida, mentre i campi istanza pubblica o istanza protetta non sono consentiti dalle [linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md).  
   
- **✓ SI** utilizzare il sistema Pascal nei nomi di campo.  
+ **✓ DO** Usare la notazione Pascal nei nomi dei campi.  
   
- **✓ SI** nome campi utilizzando un sostantivo, sintagmi nominali o aggettivo.  
+ **✓ DO** Denominare i campi con un sostantivo, un sintagma nominale o un aggettivo.  
   
- **X non** usare un prefisso per i nomi dei campi.  
+ **X DO NOT** Usare un prefisso per i nomi dei campi.  
   
- Ad esempio, non utilizzare "g _" o "s _" per indicare i campi statici.  
+ Ad esempio evitare di usare "g_" o "s _" per indicare i campi statici.  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Vedere anche  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
