@@ -5,11 +5,11 @@ helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 ms.openlocfilehash: 4c13b482ddbb3c1c109ca8dfe36ed76a2025d61a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590699"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39333039"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classi utilizzate nel file system e nella funzionalità di I/O di file di .Net Framework (Visual Basic)
 Le tabelle seguenti elencano le classi comunemente usate per l'I/O di file di .NET Framework, suddivisi in classi I/O di file, classi usate per la creazione di flussi e classi usate per leggere e scrivere nei flussi.  

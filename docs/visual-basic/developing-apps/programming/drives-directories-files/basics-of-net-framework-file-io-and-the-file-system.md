@@ -10,11 +10,11 @@ helpviewer_keywords:
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 ms.openlocfilehash: c978f79571494d9b716df4e8a42e7f40d20766f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591781"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332955"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)
 Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unità, file e directory.  
@@ -78,7 +78,7 @@ Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unit�
 |Determinare gli attributi di un file|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Autorizzazioni di file  
- Il controllo dell'accesso ai file e alle directory può essere eseguito con la classe <xref:System.Security.Permissions.FileIOPermission>. Questo può essere particolarmente importante per gli sviluppatori che lavorano con i Web Form che, per impostazione predefinita, vengono eseguiti nel contesto di un account utente locale speciale denominato ASPNET, che viene creato come parte delle installazioni di [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] e [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Quando una tale applicazione richiede l'accesso a una risorsa, l'account utente ASPNET dispone di autorizzazioni limitate, che potrebbero impedire all'utente di eseguire azioni quali la scrittura in un file da un'applicazione Web. Per altre informazioni, vedere <xref:System.Security.Permissions.FileIOPermission>.  
+ Il controllo dell'accesso ai file e alle directory può essere eseguito con la classe <xref:System.Security.Permissions.FileIOPermission>. Questo può essere particolarmente importante per gli sviluppatori che lavorano con i Web Form che, per impostazione predefinita, vengono eseguiti nel contesto di un account utente locale speciale denominato ASPNET, che viene creato come parte delle installazioni di [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] e [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Quando una tale applicazione richiede l'accesso a una risorsa, l'account utente ASPNET dispone di autorizzazioni limitate, che potrebbero impedire all'utente di eseguire azioni quali la scrittura in un file da un'applicazione Web. Per ulteriori informazioni, vedere <xref:System.Security.Permissions.FileIOPermission>.  
   
 ## <a name="isolated-file-storage"></a>Archiviazione di file isolati  
  Lo spazio di archiviazione isolato è un tentativo di risolvere i problemi creati durante l'uso dei file in cui l'utente o il codice non dispone delle autorizzazioni necessarie. Lo spazio di archiviazione isolato assegna a ciascun utente un raggruppamento di dati che può contenere uno o più archivi. Gli archivi possono essere isolati gli uni dagli altri per utente e per assembly. Solo l'utente e l'assembly che ha creato l'archivio può accedervi. Un archivio opera come un file system virtuale completo: all'interno di un archivio è possibile creare e modificare directory e file.  
