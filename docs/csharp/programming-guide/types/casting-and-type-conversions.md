@@ -10,11 +10,11 @@ helpviewer_keywords:
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
 ms.openlocfilehash: 0c17fc89d93bdbb01bdef7935e72f8a7d96b0a55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336557"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296143"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Cast e conversioni di tipi (Guida per programmatori C#)
 Poiché C# è statisticamente tipizzato in fase di compilazione, dopo la prima dichiarazione, una variabile non può essere dichiarata di nuovo o usata per archiviare valori di un altro tipo, a meno che tale tipo non sia convertibile nel tipo della variabile. Ad esempio, non può essere eseguita nessuna conversione da un numero intero a una stringa arbitraria. Pertanto, dopo che si dichiara `i` come valore intero, è possibile assegnargli la stringa "Hello", come illustrato nel codice seguente.  
