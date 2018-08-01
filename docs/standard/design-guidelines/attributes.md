@@ -26,25 +26,25 @@ ms.locfileid: "33574634"
   
  Proprietà che non è necessario specificare quando è applicato l'attributo sono dette proprietà facoltative (o gli argomenti facoltativi). Sono rappresentati dalle proprietà impostabili. I compilatori forniscono una sintassi speciale per impostare queste proprietà quando viene applicato un attributo. Ad esempio, il <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> proprietà rappresenta un argomento facoltativo.  
   
- **✓ SI** denominare le classi di attributo personalizzato con il suffisso "Attributo".  
+ **✓ DO** denominare le classi di attributo personalizzato con il suffisso "Attributo".  
   
- **✓ SI** applica il <xref:System.AttributeUsageAttribute> per gli attributi personalizzati.  
+ **✓ DO** applica il <xref:System.AttributeUsageAttribute> per gli attributi personalizzati.  
   
- **✓ SI** forniscono le proprietà impostabili per gli argomenti facoltativi.  
+ **✓ DO** forniscono le proprietà impostabili per gli argomenti facoltativi.  
   
- **✓ SI** forniscono proprietà solo get per gli argomenti obbligatori.  
+ **✓ DO** forniscono proprietà solo get per gli argomenti obbligatori.  
   
- **✓ SI** forniscono i parametri del costruttore per inizializzare le proprietà corrispondenti per gli argomenti obbligatori. Ogni parametro deve avere lo stesso nome (anche se con maiuscole/minuscole) della proprietà corrispondente.  
+ **✓ DO** forniscono i parametri del costruttore per inizializzare le proprietà corrispondenti per gli argomenti obbligatori. Ogni parametro deve avere lo stesso nome (anche se con maiuscole/minuscole) della proprietà corrispondente.  
   
- **X evitare** fornendo i parametri del costruttore per inizializzare le proprietà corrispondenti per gli argomenti facoltativi.  
+ **X AVOID** fornendo i parametri del costruttore per inizializzare le proprietà corrispondenti per gli argomenti facoltativi.  
   
  In altre parole, non dispone delle proprietà che è possibile impostare con un costruttore e un setter. Questa linea guida rende molto esplicite gli argomenti sono facoltativi e che sono necessari e si evita due modi per eseguire la stessa operazione.  
   
- **X evitare** l'overload di costruttori di attributo personalizzato.  
+ **X AVOID** l'overload di costruttori di attributo personalizzato.  
   
  Presenza di un solo costruttore chiaramente comunica all'utente cui gli argomenti sono obbligatori e facoltativi.  
   
- **✓ SI** proteggere le classi di attributo personalizzato, se possibile. In questo modo la ricerca per l'attributo più velocemente.  
+ **✓ DO** proteggere le classi di attributo personalizzato, se possibile. In questo modo la ricerca per l'attributo più velocemente.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
