@@ -24,11 +24,11 @@ In teoria, una classe diventa una classe di base quando un'altra classe è deriv
   
  Come illustrato in precedenza, le classi di base possono fornire Guida essenziale per gli utenti che devono implementare astrazioni, ma nello stesso momento possono essere significative passività. Aggiungono della superficie di attacco e aumentare la profondità delle gerarchie di ereditarietà e pertanto concettualmente complicare il framework. Pertanto, le classi di base devono essere utilizzate solo se un valore significativo forniscono agli utenti di framework. Essi deve essere evitate se forniscono valore solo per i responsabili dell'implementazione di framework, in cui è necessario considerare fortemente case delega a un'implementazione interna invece dell'ereditarietà da una classe base.  
   
- **✓ Provare a** astratta le classi di base che anche se non contengono alcun membro astratto. Questo chiaramente comunica agli utenti che la classe è progettata esclusivamente per essere ereditata.  
+ **✓ CONSIDER** astratta le classi di base che anche se non contengono alcun membro astratto. Questo chiaramente comunica agli utenti che la classe è progettata esclusivamente per essere ereditata.  
   
- **✓ Provare a** posizionando le classi di base in uno spazio dei nomi separato dai tipi di scenario principale. Per definizione, le classi di base sono destinate a scenari di estensibilità avanzate e pertanto non sono interessanti per la maggior parte degli utenti.  
+ **✓ CONSIDER** posizionando le classi di base in uno spazio dei nomi separato dai tipi di scenario principale. Per definizione, le classi di base sono destinate a scenari di estensibilità avanzate e pertanto non sono interessanti per la maggior parte degli utenti.  
   
- **X evitare** denominazione delle classi di base con un suffisso "Base" se la classe è destinata all'utilizzo nelle API pubbliche.  
+ **X AVOID** denominazione delle classi di base con un suffisso "Base" se la classe è destinata all'utilizzo nelle API pubbliche.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

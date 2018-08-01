@@ -25,13 +25,13 @@ Membri virtuali possono essere sottoposto a override, modificandone il comportam
   
  I membri virtuali, come i callback (e probabilmente altro rispetto ai callback), sono costosi progettare, testare e mantenere poiché qualsiasi chiamata a un membro virtuale può essere sottoposto a override in modi imprevisti e può eseguire codice arbitrario. Inoltre, notevolmente più impegnativo in genere è necessario per definire chiaramente il contratto di membri virtuali, pertanto il costo di progettazione e la loro documentazione è elevato.  
   
- **X non** rendere i membri virtuali a meno che non si dispone di un buon motivo per eseguire questa operazione e di essere a conoscenza di tutti i costi correlati alla progettazione, test e la gestione di membri virtuali.  
+ **X DO NOT** rendere i membri virtuali a meno che non si dispone di un buon motivo per eseguire questa operazione e di essere a conoscenza di tutti i costi correlati alla progettazione, test e la gestione di membri virtuali.  
   
  I membri virtuali sono meno impensabili in termini di modifiche apportate a tali senza interrompere la compatibilità. Inoltre, sono più lenti rispetto ai membri non virtuali, soprattutto perché le chiamate ai membri virtuali non vengono impostati come inline.  
   
- **✓ Provare a** limitazione estendibilità solo a quelle strettamente necessario.  
+ **✓ CONSIDER** limitazione estendibilità solo a quelle strettamente necessario.  
   
- **✓ SI** preferire accessibilità protetta accessibilità pubblica per i membri virtuali. I membri pubblici devono fornire extensibility (se richiesto) effettuando la chiamata a un membro virtuale protetta.  
+ **✓ DO** preferire accessibilità protetta accessibilità pubblica per i membri virtuali. I membri pubblici devono fornire extensibility (se richiesto) effettuando la chiamata a un membro virtuale protetta.  
   
  I membri pubblici di una classe devono fornire il set corretto di funzionalità per i consumer diretti di tale classe. I membri virtuali sono progettati per essere sottoposto a override nelle sottoclassi e accessibilità protetta è un ottimo modo per definire l'ambito di tutti i punti di estendibilità virtuale a cui possono essere utilizzati.  
   

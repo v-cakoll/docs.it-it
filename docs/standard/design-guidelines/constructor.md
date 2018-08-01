@@ -30,50 +30,50 @@ Esistono due tipi di costruttori: tipo di costruttori e dei costruttori di istan
   
  I costruttori sono il modo più semplice per creare istanze di un tipo. La maggior parte degli sviluppatori verranno cercare e tenta di utilizzare un costruttore prima ritengano modi alternativi per la creazione di istanze (ad esempio i metodi factory).  
   
- **✓ Provare a** fornendo semplice, in teoria predefiniti, costruttori.  
+ **✓ CONSIDER** fornendo semplice, in teoria predefiniti, costruttori.  
   
  Un costruttore semplice dispone di un numero molto ridotto di parametri e tutti i parametri sono primitive o enum. Tali costruttori semplici aumentano l'utilizzabilità di framework.  
   
- **✓ Provare a** utilizzando un metodo factory statico invece di un costruttore se la semantica dell'operazione desiderata non eseguano il mapping direttamente per la costruzione di una nuova istanza o seguendo le linee guida progettazione costruttore ritiene non naturale.  
+ **✓ CONSIDER** utilizzando un metodo factory statico invece di un costruttore se la semantica dell'operazione desiderata non eseguano il mapping direttamente per la costruzione di una nuova istanza o seguendo le linee guida progettazione costruttore ritiene non naturale.  
   
- **✓ SI** utilizzare i parametri del costruttore come tasti di scelta rapida per l'impostazione delle proprietà principali.  
+ **✓ DO** utilizzare i parametri del costruttore come tasti di scelta rapida per l'impostazione delle proprietà principali.  
   
  Non deve esistere alcuna differenza nella semantica tra utilizzando il costruttore vuoto seguito da un set di proprietà e l'utilizzo di un costruttore con più argomenti.  
   
- **✓ SI** utilizzare lo stesso nome per i parametri del costruttore e una proprietà, se vengono utilizzati i parametri del costruttore è sufficiente impostare la proprietà.  
+ **✓ DO** utilizzare lo stesso nome per i parametri del costruttore e una proprietà, se vengono utilizzati i parametri del costruttore è sufficiente impostare la proprietà.  
   
  L'unica differenza tra tali parametri e le proprietà debba essere maiuscole e minuscole.  
   
- **✓ SI** lavoro minimo nel costruttore.  
+ **✓ DO** lavoro minimo nel costruttore.  
   
  I costruttori non memorizzare la quantità di lavoro diverso da acquisizione i parametri del costruttore. Il costo di qualsiasi altra elaborazione deve essere ritardato fino a quando non necessaria.  
   
- **✓ SI** generare eccezioni da costruttori di istanza, se appropriato.  
+ **✓ DO** generare eccezioni da costruttori di istanza, se appropriato.  
   
- **✓ SI** dichiarare in modo esplicito il costruttore predefinito pubblico nelle classi, se tale costruttore è obbligatorio.  
+ **✓ DO** dichiarare in modo esplicito il costruttore predefinito pubblico nelle classi, se tale costruttore è obbligatorio.  
   
  Se si non dichiarano costruttori in modo esplicito su un tipo, molti linguaggi (ad esempio c#) aggiungerà automaticamente un costruttore predefinito pubblico. (Le classi astratte ottenere un costruttore protetto).  
   
  Aggiunta di un costruttore con parametri a una classe impedisce al compilatore di aggiungere il costruttore predefinito. In questo modo spesso modifiche accidentali.  
   
- **X evitare** definire in modo esplicito i costruttori predefiniti sulle strutture.  
+ **X AVOID** definire in modo esplicito i costruttori predefiniti sulle strutture.  
   
  In questo modo la creazione della matrice più velocemente, in quanto se non è definito il costruttore predefinito, non deve essere eseguito su ogni slot nella matrice. Si noti che molti compilatori, inclusi c#, non consentano strutture possono contenere costruttori senza parametri per questo motivo.  
   
- **X evitare** chiamare membri virtuali su un oggetto all'interno di relativo costruttore.  
+ **X AVOID** chiamare membri virtuali su un oggetto all'interno di relativo costruttore.  
   
  La chiamata a un membro virtuale causerà la sostituzione più derivata da chiamare, anche se il costruttore del tipo più derivato non è stato completamente eseguito ancora.  
   
 ### <a name="type-constructor-guidelines"></a>Linee guida di costruttore di tipo  
- **✓ SI** rendere privato costruttori statici.  
+ **✓ DO** rendere privato costruttori statici.  
   
  Un costruttore statico, denominato anche costruttore di classe, viene utilizzato per inizializzare un tipo. CLR chiama il costruttore statico prima viene creata la prima istanza del tipo o i membri statici su tale tipo sono chiamati. L'utente non dispone di alcun controllo sulla quando viene chiamato il costruttore statico. Se un costruttore statico non è privato, può essere chiamato da codice diverso da CLR. A seconda delle operazioni eseguite nel costruttore, questo può causare comportamenti imprevisti. Il compilatore c# forza costruttori statici come privato.  
   
- **X non** generare eccezioni da costruttori statici.  
+ **X DO NOT** generare eccezioni da costruttori statici.  
   
  Se viene generata un'eccezione da un costruttore di tipo, il tipo non è utilizzabile nel dominio applicazione corrente.  
   
- **✓ Provare a** inizializzando i campi statici inline anziché in modo esplicito i costruttori statici, perché il runtime è in grado di ottimizzare le prestazioni dei tipi che non dispongono di un costruttore statico definito in modo esplicito.  
+ **✓ CONSIDER** inizializzando i campi statici inline anziché in modo esplicito i costruttori statici, perché il runtime è in grado di ottimizzare le prestazioni dei tipi che non dispongono di un costruttore statico definito in modo esplicito.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

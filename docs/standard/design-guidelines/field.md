@@ -23,19 +23,19 @@ Il principio di incapsulamento è uno delle nozioni fondamentali nella progettaz
   
  Microsoft esclude statici e costanti campi di sola lettura da questa limitazione strict, poiché tali campi, quasi per definizione, non deve modificare.  
   
- **X non** forniscono i campi di istanza pubblici sono protetti.  
+ **X DO NOT** forniscono i campi di istanza pubblici sono protetti.  
   
  È necessario fornire le proprietà per l'accesso ai campi anziché rendendoli pubblico o protetto.  
   
- **✓ SI** utilizzare i campi costanti per le costanti che non verranno mai modificato.  
+ **✓ DO** utilizzare i campi costanti per le costanti che non verranno mai modificato.  
   
  Il compilatore esegue il burn-i valori dei campi const direttamente nella chiamata di codice. Pertanto, valori const non possono essere modificati senza il rischio di danneggiare la compatibilità.  
   
- **✓ SI** utilizzare statici pubblici `readonly` campi per le istanze di oggetto predefinito.  
+ **✓ DO** utilizzare statici pubblici `readonly` campi per le istanze di oggetto predefinito.  
   
  Se sono presenti istanze predefinite del tipo, dichiararli come public campi statici di sola lettura del tipo stesso.  
   
- **X non** assegna le istanze di tipi modificabili per `readonly` campi.  
+ **X DO NOT** assegna le istanze di tipi modificabili per `readonly` campi.  
   
  Un tipo modificabile è un tipo con le istanze che possono essere modificate dopo la creazione di istanze. Ad esempio, matrici, la maggior parte delle raccolte e i flussi sono tipi modificabili, ma <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>, e <xref:System.String?displayProperty=nameWithType> sono tutti non modificabile. Il modificatore di sola lettura su un campo di tipo riferimento impedisce l'istanza archiviati nel campo venga sostituito, ma non impedisce che i dati del campo istanza vengano modificati chiamando i membri di modifica dell'istanza.  
   

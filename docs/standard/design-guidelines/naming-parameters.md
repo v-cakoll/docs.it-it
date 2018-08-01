@@ -18,20 +18,20 @@ ms.locfileid: "33570487"
 # <a name="naming-parameters"></a>Denominazione di parametri
 Oltre il motivo evidente di migliorare la leggibilità, è importante seguire le linee guida per i nomi dei parametri perché i parametri vengono visualizzati nella documentazione e nella finestra di progettazione quando gli strumenti di progettazione visiva forniscono Intellisense e funzionalità di esplorazione di classe.  
   
- **✓ SI** utilizzare Camel nei nomi di parametro.  
+ **✓ DO** utilizzare Camel nei nomi di parametro.  
   
- **✓ SI** utilizzare nomi di parametro descrittivo.  
+ **✓ DO** utilizzare nomi di parametro descrittivo.  
   
- **✓ Provare a** utilizzare nomi basati sul significato del parametro anziché il tipo del parametro.  
+ **✓ CONSIDER** utilizzare nomi basati sul significato del parametro anziché il tipo del parametro.  
   
 ### <a name="naming-operator-overload-parameters"></a>Denominazione dei parametri di Overload di operatore  
- **✓ SI** usare `left` e `right` per i nomi di parametro dell'operatore binario overload se è presente alcun significato per i parametri.  
+ **✓ DO** usare `left` e `right` per i nomi di parametro dell'operatore binario overload se è presente alcun significato per i parametri.  
   
- **✓ SI** utilizzare `value` per unario overload degli operatori i nomi dei parametri se è presente alcun significato per i parametri.  
+ **✓ DO** utilizzare `value` per unario overload degli operatori i nomi dei parametri se è presente alcun significato per i parametri.  
   
- **✓ Provare a** nomi significativi per l'operatore di overload parametri se questo modo si aggiunge un valore significativo.  
+ **✓ CONSIDER** nomi significativi per l'operatore di overload parametri se questo modo si aggiunge un valore significativo.  
   
- **X non** le abbreviazioni di utilizzare uno o più indici numerici per l'operatore di overload i nomi dei parametri.  
+ **X DO NOT** le abbreviazioni di utilizzare uno o più indici numerici per l'operatore di overload i nomi dei parametri.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

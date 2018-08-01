@@ -27,24 +27,24 @@ Come con altre linee guida di denominazione, l'obiettivo per la denominazione de
  `Fabrikam.Math`  
  `Litware.Security`  
   
- **✓ SI** spazi dei nomi con un nome della società per evitare gli spazi dei nomi di società diverse da con lo stesso nome del prefisso.  
+ **✓ DO** spazi dei nomi con un nome della società per evitare gli spazi dei nomi di società diverse da con lo stesso nome del prefisso.  
   
- **✓ SI** utilizzare un nome stabile e indipendente dalla versione del prodotto nel secondo livello di uno spazio dei nomi.  
+ **✓ DO** utilizzare un nome stabile e indipendente dalla versione del prodotto nel secondo livello di uno spazio dei nomi.  
   
- **X non** utilizzare gerarchie organizzative come base per i nomi nelle gerarchie dello spazio dei nomi, perché i nomi dei gruppi all'interno di aziende tendono a essere di breve durata. Organizzare la gerarchia di spazi dei nomi intorno a gruppi di tecnologie correlate.  
+ **X DO NOT** utilizzare gerarchie organizzative come base per i nomi nelle gerarchie dello spazio dei nomi, perché i nomi dei gruppi all'interno di aziende tendono a essere di breve durata. Organizzare la gerarchia di spazi dei nomi intorno a gruppi di tecnologie correlate.  
   
- **✓ SI** utilizzare il sistema Pascal e i componenti di spazio dei nomi separato con punti (ad esempio, `Microsoft.Office.PowerPoint`). Se il marchio viene utilizzata maiuscole e minuscole, è opportuno seguire le maiuscole e minuscole definite dal produttore, anche se esso devia dal maiuscole e minuscole normale spazio dei nomi.  
+ **✓ DO** utilizzare il sistema Pascal e i componenti di spazio dei nomi separato con punti (ad esempio, `Microsoft.Office.PowerPoint`). Se il marchio viene utilizzata maiuscole e minuscole, è opportuno seguire le maiuscole e minuscole definite dal produttore, anche se esso devia dal maiuscole e minuscole normale spazio dei nomi.  
   
- **✓ Provare a** usando nomi plurali ove appropriato.  
+ **✓ CONSIDER** usando nomi plurali ove appropriato.  
   
  Ad esempio, utilizzare `System.Collections` anziché `System.Collection`. Marchi e gli acronimi sono tuttavia eccezioni a questa regola. Ad esempio, utilizzare `System.IO` anziché `System.IOs`.  
   
- **X non** utilizzare lo stesso nome per uno spazio dei nomi e un tipo nello spazio dei nomi.  
+ **X DO NOT** utilizzare lo stesso nome per uno spazio dei nomi e un tipo nello spazio dei nomi.  
   
  Ad esempio, non utilizzare `Debug` come uno spazio dei nomi nome e quindi fornire anche una classe denominata `Debug` dello stesso spazio dei nomi. Alcuni compilatori richiedono tali tipi completi.  
   
 ### <a name="namespaces-and-type-name-conflicts"></a>Spazi dei nomi e i conflitti di nome di tipo  
- **X non** introducono i nomi di tipo generico, ad esempio `Element`, `Node`, `Log`, e `Message`.  
+ **X DO NOT** introducono i nomi di tipo generico, ad esempio `Element`, `Node`, `Log`, e `Message`.  
   
  È molto probabile che verranno provocare per digitare nome è in conflitto in comune scenari. È necessario qualificare i nomi di tipo generico (`FormElement`, `XmlNode`, `EventLog`, `SoapMessage`).  
   
@@ -57,7 +57,7 @@ Come con altre linee guida di denominazione, l'obiettivo per la denominazione de
      `System.Windows*`   
      `System.Web.UI*`  
   
-     **X non** assegnare lo stesso nome per i tipi negli spazi dei nomi all'interno di un modello di applicazione singolo.  
+     **X DO NOT** assegnare lo stesso nome per i tipi negli spazi dei nomi all'interno di un modello di applicazione singolo.  
   
      Ad esempio, non aggiungere un tipo denominato `Page` per il <xref:System.Web.UI.Adapters?displayProperty=nameWithType> dello spazio dei nomi, perché il <xref:System.Web.UI?displayProperty=nameWithType> spazio dei nomi contiene già un tipo denominato `Page`.  
   
@@ -69,7 +69,7 @@ Come con altre linee guida di denominazione, l'obiettivo per la denominazione de
   
      Spazi dei nomi principali includono tutti `System` spazi dei nomi, esclusi gli spazi dei nomi dei modelli di applicazione e gli spazi dei nomi dell'infrastruttura. Spazi dei nomi principali includono, ad esempio, `System`, `System.IO`, `System.Xml`, e `System.Net`.  
   
-     **X non** consentono di tipi di nomi in conflitto con qualsiasi tipo negli spazi dei nomi dei componenti di base.  
+     **X DO NOT** consentono di tipi di nomi in conflitto con qualsiasi tipo negli spazi dei nomi dei componenti di base.  
   
      Ad esempio, non utilizzare mai `Stream` come nome di tipo. Genererebbe un conflitto con <xref:System.IO.Stream?displayProperty=nameWithType>, molto usati tipo.  
   
@@ -77,9 +77,9 @@ Come con altre linee guida di denominazione, l'obiettivo per la denominazione de
   
      Questa categoria include tutti gli spazi dei nomi con i primi due nodi dello spazio dei nomi stesso `(<Company>.<Technology>*`), ad esempio `Microsoft.Build.Utilities` e `Microsoft.Build.Tasks`. È importante che i tipi appartenenti a una singola tecnologia non siano in conflitto tra loro.  
   
-     **X non** assegnare nomi dei tipi che possano entrare in conflitto con altri tipi all'interno di una singola tecnologia.  
+     **X DO NOT** assegnare nomi dei tipi che possano entrare in conflitto con altri tipi all'interno di una singola tecnologia.  
   
-     **X non** introdurre conflitti di nomi tra i tipi negli spazi dei nomi di tecnologia e uno spazio dei nomi del modello di applicazione (a meno che la tecnologia non deve essere utilizzato con il modello di applicazione).  
+     **X DO NOT** introdurre conflitti di nomi tra i tipi negli spazi dei nomi di tecnologia e uno spazio dei nomi del modello di applicazione (a meno che la tecnologia non deve essere utilizzato con il modello di applicazione).  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

@@ -32,7 +32,7 @@ Dal punto di vista di Common Language Runtime, sono disponibili solo due categor
   
  Delegati, eccezioni, gli attributi, matrici e raccolte sono tutti i casi speciali dei tipi di riferimento destinati a utilizzi specifici e linee guida per la progettazione e utilizzo vengono trattate altrove in questo manuale.  
   
- **✓ SI** assicurarsi che ogni tipo è un set ben definito di membri correlati, non solo un insieme di funzionalità non correlati casuale.  
+ **✓ DO** assicurarsi che ogni tipo è un set ben definito di membri correlati, non solo un insieme di funzionalità non correlati casuale.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Scelta tra classi e struct](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  

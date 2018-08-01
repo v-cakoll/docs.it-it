@@ -21,15 +21,15 @@ ms.locfileid: "33571186"
 # <a name="naming-resources"></a>Denominazione di risorse
 Poiché possono fare riferimento a risorse localizzabili mediante determinati oggetti come se fossero proprietà, convenzioni di denominazione per le risorse sono simili alle linee guida di proprietà.  
   
- **✓ SI** utilizzare il sistema Pascal le chiavi di risorsa.  
+ **✓ DO** utilizzare il sistema Pascal le chiavi di risorsa.  
   
- **✓ SI** forniscono descrittivo anziché identificatori breve.  
+ **✓ DO** forniscono descrittivo anziché identificatori breve.  
   
- **X non** utilizzare parole chiave specifiche della lingua dei linguaggi CLR principale.  
+ **X DO NOT** utilizzare parole chiave specifiche della lingua dei linguaggi CLR principale.  
   
- **✓ SI** utilizzare solo caratteri alfanumerici e caratteri di sottolineatura nei nomi delle risorse.  
+ **✓ DO** utilizzare solo caratteri alfanumerici e caratteri di sottolineatura nei nomi delle risorse.  
   
- **✓ SI** utilizzare la seguente convenzione di denominazione per le risorse di messaggio eccezione.  
+ **✓ DO** utilizzare la seguente convenzione di denominazione per le risorse di messaggio eccezione.  
   
  L'identificatore di risorsa deve essere il nome del tipo di eccezione e un identificatore breve dell'eccezione:  
   

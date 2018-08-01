@@ -21,7 +21,7 @@ ms.locfileid: "33575336"
 # <a name="exceptions-and-performance"></a>Eccezioni e prestazioni
 Un problema comune relative alle eccezioni è che se le eccezioni vengono utilizzate per il codice che normalmente non riesce, le prestazioni dell'implementazione saranno inaccettabili. Si tratta di un problema valido. Quando un membro genera un'eccezione, le prestazioni possono essere notevolmente più lenti. Tuttavia, è possibile ottenere buone prestazioni rimanendo rigorosamente le linee guida di eccezione che non consentire l'utilizzo di codici di errore. Due modelli descritti in questa sezione vengono forniti suggerimenti per eseguire questa operazione.  
   
- **X non** utilizzare i codici di errore a causa di problemi che le eccezioni potrebbero influire negativamente sulle prestazioni.  
+ **X DO NOT** utilizzare i codici di errore a causa di problemi che le eccezioni potrebbero influire negativamente sulle prestazioni.  
   
  Per migliorare le prestazioni, è possibile utilizzare il modello Tester-agente o il modello di analisi di provare, descritti nelle due sezioni.  
   
@@ -45,7 +45,7 @@ if(!numbers.IsReadOnly){
   
  Il membro utilizzato per testare una condizione, che nel nostro esempio è la proprietà `IsReadOnly`, viene definito il tester. Il membro usato per eseguire un'operazione potenzialmente generando un'eccezione, il `Add` metodo in questo esempio, è detto dell'agente.  
   
- **✓ Provare a** modello Tester-Agente per i membri che potrebbero generare eccezioni in comune scenari per evitare problemi di prestazioni relativi alle eccezioni.  
+ **✓ CONSIDER** modello Tester-Agente per i membri che potrebbero generare eccezioni in comune scenari per evitare problemi di prestazioni relativi alle eccezioni.  
   
 ## <a name="try-parse-pattern"></a>Try-analisi modello  
  Per le API molto sensibili alle prestazioni, deve essere utilizzato un modello ancora più rapido del modello Tester-Agente descritto nella sezione precedente. Il modello necessario modificare il nome del membro per eseguire un test ben definito di caso di una parte della semantica di membro. Ad esempio, <xref:System.DateTime> definisce un <xref:System.DateTime.Parse%2A> metodo che genera un'eccezione se l'analisi di una stringa non riesce. Definisce inoltre un corrispondente <xref:System.DateTime.TryParse%2A> metodo che tenta di analizzare, ma restituisce false se l'analisi ha esito negativo e restituisce il risultato di una corretta analisi utilizzando un `out` parametro.  
@@ -63,11 +63,11 @@ public struct DateTime {
   
  Quando si utilizza questo modello, è importante definire la funzionalità try in termini di tipo strict. Se il membro non riesce per qualsiasi ragione diversa dalla try ben definito, il membro deve ancora generare un'eccezione corrispondente.  
   
- **✓ Provare a** il modello di analisi Try per i membri che potrebbero generare eccezioni in comune scenari per evitare problemi di prestazioni relativi alle eccezioni.  
+ **✓ CONSIDER** il modello di analisi Try per i membri che potrebbero generare eccezioni in comune scenari per evitare problemi di prestazioni relativi alle eccezioni.  
   
- **✓ SI** utilizzare il prefisso "Try" e un valore booleano tipo restituito per i metodi di implementazione di questo modello.  
+ **✓ DO** utilizzare il prefisso "Try" e un valore booleano tipo restituito per i metodi di implementazione di questo modello.  
   
- **✓ SI** forniscono un membro che generano eccezioni per ogni membro utilizzando il modello di analisi di riprovare.  
+ **✓ DO** forniscono un membro che generano eccezioni per ogni membro utilizzando il modello di analisi di riprovare.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

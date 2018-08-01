@@ -17,26 +17,26 @@ Una proprietà di dipendenza (DP) è una proprietà normale che archivia il valo
   
  Una proprietà di dipendenza collegata è un tipo di proprietà di dipendenza modellata come metodi statici di Get e Set che rappresenta "proprietà" descrizione delle relazioni tra oggetti e i relativi contenitori (ad esempio, la posizione di un `Button` dell'oggetto su un `Panel` contenitore).  
   
- **✓ SI** forniscono le proprietà di dipendenza, se è necessario le proprietà per supportare le funzionalità WPF, ad esempio stile, trigger, data binding, animazioni, le risorse dinamiche ed ereditarietà.  
+ **✓ DO** forniscono le proprietà di dipendenza, se è necessario le proprietà per supportare le funzionalità WPF, ad esempio stile, trigger, data binding, animazioni, le risorse dinamiche ed ereditarietà.  
   
 ## <a name="dependency-property-design"></a>Progettazione di proprietà di dipendenza  
- **✓ SI** ereditare <xref:System.Windows.DependencyObject>, o uno dei sottotipi, quando si implementa le proprietà di dipendenza. Il tipo fornisce un'implementazione estremamente efficiente di un archivio delle proprietà e il data binding WPF sono automaticamente supportati.  
+ **✓ DO** ereditare <xref:System.Windows.DependencyObject>, o uno dei sottotipi, quando si implementa le proprietà di dipendenza. Il tipo fornisce un'implementazione estremamente efficiente di un archivio delle proprietà e il data binding WPF sono automaticamente supportati.  
   
- **✓ SI** fornire un proprietà CLR regolare e un campo statico pubblico sola lettura e l'archiviazione di un'istanza di <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> per ogni proprietà di dipendenza.  
+ **✓ DO** fornire un proprietà CLR regolare e un campo statico pubblico sola lettura e l'archiviazione di un'istanza di <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> per ogni proprietà di dipendenza.  
   
- **✓ SI** implementare le proprietà di dipendenza chiamando i metodi di istanza <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> e <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>.  
+ **✓ DO** implementare le proprietà di dipendenza chiamando i metodi di istanza <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> e <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>.  
   
- **✓ SI** denominare il campo statico di proprietà di dipendenza aggiungendo il nome della proprietà con "Proprietà".  
+ **✓ DO** denominare il campo statico di proprietà di dipendenza aggiungendo il nome della proprietà con "Proprietà".  
   
- **X non** impostare valori predefiniti delle proprietà di dipendenza in modo esplicito nel codice; impostarle nei metadati.  
+ **X DO NOT** impostare valori predefiniti delle proprietà di dipendenza in modo esplicito nel codice; impostarle nei metadati.  
   
  Se si imposta un valore predefinito di proprietà in modo esplicito, è necessario impedire tale proprietà di viene impostata in modo implicito, ad esempio uno stile.  
   
- **X non** inserire codice in funzioni di accesso diversi da code standard per accedere al campo statico.  
+ **X DO NOT** inserire codice in funzioni di accesso diversi da code standard per accedere al campo statico.  
   
  Che il codice non verrà eseguito se la proprietà è impostata in modo implicito, ad esempio uno stile, perché l'applicazione degli stili, il campo statico viene utilizzato direttamente.  
   
- **X non** utilizzare le proprietà di dipendenza per archiviare i dati protetti. Le proprietà di dipendenza anche privati sono accessibili pubblicamente.  
+ **X DO NOT** utilizzare le proprietà di dipendenza per archiviare i dati protetti. Le proprietà di dipendenza anche privati sono accessibili pubblicamente.  
   
 ## <a name="attached-dependency-property-design"></a>Progettazione di proprietà di dipendenza collegata  
  Proprietà di dipendenza descritte nella sezione precedente rappresentano proprietà intrinseche del tipo dichiarante. ad esempio, il `Text` è una proprietà di `TextButton`, che lo dichiara. Un tipo speciale di proprietà di dipendenza è la proprietà di dipendenza collegata.  
@@ -82,15 +82,15 @@ public class Grid {
   
  Sfortunatamente accesso della proprietà di dipendenza non può contenere codice di convalida arbitraria. Al contrario, logica di convalida di proprietà di dipendenza deve essere specificato durante la registrazione di proprietà.  
   
- **X non** inserire logica di convalida di proprietà di dipendenza in funzioni di accesso della proprietà. Al contrario, passare un callback di convalida per `DependencyProperty.Register` metodo.  
+ **X DO NOT** inserire logica di convalida di proprietà di dipendenza in funzioni di accesso della proprietà. Al contrario, passare un callback di convalida per `DependencyProperty.Register` metodo.  
   
 ## <a name="dependency-property-change-notifications"></a>Notifiche di modifica proprietà di dipendenza  
- **X non** implementare la logica di notifica di modifica nell'accesso della proprietà di dipendenza. Le proprietà di dipendenza sono una funzionalità di notifiche di modifica incorporate che deve essere usata da fornire un callback di notifica di modifica per il <xref:System.Windows.PropertyMetadata>.  
+ **X DO NOT** implementare la logica di notifica di modifica nell'accesso della proprietà di dipendenza. Le proprietà di dipendenza sono una funzionalità di notifiche di modifica incorporate che deve essere usata da fornire un callback di notifica di modifica per il <xref:System.Windows.PropertyMetadata>.  
   
 ## <a name="dependency-property-value-coercion"></a>Coercizione del valore di proprietà di dipendenza  
  Coercizione di proprietà ha luogo quando il valore in base a un setter di proprietà viene modificato dal setter prima che venga effettivamente modificata l'archivio delle proprietà.  
   
- **X non** implementare la logica di coercizione nell'accesso della proprietà di dipendenza.  
+ **X DO NOT** implementare la logica di coercizione nell'accesso della proprietà di dipendenza.  
   
  Le proprietà di dipendenza sono una funzionalità di coercizione incorporata e può essere utilizzato, fornendo un callback la coercizione di `PropertyMetadata`.  
   

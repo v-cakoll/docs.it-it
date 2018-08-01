@@ -43,9 +43,9 @@ Le linee guida fornite in questo capitolo disporre un metodo semplice per l'util
  `ioStream`  
  `htmlTag`  
   
- **✓ SI** utilizzare il sistema Pascal per tutti i membri, tipo e spazio dei nomi nomi pubblici composta da più parole.  
+ **✓ DO** utilizzare il sistema Pascal per tutti i membri, tipo e spazio dei nomi nomi pubblici composta da più parole.  
   
- **✓ SI** utilizzare camel per i nomi dei parametri.  
+ **✓ DO** utilizzare camel per i nomi dei parametri.  
   
  Nella tabella seguente descrive le regole di utilizzo delle maiuscole per diversi tipi di identificatori.  
   
@@ -64,7 +64,7 @@ Le linee guida fornite in questo capitolo disporre un metodo semplice per l'util
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Le parole composte con iniziale maiuscole e termini comuni  
  La maggior parte dei termini composti vengono considerati come singole parole per scopi di lettere maiuscole/minuscole.  
   
- **X non** tutte iniziali maiuscole in cosiddette parole composte forma chiusa.  
+ **X DO NOT** tutte iniziali maiuscole in cosiddette parole composte forma chiusa.  
   
  Queste sono le parole composte scritte come una parola singola, ad esempio endpoint. Allo scopo di linee guida di maiuscole e minuscole, considerare una chiuso parola composta come una singola parola. Utilizzare un dizionario corrente per determinare se una parola composta è scritto in forma chiusa.  
   
@@ -99,7 +99,7 @@ Le linee guida fornite in questo capitolo disporre un metodo semplice per l'util
 ## <a name="case-sensitivity"></a>Distinzione fra maiuscole e minuscole  
  Linguaggi che è possono eseguire in Common Language Runtime non è richiesta per supportare distinzione maiuscole/minuscole, anche se alcuni. Anche se supporta la lingua, altri linguaggi che potrebbero accedere il framework non. Le API che sono accessibili dall'esterno, pertanto, possono basarsi su case da solo per distinguere tra i due nomi nello stesso contesto.  
   
- **X non** presupporre che tutti i linguaggi di programmazione siano distinzione maiuscole / minuscole. Ma non lo sono. I nomi non possono differire dalle maiuscole o minuscole da solo.  
+ **X DO NOT** presupporre che tutti i linguaggi di programmazione siano distinzione maiuscole / minuscole. Ma non lo sono. I nomi non possono differire dalle maiuscole o minuscole da solo.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

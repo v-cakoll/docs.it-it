@@ -28,11 +28,11 @@ Un'astrazione è un tipo che descrive un contratto, ma non fornisce un'implement
   
  Tuttavia, astrazioni forniscono estensibilità estremamente efficaci che spesso non possono corrispondere a altri meccanismi di estensibilità. Sono alla base di molti modelli di architettura, ad esempio plug-in, inversione di controllo (IoC), le pipeline e così via. Sono inoltre estremamente importante per la testabilità del Framework. Buona astrazioni rendono possibile sottoporre a stub pesante dipendenze allo scopo di unit test. In breve, le astrazioni sono responsabili per la ricchezza dei framework orientata agli oggetti moderno ricercata.  
   
- **X non** forniscono astrazioni a meno che non vengono verificati per lo sviluppo di diverse implementazioni concrete e utilizzano le astrazioni di API.  
+ **X DO NOT** forniscono astrazioni a meno che non vengono verificati per lo sviluppo di diverse implementazioni concrete e utilizzano le astrazioni di API.  
   
- **✓ SI** scegliere con attenzione tra una classe astratta e un'interfaccia quando si progetta un'astrazione.  
+ **✓ DO** scegliere con attenzione tra una classe astratta e un'interfaccia quando si progetta un'astrazione.  
   
- **✓ Provare a** fornendo i test di riferimento per le implementazioni concrete di astrazioni. Tali test dovrebbero consentire agli utenti di verificare la corretta implementazione del contratto.  
+ **✓ CONSIDER** fornendo i test di riferimento per le implementazioni concrete di astrazioni. Tali test dovrebbero consentire agli utenti di verificare la corretta implementazione del contratto.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

@@ -21,49 +21,49 @@ ms.locfileid: "33578274"
 # <a name="parameter-design"></a>Progettazione di parametri
 In questa sezione fornisce linee guida generali sulla progettazione di parametro, incluse sezioni con le linee guida per gli argomenti sul controllo. Inoltre, è consigliabile consultare le linee guida descritte [denominazione dei parametri](../../../docs/standard/design-guidelines/naming-parameters.md).  
   
- **✓ SI** utilizzare il tipo di parametro meno derivato che fornisce le funzionalità richieste da un membro.  
+ **✓ DO** utilizzare il tipo di parametro meno derivato che fornisce le funzionalità richieste da un membro.  
   
  Si supponga, ad esempio, che si desidera progettare un metodo che enumera una raccolta e la stampa di ogni elemento nella console. Questo metodo deve accettare <xref:System.Collections.IEnumerable> come parametro, non <xref:System.Collections.ArrayList> o <xref:System.Collections.IList>, ad esempio.  
   
- **X non** utilizzare parametri riservati.  
+ **X DO NOT** utilizzare parametri riservati.  
   
  Se più input a un membro è necessaria nelle versioni future, è possibile aggiungere un nuovo overload.  
   
- **X non** sono esposte pubblicamente i metodi che accettano puntatori, matrici di puntatori o le matrici multidimensionali come parametri.  
+ **X DO NOT** sono esposte pubblicamente i metodi che accettano puntatori, matrici di puntatori o le matrici multidimensionali come parametri.  
   
  I puntatori e matrici multidimensionali sono relativamente difficili da utilizzare in modo appropriato. Nella quasi totalità dei casi, le API possono essere riprogettate per evitare questi tipi come parametri.  
   
- **✓ SI** inserire tutti `out` parametri che seguono tutti il base al valore e `ref` parametri (esclusi matrici di parametro), anche se il risultato è un'incoerenza nel parametro ordinamento viene eseguito tra gli overload (vedere [membro L'overload](../../../docs/standard/design-guidelines/member-overloading.md)).  
+ **✓ DO** inserire tutti `out` parametri che seguono tutti il base al valore e `ref` parametri (esclusi matrici di parametro), anche se il risultato è un'incoerenza nel parametro ordinamento viene eseguito tra gli overload (vedere [membro L'overload](../../../docs/standard/design-guidelines/member-overloading.md)).  
   
  Il `out` parametri possono essere visualizzati come valori di ritorno a capo e raggruppandoli rende la firma del metodo più facile da comprendere.  
   
- **✓ SI** sia sempre coerente denominazione dei parametri quando si esegue l'override di membri o di implementazione di membri di interfaccia.  
+ **✓ DO** sia sempre coerente denominazione dei parametri quando si esegue l'override di membri o di implementazione di membri di interfaccia.  
   
  Questo comunica meglio la relazione tra i metodi.  
   
 ### <a name="choosing-between-enum-and-boolean-parameters"></a>Scelta tra i parametri booleani e di enumerazione  
- **✓ SI** utilizzare enumerazioni se un membro in caso contrario sarebbe due o più parametri booleani.  
+ **✓ DO** utilizzare enumerazioni se un membro in caso contrario sarebbe due o più parametri booleani.  
   
- **X non** utilizzare valori booleani, a meno che non si è assolutamente certi non sarà mai necessario per più di due valori.  
+ **X DO NOT** utilizzare valori booleani, a meno che non si è assolutamente certi non sarà mai necessario per più di due valori.  
   
  Le enumerazioni consentono di spazio per future aggiunta di valori, ma è necessario essere consapevoli di tutte le implicazioni dell'aggiunta di valori per le enumerazioni, che sono descritte nel [progettazione Enum](../../../docs/standard/design-guidelines/enum.md).  
   
- **✓ Provare a** utilizzando valori booleani per i parametri del costruttore che sono realmente due stati, valori e vengono utilizzati per inizializzare le proprietà booleane.  
+ **✓ CONSIDER** utilizzando valori booleani per i parametri del costruttore che sono realmente due stati, valori e vengono utilizzati per inizializzare le proprietà booleane.  
   
 ### <a name="validating-arguments"></a>Convalida di argomenti  
- **✓ SI** convalidare gli argomenti passati ai membri pubblici, protetti o implementati in modo esplicito. Generare <xref:System.ArgumentException?displayProperty=nameWithType>, o una delle sue sottoclassi, se la convalida non riesce.  
+ **✓ DO** convalidare gli argomenti passati ai membri pubblici, protetti o implementati in modo esplicito. Generare <xref:System.ArgumentException?displayProperty=nameWithType>, o una delle sue sottoclassi, se la convalida non riesce.  
   
  Si noti che la convalida effettiva non deve necessariamente essere eseguita con il membro pubblico o protetto stesso. Problema può verificarsi a un livello inferiore in alcune routine privato o interno. Il punto principale è che l'intera superficie esposta agli utenti finali controlla gli argomenti.  
   
- **✓ SI** throw <xref:System.ArgumentNullException> se viene passato un argomento null e il membro non supporta argomenti null.  
+ **✓ DO** throw <xref:System.ArgumentNullException> se viene passato un argomento null e il membro non supporta argomenti null.  
   
- **✓ SI** convalidare i parametri enum.  
+ **✓ DO** convalidare i parametri enum.  
   
  Si presuppone l'enum argomenti sarà nell'intervallo definito dal tipo enum. CLR consente di eseguire il cast di qualsiasi valore intero in un valore di enumerazione, anche se il valore non è definito nell'enumerazione.  
   
- **X non** utilizzare <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> per intervallo di enumerazione controlla.  
+ **X DO NOT** utilizzare <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> per intervallo di enumerazione controlla.  
   
- **✓ SI** tenere presente che gli argomenti modificabili sia stato modificato dopo che sono stati convalidati.  
+ **✓ DO** tenere presente che gli argomenti modificabili sia stato modificato dopo che sono stati convalidati.  
   
  Se il membro è basata sulla protezione, vengono fornite informazioni utili per creare una copia e quindi convalidare ed elaborare l'argomento.  
   
@@ -76,11 +76,11 @@ In questa sezione fornisce linee guida generali sulla progettazione di parametro
   
  `Out` i parametri sono simili a `ref` parametri, con alcune piccole differenze. Il parametro è considerato inizialmente non assegnato e non può essere letto nel corpo del membro prima che venga assegnata a un valore. Inoltre, il parametro deve essere assegnato un valore prima che venga restituito il membro.  
   
- **X evitare** mediante `out` o `ref` parametri.  
+ **X AVOID** mediante `out` o `ref` parametri.  
   
  Utilizzando `out` o `ref` parametri richiede esperienza nell'utilizzo dei puntatori, conoscenza delle differenziano tra tipi di valore e tipi di riferimento e dei metodi con più valori restituiti. Inoltre, la differenza tra `out` e `ref` parametri non è sempre nota. Architetti Framework progettazione per un pubblico generico non possono prevedere gli utenti in grado di utilizzare i `out` o `ref` parametri.  
   
- **X non** passare i tipi di riferimento per riferimento.  
+ **X DO NOT** passare i tipi di riferimento per riferimento.  
   
  Esistono alcune eccezioni alla regola, ad esempio un metodo che può essere utilizzato per scambiare i riferimenti.  
   
@@ -111,44 +111,44 @@ public class String {
   
  Si noti che è possibile aggiungere la parola chiave params solo all'ultimo parametro nell'elenco di parametri.  
   
- **✓ Provare a** aggiungendo la parola chiave params ai parametri di matrice, se si prevede che gli utenti finali per passare matrici con un numero limitato di elementi. Se si prevede che un numero elevato di elementi verrà passato in comune scenari, gli utenti probabilmente non supera tali elementi inline comunque e pertanto non è necessaria la parola chiave params.  
+ **✓ CONSIDER** aggiungendo la parola chiave params ai parametri di matrice, se si prevede che gli utenti finali per passare matrici con un numero limitato di elementi. Se si prevede che un numero elevato di elementi verrà passato in comune scenari, gli utenti probabilmente non supera tali elementi inline comunque e pertanto non è necessaria la parola chiave params.  
   
- **X evitare** utilizzo delle matrici di parametri se il chiamante quasi sempre necessario l'input già in una matrice.  
+ **X AVOID** utilizzo delle matrici di parametri se il chiamante quasi sempre necessario l'input già in una matrice.  
   
  Ad esempio, i membri con i parametri di matrice di byte non sarebbero quasi mai essere chiamati passando byte singoli. Per questo motivo, i parametri di matrice di byte in .NET Framework non utilizzano la parola chiave params.  
   
- **X non** utilizzare matrici params se la matrice viene modificata dal membro che accetta il parametro di matrice di parametri.  
+ **X DO NOT** utilizzare matrici params se la matrice viene modificata dal membro che accetta il parametro di matrice di parametri.  
   
  Per il motivo è che molti compilatori gli argomenti per il membro in una matrice temporanea nel sito di chiamata, la matrice potrebbe essere un oggetto temporaneo e pertanto le modifiche alla matrice andranno persi.  
   
- **✓ Provare a** utilizzando la parola chiave params in un overload semplice, anche se un overload più complesso non è stato possibile utilizzarla.  
+ **✓ CONSIDER** utilizzando la parola chiave params in un overload semplice, anche se un overload più complesso non è stato possibile utilizzarla.  
   
  È necessario stabilire se gli utenti sarebbero valore con la matrice di parametri in uno degli overload anche se non è stato in tutti gli overload.  
   
- **✓ SI** tenta di ordinare i parametri per consentono di utilizzare la parola chiave params.  
+ **✓ DO** tenta di ordinare i parametri per consentono di utilizzare la parola chiave params.  
   
- **✓ Provare a** fornendo overload speciali e i percorsi del codice per le chiamate con un numero ridotto di argomenti nelle API molto sensibili alle prestazioni.  
+ **✓ CONSIDER** fornendo overload speciali e i percorsi del codice per le chiamate con un numero ridotto di argomenti nelle API molto sensibili alle prestazioni.  
   
  In questo modo evitare di creare oggetti matrice quando viene chiamata l'API con un numero limitato di argomenti. Richiede una forma singolare del parametro di matrice e aggiungendo un suffisso numerico, formano i nomi dei parametri.  
   
  Si deve essere eseguita solo se si sta per l'intero percorso del codice speciale, non è sufficiente creare una matrice e chiamare il metodo più generale.  
   
- **✓ SI** tenere presente che null è stato passato come argomento di matrice di parametri.  
+ **✓ DO** tenere presente che null è stato passato come argomento di matrice di parametri.  
   
  È necessario convalidare che la matrice non sia null prima dell'elaborazione.  
   
- **X non** usare il `varargs` metodi, altrimenti noti come i puntini di sospensione.  
+ **X DO NOT** usare il `varargs` metodi, altrimenti noti come i puntini di sospensione.  
   
  Alcuni linguaggi CLR, ad esempio C++, supportano una convenzione alternativa per il passaggio di elenchi di parametri variabile denominati `varargs` metodi. La convenzione di non utilizzare nel Framework, perché non è conforme a CLS.  
   
 ### <a name="pointer-parameters"></a>Parametri dei puntatori  
  In generale, i puntatori non devono essere visualizzati nell'area della superficie pubblica di un framework di codice gestito ben progettata. La maggior parte dei casi, i puntatori devono essere incapsulati. Tuttavia, in alcuni casi i puntatori sono necessari per motivi di interoperabilità e utilizza i puntatori in questi casi è appropriato.  
   
- **✓ SI** forniscono un'alternativa per i membri che accetta un argomento di puntatore, poiché i puntatori non sono conformi a CLS.  
+ **✓ DO** forniscono un'alternativa per i membri che accetta un argomento di puntatore, poiché i puntatori non sono conformi a CLS.  
   
- **X evitare** in questo argomento costoso il controllo degli argomenti del puntatore.  
+ **X AVOID** in questo argomento costoso il controllo degli argomenti del puntatore.  
   
- **✓ SI** convenzioni comuni correlati puntatore quando si progettano i membri con puntatori.  
+ **✓ DO** convenzioni comuni correlati puntatore quando si progettano i membri con puntatori.  
   
  Ad esempio, è necessario passare l'indice di inizio, poiché è possibile utilizzare l'aritmetica dei puntatori semplice per ottenere lo stesso risultato.  
   

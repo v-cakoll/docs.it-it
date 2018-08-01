@@ -27,35 +27,35 @@ ms.locfileid: "36338104"
 Questa sezione descrive convenzioni di denominazione generali relativi alla scelta delle parole, le linee guida sull'utilizzo di abbreviazioni e acronimi e indicazioni su come evitare di utilizzare nomi specifici della lingua.  
   
 ## <a name="word-choice"></a>Scelta di Word  
- **✓ SI** scegliere i nomi degli identificatori facilmente leggibili.  
+ **✓ DO** scegliere i nomi degli identificatori facilmente leggibili.  
   
  Ad esempio, una proprietà denominata `HorizontalAlignment` è più inglese-leggibile `AlignmentHorizontal`.  
   
- **✓ SI** privilegiare la leggibilità ragioni di brevità.  
+ **✓ DO** privilegiare la leggibilità ragioni di brevità.  
   
  Il nome della proprietà `CanScrollHorizontally` è migliore `ScrollableX` (un riferimento all'asse x).  
   
- **X non** utilizzare caratteri di sottolineatura, trattini o altri caratteri non alfanumerici.  
+ **X DO NOT** utilizzare caratteri di sottolineatura, trattini o altri caratteri non alfanumerici.  
   
- **X non** utilizzare la notazione ungherese.  
+ **X DO NOT** utilizzare la notazione ungherese.  
   
- **X evitare** utilizzando gli identificatori che sono in conflitto con le parole chiave di ampiamente utilizzato linguaggi di programmazione.  
+ **X AVOID** utilizzando gli identificatori che sono in conflitto con le parole chiave di ampiamente utilizzato linguaggi di programmazione.  
   
  In base alla regola 4 della specifica CLS (Common Language), tutti i linguaggi conformi a devono fornire un meccanismo che consente l'accesso agli elementi denominati che usano una parola chiave del linguaggio come identificatore. Linguaggio c#, ad esempio, Usa il simbolo come meccanismo di escape in questo caso @. Tuttavia, è comunque consigliabile evitare le parole chiave comuni in quanto è molto più difficile usare un metodo con la sequenza di escape quello senza di esso.  
   
 ## <a name="using-abbreviations-and-acronyms"></a>Utilizzando gli acronimi e abbreviazioni  
- **X non** utilizzare abbreviazioni o termini più semplici come parte dei nomi degli identificatori.  
+ **X DO NOT** utilizzare abbreviazioni o termini più semplici come parte dei nomi degli identificatori.  
   
  Ad esempio, utilizzare `GetWindow` anziché `GetWin`.  
   
- **X non** utilizzare acronimi che non sono molto diffusa e anche se sono solo quando necessario.  
+ **X DO NOT** utilizzare acronimi che non sono molto diffusa e anche se sono solo quando necessario.  
   
 ## <a name="avoiding-language-specific-names"></a>Evitare nomi specifici della lingua  
- **✓ SI** utilizzare nomi significativi anziché le parole chiave specifiche della lingua per i nomi dei tipi.  
+ **✓ DO** utilizzare nomi significativi anziché le parole chiave specifiche della lingua per i nomi dei tipi.  
   
  Ad esempio `GetLength` è un nome più significativo rispetto a `GetInt`.  
   
- **✓ SI** usare un nome di tipo generico di CLR, anziché un nome specifico della lingua, in rari casi in cui un identificatore non ha alcun significato semantico oltre il relativo tipo.  
+ **✓ DO** usare un nome di tipo generico di CLR, anziché un nome specifico della lingua, in rari casi in cui un identificatore non ha alcun significato semantico oltre il relativo tipo.  
   
  Ad esempio, un metodo di conversione <xref:System.Int64> devono essere denominate `ToInt64`, non `ToLong` (perché <xref:System.Int64> è un nome CLR per il linguaggio c#-alias specifico `long`). La tabella seguente vengono illustrati diversi tipi di dati di base utilizzando i nomi dei tipi CLR (così come i nomi dei tipi corrispondenti per c#, Visual Basic e C++).  
   
@@ -76,24 +76,24 @@ Questa sezione descrive convenzioni di denominazione generali relativi alla scel
 |**string**|**String**|**String**|**String**|  
 |**object**|**Oggetto**|**Oggetto**|**Oggetto**|  
   
- **✓ SI** utilizzare un nome comune, ad esempio `value` o `item`, piuttosto che ripetere il nome del tipo, in rari casi in cui un identificatore non ha alcun significato semantico e il tipo del parametro non è importante.  
+ **✓ DO** utilizzare un nome comune, ad esempio `value` o `item`, piuttosto che ripetere il nome del tipo, in rari casi in cui un identificatore non ha alcun significato semantico e il tipo del parametro non è importante.  
   
 ## <a name="naming-new-versions-of-existing-apis"></a>Denominazione nuove versioni delle API esistente  
- **✓ SI** utilizzare un nome simile all'API precedente durante la creazione di nuove versioni di un'API esistente.  
+ **✓ DO** utilizzare un nome simile all'API precedente durante la creazione di nuove versioni di un'API esistente.  
   
  Ciò consente di evidenziare la relazione tra le API.  
   
- **✓ SI** preferisce aggiunta di un suffisso anziché un prefisso per indicare una nuova versione di un'API esistente.  
+ **✓ DO** preferisce aggiunta di un suffisso anziché un prefisso per indicare una nuova versione di un'API esistente.  
   
  Questo modo viene agevolata individuazione quando si esplorano documentazione, o l'utilizzo di IntelliSense. La versione precedente dell'API verrà organizzata vicino a nuove API, poiché la maggior parte dei browser e IntelliSense mostra gli identificatori in ordine alfabetico.  
   
- **✓ Provare a** utilizzando un identificatore di nuovo, ma significativo, anziché aggiungere un prefisso o suffisso.  
+ **✓ CONSIDER** utilizzando un identificatore di nuovo, ma significativo, anziché aggiungere un prefisso o suffisso.  
   
- **✓ SI** utilizzare un suffisso numerico per indicare una nuova versione di un'API esistente, in particolare se il nome dell'API esistente è l'unico nome appropriato (ad esempio, se è uno standard del settore) e se si aggiungono qualsiasi significativo suffisso (o la modifica del nome) non è un'app opzione ropriate.  
+ **✓ DO** utilizzare un suffisso numerico per indicare una nuova versione di un'API esistente, in particolare se il nome dell'API esistente è l'unico nome appropriato (ad esempio, se è uno standard del settore) e se si aggiungono qualsiasi significativo suffisso (o la modifica del nome) non è un'app opzione ropriate.  
   
- **X non** utilizzare "Ex" (o una simile) suffisso di un identificatore per distinguerlo da una versione precedente dell'API stessa.  
+ **X DO NOT** utilizzare "Ex" (o una simile) suffisso di un identificatore per distinguerlo da una versione precedente dell'API stessa.  
   
- **✓ SI** utilizzano il suffisso "64" quando si introduce le versioni delle API che operano su un valore integer a 64 bit (un valore long integer) anziché un intero a 32 bit. È necessario adottare questo approccio quando l'API di 32 bit esistente esiste; non eseguire l'operazione per le API di nuove con solo una versione a 64 bit.  
+ **✓ DO** utilizzano il suffisso "64" quando si introduce le versioni delle API che operano su un valore integer a 64 bit (un valore long integer) anziché un intero a 32 bit. È necessario adottare questo approccio quando l'API di 32 bit esistente esiste; non eseguire l'operazione per le API di nuove con solo una versione a 64 bit.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

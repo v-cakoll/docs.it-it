@@ -18,25 +18,25 @@ ms.locfileid: "33577100"
 # <a name="property-design"></a>Progettazione di proprietà
 Anche se tecnicamente molto simile ai metodi, proprietà sono diversi in termini relativi scenari di utilizzo. Si dovrebbero essere considerate come campi intelligenti. Hanno la sintassi per la chiamata di campi e la flessibilità dei metodi.  
   
- **✓ SI** creare proprietà get-only, se il chiamante non deve essere in grado di modificare il valore della proprietà.  
+ **✓ DO** creare proprietà get-only, se il chiamante non deve essere in grado di modificare il valore della proprietà.  
   
  Tenere presente che se il tipo di proprietà è un tipo di riferimento modificabile, il valore della proprietà può essere modificato anche se la proprietà solo get.  
   
- **X non** fornire solo set di proprietà o il setter con accessibilità più ampia rispetto al metodo Get.  
+ **X DO NOT** fornire solo set di proprietà o il setter con accessibilità più ampia rispetto al metodo Get.  
   
  Ad esempio, non utilizzare proprietà con un setter pubblico e un metodo di richiamo protetto.  
   
  Se il metodo Get della proprietà non può essere fornito, è possibile implementare la funzionalità di un metodo. È consigliabile iniziare con il nome del metodo `Set` e seguire con ciò che si avrebbero denominato la proprietà. Ad esempio, <xref:System.AppDomain> ha un metodo denominato `SetCachePath` anziché una set di proprietà di sola `CachePath`.  
   
- **✓ SI** fornire valori predefiniti appropriati per tutte le proprietà, assicurandosi che le impostazioni predefinite non comportano un problema di sicurezza o di codice particolarmente inefficiente.  
+ **✓ DO** fornire valori predefiniti appropriati per tutte le proprietà, assicurandosi che le impostazioni predefinite non comportano un problema di sicurezza o di codice particolarmente inefficiente.  
   
- **✓ SI** consentono di proprietà da impostare in qualsiasi ordine, anche se ciò comporta un stato temporaneo non valido dell'oggetto.  
+ **✓ DO** consentono di proprietà da impostare in qualsiasi ordine, anche se ciò comporta un stato temporaneo non valido dell'oggetto.  
   
  È comune per due o più delle proprietà correlate a un punto in cui alcuni valori di una proprietà potrebbero essere non validi in base ai valori di altre proprietà sull'oggetto stesso. In questi casi, le eccezioni derivanti da stato non valido devono essere rinviate fino a quando le proprietà correlate vengono effettivamente utilizzate insieme dall'oggetto.  
   
- **✓ SI** mantenere il valore precedente se un setter di proprietà genera un'eccezione.  
+ **✓ DO** mantenere il valore precedente se un setter di proprietà genera un'eccezione.  
   
- **X evitare** generazione di eccezioni da metodi get di proprietà.  
+ **X AVOID** generazione di eccezioni da metodi get di proprietà.  
   
  Metodi get di proprietà devono essere operazioni semplici e non deve avere le precondizioni. Se un metodo Get può generare un'eccezione, deve probabilmente riprogettato per essere un metodo. Si noti che questa regola viene applicata per gli indicizzatori, in cui è prevista eccezioni come risultato di convalida gli argomenti.  
   
@@ -45,42 +45,42 @@ Anche se tecnicamente molto simile ai metodi, proprietà sono diversi in termini
   
  Proprietà indicizzate sono conosciute come gli indicizzatori. Gli indicizzatori devono essere utilizzati solo nelle API che forniscono l'accesso agli elementi in una raccolta logica. Ad esempio, una stringa è un insieme di caratteri e l'indicizzatore in <xref:System.String?displayProperty=nameWithType> è stato aggiunto per accedere ai relativi caratteri.  
   
- **✓ Provare a** utilizzo degli indicizzatori per fornire l'accesso ai dati archiviati in una matrice interna.  
+ **✓ CONSIDER** utilizzo degli indicizzatori per fornire l'accesso ai dati archiviati in una matrice interna.  
   
- **✓ Provare a** fornendo gli indicizzatori in tipi che rappresentano raccolte di elementi.  
+ **✓ CONSIDER** fornendo gli indicizzatori in tipi che rappresentano raccolte di elementi.  
   
- **X evitare** utilizzando proprietà con più di un parametro indicizzate.  
+ **X AVOID** utilizzando proprietà con più di un parametro indicizzate.  
   
  Se la progettazione richiede più parametri, verificare che la proprietà rappresenta una funzione di accesso a un insieme logico. In caso contrario, è possibile utilizzare metodi. È consigliabile iniziare con il nome del metodo `Get` o `Set`.  
   
- **X evitare** indicizzatori con tipi di parametro diverso da <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType>, o un'enumerazione.  
+ **X AVOID** indicizzatori con tipi di parametro diverso da <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType>, o un'enumerazione.  
   
  Se il progetto richiede altri tipi di parametri, rivalutare se l'API rappresenta una funzione di accesso a un insieme logico. In caso contrario, utilizzare un metodo. È consigliabile iniziare con il nome del metodo `Get` o `Set`.  
   
- **✓ SI** usare il nome `Item` per proprietà indicizzate, a meno che non è un nome migliore ovviamente (ad esempio, vedere il <xref:System.String.Chars%2A> proprietà `System.String`).  
+ **✓ DO** usare il nome `Item` per proprietà indicizzate, a meno che non è un nome migliore ovviamente (ad esempio, vedere il <xref:System.String.Chars%2A> proprietà `System.String`).  
   
  In c#, gli indicizzatori sono per impostazione predefinita l'elemento denominato. Il <xref:System.Runtime.CompilerServices.IndexerNameAttribute> può essere utilizzato per personalizzare questo nome.  
   
- **X non** fornire sia un indicizzatore e metodi che sono semanticamente equivalenti.  
+ **X DO NOT** fornire sia un indicizzatore e metodi che sono semanticamente equivalenti.  
   
- **X non** specificare più di un gruppo di overload indicizzatori in un solo tipo.  
+ **X DO NOT** specificare più di un gruppo di overload indicizzatori in un solo tipo.  
   
  Questo viene applicato dal compilatore c#.  
   
- **X non** diversi da quelli predefiniti utilizzare proprietà indicizzate.  
+ **X DO NOT** diversi da quelli predefiniti utilizzare proprietà indicizzate.  
   
  Questo viene applicato dal compilatore c#.  
   
 ### <a name="property-change-notification-events"></a>Eventi di notifica di modifica di proprietà  
  Talvolta è utile fornire un evento di notificare all'utente di modifiche in un valore della proprietà. Ad esempio, `System.Windows.Forms.Control` genera un `TextChanged` eventi quando il valore della relativa `Text` proprietà è stata modificata.  
   
- **✓ Provare a** generato modificare eventi di notifica quando vengono modificati i valori delle proprietà generale per le API (in genere Progettazione componenti).  
+ **✓ CONSIDER** generato modificare eventi di notifica quando vengono modificati i valori delle proprietà generale per le API (in genere Progettazione componenti).  
   
  Se è presente uno scenario ottimo per un utente di conoscere quando si modifica una proprietà di un oggetto, l'oggetto deve generare un evento di notifica di modifica per la proprietà.  
   
  Tuttavia, non viene in genere valere la pena l'overhead per generare tali eventi per le API di basso livello, ad esempio tipi di base o raccolte. Ad esempio, <xref:System.Collections.Generic.List%601> potrebbe non generare tali eventi quando un nuovo elemento viene aggiunto all'elenco e `Count` le modifiche alle proprietà.  
   
- **✓ Provare a** generato modificare eventi di notifica quando il valore di una proprietà viene modificato tramite forze esterne.  
+ **✓ CONSIDER** generato modificare eventi di notifica quando il valore di una proprietà viene modificato tramite forze esterne.  
   
  Se un valore della proprietà viene modificata tramite alcuni forza esterna (in modo diverso da chiamando i metodi per l'oggetto), generare gli eventi indicano allo sviluppatore che il valore in fase di modifica e che è stato modificato. Un buon esempio è la `Text` proprietà di un controllo casella di testo. Quando l'utente digita il testo in un `TextBox`, viene automaticamente modificato il valore della proprietà.  
   

@@ -24,48 +24,48 @@ Gli eventi sono la forma più diffuse di callback (costrutti che consentono il f
   
  È importante notare che sono presenti due gruppi di eventi: eventi generati prima di uno stato delle modifiche del sistema, denominati eventi precedenti e gli eventi generati dopo uno stato di modifica, chiamati eventi successivi. Un esempio di un pre-evento di `Form.Closing`, che viene generato prima della chiusura di un form. Un esempio di un post-evento di `Form.Closed`, che viene generato dopo la chiusura di un form.  
   
- **✓ SI** viene usato il termine "generazione" per gli eventi anziché "generazione" o "trigger".  
+ **✓ DO** viene usato il termine "generazione" per gli eventi anziché "generazione" o "trigger".  
   
- **✓ SI** utilizzare <xref:System.EventHandler%601?displayProperty=nameWithType> anziché creare manualmente nuovi delegati da utilizzare come gestori eventi.  
+ **✓ DO** utilizzare <xref:System.EventHandler%601?displayProperty=nameWithType> anziché creare manualmente nuovi delegati da utilizzare come gestori eventi.  
   
- **✓ CONSIDERARE** utilizzando una sottoclasse di <xref:System.EventArgs> come argomento dell'evento, a meno che non si è assolutamente certi l'evento non sarà mai necessario eseguire tutti i dati per il metodo gestione eventi, nel qual caso è possibile utilizzare il `EventArgs` digitare direttamente.  
+ **✓ CONSIDER** utilizzando una sottoclasse di <xref:System.EventArgs> come argomento dell'evento, a meno che non si è assolutamente certi l'evento non sarà mai necessario eseguire tutti i dati per il metodo gestione eventi, nel qual caso è possibile utilizzare il `EventArgs` digitare direttamente.  
   
  Se si fornisce un'API tramite `EventArgs` direttamente, non sarà in grado di aggiungere tutti i dati da eseguire con l'evento senza interrompere la compatibilità. Se si utilizza una sottoclasse, anche se inizialmente completamente vuote, sarà possibile aggiungere proprietà alla sottoclasse quando necessario.  
   
- **✓ SI** utilizzare un metodo virtuale protetto per la generazione di ogni evento. Questa opzione è disponibile solo per eventi non statici su classi non sealed, non per le strutture, le classi sealed o eventi statici.  
+ **✓ DO** utilizzare un metodo virtuale protetto per la generazione di ogni evento. Questa opzione è disponibile solo per eventi non statici su classi non sealed, non per le strutture, le classi sealed o eventi statici.  
   
  Lo scopo del metodo è fornire un modo per una classe derivata per gestire l'evento utilizzando una sostituzione. Si esegue l'override è un modo più flessibile, più veloce e più semplice gestire gli eventi di classe di base nelle classi derivate. Per convenzione, il nome del metodo deve iniziare con "On" e con il nome dell'evento.  
   
  La classe derivata è possibile scegliere di non chiamare l'implementazione di base del metodo nel relativo override. Preparare per questo oggetto, non includendo qualsiasi elaborazione nel metodo che è necessario per la classe base funzionare correttamente.  
   
- **✓ SI** deve accettare un parametro al metodo protetto che genera un evento.  
+ **✓ DO** deve accettare un parametro al metodo protetto che genera un evento.  
   
  Il parametro deve essere denominato `e` e deve essere digitato come la classe di argomenti dell'evento.  
   
- **X non** passare null come mittente quando viene generato un evento non statico.  
+ **X DO NOT** passare null come mittente quando viene generato un evento non statico.  
   
- **✓ SI** passare null come mittente quando viene generato un evento statico.  
+ **✓ DO** passare null come mittente quando viene generato un evento statico.  
   
- **X non** passare null come parametro di dati dell'evento quando viene generato un evento.  
+ **X DO NOT** passare null come parametro di dati dell'evento quando viene generato un evento.  
   
  È necessario passare `EventArgs.Empty` se non si desidera passare tutti i dati per il metodo di gestione dell'evento. È previsto che questo parametro non deve essere null.  
   
- **✓ Provare a** generazione di eventi a cui l'utente finale può essere annullato. Questo vale solo per gli eventi precedenti.  
+ **✓ CONSIDER** generazione di eventi a cui l'utente finale può essere annullato. Questo vale solo per gli eventi precedenti.  
   
  Utilizzare <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> o la relativa sottoclasse come argomento dell'evento per consentire all'utente di annullare gli eventi.  
   
 ### <a name="custom-event-handler-design"></a>Progettazione di gestori di eventi personalizzati  
  Vi sono casi in cui `EventHandler<T>` non può essere usata, ad esempio quando il framework richiede l'utilizzo con le versioni precedenti di CLR, che non supporta Generics. In questi casi, potrebbe essere necessario progettare e sviluppare un delegato del gestore eventi personalizzati.  
   
- **✓ SI** utilizzare un tipo restituito void per gestori eventi.  
+ **✓ DO** utilizzare un tipo restituito void per gestori eventi.  
   
  Un gestore eventi è possibile richiamare metodi, anche su più oggetti di gestione di più eventi. Se i metodi di gestione degli eventi sono stati consentiti per restituire un valore, non vi sarà più valori restituiti per ogni chiamata a un evento.  
   
- **✓ SI** usare `object` come tipo del primo parametro del gestore dell'evento e chiamarlo `sender`.  
+ **✓ DO** usare `object` come tipo del primo parametro del gestore dell'evento e chiamarlo `sender`.  
   
- **✓ SI** usare <xref:System.EventArgs?displayProperty=nameWithType> o la relativa sottoclasse come il tipo del secondo parametro del gestore dell'evento e chiamarlo `e`.  
+ **✓ DO** usare <xref:System.EventArgs?displayProperty=nameWithType> o la relativa sottoclasse come il tipo del secondo parametro del gestore dell'evento e chiamarlo `e`.  
   
- **X non** avere più di due parametri sui gestori eventi.  
+ **X DO NOT** avere più di due parametri sui gestori eventi.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

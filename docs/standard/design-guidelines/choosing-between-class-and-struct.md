@@ -36,9 +36,9 @@ Una delle decisioni di progettazione di base che deve affrontare ogni finestra d
   
  Come regola generale, la maggior parte dei tipi in un framework deve essere classi. Esistono tuttavia alcune situazioni in cui le caratteristiche di un tipo valore rendano più appropriata per l'utilizzo delle strutture.  
   
- **✓ Provare a** definire una struttura invece di una classe, se le istanze del tipo sono ridotti e generalmente di breve durata o vengono comunemente incorporate in altri oggetti.  
+ **✓ CONSIDER** definire una struttura invece di una classe, se le istanze del tipo sono ridotti e generalmente di breve durata o vengono comunemente incorporate in altri oggetti.  
   
- **X evitare** che definisce uno struct, a meno che il tipo dispone di tutte le caratteristiche seguenti:  
+ **X AVOID** che definisce uno struct, a meno che il tipo dispone di tutte le caratteristiche seguenti:  
   
 -   Logicamente rappresenta un singolo valore, simile ai tipi primitivi (`int`, `double`, ecc.).  
   

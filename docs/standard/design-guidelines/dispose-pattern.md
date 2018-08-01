@@ -41,15 +41,15 @@ Tutti i programmi acquisiscono una o più risorse di sistema, ad esempio memoria
   
  La principale motivazione per il modello consiste nel ridurre la complessità dell'implementazione del <xref:System.Object.Finalize%2A> e il <xref:System.IDisposable.Dispose%2A> metodi. La complessità deriva dal fatto che i metodi condividono alcuni, ma non tutti i percorsi del codice (le differenze sono illustrate più avanti in questo capitolo). Inoltre, esistono motivi storici per alcuni elementi del modello correlato all'evoluzione del supporto delle lingue per la gestione delle risorse deterministica.  
   
- **✓ SI** implementare il modello Dispose base su tipi contenente le istanze di tipi disposable. Vedere la [base modello Dispose](#basic_pattern) sezione per informazioni dettagliate sul modello di base.  
+ **✓ DO** implementare il modello Dispose base su tipi contenente le istanze di tipi disposable. Vedere la [base modello Dispose](#basic_pattern) sezione per informazioni dettagliate sul modello di base.  
   
  Se un tipo è responsabile per la durata di altri oggetti eliminabili, gli sviluppatori devono un modo per l'eliminazione, troppo. Usa il contenitore `Dispose` metodo è un modo pratico per rendere possibile questa.  
   
- **✓ SI** implementare il modello Dispose base e di fornire un finalizzatore tipi che contiene le risorse che devono essere liberate in modo esplicito e che non dispongono di finalizzatori.  
+ **✓ DO** implementare il modello Dispose base e di fornire un finalizzatore tipi che contiene le risorse che devono essere liberate in modo esplicito e che non dispongono di finalizzatori.  
   
  Ad esempio, lo schema deve essere implementato sui tipi di archiviare i buffer di memoria non gestita. Il [finalizzabili tipi](#finalizable_types) sezione vengono illustrate le linee guida relative all'implementazione i finalizzatori.  
   
- **✓ Provare a** implementa il modello Dispose base nelle classi che stessi non contenere le risorse non gestite o gli oggetti eliminabili ma che sono probabilmente hanno sottotipi che eseguono.  
+ **✓ CONSIDER** implementa il modello Dispose base nelle classi che stessi non contenere le risorse non gestite o gli oggetti eliminabili ma che sono probabilmente hanno sottotipi che eseguono.  
   
  È un ottimo esempio di ciò il <xref:System.IO.Stream?displayProperty=nameWithType> classe. Sebbene sia una classe base astratta che non contiene tutte le risorse, la maggior parte delle sue sottoclassi non e per questo motivo, implementato questo modello.  
   
@@ -85,7 +85,7 @@ public class DisposableResourceHolder : IDisposable {
   
  Inoltre, questa sezione si applica alle classi con una base che non implementano il modello Dispose. Se sta ereditando da una classe che implementa già il modello, è sufficiente eseguire l'override di `Dispose(bool)` metodo per fornire la logica di pulizia di risorse aggiuntive.  
   
- **✓ SI** dichiarare un `protected virtual void Dispose(bool disposing)` metodo per centralizzare la logica di tutti i relativi al rilascio di risorse non gestite.  
+ **✓ DO** dichiarare un `protected virtual void Dispose(bool disposing)` metodo per centralizzare la logica di tutti i relativi al rilascio di risorse non gestite.  
   
  Pulizia di tutte le risorse deve essere eseguito in questo metodo. Il metodo viene chiamato da entrambi il finalizzatore e il `IDisposable.Dispose` metodo. Il parametro sarà false se viene richiamata dall'interno un finalizzatore. È consigliabile utilizzarlo per verificare che qualsiasi codice in esecuzione durante la finalizzazione non accede ad altri oggetti finalizzabili. Dettagli dell'implementazione di finalizzatori sono descritti nella sezione successiva.  
   
@@ -97,7 +97,7 @@ protected virtual void Dispose(bool disposing) {
 }  
 ```  
   
- **✓ SI** implementare il `IDisposable` interfaccia semplicemente chiamando `Dispose(true)` seguito da `GC.SuppressFinalize(this)`.  
+ **✓ DO** implementare il `IDisposable` interfaccia semplicemente chiamando `Dispose(true)` seguito da `GC.SuppressFinalize(this)`.  
   
  La chiamata a `SuppressFinalize` dovrebbero verificarsi solo se `Dispose(true)` viene eseguita correttamente.  
   
@@ -108,7 +108,7 @@ public void Dispose(){
 }  
 ```  
   
- **X non** rendere senza parametri `Dispose` metodo virtuale.  
+ **X DO NOT** rendere senza parametri `Dispose` metodo virtuale.  
   
  Il `Dispose(bool)` metodo è quella che deve essere sottoposto a override dalle sottoclassi.  
   
@@ -126,11 +126,11 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **X non** dichiarare tutti gli overload del `Dispose` metodo diverso da `Dispose()` e `Dispose(bool)`.  
+ **X DO NOT** dichiarare tutti gli overload del `Dispose` metodo diverso da `Dispose()` e `Dispose(bool)`.  
   
  `Dispose` deve essere considerata una parola riservata per codificare questo modello e per impedire confusione tra i responsabili dell'implementazione, utenti e i compilatori. Alcune lingue potrebbero scegliere di implementare automaticamente questo modello su determinati tipi.  
   
- **✓ SI** consentire il `Dispose(bool)` metodo da chiamare più volte. Il metodo è possibile scegliere di non eseguire alcuna operazione dopo la prima chiamata.  
+ **✓ DO** consentire il `Dispose(bool)` metodo da chiamare più volte. Il metodo è possibile scegliere di non eseguire alcuna operazione dopo la prima chiamata.  
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -146,13 +146,13 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **X evitare** generare un'eccezione dall'interno `Dispose(bool)` tranne che in alcune situazioni critiche in cui il processo di contenitore è stato danneggiato (perdite, lo stato condiviso non coerente, ecc.).  
+ **X AVOID** generare un'eccezione dall'interno `Dispose(bool)` tranne che in alcune situazioni critiche in cui il processo di contenitore è stato danneggiato (perdite, lo stato condiviso non coerente, ecc.).  
   
  Gli utenti si aspettano che una chiamata a `Dispose` non genererà un'eccezione.  
   
  Se `Dispose` potrebbe generare un'eccezione, non verrà eseguita la logica di pulizia ulteriore blocco finally. Per risolvere questo problema, l'utente dovrà eseguire il wrapping di ogni chiamata a `Dispose` (all'interno di blocco finally!) in un blocco try, determinando i gestori di pulizia molto complessi. Se l'esecuzione di un `Dispose(bool disposing)` (metodo), mai generano un'eccezione se disposing è false. In questo modo interromperà il processo se l'esecuzione all'interno di un contesto finalizzatore.  
   
- **✓ SI** generano un <xref:System.ObjectDisposedException> da qualsiasi membro non può essere usati dopo che l'oggetto è stato eliminato di.  
+ **✓ DO** generano un <xref:System.ObjectDisposedException> da qualsiasi membro non può essere usati dopo che l'oggetto è stato eliminato di.  
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -173,7 +173,7 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **✓ Provare a** fornendo meccanismo `Close()`, oltre al `Dispose()`, se chiudere è terminologia nell'area.  
+ **✓ CONSIDER** fornendo meccanismo `Close()`, oltre al `Dispose()`, se chiudere è terminologia nell'area.  
   
  In tal caso, è importante eseguire il `Close` identica all'implementazione `Dispose` e provare a implementare la `IDisposable.Dispose` metodo in modo esplicito.  
   
@@ -230,15 +230,15 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **X evitare** effettua tipi finalizzabile.  
+ **X AVOID** effettua tipi finalizzabile.  
   
  Considerare con attenzione tutti i casi in cui si ritiene che è necessario un finalizzatore. È presente un reale costi associati alle istanze con i finalizzatori, dal punto vista complessità sia delle prestazioni sia del codice. Preferire l'utilizzo di wrapper di risorse, ad esempio <xref:System.Runtime.InteropServices.SafeHandle> per incapsulare le risorse non gestite, laddove possibile, nel qual caso un finalizzatore diventa non necessario perché il wrapper è responsabile della pulizia di risorse.  
   
- **X non** finalizzabili in modo che i tipi di valore.  
+ **X DO NOT** finalizzabili in modo che i tipi di valore.  
   
  Solo i tipi di riferimento ottengano finalizzati effettivamente da CLR, e pertanto verrà ignorata qualsiasi tentativo di inserire un finalizzatore in un tipo di valore. I compilatori c# e C++ applicano questa regola.  
   
- **✓ SI** rendere finalizzabili se il tipo è responsabile del rilascio di una risorsa non gestita che non dispone di un proprio finalizzatore di un tipo.  
+ **✓ DO** rendere finalizzabili se il tipo è responsabile del rilascio di una risorsa non gestita che non dispone di un proprio finalizzatore di un tipo.  
   
  Quando si implementa il finalizzatore, è sufficiente chiamare `Dispose(false)` e inserire logica di pulizia in tutte le risorse all'interno di `Dispose(bool disposing)` metodo.  
   
@@ -255,25 +255,25 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **✓ SI** implementare il modello Dispose base su ogni tipo di finalizzazione.  
+ **✓ DO** implementare il modello Dispose base su ogni tipo di finalizzazione.  
   
  In questo modo gli utenti del tipo di un modo per eseguire in modo esplicito la pulitura deterministica delle stesse risorse di cui è responsabile il finalizzatore.  
   
- **X non** accedere agli oggetti finalizzabili nel percorso di codice finalizzatore perché vi è rischio significativo che essi verrà sia già stati completati.  
+ **X DO NOT** accedere agli oggetti finalizzabili nel percorso di codice finalizzatore perché vi è rischio significativo che essi verrà sia già stati completati.  
   
  Ad esempio, un oggetto finalizzabile A che presenta un riferimento a un altro oggetto finalizzabile B non è possibile usare in modo affidabile B nel finalizzatore, o viceversa. I finalizzatori vengono chiamati in ordine casuale (se non si una garanzia di ordinamento vulnerabile per la finalizzazione critico).  
   
  Inoltre, tenere presente che gli oggetti archiviati in variabili statiche verranno raccolto in determinati momenti durante uno scaricamento del dominio applicazione o durante l'uscita dal processo. L'accesso a una variabile statica che fa riferimento a un oggetto finalizzabile (o chiamare un metodo statico che potrebbe utilizzare i valori archiviati in variabili statiche) potrebbe non essere sicura se <xref:System.Environment.HasShutdownStarted%2A?displayProperty=nameWithType> restituisce true.  
   
- **✓ SI** apportare le `Finalize` metodo protetto.  
+ **✓ DO** apportare le `Finalize` metodo protetto.  
   
  Gli sviluppatori c#, C++ e Visual Basic.NET non devono preoccuparsi di questa operazione, perché i compilatori della Guida per applicare questa linea guida.  
   
- **X non** eccezioni let escape dalla logica del finalizzatore, ad eccezione di errori critici del sistema.  
+ **X DO NOT** eccezioni let escape dalla logica del finalizzatore, ad eccezione di errori critici del sistema.  
   
  Se viene generata un'eccezione da un finalizzatore, CLR si arresterà l'intero processo (a partire da .NET Framework versione 2.0), altri finalizzatori impediscono l'esecuzione e le risorse da rilasciati in modo controllato.  
   
- **✓ si consiglia** creazione e utilizzo di un oggetto finalizzabile critico (un tipo con una gerarchia che contiene <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) per le situazioni in cui un finalizzatore assolutamente necessario eseguire anche in caso di applicazione forzato lo scaricamento di dominio e thread si interrompe.  
+ **✓ CONSIDER** creazione e utilizzo di un oggetto finalizzabile critico (un tipo con una gerarchia che contiene <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) per le situazioni in cui un finalizzatore assolutamente necessario eseguire anche in caso di applicazione forzato lo scaricamento di dominio e thread si interrompe.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

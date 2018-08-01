@@ -22,7 +22,7 @@ Una delle funzionalità del Framework orientata a oggetti è che gli sviluppator
   
  L'utilizzo di un meccanismo potente che impedisce l'estendibilità è sealed. È possibile bloccare i singoli membri o classe. Una classe impedisce agli utenti di ereditare dalla classe. Chiusura di un membro impedisce agli utenti di un particolare membro viene sottoposto a override.  
   
- **X non** bloccare classi senza un buon motivo per eseguire questa operazione.  
+ **X DO NOT** bloccare classi senza un buon motivo per eseguire questa operazione.  
   
  Chiusura di una classe poiché è possibile considerare uno scenario di estensibilità non è un buon motivo. Gli utenti di Framework come ereditare da classi per vari motivi non prevedibile, ad esempio l'aggiunta di membri di praticità. Vedere [classi non sealed](../../../docs/standard/design-guidelines/unsealed-classes.md) per esempi di motivi non prevedibile gli utenti desiderano ereditare da un tipo.  
   
@@ -36,11 +36,11 @@ Una delle funzionalità del Framework orientata a oggetti è che gli sviluppator
   
 -   La classe è un attributo che richiede una ricerca di un runtime molto veloce. Gli attributi sealed hanno livelli di prestazioni leggermente superiori rispetto a quelli non sealed. vedere [attributi](../../../docs/standard/design-guidelines/attributes.md).  
   
- **X non** dichiarare membri protetti o virtuali su tipi sealed.  
+ **X DO NOT** dichiarare membri protetti o virtuali su tipi sealed.  
   
  Per definizione, non è possibile ereditare tipi sealed. Ciò significa che i membri protetti su tipi sealed non possono essere chiamati e metodi virtuali su tipi sealed non possono essere sottoposto a override.  
   
- **✓ Provare a** sealing membri che si esegue l'override.  
+ **✓ CONSIDER** sealing membri che si esegue l'override.  
   
  I problemi che possono derivare da introduzione membri virtuali (descritto in [membri virtuali](../../../docs/standard/design-guidelines/virtual-members.md)) si applicano a sostituzioni, anche se a un livello leggermente inferiore. Come rendere sealed un override protegge da questi problemi, a partire da quel punto nella gerarchia di ereditarietà.  
   

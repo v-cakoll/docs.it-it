@@ -26,21 +26,21 @@ Un tipo annidato è un tipo definito nell'ambito di un altro tipo, viene chiamat
   
  I tipi annidati sono particolarmente adatti per la modellazione dei dettagli di implementazione dei relativi tipi di inclusione. L'utente finale deve raramente è necessario dichiarare le variabili di un tipo annidato e quasi mai necessario creare un'istanza esplicita di tipi annidati. Ad esempio, l'enumeratore di una raccolta può essere un tipo annidato di tale raccolta. Gli enumeratori sono in genere creata un'istanza in base al tipo di inclusione e poiché molti linguaggi supportano l'istruzione foreach, le variabili di enumeratore raramente devono essere dichiarati dall'utente finale.  
   
- **✓ SI** utilizzare tipi annidati quando la relazione tra il tipo annidato e il relativo tipo esterno è tale che la semantica di accessibilità del membro auspicabile.  
+ **✓ DO** utilizzare tipi annidati quando la relazione tra il tipo annidato e il relativo tipo esterno è tale che la semantica di accessibilità del membro auspicabile.  
   
- **X non** utilizzare tipi annidati pubblici come un raggruppamento logico costruire; utilizzare gli spazi dei nomi per questo oggetto.  
+ **X DO NOT** utilizzare tipi annidati pubblici come un raggruppamento logico costruire; utilizzare gli spazi dei nomi per questo oggetto.  
   
- **X evitare** esposte pubblicamente tipi annidati. L'unica eccezione è se è necessario essere dichiarati solo in rari scenari, ad esempio la creazione di sottoclassi o altri scenari di personalizzazione avanzate variabili del tipo annidato.  
+ **X AVOID** esposte pubblicamente tipi annidati. L'unica eccezione è se è necessario essere dichiarati solo in rari scenari, ad esempio la creazione di sottoclassi o altri scenari di personalizzazione avanzate variabili del tipo annidato.  
   
- **X non** utilizzare tipi annidati se il tipo è probabilmente necessario fare riferimento all'esterno del tipo che lo contiene.  
+ **X DO NOT** utilizzare tipi annidati se il tipo è probabilmente necessario fare riferimento all'esterno del tipo che lo contiene.  
   
  Ad esempio, un'enumerazione passata a un metodo definito in una classe non deve essere definita come un tipo annidato nella classe.  
   
- **X non** utilizzare tipi annidati se devono essere creata un'istanza mediante il codice client.  Se un tipo ha un costruttore pubblico, probabilmente non si devono nidificato.  
+ **X DO NOT** utilizzare tipi annidati se devono essere creata un'istanza mediante il codice client.  Se un tipo ha un costruttore pubblico, probabilmente non si devono nidificato.  
   
  Se è possibile creare istanze di un tipo, può sembrare per indicare il tipo ha una posizione nel framework autonomamente (è possibile crearlo, lavorare con esso ed eliminato senza mai utilizzare il tipo esterno) e pertanto non devono essere nidificate. Tipi interni non devono essere riutilizzati ampiamente all'esterno del tipo outer senza alcuna relazione verso il tipo esterno.  
   
- **X non** definire un tipo annidato come membro di interfaccia. Molti linguaggi non supportano tale costrutto.  
+ **X DO NOT** definire un tipo annidato come membro di interfaccia. Molti linguaggi non supportano tale costrutto.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

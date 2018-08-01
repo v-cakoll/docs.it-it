@@ -17,31 +17,31 @@ Metodi di estensione rappresentano una funzionalità del linguaggio che consente
   
  La classe che definisce i metodi di tale estensione è definita come la classe "sponsor" e deve essere dichiarata come statica. Per utilizzare i metodi di estensione, uno necessario importare lo spazio dei nomi che definisce la classe sponsor.  
   
- **X evitare** frivolously che definisce i metodi di estensione, in particolar modo nei tipi non si è proprietari.  
+ **X AVOID** frivolously che definisce i metodi di estensione, in particolar modo nei tipi non si è proprietari.  
   
  Se si è proprietari di codice sorgente di un tipo, provare a utilizzare i normali metodi di istanza. Se non si è proprietari e si desidera aggiungere un metodo, prestare molta attenzione. Il libero utilizzo di metodi di estensione è potenzialmente ingombrare l'API di tipi che non sono stati progettati per disporre di questi metodi.  
   
- **✓ Provare a** utilizzando i metodi di estensione in uno dei seguenti scenari:  
+ **✓ CONSIDER** utilizzando i metodi di estensione in uno dei seguenti scenari:  
   
 -   Per fornire supporto funzionalità rilevanti per ogni implementazione di un'interfaccia, se ha funzionalità possono essere scritti in termini di interfaccia principale. In questo modo le implementazioni concrete in caso contrario non è possibile assegnare alle interfacce. Ad esempio, il `LINQ to Objects` gli operatori vengono implementati come metodi di estensione per tutti i <xref:System.Collections.Generic.IEnumerable%601> tipi. Pertanto, qualsiasi `IEnumerable<>` implementazione è automaticamente abilitato per LINQ.  
   
 -   Quando un metodo di istanza introdurrebbe una dipendenza su un tipo, ma tale dipendenza causa l'interruzione di regole di gestione di dipendenza. Ad esempio, una dipendenza da <xref:System.String> per <xref:System.Uri?displayProperty=nameWithType> probabilmente non è consigliabile e pertanto `String.ToUri()` il metodo di istanza restituzione `System.Uri` sarebbe la progettazione errata da una prospettiva di gestione di dipendenza. Un metodo di estensione statici `Uri.ToUri(this string str)` restituzione `System.Uri` sarebbe migliore progettazione.  
   
- **X evitare** che definisce i metodi di estensione su <xref:System.Object?displayProperty=nameWithType>.  
+ **X AVOID** che definisce i metodi di estensione su <xref:System.Object?displayProperty=nameWithType>.  
   
  Gli utenti di Visual Basic non saranno in grado di chiamare tali metodi nei riferimenti agli oggetti utilizzando la sintassi del metodo di estensione. Visual Basic non supporta la chiamata di questi metodi perché, in Visual Basic, dichiarare un riferimento come oggetto forza tutte le chiamate di metodo in modo da essere tardiva associato (membro effettivo chiamato viene determinata in fase di esecuzione), mentre le associazioni ai metodi di estensione vengono determinate in fase di compilazione (associazione anticipata associato).  
   
  Si noti che la linea guida si applica ad altri linguaggi, in cui è presente lo stesso comportamento di associazione, o in cui non sono supportati i metodi di estensione.  
   
- **X non** inserire i metodi di estensione nello spazio dei nomi stesso come il tipo esteso a meno che non sia per l'aggiunta di metodi a interfacce o per la gestione delle dipendenze.  
+ **X DO NOT** inserire i metodi di estensione nello spazio dei nomi stesso come il tipo esteso a meno che non sia per l'aggiunta di metodi a interfacce o per la gestione delle dipendenze.  
   
- **X evitare** che definisce due o più metodi di estensione con la stessa firma, anche se si trovano in spazi dei nomi diversi.  
+ **X AVOID** che definisce due o più metodi di estensione con la stessa firma, anche se si trovano in spazi dei nomi diversi.  
   
- **✓ Provare a** che definisce i metodi di estensione nello spazio dei nomi stesso come il tipo esteso se il tipo è un'interfaccia e i metodi di estensione sono concepiti per essere utilizzate in molti o tutti i casi.  
+ **✓ CONSIDER** che definisce i metodi di estensione nello spazio dei nomi stesso come il tipo esteso se il tipo è un'interfaccia e i metodi di estensione sono concepiti per essere utilizzate in molti o tutti i casi.  
   
- **X non** definire metodi di estensione che implementa una funzionalità negli spazi dei nomi in genere associati con altre funzionalità. Invece, definirli nello spazio dei nomi associato alla funzionalità a che cui appartengono.  
+ **X DO NOT** definire metodi di estensione che implementa una funzionalità negli spazi dei nomi in genere associati con altre funzionalità. Invece, definirli nello spazio dei nomi associato alla funzionalità a che cui appartengono.  
   
- **X evitare** generico denominazione degli spazi dei nomi dedicato ai metodi di estensione (ad esempio, "estensioni"). Utilizzare un nome descrittivo (ad esempio, "Routing") invece.  
+ **X AVOID** generico denominazione degli spazi dei nomi dedicato ai metodi di estensione (ad esempio, "estensioni"). Utilizzare un nome descrittivo (ad esempio, "Routing") invece.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

@@ -21,44 +21,44 @@ ms.locfileid: "33574595"
 In questa sezione descrive le eccezioni standard fornite dal Framework e i dettagli del loro utilizzo. L'elenco non è completo. Consultare la documentazione di riferimento di .NET Framework per l'utilizzo di altri tipi di eccezione di Framework.  
   
 ## <a name="exception-and-systemexception"></a>Eccezione e SystemException  
- **X non** throw <xref:System.Exception?displayProperty=nameWithType> o <xref:System.SystemException?displayProperty=nameWithType>.  
+ **X DO NOT** throw <xref:System.Exception?displayProperty=nameWithType> o <xref:System.SystemException?displayProperty=nameWithType>.  
   
- **X non** catch `System.Exception` o `System.SystemException` nel codice del framework, a meno che non si intende generare di nuovo.  
+ **X DO NOT** catch `System.Exception` o `System.SystemException` nel codice del framework, a meno che non si intende generare di nuovo.  
   
- **X evitare** intercettazione `System.Exception` o `System.SystemException`, ad eccezione dei gestori di eccezioni di livello superiore.  
+ **X AVOID** intercettazione `System.Exception` o `System.SystemException`, ad eccezione dei gestori di eccezioni di livello superiore.  
   
 ## <a name="applicationexception"></a>ApplicationException  
- **X non** generare o derivare da <xref:System.ApplicationException>.  
+ **X DO NOT** generare o derivare da <xref:System.ApplicationException>.  
   
 ## <a name="invalidoperationexception"></a>InvalidOperationException  
- **✓ SI** generano un <xref:System.InvalidOperationException> se l'oggetto è in uno stato non appropriato.  
+ **✓ DO** generano un <xref:System.InvalidOperationException> se l'oggetto è in uno stato non appropriato.  
   
 ## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException, ArgumentNullException e ArgumentOutOfRangeException  
- **✓ SI** throw <xref:System.ArgumentException> o uno dei sottotipi se a un membro vengono passati argomenti non validi. Scegliere il tipo di eccezione più derivato, se applicabile.  
+ **✓ DO** throw <xref:System.ArgumentException> o uno dei sottotipi se a un membro vengono passati argomenti non validi. Scegliere il tipo di eccezione più derivato, se applicabile.  
   
- **✓ SI** impostare il `ParamName` proprietà durante la generazione di una delle sottoclassi di `ArgumentException`.  
+ **✓ DO** impostare il `ParamName` proprietà durante la generazione di una delle sottoclassi di `ArgumentException`.  
   
  Questa proprietà rappresenta il nome del parametro che ha causato l'eccezione generata. Si noti che è possibile impostare la proprietà utilizzando uno degli overload del costruttore.  
   
- **✓ SI** utilizzare `value` per il nome del parametro del valore implicito dell'impostazione delle proprietà.  
+ **✓ DO** utilizzare `value` per il nome del parametro del valore implicito dell'impostazione delle proprietà.  
   
 ## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>AccessViolationException NullReferenceException e IndexOutOfRangeException  
- **X non** consentire pubblicamente disponibile per la chiamata API generare in modo esplicito o implicito <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, o <xref:System.IndexOutOfRangeException>. Queste eccezioni sono riservate e generata dal motore di esecuzione e nella che maggior parte dei casi indica un bug.  
+ **X DO NOT** consentire pubblicamente disponibile per la chiamata API generare in modo esplicito o implicito <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, o <xref:System.IndexOutOfRangeException>. Queste eccezioni sono riservate e generata dal motore di esecuzione e nella che maggior parte dei casi indica un bug.  
   
  Eseguire un controllo per evitare la generazione di queste eccezioni di argomento. Generazione di queste eccezioni espone i dettagli di implementazione del metodo che può cambiare nel tempo.  
   
 ## <a name="stackoverflowexception"></a>StackOverflowException  
- **X non** generare in modo esplicito <xref:System.StackOverflowException>. L'eccezione deve essere generata in modo esplicito solo da CLR.  
+ **X DO NOT** generare in modo esplicito <xref:System.StackOverflowException>. L'eccezione deve essere generata in modo esplicito solo da CLR.  
   
- **X non** catch `StackOverflowException`.  
+ **X DO NOT** catch `StackOverflowException`.  
   
  È quasi impossibile scrivere il codice gestito che rimanga coerenza in presenza di overflow dello stack arbitrario. Le parti di CLR non gestite rimangono coerenti utilizzando probe per spostare l'overflow dello stack a posizioni ben definiti invece il backup di overflow dello stack arbitrario.  
   
 ## <a name="outofmemoryexception"></a>OutOfMemoryException  
- **X non** generare in modo esplicito <xref:System.OutOfMemoryException>. Questa eccezione viene generata solo dall'infrastruttura di CLR.  
+ **X DO NOT** generare in modo esplicito <xref:System.OutOfMemoryException>. Questa eccezione viene generata solo dall'infrastruttura di CLR.  
   
 ## <a name="comexception-sehexception-and-executionengineexception"></a>ComException e SEHException ExecutionEngineException  
- **X non** generare in modo esplicito <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, e <xref:System.Runtime.InteropServices.SEHException>. Queste eccezioni devono essere generate solo dall'infrastruttura CLR.  
+ **X DO NOT** generare in modo esplicito <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, e <xref:System.Runtime.InteropServices.SEHException>. Queste eccezioni devono essere generate solo dall'infrastruttura CLR.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

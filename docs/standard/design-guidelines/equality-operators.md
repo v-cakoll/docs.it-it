@@ -21,29 +21,29 @@ ms.locfileid: "33571017"
 # <a name="equality-operators"></a>Operatori di uguaglianza
 In questa sezione illustra l'overload degli operatori di uguaglianza e fa riferimento a `operator==` e `operator!=` come operatori di uguaglianza.  
   
- **X non** overload degli operatori di uguaglianza e non in altro.  
+ **X DO NOT** overload degli operatori di uguaglianza e non in altro.  
   
- **✓ SI** assicurarsi che <xref:System.Object.Equals%2A?displayProperty=nameWithType> e gli operatori di uguaglianza hanno esattamente la stessa semantica e caratteristiche di prestazioni simili.  
+ **✓ DO** assicurarsi che <xref:System.Object.Equals%2A?displayProperty=nameWithType> e gli operatori di uguaglianza hanno esattamente la stessa semantica e caratteristiche di prestazioni simili.  
   
  Ciò significa che spesso `Object.Equals` deve essere sottoposto a override quando sono sottoposti a overload gli operatori di uguaglianza.  
   
- **X evitare** generazione di eccezioni da operatori di uguaglianza.  
+ **X AVOID** generazione di eccezioni da operatori di uguaglianza.  
   
  Ad esempio, restituisce false se uno degli argomenti è null anziché generare `NullReferenceException`.  
   
 ## <a name="equality-operators-on-value-types"></a>Operatori di uguaglianza sui tipi di valore  
- **✓ SI** eseguire l'overload degli operatori di uguaglianza sui tipi di valore, se l'uguaglianza è significativo.  
+ **✓ DO** eseguire l'overload degli operatori di uguaglianza sui tipi di valore, se l'uguaglianza è significativo.  
   
  La maggior parte dei linguaggi di programmazione, non vi è Nessuna implementazione predefinita di `operator==` per i tipi di valore.  
   
 ## <a name="equality-operators-on-reference-types"></a>Operatori di uguaglianza sui tipi di riferimento  
- **X evitare** overload degli operatori di uguaglianza sui tipi di riferimento modificabile.  
+ **X AVOID** overload degli operatori di uguaglianza sui tipi di riferimento modificabile.  
   
  Molte lingue hanno operatori di uguaglianza predefinito per i tipi di riferimento. Gli operatori incorporati in genere implementano l'uguaglianza di riferimento e molti sviluppatori sono testati quando viene modificato il comportamento predefinito per l'uguaglianza di valore.  
   
  Questo problema viene ridotta per i tipi di riferimento non modificabile in quanto rende molto più difficile da notare la differenza tra uguaglianza di riferimento e uguaglianza immutabilità.  
   
- **X evitare** overload degli operatori di uguaglianza sui tipi di riferimento se l'implementazione sarebbe notevolmente più lento rispetto a quello di uguaglianza di riferimento.  
+ **X AVOID** overload degli operatori di uguaglianza sui tipi di riferimento se l'implementazione sarebbe notevolmente più lento rispetto a quello di uguaglianza di riferimento.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

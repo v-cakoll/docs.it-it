@@ -23,23 +23,23 @@ ms.locfileid: "33572736"
 # <a name="struct-design"></a>Progettazione di struct
 Il tipo di valore generici è più noto anche come una struttura, la parola chiave c#. In questa sezione vengono fornite linee guida per la progettazione struttura generale.  
   
- **X non** fornisce un costruttore predefinito per uno struct.  
+ **X DO NOT** fornisce un costruttore predefinito per uno struct.  
   
  Seguendo questa linea guida gli matrici di strutture possono essere creati senza dover eseguire il costruttore su ogni elemento della matrice. Si noti che in c# non consente strutture possono disporre di costruttori predefiniti.  
   
- **X non** definire i tipi di valore modificabile.  
+ **X DO NOT** definire i tipi di valore modificabile.  
   
  Tipi di valore modificabile hanno vari problemi. Ad esempio, quando una proprietà get restituisce un tipo di valore, il chiamante riceve una copia. Poiché la copia viene creata in modo implicito, gli sviluppatori potrebbero non essere consapevoli che sono la mutazione di copia e non il valore originale. Inoltre, alcuni linguaggi (linguaggi dinamici, in particolare) verificarsi dei problemi con i tipi di valore modificabile perché anche le variabili locali, quando viene dereferenziato, provocare una copia da eseguire.  
   
- **✓ SI** garantire che in uno stato in cui tutti i dati dell'istanza è impostato su zero, false o null (se necessario) è valido.  
+ **✓ DO** garantire che in uno stato in cui tutti i dati dell'istanza è impostato su zero, false o null (se necessario) è valido.  
   
  Ciò impedisce la creazione accidentale di istanze non valide quando viene creata una matrice di strutture.  
   
- **✓ SI** implementare <xref:System.IEquatable%601> sui tipi di valore.  
+ **✓ DO** implementare <xref:System.IEquatable%601> sui tipi di valore.  
   
  Il <xref:System.Object.Equals%2A?displayProperty=nameWithType> metodo nei tipi di valore determina la conversione boxing e l'implementazione predefinita non è molto efficiente, perché usa la reflection. <xref:System.IEquatable%601.Equals%2A> può avere prestazioni migliori e può essere implementato in modo che non causa la conversione boxing.  
   
- **X non** estendere in modo esplicito <xref:System.ValueType>. In effetti, la maggior parte dei linguaggi evitare questo problema.  
+ **X DO NOT** estendere in modo esplicito <xref:System.ValueType>. In effetti, la maggior parte dei linguaggi evitare questo problema.  
   
  In generale, le strutture possono rivelarsi molto utile, ma devono essere utilizzate solo per i valori di piccole dimensioni, single, non modificabili che non essere boxed frequentemente.  
   

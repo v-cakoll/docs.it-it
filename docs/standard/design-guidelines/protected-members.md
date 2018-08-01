@@ -24,9 +24,9 @@ Membri protetti da soli non forniscono alcun estendibilità, ma può rendere pi�
   
  Finestre di progettazione Framework necessario prestare attenzione ai membri protetti perché il nome "protetto" può concedere a un falso senso di sicurezza. Chiunque sia in grado di sottoclasse di una classe non sealed e i membri di accesso protetto e pertanto le stesse difensivo procedure di codifica utilizzati per i membri pubblici applicano ai membri protetti.  
   
- **✓ Provare a** utilizzando membri per la personalizzazione avanzata protetti.  
+ **✓ CONSIDER** utilizzando membri per la personalizzazione avanzata protetti.  
   
- **✓ SI** trattare i membri protetti nelle classi non sealed come public allo scopo di analisi di sicurezza, documentazione e compatibilità.  
+ **✓ DO** trattare i membri protetti nelle classi non sealed come public allo scopo di analisi di sicurezza, documentazione e compatibilità.  
   
  Chiunque può ereditare da una classe e accedere ai membri protetti.  
   

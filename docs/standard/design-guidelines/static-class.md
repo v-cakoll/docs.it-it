@@ -24,15 +24,15 @@ Una classe statica viene definita come una classe che contiene solo membri stati
   
  Le classi statiche sono un compromesso tra progettazione orientata agli oggetti pura e alla semplicità. Comunemente vengono utilizzati per fornire collegamenti ad altre operazioni (ad esempio <xref:System.IO.File?displayProperty=nameWithType>), titolari di metodi di estensione o la funzionalità per i quali è non autorizzato wrapper completa orientata agli oggetti (ad esempio <xref:System.Environment?displayProperty=nameWithType>).  
   
- **✓ SI** usano le classi statiche con cautela.  
+ **✓ DO** usano le classi statiche con cautela.  
   
  Le classi statiche devono essere utilizzate solo come classi di supporto per il framework di base orientata agli oggetti.  
   
- **X non** considerato un bucket varie classi statiche.  
+ **X DO NOT** considerato un bucket varie classi statiche.  
   
- **X non** dichiarare o eseguire l'override di membri di istanza nelle classi statiche.  
+ **X DO NOT** dichiarare o eseguire l'override di membri di istanza nelle classi statiche.  
   
- **✓ SI** dichiarare le classi statiche come sealed, abstract, e aggiungere un costruttore di istanza privata se il linguaggio di programmazione non dispone di supporto incorporato per le classi statiche.  
+ **✓ DO** dichiarare le classi statiche come sealed, abstract, e aggiungere un costruttore di istanza privata se il linguaggio di programmazione non dispone di supporto incorporato per le classi statiche.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

@@ -23,23 +23,23 @@ Sebbene la maggior parte delle API vengono modellate meglio utilizzando le class
   
  L'altro caso in cui la definizione di un'interfaccia è appropriata è durante la creazione di un'interfaccia comune che può essere supportata dai diversi tipi, inclusi alcuni tipi di valore. Tipi di valore non possono ereditare da tipi diversi da <xref:System.ValueType>, ma possono implementare interfacce, pertanto, utilizzando un'interfaccia è l'unica opzione per fornire un tipo di base comune.  
   
- **✓ SI** definire un'interfaccia se è necessario alcune API comuni devono essere supportati da un set di tipi che include i tipi di valore.  
+ **✓ DO** definire un'interfaccia se è necessario alcune API comuni devono essere supportati da un set di tipi che include i tipi di valore.  
   
- **✓ Provare a** che definisce un'interfaccia se è necessario supportare le funzionalità nei tipi che ereditano già da un altro tipo.  
+ **✓ CONSIDER** che definisce un'interfaccia se è necessario supportare le funzionalità nei tipi che ereditano già da un altro tipo.  
   
- **X evitare** utilizzano interfacce marcatore (interfacce senza membri).  
+ **X AVOID** utilizzano interfacce marcatore (interfacce senza membri).  
   
  Se è necessario contrassegnare una classe come se avessero una caratteristica specifica (indicatore), in generale, utilizzare un attributo personalizzato anziché un'interfaccia.  
   
- **✓ SI** fornire almeno un tipo che è un'implementazione di un'interfaccia.  
+ **✓ DO** fornire almeno un tipo che è un'implementazione di un'interfaccia.  
   
  Effettuando questa consente di convalidare la progettazione dell'interfaccia. Ad esempio, <xref:System.Collections.Generic.List%601> è un'implementazione del <xref:System.Collections.Generic.IList%601> interfaccia.  
   
- **✓ SI** forniscono almeno una API che utilizza ciascuna interfaccia definita (un metodo che utilizza l'interfaccia come un parametro o una proprietà tipizzato come l'interfaccia).  
+ **✓ DO** forniscono almeno una API che utilizza ciascuna interfaccia definita (un metodo che utilizza l'interfaccia come un parametro o una proprietà tipizzato come l'interfaccia).  
   
  Effettuando questa consente di convalidare la progettazione dell'interfaccia. Ad esempio, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> utilizza il <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> interfaccia.  
   
- **X non** aggiungere membri a un'interfaccia che è già stata distribuita.  
+ **X DO NOT** aggiungere membri a un'interfaccia che è già stata distribuita.  
   
  Questa operazione causa l'interruzione implementazioni dell'interfaccia. Per evitare problemi di controllo delle versioni, è necessario creare una nuova interfaccia.  
   

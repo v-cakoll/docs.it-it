@@ -22,23 +22,23 @@ I callback sono i punti di estendibilità che consentono un framework di richiam
   
  Gli eventi sono un tipo speciale di callback che supporta la sintassi semplice e uniforme per fornire il delegato (gestore eventi). Inoltre, il completamento delle istruzioni e le finestre di progettazione di Visual Studio forniscono informazioni sull'utilizzo di API basata su eventi. (Vedere [evento progettazione](../../../docs/standard/design-guidelines/event.md).)  
   
- **✓ Provare a** utilizzando i callback per permettere agli utenti di fornire codice personalizzato deve essere eseguita dal framework.  
+ **✓ CONSIDER** utilizzando i callback per permettere agli utenti di fornire codice personalizzato deve essere eseguita dal framework.  
   
- **✓ Provare a** mediante gli eventi per consentire agli utenti di personalizzare il comportamento di un framework senza la necessità di informazioni sulla progettazione orientata agli oggetti.  
+ **✓ CONSIDER** mediante gli eventi per consentire agli utenti di personalizzare il comportamento di un framework senza la necessità di informazioni sulla progettazione orientata agli oggetti.  
   
- **✓ SI** preferire eventi semplici callback, perché sono più familiari a una gamma più ampia di sviluppatori e integrati con il completamento delle istruzioni di Visual Studio.  
+ **✓ DO** preferire eventi semplici callback, perché sono più familiari a una gamma più ampia di sviluppatori e integrati con il completamento delle istruzioni di Visual Studio.  
   
- **X evitare** usare callback nelle API sensibili alle prestazioni.  
+ **X AVOID** usare callback nelle API sensibili alle prestazioni.  
   
- **✓ SI** usare il nuovo `Func<...>`, `Action<...>`, o `Expression<...>` tipi anziché delegati personalizzati, quando si definiscono le API con callback.  
+ **✓ DO** usare il nuovo `Func<...>`, `Action<...>`, o `Expression<...>` tipi anziché delegati personalizzati, quando si definiscono le API con callback.  
   
  `Func<...>` e `Action<...>` rappresentano i delegati generici. `Expression<...>` rappresenta le definizioni di funzione che possono essere compilate e successivamente richiamate in fase di esecuzione ma può anche essere serializzate e passate a processi remoti.  
   
- **✓ SI** misurare e comprendere le implicazioni sulle prestazioni dell'uso `Expression<...>`, anziché utilizzare `Func<...>` e `Action<...>` delegati.  
+ **✓ DO** misurare e comprendere le implicazioni sulle prestazioni dell'uso `Expression<...>`, anziché utilizzare `Func<...>` e `Action<...>` delegati.  
   
  `Expression<...>` Nella maggior parte dei casi logicamente equivalente a sono tipi `Func<...>` e `Action<...>` delegati. La differenza principale è che i delegati sono destinati a essere utilizzato in scenari di processo locale. le espressioni sono destinate a casi in cui sia utile e consente di valutare l'espressione in un computer o un processo remoto.  
   
- **✓ SI** comprendere che la chiamata a un delegato, si eseguono codice arbitrario e che potrebbe avere ripercussioni sicurezza, la correttezza e compatibilità.  
+ **✓ DO** comprendere che la chiamata a un delegato, si eseguono codice arbitrario e che potrebbe avere ripercussioni sicurezza, la correttezza e compatibilità.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

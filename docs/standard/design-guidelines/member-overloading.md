@@ -34,23 +34,23 @@ public static class Console {
   
  Eseguire l'overload è una delle tecniche più importanti per migliorare la leggibilità di librerie riutilizzabili usabilità e produttività. L'overload per il numero di parametri consente di fornire versioni più semplice di costruttori e metodi. L'overload del tipo di parametro consente di utilizzare lo stesso nome di membro per l'esecuzione di operazioni identico a un set selezionato di tipi diversi di membri.  
   
- **✓ SI** tenta di utilizzare nomi di parametro descrittivi per indicare il valore predefinito utilizzato dagli overload più breve.  
+ **✓ DO** tenta di utilizzare nomi di parametro descrittivi per indicare il valore predefinito utilizzato dagli overload più breve.  
   
- **X evitare** arbitrariamente i nomi dei parametri in overload. Se un parametro in uno degli overload rappresenta lo stesso input di un parametro in un altro overload, tali parametri devono avere lo stesso nome.  
+ **X AVOID** arbitrariamente i nomi dei parametri in overload. Se un parametro in uno degli overload rappresenta lo stesso input di un parametro in un altro overload, tali parametri devono avere lo stesso nome.  
   
- **X evitare** incoerente nell'ordine dei parametri in membri di overload. I parametri con lo stesso nome verrà visualizzato nella stessa posizione in tutti gli overload.  
+ **X AVOID** incoerente nell'ordine dei parametri in membri di overload. I parametri con lo stesso nome verrà visualizzato nella stessa posizione in tutti gli overload.  
   
- **✓ SI** rendere virtuale solo l'overload più lunga (se estendibilità è obbligatoria). Gli overload più brevi devono semplicemente chiamare tramite un overload più lungo.  
+ **✓ DO** rendere virtuale solo l'overload più lunga (se estendibilità è obbligatoria). Gli overload più brevi devono semplicemente chiamare tramite un overload più lungo.  
   
- **X non** usare `ref` o `out` modificatori per eseguire l'overload di membri.  
+ **X DO NOT** usare `ref` o `out` modificatori per eseguire l'overload di membri.  
   
  Alcuni linguaggi non è possibile risolvere le chiamate agli overload simile al seguente. Inoltre, tali overload in genere hanno una semantica completamente diversa e probabilmente non deve essere overload, ma due metodi distinti invece.  
   
- **X non** dispongono di overload con parametri nella stessa posizione e tipi simili ma con una semantica diversa.  
+ **X DO NOT** dispongono di overload con parametri nella stessa posizione e tipi simili ma con una semantica diversa.  
   
- **✓ SI** consentire `null` da passare per gli argomenti facoltativi.  
+ **✓ DO** consentire `null` da passare per gli argomenti facoltativi.  
   
- **✓ SI** utilizzare l'overload dei membri anziché definire membri con argomenti predefiniti.  
+ **✓ DO** utilizzare l'overload dei membri anziché definire membri con argomenti predefiniti.  
   
  Argomenti predefiniti non sono conformi a CLS.  
   

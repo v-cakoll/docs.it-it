@@ -20,17 +20,17 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33570564"
 ---
 # <a name="abstract-class-design"></a>Progettazione di classi astratte
-**X non** definire costruttori interni pubblici o protetti in tipi astratti.  
+**X DO NOT** definire costruttori interni pubblici o protetti in tipi astratti.  
   
  I costruttori devono essere pubblici solo se gli utenti dovranno creare istanze del tipo. Poiché è possibile creare istanze di un tipo astratto, un tipo astratto con costruttore pubblico in modo non corretto è progettato e fuorviante per gli utenti.  
   
- **✓ SI** definiscono un protetto o un costruttore interno per le classi astratte.  
+ **✓ DO** definiscono un protetto o un costruttore interno per le classi astratte.  
   
  Un costruttore protetto è più comune e consente semplicemente la classe di base eseguire il proprio inizializzazione quando vengono creati i sottotipi.  
   
  Un costruttore interno può essere utilizzato per limitare le implementazioni concrete della classe astratta per l'assembly che definisce la classe.  
   
- **✓ SI** fornire almeno un tipo concreto che eredita da ogni classe astratta che si effettua la spedizione.  
+ **✓ DO** fornire almeno un tipo concreto che eredita da ogni classe astratta che si effettua la spedizione.  
   
  Effettuando questa consente di convalidare la struttura della classe astratta. Ad esempio, <xref:System.IO.FileStream?displayProperty=nameWithType> è un'implementazione del <xref:System.IO.Stream?displayProperty=nameWithType> classe astratta.  
   
