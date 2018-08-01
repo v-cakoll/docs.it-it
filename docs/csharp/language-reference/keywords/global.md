@@ -1,5 +1,5 @@
 ---
-title: global (Riferimenti per C#)
+title: Parola chiave contestuale global (Riferimenti per C#)
 ms.date: 07/20/2015
 f1_keywords:
 - global
@@ -7,20 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 8932c16a-6959-42c2-86e7-2c4221ab788b
-ms.openlocfilehash: d6323f3b429b74c9b1f6e5d05c213d2e8f5a96c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79e0184f58ffc6232038abdd3d9f852147d5732c
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216037"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404288"
 ---
-# <a name="global-c-reference"></a><span data-ttu-id="99eea-102">global (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="99eea-102">global (C# Reference)</span></span>
-<span data-ttu-id="99eea-103">La parola chiave contestuale `global`, se posta prima dell'operatore [::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md), fa riferimento allo spazio dei nomi globale, ovvero lo spazio dei nomi predefinito per qualsiasi programma C#, che è altrimenti senza nome.</span><span class="sxs-lookup"><span data-stu-id="99eea-103">The `global` contextual keyword, when it comes before the [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md), refers to the global namespace, which is the default namespace for any C# program and is otherwise unnamed.</span></span> <span data-ttu-id="99eea-104">Per altre informazioni, vedere [Procedura: Usare l'alias dello spazio dei nomi globale](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).</span><span class="sxs-lookup"><span data-stu-id="99eea-104">For more information, see [How to: Use the Global Namespace Alias](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="99eea-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="99eea-105">Example</span></span>  
- <span data-ttu-id="99eea-106">L'esempio seguente mostra come usare la parola chiave contestuale `global` per specificare che la classe `TestApp` è definita nello spazio dei nomi globale:</span><span class="sxs-lookup"><span data-stu-id="99eea-106">The following example shows how to use the `global` contextual keyword to specify that the class `TestApp` is defined in the global namespace:</span></span>  
-  
- [!code-csharp[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/global_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="99eea-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="99eea-107">See Also</span></span>  
- [<span data-ttu-id="99eea-108">Spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="99eea-108">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)
+# <a name="global-c-reference"></a><span data-ttu-id="402c5-102">global (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="402c5-102">global (C# Reference)</span></span>
+
+<span data-ttu-id="402c5-103">La parola chiave contestuale `global`, se posta prima dell'operatore [::](../operators/namespace-alias-qualifer.md), fa riferimento allo spazio dei nomi globale, ovvero lo spazio dei nomi predefinito per qualsiasi programma C#, che è altrimenti senza nome.</span><span class="sxs-lookup"><span data-stu-id="402c5-103">The `global` contextual keyword, when it comes before the [:: operator](../operators/namespace-alias-qualifer.md), refers to the global namespace, which is the default namespace for any C# program and is otherwise unnamed.</span></span> <span data-ttu-id="402c5-104">Per altre informazioni, vedere [Procedura: Usare l'alias dello spazio dei nomi globale](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).</span><span class="sxs-lookup"><span data-stu-id="402c5-104">For more information, see [How to: Use the Global Namespace Alias](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).</span></span>
+
+## <a name="example"></a><span data-ttu-id="402c5-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="402c5-105">Example</span></span>
+
+<span data-ttu-id="402c5-106">L'esempio seguente mostra come usare la parola chiave contestuale `global` per specificare che la classe `TestApp` è definita nello spazio dei nomi globale:</span><span class="sxs-lookup"><span data-stu-id="402c5-106">The following example shows how to use the `global` contextual keyword to specify that the class `TestApp` is defined in the global namespace:</span></span>
+
+[!code-csharp[csrefKeywordsContextual#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#13)]
+
+## <a name="see-also"></a><span data-ttu-id="402c5-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="402c5-107">See also</span></span>
+
+[<span data-ttu-id="402c5-108">Spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="402c5-108">Namespaces</span></span>](../../programming-guide/namespaces/index.md)

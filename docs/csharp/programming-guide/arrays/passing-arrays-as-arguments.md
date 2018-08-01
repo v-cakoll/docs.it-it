@@ -1,64 +1,64 @@
 ---
 title: Passaggio di matrici come argomenti (Guida per programmatori C#)
-ms.date: 07/20/2015
+ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: d863cdc33a8a1a844aabbea9ba5876614e6e8dba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0289297be9d7b4989cc95d2b50b92dae9ee831f7
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315516"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199231"
 ---
-# <a name="passing-arrays-as-arguments-c-programming-guide"></a><span data-ttu-id="7fed1-102">Passaggio di matrici come argomenti (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="7fed1-102">Passing Arrays as Arguments (C# Programming Guide)</span></span>
-<span data-ttu-id="7fed1-103">Le matrici possono essere passate come argomenti ai parametri di metodo.</span><span class="sxs-lookup"><span data-stu-id="7fed1-103">Arrays can be passed as arguments to method parameters.</span></span> <span data-ttu-id="7fed1-104">Le matrici, infatti, sono tipi di parametri e il metodo può quindi modificare il valore degli elementi.</span><span class="sxs-lookup"><span data-stu-id="7fed1-104">Because arrays are reference types, the method can change the value of the elements.</span></span>  
-  
-## <a name="passing-single-dimensional-arrays-as-arguments"></a><span data-ttu-id="7fed1-105">Passaggio di matrici unidimensionali come parametri</span><span class="sxs-lookup"><span data-stu-id="7fed1-105">Passing Single-Dimensional Arrays As Arguments</span></span>  
- <span data-ttu-id="7fed1-106">È possibile passare una matrice unidimensionale inizializzata a un metodo.</span><span class="sxs-lookup"><span data-stu-id="7fed1-106">You can pass an initialized single-dimensional array to a method.</span></span> <span data-ttu-id="7fed1-107">L'istruzione seguente, ad esempio, invia una matrice a un metodo di stampa.</span><span class="sxs-lookup"><span data-stu-id="7fed1-107">For example, the following statement sends an array to a print method.</span></span>  
-  
- [!code-csharp[csProgGuideArrays#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_1.cs)]  
-  
- <span data-ttu-id="7fed1-108">Nel codice seguente viene illustrata un'implementazione parziale del metodo di stampa.</span><span class="sxs-lookup"><span data-stu-id="7fed1-108">The following code shows a partial implementation of the print method.</span></span>  
-  
- [!code-csharp[csProgGuideArrays#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_2.cs)]  
-  
- <span data-ttu-id="7fed1-109">È possibile inizializzare e passare una nuova matrice in un passaggio, come mostrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="7fed1-109">You can initialize and pass a new array in one step, as is shown in the following example.</span></span>  
-  
- [!code-csharp[CsProgGuideArrays#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_3.cs)]  
-  
-## <a name="example"></a><span data-ttu-id="7fed1-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="7fed1-110">Example</span></span>  
-  
-### <a name="description"></a><span data-ttu-id="7fed1-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7fed1-111">Description</span></span>  
- <span data-ttu-id="7fed1-112">Nell'esempio seguente, una matrice di stringhe viene inizializzata e passata come argomento a un metodo `PrintArray` per le stringhe.</span><span class="sxs-lookup"><span data-stu-id="7fed1-112">In the following example, an array of strings is initialized and passed as an argument to a `PrintArray` method for strings.</span></span> <span data-ttu-id="7fed1-113">Nel metodo vengono visualizzati gli elementi della matrice.</span><span class="sxs-lookup"><span data-stu-id="7fed1-113">The method displays the elements of the array.</span></span> <span data-ttu-id="7fed1-114">Vengono quindi chiamati i metodi `ChangeArray` e `ChangeArrayElement` per dimostrare che l'invio di un argomento di matrice per valore non impedisce eventuali modifiche agli elementi della matrice.</span><span class="sxs-lookup"><span data-stu-id="7fed1-114">Next, methods `ChangeArray` and `ChangeArrayElement` are called to demonstrate that sending an array argument by value does not prevent changes to the array elements.</span></span>  
-  
-### <a name="code"></a><span data-ttu-id="7fed1-115">Codice</span><span class="sxs-lookup"><span data-stu-id="7fed1-115">Code</span></span>  
- [!code-csharp[csProgGuideArrays#30](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_4.cs)]  
-  
-## <a name="passing-multidimensional-arrays-as-arguments"></a><span data-ttu-id="7fed1-116">Passaggio di matrici multidimensionali come parametri</span><span class="sxs-lookup"><span data-stu-id="7fed1-116">Passing Multidimensional Arrays As Arguments</span></span>  
- <span data-ttu-id="7fed1-117">Una matrice multidimensionale inizializzata viene passata a un metodo nello stesso modo in cui viene passata una matrice unidimensionale.</span><span class="sxs-lookup"><span data-stu-id="7fed1-117">You pass an initialized multidimensional array to a method in the same way that you pass a one-dimensional array.</span></span>  
-  
- [!code-csharp[csProgGuideArrays#41](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_5.cs)]  
-  
- <span data-ttu-id="7fed1-118">Nel codice seguente viene illustrata una dichiarazione parziale di un metodo di stampa che accetta una matrice bidimensionale come argomento.</span><span class="sxs-lookup"><span data-stu-id="7fed1-118">The following code shows a partial declaration of a print method that accepts a two-dimensional array as its argument.</span></span>  
-  
- [!code-csharp[csProgGuideArrays#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_6.cs)]  
-  
- <span data-ttu-id="7fed1-119">È possibile inizializzare e passare una nuova matrice in un passaggio, come mostrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="7fed1-119">You can initialize and pass a new array in one step, as is shown in the following example.</span></span>  
-  
- [!code-csharp[csProgGuideArrays#32](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_7.cs)]  
-  
-## <a name="example"></a><span data-ttu-id="7fed1-120">Esempio</span><span class="sxs-lookup"><span data-stu-id="7fed1-120">Example</span></span>  
-  
-### <a name="description"></a><span data-ttu-id="7fed1-121">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7fed1-121">Description</span></span>  
- <span data-ttu-id="7fed1-122">Nell'esempio seguente, una matrice bidimensionale di Integer viene inizializzata e passata al metodo `Print2DArray`.</span><span class="sxs-lookup"><span data-stu-id="7fed1-122">In the following example, a two-dimensional array of integers is initialized and passed to the `Print2DArray` method.</span></span> <span data-ttu-id="7fed1-123">Nel metodo vengono visualizzati gli elementi della matrice.</span><span class="sxs-lookup"><span data-stu-id="7fed1-123">The method displays the elements of the array.</span></span>  
-  
-### <a name="code"></a><span data-ttu-id="7fed1-124">Codice</span><span class="sxs-lookup"><span data-stu-id="7fed1-124">Code</span></span>  
- [!code-csharp[csProgGuideArrays#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_8.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="7fed1-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7fed1-125">See Also</span></span>  
- [<span data-ttu-id="7fed1-126">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="7fed1-126">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="7fed1-127">Array</span><span class="sxs-lookup"><span data-stu-id="7fed1-127">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
- [<span data-ttu-id="7fed1-128">Matrici unidimensionali</span><span class="sxs-lookup"><span data-stu-id="7fed1-128">Single-Dimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [<span data-ttu-id="7fed1-129">Matrici multidimensionali</span><span class="sxs-lookup"><span data-stu-id="7fed1-129">Multidimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [<span data-ttu-id="7fed1-130">Matrici irregolari</span><span class="sxs-lookup"><span data-stu-id="7fed1-130">Jagged Arrays</span></span>](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+# <a name="passing-arrays-as-arguments-c-programming-guide"></a><span data-ttu-id="c71b4-102">Passaggio di matrici come argomenti (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="c71b4-102">Passing arrays as arguments (C# Programming Guide)</span></span>
+
+<span data-ttu-id="c71b4-103">Le matrici possono essere passate come argomenti ai parametri di metodo.</span><span class="sxs-lookup"><span data-stu-id="c71b4-103">Arrays can be passed as arguments to method parameters.</span></span> <span data-ttu-id="c71b4-104">Le matrici, infatti, sono tipi di parametri e il metodo può quindi modificare il valore degli elementi.</span><span class="sxs-lookup"><span data-stu-id="c71b4-104">Because arrays are reference types, the method can change the value of the elements.</span></span>
+
+## <a name="passing-single-dimensional-arrays-as-arguments"></a><span data-ttu-id="c71b4-105">Passaggio di matrici unidimensionali come argomenti</span><span class="sxs-lookup"><span data-stu-id="c71b4-105">Passing single-dimensional arrays as arguments</span></span>
+
+<span data-ttu-id="c71b4-106">È possibile passare una matrice unidimensionale inizializzata a un metodo.</span><span class="sxs-lookup"><span data-stu-id="c71b4-106">You can pass an initialized single-dimensional array to a method.</span></span> <span data-ttu-id="c71b4-107">L'istruzione seguente, ad esempio, invia una matrice a un metodo di stampa.</span><span class="sxs-lookup"><span data-stu-id="c71b4-107">For example, the following statement sends an array to a print method.</span></span>
+
+[!code-csharp[csProgGuideArrays#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#34)]
+
+<span data-ttu-id="c71b4-108">Nel codice seguente viene illustrata un'implementazione parziale del metodo di stampa.</span><span class="sxs-lookup"><span data-stu-id="c71b4-108">The following code shows a partial implementation of the print method.</span></span>
+
+[!code-csharp[csProgGuideArrays#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#33)]
+
+<span data-ttu-id="c71b4-109">È possibile inizializzare e passare una nuova matrice in un passaggio, come mostrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="c71b4-109">You can initialize and pass a new array in one step, as is shown in the following example.</span></span>
+
+[!code-csharp[CsProgGuideArrays#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#35)]
+
+### <a name="example"></a><span data-ttu-id="c71b4-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="c71b4-110">Example</span></span>
+
+<span data-ttu-id="c71b4-111">Nell'esempio seguente, una matrice di stringhe viene inizializzata e passata come argomento a un metodo `DisplayArray` per le stringhe.</span><span class="sxs-lookup"><span data-stu-id="c71b4-111">In the following example, an array of strings is initialized and passed as an argument to a `DisplayArray` method for strings.</span></span> <span data-ttu-id="c71b4-112">Nel metodo vengono visualizzati gli elementi della matrice.</span><span class="sxs-lookup"><span data-stu-id="c71b4-112">The method displays the elements of the array.</span></span> <span data-ttu-id="c71b4-113">Successivamente, il metodo `ChangeArray` inverte gli elementi della matrice e quindi il metodo `ChangeArrayElements` consente di modificare i primi tre elementi della matrice.</span><span class="sxs-lookup"><span data-stu-id="c71b4-113">Next, the `ChangeArray` method reverses the array elements, and then the `ChangeArrayElements` method modifies the first three elements of the array.</span></span> <span data-ttu-id="c71b4-114">Al termine delle restituzioni di ogni metodo, il metodo `DisplayArray` mostra che il passaggio di una matrice per valore non impedisce le modifiche agli elementi della matrice.</span><span class="sxs-lookup"><span data-stu-id="c71b4-114">After each method returns, the `DisplayArray` method shows that passing an array by value doesn't prevent changes to the array elements.</span></span>
+
+[!code-csharp[csProgGuideArrays#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/ArrayExample.cs)]
+
+## <a name="passing-multidimensional-arrays-as-arguments"></a><span data-ttu-id="c71b4-115">Passaggio di matrici multidimensionali come argomenti</span><span class="sxs-lookup"><span data-stu-id="c71b4-115">Passing multidimensional arrays as arguments</span></span>
+
+<span data-ttu-id="c71b4-116">Una matrice multidimensionale inizializzata viene passata a un metodo nello stesso modo in cui viene passata una matrice unidimensionale.</span><span class="sxs-lookup"><span data-stu-id="c71b4-116">You pass an initialized multidimensional array to a method in the same way that you pass a one-dimensional array.</span></span>
+
+[!code-csharp[csProgGuideArrays#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#41)]
+
+<span data-ttu-id="c71b4-117">Nel codice seguente viene illustrata una dichiarazione parziale di un metodo di stampa che accetta una matrice bidimensionale come argomento.</span><span class="sxs-lookup"><span data-stu-id="c71b4-117">The following code shows a partial declaration of a print method that accepts a two-dimensional array as its argument.</span></span>
+
+[!code-csharp[csProgGuideArrays#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#36)]
+
+<span data-ttu-id="c71b4-118">È possibile inizializzare e passare una nuova matrice in un passaggio, come mostrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="c71b4-118">You can initialize and pass a new array in one step, as is shown in the following example:</span></span>
+
+[!code-csharp[csProgGuideArrays#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#32)]
+
+### <a name="example"></a><span data-ttu-id="c71b4-119">Esempio</span><span class="sxs-lookup"><span data-stu-id="c71b4-119">Example</span></span>
+
+<span data-ttu-id="c71b4-120">Nell'esempio seguente, una matrice bidimensionale di Integer viene inizializzata e passata al metodo `Print2DArray`.</span><span class="sxs-lookup"><span data-stu-id="c71b4-120">In the following example, a two-dimensional array of integers is initialized and passed to the `Print2DArray` method.</span></span> <span data-ttu-id="c71b4-121">Nel metodo vengono visualizzati gli elementi della matrice.</span><span class="sxs-lookup"><span data-stu-id="c71b4-121">The method displays the elements of the array.</span></span>
+
+[!code-csharp[csProgGuideArrays#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#31)]
+
+## <a name="see-also"></a><span data-ttu-id="c71b4-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c71b4-122">See also</span></span>
+
+[<span data-ttu-id="c71b4-123">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="c71b4-123">C# Programming Guide</span></span>](../index.md)  
+[<span data-ttu-id="c71b4-124">Array</span><span class="sxs-lookup"><span data-stu-id="c71b4-124">Arrays</span></span>](index.md)  
+[<span data-ttu-id="c71b4-125">Matrici unidimensionali</span><span class="sxs-lookup"><span data-stu-id="c71b4-125">Single-Dimensional Arrays</span></span>](single-dimensional-arrays.md)  
+[<span data-ttu-id="c71b4-126">Matrici multidimensionali</span><span class="sxs-lookup"><span data-stu-id="c71b4-126">Multidimensional Arrays</span></span>](multidimensional-arrays.md)  
+[<span data-ttu-id="c71b4-127">Matrici irregolari</span><span class="sxs-lookup"><span data-stu-id="c71b4-127">Jagged Arrays</span></span>](jagged-arrays.md)  
