@@ -3,20 +3,18 @@ title: Caratteristiche delle applicazioni Web moderne
 description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Caratteristiche delle applicazioni Web moderne
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: cc4493bf8e45c41a94e8e6f719318b14ad5b05f1
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 4c73ab59148325f66d3ee17db3fb78d397b73f15
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105807"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404486"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Caratteristiche delle applicazioni Web moderne
 
 > "… con la progettazione adeguata, i costi delle funzionalità risultano competitivi. Questo approccio è complesso, ma continua a dare risultati positivi".  
 > _\- Dennis Ritchie_
-
-## <a name="summary"></a>Riepilogo
 
 Le applicazioni Web moderne devono soddisfare esigenze e aspettative degli utenti sempre più importanti. Oggi le app Web devono essere disponibili 24 ore al giorno, ogni giorno e in qualsiasi parte del mondo e devono poter essere usate su qualsiasi dispositivo o su uno schermo di qualsiasi dimensione. Le applicazioni Web devono essere sicure, flessibili e scalabili, per soddisfare i picchi di richiesta. Scenari sempre più complessi devono essere gestiti con esperienze utente complete, app compilate nel client con JavaScript e in grado di comunicare adeguatamente tramite le API Web.
 
@@ -24,15 +22,16 @@ ASP.NET Core è ottimizzato per le applicazioni Web moderne e gli scenari di hos
 
 ## <a name="reference-application-eshoponweb"></a>Applicazione di riferimento: eShopOnWeb
 
-Questa guida include un'applicazione di riferimento, *eShopOnWeb*, che dimostra alcune idee e suggerimenti. L'applicazione è un semplice negozio online, nel quale gli utenti possono consultare un catalogo di T-shirt, tazze da caffè e altri articoli di marketing. L'applicazione di riferimento è volutamente semplice, perché sia facile comprenderne il funzionamento.
+Questa guida include un'applicazione di riferimento, _eShopOnWeb_, che dimostra alcune idee e suggerimenti. L'applicazione è un semplice negozio online, nel quale gli utenti possono consultare un catalogo di T-shirt, tazze da caffè e altri articoli di marketing. L'applicazione di riferimento è volutamente semplice, perché sia facile comprenderne il funzionamento.
 
 **Figura 2-1.** eShopOnWeb
 
 ![](./media/image2-1.png)
 
 > ### <a name="reference-application"></a>Applicazione di riferimento
+>
 > - **eShopOnWeb**  
-> <https://github.com/dotnet/eShopOnWeb>
+>   <https://github.com/dotnet/eShopOnWeb>
 
 ## <a name="cloud-hosted-and-scalable"></a>Ospitato nel cloud e scalabile
 
@@ -58,7 +57,7 @@ Le applicazioni Web tradizionali includono comportamenti lato client limitati, m
 
 Le applicazioni a pagina singola, al contrario, richiedono un numero molto limitato di caricamenti pagina generati dinamicamente sul lato server. Molte applicazioni a pagina singola vengono inizializzate all'interno di un file HTML statico, che carica le librerie JavaScript necessarie per avviare ed eseguire l'app. Queste app usano in modo intensivo le API Web per ottenere i dati necessari e possono offrire esperienze utente molto più complete.
 
-Molte applicazioni Web presentano una combinazione di comportamenti dell'applicazione Web tradizionale (in genere per il contenuto) e applicazioni a pagina singola (per l'interattività). ASP.NET Core supporta sia i framework MVC sia le API Web nella stessa applicazione, usando lo stesso set di strumenti e librerie del framework sottostanti.
+Molte applicazioni Web presentano una combinazione di comportamenti dell'applicazione Web tradizionale (in genere per il contenuto) e applicazioni a pagina singola (per l'interattività). ASP.NET Core supporta sia i framework MVC (Viste e/o Razor Pages) sia le API Web nella stessa applicazione, usando lo stesso set di strumenti e librerie del framework sottostanti.
 
 ## <a name="simple-development-and-deployment"></a>Sviluppo e distribuzione facili
 
@@ -69,12 +68,13 @@ Molte applicazioni Web presentano una combinazione di comportamenti dell'applica
 Oltre ad ASP.NET Core, anche ASP.NET 4.x continua a rappresentare una piattaforma solida e affidabile per la compilazione di applicazioni Web. Oltre ai modelli di sviluppo MVC e API Web, ASP.NET supporta Web Form, ideale per lo sviluppo di applicazioni complesse basate sulla pagina e dispone di un ecosistema di componenti di terze parti completo. Windows Azure offre da tempo il supporto completo delle applicazioni ASP.NET 4.x e molti sviluppatori conoscono a fondo questa piattaforma.
 
 > ### <a name="references--modern-web-applications"></a>Riferimenti: applicazioni Web moderne
+>
 > - **Introduzione a ASP.NET Core**  
-> <https://docs.microsoft.com/aspnet/core/>
+>   <https://docs.microsoft.com/aspnet/core/>
 > - **Six Key Benefits of ASP.NET Core which make it Different and Better** (Sei vantaggi chiave che fanno di ASP.NET Core una soluzione migliore)  
-> <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
+>   <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **Test e debug in ASP.NET Core**  
-> <https://docs.microsoft.com/aspnet/core/testing/>
+>   <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
 [Precedente](index.md)

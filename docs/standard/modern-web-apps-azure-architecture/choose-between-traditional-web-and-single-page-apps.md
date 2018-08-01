@@ -1,40 +1,38 @@
 ---
 title: Scegliere tra app Web tradizionali e a pagina singola
-description: Progettare applicazioni Web moderne con ASP.NET Core e Microsoft Azure
+description: Informazioni su come scegliere tra le app Web tradizionali e a pagina singola (SPAs) durante la compilazione di applicazioni Web.
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104766"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404147"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Scegliere tra app Web tradizionali e a pagina singola
 
 > "Legge di Atwood: qualsiasi applicazione che può essere creata in JavaScript, finirà per essere creata in JavaScript".  
 > _\- Jeff Atwood_
 
-## <a name="summary"></a>Riepilogo
-
 Attualmente esistono due approcci generali alla creazione di applicazioni Web: le applicazioni Web tradizionali che eseguono la maggior parte della logica dell'applicazione nel server e le applicazioni a pagina singola (SPA, Single Page Application) che eseguono la maggior parte della logica dell'interfaccia utente in un Web browser, comunicando con il server Web principalmente attraverso API Web. È anche possibile un approccio ibrido: l'esempio più semplice è l'hosting di una o più sottoapplicazioni a pagina singola in un'applicazione Web tradizionale più grande.
 
 L'uso delle applicazioni Web tradizionali è consigliato quando:
 
--   I requisiti lato client dell'applicazione sono semplici o di sola lettura.
+- I requisiti lato client dell'applicazione sono semplici o di sola lettura.
 
--   L'applicazione deve funzionare in browser che non supportano JavaScript.
+- L'applicazione deve funzionare in browser che non supportano JavaScript.
 
--   Il team non ha dimestichezza con le tecniche di sviluppo di JavaScript o TypeScript.
+- Il team non ha dimestichezza con le tecniche di sviluppo di JavaScript o TypeScript.
 
 È consigliabile usare un' applicazione a pagina singola quando:
 
--   L'applicazione deve esporre un'interfaccia utente avanzata con numerose funzionalità.
+- L'applicazione deve esporre un'interfaccia utente avanzata con numerose funzionalità.
 
--   Il team ha familiarità con lo sviluppo in JavaScript e/o TypeScript.
+- Il team ha familiarità con lo sviluppo in JavaScript e/o TypeScript.
 
--   L'applicazione deve già esporre un'API per altri client (interni o pubblici).
+- L'applicazione deve già esporre un'API per altri client (interni o pubblici).
 
 I framework delle applicazioni a pagina singola richiedono anche maggiori conoscenze a livello di architettura e sicurezza. Tali framework soggetti a maggior varianza rispetto alle applicazioni Web tradizionali, a causa di aggiornamenti frequenti e nuovi framework. La configurazione dei processi di compilazione e distribuzione automatizzati e l'uso di opzioni di distribuzione come i contenitori risultano più difficili con le applicazioni a pagina singola che con le app Web tradizionali.
 
@@ -71,10 +69,11 @@ Si noti che in molti casi le applicazioni a pagina singola devono implementare f
 Per creare applicazioni a pagina singola è necessario avere dimestichezza con JavaScript e/o TypeScript e con le tecniche e le librerie della programmazione lato client. Il team deve essere in grado di creare codice JavaScript moderno tramite un framework per applicazioni a pagina singola come Angular.
 
 > ### <a name="references--spa-frameworks"></a>Riferimenti: framework per applicazioni a pagina singola
+>
 > - **Angular**  
-> <https://angular.io>
+>   <https://angular.io>
 > - **Confronto tra diversi framework JavaScript**  
-> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
 **L'applicazione deve già esporre un'API per altri client (interni o pubblici)**
 
@@ -84,12 +83,12 @@ Se si supporta già un'API Web per l'uso con altri client, può risultare meno o
 
 La tabella seguente riepiloga alcuni fattori di base da considerare nella scelta tra un'applicazione Web tradizionale e un'applicazione a pagina singola.
 
-  | **Fattore** | **App Web tradizionale** | **Applicazione a pagina singola** |
-  |---|---|---|
-  | Il team deve conoscere JavaScript o TypeScript | **Minimo** | **Obbligatorio** |
-  | Supporto dei browser senza script | **Supportato** | **Non supportato** |
-  | Comportamento minimo dell'applicazione lato client | **Adeguato** | **Eccessivo** |
-  | Esigenza di un'interfaccia utente dettagliata e complessa | **Limitato** | **Adeguato** |
+| **Fattore**                                           | **App Web tradizionale** | **Applicazione a pagina singola** |
+| ---------------------------------------------------- | ----------------------- | --------------------------- |
+| Il team deve conoscere JavaScript o TypeScript | **Minimo**             | **Obbligatorio**                |
+| Supporto dei browser senza script                   | **Supportato**           | **Non supportato**           |
+| Comportamento minimo dell'applicazione lato client             | **Adeguato**         | **Eccessivo**                |
+| Esigenza di un'interfaccia utente dettagliata e complessa            | **Limitato**             | **Adeguato**             |
 
 >[!div class="step-by-step"]
 [Precedente](modern-web-applications-characteristics.md)

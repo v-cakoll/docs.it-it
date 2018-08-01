@@ -1,23 +1,21 @@
 ---
 title: Usare i dati nelle app ASP.NET Core
-description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Uso dei dati in ASP
+description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usare i dati nelle app ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: c9f1350f57ed649b9bf53968c19ab652b3c74384
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 7209789eb36dc717823625c0ae67357ee332086b
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106175"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404658"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
 > "I dati sono un elemento prezioso che dura più a lungo dei sistemi"
-
-Tim Berners-Lee
-
-## <a name="summary"></a>Riepilogo
+>
+> Tim Berners-Lee
 
 L'accesso ai dati è una questione importante in quasi tutte le applicazioni software. ASP.NET Core supporta un'ampia gamma di opzioni di accesso ai dati, tra cui Entity Framework Core (e anche Entity Framework 6) e può usare qualsiasi framework di accesso ai dati .NET. La scelta del tipo di framework di accesso ai dati da usare dipende dalle esigenze dell'applicazione. Scegliere in base ai progetti ApplicationCore e UI e incapsulare i dettagli di implementazione in Infrastructure per creare un software testabile e poco accoppiato.
 
@@ -35,7 +33,7 @@ add package Microsoft.EntityFrameworkCore.SqlServer
 
 ### <a name="the-dbcontext"></a>DbContext
 
-Per usare EF Core è necessaria una sottoclasse di DbContext. Questa classe contiene le proprietà che rappresentano raccolte di entità che l'applicazione userà. L'esempio eShopOnWeb include un oggetto CatalogContext contenente raccolte per elementi, marchi e i tipi:
+Per usare EF Core è necessaria una sottoclasse di <xref:Microsoft.EntityFrameworkCore.DbContext>. Questa classe contiene le proprietà che rappresentano raccolte di entità che l'applicazione userà. L'esempio eShopOnWeb include un oggetto CatalogContext contenente raccolte per elementi, marchi e i tipi:
 
 ```csharp
 public class CatalogContext : DbContext
@@ -78,7 +76,7 @@ Dopo aver installato EF Core, aver creato un tipo figlio DbContext e averlo conf
 
 Figura 8-1: registrazione delle query di EF Core nella console
 
-### <a name="fetching-and-storing-data"></a>Recupero e archiviatone dei dati
+### <a name="fetching-and-storing-data"></a>Recupero e archiviazione dei dati
 
 Per recuperare i dati da EF Core, accedere alla proprietà appropriata e usare LINQ per filtrare il risultato. È anche possibile usare LINQ per eseguire una proiezione e trasformare il risultato da un tipo a un altro. Nell'esempio seguente viene recuperato l'oggetto CatalogBrands. Viene ordinato per nome, filtrato per la proprietà Enabled e proiettato in un tipo SelectListItem:
 
@@ -116,7 +114,7 @@ EF Core supporta sia metodi sincroni che asincroni per il recupero e il salvatag
 
 ### <a name="fetching-related-data"></a>Recupero dei dati correlati
 
-Dopo aver recuperato le entità, EF Core compila tutte le proprietà archiviate direttamente con l'entità appropriata nel database. Le proprietà di navigazione, ad esempio elenchi di entità correlate, non vengono popolate e il loro valore può essere impostato su Null. In questo modo, EF Core non recupererà più dati del necessario, requisito particolarmente importante per le applicazioni Web, che devono elaborare velocemente le richieste e restituire le risposte in modo efficiente. Per includere le relazioni con un'entità tramite il *caricamento eager*, specificare la proprietà usando il metodo di estensione Include nella query, come illustrato di seguito:
+Dopo aver recuperato le entità, EF Core compila tutte le proprietà archiviate direttamente con l'entità appropriata nel database. Le proprietà di navigazione, ad esempio elenchi di entità correlate, non vengono popolate e il loro valore può essere impostato su Null. In questo modo, EF Core non recupererà più dati del necessario, requisito particolarmente importante per le applicazioni Web, che devono elaborare velocemente le richieste e restituire le risposte in modo efficiente. Per includere le relazioni con un'entità tramite il _caricamento eager_, specificare la proprietà usando il metodo di estensione Include nella query, come illustrato di seguito:
 
 ```csharp
 // .Include requires using Microsoft.EntityFrameworkCore
@@ -127,13 +125,15 @@ var brandsWithItems = await _context.CatalogBrands
 
 È possibile includere più relazioni, ma anche relazioni secondarie usando ThenInclude. EF Core eseguirà una singola query per recuperare il set di entità ottenuto.
 
-Il *caricamento esplicito* è un'altra opzione per caricare i dati correlati. Il caricamento esplicito consente di caricare dati aggiuntivi in un'entità che è già stata recuperata. Poiché prevede una richiesta separata al database, non è consigliabile per le applicazioni Web, che devono ridurre al minimo il numero round trip al database per ogni richiesta.
+Il _caricamento esplicito_ è un'altra opzione per caricare i dati correlati. Il caricamento esplicito consente di caricare dati aggiuntivi in un'entità che è già stata recuperata. Poiché prevede una richiesta separata al database, non è consigliabile per le applicazioni Web, che devono ridurre al minimo il numero round trip al database per ogni richiesta.
 
-Il *caricamento lazy* è una funzionalità che consente di caricare automaticamente i dati correlati ai quali l'applicazione fa riferimento. Non è attualmente supportata da EF Core. Come per il caricamento esplicito è tuttavia consigliabile disabilitarla per le applicazioni Web.
+Il _caricamento lazy_ è una funzionalità che consente di caricare automaticamente i dati correlati ai quali l'applicazione fa riferimento. EF Core ha aggiunto il supporto per il caricamento posticipato nella versione 2.1. Il caricamento posticipato non è abilitato per impostazione predefinita e richiede l'installazione di `Microsoft.EntityFrameworkCore.Proxies`. Come con il caricamento esplicito, il caricamento posticipato in genere deve essere disabilitato per le applicazioni Web poiché comporta delle query di database aggiuntive eseguite all'interno di ogni richiesta Web. Purtroppo, il sovraccarico generato dal caricamento posticipato spesso non viene rilevato in fase di sviluppo, quando la latenza è poca e spesso i set di dati usati per il test sono piccoli. Tuttavia nell'ambiente di produzione, con più utenti, più dati e latenza maggiore, le richieste di database aggiuntive spesso possono causare una riduzione delle prestazioni delle applicazioni Web che fanno largo uso del caricamento posticipato.
+
+[Avoid Lazy Loading Entities in Web Applications](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications) (Evitare il caricamento posticipato nelle applicazioni Web)
 
 ### <a name="resilient-connections"></a>Connessioni resilienti
 
-In alcuni casi è possibile che le risorse esterne, ad esempio i database SQL, non siano disponibili. In caso di indisponibilità temporanea, le applicazioni possono usare la logica di ripetizione per evitare che sia generata un'eccezione. Questa tecnica è comunemente nota come *resilienza della connessione*. È possibile implementare i [tentativi con backoff esponenziale](https://docs.microsoft.com/azure/architecture/patterns/retry), vale a dire una tecnica che tenta di ripetere un'operazione con un tempo di attesa che aumenta esponenzialmente, fino a quando non viene raggiunto il numero massimo di tentativi. Questa tecnica si basa sul presupposto che le risorse cloud potrebbero essere non disponibili in modo intermittente per brevi periodi, generando l'errore di alcune richieste.
+In alcuni casi è possibile che le risorse esterne, ad esempio i database SQL, non siano disponibili. In caso di indisponibilità temporanea, le applicazioni possono usare la logica di ripetizione per evitare che sia generata un'eccezione. Questa tecnica è comunemente nota come _resilienza della connessione_. È possibile implementare i [tentativi con backoff esponenziale ](https://docs.microsoft.com/azure/architecture/patterns/retry), vale a dire una tecnica che tenta di ripetere un'operazione con un tempo di attesa che aumenta esponenzialmente, fino a quando non viene raggiunto il numero massimo di tentativi. Questa tecnica si basa sul presupposto che le risorse cloud potrebbero essere non disponibili in modo intermittente per brevi periodi, generando l'errore di alcune richieste.
 
 Per il database SQL di Azure, Entity Framework Core fornisce già la logica per i tentativi e la resilienza della connessione di database interna. È tuttavia necessario abilitare la strategia di esecuzione di Entity Framework per ogni connessione DbContext per ottenere connessioni di EF Core resilienti.
 
@@ -153,19 +153,19 @@ public class Startup
         {
             sqlOptions.EnableRetryOnFailure(
             maxRetryCount: 5,
-            maxRetryDelay: TimeSpan.FromSeconds(30), 
-            errorNumbersToAdd: null); 
+            maxRetryDelay: TimeSpan.FromSeconds(30),
+            errorNumbersToAdd: null);
         });
     });
 }
 //...
 ```
 
-  #### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Strategie di esecuzione e transazioni esplicite usando BeginTransaction e più oggetti DbContext 
-  
-  Quando nelle connessioni di EF Core sono abilitati i tentativi, ogni operazione che viene eseguita con EF Core diventa un'unica operazione con possibilità di ritentare. Per ogni query e per ogni chiamata a SaveChanges verranno eseguiti altri tentativi come una sola unità nel caso in cui si verifichi un errore temporaneo.
-  
-  Tuttavia, se il codice avvia una transazione tramite BeginTransaction, viene definito un gruppo personalizzato di operazioni che deve essere considerato come un'unità. Se si verifica un errore, verrà eseguito il rollback di tutto ciò che si trova all'interno della transazione. Se si tenta di eseguire la transazione quando si usa una strategia di esecuzione (criteri di ripetizione) di EF e si includono numerosi oggetti SaveChanges da più oggetti DbContext, verrà restituita un'eccezione simile alla seguente.
+#### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Strategie di esecuzione e transazioni esplicite usando BeginTransaction e più oggetti DbContext
+
+Quando nelle connessioni di EF Core sono abilitati i tentativi, ogni operazione che viene eseguita con EF Core diventa un'unica operazione con possibilità di ritentare. Per ogni query e per ogni chiamata a SaveChanges verranno eseguiti altri tentativi come una sola unità nel caso in cui si verifichi un errore temporaneo.
+
+Tuttavia, se il codice avvia una transazione tramite BeginTransaction, viene definito un gruppo personalizzato di operazioni che deve essere considerato come un'unità. Se si verifica un errore, verrà eseguito il rollback di tutto ciò che si trova all'interno della transazione. Se si tenta di eseguire la transazione quando si usa una strategia di esecuzione (criteri di ripetizione) di EF e si includono numerosi oggetti SaveChanges da più oggetti DbContext, verrà restituita un'eccezione simile alla seguente.
 
 System.InvalidOperationException: La strategia di esecuzione configurata 'SqlServerRetryingExecutionStrategy' non supporta le transazioni avviate dall'utente. Usare la strategia di esecuzione restituita da 'DbContext.Database.CreateExecutionStrategy()' per eseguire tutte le operazioni nella transazione come un'unità con possibilità di ritentare.
 
@@ -176,7 +176,7 @@ La soluzione prevede di richiamare manualmente la strategia di esecuzione di EF 
 // within an explicit transaction
 // See:
 // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
-var strategy = _catalogContext.Database.CreateExecutionStrategy(); 
+var strategy = _catalogContext.Database.CreateExecutionStrategy();
 await strategy.ExecuteAsync(async () =>
 {
     // Achieving atomicity between original Catalog database operation and the
@@ -185,7 +185,7 @@ await strategy.ExecuteAsync(async () =>
     {
         _catalogContext.CatalogItems.Update(catalogItem);
         await _catalogContext.SaveChangesAsync();
-        
+
         // Save to EventLog only if product price changed
         if (raiseProductPriceChangedEvent)
         await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
@@ -197,12 +197,13 @@ await strategy.ExecuteAsync(async () =>
 Il primo oggetto DbContext è \_catalogContext e il secondo oggetto DbContext si trova all'interno dell'oggetto \_integrationEventLogService. Alla fine, l'azione Commit viene eseguita su più oggetti DbContext tramite una strategia di esecuzione di EF.
 
 > ### <a name="references--entity-framework-core"></a>Riferimenti a Entity Framework Core
+>
 > - **Documentazione di Entity Framework**  
-> <https://docs.microsoft.com/ef/>
+>   <https://docs.microsoft.com/ef/>
 > - **Entity Framework Core: dati correlati**  
-> <https://docs.microsoft.com/ef/core/querying/related-data>
+>   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Avoid Lazy Loading Entities in ASP.NET Applications** (Evitare il caricamento lazy di entità in applicazioni ASPNET)  
-> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+>   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core o micro ORM?
 
@@ -270,8 +271,7 @@ In genere nei database NoSQL non vengono applicate le [ACID](https://en.wikipedi
 
 ## <a name="azure-documentdb"></a>Azure DocumentDB
 
-Azure DocumentDB è un servizio di database NoSQL completamente gestito che offre l'archiviazione di dati privi di schema basata sul cloud. DocumentDB garantisce prestazioni rapide e prevedibili, disponibilità elevata, scalabilità elastica e distribuzione globale. Nonostante sia un database NoSQL, gli sviluppatori possono applicare le note funzionalità avanzate di query SQL su dati JSON. Tutte le risorse in DocumentDB vengono archiviate come documenti JSON. Le risorse sono gestite come *elementi*, vale a dire documenti che contengono metadati, e come *feed*, ovvero raccolte di elementi. Figura 8-2: illustra la relazione tra le diverse risorse di DocumentDB.
-
+Azure DocumentDB è un servizio di database NoSQL completamente gestito che offre l'archiviazione di dati privi di schema basata sul cloud. DocumentDB garantisce prestazioni rapide e prevedibili, disponibilità elevata, scalabilità elastica e distribuzione globale. Nonostante sia un database NoSQL, gli sviluppatori possono applicare le note funzionalità avanzate di query SQL su dati JSON. Tutte le risorse in DocumentDB vengono archiviate come documenti JSON. Le risorse sono gestite come _elementi_, vale a dire documenti che contengono metadati, e come _feed_, ovvero raccolte di elementi. Figura 8-2: illustra la relazione tra le diverse risorse di DocumentDB.
 
 ![Relazione gerarchica tra le risorse di DocumentDB, un database NoSQL JSON](./media/image8-2.png)
 
@@ -281,25 +281,25 @@ Il linguaggio di query di DocumentDB è costituito da un'interfaccia semplice ma
 
 **Riferimenti a DocumentDB**
 
--   Introduzione a DocumentDB\
-    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- Introduzione a DocumentDB\
+  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Altre opzioni di persistenza
 
 Oltre alle opzioni di archiviazione con database relazionali e NoSQL, le applicazioni ASP.NET Core possono usare l'archiviazione di Azure per archiviare una varietà di formati di dati e file in modelli scalabili, basati sul cloud. L'archiviazione di Azure è altamente scalabile. È quindi possibile iniziare archiviando piccole quantità di dati per poi aumentare l'archiviazione a centinaia di terabyte, se richiesto dall'applicazione. L'archiviazione di Azure supporta quattro tipi di dati:
 
--   Archiviazione BLOB per l'archiviazione di testo non strutturato o dati binari, detta anche archiviazione di oggetti.
+- Archiviazione BLOB per l'archiviazione di testo non strutturato o dati binari, detta anche archiviazione di oggetti.
 
--   Archiviazione tabelle per set di dati strutturati, accessibile tramite chiavi di riga.
+- Archiviazione tabelle per set di dati strutturati, accessibile tramite chiavi di riga.
 
--   Archiviazione code per messaggistica affidabile basata su coda.
+- Archiviazione code per messaggistica affidabile basata su coda.
 
--   Archiviazione file per l'accesso a file condivisi tra macchine virtuali di Azure e applicazioni locali.
+- Archiviazione file per l'accesso a file condivisi tra macchine virtuali di Azure e applicazioni locali.
 
 **Riferimenti ad archiviazione di Azure**
 
--   Introduzione all'archiviazione di Azure\
-    <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Introduzione all'archiviazione di Azure\
+  <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Memorizzazione nella cache
 
@@ -315,16 +315,17 @@ ASP.NET Core supporta due livelli di memorizzazione nella cache delle risposte. 
     [ResponseCache(Duration = 60)]
     public IActionResult Contact()
     { }
-    
+
     ViewData["Message"] = "Your contact page.";
     return View();
 }
+```
 
-The above example will result in the following header being added to the response, instructing clients to cache the result for up to 60 seconds.
+L'esempio precedente comporterà l'aggiunta della seguente intestazione alla risposta, indicando ai client di memorizzare nella cache il risultato fino a 60 secondi.
 
 Cache-Control: public,max-age=60
 
-In order to add server-side in-memory caching to the application, you must reference the Microsoft.AspNetCore.ResponseCaching NuGet package, and then add the Response Caching middleware. This middleware is configured in both ConfigureServices and Configure in Startup:
+Per aggiungere la memorizzazione nella cache in memoria sul lato server per l'applicazione, è necessario fare riferimento al pacchetto Microsoft.AspNetCore.ResponseCaching NuGet e quindi aggiungere il middleware di memorizzazione nella cache delle risposte. Il middleware è configurato sia in ConfigureServices che in Configure in Startup:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -338,11 +339,11 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-Il middleware di memorizzazione nella cache delle risposte memorizzerà autenticamente le risposte sulla base di una serie di condizioni personalizzabili. Per impostazione predefinita, vengono memorizzate nella cache solo risposte con codice di stato 200 (OK) tramite i metodi GET o HEAD. È anche necessario che le richieste abbiano una risposta con intestazione pubblica Cache-Control e non includano le intestazioni Authorization o Set-Cookie. Vedere l'[elenco completo delle condizioni di memorizzazione nella cache usato dal middleware di memorizzazione nella cache delle risposte](https://docs.microsoft.com/aspnet/core/performance/caching/middleware#conditions-for-caching).
+Il middleware di memorizzazione nella cache delle risposte memorizzerà autenticamente le risposte sulla base di una serie di condizioni personalizzabili. Per impostazione predefinita, vengono memorizzate nella cache solo risposte con codice di stato 200 (OK) tramite i metodi GET o HEAD. È anche necessario che le richieste abbiano una risposta con intestazione pubblica Cache-Control e non includano le intestazioni Authorization o Set-Cookie. Vedere l'[elenco completo delle condizioni di memorizzazione nella cache usato dal middleware di memorizzazione nella cache delle risposte](/aspnet/core/performance/caching/middleware#conditions-for-caching).
 
 ### <a name="data-caching"></a>Memorizzazione nella cache dei dati
 
-Anziché memorizzare nella cache tutte le risposte Web oppure oltre ad abilitare tale funzionalità, è possibile memorizzare nella cache i risultati delle singole query sui dati. A tale scopo, è possibile usare la memorizzazione nella cache in memoria nel server Web, oppure una [cache distribuita](https://docs.microsoft.com/aspnet/core/performance/caching/distributed). In questa sezione sarà illustrato come implementare la memorizzazione nella cache in memoria.
+Anziché memorizzare nella cache tutte le risposte Web oppure oltre ad abilitare tale funzionalità, è possibile memorizzare nella cache i risultati delle singole query sui dati. A tale scopo, è possibile usare la memorizzazione nella cache in memoria nel server Web, oppure una [cache distribuita](/aspnet/core/performance/caching/distributed). In questa sezione sarà illustrato come implementare la memorizzazione nella cache in memoria.
 
 Aggiungere il supporto per la memorizzazione nella cache in memoria (o per la cache distribuita) in ConfigureServices:
 
@@ -373,7 +374,7 @@ public class CachedCatalogService : ICatalogService
         _cache = cache;
         _catalogService = catalogService;
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetBrands()
     {
         return await _cache.GetOrCreateAsync(_brandsKey, async entry =>
@@ -382,7 +383,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetBrands();
         });
     }
-    
+
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
         string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
@@ -392,7 +393,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetCatalogItems(pageIndex, itemsPage, brandID, typeId);
         });
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetTypes()
     {
         return await _cache.GetOrCreateAsync(_typesKey, async entry =>
@@ -414,7 +415,7 @@ services.AddScoped<CatalogService>();
 
 A questo punto, le chiamate al database per recuperare i dati del catalogo verranno eseguite una sola volta al minuto, anziché a ogni richiesta. In base al traffico destinato al sito, questa configurazione può avere un impatto significativo sul numero di query inviate al database e sul tempo medio di caricamento della home page che attualmente dipende da tutte e tre le query esposte da questo servizio.
 
-Quando viene implementata la memorizzazione nella cache si verifica un problema correlato ai *dati non aggiornati* , vale a dire i dati che sono stati modificati nell'origine, ma nella cache è rimasta una versione non aggiornata. Un modo semplice per risolvere questo problema è usare durate della cache ridotte. Infatti, per un'applicazione occupata il vantaggio aggiuntivo di estendere la durata di memorizzazione nella cache dei dati è limitato. Si consideri ad esempio una pagina che esegue un'unica query al database, richiedendola 10 volte al secondo. Se questa pagina rimane memorizzata nella cache per un minuto, il numero di query al database ogni minuto diminuirà da 600 a 1, pari a una riduzione del 99,8%. Se invece la durata della cache fosse di un'ora, la riduzione complessiva sarebbe del 99,997%, ma la probabilità e la potenziale durata dei dati non aggiornati aumentano considerevolmente.
+Quando viene implementata la memorizzazione nella cache si verifica un problema correlato ai _dati non aggiornati_ , vale a dire i dati che sono stati modificati nell'origine, ma nella cache è rimasta una versione non aggiornata. Un modo semplice per risolvere questo problema è usare durate della cache ridotte. Infatti, per un'applicazione occupata il vantaggio aggiuntivo di estendere la durata di memorizzazione nella cache dei dati è limitato. Si consideri ad esempio una pagina che esegue un'unica query al database, richiedendola 10 volte al secondo. Se questa pagina rimane memorizzata nella cache per un minuto, il numero di query al database ogni minuto diminuirà da 600 a 1, pari a una riduzione del 99,8%. Se invece la durata della cache fosse di un'ora, la riduzione complessiva sarebbe del 99,997%, ma la probabilità e la potenziale durata dei dati non aggiornati aumentano considerevolmente.
 
 Un altro approccio consiste nel rimuovere in modo proattivo le voci della cache quando vengono aggiornati i dati in esse contenuti. È possibile rimuovere ogni singola voce se si conosce la relativa chiave:
 
@@ -435,6 +436,8 @@ new CancellationChangeToken(cts.Token));
 // elsewhere, expire the cache by cancelling the token\
 _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
+
+La memorizzazione nella cache può migliorare notevolmente le prestazioni delle pagine Web che richiedono più volte gli stessi valori dal database. Assicurarsi di misurare le prestazioni di accesso ai dati e delle pagine prima di applicare la memorizzazione nella cache e applicarla solo dove si ritiene sia necessario un miglioramento. La memorizzazione nella cache consuma le risorse di memoria del server Web e aumenta la complessità dell'applicazione, pertanto è importante non eseguire anzitempo l'ottimizzazione con questa tecnica.
 
 >[!div class="step-by-step"]
 [Precedente](develop-asp-net-core-mvc-apps.md)

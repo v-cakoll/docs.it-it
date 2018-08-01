@@ -3,13 +3,13 @@ title: Installare .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8
 description: Informazioni sull'installazione di .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8.
 author: rlander
 ms.author: mairaw
-ms.date: 03/30/2018
-ms.openlocfilehash: 226449b8ee7c9360e6bfdc5bfa5dfeb59f19bd2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 07/16/2018
+ms.openlocfilehash: 7b3b7ca5709008260ea284602a3ed8d2b288c410
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387416"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245537"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Installare .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8
 
@@ -42,3 +42,6 @@ Se si prova a eseguire un'app che richiede .NET Framework 3.5 può essere visual
 Durante l'installazione può verificarsi un errore 0x800f0906, 0x800f0907, 0x800f081f o 0x800F0922. In tal caso, vedere [Errore di installazione di .NET Framework 3.5: 0x800f0906, 0x800f0907 o 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) per informazioni su come risolvere questi problemi.
 
 Se il problema di installazione persiste o se non è disponibile una connessione a Internet, è possibile tentare l'installazione usando il supporto di installazione di Windows. Per altre informazioni, vedere [Deploy .NET Framework 3.5 by using Deployment Image Servicing and Management (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism) (Distribuire .NET Framework 3.5 usando Gestione e manutenzione immagini distribuzione). Se il supporto di installazione non è disponibile, vedere [Creare supporti di installazione per Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
+
+> [!WARNING]
+> Se non intende usare Windows Update come origine per l'installazione di .NET Framework 3.5, è necessario usare esclusivamente le origini della stessa versione del sistema operativo di Windows corrispondente. L'uso un percorso di origine non corrisponde alla stessa versione di Windows non impedisce di installare una versione non corrispondente di .NET Framework 3.5. Tuttavia, in questo modo il sistema sarà in uno stato non supportato e inutilizzabile.

@@ -3,20 +3,18 @@ title: Tecnologie Web lato client comuni
 description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Tecnologie Web lato client comuni
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: 79dac220e40274889783d29c0e04679dd878fda5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106762"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404606"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologie Web lato client comuni
 
 > "I siti Web dovrebbero avere sempre un ottimo aspetto, dentro e fuori."  
 > _- Paul Cookson_
-
-## <a name="summary"></a>Riepilogo
 
 Le applicazioni ASP.NET Core sono applicazioni Web che in genere si basano su tecnologie Web lato client quali HTML, CSS e JavaScript. Grazie alla separazione del contenuto della pagina (HTML) dal layout e dallo stile (CSS), nonché dal comportamento (tramite JavaScript), le app Web complesse possono sfruttare il principio di separazione delle competenze. Se queste competenze non sono interconnesse, le future modifiche alla struttura, alla progettazione o al comportamento possono essere apportate più facilmente.
 
@@ -38,7 +36,7 @@ La tecnologia CSS (Cascading Style Sheets) viene usata per controllare l'aspetto
 
 ### <a name="css-preprocessors"></a>Preprocessori CSS
 
-Nei fogli di stile CSS non è previsto il supporto per la logica condizionale, le variabili e altre funzionalità del linguaggio di programmazione. Di conseguenza, fogli di stile di grandi dimensioni spesso includono molte ripetizioni poiché gli stessi colori, caratteri o altre impostazioni vengono applicati a molte varianti diverse degli elementi HTML e delle classi CSS. Grazie ai preprocessori CSS, i fogli di stile possono seguire il [principio DRY](http://deviq.com/don-t-repeat-yourself/) aggiungendo il supporto per le variabili e la logica.
+Nei fogli di stile CSS non è previsto il supporto per la logica condizionale, le variabili e altre funzionalità del linguaggio di programmazione. Di conseguenza, fogli di stile di grandi dimensioni spesso includono molte ripetizioni poiché gli stessi colori, caratteri o altre impostazioni vengono applicati a molte varianti diverse degli elementi HTML e delle classi CSS. Grazie ai preprocessori CSS, i fogli di stile possono seguire il [principio DRY](https://deviq.com/don-t-repeat-yourself/) aggiungendo il supporto per le variabili e la logica.
 
 I preprocessori CSS più diffusi sono Sass e LESS. Entrambi estendono CSS e sono compatibili con le versioni precedenti, vale a dire che un file CSS normale è un file Sass o LESS valido. Sass è basato su Ruby e LESS è basato su JavaScript. Entrambi vengono in genere eseguiti nell'ambito del processo di sviluppo locale. Per entrambi sono disponibili strumenti da riga di comando e il supporto predefinito in Visual Studio per l'esecuzione tramite attività Gulp o Grunt.
 
@@ -48,13 +46,13 @@ JavaScript è un linguaggio di programmazione dinamico e interpretato che è sta
 
 Quando si usa la tecnologia JavaScript in un'applicazione Web sarà in genere necessario eseguire alcune attività:
 
--   Selezione di un elemento HTML e recupero e/o aggiornamento del relativo valore
+- Selezione di un elemento HTML e recupero e/o aggiornamento del relativo valore.
 
--   Esecuzione di query su un'API Web per ottenere i dati
+- Esecuzione di query su un'API Web per ottenere i dati.
 
--   Invio di un comando a un'API Web (e risposta a un callback con il relativo risultato)
+- Invio di un comando a un'API Web (e risposta a un callback con il relativo risultato).
 
--   Esecuzione della convalida
+- Esecuzione della convalida.
 
 È possibile eseguire tutte queste attività solo con JavaScript, ma esistono molte librerie che semplificano queste operazioni. Una delle prime di queste librerie e tra le più usate è jQuery che continua a essere una scelta piuttosto diffusa per semplificare queste attività nelle pagine Web. Per le applicazioni a pagina singola, jQuery non offre molte delle funzionalità desiderate offerte da Angular e React.
 
@@ -100,9 +98,9 @@ I componenti vengono definiti usando la funzione di espressione Decorator @Compo
 
 Grazie all'uso di componenti e modelli, anziché di elementi DOM, le app Angular sono in grado di operare a un livello di astrazione superiore e con una minore quantità di codice rispetto alle app scritte usando solo JavaScript (anche noto come "vanilla JS") o con jQuery. Angular impone anche un certo ordine nel modo di organizzare i file di script sul lato client. Per convenzione, le app Angular usano una struttura di cartelle comune con i file di script di moduli e componenti inseriti in una cartella dell'app. Gli script di Angular relativi alla compilazione, alla distribuzione e ai test dell'app si trovano in genere in una cartella di livello superiore.
 
-Angular fa anche un ottimo uso degli strumenti dell'interfaccia della riga di comando. Per iniziare a sviluppare con Angular in locale, presupponendo che git e npm siano già installati, basta semplicemente clonare un repository da GitHub ed eseguire \`npm install\` e \`npm start\`. Oltre a ciò, Angular offre il proprio strumento dell'interfaccia della riga di comando che consente di creare progetti, aggiungere file e semplificare le attività di test, creazione di bundle e distribuzione. Grazie all'uso di questo tipo di strumenti, Angular è particolarmente compatibile con ASP.NET Core il cui supporto dell'interfaccia della riga di comando è altrettanto buono.
+Angular fa anche un ottimo uso degli strumenti dell'interfaccia della riga di comando. Per iniziare a sviluppare con Angular in locale, presupponendo che git e npm siano già installati, basta semplicemente clonare un repository da GitHub ed eseguire `npm install` e `npm start`. Oltre a ciò, Angular offre il proprio strumento dell'interfaccia della riga di comando che consente di creare progetti, aggiungere file e semplificare le attività di test, creazione di bundle e distribuzione. Grazie all'uso di questo tipo di strumenti, Angular è particolarmente compatibile con ASP.NET Core il cui supporto dell'interfaccia della riga di comando è altrettanto buono.
 
-Microsoft ha sviluppato un'applicazione di riferimento, [eShopOnContainers](http://aka.ms/MicroservicesArchitecture), che include l'implementazione di un'applicazione a pagina singola Angular. Questa app include moduli Angular per gestire il carrello acquisti del negozio online, caricare e visualizzare gli articoli dal catalogo e gestire la creazione degli ordini. È possibile visualizzare e scaricare l'applicazione di esempio da [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
+Microsoft ha sviluppato un'applicazione di riferimento, [eShopOnContainers](https://aka.ms/MicroservicesArchitecture), che include l'implementazione di un'applicazione a pagina singola Angular. Questa app include moduli Angular per gestire il carrello acquisti del negozio online, caricare e visualizzare gli articoli dal catalogo e gestire la creazione degli ordini. È possibile visualizzare e scaricare l'applicazione di esempio da [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
 
 ### <a name="react"></a>React
 
@@ -128,17 +126,17 @@ Dal momento che React non è un framework completo, in genere è opportuno usare
 
 Al momento di valutare il framework JavaScript migliore per supportare un'applicazione a pagina singola, tenere presente le considerazioni seguenti:
 
--   Il team ha familiarità con il framework e le relative dipendenze (incluso TypeScript in alcuni casi)?
+- Il team ha familiarità con il framework e le relative dipendenze (incluso TypeScript in alcuni casi)?
 
--   Quanto è vincolante il framework e si è d'accordo con la modalità predefinita di esecuzione delle operazioni?
+- Quanto è vincolante il framework e si è d'accordo con la modalità predefinita di esecuzione delle operazioni?
 
--   Il framework (o una libreria complementare) include tutte le funzionalità necessarie per l'app?
+- Il framework (o una libreria complementare) include tutte le funzionalità necessarie per l'app?
 
--   È ben documentato?
+- È ben documentato?
 
--   La community del framework è sufficientemente attiva? Viene usato nella compilazione di nuovi progetti?
+- La community del framework è sufficientemente attiva? Viene usato nella compilazione di nuovi progetti?
 
--   Quanto è attivo il team di base? I problemi vengono risolti e nuove versioni vengono rese disponibili regolarmente?
+- Quanto è attivo il team di base? I problemi vengono risolti e nuove versioni vengono rese disponibili regolarmente?
 
 I framework JavaScript continuano a evolvere molto rapidamente. Usare le considerazioni elencate sopra per ridurre il rischio di scegliere un framework da cui in seguito ci si pentirà di dover dipendere. Se si è particolarmente contrari a rischiare, prendere in considerazione un framework che offra supporto commerciale e/o che sia sviluppato da una grande azienda.
 

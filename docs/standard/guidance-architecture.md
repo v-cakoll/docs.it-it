@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.technology: dotnet
-ms.openlocfilehash: 7d636e842c7ec91949f2557f74ae724def858053
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e63f7043b2dfdbe367ed2cbfba13bc6985c1ead6
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570499"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404174"
 ---
 # <a name="net-architecture-guidance"></a>Linee guida sull'architettura .NET
 
@@ -28,4 +28,8 @@ In questa guida viene fornita un'introduzione all'architettura consigliata, alla
 
 ## <a name="architecting-container-and-microservice-based-applicationsmicroservices-architectureindexmd"></a>[Architettura di applicazioni basate su contenitori e microservizi](microservices-architecture/index.md)
 
-Questa guida offre un'introduzione allo sviluppo di applicazioni basate su microservizi e alla relativa gestione tramite i contenitori. Vengono descritti gli approcci alla progettazione e all'implementazione dell'architettura mediante i contenitori di .NET Core e Docker. 
+Questa guida offre un'introduzione allo sviluppo di applicazioni basate su microservizi e alla relativa gestione tramite i contenitori. Vengono descritti gli approcci alla progettazione e all'implementazione dell'architettura mediante i contenitori di .NET Core e Docker.
+
+## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[App serverless: architettura, modelli e implementazione di Azure](serverless-architecture/index.md)
+
+Questa guida illustra come compilare applicazioni serverless con esempi che usano Azure. Illustra vari approcci di architettura e progettazione, i vantaggi e le sfide del serverless, oltre a fornisce gli scenari e casi d'uso per le app serverless.

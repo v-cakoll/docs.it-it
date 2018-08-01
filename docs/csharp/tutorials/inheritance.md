@@ -3,14 +3,14 @@ title: Ereditarietà in C#
 description: Informazioni su come usare l'ereditarietà nelle applicazioni e nelle librerie C#.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 08/16/2017
+ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 1476425594e55531fdb56de531ee61808dccd7db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 646602c4bab311e6d6078378fe423741a1dd38e1
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365761"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875224"
 ---
 # <a name="inheritance-in-c-and-net"></a>Ereditarietà in C# e .NET
 
@@ -32,7 +32,6 @@ Per creare ed eseguire gli esempi in questa esercitazione, viene usata l'utilit�
   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. Per compilare ed eseguire l'esempio, immettere il comando [dotnet run](../../core/tools/dotnet-run.md).
-
 
 ## <a name="background-what-is-inheritance"></a>Informazioni generali: che cos'è l'ereditarietà?
 
@@ -99,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-L'ereditarietà si applica solo alle classi e alle interfacce. Le altre categorie di tipi (struct, delegati ed enumerazioni) non supportano l'ereditarietà. Per questo motivo, se si prova a compilare il codice come nell'esempio seguente, verrà generato l'errore del compilatore CS0527: "Il tipo 'ValueType' nell'elenco delle interfacce non è un'interfaccia". Il messaggio di errore indica che, sebbene sia possibile definire le interfacce implementate da un tipo struct, l'ereditarietà non è supportata.
+L'ereditarietà si applica solo alle classi e alle interfacce. Le altre categorie di tipi (struct, delegati ed enumerazioni) non supportano l'ereditarietà. Per queste regole, se si prova a compilare il codice come nell'esempio seguente, verrà generato l'errore del compilatore CS0527: "Il tipo 'ValueType' nell'elenco delle interfacce non è un'interfaccia". Il messaggio di errore indica che, sebbene sia possibile definire le interfacce implementate da un tipo struct, l'ereditarietà non è supportata.
 
 ```csharp
 using System;
@@ -111,13 +110,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="implicit-inheritance"></a>Ereditarietà implicita
 
-Oltre ai tipi da cui possono ereditare tramite l'ereditarietà singola, tutti i tipi nel sistema di tipi .NET ereditano in modo implicito da <xref:System.Object> o da un tipo derivato. In questo modo le funzionalità comuni saranno disponibili per qualsiasi tipo.
+Oltre ai tipi da cui possono ereditare tramite l'ereditarietà singola, tutti i tipi nel sistema di tipi .NET ereditano in modo implicito da <xref:System.Object> o da un tipo derivato. Le funzionalità comuni di <xref:System.Object> saranno disponibili per qualsiasi tipo.
 
 Per comprendere il significato dell'ereditarietà implicita, si definirà una nuova classe, `SimpleClass`, che è semplicemente una definizione di classe vuota:
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-È quindi possibile usare la reflection, che consente di esaminare i metadati del tipo per ottenere informazioni su di esso, per generare un elenco dei membri che appartengono al tipo `SimpleClass`. Anche se non è stato definito alcun membro nella classe `SimpleClass`, l'output dell'esempio indica che ha effettivamente nove membri. Uno di questi membri è un costruttore senza parametri (o predefinito) fornito automaticamente per il tipo `SimpleClass` dal compilatore C#. I rimanenti otto sono membri di <xref:System.Object>, il tipo da cui ereditano in modo implicito tutte le classi e le interfacce nel sistema di tipi .NET.
+È quindi possibile usare la reflection, che consente di esaminare i metadati del tipo per ottenere informazioni su di esso, per generare un elenco dei membri che appartengono al tipo `SimpleClass`. Anche se non è stato definito alcun membro nella classe `SimpleClass`, l'output dell'esempio indica che ha effettivamente nove membri. Uno di questi è un costruttore senza parametri (o predefinito) fornito automaticamente per il tipo `SimpleClass` dal compilatore C#. I rimanenti otto sono membri di <xref:System.Object>, il tipo da cui ereditano in modo implicito tutte le classi e le interfacce nel sistema di tipi .NET.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
@@ -177,25 +176,27 @@ Per progettare la classe `Publication`, è necessario prendere alcune decisioni 
 
   In questo caso la classe `Publication` fornirà le implementazioni del metodo. La sezione [Progettazione di classi di base astratte e delle relative classi derivate](#abstract) contiene un esempio in cui viene usata una classe base astratta per definire i metodi di cui le classi derivate devono eseguire l'override. Le classi derivate possono fornire qualsiasi implementazione adatta al tipo derivato.
 
-  La possibilità di riutilizzare il codice, ovvero il fatto che più classi derivate condividano la dichiarazione e l'implementazione dei metodi della classe di base e non ne richiedano l'override, è un vantaggio delle classi di base non astratte. È quindi necessario aggiungere membri a `Publication` se è probabile che il relativo codice venga condiviso da alcuni o dalla maggior parte dei tipi specializzati `Publication`. Se questa operazione non viene eseguita in modo efficiente, sarà necessario fornire implementazioni di membri pressoché identiche nelle classi derivate anziché una singola implementazione nella classe di base. La necessità di mantenere il codice duplicato in più posizioni è una potenziale fonte di bug.
+  La possibilità di riutilizzare il codice, ovvero il fatto che più classi derivate condividano la dichiarazione e l'implementazione dei metodi della classe di base e non ne richiedano l'override, è un vantaggio delle classi di base non astratte. È quindi necessario aggiungere membri a `Publication` se è probabile che il relativo codice venga condiviso da alcuni o dalla maggior parte dei tipi specializzati `Publication`. Se le implementazioni delle classi di base non vengono eseguite in modo efficiente, sarà necessario fornire implementazioni di membri pressoché identiche nelle classi derivate anziché una singola implementazione nella classe di base. La necessità di mantenere il codice duplicato in più posizioni è una potenziale fonte di bug.
 
   Per ottimizzare il riutilizzo del codice e per creare una gerarchia di ereditarietà logica e intuitiva, è opportuno assicurarsi che nella classe `Publication` vengano inclusi solo i dati e le funzionalità comuni a tutte le pubblicazioni o alla maggior parte di esse. Le classi derivate implementano quindi i membri che sono univoci per i tipi di pubblicazione specifici che rappresentano.
 
 - Fino a che punto estendere la gerarchia di classi. È necessario decidere se si vuole sviluppare una gerarchia di tre o più classi, anziché semplicemente una classe di base e una o più classi derivate. `Publication` può ad esempio essere una classe di base di `Periodical`, che a sua volta è una classe di base di `Magazine`, `Journal` e `Newspaper`.
 
-  Per questo esempio si userà la gerarchia semplice di una classe `Publication` e di una singola classe derivata `Book`. L'esempio può essere facilmente esteso alla creazione di una serie di classi aggiuntive che derivano da `Publication`, ad esempio `Magazine` e `Article`.
+  Per questo esempio si userà la piccola gerarchia di una classe `Publication` e di una singola classe derivata `Book`. L'esempio può essere facilmente esteso alla creazione di una serie di classi aggiuntive che derivano da `Publication`, ad esempio `Magazine` e `Article`.
 
-- Se è opportuno creare un'istanza della classe di base. In caso contrario, è necessario applicare alla classe la parola chiave [abstract](../language-reference/keywords/abstract.md). Se si prova a creare un'istanza di una classe contrassegnata con la parola chiave `abstract` da una chiamata diretta al costruttore della classe, il compilatore C# genera l'errore CS0144, "Non è possibile creare un'istanza della classe o dell'interfaccia astratta". Se si prova a creare un'istanza della classe usando la reflection, il metodo di reflection genera un'eccezione <xref:System.MemberAccessException>. In caso contrario, è possibile creare un'istanza della classe `Publication` chiamando il relativo costruttore di classe.
+- Se è opportuno creare un'istanza della classe di base. In caso contrario, è necessario applicare alla classe la parola chiave [abstract](../language-reference/keywords/abstract.md). Altrimenti è possibile creare un'istanza della classe `Publication` chiamando il relativo costruttore di classe. Se si prova a creare un'istanza di una classe contrassegnata con la parola chiave `abstract` da una chiamata diretta al costruttore della classe, il compilatore C# genera l'errore CS0144, "Non è possibile creare un'istanza della classe o dell'interfaccia astratta". Se si prova a creare un'istanza della classe usando la reflection, il metodo di reflection genera un'eccezione <xref:System.MemberAccessException>.
 
-  Per impostazione predefinita, è possibile creare un'istanza della classe di base chiamando il relativo costruttore di classe. Si noti che non è necessario definire in modo esplicito un costruttore di classe. Se non è presente un costruttore nel codice sorgente della classe di base, il compilatore C# ne fornisce automaticamente uno predefinito (senza parametri).
+  Per impostazione predefinita, è possibile creare un'istanza della classe di base chiamando il relativo costruttore di classe. Non è necessario definire in modo esplicito un costruttore di classe. Se non è presente un costruttore nel codice sorgente della classe di base, il compilatore C# ne fornisce automaticamente uno predefinito (senza parametri).
 
-  Per questo esempio, la classe `Publication` verrà contrassegnata come [abstract](../language-reference/keywords/abstract.md) in modo che non sia possibile crearne un'istanza.
+  Per questo esempio, la classe `Publication` verrà contrassegnata come [abstract](../language-reference/keywords/abstract.md) in modo che non sia possibile crearne un'istanza.  Una classe `abstract` senza metodi `abstract` indica che questa classe rappresenta un concetto astratto condiviso tra diverse classi concrete (ad esempio `Book`, `Journal`).
 
-- Se le classi derivate devono ereditare l'implementazione della classe di base di un membro specifico o se possono eseguire l'override dell'implementazione della classe di base. È necessario usare la parola chiave [virtual](../language-reference/keywords/virtual.md) per consentire alle classi derivate di eseguire l'override di un metodo della classe di base. Per impostazione predefinita, *non* è possibile eseguire l'override dei metodi definiti nella classe di base.
+- Se le classi derivate devono ereditare l'implementazione della classe di base di un membro specifico, o se possono eseguire l'override dell'implementazione della classe di base, o ancora se devono fornire un'implementazione. La parola chiave [abstract](../language-reference/keywords/abstract.md) si usa per forzare le classi derivate a fornire un'implementazione. Usare la parola chiave [virtual](../language-reference/keywords/virtual.md) per consentire alle classi derivate di eseguire l'override di un metodo della classe di base. Per impostazione predefinita, *non* è possibile eseguire l'override dei metodi definiti nella classe di base.
+
+ La classe `Publication` non ha metodi `abstract`, ma la classe stessa è `abstract`.
 
 - Se una classe derivata rappresenta la classe finale nella gerarchia di ereditarietà e non può essere usata come classe di base per altre classi derivate. Per impostazione predefinita, qualsiasi classe può essere usata come classe di base. È possibile applicare la parola chiave [sealed](../language-reference/keywords/sealed.md) per indicare che una classe non può essere usata come classe di base per altre classi. Se si prova a stabilire una relazione di derivazione da una classe sealed, viene generato l'errore del compilatore CS0509, "non può derivare dal tipo sealed <typeName>".
 
-  Per questo esempio, la classe derivata verrà contrassegnata come `sealed`.
+  Per esempio, contrassegnare la classe derivata come `sealed`.
 
 L'esempio seguente illustra il codice sorgente della classe `Publication`, nonché un'enumerazione `PublicationType` restituita dalla proprietà `Publication.PublicationType`. Oltre ai membri che eredita da <xref:System.Object>, la classe `Publication` definisce i membri univoci e gli override dei membri seguenti:
 
@@ -250,7 +251,7 @@ Oltre ai membri che eredita da `Publication`, la classe `Book` definisce i membr
 
   I due costruttori `Book` condividono tre parametri comuni. Due, *title* e *publisher*, corrispondono ai parametri del costruttore `Publication`. Il terzo è *author*, che viene archiviato in un campo privato `authorName`. Un costruttore include un parametro *isbn*, che viene archiviato nella proprietà automatica `ISBN`.
 
-  Il primo costruttore usa la parola chiave [this](../language-reference/keywords/this.md) per chiamare l'altro costruttore. Questo è un modello comune per la definizione di costruttori. I costruttori con meno parametri forniscono i valori predefiniti quando chiamano il costruttore con il maggior numero di parametri.
+  Il primo costruttore usa la parola chiave [this](../language-reference/keywords/this.md) per chiamare l'altro costruttore. Il concatenamento di costruttori è un modello comune nella definizione dei costruttori. I costruttori con meno parametri forniscono i valori predefiniti quando chiamano il costruttore con il maggior numero di parametri.
 
   Il secondo costruttore usa la parola chiave [base](../language-reference/keywords/base.md) per passare il titolo e il nome dell'editore al costruttore della classe di base. Se non si esegue una chiamata esplicita a un costruttore della classe di base nel codice sorgente, il compilatore C# effettua automaticamente una chiamata al costruttore della classe di base predefinito o senza parametri.
 
@@ -264,7 +265,7 @@ Oltre ai membri che eredita da `Publication`, la classe `Book` definisce i membr
 
 - Esegue l'override del metodo `ToString` ereditato da `Publication` e dei metodi <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> e <xref:System.Object.GetHashCode%2A> (ereditati da <xref:System.Object>).
 
-  A meno che non venga sottoposto a override, il metodo <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> verifica l'uguaglianza dei riferimenti. Ciò significa che due variabili di oggetto sono considerate uguali se fanno riferimento allo stesso oggetto. Nel caso della classe `Book`, d'altra parte, due oggetti `Book` sono considerati uguali se hanno lo stesso ISBN.
+  A meno che non venga sottoposto a override, il metodo <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> verifica l'uguaglianza dei riferimenti. Ciò significa che due variabili di oggetto sono considerate uguali se fanno riferimento allo stesso oggetto. Nella classe `Book`, d'altra parte, due oggetti `Book` sono considerati uguali se hanno lo stesso ISBN.
 
   Quando si esegue l'override del metodo <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>, è necessario eseguire l'override anche del metodo <xref:System.Object.GetHashCode%2A>, che restituisce un valore che verrà usato dal runtime per archiviare elementi in raccolte con hash e facilitarne così il recupero. Il codice hash deve restituire un valore coerente con il test di uguaglianza. Poiché <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> è stato sottoposto a override per restituire `true` se le proprietà ISBN di due oggetti `Book` sono uguali, si restituisce il codice hash calcolato chiamando il metodo <xref:System.String.GetHashCode%2A> della stringa restituita dalla proprietà `ISBN`.
 
@@ -279,11 +280,11 @@ La figura seguente illustra la relazione tra la classe `Book` e la relativa clas
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>Progettazione di classi di base astratte e delle relative classi derivate
 <a name="abstract"></a>
 
-Nell'esempio precedente si è definita una classe di base che fornisce un'implementazione per una serie di metodi per consentire alle classi derivate di condividere il codice. In molti casi, tuttavia, la classe di base non deve fornire un'implementazione. Al contrario, è una *classe astratta* e funge da modello che definisce i membri che ogni classe derivata deve implementare. Nel caso di una classe di base astratta l'implementazione di ogni tipo derivato è in genere univoca per quel tipo.
+Nell'esempio precedente si è definita una classe di base che fornisce un'implementazione per una serie di metodi per consentire alle classi derivate di condividere il codice. In molti casi, tuttavia, la classe di base non deve fornire un'implementazione. Al contrario, è una *classe astratta* che dichiara dei *metodi astratti* e funge da modello che definisce i membri che ogni classe derivata deve implementare. Per una classe di base astratta l'implementazione di ogni tipo derivato è in genere univoca per quel tipo. La classe è stata contrassegnata con la parola chiave abstract perché non si è ritenuto logico creare un'istanza di un oggetto `Publication`, anche se la classe ha fornito implementazioni di funzionalità comuni alle pubblicazioni.
 
-Ogni forma geometrica bidimensionale chiusa include ad esempio due proprietà: l'area, l'estensione interna della forma e il perimetro, ovvero la lunghezza totale dei bordi della forma. La modalità di calcolo di queste proprietà dipende tuttavia completamente dalla forma specifica. La formula per calcolare il perimetro (o circonferenza) di un cerchio è ad esempio molto diversa da quella usata per un triangolo.
+Ogni forma geometrica bidimensionale chiusa include ad esempio due proprietà: l'area, l'estensione interna della forma e il perimetro, ovvero la lunghezza totale dei bordi della forma. La modalità di calcolo di queste proprietà dipende tuttavia completamente dalla forma specifica. La formula per calcolare il perimetro (o circonferenza) di un cerchio è ad esempio diversa da quella usata per un triangolo. La classe `Shape` è una classe `abstract` con i metodi `abstract`. Ciò indica che le classi derivate condividono la stessa funzionalità, ma implementano questa funzionalità in modo diverso.
 
-L'esempio seguente definisce una classe di base astratta denominata `Shape` che definisce due proprietà: `Area` e `Perimeter`. Si noti che, oltre a contrassegnare la classe con la parola chiave [abstract](../language-reference/keywords/abstract.md), si contrassegna con la parola chiave [abstract](../language-reference/keywords/abstract.md) anche ogni membro dell'istanza. In questo caso `Shape` esegue anche l'override del metodo <xref:System.Object.ToString%2A?displayProperty=nameWithType> per restituire il nome del tipo, anziché il nome completo. Definisce inoltre due membri statici, `GetArea` e `GetPerimeter`, che consentono ai chiamanti di recuperare facilmente l'area e il perimetro di un'istanza di qualsiasi classe derivata. Quando si passa un'istanza di una classe derivata a uno di questi metodi, il runtime chiama l'override del metodo della classe derivata.
+L'esempio seguente definisce una classe di base astratta denominata `Shape` che definisce due proprietà: `Area` e `Perimeter`. Oltre a contrassegnare la classe con la parola chiave [abstract](../language-reference/keywords/abstract.md), si contrassegna con la parola chiave [abstract](../language-reference/keywords/abstract.md) anche ogni membro dell'istanza. In questo caso `Shape` esegue anche l'override del metodo <xref:System.Object.ToString%2A?displayProperty=nameWithType> per restituire il nome del tipo, anziché il nome completo. Definisce inoltre due membri statici, `GetArea` e `GetPerimeter`, che consentono ai chiamanti di recuperare facilmente l'area e il perimetro di un'istanza di qualsiasi classe derivata. Quando si passa un'istanza di una classe derivata a uno di questi metodi, il runtime chiama l'override del metodo della classe derivata.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
@@ -291,7 +292,7 @@ L'esempio seguente definisce una classe di base astratta denominata `Shape` che 
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-Nell'esempio seguente vengono usati gli oggetti derivati da `Shape`. Viene creata un'istanza di una matrice di oggetti derivati da `Shape` e vengono chiamati i metodi statici della classe `Shape`, che esegue il wrapping dei valori restituiti della proprietà `Shape`. Si noti che il runtime recupera i valori dalle proprietà dei tipi derivati sottoposte a override. Nell'esempio viene anche eseguito il cast di ogni oggetto `Shape` nella matrice al relativo tipo derivato e, se il cast ha esito positivo, vengono recuperate le proprietà di quella sottoclasse specifica di `Shape`. 
+Nell'esempio seguente vengono usati gli oggetti derivati da `Shape`. Viene creata un'istanza di una matrice di oggetti derivati da `Shape` e vengono chiamati i metodi statici della classe `Shape`, che esegue il wrapping dei valori restituiti della proprietà `Shape`. Il runtime recupera i valori dalle proprietà dei tipi derivati sottoposte a override. Nell'esempio viene anche eseguito il cast di ogni oggetto `Shape` nella matrice al relativo tipo derivato e, se il cast ha esito positivo, vengono recuperate le proprietà di quella sottoclasse specifica di `Shape`. 
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 

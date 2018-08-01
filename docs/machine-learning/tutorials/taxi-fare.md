@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 06/18/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9706dad0a8e32651496e0404be4501c2c70e9d75
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: e3ff2124a43cf42ce26cf94cfd5384387eef0ed9
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948631"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937072"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>Esercitazione: Usare ML.NET per stimare le tariffe dei taxi a New York (regressione)
 
@@ -296,6 +296,6 @@ In questa esercitazione si è appreso come:
 > * Valutare il modello
 > * Usare il modello per le stime
 
-Visitare il repository GitHub per ottenere altre informazioni ed esempi.
+Passare all'esercitazione successiva per altre informazioni.
 > [!div class="nextstepaction"]
-> [Repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/)
+> [Clustering Iris](iris-clustering.md)

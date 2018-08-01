@@ -3,13 +3,13 @@ title: Processo di sviluppo per Azure
 description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Processo di sviluppo per Azure
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/08/2017
-ms.openlocfilehash: ea7b173369cea3b785297a136546d65965c3d789
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106853"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404389"
 ---
 # <a name="development-process-for-azure"></a>Processo di sviluppo per Azure
 
@@ -40,8 +40,6 @@ Durante lo sviluppo di applicazioni ASP.NET Core Microsoft offre gli strumenti n
 
 [Download di Visual Studio Code](https://code.visualstudio.com/download)
 
-
-
 ## <a name="development-workflow-for-azure-hosted-aspnet-core-apps"></a>Flusso di lavoro di sviluppo per le app ASP.NET Core ospitate in Azure
 
 Il ciclo di vita dello sviluppo applicativo inizia dal computer di ogni sviluppatore quando l'applicazione viene scritta usando il linguaggio preferito e viene testata in locale. Gli sviluppatori possono scegliere il sistema di controllo del codice sorgente preferito e possono configurare l'integrazione continua (CI) e/o il recapito/distribuzione continua (CD) usando un server di compilazione o in base alle funzionalità di Azure predefinite.
@@ -52,9 +50,9 @@ Per iniziare a sviluppare un'applicazione ASP.NET Core mediante CI/CD, è possib
 
 Per creare una pipeline di versione per l'app, è necessario avere il codice dell'applicazione nel controllo del codice sorgente. Configurare un repository locale e connetterlo a un repository remoto in un progetto team. Seguire le istruzioni seguenti:
 
--   [Condividere il codice con Git e Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) oppure
+- [Condividere il codice con Git e Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) oppure
 
--   [Condividere il codice con il controllo della versione di Team Foundation e Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+- [Condividere il codice con il controllo della versione di Team Foundation e Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 Creare un servizio app di Azure in cui verrà distribuita l'applicazione. Creare un'app Web passando al pannello Servizi app nel portale di Azure. Fare clic su +Aggiungi, selezionare il modello di app Web, fare clic su Crea e specificare un nome e altri dettagli. L'app Web sarà accessibile da {name}.azurewebsites.net.
 
@@ -90,7 +88,7 @@ Lo sviluppo di un'applicazione ASP.NET Core per la distribuzione in Azure non di
 
 Quando si è pronti per condividere il codice con il proprio team, eseguire il push delle modifiche dal repository del codice sorgente locale al repository del codice sorgente condiviso del team. Se è stato usato un ramo personalizzato, questo passaggio prevede in genere l'unione del codice in un ramo condiviso, ad esempio per mezzo di una [richiesta pull](https://docs.microsoft.com/vsts/git/pull-requests).
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Passaggio 3. Server di compilazione: integrazione continua. Compilazione, test, pacchetto
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Passaggio 3. Server di compilazione: integrazione continua. compilazione, test, pacchetto
 
 Per ogni nuovo commit eseguito nel repository di codice dell'applicazione condiviso, nel server di compilazione viene attivata una nuova compilazione. Come parte del processo di integrazione continua (CI), la compilazione deve compilare l'applicazione ed eseguire test automatizzati per verificare che tutto funzioni come previsto. Il risultato finale del processo di integrazione continua deve essere una versione pacchetto dell'app Web pronta per la distribuzione.
 
@@ -98,7 +96,7 @@ Per ogni nuovo commit eseguito nel repository di codice dell'applicazione condiv
 
 Dopo la compilazione, il processo di recapito continuo (CD) acquisirà gli artefatti di compilazione generati. Gli artefatti includeranno un pacchetto di distribuzione Web. Il server di compilazione distribuirà il pacchetto nel servizio app di Azure, sostituendo eventuali servizi esistenti con il servizio appena creato. Sebbene questo passaggio sia in genere destinato a un ambiente di gestione temporanea, alcune applicazioni eseguono la distribuzione direttamente nell'ambiente di produzione tramite un processo CD.
 
-#### <a name="step-5-azure-app-service-web-app"></a>Passaggio 5. Servizio app di Azure. App Web.
+#### <a name="step-5-azure-app-service-web-app"></a>Passaggio 5. App Web del servizio app di Azure
 
 Dopo la distribuzione, l'applicazione ASP.NET Core viene eseguita all'interno del contesto di un'app Web del servizio app di Azure. L'app Web può essere monitorata e configurata tramite il portale di Azure.
 
@@ -110,7 +108,6 @@ Mentre l'app Web è in esecuzione, è possibile monitorare l'integrità dell'app
 
 **Compilare e distribuire l'app ASP.NET Core in Azure**  
 <https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
-
 
 >[!div class="step-by-step"]
 [Precedente](test-asp-net-core-mvc-apps.md)

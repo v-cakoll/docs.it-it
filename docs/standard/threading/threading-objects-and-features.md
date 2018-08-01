@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02f88faab6ddbaa026e73ad61bc63fbe8e5e00ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d689aeb91ad79b776c3b93c1809ec46947ea60b
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591327"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874787"
 ---
 # <a name="threading-objects-and-features"></a>Oggetti e funzionalità del threading
 .NET Framework fornisce numerosi oggetti che consentono di creare e gestire applicazioni multithread. I thread gestiti sono rappresentati dalla classe <xref:System.Threading.Thread>. La classe <xref:System.Threading.ThreadPool> consente di creare e gestire facilmente attività multithreading in background. La classe <xref:System.ComponentModel.BackgroundWorker> ha la stessa funzione per le attività che interagiscono con l'interfaccia utente. La classe <xref:System.Threading.Timer> esegue attività in background a intervalli fissi.  
@@ -25,7 +25,7 @@ ms.locfileid: "33591327"
  Illustra la classe **ThreadPool**, che consente di richiedere un thread per eseguire un'attività senza dover gestire manualmente il thread.  
   
  [Timer](../../../docs/standard/threading/timers.md)  
- Illustra come usare un **timer** per specificare un delegato da chiamare a un'ora specificata.  
+ Descrive i timer che possono essere usati in un ambiente multithreading.  
   
  [Monitoraggi](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  Illustra come usare la classe **Monitor** per sincronizzare l'accesso a un membro o per creare i propri tipi di gestione dei thread.  

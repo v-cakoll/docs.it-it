@@ -12,17 +12,17 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: 3f9b18b3362155e256c922a84f3f1cdb6d255a4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b00b01cb82f7fa2f1d9af42438c37592bb1e8181
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570978"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198876"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Quando implementare il modello asincrono basato su eventi
 Il modello asincrono basato su eventi fornisce un modello per esporre il comportamento asincrono di una classe. Con l'introduzione di questo modello, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definisce due modelli per l'esposizione del comportamento asincrono: il modello asincrono basato sull'interfaccia <xref:System.IAsyncResult?displayProperty=nameWithType> e il modello basato su eventi. Questo argomento illustra quando è appropriato implementare entrambi i modelli.  
   
- Per altre informazioni sulla programmazione asincrona con l'interfaccia <xref:System.IAsyncResult>, vedere [Modello asincrono basato su eventi (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+ Per altre informazioni sulla programmazione asincrona con l'interfaccia <xref:System.IAsyncResult>, vedere [Modello di programmazione asincrona (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
   
 ## <a name="general-principles"></a>Principi generali  
  In generale, è consigliabile esporre le funzionalità asincrone usando il modello asincrono basato su eventi ogni volta che è possibile. Tuttavia, esistono alcuni requisiti che il modello basato su eventi non riesce a soddisfare. In questi casi, potrebbe essere necessario implementare il modello <xref:System.IAsyncResult> oltre al modello basato su eventi.  

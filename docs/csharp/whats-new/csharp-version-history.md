@@ -3,12 +3,12 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207534"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404593"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C# #
 
@@ -73,7 +73,7 @@ C# versione 3.0 è stato rilasciato alla fine del 2007, insieme a Visual Studio 
 - [Metodi di estensione](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 - [Variabili locali tipizzate in modo implicito](../language-reference/keywords/var.md)
 - [Metodi parziali](../language-reference/keywords/partial-method.md)
-- Inizializzatori di oggetto e di insieme
+- [Inizializzatori di oggetto e di insieme](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 A posteriori, molte di queste funzionalità sembrano inevitabili e inseparabili, perché si fondono l'una con l'altra in modo strategico. Si pensa in genere che la funzionalità killer di questa versione di C# sia l'espressione di query, nota anche come Language-Integrated Query (LINQ),
 

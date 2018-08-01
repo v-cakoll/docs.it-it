@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: eaf410fa198fdb38a39a0474e9e147542919df8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 519c22e3c2647e2ae3423688b468e133a3e5eb84
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578421"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937114"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Suggerimenti per l'implementazione del modello asincrono basato su eventi
 Il modello asincrono basato su eventi offre un sistema efficace per l'esposizione del comportamento asincrono nelle classi attraverso una semantica nota di eventi e delegati. Per implementare tale modello, è necessario soddisfare alcuni requisiti comportamentali specifici. Nelle sezioni riportate di seguito vengono illustrati i requisiti e le indicazioni da tenere presenti per l'implementazione di una classe che segue il modello asincrono basato su eventi.  
@@ -28,14 +28,14 @@ Il modello asincrono basato su eventi offre un sistema efficace per l'esposizion
  Se si implementa il modello asincrono basato su eventi, è necessario fornire garanzie sul comportamento della classe e sull'affidabilità di tale comportamento per i client.  
   
 ### <a name="completion"></a>Completamento  
- Richiamare sempre il gestore eventi *NomeMetodo***Completed** in caso di completamento, errore o annullamento. È infatti consigliabile che le applicazioni non si trovino mai in una situazione permanente di inattività nella quale il completamento non si verifica mai. Fa eccezione a questa regola il caso in cui l'operazione asincrona stessa sia progettata per non essere mai completata.  
+ Richiamare sempre il gestore eventi <em>MethodName</em>**Completed** in caso di completamento, errore o annullamento. È infatti consigliabile che le applicazioni non si trovino mai in una situazione permanente di inattività nella quale il completamento non si verifica mai. Fa eccezione a questa regola il caso in cui l'operazione asincrona stessa sia progettata per non essere mai completata.  
   
 ### <a name="completed-event-and-eventargs"></a>Eventi Completed e classi EventArgs  
- Per ogni metodo *NomeMetodo***Async** distinto, applicare i requisiti di progettazione seguenti:  
+ Per ogni metodo <em>MethodName</em>**Async** distinto, applicare i requisiti di progettazione seguenti:  
   
--   Definire un evento *NomeMetodo***Completed** sulla stessa classe del metodo.  
+-   Definire un evento <em>MethodName</em>**Completed** sulla stessa classe del metodo.  
   
--   Definire una classe <xref:System.EventArgs> e un delegato associato per l'evento *NomeMetodo***Completed** che deriva dalla classe <xref:System.ComponentModel.AsyncCompletedEventArgs>. Il nome predefinito della classe deve avere il formato *NomeMetodo***CompletedEventArgs**.  
+-   Definire una classe <xref:System.EventArgs> e un delegato associato per l'evento <em>MethodName</em>**Completed** che deriva dalla classe <xref:System.ComponentModel.AsyncCompletedEventArgs>. Il nome predefinito della classe deve avere il formato *NomeMetodo***CompletedEventArgs**.  
   
 -   Verificare che la classe <xref:System.EventArgs> sia specifica dei valori restituiti del metodo *NomeMetodo*. Quando si usa la classe <xref:System.EventArgs>, è consigliabile non richiedere mai agli sviluppatori di eseguire il cast del risultato.  
   

@@ -3,13 +3,13 @@ title: Gestione degli errori parziali
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Gestione degli errori parziali
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 957a0b1b8b4d217fac591db54e4ee053098bc7da
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: 723719b22c1c7de63f19f68acf91e6499c1a4e43
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105195"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875183"
 ---
 # <a name="handling-partial-failure"></a>Gestione degli errori parziali
 
@@ -27,7 +27,7 @@ In applicazioni basate su microservizi di grandi dimensioni, ogni errore parzial
 
 **Figura 10-2**. L'impatto di una progettazione non corretta che prevede lunghe catene di richieste HTTP
 
-L'errore intermittente è virtualmente garantito in un sistema distribuito basato sul cloud, anche se ogni dipendenza presenta una disponibilità eccellente. Questo è un aspetto da prendere in considerazione.
+L'errore intermittente è garantito in un sistema distribuito basato sul cloud, anche se ogni dipendenza presenta una disponibilità eccellente. Questo è un aspetto da prendere in considerazione.
 
 Se non si progettano e implementano tecniche in grado di garantire la tolleranza di errore, anche brevi periodi di inattività possono risultare amplificati. Ad esempio, 50 dipendenze ognuna con una disponibilità del 99,99% genererebbero diverse ore di inattività al mese a causa dell'effetto domino. Quando si verifica un errore nella dipendenza di un microservizio durante la gestione di un volume elevato di richieste, l'errore può saturare velocemente tutti i thread delle richieste disponibili in ogni servizio e determinare un arresto anomalo dell'intera applicazione.
 
@@ -35,7 +35,7 @@ Se non si progettano e implementano tecniche in grado di garantire la tolleranza
 
 **Figura 10-3**. Errore parziale amplificato da microservizi con lunghe catene di chiamate HTTP sincrone
 
-Per ridurre al minimo l'impatto del problema, nella sezione "*L'integrazione di microservizi asincroni impone l'autonomia del microservizio*" del capitolo relativo all'architettura, si incoraggia l'uso della comunicazione asincrona tra i microservizi interni. Verranno fornite ulteriori spiegazioni nella sezione successiva.
+Per ridurre al minimo l'impatto del problema, nella sezione "*L'integrazione di microservizi asincroni impone l'autonomia del microservizio*" del capitolo relativo all'architettura, questa istruzione incoraggia l'uso della comunicazione asincrona tra i microservizi interni. 
 
 Inoltre, è essenziale progettare i microservizi e le applicazioni client per la gestione degli errori parziali, ovvero creare microservizi e applicazioni client resilienti.
 

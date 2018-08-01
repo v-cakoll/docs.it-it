@@ -3,26 +3,24 @@ title: Principi architetturali
 description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Principi architetturali
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 4ee14b128d3b83fd446352bb6f78afc08fb38c52
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 2e0938fc67e02a52b99158b2ff07b9f32464e674
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105859"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404438"
 ---
 # <a name="architectural-principles"></a>Principi architetturali
 
 > "Se i costruttori costruissero edifici come i programmatori scrivono i programmi, il primo picchio che passa distruggerebbe la civiltà."  
 > _\- Gerald Weinberg_
 
-## <a name="summary"></a>Riepilogo
-
 È necessario ideare e progettare soluzioni software tenendo presente l'aspetto della loro gestione. I principi indicati in questa sezione possono favorire scelte architetturali che daranno vita ad applicazioni pulite e gestibili. Generalmente, questi principi orientano verso la creazione di applicazioni contenenti componenti discreti che non sono strettamente accoppiati ad altre parti dell'applicazione, ma che comunicano tramite interfacce esplicite o sistemi di messaggistica.
 
 ## <a name="common-design-principles"></a>Principi di progettazione comuni
 
-### <a name="separation-of-concerns"></a>Separazione dei concetti
+### <a name="separation-of-concerns"></a>Separazione delle problematiche
 
 Un principio guida per lo sviluppo di applicazioni è **la separazione dei concetti**. In base a questo principio, deve esistere una separazione a livello di software in funzione delle operazioni eseguite. Ad esempio, si consideri un'applicazione che include la logica per l'identificazione di elementi importanti da visualizzare all'utente e la formattazione specifica di tali elementi per renderli più evidenti. Il comportamento responsabile della scelta degli elementi da formattare dovrebbe essere mantenuto separato dal comportamento responsabile della formattazione vera e propria degli elementi, poiché si tratta di concetti distinti e solo casualmente correlati tra loro.
 
@@ -64,7 +62,7 @@ In un'applicazione monolitica, è possibile applicare il principio di singola re
 
 Quando si applica questo principio all'architettura delle applicazioni portandolo fino all'endpoint logico, si ottengono i microservizi. Ogni microservizio deve avere una singola responsabilità. Se si presenta la necessità di estendere il comportamento di un sistema, è preferibile farlo aggiungendo ulteriori microservizi, anziché aggiungendo responsabilità a un microservizio esistente.
 
-[Altre informazioni sull'architettura dei microservizi](http://aka.ms/MicroservicesEbook)
+[Altre informazioni sull'architettura dei microservizi](https://aka.ms/MicroservicesEbook)
 
 ### <a name="dont-repeat-yourself-dry"></a>Don't Repeat Yourself (DRY)
 
@@ -81,17 +79,17 @@ Il **mancato riconoscimento della persistenza** riguarda i tipi che devono esser
 
 Alcuni esempi di violazioni di questo principio:
 
--   Una classe base obbligatoria
+- Una classe base obbligatoria.
 
--   Un'implementazione dell'interfaccia obbligatoria
+- Un'implementazione dell'interfaccia obbligatoria.
 
--   Classi responsabili del proprio salvataggio ad esempio, il criterio del record attivo
+- Classi responsabili del proprio salvataggio ad esempio, il criterio del record attivo.
 
--   Un costruttore predefinito obbligatorio
+- Un costruttore predefinito obbligatorio.
 
--   Proprietà che richiedono una parola chiave virtuale
+- Proprietà che richiedono una parola chiave virtuale.
 
--   Attributi di persistenza obbligatori
+- Attributi di persistenza obbligatori.
 
 Il requisito che le classi presentino una o più funzionalità o uno o più comportamenti precedenti rende permanente l'accoppiamento tra i tipi e aggiunge la scelta della tecnologia di persistenza, rendendo più difficoltoso adottare nuove strategie di accesso ai dati in futuro.
 
@@ -103,19 +101,20 @@ Come minimo, ogni singola applicazione web deve puntare ad essere il proprio con
 
 > ### <a name="references--modern-web-applications"></a>Riferimenti: applicazioni Web moderne
 > - **Separazione dei concetti**  
-> <http://deviq.com/separation-of-concerns/>
-> - **Incapsulamento** <http://deviq.com/encapsulation/>
+> <https://deviq.com/separation-of-concerns/>
+> - **Incapsulamento**  
+> <https://deviq.com/encapsulation/>
 > - **Principio di inversione delle dipendenze**  
-> <http://deviq.com/dependency-inversion-principle/>
+> <https://deviq.com/dependency-inversion-principle/>
 > - **Explicit Dependencies Principle** (Principio delle dipendenze esplicite)  
-> <http://deviq.com/explicit-dependencies-principle/>
+> <https://deviq.com/explicit-dependencies-principle/>
 > - **Don't Repeat Yourself (DRY)**  
-> <http://deviq.com/don-t-repeat-yourself/>
+> <https://deviq.com/don-t-repeat-yourself/>
 > - **Mancato riconoscimento della persistenza**  
-> <http://deviq.com/persistence-ignorance/>
+> <https://deviq.com/persistence-ignorance/>
 > - **Contesti limitati**  
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
-> [!div class="step-by-step"]
+>[!div class="step-by-step"]
 [Precedente](choose-between-traditional-web-and-single-page-apps.md)
 [Successivo](common-web-application-architectures.md)

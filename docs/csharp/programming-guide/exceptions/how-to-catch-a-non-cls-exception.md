@@ -4,60 +4,49 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-ms.openlocfilehash: 6169f4b6de2efdfed0dbf43272d708c47b46dbca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3153da78e0c25d59da7b5d83bd33f8080c7fae8
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340021"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198770"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Procedura: intercettare un'eccezione non CLS
-Alcuni linguaggi .NET, inclusi C++ /CLI, consentono agli oggetti di generare eccezioni che non derivano da <xref:System.Exception>. Tali eccezioni sono chiamate *eccezioni non CLS* o *non eccezioni*. In Visual C# non è possibile generare eccezioni non CLS, ma è possibile rilevarle in due modi:  
+Alcuni linguaggi .NET, inclusi C++ /CLI, consentono agli oggetti di generare eccezioni che non derivano da <xref:System.Exception>. Tali eccezioni sono chiamate *eccezioni non CLS* o *non eccezioni*. In C# non è possibile generare eccezioni non CLS, ma è possibile rilevarle in due modi:  
   
--   All'interno di un blocco `catch (Exception e)` come oggetto <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
+-   All'interno di un blocco `catch (RuntimeWrappedException e)`.
   
-     Per impostazione predefinita, un assembly Visual C# rileva le eccezioni non CLS come eccezioni con wrapper. Usare questo metodo se è necessario accedere all'eccezione originale, accessibile tramite la proprietà <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>. La procedura illustrata più avanti in questo argomento spiega come rilevare le eccezioni in questo modo.  
+     Per impostazione predefinita, un assembly Visual C# rileva le eccezioni non CLS come eccezioni con wrapper. Usare questo metodo se è necessario accedere all'eccezione originale, accessibile tramite la proprietà <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType>. La procedura illustrata più avanti in questo argomento spiega come rilevare le eccezioni in questo modo.  
   
--   All'interno di un blocco catch generale, ovvero un blocco catch senza un tipo di eccezione specificato, posizionato dopo un blocco `catch (Exception)` o `catch (Exception e)`.  
+-   All'interno di un blocco catch generale, ovvero un blocco catch senza un tipo di eccezione specificato, posizionato dopo tutti i blocchi `catch`.
   
      Usare questo metodo quando si vuole eseguire un'azione, come ad esempio la scrittura in un file di log, in risposta alle eccezioni non CLS e non è necessario accedere alle informazioni dell'eccezione. Per impostazione predefinita, Common Language Runtime esegue il wrapping di tutte le eccezioni. Per disabilitare questo comportamento, aggiungere l'attributo a livello di assembly seguente al codice, in genere nel file AssemblyInfo.cs: `[assembly: RuntimeCompatibilityAttribute(WrapNonExceptionThrows = false)]`.  
   
 ### <a name="to-catch-a-non-cls-exception"></a>Per rilevare un'eccezione non CLS  
   
-1.  All'interno di un oggetto `catch(Exception e) block` usare la parola chiave `as` per verificare se è possibile eseguire il cast di `e` a <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
-  
-2.  Accedere all'eccezione originale tramite la proprietà <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>.  
+All'interno di un blocco `catch(RuntimeWrappedException e)` accedere all'eccezione originale tramite la proprietà <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come rilevare un'eccezione non CLS generata da una libreria di classi scritta in C++/CLR. Si noti che in questo esempio il codice client Visual C# sa in anticipo che il tipo di eccezione generato è <xref:System.String?displayProperty=nameWithType>. È possibile eseguire il cast della proprietà <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> al tipo originale, a condizione che tale tipo sia accessibile dal codice.  
+ L'esempio seguente illustra come rilevare un'eccezione non CLS generata da una libreria di classi scritta in C++/CLI. Si noti che in questo esempio il codice client C# sa in anticipo che il tipo di eccezione generato è <xref:System.String?displayProperty=nameWithType>. È possibile eseguire il cast della proprietà <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> al tipo originale, a condizione che tale tipo sia accessibile dal codice.  
   
-```  
-// Class library written in C++/CLR.  
-   ThrowNonCLS.Class1 myClass = new ThrowNonCLS.Class1();  
-  
-   try  
-   {  
+```csharp
+// Class library written in C++/CLI.
+var myClass = new ThrowNonCLS.Class1();
+
+try
+{
     // throws gcnew System::String(  
     // "I do not derive from System.Exception!");  
-    myClass.TestThrow();   
-   }  
-  
-   catch (Exception e)  
-   {  
-    RuntimeWrappedException rwe = e as RuntimeWrappedException;  
-    if (rwe != null)      
-    {  
-      String s = rwe.WrappedException as String;  
-      if (s != null)  
-      {  
-        Console.WriteLine(s);  
-      }  
-    }  
-    else  
-    {  
-       // Handle other System.Exception types.  
-    }  
-   }             
+    myClass.TestThrow();
+}
+catch (RuntimeWrappedException e)
+{
+    String s = e.WrappedException as String;
+    if (s != null)
+    {
+        Console.WriteLine(s);
+    }
+}
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

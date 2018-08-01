@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: f0bf9b1da76033ef40cc72657ee722083a6f8b1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a96641e6dd42e033f2d28b847fc071dfc514912d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567633"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936997"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Procedura: usare componenti che supportano il modello asincrono basato su eventi
 Molti componenti consentono di eseguire le attività in modo asincrono. I componenti <xref:System.Media.SoundPlayer> e <xref:System.Windows.Forms.PictureBox>, ad esempio, consentono di caricare suoni e immagini "in background", mentre l'esecuzione del thread principale procede senza interruzioni.  
@@ -63,4 +63,4 @@ Molti componenti consentono di eseguire le attività in modo asincrono. I compon
 ## <a name="see-also"></a>Vedere anche  
  [Procedura: Eseguire un'operazione in background](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- [NON INCLUSO NELLA COMPILAZIONE: Multithreading in Visual Basic](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)
+ [Multithreading in Visual Basic](../../../docs/visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)

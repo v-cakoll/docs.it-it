@@ -3,28 +3,26 @@ title: Sviluppo di app ASP.NET Core MVC
 description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Sviluppo di app ASP.NET Core MVC
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: a90f88e117965aec1550a45f114cabfda5204468
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 2fd3eb1e123959130884b96ee9d2e59b83c41b0a
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106593"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404645"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
 > "Non è importante ottenere il risultato desiderato al primo tentativo. L'importante è ottenerlo all'ultimo".  
 > _- Andrew Hunt e David Thomas_
 
-## <a name="summary"></a>Riepilogo
-
 ASP.NET Core è un framework multipiattaforma open source per la compilazione di moderne applicazioni Web ottimizzate per il cloud. Le app ASP.NET Core sono leggere e modulari, con supporto incorporato per l'inserimento di dipendenze, e offrono maggiore testabilità e gestibilità. In associazione a MVC, che supporta la compilazione di API Web moderne oltre che di app basate su visualizzazione, ASP.NET Core è un framework potente per la compilazione di applicazioni Web aziendali.
 
 ## <a name="mapping-requests-to-responses"></a>Mapping delle richieste alle risposte
 
-Fondamentalmente, le app ASP.NET Core mappano le richieste in ingresso alle risposte in uscita. Questa operazione viene eseguita tramite middleware e le semplici app ASP.NET Core e i microservizi possono essere costituiti esclusivamente da middleware personalizzato. Quando si usa ASP.NET Core MVC, è possibile lavorare a un livello avanzato con *route*, *controller* e *azioni*. Ogni richiesta in ingresso viene confrontata con la tabella di routing dell'applicazione e se viene trovata una route corrispondente, viene chiamato il metodo di azione associato (appartenente a un controller) per gestire la richiesta. Se non viene trovata alcuna route corrispondente, viene chiamato un gestore degli errori (in questo caso, viene restituito un risultato NotFound).
+Fondamentalmente, le app ASP.NET Core mappano le richieste in ingresso alle risposte in uscita. Questa operazione viene eseguita tramite middleware e le semplici app ASP.NET Core e i microservizi possono essere costituiti esclusivamente da middleware personalizzato. Quando si usa ASP.NET Core MVC, è possibile lavorare a un livello avanzato con _route_, _controller_ e _azioni_. Ogni richiesta in ingresso viene confrontata con la tabella di routing dell'applicazione e se viene trovata una route corrispondente, viene chiamato il metodo di azione associato (appartenente a un controller) per gestire la richiesta. Se non viene trovata alcuna route corrispondente, viene chiamato un gestore degli errori (in questo caso, viene restituito un risultato NotFound).
 
-Le app ASP.NET Core MVC possono usare route convenzionali, route di attributi o entrambi i tipi di route. Le route convenzionali sono definite nel codice tramite la specifica delle *convenzioni* di routing usando una sintassi simile a quella dell'esempio seguente:
+Le app ASP.NET Core MVC possono usare route convenzionali, route di attributi o entrambi i tipi di route. Le route convenzionali sono definite nel codice tramite la specifica delle _convenzioni_ di routing usando una sintassi simile a quella dell'esempio seguente:
 
 ```csharp
 app.UseMvc(routes =>;
@@ -33,7 +31,7 @@ app.UseMvc(routes =>;
 });
 ```
 
-In questo esempio è stata aggiunta una route denominata "default" alla tabella di routing. Definisce un modello di route con segnaposto per *controller*, *azione* e *ID*. I segnaposto di controller e azione hanno un valore predefinito specificato, rispettivamente "Home" e "Index", mentre il segnaposto di ID è facoltativo poiché è applicato un "?". La convenzione definita in questo caso stabilisce che la prima parte di una richiesta deve corrispondere al nome del controller, la seconda parte all'azione e, se necessaria, una terza parte al parametro dell'ID. Le route convenzionali vengono in genere definite in un'unica posizione per l'applicazione, ad esempio nel metodo Configure della classe Startup.
+In questo esempio è stata aggiunta una route denominata "default" alla tabella di routing. Definisce un modello di route con segnaposto per _controller_, _azione_ e _ID_. I segnaposto di controller e azione hanno un valore predefinito specificato, rispettivamente "Home" e "Index", mentre il segnaposto di ID è facoltativo poiché è applicato un "?". La convenzione definita in questo caso stabilisce che la prima parte di una richiesta deve corrispondere al nome del controller, la seconda parte all'azione e, se necessaria, una terza parte al parametro dell'ID. Le route convenzionali vengono in genere definite in un'unica posizione per l'applicazione, ad esempio nel metodo Configure della classe Startup.
 
 Le route di attributi vengono applicate a controller e azioni direttamente anziché essere specificate a livello globale. Ciò offre il vantaggio di renderle più facilmente individuabili durante la ricerca di un metodo specifico, ma significa che le informazioni di routing non vengono mantenute in un'unica posizione nell'applicazione. Con le route di attributi, è possibile specificare in modo semplice più route per una determinata azione nonché combinare le route tra i controller e le azioni. Ad esempio:
 
@@ -45,9 +43,10 @@ public class HomeController : Controller
     [Route("Index")] // Combines to define route template "Home/Index"
     [Route("/")] // Does not combine, defines the route template ""
     public IActionResult Index() {}
+}
 ```
 
-Le route possono essere specificate in [HttpGet] e attributi simili, evitando la necessità di aggiungere attributi [Route\] separati. Le route di attributi possono anche usare i token per ridurre la necessità di ripetere i nomi di controller o azioni, come illustrato di seguito:
+Le route possono essere specificate in [HttpGet] e attributi simili, evitando la necessità di aggiungere attributi [Route] separati. Le route di attributi possono anche usare i token per ridurre la necessità di ripetere i nomi di controller o azioni, come illustrato di seguito:
 
 ```csharp
 [Route("[controller\]")]
@@ -55,29 +54,32 @@ public class ProductsController : Controller
 {
     [Route("")] // Matches 'Products'
     [Route("Index")] // Matches 'Products/Index'
-    public IActionResult Index()
+    public IActionResult Index() {}
 }
 ```
 
-Dopo aver individuato una determinata richiesta corrispondente a una route e prima della chiamata al metodo di azione, ASP.NET Core MVC eseguirà l'[associazione del modello](https://docs.microsoft.com/aspnet/core/mvc/models/model-binding) e la [convalida del modello](https://docs.microsoft.com/aspnet/core/mvc/models/validation) nella richiesta. L'associazione del modello converte i dati HTTP in ingresso nei tipi .NET specificati come parametri del metodo di azione da chiamare. Ad esempio, se il metodo di azione prevede un parametro ID di tipo int, l'associazione del modello tenterà di usare questo parametro in base a un valore specificato come parte della richiesta. A tale scopo, l'associazione del modello cerca i valori in un form pubblicato, i valori nella route e i valori di stringa di query. Se viene trovato un valore ID, il valore viene convertito in un intero prima di essere passato nel metodo di azione.
+Dopo aver individuato una determinata richiesta corrispondente a una route e prima della chiamata al metodo di azione, ASP.NET Core MVC eseguirà l'[associazione del modello](/aspnet/core/mvc/models/model-binding) e la [convalida del modello](/aspnet/core/mvc/models/validation) nella richiesta. L'associazione del modello converte i dati HTTP in ingresso nei tipi .NET specificati come parametri del metodo di azione da chiamare. Ad esempio, se il metodo di azione prevede un parametro ID di tipo int, l'associazione del modello tenterà di usare questo parametro in base a un valore specificato come parte della richiesta. A tale scopo, l'associazione del modello cerca i valori in un form pubblicato, i valori nella route e i valori di stringa di query. Se viene trovato un valore ID, il valore viene convertito in un intero prima di essere passato nel metodo di azione.
 
 Dopo l'associazione del modello ma prima della chiamata al metodo di azione, viene eseguita la convalida del modello. La convalida del modello usa gli attributi facoltativi del tipo di modello e contribuisce a garantire che l'oggetto di modello specificato sia conforme a determinati requisiti dei dati. Alcuni valori possono essere specificati come obbligatori o limitati a una determinata lunghezza o a un determinato intervallo numerico e così via. Se vengono specificati gli attributi di convalida ma il modello non è conforme ai requisiti, la proprietà ModelState.IsValid avrà valore false e il set di regole della convalida non riuscita sarà disponibile per l'invio al client che effettua la richiesta.
 
-Se viene usata la convalida del modello, è necessario verificare sempre che il modello sia valido prima di eseguire i comandi di modifica dello stato per garantire che l'app non sia danneggiata da dati non validi. È possibile usare un [filtro](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters) per evitare di aggiungere il codice necessario in ogni azione. I filtri di ASP.NET Core MVC consentono di intercettare i gruppi di richieste in modo che sia possibile applicare alla base di destinazione i criteri e gli aspetti comuni. I filtri possono essere applicati alle singole azioni, a interi controller o a livello globale per un'applicazione.
+Se viene usata la convalida del modello, è necessario verificare sempre che il modello sia valido prima di eseguire i comandi di modifica dello stato per garantire che l'app non sia danneggiata da dati non validi. È possibile usare un [filtro](/aspnet/core/mvc/controllers/filters) per evitare di aggiungere il codice necessario in ogni azione. I filtri di ASP.NET Core MVC consentono di intercettare i gruppi di richieste in modo che sia possibile applicare alla base di destinazione i criteri e gli aspetti comuni. I filtri possono essere applicati alle singole azioni, a interi controller o a livello globale per un'applicazione.
 
-Per le API Web, ASP.NET Core MVC supporta la [*negoziazione del contenuto*](https://docs.microsoft.com/aspnet/core/mvc/models/formatting) consentendo alle richieste di specificare la formattazione delle risposte. In base alle intestazioni specificate nella richiesta, le azioni che restituiscono dati formattano la risposta nel formato XML, JSON o un altro formato supportato. Questa funzionalità consente a più client con requisiti diversi di formattazione dei dati di usare la stessa API.
+Per le API Web, ASP.NET Core MVC supporta la [_negoziazione del contenuto_](/aspnet/core/mvc/models/formatting) consentendo alle richieste di specificare la formattazione delle risposte. In base alle intestazioni specificate nella richiesta, le azioni che restituiscono dati formattano la risposta nel formato XML, JSON o un altro formato supportato. Questa funzionalità consente a più client con requisiti diversi di formattazione dei dati di usare la stessa API.
 
 > ### <a name="references--mapping-requests-to-responses"></a>Riferimenti - Mapping delle richieste alle risposte
+>
 > - **Routing ad azioni del controller**
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **Associazione di modelli** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
+> - **Associazione di modelli**
+> <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **Convalida del modello**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **Filtri** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **Filtri**
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 
 ## <a name="working-with-dependencies"></a>Uso delle dipendenze
 
-ASP.NET Core include il supporto incorporato e usa internamente una tecnica chiamata [inserimento di dipendenze](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection). L'inserimento di dipendenze è una tecnica che abilita l'accoppiamento libero tra parti diverse di un'applicazione. L'accoppiamento libero può essere utile perché rende più semplice isolare le parti dell'applicazione per il test o la sostituzione. Rende anche meno probabile che una modifica in una parte dell'applicazione abbia un impatto imprevisto in un'altra posizione nell'applicazione. L'inserimento di dipendenze si basa sul principio di inversione della dipendenza e rappresenta spesso la chiave per ottenere il principio di apertura/chiusura. Quando si valuta il funzionamento dell'applicazione con le dipendenze, prestare attenzione al codice [static cling](http://deviq.com/static-cling/) e ricordare la frase "[New is Glue](https://ardalis.com/new-is-glue)".
+ASP.NET Core include il supporto incorporato e usa internamente una tecnica chiamata [inserimento di dipendenze](/aspnet/core/fundamentals/dependency-injection). L'inserimento di dipendenze è una tecnica che abilita l'accoppiamento libero tra parti diverse di un'applicazione. L'accoppiamento libero può essere utile perché rende più semplice isolare le parti dell'applicazione per il test o la sostituzione. Rende anche meno probabile che una modifica in una parte dell'applicazione abbia un impatto imprevisto in un'altra posizione nell'applicazione. L'inserimento di dipendenze si basa sul principio di inversione della dipendenza e rappresenta spesso la chiave per ottenere il principio di apertura/chiusura. Quando si valuta il funzionamento dell'applicazione con le dipendenze, prestare attenzione al codice [static cling](https://deviq.com/static-cling/) e ricordare la frase "[New is Glue](https://ardalis.com/new-is-glue)".
 
 Lo static cling si verifica quando le classi chiamano metodi statici o accedono a proprietà statiche, un'operazione che comporta effetti collaterali o dipendenze nell'infrastruttura. Ad esempio, se è presente un metodo che chiama un metodo statico che a sua volta scrive in un database, il metodo è strettamente accoppiato al database. Qualsiasi elemento che interrompe la chiamata al database interromperà il metodo. Eseguire i test di questi tipi di metodi è notoriamente difficile poiché i test richiedono librerie di simulazione commerciali per simulare le chiamate statiche oppure possono essere eseguiti solo con un database di prova. Le chiamate statiche che non hanno alcuna dipendenza nell'infrastruttura, in particolare quelle che sono completamente senza stato, possono essere eseguite senza problemi e non hanno alcun effetto sull'accoppiamento o la testabilità (oltre all'accoppiamento del codice alla chiamata statica).
 
@@ -118,7 +120,7 @@ Il metodo ConfigureServices rappresenta l'eccezione a questo comportamento. Il m
 > [!NOTE]
 > Se è necessario garantire che alcuni servizi siano disponibili per la classe Startup, è possibile configurarli usando WebHostBuilder e il relativo metodo ConfigureServices.
 
-La classe Startup costituisce un modello per la struttura delle altre parti dell'applicazione ASP.NET Core, dai controller al middleware e dai filtri ai servizi. In ogni caso, è necessario seguire il [principio delle dipendenze esplicite](http://deviq.com/explicit-dependencies-principle/) richiedendo le dipendenze anziché crearle direttamente e usando l'inserimento di dipendenze in tutta l'applicazione. Prestare attenzione alla posizione e alla modalità di creazione diretta delle istanze delle implementazioni, in particolare dei servizi e degli oggetti che usano l'infrastruttura o presentano effetti collaterali. Preferire l'uso di astrazioni definite nell'applicazione e passate come argomenti anziché l'uso di riferimenti hardcoded a tipi di implementazione specifici.
+La classe Startup costituisce un modello per la struttura delle altre parti dell'applicazione ASP.NET Core, dai controller al middleware e dai filtri ai servizi. In ogni caso, è necessario seguire il [principio delle dipendenze esplicite](https://deviq.com/explicit-dependencies-principle/) richiedendo le dipendenze anziché crearle direttamente e usando l'inserimento di dipendenze in tutta l'applicazione. Prestare attenzione alla posizione e alla modalità di creazione diretta delle istanze delle implementazioni, in particolare dei servizi e degli oggetti che usano l'infrastruttura o presentano effetti collaterali. Preferire l'uso di astrazioni definite nell'applicazione e passate come argomenti anziché l'uso di riferimenti hardcoded a tipi di implementazione specifici.
 
 ## <a name="structuring-the-application"></a>Creazione della struttura dell'applicazione
 
@@ -136,7 +138,7 @@ Un altro approccio per disaccoppiare l'applicazione dai dettagli di implementazi
 
 ### <a name="feature-organization"></a>Organizzazione basata sulle funzionalità
 
-Per impostazione predefinita, le applicazioni ASP.NET Core organizzano la struttura delle cartelle in modo da includere controller e visualizzazioni e spesso modelli di visualizzazione. Il codice lato client per supportare queste strutture lato server è in genere archiviato separatamente nella cartella wwwroot. Questa organizzazione, tuttavia, può creare problemi nelle applicazioni di grandi dimensioni poiché l'utilizzo di qualsiasi funzionalità specificata richiede spesso il passaggio da una cartella all'altra. Questa operazione diventa ancora più complessa con un numero più elevato di file e sottocartelle in ogni cartella richiedendo un maggior esplorazione in Esplora soluzioni. Per risolvere questo problema è possibile organizzare il codice dell'applicazione per *funzionalità* anziché per tipo di file. Questo tipo di organizzazione viene solitamente chiamato "cartelle di funzionalità" o "sezioni di funzionalità". Vedere anche [Vertical Slices](http://deviq.com/vertical-slices/) (Sezioni verticali).
+Per impostazione predefinita, le applicazioni ASP.NET Core organizzano la struttura delle cartelle in modo da includere controller e visualizzazioni e spesso modelli di visualizzazione. Il codice lato client per supportare queste strutture lato server è in genere archiviato separatamente nella cartella wwwroot. Questa organizzazione, tuttavia, può creare problemi nelle applicazioni di grandi dimensioni poiché l'utilizzo di qualsiasi funzionalità specificata richiede spesso il passaggio da una cartella all'altra. Questa operazione diventa ancora più complessa con un numero più elevato di file e sottocartelle in ogni cartella richiedendo un maggior esplorazione in Esplora soluzioni. Per risolvere questo problema è possibile organizzare il codice dell'applicazione per _funzionalità_ anziché per tipo di file. Questo tipo di organizzazione viene solitamente chiamato "cartelle di funzionalità" o "sezioni di funzionalità". Vedere anche [Vertical Slices](https://deviq.com/vertical-slices/) (Sezioni verticali).
 
 A tale scopo, ASP.NET Core MVC supporta le aree. Usando le aree è possibile creare set separati di cartelle di controller e visualizzazioni, inclusi i modelli associati, in ogni cartella Area. La figure 7-1 illustra un esempio di struttura di cartelle con aree.
 
@@ -205,7 +207,7 @@ ASP.NET Core MVC usa una convenzione anche per individuare le visualizzazioni. Q
 
 ### <a name="cross-cutting-concerns"></a>Problemi di montaggio incrociato
 
-Con l'aumento delle dimensioni delle applicazioni, diventa sempre più importante evitare i problemi di cross-cutting per eliminare la duplicazione e mantenere la coerenza. Alcuni esempi di problemi di cross-cutting nelle applicazioni ASP.NET Core sono, tra gli altri, l'autenticazione, le regole di convalida del modello, la memorizzazione nella cache dell'output e la gestione degli errori. I [filtri](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters) di ASP.NET Core MVC consentono di eseguire codice prima o dopo determinate fasi della pipeline di elaborazione della richiesta. Ad esempio, un filtro può essere eseguito prima e dopo l'associazione di modelli, prima e dopo un'azione o prima e dopo il risultato di un'azione. È anche possibile usare un filtro di autorizzazione per controllare l'accesso alla parte rimanente della pipeline. La figura 7-2 mostra l'esecuzione della richiesta attraverso i filtri, se configurati.
+Con l'aumento delle dimensioni delle applicazioni, diventa sempre più importante evitare i problemi di cross-cutting per eliminare la duplicazione e mantenere la coerenza. Alcuni esempi di problemi di cross-cutting nelle applicazioni ASP.NET Core sono, tra gli altri, l'autenticazione, le regole di convalida del modello, la memorizzazione nella cache dell'output e la gestione degli errori. I [filtri](/aspnet/core/mvc/controllers/filters) di ASP.NET Core MVC consentono di eseguire codice prima o dopo determinate fasi della pipeline di elaborazione della richiesta. Ad esempio, un filtro può essere eseguito prima e dopo l'associazione di modelli, prima e dopo un'azione o prima e dopo il risultato di un'azione. È anche possibile usare un filtro di autorizzazione per controllare l'accesso alla parte rimanente della pipeline. La figura 7-2 mostra l'esecuzione della richiesta attraverso i filtri, se configurati.
 
 ![La richiesta passa attraverso i filtri autorizzazione, i filtri risorse, l'associazione di modelli, i filtri azione, l'esecuzione dell'azione e la conversione del risultato dell'azione, i filtri eccezioni, i filtri risultato e l'esecuzione del risultato. All'uscita della pipeline, la richiesta viene elaborata solo dai filtri risultato e dai filtri risorse prima di diventare una risposta inviata al client.](./media/image7-2.png)
 
@@ -264,7 +266,6 @@ public class ValidateModelAttribute : ActionFilterAttribute
 Analogamente, è possibile usare un filtro per verificare l'esistenza di un record e restituire un errore 404 prima che venga eseguita l'azione, eliminando la necessità di eseguire questi controlli nell'azione. Dopo aver estratto le convenzioni comuni e aver organizzato la soluzione per separare il codice dell'infrastruttura e la logica di business dall'interfaccia utente, i metodi delle azioni MVC dovrebbero essere estremamente snelli:
 
 ```csharp
-// PUT api/authors/2/5
 [HttpPut("{id}")]
 [ValidateAuthorExists]
 public async Task<IActionResult> Put(int id, [FromBody]Author author)
@@ -277,18 +278,19 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 Per altre informazioni sull'implementazione di filtri e per scaricare un esempio funzionante, vedere l'articolo di MSDN [Filtri reali di ASP.NET Core MVC](https://msdn.microsoft.com/magazine/mt767699.aspx).
 
 > ### <a name="references--structuring-applications"></a>Riferimenti - Creazione della struttura delle applicazioni
+>
 > - **Aree**  
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN - Funzionalità Feature Slices per ASP.NET Core MVC**
->  <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
+> - **MSDN Magazine - Funzionalità Feature Slices per ASP.NET Core MVC**  
+ > <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtri**  
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+>   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN - Real World ASP.NET Core MVC Filters (MSDN - Filtri reali di ASP.NET Core MVC)**  
-> <https://msdn.microsoft.com/magazine/mt767699.aspx>
+>   <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>Sicurezza
 
-La protezione delle applicazioni Web è un argomento molto ampio con numerose considerazioni. Proteggere le applicazioni significa essenzialmente verificare l'identità dell'utente da cui proviene una determinata richiesta e assicurarsi che la richiesta abbia accesso solo alle risorse necessarie. L'autenticazione è il processo di confronto delle credenziali specificate con una richiesta con quelle di un archivio di dati attendibili per verificare se la richiesta deve essere trattata come proveniente da un'entità nota. L'autorizzazione è il processo di limitazione dell'accesso a determinate risorse in base all'identità utente. Un terzo aspetto relativo alla sicurezza è la protezione delle richieste dall'intercettazione da terze parti per cui è necessario [assicurarsi che l'applicazione usi SSL](https://docs.microsoft.com/aspnet/core/security/enforcing-ssl).
+La protezione delle applicazioni Web è un argomento molto ampio con numerose considerazioni. Proteggere le applicazioni significa essenzialmente verificare l'identità dell'utente da cui proviene una determinata richiesta e assicurarsi che la richiesta abbia accesso solo alle risorse necessarie. L'autenticazione è il processo di confronto delle credenziali specificate con una richiesta con quelle di un archivio di dati attendibili per verificare se la richiesta deve essere trattata come proveniente da un'entità nota. L'autorizzazione è il processo di limitazione dell'accesso a determinate risorse in base all'identità utente. Un terzo aspetto relativo alla sicurezza è la protezione delle richieste dall'intercettazione da terze parti per cui è necessario [assicurarsi che l'applicazione usi SSL](/aspnet/core/security/enforcing-ssl).
 
 ### <a name="authentication"></a>Autenticazione
 
@@ -329,7 +331,7 @@ public void Configure(IApplicationBuilder app)
 
 È importante che UseIdentity si trovi prima di UseMvc nel metodo Configure. Quando si configura Identity in ConfigureServices, è possibile notare una chiamata ad AddDefaultTokenProviders. La chiamata non è correlata ai token che possono essere usati per proteggere le connessioni Web, ma fa riferimento ai provider che creano prompt che è possibile inviare agli utenti tramite SMS o posta elettronica per la conferma dell'identità.
 
-Per altre informazioni sulla [configurazione dell'autenticazione a due fattori](https://docs.microsoft.com/aspnet/core/security/authentication/2fa) e l'[abilitazione di provider di accesso esterni](https://docs.microsoft.com/aspnet/core/security/authentication/social/), vedere la documentazione ufficiale di ASP.NET Core.
+Per altre informazioni sulla [configurazione dell'autenticazione a due fattori](/aspnet/core/security/authentication/2fa) e l'[abilitazione di provider di accesso esterni](/aspnet/core/security/authentication/social/), vedere la documentazione ufficiale di ASP.NET Core.
 
 ### <a name="authorization"></a>Autorizzazione
 
@@ -383,40 +385,41 @@ La maggior parte delle API Web deve implementare un sistema di autenticazione ba
 **Figura 7-4.** Autenticazione basata su token per le API Web.
 
 > ### <a name="references--security"></a>Riferimenti - Sicurezza
+>
 > - **Panoramica della documentazione sulla sicurezza**  
-> https://docs.microsoft.com/aspnet/core/security/
+>   https://docs.microsoft.com/aspnet/core/security/
 > - **Applicazione di SSL in un'app ASP.NET Core**  
-> <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
+>   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Introduzione a Identity**  
-> <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
+>   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Introduzione alle autorizzazioni**  
-> <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
+>   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Autenticazione e autorizzazione per app per le API nel servizio app di Azure**  
-> <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
+>   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 
 ## <a name="client-communication"></a>Comunicazione con i client
 
 Oltre a visualizzare le pagine e a rispondere alle richieste di dati tramite le API Web, le app ASP.NET Core possono comunicare direttamente con i client connessi. Questa comunicazione in uscita può usare diverse tecnologie di trasporto, tra cui la più comune sono i WebSocket. ASP.NET ASP.NET Core SignalR è una libreria che semplifica l'aggiunta della funzionalità di comunicazione da server a client in tempo reale alle applicazioni. SignalR supporta diverse tecnologie di trasporto, inclusi i WebSocket, ed elimina molti dei dettagli di implementazione specificati dallo sviluppatore.
 
-ASP.NET Core SignalR è attualmente in fase di sviluppo e sarà disponibile nella prossima versione di ASP.NET Core. Sono tuttavia disponibili altre [librerie WebSocket open source](https://github.com/radu-matei/websocket-manager).
+ASP.NET Core SignalR è incluso in ASP.NET Core 2.1.
 
 La comunicazione con il client in tempo reale, con l'utilizzo diretto di WebSocket o altre tecniche, è utile in diversi scenari di applicazioni. Di seguito sono riportati alcuni esempi:
 
--   Applicazioni live chat room
+- Applicazioni live chat room
 
--   Applicazioni di monitoraggio
+- Applicazioni di monitoraggio
 
--   Aggiornamenti dello stato di processo
+- Aggiornamenti dello stato di processo
 
--   Notifiche
+- Notifiche
 
--   Applicazioni di moduli interattivi
+- Applicazioni di moduli interattivi
 
 Quando si definisce la comunicazione con i client nelle applicazioni, vengono in genere usati due componenti:
 
--   Gestione della connessione sul lato server (hub SignalR, WebSocketManager, WebSocketHandler)
+- Gestione della connessione sul lato server (hub SignalR, WebSocketManager, WebSocketHandler)
 
--   Libreria lato client
+- Libreria lato client
 
 I client non sono costituiti solo da browser. Anche le app per dispositivi mobili, le app della console e altre app native possono comunicare tramite SignalR/WebSocket. Il semplice programma seguente ripete tutto il contenuto inviato a un'applicazione chat alla console, come parte di un'applicazione di esempio WebSocketManager:
 
@@ -434,58 +437,60 @@ public class Program
         Console.ReadLine();
         StopConnectionAsync();
     }
-    
+
     public static async Task StartConnectionAsync()
     {
         _connection = new Connection();
         await _connection.StartConnectionAsync("ws://localhost:65110/chat");
     }
-    
+
     public static async Task StopConnectionAsync()
     {
         await _connection.StopConnectionAsync();
     }
+}
 ```
 
 Esaminare i modi in cui le applicazioni comunicano direttamente con le applicazioni client e considerare se la comunicazione in tempo reale migliorerebbe l'esperienza utente dell'app.
 
 > ### <a name="references--client-communication"></a>Riferimenti - Comunicazione con i client
+>
 > - **ASP.NET Core SignalR**  
-> <https://github.com/aspnet/SignalR>
+>   <https://github.com/aspnet/SignalR>
 > - **WebSocket Manager**  
-> https://github.com/radu-matei/websocket-manager
+>   https://github.com/radu-matei/websocket-manager
 
-## <a name="domain-driven-design--should-you-apply-it"></a>Quando usare la progettazione basata su domini (DDD)
+## <a name="domain-driven-design--should-you-apply-it"></a>Quando usare la progettazione basata su domini
 
-La progettazione basata su domini (Domain-Driven Design, DDD) è un approccio semplice alla creazione di software che pone l'attenzione sul *dominio aziendale*. Evidenzia in particolare la comunicazione e l'interazione con gli esperti dei domini aziendali che possono indicare agli sviluppatori come funziona il sistema nel mondo reale. Ad esempio, se si crea un sistema per la gestione dei titoli azionari, l'esperto del dominio potrebbe essere un agente di cambio. La progettazione basata su domini (DDD) è indirizzata alla soluzione di problemi aziendali estesi e complessi e spesso non è adatta ad applicazioni più semplici e di piccole dimensioni poiché l'investimento nella conoscenza e nella modellazione del dominio potrebbe essere eccessivo.
+La progettazione basata su domini (Domain-Driven Design, DDD) è un approccio semplice alla creazione di software che pone l'attenzione sul _dominio aziendale_. Evidenzia in particolare la comunicazione e l'interazione con gli esperti dei domini aziendali che possono indicare agli sviluppatori come funziona il sistema nel mondo reale. Ad esempio, se si crea un sistema per la gestione dei titoli azionari, l'esperto del dominio potrebbe essere un agente di cambio. La progettazione basata su domini (DDD) è indirizzata alla soluzione di problemi aziendali estesi e complessi e spesso non è adatta ad applicazioni più semplici e di piccole dimensioni poiché l'investimento nella conoscenza e nella modellazione del dominio potrebbe essere eccessivo.
 
-Quando si compila un software seguendo un approccio DDD, è necessario che il team, inclusi gli utenti e i collaboratori non tecnici, sviluppi un *linguaggio universale* per l'area dei problemi. Ciò significa che è necessario usare la stessa terminologia per il concetto del mondo reale modellato, l'equivalente software ed eventuali strutture esistenti per il mantenimento del concetto, ad esempio le tabelle di database. Di conseguenza, i concetti descritti in linguaggio universale devono costituire la base del *modello di dominio*.
+Quando si compila un software seguendo un approccio DDD, è necessario che il team, inclusi gli utenti e i collaboratori non tecnici, sviluppi un _linguaggio universale_ per l'area dei problemi. Ciò significa che è necessario usare la stessa terminologia per il concetto del mondo reale modellato, l'equivalente software ed eventuali strutture esistenti per il mantenimento del concetto, ad esempio le tabelle di database. Di conseguenza, i concetti descritti in linguaggio universale devono costituire la base del _modello di dominio_.
 
 Il modello di dominio è costituito da oggetti che interagiscono tra loro per rappresentare il comportamento del sistema. Gli oggetti sono suddivisi nelle categorie seguenti:
 
--   [Entità](http://deviq.com/entity/) che rappresentano gli oggetti con un thread di identità. Le entità sono in genere salvate in modo permanente con una chiave con cui possono essere recuperate in seguito.
+- [Entità](https://deviq.com/entity/) che rappresentano gli oggetti con un thread di identità. Le entità sono in genere salvate in modo permanente con una chiave con cui possono essere recuperate in seguito.
 
--   [Aggregazioni](http://deviq.com/aggregate-pattern/) che rappresentano gruppi di oggetti che devono essere salvati in modo permanente come unità.
+- [Aggregazioni](https://deviq.com/aggregate-pattern/) che rappresentano gruppi di oggetti che devono essere salvati in modo permanente come unità.
 
--   [Oggetti valore](http://deviq.com/value-object/) che rappresentano i concetti che possono essere confrontati mediante la somma dei valori delle relative proprietà. Ad esempio, DateRange costituito da una data di inizio e di fine.
+- [Oggetti valore](https://deviq.com/value-object/) che rappresentano i concetti che possono essere confrontati mediante la somma dei valori delle relative proprietà. Ad esempio, DateRange costituito da una data di inizio e di fine.
 
--   [Eventi del dominio](https://martinfowler.com/eaaDev/DomainEvent.html) che rappresentano operazioni eseguite all'interno del sistema di interesse ad altre parti del sistema.
+- [Eventi del dominio](https://martinfowler.com/eaaDev/DomainEvent.html) che rappresentano operazioni eseguite all'interno del sistema di interesse ad altre parti del sistema.
 
-Si noti che un modello di dominio DDD deve incapsulare un comportamento complesso all'interno del modello. Le entità, in particolare, non devono essere semplici raccolte di proprietà. Quando il modello di dominio non include il comportamento e rappresenta solo lo stato del sistema viene definito un [modello anemico](http://deviq.com/anemic-model/) non adatto per la progettazione DDD.
+Si noti che un modello di dominio DDD deve incapsulare un comportamento complesso all'interno del modello. Le entità, in particolare, non devono essere semplici raccolte di proprietà. Quando il modello di dominio non include il comportamento e rappresenta solo lo stato del sistema viene definito un [modello anemico](https://deviq.com/anemic-model/) non adatto per la progettazione DDD.
 
 Oltre a questi tipi di modello, la progettazione DDD usa in genere un'ampia gamma di modelli:
 
--   [Repository](http://deviq.com/repository-pattern/), per fornire l'astrazione dei dettagli di persistenza.
+- [Repository](https://deviq.com/repository-pattern/), per fornire l'astrazione dei dettagli di persistenza.
 
--   [Factory](https://en.wikipedia.org/wiki/Factory_method_pattern), per incapsulare la creazione di oggetti complessi.
+- [Factory](https://en.wikipedia.org/wiki/Factory_method_pattern), per incapsulare la creazione di oggetti complessi.
 
--   Eventi di dominio, per separare il comportamento dipendente dal comportamento di attivazione.
+- Eventi di dominio, per separare il comportamento dipendente dal comportamento di attivazione.
 
--   [Servizi](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/), per incapsulare un comportamento complesso e/o i dettagli di implementazione dell'infrastruttura.
+- [Servizi](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/), per incapsulare un comportamento complesso e/o i dettagli di implementazione dell'infrastruttura.
 
--   [Comando](https://en.wikipedia.org/wiki/Command_pattern), per separare l'invio dei comandi e l'esecuzione del comando.
+- [Comando](https://en.wikipedia.org/wiki/Command_pattern), per separare l'invio dei comandi e l'esecuzione del comando.
 
--   [Specifica](http://deviq.com/specification-pattern/), per incapsulare i dettagli di query.
+- [Specifica](https://deviq.com/specification-pattern/), per incapsulare i dettagli di query.
 
 Con la progettazione DDD è inoltre consigliabile usare l'architettura "pulita" descritta in precedenza che offre l'accoppiamento libero, l'incapsulamento e un codice che può essere facilmente verificato tramite unit test.
 
@@ -500,8 +505,9 @@ La progettazione DDD prevede investimenti nella modellazione, nell'architettura 
 Un approccio ibrido potrebbe essere quello di usare la progettazione DDD solo per le aree transazionali o più complesse dell'applicazione e di non usarla per le parti più semplici CRUD o di sola lettura dell'applicazione. Ad esempio, non sono necessari i vincoli di un'aggregazione quando si eseguono query sui dati per visualizzare un report o i dati di un dashboard. Per questo tipo di requisiti è possibile avere un modello di lettura più semplice separato.
 
 > ### <a name="references--domain-driven-design"></a>Riferimenti - Progettazione basata su domini (DDD)
+>
 > - **DDD in Plain English (StackOverflow Answer)** (Progettazione basata su domini (risposta StackOverflow))  
-> <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
+>   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>Distribuzione
 
@@ -525,31 +531,32 @@ Un approccio sempre più diffuso consiste nell'ospitare l'applicazione ASP.NET C
 
 Se l'applicazione è ospitata in Azure, è possibile usare il gateway applicazione di Microsoft Azure come appliance virtuale dedicata per offrire servizi diversi. Oltre a svolgere la funzione di proxy inverso per le singole applicazioni, il gateway applicazione può offrire anche le funzionalità seguenti:
 
--   Bilanciamento del carico HTTP
+- Bilanciamento del carico HTTP
 
--   Ripartizione del carico di lavoro SSL (SSL sono in Internet)
+- Ripartizione del carico di lavoro SSL (SSL sono in Internet)
 
--   SSL end-to-end
+- SSL end-to-end
 
--   Routing multisito (consolidare fino a 20 siti in un unico gateway applicazione)
+- Routing multisito (consolidare fino a 20 siti in un unico gateway applicazione)
 
--   Firewall dell'applicazione Web
+- Firewall dell'applicazione Web
 
--   Supporto di WebSocket
+- Supporto di WebSocket
 
--   Diagnostica avanzata
+- Diagnostica avanzata
 
-*Per altre informazioni sulle opzioni di distribuzione di Azure, vedere il capitolo 10.*
+_Per altre informazioni sulle opzioni di distribuzione di Azure, vedere il [capitolo 10](development-process-for-azure.md)._
 
 > ### <a name="references--deployment"></a>Riferimenti - Distribuzione
+>
 > - **Panoramica sull'hosting e la distribuzione**  
-> <https://docs.microsoft.com/aspnet/core/publishing/>
+>   <https://docs.microsoft.com/aspnet/core/publishing/>
 > - **Quando usare Kestrel con un proxy inverso**  
-> <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
+>   <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Ospitare app ASP.NET Core in Docker**  
-> <https://docs.microsoft.com/aspnet/core/publishing/docker>
+>   <https://docs.microsoft.com/aspnet/core/publishing/docker>
 > - **Introduzione al gateway applicazione di Azure**  
-> <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
+>   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
 [Precedente](common-client-side-web-technologies.md)

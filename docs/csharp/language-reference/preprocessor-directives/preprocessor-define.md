@@ -1,17 +1,17 @@
 ---
 title: '#define (Riferimenti per C#)'
-ms.date: 07/20/2015
+ms.date: 06/30/2018
 f1_keywords:
 - '#define'
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 1903b96de5f9dfa4efc252897a4a4bd18ed64924
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f40c32a89641256e4f8fe30cd24f523b898139d5
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143479"
 ---
 # <a name="define-c-reference"></a>#define (Riferimenti per C#)
 Si usa `#define` per definire un simbolo. Quando si usa il simbolo come espressione passata alla direttiva [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), l'espressione restituisce `true`, come illustrato nell'esempio seguente:  
@@ -29,9 +29,9 @@ Si usa `#define` per definire un simbolo. Quando si usa il simbolo come espressi
   
  È possibile definire un simbolo ma non è possibile assegnare a questo un valore. La direttiva `#define` deve essere inserita in un file prima di usare istruzioni che non siano anche direttive del preprocessore.  
   
- Un simbolo può anche essere definito tramite l'opzione del compilatore [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md). Per rimuovere la definizione di un simbolo, è possibile usare [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ Un simbolo può anche essere definito tramite l'opzione del compilatore [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md). Per rimuovere la definizione di un simbolo, è possibile usare [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
   
- Un simbolo definito tramite `/define` o `#define` non provoca conflitti con una variabile avente lo stesso nome. Il nome di una variabile, infatti, non può essere passato a una direttiva del preprocessore e un simbolo può essere valutato solo da una direttiva del preprocessore.  
+ Un simbolo definito tramite `-define` o `#define` non provoca conflitti con una variabile avente lo stesso nome. Il nome di una variabile, infatti, non può essere passato a una direttiva del preprocessore e un simbolo può essere valutato solo da una direttiva del preprocessore.  
   
  L'ambito di un simbolo creato tramite `#define` è il file in cui il simbolo è stato definito.  
   

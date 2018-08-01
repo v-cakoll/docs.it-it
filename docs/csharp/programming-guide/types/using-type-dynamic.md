@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 67eb39fd6f2077d2adf1d38d001e801b815d687d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 296b9c80b4ea8b09e8efce71e3b388f7e453850b
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336638"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404376"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Utilizzo del tipo dinamico (Guida per programmatori C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] introduce un nuovo tipo, `dynamic`. Il tipo è statico, ma un oggetto di tipo `dynamic` ignora il controllo del tipo statico. Nella maggior parte dei casi, funziona come se disponesse del tipo `object`. In fase di compilazione, si presume che un elemento tipizzato come `dynamic`dynamic supporti qualsiasi operazione. Non è pertanto importante se l'oggetto ottiene il valore da un'API COM, da un linguaggio dinamico quale IronPython, dal modello DOM (Document Object Model) HTML, dalla reflection o da un altro elemento del programma. Se, tuttavia, il codice non è valido, vengono intercettati errori in fase di esecuzione.  
@@ -27,7 +27,12 @@ ms.locfileid: "33336638"
   
  [!code-csharp[CsProgGuideTypes#51](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_3.cs)]  
   
- Le operazioni nelle quali il risultato non è `dynamic` includono le conversioni da `dynamic` a un altro tipo e le chiamate al costruttore che includono argomenti di tipo `dynamic`. Il tipo di `testInstance`, ad esempio, nella dichiarazione seguente è `ExampleClass`, non `dynamic`.  
+ Le operazioni in cui il risultato non è `dynamic` includono:
+ 
+* Le conversioni da `dynamic` a un altro tipo. 
+* Le chiamate al costruttore che includono argomenti di tipo `dynamic`. 
+
+Il tipo di `testInstance`, ad esempio, nella dichiarazione seguente è `ExampleClass`, non `dynamic`:
   
  [!code-csharp[CsProgGuideTypes#52](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_4.cs)]  
   
