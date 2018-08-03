@@ -1,1 +1,1 @@
-<span data-ttu-id="e18c4-101">Windows 8.x Store</span><span class="sxs-lookup"><span data-stu-id="e18c4-101">Windows 8.x Store</span></span>
+<span data-ttu-id="45764-101">Windows 8.x Store</span><span class="sxs-lookup"><span data-stu-id="45764-101">Windows 8.x Store</span></span>
