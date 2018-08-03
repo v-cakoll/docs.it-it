@@ -7,34 +7,34 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: e278b28e5c0015eeab549b04d3870dfa247a57ed
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33808871"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informazioni sulla privacy di Windows Communication Foundation
-Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si compila un'applicazione che utilizza Windows Communication Foundation (WCF), versione 3.0, l'applicazione può influire sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. WCF non invia informazioni a Microsoft dall'applicazione, a meno che l'utente finale sceglie di inviare una richiesta.  
+Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si compila un'applicazione che usa Windows Communication Foundation (WCF), versione 3.0, l'applicazione può incidere sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. WCF non invia informazioni a Microsoft dall'applicazione, a meno che l'utente finale sceglie di inviarlo a Microsoft.  
   
 ## <a name="wcf-in-brief"></a>WCF in breve  
- WCF è un framework di messaggistica distribuito utilizzando Microsoft .NET Framework che consente agli sviluppatori di compilare applicazioni distribuite. I messaggi comunicati tra due applicazioni contengono informazioni di intestazione e corpo.  
+ WCF è un framework di messaggistica distribuito tramite Microsoft .NET Framework che consente agli sviluppatori di compilare applicazioni distribuite. I messaggi comunicati tra due applicazioni contengono informazioni di intestazione e corpo.  
   
- Le intestazioni possono contenere il routing dei messaggi, informazioni sulla sicurezza, transazioni e altro, a seconda dei servizi usati dall'applicazione. I messaggi vengono in genere crittografati per impostazione predefinita. L'unica eccezione a questa regola si verifica quando si usa `BasicHttpBinding`, che è stato progettato per l'uso con i servizi Web legacy, non-protetti. I progettisti dell'applicazione sono responsabili della progettazione finale. I messaggi nel corpo SOAP contengono dati specifici dell'applicazione; Tuttavia, questi dati, ad esempio le informazioni personali definite dall'applicazione, possono essere protetti usando le funzionalità di crittografia o riservatezza WCF. Nelle sezioni seguenti vengono descritte le funzionalità che potrebbero avere un impatto sulla privacy.  
+ Le intestazioni possono contenere il routing dei messaggi, informazioni sulla sicurezza, transazioni e altro, a seconda dei servizi usati dall'applicazione. I messaggi vengono in genere crittografati per impostazione predefinita. L'unica eccezione a questa regola si verifica quando si usa `BasicHttpBinding`, che è stato progettato per l'uso con i servizi Web legacy, non-protetti. I progettisti dell'applicazione sono responsabili della progettazione finale. I messaggi nel corpo SOAP contengono dati specifici dell'applicazione. Tuttavia, è possibile proteggere questi dati, ad esempio le informazioni personali definite dall'applicazione, usando le funzionalità di crittografia o riservatezza WCF. Nelle sezioni seguenti vengono descritte le funzionalità che potrebbero avere un impatto sulla privacy.  
   
 ## <a name="messaging"></a>Messaggistica  
- Ogni messaggio WCF include un'intestazione di indirizzo che specifica la destinazione del messaggio e in cui la risposta dovrebbe arrivare.  
+ Ogni messaggio WCF presenta un'intestazione di indirizzo che specifica la destinazione del messaggio e in cui la risposta dovrebbe arrivare.  
   
  Il componente indirizzo di un endpoint è un URI (Uniform Resource Identifier) che identifica l'endpoint. L'indirizzo può essere un indirizzo di rete o logico. L'indirizzo può includere il nome del computer (nome host, nome di dominio completo) e un indirizzo IP. L'indirizzo dell'endpoint può inoltre contenere un GUID (Globally Unique Identifier) o una raccolta di GUID per indirizzamento temporaneo usato per discernere ogni indirizzo. Ogni messaggio contiene un ID di messaggio che corrisponde a un GUID. Questa funzionalità segue lo standard di riferimento WS-Addressing.  
   
- Il livello di messaggistica WCF non scrive informazioni personali del computer locale. Tuttavia, potrebbe propagare informazioni personali a livello di rete, se un sviluppatore di servizi ha creato un servizio che espone tali informazioni usando, ad esempio, il nome di una persona in un nome di endpoint o includendo informazioni personali nel linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language) dell'endpoint senza richiedere però ai client di usare https per accedere al codice WSDL. Inoltre, se viene eseguito uno sviluppatore di [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) strumento su un endpoint che espone informazioni personali, l'output dello strumento potrebbe contenere informazioni e il file di output viene scritto il disco rigido locale.  
+ Il livello di messaggistica di WCF non scrive informazioni personali nel computer locale. Tuttavia, potrebbe propagare informazioni personali a livello di rete, se un sviluppatore di servizi ha creato un servizio che espone tali informazioni usando, ad esempio, il nome di una persona in un nome di endpoint o includendo informazioni personali nel linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language) dell'endpoint senza richiedere però ai client di usare https per accedere al codice WSDL. Inoltre, se uno sviluppatore è in esecuzione la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) strumento su un endpoint che espone informazioni personali, l'output dello strumento potrebbe contenere tali informazioni e il file di output viene scritto il disco rigido locale.  
   
 ## <a name="hosting"></a>Hosting  
- La funzionalità di hosting di WCF consente alle applicazioni per avviare su richiesta o per la condivisione delle porte tra più applicazioni. Un'applicazione WCF può essere ospitata in Internet Information Services (IIS), simile a [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ La funzionalità di hosting di WCF consente alle applicazioni per avviare su richiesta o per abilitare la condivisione delle porte tra più applicazioni. Un'applicazione WCF può essere ospitata in Internet Information Services (IIS), simile a [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
   
  L'hosting non espone informazioni specifiche sulla rete e non implica il mantenimento di dati sul computer.  
   
 ## <a name="message-security"></a>Sicurezza dei messaggi  
- Sicurezza WCF fornisce le funzionalità di sicurezza per applicazioni di messaggistica. Le funzioni di sicurezza previste includono autenticazione e autorizzazione.  
+ Sicurezza WCF fornisce le funzionalità di sicurezza per le applicazioni di messaggistica. Le funzioni di sicurezza previste includono autenticazione e autorizzazione.  
   
  L'autenticazione viene eseguita passando credenziali tra i client e i servizi. L'autenticazione può avvenire tramite la sicurezza a livello di trasporto o tramite la sicurezza a livello di messaggio SOAP, come riportato di seguito:  
   
@@ -80,20 +80,20 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
  La funzionalità dei canali in coda non conserva alcuna informazione sul computer dell'utente finale, perché usa l'accodamento messaggi come infrastruttura di accodamento.  
   
 ## <a name="com-integration"></a>Integrazione COM+  
- Questa funzionalità esegue il wrapping delle funzionalità COM e COM+ esistenti per creare servizi compatibili con i servizi WCF. Essa non usa intestazioni specifiche e non conserva dati sul computer dell'utente finale.  
+ Questa funzionalità esegue il wrapping di funzionalità COM e COM+ esistenti per creare servizi compatibili con i servizi WCF. Essa non usa intestazioni specifiche e non conserva dati sul computer dell'utente finale.  
   
 ## <a name="com-service-moniker"></a>Moniker servizio COM  
  Questo fornisce un wrapper non gestito a un client WCF standard. Essa non prevede intestazioni specifiche in transito né conserva dati sul computer.  
   
 ## <a name="peer-channel"></a>Canale del peer  
- Un canale peer consente lo sviluppo di applicazioni a più parti usando WCF. La messaggistica a più parti si verifica nel contesto di una rete. Le reti vengono identificate da un nome a cui i nodi possono connettersi. Ogni nodo nel canale del peer crea un listener TCP su una porta specificata dall'utente e stabilisce connessioni con altri nodi nella rete per assicurare la flessibilità. Per connettersi ad altri nodi nella rete, i nodi si scambiano anche alcuni dati, incluso l'indirizzo del listener e gli indirizzi IP del computer. I messaggi inviati nella rete possono contenere informazioni di sicurezza relative al mittente, per impedire lo spoofing e la manomissione dei messaggi.  
+ Il canale peer consente lo sviluppo di applicazioni a più parti tramite WCF. La messaggistica a più parti si verifica nel contesto di una rete. Le reti vengono identificate da un nome a cui i nodi possono connettersi. Ogni nodo nel canale del peer crea un listener TCP su una porta specificata dall'utente e stabilisce connessioni con altri nodi nella rete per assicurare la flessibilità. Per connettersi ad altri nodi nella rete, i nodi si scambiano anche alcuni dati, incluso l'indirizzo del listener e gli indirizzi IP del computer. I messaggi inviati nella rete possono contenere informazioni di sicurezza relative al mittente, per impedire lo spoofing e la manomissione dei messaggi.  
   
  Non vengono archiviate informazioni personali sul computer dell'utente finale.  
   
 ## <a name="it-professional-experience"></a>Esperienza dei professionisti IT  
   
 ### <a name="tracing"></a>Traccia  
- La funzionalità di diagnostica dell'infrastruttura di WCF registra i messaggi che passano attraverso il trasporto e livelli del modello di servizio e le attività e gli eventi associati a questi messaggi. Questa funzionalità è disattivata per impostazione predefinita. Viene attivata usando il file di configurazione dell'applicazione e il comportamento di traccia può essere modificato usando il provider WMI per WCF in fase di esecuzione. Quando viene attivata, l'infrastruttura di traccia emette una traccia di diagnostica che contiene messaggi, attività ed eventi di elaborazione per i listener configurati. Il formato e la posizione dell'output vengono determinati dalle scelte di configurazione dei listener dell'amministratore, ma l'output è in genere un file con formattazione XML. L'amministratore è responsabile dell'impostazione dell'elenco di controllo di accesso sui file di traccia. In particolare, in caso di hosting in Windows Activation System (WAS), l'amministratore deve verificare che i file non vengano servizi dalla directory radice virtuale pubblica, se non lo si desidera.  
+ La funzionalità di diagnostica dell'infrastruttura di WCF registra i messaggi che passano attraverso il trasporto e livelli del modello di servizio e le attività e gli eventi associati a questi messaggi. Questa funzionalità è disattivata per impostazione predefinita. Viene attivata usando il file di configurazione dell'applicazione e il comportamento della traccia può essere modificato usando il provider WMI per WCF in fase di esecuzione. Quando viene attivata, l'infrastruttura di traccia emette una traccia di diagnostica che contiene messaggi, attività ed eventi di elaborazione per i listener configurati. Il formato e la posizione dell'output vengono determinati dalle scelte di configurazione dei listener dell'amministratore, ma l'output è in genere un file con formattazione XML. L'amministratore è responsabile dell'impostazione dell'elenco di controllo di accesso sui file di traccia. In particolare, in caso di hosting in Windows Activation System (WAS), l'amministratore deve verificare che i file non vengano servizi dalla directory radice virtuale pubblica, se non lo si desidera.  
   
  Ci sono due tipi di traccia, la registrazione messaggi e la traccia diagnostica del modello di servizio, descritte nella sezione seguente. Ogni tipo viene configurato tramite la propria origine di traccia: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> e <xref:System.ServiceModel>. Entrambe queste origini di traccia di registrazione acquisiscono dati locali rispetto all'applicazione.  
   
@@ -116,18 +116,18 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
  I messaggi registrati a questo livello vengono decrittografati anche se sono stati protetti e crittografati durante il transito.  
   
  Registrazione messaggi in formato non valido  
- Registra i messaggi che l'infrastruttura WCF non può comprendere o elaborare.  
+ Registra i messaggi che non è possibile comprendere o elaborare l'infrastruttura WCF.  
   
  I messaggi vengono registrati così come sono, ovvero in forma crittografata o decrittografata.  
   
- Quando i messaggi vengono registrati forma non crittografata o decrittografata, per impostazione predefinita WCF rimuove le chiavi di sicurezza e potenziali informazioni personali dai messaggi prima di essere inserite. Nelle sezioni successive vengono descritte quali informazioni vengono rimosse e quando. L'amministratore del computer e il distributore dell'applicazione devono entrambi eseguire determinate operazioni di configurazione per modificare il comportamento predefinito al fine di registrare chiavi e potenziali informazioni personali.  
+ Quando i messaggi vengono registrati forma decrittografata o non crittografata, per impostazione predefinita WCF rimuove le chiavi di sicurezza e potenziali informazioni personali dai messaggi prima la registrazione. Nelle sezioni successive vengono descritte quali informazioni vengono rimosse e quando. L'amministratore del computer e il distributore dell'applicazione devono entrambi eseguire determinate operazioni di configurazione per modificare il comportamento predefinito al fine di registrare chiavi e potenziali informazioni personali.  
   
 #### <a name="information-removed-from-message-headers-when-logging-decryptedunencrypted-messages"></a>Informazioni rimosse dalle intestazioni dei messaggi in caso di registrazione di messaggi decrittografati/non crittografati  
  Quando i messaggi vengono registrati in forma decrittografata/non crittografata, le chiavi di sicurezza e le potenziali informazioni personali vengono rimosse, per impostazione predefinita, dalle intestazioni e dai corpi dei messaggi prima della registrazione. Nell'elenco seguente viene illustrato cosa WCF considera chiavi e potenziali informazioni personali.  
   
  Chiavi rimosse:  
   
- \- Per xmlns:WST="http://schemas.xmlsoap.org/ws/2004/04/trust ="http://schemas.xmlsoap.org/ws/2004/04/trust"e xmlns:WST="http://schemas.xmlsoap.org/ws/2005/02/trust = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- Per xmlns:wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
@@ -147,9 +147,9 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  wsse:BinarySecurityToken  
   
- \- Per xmlns:SAML="urn:OASIS:Names:TC:SAML:1.0:Assertion ="urn: oasis: i nomi: tc: SAML:1.0:assertion"vengono rimossi gli elementi in grassetto (seguenti):  
+ \- Per xmlns:SAML="urn:OASIS:Names:TC:SAML:1.0:Assertion ="urn: oasis: nomi: tc: SAML:1.0:assertion"vengono rimossi gli elementi in grassetto (seguenti):  
   
- \<asserzione  
+ \<Asserzione  
   
  MajorVersion="1"  
   
@@ -181,7 +181,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  \</ Condizioni >?  
   
- \<Avviso >  
+ \<Consigli >  
   
  \<AssertionIDReference > [ID]\</AssertionIDReference > *  
   
@@ -189,15 +189,15 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  [any]*  
   
- \</ Advice >?  
+ \</ Consigli >?  
   
- <\!-I tipi di base astratti  
+ <\!: Tipi di base astratti  
   
  \<Istruzione / > *  
   
  \<SubjectStatement >  
   
- \<Oggetto >  
+ \<Soggetto >  
   
  `<NameIdentifier`  
   
@@ -285,7 +285,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  [Subject]  
   
- \<Azione Namespace = "[uri]" > [stringa]\</Action > +  
+ \<Azione Namespace = "[uri]" > [string]\</Action > +  
   
  \<Evidenza >  
   
@@ -300,11 +300,11 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
  \</ Asserzione >  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Informazioni rimosse dai corpi dei messaggi in caso di registrazione di messaggi decrittografati/non crittografati  
- Come descritto in precedenza, WCF rimuove chiavi e potenziali informazioni personali note dalle intestazioni dei messaggi decrittografati/non crittografati registrati messaggi. Inoltre, WCF rimuove le chiavi e potenziali informazioni personali note dai corpi dei messaggi per le elementi del corpo e le azioni nell'elenco seguente, che descrivono i messaggi di sicurezza coinvolti nello scambio di chiave.  
+ Come descritto in precedenza, WCF rimuove chiavi e potenziali informazioni personali note dalle intestazioni del messaggio per i messaggi decrittografati/non crittografati registrati. Inoltre, WCF consente di rimuovere le chiavi e potenziali informazioni personali note dai corpi dei messaggi per gli elementi di corpo e le azioni nell'elenco seguente, che descrivono messaggi di sicurezza coinvolti nello scambio di chiave.  
   
  Per gli spazi dei nomi seguenti:  
   
- xmlns:WST="http://schemas.xmlsoap.org/ws/2004/04/trust ="http://schemas.xmlsoap.org/ws/2004/04/trust"e xmlns:WST="http://schemas.xmlsoap.org/ws/2005/02/trust = "http://schemas.xmlsoap.org/ws/2005/02/trust" (ad esempio, se nessuna azione disponibile)  
+ xmlns:WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" (ad esempio, se nessuna azione disponibile)  
   
  Vengono rimosse informazioni per questi elementi del corpo, che implicano lo scambio di chiavi:  
   
@@ -372,14 +372,14 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
  Per la registrazione e la traccia dei messaggi è possibile configurare un listener di traccia personalizzato che può inviare tracce e messaggi in rete, ad esempio, a un database remoto. Il distributore dell'applicazione è responsabile della configurazione di listener personalizzati o dell'abilitazione degli utenti a tale attività. È inoltre responsabile di qualsiasi informazione personale esposta nel percorso remoto e della corretta applicazione di elenchi di controllo di accesso al percorso in questione.  
   
 ### <a name="other-features-for-it-professionals"></a>Altre funzionalità per i professionisti IT  
- WCF dispone di un provider WMI che espone le informazioni di configurazione dell'infrastruttura WCF tramite WMI (componente fornito con Windows). Per impostazione predefinita, l'interfaccia WMI è disponibile per gli amministratori.  
+ WCF include un provider WMI che espone le informazioni di configurazione dell'infrastruttura WCF tramite WMI (forniti con Windows). Per impostazione predefinita, l'interfaccia WMI è disponibile per gli amministratori.  
   
- Configurazione WCF utilizza il meccanismo di configurazione di .NET Framework. I file di configurazione vengono archiviati sul computer. Lo sviluppatore dell'applicazione e l'amministratore creano i file di configurazione e l'elenco di controllo di accesso per ognuno dei requisiti dell'applicazione. Un file di configurazione può contenere indirizzi degli endpoint e collegamenti ai certificati nell'archivio certificati. I certificati possono essere usati per fornire dati dell'applicazione e configurare le varie proprietà delle funzionalità usate dall'applicazione.  
+ Configurazione di WCF utilizza il meccanismo di configurazione di .NET Framework. I file di configurazione vengono archiviati sul computer. Lo sviluppatore dell'applicazione e l'amministratore creano i file di configurazione e l'elenco di controllo di accesso per ognuno dei requisiti dell'applicazione. Un file di configurazione può contenere indirizzi degli endpoint e collegamenti ai certificati nell'archivio certificati. I certificati possono essere usati per fornire dati dell'applicazione e configurare le varie proprietà delle funzionalità usate dall'applicazione.  
   
- WCF Usa anche la funzionalità di dump di processo di .NET Framework chiamando il <xref:System.Environment.FailFast%2A> metodo.  
+ WCF Usa anche la funzionalità di dump di processo di .NET Framework chiamando il <xref:System.Environment.FailFast%2A> (metodo).  
   
 ### <a name="it-pro-tools"></a>Strumenti per i professionisti IT  
- WCF fornisce anche gli strumenti professionali a IT seguenti, che vengono fornito con Windows SDK.  
+ WCF fornisce anche gli strumenti professionali a IT seguenti, che vengono fornito con il SDK di Windows.  
   
 #### <a name="svctraceviewerexe"></a>SvcTraceViewer.exe  
  Il Visualizzatore Visualizza file di traccia WCF. Il visualizzatore mostra tutte le informazioni contenute nelle tracce.  
@@ -388,7 +388,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
  L'editor consente all'utente di creare e modificare i file di configurazione WCF. L'editor mostra tutte le informazioni contenute nei file di configurazione. La stessa attività può essere eseguita con un editor di testo.  
   
 #### <a name="servicemodelreg"></a>ServiceModel_Reg  
- Questo strumento consente all'utente di gestire installazioni ServiceModel in un computer. Lo strumento visualizza messaggi di stato in una finestra della console quando viene eseguito e, nel processo, possono essere visualizzate informazioni relative alla configurazione dell'installazione di WCF.  
+ Questo strumento consente all'utente di gestire installazioni ServiceModel in un computer. Lo strumento visualizza messaggi di stato nella finestra della console quando viene eseguito e, nel processo, possono essere visualizzate informazioni relative alla configurazione dell'installazione di WCF.  
   
 #### <a name="wsatconfigexe-and-wsatuidll"></a>WSATConfig.exe e WSATUI.dll  
  Questi strumenti consentono ai professionisti IT di configurare il supporto di rete interoperativo WS-AtomicTransaction in WCF. Gli strumenti visualizzano i valori delle impostazioni WS-AtomicTransaction più comunemente usate archiviati nel Registro di sistema e consentono all'utente di modificarli.  

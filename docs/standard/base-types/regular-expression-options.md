@@ -15,10 +15,10 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33579652"
 ---
 # <a name="regular-expression-options"></a>Opzioni di espressioni regolari
@@ -275,7 +275,7 @@ ms.locfileid: "33579652"
   
 -   Uno spazio vuoto in una classe di caratteri viene sempre interpretato letteralmente. Ad esempio, il criterio di ricerca di espressioni regolari `[ .,;:]` trova la corrispondenza di qualsiasi spazio vuoto, punto, virgola, punto e virgola o due punti.  
   
--   Gli spazi vuoti non sono consentiti all'interno di un quantificatore tra parentesi, ad esempio `{`*n*`}`, `{`*n*`,}` e `{`*n*`,`*m*`}`. Ad esempio, il criterio di ricerca di espressioni regolari `\d{1. 3}` non riesce a trovare sequenze di cifre da una a tre cifre perché contiene uno spazio vuoto.  
+-   Gli spazi vuoti non sono consentiti all'interno di un quantificatore tra parentesi, ad esempio `{`*n*`}`, `{`*n*`,}` e `{`*n*`,`*m*`}`. Ad esempio, il criterio di ricerca di espressioni regolari `\d{1, 3}` non riesce a trovare sequenze di cifre da una a tre cifre perché contiene uno spazio vuoto.  
   
 -   Gli spazi vuoti non sono consentiti all'interno di una sequenza di caratteri che introduce un elemento di linguaggio. Ad esempio:  
   
