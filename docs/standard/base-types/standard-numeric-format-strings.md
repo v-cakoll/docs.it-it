@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36208209"
 ---
 # <a name="standard-numeric-format-strings"></a>Stringhe di formato numerico standard
@@ -67,7 +67,7 @@ Le stringhe di formato numerico standard sono supportate:
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>uso di stringhe di formato numerico standard  
 
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 È possibile usare una stringa di formato numerico standard per definire la formattazione di un valore numerico in uno dei due modi seguenti:  
   
@@ -166,7 +166,7 @@ Le stringhe di formato numerico standard sono supportate:
   
 <a name="FFormatString"></a>   
 ## <a name="the-fixed-point-f-format-specifier"></a>Identificatore di formato a virgola fissa ("F")  
- L'identificatore di formato a virgola fissa ("F") converte il numero di una stringa nel formato "-ddd.ddd…" dove ciascuna "d" indica una cifra (0-9). Se il numero è negativo, la stringa inizierà con un segno meno.  
+ L'identificatore di formato a virgola fissa ("F") consente di convertire un numero in una stringa nel formato "-ddd.ddd…", dove ogni "d" indica una cifra da 0 a 9. Se il numero è negativo, la stringa inizierà con un segno meno.  
   
  L'identificatore di precisione indica il numero di posizioni decimali desiderato. Se l'identificatore di precisione viene omesso, la precisione numerica viene fornita dalla proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> corrente.  
   
@@ -350,7 +350,7 @@ Per i valori <xref:System.Double> l'identificatore di formato "R" in alcuni casi
   
 ## <a name="example"></a>Esempio  
  
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
  
  Nell'esempio seguente vengono formattati un valore numerico a virgola mobile e uno integrale usando le impostazioni cultura en-US e tutti gli identificatori di formato numerico standard. Nell'esempio vengono usati due tipi numerici particolari (<xref:System.Double> e <xref:System.Int32>), tuttavia i risultati sarebbero simili con qualsiasi altro tipo numerico di base (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal> e <xref:System.Single>).  
   

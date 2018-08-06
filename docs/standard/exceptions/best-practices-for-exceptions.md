@@ -12,10 +12,10 @@ ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd38b59e39f938d6347457100243f09935444d88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33578082"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedure consigliate per le eccezioni
@@ -104,17 +104,19 @@ Ad esempio, nelle implementazioni .NET che supportano domini app, è possibile c
 
 - Se i domini non condividono alcuna base applicativa comune, firmando l'assembly contenente le informazioni sull'eccezione con un nome sicuro e distribuendo tale assembly nella Global Assembly Cache.
 
-## <a name="include-a-localized-description-string-in-every-exception"></a>Includere in ciascuna eccezione una stringa descrittiva localizzata
-
-Il messaggio di errore visualizzato all'utente è derivato dalla stringa descrittiva dell'eccezione generata, anziché dal nome della classe di eccezione.
-
 ## <a name="use-grammatically-correct-error-messages"></a>Usare messaggi di errore grammaticalmente corretti
 
-Scrivere frasi chiare e includere la punteggiatura finale. È necessario che ogni frase della stringa descrittiva di un'eccezione termini con un punto. Ad esempio, "Overflow della tabella del log." è una stringa descrittiva corretta.
+Scrivere frasi chiare e includere la punteggiatura finale. Ogni frase della stringa assegnata alla proprietà <xref:System.Exception.Message?displayProperty=nameWithType> deve terminare con un punto. Ad esempio, "Overflow della tabella del log." è una stringa del messaggio corretta.
+
+## <a name="include-a-localized-string-message-in-every-exception"></a>Includere in ogni eccezione un messaggio stringa localizzato
+
+Il messaggio di errore visualizzato all'utente è derivato dalla proprietà <xref:System.Exception.Message?displayProperty=nameWithType> dell'eccezione generata e non dal nome della classe di eccezione. In genere, si assegna un valore alla proprietà <xref:System.Exception.Message?displayProperty=nameWithType> passando la stringa del messaggio all'argomento `message` di un [costruttore di eccezione](xref:System.Exception.%23ctor%2A). 
+
+Per le applicazioni localizzate, è necessario specificare una stringa di messaggio localizzata per ogni eccezione che può essere generata dall'applicazione. Usare i file di risorse per specificare i messaggi di errore localizzati. Per informazioni sulla localizzazione delle applicazioni e sul recupero delle stringhe localizzate, vedere [Risorse nelle applicazioni desktop](../../framework/resources/index.md) e <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Nelle eccezioni personalizzate specificare le proprietà aggiuntive necessarie
 
-Fornire le proprietà aggiuntive di un'eccezione (oltre alla stringa descrittiva) solo nel caso di uno scenario a livello di codice in cui è utile disporre di altre informazioni. Ad esempio, <xref:System.IO.FileNotFoundException> fornisce la proprietà <xref:System.IO.FileNotFoundException.FileName>.
+Specificare le proprietà aggiuntive di un'eccezione (oltre alla stringa del messaggio personalizzata) solo in un contesto di codice in cui è utile avere a disposizione altre informazioni. Ad esempio, <xref:System.IO.FileNotFoundException> fornisce la proprietà <xref:System.IO.FileNotFoundException.FileName>.
 
 ## <a name="place-throw-statements-so-that-the-stack-trace-will-be-helpful"></a>Inserire istruzioni throw in modo che l'analisi dello stack risulti utile
 

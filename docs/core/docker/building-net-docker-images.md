@@ -7,10 +7,10 @@ ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "34827339"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Compilazione di immagini Docker per applicazioni .NET Core
@@ -83,6 +83,17 @@ Versioni più recenti di ciascuna variante:
 * [Questo esempio di Docker per ASP.NET Core](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp) illustra un modello di procedura consigliata per la compilazione di immagini Docker per app ASP.NET Core per la produzione. L'esempio usa contenitori sia Linux che Windows.
 
 * Questo esempio di Docker per .NET Core illustra un modello di procedura consigliata per la [compilazione di immagini Docker per app .NET Core per la produzione](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp).
+
+## <a name="forward-the-request-scheme-and-original-ip-address"></a>Trasferire lo schema di richiesta e l'indirizzo IP originale
+
+Server proxy, servizi di bilanciamento del carico e altre appliance di rete spesso nascondono informazioni su una richiesta prima che questa raggiunga l'app nel contenitore:
+
+* Quando le richieste HTTPS vengono trasmesse tramite proxy su HTTP, lo schema originale (HTTPS) viene perso e deve essere inoltrato in un'intestazione.
+* Poiché un'app riceve una richiesta dal proxy e non dall'effettiva origine su Internet o nella rete aziendale, anche l'indirizzo IP originale del client deve essere inoltrato in un'intestazione.
+
+Queste informazioni potrebbero essere importanti per l'elaborazione delle richieste, ad esempio per i reindirizzamenti, l'autenticazione, la generazione di collegamenti, la valutazione dei criteri e la georilevazione dei client.
+
+Per trasferire lo schema e l'indirizzo IP originale a un'app ASP.NET Core presente in un contenitore, usare il middleware delle intestazioni inoltrate. Per altre informazioni, vedere [Configurare ASP.NET Core per l'utilizzo di server proxy e servizi di bilanciamento del carico](/aspnet/core/host-and-deploy/proxy-load-balancer).
 
 ## <a name="your-first-aspnet-core-docker-app"></a>La prima app Docker ASP.NET Core
 
@@ -258,7 +269,6 @@ La procedura è stata completata. Sono state eseguite le attività seguenti:
 > * Esecuzione locale dell'app di esempio ASP.NET
 > * Compilazione ed esecuzione dell'esempio con Docker per i contenitori Linux
 > * Compilazione ed esecuzione dell'esempio con Docker per i contenitori Windows
-
 
 **Passaggi successivi**
 
