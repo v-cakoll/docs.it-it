@@ -13,7 +13,7 @@ ms.locfileid: "33520500"
 WCF Data Services è un componente di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] che consente di creare servizi che usano Open Data Protocol (OData) per esporre e usare dati sul Web o su rete Intranet tramite la semantica REST (Representational State Transfer). In OData i dati vengono esposti come risorse indirizzabili tramite URI. Un'applicazione può interagire con un servizio dati basato su OData quando è in grado di inviare una richiesta HTTP e di elaborare il feed OData restituito da un servizio dati. In WCF Data Services sono inoltre disponibili librerie client che consentono di programmare in modo più completo quando si usano feed OData da applicazioni [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . In questo argomento viene fornita una panoramica sull'uso di un feed OData in un flusso di lavoro con e senza librerie client.  
   
 ## <a name="using-the-sample-northwind-odata-service"></a>Utilizzo del servizio OData Northwind di esempio  
- Gli esempi in questo argomento usano il servizio dati che si trova in Northwind di esempio [ http://services.odata.org/Northwind/Northwind.svc/ ](http://go.microsoft.com/fwlink/?LinkID=187426). Il servizio viene fornito come parte di [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) e consente di accedere in sola lettura al database Northwind di esempio. Se si desidera ottenere l'accesso in scrittura o un'istanza di WCF Data Services locale, seguire la procedura descritta in [Guida rapida (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=131076) per creare un servizio OData locale che consenta di accedere al database Northwind. Se si eseguono le operazioni indicate nella guida rapida, sostituire l'URI locale a quello indicato nel codice di esempio in questo argomento.  
+ Gli esempi in questo argomento usano il servizio dati che si trova in Northwind di esempio [http://services.odata.org/Northwind/Northwind.svc/](http://go.microsoft.com/fwlink/?LinkID=187426). Il servizio viene fornito come parte di [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) e consente di accedere in sola lettura al database Northwind di esempio. Se si desidera ottenere l'accesso in scrittura o un'istanza di WCF Data Services locale, seguire la procedura descritta in [Guida rapida (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=131076) per creare un servizio OData locale che consenta di accedere al database Northwind. Se si eseguono le operazioni indicate nella guida rapida, sostituire l'URI locale a quello indicato nel codice di esempio in questo argomento.  
   
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>Uso di un feed OData tramite le librerie client  
  In WCF Data Services sono disponibili librerie client che consentono di usare con più facilità un feed OData da applicazioni [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] e client. Queste librerie semplificano l'invio e la ricezione di messaggi HTTP, oltre a convertire il payload del messaggio in oggetti CLR che rappresentano dati di entità. Le librerie client rendono disponibili le due classi principali <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601> che consentono di eseguire una query su un servizio dati e di usare quindi i dati di entità restituiti come oggetti CLR. Contenuto della sezione vengono descritti due approcci alla creazione di attività che usano le librerie client.  
@@ -119,11 +119,11 @@ WCF Data Services è un componente di [!INCLUDE[dnprdnshort](../../../includes/d
  **xmlns:m="http://schemas.microsoft.com/ADO/2007/08/dataservices/Metadata ="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"**  
  **xmlns = "http://www.w3.org/2005/Atom" >**  
  **\<titolo tipo = "text" > gli ordini \< /title >**  
- **\<ID >http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI') / Ordina\</id >**  
+ **\<ID>http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Ordina\</id>**  
  **\<aggiornato > 2010-05-19T19:37:07Z\</ aggiornare >**  
  **\<link rel = "self" title = "Orders" href = "Orders" / >**  
  **\<voce >**  
- **\<ID >http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id>**  
+ **\<ID>http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id>**  
  **\<titolo tipo = "text" > \< /title >**  
  **\<aggiornato > 2010-05-19T19:37:07Z\</ aggiornare >**  
  **\<autore >**  

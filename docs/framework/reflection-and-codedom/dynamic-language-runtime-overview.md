@@ -75,7 +75,7 @@ ms.locfileid: "33397286"
 ## <a name="dlr-architecture"></a>Architettura di DLR  
  Nella figura seguente viene illustrata l'architettura di Dynamic Language Runtime.  
   
- ![Dynamic Language Runtime Architecture Overview] (Panoramica sull'architettura di Dynamic Language Runtime) (../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview")  
+ ![Dynamic Language Runtime Architecture Overview](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview") (Panoramica sull'architettura di Dynamic Language Runtime)  
 Architettura di DLR  
   
  DLR estende CLR con un set di servizi in grado di supportare in modo più efficiente i linguaggi dinamici. Questi servizi includono:  
