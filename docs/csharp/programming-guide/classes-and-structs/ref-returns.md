@@ -5,10 +5,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
 ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33339618"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valori restituiti e variabili locali ref
@@ -35,16 +35,19 @@ Inoltre, i valori restituiti di riferimento non sono consentiti per i metodi asi
  
 ## <a name="defining-a-ref-return-value"></a>Definizione di un valore restituito ref
 
-È possibile definire un valore restituito ref aggiungendo la parola chiave [ref](../../language-reference/keywords/ref.md) al tipo restituito della firma del metodo. Ad esempio, la firma seguente indica che la proprietà `GetContactInformation` restituisce al chiamante un riferimento a un oggetto `Person`:
+Un metodo che restituisce un *valore restituito di riferimento* deve soddisfare le due condizioni seguenti:
+
+- La firma del metodo include la parola chiave [ref](../../language-reference/keywords/ref.md) davanti al tipo restituito.
+- Ogni istruzione [return](../../language-reference/keywords/return.md) nel corpo del metodo include la parola chiave [ref](../../language-reference/keywords/ref.md) davanti al nome dell'istanza restituita.
+
+L'esempio seguente illustra un metodo che soddisfa le condizioni e restituisce un riferimento a un oggetto `Person` denominato `p`:
 
 ```csharp
-public ref Person GetContactInformation(string fname, string lname);
-```
-
-Inoltre, il nome dell'oggetto restituito da ciascuna istruzione [return](../../language-reference/keywords/return.md) nel corpo del metodo deve essere preceduto dalla parola chiave [ref](../../language-reference/keywords/ref.md). Ad esempio, l'istruzione `return` seguente restituisce un riferimento a un oggetto `Person` denominato `p`:
-
-```csharp
-return ref p;
+public ref Person GetContactInformation(string fname, string lname)
+{
+    // ...method implementation...
+    return ref p;
+}
 ```
 
 ## <a name="consuming-a-ref-return-value"></a>Uso di un valore restituito ref
