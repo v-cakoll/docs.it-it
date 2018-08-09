@@ -45,7 +45,7 @@ HRESULT Merge (
  [in] Un puntatore a un [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) oggetto che specifica il nuovo mapping dei token.  
   
  `pHandleer`  
- [in] Un puntatore a un <!--<<!--zzxref:IUnknown --> `IUnknown` >-->  `IUnknown` oggetto che specifica gli errori.  
+ [in] Un puntatore a un <!--<<!--zzxref:IUnknown --> `IUnknown`>--> `IUnknown` oggetto che specifica gli errori.  
   
 ## <a name="remarks"></a>Note  
  Chiamare [IMetaDataEmit:: MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) per attivare l'unione dei metadati in un singolo ambito.  
