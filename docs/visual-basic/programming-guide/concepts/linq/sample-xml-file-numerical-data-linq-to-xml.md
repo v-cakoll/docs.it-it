@@ -3,11 +3,11 @@ title: 'File XML di esempio: dati numerici (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5faef812-0006-4d84-9cf2-5746070e7fbf
 ms.openlocfilehash: fb7bdb93aa63d430ba9371ed754616e39ea03487
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644680"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754196"
 ---
 # <a name="sample-xml-file-numerical-data-linq-to-xml"></a>File XML di esempio: dati numerici (LINQ to XML)
 Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Questo file contiene dati numerici per il calcolo della somma e della media, nonché per il raggruppamento.  

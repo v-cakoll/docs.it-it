@@ -3,11 +3,11 @@ title: 'Procedura: creare un documento con spazi dei nomi (LINQ to XML) (Visual 
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643078"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754170"
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Procedura: creare un documento con spazi dei nomi (LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come creare un documento con spazi dei nomi in Visual Basic.  
@@ -18,7 +18,7 @@ In questo argomento viene illustrato come creare un documento con spazi dei nomi
   
  Per definire spazi dei nomi predefiniti e spazi dei nomi con prefissi, usare la parola chiave `Imports`.  
   
- Per ulteriori informazioni, vedere [Introduzione ai valori letterali XML in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
+ Per altre informazioni, vedere [Introduzione ai valori letterali XML in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
   
  Notare che lo spazio dei nomi XML predefinito si applica solo agli elementi e non agli attributi. Per impostazione predefinita, gli attributi non sono inclusi in nessuno spazio dei nomi. È tuttavia possibile usare un prefisso dello spazio dei nomi per inserire un attributo in uno spazio dei nomi.  
   

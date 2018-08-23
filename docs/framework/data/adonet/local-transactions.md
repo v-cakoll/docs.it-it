@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 394059481b5081586904d2d5ea5d4a3d3e0df42b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 40ba9085905869ca5d3d8f39a3d7ce11639b1504
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758893"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754573"
 ---
 # <a name="local-transactions"></a>Transazioni locali
-Le transazioni in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] consentono di associare più attività in modo da poterle eseguire come un'unità di lavoro singola. Ad esempio, si supponga che un'applicazione esegua due attività. Ovvero che prima aggiorni una tabella con le informazioni sull'ordine e che, successivamente, aggiorni una tabella contenente le informazioni d'inventario addebitando gli articoli ordinati. Se l'attività ha esito negativo, quindi entrambi gli aggiornamenti di rollback.  
+Le transazioni in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] consentono di associare più attività in modo da poterle eseguire come un'unità di lavoro singola. Ad esempio, si supponga che un'applicazione esegua due attività. Ovvero che prima aggiorni una tabella con le informazioni sull'ordine e che, successivamente, aggiorni una tabella contenente le informazioni d'inventario addebitando gli articoli ordinati. Se una delle attività non riesce, quindi entrambi gli aggiornamenti di rollback.  
   
 ## <a name="determining-the-transaction-type"></a>Determinazione del tipo di transazione  
- Una transazione viene considerata come una transazione locale quando è a fase singola e viene gestita direttamente dal database. Una transazione viene considerata come una transazione distribuita quando è coordinata da un monitoraggio delle transazioni e utilizza i meccanismi fail-safe (quale il commit in due fasi) per la risoluzione delle transazioni.  
+ Una transazione viene considerata una transazione locale quando tratta di una transazione monofase e viene gestito direttamente dal database. Una transazione viene considerata una transazione distribuita quando è coordinata da un monitoraggio delle transazioni e utilizza meccanismi fail-safe (ad esempio, i commit in due fasi) per la risoluzione delle transazioni.  
   
- Ogni provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dispone di un oggetto `Transaction` per l'esecuzione delle transazioni locali. Per eseguire una transazione in un database di SQL Server, selezionare una transazione <xref:System.Data.SqlClient>. Per una transazione Oracle usare il provider <xref:System.Data.OracleClient>. Inoltre, è un <xref:System.Data.Common.DbTransaction> classe disponibile per la scrittura di codice indipendente dal provider che richiede transazioni.  
+ Ogni provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dispone di un oggetto `Transaction` per l'esecuzione delle transazioni locali. Per eseguire una transazione in un database di SQL Server, selezionare una transazione <xref:System.Data.SqlClient>. Per una transazione Oracle usare il provider <xref:System.Data.OracleClient>. Inoltre, è presente un <xref:System.Data.Common.DbTransaction> classe disponibile per la scrittura di codice indipendente dal provider che richiede transazioni.  
   
 > [!NOTE]
->  Le transazioni più efficienti sono quelle eseguite sul server. Se si usa un database SQL Server in cui sono ampiamente usate le transazioni esplicite, è consigliabile scrivere queste transazioni come stored procedure usando l'istruzione BEGIN TRANSACTION Transact-SQL. Per altre informazioni sull'esecuzione di transazioni sul lato server, vedere la documentazione online di SQL Server.  
+> Le transazioni più efficienti sono quelle eseguite sul server. Se si usa un database SQL Server in cui sono ampiamente usate le transazioni esplicite, è consigliabile scrivere queste transazioni come stored procedure usando l'istruzione BEGIN TRANSACTION Transact-SQL.
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>Esecuzione di una transazione con una singola connessione  
  In [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] è possibile controllare le transazioni mediante l'oggetto `Connection`. È possibile avviare una transazione locale con il metodo `BeginTransaction`. Una volta iniziata una transazione, è possibile inserire un comando nell'elenco della transazione usando la proprietà `Transaction` di un oggetto `Command`. In seguito è possibile eseguire il commit o il rollback delle modifiche apportate nell'origine dati in base all'esito corretto o errato dei componenti della transazione.  
@@ -29,7 +29,7 @@ Le transazioni in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] cons
 > [!NOTE]
 >  Il metodo `EnlistDistributedTransaction` non deve essere usato per una transazione locale.  
   
- L'ambito della transazione si limita alla connessione. Nell'esempio seguente viene eseguita una transazione esplicita composta da due comandi separati nel blocco `try`. I comandi eseguono le istruzioni INSERT sulla tabella Production. ScrapReason nel database di esempio AdventureWorks di SQL Server, viene eseguito il commit non vengono generate eccezioni. Se, invece, viene generata un'eccezione, il codice del blocco `catch` esegue il rollback della transazione. Allo stesso modo, se la transazione viene interrotta oppure la connessione viene chiusa prima del completamento della transazione, viene eseguito automaticamente il rollback della transazione.  
+ L'ambito della transazione si limita alla connessione. Nell'esempio seguente viene eseguita una transazione esplicita composta da due comandi separati nel blocco `try`. I comandi eseguono istruzioni INSERT sulla tabella Production. ScrapReason nel database di esempio AdventureWorks-SQL Server, viene eseguito il commit se non vengono generate eccezioni. Se, invece, viene generata un'eccezione, il codice del blocco `catch` esegue il rollback della transazione. Allo stesso modo, se la transazione viene interrotta oppure la connessione viene chiusa prima del completamento della transazione, viene eseguito automaticamente il rollback della transazione.  
   
 ## <a name="example"></a>Esempio  
  Per eseguire una transazione, usare la procedura seguente:  

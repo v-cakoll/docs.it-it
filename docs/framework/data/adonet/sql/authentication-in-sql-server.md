@@ -2,12 +2,12 @@
 title: Autenticazione in SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: f2d290d22d27c43cf7fb3250bf7898e8260dce2b
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 85f441d2181d434ec9fccca5841296106d0d7e3f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472387"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754438"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticazione in SQL Server
 In SQL Server sono supportate due modalità di autenticazione: la modalità dell'autenticazione di Windows e la modalità mista.  
@@ -17,7 +17,7 @@ In SQL Server sono supportate due modalità di autenticazione: la modalità dell
 -   La modalità mista supporta l'autenticazione di Windows e quella di SQL Server. Le coppie di nome utente e password vengono mantenute in SQL Server.  
   
 > [!IMPORTANT]
->  Se possibile, si consiglia di usare l'autenticazione di Windows. In questa modalità viene utilizzata una serie di messaggi crittografati per autenticare gli utenti in SQL Server. Quando si utilizzano gli account di accesso di SQL Server, i nomi di account di accesso di SQL Server e le password crittografate vengono passate attraverso la rete, che li rende meno sicura.  
+>  Se possibile, si consiglia di usare l'autenticazione di Windows. In questa modalità viene utilizzata una serie di messaggi crittografati per autenticare gli utenti in SQL Server. Quando vengono utilizzati gli account di accesso di SQL Server, i nomi di account di accesso di SQL Server e le password crittografate vengono passate attraverso la rete, che li rende meno sicura.  
   
  Con l'autenticazione di Windows, gli utenti sono già connessi a Windows e non devono eseguire separatamente l'accesso a SQL Server. Nell'oggetto `SqlConnection.ConnectionString` seguente è specificata l'autenticazione di Windows senza la richiesta di immissione di nome utente o password.  
   
@@ -35,7 +35,7 @@ In SQL Server sono supportate due modalità di autenticazione: la modalità dell
   
 -   L'applicazione e il database si trovano nello stesso computer.  
   
--   Si utilizza un'istanza di SQL Server Express o LocalDB.  
+-   Si usa un'istanza di SQL Server Express o LocalDB.  
   
  Gli account di accesso di SQL Server vengono in genere usati nelle seguenti situazioni:  
   
@@ -58,7 +58,7 @@ In SQL Server sono supportate due modalità di autenticazione: la modalità dell
 -   Account di accesso di SQL Server. In SQL Server sia il nome utente che un hash della password vengono archiviati nel database master, utilizzando metodi di autenticazione interni per verificare i tentativi di accesso.  
   
 > [!NOTE]
->  SQL Server sono disponibili account di accesso creati da certificati o chiavi asimmetriche che vengono utilizzate solo per la firma del codice. che non possono essere utilizzati per la connessione a SQL Server.  
+>  SQL Server sono disponibili account di accesso creati da certificati o chiavi asimmetriche che vengono usate solo per la firma del codice. che non possono essere utilizzati per la connessione a SQL Server.  
   
 ## <a name="mixed-mode-authentication"></a>Autenticazione in modalità mista  
  Se è necessario utilizzare l'autenticazione in modalità mista, occorre creare account di accesso di SQL Server, che vengono archiviati in SQL Server. È quindi necessario specificare il nome utente e la password di SQL Server in fase di esecuzione.  
@@ -66,17 +66,17 @@ In SQL Server sono supportate due modalità di autenticazione: la modalità dell
 > [!IMPORTANT]
 >  SQL Server viene installato con un account di accesso denominato `sa` (abbreviazione di "system administrator"). Assegnare una password complessa all'account di accesso `sa` e non usare l'account di accesso `sa` nell'applicazione. L'account di accesso `sa` viene mappato al ruolo predefinito del server `sysadmin`, che dispone di credenziali amministrative irrevocabili nell'intero server. Non esistono limiti ai danni che potrebbero verificarsi se un utente non autorizzato ottiene accesso come amministratore di sistema. Per impostazione predefinita, tutti i membri del gruppo `BUILTIN\Administrators` di Windows (il gruppo di amministratori locali) sono membri del ruolo `sysadmin`, ma possono essere rimossi da tale ruolo.  
   
- SQL Server fornisce meccanismi di criteri di password di Windows per gli account di accesso di SQL Server è in esecuzione [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] o versioni successive. I criteri di complessità delle password sono progettati per fungere da deterrente agli attacchi a forza bruta aumentando il numero di password possibili. SQL Server è possibile applicare gli stessi criteri di complessità e scadenza utilizzati [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] alle password all'interno di SQL Server.  
+ SQL Server fornisce meccanismi di criteri password di Windows per gli account di accesso di SQL Server in cui viene eseguito [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] o versioni successive. I criteri di complessità delle password sono progettati per fungere da deterrente agli attacchi a forza bruta aumentando il numero di password possibili. SQL Server è possibile applicare gli stessi criteri di complessità e scadenza utilizzati [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] alle password all'interno di SQL Server.  
   
 > [!IMPORTANT]
->  La concatenazione di stringhe di connessione dall'input dell'utente può lasciare il sistema vulnerabile a un attacco injection alle stringhe di connessione. Usare <xref:System.Data.SqlClient.SqlConnectionStringBuilder> per creare stringhe di connessione sintatticamente valide in fase di esecuzione. Per ulteriori informazioni, vedere [generatori di stringhe di connessione](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+>  La concatenazione di stringhe di connessione dall'input dell'utente può lasciare il sistema vulnerabile a un attacco injection alle stringhe di connessione. Usare <xref:System.Data.SqlClient.SqlConnectionStringBuilder> per creare stringhe di connessione sintatticamente valide in fase di esecuzione. Per altre informazioni, vedere [Compilatori di stringhe di connessione](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Per altre informazioni, vedere le risorse seguenti.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Entità](http://msdn.microsoft.com/library/bb543165.aspx) nella documentazione Online di SQL Server|Vengono descritti gli account di accesso e altre entità di sicurezza in SQL Server.|  
+|[Entità](/sql/relational-databases/security/authentication-access/principals-database-engine)|Vengono descritti gli account di accesso e altre entità di sicurezza in SQL Server.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

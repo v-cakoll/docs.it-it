@@ -1,22 +1,23 @@
 ---
-title: Oggetto My.Log
+title: Oggetto My. log (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object
 ms.assetid: 309b14b4-8875-4b2f-9661-a734b8cbff07
-ms.openlocfilehash: d37c42bc7d67c66a3aa29a425a86a7fd7cd0349c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c36382db2918952a9c84c25fb4319f7006d73d2
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754051"
 ---
 # <a name="mylog-object"></a>Oggetto My.Log
-Fornisce una proprietà e metodi per la scrittura di eventi e informazioni sull'eccezione ai listener di log dell'applicazione.  
+Fornisce una proprietà e metodi per la scrittura di eventi e informazioni sull'eccezione nei listener di log dell'applicazione.  
   
 ## <a name="remarks"></a>Note  
- Per informazioni sui metodi e proprietà del `My.Log` , vedere <xref:Microsoft.VisualBasic.Logging.AspLog>.  
+ Per informazioni sui metodi e proprietà del `My.Log` oggetti, vedere <xref:Microsoft.VisualBasic.Logging.AspLog>.  
   
- Il `My.Log` l'oggetto è disponibile per solo le applicazioni ASP.NET. Per le applicazioni client, utilizzare [oggetto My](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
+ Il `My.Log` l'oggetto è disponibile per solo le applicazioni ASP.NET. Per le applicazioni client, usare [oggetto My.Application.Log](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** <xref:Microsoft.VisualBasic.Logging>  

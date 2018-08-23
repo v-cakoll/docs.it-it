@@ -3,11 +3,11 @@ title: 'Procedura: trovare elementi figlio in base alla posizione (XPath-LINQ to
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
 ms.openlocfilehash: 9f18da12786b4c44dc21e54c8d5020f49ef9ecb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641040"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754143"
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare elementi figlio in base alla posizione (XPath-LINQ to XML) (Visual Basic)
 Talvolta si desidera individuare elementi in base alla posizione, ad esempio il secondo elemento oppure dal terzo al quinto elemento.  
