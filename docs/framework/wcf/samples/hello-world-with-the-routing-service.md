@@ -2,15 +2,15 @@
 title: Hello World con il servizio di routing
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 881636097cf342de09164804c6df6acfbcd97c45
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d875ab5471a7c1ff50aa0501991a7af0eaf0bb5f
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810252"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792396"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World con il servizio di routing
-Questo esempio viene illustrato il servizio di Routing di Windows Communication Foundation (WCF). Il servizio di Routing è un componente WCF che rende più semplice includere un router basato sul contenuto nell'applicazione. In questo esempio adatta l'esempio di calcolatrice WCF standard per comunicare mediante il servizio di Routing. In questo esempio, il client calcolatrice è configurato per inviare messaggi a un endpoint esposto dal router. Il servizio di routing è configurato per accettare tutti i messaggi ad esso inviati e per inoltrarli a un endpoint che corrisponde al servizio di calcolatrice. I messaggi inviati dal client vengono pertanto ricevuti dal router e reindirizzati al servizio di calcolatrice effettivo. I messaggi provenienti dal servizio di calcolatrice di backup vengono inviati nuovamente al router del servizio, che a sua volta li inoltra al client calcolatrice.  
+Questo esempio viene illustrato il servizio di Routing di Windows Communication Foundation (WCF). Il servizio di Routing è un componente WCF che rende più semplice includere un router basato sul contenuto nell'applicazione. In questo esempio si adatta l'esempio di calcolatrice standard di WCF per comunicare con il servizio di Routing. In questo esempio, il client calcolatrice è configurato per inviare messaggi a un endpoint esposto dal router. Il servizio di routing è configurato per accettare tutti i messaggi ad esso inviati e per inoltrarli a un endpoint che corrisponde al servizio di calcolatrice. I messaggi inviati dal client vengono pertanto ricevuti dal router e reindirizzati al servizio di calcolatrice effettivo. I messaggi provenienti dal servizio di calcolatrice di backup vengono inviati nuovamente al router del servizio, che a sua volta li inoltra al client calcolatrice.  
   
 ### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
@@ -20,8 +20,8 @@ Questo esempio viene illustrato il servizio di Routing di Windows Communication 
   
     > [!NOTE]
     >  Se si preme F5, il client calcolatrice viene avviato automaticamente. Se si preme CTRL+MAIUSC+B (compilazione), è necessario avviare le applicazioni seguenti.  
-    >   
-    >  1.  Client calcolatrice (./CalculatorClient/bin/client.exe  
+    >  
+    > 1.  Client calcolatrice (./CalculatorClient/bin/client.exe  
     > 2.  Servizio di calcolatrice (./CalculatorService/bin/service.exe)  
     > 3.  Servizio di routing (./RoutingService/bin/RoutingService.exe)  
   
@@ -56,4 +56,4 @@ Questo esempio viene illustrato il servizio di Routing di Windows Communication 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Hosting di AppFabric ed esempi di persistenza](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hosting di AppFabric e salvataggio permanente](http://go.microsoft.com/fwlink/?LinkId=193961)
