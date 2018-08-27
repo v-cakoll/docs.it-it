@@ -1,84 +1,116 @@
 ---
-title: Nozioni di base sull'input penna
-ms.date: 03/30/2017
+title: Creare un oggetto InkCanvas in un'app WPF in Visual Studio
+ms.date: 08/15/2018
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - procedural code in lieu of XAML [WPF]
-- gradient brush [WPF], animating colors of
 - XAML [WPF], procedural code in lieu of
-- animation [WPF], gradient brush colors
-- brushes [WPF], animating colors of
+- InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 9a1b53d0513eeef377fe8e012a8d5d7ea3f8a984
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 600d8528125606c6e1af5b031e2fc31aabb79206
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546237"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925044"
 ---
-# <a name="getting-started-with-ink"></a>Nozioni di base sull'input penna
-Inserimento di input penna nelle applicazioni è più semplice che mai. Input penna è stato migliorato da un corollario al metodo COM e Windows Form di programmazione per raggiungere la piena integrazione in corso il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Non è necessario installare gli SDK separati o le librerie di runtime.  
-  
-## <a name="prerequisites"></a>Prerequisiti  
- Per utilizzare gli esempi seguenti, è innanzitutto necessario installare Microsoft Visual Studio 2005 e [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. È anche necessario avere conoscenze su come scrivere applicazioni per [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Per ulteriori informazioni sui concetti introduttivi di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [procedura dettagliata: applicazione desktop WPF prima](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
-  
-## <a name="quick-start"></a>Avvio rapido  
- In questa sezione consente di scrivere un semplice [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione che raccoglie input penna.  
-  
- Se non già stato fatto, installare Microsoft Visual Studio 2005 e [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni in genere devono essere compilate prima possibile visualizzarli, anche se sono costituite interamente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Tuttavia, il [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] include un'applicazione, XamlPad, progettata per velocizzare il processo di implementazione di un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-interfaccia utente basata su. Per visualizzare e globalmente con i primi esempi riportati in questo documento, è possibile utilizzare tale applicazione. Il processo di creazione di applicazioni compilate da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene descritta più avanti in questo documento.  
-  
- Per avviare XAMLPad, fare clic su di **avviare** dal menu **tutti i programmi**, scegliere **Microsoft Windows SDK**, scegliere **strumenti**, fare clic su **XAMLPad**. Nel riquadro di rendering XAMLPad esegue il rendering del codice XAML scritto nel riquadro del codice. È possibile modificare il codice XAML, e le modifiche vengano visualizzate immediatamente nel riquadro di rendering.  
-  
-#### <a name="got-ink"></a>Hai input penna?  
- Per avviare la prima [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione che supporta l'input penna:  
-  
-1.  Aprire Microsoft Visual Studio 2005  
-  
-2.  Creare un nuovo **applicazione WPF (Windows)**  
-  
-3.  Tipo `<InkCanvas/>` tra il `<Grid>` tag  
-  
-4.  Premere **F5** per avviare l'applicazione nel debugger  
-  
-5.  Tramite uno stilo o un mouse, scrivere **HelloWorld** nella finestra  
-  
- Si è scritto l'equivalente di input penna di un'applicazione "hello world" con sequenze di tasti solo 12.  
-  
-#### <a name="spice-up-your-application"></a>Personalizzare l'applicazione  
- Per sfruttare alcune funzionalità del [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Sostituire tutto il contenuto tra l'apertura \<finestra > e di chiusura \</Window > tag con il markup seguente per ottenere uno sfondo con pennello sfumato sull'area di input penna.  
-  
- [!code-xaml[DigitalInkTopics#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1)]  
-[!code-xaml[DigitalInkTopics#1a](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1a)]  
-  
-#### <a name="using-animation"></a>Utilizzo dell'animazione  
- Per una divertente, animare i colori del pennello sfumato. Aggiungere il seguente [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dopo la chiusura `</InkCanvas>` tag ma prima della chiusura `</Page>` tag.  
-  
- [!code-xaml[DigitalInkTopics#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#2)]  
-  
-#### <a name="adding-some-code-behind-the-xaml"></a>Aggiunta di codice sottostante a XAML  
- Mentre XAML è molto semplice progettare l'interfaccia utente, qualsiasi applicazione reale deve aggiungere il codice per gestire gli eventi. Di seguito è riportato un esempio semplice che consente di ingrandire l'input penna in risposta al pulsante destro del mouse:  
-  
- Impostare il `MouseRightButtonUp` gestore il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:  
-  
- [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]  
-  
- In Esplora soluzioni di Visual Studio, espandere Windows1. XAML e aprire il file code-behind, Window1.xaml.cs o Window1. XAML se si utilizza Visual Basic. Aggiungere il codice del gestore eventi seguente:  
-  
- [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
- [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]  
-  
- A questo punto, eseguire l'applicazione. Aggiungere un input penna e quindi fare clic con il mouse o eseguire un equivalente premere e tenere con stilo.  
-  
-#### <a name="using-procedural-code-instead-of-xaml"></a>Usando codice procedurale anziché XAML  
- È possibile accedere a tutti [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funzionalità dal codice procedurale. In questo caso è un'applicazione "Hello Ink World" per [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che non utilizza [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] affatto. Incollare il codice seguente in un'applicazione Console vuota in Visual Studio. Aggiungere riferimenti agli assembly WindowsBase, PresentationCore e PresentationFramework e compilare l'applicazione premendo **F5**:  
-  
- [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
- [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
-  
-## <a name="see-also"></a>Vedere anche  
- [Input penna](../../../../docs/framework/wpf/advanced/digital-ink.md)  
- [Raccolta di input penna](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
- [Riconoscimento della grafia](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
- [Archiviazione dell'input penna](../../../../docs/framework/wpf/advanced/storing-ink.md)
+# <a name="get-started-with-ink-in-wpf"></a>Introduzione a input penna in WPF
+
+Windows Presentation Foundation (WPF) è una funzionalità di input penna che rende più semplice incorporare input penna digitale nella tua app.
+
+## <a name="prerequisites"></a>Prerequisiti
+
+Per usare gli esempi seguenti, innanzitutto [installa Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). È anche utile per sapere come scrivere le app WPF di base. Per informazioni sulla Guida introduttiva a WPF, vedere [procedura dettagliata: prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+
+## <a name="quick-start"></a>Guida introduttiva
+
+In questa sezione consente di scrivere una semplice applicazione WPF che consente di raccogliere input penna.
+
+### <a name="got-ink"></a>Ricevuto input penna?
+
+Per creare un'app WPF che supporta l'input penna:
+
+1. Aprire Visual Studio.
+
+2. Creare una nuova **App WPF**.
+
+   Nel **nuovo progetto** finestra di dialogo espandere il **installato** > **Visual c#** oppure **Visual Basic**  >   **Windows Desktop** categoria. Selezionare quindi il **App WPF (.NET Framework)** modello di app. Immettere un nome e quindi selezionare **OK**.
+
+   Visual Studio crea il progetto, e *MainWindow. XAML* nella finestra di progettazione.
+
+3. Tipo di `<InkCanvas/>` tra il `<Grid>` tag.
+
+   ![Finestra di progettazione XAML con tag InkCanvas](media/getting-started-with-ink/inkcanvas-xaml.png)
+
+4. Premere **F5** per avviare l'applicazione nel debugger.
+
+5. Tramite uno stilo o un mouse, scrivere **HelloWorld** nella finestra.
+
+L'equivalente dell'input penna di un'applicazione "hello world" con solo 12 tasti scritto!
+
+### <a name="spice-up-your-app"></a>Migliorare le prestazioni dell'App
+
+È possibile sfruttare i vantaggi di alcune funzionalità di WPF. Sostituire tutto il contenuto tra l'apertura e chiusura \<finestra > tag con il markup seguente:
+
+```xaml
+<Page>
+  <InkCanvas Name="myInkCanvas" MouseRightButtonUp="RightMouseUpHandler">
+    <InkCanvas.Background>
+      <LinearGradientBrush>
+        <GradientStop Color="Yellow" Offset="0.0" />
+          <GradientStop Color="Blue" Offset="0.5" />
+            <GradientStop Color="HotPink" Offset="1.0" />
+              </LinearGradientBrush>
+    </InkCanvas.Background>
+  </InkCanvas>
+</Page>
+```
+
+Questo XAML crea uno sfondo pennello sfumato nella superficie dell'input penna.
+
+![Colori sfumati in input penna di surface in app WPF](media/getting-started-with-ink/gradient-colors.png)
+
+### <a name="add-some-code-behind-the-xaml"></a>Aggiungere il codice dietro il XAML
+
+Mentre XAML è molto semplice progettare l'interfaccia utente, tutte le applicazioni del mondo reale deve aggiungere il codice per gestire gli eventi. Ecco un esempio semplice che viene ingrandita sull'input penna in risposta al pulsante destro del mouse.
+
+1. Impostare il `MouseRightButtonUp` gestore nel XAML:
+
+   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+
+1. Nelle **Esplora soluzioni**espandere MainWindow. XAML e aprire il file code-behind (MainWindow.xaml.cs o XAML. vb). Aggiungere il codice del gestore eventi seguente:
+
+   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+
+1. Eseguire l'applicazione. Aggiungere alcuni input penna, quindi fare clic con il mouse o eseguire un equivalente premere e tenere con uno stilo.
+
+   La visualizzazione viene ingrandita ogni volta che si fa clic con il pulsante destro del mouse.
+
+### <a name="use-procedural-code-instead-of-xaml"></a>Usare codice procedurale anziché XAML
+
+Tutte le funzionalità WPF è possibile accedere dal codice procedurale. Seguire questi passaggi per creare un'applicazione "Hello dell'input penna World" per WPF che non utilizza affatto qualsiasi XAML.
+
+1. Creare un nuovo progetto applicazione console in Visual Studio.
+
+   Nel **nuovo progetto** finestra di dialogo espandere il **installato** > **Visual c#** oppure **Visual Basic**  >   **Windows Desktop** categoria. Selezionare quindi il **App Console (.NET Framework)** modello di app. Immettere un nome e quindi selezionare **OK**.
+
+1. Incollare il codice seguente nel file Program.cs o Program. vb:
+
+   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+
+1. Aggiungere riferimenti agli assembly PresentationCore, PresentationFramework e WindowsBase facendo clic su **riferimenti** nelle **Esplora soluzioni** e scegliendo **Aggiungi riferimento**.
+
+   ![Gestione di riferimenti che mostra PresentationCore e PresentationFramework](media/getting-started-with-ink/references.png)
+
+1. Compilare l'applicazione premendo **F5**.
+
+## <a name="see-also"></a>Vedere anche
+
+- [Input penna](../../../../docs/framework/wpf/advanced/digital-ink.md)
+- [Raccolta di input penna](../../../../docs/framework/wpf/advanced/collecting-ink.md)
+- [Riconoscimento della grafia](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
+- [Archiviazione dell'input penna](../../../../docs/framework/wpf/advanced/storing-ink.md)

@@ -2,12 +2,12 @@
 title: Gestione delle autorizzazioni con stored procedure in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 2472481156f44b55726243e9d939522e46796070
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d16a6609603cfb83fc6523606cc7ec9e7bfd8dba
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361284"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912065"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gestione delle autorizzazioni con stored procedure in SQL Server
 Per creare più linee di difesa intorno al database, è possibile implementare tutto l'accesso ai dati tramite stored procedure o funzioni definite dall'utente. Revocare o negare tutte le autorizzazioni per gli oggetti sottostanti, ad esempio tabelle, e concedere autorizzazioni EXECUTE sulle stored procedure. In questo modo viene creato un perimetro di sicurezza efficace intorno ai dati e agli oggetti di database.  
@@ -54,7 +54,7 @@ Per creare più linee di difesa intorno al database, è possibile implementare t
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Stored procedure](http://msdn.microsoft.com/library/ms190782.aspx) e [attacchi SQL Injection](http://go.microsoft.com/fwlink/?LinkId=98234) nella documentazione Online di SQL Server|Viene descritto come creare stored procedure e come funziona SQL Injection.|  
+|[Stored procedure](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [Attacco SQL Injection](http://go.microsoft.com/fwlink/?LinkId=98234) nella documentazione online di SQL Server|Viene descritto come creare stored procedure e come funziona SQL Injection.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

@@ -10,30 +10,30 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: e672402535215ca30d19cc480e39b42b0364f137
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09b0162068bc068bd77612816626897ec4a151d9
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590813"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911967"
 ---
 # <a name="char-data-type-visual-basic"></a>Tipo di dati Char (Visual Basic)
-Contiene punti di codice di (2 byte) senza segno a 16 bit compresi nell'intervallo compreso tra 0 e 65535. Ogni *punto di codice*, o codice di carattere, rappresenta un singolo carattere Unicode.  
+Contiene punti di codice (a 2 byte) a 16 bit senza segno compresi nell'intervallo compreso tra 0 e 65535. Ciascuna *punto di codice*, o il codice carattere rappresenta un singolo carattere Unicode.  
   
 ## <a name="remarks"></a>Note  
- Utilizzare il `Char` quando è necessario contenere un solo tipo di dati carattere e non è necessario l'overhead di `String`. In alcuni casi è possibile utilizzare `Char()`, una matrice di `Char` elementi, per contenere più caratteri.  
+ Usare la `Char` quando è necessario contenere un solo tipo di dati carattere e non è necessario l'overhead di `String`. In alcuni casi è possibile usare `Char()`, una matrice di `Char` elementi, per contenere più caratteri.  
   
  Il valore predefinito di `Char` è il carattere con un punto di codice pari a 0.  
   
 ## <a name="unicode-characters"></a>Caratteri Unicode  
- I primo 128 punti di codice (0-127) di Unicode corrispondono alle lettere e simboli di tastiera standard. Questi primi punti di 128 codice sono gli stessi di quelli definisce il set di caratteri ASCII. I secondo 128 punti di codice (128 a 255) rappresentano i caratteri speciali, quali lettere dell'alfabeto latino, accenti, simboli di valuta e le frazioni di secondo. Unicode utilizza i punti di codice rimanenti (256-65535) per un'ampia gamma di simboli, inclusi i caratteri di testuali in tutto il mondo, segni diacritici e simboli matematici e tecnici.  
+ I punti di 128 codice (0-127) prima di Unicode corrispondono alle lettere e simboli di una tastiera US standard. Questi primi punti di 128 codice sono identici a quelli definisce il set di caratteri ASCII. I secondo 128 punti di codice (128 a 255) rappresentano i caratteri speciali, ad esempio lettere dell'alfabeto basati sull'alfabeto latino, accenti, i simboli di valuta e le frazioni. Unicode utilizza i punti di codice rimanenti (256 e 65535) per un'ampia gamma di simboli, inclusi i caratteri di testo in tutto il mondo, i segni diacritici e simboli matematici e tecnici.  
   
- È possibile utilizzare i metodi, ad esempio <xref:System.Char.IsDigit%2A> e <xref:System.Char.IsPunctuation%2A> su un `Char` variabile per determinarne la classificazione di Unicode.  
+ È possibile usare metodi quali <xref:System.Char.IsDigit%2A> e <xref:System.Char.IsPunctuation%2A> su un `Char` variabile per determinarne la classificazione di Unicode.  
   
 ## <a name="type-conversions"></a>Conversione di tipi  
- Visual Basic non convertire direttamente tra `Char` e i tipi numerici. È possibile utilizzare il <xref:Microsoft.VisualBasic.Strings.Asc%2A> o <xref:Microsoft.VisualBasic.Strings.AscW%2A> funzione per convertire un `Char` valore un `Integer` che rappresenta il punto di codice. È possibile utilizzare il <xref:Microsoft.VisualBasic.Strings.Chr%2A> o <xref:Microsoft.VisualBasic.Strings.ChrW%2A> funzione per convertire un `Integer` valore un `Char` che dispone di tale punto di codice.  
+ Visual Basic non converte direttamente tra `Char` e i tipi numerici. È possibile usare la <xref:Microsoft.VisualBasic.Strings.Asc%2A> oppure <xref:Microsoft.VisualBasic.Strings.AscW%2A> funzione per convertire un `Char` valore un `Integer` che rappresenta il punto di codice. È possibile usare il <xref:Microsoft.VisualBasic.Strings.Chr%2A> oppure <xref:Microsoft.VisualBasic.Strings.ChrW%2A> funzione per convertire un `Integer` valore un `Char` che dispone di tale punto di codice.  
   
- Se il controllo dei tipi passa ([istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)) è abilitato, è necessario aggiungere il tipo di valore letterale di carattere in una stringa di caratteri a singolo valore letterale per identificarlo come il `Char` tipo di dati. Questa condizione è illustrata nell'esempio seguente.  
+ Se il controllo del tipo passa ([Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)) è attivo, è necessario aggiungere il carattere di tipo di valore letterale in una stringa di caratteri a un valore letterale per identificarlo come il `Char` tipo di dati. Questa condizione è illustrata nell'esempio seguente.  
   
 ```  
 Option Strict On  
@@ -47,13 +47,13 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>Suggerimenti per la programmazione  
   
--   **Numeri negativi.** `Char` è un tipo unsigned e non può rappresentare un valore negativo. In ogni caso, è consigliabile non utilizzare `Char` per contenere valori numerici.  
+-   **Numeri negativi.** `Char` è un tipo senza segno e non può rappresentare un valore negativo. In ogni caso, è consigliabile non usare `Char` per contenere valori numerici.  
   
--   **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi di carattere hanno un'ampiezza dei dati diversa (8 bit) in altri ambienti. Se si passa un argomento a 8 bit a tale componente, dichiararla come `Byte` anziché `Char` nel nuovo codice Visual Basic.  
+-   **Considerazioni sull'interoperabilità.** Se si deve interfacciare con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi di carattere hanno un'ampiezza dei dati diverse (8 bit) in altri ambienti. Se si passa un argomento a 8 bit da tale componente, dichiararlo come `Byte` invece di `Char` nel nuovo codice Visual Basic.  
   
--   **Ampliamento.** Il `Char` può ampliarsi nel tipo di dati `String`. È pertanto possibile convertire `Char` a `String` senza che si verifichi un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
+-   **Ampliamento.** Il `Char` può ampliarsi nel tipo di dati `String`. Ciò significa che è possibile convertire `Char` al `String` senza che si verifichi un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
   
--   **Caratteri tipo.** Aggiungendo il tipo di valore letterale del carattere `C` in una stringa di caratteri a singolo valore letterale indica al sistema di `Char` tipo di dati. `Char` non include alcun carattere di tipo identificatore.  
+-   **Caratteri tipo.** Aggiungendo il carattere di tipo di valore letterale `C` a una stringa di caratteri a un valore letterale, se ne determina la `Char` tipo di dati. `Char` possiede alcun carattere di tipo identificatore.  
   
 -   **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Char?displayProperty=nameWithType>.  
   
@@ -63,7 +63,7 @@ charVar = "Z"C
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
  <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
  <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [Tipi di dati](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)  
  [Tipo di dati String](../../../visual-basic/language-reference/data-types/string-data-type.md)  
  [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)  

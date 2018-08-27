@@ -36,24 +36,24 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: f86819f9bd3cbcceb4be696852655018868f4a56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a33e058b41629a2f01f2162dadd7a5f965a82548
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655597"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925553"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipi generici in Visual Basic (Visual Basic)
 Un *tipo generico* è un singolo elemento di programmazione che si adatta per eseguire la stessa funzionalità per diversi tipi di dati. Quando si definisce una classe o una routine generica, non è necessario definire una versione distinta per ogni tipo di dati per il quale si vuole eseguire tale funzionalità.  
   
  Un'analogia è un cacciavite con diverse punte rimovibili. Si esamina la vite che è necessario ruotare e si seleziona la punta corretta per tale vite (a taglio, a croce, a stella). Dopo avere inserito la punta corretta nel manico del cacciavite, si esegue in tutti i casi la stessa funzione, ovvero ruotare la vite.  
   
- ![Diagramma di un cacciavite come strumento generico](../../../../visual-basic/programming-guide/language-features/data-types/media/genericscrewdriver.gif "GenericScrewDriver")  
+ ![Diagramma di un cacciavite impostato come strumento generico](../../../../visual-basic/programming-guide/language-features/data-types/media/genericscrewdriver.gif "GenericScrewDriver")  
 Cacciavite come strumento generico  
   
  Quando si definisce un tipo generico, questo viene parametrizzato con uno o più tipi di dati. Questo consente di usare il codice per adattare i tipi di dati ai propri requisiti. Il codice può dichiarare più elementi di programmazione dall'elemento generico, ciascuno dei quali agisce su un diverso set di tipi di dati. Tuttavia, tutti gli elementi dichiarati eseguono la stessa logica, indipendentemente dai tipi di dati in uso.  
   
- È ad esempio possibile creare e usare una classe queue che opera su un tipo di dati specifico, quale `String`. È possibile dichiarare una classe da <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, come illustrato nell'esempio seguente.  
+ È ad esempio possibile creare e usare una classe queue che opera su un tipo di dati specifico, quale `String`. È possibile dichiarare tale classe da <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, come illustrato nell'esempio seguente.  
   
  [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
   
@@ -77,7 +77,7 @@ Cacciavite come strumento generico
  Per un esempio più esaustivo, vedere [procedura: definire una classe che può fornire funzionalità identiche su diversi tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Elementi di programmazione idonei  
- È possibile definire e usare classi, strutture, interfacce, routine e delegati generici. Si noti che [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] definisce diverse classi, strutture e interfacce generiche che rappresentano elementi generici usati comunemente. Il <xref:System.Collections.Generic?displayProperty=nameWithType> spazio dei nomi fornisce dizionari, elenchi, code e stack. Prima di definire un elemento generico personalizzato, verificare se è già disponibile in <xref:System.Collections.Generic?displayProperty=nameWithType>.  
+ È possibile definire e usare classi, strutture, interfacce, routine e delegati generici. Si noti che [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] definisce diverse classi, strutture e interfacce generiche che rappresentano elementi generici usati comunemente. Il <xref:System.Collections.Generic?displayProperty=nameWithType> dello spazio dei nomi fornisce dizionari, elenchi, code e stack. Prima di definire un elemento generico personalizzato, verificare se è già disponibile in <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
  Le routine non sono tipi, ma è possibile definire e usare routine generiche. Vedere [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
@@ -125,7 +125,7 @@ Cacciavite come strumento generico
   
 -   L'argomento di tipo deve essere un *tipo riferimento*oppure un *tipo valore*  
   
- Se è necessario imporre più di un requisito, usare un *elenco di vincoli* separati da virgole tra parentesi graffe (`{ }`). Per richiedere un costruttore accessibile, includere il [nuovo operatore](../../../../visual-basic/language-reference/operators/new-operator.md) (parola chiave) nell'elenco. Per richiedere un tipo di riferimento, includere la parola chiave `Class` ; per richiedere un tipo di valore, includere la parola chiave `Structure` .  
+ Se è necessario imporre più di un requisito, usare un *elenco di vincoli* separati da virgole tra parentesi graffe (`{ }`). Per richiedere un costruttore accessibile, includere il [operatore New](../../../../visual-basic/language-reference/operators/new-operator.md) parola chiave nell'elenco. Per richiedere un tipo di riferimento, includere la parola chiave `Class` ; per richiedere un tipo di valore, includere la parola chiave `Structure` .  
   
  Per altre informazioni sui vincoli, vedere [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
   
@@ -153,7 +153,7 @@ Cacciavite come strumento generico
  [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [Conversioni di tipi in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Risoluzione dei problemi relativi ai tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md)  
  [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
  [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)  

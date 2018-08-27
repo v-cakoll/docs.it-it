@@ -16,23 +16,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d9eda0d90e4db7638e3733d0b7a7cc265f4deba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: baff7dac7f1ddc8546bcb52627eeee992921a395
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925883"
 ---
 # <a name="itypelibresolver-interface"></a>Interfaccia ITypeLibResolver
-Fornisce il [metodo ResolveTypeLib](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), che consente di risolvere il percorso del file di una libreria dei tipi.  
+Fornisce il [metodo ResolveTypeLib](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), che risolve il percorso del file di una libreria dei tipi.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo ResolveTypeLib](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|Risolve il nome semplice di una libreria dei tipi restituendo il percorso completo.|  
+|[Metodo ResolveTypeLib](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|Risolve il nome semplice di una libreria dei tipi, restituendo il relativo percorso completo.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** TlbRef.idl, TlbRef. H  
   
@@ -42,4 +43,4 @@ Fornisce il [metodo ResolveTypeLib](../../../../docs/framework/unmanaged-api/tlb
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di supporto Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [Funzione LoadTypeLibEx dell'](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)
+ [Funzione LoadTypeLibEx dell'](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

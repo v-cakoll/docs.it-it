@@ -2,12 +2,12 @@
 title: Ruoli server e database in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 9a563c2b448b07dc6536ff42a21c256195ba52fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 196ca0791f42414b9da8dff32eb8285045fd7e63
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364798"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925465"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Ruoli server e database in SQL Server
 In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che consente di assegnare le autorizzazioni a un ruolo, ovvero un gruppo di utenti, anziché ai singoli utenti. Ai ruoli predefiniti del server e del database è assegnato un set predefinito di autorizzazioni.  
@@ -27,8 +27,8 @@ In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che con
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Ruoli a livello di server](http://msdn.microsoft.com/library/ms188659.aspx) e [delle autorizzazioni dei ruoli predefiniti del Server](http://msdn.microsoft.com/library/ms175892.aspx) nella documentazione Online di SQL Server|Vengono descritti i ruoli predefiniti del server e le autorizzazioni associate in SQL Server.|  
-|[Ruoli a livello di database](http://msdn.microsoft.com/library/ms189121.aspx) e [delle autorizzazioni dei ruoli predefiniti del Database](http://msdn.microsoft.com/library/ms189612.aspx) nella documentazione Online di SQL Server|Vengono descritti i ruoli predefiniti del database e le autorizzazioni associate.|  
+|[Ruoli a livello di server](/sql/relational-databases/security/authentication-access/server-level-roles) e [autorizzazioni dei ruoli predefiniti del Server](http://msdn.microsoft.com/library/ms175892.aspx) nella documentazione Online di SQL Server|Descrive le autorizzazioni associate in SQL Server e ruoli predefiniti del server.|  
+|[Ruoli a livello di database](/sql/relational-databases/security/authentication-access/database-level-roles) e [autorizzazioni dei ruoli predefiniti del Database](http://msdn.microsoft.com/library/ms189612.aspx) nella documentazione Online di SQL Server|Vengono descritti i ruoli predefiniti del database e le autorizzazioni associate.|  
   
 ## <a name="database-roles-and-users"></a>Ruoli e utenti del database  
  Gli account di accesso devono essere mappati ad account utente di database per poter essere usati con gli oggetti di database. Gli utenti del database possono quindi essere aggiunti ai ruoli del database, ereditando i set di autorizzazioni associati a tali ruoli. È possibile concedere tutte le autorizzazioni.  
@@ -42,7 +42,7 @@ In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che con
  L'utente `dbo`, o proprietario del database, è un account utente che dispone di autorizzazioni implicite per l'esecuzione di tutte le attività nel database. I membri del ruolo predefinito del server `sysadmin` vengono automaticamente mappati a `dbo`.  
   
 > [!NOTE]
->  `dbo` è anche il nome di uno schema, come descritto in [distinzione tra utente e Schema in SQL Server e la proprietà](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
+>  `dbo` è anche il nome di uno schema, come descritto [la proprietà e separazione tra schemi e utenti in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
   
  L'account utente `dbo` viene spesso confuso con il ruolo predefinito del database `db_owner`. L'ambito di `db_owner` è un database, mentre quello di `sysadmin` corrisponde all'intero server. L'appartenenza al ruolo `db_owner` non conferisce i privilegi dell'utente `dbo`.  
   
@@ -58,8 +58,8 @@ In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che con
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Controllo di identità e accesso](http://msdn.microsoft.com/library/bb510418.aspx) nella documentazione Online di SQL Server|Contiene collegamenti ad argomenti in cui vengono descritti entità, ruoli, credenziali, entità a protezione diretta e autorizzazioni.|  
-|[Entità](http://msdn.microsoft.com/library/ms181127.aspx) nella documentazione Online di SQL Server|Contiene una descrizione delle entità e collegamenti ad argomenti in cui sono illustrati i ruoli del server e del database.|  
+|[Identità e controllo di accesso](http://msdn.microsoft.com/library/bb510418.aspx) nella documentazione Online di SQL Server|Contiene collegamenti ad argomenti in cui vengono descritti entità, ruoli, credenziali, entità a protezione diretta e autorizzazioni.|  
+|[Le entità](/sql/relational-databases/security/authentication-access/principals-database-engine) nella documentazione Online di SQL Server|Contiene una descrizione delle entità e collegamenti ad argomenti in cui sono illustrati i ruoli del server e del database.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

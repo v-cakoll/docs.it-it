@@ -4,18 +4,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 367991e4bbca710df54edf73179f855ff79bb56e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f168b3021ee1dbe3c82edc22fc779767c30446b8
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647618"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912013"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Procedura: convertire un oggetto in un altro tipo in Visual Basic
-Convertire un `Object` variabile a un altro tipo di dati tramite una parola chiave di conversione, ad esempio [CType (funzione)](../../../../visual-basic/language-reference/functions/ctype-function.md).  
+Si converte un `Object` variabile in un altro tipo di dati con una parola chiave di conversione, ad esempio [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente converte un `Object` variabile a un `Integer` e `String`.  
+ L'esempio seguente converte un' `Object` variabile in un `Integer` e un `String`.  
   
 ```  
 Public Sub objectConversion(ByVal anObject As Object)  
@@ -26,7 +26,7 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- Se si è certi che il contenuto di un `Object` sono variabile di un particolare tipo di dati, si consiglia di convertire la variabile di quel tipo di dati. Se si continua a utilizzare il `Object` variabile, verrà eseguita una *boxing* e *unboxing* (per un tipo di valore) o *ad associazione tardiva* (per un tipo di riferimento). Queste operazioni tutti richiedere più tempo di esecuzione e riduzione delle prestazioni.  
+ Se si è certi che il contenuto di un `Object` sono variabile di un particolare tipo di dati, è preferibile convertire la variabile di quel tipo di dati. Se si continua a usare il `Object` variabile, verrà eseguita una *boxing* e *unboxing* (per un tipo di valore) o *associazione tardiva* (per un tipo riferimento). Queste operazioni tutti richiedere più tempo di esecuzione e riduzione delle prestazioni.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
@@ -41,5 +41,5 @@ End Sub
  [Conversioni fra stringhe e altri tipi](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  [Conversioni di matrice](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
  [Strutture](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md)  
  [Funzioni di conversione del tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: 1810bf4a6573c6fa36f1d8149bf341d45cfd6f52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 615f98bf36d29c1f269d6866b1232ad33a5ae2f2
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602827"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925437"
 ---
 # <a name="skip-clause-visual-basic"></a>Clausola Skip (Visual Basic)
 Ignora un numero specificato di elementi in una raccolta e quindi restituisce gli elementi rimanenti.  
@@ -29,22 +29,22 @@ Skip count
  Obbligatorio. Un valore o un'espressione che restituisce il numero di elementi della sequenza da ignorare.  
   
 ## <a name="remarks"></a>Note  
- Il `Skip` clausola interrompe una query ignora gli elementi all'inizio di un elenco di risultati e restituisce gli elementi rimanenti. Il numero di elementi da ignorare è identificato dal `count` parametro.  
+ Il `Skip` clausola provoca una query ignorare gli elementi all'inizio di un elenco dei risultati e restituire gli elementi rimanenti. Il numero di elementi da ignorare è identificato dal `count` parametro.  
   
- È possibile utilizzare il `Skip` clausola con il `Take` clausola per restituire un intervallo di dati da qualsiasi segmento di una query. A tale scopo, passare l'indice del primo elemento dell'intervallo per il `Skip` clausola e le dimensioni dell'intervallo per il `Take` clausola.  
+ È possibile usare la `Skip` clausola con il `Take` clausola per restituire un intervallo di dati da qualsiasi segmento di una query. A questo scopo, passare l'indice del primo elemento dell'intervallo per il `Skip` clausola e le dimensioni dell'intervallo dal `Take` clausola.  
   
- Quando si utilizza il `Skip` clausola in una query, è necessario anche per assicurarsi che i risultati vengono restituiti in un ordine, per consentire il `Skip` clausola per ignorare i risultati desiderati. Per ulteriori informazioni sull'ordinamento dei risultati della query, vedere [clausola Order By](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Quando si usa la `Skip` clausola in una query, è necessario anche assicurarsi che i risultati vengono restituiti in un ordine che consentirà di `Skip` clausola per ignorare i risultati desiderati. Per altre informazioni su come ordinare i risultati della query, vedere [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- È possibile utilizzare il `SkipWhile` clausola per specificare che solo determinati elementi vengano ignorati, a seconda di una condizione fornita.  
+ È possibile usare il `SkipWhile` clausola per specificare che solo alcuni elementi vengono ignorati, a seconda di una condizione fornita.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio di codice viene illustrato come utilizzare il `Skip` clausola con il `Take` clausola per restituire dati da una query in pagine. Il `GetCustomers` funzione Usa il `Skip` clausola per ignorare i clienti nell'elenco finché l'iniziale fornito valore di indice e utilizza il `Take` clausola per restituire una pagina di clienti a partire da quel valore di indice.  
+ Il codice seguente viene illustrato come utilizzare il `Skip` clausola insieme al `Take` clausola per restituire i dati da una query nelle pagine. Il `GetCustomers` funzione Usa le `Skip` clausola per ignorare i clienti nell'elenco fino a quando il valore iniziale specificato valore di indice e utilizza il `Take` clausola per restituire una pagina di clienti a partire dal valore di indice specificato.  
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-clause_1.vb)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Query](../../../visual-basic/language-reference/queries/queries.md)  
+ [Query](../../../visual-basic/language-reference/queries/index.md)  
  [Clausola Select](../../../visual-basic/language-reference/queries/select-clause.md)  
  [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Clausola Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)  

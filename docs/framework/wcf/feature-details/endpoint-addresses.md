@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 46278e35c6966e473f5a800f7e99814efd7b943c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2815c7c63e9ba9615904028081956b138b1befa
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495909"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925478"
 ---
 # <a name="endpoint-addresses"></a>Indirizzi endpoint
-A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e identificarlo. L'indirizzo è costituito principalmente da un URI (Uniform Resource Identifier) che specifica il percorso dell'endpoint. L'indirizzo dell'endpoint è rappresentato nel modello di programmazione di Windows Communication Foundation (WCF) per il <xref:System.ServiceModel.EndpointAddress> classe, che contiene un parametro facoltativo <xref:System.ServiceModel.EndpointAddress.Identity%2A> proprietà che abilita l'autenticazione dell'endpoint da altri endpoint che scambio di messaggi con esso e un set di facoltativo <xref:System.ServiceModel.EndpointAddress.Headers%2A> proprietà definiscono qualsiasi altra intestazione SOAP richiesta per raggiungere il servizio. Le intestazioni facoltative forniscono dettagli aggiuntivi e più precisi sull'indirizzo per identificare o interagire con l'endpoint del servizio. L'indirizzo di un endpoint è rappresentato in transito come riferimento all'endpoint di WS-Addressing (EPR).  
+A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e identificarlo. L'indirizzo è costituito principalmente da un URI (Uniform Resource Identifier) che specifica il percorso dell'endpoint. L'indirizzo dell'endpoint è rappresentato nel modello di programmazione di Windows Communication Foundation (WCF) per il <xref:System.ServiceModel.EndpointAddress> classe, che contiene un facoltativo <xref:System.ServiceModel.EndpointAddress.Identity%2A> proprietà che abilita l'autenticazione dell'endpoint da altri endpoint che scambiare messaggi con esso e un set di facoltativo <xref:System.ServiceModel.EndpointAddress.Headers%2A> proprietà definiscono qualsiasi altra intestazione SOAP richiesta per raggiungere il servizio. Le intestazioni facoltative forniscono dettagli aggiuntivi e più precisi sull'indirizzo per identificare o interagire con l'endpoint del servizio. L'indirizzo di un endpoint è rappresentato in transito come riferimento all'endpoint di WS-Addressing (EPR).  
   
 ## <a name="uri-structure-of-an-address"></a>Struttura URI di un indirizzo  
  L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti. Ad esempio, le quattro parti dell'URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint possono essere specificate come segue:  
   
 -   Schema: http:  
   
--   Computer: www.fabrikam.com  
+-   Computer: `www.fabrikam.com`  
   
 -   (facoltativo) Porta: 322  
   
@@ -31,13 +31,13 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
  L'indirizzo endpoint per un servizio può essere specificato in modo imperativo mediante l'utilizzo di codice oppure in modo dichiarativo mediante la configurazione. In genere definire endpoint nel codice non è pratico in quanto le associazioni e gli indirizzi di un servizio distribuito sono solitamente diversi da quelli usati durante lo sviluppo del servizio. In genere è più pratico definire endpoint di servizio mediante la configurazione piuttosto che mediante codice. Se le informazioni sull'associazione e sull'indirizzo non vengono incluse nel codice, tali dati possono essere modificati senza dover compilare o distribuire nuovamente l'applicazione.  
   
 ### <a name="defining-an-address-in-configuration"></a>Definizione di un indirizzo nella configurazione  
- Per definire un endpoint in un file di configurazione, utilizzare il [ \<endpoint >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento. Per informazioni dettagliate ed esempi, vedere [specificando un indirizzo Endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+ Per definire un endpoint in un file di configurazione, usare il [ \<endpoint >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento. Per informazioni dettagliate ed esempi, vedere [che specifica un indirizzo Endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 ### <a name="defining-an-address-in-code"></a>Definizione di un indirizzo nel codice  
- È possibile creare un indirizzo endpoint nel codice con la classe <xref:System.ServiceModel.EndpointAddress>. Per informazioni dettagliate ed esempi, vedere [specificando un indirizzo Endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+ È possibile creare un indirizzo endpoint nel codice con la classe <xref:System.ServiceModel.EndpointAddress>. Per informazioni dettagliate ed esempi, vedere [che specifica un indirizzo Endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 ### <a name="endpoints-in-wsdl"></a>Endpoint in WSDL  
- Un indirizzo endpoint può essere rappresentato anche in WSDL come elemento EPR di WS-Addressing all'interno dell'elemento `wsdl:port` dell'endpoint corrispondente. L'EPR contiene l'indirizzo dell'endpoint e qualsiasi proprietà dell'indirizzo. Per informazioni dettagliate ed esempi, vedere [specificando un indirizzo Endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+ Un indirizzo endpoint può essere rappresentato anche in WSDL come elemento EPR di WS-Addressing all'interno dell'elemento `wsdl:port` dell'endpoint corrispondente. L'EPR contiene l'indirizzo dell'endpoint e qualsiasi proprietà dell'indirizzo. Per informazioni dettagliate ed esempi, vedere [che specifica un indirizzo Endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 ## <a name="multiple-iis-binding-support-in-net-framework-35"></a>IIS più supporto dell'associazione in .NET Framework 3.5  
  I provider di servizi Internet consentono spesso di ospitare diverse applicazioni nello stesso server e nello stesso sito per aumentare la densità del sito e ridurre il costo totale di proprietà. Queste applicazioni sono in genere associate a indirizzi di base diversi. Un sito Web IIS (Internet Information Services) può contenere più applicazioni. Alle applicazioni in un sito è possibile accedere tramite una o più associazioni IIS.  
@@ -84,7 +84,7 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
 ## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>Supporto per più binding IIS in .NET Framework 4 e versioni successive  
  A partire da .NET 4, è possibile abilitare il supporto di più binding in IIS senza dover scegliere un indirizzo di base unico, impostando la proprietà <xref:System.ServiceModel.ServiceHostingEnvironment> dell'oggetto <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> su true. Questo supporto è limitato agli schemi del protocollo HTTP.  
   
- Di seguito è riportato un esempio di codice di configurazione che utilizza multipleSiteBindingsEnabled in [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).  
+ Di seguito è riportato un esempio di codice di configurazione che usa multipleSiteBindingsEnabled in [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).  
   
 ```xml  
 <system.serviceModel>  
@@ -95,10 +95,10 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
  Quando questa impostazione viene utilizzata per abilitare più associazioni di siti, tutte le impostazioni baseAddressPrefixFilters vengono ignorate, sia per i protocolli HTTP sia per quelli non HTTP.  
   
- Per informazioni dettagliate ed esempi, vedere [di supporto di più associazioni di sito IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) e <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
+ Per informazioni dettagliate ed esempi, vedere [supporto di più associazioni del sito IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) e <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
   
 ## <a name="extending-addressing-in-wcf-services"></a>Estensione dell'indirizzamento nei servizi WCF  
- Il valore predefinito addressing modello dei servizi WCF utilizza l'indirizzo URI dell'endpoint per gli scopi seguenti:  
+ Il valore predefinito di indirizzamento del modello di servizi WCF utilizza l'indirizzo URI dell'endpoint per gli scopi seguenti:  
   
 -   Per specificare l'indirizzo di ascolto del servizio, il percorso su cui l'endpoint resta in ascolto dei messaggi.  
   

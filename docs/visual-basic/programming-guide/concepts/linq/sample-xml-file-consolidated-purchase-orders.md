@@ -3,11 +3,11 @@ title: 'File XML di esempio: Orders3 di acquisto consolidati'
 ms.date: 07/20/2015
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
 ms.openlocfilehash: 4de74aab208b3ee09a49210dd1f97c13af273789
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754217"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924811"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>File XML di esempio: ordini di acquisto consolidati
 Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Questo file è costituito da un set di ordini di acquisto contenenti forme diverse e relativi a più società. Gli ordini di acquisto di ciascuna società sono inseriti in spazi dei nomi distinti.  

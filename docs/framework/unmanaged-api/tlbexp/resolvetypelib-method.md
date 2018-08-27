@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96a9672ee05cb1fe2573620bd1dea23e57339c93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: be2558e760be8519e528baeff438273c8871f320
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460841"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924469"
 ---
 # <a name="resolvetypelib-method"></a>Metodo ResolveTypeLib
-Risolve il nome semplice di una libreria dei tipi restituendo il percorso completo.  
+Risolve il nome semplice di una libreria dei tipi, restituendo il relativo percorso completo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ HRESULT ResolveTypeLib(
   
 #### <a name="parameters"></a>Parametri  
  `bstrSimpleName`  
- [in] Oggetto [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) che contiene il nome semplice della libreria dei tipi.  
+ [in] Oggetto [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) che contiene il nome della libreria dei tipi semplice.  
   
  `tlbid`  
  [in] GUID assegnato alla libreria dei tipi nel Registro di sistema.  
@@ -49,31 +49,31 @@ HRESULT ResolveTypeLib(
  [in] L'ID di localizzazione della libreria dei tipi.  
   
  `wMajorVersion`  
- [in] Il numero di versione principale della libreria dei tipi. Ad esempio, per la versione *x. y*, il numero di versione principale è *x*.  
+ [in] Il numero di versione principale della libreria dei tipi. Ad esempio, per la versione *x. y*, il numero di versione principale viene *x*.  
   
  `wMinorVersion`  
- [in] Il numero di versione secondaria della libreria dei tipi. Ad esempio, per la versione *x. y*, il numero di versione secondaria è *y*.  
+ [in] Il numero di versione secondaria della libreria dei tipi. Ad esempio, per la versione *x. y*, è il numero di versione secondaria *y*.  
   
  `syskind`  
- [in] Oggetto [SYSKIND](http://msdn.microsoft.com/library/662048b2-59a8-48ca-9e4f-2f9a5306faa1) flag che identifica il sistema operativo. Valori comuni sono SYS_WIN32 e SYS_WIN64.  
+ [in] Oggetto [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) flag che identifica l'ambiente operativo. I valori comuni sono SYS_WIN32 e SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- [out] Un puntatore a un [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) che contiene il percorso completo della libreria dei tipi denominato nel `bstrSimpleName` parametro.  
+ [out] Un puntatore a un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) che contiene il percorso completo della libreria dei tipi denominato nel `bstrSimpleName` parametro.  
   
 ## <a name="remarks"></a>Note  
- Il `ResolveTypeLib` metodo viene chiamato dal [funzione LoadTypeLibWithResolver](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) durante [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) l'elaborazione.  
+ Il `ResolveTypeLib` metodo viene chiamato dal [LoadTypeLibWithResolver (funzione)](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) durante [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) l'elaborazione.  
   
- Le implementazioni personalizzate di questa interfaccia devono restituire un [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) che contiene il percorso completo della libreria dei tipi denominato nel `bstrSimpleName` parametro.  
+ Le implementazioni personalizzate di questa interfaccia devono restituire un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) che contiene il percorso completo della libreria dei tipi denominato nel `bstrSimpleName` parametro.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** TlbRef.idl, TlbRef. H  
   
  **Libreria:** TlbRef. lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di supporto Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx dell'](http://msdn.microsoft.com/library/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)
+ [LoadTypeLibEx dell'](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

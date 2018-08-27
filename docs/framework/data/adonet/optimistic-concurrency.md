@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: b1395c3bd81f7f9d2f12d5b1ea2ec4b784f7aab9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0b4cdfa7bab1f41f80926b20da3e63a72a2d165d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766228"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912000"
 ---
 # <a name="optimistic-concurrency"></a>Concorrenza ottimistica
 In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento di dati in un database: la concorrenza ottimistica e la concorrenza pessimistica. L'oggetto <xref:System.Data.DataSet> è stato progettato per favorire l'uso della concorrenza ottimistica per attività di lunga durata, quali la gestione in remoto dei dati e l'interazione con i dati.  
@@ -32,7 +32,7 @@ In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento 
   
  **LastName FirstName CustID**  
   
- 101 Dalzi Maria  
+ Bob Smith 101  
   
 |Nome colonna|Valore originale|Valore corrente|Valore nel database|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -42,7 +42,7 @@ In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento 
   
  Alle ore 13.01 l'Utente2 legge la stessa colonna.  
   
- In 1 ore 13.03 l'Utente2 modifica **FirstName** da "Maria" a "Maria Teresa" e aggiorna il database.  
+ In 1 ore 13.03 l'utente2 modifica **FirstName** da "Maria" a "Maria Teresa" e aggiorna il database.  
   
 |Nome colonna|Valore originale|Valore corrente|Valore nel database|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  Quando si usa il modello di concorrenza ottimistica, è possibile applicare anche criteri meno restrittivi. Ad esempio, se si usano solo le colonne di chiave primaria nella clausola WHERE, i dati verranno sovrascritti, indipendentemente dagli eventuali aggiornamenti apportati alle altre colonne successivamente all'ultima query. È inoltre possibile applicare una clausola WHERE solo a colonne specifiche, in modo che i dati vengano sovrascritti a meno che particolari campi non siano stati aggiornati successivamente all'ultima query.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>Evento DataAdapter.RowUpdated  
- Il **RowUpdated** evento del <xref:System.Data.Common.DataAdapter> oggetto può essere utilizzato in combinazione con le tecniche descritte in precedenza, per fornire la notifica all'applicazione di eventuali violazioni alla concorrenza ottimistica. **RowUpdated** si verifica dopo ogni tentativo di aggiornare un **Modified** riga da una **DataSet**. È quindi possibile aggiungere un particolare codice di gestione, che includa l'elaborazione nel caso in cui si verifichi un'eccezione, l'aggiunta di informazioni personalizzate relative agli errori, l'aggiunta di logica relativa ai nuovi tentativi e così via. Il <xref:System.Data.Common.RowUpdatedEventArgs> restituirà un **RecordsAffected** proprietà contenente il numero di righe interessate da un particolare comando di aggiornamento per una riga modificata in una tabella. Impostando il comando di aggiornamento per la concorrenza ottimistica, la **RecordsAffected** proprietà, di conseguenza, restituirà un valore pari a 0 quando si verifica una violazione della concorrenza ottimistica, poiché nessun record sono stati aggiornati. In questo caso viene generata un'eccezione. Il **RowUpdated** evento consente di gestire questa occorrenza e di evitare l'eccezione impostando un appropriato **RowUpdatedEventArgs** valore, ad esempio  **UpdateStatus. SkipCurrentRow**. Per ulteriori informazioni sul **RowUpdated** eventi, vedere [gestione di eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ Il **RowUpdated** eventi del <xref:System.Data.Common.DataAdapter> oggetto può essere utilizzato in combinazione con le tecniche descritte in precedenza, per fornire la notifica all'applicazione di eventuali violazioni alla concorrenza ottimistica. **RowUpdated** si verifica dopo ogni tentativo di aggiornare una **Modified** riga da una **DataSet**. È quindi possibile aggiungere un particolare codice di gestione, che includa l'elaborazione nel caso in cui si verifichi un'eccezione, l'aggiunta di informazioni personalizzate relative agli errori, l'aggiunta di logica relativa ai nuovi tentativi e così via. Il <xref:System.Data.Common.RowUpdatedEventArgs> oggetto restituisce un **RecordsAffected** proprietà contenente il numero di righe interessate da un particolare comando di aggiornamento per una riga modificata in una tabella. Impostando il comando update per verificare la concorrenza ottimistica, la **RecordsAffected** proprietà, di conseguenza, restituirà un valore pari a 0 quando si è verificata una violazione della concorrenza ottimistica, poiché nessun record sono stato aggiornato. In questo caso viene generata un'eccezione. Il **RowUpdated** evento consente di gestire questa occorrenza ed evitare l'eccezione impostando un appropriato **RowUpdatedEventArgs** valore, come  **SkipCurrentRow**. Per altre informazioni sul **RowUpdated** eventi, vedere [gestione degli eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
- Facoltativamente, è possibile impostare **DataAdapter. ContinueUpdateOnError** a **true**, prima di chiamare **aggiornamento**e rispondere alle informazioni di errore archiviate nel **RowError** proprietà di una particolare riga quando il **aggiornamento** è stata completata. Per ulteriori informazioni, vedere [informazioni sugli errori di riga](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
+ Facoltativamente, è possibile impostare **DataAdapter. ContinueUpdateOnError** al **true**, prima di chiamare **Update**e rispondere alle informazioni di errore archiviate nel **RowError** proprietà di una particolare riga quando la **Update** viene completata. Per altre informazioni, vedere [le informazioni sull'errore di riga](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>Esempio di concorrenza ottimistica  
- Di seguito è riportato un semplice esempio che imposta il **UpdateCommand** di un **DataAdapter** per testare la concorrenza ottimistica e quindi utilizza il **RowUpdated** evento per verificare il violazioni alla concorrenza ottimistica. Quando viene rilevata una violazione della concorrenza ottimistica, l'applicazione imposta la **RowError** della riga emesso per l'aggiornamento in modo da riflettere una violazione della concorrenza ottimistica.  
+ Di seguito è riportato un esempio semplice che consente di impostare il **UpdateCommand** di un **DataAdapter** per eseguire il test della concorrenza ottimistica e quindi Usa il **RowUpdated** dell'evento di test per violazioni alla concorrenza ottimistica. Quando viene rilevata una violazione della concorrenza ottimistica, l'applicazione imposta il **RowError** della riga in cui l'aggiornamento sia stato rilasciato per riflettere una violazione della concorrenza ottimistica.  
   
- Si noti che i valori dei parametri passati alla clausola WHERE del comando UPDATE vengono eseguito il mapping per il **originale** i valori delle rispettive colonne.  
+ Si noti che i valori dei parametri passati alla clausola WHERE del comando di aggiornamento vengono eseguito il mapping per il **originale** i valori delle rispettive colonne.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -166,7 +166,7 @@ SqlDataAdapter adapter = new SqlDataAdapter(
 // The Update command checks for optimistic concurrency violations  
 // in the WHERE clause.  
 adapter.UpdateCommand = new SqlCommand("UPDATE Customers Set CustomerID = @CustomerID, CompanyName = @CompanyName " +  
-   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName, connection);  
+   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName", connection);  
 adapter.UpdateCommand.Parameters.Add(  
   "@CustomerID", SqlDbType.NChar, 5, "CustomerID");  
 adapter.UpdateCommand.Parameters.Add(  

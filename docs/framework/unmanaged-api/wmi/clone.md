@@ -1,6 +1,6 @@
 ---
-title: Funzione clone (riferimenti alle API non gestite)
-description: La funzione Clone restituisce un nuovo oggetto che è un clone completo dell'oggetto corrente.
+title: 'IMetaDataImport:: Clone (funzione) (riferimenti alle API non gestite)'
+description: La funzione Clone restituisce un nuovo oggetto che costituisce un clone completo dell'oggetto corrente.
 ms.date: 11/06/2017
 api_name:
 - Clone
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5cd87cb619ef2dc1e0548c7553585b7e51e94c4f
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457316"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924775"
 ---
-# <a name="clone-function"></a>Clone (funzione)
-Restituisce un nuovo oggetto che è un clone completo dell'oggetto corrente.   
+# <a name="clone-function"></a>Funzioni di clone
+Restituisce un nuovo oggetto che costituisce un clone completo dell'oggetto corrente.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,34 +44,34 @@ HRESULT Clone (
 [in] Questo parametro è inutilizzato.
 
 `ptr`  
-[in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
+[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
 `ppCopy`  
-[out] Un nuovo oggetto di un completamento unico di `ptr`. Questo argomento non può essere `null` se riceve la copia dell'oggetto corrente.
+[out] Un nuovo oggetto che è stato completato un unico di `ptr`. Questo argomento non può essere `null` se riceve la copia dell'oggetto corrente.
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice:
+I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` è stato specificato come parametro, e non è consentito in questo caso. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` è stato specificato come parametro, e non è consentito in questo tipo di utilizzo. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per clonare l'oggetto. |
-| `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
+| `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject::Clone](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) metodo.
+Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) (metodo).
 
-L'oggetto clonato è un oggetto COM che presenta un conteggio dei riferimenti di 1.
+Oggetto clonato è un oggetto COM che dispone di un conteggio dei riferimenti pari a 1.
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
-[WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
