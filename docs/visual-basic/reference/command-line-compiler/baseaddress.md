@@ -10,11 +10,11 @@ helpviewer_keywords:
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
 ms.openlocfilehash: 6331a55bb1d20b5804605db103dcfd2997e348d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650150"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930442"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 Specifica un indirizzo di base predefinito durante la creazione di una DLL.  
@@ -32,11 +32,11 @@ Specifica un indirizzo di base predefinito durante la creazione di una DLL.
 |`address`|Obbligatorio. Indirizzo di base per la DLL. Questo indirizzo deve essere specificato come numero esadecimale.|  
   
 ## <a name="remarks"></a>Note  
- L'indirizzo di base predefinito per una DLL è l'impostazione di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+ L'indirizzo di base predefinito per una DLL è impostata il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
- Tenere presente che l'ordine inferiore in questo indirizzo viene arrotondato. Ad esempio, se si specifica 0x11110001, verrà arrotondato a 0x11110000.  
+ Tenere presente che la parola di ordine inferiore di questo indirizzo viene arrotondata. Ad esempio, se si specifica 0x11110001, il valore viene arrotondato a 0x11110000.  
   
- Per completare il processo di firma di una DLL, utilizzare il `–R` opzione dello strumento nome sicuro (Sn.exe).  
+ Per completare il processo di firma per una DLL, usare il `–R` opzione dello strumento nome sicuro (Sn.exe).  
   
  Questa opzione viene ignorata se la destinazione non è una DLL.  
   

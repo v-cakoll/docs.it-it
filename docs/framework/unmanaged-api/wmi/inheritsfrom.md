@@ -1,6 +1,6 @@
 ---
 title: Funzione InheritsFrom (riferimenti alle API non gestite)
-description: La funzione InheritsFrom determina se una classe o istanza deriva da una classe particolare padre.
+description: La funzione InheritsFrom determina se una classe o istanza deriva da una classe padre specifica.
 ms.date: 11/06/2017
 api_name:
 - InheritsFrom
@@ -16,14 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87a1c1ee44d3b192747bd785f538c0332300ff50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930922"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom (funzione)
-Determina se la classe o istanza corrente deriva da una classe padre specificata.
+Determina se l'istanza o la classe corrente deriva da una classe padre specificata.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -43,14 +44,14 @@ HRESULT InheritsFrom (
 [in] Questo parametro è inutilizzato.
 
 `ptr`  
-[in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
+[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
 `wszAncestor`  
 [in] Il nome della classe. `wszAncestor` deve puntare a un valore valido `LPCWSTR`.
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice:
+I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
@@ -60,14 +61,14 @@ I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* fi
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject::InheritsFrom](https://msdn.microsoft.com/library/aa391452(v=vs.85).aspx) metodo.
+Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) (metodo).
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
-[WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

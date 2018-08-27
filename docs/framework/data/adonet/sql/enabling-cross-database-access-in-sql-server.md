@@ -2,12 +2,12 @@
 title: Abilitazione dell'accesso tra database in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 22fa2b48d795fb81b4740ce882f9bff632deabbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e041a6c90940ad33e17d83e5f0400d05c645ada
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353462"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934563"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Abilitazione dell'accesso tra database in SQL Server
 Il concatenamento della proprietà tra database si verifica quando una procedura di un database dipende dagli oggetti di un altro. Una catena di proprietà tra database funziona allo stesso modo del concatenamento della proprietà con un singolo database, ad eccezione del fatto che una catena di proprietà non interrotta richiede che tutti i proprietari degli oggetti siano mappati allo stesso account di accesso. Se l'oggetto di origine nel database di origine e gli oggetti di destinazione nei database di destinazione appartengono allo stesso account di accesso, le autorizzazioni sugli oggetti di destinazione non verranno controllate in SQL Server.  
@@ -41,14 +41,14 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 ```  
   
 ### <a name="dynamic-sql"></a>SQL dinamico  
- Il concatenamento della proprietà tra database non funziona nei casi in cui vengono eseguite istruzioni SQL create in modo dinamico, a meno che nei due database non esistano gli stessi utenti. È possibile risolvere il problema in SQL Server creando una stored procedure che accede ai dati in un altro database e firmare la procedura con un certificato esistente in entrambi i database. In questo modo si fornisce agli utenti l'accesso alle risorse del database usate dalla procedura senza concedere loro l'accesso o le autorizzazioni per il database.  
+ Il concatenamento della proprietà tra database non funziona nei casi in cui vengono eseguite istruzioni SQL create in modo dinamico, a meno che nei due database non esistano gli stessi utenti. Per aggirare questo problema, in SQL Server è possibile creare una stored procedure che accede ai dati di un altro database e firmare la procedura con un certificato disponibile in entrambi i database. In questo modo si fornisce agli utenti l'accesso alle risorse del database usate dalla procedura senza concedere loro l'accesso o le autorizzazioni per il database.  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Per altre informazioni, vedere le risorse seguenti.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Estensione della rappresentazione di Database tramite EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) e [Cross DB Ownership Chaining-opzione](http://msdn.microsoft.com/library/ms188694.aspx)documentazione Online di SQL Server.|Negli argomenti viene descritto come configurare tra database concatenamento della proprietà per un'istanza di SQL Server.|  
+|[Estensione della rappresentazione del Database tramite EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) e [opzione Cross DB Ownership Chaining](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)documentazione Online di SQL Server.|Negli argomenti viene descritto come configurare il concatenamento di un'istanza di SQL Server della proprietà tra database.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

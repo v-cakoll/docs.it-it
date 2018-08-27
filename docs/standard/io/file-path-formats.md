@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a5fccf5ea86469f14963fad8e7d2af0f7c68d2df
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107033"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933605"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formati dei percorsi di file nei sistemi Windows
 
@@ -181,7 +181,7 @@ Insieme ai separatori e ai segmenti relativi rimossi in precedenza, durante la n
 
 ## <a name="skipping-normalization"></a>Esclusione della normalizzazione
 
-Normalmente, qualsiasi percorso passato a un'API di Windows viene effettivamente passato alla [funzione GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) e normalizzato. Un'eccezione degna di nota è quando il percorso di un dispositivo inizia con un punto interrogativo anziché con un punto. A meno che il percorso non inizi esattamente con `\\?\` (si noti l'uso della barra rovesciata canonica), viene normalizzato.
+Normalmente, qualsiasi percorso passato a un'API di Windows viene effettivamente passato alla [funzione GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) e normalizzato. Un'eccezione degna di nota è quando il percorso di un dispositivo inizia con un punto interrogativo anziché con un punto. A meno che il percorso non inizi esattamente con `\\?\` (si noti l'uso della barra rovesciata canonica), viene normalizzato.
 
 Perché escludere la normalizzazione? Per tre motivi principali:
 
@@ -196,9 +196,9 @@ Perché escludere la normalizzazione? Per tre motivi principali:
 
 L'esclusione della normalizzazione e dei controlli MAX_PATH è l'unica differenza tra le sintassi dei due percorsi di dispositivo; altrimenti sono identici. Prestare attenzione quando si esclude la normalizzazione, perché si rischia di creare percorsi difficili da gestire con le "normali" applicazioni.
 
-I percorsi che iniziano con `\\?\` vengono comunque normalizzati se si passano in modo esplicito alla [funzione GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx).
+I percorsi che iniziano con `\\?\` vengono comunque normalizzati se si passano in modo esplicito alla [funzione GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-Si noti che è possibile passare contenenti più caratteri di `MAX_PATH` a [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) senza `\\?\`. Supporta percorsi di lunghezza arbitraria fino alla dimensione massima delle stringhe che Windows è in grado di gestire.
+Si noti che è possibile passare contenenti più caratteri di `MAX_PATH` a [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) senza `\\?\`. Supporta percorsi di lunghezza arbitraria fino alla dimensione massima delle stringhe che Windows è in grado di gestire.
 
 ## <a name="case-and-the-windows-file-system"></a>Maiuscole/minuscole e file system di Windows
 

@@ -3,11 +3,11 @@ title: 'Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Vi
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 ms.openlocfilehash: 90bb523e3eb42cea2cd0a9d1e753e4d9b9873c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339242"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932095"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)
 Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, è possibile effettuare un accoppiamento debole dei tipi in un'applicazione per ottenere l'indipendenza dalla versione. Ovvero, il programma può essere scritto in modo da usare tipi di più versioni di una libreria gestita senza dover essere ricompilato per ogni versione.  

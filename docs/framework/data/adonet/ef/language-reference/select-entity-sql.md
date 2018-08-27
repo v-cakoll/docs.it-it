@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: f815c08b9be11efc71b04678d9780cabcdd69ab5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 93eea5d539e943c57ed7c6236caa854486ac238e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765984"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933853"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 Specifica gli elementi restituiti da una query.  
@@ -32,7 +32,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  Consente di specificare un solo elemento e non aggiunge un wrapper di riga.  
   
  `topSubclause`  
- Qualsiasi espressione valida che indica il numero dei primi risultati che devono essere restituiti dalla query, nel formato `top (``expr``)`.  
+ Qualsiasi espressione valida che indica il numero dei primi risultati da restituire dalla query, nel formato `top(expr)`.  
   
  Il parametro LIMIT del [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) operatore consente inoltre di selezionare i primi n elementi nel set di risultati.  
   
@@ -94,7 +94,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore SELECT per specificare gli elementi che devono essere restituiti da una query. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1.  Seguire la procedura indicata in [Procedura: eseguire una query che restituisce risultati StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Seguire la procedura indicata in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2.  Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   

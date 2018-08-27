@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: c731799fd51397b2bbbb190efcec63321ebae940
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 70379136fd4b14403eac919ac15590250b17b416
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243735"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932731"
 ---
 # <a name="implicit-c-reference"></a>implicit (Riferimenti per C#)
 
@@ -30,9 +30,9 @@ Grazie all'eliminazione dei cast non necessari, le conversioni implicite contrib
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti per C#](../index.md)  
-[Guida per programmatori C#](../../programming-guide/index.md)  
-[Parole chiave di C#](index.md)  
-[explicit](explicit.md)  
-[operatore (Riferimenti per C#)](operator.md)  
-[Procedura: Implementare conversioni tra struct definite dall'utente](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [Riferimenti per C#](../index.md)  
+- [Guida per programmatori C#](../../programming-guide/index.md)  
+- [Parole chiave di C#](index.md)  
+- [explicit](explicit.md)  
+- [operatore (Riferimenti per C#)](operator.md)  
+- [Procedura: Implementare conversioni tra struct definite dall'utente](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

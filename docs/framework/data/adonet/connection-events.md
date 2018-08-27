@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: 719e529c7813679f1e927b66e7db0e110714e438
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aebd38cf57d602fef61c1ad4e6679f37227b1355
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758158"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930862"
 ---
 # <a name="connection-events"></a>Eventi di connessione
-Tutti i provider di dati .NET Framework dispongono di **connessione** oggetti con due eventi che è possibile utilizzare per recuperare i messaggi informativi da un'origine dati o per determinare se lo stato di un **connessione** è modificato. Nella tabella seguente vengono descritti gli eventi del **connessione** oggetto.  
+Tutti i provider di dati .NET Framework dispongono **connessione** gli oggetti con due eventi che è possibile usare per recuperare i messaggi informativi da un'origine dati o per determinare se lo stato di un **connessione** ha stato modificato. Nella tabella seguente vengono descritti gli eventi dei **connessione** oggetto.  
   
 |event|Descrizione|  
 |-----------|-----------------|  
@@ -21,9 +21,9 @@ Tutti i provider di dati .NET Framework dispongono di **connessione** oggetti co
 |**StateChange**|Si verifica quando lo stato del **connessione** le modifiche.|  
   
 ## <a name="working-with-the-infomessage-event"></a>Utilizzo dell'evento InfoMessage  
- È possibile recuperare avvisi e messaggi informativi da un'origine dati SQL Server usando l'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage> dell'oggetto <xref:System.Data.SqlClient.SqlConnection>. Gli errori restituiti da un'origine dati con un livello di gravità compreso tra 11 e 16 generano un'eccezione. Tuttavia, l'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage> consente di ottenere dall'origine dati i messaggi che non sono associati a un errore. Nel caso di Microsoft SQL Server i messaggi di errore con una gravità uguale o minore di 10 sono considerati informativi e vengono acquisiti usando l'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage>. Per altre informazioni, vedere l'argomento "Error Message Severity Levels" (Livelli di gravità dei messaggi di errore) nella documentazione online di SQL Server.  
+ È possibile recuperare avvisi e messaggi informativi da un'origine dati SQL Server usando l'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage> dell'oggetto <xref:System.Data.SqlClient.SqlConnection>. Gli errori restituiti da un'origine dati con un livello di gravità compreso tra 11 e 16 generano un'eccezione. Tuttavia, l'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage> consente di ottenere dall'origine dati i messaggi che non sono associati a un errore. Nel caso di Microsoft SQL Server i messaggi di errore con una gravità uguale o minore di 10 sono considerati informativi e vengono acquisiti usando l'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage>. Per altre informazioni, vedere la [gravità degli errori del motore di Database](/sql/relational-databases/errors-events/database-engine-error-severities) articolo.
   
- Il <xref:System.Data.SqlClient.SqlConnection.InfoMessage> evento riceve un <xref:System.Data.SqlClient.SqlInfoMessageEventArgs> oggetto che contiene, nella relativa **errori** , una raccolta di messaggi dall'origine dati. È possibile eseguire una query di **errore** oggetti della raccolta per il testo di un numero e il messaggio di errore, nonché l'origine dell'errore. Il provider di dati .NET Framework per SQL Server include inoltre i dettagli sul database, sulla stored procedure e sul numero di riga da cui proviene il messaggio.  
+ Il <xref:System.Data.SqlClient.SqlConnection.InfoMessage> evento riceve un <xref:System.Data.SqlClient.SqlInfoMessageEventArgs> che contiene oggetti, nella relativa **errori** , una raccolta di messaggi dall'origine dati. È possibile eseguire una query di **errore** gli oggetti in questa raccolta per il testo di un numero e il messaggio di errore, nonché l'origine dell'errore. Il provider di dati .NET Framework per SQL Server include inoltre i dettagli sul database, sulla stored procedure e sul numero di riga da cui proviene il messaggio.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio di codice seguente viene illustrato come aggiungere un gestore eventi per l'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage>.  
@@ -66,7 +66,7 @@ protected static void OnInfoMessage(
 ```  
   
 ## <a name="handling-errors-as-infomessages"></a>Gestione di errori come InfoMessage  
- In genere, l'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage> verrà generato solo per messaggi informativi e per messaggi di avviso inviati dal server. Tuttavia, quando si verifica un errore, l'esecuzione del **ExecuteNonQuery** o **ExecuteReader** metodo che ha avviato l'operazione del server viene interrotta e viene generata un'eccezione.  
+ In genere, l'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage> verrà generato solo per messaggi informativi e per messaggi di avviso inviati dal server. Tuttavia, quando si verifica un errore, l'esecuzione del **ExecuteNonQuery** oppure **ExecuteReader** metodo che ha avviato l'operazione del server viene interrotta e viene generata un'eccezione.  
   
  Per continuare a elaborare le restanti istruzioni di un comando indipendentemente da eventuali messaggi di errore generati dal server, impostare la proprietà <xref:System.Data.SqlClient.SqlConnection.FireInfoMessageEventOnUserErrors%2A> del tipo <xref:System.Data.SqlClient.SqlConnection> su `true`. In questo modo, invece di generare un'eccezione e di interrompere l'elaborazione, la connessione genera l'evento di errore <xref:System.Data.SqlClient.SqlConnection.InfoMessage>. L'applicazione client può quindi gestire questo evento e rispondere alle condizioni di errore.  
   
@@ -74,9 +74,9 @@ protected static void OnInfoMessage(
 >  Un errore con un livello di gravità pari a 17 o superiore che provoca l'interruzione dell'elaborazione del comando da parte del server deve essere gestito come un'eccezione. In questo caso viene generata un'eccezione indipendentemente da come viene gestito l'errore nell'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage>.  
   
 ## <a name="working-with-the-statechange-event"></a>Utilizzo dell'evento StateChange  
- Il **StateChange** evento si verifica quando lo stato di un **connessione** le modifiche. Il **StateChange** riceve eventi <xref:System.Data.StateChangeEventArgs> che consentono di determinare la modifica dello stato del **connessione** utilizzando il **OriginalState** e **CurrentState** proprietà. Il **OriginalState** proprietà è un <xref:System.Data.ConnectionState> enumerazione che indica lo stato del **connessione** prima della modifica. **CurrentState** è un <xref:System.Data.ConnectionState> enumerazione che indica lo stato del **connessione** dopo che è stata modificata.  
+ Il **StateChange** evento si verifica quando lo stato di un **connessione** le modifiche. Il **StateChange** evento riceve <xref:System.Data.StateChangeEventArgs> che consentono di determinare la modifica dello stato del **connessione** usando il **OriginalState** e**CurrentState** proprietà. Il **OriginalState** proprietà è un <xref:System.Data.ConnectionState> enumerazione che indica lo stato del **connessione** prima della modifica. **CurrentState** è un <xref:System.Data.ConnectionState> enumerazione che indica lo stato delle **connessione** dopo la modifica.  
   
- Nell'esempio di codice viene illustrato come utilizzare il **StateChange** evento per scrivere un messaggio nella console quando lo stato del **connessione** le modifiche.  
+ Il codice seguente viene illustrato come utilizzare il **StateChange** eventi per scrivere un messaggio nella console quando lo stato delle **connessione** le modifiche.  
   
 ```vb  
 ' Assumes connection represents a SqlConnection object.  

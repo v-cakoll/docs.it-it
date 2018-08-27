@@ -4,12 +4,12 @@ description: Informazioni sulle nuove funzionalità in .NET Core 2.1.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 52fe2d47dbca9bc43c2f1274b0d9e535ba9f9abc
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874572"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935579"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novità di .NET Core 2.1
 
@@ -123,7 +123,7 @@ Tramite .NET Core 2.0 SDK, le applicazioni autonome sono pubblicate con il runti
 
 ## <a name="windows-compatibility-pack"></a>Windows Compatibility Pack
 
-Quando si porta il codice esistente da .NET Framework a .NET Core, è possibile usare [Windows Compatibility Pack](https://www.nuget.org/packages/Microsoft.Windows.Compatibility), che garantisce l'accesso a 20.000 API in più rispetto a quelle disponibili in .NET Core. Queste API includono tipi nello spazio dei nomi <xref:System.Drawing?displayProperty="nameWithType">, la classe <xref:System.Diagnostics.EventLog>, WMI, contatori delle prestazioni, servizi di Windows e tipi e membri del Registro di sistema di Windows.
+Quando si porta il codice esistente da .NET Framework a .NET Core, è possibile usare [Windows Compatibility Pack](https://www.nuget.org/packages/Microsoft.Windows.Compatibility), che garantisce l'accesso a 20.000 API in più rispetto a quelle disponibili in .NET Core. Queste API includono tipi nello spazio dei nomi <xref:System.Drawing?displayProperty=nameWithType>, la classe <xref:System.Diagnostics.EventLog>, WMI, contatori delle prestazioni, servizi di Windows e tipi e membri del Registro di sistema di Windows.
 
 ## <a name="jit-compiler-improvements"></a>Miglioramenti del compilatore JIT
 
@@ -195,7 +195,7 @@ Il comportamento di <xref:System.IO.Compression.BrotliStream> è lo stesso di <x
 
   - <xref:System.Security.Cryptography.CryptographicOperations.ZeroMemory%2A> è una routine di cancellazione della memoria che non può essere ottimizzata.
 
-- Il metodo statico <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=fullName> riempie un <xref:System.Span%601> con valori casuali.
+- Il metodo statico <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> riempie un <xref:System.Span%601> con valori casuali.
 
 - <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> è ora supportato in Linux e macOS.
 
@@ -215,7 +215,7 @@ L'implementazione dei socket introdotta in .NET Core 2.1 comporta numerosi vanta
 
 - Comportamento coerente in tutte le piattaforme .NET Core.
 
-<xref:System.Net.Http.SocketsHttpHandler> è l'implementazione predefinita in .NET Core 2.1. Tuttavia, è possibile configurare l'applicazione per usare la classe <xref:System.Net.Http.HttpClientHandler> precedente chiamando il metodo <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType">:
+<xref:System.Net.Http.SocketsHttpHandler> è l'implementazione predefinita in .NET Core 2.1. Tuttavia, è possibile configurare l'applicazione per usare la classe <xref:System.Net.Http.HttpClientHandler> precedente chiamando il metodo <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>:
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);

@@ -1,6 +1,6 @@
 ---
 title: Funzione SpawnInstance (riferimenti alle API non gestite)
-description: La funzione SpawnInstance crea una nuova istanza della classe.
+description: La funzione SpawnInstance crea una nuova istanza di una classe.
 ms.date: 11/06/2017
 api_name:
 - SpawnInstance
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb187719ff502abe61ac5deb69c6427a4a64ab44
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460462"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930227"
 ---
-# <a name="spawninstance-function"></a>Funzione SpawnInstance
+# <a name="spawninstance-function"></a>SpawnInstance (funzione)
 Crea una nuova istanza di una classe.    
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -44,42 +44,42 @@ HRESULT SpawnInstance (
 [in] Questo parametro è inutilizzato.
 
 `ptr`  
-[in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
+[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
 `lFlags`  
 [in] Riservato. Questo parametro deve essere 0.
 
 `ppNewInstance`  
-[out] Riceve il puntatore a una nuova istanza della classe. Se si verifica un errore, non è un nuovo oggetto restituito, e `ppNewInstance` è invariato a sinistra.
+[out] Riceve il puntatore alla nuova istanza della classe. Se si verifica un errore, non è un nuovo oggetto restituito, e `ppNewInstance` è invariata a sinistra.
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice:
+I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` non è una definizione di classe valido e non può generare nuove istanze. È incompleto o non è stato registrato con WMI chiamando [PutClassWmi](putclasswmi.md). |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` non è una definizione di classe valido e non è possibile distribuire le nuove istanze. È incompleto o non è stato registrato con la gestione di Windows tramite una chiamata [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per completare l'operazione. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` è `null`. |
-| `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
+| `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject:: SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) metodo.
+Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) (metodo).
 
-`ptr` deve essere una definizione di classe ottenuta dalla gestione di Windows. Si noti che la generazione di un'istanza da un'istanza è supportata ma l'istanza restituita è vuota. È quindi possibile utilizzare la definizione di classe per creare nuove istanze. Una chiamata al [PutInstanceWmi](putinstancewmi.md) è la funzione se si prevede di scrivere l'istanza di gestione di Windows.
-
-
+`ptr` deve essere una definizione di classe ottenuta dalla gestione di Windows. Si noti che la generazione di un'istanza da un'istanza è supportata ma l'istanza restituita è vuota. È quindi possibile usare questa definizione di classe per creare nuove istanze. Una chiamata per il [PutInstanceWmi](putinstancewmi.md) funzione è obbligatorio se si prevede di scrivere l'istanza di gestione di Windows.
 
 
-Il nuovo oggetto restituito `ppNewClass` diventa automaticamente una sottoclasse dell'oggetto corrente. Impossibile eseguire l'override di questo comportamento. Non vi è alcun altro metodo per cui è possono creare le sottoclassi (classi derivate).
+
+
+Il nuovo oggetto restituito in `ppNewClass` diventa automaticamente una sottoclasse dell'oggetto corrente. Impossibile eseguire l'override di questo comportamento. Non vi è alcun altro metodo per cui è possono creare sottoclassi (classi derivate).
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
-[WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

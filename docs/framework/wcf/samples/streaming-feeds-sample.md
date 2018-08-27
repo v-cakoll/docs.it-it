@@ -2,12 +2,12 @@
 title: Esempio trasmissione feed
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 2c420bad9ad96107f56b5435efa6fffd6941cdaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50fa7ccfde544ac9e0ab762434ccc5c3b94958ea
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505537"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929247"
 ---
 # <a name="streaming-feeds-sample"></a>Esempio trasmissione feed
 Questo esempio illustra come gestire feed che contengono numerosi elementi. Nel server, l'esempio illustra come rimandare la creazione di oggetti <xref:System.ServiceModel.Syndication.SyndicationItem> singoli all'interno del feed fino a immediatamente prima della scrittura dell'elemento nel flusso della rete.  
@@ -16,7 +16,7 @@ Questo esempio illustra come gestire feed che contengono numerosi elementi. Nel 
   
  Per dimostrare al meglio la funzionalità del flusso di diffusione API, questo esempio utilizza uno scenario piuttosto improbabile nel quale il server espone un feed che contiene un numero infinito di elementi. In questo caso, il server continua a generare nuovi elementi nel feed fino a determinare che il client ha letto un numero specificato di elementi dal feed (10, per impostazione predefinita). Per semplicità, sia il client che il server vengono implementati nello stesso processo e utilizzano un oggetto `ItemCounter` condiviso per tenere traccia del numero di elementi prodotti dal client. Il tipo `ItemCounter` esiste solo allo scopo di consentire allo scenario di esempio di terminare in modo pulito e non è un elemento principale dello schema illustrato.  
   
- Nella dimostrazione viene utilizzato di Visual c# iteratori (usando il `yield``return` costrutto parola chiave). Per ulteriori informazioni sugli iteratori, vedere l'argomento "Utilizzo degli iteratori" su MSDN.  
+ Rende la dimostrazione dell'uso di Visual c# iteratori (usando il `yield return` costrutto parola chiave). Per altre informazioni sugli iteratori, vedere l'argomento "Utilizzo di iteratori" su MSDN.  
   
 ## <a name="service"></a>Service  
  Il servizio implementa un contratto <xref:System.ServiceModel.Web.WebGetAttribute> di base che è costituito da un'operazione, come mostra il codice seguente.  
@@ -65,7 +65,7 @@ public Atom10FeedFormatter StreamedFeed()
 }  
 ```  
   
- Di conseguenza, il flusso dell'elemento non viene mai memorizzato pienamente nel buffer. È possibile osservare questo comportamento impostando un punto di interruzione per il `yield``return` istruzione all'interno del `ItemGenerator.GenerateItems()` metodo e notare che il punto di interruzione viene rilevato per la prima volta dopo che il servizio ha restituito il risultato del `StreamedFeed()` metodo.  
+ Di conseguenza, il flusso dell'elemento non viene mai memorizzato pienamente nel buffer. È possibile osservare questo comportamento impostando un punto di interruzione nel `yield return` istruzione all'interno del `ItemGenerator.GenerateItems()` metodo e notare che questa interruzione si incontra per la prima volta dopo che il servizio ha restituito il risultato del `StreamedFeed()` (metodo).  
   
 ## <a name="client"></a>Client  
  Il client in questo esempio utilizza un'implementazione personalizzata della classe <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> che rimanda la materializzazione di elementi singoli nel feed invece di memorizzarli nel buffer. Di seguito viene illustrata l'istanza personalizzata di `StreamedAtom10FeedFormatter`:  
@@ -97,13 +97,13 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 }  
 ```  
   
- Di conseguenza, ogni elemento non viene letto dalla rete fino a che l'applicazione client che attraversa i risultati di `ReadItems()` non è pronta a utilizzarli. È possibile osservare questo comportamento impostando un punto di interruzione per il `yield``return` istruzione all'interno di `StreamedAtom10FeedFormatter.DelayReadItems()` e osservare che il punto di interruzione viene rilevato per la prima volta dopo la chiamata a `ReadFrom()` viene completata.  
+ Di conseguenza, ogni elemento non viene letto dalla rete fino a che l'applicazione client che attraversa i risultati di `ReadItems()` non è pronta a utilizzarli. È possibile osservare questo comportamento impostando un punto di interruzione per il `yield return` istruzione all'interno di `StreamedAtom10FeedFormatter.DelayReadItems()` e notando che questa interruzione si incontra per la prima volta dopo la chiamata a `ReadFrom()` viene completata.  
   
  Nelle istruzioni seguenti viene illustrato come compilare ed eseguire l'esempio. Notare che anche se il server smette di generare elementi dopo che il client ha letto 10 elementi, l'output mostra che il client ne legge molti più di 10. Ciò avviene perché l'associazione di rete utilizzata dall'esempio trasmette dati in segmenti di quattro kilobyte (KB). Di conseguenza, il client riceve 4 KB di dati dell'elemento prima che abbia la possibilità di leggere il primo elemento. Si tratta di un comportamento normale (trasmettere dati HTTP in segmenti di dimensioni ragionevolmente grandi aumenta le prestazioni).  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   

@@ -2,14 +2,14 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: 5498c300ab126bbc4e08cd228e3e7b48e905932e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 730b1188a95d0e35d7431d43884e867e5520585e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352544"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930176"
 ---
-# <a name="servicehost"></a>@ServiceHost
+# <a name="servicehost"></a>\@ServiceHost
 Associa la factory usata per creare l'host del servizio al servizio da ospitare e agli altri aspetti di programmazione necessari per accedere al codice host fornito nel file .svc o per compilarlo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -41,11 +41,11 @@ CodeBehind = "CodeBehind"%>
  Specifica il file di origine per l'implementazione del servizio Web XML, quando la classe di implementazione non si trova nello stesso file e non è stata compilata in un assembly e inserita nella directory \Bin.  
   
 ## <a name="remarks"></a>Note  
- Il <xref:System.ServiceModel.ServiceHost> utilizzato per ospitare il servizio è un punto di estensibilità all'interno del modello di programmazione di Windows Communication Foundation (WCF). Poiché un modello di factory può essere un tipo polimorfico di cui l'ambiente host non deve creare un'istanza direttamente, tale modello viene usato per creare un'istanza dell'host <xref:System.ServiceModel.ServiceHost>.  
+ Il <xref:System.ServiceModel.ServiceHost> usato per ospitare il servizio è un punto di estendibilità all'interno del modello di programmazione di Windows Communication Foundation (WCF). Poiché un modello di factory può essere un tipo polimorfico di cui l'ambiente host non deve creare un'istanza direttamente, tale modello viene usato per creare un'istanza dell'host <xref:System.ServiceModel.ServiceHost>.  
   
- L'implementazione predefinita usa la factory <xref:System.ServiceModel.Activation.ServiceHostFactory> per creare un'istanza dell'host <xref:System.ServiceModel.ServiceHost>. È però possibile fornire una propria factory (uno che restituisca l'host derivato) specificando il nome del tipo CLR dell'implementazione di factory nel [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) direttiva.  
+ L'implementazione predefinita usa la factory <xref:System.ServiceModel.Activation.ServiceHostFactory> per creare un'istanza dell'host <xref:System.ServiceModel.ServiceHost>. Ma è possibile fornire una propria factory (uno che restituisce l'host derivato), specificando il nome del tipo CLR dell'implementazione della factory nel [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) direttiva.  
   
- Per utilizzare è factory host del servizio personalizzato personalizzati anziché la factory predefinita, solo specificare il nome del tipo nel [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) direttiva come indicato di seguito:  
+ Per usare la factory di host del servizio personalizzata anziché la factory predefinita, è sufficiente fornire il nome del tipo nel [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) direttiva come indicato di seguito:  
   
 ```xml  
 <% @ServiceHost Factory="DerivedFactory" Service="MyService" %>  
@@ -53,7 +53,7 @@ CodeBehind = "CodeBehind"%>
   
  È consigliabile garantire che le implementazioni presentino la massima semplicità possibile. Se si usa un'elevata quantità di logica personalizzata, quest'ultima è più riutilizzabile se inserita nell'host anziché nella factory.  
   
- Ad esempio, per abilitare un endpoint compatibile con AJAX per `MyService`, specificare il <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> per il valore del `Factory` attributo, anziché il valore predefinito <xref:System.ServiceModel.Activation.ServiceHostFactory>nella [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) direttiva come Nell'esempio seguente.  
+ Ad esempio, per abilitare un endpoint compatibile con AJAX per `MyService`, specificare il <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> per il valore della `Factory` attributo, anziché il valore predefinito <xref:System.ServiceModel.Activation.ServiceHostFactory>, nel [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) direttiva come illustrato nell'esempio seguente.  
   
 ## <a name="example"></a>Esempio  
   

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
 ms.openlocfilehash: 668476beb2eefa7a818f60606443ae06ae26a17d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217207"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930963"
 ---
 # <a name="-link-c-compiler-options"></a>-link (opzioni del compilatore C#)
 Indica al compilatore di rendere disponibili al progetto in fase di compilazione le informazioni sui tipi COM presenti negli assembly specificati.  

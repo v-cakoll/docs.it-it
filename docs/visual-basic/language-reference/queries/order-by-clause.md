@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: 7c60156ee81618530b42d5f61dbcac6f59c4f675
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4abb5f0b75ae4069c1dbe695a5c810b1f7aa6e1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604120"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935487"
 ---
 # <a name="order-by-clause-visual-basic"></a>Clausola Order By (Visual Basic)
-Specifica l'ordinamento dei risultati di una query.  
+Specifica l'ordinamento dei risultati della query.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -28,30 +28,30 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
 ## <a name="parts"></a>Parti  
  `orderExp1`  
- Obbligatorio. Uno o più campi dai risultati della query corrente che specificano come ordinare i valori restituiti. I nomi dei campi devono essere separati da virgole (,). È possibile identificare ogni campo, come ordinato in ordine crescente o decrescente utilizzando il `Ascending` o `Descending` parole chiave. Se non `Ascending` o `Descending` (parola chiave) è specificato, l'ordinamento predefinito è crescente. I campi di ordinamento ha la precedenza da sinistra a destra.  
+ Obbligatorio. Uno o più campi dai risultati della query corrente che identificano come ordinare i valori restituiti. I nomi dei campi devono essere separati da virgole (,). È possibile identificare ogni campo, come ordinato in ordine crescente o decrescente usando la `Ascending` o `Descending` parole chiave. Se nessun `Ascending` o `Descending` (parola chiave) viene specificato, l'ordinamento predefinito è crescente. I campi di ordinamento ha la precedenza da sinistra a destra.  
   
 ## <a name="remarks"></a>Note  
- È possibile utilizzare il `Order By` clausola per ordinare i risultati di una query. Il `Order By` clausola può ordinare solo un risultato in base alla variabile di intervallo per l'ambito corrente. Ad esempio, il `Select` clausola introduce un nuovo ambito in un'espressione di query con nuove variabili di iterazione per tale ambito. Le variabili definite prima di intervallo un `Select` in una query non sono disponibili dopo il `Select` clausola. Pertanto, se si desidera ordinare i risultati in base a un campo che non è disponibile nel `Select` clausola, è necessario inserire il `Order By` clausola prima il `Select` clausola. Un esempio di quando è necessario eseguire questa operazione è quando si desidera ordinare la query per i campi che non vengono restituiti come parte del risultato.  
+ È possibile usare il `Order By` clausola per ordinare i risultati di una query. Il `Order By` clausola solo possibile ordinare un risultato basato sulla variabile di intervallo per l'ambito corrente. Ad esempio, il `Select` clausola introduce un nuovo ambito in un'espressione di query con nuove variabili di iterazione per tale ambito. Le variabili definite prima di intervallo un `Select` clausola in una query non sono disponibili dopo il `Select` clausola. Pertanto, se si desidera ordinare i risultati tramite un campo che non è disponibile nel `Select` clausola, è necessario inserire il `Order By` clausola prima il `Select` clausola. Un esempio di quando è necessario eseguire questa operazione è quando si desidera ordinare query in base a campi che non vengono restituiti come parte del risultato.  
   
- Ordinamento crescente e decrescente per un campo è determinato dall'implementazione del <xref:System.IComparable> interfaccia per il tipo di dati del campo. Se il tipo di dati non implementa il <xref:System.IComparable> interfaccia, l'ordinamento viene ignorato.  
+ Ordine crescente o decrescente per un campo è determinato dall'implementazione del <xref:System.IComparable> interfaccia per il tipo di dati del campo. Se il tipo di dati non implementa il <xref:System.IComparable> interfaccia, l'ordinamento viene ignorato.  
   
 ## <a name="example"></a>Esempio  
- La query seguente espressione utilizza un `From` clausola per dichiarare una variabile di intervallo `book` per il `books` insieme. Il `Order By` clausola ordina i risultati della query in base al prezzo in senso crescente (impostazione predefinita). Documentazione con lo stesso prezzo vengono ordinati in base a titolo in ordine crescente. Il `Select` clausola seleziona il `Title` e `Price` proprietà come valori restituiti dalla query.  
+ La query seguente espressione Usa un `From` clausola per dichiarare una variabile di intervallo `book` per il `books` raccolta. Il `Order By` clausola consente di ordinare i risultati della query in base al prezzo in modo crescente (impostazione predefinita). Documentazione con lo stesso prezzo sono ordinati per titolo in ordine crescente. Il `Select` clausola consente di selezionare il `Title` e `Price` proprietà come valori restituiti dalla query.  
   
  [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
   
 ## <a name="example"></a>Esempio  
- La query seguente espressione utilizza la `Order By` clausola per ordinare il risultato della query in base al prezzo in ordine decrescente. Documentazione con lo stesso prezzo vengono ordinati in base a titolo in ordine crescente.  
+ La query seguente Usa espressione di `Order By` clausola per ordinare i risultati della query in base al prezzo in ordine decrescente. Documentazione con lo stesso prezzo sono ordinati per titolo in ordine crescente.  
   
  [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
   
 ## <a name="example"></a>Esempio  
- La query seguente espressione utilizza un `Select` clausola per selezionare il titolo del libro, prezzo, data di pubblicazione e la creazione. Viene quindi popolato il `Title`, `Price`, `PublishDate`, e `Author` campi della variabile di intervallo per il nuovo ambito. Il `Order By` clausola ordina la nuova variabile di intervallo per il nome dell'autore, titolo del libro e prezzo. Ogni colonna viene ordinata in ordine predefinito (crescente).  
+ La query seguente espressione utilizza un `Select` clausola per selezionare il titolo del libro, prezzo, data di pubblicazione e la creazione. Viene quindi popolato il `Title`, `Price`, `PublishDate`, e `Author` campi della variabile di intervallo per il nuovo ambito. Il `Order By` clausola ordina la nuova variabile di intervallo per il nome dell'autore, titolo del libro e prezzo. Ogni colonna è ordinata l'ordine predefinito (crescente).  
   
  [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Query](../../../visual-basic/language-reference/queries/queries.md)  
+ [Query](../../../visual-basic/language-reference/queries/index.md)  
  [Clausola Select](../../../visual-basic/language-reference/queries/select-clause.md)  
  [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)

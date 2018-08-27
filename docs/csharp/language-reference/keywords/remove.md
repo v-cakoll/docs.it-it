@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-ms.openlocfilehash: 16a169ce1a0ef5dbc29739b2d808acb19737669e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 245ef0a16fd2cec2f36c86dd0ac3b8838a76b02e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269119"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999771"
 ---
 # <a name="remove-c-reference"></a>remove (Riferimenti per C#)
 La parola chiave contestuale `remove` viene usata per definire una funzione di accesso a eventi personalizzata che viene chiamata quando il codice client annulla la sottoscrizione all'[evento](../../../csharp/language-reference/keywords/event.md). Se si specifica una funzione di accesso `remove` personalizzata, è necessario specificare anche una funzione di accesso [add](../../../csharp/language-reference/keywords/add.md).  
@@ -23,5 +23,6 @@ La parola chiave contestuale `remove` viene usata per definire una funzione di a
   
  In genere, non è necessario fornire funzioni di accesso a eventi personalizzate. Le funzioni di accesso generate automaticamente dal compilatore quando si dichiara un evento sono sufficienti per la maggior parte degli scenari.  
   
-## <a name="see-also"></a>Vedere anche  
- [Eventi](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Eventi](../../../csharp/programming-guide/events/index.md)

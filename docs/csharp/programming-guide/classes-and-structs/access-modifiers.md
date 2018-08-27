@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: ec275d4782fee047b16fd114c4d22ceb03eecb11
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 4be248b1d86692bd35491e55b1c649cd8428a33b
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199238"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752052"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modificatori di accesso (Guida per programmatori C#)
 Tutti i tipi e i membri dei tipi hanno un livello di accessibilità, che controlla se possono essere usati da altro codice nell'assembly o in assembly di terze parti. È possibile usare i modificatori di accesso seguenti per specificare l'accessibilità di un tipo o di un membro quando viene dichiarato:  
@@ -43,7 +43,7 @@ Tutti i tipi e i membri dei tipi hanno un livello di accessibilità, che control
   
  Le classi derivate non possono avere un'accessibilità maggiore di quella dei tipi di base. In altre parole, non è possibile avere una classe `B` public che deriva da una classe `A` internal. Se questo fosse consentito, avrebbe l'effetto di rendere `A` pubblic, perché tutti i membri protected e internal di `A` sarebbero accessibili dalla classe derivata.  
   
- È possibile abilitare altri assembly specifici per accedere ai tipi internal usando InternalsVisibleToAttribute. Per altre informazioni, vedere [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055) (Assembly friend).  
+ È possibile abilitare altri assembly specifici per accedere ai tipi internal usando InternalsVisibleToAttribute. Per altre informazioni, vedere [Friend Assemblies](../concepts/assemblies-gac/friend-assemblies.md) (Assembly friend).  
   
 ## <a name="class-and-struct-member-accessibility"></a>Accessibilità dei membri struct e di classe  
  I membri di classe (inclusi le classi e gli struct annidati) possono essere dichiarati con uno qualsiasi dei sei tipi di accesso. I membri struct non possono essere dichiarati protected perché struct non supporta l'ereditarietà.  

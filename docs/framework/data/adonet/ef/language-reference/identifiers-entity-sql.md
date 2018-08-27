@@ -2,20 +2,21 @@
 title: Identificatori (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: 55b9ac101c7849c5b348ba8e48c695c0fa328105
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 390c69dec6caed1ffe6faccb5893174d2c211a6b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932184"
 ---
 # <a name="identifiers-entity-sql"></a>Identificatori (Entity SQL)
-Gli identificatori vengono usati in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] per rappresentare alias di espressioni di query, riferimenti di variabili, proprietà di oggetti, funzioni e così via. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono disponibili due tipi di identificatori: gli identificatori semplici e gli identificatori tra virgolette.  
+Gli identificatori vengono usati in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] per rappresentare alias di espressioni di query, riferimenti di variabili, proprietà di oggetti, funzioni e così via. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono disponibili due tipi di identificatori: identificatori semplici e identificatori tra virgolette.  
   
 ## <a name="simple-identifiers"></a>Identificatori semplici  
  Un identificatore semplice in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è una sequenza di caratteri alfanumerici e caratteri di sottolineatura. Il primo carattere dell'identificatore deve essere un carattere alfabetico (a-z o A-Z).  
   
 ## <a name="quoted-identifiers"></a>Identificatori delimitati  
- Un identificatore delimitato è una qualsiasi sequenza di caratteri racchiusi tra parentesi quadre ([]). Gli identificatori delimitati consentono di specificare gli identificatori con caratteri che non sono validi negli identificatori. Tutti i caratteri racchiusi tra le parentesi quadre diventano parte dell'identificatore, inclusi tutti gli spazi vuoti.  
+ Un identificatore delimitato è una qualsiasi sequenza di caratteri racchiusi tra parentesi quadre ([]). Gli identificatori delimitati consentono di specificare gli identificatori con caratteri che non sono validi negli identificatori. Tutti i caratteri tra parentesi quadre diventano parte di identificatore, inclusi tutti gli spazi vuoti.  
   
  Un identificatore delimitato non può includere i caratteri seguenti:  
   
@@ -47,10 +48,10 @@ Gli identificatori vengono usati in [!INCLUDE[esql](../../../../../../includes/e
   
  `SELECT t from ts as t WHERE t.[abc]]] == 2`  
   
- Per la semantica di confronto identificatore tra virgolette, vedere [Set di caratteri di Input](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).  
+ Per la semantica di confronto di identificatori delimitati, vedere [Set di caratteri di Input](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).  
   
 ## <a name="aliasing-rules"></a>Regole relative all'utilizzo degli alias  
- Si consiglia di specificare gli alias nelle [!INCLUDE[esql](../../../../../../includes/esql-md.md)] quando necessario, tra cui una query [!INCLUDE[esql](../../../../../../includes/esql-md.md)] costruisce:  
+ È consigliabile specificare gli alias nelle [!INCLUDE[esql](../../../../../../includes/esql-md.md)] esegue una query alle necessità, incluse le seguenti [!INCLUDE[esql](../../../../../../includes/esql-md.md)] costruisce:  
   
 -   Campi di un costruttore ROW.  
   
@@ -61,10 +62,10 @@ Gli identificatori vengono usati in [!INCLUDE[esql](../../../../../../includes/e
 -   Elementi nella clausola GROUP BY di un'espressione di query.  
   
 ### <a name="valid-aliases"></a>Alias validi  
- Alias validi in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] eventuali semplice identificatore o identificatore tra virgolette.  
+ Alias validi in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono qualsiasi identificatore semplice o un identificatore tra virgolette.  
   
 ### <a name="alias-generation"></a>Generazione di alias  
- Se viene specificato alcun alias in un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] , espressione di query [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta di generare un alias in base alle semplici regole seguenti:  
+ Se viene specificato alcun alias in un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] espressione di query, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta di generare un alias usando semplici regole seguenti:  
   
 -   Se l'espressione di query (per la quale l'alias non è specificato) è un identificatore semplice o delimitato, tale identificatore viene usato come alias. `ROW(a, [b])`, ad esempio, diventa `ROW(a AS a, [b] AS [b])`.  
   
@@ -89,7 +90,7 @@ SELECT 1 AS X, 2 AS X …
   
  Quando i nomi vengono definiti un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query, si dice che vengono definiti in un ambito. Un ambito include l'intera area della query. I nomi definiti in un ambito sono visibili per tutte le espressioni o i riferimenti ai nomi inclusi in tale ambito. Prima dell'inizio di un ambito e dopo la sua fine, non è possibile fare riferimento ai nomi definiti nell'ambito.  
   
- Gli ambiti possono essere annidati. Parti di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] introducono nuovi ambiti che coprono intere aree e tali aree possono contenere altri [!INCLUDE[esql](../../../../../../includes/esql-md.md)] espressioni che introducono anche gli ambiti. Quando gli ambiti sono annidati, è possibile fare riferimento ai nomi definiti nell'ambito più interno, che contiene il riferimento. È inoltre possibile fare riferimento a qualsiasi nome definito in qualsiasi ambito esterno. Due ambiti qualsiasi definiti all'interno dello stesso ambito sono considerati ambiti di pari livello. Non è possibile fare riferimento ai nomi definiti in ambiti di pari livello.  
+ Gli ambiti possono essere annidati. Parti del [!INCLUDE[esql](../../../../../../includes/esql-md.md)] introducono nuovi ambiti che coprono intere aree e tali aree possono contenere altri [!INCLUDE[esql](../../../../../../includes/esql-md.md)] espressioni che introducono anche gli ambiti. Quando gli ambiti sono annidati, è possibile fare riferimento ai nomi definiti nell'ambito più interno, che contiene il riferimento. È inoltre possibile fare riferimento a qualsiasi nome definito in qualsiasi ambito esterno. Due ambiti qualsiasi definiti all'interno dello stesso ambito sono considerati ambiti di pari livello. Non è possibile fare riferimento ai nomi definiti in ambiti di pari livello.  
   
  Se un nome dichiarato in un ambito interno corrisponde a un nome dichiarato in un ambito esterno, i riferimenti nell'ambito interno o negli ambiti dichiarati all'interno di tale ambito riguardano solo il nome appena dichiarato. Il nome nell'ambito esterno è nascosto.  
   
@@ -115,7 +116,7 @@ SELECT 1 AS X, 2 AS X …
 ### <a name="aggregate-handling"></a>Gestione delle aggregazioni  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta due forme di aggregazione: aggregazioni basate sulle raccolte e aggregazioni basate su gruppo. Le aggregazioni basate sulle raccolte rappresentano il costrutto preferito in [!INCLUDE[esql](../../../../../../includes/esql-md.md)], mentre quelle basate sui gruppi sono supportate per offrire compatibilità con SQL.  
   
- Quando si risolve un'aggregazione, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta innanzitutto di considerarlo come una funzione di aggregazione basate sulle raccolte. Se il problema persiste, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Trasforma l'input di aggregazione in un riferimento all'aggregazione annidata e tenta di risolvere questa nuova espressione, come illustrato nell'esempio seguente.  
+ Quando si risolve un'aggregazione, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta innanzitutto di considerarlo come una funzione di aggregazione basato su raccolte. Se il problema persiste, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Trasforma l'input di aggregazione in un riferimento all'aggregazione annidata e tenta di risolvere questa nuova espressione, come illustrato nell'esempio seguente.  
   
  `AVG(t.c) becomes AVG(group..(t.c))`  
   

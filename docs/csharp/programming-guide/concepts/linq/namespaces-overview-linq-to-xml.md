@@ -3,11 +3,11 @@ title: Panoramica degli spazi dei nomi (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
 ms.openlocfilehash: 03451f50605adf6de0d43f19d220aaeed382f13c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323849"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999225"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>Panoramica degli spazi dei nomi (LINQ to XML)
 In questo argomento vengono presentati gli spazi dei nomi, la classe <xref:System.Xml.Linq.XName> e la classe <xref:System.Xml.Linq.XNamespace>.  

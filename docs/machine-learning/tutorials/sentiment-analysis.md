@@ -4,12 +4,12 @@ description: Informazioni su come usare ML.NET in uno scenario di classificazion
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 57ade448f5773bee3474cb46bec8ad33e3afbee3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948618"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000388"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Esercitazione: Usare ML.NET in uno scenario di classificazione binaria per l'analisi del sentiment
 
@@ -105,7 +105,7 @@ Le attività di classificazione sono spesso di uno dei tipi seguenti:
 
 1. Scaricare i set di dati [WikiPedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) e [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) e salvarli nella cartella *Data* creata in precedenza. Il primo set di dati esegue il training del modello di apprendimento automatico e il secondo può essere usato per valutare il livello di accuratezza del modello.
 
-2. In Esplora soluzioni fare clic con il pulsante destro del mouse su ognuno dei file \*con estensione tsv e selezionare **Proprietà**. In **Avanzate** impostare il valore di **Copia nella directory di output** su **Sempre**.
+2. In Esplora soluzioni fare clic con il pulsante destro del mouse su ognuno dei file \*con estensione tsv e selezionare **Proprietà**. In **Avanzate** impostare il valore di **Copia nella directory di output** su **Copia se più recente**.
 
 ### <a name="create-classes-and-define-paths"></a>Creare le classi e definire i percorsi
 

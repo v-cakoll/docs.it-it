@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
 ms.openlocfilehash: 4e2599f34e80f70a36d6f497f908887aa6853121
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338744"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932108"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedura: accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)
 Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Office. Le nuove funzionalità includono argomenti denominati e facoltativi, un nuovo tipo chiamato `dynamic` e la possibilità di passare argomenti a parametri di riferimento nei metodi COM come se fossero parametri di valore.  

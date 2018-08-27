@@ -8,12 +8,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: a2803d09ee64af854cad352f6a158fb84bb6d410
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 66210bc1a84e2c3239dcac72cdc194b14dcccf30
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960587"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999989"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (Riferimenti per C#)
 È necessario far riferimento a due versioni di assembly che dispongono degli stessi nomi di tipo completi. Ad esempio, potrebbe essere necessario usare due o più versioni di un assembly nella stessa applicazione. Con un alias di assembly esterno, è possibile eseguire il wrapping degli spazi dei nomi di ogni assembly all'interno degli spazi dei nomi a livello radice denominati dall'alias, consentendone l'utilizzo nello stesso file.  
@@ -40,10 +40,11 @@ ms.locfileid: "37960587"
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [Operatore ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
- [-reference (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [Operatore ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [-reference (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)

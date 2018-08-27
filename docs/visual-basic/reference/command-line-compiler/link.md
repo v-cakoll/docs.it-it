@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 ms.openlocfilehash: 95c528c4d686c44d0d77d1f55833be75ab14f8bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656269"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931890"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 Indica al compilatore di rendere disponibili al progetto in fase di compilazione le informazioni sui tipi COM presenti negli assembly specificati.  
@@ -53,9 +53,9 @@ Indica al compilatore di rendere disponibili al progetto in fase di compilazione
   
 -   Viene richiamato un campo, una proprietà, un evento o un metodo che presenta un tipo restituito o un tipo di parametro proveniente dall'assembly B.  
   
- Uso [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) per specificare la directory in cui si trova uno o più riferimenti agli assembly.  
+ Uso [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) per specificare la directory in cui si trovano uno o più riferimenti agli assembly.  
   
- Come il [/Reference](../../../visual-basic/reference/command-line-compiler/reference.md) opzione del compilatore di `-link` l'opzione del compilatore utilizza il file di risposta Vbc.rsp riferimenti utilizzati di frequente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assembly. Usare la [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) l'opzione del compilatore se non si desidera al compilatore di usare il file Vbc. rsp.  
+ Ad esempio il [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) l'opzione del compilatore, il `-link` l'opzione del compilatore Usa il file di risposta Vbc. rsp, che i riferimenti utilizzati frequentemente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assembly. Usare la [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) l'opzione del compilatore se non si desidera al compilatore di utilizzare il file Vbc. rsp.  
   
  La forma breve di `-link` è `-l`.  
   
@@ -79,7 +79,7 @@ Indica al compilatore di rendere disponibili al progetto in fase di compilazione
  [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
   
 ## <a name="example"></a>Esempio  
- Riga di comando seguente consente di compilare file di origine `OfficeApp.vb` e fare riferimento agli assembly da `COMData1.dll` e `COMData2.dll` per produrre `OfficeApp.exe`.  
+ Riga di comando seguente consente di compilare file di origine `OfficeApp.vb` e fare riferimento agli assembly da `COMData1.dll` e `COMData2.dll` produrre `OfficeApp.exe`.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  

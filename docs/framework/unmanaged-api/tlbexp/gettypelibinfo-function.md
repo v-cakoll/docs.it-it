@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56a9b97f37240e385dbd1788bafea62578d687a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ec28c581b8e6e0aff3a2765720b6e9795be931b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931704"
 ---
 # <a name="gettypelibinfo-function"></a>Funzione GetTypeLibInfo
-Restituisce informazioni sulla libreria dei tipi specificata esaminando il [TLIBATTR](https://msdn.microsoft.com/library/ms221376\(v=vs.85\).aspx) struttura.  
+Restituisce informazioni sulla libreria dei tipi specificata esaminando relativa [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) struttura.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +41,7 @@ HRESULT GetTypeLibInfo(
   
 #### <a name="parameters"></a>Parametri  
  `szFile`  
- [in] Il nome del file della libreria dei tipi.  
+ [in] Il nome di file della libreria dei tipi.  
   
  `pTypeLibID`  
  [out] Il GUID della libreria dei tipi.  
@@ -49,28 +50,28 @@ HRESULT GetTypeLibInfo(
  [out] L'ID di localizzazione della libreria dei tipi.  
   
  `pTypeLibPlatform`  
- [out] Oggetto [SYSKIND](https://msdn.microsoft.com/library/ms221272\(v=vs.85\).aspx) flag che identifica il sistema operativo di destinazione per la libreria dei tipi. Valori comuni sono SYS_WIN32 e SYS_WIN64.  
+ [out] Oggetto [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) flag che identifica il sistema operativo di destinazione della libreria dei tipi. I valori comuni sono SYS_WIN32 e SYS_WIN64.  
   
  `pTypeLibMajorVer`  
- [out] Il numero di versione principale della libreria dei tipi. Ad esempio, per la versione *x. y*, il numero di versione principale è *x*.  
+ [out] Il numero di versione principale della libreria dei tipi. Ad esempio, per la versione *x. y*, il numero di versione principale viene *x*.  
   
  `pTypeLibMinorVer`  
- [out] Il numero di versione secondaria della libreria dei tipi. Ad esempio, per la versione *x. y*, il numero di versione secondaria è *y*.  
+ [out] Il numero di versione secondaria della libreria dei tipi. Ad esempio, per la versione *x. y*, è il numero di versione secondaria *y*.  
   
 ## <a name="remarks"></a>Note  
- Il `GetTypeLibInfo` funzione viene chiamata il [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md). Questo strumento genera una libreria dei tipi che descrive i tipi in un assembly di common language runtime (CLR).  
+ Il `GetTypeLibInfo` funzione viene chiamata dal [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md). Questo strumento genera una libreria dei tipi che descrive i tipi in un assembly di common language runtime (CLR).  
   
  Se qualsiasi parametro è null, la funzione restituisce un `HRESULT` di `E_POINTER`. In caso contrario restituirà `S_OK`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** TlbRef. H  
   
  **Libreria:** TlbRef. lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di supporto Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [Funzione LoadTypeLibEx dell'](https://msdn.microsoft.com/library/ms221249\(v=vs.85\).aspx)
+ [Funzione LoadTypeLibEx dell'](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

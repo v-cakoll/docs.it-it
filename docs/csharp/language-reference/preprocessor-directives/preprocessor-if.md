@@ -1,17 +1,17 @@
 ---
 title: '#Direttiva del preprocessore if (Riferimenti per C#)'
-ms.date: 02/13/2017
+ms.date: 06/30/2018
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 2ae0af6971dbf549b52e8168e035d8582bdab61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54a1fe0dba5f6d57b03b2ffeb4f1737fadfe039
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33287683"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000937"
 ---
 # <a name="if-c-reference"></a>#if (Riferimenti per C#)
 
@@ -33,9 +33,9 @@ Una direttiva condizionale che inizia con `#if` deve terminare in modo esplicito
 
 `#define` consente di definire un simbolo. Usando poi il simbolo come espressione passata alla direttiva `#if`, l'espressione restituisce `true`.
 
-Un simbolo può anche essere definito tramite l'opzione del compilatore [/define](../compiler-options/define-compiler-option.md). Per rimuovere la definizione di un simbolo, è possibile usare [#undef](preprocessor-undef.md).
+Un simbolo può anche essere definito tramite l'opzione del compilatore [-define](../compiler-options/define-compiler-option.md). Per rimuovere la definizione di un simbolo, è possibile usare [#undef](preprocessor-undef.md).
 
-Un simbolo definito tramite `/define` o `#define` non provoca conflitti con una variabile avente lo stesso nome. Il nome di una variabile, infatti, non può essere passato a una direttiva del preprocessore e un simbolo può essere valutato solo da una direttiva del preprocessore.
+Un simbolo definito tramite `-define` o `#define` non provoca conflitti con una variabile avente lo stesso nome. Il nome di una variabile, infatti, non può essere passato a una direttiva del preprocessore e un simbolo può essere valutato solo da una direttiva del preprocessore.
 
 L'ambito di un simbolo creato con `#define` è il file in cui è stato definito.
 
@@ -88,7 +88,7 @@ public class MyClass
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti per C#](../../../csharp/language-reference/index.md)  
-[Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-[Direttive per il preprocessore C#](index.md)  
-[Procedura: Compilare in modo condizionale con traccia e debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Direttive per il preprocessore C#](index.md)  
+- [Procedura: Compilare in modo condizionale con traccia e debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

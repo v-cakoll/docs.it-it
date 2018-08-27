@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1e1efd6db6efa3a0b85d7d7794be7d3728da8c85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93eda6d6a13d6a510f2aeb06ab1c66d0cd40927f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557511"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931540"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Estendere l'effetto cristallo a un'applicazione WPF
-In questo argomento viene illustrato come estendere il [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] cristallo nell'area client di un'applicazione Windows Presentation Foundation (WPF).  
+In questo argomento viene illustrato come estendere il [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] fotogramma effetto cristallo all'area client di un'applicazione Windows Presentation Foundation (WPF).  
   
 > [!NOTE]
 >  Questo esempio funziona solo su un computer [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] che esegue Gestione finestre desktop (DWM) con l'effetto cristallo abilitato. Home Basic edition di [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] non supporta la trasparenza effetto cristallo. Le aree che avrebbero una trasparenza effetto cristallo nelle altre versioni di [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] risultano opache.  
@@ -62,10 +62,10 @@ public static extern int DwmExtendFrameIntoClientArea(
         End Function  
 ```  
   
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) è la funzione DWM che estende il fotogramma all'area client. Il metodo accetta due parametri; un punto di controllo di finestra e una struttura [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx). [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) viene usata per indicare a DWM l'ulteriore estensione del fotogramma dell'area client.  
+ [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) è la funzione DWM che estende il fotogramma all'area client. Il metodo accetta due parametri; un punto di controllo di finestra e una struttura [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins). [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) viene usata per indicare a DWM l'ulteriore estensione del fotogramma dell'area client.  
   
 ## <a name="example"></a>Esempio  
- Per usare la funzione [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx), è necessario ottenere un punto di controllo di finestra. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], l'handle di finestra può essere ottenuto dal <xref:System.Windows.Interop.HwndSource.Handle%2A> proprietà di un <xref:System.Windows.Interop.HwndSource>. Nell'esempio seguente, il frame viene esteso nell'area client nel <xref:System.Windows.FrameworkElement.Loaded> evento della finestra.  
+ Per usare la funzione [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), è necessario ottenere un punto di controllo di finestra. Nelle [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], l'handle di finestra può essere ottenuto dal <xref:System.Windows.Interop.HwndSource.Handle%2A> proprietà di un <xref:System.Windows.Interop.HwndSource>. Nell'esempio seguente, il fotogramma viene esteso all'area client nel <xref:System.Windows.FrameworkElement.Loaded> evento della finestra.  
   
 ```csharp  
 void OnLoaded(object sender, RoutedEventArgs e)  
@@ -109,7 +109,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata una semplice finestra in cui il fotogramma viene esteso all'area client. Il frame viene esteso dietro il bordo superiore che contiene i due <xref:System.Windows.Controls.TextBox> oggetti.  
+ Nell'esempio seguente viene illustrata una semplice finestra in cui il fotogramma viene esteso all'area client. Il fotogramma viene esteso dietro il bordo superiore che contiene i due <xref:System.Windows.Controls.TextBox> oggetti.  
   
 ```xaml  
 <Window x:Class="SDKSample.Window1"  
@@ -150,6 +150,6 @@ void OnLoaded(object sender, RoutedEventArgs e)
  ![Estensione dell'effetto cristallo a un'applicazione WPF.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gestione finestre desktop](https://msdn.microsoft.com/library/aa969540.aspx)  
- [Panoramica di sfocatura Gestione finestre desktop](https://msdn.microsoft.com/library/aa969537.aspx)  
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx)
+ [Panoramica di gestione finestre desktop](/windows/desktop/dwm/dwm-overview)  
+ [Cenni preliminari sulla sfocatura Gestione finestre desktop](/windows/desktop/dwm/blur-ovw)  
+ [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)

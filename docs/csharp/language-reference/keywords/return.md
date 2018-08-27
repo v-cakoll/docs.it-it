@@ -8,12 +8,12 @@ helpviewer_keywords:
 - return statement [C#]
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
-ms.openlocfilehash: 29d2b8e28ae6240b9d06b82695efe1736404c5cb
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1b6a1ce2a8587c8630fece3d5c9a2186fbbc9c22
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244777"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001476"
 ---
 # <a name="return-c-reference"></a>return (Riferimenti per C#)
 L'istruzione `return` termina l'esecuzione del metodo in cui viene visualizzata e restituisce il controllo al metodo di chiamata. Può restituire anche un valore facoltativo. Se il metodo è un tipo `void`, l'istruzione `return` può essere omessa.  
@@ -28,9 +28,10 @@ L'istruzione `return` termina l'esecuzione del metodo in cui viene visualizzata 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Istruzione return](/cpp/cpp/return-statement-cpp)  
- [Istruzioni di spostamento](../../../csharp/language-reference/keywords/jump-statements.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Istruzione return](/cpp/cpp/return-statement-cpp)  
+- [Istruzioni di spostamento](../../../csharp/language-reference/keywords/jump-statements.md)

@@ -10,12 +10,12 @@ ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ab732ffedfbe05b1b246d8d8eef1c374e223eb39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401180"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931615"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Panoramica sugli oggetti incorporati e TextPattern
 > [!NOTE]
@@ -41,7 +41,7 @@ Esempio di visualizzazione del contenuto di una parte del contenitore di testo p
   
  Il contenuto testuale (o testo interno) di un contenitore di testo o di un oggetto incorporato, ad esempio una cella di tabella o un collegamento ipertestuale, viene esposto come un flusso di testo continuo sia nella vista di controllo che nella visualizzazione del contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . I limiti dell'oggetto vengono ignorati. Se un client di automazione interfaccia utente sta recuperando il testo a scopo di esposizione, interpretazione o analisi, è necessario verificare l'eventuale presenza di casi speciali nell'intervallo di testo, ad esempio una tabella con contenuto testuale o altri oggetti incorporati. Questa operazione può essere eseguita chiamando <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> per ottenere un <xref:System.Windows.Automation.AutomationElement> per ogni oggetto incorporato e chiamando quindi <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> per ottenere un intervallo di testo per ogni elemento. Questa operazione viene eseguita in modo ricorsivo fino a quando non è stato recuperato l'intero contenuto testuale.  
   
- ![Intervalli di testo estesi da oggetti incorporati. ] (../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
+ ![Intervalli di testo estesi da oggetti incorporati. ](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
 Esempio di un flusso di testo con oggetti incorporati e le estensioni degli intervalli corrispondenti  
   
  Quando è necessario scorrere il contenuto di un intervallo di testo, per garantire una corretta esecuzione del metodo <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> è prevista una serie di passaggi dietro le quinte.  
@@ -82,7 +82,7 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
   
  **Esempio 2: intervallo di testo che si estende parzialmente su un collegamento ipertestuale con testo incorporato**  
   
- URL http://{[www]} è incorporato nel testo.  
+ L'URL `http://{[www]}` è incorporato nel testo.  
   
 |Metodo chiamato|Risultato|  
 |-------------------|------------|  
@@ -90,7 +90,7 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Restituisce l' <xref:System.Windows.Automation.AutomationElement> più interno che racchiude l'intervallo di testo, in questo caso, il controllo collegamento ipertestuale.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Restituisce `null` poiché l'intervallo di testo non si estende sull'intera stringa dell'URL.|  
   
- **Esempio 3: intervallo di testo che si estende parzialmente sul contenuto di un contenitore di testo. Il contenitore di testo contiene testo incorporato che non fa parte dell'intervallo di testo.**  
+ **Esempio 3: intervallo di testo che si estende parzialmente sul contenuto di un contenitore di testo. Il contenitore di testo contiene un collegamento ipertestuale con testo incorporato che non fa parte dell'intervallo di testo.**  
   
  {L'URL} [ http://www.microsoft.com ](http://www.microsoft.com) è incorporato nel testo.  
   
@@ -111,7 +111,7 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Restituisce la stringa "L'immagine è incorporata nel testo". Non è possibile prevedere l'inclusione nel flusso di testo dell'eventuale testo alternativo associato all'immagine.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Restituisce l' <xref:System.Windows.Automation.AutomationElement> più interno che racchiude l'intervallo di testo, in questo caso, l' <xref:System.Windows.Automation.AutomationElement> che rappresenta il provider di testo stesso.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Restituisce un <xref:System.Windows.Automation.AutomationElement> che rappresenta il controllo immagine.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> dove <xref:System.Windows.Automation.AutomationElement> è l'oggetto restituito dal metodo <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> precedente.|Restituisce l'intervallo degenerato che rappresenta "![esempio di immagine incorporata](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> dove <xref:System.Windows.Automation.AutomationElement> è l'oggetto restituito dal metodo <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> precedente.|Restituisce l'intervallo degenere che rappresenta "![esempio di immagine incorporata](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")".|  
   
  **Esempio 2: intervallo di testo che si estende parzialmente sul contenuto di un contenitore di testo. Il contenitore di testo contiene un'immagine incorporata che non fa parte dell'intervallo di testo.**  
   
@@ -132,7 +132,7 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
 |---------------------|--------------------|  
 |![Esempio di immagine incorporata](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|x|  
 |![Incorporati di esempio di immagine 2](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
-|![Incorporati di esempio di immagine 3](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Immagine per Z|Z|  
+|![3 esempio di immagine incorporata](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Immagine per Z|Z|  
   
  **Esempio 1: ottenere il contenitore di testo dal contenuto di una cella.**  
   

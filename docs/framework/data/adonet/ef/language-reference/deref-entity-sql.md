@@ -2,12 +2,12 @@
 title: DEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
-ms.openlocfilehash: ee3877ca256eb3847b0284ac2a7362a4a60aad48
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: abe47f8c72abe13bd5c27fe10a412ff94ab861cf
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761480"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930012"
 ---
 # <a name="deref-entity-sql"></a>DEREF (Entity SQL)
 Consente di dereferenziare un valore di riferimento e restituisce il risultato di tale operazione.  
@@ -26,12 +26,12 @@ SELECT DEREF ( o.expression ) from Table as o;
  Valore dell'entità di cui viene risolto il riferimento.  
   
 ## <a name="remarks"></a>Note  
- L'operatore DEREF consente di dereferenziare un valore di riferimento e restituisce il risultato di tale operazione. Ad esempio, se `r` è un riferimento di tipo ref\<T >, `Deref``(r)` è un'espressione di tipo `T` che restituisce l'entità a cui fa riferimento `r`. Se il valore di riferimento è Null o è inesatto, ovvero la destinazione del riferimento non esiste, il risultato dell'operatore DEREF è Null.  
+ L'operatore DEREF consente di dereferenziare un valore di riferimento e restituisce il risultato di tale operazione. Ad esempio, se `r` è un riferimento di tipo ref\<T >, `Deref(r)` è un'espressione di tipo `T` che restituisce l'entità fa riferimento `r`. Se il valore di riferimento è Null o è inesatto, ovvero la destinazione del riferimento non esiste, il risultato dell'operatore DEREF è Null.  
   
 ## <a name="example"></a>Esempio  
  Nella query [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguente viene usato l'operatore DEREF per dereferenziare un valore di riferimento e viene restituito il risultato di tale operazione. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1.  Attenersi alla procedura di [procedura: eseguire una Query che restituisce risultati di PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1.  Seguire la procedura descritta in [procedura: eseguire una Query che restituisce risultati PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2.  Passare la query seguente come argomento al metodo ExecutePrimitiveTypeQuery:  
   

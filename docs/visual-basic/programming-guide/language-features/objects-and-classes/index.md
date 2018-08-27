@@ -6,21 +6,21 @@ helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
 ms.openlocfilehash: 2917a698f9aa7828c201a048f443f5941797c704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655863"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934290"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Oggetti e classi in Visual Basic
 Un *oggetto* è una combinazione di codice e dati che è possibile considerare come singola unità. Un oggetto può essere una parte di un'applicazione, ad esempio un controllo o un form. Anche un'intera applicazione può essere un oggetto.
 
-Quando si crea un'applicazione in Visual Basic, si utilizzano costantemente degli oggetti. È possibile utilizzare gli oggetti forniti da Visual Basic, ad esempio gli oggetti di accesso ai dati, form e controlli. È inoltre possibile utilizzare gli oggetti da altre applicazioni all'interno dell'applicazione Visual Basic. È inoltre possibile creare oggetti personalizzati e definire per essi proprietà e metodi aggiuntivi. Per i programmi, gli oggetti svolgono la stessa funzione dei blocchi predefiniti. Consentono infatti di scrivere un pezzo di codice una sola volta e di riutilizzarlo quanto necessario.  
+Quando si crea un'applicazione in Visual Basic, utilizzano costantemente degli oggetti. È possibile usare oggetti forniti da Visual Basic, ad esempio controlli, form e i dati accedere agli oggetti. È anche possibile usare gli oggetti da altre applicazioni all'interno di un'applicazione Visual Basic. È inoltre possibile creare oggetti personalizzati e definire per essi proprietà e metodi aggiuntivi. Per i programmi, gli oggetti svolgono la stessa funzione dei blocchi predefiniti. Consentono infatti di scrivere un pezzo di codice una sola volta e di riutilizzarlo quanto necessario.  
   
 Questo argomento fornisce informazioni dettagliate sugli oggetti.  
 
 ## <a name="objects-and-classes"></a>Oggetti e classi
-Ogni oggetto in Visual Basic è definito da un *classe*. che ne descrive le variabili, le proprietà, le routine e gli eventi. Gli oggetti sono istanze di classi. Dopo aver definito una classe, sarà possibile creare tutti gli oggetti necessari.
+Ogni oggetto in Visual Basic è definito da una *classe*. che ne descrive le variabili, le proprietà, le routine e gli eventi. Gli oggetti sono istanze di classi. Dopo aver definito una classe, sarà possibile creare tutti gli oggetti necessari.
 
 Per comprendere la relazione esistente tra un oggetto e la classe di appartenenza, si pensi alla relazione tra gli stampi per biscotti e i biscotti. La classe è lo stampo che definisce le caratteristiche di ogni biscotto, ad esempio le dimensioni e la forma. La classe viene usata per creare oggetti. Gli oggetti sono i biscotti.
 
@@ -232,7 +232,7 @@ Verificare che il compilatore possa accedere alla classe da cui si vuole derivar
 Un altro tipo di relazione tra oggetti è la *relazione di contenimento*. Gli oggetti contenitore incapsulano logicamente altri oggetti. Ad esempio, l'oggetto <xref:System.OperatingSystem> contiene logicamente un oggetto <xref:System.Version>, restituito tramite la proprietà <xref:System.OperatingSystem.Version%2A>. Tenere presente che l'oggetto contenitore non contiene fisicamente altri oggetti.
 
 #### <a name="collections"></a>Raccolte
-Un tipo particolare di contenimento degli oggetti è rappresentato dalle *raccolte*. Le raccolte sono gruppi di oggetti simili che possono essere enumerati. Visual Basic supporta una sintassi specifica nel [For Each... Istruzione successiva](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) che consente di scorrere gli elementi di una raccolta. Inoltre, le raccolte consentono spesso di usare un <xref:Microsoft.VisualBasic.Collection.Item%2A> per recuperare gli elementi in base al relativo indice o tramite l'associazione a una stringa univoca. Le raccolte possono risultare di uso più semplice rispetto alle matrici, in quanto consentono di aggiungere o rimuovere elementi senza ricorrere agli indici. Grazie alla loro facilità d'uso, vengono spesso usate per l'archiviazione di form e controlli.
+Un tipo particolare di contenimento degli oggetti è rappresentato dalle *raccolte*. Le raccolte sono gruppi di oggetti simili che possono essere enumerati. Visual Basic supporta una sintassi specifica nel [For Each... Istruzione Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) che consente di scorrere gli elementi di una raccolta. Inoltre, le raccolte consentono spesso di usare un <xref:Microsoft.VisualBasic.Collection.Item%2A> per recuperare gli elementi in base al relativo indice o tramite l'associazione a una stringa univoca. Le raccolte possono risultare di uso più semplice rispetto alle matrici, in quanto consentono di aggiungere o rimuovere elementi senza ricorrere agli indici. Grazie alla loro facilità d'uso, vengono spesso usate per l'archiviazione di form e controlli.
 
 ## <a name="related-topics"></a>Argomenti correlati  
  [Procedura dettagliata: Definizione delle classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  

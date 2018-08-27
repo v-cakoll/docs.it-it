@@ -8,12 +8,12 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: d4a269c07e0d6dc2ac6a6a101f200653c6ea7a29
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244871"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930712"
 ---
 # <a name="-operator-c-reference"></a>Operatore + (Riferimenti per C#)
 L'operatore `+` ha la funzione di operatore unario o binario.  
@@ -33,8 +33,9 @@ L'operatore `+` ha la funzione di operatore unario o binario.
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Operatori C#](../../../csharp/language-reference/operators/index.md)  
- [operatore (Riferimenti per C#)](../../../csharp/language-reference/keywords/operator.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Operatori C#](../../../csharp/language-reference/operators/index.md)  
+- [operatore (Riferimenti per C#)](../../../csharp/language-reference/keywords/operator.md)

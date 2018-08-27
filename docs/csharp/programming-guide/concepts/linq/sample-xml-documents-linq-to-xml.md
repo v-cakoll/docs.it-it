@@ -3,11 +3,11 @@ title: Documenti XML di esempio (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 9ec89809-41a1-484c-b1e3-6c4ecdca7b8d
 ms.openlocfilehash: ce653f5067869a3ac568cd9c25e47a92b3148dbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333456"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754921"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Documenti XML di esempio (LINQ to XML)
 I file di esempio seguenti vengono usati negli esempi e nei frammenti di codice in tutta la documentazione [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

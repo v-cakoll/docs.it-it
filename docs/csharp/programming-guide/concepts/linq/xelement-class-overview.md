@@ -3,11 +3,11 @@ title: Panoramica della classe XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
 ms.openlocfilehash: 49b3b81276a598d003efa98337dd945576d802ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336544"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925103"
 ---
 # <a name="xelement-class-overview-c"></a>Panoramica della classe XElement (C#)
 <xref:System.Xml.Linq.XElement> è una delle classi fondamentali di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Rappresenta un elemento XML. Può essere usata per creare elementi, modificare il contenuto dell'elemento, aggiungere, modificare o eliminare elementi figlio, aggiungere attributi a un elemento oppure serializzare il contenuto di un elemento in formato testo. È inoltre possibile definire l'interoperabilità con altre classi di <xref:System.Xml?displayProperty=nameWithType>, ad esempio <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> e <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -22,7 +22,7 @@ ms.locfileid: "33336544"
   
 -   È possibile analizzare codice XML di origini diverse, incluso un oggetto <xref:System.IO.TextReader>, file di testo o un indirizzo Web (URL). Per altre informazioni, vedere [Analisi di codice XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md).  
   
--   È possibile usare un oggetto <xref:System.Xml.XmlReader> per popolare l'albero. Per altre informazioni, vedere <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
+-   È possibile usare un oggetto <xref:System.Xml.XmlReader> per popolare l'albero. Per ulteriori informazioni, vedere <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
 -   Se si dispone di un modulo in grado di scrivere contenuto in un oggetto <xref:System.Xml.XmlWriter>, è possibile usare il metodo <xref:System.Xml.Linq.XContainer.CreateWriter%2A> per creare un writer, passare il writer al modulo e quindi usare il contenuto scritto in <xref:System.Xml.XmlWriter> per popolare l'albero XML.  
   

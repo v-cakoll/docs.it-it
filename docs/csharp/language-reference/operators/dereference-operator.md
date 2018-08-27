@@ -7,12 +7,12 @@ helpviewer_keywords:
 - member access operator (->) [C#]
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
-ms.openlocfilehash: 037229b2081a43077cb4b5d02a8929b06ba9e077
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: fb95e508ce1339868723bcc3178851e8c1355c1f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171980"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930304"
 ---
 # <a name="-gt-operator-c-reference"></a>-&gt; Operatore (Riferimenti per C#)
 L'operatore `->` combina la deferenziazione del puntatore e l'accesso ai membri.  
@@ -37,7 +37,8 @@ x->y
 ## <a name="example"></a>Esempio  
  [!code-csharp[csRefOperators#15](../../../csharp/language-reference/operators/codesnippet/CSharp/dereference-operator_1.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Operatori C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Operatori C#](../../../csharp/language-reference/operators/index.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
-ms.openlocfilehash: ecc5c4b48790d0cb6825883922f3903414bb2b26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6d797b68ad03023d6101b20cacae6d828abe0c1
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275576"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42751997"
 ---
 # <a name="elif-c-reference"></a>#elif (Riferimenti per C#)
 `#elif` consente di creare una direttiva condizionale composita. L'espressione `#elif` viene valutata quando né l'espressione [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) che la precede, né eventuali espressioni delle direttive `#elif` facoltative che la precedono, restituiscono `true`. Se un'espressione `#elif` restituisce `true`, il compilatore valuterà tutto il codice compreso tra `#elif` e la direttiva condizionale successiva. Ad esempio:  
@@ -20,9 +20,9 @@ ms.locfileid: "33275576"
 #define VC7  
 //...  
 #if debug  
-    Console.Writeline("Debug build");  
+    Console.WriteLine("Debug build");  
 #elif VC7  
-    Console.Writeline("Visual Studio 7");  
+    Console.WriteLine("Visual Studio 7");  
 #endif  
 ```  
   

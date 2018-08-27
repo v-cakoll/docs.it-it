@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 31073772fd42244167b5e68959ebb373ec759025
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65e815411cc9f4af063cb955ae63d18e87f43f38
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314327"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998697"
 ---
 # <a name="fields-c-programming-guide"></a>Campi (Guida per programmatori C#)
 Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente in una [classe](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md). I campi sono *membri* del rispettivo tipo contenitore.  
@@ -41,7 +41,7 @@ Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente 
   
  È possibile facoltativamente dichiarare un campo come [static](../../../csharp/language-reference/keywords/static.md). Questo rende il campo disponibile per i chiamanti in qualsiasi momento, anche se non esiste alcuna istanza della classe. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
- È possibile dichiarare un campo come [readonly](../../../csharp/language-reference/keywords/readonly.md). A un campo di sola lettura può essere assegnato un valore solo durante l'inizializzazione o in un costruttore. Un campo `static``readonly` è molto simile a una costante, a parte il fatto che il compilatore C# non ha accesso al valore di un campo statico di sola lettura in fase di compilazione, ma solo in fase di esecuzione. Per altre informazioni, vedere [Costanti](../../../csharp/programming-guide/classes-and-structs/constants.md).  
+ È possibile dichiarare un campo come [readonly](../../../csharp/language-reference/keywords/readonly.md). A un campo di sola lettura può essere assegnato un valore solo durante l'inizializzazione o in un costruttore. Un campo `static readonly` è molto simile a una costante, a parte il fatto che il compilatore C# non ha accesso al valore di un campo statico di sola lettura in fase di compilazione, ma solo in fase di esecuzione. Per altre informazioni, vedere [Costanti](../../../csharp/programming-guide/classes-and-structs/constants.md).  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

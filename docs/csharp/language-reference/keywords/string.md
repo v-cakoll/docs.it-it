@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: f92a44283e59bd80421758a63b40bc5289c3628b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 8b70f1c1dcb39dcdde6ba24a1bdcdfc3084cfc97
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172162"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929273"
 ---
 # <a name="string-c-reference"></a>string (Riferimenti per C#)
 Il tipo `string` rappresenta una sequenza di zero o più caratteri Unicode. `string` è un alias per <xref:System.String> in .NET.  
@@ -99,14 +99,15 @@ Console.WriteLine(a);
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Procedure consigliate per l'uso delle stringhe](../../../standard/base-types/best-practices-strings.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)  
- [Tipi valore](../../../csharp/language-reference/keywords/value-types.md)  
- [Operazioni di base su stringhe](../../../standard/base-types/basic-string-operations.md)  
- [Creazione di nuove stringhe](../../../standard/base-types/creating-new.md)  
- [Tabella di formattazione dei risultati numerici](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Procedure consigliate per l'uso delle stringhe](../../../standard/base-types/best-practices-strings.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Tipi valore](../../../csharp/language-reference/keywords/value-types.md)  
+- [Operazioni di base su stringhe](../../../standard/base-types/basic-string-operations.md)  
+- [Creazione di nuove stringhe](../../../standard/base-types/creating-new.md)  
+- [Tabella di formattazione dei risultati numerici](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)

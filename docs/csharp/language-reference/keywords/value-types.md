@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 49043a9fe9eabbb54176a0106007ef0d26ed795f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 17bbb0280c4db7d91e5d3cc3d3b6233b8db89cdc
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172212"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754969"
 ---
 # <a name="value-types-c-reference"></a>Tipi di valore (Riferimenti per C#)
 I tipi valore comprendono due categorie principali:  
@@ -29,8 +29,6 @@ I tipi valore comprendono due categorie principali:
     -   [Tipi integrali](../../../csharp/language-reference/keywords/integral-types-table.md)  
   
     -   [Tipi a virgola mobile](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-  
-    -   [decimal](../../../csharp/language-reference/keywords/decimal.md)  
   
 -   [bool](../../../csharp/language-reference/keywords/bool.md)  
   
@@ -105,4 +103,5 @@ Point p = new Point(); // Invoke default constructor for the struct.
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
  [Tipi](../../../csharp/language-reference/keywords/types.md)  
  [Tabelle di riferimento per i tipi](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)
+ [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)  
+ [Tipi nullable](../../programming-guide/nullable-types/index.md)  

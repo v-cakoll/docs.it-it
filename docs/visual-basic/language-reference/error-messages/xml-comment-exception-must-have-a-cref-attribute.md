@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: ee91513ef94e2abbe01d3ac09796b7fdf8e129ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: abe9fe0f6216f81fa223fe83a122b580577e1c32
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597383"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930028"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>Eccezione del commento XML deve avere un &#39;cref&#39; attributo
-Il \<eccezione > tag fornisce un modo per documentare le eccezioni che possono essere generate da un metodo. Obbligatorio `cref` l'attributo specifica il nome di un membro, è selezionata per il generatore di documentazione. Se il membro esiste, viene convertito il nome canonico dell'elemento nel file di documentazione.  
+Il \<eccezione > tag consente di documentare le eccezioni che possono essere generate da un metodo. Obbligatorio `cref` l'attributo specifica il nome di un membro, che viene controllato dal generatore di documentazione. Se il membro esiste, viene convertito al nome canonico dell'elemento nel file di documentazione.  
   
  **ID errore:** BC42319  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Aggiungere il `cref` attributo all'eccezione, come indicato di seguito:  
+-   Aggiungere il `cref` attributo per l'eccezione come indicato di seguito:  
   
     ```  
     '''<exception cref="member">description</exception>  
@@ -30,4 +30,4 @@ Il \<eccezione > tag fornisce un modo per documentare le eccezioni che possono e
 ## <a name="see-also"></a>Vedere anche  
  [\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md)  
  [Procedura: Creare documentazione XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)

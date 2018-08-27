@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 800280ed9ceaf69b825bb2a3c2c3d0d5f829922d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e58afadae78d3f6b15a8e859edc8d554d84c393
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332754"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911906"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Membri con corpo di espressione (Guida per programmatori C#)
 Le definizioni dei corpi di espressione consentono di eseguire l'implementazione di un membro in un modulo molto conciso e leggibile. È possibile usare una definizione di corpo di espressione ogni volta che la logica per un membro supportato, ad esempio un metodo o proprietà, è costituita da un'unica espressione. Una definizione di corpo di espressione presenta la seguente sintassi generale:
@@ -37,7 +37,7 @@ Il supporto per le definizioni dei corpi di espressione è stato introdotto per 
 
 Un metodo con corpo di espressione è costituito da una singola espressione che restituisce un valore il cui tipo corrisponde al tipo restituito del metodo oppure, per i metodi che restituiscono `void`, che esegue una determinata operazione. Ad esempio, i tipi che eseguono l'override del metodo <xref:System.Object.ToString%2A> di solito includono una singola espressione che restituisce la rappresentazione di stringa dell'oggetto corrente. 
 
-L'esempio seguente definisce una classe `Person` che esegue l'override del metodo <xref:System.Object.ToString%2A> con una definizione di corpo di espressione. Definisce inoltre un metodo `Show` che visualizza un nome nella console. Si noti che la parola chiave `return` non viene usata nella definizione del corpo di espressione `ToString`.
+L'esempio seguente definisce una classe `Person` che esegue l'override del metodo <xref:System.Object.ToString%2A> con una definizione di corpo di espressione. Definisce inoltre un metodo `DisplayName` che visualizza un nome nella console. Si noti che la parola chiave `return` non viene usata nella definizione del corpo di espressione `ToString`.
 
 [!code-csharp[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
 

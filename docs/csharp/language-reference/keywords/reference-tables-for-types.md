@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], reference tables
 - C# language, data types
 ms.assetid: 1d2b6a9b-31fd-4fa6-a7b2-bfd9c806ac8a
-ms.openlocfilehash: c432140dfd009518290ac6a21129cfb968f661b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a46766b17f413346c22dd6980b461421af26391c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266811"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999107"
 ---
 # <a name="reference-tables-for-types-c-reference"></a>Tabelle di riferimento per i tipi (Riferimenti per C#)
 Nelle tabelle di riferimento seguenti sono riepilogati i tipi di C#:  
@@ -34,8 +34,9 @@ Nelle tabelle di riferimento seguenti sono riepilogati i tipi di C#:
   
  Per informazioni sulla formattazione dell'output dei tipi numerici, vedere [Tabella di formattazione dei risultati numerici](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)  
- [Tipi valore](../../../csharp/language-reference/keywords/value-types.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Tipi valore](../../../csharp/language-reference/keywords/value-types.md)

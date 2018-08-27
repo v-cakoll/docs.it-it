@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: a9d78ecfc3911cf959333c098a66614239609c4e
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: f5fd156ba25352fb1f816349c5e130267f7da8c2
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457956"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925844"
 ---
 # <a name="methods"></a>Metodi #
 
@@ -296,12 +296,12 @@ Per altre informazioni, vedere [Iteratori](programming-guide/concepts/iterators.
 
 ## <a name="see-also"></a>Vedere anche ##
 
-[Modificatori di accesso](language-reference/keywords/access-modifiers.md)   
-[Classi statiche e membri di classi statiche](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
-[Ereditarietà](programming-guide/classes-and-structs/inheritance.md)   
-[Classi e membri delle classi astratte e sealed](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
-[params](language-reference/keywords/params.md)   
-[out](language-reference/keywords/out-parameter-modifier.md)   
-[ref](language-reference/keywords/ref.md)   
-[in](language-reference/keywords/in-parameter-modifier.md)   
-[Passaggio di parametri](programming-guide/classes-and-structs/passing-parameters.md)
+- [Modificatori di accesso](language-reference/keywords/access-modifiers.md)   
+- [Classi statiche e membri di classi statiche](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
+- [Ereditarietà](programming-guide/classes-and-structs/inheritance.md)   
+- [Classi e membri delle classi astratte e sealed](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
+- [params](language-reference/keywords/params.md)   
+- [out](language-reference/keywords/out-parameter-modifier.md)   
+- [ref](language-reference/keywords/ref.md)   
+- [in](language-reference/keywords/in-parameter-modifier.md)   
+- [Passaggio di parametri](programming-guide/classes-and-structs/passing-parameters.md)

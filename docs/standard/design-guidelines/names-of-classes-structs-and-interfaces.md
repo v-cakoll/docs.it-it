@@ -14,38 +14,38 @@ helpviewer_keywords:
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1841fbfcb76d5b56681b63ec4b39e9a7418707f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f60a2283c01d0dc2665dafaa99ea52000aa3bc47
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576142"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931207"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Nomi di classi, struct e interfacce
 Convenzioni di denominazione che seguono si applicano per la denominazione di tipo generale.  
   
  **✓ DO** nome classi e struct con sostantivi o sintagmi nominali, utilizzando il sistema Pascal.  
   
- Consente di distinguere i nomi dei tipi di metodi, denominati con frasi di verbo.  
+ Ciò consente di distinguere i nomi dei tipi dai metodi, denominati con le diciture verbo.  
   
  **✓ DO** nome interfacce Frasario frasi o in alcuni casi con sostantivi o sintagmi nominali.  
   
- Sostantivi e sintagmi nominali devono essere utilizzate raramente e potrebbero indicare che il tipo deve essere una classe astratta e non un'interfaccia.  
+ Sostantivi che sintagmi nominali devono essere utilizzate raramente e potrebbero indicare che il tipo deve essere una classe astratta e non un'interfaccia.  
   
  **X DO NOT** ai nomi delle classi un prefisso (ad esempio, "C").  
   
  **✓ CONSIDER** terminare il nome della classe derivata con il nome della classe base.  
   
- Questo è molto leggibile e illustra chiaramente la relazione. Sono riportati alcuni esempi di questo codice: `ArgumentOutOfRangeException`, che è un tipo di `Exception`, e `SerializableAttribute`, che è un tipo di `Attribute`. Tuttavia, è importante utilizzare valutando questa linea guida; ad esempio, il `Button` classe è un tipo di `Control` evento, sebbene `Control` non viene visualizzato nel relativo nome.  
+ Questo è molto leggibile e illustra la relazione in modo chiaro. Sono riportati alcuni esempi di questo nel codice: `ArgumentOutOfRangeException`, che è un tipo di `Exception`, e `SerializableAttribute`, che è una sorta di `Attribute`. Tuttavia, è importante usare valutando questa linea guida; ad esempio, il `Button` classe è un tipo di `Control` evento, anche se `Control` non viene visualizzato nel relativo nome.  
   
  **✓ DO** prefisso nei nomi di interfaccia con la lettera I, a indicare che il tipo è un'interfaccia.  
   
- Ad esempio, `IComponent` (nome descrittivo), `ICustomAttributeProvider` (sintagma nominale) e `IPersistable` (aggettivo) sono nomi di interfaccia appropriata. Come con gli altri nomi di tipo, evitare di abbreviazioni.  
+ Ad esempio, `IComponent` (nome descrittivo), `ICustomAttributeProvider` (sintagma nominale), e `IPersistable` (aggettivo) sono nomi di interfaccia appropriata. Come con altri nomi di tipo, evitare le abbreviazioni.  
   
  **✓ DO** assicurarsi che i nomi differiscono solo per la "I" prefisso nel nome dell'interfaccia quando si definisce una coppia: interfaccia della classe in cui la classe è un'implementazione standard dell'interfaccia.  
   
 ## <a name="names-of-generic-type-parameters"></a>Nomi dei parametri di tipo generico  
- I generics sono stati aggiunti a .NET Framework 2.0. La funzionalità introdotto un nuovo tipo di identificatore denominato *parametro di tipo*.  
+ I generics sono state aggiunte a .NET Framework 2.0. La funzionalità introdotto un nuovo tipo di identificatore denominato *il parametro di tipo*.  
   
  **✓ DO** denominare i parametri di tipo generico con nomi descrittivi a meno che non è completamente non necessitano di spiegazione un nome di lettera singola e un nome descrittivo non aggiunge valore.  
   
@@ -60,19 +60,19 @@ public struct Nullable<T> where T:struct { ... }
  **✓ DO** i nomi dei parametri di tipo descrittivo con prefisso `T`.  
   
 ```  
-public interface ISessionChannel<TSession> where TSession : ISession{  
+public interface ISessionChannel<TSession> where TSession : ISession {  
     TSession Session { get; }  
 }  
 ```  
   
  **✓ CONSIDER** che indica i vincoli posizionati su un parametro di tipo del nome del parametro.  
   
- Ad esempio, un parametro vincolato a `ISession` potrebbe essere denominata `TSession`.  
+ Ad esempio, un parametro vincolato a `ISession` potrebbe essere chiamato `TSession`.  
   
-## <a name="names-of-common-types"></a>Nomi di tipi comuni  
+## <a name="names-of-common-types"></a>Nomi dei tipi comuni  
  **✓ DO** seguire le linee guida descritte nella tabella seguente, la denominazione dei tipi derivati da o implementare determinati tipi di .NET Framework.  
   
-|Base Type|Linee guida di tipo derivato implementazione|  
+|Base Type|Linee guida di tipo derivato/implementazione|  
 |---------------|------------------------------------------|  
 |`System.Attribute`|**✓ DO** aggiungere il suffisso "Attribute" ai nomi delle classi di attributi personalizzati.|  
 |`System.Delegate`|**✓ DO** aggiungere il suffisso "EventHandler" ai nomi dei delegati vengono utilizzati negli eventi.<br /><br /> **✓ DO** aggiungere il suffisso "Callback" ai nomi dei delegati diversi da quelli usati come gestori eventi.<br /><br /> **X DO NOT** aggiungere il suffisso "Delegato" a un delegato.|  
@@ -85,7 +85,7 @@ public interface ISessionChannel<TSession> where TSession : ISession{
 |`CodeAccessPermission IPermission`|**✓ DO** aggiungere il suffisso "Autorizzazioni".|  
   
 ## <a name="naming-enumerations"></a>Denominazione delle enumerazioni  
- I nomi dei tipi di enumerazione (detti anche le enumerazioni) in genere devono seguire le regole denominazione di tipo standard (il sistema Pascal, ecc.). Tuttavia, esistono linee guida aggiuntive specifiche per le enumerazioni.  
+ I nomi dei tipi di enumerazione (detti anche enumerazioni) in genere devono seguire le regole di denominazione di tipo standard (il sistema Pascal e così via). Tuttavia, esistono linee guida aggiuntive che si applicano in modo specifico per le enumerazioni.  
   
  **✓ DO** utilizzare un nome di tipo singolare per un'enumerazione, a meno che i relativi valori sono i campi di bit.  
   
@@ -97,9 +97,9 @@ public interface ISessionChannel<TSession> where TSession : ISession{
   
  **X DO NOT** usare un prefisso ai nomi di valore di enumerazione (ad esempio, "ad" per le enumerazioni di ADO.), "rtf" per le enumerazioni RTF e così via.  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Vedere anche  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  

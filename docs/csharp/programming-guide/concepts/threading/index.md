@@ -2,12 +2,12 @@
 title: Threading (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: f9ba0793876f38b3ada2f65c4594562ea1a66983
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 35f0ee3bfd67104d9eaab7c4dde7e35a28a374c5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296182"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934701"
 ---
 # <a name="threading-c"></a>Threading (C#)
 Il threading consente al programma C# di eseguire l'elaborazione simultanea in modo che sia possibile eseguire più operazioni contemporaneamente. Ad esempio, è possibile usare il threading per monitorare l'input dell'utente, eseguire attività in background e gestire flussi di input simultanei.  
@@ -37,8 +37,5 @@ Il threading consente al programma C# di eseguire l'elaborazione simultanea in m
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Applicazioni multithreading (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)|Descrive come creare e usare i thread.|  
 |[Sincronizzazione di thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|Descrive come controllare le interazioni dei thread.|  
-|[Creazione di pool di thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|Descrive come usare un pool di thread di lavoro gestiti dal sistema.|  
-|[Procedura: Usare un pool di thread (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Illustra l'uso sincronizzato di più thread nel pool di thread.|  
 |[Threading](../../../../../docs/standard/threading/index.md)|Descrive come implementare il threading in .NET Framework.|

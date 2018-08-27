@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET nei conteni
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 171d9120e4817065ddafc9dfa9caa362694ddeb3
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 84e016e4620b73444f800b02076489012ea5e844
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105284"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001440"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Uso di Azure Key Vault per proteggere i segreti in fase di produzione
 
@@ -19,7 +19,7 @@ Il pacchetto Microsoft.Extensions.Configuration.AzureKeyVault consente alle appl
 
 Registrare prima di tutto l'applicazione come applicazione Azure AD. L'accesso agli insiemi di credenziali delle chiavi viene gestito da Azure AD. Questa operazione può essere eseguita tramite il portale di gestione di Azure.
 
-In alternativa, se si vuole che l'applicazione effettui l'autenticazione tramite certificato anziché tramite password o segreto client, è possibile usare il cmdlet PowerShell [New-AzureRmADApplication](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication). Il certificato che si registra con Azure Key Vault ha bisogno della sola chiave pubblica. L'applicazione userà la chiave privata.
+In alternativa, se si vuole che l'applicazione effettui l'autenticazione tramite certificato anziché tramite password o segreto client, è possibile usare il cmdlet PowerShell [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication). Il certificato che si registra con Azure Key Vault ha bisogno della sola chiave pubblica. L'applicazione userà la chiave privata.
 
 In secondo luogo, concedere all'applicazione registrata l'accesso all'insieme di credenziali delle chiavi creando una nuova entità servizio. A tale scopo, è possibile usare i comandi PowerShell seguenti:
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - '&& operator [C#]'
 - logical AND operator [C#]
 ms.assetid: 2e4f0a1c-92a3-40f8-8e3b-17b607f20c31
-ms.openlocfilehash: 15bb3e9702f04cc805af63767c7ecbfc68160368
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 459b791fde3e4d3940dbd3d916f940e81f365da6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171915"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999730"
 ---
 # <a name="ampamp-operator-c-reference"></a>&amp;&amp; Operatore (Riferimenti per C#)
 L'operatore AND condizionale (`&&`) esegue un AND logico sugli operandi `bool`, ma valuta il secondo operando solo se necessario.  
@@ -42,7 +42,8 @@ x & y
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Operatori C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Operatori C#](../../../csharp/language-reference/operators/index.md)

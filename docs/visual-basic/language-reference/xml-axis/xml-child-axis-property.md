@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 1407a3315d8971895b70893af9d85c8bb428c3be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b504a9e368e5179d5f91faf7256445d7da47b1d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603860"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929613"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Proprietà Child Axis XML (Visual Basic)
 Fornisce l'accesso agli elementi figlio di uno dei seguenti oggetti: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument>, raccolta di <xref:System.Xml.Linq.XElement> o raccolta di <xref:System.Xml.Linq.XDocument>.  
@@ -32,19 +32,19 @@ object.<child>
 |---|---|  
 |`object`|Obbligatorio. Un oggetto <xref:System.Xml.Linq.XElement>, un oggetto <xref:System.Xml.Linq.XDocument>, una raccolta di oggetti <xref:System.Xml.Linq.XElement> o una raccolta di oggetti <xref:System.Xml.Linq.XDocument>.|  
 |.<|Obbligatorio. Indica l'inizio di una proprietà axis dell'elemento figlio.|  
-|`child`|Obbligatorio. Nome dei nodi figlio a cui accedere, nel formato [`prefix``:`]`name`.<br /><br /> -   `Prefix` -Facoltativo. Prefisso dello spazio dei nomi XML per il nodo figlio. Deve essere uno spazio dei nomi XML globale definito usando un'istruzione `Imports`.<br />-   `Name` -Obbligatorio. Nome del nodo figlio locale. Vedere [i nomi di elementi e attributi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`child`|Obbligatorio. Nome dei nodi figlio a cui accedere, nel formato [`prefix``:`]`name`.<br /><br /> -   `Prefix` -Facoltativo. Prefisso dello spazio dei nomi XML per il nodo figlio. Deve essere uno spazio dei nomi XML globale definito usando un'istruzione `Imports`.<br />-   `Name` -Obbligatorio. Nome del nodo figlio locale. Visualizzare [nomi degli elementi e attributi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
 |>|Obbligatorio. Indica la fine di una proprietà axis dell'elemento figlio.|  
   
 ## <a name="return-value"></a>Valore restituito  
  Raccolta di oggetti <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="remarks"></a>Note  
- È possibile usare una proprietà axis dell'elemento figlio XML per accedere a nodi figlio in base al nome, da un oggetto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> o da raccolte di oggetti <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>. Usare la proprietà `Value` XML per accedere al valore del primo nodo figlio nella raccolta restituita. Per ulteriori informazioni, vedere [proprietà Value XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ È possibile usare una proprietà axis dell'elemento figlio XML per accedere a nodi figlio in base al nome, da un oggetto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> o da raccolte di oggetti <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>. Usare la proprietà `Value` XML per accedere al valore del primo nodo figlio nella raccolta restituita. Per altre informazioni, vedere [proprietà Value XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
- Il compilatore Visual Basic converte le proprietà asse figlio in chiamate al <xref:System.Xml.Linq.XContainer.Elements%2A> metodo.  
+ Il compilatore Visual Basic converte le proprietà asse figlio per le chiamate al <xref:System.Xml.Linq.XContainer.Elements%2A> (metodo).  
   
 ## <a name="xml-namespaces"></a>Spazi dei nomi XML  
- Il nome in una proprietà axis dell'elemento figlio può usare solo prefissi degli spazi dei nomi XML dichiarati globalmente con l'istruzione `Imports`. Non può usare prefissi degli spazi dei nomi XML dichiarati localmente all'interno di valori letterali dell'elemento XML. Per ulteriori informazioni, vedere [istruzione Imports (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
+ Il nome in una proprietà axis dell'elemento figlio può usare solo prefissi degli spazi dei nomi XML dichiarati globalmente con l'istruzione `Imports`. Non può usare prefissi degli spazi dei nomi XML dichiarati localmente all'interno di valori letterali dell'elemento XML. Per altre informazioni, vedere [istruzione Imports (Namespace XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra come accedere ai nodi figlio denominati `phone` dall'oggetto `contact`.  
@@ -75,7 +75,7 @@ object.<child>
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Xml.Linq.XElement>  
- [Proprietà Axis XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [Proprietà Axis XML](../../../visual-basic/language-reference/xml-axis/index.md)  
  [Valori letterali XML](../../../visual-basic/language-reference/xml-literals/index.md)  
  [Creazione di XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
  [Nomi di elementi e attributi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

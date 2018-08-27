@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: 2f614045be1b91b9c747d961cdefd526ba1bab98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe200add4e29fe4bbe0fdf335dcd94107b8ff1eb
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603522"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932592"
 ---
 # <a name="return-statement-visual-basic"></a>Istruzione Return (Visual Basic)
-Restituisce il controllo al codice che ha chiamato un `Function`, `Sub`, `Get`, `Set`, o `Operator` stored procedure.  
+Restituisce il controllo al codice che ha chiamato un' `Function`, `Sub`, `Get`, `Set`, o `Operator` procedure.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,17 +29,17 @@ Return expression
   
 ## <a name="part"></a>Parte  
  `expression`  
- Obbligatorio in un `Function`, `Get`, o `Operator` stored procedure. Espressione che rappresenta il valore deve essere restituito al codice chiamante.  
+ Obbligatorio in un `Function`, `Get`, o `Operator` procedure. Espressione che rappresenta il valore deve essere restituito al codice chiamante.  
   
 ## <a name="remarks"></a>Note  
- In un `Sub` o `Set` procedure, il `Return` equivale all'istruzione un' `Exit Sub` o `Exit Property` istruzione e `expression` non è necessario specificare.  
+ In un `Sub` o `Set` procedure, il `Return` istruzione è equivalente a un `Exit Sub` o `Exit Property` istruzione, e `expression` non deve essere specificato.  
   
- In un `Function`, `Get`, o `Operator` procedure, il `Return` deve includere l'istruzione `expression`, e `expression` deve restituire un tipo di dati che è convertibile nel tipo restituito della procedura. In un `Function` o `Get` procedura, è anche possibile assegnare un'espressione al nome della procedura da utilizzare come valore restituito e quindi eseguendo un `Exit Function` o `Exit Property` istruzione. In un `Operator` procedura, è necessario utilizzare `Return``expression`.  
+ In un `Function`, `Get`, o `Operator` routine, il `Return` istruzione deve includere `expression`, e `expression` deve restituire un tipo di dati che è convertibile nel tipo restituito della procedura. In un `Function` oppure `Get` procedura, è l'alternativa di assegnazione di un'espressione per il nome della routine come il valore restituito e quindi eseguendo un `Exit Function` o `Exit Property` istruzione. In un' `Operator` procedure, è necessario usare `Return expression`.  
   
- È possibile includere un numero `Return` istruzioni appropriate nella stessa routine.  
+ È possibile includere un numero `Return` le istruzioni nel modo appropriato per la stessa procedura.  
   
 > [!NOTE]
->  Il codice in un `Finally` blocco viene eseguito dopo un `Return` istruzione in un `Try` o `Catch` blocco viene rilevata, ma prima che `Return` dell'istruzione. Oggetto `Return` istruzione non può essere incluso un `Finally` blocco.  
+>  Il codice in un `Finally` blocco viene eseguito dopo un `Return` istruzione in un `Try` oppure `Catch` blocco viene rilevata, ma prima che `Return` istruzione viene eseguita. Oggetto `Return` istruzione non può essere incluso in un `Finally` blocco.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il `Return` istruzione più volte per tornare al codice chiamante quando la procedura non è necessario eseguire altre operazioni.  

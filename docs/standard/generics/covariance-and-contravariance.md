@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c50d79f402d55a2fb5e859da4d61b04eeeb6931
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c3a772ae4dfba53982ed28c0bd54f500c50b08
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579743"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932948"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza e controvarianza nei generics
 <a name="top"></a> La covarianza e la controvarianza sono termini che fanno riferimento alla possibilità di usare un tipo più derivato (più specifico) o un tipo meno derivato (meno specifico) di quanto specificato in origine. I parametri di tipo generico supportano la covarianza e la controvarianza per offrire la massima flessibilità nell'assegnazione e nell'utilizzo dei tipi generici. Quando si fa riferimento a un sistema di tipi, la covarianza, la controvarianza e l'invarianza hanno le seguenti definizioni. Negli esempi si presuppone una classe di base denominata `Base` e una classe derivata denominata `Derived`.  
@@ -33,13 +33,13 @@ ms.locfileid: "33579743"
   
      Consente di utilizzare un tipo più generico (meno derivato) di quello originariamente specificato.  
   
-     È possibile assegnare un'istanza di `IEnumerable<Base>` (`IEnumerable(Of Base)` in Visual Basic) a una variabile di tipo `IEnumerable<Derived>`.  
+     È possibile assegnare un'istanza di `Action<Base>` (`Action(Of Base)` in Visual Basic) a una variabile di tipo `Action<Derived>`.  
   
 -   `Invariance`  
   
      Significa che è possibile usare solo il tipo specificato originariamente; pertanto un parametro di tipo generico invariante non è covariante o controvariante.  
   
-     Non è possibile assegnare un'istanza di `IEnumerable<Base>` (`IEnumerable(Of Base)` in Visual Basic) a una variabile di tipo `IEnumerable<Derived>` o viceversa.  
+     Non è possibile assegnare un'istanza di `List<Base>` (`List(Of Base)` in Visual Basic) a una variabile di tipo `List<Derived>` o viceversa.  
   
  I parametri di tipo covariante consentono di effettuare assegnazioni simili al [polimorfismo](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md) ordinario., come illustrato nel codice seguente.  
   

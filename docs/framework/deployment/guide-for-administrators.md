@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b4c2d4205e87d8be21f82eaf74b17e316d9057e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a909b7c940f22e6435fc72a370b8a4ed17d5f937
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394332"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925057"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guida alla distribuzione di .NET Framework per amministratori
 In questo articolo dettagliato vengono descritte le modalità in cui un amministratore di sistema può distribuire [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e le relative dipendenze di sistema attraverso una rete usando Microsoft System Center Configuration Manager. L'articolo presuppone che tutti i computer client di destinazione soddisfino i requisiti minimi per .NET Framework. Per un elenco di requisiti software e hardware per l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], vedere [Requisiti di sistema di .NET Framework](../../../docs/framework/get-started/system-requirements.md).  
@@ -252,7 +252,7 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
 -   [Codici di errore del moniker URL](http://msdn.microsoft.com/library/ms775145.aspx)  
   
--   [WinHttp error codes](http://msdn.microsoft.com/library/aa383770.aspx) (Codici di errore WinHttp)  
+-   [WinHttp error codes](/windows/desktop/WinHttp/error-messages) (Codici di errore WinHttp)  
   
  Altri codici di errore:  
   

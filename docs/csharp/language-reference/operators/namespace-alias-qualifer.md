@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 668799a2d846d0f0bf1b3743e202602250a57ae5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 480ed224d1994dac926dfc78d59e227c8d1e8f36
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271773"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934995"
 ---
 # <a name="-operator-c-reference"></a>Operatore :: (Riferimenti per C#)
 Il qualificatore di alias dello spazio dei nomi (`::`) viene usato per cercare gli identificatori. Viene sempre posizionato tra due identificatori, come nell'esempio seguente:  
@@ -31,10 +31,11 @@ Il qualificatore di alias dello spazio dei nomi (`::`) viene usato per cercare g
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Operatori C#](../../../csharp/language-reference/operators/index.md)  
- [Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [. (operatore)](../../../csharp/language-reference/operators/member-access-operator.md)  
- [alias extern](../../../csharp/language-reference/keywords/extern-alias.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Operatori C#](../../../csharp/language-reference/operators/index.md)  
+- [Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [. (operatore)](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [alias extern](../../../csharp/language-reference/keywords/extern-alias.md)

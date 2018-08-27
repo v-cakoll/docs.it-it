@@ -7,12 +7,12 @@ helpviewer_keywords:
 - / operator [C#]
 - division operator [C#]
 ms.assetid: d155e496-678f-4efa-bebe-2bd08da2c5af
-ms.openlocfilehash: 9d0bbff1fd9f4ab3c93c879d12ccd5fde1187b44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bddf6d234f3536ad64f0cd876cc7ade4494916d9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272571"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935160"
 ---
 # <a name="-operator-c-reference"></a>Operatore / (Riferimenti per C#)
 L'operatore di divisione (`/`) divide il primo operando per il secondo operando. Tutti i tipi numerici hanno operatori di divisione predefiniti.
@@ -29,7 +29,8 @@ L'operatore di divisione (`/`) divide il primo operando per il secondo operando.
 ## <a name="example"></a>Esempio  
  [!code-csharp[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/CSharp/division-operator_1.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Operatori C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Operatori C#](../../../csharp/language-reference/operators/index.md)

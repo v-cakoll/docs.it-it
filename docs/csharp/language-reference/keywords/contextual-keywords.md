@@ -4,12 +4,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 8b15b0df5e3f65494a037eed7992c9a16d9b8578
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b5f79f41306d6e4a8d2f1aa432ba6c2e0879f74
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216180"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930042"
 ---
 # <a name="contextual-keywords-c-reference"></a>Parole chiave contestuali (Riferimenti per C#)
 Una parola chiave contestuale viene usata per conferire un significato particolare nel codice, ma non è una parola riservata in C#. Questa sezione presenta le seguenti parole chiave contestuali:  
@@ -33,7 +33,8 @@ Una parola chiave contestuale viene usata per conferire un significato particola
   
  Anche tutte le parole chiave di query introdotte in C# 3.0 sono contestuali. Per altre informazioni, vedere [Parole chiave di query (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)

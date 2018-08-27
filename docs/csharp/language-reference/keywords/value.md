@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
-ms.openlocfilehash: c8f808540385552f6222566f23251f6cbd6e86df
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 1e120d68fc4a42f24feb225f652c14525fde3d71
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959394"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931942"
 ---
 # <a name="value-c-reference"></a>value (Riferimenti per C#)
 La parola chiave contestuale `value` viene usata nella funzione di accesso set nelle dichiarazioni di proprietà ordinarie. È simile a un parametro di input su un metodo. La parola `value` fa riferimento al valore che il codice client tenta di assegnare alla proprietà. Nell'esempio seguente, `MyDerivedClass` ha una proprietà denominata `Name` che usa il parametro `value` per assegnare una nuova stringa al campo sottostante `name`. Dal punto di vista del codice client, l'operazione viene scritta come assegnazione semplice.  
@@ -23,7 +23,8 @@ La parola chiave contestuale `value` viene usata nella funzione di accesso set n
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)

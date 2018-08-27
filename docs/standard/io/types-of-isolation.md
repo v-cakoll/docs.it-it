@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0c888181b5f2150c37a87957cd932e10a36f7f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c1d4674c84fad1b7ae6021c4868e7f5a053c5a4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577616"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935626"
 ---
 # <a name="types-of-isolation"></a>Tipi di isolamento
 L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente che l'ha creata. Per implementare questo tipo di isolamento, Common Language Runtime usa la stessa nozione di identità utente riconosciuta dal sistema operativo, ovvero l'identità associata al processo in cui è in esecuzione il codice quando viene aperto lo spazio di memorizzazione. Sebbene sia un'identità utente autenticata, è possibile che con la rappresentazione l'identità dell'utente corrente venga modificata dinamicamente.  
@@ -54,7 +54,7 @@ Tipi di spazio di memorizzazione isolato
  Si osservi che, fatta eccezione per gli spazi di memorizzazione roaming, lo spazio di memorizzazione isolato viene sempre isolato implicitamente in base al computer, poiché usa le funzioni di memorizzazione locali del computer in uso.  
   
 > [!IMPORTANT]
->  Lo spazio di memorizzazione isolato non è disponibile per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Al contrario, utilizzare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API [!INCLUDE[wrt](../../../includes/wrt-md.md)] per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.  
+>  Lo spazio di memorizzazione isolato non è disponibile per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Al contrario, utilizzare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API [!INCLUDE[wrt](../../../includes/wrt-md.md)] per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Isolamento in base all'utente e all'assembly  

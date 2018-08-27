@@ -5,12 +5,12 @@ helpviewer_keywords:
 - jump statements [C#]
 - branch statements [C#]
 ms.assetid: 58da6ae7-7388-491e-828f-e74485d87d53
-ms.openlocfilehash: 363e0cfa9d31479caeb8c71e2454db3e28d372bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1eb72fc599eae85b6c51b5030ffcd5072b7d7cef
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265220"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934100"
 ---
 # <a name="jump-statements-c-reference"></a>Istruzioni di spostamento (Riferimenti per C#)
 Le diramazioni vengono eseguite usando istruzioni di salto che provocano l'immediato trasferimento del controllo del programma. Nelle istruzioni di salto vengono usate le parole chiave seguenti:  
@@ -25,8 +25,9 @@ Le diramazioni vengono eseguite usando istruzioni di salto che provocano l'immed
   
 -   [throw](../../../csharp/language-reference/keywords/throw.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Parole chiave per le istruzioni](../../../csharp/language-reference/keywords/statement-keywords.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Parole chiave per le istruzioni](../../../csharp/language-reference/keywords/statement-keywords.md)

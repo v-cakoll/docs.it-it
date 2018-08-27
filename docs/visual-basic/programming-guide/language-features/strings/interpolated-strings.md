@@ -3,12 +3,12 @@ title: Stringhe interpolate (Visual Basic)
 ms.date: 10/31/2017
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 313e74d5ce252884f1df2479ef1db8b4b24b5cce
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653559"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930550"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Stringhe interpolate (riferimenti di Visual Basic)
 
@@ -35,7 +35,7 @@ dove:
 
 - *field-width* è un intero con segno che indica il numero di caratteri nel campo. Se è positivo, il campo viene allineato a destra; se è negativo, viene allineato a sinistra. 
 
-- *format-string* è una stringa di formato appropriata per il tipo di oggetto formattato. Ad esempio, per un <xref:System.DateTime> valore, potrebbe essere un [stringa di formato di data e ora standard](~/docs/standard/base-types/standard-date-and-time-format-strings.md) , ad esempio "D" o "d".
+- *format-string* è una stringa di formato appropriata per il tipo di oggetto formattato. Ad esempio, per un <xref:System.DateTime> valore, può trattarsi di un [stringa di formato data e ora standard](~/docs/standard/base-types/standard-date-and-time-format-strings.md) , ad esempio "D" o "d".
 
 > [!IMPORTANT]
 > Tra `$` e il simbolo `"` all'inizio della stringa non possono essere presenti spazi vuoti, In questo modo, un errore del compilatore.
@@ -66,7 +66,7 @@ Da una stringa interpolata vengono effettuate tre conversioni di tipo implicito:
 
    Si noti che la stringa interpolata può essere controllata solo tramite reflection. Se viene passata a un metodo di formattazione delle stringhe, ad esempio <xref:System.Console.WriteLine(System.String)>, gli elementi di formato vengono risolti e viene restituita la stringa risultato. 
 
-3. Conversione di una stringa interpolata a un <xref:System.FormattableString> variabile che rappresenta una stringa di formato composita. Grazie all'esame della stringa di formato composito e del modo in cui viene eseguito il rendering come stringa di risultato, è ad esempio possibile attuare misure di protezione contro attacchi di tipo injection durante la creazione di una query. Oggetto <xref:System.FormattableString> include anche:
+3. Conversione di una stringa interpolata in una <xref:System.FormattableString> variabile che rappresenta una stringa di formato composito. Grazie all'esame della stringa di formato composito e del modo in cui viene eseguito il rendering come stringa di risultato, è ad esempio possibile attuare misure di protezione contro attacchi di tipo injection durante la creazione di una query. Oggetto <xref:System.FormattableString> include anche:
 
       - Un overload <xref:System.FormattableString.ToString> che produce una stringa risultato per <xref:System.Globalization.CultureInfo.CurrentCulture>.
       
@@ -74,7 +74,7 @@ Da una stringa interpolata vengono effettuate tre conversioni di tipo implicito:
       
       - Un metodo <xref:System.FormattableString.ToString(System.IFormatProvider)> che produce una stringa risultato per impostazioni cultura specifiche. 
   
-    Tutte le occorrenze di parentesi graffe doppie ("{{" e "}}") rimangono invariate tra parentesi graffe doppie finché non viene formattata.  Tutte le espressioni di interpolazione contenute vengono convertite in {0}, {1}e così via.  
+    Tutte le occorrenze delle parentesi graffe doppie ("{{" e "}}") rimangono invariate tra parentesi graffe doppie finché non viene formattata.  Tutte le espressioni di interpolazione contenute vengono convertite in {0}, {1}e così via.  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
-ms.openlocfilehash: 4b75eb21cab7cd3acf25f7bcb9a3f009e8d5748b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1eb2618e14f0e02aa5e1a2e91aa93fe0831c7c7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353892"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932977"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>Procedura: proiettare risultati di query (WCF Data Services)
-La proiezione fornisce un meccanismo per ridurre la quantità di dati restituiti da una query specificando che solo determinate proprietà di un'entità vengano restituite nella risposta. È possibile eseguire proiezioni sui risultati di un [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] query tramite l'utilizzo di `$select` opzione di query o utilizzando il [selezionare](~/docs/csharp/language-reference/keywords/select-clause.md) clausola ([selezionare](~/docs/visual-basic/language-reference/queries/select-clause.md) in Visual Basic) in una query LINQ. Per ulteriori informazioni, vedere [l'esecuzione di query del servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+La proiezione fornisce un meccanismo per ridurre la quantità di dati restituiti da una query specificando che solo determinate proprietà di un'entità vengano restituite nella risposta. È possibile eseguire proiezioni sui risultati di un' [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] tramite l'utilizzo di query il `$select` opzione di query o utilizzando il [selezionare](~/docs/csharp/language-reference/keywords/select-clause.md) clausola ([selezionare](~/docs/visual-basic/language-reference/queries/select-clause.md) in Visual Basic) in una query LINQ. Per altre informazioni, vedere [l'esecuzione di query al servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
- Nell'esempio riportato in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi di dati client vengono create quando si completa la [Guida rapida di WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Nell'esempio riportato in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi dati client vengono create quando si completa la [Guida rapida di WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio riportato di seguito viene illustrata una query LINQ che proietta le entità Customers in un nuovo tipo CustomerAddress contenente solo le proprietà specifiche dell'indirizzo e la proprietà Identity. Questa classe `CustomerAddress` viene definita nel client e attribuita in modo da essere riconosciuta come tipo di entità dalla libreria client.  
@@ -35,7 +35,7 @@ La proiezione fornisce un meccanismo per ridurre la quantità di dati restituiti
  [!code-vb[Astoria Northwind Client#SelectCustomerAddressNonEntity](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#selectcustomeraddressnonentity)]  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente vengono illustrate le definizioni del `CustomerAddress``CustomerAddressNonEntity` tipi utilizzati negli esempi precedenti.  
+ Nell'esempio seguente mostra le definizioni del `CustomerAddress` e `CustomerAddressNonEntity` tipi utilizzati negli esempi precedenti.  
   
  [!code-csharp[Astoria Northwind Client#CustomerAddressDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customeraddress.cs#customeraddressdefinition)]
  [!code-vb[Astoria Northwind Client#CustomerAddressDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customeraddress.vb#customeraddressdefinition)]

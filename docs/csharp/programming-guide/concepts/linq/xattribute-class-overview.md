@@ -3,11 +3,11 @@ title: Panoramica della classe XAttribute (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
 ms.openlocfilehash: e0020a8cd8841ef9a35781b534c82db5e15c257f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324418"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934813"
 ---
 # <a name="xattribute-class-overview-c"></a>Panoramica della classe XAttribute (C#)
 Gli attributi sono coppie nome/valore associate a un elemento. La classe <xref:System.Xml.Linq.XAttribute> rappresenta gli attributi XML.  

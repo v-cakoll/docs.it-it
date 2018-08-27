@@ -10,11 +10,11 @@ helpviewer_keywords:
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
 ms.openlocfilehash: fa177fa1f07c52d900f57e5bf61c967f06203c4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590933"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42908225"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Procedura dettagliata: individuazione della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
 L'oggetto `My.Application.Log` può scrivere le informazioni in diversi listener di log. I listener di log sono configurati dal file di configurazione del computer ed è possibile eseguirne l'override con il file di configurazione di un'applicazione. Questo argomento descrive le impostazioni predefinite e illustra come determinare le impostazioni dell'applicazione.  

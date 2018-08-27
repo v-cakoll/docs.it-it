@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 279e0536f69ebd4b45d9458a88c4f930f6bb3262
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 987f8e25014e8ce6413c998f6eb78d821558ecec
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389109"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999695"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Sviluppo di applicazioni client con .NET Framework
 
@@ -49,7 +49,7 @@ Viene descritto come creare applicazioni per Windows 10 che è possibile mettere
 [.NET per app UWP](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)  
 Viene descritto il supporto di .NET Framework per le app di Windows Store, che è possibile distribuire in computer e dispositivi Windows.
 
-[.NET API per Windows Phone Silverlight](https://docs.microsoft.com/en-us/previous-versions/windows/apps/jj207211\(v=vs.105\))  
+[.NET API per Windows Phone Silverlight](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))  
 Vengono elencate le API di .NET Framework che è possibile usare per creare app con Silverlight per Windows Phone.
   
 [Sviluppo per piattaforme multiple](../../docs/standard/cross-platform/index.md)  

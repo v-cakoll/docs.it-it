@@ -7,14 +7,14 @@ ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13aeab52cfd43aa8dfd7fda69e2eb9be798473e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655824"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932167"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opzioni del compilatore Visual Basic elencate per categoria
-Il compilatore della riga di comando di Visual Basic viene fornito come alternativa alla compilazione dei programmi dall'interno l'ambiente di sviluppo integrato (IDE) di Visual Studio. Di seguito è un elenco delle opzioni della riga di comando del compilatore Visual Basic ordinati in base alla categoria funzionale.  
+Il compilatore della riga di comando di Visual Basic viene fornito come alternativa alla compilazione dei programmi dall'interno l'ambiente di sviluppo integrato (IDE) di Visual Studio. Di seguito è riportato un elenco delle opzioni del compilatore da riga di comando di Visual Basic ordinati in base alla categoria funzionale.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -43,7 +43,7 @@ Il compilatore della riga di comando di Visual Basic viene fornito come alternat
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Fa sì che l'output del compilatore sia un assembly il cui contenuto binario è identico in tutte le compilazioni se gli input sono identici.|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Imposta il compilatore in modo che punti a [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Specifica un file di output.|  
-|[/refonly](refonly-compiler-option.md)|Genera solo un assembly di riferimento.|
+|[/refonly](refonly-compiler-option.md)|Restituisce solo un assembly di riferimento.|
 |[/refout](refout-compiler-option.md)|Specifica il percorso di output di un assembly di riferimento.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Specifica il formato dell'output.|  
   
@@ -85,7 +85,7 @@ Il compilatore della riga di comando di Visual Basic viene fornito come alternat
   
 |Opzione|Scopo|  
 |---|---|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specificare la versione linguaggio: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specifica la versione linguaggio: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Richiede la dichiarazione esplicita delle variabili.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Attiva la semantica dei tipi rigorosa.|  
 |[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Specifica se il confronto si verifica tra stringhe di tipo binario oppure se usare una semantica basata sul testo specifica delle impostazioni locali definite.|  

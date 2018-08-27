@@ -16,38 +16,39 @@ helpviewer_keywords:
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20a5a9182da50345f97331e6f01e0e3665a2a61c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94ab72b2ac2678640697e3cfab426e5a7d6d889a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933152"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>Tipo di dati SByte (Visual Basic)
 
-Contiene valori integer a 8 bit (1-byte) in un intervallo compreso tra -128 e 127.  
+Contiene valori integer a 8 bit (a 1 byte) in un intervallo compreso tra -128 e 127.  
   
 ## <a name="remarks"></a>Note
 
-Utilizzare il `SByte` il tipo di dati per contenere i valori integer che non richiedono l'ampiezza dei dati completo `Integer` o anche l'ampiezza dei dati metà `Short`. In alcuni casi, potrebbe essere in grado di pack common language runtime il `SByte` variabili e ridurre il consumo di memoria.
+Usare la `SByte` tipo di dati per contenere i valori interi che non richiedono l'intera ampiezza dei dati `Integer` o anche la larghezza della metà dei dati di `Short`. In alcuni casi, common language runtime potrebbe essere possibile riunire i `SByte` variabili e ridurre il consumo di memoria.
 
 Il valore predefinito di `SByte` è 0.
 
 ## <a name="literal-assignments"></a>Assegnazioni di valori letterali
   
-È possibile dichiarare e inizializzare un `SByte` variabile assegnando il valore letterale decimale, valore letterale esadecimale, un valore letterale ottale, o (a partire da Visual Basic 2017) un valore letterale binario.
+È possibile dichiarare e inizializzare un `SByte` variabile da assegnarle un valore letterale decimale, un valore letterale esadecimale, un valore letterale ottale, o (a partire da Visual Basic 2017) un valore letterale binario.
 
-Nell'esempio seguente, i numeri interi uguale a-102 rappresentati come decimali, esadecimali, e valori letterali binari vengono assegnati a `SByte` valori. In questo esempio richiede la compilazione con il `/removeintchecks` opzione del compilatore.
+Nell'esempio seguente, i valori interi uguali a 102 rappresentati come decimali, esadecimali o valori letterali binari vengono assegnati a `SByte` valori. In questo esempio richiede la compilazione con il `/removeintchecks` opzione del compilatore.
 
 [!code-vb[SByte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByte)]  
 
 > [!NOTE] 
-> Utilizzare il prefisso `&h` o `&H` per indicare un valore letterale esadecimale, il prefisso `&b` o `&B` per indicare un valore letterale binario e il prefisso `&o` o `&O` per indicare un valore letterale ottale. I valori letterali decimali non hanno prefissi.
+> Il prefisso viene usato `&h` oppure `&H` per indicare un valore letterale esadecimale, il prefisso `&b` oppure `&B` per indicare un valore letterale binario e il prefisso `&o` o `&O` per indicare un valore letterale ottale. I valori letterali decimali non hanno prefissi.
 
-A partire da Visual Basic 2017, è inoltre possibile utilizzare il carattere di sottolineatura, `_`, come un separatore di cifre per migliorare la leggibilità, come nell'esempio seguente viene illustrato.
+A partire da Visual Basic 2017, è anche possibile usare il carattere di sottolineatura `_`, come separatore di cifre per migliorare la leggibilità, come illustrato nell'esempio seguente viene illustrato.
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
 
-A partire da Visual Basic 15,5, è inoltre possibile utilizzare il carattere di sottolineatura (`_`) come separatore iniziale tra il prefisso e le cifre binarie, ottale o esadecimale. Ad esempio:
+A partire da Visual Basic 15.5, è anche possibile usare il carattere di sottolineatura (`_`) come separatore iniziale tra il prefisso e le cifre esadecimali, binarie o ottale. Ad esempio:
 
 ```vb
 Dim number As SByte = &H_F9
@@ -55,19 +56,19 @@ Dim number As SByte = &H_F9
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Se il valore letterale integer è esterno all'intervallo di `SByte`, vale a dire se è minore di <xref:System.SByte.MinValue?displayProperty=nameWithType> o maggiore di <xref:System.SByte.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione. Quando un valore letterale integer non ha alcun suffisso, un [intero](integer-data-type.md) è dedotto. Se il valore letterale integer è compreso nell'intervallo del `Integer` tipo, un [lungo](long-data-type.md) è dedotto. Ciò significa che, negli esempi precedenti, i valori letterali numerici `0x9A` e `0b10011010` vengono interpretati come interi con segno a 32 bit con un valore di 156, che supera <xref:System.SByte.MaxValue?displayProperty=nameWithType>. Per la corretta compilazione di codice simile al seguente che assegna un intero decimale non a un `SByte`, è possibile effettuare una delle operazioni seguenti:
+Se il valore letterale integer è esterno all'intervallo di `SByte`, vale a dire se è minore di <xref:System.SByte.MinValue?displayProperty=nameWithType> o maggiore di <xref:System.SByte.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione. Quando un valore letterale integer non ha alcun suffisso, un [Integer](integer-data-type.md) viene dedotto. Se il valore letterale integer è compreso nell'intervallo del `Integer` tipo, una [lungo](long-data-type.md) viene dedotto. Ciò significa che, negli esempi precedenti, i valori letterali numerici `0x9A` e `0b10011010` vengono interpretati come interi con segno a 32 bit con un valore corrispondente a 156, che supera <xref:System.SByte.MaxValue?displayProperty=nameWithType>. Per la corretta compilazione codice simile al seguente che assegna un intero decimale non a un `SByte`, è possibile effettuare una delle operazioni seguenti:
 
-- Disabilitare i controlli dei limiti integer per la compilazione con il `/removeintchecks` opzione del compilatore.
+- Disabilitare il controllo dei limiti di integer eseguendo la compilazione con il `/removeintchecks` opzione del compilatore.
 
-- Utilizzare un [carattere tipo](../../programming-guide\language-features\data-types/type-characters.md) definire in modo esplicito il valore letterale che si desidera assegnare il `SByte`. Nell'esempio seguente viene assegnato un valore negativo letterale `Short` valore un `SByte`. Si noti che, per i numeri negativi, è necessario impostare il bit più significativo della parola significativa del valore letterale numerico. Nel caso di questo esempio, questo è di tipo bit 15 del valore letterale `Short` valore.
+- Usare un [carattere di tipo](../../programming-guide\language-features\data-types/type-characters.md) definire in modo esplicito il valore letterale che si desidera assegnare al `SByte`. L'esempio seguente assegna un valore letterale negativo `Short` valore per un `SByte`. Si noti che, per i numeri negativi, è necessario impostare il bit più significativo della parola più significativa del valore letterale numerico. Nel caso di questo esempio, si tratta del valore letterale 15 `Short` valore.
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 
 ## <a name="programming-tips"></a>Suggerimenti sulla programmazione
   
--   **Conformità a CLS.** Il `SByte` tipo di dati non è in parte il [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), pertanto codice conforme a CLS non può utilizzare un componente che utilizza tale.
+-   **Conformità a CLS.** Il `SByte` tipo di dati non è in parte il [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), in modo che il codice conforme a CLS non è possibile utilizzare un componente che lo usa.
 
--   **Ampliamento.** Il `SByte` può ampliarsi nel tipo di dati `Short`, `Integer`, `Long`, `Decimal`, `Single`, e `Double`. È pertanto possibile convertire `SByte` a uno di questi tipi senza generare un <xref:System.OverflowException?displayProperty=nameWithType> errore.
+-   **Ampliamento.** Il `SByte` può ampliarsi nel tipo di dati `Short`, `Integer`, `Long`, `Decimal`, `Single`, e `Double`. Ciò significa che è possibile convertire `SByte` a uno di questi tipi senza generare un <xref:System.OverflowException?displayProperty=nameWithType> errore.
   
 -   **Caratteri tipo.** `SByte` non dispone di alcun carattere di tipo letterale o un carattere di tipo identificatore.  
   
@@ -76,7 +77,7 @@ Se il valore letterale integer è esterno all'intervallo di `SByte`, vale a dire
 ## <a name="see-also"></a>Vedere anche
 
  <xref:System.SByte?displayProperty=nameWithType>  
- [Tipi di dati](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)  
  [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Tipo di dati Short](../../../visual-basic/language-reference/data-types/short-data-type.md)  

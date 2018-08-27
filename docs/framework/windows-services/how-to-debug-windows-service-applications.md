@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 manager: douge
-ms.openlocfilehash: 2c73ccd75bdbd1298371921bababa87ba4520495
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5de4c90361033df603bb63fbb365514d6bb5ea0c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518050"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935687"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Procedura: eseguire il debug di applicazioni di servizio per Windows
 Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione controllo servizi e non dall'interno di Visual Studio, il debug di un servizio non è semplice come quello di altri tipi di applicazioni di Visual Studio. Per eseguire il debug di un servizio, è necessario avviare il servizio e connettere un debugger al processo in cui viene eseguito. È quindi possibile eseguire il debug dell'applicazione tramite tutte le funzionalità di debug standard di Visual Studio.  
@@ -33,7 +33,7 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
 >  Il debug del metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> può risultare difficile in quanto Gestione controllo servizi impone un limite di 30 secondi per tutti i tentativi di avvio di un servizio. Per altre informazioni, vedere [Risoluzione dei problemi: Debug dei servizi Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
->  Per ottenere informazioni significative per il debug, il debugger di Visual Studio deve trovare il file di simboli per i file binari sottoposti a debug. Se si esegue il debug di un servizio compilato in Visual Studio, i file di simboli (con estensione PDB) si trovano nella stessa cartella dell'eseguibile o della libreria e il debugger li carica automaticamente. Se si esegue il debug di un servizio che non è stato compilato, è necessario prima trovare i simboli per il servizio e assicurarsi che possano essere individuati dal debugger. Vedere [Specificare file di simboli (con estensione pdb) e di origine](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Se si esegue il debug di un processo di sistema o è necessario avere i simboli per le chiamate di sistema nei servizi, aggiungere i server dei simboli Microsoft. Vedere [Simboli di debug](http://msdn.microsoft.com/windows/desktop/ee416588.aspx).  
+>  Per ottenere informazioni significative per il debug, il debugger di Visual Studio deve trovare il file di simboli per i file binari sottoposti a debug. Se si esegue il debug di un servizio compilato in Visual Studio, i file di simboli (con estensione PDB) si trovano nella stessa cartella dell'eseguibile o della libreria e il debugger li carica automaticamente. Se si esegue il debug di un servizio che non è stato compilato, è necessario prima trovare i simboli per il servizio e assicurarsi che possano essere individuati dal debugger. Vedere [Specificare file di simboli (con estensione pdb) e di origine](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Se si esegue il debug di un processo di sistema o è necessario avere i simboli per le chiamate di sistema nei servizi, aggiungere i server dei simboli Microsoft. Vedere [Simboli di debug](/windows/desktop/DxTechArts/debugging-with-symbols).  
   
 ### <a name="to-debug-a-service"></a>Per eseguire il debug di un servizio  
   
@@ -80,7 +80,7 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
   
 1.  Aggiungere un metodo al servizio che esegue i metodi <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A>:  
   
-    ```  
+    ```csharp  
     internal void TestStartupAndStop(string[] args)  
     {  
         this.OnStart(args);  
@@ -91,18 +91,19 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
   
 2.  Riscrivere il metodo `Main` come segue:  
   
-    ```  
+    ```csharp  
     static void Main(string[] args)  
-            {  
-                if (Environment.UserInteractive)  
-                {  
-                    MyNewService service1 = new MyNewService(args);  
-                    service1.TestStartupAndStop(args);  
-                }  
-                else  
-                {  
-                    // Put the body of your old Main method here.  
-                }  
+    {  
+        if (Environment.UserInteractive)  
+        {  
+            MyNewService service1 = new MyNewService(args);  
+            service1.TestStartupAndStop(args);  
+        }  
+        else  
+        {  
+            // Put the body of your old Main method here.  
+        }  
+    }
     ```  
   
 3.  Nella scheda **Applicazione** delle proprietà del progetto impostare il **Tipo di output** su **Applicazione console**.  
@@ -117,4 +118,4 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
  [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [Procedura: installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
  [Procedura: avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Debug di un servizio](http://msdn.microsoft.com/library/windows/desktop/ms682546.aspx)
+ [Debug di un servizio](/windows/desktop/Services/debugging-a-service)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: d22e57d097edb0fe52b604e9c6431e167c410f0b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 58e5fd72a3748e7af0894093fc461c4efb543608
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171806"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925540"
 ---
 # <a name="-operator-c-reference"></a>Operatore || (Riferimenti per C#)
 L'operatore OR condizionale (`||`) esegue un'operazione OR logica sui propri operandi `bool`. Se il primo operando restituisce `true`, il secondo operando non viene valutato. Se il primo operando restituisce `false`, il secondo operando determina se l'espressione OR nel suo complesso restituisce `true` o `false`.  
@@ -40,7 +40,8 @@ x | y
   
  [!code-csharp[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Operatori C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Operatori C#](../../../csharp/language-reference/operators/index.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdba02feb8cacc6ab1886c12f88716184aa2a81a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 049268c29946e95ca7bb194f6cae38baf8f060f6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752429"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933530"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Librerie di classi e API aggiuntive
 
-Poiché .NET Framework è in costante evoluzione, vengono rilasciate nuove funzionalità fuori programma (OOB) per migliorare lo sviluppo multipiattaforma o introdurre nuove funzionalità in anteprima per i clienti. Questo argomento elenca i progetti fuori banda (OOB) per i quali viene fornita la documentazione.  
+.NET Framework è in costante evoluzione. Per migliorare lo sviluppo multipiattaforma e introdurre nuove funzionalità all'inizio, vengono rilasciate nuove funzionalità fuori banda (OOB). Questo argomento elenca i progetti fuori banda (OOB) per i quali viene fornita la documentazione.  
   
-Inoltre, alcune librerie sono destinate a piattaforme o implementazioni specifiche di .NET Framework. Ad esempio, il <xref:System.Text.CodePagesEncodingProvider> rende codifiche delle tabelle codici di codice disponibili per App UWP sviluppata con .NET Framework. Questo argomento include anche un elenco di queste librerie.  
+Inoltre, alcune librerie sono destinate a piattaforme o implementazioni specifiche di .NET Framework. Ad esempio, il <xref:System.Text.CodePagesEncodingProvider> classe rende codifiche della tabella codici disponibili per le app UWP sviluppate usando .NET Framework. Questo argomento include anche un elenco di queste librerie.  
   
 ## <a name="oob-projects"></a>Progetti OOB
   
@@ -35,7 +35,7 @@ Inoltre, alcune librerie sono destinate a piattaforme o implementazioni specific
   
 | Progetto | Descrizione |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Estende la <xref:System.Text.EncodingProvider> classe per rendere disponibili per le applicazioni che usano la piattaforma Windows universale codifiche delle tabelle codici di codice. |  
+| <xref:System.Text.CodePagesEncodingProvider> | Estende il <xref:System.Text.EncodingProvider> classe per rendere disponibili per le app destinate a Universal Windows Platform codifiche della tabella codici. |  
   
 ## <a name="private-apis"></a>API private  
 
@@ -50,8 +50,8 @@ Queste API supportano l'infrastruttura del prodotto e non sono progettate/suppor
 | [Classe System.Net.CoreResponseData](../../../docs/framework/additional-apis/coreresponsedata.md) |
 | [System.Net.CoreResponseData.m\_ResponseHeaders Field](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
 | [System.Net.CoreResponseData.m\_StatusCode Field](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
-| [System.NET. HttpWebRequest. \_AutoRedirects campo](../../../docs/framework/additional-apis/_autoredirects.md) |
-| [System.NET. HttpWebRequest. \_CoreResponse campo](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
+| [System.NET. HttpWebRequest. \_Campo AutoRedirects](../../../docs/framework/additional-apis/_autoredirects.md) |
+| [System.NET. HttpWebRequest. \_Campo CoreResponse](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
 | [System.NET. HttpWebRequest. \_HttpResponse campo](../../../docs/framework/additional-apis/_httpresponse.md) |
 | [System.Net.ServicePoint.m\_ConnectionGroupList Field](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
 | [System.Net.ServicePointManager.s\_ServicePointTable Field](../../../docs/framework/additional-apis/s_servicepointtable.md) |

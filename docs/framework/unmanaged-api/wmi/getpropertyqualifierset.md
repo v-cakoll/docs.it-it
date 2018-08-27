@@ -1,6 +1,6 @@
 ---
 title: Funzione GetPropertyQualifierSet (riferimenti alle API non gestite)
-description: La funzione GetPropertyQualifierSet recupera il qualificatore di impostazione per una proprietà.
+description: La funzione GetPropertyQualifierSet recupera il qualificatore impostato per una proprietà.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyQualifierSet
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2951733211737f06cd737b20bd1537277be1be1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fcddca2e435a3f5bf4b8d083784613254d9801a4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461477"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935700"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet (funzione)
-Recupera il qualificatore impostato per una particolare proprietà.
+Recupera il qualificatore impostata per una particolare proprietà.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -45,17 +45,17 @@ HRESULT GetPropertyQualifierSet (
 [in] Questo parametro è inutilizzato.
 
 `ptr`  
-[in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
+[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
 `wszMethod`  
 [in] Il nome della proprietà. `wszProperty` deve puntare a un valore valido `LPCWSTR`. 
 
 `ppQualSet`  
-[out] Riceve il puntatore a interfaccia che consente l'accesso per i qualificatori della proprietà. Il parametro `ppQualSet` non può essere `null`. Se si verifica un errore, non viene restituito un nuovo oggetto e il puntatore è impostato in modo che punti a `null`. 
+[out] Riceve il puntatore a interfaccia che consente l'accesso per i qualificatori della proprietà. Il parametro `ppQualSet` non può essere `null`. Se si verifica un errore, non viene restituito un nuovo oggetto e il puntatore viene impostato in modo che punti a `null`. 
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice:
+I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
@@ -63,25 +63,25 @@ I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* fi
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Il metodo specificato non esiste. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per completare l'operazione. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | È un parametro `null`. |
-| `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | La funzione tenta di ottenere i qualificatori di una proprietà di sistema. |
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
+| `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | La funzione tenta di ottenere qualificatori di una proprietà di sistema. |
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject::GetPropertyQualifierSet](https://msdn.microsoft.com/library/aa391450(v=vs.85).aspx) metodo. 
+Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) (metodo). 
 
-Una chiamata a questa funzione è supportata solo se l'oggetto corrente è una definizione di classe CIM. Modifica di metodo non è disponibile per [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) ponters che puntano a istanze CIM.
+Una chiamata a questa funzione è supportata solo se l'oggetto corrente è una definizione di classe CIM. Manipolazione di metodo non è disponibile per [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters che puntano a istanze CIM.
 
-Poiché ogni metodo può avere un proprio qualificatori, il [IWbemQualifierSet puntatore](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) consente al chiamante di aggiungere, modificare o eliminare questi qualificatori.
+Poiché ogni metodo può avere un proprio qualificatori, il [puntatore IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) consente al chiamante di aggiungere, modificare o eliminare questi qualificatori.
 
-Poiché le proprietà di sistema non dispongono di alcun qualificatori, la funzione restituisce `WBEM_E_SYSTEM_PROPERTY` se si tenta di ottenere un [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) puntatore per una proprietà di sistema.
+Poiché le proprietà di sistema non dispongono di alcun qualificatori, la funzione restituisce `WBEM_E_SYSTEM_PROPERTY` se si prova a ottenere un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) puntatore per una proprietà di sistema.
 
 ## <a name="requirements"></a>Requisiti  
-**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
-[WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

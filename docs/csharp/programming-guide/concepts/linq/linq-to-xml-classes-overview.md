@@ -3,11 +3,11 @@ title: Panoramica delle classi LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
 ms.openlocfilehash: 619bf59c2b10cbb699f8e5b177991da9a0a2b238
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329894"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42752120"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>Panoramica delle classi LINQ to XML (C#)
 In questo argomento viene fornito un elenco delle classi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] disponibili nello spazio dei nomi <xref:System.Xml.Linq>, con una breve descrizione.  

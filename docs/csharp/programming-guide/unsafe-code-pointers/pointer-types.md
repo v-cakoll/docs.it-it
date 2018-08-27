@@ -5,11 +5,11 @@ helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.openlocfilehash: cbc75a2ec6fe826cb192b1e8bef61c7295f13916
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337168"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924508"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipi di puntatori (Guida per programmatori C#)
 

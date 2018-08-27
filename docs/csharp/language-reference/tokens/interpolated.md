@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 407ca9e4744ea9be45867a08e87c502821226472
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058836"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000976"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - interpolazione di stringhe (Riferimenti per C#)
 
@@ -88,12 +88,13 @@ L'esempio seguente usa la conversione implicita a <xref:System.FormattableString
 
 Se non si ha familiarità con l'interpolazione di stringhe, vedere la guida introduttiva [Interpolazione di stringhe in C#](../../quick-starts/interpolated-strings.yml). Per altri esempi, vedere l'esercitazione [Interpolazione di stringhe in C#](../../tutorials/string-interpolation.md).
 
-## <a name="see-also"></a>Vedere anche  
- <xref:System.String.Format%2A?displayProperty=nameWithType>  
- <xref:System.FormattableString?displayProperty=nameWithType>  
- <xref:System.IFormattable?displayProperty=nameWithType>  
- [Formattazione composita](../../../standard/base-types/composite-formatting.md)  
- [Stringhe](../../programming-guide/strings/index.md)  
- [Guida per programmatori C#](../../programming-guide/index.md)  
- [Caratteri speciali di C#](index.md)  
- [Riferimenti per C#](../index.md)  
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- [Formattazione composita](../../../standard/base-types/composite-formatting.md)
+- [Stringhe](../../programming-guide/strings/index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Caratteri speciali di C#](index.md)
+- [Riferimenti per C#](../index.md)

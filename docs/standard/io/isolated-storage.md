@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ab12ac28728535c3bc984d6b37d82f5bf371ba2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88c70e6a35e0a731cd8937b188dc6ee8e9bce105
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579470"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998854"
 ---
 # <a name="isolated-storage"></a>Spazio di memorizzazione isolato
 <a name="top"></a> Per le applicazioni [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)], lo spazio di memorizzazione isolato è un meccanismo di archiviazione dati che offre isolamento e sicurezza definendo modi standardizzati di associare il codice ai dati salvati. La standardizzazione offre anche altri vantaggi. Gli amministratori possono utilizzare strumenti in grado di modificare l'archiviazione isolata per configurare lo spazio di archiviazione dei file, per impostare i criteri di sicurezza e per eliminare dati inutilizzati. Con lo spazio di memorizzazione isolato, non occorre più fornire al codice percorsi univoci per individuare posizioni sicure nel file system e i dati sono protetti da altre applicazioni che dispongono esclusivamente dell'accesso allo spazio di memorizzazione isolato. Non è necessario specificare informazioni hardcoded che indicano il percorso dell'area di archiviazione di un'applicazione.  
   
 > [!IMPORTANT]
->  Lo spazio di memorizzazione isolato non è disponibile per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Al contrario, utilizzare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API [!INCLUDE[wrt](../../../includes/wrt-md.md)] per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.  
+>  Lo spazio di memorizzazione isolato non è disponibile per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Al contrario, utilizzare le classi di dati dell'applicazione negli spazi dei nomi `Windows.Storage` inclusi nell'API [!INCLUDE[wrt](../../../includes/wrt-md.md)] per archiviare dati e file locali. Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
