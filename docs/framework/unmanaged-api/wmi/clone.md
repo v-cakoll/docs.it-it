@@ -1,6 +1,6 @@
 ---
-title: Funzione clone (riferimenti alle API non gestite)
-description: La funzione Clone restituisce un nuovo oggetto che è un clone completo dell'oggetto corrente.
+title: 'IMetaDataImport:: Clone (funzione) (riferimenti alle API non gestite)'
+description: La funzione Clone restituisce un nuovo oggetto che costituisce un clone completo dell'oggetto corrente.
 ms.date: 11/06/2017
 api_name:
 - Clone
@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5cd87cb619ef2dc1e0548c7553585b7e51e94c4f
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457316"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924775"
 ---
-# <a name="clone-function"></a><span data-ttu-id="584fe-103">Clone (funzione)</span><span class="sxs-lookup"><span data-stu-id="584fe-103">Clone function</span></span>
-<span data-ttu-id="584fe-104">Restituisce un nuovo oggetto che è un clone completo dell'oggetto corrente.</span><span class="sxs-lookup"><span data-stu-id="584fe-104">Returns a new object that is a complete clone of the current object.</span></span>   
+# <a name="clone-function"></a><span data-ttu-id="98491-103">Funzioni di clone</span><span class="sxs-lookup"><span data-stu-id="98491-103">Clone function</span></span>
+<span data-ttu-id="98491-104">Restituisce un nuovo oggetto che costituisce un clone completo dell'oggetto corrente.</span><span class="sxs-lookup"><span data-stu-id="98491-104">Returns a new object that is a complete clone of the current object.</span></span>   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="584fe-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="584fe-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98491-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="98491-105">Syntax</span></span>  
   
 ```  
 HRESULT Clone (
@@ -38,40 +38,40 @@ HRESULT Clone (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="584fe-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="584fe-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="98491-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="98491-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="584fe-107">[in] Questo parametro è inutilizzato.</span><span class="sxs-lookup"><span data-stu-id="584fe-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="98491-107">[in] Questo parametro è inutilizzato.</span><span class="sxs-lookup"><span data-stu-id="98491-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="584fe-108">[in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.</span><span class="sxs-lookup"><span data-stu-id="584fe-108">[in] A pointer to an [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.</span></span>
+<span data-ttu-id="98491-108">[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.</span><span class="sxs-lookup"><span data-stu-id="98491-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `ppCopy`  
-<span data-ttu-id="584fe-109">[out] Un nuovo oggetto di un completamento unico di `ptr`.</span><span class="sxs-lookup"><span data-stu-id="584fe-109">[out] A new object that is a complete lone of `ptr`.</span></span> <span data-ttu-id="584fe-110">Questo argomento non può essere `null` se riceve la copia dell'oggetto corrente.</span><span class="sxs-lookup"><span data-stu-id="584fe-110">This argument cannot be `null` if it receives the copy of the current object.</span></span>
+<span data-ttu-id="98491-109">[out] Un nuovo oggetto che è stato completato un unico di `ptr`.</span><span class="sxs-lookup"><span data-stu-id="98491-109">[out] A new object that is a complete lone of `ptr`.</span></span> <span data-ttu-id="98491-110">Questo argomento non può essere `null` se riceve la copia dell'oggetto corrente.</span><span class="sxs-lookup"><span data-stu-id="98491-110">This argument cannot be `null` if it receives the copy of the current object.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="584fe-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="584fe-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="98491-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="98491-111">Return value</span></span>
 
-<span data-ttu-id="584fe-112">I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="584fe-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="98491-112">I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="98491-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="584fe-113">Costante</span><span class="sxs-lookup"><span data-stu-id="584fe-113">Constant</span></span>  |<span data-ttu-id="584fe-114">Valore</span><span class="sxs-lookup"><span data-stu-id="584fe-114">Value</span></span>  |<span data-ttu-id="584fe-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="584fe-115">Description</span></span>  |
+|<span data-ttu-id="98491-113">Costante</span><span class="sxs-lookup"><span data-stu-id="98491-113">Constant</span></span>  |<span data-ttu-id="98491-114">Valore</span><span class="sxs-lookup"><span data-stu-id="98491-114">Value</span></span>  |<span data-ttu-id="98491-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="98491-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | <span data-ttu-id="584fe-116">0x80041001</span><span class="sxs-lookup"><span data-stu-id="584fe-116">0x80041001</span></span> | <span data-ttu-id="584fe-117">Si è verificato un errore generale.</span><span class="sxs-lookup"><span data-stu-id="584fe-117">There has been a general failure.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="584fe-118">0x80041008</span><span class="sxs-lookup"><span data-stu-id="584fe-118">0x80041008</span></span> | <span data-ttu-id="584fe-119">`null` è stato specificato come parametro, e non è consentito in questo caso.</span><span class="sxs-lookup"><span data-stu-id="584fe-119">`null` was specified as a parameter, and it is not legal in this usage.</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="584fe-120">0x80041006</span><span class="sxs-lookup"><span data-stu-id="584fe-120">0x80041006</span></span> | <span data-ttu-id="584fe-121">Memoria insufficiente è disponibile per clonare l'oggetto.</span><span class="sxs-lookup"><span data-stu-id="584fe-121">Not enough memory is available to clone the object.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="584fe-122">0</span><span class="sxs-lookup"><span data-stu-id="584fe-122">0</span></span> | <span data-ttu-id="584fe-123">La chiamata di funzione è stata completata.</span><span class="sxs-lookup"><span data-stu-id="584fe-123">The function call was successful.</span></span>  |
+| `WBEM_E_FAILED` | <span data-ttu-id="98491-116">0x80041001</span><span class="sxs-lookup"><span data-stu-id="98491-116">0x80041001</span></span> | <span data-ttu-id="98491-117">Si è verificato un errore generale.</span><span class="sxs-lookup"><span data-stu-id="98491-117">There has been a general failure.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="98491-118">0x80041008</span><span class="sxs-lookup"><span data-stu-id="98491-118">0x80041008</span></span> | <span data-ttu-id="98491-119">`null` è stato specificato come parametro, e non è consentito in questo tipo di utilizzo.</span><span class="sxs-lookup"><span data-stu-id="98491-119">`null` was specified as a parameter, and it is not legal in this usage.</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="98491-120">0x80041006</span><span class="sxs-lookup"><span data-stu-id="98491-120">0x80041006</span></span> | <span data-ttu-id="98491-121">Memoria insufficiente è disponibile per clonare l'oggetto.</span><span class="sxs-lookup"><span data-stu-id="98491-121">Not enough memory is available to clone the object.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="98491-122">0</span><span class="sxs-lookup"><span data-stu-id="98491-122">0</span></span> | <span data-ttu-id="98491-123">La chiamata di funzione è riuscita.</span><span class="sxs-lookup"><span data-stu-id="98491-123">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="584fe-124">Note</span><span class="sxs-lookup"><span data-stu-id="584fe-124">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="98491-124">Note</span><span class="sxs-lookup"><span data-stu-id="98491-124">Remarks</span></span>
 
-<span data-ttu-id="584fe-125">Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject::Clone](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) metodo.</span><span class="sxs-lookup"><span data-stu-id="584fe-125">This function wraps a call to the [IWbemClassObject::Clone](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="98491-125">Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) (metodo).</span><span class="sxs-lookup"><span data-stu-id="98491-125">This function wraps a call to the [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) method.</span></span>
 
-<span data-ttu-id="584fe-126">L'oggetto clonato è un oggetto COM che presenta un conteggio dei riferimenti di 1.</span><span class="sxs-lookup"><span data-stu-id="584fe-126">The cloned object is a COM object that has a reference count of 1.</span></span>
+<span data-ttu-id="98491-126">Oggetto clonato è un oggetto COM che dispone di un conteggio dei riferimenti pari a 1.</span><span class="sxs-lookup"><span data-stu-id="98491-126">The cloned object is a COM object that has a reference count of 1.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="584fe-127">Requisiti</span><span class="sxs-lookup"><span data-stu-id="584fe-127">Requirements</span></span>  
- <span data-ttu-id="584fe-128">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="584fe-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="98491-127">Requisiti</span><span class="sxs-lookup"><span data-stu-id="98491-127">Requirements</span></span>  
+ <span data-ttu-id="98491-128">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="98491-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="584fe-129">**Intestazione:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="584fe-129">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="98491-129">**Intestazione:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="98491-129">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="584fe-130">**Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="584fe-130">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="98491-130">**Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="98491-130">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="584fe-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="584fe-131">See also</span></span>  
-[<span data-ttu-id="584fe-132">WMI e i contatori delle prestazioni (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="584fe-132">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="98491-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="98491-131">See also</span></span>  
+[<span data-ttu-id="98491-132">WMI e contatori delle prestazioni (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="98491-132">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
