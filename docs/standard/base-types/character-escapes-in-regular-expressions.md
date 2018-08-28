@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebdcda655a186d54065e98f8b9c5c7ae2fda4955
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f19cbf305165c2553d5a493f7011a6aea19fb23
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569908"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931859"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Caratteri di escape nelle espressioni regolari
 La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni seguenti:  
@@ -38,7 +38,7 @@ La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni 
   
 |Carattere o sequenza|Descrizione|  
 |---------------------------|-----------------|  
-|Tutti i caratteri eccetto i seguenti:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \|I caratteri diversi da quelli elencati nella colonna **Carattere o sequenza** non hanno un significato speciale nelle espressioni regolari, ma corrispondono a se stessi.<br /><br /> I caratteri inclusi nella colonna **Carattere o sequenza** sono elementi speciali del linguaggio di espressioni regolari. Per trovare una corrispondenza con essi in un'espressione regolare, è necessario aggiungere un carattere di escape o includerli in un [gruppo di caratteri positivi](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Ad esempio, l'espressione regolare `\$\d+` o `[$]\d+` trova la corrispondenza con "$1200".|  
+|Tutti i caratteri eccetto i seguenti:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |I caratteri diversi da quelli elencati nella colonna **Carattere o sequenza** non hanno un significato speciale nelle espressioni regolari, ma corrispondono a se stessi.<br /><br /> I caratteri inclusi nella colonna **Carattere o sequenza** sono elementi speciali del linguaggio di espressioni regolari. Per trovare una corrispondenza con essi in un'espressione regolare, è necessario aggiungere un carattere di escape o includerli in un [gruppo di caratteri positivi](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Ad esempio, l'espressione regolare `\$\d+` o `[$]\d+` trova la corrispondenza con "$1200".|  
 |`\a`|Corrisponde a un carattere di controllo del segnale acustico di avviso, `\u0007`.|  
 |`\b`|In una classe di caratteri `[`*character_group*`]` corrisponde a una carattere backspace, `\u0008`.  Vedere [Classi di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Al di fuori di una classe di caratteri, `\b` è un ancoraggio che corrisponde a un confine di parola. Vedere [Ancoraggi](../../../docs/standard/base-types/anchors-in-regular-expressions.md).|  
 |`\t`|Corrisponde a un carattere di tabulazione, `\u0009`.|  
