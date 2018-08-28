@@ -2,12 +2,12 @@
 title: Articoli sulla procedura (Guida a C#)
 description: Raccolta di suggerimenti rapidi e brevi esempi di codice evidenziati
 ms.date: 12/20/2017
-ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549392"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999563"
 ---
 # <a name="how-to-c"></a>Procedura (C#)
 
@@ -68,7 +68,7 @@ Potrebbe essere necessario convertire un oggetto in un tipo diverso.
 - [Usare `as` e `is` per eseguire il cast sicuro di un tipo diverso](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).
 - [Definire operatori di conversione per tipi `struct`](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
 - [Determinare se un tipo è un tipo di valore nullable](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
-- [Eseguire la conversione tra tipi di valore nullable e non nullable](../programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md).
+- [Eseguire la conversione tra tipi di valore nullable e non nullable](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
 
 ## <a name="equality-and-ordering-comparisons"></a>Confronti di uguaglianza e ordinamento
 
@@ -126,7 +126,7 @@ I programmi moderni usano spesso operazioni asincrone. Questi articoli contengon
 
 - [Migliorare le prestazioni di operazioni asincrone usando `System.Threading.Tasks.Task.WhenAll`](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 - [Eseguire più richieste Web in parallelo tramite `async` e `await`](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md).
-- [Usare un pool di thread](../programming-guide/concepts/threading/how-to-use-a-thread-pool.md).
+- [Usare un pool di thread](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool).
 
 ## <a name="command-line-args-to-your-program"></a>Argomenti della riga di comando per il programma
 
