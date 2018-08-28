@@ -2,12 +2,12 @@
 title: Modello di configurazione gerarchica
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: 233a8d4ba36835ab26e0c4a8cd044cf60d497a0b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ce0bc69424495594e0ee9c6b950a5fa9c4d5f993
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806630"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000101"
 ---
 # <a name="hierarchical-configuration-model"></a>Modello di configurazione gerarchica
 In questo esempio viene descritto come implementare una gerarchia di file di configurazione per i servizi. Viene inoltre descritto come associazioni, comportamenti del servizio e comportamenti dell'endpoint vengono ereditati dai livelli superiori nella gerarchia.  
@@ -19,7 +19,7 @@ In questo esempio viene descritto come implementare una gerarchia di file di con
   
  Tutti i servizi implementano il contratto `IDesc`. Gli elementi seguenti sono la definizione dell'interfaccia `IDesc`, che mostra i metodi esposti in questa interfaccia. L'interfaccia `IDesc` è definita in Service1.cs.  
   
-```  
+```csharp  
 // Define a service contract  
 [ServiceContract(Namespace="http://Microsoft.Samples.ConfigHierarchicalModel")]  
 public interface IDesc  
@@ -45,9 +45,9 @@ public interface IDesc
   
 2.  Se il progetto client non è già stato configurato come progetto di avvio, attenersi alla seguente procedura.  
   
-    1.  In **Esplora**, la soluzione e quindi scegliere **proprietà**.  
+    1.  Nelle **Esplora soluzioni**, fare doppio clic la soluzione e quindi selezionare **proprietà**.  
   
-    2.  In **proprietà comuni**selezionare **progetto di avvio**, quindi fare clic su **progetto di avvio singolo**.  
+    2.  Nelle **proprietà comuni**, selezionare **progetto di avvio**, quindi fare clic su **progetto di avvio singolo**.  
   
     3.  Dal **progetto di avvio singolo** elenco a discesa, selezionare **Client**.  
   
@@ -58,11 +58,11 @@ public interface IDesc
 4.  Premere CTRL+F5 per eseguire il client.  
   
 > [!NOTE]
->  Se questi passaggi non funzionano, verificare che l'ambiente sia stato configurato correttamente, usando i passaggi seguenti.  
+>  Se questi passaggi non funzionano, assicurarsi che l'ambiente è stato configurato correttamente, usando la procedura seguente:  
 >   
->  1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-> 2.  Per compilare la soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-> 3.  Per eseguire l'esempio in uno o più configurazioni di computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+> 1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
+> 2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](building-the-samples.md).  
+> 3.  Per eseguire l'esempio in una o più configurazioni di computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: bc040e17f5c612b9fc43a9ef24fb6f15f0942b8e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 8607c79a8b1e9a9fd999e4f5b77ecfac786161b3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243994"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003151"
 ---
 # <a name="where-clause-c-reference"></a>Clausola where (Riferimento C#)
 La clausola `where` viene usata in un'espressione di query per specificare quali elementi dell'origine dati verranno restituiti nell'espressione di query. Viene applicata una condizione booleana (*predicato*) a ogni elemento di origine (a cui fa riferimento la variabile di intervallo) e viene restituita quella per cui la condizione specificata è vera. Una singola espressione di query può contenere più clausole `where` e una singola clausola può contenere più sottoespressioni di predicato.  
@@ -39,10 +39,11 @@ La clausola `where` viene usata in un'espressione di query per specificare quali
   
  In fase di compilazione, la parola chiave `where` viene convertita in una chiamata al metodo <xref:System.Linq.Enumerable.Where%2A> dell'operatore query standard.  
   
-## <a name="see-also"></a>Vedere anche  
- [Parole chiave di query (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [Clausola from](../../../csharp/language-reference/keywords/from-clause.md)  
- [Clausola select](../../../csharp/language-reference/keywords/select-clause.md)  
- [Filtraggio dei dati](../../programming-guide/concepts/linq/filtering-data.md)  
- [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Nozioni di base su LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Parole chiave di query (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+- [Clausola from](../../../csharp/language-reference/keywords/from-clause.md)  
+- [Clausola select](../../../csharp/language-reference/keywords/select-clause.md)  
+- [Filtraggio dei dati](../../programming-guide/concepts/linq/filtering-data.md)  
+- [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [Nozioni di base su LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

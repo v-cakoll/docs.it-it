@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 3fabd7e3cad76e17061751d0fe0bb4ae06bf6fb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410455"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998466"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory e WSTrustChannel
 Se si ha già familiarità con Windows Communication Foundation (WCF), si sa che un client WCF supporta già la federazione. Configurando un client WCF con <xref:System.ServiceModel.WSFederationHttpBinding> o un binding personalizzato simile, è possibile abilitare l'autenticazione federata in un servizio.  
@@ -34,10 +34,10 @@ Se si ha già familiarità con Windows Communication Foundation (WCF), si sa che
 > [!TIP]
 >  Qual è la differenza tra ActAs e OnBehalfOf?  
 >   
->  Dal punto di vista del protocollo WS-Trust:  
+>  Dal punto di vista protocollo WS-Trust:  
 >   
->  1.  Un elemento token di sicurezza delle richieste ActAs indica che il richiedente vuole un token che include attestazioni relative a due entità distinte, ovvero il richiedente e un'entità esterna rappresentata dal token nell'elemento ActAs.  
-> 2.  Un elemento token di sicurezza delle richieste OnBehalfOf indica che il richiedente vuole un token che include attestazioni relative a una sola entità, ovvero l'entità esterna rappresentata dal token nell'elemento OnBehalfOf.  
+> 1. Un elemento token di sicurezza delle richieste ActAs indica che il richiedente vuole un token che include attestazioni relative a due entità distinte, ovvero il richiedente e un'entità esterna rappresentata dal token nell'elemento ActAs.  
+> 2. Un elemento token di sicurezza delle richieste OnBehalfOf indica che il richiedente vuole un token che include attestazioni relative a una sola entità, ovvero l'entità esterna rappresentata dal token nell'elemento OnBehalfOf.  
 >   
 >  La funzionalità ActAs viene usata in genere in scenari che richiedono la delega composita, dove il destinatario finale del token rilasciato può controllare l'intera catena di delega e vedere non solo il client, ma tutti gli intermediari. Ciò consente di eseguire il controllo di accesso, le attività di controllo e altre attività correlate basate sull'intera catena di delega di identità. La funzionalità ActAs viene in genere usata in sistemi multilivello per autenticare e passare informazioni sulle identità tra i livelli, senza dover passare tali informazioni a livello di applicazione/logica di business.  
 >   

@@ -14,27 +14,27 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: afec9965c4ff728094e901eb4924ac94c432b300
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44c67470def430a9ba924483899f0db6a9c798a2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643026"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999909"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Procedura: chiamare una funzione Windows che accetta tipi senza segno (Visual Basic)
-Se si utilizza una classe, modulo o struttura che dispone di membri di tipi integer senza segno, è possibile accedere a questi membri con Visual Basic.  
+Se si sta utilizzando una classe, modulo o una struttura con membri dei tipi di integer senza segno, è possibile accedere a questi membri con Visual Basic.  
   
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Per chiamare una funzione Windows che accetta un tipo senza segno  
+### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Per chiamare una funzione Windows che accetta un tipo unsigned  
   
-1.  Utilizzare un [istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md) indicare a Visual Basic la libreria che contiene la funzione, quali il nome è in tale raccolta, qual è la sequenza di chiamata e come convertire le stringhe, la chiamata.  
+1.  Usare un [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) per indicare a Visual Basic la libreria che contiene la funzione, che cos'è il nome di tale libreria, che cos'è la sequenza di chiamata e come convertire le stringhe quando viene chiamata.  
   
 2.  Nel `Declare` istruzione, utilizzare `UInteger`, `ULong`, `UShort`, o `Byte` come appropriato per ogni parametro con un tipo senza segno.  
   
-3.  Consultare la documentazione per la funzione di Windows che si sta chiamando per trovare i nomi e i valori delle costanti utilizzate. Molte di queste vengono definite nel file winuser. H.  
+3.  Consultare la documentazione per la funzione di Windows che per trovare i nomi e valori delle costanti che usa si sta chiamando. Molte di queste sono definiti nel file winuser. H.  
   
-4.  Dichiarare le costanti necessarie nel codice. Molte costanti Windows sono valori senza segno a 32 bit e devono essere dichiarate `As``UInteger`.  
+4.  Dichiarare le costanti necessarie nel codice. Molte Windows costanti sono valori senza segno a 32 bit e devono essere dichiarate `As``UInteger`.  
   
-5.  Chiamare la funzione nel modo normale. Nell'esempio seguente viene chiamata la funzione Windows `MessageBox`, che accetta un argomento di intero senza segno.  
+5.  Chiamare la funzione in modo normale. L'esempio seguente chiama la funzione Windows `MessageBox`, che accetta un argomento di intero senza segno.  
   
     ```  
     Public Class windowsMessage  
@@ -69,16 +69,16 @@ Se si utilizza una classe, modulo o struttura che dispone di membri di tipi inte
     ```  
   
     > [!CAUTION]
-    >  Il `UInteger`, `ULong`, `UShort`, e `SByte` tipi di dati non sono in parte il [indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../../standard/language-independence-and-language-independent-components.md) (CLS), pertanto il codice conforme a CLS non è possibile utilizzare un componente che li utilizza.  
+    >  Il `UInteger`, `ULong`, `UShort`, e `SByte` tipi di dati non sono in parte il [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), pertanto il codice conforme a CLS non è possibile utilizzare un componente che li Usa.  
   
     > [!IMPORTANT]
     >  Effettua una chiamata a codice non gestito, ad esempio l'interfaccia di programmazione dell'applicazione di Windows (API), espone il codice a potenziali rischi di sicurezza.  
   
     > [!IMPORTANT]
-    >  Chiama l'API di Windows è necessaria l'autorizzazione di codice non gestito, che può influire sulla relativa esecuzione in situazioni di attendibilità parziale. Per ulteriori informazioni, vedere <xref:System.Security.Permissions.SecurityPermission> e [le autorizzazioni di accesso di codice](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
+    >  Chiamare l'API di Windows richiede l'autorizzazione di accesso al codice non gestito, che possono influire sull'esecuzione in situazioni di attendibilità parziale. Per altre informazioni, vedere <xref:System.Security.Permissions.SecurityPermission> e [le autorizzazioni di accesso di codice](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi di dati](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)  
  [Tipo di dati Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
  [Tipo di dati UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
  [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  

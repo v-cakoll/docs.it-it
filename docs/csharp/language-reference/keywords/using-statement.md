@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 7bf9138721ecee63c65c2e39922aee96b1dfaa41
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ec4849dda0f28ad1f0e0ebb2c493a33005107db4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960952"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003112"
 ---
 # <a name="using-statement-c-reference"></a>Istruzione using (Riferimenti per C#)
 Offre una comoda sintassi che verifica l'uso corretto degli oggetti <xref:System.IDisposable>.  
@@ -43,11 +43,12 @@ Per altre informazioni sull'eliminazione degli oggetti `IDisposable`, vedere [Us
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Direttiva using](../../../csharp/language-reference/keywords/using-directive.md)  
- [Garbage Collection](../../../standard/garbage-collection/index.md)  
- [Uso di oggetti che implementano IDisposable](../../../standard/garbage-collection/using-objects.md)  
- [Interfaccia IDisposable](xref:System.IDisposable)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Direttiva using](../../../csharp/language-reference/keywords/using-directive.md)  
+- [Garbage Collection](../../../standard/garbage-collection/index.md)  
+- [Uso di oggetti che implementano IDisposable](../../../standard/garbage-collection/using-objects.md)  
+- [Interfaccia IDisposable](xref:System.IDisposable)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bb1d9bdbd0874875939010ea5503fe791a2cd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579834"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925724"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedure consigliate per le espressioni regolari in .NET
 <a name="top"></a> Il motore delle espressioni regolari in .NET è uno strumento potente e completo che consente di elaborare il testo in base alle corrispondenze dei modelli invece che in base al confronto e alla corrispondenza con il testo letterale. Nella maggior parte dei casi, la corrispondenza dei modelli viene applicata in modo rapido ed efficiente. In alcuni casi, tuttavia, il motore delle espressioni regolari può risultare molto lento. In casi estremi, può anche sembrare che il motore non risponda durante l'elaborazione di un input relativamente piccolo per ore o perfino giorni.  
@@ -190,7 +190,7 @@ ms.locfileid: "33579834"
   
  Poiché un confine di parola non è uguale a un carattere alfanumerico né è un subset di tali caratteri, non è possibile che il motore delle espressioni regolari attraversi un confine di parola quando viene trovata una corrispondenza con i caratteri alfanumerici. Ciò significa che per questa espressione regolare, il backtracking non potrà mai contribuire alla riuscita dell'operazione ma potrà solo ridurre le prestazioni poiché il motore delle espressioni regolari deve salvare lo stato per ogni corrispondenza preliminare corretta di un carattere alfanumerico.  
   
- Se si determina che il backtracking non è necessario, è possibile disabilitarlo usando l'elemento del linguaggio `(?>``subexpression``)`. Nell'esempio seguente viene analizzata una stringa di input utilizzando due espressioni regolari. La prima, `\b\p{Lu}\w*\b`, si basa sul backtracking. La seconda, `\b\p{Lu}(?>\w*)\b`, disabilita il backtracking. Come illustrato nell'output dell'esempio, entrambe producono lo stesso risultato.  
+ Se si determina che il backtracking non è necessario, è possibile disabilitarlo usando l'elemento del linguaggio `(?>subexpression)`. Nell'esempio seguente viene analizzata una stringa di input utilizzando due espressioni regolari. La prima, `\b\p{Lu}\w*\b`, si basa sul backtracking. La seconda, `\b\p{Lu}(?>\w*)\b`, disabilita il backtracking. Come illustrato nell'output dell'esempio, entrambe producono lo stesso risultato.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]  
@@ -272,20 +272,20 @@ ms.locfileid: "33579834"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group1.cs#8)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group1.vb#8)]  
   
- Quando le sottoespressioni vengono utilizzate solo per applicarvi i quantificatori e non è necessario il testo acquisito, è consigliabile disabilitare le acquisizioni del gruppo. Ad esempio, l'elemento del linguaggio `(?:``subexpression``)` impedisce al gruppo al quale viene applicato di acquisire le sottostringhe corrispondenti. Nell'esempio seguente il criterio di espressione regolare dell'esempio precedente viene modificato in `\b(?:\w+[;,]?\s?)+[.?!]`. Come illustrato nell'output, il motore delle espressioni regolari non popolerà le raccolte <xref:System.Text.RegularExpressions.GroupCollection> e <xref:System.Text.RegularExpressions.CaptureCollection>.  
+ Quando le sottoespressioni vengono utilizzate solo per applicarvi i quantificatori e non è necessario il testo acquisito, è consigliabile disabilitare le acquisizioni del gruppo. Ad esempio, l'elemento del linguaggio `(?:subexpression)` impedisce al gruppo al quale viene applicato di acquisire le sottostringhe corrispondenti. Nell'esempio seguente il criterio di espressione regolare dell'esempio precedente viene modificato in `\b(?:\w+[;,]?\s?)+[.?!]`. Come illustrato nell'output, il motore delle espressioni regolari non popolerà le raccolte <xref:System.Text.RegularExpressions.GroupCollection> e <xref:System.Text.RegularExpressions.CaptureCollection>.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group2.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group2.vb#9)]  
   
  È possibile disabilitare le acquisizioni in uno dei modi seguenti:  
   
--   Usare l'elemento del linguaggio `(?:``subexpression``)`. Questo elemento impedisce l'acquisizione delle sottostringhe corrispondenti nel gruppo a cui viene applicato. Non disabilita le acquisizioni delle sottostringhe in tutti i gruppi annidati.  
+-   Usare l'elemento del linguaggio `(?:subexpression)`. Questo elemento impedisce l'acquisizione delle sottostringhe corrispondenti nel gruppo a cui viene applicato. Non disabilita le acquisizioni delle sottostringhe in tutti i gruppi annidati.  
   
--   Usare l'opzione <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Disabilita tutte le acquisizioni non denominate o implicite nel modello di espressione regolare. Quando si usa questa opzione, è possibile acquisire solo le sottostringhe che corrispondono ai gruppi denominati definiti con l'elemento del linguaggio `(?<``name``>``subexpression``)`. Il flag <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> può essere passato al parametro `options` del costruttore della classe <xref:System.Text.RegularExpressions.Regex> o al parametro `options` di un metodo <xref:System.Text.RegularExpressions.Regex> statico corrispondente.  
+-   Usare l'opzione <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Disabilita tutte le acquisizioni non denominate o implicite nel modello di espressione regolare. Quando si usa questa opzione, è possibile acquisire solo le sottostringhe che corrispondono ai gruppi denominati definiti con l'elemento del linguaggio `(?<name>subexpression)`. Il flag <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> può essere passato al parametro `options` del costruttore della classe <xref:System.Text.RegularExpressions.Regex> o al parametro `options` di un metodo <xref:System.Text.RegularExpressions.Regex> statico corrispondente.  
   
 -   Utilizzare l'opzione `n` nell'elemento del linguaggio `(?imnsx)`. Questa opzione disabilita tutte le acquisizioni non denominate o implicite dal punto nel modello di espressione regolare in corrispondenza del quale viene visualizzato l'elemento. Le acquisizioni vengono disabilitate fino alla fine del modello o finché l'opzione `(-n)` non abilita le acquisizioni non denominate o implicite. Per altre informazioni, vedere [Costrutti vari](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
   
--   Utilizzare l'opzione `n` nell'elemento del linguaggio `(?imnsx:``subexpression``)`. Questa opzione disabilita tutte le acquisizioni non denominate o implicite in `subexpression`. Vengono inoltre disabilitate tutte le acquisizioni dai gruppi di acquisizione annidati non denominati o impliciti.  
+-   Utilizzare l'opzione `n` nell'elemento del linguaggio `(?imnsx:subexpression)`. Questa opzione disabilita tutte le acquisizioni non denominate o implicite in `subexpression`. Vengono inoltre disabilitate tutte le acquisizioni dai gruppi di acquisizione annidati non denominati o impliciti.  
   
  [Torna all'inizio](#top)  
   

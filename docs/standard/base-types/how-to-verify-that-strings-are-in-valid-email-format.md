@@ -1,6 +1,6 @@
 ---
 title: 'Procedura: Verificare che le stringhe siano in formato di posta elettronica valido'
-ms.date: 03/30/2017
+ms.date: 08/10/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -20,19 +20,16 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 18426e655f6702844daa822921888194ed7ecb64
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172341"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753614"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procedura: Verificare che le stringhe siano in formato di posta elettronica valido
 L'esempio seguente usa un'espressione regolare per verificare la validità del formato di posta elettronica di una stringa.  
 
-> [!NOTE]
->  È consigliabile usare la classe <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> per controllare se una stringa è nel formato di indirizzo di posta elettronica valido. A tale scopo, passare la stringa dell'indirizzo di posta elettronica al costruttore di classe <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType>, che genera una <xref:System.FormatException> se la stringa ha un formato non riconosciuto.  
-  
 ## <a name="example"></a>Esempio  
  Nell'esempio viene definito un metodo `IsValidEmail` che restituisce `true` se nella stringa è presente un indirizzo di posta elettronica valido e `false` in caso contrario, ma non esegue alcuna altra azione.  
   

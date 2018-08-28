@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 634fbd846993d32ae529f87e96fd91857e5c1883
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: a64559ac1127f5ec296cf3892dd521c3ad8ac2be
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028279"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003242"
 ---
 # <a name="enum-c-reference"></a>enum (Riferimenti per C#)
 
@@ -97,11 +97,11 @@ Se si rimuove `Flags`, l'esempio visualizza i valori seguenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti per C#](../index.md)  
-[Tipi di enumerazione](../../programming-guide/enumeration-types.md)  
-[Parole chiave di C#](index.md)  
-[Tabella dei tipi integrali](integral-types-table.md)  
-[Tabella dei tipi incorporati](built-in-types-table.md)  
-[Tabella delle conversioni numeriche implicite](implicit-numeric-conversions-table.md)  
-[Tabella delle conversioni numeriche esplicite](explicit-numeric-conversions-table.md)  
-[Convenzioni di denominazione di enumerazione](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
+- [Riferimenti per C#](../index.md)  
+- [Tipi di enumerazione](../../programming-guide/enumeration-types.md)  
+- [Parole chiave di C#](index.md)  
+- [Tabella dei tipi integrali](integral-types-table.md)  
+- [Tabella dei tipi incorporati](built-in-types-table.md)  
+- [Tabella delle conversioni numeriche implicite](implicit-numeric-conversions-table.md)  
+- [Tabella delle conversioni numeriche esplicite](explicit-numeric-conversions-table.md)  
+- [Convenzioni di denominazione di enumerazione](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

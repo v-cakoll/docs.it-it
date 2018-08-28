@@ -6,15 +6,15 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 29bf95a336b6f6ed5c9c310c9ea7575a91089361
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfdd17f6f4ee6c4ddb3fa73ab3ec9c5ce46a162f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604887"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998950"
 ---
 # <a name="function-expression-visual-basic"></a>Espressione di funzione (Visual Basic)
-Dichiara i parametri e il codice che definiscono un'espressione lambda di funzione.  
+Dichiara i parametri e il codice che definiscono un'espressione lambda function.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,49 +30,49 @@ End Function
   
 |Termine|Definizione|  
 |---|---|  
-|`parameterlist`|Facoltativo. Un elenco di nomi di variabili locali che rappresentano i parametri di questa procedura. Le parentesi devono essere presenti anche quando l'elenco è vuoto. Vedere [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`parameterlist`|Facoltativo. Elenco di nomi delle variabili locali che rappresentano i parametri di questa procedura. Le parentesi devono essere presenti anche quando l'elenco è vuoto. Visualizzare [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`expression`|Obbligatorio. Una singola espressione. Il tipo dell'espressione è il tipo restituito della funzione.|  
 |`statements`|Obbligatorio. Un elenco di istruzioni che restituisce un valore utilizzando il `Return` istruzione. (Vedere [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md).) Il tipo del valore restituito è il tipo restituito della funzione.|  
   
 ## <a name="remarks"></a>Note  
- Oggetto *espressione lambda* è una funzione senza nome, che calcola e restituisce un valore. È possibile utilizzare un'espressione lambda in qualsiasi punto è possibile utilizzare un tipo delegato, ad eccezione di come un argomento a `RemoveHandler`. Per ulteriori informazioni sui delegati e l'utilizzo delle espressioni lambda con i delegati, vedere [istruzione Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) e [conversione di tipo Relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ Oggetto *espressione lambda* è una funzione senza nome, che calcola e restituisce un valore. È possibile usare un'espressione lambda in un punto qualsiasi tranne è possibile usare un tipo delegato, come argomento a `RemoveHandler`. Per altre informazioni sui delegati e l'uso delle espressioni lambda con i delegati, vedere [istruzione Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) e [conversione di tipo Relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Sintassi delle espressioni lambda  
- La sintassi di un'espressione lambda è simile a quello di una funzione standard. Come indicato di seguito sono riportate le differenze:  
+ La sintassi di un'espressione lambda è simile a quello di una funzione standard. Le differenze sono i seguenti:  
   
 -   Un'espressione lambda non ha un nome.  
   
--   Espressioni lambda non possono avere modificatori, ad esempio `Overloads` o `Overrides`.  
+-   Le espressioni lambda non possono avere modificatori, ad esempio `Overloads` o `Overrides`.  
   
--   Le espressioni lambda non utilizzano un `As` clausola per definire il tipo restituito della funzione. Al contrario, il tipo viene dedotto dal valore che restituisce il corpo di un'espressione lambda a riga singola o il valore restituito di un'espressione lambda su più righe. Ad esempio, se il corpo di un'espressione lambda a riga singola `Where cust.City = "London"`, il tipo restituito è `Boolean`.  
+-   Le espressioni lambda non utilizzano un `As` clausola per designare il tipo restituito della funzione. Al contrario, il tipo viene dedotto dal valore che restituisce il corpo di un'espressione lambda a riga singola, o il valore restituito di un'espressione lambda su più righe. Ad esempio, se il corpo di un'espressione lambda a riga singola `Where cust.City = "London"`, il tipo restituito è `Boolean`.  
   
--   Il corpo di un'espressione lambda a riga singola deve essere un'espressione, non è un'istruzione. Il corpo può essere costituito da una chiamata a una routine function, ma non una chiamata a una routine sub.  
+-   Il corpo di un'espressione lambda a riga singola deve essere un'espressione, non un'istruzione. Il corpo può essere costituito da una chiamata a una routine di funzione, ma non una chiamata a una routine sub.  
   
--   Tutti i parametri devono avere specificati devono dedurre i tipi di dati o tutti.  
+-   Tutti i parametri devono avere specificati tipi di dati o tutti devono essere dedotti.  
   
--   Parametri facoltativi e Paramarray non sono consentiti.  
+-   I parametri Paramarray e Optional non sono consentiti.  
   
--   Parametri generici non sono consentiti.  
+-   I parametri generici non sono consentiti.  
   
 ## <a name="example"></a>Esempio  
- Gli esempi seguenti mostrano due modi per creare espressioni lambda semplici. Il primo Usa un `Dim` per fornire un nome per la funzione. Per chiamare la funzione, si invia un valore per il parametro.  
+ Gli esempi seguenti illustrano due modi per creare le espressioni lambda semplice. Il primo Usa un `Dim` per fornire un nome per la funzione. Per chiamare la funzione, si invia un valore per il parametro.  
   
  [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_1.vb)]  
   
  [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_2.vb)]  
   
 ## <a name="example"></a>Esempio  
- In alternativa, è possibile dichiarare ed eseguire la funzione allo stesso tempo.  
+ In alternativa, è possibile dichiarare ed eseguire la funzione nello stesso momento.  
   
  [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_3.vb)]  
   
 ## <a name="example"></a>Esempio  
- Ecco un esempio di un'espressione lambda che incrementa il relativo argomento e restituisce il valore. L'esempio mostra sia la sintassi di espressione lambda a riga singola e su più righe per una funzione. Per ulteriori esempi, vedere [espressioni Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Ecco un esempio di un'espressione lambda che incrementa il relativo argomento e restituisce il valore. L'esempio illustra sia la sintassi delle espressioni lambda a riga singola e a più righe per una funzione. Per altri esempi, vedere [espressioni Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
   
 ## <a name="example"></a>Esempio  
- Espressioni lambda sottostanti molti degli operatori di query in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]e può essere utilizzato in modo esplicito nella query basate su metodo. Nell'esempio seguente viene illustrato un tipico [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query, seguita dalla conversione della query in formato del metodo.  
+ Le espressioni lambda sono alla base di molti degli operatori di query in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]e può essere usato in modo esplicito nella query basate su metodo. Nell'esempio seguente viene illustrato un tipico [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query, seguita dalla conversione della query nel formato del metodo.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  
@@ -85,7 +85,7 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- Per ulteriori informazioni sui metodi di query, vedere [query](../../../visual-basic/language-reference/queries/queries.md). Per ulteriori informazioni sugli operatori di query standard, vedere [Cenni preliminari sugli operatori di Query Standard](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Per altre informazioni sui metodi di query, vedere [query](../../../visual-basic/language-reference/queries/index.md). Per altre informazioni sugli operatori di query standard, vedere [panoramica degli operatori Query Standard](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)  

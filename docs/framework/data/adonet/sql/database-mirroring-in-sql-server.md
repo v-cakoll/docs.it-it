@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: cbb4b729475c8f77c204c3a9250d48d4b0cd3bc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 349cc10062cd73def0b8b3966a17ae9cbd0deab5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362270"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003086"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Mirroring del database in SQL Server
 Il mirroring del database in SQL Server consente di mantenere una copia, o mirror, di un database di SQL Server in un server di standby. Il mirroring assicura che siano sempre disponibili due copie separate dei dati per assicurare un'elevata disponibilità e una ridondanza completa dei dati. Il provider di dati .NET per SQL Server fornisce il supporto implicito per il mirroring del database. Pertanto, una volta configurato il provider per un database SQL Server, lo sviluppatore non dovrà eseguire alcuna operazione né scrivere codice. L'oggetto <xref:System.Data.SqlClient.SqlConnection> supporta inoltre una modalità di connessione esplicita che consente di specificare il nome di un server partner di failover in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -51,17 +51,17 @@ string activeServer = connection.DataSource;
 ```  
   
 ## <a name="sqlclient-mirroring-behavior"></a>Comportamento del mirroring SqlClient  
- Il client tenta sempre di connettersi al server principale corrente e, in caso di errore, passa al partner di failover. Se il database mirror è già stato promosso al ruolo principale nel server partner, la connessione viene eseguita correttamente e il nuovo mapping principale-mirror viene inviato al client e memorizzato nella cache per l'intera durata della chiamata <xref:System.AppDomain>. Non viene archiviato nell'archivio permanente e non è disponibile per le connessioni successive in un altro **AppDomain** o processo. Tuttavia, è disponibile per le connessioni successive all'interno dello stesso **AppDomain**. Si noti che un'altra **AppDomain** o processo che esegue sempre nello stesso o in un computer diverso dispone di un pool di connessioni e tali connessioni non vengono reimpostate. In tal caso, se il database primario diventa inattivo, ogni processo o **AppDomain** fallisce e il pool viene cancellato automaticamente.  
+ Il client tenta sempre di connettersi al server principale corrente e, in caso di errore, passa al partner di failover. Se il database mirror è già stato promosso al ruolo principale nel server partner, la connessione viene eseguita correttamente e il nuovo mapping principale-mirror viene inviato al client e memorizzato nella cache per l'intera durata della chiamata <xref:System.AppDomain>. Non viene archiviato nell'archivio permanente e non è disponibile per le connessioni successive in un altro **AppDomain** o processo. Tuttavia, è disponibile per le connessioni successive all'interno della stessa **AppDomain**. Si noti che un'altra **AppDomain** o processo sempre in esecuzione nello stesso o in un computer diverso dispone di un pool di connessioni e tali connessioni non vengono reimpostate. In tal caso, se il database primario diventa inattivo, ogni processo o **AppDomain** fallisce e il pool viene cancellato automaticamente.  
   
 > [!NOTE]
 >  Il supporto del mirroring sul server è configurato sulla base dei singoli database. Se vengono eseguite operazioni di modifica dei dati di altri database non inclusi nel set principale/mirror usando nomi in più parti o modificando il database corrente, le modifiche apportate a tali database non verranno propagate in caso di errore. Quando vengono modificati i dati di un database di cui non è stato eseguito il mirroring, non verrà generato alcun errore. Lo sviluppatore deve quindi valutare il possibile impatto di tali operazioni.  
   
 ## <a name="database-mirroring-resources"></a>Risorse relative al mirroring del database  
- Per informazioni di carattere concettuale e sulla configurazione, la distribuzione e l'amministrazione del mirroring, vedere le risorse seguenti nella documentazione online di SQL Server.  
+ Per visualizzare la documentazione concettuale e le informazioni sulla configurazione, distribuzione e amministrazione di mirroring, vedere le seguenti risorse nella documentazione di SQL Server.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Mirroring del database](http://msdn.microsoft.com/library/bb934127.aspx) nella documentazione Online di SQL Server|Viene descritto come impostare e configurare il mirroring in SQL Server.|  
+|[Il mirroring del database](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Viene descritto come impostare e configurare il mirroring in SQL Server.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
