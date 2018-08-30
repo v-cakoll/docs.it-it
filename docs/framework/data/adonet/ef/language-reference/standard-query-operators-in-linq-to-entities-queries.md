@@ -1,23 +1,23 @@
 ---
 title: Operatori di query standard in query di LINQ to Entities
-ms.date: 03/30/2017
+ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: a65f759ef51d34cc3ac6d37fe3575b9e89aadf7c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1085e43ef1db8eb0017f9ff87acba2da4be46377
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766400"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238563"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Operatori di query standard in query di LINQ to Entities
-In una query è necessario specificare le informazioni che si desidera recuperare dall'origine dati. Una query può inoltre specificare in che modo ordinare, raggruppare e formattare le informazioni prima che vengano restituite. LINQ fornisce un set di metodi di query standard che è possibile usare in una query. La maggior parte di questi metodi agisce sulle sequenze; In questo contesto una sequenza è un oggetto il cui tipo implementa il <xref:System.Collections.Generic.IEnumerable%601> interfaccia o <xref:System.Linq.IQueryable%601> interfaccia. Le funzionalità di query degli operatori di query standard includono filtro, proiezione, aggregazione, ordinamento, raggruppamento, paging e altro ancora. Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave, in modo da poter essere chiamati usando la sintassi delle espressioni di query. Un'espressione di query rappresenta un modo diverso e più leggibile per esprimere una query rispetto alla sintassi equivalente basata su metodo. Le clausole di espressione di query vengono convertite in chiamate ai metodi di query in fase di compilazione. Per un elenco degli operatori query standard con le clausole di espressione di query equivalenti, vedere [Cenni preliminari sugli operatori di Query Standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+In una query è necessario specificare le informazioni che si desidera recuperare dall'origine dati. Una query può inoltre specificare in che modo ordinare, raggruppare e formattare le informazioni prima che vengano restituite. LINQ fornisce un set di metodi di query standard che è possibile usare in una query. La maggior parte di questi metodi agisce sulle sequenze; In questo contesto, una sequenza è un oggetto il cui tipo implementa la <xref:System.Collections.Generic.IEnumerable%601> interfaccia o <xref:System.Linq.IQueryable%601> interfaccia. Le funzionalità di query degli operatori di query standard includono filtro, proiezione, aggregazione, ordinamento, raggruppamento, paging e altro ancora. Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave, in modo da poter essere chiamati usando la sintassi delle espressioni di query. Un'espressione di query rappresenta un modo diverso e più leggibile per esprimere una query rispetto alla sintassi equivalente basata su metodo. Le clausole di espressione di query vengono convertite in chiamate ai metodi di query in fase di compilazione. Per un elenco degli operatori query standard che hanno clausole di espressione di query equivalenti, vedere [panoramica degli operatori Query Standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
- Non tutti gli operatori di query standard sono supportati nelle query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Per ulteriori informazioni, vedere [supportati e i metodi LINQ non supportati (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). In questo argomento vengono fornite informazioni sugli operatori di query standard specifici di [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Per ulteriori informazioni sui problemi noti in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query, vedere [problemi noti e considerazioni in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
+ Non tutti gli operatori di query standard sono supportati nelle query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Per altre informazioni, vedere [supportati e i metodi LINQ non supportati (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). In questo argomento vengono fornite informazioni sugli operatori di query standard specifici di [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Per altre informazioni sui problemi noti [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query, vedere [problemi noti e considerazioni in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
   
 ## <a name="projection-and-filtering-methods"></a>Metodi di proiezione e di filtro  
- *Proiezione* si riferisce alla trasformazione gli elementi di un set di risultati nel formato desiderato. È ad esempio possibile proiettare un subset delle proprietà necessarie da ciascun oggetto nel set di risultati, proiettare una proprietà ed eseguire un calcolo matematico su di essa o proiettare l'intero oggetto dal set di risultati. I metodi di proiezione sono `Select` e `SelectMany`.  
+ *Proiezione* fa riferimento alla trasformazione degli elementi di un set di risultati in formato desiderato. È ad esempio possibile proiettare un subset delle proprietà necessarie da ciascun oggetto nel set di risultati, proiettare una proprietà ed eseguire un calcolo matematico su di essa o proiettare l'intero oggetto dal set di risultati. I metodi di proiezione sono `Select` e `SelectMany`.  
   
- *Applicazione di filtri* fa riferimento all'operazione di limitare il set di risultati per contenere solo gli elementi che corrispondono a una condizione specificata. Il metodo di filtro è `Where`.  
+ *Il filtro* fa riferimento all'operazione di limitare il set di risultati a contenere solo gli elementi che corrispondono a una condizione specificata. Il metodo di filtro è `Where`.  
   
  La maggior parte degli overload dei metodi di proiezione e di filtro è supportata in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], fatta eccezione per gli overload che accettano un argomento posizionale.  
   
@@ -29,7 +29,7 @@ In una query è necessario specificare le informazioni che si desidera recuperar
 ## <a name="set-methods"></a>Metodi Set  
  Le operazioni Set in LINQ sono operazioni di query i cui set di risultati sono basati sulla presenza o sull'assenza di elementi equivalenti nella stessa raccolta o in una raccolta distinta. I metodi Set sono `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect` e `Union`.  
   
- La maggior parte degli overload dei metodi Set è supportata in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], sebbene vi siano alcune differenze nel comportamento rispetto a LINQ to Objects. Tuttavia, metodi set che usano un <xref:System.Collections.Generic.IEqualityComparer%601> non sono supportati in quanto l'operatore di confronto non può essere convertito l'origine dati.  
+ La maggior parte degli overload dei metodi Set è supportata in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], sebbene vi siano alcune differenze nel comportamento rispetto a LINQ to Objects. Tuttavia, impostare i metodi che usano un <xref:System.Collections.Generic.IEqualityComparer%601> non sono supportate perché l'operatore di confronto non può essere convertito nell'origine dati.  
   
 ## <a name="ordering-methods"></a>Metodi di ordinamento  
  L'ordinamento consiste nell'ordinare gli elementi di un set di risultati in base a uno o più attributi. Specificando più di un criterio di ordinamento, è possibile interrompere i collegamenti all'interno di un gruppo.  
@@ -72,9 +72,9 @@ In una query è necessario specificare le informazioni che si desidera recuperar
  `OfType` è supportato per i tipi di entità. `Convert` è supportato per i tipi primitivi del modello concettuale.  Sono supportati anche i metodi `is` e `as` C#.  
   
 ## <a name="paging-methods"></a>Metodi di paging  
- Le operazioni di paging restituiscono un singolo elemento specifico di una sequenza. I metodi relativi agli elementi sono `ElementAt`, `First`, `FirstOrDefault`, `Last`, `LastOrDefault`, `Single`, `Skip`, `Take` e `TakeWhile`.  
+ Operazioni di paging restituiscono un singolo elemento o più elementi di una sequenza. I metodi di paging supportati sono `First`, `FirstOrDefault`, `Single`, `SingleOrDefault`, `Skip`, e `Take`.  
   
- Numerosi metodi di paging non sono supportati, a causa dell'impossibilità di mappare le funzioni all'origine dati o della mancanza di ordinamento implicito dei set nell'origine dati. I metodi che restituiscono un valore predefinito sono limitati ai tipi primitivi del modello concettuale e ai tipi di riferimento con valori predefiniti null. I metodi di paging eseguiti in una sequenza vuota restituiscono null.  
+ Un numero di metodi di paging non è supportato, a causa dell'impossibilità di eseguire il mapping di funzioni all'origine dati o la mancanza di ordinamento implicito dei set nell'origine dati. I metodi che restituiscono un valore predefinito sono limitati ai tipi primitivi del modello concettuale e ai tipi di riferimento con valori predefiniti null. I metodi di paging eseguiti in una sequenza vuota restituiscono null.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi LINQ supportati e non supportati (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
