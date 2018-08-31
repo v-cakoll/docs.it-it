@@ -1,6 +1,6 @@
 ---
-title: Funzione GetNames (riferimenti alle API non gestite)
-description: La funzione GetNames recupera i nomi delle proprietà di un oggetto.
+title: 'IMetaDataImport:: GetNames (funzione) (riferimenti alle API non gestite)'
+description: La funzione di GetNames recupera i nomi delle proprietà di un oggetto.
 ms.date: 11/06/2017
 api_name:
 - GetNames
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f53174bf060938d5a55cbd196944ac11916d59cd
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461981"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258111"
 ---
 # <a name="getnames-function"></a>GetNames (funzione)
 Recupera un subset o tutti i nomi delle proprietà di un oggetto. 
@@ -47,50 +47,50 @@ HRESULT GetNames (
 [in] Questo parametro è inutilizzato.
 
 `ptr`  
-[in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
+[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
 `wszQualifierName`  
-[in] Un puntatore a un oggetto valido `LPCWSTR` che specifica un nome di qualificatore che agisce come parte di un filtro. Per ulteriori informazioni, vedere il [osservazioni](#remarks) sezione. Questo parametro può essere `null`. 
+[in] Un puntatore a un valore valido `LPCWSTR` che specifica un nome di qualificatore che opera come parte di un filtro. Per altre informazioni, vedere la [osservazioni](#remarks) sezione. Questo parametro può essere `null`. 
 
 `lFlags`  
-[in] Una combinazione dei campi di bit. Per ulteriori informazioni, vedere il [osservazioni](#remarks) sezione.
+[in] Una combinazione dei campi di bit. Per altre informazioni, vedere la [osservazioni](#remarks) sezione.
 
 `pQualifierValue`   
-[in] Un puntatore a un oggetto valido `VARIANT` struttura inizializzato con un valore di filtro. Questo parametro può essere `null`. 
+[in] Un puntatore a un valore valido `VARIANT` struttura inizializzata su un valore di filtro. Questo parametro può essere `null`. 
 
 `pstrNames`  
-[out] Oggetto `SAFEARRAY` struttura che contiene i nomi delle proprietà. In ingresso, questo parametro deve essere sempre un puntatore a `null`. Vedere il [osservazioni](#remarks) sezione per ulteriori informazioni. 
+[out] Oggetto `SAFEARRAY` struttura che contiene i nomi delle proprietà. In ingresso, questo parametro deve essere sempre un puntatore a `null`. Vedere le [osservazioni](#remarks) sezione per altre informazioni. 
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice:
+I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o più parametri non vengono o è stata specificata una combinazione dei flag e i parametri non corretta. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o più parametri non vengono o è stata specificata una combinazione di flag e i parametri non corretta. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per completare l'operazione. |
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject::GetNames](https://msdn.microsoft.com/library/aa391447(v=vs.85).aspx) metodo.
+Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames) (metodo).
 
-Viene controllata denominata restituito da una combinazione di flag e i parametri. Ad esempio, la funzione può restituire i nomi di tutte le proprietà o solo i nomi delle proprietà chiave.  Filtro primario è incluso il `lFlags` parametro e gli altri parametri dipendono.
+L'oggetto denominato restituito è controllato da una combinazione di flag e i parametri. Ad esempio, la funzione può restituire i nomi di tutte le proprietà o solo i nomi delle proprietà della chiave.  Filtro primario viene specificato nella `lFlags` parametro e gli altri parametri dipendono.
 
 I valori di flag `lFlags` sono campi di bit
 
 
-I flag che possono essere passati come i `lEnumFlags` argomento sono campi di bit che sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice.  È possibile combinare un flag di ogni gruppo con un flag da qualsiasi altro gruppo. Tuttavia, i flag dello stesso gruppo si escludono a vicenda. 
+I flag che possono essere passati come le `lEnumFlags` argomenti sono i campi di bit definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice.  È possibile combinare un flag di ogni gruppo con eventuali flag da qualsiasi altro gruppo. Tuttavia, i flag dallo stesso gruppo si escludono a vicenda. 
 
 | Flag di gruppo 1 |Valore  |Descrizione  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | Restituisce i nomi delle proprietà. `strQualifierName` e `pQualifierVal` inutilizzate. |
+| `WBEM_FLAG_ALWAYS` | 0 | Restituire tutti i nomi di proprietà. `strQualifierName` e `pQualifierVal` inutilizzate. |
 | `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Restituire solo le proprietà che hanno un qualificatore del nome specificato per il `strQualifierName` parametro. Se questo flag viene utilizzato, è necessario specificare `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Restituire solo le proprietà che non dispongono di un qualificatore del nome specificato per il `strQualifierName` parametro. Se questo flag viene utilizzato, è necessario specificare `strQualifierName`. |
-|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Restituire solo le proprietà che dispongono di un qualificatore del nome specificato per il `wszQualifierName` parametro e avere un valore identico a quello specificato dal `pQualifierVal` struttura. Se questo flag viene utilizzato, è necessario specificare sia un `wszQualifierName` e `pQualifierValue`. |
+|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Restituire solo le proprietà che hanno un qualificatore del nome specificato per il `wszQualifierName` parametro e anche avere un valore identico a quello specificato dal `pQualifierVal` struttura. Se questo flag viene utilizzato, è necessario specificare sia un `wszQualifierName` e un `pQualifierValue`. |
 
-| Gruppo 2 flag |Valore  |Descrizione  |
+| Flag di gruppo 2 |Valore  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | Restituire solo i nomi di proprietà che definiscono le chiavi. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Restituito solo nomi di proprietà che sono riferimenti a oggetti. |
@@ -99,17 +99,17 @@ I flag che possono essere passati come i `lEnumFlags` argomento sono campi di bi
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Restituire solo i nomi di proprietà che appartengono alla classe più derivata. Escludere le proprietà delle classi padre. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Restituire solo i nomi di proprietà che appartengono alle classi padre. |
-|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Restituire solo i nomi di proprietà di sistema. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Restituire solo i nomi delle proprietà di sistema. |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Restituire solo i nomi di proprietà non di sistema. |
 
-La funzione alloca sempre un nuovo `SAFEARRAY` se restituisce `WBEM_S_NO_ERROR`, e `pstrNames` è sempre impostata su di esso. La matrice restituita può essere 0 elementi se non esistono proprietà corrispondenti ai filtri specificati. Se la funzione restituisce un valore diverso da `WBM_S_NO_ERROR`, un nuovo `SAFEARRAY` struttura non viene restituita.
+La funzione alloca sempre una nuova `SAFEARRAY` se viene restituito `WBEM_S_NO_ERROR`, e `pstrNames` è sempre impostato in modo che punti a esso. La matrice restituita può contenere elementi 0 se non esistono proprietà corrispondenti ai filtri specificati. Se la funzione restituisce un valore diverso da `WBM_S_NO_ERROR`, un nuovo `SAFEARRAY` struttura non viene restituita.
  
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
-[WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

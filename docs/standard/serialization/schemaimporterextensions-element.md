@@ -6,12 +6,12 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: c9f4f6800c2718c3b2c2b9b5b2b6d97e1114dbcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8bcd8abb138c645f61bf833b49cda2631d1778dd
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581329"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255629"
 ---
 # <a name="ltschemaimporterextensionsgt-element"></a>Elemento &lt;schemaImporterExtensions&gt;
 Contiene tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'esecuzione del mapping dei tipi XSD ai tipi .NET Framework. Per altre informazioni sui file di configurazione, vedere [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -21,14 +21,14 @@ Contiene tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'e
 ```xml  
 <schemaImporterExtensions>  
     <!-- Add types -->  
-</SchemaImporterExtension>  
+</schemaImporterExtensions>  
 ```  
   
 ## <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[Elemento \<add> per \<xmlSchemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)|Aggiunge tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per creare i mapping.|  
+|[\<aggiungere > (elemento) per \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|Aggiunge tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per creare i mapping.|  
   
 ## <a name="parent-elements"></a>Elementi padre  
   
@@ -47,7 +47,7 @@ Contiene tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'e
         System.Web.Mobile, Version - 2.0.0.0, Culture = neutral,   
         PublicKeyToken = b03f5f6f11d40a3a" />  
     </schemaImporterExtensions>  
-/system.sxml.serializaiton>  
+</system.xml.serialization>  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -55,5 +55,5 @@ Contiene tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'e
  <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
  [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Elemento \<dateTimeSerialization>](../../../docs/standard/serialization/datetimeserialization-element.md)  
- [Elemento \<add> per \<xmlSchemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)  
+ [\<aggiungere > (elemento) per \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
  [Elemento \<system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)
