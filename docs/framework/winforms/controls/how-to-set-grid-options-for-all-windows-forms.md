@@ -8,30 +8,30 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 663e816cdc31ed7854f7ebd060bffcfa5b85f475
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1779752cea467cbd7ee25235821ca99fc5cbdb5
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535025"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253352"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Procedura: impostare le opzioni della griglia per tutti i Windows Form
-Come si diventano abituati a usare nell'ambiente di sviluppo di Visual Studio, è possibile impostare le preferenze per tutti i form e i progetti utilizzati in Progettazione Windows Form.  
+Come si diventa abituati a usare nell'ambiente di sviluppo Visual Studio, è possibile impostare le preferenze per tutti i form e i progetti utilizzati in Progettazione Windows Form.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-set-global-windows-forms-options"></a>Per impostare le opzioni di Windows Form globali  
   
-1.  Dal **strumenti** dal menu **opzioni**.  
+1.  Dal **degli strumenti** dal menu **opzioni**.  
   
-2.  Nel riquadro sinistro della finestra di **opzioni** nella finestra di dialogo fare clic su **Progettazione Windows Form**.  
+2.  Nel riquadro sinistro della finestra di **opzioni** nella finestra di dialogo fare clic su **Windows Form Designer**.  
   
-     Nel riquadro di destra, sotto il **le impostazioni di Layout** titolo, è possibile impostare il valore predefinito impostazioni della griglia per tutti i nuovi form creato. Queste impostazioni includono le dimensioni della griglia, se i controlli blocco e se è attiva per impostazione predefinita. Inoltre, è possibile scegliere tra **SnapToGrid** e **le guide di allineamento** le modalità di layout. Per ulteriori informazioni sulle guide di allineamento, vedere [procedura dettagliata: disposizione dei controlli in Windows Form usando guide di allineamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+     Nel riquadro di destra, sotto il **le impostazioni di Layout** intestazione, è possibile impostare il valore predefinito delle impostazioni della griglia per tutti i nuovi form si crea. Queste impostazioni includono le dimensioni della griglia, eventuale blocco dei controlli ad esso e indica se è attiva per impostazione predefinita. Inoltre, è possibile scegliere tra **SnapToGrid** e **guide di allineamento** le modalità di layout. Per altre informazioni sulle guide di allineamento, vedere [procedura dettagliata: disposizione dei controlli in Windows Form usando guide di allineamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Generale, Progettazione Windows Form, finestra di dialogo Opzioni](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Generale, finestra di progettazione di Windows Form, finestra di dialogo Opzioni](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Controlli Windows Form](../../../../docs/framework/winforms/controls/index.md)  
  [Procedura: Aggiungere controlli a un Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [Disposizione di controlli in Windows Form](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457566"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254353"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Scrittura di app grandi e reattive in .NET Framework
 Questo articolo include suggerimenti per il miglioramento delle prestazioni delle app .NET Framework di grandi dimensioni o di app che elaborano una quantità elevata di dati, ad esempio file o database. Questi suggerimenti derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e l'articolo include diversi esempi concreti tratti dal compilatore C#.  
@@ -23,7 +23,7 @@ Questo articolo include suggerimenti per il miglioramento delle prestazioni dell
   
  Quando gli utenti finali interagiscono con l'app, si aspettano che sia reattiva.  La digitazione o la gestione dei comandi non devono essere mai bloccate.  Le informazioni di supporto devono essere visualizzate rapidamente o scomparire se l'utente continua a digitare.  L'app deve evitare di bloccare il thread dell'interfaccia utente con calcoli di lunga durata, che potrebbero dare l'impressione di lentezza dell'app.  
   
- Per ulteriori informazioni sui compilatori Roslyn, visitare il [dotnet/roslyn](https://github.com/dotnet/roslyn) repository in GitHub.
+ Per altre informazioni sui compilatori Roslyn, visitare il [dotnet/roslyn](https://github.com/dotnet/roslyn) repository in GitHub.
  <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
 ## <a name="just-the-facts"></a>Considerazioni essenziali  
@@ -196,7 +196,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...  
 ```  
   
- La prima versione di `WriteFormattedDocComment()` esegue l'allocazione di una matrice, alcune sottostringhe e una sottostringa ritagliata, insieme a una matrice di `params` vuota.  Rileva inoltre eventuali `"///"`.  Il codice rivisto usa solo l'indicizzazione e non esegue alcuna allocazione.  Rileva il primo carattere diverso da uno spazio vuoto, quindi controlla carattere per carattere per verificare se la stringa inizia con `"///"`.  Il nuovo codice usa `IndexOfFirstNonWhiteSpaceChar` invece di <xref:System.String.TrimStart%2A> per restituire il primo indice (dopo un indice iniziale specificato) in corrispondenza della posizione in cui si trova un carattere diverso da uno spazio vuoto.  La correzione non è completa, ma è semplice intuire come applicare correzioni simili per ottenere una soluzione completa.  Applicando questo approccio a tutto il codice sarà possibile rimuovere tutte le allocazioni in `WriteFormattedDocComment()`.  
+ La prima versione di `WriteFormattedDocComment()` esegue l'allocazione di una matrice, alcune sottostringhe e una sottostringa ritagliata, insieme a una matrice di `params` vuota.  Rileva inoltre eventuali `"///"`.  Il codice rivisto usa solo l'indicizzazione e non esegue alcuna allocazione.  Rileva il primo carattere diverso da uno spazio vuoto, quindi controlla carattere per carattere per verificare se la stringa inizia con `"///"`.  Il nuovo codice Usa `IndexOfFirstNonWhiteSpaceChar` invece di <xref:System.String.TrimStart%2A> per restituire il primo indice (dopo un indice iniziale specificato) in cui si è un carattere di spazio non vuoto.  La correzione non è completa, ma è semplice intuire come applicare correzioni simili per ottenere una soluzione completa.  Applicando questo approccio a tutto il codice sarà possibile rimuovere tutte le allocazioni in `WriteFormattedDocComment()`.  
   
  **Esempio 4: StringBuilder**  
   
@@ -277,7 +277,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  Questa semplice strategia per la memorizzazione nella cache rispetta le indicazioni per una progettazione ottimale della cache, poiché prevede un limite per le dimensioni.  La quantità di codice, tuttavia, è superiore rispetto all'originale e ciò comporta maggiori costi di gestione.  È consigliabile adottare la strategia per la memorizzazione nella cache solo se si sono verificati problemi di prestazioni e se PerfView ha mostrato che le allocazioni di <xref:System.Text.StringBuilder> contribuiscono in modo significativo a questi problemi.  
   
 ### <a name="linq-and-lambdas"></a>LINQ ed espressioni lambda  
- L'uso di espressioni LINQ (Language Integrated Query) e di espressioni lambda è un ottimo esempio di uso di funzionalità produttive che potrebbe essere necessario riscrivere in seguito se l'impatto del codice sulle prestazioni risulta significativo.  
+Language-Integrated Query (LINQ), in combinazione con le espressioni lambda, è un esempio di una funzionalità di produttività. Tuttavia, l'uso può avere un impatto significativo sulle prestazioni nel corso del tempo e si potrebbe rilevare che è necessario riscrivere il codice.
   
  **Esempio 5: Espressioni lambda, List\<T> e IEnumerable\<T>**  
   
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- Nella prima riga l'[espressione lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)`s => s.Name == name`[si chiude](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) sulla variabile locale `name`.  Ciò significa che, oltre ad allocare un oggetto per il [delegato](~/docs/csharp/language-reference/keywords/delegate.md) incluso in `predicate`, il codice esegue l'allocazione di una classe statica in cui includere l'ambiente che acquisisce il valore di `name`.  Il compilatore genera codice analogo al seguente:  
+ Nella prima riga, il [espressione lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [si chiude sulla](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) la variabile locale `name`.  Ciò significa che, oltre ad allocare un oggetto per il [delegato](~/docs/csharp/language-reference/keywords/delegate.md) incluso in `predicate`, il codice esegue l'allocazione di una classe statica in cui includere l'ambiente che acquisisce il valore di `name`.  Il compilatore genera codice analogo al seguente:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -466,8 +466,8 @@ class Compilation { /*...*/
  [Guida per principianti alla profilatura delle prestazioni](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [Prestazioni](../../../docs/framework/performance/index.md)  
  [Suggerimenti sulle prestazioni .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Strumento di analisi delle prestazioni di Windows Phone](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Individuare i colli di bottiglia con il Profiler di Visual Studio](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Windows Phone Performance Analysis Tool](http://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Trovare i colli di bottiglia dell'applicazione con Visual Studio Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  
  [Channel 9 esercitazioni di PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [Suggerimenti sulle prestazioni generali](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [dotnet/roslyn repository in GitHub](https://github.com/dotnet/roslyn)
+ [Suggerimenti sulle prestazioni di alto livello](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [repository dotnet/roslyn su GitHub](https://github.com/dotnet/roslyn)

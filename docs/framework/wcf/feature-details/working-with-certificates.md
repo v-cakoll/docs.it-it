@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 62bf3ce4bc7a0ff8109ec34fba77dd854c7679b8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f56445e9bdd030d591f9fc6300f9a24d330dbc20
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697118"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257370"
 ---
 # <a name="working-with-certificates"></a>Utilizzo dei certificati
 Per programmare le funzionalità di sicurezza di Windows Communication Foundation (WCF) in genere si usano i certificati digitali X.509. In particolare, questi certificati vengono usati per autenticare client e server, nonché per crittografare e firmare digitalmente i messaggi. Questo argomento fornisce una breve descrizione delle funzionalità relative ai certificati digitali X.509 e illustra come usarle in WCF. Questo argomento contiene inoltre i collegamenti agli argomenti che trattano questi concetti in modo più dettagliato o che descrivono come eseguire attività comuni tramite l'uso di WCF e dei certificati.  
@@ -102,9 +102,9 @@ Per programmare le funzionalità di sicurezza di Windows Communication Foundatio
  Quando si utilizzano i certificati spesso sorgono dubbi su quale certificato scegliere e sul motivo per cui sceglierlo. La soluzione a questi dubbi varia a seconda che la programmazione riguardi un client o un servizio. Le informazioni seguenti rappresentano una linea guida generale e non forniscono una risposta esauriente a questi dubbi.  
   
 ### <a name="service-certificates"></a>Certificati di servizio  
- Lo scopo principale dei certificati di servizio è autenticare il server presso i client. Uno dei primi controlli svolti durante l'autenticazione di un server presso un client consiste nel confrontare il valore del campo **Soggetto** con l'Uniform Resource Identifier (URI) usato per contattare il servizio. In particolare, è necessario che i DNS di entrambi corrispondano fra loro. Ad esempio, se l'URI del servizio è "http://www.contoso.com/endpoint/", anche il campo **Soggetto** deve contenere il valore "www.contoso.com".  
+ Lo scopo principale dei certificati di servizio è autenticare il server presso i client. Uno dei primi controlli svolti durante l'autenticazione di un server presso un client consiste nel confrontare il valore del campo **Soggetto** con l'Uniform Resource Identifier (URI) usato per contattare il servizio. In particolare, è necessario che i DNS di entrambi corrispondano fra loro. Ad esempio, se l'URI del servizio è `http://www.contoso.com/endpoint/` il **Subject** campo deve contenere anche il valore `www.contoso.com`.  
   
- Si noti che il campo può contenere più valori, ognuno avente un prefisso iniziale che ne indica il valore. Nella maggior parte dei casi viene utilizzato il prefisso iniziale "CN" per indicare un nome comune. Ad esempio, "CN = www.contoso.com". È inoltre possibile che il campo **Soggetto** sia vuoto. In tal caso, il campo **Nome alternativo soggetto** può contenere il valore **Nome DNS**.  
+ Si noti che il campo può contenere più valori, ognuno avente un prefisso iniziale che ne indica il valore. In genere, l'inizializzazione è "CN" per il nome comune, ad esempio, `CN = www.contoso.com`. È inoltre possibile che il campo **Soggetto** sia vuoto. In tal caso, il campo **Nome alternativo soggetto** può contenere il valore **Nome DNS**.  
   
  Si noti inoltre che il valore del campo **Scopi designati** del certificato deve includere un valore appropriato, ad esempio "Autenticazione server" o "Autenticazione client".  
   

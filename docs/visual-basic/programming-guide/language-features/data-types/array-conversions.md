@@ -12,28 +12,28 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: a179b7cf5b82132db88fb5412f0ca4be207f0987
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651466"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255150"
 ---
 # <a name="array-conversions-visual-basic"></a>Conversioni di matrici (Visual Basic)
-È possibile convertire un tipo di matrice a un tipo di matrice diversa purché soddisfi le condizioni seguenti:  
+È possibile convertire un tipo di matrice a un tipo di matrice diversa purché si soddisfino le condizioni seguenti:  
   
--   **Numero di dimensioni uguale.** Le classificazioni di due matrici devono essere uguali, vale a dire deve hanno lo stesso numero di dimensioni. Tuttavia, le lunghezze delle rispettive dimensioni non è necessario essere uguali.  
+-   **Numero di dimensioni uguale.** Le classificazioni delle due matrici devono essere lo stesso, vale a dire deve avere lo stesso numero di dimensioni. Tuttavia, le lunghezze delle rispettive dimensioni non sono necessario essere lo stesso.  
   
--   **Tipo di elemento di dati.** I tipi di dati degli elementi di entrambe le matrici devono essere tipi di riferimento. Non è possibile convertire un `Integer` matrice un `Long` matrice, o anche a un `Object` matrice, in quanto è interessato almeno un tipo valore. Per ulteriori informazioni, vedere [tipi di valore e tipi di riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+-   **Tipo di dati elemento.** I tipi di dati degli elementi di entrambe le matrici devono essere tipi di riferimento. Non è possibile convertire un' `Integer` matrice per un `Long` della matrice, o anche a un `Object` della matrice, in quanto è coinvolta in almeno un tipo valore. Per altre informazioni, vedere [tipi di valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
--   **Possibilità di conversione.** Una conversione widening o narrowing, deve essere possibile tra i tipi di elementi di due matrici. Un esempio di questo requisito non è un tentativo di conversione tra un `String` matrice e una matrice di una classe derivata da <xref:System.Attribute?displayProperty=nameWithType>. Questi due tipi hanno in comune nulla e non esiste alcuna conversione di qualsiasi tipo tra di essi.  
+-   **Convertibilità della varianza.** Una conversione widening o narrowing, deve essere possibile tra i tipi di elementi delle due matrici. Un esempio che questo requisito non è un tentativo di conversione tra una `String` matrice e una matrice di una classe derivata da <xref:System.Attribute?displayProperty=nameWithType>. Questi due tipi presentano nulla in comune e non esiste alcuna conversione di qualsiasi tipo tra di essi.  
   
- Una conversione di un tipo di matrice a un altro è widening o narrowing a seconda se la conversione dei rispettivi elementi è grande o più piccolo. Per altre informazioni, vedere [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Una conversione del tipo di una matrice a un altro è widening o narrowing a seconda se la conversione degli elementi rispettivi widening o narrowing. Per altre informazioni, vedere [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
-## <a name="conversion-to-an-object-array"></a>Conversione in una matrice di oggetti  
- Quando si dichiara un `Object` matrice senza inizializzarla, il tipo di elemento è `Object` purché rimane non inizializzato. Quando si imposta in una matrice di una classe specifica, assume il tipo di tale classe. Tuttavia, il relativo tipo sottostante è ancora `Object`, ed è possibile impostare successivamente a un'altra matrice di una classe non correlata. Poiché tutte le classi derivano da `Object`, è possibile modificare il tipo di elemento della matrice da una classe in qualsiasi altra classe.  
+## <a name="conversion-to-an-object-array"></a>Conversione a una matrice di oggetti  
+ Quando si dichiara un `Object` matrice senza inizializzazione, il tipo di elemento è `Object` purché rimane non inizializzata. Se si imposta in una matrice di una classe specifica, assume il tipo di tale classe. Tuttavia, il relativo tipo sottostante è ancora `Object`, ed è possibile impostarlo successivamente in un'altra matrice di una classe non correlata. Poiché tutte le classi di derivano da `Object`, è possibile modificare il tipo di elemento della matrice da una classe a qualsiasi altra classe.  
   
- Nell'esempio seguente, non esiste alcuna conversione tra tipi `student` e `String`, ma entrambi derivano da `Object`, pertanto tutte le assegnazioni sono valide.  
+ Nell'esempio seguente, non esiste alcuna conversione tra tipi `student` e `String`, ma entrambi derivano da `Object`, in modo che tutte le assegnazioni sono valide.  
   
 ```  
 ' Assume student has already been defined as a class.  
@@ -46,10 +46,10 @@ testArray = names
 ' testArray is now a String array.  
 ```  
   
-### <a name="underlying-type-of-an-array"></a>Il tipo sottostante di una matrice  
- Se originariamente si dichiara una matrice con una classe specifica, il tipo di elemento sottostante è quella classe. Se si imposta in seguito a una matrice di un'altra classe, deve esistere una conversione tra le due classi.  
+### <a name="underlying-type-of-an-array"></a>Tipo sottostante di una matrice  
+ Se inizialmente si dichiara una matrice con una classe specifica, il relativo tipo di elemento sottostante è quella classe. Se è impostarlo successivamente in una matrice di un'altra classe, deve esistere una conversione tra le due classi.  
   
- Nell'esempio seguente, `students` è un `student` matrice. Poiché non esiste alcuna conversione tra `String` e `student`, l'ultima istruzione ha esito negativo.  
+ Nell'esempio riportato di seguito `students` è un `student` matrice. Poiché non esiste alcuna conversione tra `String` e `student`, l'ultima istruzione ha esito negativo.  
   
 ```  
 Dim students() As student  
@@ -65,6 +65,6 @@ students = names
  [Conversioni implicite ed esplicite](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [Conversioni fra stringhe e altri tipi](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  [Procedura: convertire un oggetto in un altro tipo in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [Tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md)  
  [Funzioni di conversione del tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

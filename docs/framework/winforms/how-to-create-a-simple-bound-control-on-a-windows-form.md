@@ -5,32 +5,32 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: ce4585a1c5c2b9acbdb7ec33c62a1e91851b720e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538832"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258721"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procedura: creare un controllo con associazione semplice in un Windows Form
-Con *associazione semplice*, è possibile visualizzare un singolo elemento dati, ad esempio un valore di colonna da una tabella di set di dati, in un controllo. È possibile un'associazione semplice di qualsiasi proprietà di un controllo a un valore di dati.  
+Con *associazione semplice*, è possibile visualizzare un singolo elemento di dati, ad esempio un valore di colonna da una tabella di set di dati, in un controllo. È possibile un'associazione semplice di qualsiasi proprietà di un controllo a un valore di dati.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-simple-bind-a-control"></a>Per un controllo con associazione a semplice  
+### <a name="to-simple-bind-a-control"></a>Per un controllo di un'associazione semplice  
   
-1.  Effettuare una connessione a un'origine dati. Per ulteriori informazioni, vedere [la connessione a un'origine dati](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
+1.  Effettuare una connessione a un'origine dati. Per altre informazioni, vedere [ci si connette a un'origine dati](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
   
 2.  Selezionare il controllo nel form e visualizzare il **proprietà** finestra.  
   
-3.  Espandere il **(DataBindings)** proprietà.  
+3.  Espandere la **(DataBindings)** proprietà.  
   
-     Le proprietà più frequentemente associate vengono visualizzate sotto il **(DataBindings)** proprietà. Ad esempio, nella maggior parte dei controlli, la **testo** proprietà è associata più di frequente.  
+     Le proprietà associate in genere sono visualizzate sotto le **(DataBindings)** proprietà. Ad esempio, nella maggior parte dei controlli, il **testo** più di frequente è associata la proprietà.  
   
-4.  Se la proprietà che si desidera associare non fa parte di più comunemente associate, fare clic su di **i puntini di sospensione** pulsante (![schermata VisualStudioEllipsesButton](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton") ) nei **(avanzate)** casella per visualizzare il **formattazione e associazione avanzata** la finestra di dialogo con un elenco completo delle proprietà per tale controllo.  
+4.  Se la proprietà si desidera binding non è uno dei più comunemente associate, selezionare la **puntini di sospensione** pulsante (![schermata di VisualStudioEllipsesButton](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton") ) nei **(avanzate)** casella per visualizzare i **formattazione e associazione avanzata** finestra di dialogo contenente un elenco completo delle proprietà per il controllo.  
   
-5.  Selezionare la proprietà che si desidera associare e fare clic sulla freccia a discesa sotto **associazione**.  
+5.  Selezionare la proprietà si desidera eseguire il binding e fare clic sulla freccia a discesa sotto **Binding**.  
   
      Verrà visualizzato un elenco di origini dati disponibili.  
   
@@ -38,12 +38,12 @@ Con *associazione semplice*, è possibile visualizzare un singolo elemento dati,
   
 7.  Fare clic sul nome dell'elemento a cui effettuare il binding.  
   
-8.  Se si utilizza il **formattazione e associazione avanzata** la finestra di dialogo, fare clic su **OK** per tornare al **proprietà** finestra.  
+8.  Se si utilizza il **formattazione e associazione avanzata** della finestra di dialogo fare clic su **OK** per tornare al **proprietà** finestra.  
   
 9. Se si desidera associare proprietà aggiuntive del controllo, ripetere i passaggi da 3 a 7.  
   
     > [!NOTE]
-    >  Poiché i controlli con associazione semplice visualizzare solo un singolo elemento dati, viene in genere includere logica di spostamento in un Windows Form con controlli con associazione semplice.  
+    >  Poiché i controlli con associazione semplice visualizzare solo un singolo elemento di dati, viene in genere includere logica di navigazione in un Windows Form con controlli con associazione semplice.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Forms.Binding>  

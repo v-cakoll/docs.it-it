@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 59447bb589eb019f81beb1db2ea254a9fe3a889e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09019f24248985c0a1057873f0226ee69a30ca9d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541005"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254754"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Procedura dettagliata: esecuzione di un'operazione in background
 Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare ritardi nella risposta dell'interfaccia utente, è possibile usare la classe <xref:System.ComponentModel.BackgroundWorker> per eseguire l'operazione in un altro thread.  
@@ -26,28 +26,28 @@ Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare rita
  Per un elenco completo del codice usato in questo esempio, vedere [procedura: eseguire un'operazione in Background](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-run-an-operation-in-the-background"></a>Per eseguire un'operazione in background  
   
-1.  Il form attivo in Progettazione Windows Form, trascinare due <xref:System.Windows.Forms.Button> dei controlli di **della casella degli strumenti** al form e quindi impostare il `Name` e <xref:System.Windows.Forms.Control.Text%2A> le proprietà dei pulsanti in base alla tabella seguente.  
+1.  Aprire il modulo attivo in Progettazione Windows Form e trascinare due <xref:System.Windows.Forms.Button> dei controlli il **della casella degli strumenti** al form e quindi impostare il `Name` e <xref:System.Windows.Forms.Control.Text%2A> le proprietà dei pulsanti in base alla tabella riportata di seguito.  
   
     |Button|nome|Testo|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Start**|  
     |`button2`|`cancelBtn`|**Annulla**|  
   
-2.  Aprire il **della casella degli strumenti**, fare clic su di **componenti** scheda e quindi trascinare il <xref:System.ComponentModel.BackgroundWorker> componente al form.  
+2.  Aprire il **casella degli strumenti**, fare clic sul **componenti** scheda e quindi trascinare il <xref:System.ComponentModel.BackgroundWorker> componente al form.  
   
-     Il `backgroundWorker1` componente viene visualizzato nel **sulla barra dei componenti**.  
+     Il `backgroundWorker1` viene visualizzato nel componente le **sulla barra dei componenti**.  
   
-3.  Nel **proprietà** finestra, impostare il <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> proprietà `true`.  
+3.  Nel **le proprietà** impostare nella finestra di <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> proprietà `true`.  
   
-4.  Nel **proprietà** finestra, fare clic su di **eventi** pulsante e quindi fare doppio clic sul <xref:System.ComponentModel.BackgroundWorker.DoWork> e <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> gli eventi per creare gestori eventi.  
+4.  Nel **proprietà** finestra, fare clic sul **eventi** pulsante e quindi fare doppio clic il <xref:System.ComponentModel.BackgroundWorker.DoWork> e <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventi per creare gestori eventi.  
   
-5.  Inserire il codice nel tempo la <xref:System.ComponentModel.BackgroundWorker.DoWork> gestore dell'evento.  
+5.  Inserire il codice che richiedono molto tempo nel <xref:System.ComponentModel.BackgroundWorker.DoWork> gestore dell'evento.  
   
-6.  Estrarre tutti i parametri richiesti per l'operazione dal <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> proprietà del <xref:System.ComponentModel.DoWorkEventArgs> parametro.  
+6.  Estrarre eventuali parametri richiesti dall'operazione dei <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> proprietà del <xref:System.ComponentModel.DoWorkEventArgs> parametro.  
   
 7.  Assegnare il risultato del calcolo per il <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> proprietà del <xref:System.ComponentModel.DoWorkEventArgs>.  
   
@@ -66,16 +66,16 @@ Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare rita
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#4)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#4)]  
   
-10. In Progettazione Windows Form, fare doppio clic su `startButton` per creare il <xref:System.Windows.Forms.Control.Click> gestore dell'evento.  
+10. Nella finestra di progettazione Windows Form, fare doppio clic su `startButton` per creare il <xref:System.Windows.Forms.Control.Click> gestore dell'evento.  
   
-11. Chiamare il <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> metodo il <xref:System.Windows.Forms.Control.Click> gestore eventi per `startButton`.  
+11. Chiamare il <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> metodo nella <xref:System.Windows.Forms.Control.Click> gestore eventi per `startButton`.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#5)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#5)]  
   
-12. In Progettazione Windows Form, fare doppio clic su `cancelButton` per creare il <xref:System.Windows.Forms.Control.Click> gestore dell'evento.  
+12. Nella finestra di progettazione Windows Form, fare doppio clic su `cancelButton` per creare il <xref:System.Windows.Forms.Control.Click> gestore dell'evento.  
   
-13. Chiamare il <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> metodo il <xref:System.Windows.Forms.Control.Click> gestore eventi per `cancelButton`.  
+13. Chiamare il <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> metodo nella <xref:System.Windows.Forms.Control.Click> gestore eventi per `cancelButton`.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#6)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#6)]  
@@ -85,20 +85,20 @@ Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare rita
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#7)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#7)]  
   
-15. Premere F6 per compilare la soluzione e quindi premere CTRL + F5 per eseguire l'applicazione all'esterno del debugger.  
+15. Premere F6 per compilare la soluzione e quindi premere CTRL+F5 per eseguire l'applicazione all'esterno del debugger.  
   
 > [!NOTE]
->  Se si preme F5 per eseguire l'applicazione nel debugger, l'eccezione generata nel `TimeConsumingOperation` (metodo) viene rilevata e visualizzate dal debugger. Quando si esegue l'applicazione all'esterno del debugger, il <xref:System.ComponentModel.BackgroundWorker> gestisce l'eccezione e lo memorizza nella cache nel <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> proprietà del <xref:System.ComponentModel.RunWorkerCompletedEventArgs>.  
+>  Se si preme F5 per eseguire l'applicazione nel debugger, l'eccezione generata nel `TimeConsumingOperation` metodo viene rilevato e visualizzato dal debugger. Quando si esegue l'applicazione all'esterno del debugger, il <xref:System.ComponentModel.BackgroundWorker> gestisce l'eccezione e li inserisce nel <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> proprietà del <xref:System.ComponentModel.RunWorkerCompletedEventArgs>.  
   
-1.  Fare clic sul **avviare** pulsante per eseguire un'operazione asincrona e quindi scegliere il **Annulla** pulsante per arrestare l'esecuzione dell'operazione asincrona.  
+1.  Fare clic sui **avviare** pulsante per eseguire un'operazione asincrona e quindi fare clic sui **Annulla** sul pulsante per arrestare l'esecuzione dell'operazione asincrona.  
   
      Il risultato di ciascuna operazione viene visualizzato in una finestra di messaggio <xref:System.Windows.Forms.MessageBox>.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
--   Implementare un form che segnala lo stato di avanzamento del processo di un'operazione asincrona. Per ulteriori informazioni, vedere [procedura: implementare un Form che usa un'operazione in Background](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+-   Implementare un form che segnala lo stato del processo di un'operazione asincrona. Per altre informazioni, vedere [procedura: implementare un Form che usa un'operazione in Background](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
   
--   Implementare una classe che supporta il modello asincrono per i componenti. Per ulteriori informazioni, vedere [implementazione del modello asincrono basato su eventi](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+-   Implementare una classe che supporta il modello asincrono per i componenti. Per altre informazioni, vedere [implementazione del modello asincrono basato su eventi](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ComponentModel.BackgroundWorker>  

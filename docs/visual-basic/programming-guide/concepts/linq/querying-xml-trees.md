@@ -3,16 +3,16 @@ title: Esecuzione di query su strutture ad albero XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
 ms.openlocfilehash: e26ff23d5278bcaaeb2c8e26303c2380bbb1f1e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645330"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253930"
 ---
 # <a name="querying-xml-trees-visual-basic"></a>Esecuzione di query su strutture ad albero XML (Visual Basic)
 Contenuto della sezione vengono forniti esempi di query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- Per ulteriori informazioni sulla scrittura [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query, vedere [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
+ Per altre informazioni sulla scrittura [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query, vedere [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
  Dopo aver creato un'istanza di un albero XML, la scrittura di query è il modo più efficace per estrarre dati dall'albero. Inoltre, le query combinate con la costruzione funzionale consentono di generare un nuovo documento XML con una forma diversa rispetto all'originale.  
   
@@ -20,9 +20,9 @@ Contenuto della sezione vengono forniti esempi di query [!INCLUDE[sqltecxlinq](~
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Le query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)|Vengono forniti esempi comuni relativi all'esecuzione di query su alberi XML.|  
+|[Query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)|Vengono forniti esempi comuni relativi all'esecuzione di query su alberi XML.|  
 |[Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)|Vengono forniti esempi comuni di proiezione e trasformazione di alberi XML.|  
-|[Tecniche di Query (LINQ to XML) avanzate (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)|Vengono fornite tecniche di query che risultano utili negli scenari più avanzati.|  
+|[Query tecniche avanzate (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)|Vengono fornite tecniche di query che risultano utili negli scenari più avanzati.|  
 |[LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)|Vengono presentate diverse espressioni XPath e gli equivalenti [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Trasformazioni funzionali pure di XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)|Viene presentata una breve esercitazione sulla scrittura di query nello stile della programmazione funzionale.|  
   

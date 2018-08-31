@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: e06836e53a69394ad899bedc8e545dbff9b9c29d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 272ce198a61e0d1bbe9c44514aaf51db72f5d04c
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525778"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257923"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Attributi nei controlli Windows Form
 .NET Framework offre un'ampia gamma di attributi che è possibile applicare ai membri dei controlli e dei componenti personalizzati. Alcuni di questi attributi influiscono sul comportamento in fase di esecuzione di una classe, mentre altri influiscono sul comportamento in fase di progettazione.  
@@ -24,10 +24,10 @@ ms.locfileid: "33525778"
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|Specifica il valore per passare a una proprietà che determini il proprio valore da un'altra origine. Questo concetto è noto come *ambiente*.|  
 |<xref:System.ComponentModel.BrowsableAttribute>|Indica se visualizzare una proprietà o un evento in una finestra **Proprietà**.|  
-|<xref:System.ComponentModel.CategoryAttribute>|Specifica il nome della categoria in base a cui raggruppare la proprietà o evento se visualizzato in un <xref:System.Windows.Forms.PropertyGrid> controllo impostato su <xref:System.Windows.Forms.PropertySort.Categorized> modalità.|  
+|<xref:System.ComponentModel.CategoryAttribute>|Specifica il nome della categoria in cui raggruppare la proprietà o evento se visualizzato in una <xref:System.Windows.Forms.PropertyGrid> controllo impostato su <xref:System.Windows.Forms.PropertySort.Categorized> modalità.|  
 |<xref:System.ComponentModel.DefaultValueAttribute>|Specifica il valore predefinito per una proprietà.|  
 |<xref:System.ComponentModel.DescriptionAttribute>|Specifica una descrizione per una proprietà o un evento.|  
-|<xref:System.ComponentModel.DisplayNameAttribute>|Specifica il nome visualizzato per una proprietà, un evento o un metodo `public``void` che non accetta argomenti.|  
+|<xref:System.ComponentModel.DisplayNameAttribute>|Specifica il nome visualizzato per una proprietà, un evento o un metodo `public void` che non accetta argomenti.|  
 |<xref:System.ComponentModel.EditorAttribute>|Specifica l'editor da usare per modificare una proprietà.|  
 |<xref:System.ComponentModel.EditorBrowsableAttribute>|Specifica che una proprietà o un metodo è visualizzabile in un editor.|  
 |<xref:System.ComponentModel.Design.HelpKeywordAttribute>|Specifica la parola chiave di contesto per una classe o un membro.|  
