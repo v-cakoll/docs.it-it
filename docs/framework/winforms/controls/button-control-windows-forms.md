@@ -5,12 +5,12 @@ helpviewer_keywords:
 - buttons
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
-ms.openlocfilehash: d7eef53967962804033334750b9f3230b95a949d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2f421afe8e64b38851b3063c7091d9ee105ade9
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525085"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332019"
 ---
 # <a name="button-control-windows-forms"></a>Controllo Button (Windows Form)
 Il controllo `Button` Windows Form consente all'utente di eseguire le operazioni desiderate facendo clic su di esso. Il controllo `Button` può visualizzare sia testo che immagini. Una volta scelto, il pulsante viene visualizzato come se fosse stato effettivamente premuto e poi rilasciato.  
@@ -31,7 +31,7 @@ Il controllo `Button` Windows Form consente all'utente di eseguire le operazioni
  [Modalità di selezione di un controllo Button di Windows Form](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
  Elenca i metodi di selezione di un pulsante.  
   
- Vedere anche [procedura: designare un pulsante Windows Form come pulsante di conferma usando la finestra di progettazione](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) e [procedura: designare un pulsante Windows Form come pulsante di annullamento usando la finestra di progettazione](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
+ Vedere anche [procedura: designare un pulsante di Windows Form come pulsante di conferma usando la finestra di progettazione](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) e [procedura: designare un pulsante di Windows Form come pulsante di annullamento usando la finestra di progettazione](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
   
 ## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.Button>  
@@ -41,4 +41,4 @@ Il controllo `Button` Windows Form consente all'utente di eseguire le operazioni
  [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
   
- Vedere anche [Input dell'utente alle finestre di dialogo](http://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55) e [procedura: chiudere finestre di dialogo e mantenere l'Input dell'utente](http://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).
+ Vedere anche [Input dell'utente alle finestre di dialogo](https://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55) e [procedura: chiudere finestre di dialogo e Input dell'utente mantenere](https://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).

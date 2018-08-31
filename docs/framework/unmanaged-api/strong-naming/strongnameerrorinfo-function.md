@@ -20,11 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db818f638898da6379ce4dadfada8eccc3adeb12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332747"
 ---
 # <a name="strongnameerrorinfo-function"></a>Funzione StrongNameErrorInfo
 Ottiene l'ultimo codice di errore che è stato generato da una delle funzioni con nome sicuro.  
@@ -41,16 +42,16 @@ HRESULT StrongNameErrorInfo ();
  L'ultimo codice di errore COM impostato da una delle funzioni con nome sicuro.  
   
 ## <a name="remarks"></a>Note  
- La maggior parte dei metodi con nome sicuro restituisce una semplice `true` o `false` indicazione del completamento. Utilizzare il `StrongNameErrorInfo` funzione per recuperare un valore HRESULT che specifica l'ultimo errore generato dalle funzioni con nome sicuro.  
+ La maggior parte dei metodi con nome sicuro restituiscono un semplice `true` o `false` indicazione del completamento. Usare il `StrongNameErrorInfo` funzione per recuperare un valore HRESULT che specifica l'ultimo errore generato dalle funzioni con nome sicuro.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** StrongName. H  
   
  **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni statiche globali dei nomi sicuri](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)
+ [Funzioni statiche globali dei nomi sicuri](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

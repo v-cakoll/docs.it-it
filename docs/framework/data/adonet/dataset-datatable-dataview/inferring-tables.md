@@ -2,15 +2,15 @@
 title: Deduzione di tabelle
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: b14cbc39b02136ac7f226faf2636a69ac072f529
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38709f91e01c7f85d9e8482bdd49bc0892121f09
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757827"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332853"
 ---
 # <a name="inferring-tables"></a>Deduzione di tabelle
-Durante l'inferenza di uno schema per un tipo <xref:System.Data.DataSet> da un documento XML, ADO.NET determina innanzitutto quali elementi XML rappresentano tabelle. Le seguenti strutture XML come risultato una tabella per la **DataSet** schema:  
+Durante l'inferenza di uno schema per un tipo <xref:System.Data.DataSet> da un documento XML, ADO.NET determina innanzitutto quali elementi XML rappresentano tabelle. Le strutture XML seguente come risultato una tabella per la **set di dati** dello schema:  
   
 -   Elementi con attributi  
   
@@ -60,7 +60,7 @@ Durante l'inferenza di uno schema per un tipo <xref:System.Data.DataSet> da un d
 |-------------------|  
 |Text1|  
   
- L'elemento del documento, o elemento radice, dà come risultato una tabella inferita nel caso in cui a tale elemento siano associati attributi o elementi figlio che vengono inferiti come colonne. Se l'elemento del documento dispone di alcun attributo e non gli elementi figlio da inferire come colonne, l'elemento viene inferito come un **DataSet**. Ad esempio, si consideri il seguente codice XML:  
+ L'elemento del documento, o elemento radice, dà come risultato una tabella inferita nel caso in cui a tale elemento siano associati attributi o elementi figlio che vengono inferiti come colonne. Se l'elemento documento presenta alcun attributo e nessun elemento figlio da inferire come colonne, l'elemento viene inferito come un **set di dati**. Ad esempio, si consideri il seguente codice XML:  
   
 ```xml  
 <DocumentElement>  
@@ -87,7 +87,7 @@ Durante l'inferenza di uno schema per un tipo <xref:System.Data.DataSet> da un d
 </DocumentElement>  
 ```  
   
- Il processo di inferenza produce una **DataSet** denominato "DocumentElement" contenente una tabella denominata "Element1".  
+ Il processo di inferenza produce una **set di dati** denominata "DocumentElement" contenente una tabella denominata "Element1".  
   
  **Set di dati:** DocumentElement  
   
@@ -124,4 +124,4 @@ Durante l'inferenza di uno schema per un tipo <xref:System.Data.DataSet> da un d
  [Caricamento delle informazioni dello schema DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

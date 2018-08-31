@@ -5,12 +5,12 @@ helpviewer_keywords:
 - paramref XML tag
 - <paramref> XML tag
 ms.assetid: 8979d53b-beb1-41b7-b41e-6bbea1c17a03
-ms.openlocfilehash: 763e311dfb46ceeed358c3b3bebd6212d3e2489c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 153f5ddeeb7d09159049af4d466b0695f5cb6f23
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598662"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331359"
 ---
 # <a name="ltparamrefgt-visual-basic"></a>&lt;paramref&gt; (Visual Basic)
 Formatta una parola come parametro.  
@@ -31,9 +31,9 @@ Formatta una parola come parametro.
  Compilare con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio viene utilizzato il `<paramref>` tag per fare riferimento al `id` parametro.  
+ Questo esempio Usa la `<paramref>` tag per fare riferimento al `id` parametro.  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/paramref_1.vb)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)

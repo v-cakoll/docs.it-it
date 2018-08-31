@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: 20bf9b263a349f327f12d1f3c7753fb9f34436e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e844a673f1a60d5a151a6ae612d4af7a6712eef4
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654216"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332552"
 ---
 # <a name="collection-initializers-visual-basic"></a>Inizializzatori di raccolta (Visual Basic)
 Gli *inizializzatori di insieme* consentono di creare una raccolta e popolarla con un set iniziale di valori. Gli inizializzatori di insieme sono utili quando si crea una raccolta da un set di valori noti, ad esempio un elenco di opzioni di menu o categorie, un set iniziale di valori numerici, un elenco statico di stringhe quali nomi di giorni o mesi o un elenco di aree geografiche, ad esempio un elenco di stati che viene usato per la convalida.  
   
- Per altre informazioni sulle raccolte, vedere [Raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
+ Per altre informazioni sulle raccolte, vedere [Raccolte](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   
  È possibile identificare un inizializzatore di insieme usando la parola chiave `From` seguita da parentesi graffe (`{}`). Questo approccio è simile alla sintassi dei valori letterali di matrice, descritta in [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md). Gli esempi seguenti illustrano diversi metodi d'uso degli inizializzatori di insieme per la creazione di raccolte.  
   
@@ -77,7 +77,7 @@ Gli *inizializzatori di insieme* consentono di creare una raccolta e popolarla c
 |[Procedura: Creare una raccolta usata da un inizializzatore di raccolta](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Illustra come abilitare l'uso di un inizializzatore di insieme includendo un metodo `Add` in una classe di raccolte che implementa `IEnumerable`.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [Raccolte](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
  [Array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [Operatore New](../../../../visual-basic/language-reference/operators/new-operator.md)  
