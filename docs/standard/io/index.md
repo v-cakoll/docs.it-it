@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40eeeab159bdef9fc286374fde8c1c1d3a9f5c2b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 7aacb6ca64a8b45a9b54b3f9d8785c7c61a07e09
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105654"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254312"
 ---
 # <a name="file-and-stream-io"></a>I/O di file e di flussi
 I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati da o verso un supporto di archiviazione. In .NET Framework gli spazi dei nomi `System.IO` contengono i tipi che consentono la lettura e la scrittura, sia in modo sincrono che in modo asincrono, su flussi di dati e file. Questi spazi dei nomi contengono anche i tipi che eseguono la compressione e la decompressione dei file e i tipi che consentono la comunicazione tra le pipe e le porte seriali.  
@@ -120,7 +120,7 @@ Per le convenzioni di denominazione dei percorsi e i modi in cui esprimere un pe
 ## <a name="isolated-storage"></a>Spazio di memorizzazione isolato  
  L'archiviazione isolata è un meccanismo di archiviazione dati che offre isolamento e sicurezza definendo modi standardizzati di associare il codice ai dati salvati. L'archiviazione offre un file system virtuale che è isolato dall'utente, dall'assembly ed eventualmente dal dominio. Lo spazio di memorizzazione isolato è particolarmente utile quando l'applicazione non dispone delle autorizzazioni di accesso ai file dell'utente. È possibile salvare le impostazioni o i file per l'applicazione in modo tale che vengano controllati dai criteri di sicurezza del computer.  
   
- Lo spazio di memorizzazione isolato non è disponibile per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]; usare invece le classi di dati nello spazio dei nomi [Windows.Storage](/uwp/api/Windows.Storage). Per altre informazioni, vedere [Dati dell'applicazione](/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.  
+ Lo spazio di memorizzazione isolato non è disponibile per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]; usare invece le classi di dati nello spazio dei nomi [Windows.Storage](/uwp/api/Windows.Storage). Per altre informazioni, vedere [Dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.  
   
  Le classi seguenti vengono spesso usate nell'implementazione dello spazio di memorizzazione isolato:  
   
@@ -139,7 +139,7 @@ Per le convenzioni di denominazione dei percorsi e i modi in cui esprimere un pe
   
 -   I tipi relativi specificamente alle operazioni su file, come <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, non sono inclusi in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Usare invece i tipi nello spazio dei nomi [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) di [!INCLUDE[wrt](../../../includes/wrt-md.md)], ad esempio [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) e [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
--   Lo spazio di memorizzazione isolato non è disponibile; usare invece i [dati dell'applicazione](/previous-versions/windows/apps/hh464917(v=win.10)).  
+-   Lo spazio di memorizzazione isolato non è disponibile; usare invece i [dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Usare i metodi asincroni, ad esempio <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>, per evitare il blocco del thread UI.  
   
@@ -147,12 +147,12 @@ Per le convenzioni di denominazione dei percorsi e i modi in cui esprimere un pe
   
  Se necessario è possibile passare da flussi di .NET Framework a flussi di Windows Runtime e viceversa. Per altre informazioni, vedere [Procedura: eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) o [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
- Per altre informazioni sulle operazioni di I/O in un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], vedere [Guida rapida: Lettura e scrittura di un file](/previous-versions/windows/apps/hh758325(v=win.10)).  
+ Per altre informazioni sulle operazioni di I/O in un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], vedere [Guida rapida: Lettura e scrittura di un file](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).  
   
 ## <a name="io-and-security"></a>I/O e sicurezza  
  Quando si usano le classi nello spazio dei nomi <xref:System.IO?displayProperty=nameWithType>, è necessario soddisfare i requisiti di sicurezza del sistema operativo, ad esempio gli elenchi di controllo dell'accesso (ACL), che controllano l'accesso ai file e alle directory. Vanno anche soddisfatti i requisiti imposti da <xref:System.Security.Permissions.FileIOPermission>. Gli elenchi di controllo dell'accesso (ACL) possono essere gestiti a livello di codice. Per altre informazioni, vedere [Procedura: aggiungere o rimuovere voci dell'elenco di controllo di accesso (ACL)](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
- I criteri di sicurezza predefiniti impediscono alle applicazioni Internet o Intranet di accedere ai file nel computer dell'utente. Pertanto, nello scrivere codice che verrà scaricato da Internet o Intranet, non usare classi I/O che richiedono un percorso a un file fisico. In alternativa, usare lo [spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md) per le applicazioni .NET Framework tradizionali o [dati dell'applicazione](/previous-versions/windows/apps/hh464917(v=win.10)) per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+ I criteri di sicurezza predefiniti impediscono alle applicazioni Internet o Intranet di accedere ai file nel computer dell'utente. Pertanto, nello scrivere codice che verrà scaricato da Internet o Intranet, non usare classi I/O che richiedono un percorso a un file fisico. In alternativa, usare lo [spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md) per le applicazioni .NET Framework tradizionali o [dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
  Un controllo di sicurezza viene eseguito solo quando il flusso viene costruito. Di conseguenza, non aprire un flusso per poi passarlo a codice o domini di applicazione meno attendibili.  
   
