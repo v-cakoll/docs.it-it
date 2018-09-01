@@ -2,12 +2,12 @@
 title: Utilizzo di variabili con un set di regole di .NET Framework 3.5
 ms.date: 03/30/2017
 ms.assetid: 27b56249-22fe-4252-840f-74c0d6c7a6b3
-ms.openlocfilehash: 9fa6eaf58aaddc4673f08ec9a9001647a494877d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64d47564076e19e152e30b6ab0cb3900ce53cfa1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516856"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395154"
 ---
 # <a name="using-variables-with-a-net-framework-35-ruleset"></a>Utilizzo di variabili con un set di regole di .NET Framework 3.5
 In questo esempio viene illustrato come creare un flusso di lavoro che usa l'attività <xref:System.Activities.Statements.Interop> per integrare un'attività personalizzata scritta in [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] che usa criteri e regole. I dati vengono passati dal flusso di lavoro all'attività personalizzata associando variabili alle proprietà di dipendenza esposte dall'attività personalizzata.  
@@ -16,7 +16,7 @@ In questo esempio viene illustrato come creare un flusso di lavoro che usa l'att
   
 #### <a name="to-examine-travelrulelibrary"></a>Per esaminare TravelRuleLibrary  
   
-1.  Utilizzo di Visual Studio, aprire il soluzione interopwith35ruleset.sln.  
+1.  Usa Visual Studio, aprire la soluzione interopwith35ruleset.sln.  
   
 2.  Aprire TravelRuleSet.cs nella finestra di progettazione del flusso di lavoro.  
   
@@ -28,7 +28,7 @@ In questo esempio viene illustrato come creare un flusso di lavoro che usa l'att
   
 4.  Fare clic il `DiscountPolicy` e selezionare il **Visualizza codice** possibilità di esaminare il code-beside codice c# per l'attività.  
   
-     Osservare l'impostazione della proprietà di dipendenza per l'oggetto `DiscountLevel`. È equivalente agli argomenti in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. Per ulteriori informazioni sugli argomenti, vedere [variabili e argomenti](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
+     Osservare l'impostazione della proprietà di dipendenza per l'oggetto `DiscountLevel`. È equivalente agli argomenti in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. Per altre informazioni sugli argomenti, vedere [variabili e argomenti](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
   
 ## <a name="interopwith35ruleset"></a>InteropWith35RuleSet  
  Si tratta di un progetto di flusso di lavoro sequenziale che usa l'attività <xref:System.Activities.Statements.Interop> per eseguire l'integrazione con il set di regole personalizzato creato nel progetto `TravelRuleLibrary`. Le variabili vengono create nell'attività <xref:System.Activities.Statements.Sequence> di primo livello. L'attività <xref:System.Activities.Statements.Interop> viene usata per eseguire l'integrazione con l'attività `TravelRuleSet`. Le variabili dichiarate nell'oggetto <xref:System.Activities.Statements.Sequence> vengono usate per eseguire l'associazione alle proprietà di dipendenza.  
@@ -46,6 +46,6 @@ In questo esempio viene illustrato come creare un flusso di lavoro che usa l'att
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InteropWith35RuleSet`

@@ -2,24 +2,24 @@
 title: Specifiche delle funzionalità di Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 0f9bc81609379414ce022499e20791073d259cdc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b18c6dd76762f4495ac475cd3dfa4e1995733b59
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809862"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386091"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Specifiche delle funzionalità di Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] aggiunge una serie di funzionalità a Windows Workflow Foundation. Questo documento descrive alcune delle nuove funzionalità e fornisce informazioni dettagliate sugli scenari nei quali potrebbero essere utili.  
   
 ## <a name="messaging-activities"></a>Attività di messaggistica  
- Le attività di messaggistica (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) vengono utilizzati per inviare e ricevere messaggi WCF dal flusso di lavoro.  <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply> attività vengono utilizzate in modo da formare un'operazione del servizio Windows Communication Foundation (WCF) che viene esposta tramite WSDL esattamente come servizi web WCF standard.  <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.ReceiveReply> consentono di utilizzare un servizio web simile a WCF <xref:System.ServiceModel.ChannelFactory>; un **Aggiungi riferimento al servizio** esperienza è disponibile anche per Workflow Foundation che genera attività preconfigurate.  
+ Le attività di messaggistica (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) vengono usati per inviare e ricevere messaggi WCF dal flusso di lavoro.  <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply> attività incluse vengono usate per formare un'operazione del servizio Windows Communication Foundation (WCF) che viene esposta tramite WSDL esattamente come servizi web WCF standard.  <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.ReceiveReply> consentono di utilizzare un servizio web simile a un WCF <xref:System.ServiceModel.ChannelFactory>; un **Aggiungi riferimento al servizio** esperienza è disponibile anche per Workflow Foundation che genera attività preconfigurate.  
   
 ### <a name="getting-started-with-messaging-activities"></a>Introduzione alle attività di messaggistica  
   
 -   In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], creare un progetto Applicazione di servizi flusso di lavoro WCF. Nel canvas verrà posizionata la coppia <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply>.  
   
--   Pulsante destro del mouse sul progetto e selezionare **Aggiungi riferimento al servizio**.  Quindi fare clic su un servizio web esistente WSDL **OK**.  Compilare il progetto per visualizzare le attività generate (implementata utilizzando <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.ReceiveReply>) nella casella degli strumenti.  
+-   Pulsante destro del mouse sul progetto e scegliere **Aggiungi riferimento al servizio**.  Quindi fare clic su un servizio web esistente WSDL **OK**.  Compilare il progetto per mostrare le attività generate (implementate usando <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.ReceiveReply>) nella casella degli strumenti.  
   
 -   Esempi di queste attività sono disponibili nelle sezioni seguenti:  
   
@@ -27,19 +27,19 @@ ms.locfileid: "33809862"
   
     -   Scenari: [servizi](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
   
--   [Documentazione concettuale](http://go.microsoft.com/fwlink/?LinkId=204801)  
+-   [Documentazione concettuale](https://go.microsoft.com/fwlink/?LinkId=204801)  
   
--   [Documentazione della finestra di progettazione di attività di messaggistica](http://go.microsoft.com/fwlink/?LinkId=204802)  
+-   [Documentazione della finestra di progettazione di attività di messaggistica](https://go.microsoft.com/fwlink/?LinkId=204802)  
   
 ### <a name="messaging-activities-example-scenario"></a>Scenario di esempio relativo alle attività di messaggistica  
- Oggetto `BestPriceFinder` servizio chiama più servizi airline per individuare il prezzo del ticket migliore per una route specifica.  Implementazione di questo scenario caso è necessario usare le attività di messaggio per ricevere la richiesta di prezzo, recuperare i prezzi dei servizi back-end e rispondere alla richiesta di prezzo con il prezzo migliore.  È possibile utilizzare altre attività out-of-box per creare la logica di business per il calcolo del prezzo migliore anche richiederà.  
+ Oggetto `BestPriceFinder` servizio chiama più servizi di compagnie aeree per trovare il prezzo migliore del biglietto per una route specifica.  Implementazione di questo scenario sarebbe necessario usare le attività di messaggistica per ricevere la richiesta di prezzo, recuperare i prezzi dai servizi di back-end e rispondere alla richiesta di prezzo con il prezzo migliore.  Sarebbe inoltre necessario utilizzare altre attività out-of-box per creare la logica di business per calcolare il prezzo migliore.  
   
 ## <a name="workflowservicehost"></a>WorkflowServiceHost  
- Il <xref:System.ServiceModel.WorkflowServiceHost> è l'host del flusso di lavoro out-of-box che supporta più istanze, configurazione e messaggistica WCF (anche se non è necessari utilizzare la messaggistica per ospitare i flussi di lavoro).  Inoltre si integra con la persistenza, il rilevamento e il controllo dell'istanza tramite un set di comportamenti del servizio.  Come in qualsiasi WCF <xref:System.ServiceModel.ServiceHost>, il <xref:System.ServiceModel.WorkflowServiceHost> può essere indipendente in un'applicazione console/Windows Form/WPF o un servizio Windows o ospitato su web (come un file con estensione xamlx) in IIS o WAS.  
+ Il <xref:System.ServiceModel.WorkflowServiceHost> è l'host del flusso di lavoro out-of-box che supporta più istanze, configurazione e messaggistica WCF (anche se i flussi di lavoro non è necessari usare la messaggistica per consentire l'hosting).  Inoltre si integra con la persistenza, il rilevamento e il controllo dell'istanza tramite un set di comportamenti del servizio.  Analogamente di WCF <xref:System.ServiceModel.ServiceHost>, il <xref:System.ServiceModel.WorkflowServiceHost> possono essere self-hosted in un servizio di Windows o applicazione console/WinForms/WPF o ospitati su web (come file con estensione xamlx) in IIS o WAS.  
   
 ### <a name="getting-started-with-workflow-service-host"></a>Guida introduttiva all'host del servizio del flusso di lavoro  
   
--   In Visual Studio 2010, creare un progetto di applicazione di servizio del flusso di lavoro WCF: questo progetto verrà configurato per utilizzare <xref:System.ServiceModel.WorkflowServiceHost> in un ambiente host web.  
+-   In Visual Studio 2010, creare un progetto di applicazione del servizio del flusso di lavoro WCF: il progetto verrà impostato per usare <xref:System.ServiceModel.WorkflowServiceHost> in un ambiente host web.  
   
 -   Per ospitare un flusso di lavoro non di messaggistica, aggiungere un <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> personalizzato che creerà l'istanza basata su un messaggio.  
   
@@ -55,10 +55,10 @@ ms.locfileid: "33809862"
   
     -   Applicazione: [sospesa la gestione delle istanze](../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
   
--   [Documentazione concettuale su WorkflowServiceHost](http://go.microsoft.com/fwlink/?LinkId=204807)  
+-   [Documentazione concettuale su WorkflowServiceHost](https://go.microsoft.com/fwlink/?LinkId=204807)  
   
 ### <a name="workflowservicehost-scenario"></a>Scenario relativo a WorkflowServiceHost  
- Un servizio BestPriceFinder effettua una chiamata a più servizi airline per individuare il prezzo del ticket migliore per una route specifica.  Implementazione di questo scenario è necessario ospitare il flusso di lavoro <xref:System.ServiceModel.WorkflowServiceHost>.  Utilizza inoltre le attività di messaggio per ricevere la richiesta di prezzo, recuperare i prezzi dei servizi back-end e rispondere alla richiesta di prezzo con il prezzo migliore.  
+ Un servizio BestPriceFinder chiama più servizi di compagnie aeree per trovare il prezzo migliore del biglietto per una route specifica.  Implementazione di questo scenario sarebbe necessario ospitare il flusso di lavoro in <xref:System.ServiceModel.WorkflowServiceHost>.  Utilizza inoltre le attività di messaggistica per ricevere la richiesta di prezzo, recuperare i prezzi dai servizi di back-end e rispondere alla richiesta di prezzo con il prezzo migliore.  
   
 ## <a name="correlation"></a>Correlazione  
  Una correlazione è una delle modalità seguenti:  
@@ -73,9 +73,9 @@ ms.locfileid: "33809862"
   
 -   Un esempio di correlazione usata per raggruppare i messaggi è una correlazione Request-Reply che raggruppa i messaggi.  
   
-    -   In un <xref:System.ServiceModel.Activities.Receive> attività, fare clic su di <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> proprietà e aggiungere un <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> usando il CorrelationHandle creato nel primo passaggio precedente.  
+    -   In un <xref:System.ServiceModel.Activities.Receive> attività, fare clic sui <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> proprietà e aggiungere un <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> usando il CorrelationHandle creato nel primo passaggio precedente.  
   
-    -   Crea un <xref:System.ServiceModel.Activities.SendReply> attività facendo clic su di <xref:System.ServiceModel.Activities.Receive> e facendo clic su "Crea SendReply". Incollarla nel flusso di lavoro dopo l'attività <xref:System.ServiceModel.Activities.Receive>.  
+    -   Crea una <xref:System.ServiceModel.Activities.SendReply> attività facendo clic su di <xref:System.ServiceModel.Activities.Receive> e facendo clic su "Crea SendReply". Incollarla nel flusso di lavoro dopo l'attività <xref:System.ServiceModel.Activities.Receive>.  
   
 -   Un esempio di mapping di un dato a un'istanza del servizio è una correlazione basata sul contenuto che associa un dato (ad esempio un ID ordine) a una determinata istanza del flusso di lavoro.  
   
@@ -87,37 +87,37 @@ ms.locfileid: "33809862"
   
     -   Scenari: [servizi](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
   
-    -   [Documentazione concettuale di correlazione](http://go.microsoft.com/fwlink/?LinkId=204939)  
+    -   [Documentazione concettuale sulla correlazione](https://go.microsoft.com/fwlink/?LinkId=204939)  
   
 ### <a name="correlation-scenario"></a>Scenario relativo alla correlazione  
- Un flusso di lavoro di elaborazione degli ordini viene utilizzata per gestire la creazione del nuovo ordine e l'aggiornamento di ordini esistenti in corso.  Implementazione di questo scenario è necessario ospitare il flusso di lavoro <xref:System.ServiceModel.WorkflowServiceHost> e utilizzare le attività di messaggistica.  Richiede anche correlazione basata sul `orderId` per garantire che gli aggiornamenti al flusso di lavoro corretto.  
+ Un flusso di lavoro di elaborazione ordini viene utilizzato per gestire la creazione di nuovi ordini e l'aggiornamento degli ordini esistenti nel processo.  Implementazione di questo scenario sarebbe necessario ospitare il flusso di lavoro in <xref:System.ServiceModel.WorkflowServiceHost> e usare le attività di messaggistica.  Sarebbe inoltre necessaria la correlazione basata sul `orderId` per garantire che gli aggiornamenti vengono eseguiti nel flusso di lavoro corretta.  
   
 ## <a name="simplified-configuration"></a>Configurazione semplificata  
- Lo schema di configurazione WCF è complesso e fornisce agli utenti molte funzionalità difficilmente reperibili. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], obiettivo è consentire agli utenti WCF configurare i servizi con le funzionalità seguenti:  
+ Lo schema di configurazione di WCF è complesso e fornisce agli utenti molte funzionalità difficilmente reperibili. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], Microsoft si è concentrata sull'aiutare gli utenti WCF configurare i servizi con le funzionalità seguenti:  
   
--   Eliminare la necessità della configurazione esplicita di ogni singolo servizio. Se non si configura qualsiasi \<servizio > elementi per il servizio e il servizio non definisce a livello di codice a qualsiasi endpoint, quindi verrà aggiunto automaticamente un set di endpoint al servizio, uno per ogni indirizzo di base del servizio e per ogni contratto implementato dal servizio.  
+-   Eliminare la necessità della configurazione esplicita di ogni singolo servizio. Se non si configura qualsiasi \<servizio > elementi per il servizio e il servizio non definisce a livello di codice Nessun endpoint, quindi verrà aggiunto automaticamente un set di endpoint al servizio, uno per ogni indirizzo di base del servizio e per ogni contratto implementato dal servizio.  
   
 -   Consentire all'utente di definire valori predefiniti per le associazioni e i comportamenti di WCF che verranno applicati ai servizi senza configurazione esplicita.  
   
 -   Gli endpoint standard definiscono endpoint preconfigurati riutilizzabili, che dispongono di valori fissi per una o più delle proprietà dell'endpoint (indirizzo, associazione e contratto) e consentono la definizione di proprietà personalizzate.  
   
--   Infine, il <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> è possibile eseguire operazioni di gestione centrale della configurazione di client WCF, utile in scenari in cui configurazione viene selezionata o modificata dopo la fase di caricamento del dominio applicazione.  
+-   Infine, il <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> consente di eseguire operazioni di gestione centrale della configurazione del client WCF, utile in scenari in cui configurazione viene selezionata o modificata dopo il tempo di caricamento del dominio applicazione.  
   
 ### <a name="getting-started"></a>Introduzione  
   
--   [Guida per sviluppatori di WCF 4.0](http://go.microsoft.com/fwlink/?LinkId=204940)  
+-   [Una Guida per sviluppatori di WCF 4.0](https://go.microsoft.com/fwlink/?LinkId=204940)  
   
--   [Configurazione di una channel factory](http://go.microsoft.com/fwlink/?LinkId=204941)  
+-   [Configurazione di una channel factory](https://go.microsoft.com/fwlink/?LinkId=204941)  
   
--   [Elemento Endpoint standard](http://go.microsoft.com/fwlink/?LinkId=204942)  
+-   [Elemento Endpoint standard](https://go.microsoft.com/fwlink/?LinkId=204942)  
   
--   [Servizio miglioramenti della configurazione di .net Framework 4](http://go.microsoft.com/fwlink/?LinkId=204943)  
+-   [Miglioramenti dei servizi configurazione in .net Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)  
   
--   [Errore comune dell'utente in .NET 4: errata digitazione il nome di configurazione del servizio WF/WCF](http://go.microsoft.com/fwlink/?LinkId=204944)  
+-   [Errore comune dell'utente in .NET 4: errata digitazione del nome di configurazione del servizio WF/WCF](https://go.microsoft.com/fwlink/?LinkId=204944)  
   
 ### <a name="simplified-configuration-scenarios"></a>Scenari di configurazione semplificati  
   
--   Un sviluppatore ASMX esperto desidera iniziare a usare WCF. Tuttavia, WCF sembra molto complicato! In particolare per tutte le informazioni da scrivere in un file di configurazione. In .NET 4, è anche possibile decidere di non avere un file di configurazione.  
+-   Un sviluppatore ASMX esperto desidera iniziare a usare WCF. Tuttavia, WCF sembra essere molto complicato. In particolare per tutte le informazioni da scrivere in un file di configurazione. In .NET 4, è anche possibile decidere di non avere un file di configurazione.  
   
 -   È molto difficile configurare e gestire un set di servizi WCF già esistente. Il file di configurazione è composto da migliaia di righe di codice XML ed è molto pericoloso modificarle. È necessario aiutare gli utenti a ridurre la quantità di codice per renderlo più maneggevole.  
   
@@ -134,9 +134,9 @@ ms.locfileid: "33809862"
   
 ### <a name="getting-started"></a>Introduzione  
   
--   [Documentazione dell'API di Resolver di contratto dati](http://go.microsoft.com/fwlink/?LinkId=204946)  
+-   [Documentazione dell'API del Resolver di contratto dati](https://go.microsoft.com/fwlink/?LinkId=204946)  
   
--   [Introduzione al Resolver del contratto dati](http://go.microsoft.com/fwlink/?LinkId=204947)  
+-   [Introduzione al Resolver del contratto dati](https://go.microsoft.com/fwlink/?LinkId=204947)  
   
 -   Esempi:  
   
@@ -182,7 +182,7 @@ ms.locfileid: "33809862"
     -   [Activity Designer Flowchart](/visualstudio/workflow-designer/flowchart-activity-designers)  
   
 ### <a name="flowchart-scenarios"></a>Scenari relativi al diagramma di flusso  
- Un'attività del diagramma di flusso può essere usata per implementare un gioco per indovinare un numero. Il gioco è molto semplice: il computer seleziona un numero casuale e il giocatore deve indovinare il numero. Quando il giocatore invia ogni ipotesi, il computer mostra un suggerimento, (ad esempio "provare un numero inferiore"). Se il giocatore indovina il numero in meno di 7 tentativi, viene visualizzato un messaggio di congratulazioni speciali. È possibile implementare questo gioco con una combinazione delle attività procedurali seguenti:  
+ Un'attività del diagramma di flusso può essere usata per implementare un gioco per indovinare un numero. Il gioco è molto semplice: il computer seleziona un numero casuale e il giocatore deve indovinare il numero. Quando il giocatore invia ogni tentativo, il computer mostra un suggerimento (vale a dire "prova con un numero inferiore"). Se il giocatore indovina il numero in meno di 7 tentativi, viene visualizzato un messaggio di congratulazioni speciali. È possibile implementare questo gioco con una combinazione delle attività procedurali seguenti:  
   
 -   <xref:System.Activities.Statements.Sequence>  
   
@@ -217,7 +217,7 @@ ms.locfileid: "33809862"
   
 ### <a name="procedural-activity-scenarios"></a>Scenari relativi alle attività procedurali  
   
--   <xref:System.Activities.Statements.Parallel>: Un sistema di gestione intranet documento dispone di un flusso di lavoro di approvazione di documento. Prima di poter essere pubblicati nella rete Intranet, i documenti devono essere approvati dai responsabili dei diversi reparti. Non è un ordine prestabilito per le approvazioni; possono verificarsi in qualsiasi momento mentre il documento è nella fase di "approvazione in sospeso". Quando un utente manda in revisione un documento, deve essere approvato dal suo responsabile diretto, dall'amministratore della rete Intranet e dal responsabile delle comunicazioni interne.  
+-   <xref:System.Activities.Statements.Parallel>: Un sistema di gestione intranet documento ha un flusso di lavoro di approvazione di documenti. Prima di poter essere pubblicati nella rete Intranet, i documenti devono essere approvati dai responsabili dei diversi reparti. Non c'è un ordine prestabilito per le approvazioni; possono verificarsi in qualsiasi momento mentre il documento è nella fase di "approvazione in sospeso". Quando un utente manda in revisione un documento, deve essere approvato dal suo responsabile diretto, dall'amministratore della rete Intranet e dal responsabile delle comunicazioni interne.  
   
 -   <xref:System.Activities.Statements.ParallelForEach%601>: Un'applicazione WF gestisce gli acquisti di una grande società. In base a quanto definito nei regolamenti aziendali, prima di pianificare qualsiasi operazione di acquisto è necessario valutare tre fornitori diversi. Un dipendente dell'ufficio acquisti seleziona tre fornitori dall'elenco fornitori della società. Una volta selezionati e informati i fornitori, la società attenderà le proposte economiche. Le proposte possono pervenire in qualsiasi ordine. Per implementare questo scenario in WF, viene usato <xref:System.Activities.Statements.ParallelForEach%601> per scorrere l'elenco dei fornitori e richiedere le proposte economiche. Una volta raccolte tutte le offerte, viene scelta e visualizzata la migliore.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "33809862"
   
     -   [InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
   
--   Documentazione di progettazione: [ActivityDesigner InvokeMethod](/visualstudio/workflow-designer/invokemethod-activity-designer)  
+-   Documentazione della finestra di progettazione: [ActivityDesigner InvokeMethod](/visualstudio/workflow-designer/invokemethod-activity-designer)  
   
 ### <a name="invokemethod-scenarios"></a>Scenari relativi a InvokeMethod  
   
@@ -253,7 +253,7 @@ ms.locfileid: "33809862"
   
     2.  [Uso di attività procedurali](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
   
--   Documentazione di progettazione: [ActivityDesigner gestione errori](/visualstudio/workflow-designer/error-handling-activity-designers)  
+-   Documentazione della finestra di progettazione: [Activity Designer Error Handling](/visualstudio/workflow-designer/error-handling-activity-designers)  
   
 ### <a name="error-handling-scenarios"></a>Scenari relativi alla gestione degli errori  
  È necessario eseguire un set di attività e, quando si verifica un errore, è necessario eseguire una logica specifica. Se durante l'esecuzione della logica di gestione degli errori si scopre che l'errore non è risolvibile, viene rigenerata l'eccezione e il problema viene gestito dall'attività padre (o dall'host).  
@@ -273,7 +273,7 @@ ms.locfileid: "33809862"
  È necessario richiedere l'input di un utente. In circostanze normali, lo sviluppatore utilizzerebbe una chiamata al metodo come <xref:System.Console.ReadLine%2A> per richiedere l'input di un utente. Il problema di questa impostazione è che il programma attende fino a quando l'utente non immette un valore. In questo scenario, è necessario un timeout per sbloccare un'attività di blocco. Un scenario comune è quello in cui è necessario completare un'attività entro un periodo di tempo specificato. Il timeout di un'attività di blocco è uno scenario in cui l'attività Pick rappresenta un valore aggiunto.  
   
 ## <a name="wcf-routing-service"></a>Servizio di routing di WCF  
- Il servizio di Routing è progettato per essere un software generico Router che consente di controllare il flusso del WCFmessages tra client e servizi.  Il servizio di Routing consente di separare i client dai servizi, che consente una maggiore libertà in termini delle configurazioni che è possibile supportare e la flessibilità necessaria quando si considera come ospitare i servizi.  In .NET 3.5, client e servizi sono strettamente; un client deve conoscere tutti i servizi necessarie per comunicare con e in cui si trovavano. WCF in .NET Framework 3.5 aveva inoltre le limitazioni seguenti:  
+ Il servizio di Routing è progettato per essere un Router che è possibile controllare il flusso del WCFmessages tra i client e servizi software generiche.  Il servizio di Routing consente di disaccoppiare i client dai servizi, che ti offre maggiore libertà in termini di configurazioni che è possibile supportare e la flessibilità è necessario quando si considera come ospitare i servizi.  In .NET 3.5, i client e i servizi erano strettamente collegati; un client doveva conoscere tutti i servizi necessari per comunicare con e in cui è stati individuati. WCF in .NET Framework 3.5 aveva inoltre le limitazioni seguenti:  
   
 -   La gestione degli errori era complessa, in quanto la logica doveva essere impostata come hardcoded nel client.  
   
@@ -295,9 +295,9 @@ ms.locfileid: "33809862"
   
 1.  Documentazione: [Routing](../../../docs/framework/wcf/feature-details/routing.md)  
   
-2.  Esempi: [servizi di Routing &#91;esempi WCF&#93;](../../../docs/framework/wcf/samples/routing-services.md)  
+2.  Esempi: [servizi di Routing &#91;esempi di WCF&#93;](../../../docs/framework/wcf/samples/routing-services.md)  
   
-3.  Blog: [regole di Routing.](http://go.microsoft.com/fwlink/?LinkId=204956)  
+3.  Blog: [le regole di Routing.](https://go.microsoft.com/fwlink/?LinkId=204956)  
   
 ### <a name="routing-scenarios"></a>Scenari di routing  
  Il servizio di routing è utile negli scenari seguenti:  
@@ -313,7 +313,7 @@ ms.locfileid: "33809862"
 -   È possibile rendere i client più affidabili in caso di guasto o indisponibilità dei servizi.  
   
 ## <a name="wcf-discovery"></a>WCF Discovery  
- WCF Discovery è una tecnologia di framework che consente di incorporare un meccanismo di individuazione nell'infrastruttura dell'applicazione. È possibile usarlo per rendere individuabile il servizio e configura i client per la ricerca dei servizi. Non è più necessario impostare i clienti come hardcoded con gli endpoint, pertanto l'applicazione è più affidabile e garantisce una maggiore tolleranza agli errori. Discovery è la piattaforma ideale per integrare funzionalità di configurazione automatica nell'applicazione.  
+ WCF Discovery è una tecnologia di framework che consente di incorporare un meccanismo di individuazione per l'infrastruttura dell'applicazione. È possibile usarlo per rendere individuabile il servizio e configura i client per la ricerca dei servizi. Non è più necessario impostare i clienti come hardcoded con gli endpoint, pertanto l'applicazione è più affidabile e garantisce una maggiore tolleranza agli errori. Discovery è la piattaforma ideale per integrare funzionalità di configurazione automatica nell'applicazione.  
   
  Il prodotto si basa sullo standard WS-Discovery ed è progettato per essere interoperativo, estendibile e generico. Il prodotto supporta due modalità di funzionamento:  
   
@@ -321,7 +321,7 @@ ms.locfileid: "33809862"
   
 2.  Ad hoc: in questa modalità i client usano messaggi multicast per individuare i servizi.  
   
- Inoltre, i messaggi di individuazione non riconoscono il protocollo di rete; è possibile usarli in aggiunta a qualsiasi protocollo che supporta i requisiti della modalità. Ad esempio, l'individuazione dei messaggi multicast possono essere inviati tramite il canale UDP o qualsiasi altra rete che supporta la messaggistica multicast.  Questi punti, combinati con la flessibilità di funzionalità, consentono di adattare il processo di individuazione in modo specifico per la soluzione di progettazione.  
+ Inoltre, i messaggi di individuazione non riconoscono il protocollo di rete; è possibile usarli in aggiunta a qualsiasi protocollo che supporta i requisiti della modalità. Ad esempio, il rilevamento messaggi multicast possono essere inviati tramite il canale UDP o qualsiasi altra rete che supporta la messaggistica multicast.  Questi punti, combinati con flessibilità della funzionalità, è possibili adattare l'individuazione in modo specifico alla soluzione di progettazione.  
   
 ### <a name="getting-started"></a>Introduzione  
   
@@ -333,7 +333,7 @@ ms.locfileid: "33809862"
  Un sviluppatore non desidera impostare gli endpoint come hardcoded, in quanto non è possibile sapere quando sarà disponibile il servizio. Al contrario, lo sviluppatore desidera scegliere un servizio in fase di runtime. I componenti dell'applicazione devono essere più separabili, più affidabili e autoconfigurabili.  
   
 ## <a name="tracking"></a>Rilevamento  
- Flusso di lavoro di rilevamento consente di comprendere l'esecuzione di un'istanza del flusso di lavoro.  Gli eventi di rilevamento vengono generati da un flusso di lavoro a livello di istanza del flusso di lavoro e quando eseguono le attività all'interno del flusso di lavoro. Per sottoscrivere i record di rilevamento, è necessario aggiungere all'host del flusso di lavoro un partecipante del rilevamento del flusso di lavoro. I record di rilevamento vengono filtrati usando un profilo di rilevamento. .NET Framework fornisce un partecipante del rilevamento ETW (Event Tracing for Windows) e nel file machine.config. viene installato un profilo di base.  
+ Flusso di lavoro di rilevamento fornisce approfondimenti l'esecuzione di un'istanza del flusso di lavoro.  Gli eventi di rilevamento vengono generati da un flusso di lavoro a livello di istanza del flusso di lavoro e quando eseguono le attività all'interno del flusso di lavoro. Per sottoscrivere i record di rilevamento, è necessario aggiungere all'host del flusso di lavoro un partecipante del rilevamento del flusso di lavoro. I record di rilevamento vengono filtrati usando un profilo di rilevamento. .NET Framework fornisce un partecipante del rilevamento ETW (Event Tracing for Windows) e nel file machine.config. viene installato un profilo di base.  
   
 ### <a name="getting-started"></a>Introduzione  
   
@@ -351,7 +351,7 @@ ms.locfileid: "33809862"
   
 3.  Esempi: [rilevamento](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
   
-4.  Documentazione concettuale: [flusso di lavoro rilevamento e traccia](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+4.  Documentazione concettuale: [flusso di lavoro di rilevamento e traccia](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
   
 ## <a name="sql-workflow-instance-store"></a>Archivio di istanze del flusso di lavoro SQL  
  <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> è un'implementazione basata su server SQL di un archivio di istanze. In un archivio di istanze è memorizzato lo stato di un'istanza in esecuzione nonché tutti i dati necessari per caricare e riprendere l'esecuzione di quell'istanza. L'host del servizio indica all'archivio di istanze di salvare lo stato dell'istanza se il flusso di lavoro è persistente e di caricare lo stato dell'istanza all'arrivo di un messaggio per quell'istanza o alla scadenza di un'attività di ritardo.  
@@ -362,4 +362,4 @@ ms.locfileid: "33809862"
   
 2.  Esempi: [persistenza](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   
-3.  Documentazione concettuale: [archivio di istanze del flusso di lavoro SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).
+3.  Documentazione concettuale: [Store di istanza del flusso di lavoro SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).

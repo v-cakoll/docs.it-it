@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 44fbf35ee4ab5a0c4763269808f0817a33d05b40
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998437"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387634"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Scrittura della prima query LINQ (Visual Basic)
 Una *query* è un'espressione che recupera dati da un'origine dati. Le query sono espresse in un linguaggio di query dedicato. Nel corso del tempo, sono stati sviluppati diversi linguaggi per diversi tipi di origini dati, ad esempio, SQL per i database relazionali e XQuery per XML. Ciò rende necessario per lo sviluppatore dell'applicazione per informazioni su un nuovo linguaggio di query per ogni tipo di origine dati o formato dati supportato.  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Per altre informazioni sulla creazione di tipi specifici di origini dati, vedere la documentazione dei diversi provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Per un elenco di questi provider, vedere [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) La regola di base è semplice: una [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] origine dati è qualsiasi oggetto che supporta il tipo generico <xref:System.Collections.Generic.IEnumerable%601> interfaccia o un'interfaccia che eredita da esso.  
+ Per altre informazioni sulla creazione di tipi specifici di origini dati, vedere la documentazione dei diversi provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Per un elenco di questi provider, vedere [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) La regola di base è semplice: una [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] origine dati è qualsiasi oggetto che supporta il tipo generico <xref:System.Collections.Generic.IEnumerable%601> interfaccia o un'interfaccia che eredita da esso.  
   
 > [!NOTE]
 >  I tipi, ad esempio <xref:System.Collections.ArrayList> che supportano non generica <xref:System.Collections.IEnumerable> interfaccia può essere utilizzata anche come [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] origini dati. Per un esempio che usa un' <xref:System.Collections.ArrayList>, vedere [procedura: eseguire una Query su un ArrayList con LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  

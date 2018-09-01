@@ -2,22 +2,22 @@
 title: Bridging e gestione degli errori
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804391"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389068"
 ---
 # <a name="bridging-and-error-handling"></a>Bridging e gestione degli errori
-In questo esempio di seguito viene illustrato come utilizzata il servizio di routing di Windows Communication Foundation (WCF) per il collegamento delle comunicazioni tra un client e un servizio che utilizzano associazioni diverse. L'esempio mostra inoltre come utilizzare un servizio di backup per scenari di failover. Il servizio di routing è un componente WCF che rende più semplice includere un router basato sul contenuto nell'applicazione. In questo esempio adatta l'esempio di calcolatrice WCF standard per comunicare tramite il servizio di routing.  
+Questo esempio viene illustrato come il servizio di routing di Windows Communication Foundation (WCF) viene usato per il collegamento delle comunicazioni tra un client e un servizio che impiegano associazioni diverse. L'esempio mostra inoltre come utilizzare un servizio di backup per scenari di failover. Il servizio di routing è un componente WCF che rende più semplice includere un router basato sul contenuto nell'applicazione. In questo esempio si adatta l'esempio di calcolatrice standard di WCF per comunicare con il servizio di routing.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\ErrorHandlingAndBridging`  
   
@@ -39,7 +39,7 @@ In questo esempio di seguito viene illustrato come utilizzata il servizio di rou
   
 2.  Premere F5 o CTRL+MAIUSC+B in Visual Studio  
   
-    1.  Se si desidera avviare automaticamente i progetti necessari quando si preme F5, fare doppio clic la soluzione, selezionare **proprietà**e il **progetto di avvio** nodo **proprietà comuni**selezionare **più progetti di avvio**e impostare tutti i progetti **avviare**.  
+    1.  Se si desidera avviare automaticamente i progetti necessari quando si preme F5, fare doppio clic la soluzione, selezionare **proprietà**e il **progetto di avvio** nodo sotto **proprietà comuni**, selezionare **progetti di avvio multipli**e impostare tutti i progetti **Start**.  
   
     2.  Se si compila il progetto con CTRL+MAIUSC+B, avviare le applicazioni seguenti:  
   
@@ -70,4 +70,4 @@ In questo esempio di seguito viene illustrato come utilizzata il servizio di rou
  Contoso desidera fornire un endpoint del servizio interoperativo a livello mondiale, ottimizzando al contempo le prestazioni interne. Propone pertanto i propri servizi a livello internazionale tramite un endpoint utilizzando BasicHttpBinding e ricorrendo internamente al servizio di routing che funge da bridge alla connessione all'endpoint utilizzando NetTcpBinding, impiegato dai propri servizi. Inoltre, poiché Contoso desidera che il servizio offerto tenga conto di possibili periodi di interruzione temporanei in uno dei servizi di produzione, virtualizza più endpoint associati al servizio del router utilizzando le funzionalità di gestione degli errori per il failover automatico nel caso in cui si renda necessario effettuare il backup degli endpoint.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Hosting di AppFabric ed esempi di persistenza](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hosting di AppFabric e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)

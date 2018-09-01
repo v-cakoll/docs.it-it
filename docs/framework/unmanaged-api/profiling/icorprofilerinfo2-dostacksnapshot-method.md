@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 338120932b0bcbe390332515856aaeaa3bc34a56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461698"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385909"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>Metodo ICorProfilerInfo2::DoStackSnapshot
-Verifica i frame gestiti nello stack per il thread specificato e invia informazioni al profiler tramite un callback.  
+Descrive i frame gestiti nello stack per il thread specificato e invia informazioni al profiler tramite un callback.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,70 +43,70 @@ HRESULT DoStackSnapshot(
  `thread`  
  [in] L'ID del thread di destinazione.  
   
- Il passaggio di null in `thread` viene generato uno snapshot del thread corrente. Se un `ThreadID` di viene passato un altro thread, sospende il thread di common language runtime (CLR), esegue lo snapshot e riprende.  
+ Il passaggio di null in `thread` viene generato uno snapshot del thread corrente. Se un `ThreadID` di viene passato un altro thread, common language runtime (CLR) sospende il thread in questione, esegue lo snapshot e viene ripresa.  
   
  `callback`  
- [in] Un puntatore all'implementazione del [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) metodo, che viene chiamato da Common Language Runtime per fornire al profiler con informazioni su ogni frame gestito e ogni esecuzione di frame non gestiti.  
+ [in] Un puntatore all'implementazione del [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) metodo, che viene chiamata da CLR per fornire il profiler con le informazioni su ogni frame gestito e ogni esecuzione dei frame non gestiti.  
   
  Il `StackSnapshotCallback` metodo è implementato dal writer del profiler.  
   
  `infoFlags`  
- [in] Il valore di [COR_PRF_SNAPSHOT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) enumerazione che specifica la quantità di dati da passare per ciascun frame `StackSnapshotCallback`.  
+ [in] Valore di [COR_PRF_SNAPSHOT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) enumerazione che specifica la quantità di dati da passare per ciascun frame `StackSnapshotCallback`.  
   
  `clientData`  
  [in] Un puntatore ai dati client, che vengano passati direttamente tramite il `StackSnapshotCallback` funzione di callback.  
   
  `context`  
- [in] Un puntatore a un Win32 `CONTEXT` struttura, viene utilizzato per inizializzare il percorso dello stack. Win32 `CONTEXT` struttura contiene i valori dei registri della CPU e rappresenta lo stato della CPU in un determinato momento.  
+ [in] Un puntatore a un Win32 `CONTEXT` struttura, che viene utilizzato per inizializzare il percorso dello stack. Win32 `CONTEXT` struttura contiene i valori dei registri della CPU e rappresenta lo stato della CPU in un determinato momento nel tempo.  
   
- Il valore di inizializzazione consente a CLR di determinare il punto di inizio dell'analisi dello stack, se l'inizio dello stack è il codice di supporto non gestita. in caso contrario, il valore di inizializzazione viene ignorato. È necessario specificare un valore di inizializzazione per una verifica asincrona. Se si sta eseguendo una verifica sincrona, non è necessario alcun valore di inizializzazione.  
+ Il valore di inizializzazione consente a CLR di determinare il punto di inizio analisi dello stack, se l'inizio dello stack del codice di supporto non gestita; in caso contrario, il valore di inizializzazione viene ignorato. Per una verifica asincrona, è necessario specificare un valore di inizializzazione. Se si sta eseguendo una procedura sincrona, non è necessario alcun valore di inizializzazione.  
   
  Il `context` parametro è valido solo se è stato passato il flag COR_PRF_SNAPSHOT_CONTEXT il `infoFlags` parametro.  
   
  `contextSize`  
- [in] Le dimensioni del `CONTEXT` struttura, a cui fa riferimento il `context` parametro.  
+ [in] Le dimensioni dei `CONTEXT` struttura, a cui fa riferimento il `context` parametro.  
   
 ## <a name="remarks"></a>Note  
- Passare null per `thread` viene generato uno snapshot del thread corrente. Solo se il thread di destinazione è sospeso al momento, è possono eseguire gli snapshot di altri thread.  
+ Passare null per `thread` viene generato uno snapshot del thread corrente. Gli snapshot possono essere creati degli altri thread solo se il thread di destinazione viene sospeso al momento.  
   
- Quando il profiler richiede analizzare lo stack, chiama `DoStackSnapshot`. Prima di CLR viene restituito dalla chiamata, chiama il `StackSnapshotCallback` più volte, una volta per ogni frame gestito (o esecuzione di frame non gestiti) nello stack. Quando vengono rilevati frame non gestiti, è necessario verificarli manualmente.  
+ Quando il profiler richiede la analizzare lo stack, chiama `DoStackSnapshot`. Prima che Common Language Runtime restituito dalla chiamata, viene chiamato il `StackSnapshotCallback` più volte, una volta per ogni frame gestito (o esecuzione di frame non gestiti) nello stack. Quando vengono rilevati i frame non gestiti, è necessario verificarli manualmente.  
   
- L'ordine in cui viene esaminato lo stack è l'opposto di come i frame sono stati inseriti nello stack: foglia ultimo fotogramma (inserito per ultimo) in primo luogo, principale fotogramma (inserito per primo).  
+ L'ordine in cui viene esaminato lo stack è il contrario del modo in cui i frame sono stati inseriti nello stack: foglia ultimo fotogramma (inserito per ultimo) prima di tutto, principale fotogramma (inserito per primo).  
   
- Per ulteriori informazioni su come programmare il profiler per spostarti chiamate negli stack gestiti, vedere [analisi dello Stack del Profiler in .NET Framework 2.0: nozioni di base e oltre](http://go.microsoft.com/fwlink/?LinkId=73638).  
+ Per altre informazioni sulla programmazione del profiler per esaminare chiamate negli stack gestiti, vedere [analisi dello Stack del Profiler in .NET Framework 2.0: concetti di base e](https://go.microsoft.com/fwlink/?LinkId=73638).  
   
- Un percorso stack può essere sincrona o asincrona, come illustrato nelle sezioni seguenti.  
+ Un percorso stack può essere sincrono o asincrono, come illustrato nelle sezioni seguenti.  
   
-## <a name="synchronous-stack-walk"></a>Sincrono dello stack  
- Un percorso stack sincrono implica percorsi nello stack del thread corrente in risposta a un callback. Non richiede il seeding o sospensione.  
+## <a name="synchronous-stack-walk"></a>Analisi dello stack sincrono  
+ Un percorso stack sincrona prevede i percorsi nello stack del thread corrente in risposta a un callback. Non richiede il seeding o sospensione.  
   
- Apportate sincrono, chiamare in risposta a una chiamata a uno del profiler CLR [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (o [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)), chiamano `DoStackSnapshot` per analizzare lo stack del thread corrente. Ciò è utile quando si desidera visualizzare lo stack di aspetto analogo al seguente in una notifica, ad esempio [ICorProfilerCallback:: ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md). È sufficiente chiamare `DoStackSnapshot` dall'interno del `ICorProfilerCallback` , passando null nel `context` e `thread` parametri.  
+ Rendere sincrono, chiamare in risposta a CLR una chiamata a uno del profiler [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (o [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) metodi, si chiama `DoStackSnapshot` per analizzare lo stack del thread corrente. Ciò è utile quando si desidera visualizzare lo stack di un aspetto analogo a una notifica, ad esempio [ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md). È sufficiente chiamare `DoStackSnapshot` dall'interno di `ICorProfilerCallback` metodo, il passaggio di null nel `context` e `thread` parametri.  
   
-## <a name="asynchronous-stack-walk"></a>Analisi dello Stack asincrona  
- Un'analisi dello stack asincrono comporta la verifica dello stack di un thread diverso o percorsi nello stack del thread corrente, non in risposta a un callback, ma assumendo puntatore all'istruzione del thread corrente. Una verifica asincrona richiede un valore di inizializzazione se l'inizio dello stack è il codice non gestito che non fa parte di una piattaforma invoke (PInvoke) o chiamata COM, ma il codice helper in CLR. Codice che esegue la compilazione o la garbage collection di (JIT) di just-in-time è ad esempio, codice di supporto.  
+## <a name="asynchronous-stack-walk"></a>Analisi dello stack asincrona  
+ Un percorso stack asincrona comporta i percorsi nello stack di un altro thread o i percorsi nello stack del thread corrente, non in risposta a un callback, ma assumendo puntatore dell'istruzione del thread corrente. Una verifica asincrona richiede un valore di inizializzazione se l'inizio dello stack è il codice non gestito che non fa parte di una piattaforma invoke (PInvoke) o chiamata COM, ma il codice helper in CLR. Ad esempio, codice che esegue la compilazione o la garbage collection di (JIT) di just-in-time è codice helper.  
   
- Si ottiene un valore di inizializzazione sospendendo direttamente il thread di destinazione e un esame relativo stack frame manualmente, fino a individuare il livello più alto gestito. Dopo che il thread di destinazione è sospeso, è possibile ottenere il contesto di registro corrente del thread di destinazione. Successivamente, determinare se il contesto del registro punta a codice non gestito chiamando [ICorProfilerInfo::](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) , ovvero se viene restituito un `FunctionID` uguale a zero, il frame è codice non gestito. A questo punto, analizzare lo stack fino a raggiunga il primo frame gestito e quindi calcola il contesto del valore di inizializzazione in base al contesto di registro per quel frame.  
+ Per ottenere un valore di inizializzazione, direttamente la sospensione del thread di destinazione e walking relativo stack frame manualmente, fino a individuare il livello più alto gestito. Dopo che il thread di destinazione viene sospesa, ottenere il contesto di registro corrente del thread di destinazione. Successivamente, determinare se il contesto di registro punta al codice non gestito mediante la chiamata [GetFunctionFromIP](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) — se viene restituito un `FunctionID` uguale a zero, il frame è codice non gestito. A questo punto, analizzare lo stack fino a raggiunge il primo frame gestito e quindi calcola il contesto di inizializzazione basato sul contesto di registro per quel fotogramma.  
   
- Chiamare `DoStackSnapshot` con il contesto del valore di inizializzazione per iniziare il percorso stack asincrona. Se non si specifica un valore di inizializzazione, `DoStackSnapshot` potrebbe ignorare i frame gestiti nella parte superiore dello stack e, di conseguenza, verrà visualizzato un percorso di stack incompleto. Se si specifica un valore di inizializzazione, deve puntare a compilato tramite JIT o Native Image Generator (Ngen.exe)-; codice generato in caso contrario, `DoStackSnapshot` restituisce il codice di errore CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX.  
+ Chiamare `DoStackSnapshot` con il contesto del valore di inizializzazione per iniziare il percorso stack asincrona. Se non si specifica un valore di inizializzazione, `DoStackSnapshot` potrebbe ignorare i frame gestiti nella parte superiore dello stack e, di conseguenza, verrà visualizzato un percorso stack incompleto. Se si specifica un valore di inizializzazione, deve puntare a compilazione JIT o Native Image Generator (Ngen.exe)-generato codice. in caso contrario, `DoStackSnapshot` restituisce il codice di errore CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX.  
   
  Analisi dello stack asincrona può facilmente causare deadlock o violazioni di accesso, a meno che non si seguono queste linee guida:  
   
--   Quando si sospendono direttamente i thread, tenere presente che solo un thread che non ha mai eseguito codice gestito è possibile sospendere un altro thread.  
+-   Quando si sospendono direttamente thread, tenere presente che solo un thread che non ha mai eseguito il codice gestito può sospendere un altro thread.  
   
--   Blocco sempre il [ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) callback fino al termine dell'analisi dello stack del thread.  
+-   Blocca sempre [ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) callback fino al completamento dello stack del thread.  
   
--   Non mantenere un blocco mentre il profiler chiama una funzione CLR che può attivare una garbage collection. Ovvero, non mantenere un blocco se il thread proprietario può effettuare una chiamata che attiva un'operazione di garbage collection.  
+-   Non mantenere un blocco mentre il profiler chiama una funzione CLR che possono attivare una garbage collection. Vale a dire, non mantenere un blocco se il thread proprietario può effettuare una chiamata che attiva un'operazione di garbage collection.  
   
- È inoltre disponibile un rischio di deadlock se si chiama `DoStackSnapshot` da un thread che ha creato il profiler in modo che è possibile analizzare lo stack di un thread di destinazione diversa. La prima volta che il thread è stato creato viene inserito determinate `ICorProfilerInfo*` metodi (inclusi `DoStackSnapshot`), CLR esegue per ogni thread, l'inizializzazione specifica del CLR su tale thread. Se il profiler ha sospeso il thread di destinazione i cui stack si sta tentando di analizzare e se si è verificato un thread di destinazione sia il proprietario di un blocco necessari per eseguire l'inizializzazione di singoli thread, si verificherà un deadlock. Per evitare il deadlock, effettuare una chiamata iniziale in `DoStackSnapshot` dal thread del creato profiler per verificare il thread di destinazione separato, ma non sospendere il thread di destinazione prima. Questa chiamata iniziale garantisce che l'inizializzazione di singoli thread può essere completato senza deadlock. Se `DoStackSnapshot` ha esito positivo e segnala almeno un frame, in seguito, sarà sicuro per tale thread creato profiler sospendere tutti i thread di destinazione e chiamare `DoStackSnapshot` per analizzare lo stack di thread di destinazione.  
+ È inoltre disponibile un rischio di deadlock se si chiama `DoStackSnapshot` da un thread che ha creato il profiler in modo che è possibile analizzare lo stack di un thread di destinazione distinto. La prima volta che il thread è stato creato viene inserito determinati `ICorProfilerInfo*` metodi (inclusi `DoStackSnapshot`), CLR dovrà eseguire per ogni thread, l'inizializzazione di CLR specifici su tale thread. Se il profiler ha sospeso il thread di destinazione cui stack desiderata per esaminare e se il thread di destinazione è successo a un blocco di proprietà necessario per eseguire tale inizializzazione per ogni thread, si verificherà un deadlock. Per evitare il deadlock, effettuare una chiamata iniziale in `DoStackSnapshot` dal thread profiler creato per verificare il thread di destinazione un oggetto separato, ma non sospendere il thread di destinazione prima di tutto. Questa chiamata iniziale assicura che l'inizializzazione di singoli thread può essere completato senza deadlock. Se `DoStackSnapshot` ha esito positivo e i report almeno un frame, da quel punto, sarà sicuro per il thread profiler-creazione di sospendere qualsiasi thread di destinazione e chiamare `DoStackSnapshot` per analizzare lo stack di thread di destinazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  

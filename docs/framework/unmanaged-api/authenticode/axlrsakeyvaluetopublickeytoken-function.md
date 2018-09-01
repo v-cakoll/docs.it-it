@@ -1,5 +1,5 @@
 ---
-title: Funzione _AxlRSAKeyValueToPublicKeyToken
+title: Funzione AxlRSAKeyValueToPublicKeyToken
 ms.date: 03/30/2017
 api_name:
 - _AxlRSAKeyValueToPublicKeyToken
@@ -10,14 +10,15 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ef73f0f7599fdff887437756a5995591fd8ec89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e09391af9b5d71cfa423b3bf1a2b307117d0dee1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402411"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385887"
 ---
-# <a name="axlrsakeyvaluetopublickeytoken-function"></a>Funzione _AxlRSAKeyValueToPublicKeyToken
+# <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_Funzione AxlRSAKeyValueToPublicKeyToken
+
 Converte un elemento Modulus e un elemento Exponent in un token di chiave pubblica con nome sicuro.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -30,12 +31,12 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  `pModulusBlob`  
- [in] Il blob dell'elemento Modulus con codifica base64 (dal \<Modulus > elemento).  Vedere il [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) struttura.  
+ [in] Il blob dell'elemento Modulus con codifica base64 (dalla \<Modulus > elemento).  Vedere le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struttura.  
   
  `pExponentBlob`  
- [in] Il blob Exponent con codifica base64 (dal \<esponente > elemento). Vedere il [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) struttura.  
+ [in] Il blob di Exponent con codifica base64 (dalla \<Exponent > elemento). Vedere le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struttura.  
   
  `ppwszPublicKeyToken`  
  [out] Puntatore a WCHAR * per ricevere il token di chiave pubblica con codifica esadecimale.  

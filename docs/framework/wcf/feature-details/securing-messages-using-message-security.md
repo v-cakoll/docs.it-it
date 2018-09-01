@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 1ebe2526e564ef24d20f1602fd5824b44e2e2bbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d895524d36895ad087f7394fcc3380573355eaad
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498690"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392030"
 ---
 # <a name="securing-messages-using-message-security"></a>Protezione dei messaggi mediante protezione a livello di messaggio
-In questa sezione presenta la protezione dei messaggi WCF quando si usano <xref:System.ServiceModel.NetMsmqBinding>.  
+Questa sezione illustra la protezione dei messaggi WCF quando si usa <xref:System.ServiceModel.NetMsmqBinding>.  
   
 > [!NOTE]
->  Prima di leggere questo argomento, è consigliabile leggere [concetti sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+>  Prima di leggere questo argomento, è consigliabile leggere [concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
  Nella figura seguente fornisce un modello concettuale della comunicazione in coda tramite WCF. L'illustrazione e la terminologia vengono utilizzate nella spiegazione  
   
  dei concetti della protezione del trasporto.  
   
- ![In coda applicazione diagramma](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "figura coda distribuita")  
+ ![Diagramma applicazioni accodate](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-coda-figura")  
   
  Quando l'invio di messaggi in coda mediante WCF, il messaggio WCF viene allegato come corpo del messaggio di Accodamento messaggi (MSMQ). Mentre la protezione del trasporto protegge l'intero messaggio MSMQ, la protezione del messaggio, o SOAP, protegge il corpo del messaggio MSMQ.  
   
- Il concetto chiave della protezione del messaggio consiste nel fatto che il client protegge il messaggio per l'applicazione ricevente (servizio), a differenza dalla protezione del trasporto in cui il client protegge il messaggio per la coda di destinazione. Di conseguenza, MSMQ non svolge nessuna parte per la protezione del messaggio WCF mediante la sicurezza dei messaggi.  
+ Il concetto chiave della protezione del messaggio consiste nel fatto che il client protegge il messaggio per l'applicazione ricevente (servizio), a differenza dalla protezione del trasporto in cui il client protegge il messaggio per la coda di destinazione. Di conseguenza, MSMQ non svolge alcuna parte quando si proteggono il messaggio WCF utilizzando la sicurezza dei messaggi.  
   
  Sicurezza dei messaggi WCF aggiunge intestazioni di sicurezza per il messaggio WCF che si integrano con infrastrutture di sicurezza esistenti, ad esempio un certificato o il protocollo Kerberos.  
   
@@ -43,7 +43,7 @@ In questa sezione presenta la protezione dei messaggi WCF quando si usano <xref:
   
  In considerazione del fatto che le code funzionano spesso in modalità disconnessa, il client e il servizio potrebbero non essere in linea contemporaneamente e potrebbero doversi scambiare i certificati fuori banda. Il client, in particolare, poiché detiene il certificato del servizio (che può essere collegato a un'autorità di certificazione) nell'archivio attendibile, deve appurare di avere stabilito la comunicazione con il servizio corretto. Per autenticare il client, il servizio utilizza il certificato X.509 allegato al messaggio e cerca una corrispondenza con il certificato esistente nell'archivio. Anche in questo caso il certificato deve essere collegato a un'autorità di certificazione.  
   
- Nei computer che eseguono Windows i certificati sono contenuti in vari tipi di archivio. Per ulteriori informazioni sugli archivi diversi, vedere [gli archivi certificati](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ Nei computer che eseguono Windows i certificati sono contenuti in vari tipi di archivio. Per altre informazioni sugli archivi diversi, vedere [archivi certificati](https://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>WINDOWS  
  Il tipo di credenziale del messaggio di Windows utilizza il protocollo Kerberos.  
@@ -54,7 +54,7 @@ In questa sezione presenta la protezione dei messaggi WCF quando si usano <xref:
   
  Si noti che in caso di utilizzo di questo tipo di credenziale, il servizio deve essere in esecuzione nell'account SERVIZIO.  
   
- Il protocollo Kerberos viene utilizzato per impostazione predefinita durante la scelta della credenziale del messaggio. Per altre informazioni, vedere [esplorazione Kerberos, il protocollo per Distributed Security in Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
+ Il protocollo Kerberos viene utilizzato per impostazione predefinita durante la scelta della credenziale del messaggio. Per altre informazioni, vedere [esplorazione Kerberos, il protocollo per la sicurezza distribuita in Windows 2000](https://go.microsoft.com/fwlink/?LinkId=87790).  
   
 ### <a name="username-password"></a>Nome utente/password  
  Mediante questa proprietà il client può eseguire l'autenticazione nel server utilizzando una password di nome utente nell'intestazione di sicurezza del messaggio.  

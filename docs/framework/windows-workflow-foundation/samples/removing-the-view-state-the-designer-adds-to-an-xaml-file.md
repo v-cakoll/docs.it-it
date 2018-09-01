@@ -2,11 +2,12 @@
 title: Rimozione dello stato di visualizzazione della finestra di progettazione per l'aggiunta a un file XAML
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: f63723c29c76854602308ba3e8d7e6dd65d9fb94
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed2fda0bb66b2c8fe58c60acc6f80b9e9c8e984e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386933"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Rimozione dello stato di visualizzazione della finestra di progettazione per l'aggiunta a un file XAML
 In questo esempio viene illustrato come creare una classe che deriva da <xref:System.Windows.Markup.XamlWriter> e rimuove lo stato di visualizzazione da un file XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] scrive informazioni nel documento XAML, che è noto come stato di visualizzazione. Lo stato di visualizzazione si riferisce alle informazioni richieste in fase di progettazione, ad esempio il posizionamento del layout, che non sono richieste in fase di esecuzione. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] inserisce queste informazioni nel documento XAML man mano che viene modificato. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] scrive lo stato di visualizzazione nel file XAML con un attributo `mc:Ignorable`, in modo che queste informazioni non vengano caricate quando il runtime carica il file XAML. In questo esempio viene illustrato come creare una classe che rimuove tali informazioni sullo stato di visualizzazione durante l'elaborazione di nodi XAML.  
@@ -14,7 +15,7 @@ In questo esempio viene illustrato come creare una classe che deriva da <xref:Sy
 ## <a name="discussion"></a>Discussione  
  In questo esempio viene illustrato come creare un writer personalizzato.  
   
- Per compilare un writer XAML personalizzato, creare una classe che eredita da <xref:System.Windows.Markup.XamlWriter>. I writer XAML sono spesso annidati, è tipico tenere traccia di un writer XAML "interno". Questi "interna ' writer possono essere considerati come riferimento allo stack restante di writer XAML, consentendo di disporre di più punti di ingresso per eseguire le operazioni e delegare quindi l'elaborazione al resto dello stack.  
+ Per compilare un writer XAML personalizzato, creare una classe che eredita da <xref:System.Windows.Markup.XamlWriter>. Come i writer XAML sono spesso annidati, è tipico tenere traccia di un writer XAML "interno". Questi "interna" writer possono essere considerati il riferimento allo stack restante di writer XAML, consentendo di impostare più punti di ingresso per eseguire le operazioni e delegare quindi l'elaborazione per il resto dello stack.  
   
  In questo esempio sono presenti alcuni elementi di interesse. Uno consiste nel verificare se l'elemento scritto proviene da uno spazio dei nomi della finestra di progettazione. Si noti che consente di rimuovere anche l'uso di altri tipi dallo spazio dei nomi della finestra di progettazione in un flusso di lavoro.  
   
@@ -38,7 +39,7 @@ XamlWriter InnerWriter {get; set; }
 Stack<XamlMember> MemberStack {get; set; }  
 ```  
   
- Inoltre, crea uno stack di membri XAML usati mentre si attraversa il flusso del nodo. Il lavoro rimanente di questo esempio è ampiamente contenuto nel <!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>--> `System.Windows.Markup.XamlWriter.WriteStartMember` metodo.  
+ Inoltre, crea uno stack di membri XAML usati mentre si attraversa il flusso del nodo. Il lavoro rimanente di questo esempio è ampiamente contenuto nel <!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>--> `System.Windows.Markup.XamlWriter.WriteStartMember` (metodo).  
   
 ```csharp
 public override void WriteStartMember(XamlMember xamlMember)  
@@ -96,7 +97,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
    ViewStateCleaningWriter.exe [input file] [output file]
    ```
    
-   Restituisce un file XAML in \[outfile], che contiene tutte le informazioni sullo stato di visualizzazione rimosse.  
+   Ciò produce un file XAML per \[FileOut], che dispone di tutte le informazioni sullo stato di visualizzazione rimosse.  
   
 > [!NOTE]
 > Per un flusso di lavoro <xref:System.Activities.Statements.Sequence>, vengono rimossi diversi suggerimenti di virtualizzazione determinando così il ricalcolo del layout da parte della finestra di progettazione al successivo caricamento. Quando si usa questo esempio per un oggetto <xref:System.Activities.Statements.Flowchart>, tutte le informazioni relative al posizionamento e al routing linea vengono rimosse e, al successivo caricamento nella finestra di progettazione, tutte le attività sono in pila sul lato sinistro dello schermo.  
@@ -118,6 +119,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

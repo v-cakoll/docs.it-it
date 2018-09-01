@@ -2,12 +2,12 @@
 title: Gestione dell'istanza sospesa
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 8e8bb40b22633aa83b7a70ee94f37cefe48ba68e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f614770121185644c3395f923cf7835141653f55
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519223"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394600"
 ---
 # <a name="suspended-instance-management"></a>Gestione dell'istanza sospesa
 In questo esempio viene illustrato come gestire le istanze del flusso di lavoro che sono state sospese.  L'azione predefinita per l'oggetto <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> è `AbandonAndSuspend`. Pertanto, per impostazione predefinita, le eccezioni non gestite generate da un'istanza del flusso di lavoro ospitata nell'oggetto <xref:System.ServiceModel.WorkflowServiceHost> comporteranno l'eliminazione dell'istanza dalla memoria (abbandonata) e la versione durevole/persistente dell'istanza sarà contrassegnata come sospesa. Non sarà possibile eseguire un'istanza del flusso di lavoro sospesa finché non viene annullata la sospensione.  
@@ -32,7 +32,7 @@ In questo esempio viene illustrato come gestire le istanze del flusso di lavoro 
   
 2.  Impostare il database SQL Server.  
   
-    1.  Da un [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] prompt dei comandi, eseguire "setup.cmd" dalla directory di esempio SuspendedInstanceManagement, che esegue le operazioni seguenti:  
+    1.  Da un [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] prompt dei comandi, eseguire "Setup. cmd" dalla directory di esempio SuspendedInstanceManagement, che esegue le operazioni seguenti:  
   
         1.  Creare un database di persistenza tramite SQL Server Express. Se il database di persistenza è già presente, viene eliminato e ricreato  
   
@@ -42,7 +42,7 @@ In questo esempio viene illustrato come gestire le istanze del flusso di lavoro 
   
 3.  Impostare la coda del servizio.  
   
-    1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], fare doppio clic su di **SampleWorkflowApp** sul progetto e scegliere **imposta come progetto di avvio**.  
+    1.  Nelle [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], fare doppio clic sui **SampleWorkflowApp** del progetto e fare clic su **imposta come progetto di avvio**.  
   
     2.  Compilare ed eseguire SampleWorkflowApp premendo **F5**. In questo modo verrà creata la coda richiesta.  
   
@@ -50,15 +50,15 @@ In questo esempio viene illustrato come gestire le istanze del flusso di lavoro 
   
     4.  Aprire la console Gestione computer eseguendo Compmgmt.msc da un prompt dei comandi.  
   
-    5.  Espandere **servizi e applicazioni**, **Accodamento**, **code Private**.  
+    5.  Espandere **applicazioni e servizi**, **Accodamento**, **code Private**.  
   
-    6.  Fare clic destro la **ReceiveTx** coda e selezionare **proprietà**.  
+    6.  Fare clic il **ReceiveTx** della coda e selezionare **proprietà**.  
   
-    7.  Selezionare il **sicurezza** scheda e consentono **Everyone** disporre delle autorizzazioni per **Ricevi messaggio**, **Visualizza il messaggio**, e  **Invia messaggio**.  
+    7.  Selezionare il **sicurezza** scheda e consentire **Everyone** disporre delle autorizzazioni per **Ricevi messaggio**, **Visualizza il messaggio**, e  **Invio messaggio**.  
   
 4.  A questo punto, eseguire l'esempio.  
   
-    1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], eseguire nuovamente il progetto SampleWorkflowApp senza debug premendo **Ctrl + F5**. Nella finestra della console saranno stampati due indirizzi endpoint: uno per l'endpoint dell'applicazione e l'altro per l'oggetto <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Viene quindi creata un'istanza del flusso di lavoro e i record di rilevamento per tale istanza saranno visualizzati nella finestra della console. L'istanza del flusso di lavoro genererà un'eccezione che comporterà la sospensione e l'interruzione dell'istanza.  
+    1.  Nelle [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], eseguire nuovamente il progetto SampleWorkflowApp senza debug premendo **CTRL+F5**. Nella finestra della console saranno stampati due indirizzi endpoint: uno per l'endpoint dell'applicazione e l'altro per l'oggetto <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Viene quindi creata un'istanza del flusso di lavoro e i record di rilevamento per tale istanza saranno visualizzati nella finestra della console. L'istanza del flusso di lavoro genererà un'eccezione che comporterà la sospensione e l'interruzione dell'istanza.  
   
     2.  L'utilità della riga di comando può essere quindi usata per eseguire ulteriori azioni in qualsiasi istanza. Di seguito è riportata la sintassi per gli argomenti della riga di comando:  
   
@@ -70,7 +70,7 @@ In questo esempio viene illustrato come gestire le istanze del flusso di lavoro 
   
 1.  Aprire la console Gestione computer eseguendo Compmgmt.msc da un prompt dei comandi di `vs2010`.  
   
-2.  Espandere **servizi e applicazioni**, **Accodamento**, **code Private**.  
+2.  Espandere **applicazioni e servizi**, **Accodamento**, **code Private**.  
   
 3.  Eliminare il **ReceiveTx** coda.  
   
@@ -81,6 +81,6 @@ In questo esempio viene illustrato come gestire le istanze del flusso di lavoro 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

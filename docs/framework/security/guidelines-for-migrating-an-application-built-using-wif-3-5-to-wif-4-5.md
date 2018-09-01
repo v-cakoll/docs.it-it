@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 60e9dd96824b2c9bef81d236bab8f577f9fb2062
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5db0925900a357134cf0103bbebbf5c9aac9e688
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399296"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386865"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5
 ## <a name="applies-to"></a>Si applica a  
@@ -27,7 +27,7 @@ ms.locfileid: "33399296"
 ### <a name="assembly-and-namespace-changes"></a>Modifiche apportate agli assembly e agli spazi dei nomi  
  In Windows Identity Foundation 3.5 tutte le classi sono contenute nell'assembly `Microsoft.IdentityModel` (microsoft.identitymicrosoft.identitymodel.dll). In Windows Identity Foundation 4.5 le classi sono state suddivise tra questi assembly: `mscorlib` (mscorlib.dll), `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll) e `System.ServiceModel` (System.ServiceModel.dll).  
   
- Le classi di Windows Identity Foundation 3.5 sono tutte contenute in uno degli spazi dei nomi `Microsoft.IdentityModel`, ad esempio `Microsoft.IdentityModel`, `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Web`e così via. In Windows Identity Foundation 4.5 le classi sono ora distribuite tra gli spazi dei nomi [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004), lo spazio dei nomi <xref:System.Security.Claims?displayProperty=nameWithType> e lo spazio dei nomi <xref:System.ServiceModel.Security?displayProperty=nameWithType>. Oltre a questa riorganizzazione, alcune classi di Windows Identity Foundation 3.5 sono state eliminate in Windows Identity Foundation 4.5.  
+ Le classi di Windows Identity Foundation 3.5 sono tutte contenute in uno degli spazi dei nomi `Microsoft.IdentityModel`, ad esempio `Microsoft.IdentityModel`, `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Web`e così via. In Windows Identity Foundation 4.5 le classi sono ora distribuite tra gli spazi dei nomi [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004), lo spazio dei nomi <xref:System.Security.Claims?displayProperty=nameWithType> e lo spazio dei nomi <xref:System.ServiceModel.Security?displayProperty=nameWithType>. Oltre a questa riorganizzazione, alcune classi di Windows Identity Foundation 3.5 sono state eliminate in Windows Identity Foundation 4.5.  
   
  La tabella seguente mostra alcuni degli spazi dei nomi più importanti di Windows Identity Foundation 4.5 e il tipo di classi in essi contenute. Per informazioni più dettagliate sul mapping degli spazi dei nomi tra Windows Identity Foundation 3.5 e Windows Identity Foundation 4.5 e sulle classi e sugli spazi dei nomi eliminati in Windows Identity Foundation 4.5, vedere [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "33399296"
 ### <a name="visual-studio-tooling-changes"></a>Modifiche apportate agli strumenti di Visual Studio  
  Windows Identity Foundation 3.5 SDK offre un'utilità di federazione autonoma, FedUtil.exe (FedUtil), che può essere usata per l'outsourcing della gestione delle identità in applicazioni abilitate per Windows Identity Foundation a un servizio token di sicurezza. Questo strumento aggiunge impostazioni di Windows Identity Foundation al file di configurazione dell'applicazione per permettere all'applicazione di ottenere token di sicurezza da uno o più servizi token di sicurezza ed è disponibile in Visual Studio tramite il pulsante **Aggiungi riferimento al servizio token di sicurezza**. L'utilità FedUtil non è inclusa in Windows Identity Foundation 4.5. Windows Identity Foundation 4.5 supporta invece una nuova estensione di Visual Studio chiamata Identity and Access Tool per Visual Studio 2012, che può essere usata per modificare il file di configurazione dell'applicazione con le impostazioni di Windows Identity Foundation necessarie per l'outsourcing della gestione delle identità a un servizio token di sicurezza. Identity and Access Tool implementa anche un servizio token di sicurezza chiamato servizio token di sicurezza locale, che può essere usato per testare le applicazioni abilitate per Windows Identity Foundation. In molti casi, questa funzionalità elimina la necessità di compilare servizi token di sicurezza personalizzati, spesso necessari in Windows Identity Foundation 3.5 per testare le soluzioni in fase di sviluppo. Per questo motivo, i modelli di servizio token di sicurezza non sono più supportati in Visual Studio 2012, ma le classi che supportano lo sviluppo di servizi token di sicurezza sono ancora disponibili in Windows Identity Foundation 4.5.  
   
- È possibile installare Identity and Access Tool dal gestore di estensioni e aggiornamenti in Visual Studio oppure è possibile scaricarlo dalla pagina [Identity and Access Tool per Visual Studio 2012 su Code Gallery](http://go.microsoft.com/fwlink/?LinkID=245849). L'elenco seguente offre un riepilogo delle modifiche apportate agli strumenti di Visual Studio:  
+ È possibile installare Identity and Access Tool dal gestore di estensioni e aggiornamenti in Visual Studio oppure è possibile scaricarlo dalla pagina [Identity and Access Tool per Visual Studio 2012 su Code Gallery](https://go.microsoft.com/fwlink/?LinkID=245849). L'elenco seguente offre un riepilogo delle modifiche apportate agli strumenti di Visual Studio:  
   
 -   È stata rimossa la funzionalità Aggiungi riferimento al servizio token di sicurezza. La funzionalità è stata sostituita da Identity and Access Tool.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "33399296"
 ## <a name="enabling-wif-35-in-windows-8"></a>Abilitazione di Windows Identity Foundation 3.5 in Windows 8  
  Poiché Windows Identity Foundation 4.5 fa parte di .NET 4.5, è automaticamente abilitato nei computer che eseguono Windows 8 e Windows Server 2012 e le applicazioni compilate con Windows Identity Foundation 4.5 vengono eseguite automaticamente in Windows 8 o Windows Server 2012. Tuttavia, potrebbe essere necessario eseguire applicazioni compilate con Windows Identity Foundation 3.5 in un computer con Windows 8 o Windows Server 2012. In questo caso, è necessario abilitare Windows Identity Foundation 3.5 nel computer di destinazione. A questo scopo, in un computer che esegue Windows 8 è possibile usare lo strumento Gestione e manutenzione immagini distribuzione. In un computer che esegue Windows Server 2012 è possibile usare lo strumento Gestione e manutenzione immagini distribuzione oppure il cmdlet `Add-WindowsFeature` di Windows PowerShell. In entrambi i casi, è possibile richiamare i comandi appropriati dalla riga di comando o dall'ambiente di Windows PowerShell.  
   
- I comandi seguenti mostrano come usare lo strumento Gestione e manutenzione immagini di distribuzione dalla riga di comando o dall'ambiente di Windows PowerShell. Per impostazione predefinita, il modulo PowerShell per Gestione e manutenzione immagini di distribuzione è incluso in Windows 8 e Windows Server 2012 e non deve essere importato. Per altre informazioni sull'uso di Gestione e manutenzione immagini di distribuzione con Windows PowerShell, vedere [Usare Gestione e manutenzione immagini distribuzione in Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=254419).  
+ I comandi seguenti mostrano come usare lo strumento Gestione e manutenzione immagini di distribuzione dalla riga di comando o dall'ambiente di Windows PowerShell. Per impostazione predefinita, il modulo PowerShell per Gestione e manutenzione immagini di distribuzione è incluso in Windows 8 e Windows Server 2012 e non deve essere importato. Per altre informazioni sull'uso di Gestione e manutenzione immagini di distribuzione con Windows PowerShell, vedere [Usare Gestione e manutenzione immagini distribuzione in Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=254419).  
   
  Per abilitare Windows Identity Foundation 3.5 con Gestione e manutenzione immagini distribuzione:  
   

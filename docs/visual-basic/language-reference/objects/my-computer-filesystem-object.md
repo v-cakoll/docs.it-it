@@ -1,5 +1,5 @@
 ---
-title: Oggetto My.Computer.FileSystem
+title: FileSystem (oggetto) (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - FileSystem module
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 111dde90912e586c92da4ed9f5be50d15a75485b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05d849afb50a3b1c4eeecc3db26170bacc3517df
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594370"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390928"
 ---
 # <a name="mycomputerfilesystem-object"></a>Oggetto My.Computer.FileSystem
 Specifica proprietà e metodi per l'uso di unità, file e directory.  
   
 ## <a name="remarks"></a>Note  
- Per informazioni sui metodi e proprietà del `My.Computer.FileSystem` , vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ Per informazioni sui metodi e proprietà del `My.Computer.FileSystem` oggetti, vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
- Per ulteriori informazioni, vedere [accesso ai File con Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
+ Per altre informazioni, vedere [accesso al File con Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
->  È inoltre possibile utilizzare le classi di <xref:System.IO?displayProperty=nameWithType> dello spazio dei nomi per funzionare con unità, file e directory.  
+>  È anche possibile usare le classi di <xref:System.IO?displayProperty=nameWithType> dello spazio dei nomi per lavorare con unità, file e directory.  
   
 ## <a name="requirements"></a>Requisiti  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  

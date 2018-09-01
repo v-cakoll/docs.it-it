@@ -2,12 +2,12 @@
 title: DynamicActivityCreation
 ms.date: 03/30/2017
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
-ms.openlocfilehash: 93435be69f90ca0b74dae6b934cb145fabb7afff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 270066fafd5c71b2a720ca305433159c172872aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518103"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385261"
 ---
 # <a name="dynamicactivity-creation"></a>DynamicActivityCreation
 In questo esempio vengono illustrati due modi diversi per creare un'attività in fase di esecuzione usando l'attività <xref:System.Activities.DynamicActivity>.  
@@ -112,13 +112,13 @@ DynamicActivity act = new DynamicActivity()
 </Activity>  
 ```  
   
- Il codice XAML può essere creato in modo visivo tramite [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]. Se è incluso in un progetto di Visual Studio, assicurarsi di impostare il "Compila azione" su "None" per evitare che si sta compilando. Il codice XAML può quindi essere caricato dinamicamente usando la chiamata seguente.  
+ Il codice XAML può essere creato in modo visivo tramite [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]. Se è incluso in un progetto di Visual Studio, assicurarsi di impostare il "Compila azione" su "None" per impedire che in fase di compilazione. Il codice XAML può quindi essere caricato dinamicamente usando la chiamata seguente.  
   
 ```  
 Activity act2 = ActivityXamlServices.Load(@"FindAverage.xaml");  
 ```  
   
- L'istanza <xref:System.Activities.DynamicActivity> creata a livello di codice o tramite il caricamento di un flusso di lavoro XAML può essere usata come mostrato nell'esempio di codice seguente. Si noti che "atto" passato al `WorkflowInvoker.Invoke` è il "atto" <xref:System.Activities.Activity> definito nel primo esempio di codice.  
+ L'istanza <xref:System.Activities.DynamicActivity> creata a livello di codice o tramite il caricamento di un flusso di lavoro XAML può essere usata come mostrato nell'esempio di codice seguente. Si noti che il "atto" passato per il `WorkflowInvoker.Invoke` è il "atto" <xref:System.Activities.Activity> definito nel primo esempio di codice.  
   
 ```  
 IDictionary<string, object> results = WorkflowInvoker.Invoke(act, new Dictionary<string, object> { { "Numbers", numbers } });  
@@ -137,12 +137,12 @@ Console.WriteLine("The average calculated using the code activity is = " + resul
 ## <a name="command-line-arguments"></a>Argomenti della riga di comando  
  In questo esempio sono accettati gli argomenti della riga di comando. Gli utenti possono fornire un elenco di numeri affinché l'attività calcoli la media. L'elenco di numeri da usare viene passato come elenco di numeri separati da uno spazio. Ad esempio per calcolare la media di 5, 10 e 32, richiamare l'esempio usando la riga di comando seguente.  
   
- **DynamicActivityCreation 5 10 32**  
+ **DynamicActivityCreation 32 10 5**  
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`

@@ -1,5 +1,5 @@
 ---
-title: Specifica un Assembly&#39;percorso s
+title: Specifica un Assembly&#39;posizione
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [.NET Framework], applications
@@ -9,26 +9,26 @@ ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 65bd075115e33486e86e8081b01b96db665e9da5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4a83f1e67377a5ce699301770ff0369f8f760884
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758269"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387328"
 ---
-# <a name="specifying-an-assembly39s-location"></a>Specifica un Assembly&#39;percorso s
-Esistono due modi per specificare il percorso dell'assembly:  
+# <a name="specifying-an-assembly39s-location"></a>Specifica un Assembly&#39;posizione
+Esistono due modi per specificare la posizione dell'assembly:  
   
--   Utilizzo di [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elemento.  
+-   Usando il [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elemento.  
   
--   Utilizzo di [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento.  
+-   Usando il [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento.  
   
- È inoltre possibile utilizzare il [strumento .NET Framework Configuration (Mscorcfg.msc)](http://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) per specificare i percorsi degli assembly o percorsi visualizzati per common language runtime verificare la presenza di assembly.  
+ È anche possibile usare la [strumento di .NET Framework Configuration (Mscorcfg. msc)](https://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) per specificare i percorsi degli assembly o specificare i percorsi per common language runtime verificare la presenza di assembly.  
   
-## <a name="using-the-codebase-element"></a>Utilizzo di \<codeBase > elemento  
- È possibile utilizzare il  **\<codeBase >** elemento solo nei computer server di pubblicazione o di configurazione file dei criteri che anche la versione dell'assembly di reindirizzamento. Quando il runtime determina la versione di assembly da usare, si applica l'impostazione di base del codice dal file che determina la versione. Se non viene specificata alcuna base di codice, il runtime verifica per l'assembly in modo normale. Per informazioni dettagliate, vedere [come il Runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-codebase-element"></a>Uso di \<codeBase > elemento  
+ È possibile usare la  **\<codeBase >** elemento solo in computer configuration o autore del file dei criteri che anche il reindirizzamento alla versione dell'assembly. Se il runtime determina la versione di assembly da usare, si applica l'impostazione di base di codice dal file che determina la versione. Se non viene indicato alcun codice di base, il runtime esegue il probe per l'assembly in modo normale. Per informazioni dettagliate, vedere [modo in cui il Runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
- Nell'esempio seguente viene illustrato come specificare il percorso di un assembly.  
+ Nell'esempio seguente viene illustrato come specificare la posizione dell'assembly.  
   
 ```xml  
 <configuration>  
@@ -46,15 +46,15 @@ Esistono due modi per specificare il percorso dell'assembly:
 </configuration>  
 ```  
   
- Il **versione** attributo è obbligatorio per tutti gli assembly con nome sicuro, ma deve essere omesso per gli assembly senza nome sicuro. Il  **\<codeBase >** elemento richiede il **href** attributo. Non è possibile specificare gli intervalli di versione nel  **\<codeBase >** elemento.  
+ Il **versione** attributo è obbligatorio per tutti gli assembly con nome sicuro, ma deve essere omesso per gli assembly che non sono sicuro. Il  **\<codeBase >** elemento richiede il **href** attributo. Non è possibile specificare gli intervalli di versione nel  **\<codeBase >** elemento.  
   
 > [!NOTE]
->  Se viene fornito un hint di base di codice per un assembly che non è sicuro, l'hint deve puntare alla base dell'applicazione o una sottodirectory della directory base dell'applicazione.  
+>  Se viene fornito un suggerimento di base di codice per un assembly che non è sicuro, l'hint deve puntare alla base dell'applicazione o una sottodirectory della directory base dell'applicazione.  
   
-## <a name="using-the-probing-element"></a>Utilizzo di \<probing > elemento  
- Il runtime individua gli assembly che non contengono un codice di base mediante la ricerca. Per ulteriori informazioni, vedere [come il Runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-probing-element"></a>Uso di \<probing > elemento  
+ Il runtime individua gli assembly che non hanno una base di codice per l'individuazione tramite probe. Per altre informazioni, vedere [modo in cui il Runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
- È possibile utilizzare il [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento nel file di configurazione dell'applicazione per specificare le sottodirectory, eseguire la ricerca durante l'individuazione di un assembly. Nell'esempio seguente viene illustrato come specificare directory di cui che eseguire la ricerca.  
+ È possibile usare la [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento nel file di configurazione dell'applicazione per specificare le sottodirectory il runtime ricerca durante l'individuazione di un assembly. Nell'esempio seguente viene illustrato come specificare le directory che il runtime deve cercare.  
   
 ```xml  
 <configuration>  
@@ -66,10 +66,10 @@ Esistono due modi per specificare il percorso dell'assembly:
 </configuration>  
 ```  
   
- Il **privatePath** attributo contiene le directory che il runtime deve cercare gli assembly. Se l'applicazione si trova in c:\Programmi\Microsoft Programmi\Applicazione, il runtime cerca gli assembly che non si specificano una base di codice in c:\Programmi\Microsoft Files\MyApp\Bin Files\MyApp\Bin2\Subbin c:\Programmi\Microsoft e c:\Programmi\Microsoft Files\MyApp\Bin3. Directory specificate in **privatePath** devono essere sottodirectory della directory base dell'applicazione.  
+ Il **privatePath** attributo contiene le directory in cui il runtime deve cercare gli assembly. Se l'applicazione si trova in c:\Programmi\Microsoft Programmi\Applicazione, il runtime cerca gli assembly che non si specificano una codebase in c:\Programmi\Microsoft Files\MyApp\Bin Files\MyApp\Bin2\Subbin c:\Programmi\Microsoft e Files\MyApp\Bin3 c:\Programmi\Microsoft. Directory specificate nella **privatePath** devono essere sottodirectory della directory base dell'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Configurazione di App .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [Configurazione delle app .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

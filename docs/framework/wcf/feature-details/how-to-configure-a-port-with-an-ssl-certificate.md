@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: c3cede1eb90b963f4c0b567a8df48925bca9b02d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0595bcbd3dcae7977c8734b7d3858df2412c962
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494829"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395306"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procedura: configurare una porta con un certificato SSL
-Quando si crea un servizio indipendente di Windows Communication Foundation (WCF) con il <xref:System.ServiceModel.WSHttpBinding> che utilizza la protezione del trasporto di classi, è inoltre necessario configurare una porta con un certificato X.509. Se non si intende creare un servizio indipendente, è possibile ospitare il servizio in Internet Information Services (IIS). Per altre informazioni, vedere [sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Quando si crea un servizio Windows Communication Foundation (WCF) self-hosted con la <xref:System.ServiceModel.WSHttpBinding> che usa la protezione del trasporto di classi, è anche necessario configurare una porta con un certificato X.509. Se non si intende creare un servizio indipendente, è possibile ospitare il servizio in Internet Information Services (IIS). Per altre informazioni, vedere [protezione del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Per configurare una porta, lo strumento da usare dipende dal sistema operativo eseguito nel computer.  
   
- Se viene eseguito [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], usare lo strumento HttpCfg.exe. Con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], questo strumento è installato. Con [!INCLUDE[wxp](../../../../includes/wxp-md.md)], è possibile scaricare lo strumento dalla pagina [strumenti di supporto di Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Per altre informazioni, vedere [Panoramica di Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605). Il [documentazione di Windows Support Tools](http://go.microsoft.com/fwlink/?LinkId=94840) viene illustrata la sintassi dello strumento Httpcfg.exe.  
+ Se viene eseguito [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], usare lo strumento HttpCfg.exe. Con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], questo strumento è installato. Con [!INCLUDE[wxp](../../../../includes/wxp-md.md)], è possibile scaricare lo strumento [strumenti di supporto di Windows XP Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Per altre informazioni, vedere [Panoramica di Httpcfg](https://go.microsoft.com/fwlink/?LinkId=88605). Il [documentazione di Windows Support Tools](https://go.microsoft.com/fwlink/?LinkId=94840) viene illustrata la sintassi per lo strumento Httpcfg.exe.  
   
  Se viene eseguito [!INCLUDE[wv](../../../../includes/wv-md.md)], usare lo strumento Netsh.exe già installato.  
   
@@ -41,7 +41,7 @@ Quando si crea un servizio indipendente di Windows Communication Foundation (WCF
   
 ### <a name="to-determine-how-ports-are-configured"></a>Per determinare la configurazione delle porte  
   
-1.  In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], utilizzare lo strumento HttpCfg.exe per visualizzare la configurazione della porta corrente, usando il **query** e **ssl** attiva, come illustrato nell'esempio seguente.  
+1.  In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oppure [!INCLUDE[wxp](../../../../includes/wxp-md.md)], usare lo strumento HttpCfg.exe per visualizzare la configurazione corrente delle porte, usando la **query** e **ssl** attiva, come illustrato nell'esempio seguente.  
   
     ```  
     httpcfg query ssl  
@@ -55,9 +55,9 @@ Quando si crea un servizio indipendente di Windows Communication Foundation (WCF
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Per ottenere l'identificazione personale di un certificato  
   
-1.  Usare lo snap-in MMC Certificati per individuare un certificato X.509 che abbia come scopo previsto l'autenticazione client. Per ulteriori informazioni, vedere [procedura: visualizzare certificati con lo Snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Usare lo snap-in MMC Certificati per individuare un certificato X.509 che abbia come scopo previsto l'autenticazione client. Per altre informazioni, vedere [Procedura: visualizzare certificati con lo snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2.  Accedere all'identificazione personale del certificato. Per ulteriori informazioni, vedere [procedura: recuperare l'identificazione personale del certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2.  Accedere all'identificazione personale del certificato. Per altre informazioni, vedere [procedura: recuperare l'identificazione personale di un certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3.  Copiare l'identificazione personale del certificato in un editor di testo, ad esempio Blocco note.  
   
@@ -71,7 +71,7 @@ Quando si crea un servizio indipendente di Windows Communication Foundation (WCF
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   Il **-i** commutatore presenta la sintassi `IP`:`port` e indica allo strumento per impostare il certificato sulla porta 8012 del computer. I quattro zero che precedono il numero possono essere anche sostituiti dall'indirizzo IP effettivo del computer.  
+    -   Il **-i** commutatore presenta la sintassi `IP`:`port` e indica allo strumento di impostare il certificato sulla porta 8012 del computer. I quattro zero che precedono il numero possono essere anche sostituiti dall'indirizzo IP effettivo del computer.  
   
     -   Il **-h** consente di specificare l'identificazione personale del certificato.  
   
@@ -95,7 +95,7 @@ Quando si crea un servizio indipendente di Windows Communication Foundation (WCF
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
     ```  
   
-     Il **-f** commutatore presenta la sintassi `n` dove n è un numero compreso tra 1 e 7. Un valore di 2, come mostrato nell'esempio precedente, abilita certificati client a livello di trasporto. Il valore 3 attiva i certificati client e associa tali certificati a un account Windows. Per il comportamento di altri valori, vedere la Guida di HttpCfg.exe.  
+     Il **-f** commutatore ha la sintassi di `n` dove n è un numero compreso tra 1 e 7. Un valore di 2, come mostrato nell'esempio precedente, abilita certificati client a livello di trasporto. Il valore 3 attiva i certificati client e associa tali certificati a un account Windows. Per il comportamento di altri valori, vedere la Guida di HttpCfg.exe.  
   
 2.  In [!INCLUDE[wv](../../../../includes/wv-md.md)] per supportare i client che eseguono l'autenticazione con i certificati X.509 a livello di trasporto, eseguire la procedura precedente, ma con un parametro aggiuntivo, come illustrato nell'esempio seguente.  
   
@@ -111,7 +111,7 @@ Quando si crea un servizio indipendente di Windows Communication Foundation (WCF
     httpcfg query ssl>myMachinePorts.txt  
     ```  
   
-2.  In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], utilizzare lo strumento HttpCfg.exe con il **eliminare** e **ssl** parole chiave. Utilizzare il **-i** per specificare il `IP`:`port` , numero e **-h** per specificare l'identificazione personale.  
+2.  Nella [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oppure [!INCLUDE[wxp](../../../../includes/wxp-md.md)], utilizzare lo strumento HttpCfg.exe con la **eliminare** e **ssl** parole chiave. Usare la **-i** per specificare le `IP`:`port` numero e il **-h** per specificare l'identificazione personale.  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

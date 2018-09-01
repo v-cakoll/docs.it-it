@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
-ms.openlocfilehash: eb4ea812318e5a7df6a1bffefa5d47bf2c929f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03328b324399c7500f2cf3a8b6ab12c843115e29
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540190"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385120"
 ---
 # <a name="menustrip-control-windows-forms"></a>Controllo MenuStrip (Windows Form)
 Questo controllo raggruppa i comandi dell'applicazione e li rende facilmente accessibili.  
@@ -55,19 +55,19 @@ Questo controllo raggruppa i comandi dell'applicazione e li rende facilmente acc
  [Procedura: Impostare l'unione automatica dei menu per applicazioni MDI](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  Descrive come unire le voci di menu automaticamente in fase di esecuzione.  
   
--   [Editor raccolta Items di MenuStrip](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [Editor dell'insieme Items di MenuStrip](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
   
--   [Procedura: Copiare ToolStripMenuItems](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))  
+-   [Procedura: Copiare ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
   
--   [Procedura: Nascondere ToolStripMenuItems usando la finestra di progettazione](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))  
+-   [Procedura: Nascondere ToolStripMenuItems usando la finestra di progettazione](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [Procedura: Disabilitare i ToolStripMenuItems con la finestra di progettazione](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))  
+-   [Procedura: Disabilitare i ToolStripMenuItems con la finestra di progettazione](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [Procedura: Spostare i ToolStripMenuItems](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))  
+-   [Procedura: Spostare i ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
   
--   [Procedura dettagliata: inserimento di voci di menu standard in un form](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))  
+-   [Procedura dettagliata: inserimento di voci di menu standard in un form](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [Finestra di dialogo attività di MenuStrip](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [Finestra di dialogo attività di MenuStrip](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.MenuStrip>  

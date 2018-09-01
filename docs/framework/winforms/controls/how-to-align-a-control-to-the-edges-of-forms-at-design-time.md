@@ -5,15 +5,15 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: 5b36879413442ff99da034fcbee6bf6388affa6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 513029c1bd5cc4af52fcee97f7fab961729e613c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528718"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389055"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Procedura: allineare un controllo ai bordi dei form in fase di progettazione
-È possibile allineare un controllo al bordo dei form impostando la <xref:System.Windows.Forms.Control.Dock%2A>. che designa la posizione del controllo nel form. La proprietà <xref:System.Windows.Forms.Control.Dock%2A> può essere impostata su uno dei valori riportati di seguito:  
+È possibile allineare un controllo per il bordo dei form impostando la <xref:System.Windows.Forms.Control.Dock%2A>. che designa la posizione del controllo nel form. La proprietà <xref:System.Windows.Forms.Control.Dock%2A> può essere impostata su uno dei valori riportati di seguito:  
   
 |Impostazione|Effetto sul controllo|  
 |-------------|----------------------------|  
@@ -24,22 +24,22 @@ ms.locfileid: "33528718"
 |<xref:System.Windows.Forms.DockStyle.Right>|Il controllo viene ancorato al lato destro del form.|  
 |<xref:System.Windows.Forms.DockStyle.Top>|Il controllo viene ancorato alla parte superiore del form.|  
   
- Questi valori possono anche essere impostati nel codice. Per ulteriori informazioni, vedere [procedura: allineare un controllo ai bordi dei form](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md).  
+ Questi valori possono anche essere impostati nel codice. Per altre informazioni, vedere [procedura: allineare un controllo ai bordi dei form](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md).  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>Per impostare la proprietà Dock del controllo in fase di progettazione  
   
-1.  In Progettazione Windows Form, selezionare il controllo.  
+1.  Nella finestra di progettazione Windows Form, selezionare il controllo.  
   
-2.  Nel **proprietà** finestra, fare clic su casella di riepilogo a discesa accanto al <xref:System.Windows.Forms.Control.Dock%2A> proprietà.  
+2.  Nel **delle proprietà** fare clic sulla casella di elenco a discesa accanto al <xref:System.Windows.Forms.Control.Dock%2A> proprietà.  
   
      Un'interfaccia grafica che rappresenta le sei possibili <xref:System.Windows.Forms.Control.Dock%2A> impostazioni viene visualizzata.  
   
 3.  Scegliere l'impostazione appropriata.  
   
-4.  Il controllo verrà ancorato nel modo specificato dalla configurazione dell'impostazione.  
+4.  Il controllo verrà ancorato nel modo specificato dall'impostazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>  

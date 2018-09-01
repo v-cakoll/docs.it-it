@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 04cedc0df60ef95acb79b651ddcbcbb34ae5e920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07a4de944e36b0be1a6196d08df33c4f3ab24bcc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539666"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387038"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Procedura: sviluppare un controllo di Windows Form semplice
 Questa sezione illustra i passaggi chiave per la creazione di un controllo di Windows Form personalizzato. Il controllo semplice sviluppato in questa procedura dettagliata consente l'allineamento della relativa <xref:System.Windows.Forms.Control.Text%2A> proprietà da modificare. Non genera o gestisce eventi.  
@@ -31,27 +31,27 @@ Questa sezione illustra i passaggi chiave per la creazione di un controllo di Wi
     ```  
   
     ```csharp  
-    public class FirstControl:Control{}  
+    public class FirstControl:Control {}  
     ```  
   
-2.  Definire le proprietà. (Non è necessario per definire le proprietà, poiché un controllo eredita le proprietà molti la <xref:System.Windows.Forms.Control> classe, ma la maggior parte dei controlli personalizzati in genere definite proprietà aggiuntive.) Frammento di codice seguente definisce una proprietà denominata `TextAlignment` che `FirstControl` viene utilizzata per formattare la visualizzazione del <xref:System.Windows.Forms.Control.Text%2A> proprietà ereditata da <xref:System.Windows.Forms.Control>. Per altre informazioni sulla definizione delle proprietà, vedere [Panoramica delle proprietà](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).  
+2.  Definire le proprietà. (Non occorre definire proprietà, poiché un controllo eredita molte proprietà dal <xref:System.Windows.Forms.Control> classe, ma la maggior parte dei controlli personalizzati in genere definisce proprietà aggiuntive.) Il frammento di codice seguente definisce una proprietà denominata `TextAlignment` che `FirstControl` viene utilizzata per formattare la visualizzazione delle <xref:System.Windows.Forms.Control.Text%2A> proprietà ereditata da <xref:System.Windows.Forms.Control>. Per altre informazioni sulla definizione delle proprietà, vedere [Panoramica delle proprietà](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     Quando si imposta una proprietà che modifica la visualizzazione del controllo, è necessario richiamare il <xref:System.Windows.Forms.Control.Invalidate%2A> metodo per ridisegnare il controllo. <xref:System.Windows.Forms.Control.Invalidate%2A> è definito nella classe base <xref:System.Windows.Forms.Control>.  
+     Quando si imposta una proprietà che modifica la visualizzazione del controllo, è necessario richiamare il <xref:System.Windows.Forms.Control.Invalidate%2A> metodo ridisegnare il controllo. <xref:System.Windows.Forms.Control.Invalidate%2A> è definito nella classe base <xref:System.Windows.Forms.Control>.  
   
-3.  Eseguire l'override protetto <xref:System.Windows.Forms.Control.OnPaint%2A> metodo ereditato da <xref:System.Windows.Forms.Control> per fornire la logica di rendering del controllo. Se esegue l'override <xref:System.Windows.Forms.Control.OnPaint%2A>, il controllo non sarà in grado di disegno. Nel frammento di codice seguente, il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo visualizza il <xref:System.Windows.Forms.Control.Text%2A> proprietà ereditata da <xref:System.Windows.Forms.Control> con l'allineamento specificato il `alignmentValue` campo.  
+3.  Sostituire il metodo protetto <xref:System.Windows.Forms.Control.OnPaint%2A> metodo ereditato dal <xref:System.Windows.Forms.Control> per fornire la logica di rendering del controllo. Se non esegue l'override <xref:System.Windows.Forms.Control.OnPaint%2A>, il controllo non sarà in grado di disegnarsi da solo. Nel frammento di codice seguente, il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo consente di visualizzare il <xref:System.Windows.Forms.Control.Text%2A> proprietà ereditata da <xref:System.Windows.Forms.Control> con l'allineamento specificato il `alignmentValue` campo.  
   
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  Specificare attributi per il controllo. Gli attributi attivano una finestra di progettazione per visualizzare correttamente il controllo e le relative proprietà ed eventi in fase di progettazione. Il seguente frammento di codice applica attributi alla proprietà `TextAlignment`. Nella finestra di progettazione, ad esempio Visual Studio, il <xref:System.ComponentModel.CategoryAttribute.Category%2A> attributo (mostrato nel frammento di codice), la proprietà da visualizzare in una categoria logica. Il <xref:System.ComponentModel.DescriptionAttribute.Description%2A> attributo determina una stringa descrittiva da visualizzare nella parte inferiore del **proprietà** finestra quando il `TextAlignment` proprietà è selezionata. Per altre informazioni sugli attributi, vedere [Attributi per componenti in fase di progettazione](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
+4.  Specificare attributi per il controllo. Gli attributi attivano una finestra di progettazione per visualizzare correttamente il controllo e le relative proprietà ed eventi in fase di progettazione. Il seguente frammento di codice applica attributi alla proprietà `TextAlignment`. Nella finestra di progettazione, ad esempio Visual Studio, il <xref:System.ComponentModel.CategoryAttribute.Category%2A> attributo (illustrato nel frammento di codice) fa sì che la proprietà da visualizzare in una categoria logica. Il <xref:System.ComponentModel.DescriptionAttribute.Description%2A> attributo fa sì che una stringa descrittiva da visualizzare nella parte inferiore della **delle proprietà** finestra quando il `TextAlignment` proprietà è selezionata. Per altre informazioni sugli attributi, vedere [Attributi per componenti in fase di progettazione](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
   
-5.  (facoltativo) Specifica risorse per il controllo. È possibile specificare una risorsa, ad esempio un'immagine bitmap, per il controllo tramite un'opzione del compilatore (`/res` per C#) per creare pacchetti di risorse con il controllo. In fase di esecuzione, è possibile recuperare la risorsa utilizzando i metodi della <xref:System.Resources.ResourceManager> classe. Per altre informazioni sulla creazione e sull'uso di risorse, vedere [Risorse nelle applicazioni desktop](../../../../docs/framework/resources/index.md).  
+5.  (facoltativo) Specifica risorse per il controllo. È possibile specificare una risorsa, ad esempio un'immagine bitmap, per il controllo tramite un'opzione del compilatore (`/res` per C#) per creare pacchetti di risorse con il controllo. In fase di esecuzione la risorsa può essere recuperata usando i metodi del <xref:System.Resources.ResourceManager> classe. Per altre informazioni sulla creazione e sull'uso di risorse, vedere [Risorse nelle applicazioni desktop](../../../../docs/framework/resources/index.md).  
   
 6.  Compilare e distribuire il controllo. Per compilare e distribuire `FirstControl,`, seguire i passaggi seguenti:  
   
@@ -69,7 +69,7 @@ Questa sezione illustra i passaggi chiave per la creazione di un controllo di Wi
   
          L'opzione `/t:library` indica al compilatore che l'assembly che si sta creando è una libreria e non un file eseguibile. L'opzione `/out` specifica il percorso e il nome dell'assembly. L'opzione `/r` specifica il nome delle assembly a cui fa riferimento il codice. In questo esempio, si crea un assembly privato che può essere usato solo dalle applicazioni. Di conseguenza, è necessario salvarlo nella directory dell'applicazione. Per altre informazioni sulla creazione di pacchetti e sulla distribuzione di un controllo, vedere [Distribuzione](../../../../docs/framework/deployment/index.md).  
   
- L'esempio seguente visualizza il codice per `FirstControl`. Il controllo è incluso nello spazio dei nomi `CustomWinControls`. Uno spazio dei nomi specifica un raggruppamento logico di tipi correlati. È possibile creare il controllo in uno spazio dei nomi nuovo o esistente. In C#, la dichiarazione `using` (in Visual Basic, `Imports`) consente di accedere ai tipi da uno spazio dei nomi senza usare il nome completo del tipo. Nell'esempio seguente, il `using` dichiarazione consente al codice accedere alla classe <xref:System.Windows.Forms.Control> da <xref:System.Windows.Forms?displayProperty=nameWithType> semplicemente come <xref:System.Windows.Forms.Control> anziché utilizzare il nome completo <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+ L'esempio seguente visualizza il codice per `FirstControl`. Il controllo è incluso nello spazio dei nomi `CustomWinControls`. Uno spazio dei nomi specifica un raggruppamento logico di tipi correlati. È possibile creare il controllo in uno spazio dei nomi nuovo o esistente. In C#, la dichiarazione `using` (in Visual Basic, `Imports`) consente di accedere ai tipi da uno spazio dei nomi senza usare il nome completo del tipo. Nell'esempio seguente, il `using` dichiarazione consente al codice accedere alla classe <xref:System.Windows.Forms.Control> dalla <xref:System.Windows.Forms?displayProperty=nameWithType> semplicemente <xref:System.Windows.Forms.Control> anziché dover usare il nome completo <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
  [!code-csharp[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#1)]
  [!code-vb[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#1)]  

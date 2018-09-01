@@ -2,12 +2,12 @@
 title: Apprendimento tramite procedure dettagliate
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: 028bd2af9ba88136e5955c6776b0d765af20fca3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1386d0e8fadddab5cd15818cb616bf331262e654
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362221"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385458"
 ---
 # <a name="learning-by-walkthroughs"></a>Apprendimento tramite procedure dettagliate
 Il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentazione vengono fornite diverse procedure dettagliate. In questo argomento vengono discussi alcuni problemi generali relativi alle procedure, inclusa la risoluzione dei problemi, e vengono forniti i collegamenti a diverse procedure dettagliate di base per acquisire familiarità con [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -30,20 +30,20 @@ Il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
 ## <a name="general"></a>Generale  
  Le informazioni seguenti riguardano queste procedure dettagliate in generale:  
   
--   Ambiente: In ogni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procedura dettagliata viene utilizzato Visual Studio come ambiente di sviluppo integrato (IDE).  
+-   Ambiente: In ogni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procedura dettagliata Usa Visual Studio come ambiente di sviluppo integrato (IDE).  
   
--   Motori SQL: queste procedure dettagliate sono scritte per essere implementate tramite SQL Server Express. Se non si dispone di SQL Server Express, è possibile scaricarlo gratuitamente. Per ulteriori informazioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+-   Motori SQL: queste procedure dettagliate sono scritte per essere implementate tramite SQL Server Express. Se non si dispone di SQL Server Express, è possibile scaricarlo gratuitamente. Per altre informazioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
-    >  Nelle procedure dettagliate di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene usato un nome file come stringa di connessione. La possibilità di specificare semplicemente un nome file è un aspetto pratico di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per gli utenti di SQL Server Express. Prestare sempre attenzione ai problemi di sicurezza. Per ulteriori informazioni, vedere [sicurezza in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    >  Nelle procedure dettagliate di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene usato un nome file come stringa di connessione. La possibilità di specificare semplicemente un nome file è un aspetto pratico di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per gli utenti di SQL Server Express. Prestare sempre attenzione ai problemi di sicurezza. Per altre informazioni, vedere [sicurezza in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procedure dettagliate in genere richiedono il database di esempio Northwind. Per ulteriori informazioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procedure dettagliate in genere richiedono il database di esempio Northwind. Per altre informazioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   Finestre di dialogo e i comandi di menu visualizzati nelle procedure dettagliate potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione di Visual Studio. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   Finestre di dialogo e i comandi di menu visualizzati nelle procedure dettagliate potrebbero essere diversi da quelli descritti nella Guida, a seconda delle impostazioni attive o l'edizione di Visual Studio. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 -   Per le procedure dettagliate che riguardano scenari a più livelli è necessario che il computer configurato come server sia diverso dal computer di sviluppo. Inoltre è necessario disporre delle autorizzazioni appropriate per accedere al server.  
   
--   Il nome della classe che in genere rappresenta la tabella Orders nel database di esempio Northwind è `[Order]`. La sequenza di escape è necessaria perché `Order` è una parola chiave in Visual Basic.  
+-   Il nome della classe che in genere rappresenta la tabella Orders nel database di esempio Northwind è `[Order]`. L'escape è obbligatorio perché `Order` è una parola chiave in Visual Basic.  
   
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
  Possono verificarsi errori di runtime in quanto non si dispone di sufficienti autorizzazioni per accedere ai database usati in queste procedure dettagliate. Vedere i passaggi seguenti per risolvere il più comune di questi problemi.  
@@ -53,24 +53,24 @@ Il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>Per verificare o modificare l'accesso al database  
   
-1.  Di Windows **avviare** dal menu **tutti i programmi**, **Microsoft SQL Server 2005**, scegliere **strumenti di configurazione**, quindi fare clic su **Gestione configurazione SQL Server**.  
+1.  Nella finestra di Windows **avviare** dal menu **tutti i programmi**, **Microsoft SQL Server 2005**, scegliere **gli strumenti di configurazione**e quindi fare clic su **Gestione configurazione SQL Server**.  
   
-2.  Nel riquadro sinistro della finestra di **Gestione configurazione SQL Server**, fare clic su **servizi di SQL Server 2005**.  
+2.  Nel riquadro sinistro della finestra di **Gestione configurazione SQL Server**, fare clic su **SQL Server 2005 Services**.  
   
 3.  Nel riquadro di destra, fare doppio clic su **SQL Server (SQLEXPRESS)**, quindi fare clic su **proprietà**.  
   
-4.  Fare clic su di **accesso** scheda e verificare come si sta tentando di accedere al server.  
+4.  Fare clic sui **Accedi** scheda e verificare come si sta tentando di accedere al server.  
   
-     Nella maggior parte dei casi, **sistema locale** funziona.  
+     Nella maggior parte dei casi **LocalSystem** funziona.  
   
      Se si apporta una modifica, fare clic su **riavviare** per riavviare il servizio.  
   
 ### <a name="protocols"></a>Protocolli  
- A volte i protocolli possono non essere impostati correttamente per l'accesso dell'applicazione al database. Ad esempio, il **Named Pipes** protocollo, è necessario per le procedure dettagliate in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], non è abilitato per impostazione predefinita.  
+ A volte i protocolli possono non essere impostati correttamente per l'accesso dell'applicazione al database. Ad esempio, il **Named Pipes** protocollo, che è necessario per le procedure dettagliate in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], non è abilitato per impostazione predefinita.  
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>Per abilitare il protocollo Named Pipes  
   
-1.  Nel riquadro sinistro della finestra di **Gestione configurazione SQL Server**, espandere **la configurazione di rete SQL Server 2005**e quindi fare clic su **protocolli per SQLEXPRESS**.  
+1.  Nel riquadro sinistro della finestra di **Gestione configurazione SQL Server**, espandere **configurazione di rete SQL Server 2005**, quindi fare clic su **protocolli per SQLEXPRESS**.  
   
 2.  Nel riquadro di destra, assicurarsi che il **Named Pipes** protocollo è abilitato. In caso contrario, fare doppio clic su **Named Pipes** e quindi fare clic su **abilitare**.  
   
@@ -81,7 +81,7 @@ Il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 ##### <a name="to-stop-and-restart-the-service"></a>Per arrestare e riavviare il servizio  
   
-1.  Nel riquadro sinistro della finestra di **Gestione configurazione SQL Server**, fare clic su **servizi di SQL Server 2005**.  
+1.  Nel riquadro sinistro della finestra di **Gestione configurazione SQL Server**, fare clic su **SQL Server 2005 Services**.  
   
 2.  Nel riquadro di destra, fare doppio clic su **SQL Server (SQLEXPRESS)**, quindi fare clic su **arrestare**.  
   

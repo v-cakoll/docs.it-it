@@ -2,21 +2,21 @@
 title: Esempio relativo al proxy di individuazione
 ms.date: 03/30/2017
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
-ms.openlocfilehash: e9cbfcb717f502a849d4d508d13df6c00b95db58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fc0680bc6b61a6fe1b4b141c8b1e5081df5a124
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503184"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393021"
 ---
 # <a name="discovery-proxy-sample"></a>Esempio relativo al proxy di individuazione
 Questo esempio mostra come creare un'implementazione di un proxy di individuazione per archiviare informazioni sui servizi esistenti e come i client possono eseguire una query su tale proxy per ricevere informazioni. L'esempio è costituito da tre progetti:  
   
--   **Servizio**: un semplice servizio di calcolatrice di Windows Communication Foundation (WCF) che effettua la registrazione con il proxy di individuazione.  
+-   **Servizio**: un semplice servizio di calcolatrice di Windows Communication Foundation (WCF) che si registra con il proxy di individuazione.  
   
 -   **Proxy di individuazione**: l'implementazione di un servizio proxy di individuazione.  
   
--   **Client**: applicazione client WCF che chiama il proxy di individuazione per la ricerca per i servizi.  
+-   **Client**: applicazione client WCF che richiede il proxy di individuazione per cercare servizi.  
   
 ## <a name="demonstrates"></a>Dimostrazione  
  Implementazione di un proxy di individuazione  
@@ -26,7 +26,7 @@ Questo esempio mostra come creare un'implementazione di un proxy di individuazio
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
   

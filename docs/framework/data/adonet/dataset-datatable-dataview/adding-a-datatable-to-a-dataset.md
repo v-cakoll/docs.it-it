@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: 3554790bb65310031b00ca5fb320aa4c111e1e11
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5f2282b7aea8adf9e7574e2abe86af7cc5a487e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758542"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392293"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>Aggiunta di un oggetto DataTable a un dataset
 ADO.NET consente di creare oggetti <xref:System.Data.DataTable> e di aggiungerli a un tipo <xref:System.Data.DataSet> esistente. È possibile impostare le informazioni relative ai vincoli per un tipo <xref:System.Data.DataTable> usando le proprietà <xref:System.Data.DataTable.PrimaryKey%2A> e <xref:System.Data.DataColumn.Unique%2A>.  
@@ -22,9 +22,9 @@ ADO.NET consente di creare oggetti <xref:System.Data.DataTable> e di aggiungerli
  [!code-vb[DataWorks Data.DataTableAdd#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableAdd/VB/source.vb#1)]  
   
 ## <a name="case-sensitivity"></a>Distinzione fra maiuscole e minuscole  
- In un tipo <xref:System.Data.DataSet> sono consentite due o più tabelle o relazioni con lo stesso nome ma con diversa combinazione di maiuscole e minuscole. In questi casi, i riferimenti basati sui nomi a tabelle e relazioni prevedono la distinzione tra maiuscole e minuscole. Ad esempio, se il <xref:System.Data.DataSet> **dataSet** contiene tabelle **Table1** e **table1**, si fa riferimento a **Table1** con nome **Table1 "]**, e **table1** come **Table1"]**. Il tentativo di fare riferimento a una delle tabelle come **Table1 "]** verrà generata un'eccezione.  
+ In un tipo <xref:System.Data.DataSet> sono consentite due o più tabelle o relazioni con lo stesso nome ma con diversa combinazione di maiuscole e minuscole. In questi casi, i riferimenti basati sui nomi a tabelle e relazioni prevedono la distinzione tra maiuscole e minuscole. Ad esempio, se il <xref:System.Data.DataSet> **set di dati** contiene tabelle **Table1** e **table1**, si fa riferimento a **Table1** con nome **dataSet.Tables["Table1"]**, e **table1** come **dataSet.Tables["table1"]**. Tentativo di fare riferimento a una delle tabelle come **dataSet.Tables["TABLE1"]** verrà generata un'eccezione.  
   
- La distinzione tra maiuscole e minuscole non è rilevante se è presente solo una tabella o relazione con un determinato nome. Ad esempio, se il <xref:System.Data.DataSet> solo **Table1**, è possibile farvi riferimento tramite **Table1 "]**.  
+ La distinzione tra maiuscole e minuscole non è rilevante se è presente solo una tabella o relazione con un determinato nome. Ad esempio, se il <xref:System.Data.DataSet> contiene solo **Table1**, è possibile farvi riferimento usando **dataSet.Tables["TABLE1"]**.  
   
 > [!NOTE]
 >  La proprietà <xref:System.Data.DataSet.CaseSensitive%2A> del tipo <xref:System.Data.DataSet> non influisce su tale comportamento. La proprietà <xref:System.Data.DataSet.CaseSensitive%2A> viene infatti applicata ai dati del tipo <xref:System.Data.DataSet> e influisce sull'ordinamento, la ricerca, l'applicazione di filtri, di vincoli e così via.  
@@ -34,4 +34,4 @@ ADO.NET consente di creare oggetti <xref:System.Data.DataTable> e di aggiungerli
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

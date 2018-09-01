@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
 ms.openlocfilehash: ce45e4df7f74cd68bde0fb2adba10197a11edb1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649737"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394314"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Procedura: dichiarare una costante (Visual Basic)
-Utilizzare il `Const` istruzione per dichiarare una costante e impostarne il valore. Dichiarando una costante, assegnare un nome significativo su un valore. Dopo aver dichiarata una costante, non può essere modificato o assegnare un nuovo valore.  
+Si utilizza il `Const` istruzione per dichiarare una costante e impostarne il valore. Dichiarando una costante, si assegna un nome significativo su un valore. Una volta che viene dichiarata una costante, non può essere modificato o assegnato un nuovo valore.  
   
- Dichiarare una costante all'interno di una stored procedure o nella sezione delle dichiarazioni di modulo, classe o struttura. Classe o le costanti a livello di struttura sono `Private` per impostazione predefinita, ma possono anche essere dichiarate come `Public`, `Friend`, `Protected`, o `Protected Friend` per il livello di accesso di codice appropriato.  
+ Consente di dichiarare una costante all'interno di una routine o nella sezione delle dichiarazioni di un modulo, classe o struttura. Classe o le costanti a livello di struttura vengono `Private` per impostazione predefinita, ma possono anche essere dichiarati come `Public`, `Friend`, `Protected`, o `Protected Friend` per il livello di accesso di codice appropriato.  
   
- La costante deve avere un nome simbolico valido (le regole sono gli stessi di quelli per la creazione di nomi di variabile) e un'espressione costituita da numerico o stringa costanti e operatori (ma non chiamate di funzioni).  
+ La costante deve avere un nome simbolico valido (le regole sono identici a quelli per la creazione di nomi di variabile) e un'espressione costituita da numerica o stringa costanti e operatori (ma non le chiamate di funzione).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -45,21 +45,21 @@ Utilizzare il `Const` istruzione per dichiarare una costante e impostarne il val
   
      [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
   
-     Quando [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) è `Off` e [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) è `On`, è necessario dichiarare una costante in modo esplicito specificando un tipo di dati (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, o `String`).  
+     Quando [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) viene `Off` e [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) viene `On`, è necessario dichiarare una costante in modo esplicito specificando un tipo di dati (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, o `String`).  
   
-     Quando `Option Infer` è `On` o `Option Strict` è `Off`, è possibile dichiarare una costante senza specificare un tipo di dati con un `As` clausola. Il compilatore determina il tipo della costante dal tipo dell'espressione. Per ulteriori informazioni, vedere [costante e tipi di dati letterali](constant-and-literal-data-types.md).  
+     Quando `Option Infer` viene `On` oppure `Option Strict` viene `Off`, è possibile dichiarare una costante senza specificare un tipo di dati con un `As` clausola. Il compilatore determina il tipo della costante dal tipo dell'espressione. Per altre informazioni, vedere [costante e tipi di dati letterali](constant-and-literal-data-types.md).  
   
 ### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Per dichiarare una costante con un tipo di dati specificata in modo esplicito  
   
--   Scrivere una dichiarazione che include il `As` (parola chiave) e dati espliciti di un tipo, come negli esempi seguenti:  
+-   Scrivere una dichiarazione che include il `As` digita parola chiave e una data esplicita, come negli esempi seguenti:  
   
      [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
   
-     È possibile dichiarare più costanti in una singola riga, anche se il codice più leggibile se si dichiara una sola costante per ogni riga. Se si dichiarano più costanti in una singola riga, devono tutti avere lo stesso livello di accesso (`Public`, `Private`, `Friend`, `Protected`, o `Protected Friend`).  
+     È possibile dichiarare più costanti in una singola riga, anche se quest'ultima è più leggibili se si dichiara una sola costante per ogni riga. Se si dichiarano più le costanti in una singola riga, devono tutti avere lo stesso livello di accesso (`Public`, `Private`, `Friend`, `Protected`, o `Protected Friend`).  
   
-### <a name="to-declare-multiple-constants-on-a-single-line"></a>Per dichiarare più costanti in una singola riga  
+### <a name="to-declare-multiple-constants-on-a-single-line"></a>Per dichiarare le costanti di più su una singola riga  
   
--   Le dichiarazioni, separarli con una virgola e uno spazio, come nell'esempio seguente:  
+-   Separare le dichiarazioni con una virgola e uno spazio, come nell'esempio seguente:  
   
     ```  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
@@ -68,7 +68,7 @@ Utilizzare il `Const` istruzione per dichiarare una costante e impostarne il val
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione Const](../../../../visual-basic/language-reference/statements/const-statement.md)  
  [Tipi di dati costanti e letterali](constant-and-literal-data-types.md)  
- [Cenni preliminari sulle costanti](constants-overview.md) [procedura: dichiarare una costante](how-to-declare-a-constant.md) [costanti definite dall'utente](user-defined-constants.md) [i tipi di dati costanti e letterali](constant-and-literal-data-types.md) [come: gruppo Valori costanti correlate](how-to-group-related-constant-values-together.md) [Cenni preliminari sulle enumerazioni](enumerations-overview.md) [procedura: dichiarare enumerazioni](how-to-declare-enumerations.md) [procedura: fare riferimento a un membro di enumerazione](how-to-refer-to-an-enumeration-member.md) [Qualifica di nomi ed enumerazioni](enumerations-and-name-qualification.md) [procedura: scorrere un'enumerazione](how-to-iterate-through-an-enumeration.md) [procedura: determinare la stringa associata a un valore di enumerazione](how-to-determine-the-string-associated-with-an-enumeration-value.md) [Quando utilizzare un'enumerazione](when-to-use-an-enumeration.md)
+ [Cenni preliminari sulle costanti](constants-overview.md) [procedura: dichiarare una costante](how-to-declare-a-constant.md) [costanti definite dall'utente](user-defined-constants.md) [i tipi di dati costanti e letterali](constant-and-literal-data-types.md) [come: gruppo I valori delle costanti correlate](how-to-group-related-constant-values-together.md) [Cenni preliminari sulle enumerazioni](enumerations-overview.md) [procedura: dichiarare enumerazioni](how-to-declare-enumerations.md) [procedura: fare riferimento a un membro di enumerazione](how-to-refer-to-an-enumeration-member.md) [Qualifica di nomi ed enumerazioni](enumerations-and-name-qualification.md) [procedura: scorrere un'enumerazione](how-to-iterate-through-an-enumeration.md) [procedura: determinare la stringa associata a un valore di enumerazione](how-to-determine-the-string-associated-with-an-enumeration-value.md) [Quando usare un'enumerazione](when-to-use-an-enumeration.md)
 
  [Cenni preliminari sulle enumerazioni](enumerations-overview.md)  
  [Cenni preliminari sulle costanti](constants-overview.md)  

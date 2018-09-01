@@ -2,12 +2,12 @@
 title: Comportamento specifico in-process SQL Server di ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 4f223948-ae8f-4c16-bdc2-4acc6debed3f
-ms.openlocfilehash: 2e89a902bbe7f25586bc4e6574932c8da3e67d40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33c2f1018748a0d5703119a1ab77d23a40a06457
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356603"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388130"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>Comportamento specifico in-process SQL Server di ADO.NET
 Nello spazio dei nomi <xref:Microsoft.SqlServer.Server> sono disponibili quattro principali estensioni funzionali di ADO.NET, specificamente per l'uso in-process: <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext> e <xref:Microsoft.SqlServer.Server.SqlDataRecord>.  
@@ -16,8 +16,8 @@ Nello spazio dei nomi <xref:Microsoft.SqlServer.Server> sono disponibili quattro
   
  **Documentazione online di SQL Server**  
   
-1.  [SQL Server In-Process estensioni specifiche per ADO.NET](http://go.microsoft.com/fwlink/?LinkId=115403)  
+1.  [Estensioni specifiche SQL Server In-Process per ADO.NET](https://go.microsoft.com/fwlink/?LinkId=115403)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di oggetti di SQL Server 2005 nel codice gestito](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Creazione di oggetti di SQL Server 2005 nel codice gestito](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

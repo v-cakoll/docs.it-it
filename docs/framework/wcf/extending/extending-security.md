@@ -6,19 +6,19 @@ helpviewer_keywords:
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 94aefe80674c5b4ec6fcce6a41d9b68e093f4262
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a16416e580dabd6a9057e11a8183437529ca83e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809401"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384412"
 ---
 # <a name="extending-security"></a>Estensione della protezione
 Per supportare nuovi tipi di attestazioni e token personalizzati, è possibile estendere l'infrastruttura di sicurezza di Windows Communication Foundation (WCF). Questa operazione viene descritta negli argomenti di questa sezione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Architettura di sicurezza](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- Vengono illustrati l'architettura di sistema di sicurezza di WCF.  
+ [Architettura di sicurezza](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
+ Illustra in dettaglio l'architettura di sistema di sicurezza di WCF.  
   
  [Credenziali personalizzate e convalida delle credenziali](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
  Viene spiegato il modo in cui il modello di identità viene utilizzato durante la convalida di credenziali personalizzate.  

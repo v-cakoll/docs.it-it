@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: a374c7c6e7dfc04cd8828208d6762f8d8665072e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ad3f8bc6b42c5a54b42100a5d010e097ba80adc2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767167"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386913"
 ---
 # <a name="creating-a-datatable"></a>Creazione di un oggetto DataTable
 È possibile creare una <xref:System.Data.DataTable>, che rappresenta una tabella di dati relazionali in memoria, e usarla in modo indipendente oppure usarla tramite altri oggetti di .NET Framework, in genere come membro di un <xref:System.Data.DataSet>.  
   
- È possibile creare un **DataTable** oggetto, utilizzando i **DataTable** costruttore. È possibile aggiungerlo al **DataSet** utilizzando il **Aggiungi** metodo per aggiungerlo al **DataTable** dell'oggetto **tabelle** insieme.  
+ È possibile creare un **DataTable** oggetto utilizzando l'oggetto appropriato **DataTable** costruttore. È possibile aggiungerlo al **set di dati** tramite il **Add** metodo deve essere aggiunto il **DataTable** dell'oggetto **tabelle** raccolta.  
   
- È inoltre possibile creare **DataTable** oggetti all'interno di un **set di dati** utilizzando il **riempimento** o **FillSchema** metodi del  **DataAdapter** oggetto, o da un predefinito o inferito uno schema XML utilizzando il **ReadXml**, **ReadXmlSchema**, o **InferXmlSchema** metodi di **DataSet**. Si noti che dopo aver aggiunto un **DataTable** come membro del **tabelle** raccolta costituita da un **DataSet**, non è possibile aggiungere alla raccolta di tabelle di qualsiasi altro **DataSet**.  
+ È anche possibile creare **DataTable** oggetti all'interno di un **set di dati** utilizzando il **riempire** o **FillSchema** metodi del  **DataAdapter** oggetto, o da una predefinito o inferito XML schema usando il **ReadXml**, **ReadXmlSchema**, oppure **InferXmlSchema** i metodi del **set di dati**. Si noti che dopo aver aggiunto un **DataTable** come membro delle **tabelle** raccolta di uno **set di dati**, non è possibile aggiungere alla raccolta di tabelle di qualsiasi altro **Set di dati**.  
   
- Quando si crea innanzitutto un **DataTable**, non è uno schema (ovvero, una struttura). Per definire lo schema della tabella, è necessario creare e aggiungere <xref:System.Data.DataColumn> oggetti per il **colonne** insieme della tabella. È inoltre possibile definire una colonna chiave primaria per la tabella e creare e aggiungere **vincolo** oggetti per il **vincoli** insieme della tabella. Dopo aver definito lo schema per un **DataTable**, è possibile aggiungere righe di dati alla tabella aggiungendo **DataRow** oggetti per il **righe** insieme della tabella.  
+ Quando si crea prima di tutto una **DataTable**, che non è uno schema (vale a dire una struttura). Per definire lo schema della tabella, è necessario creare e aggiungere <xref:System.Data.DataColumn> gli oggetti per il **colonne** insieme della tabella. È anche possibile definire una colonna chiave primaria per la tabella e creare e aggiungere **vincolo** gli oggetti per il **vincoli** insieme della tabella. Dopo aver definito lo schema per un **DataTable**, è possibile aggiungere le righe di dati alla tabella tramite l'aggiunta **DataRow** oggetti per il **righe** insieme della tabella.  
   
- Non è necessario fornire un valore per il <xref:System.Data.DataTable.TableName%2A> proprietà quando si crea un **DataTable**; è possibile specificare la proprietà in un secondo momento, oppure è possibile lasciare vuoto. Tuttavia, quando si aggiunge una tabella senza un **TableName** valore un **DataSet**, la tabella verrà assegnato un nome predefinito incrementale Table*N*, che inizia con "Table" per Table0.  
+ Non è necessario fornire un valore per il <xref:System.Data.DataTable.TableName%2A> proprietà quando si crea un' **DataTable**; è possibile specificare la proprietà in un secondo momento, oppure è possibile lasciarla vuota. Tuttavia, quando si aggiunge una tabella senza un **TableName** valore a un **set di dati**, la tabella verrà assegnato un nome predefinito incrementale Table*N*, che inizia con "Table" per Table0.  
   
 > [!NOTE]
->  È consigliabile evitare di "tabella*N*" convenzione di denominazione quando si fornisce un **TableName** valore, poiché il nome sia in conflitto con un nome di tabella predefinito esistente nel **set di dati** . Se il nome fornito è già presente, viene generata un'eccezione.  
+>  È consigliabile evitare il "tabella*N*" convenzione di denominazione quando si fornisce un **TableName** valore, poiché il nome immesso sia in conflitto con un nome di tabella predefinito esistente nel **set di dati** . Se il nome fornito è già presente, viene generata un'eccezione.  
   
- L'esempio seguente crea un'istanza di un **DataTable** dell'oggetto e viene assegnato il nome "Customers".  
+ L'esempio seguente crea un'istanza di un **DataTable** dell'oggetto e le assegna il nome "Customers".  
   
 ```vb  
 Dim workTable as DataTable = New DataTable("Customers")  
@@ -36,7 +36,7 @@ Dim workTable as DataTable = New DataTable("Customers")
 DataTable workTable = new DataTable("Customers");  
 ```  
   
- L'esempio seguente crea un'istanza di un **DataTable** aggiungendolo al **tabelle** raccolta di un **DataSet**.  
+ L'esempio seguente crea un'istanza di un **DataTable** aggiungendola alle **tabelle** raccolta di un **set di dati**.  
   
 ```vb  
 Dim customers As DataSet = New DataSet  
@@ -56,4 +56,4 @@ DataTable customersTable = customers.Tables.Add("CustomersTable");
  [Popolamento di un set di dati da un oggetto DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  [Caricamento di un oggetto DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
  [Caricamento delle informazioni dello schema DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

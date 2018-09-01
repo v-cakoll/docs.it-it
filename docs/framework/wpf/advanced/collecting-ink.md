@@ -1,6 +1,6 @@
 ---
-title: Raccolta di input penna
-ms.date: 03/30/2017
+title: Raccogliere l'input penna nelle applicazioni WPF
+ms.date: 08/15/2018
 dev_langs:
 - csharp
 - vb
@@ -13,70 +13,83 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: d441f606a577a2c0506a0f9ae510b3ea1045bba9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25f9c0141a97d8e52e0883b14fd3e1f4574a05ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541070"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394929"
 ---
-# <a name="collecting-ink"></a>Raccolta di input penna
-La raccolta di input penna è una delle funzionalità principali della piattaforma [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md). In questo argomento illustra i metodi per la raccolta di input penna in Windows Presentation Foundation (WPF).  
-  
-## <a name="prerequisites"></a>Prerequisiti  
- Per usare gli esempi seguenti, è prima necessario installare [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] e [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. È anche necessario avere conoscenze su come scrivere applicazioni per [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Per ulteriori informazioni sui concetti introduttivi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [procedura dettagliata: applicazione desktop WPF prima](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
-  
-## <a name="using-the-inkcanvas-element"></a>Uso dell'elemento InkCanvas  
- Il <xref:System.Windows.Controls.InkCanvas> elemento fornisce il modo più semplice per raccogliere input penna in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Il <xref:System.Windows.Controls.InkCanvas> è simile all'elemento di [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/microsoft.ink.inkoverlay\(v=vs.90\).aspx) dall'oggetto di [!INCLUDE[TLA2#tla_tpclssdk](../../../../includes/tla2sharptla-tpclssdk-md.md)] e nelle versioni precedenti.  
-  
- Utilizzare un <xref:System.Windows.Controls.InkCanvas> elemento per ricevere e visualizzare l'input penna. In genere, l'input penna viene effettuato tramite uno stilo che interagisce con un digitalizzatore per produrre i tratti. È anche possibile usare un mouse al posto dello stilo. I tratti creati vengono rappresentati come <xref:System.Windows.Ink.Stroke> degli oggetti e che possono essere modificati a livello di codice e di utente di input. Il <xref:System.Windows.Controls.InkCanvas> consente agli utenti di selezionare, modificare o eliminare un oggetto esistente <xref:System.Windows.Ink.Stroke>.  
-  
- Con XAML è possibile configurare raccolte di input penna con la stessa facilità con cui si aggiunge un elemento `InkCanvas` alla struttura ad albero. L'esempio seguente aggiunge un <xref:System.Windows.Controls.InkCanvas> a un valore predefinito [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] progetto creato in [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)].  
-  
- [!code-xaml[DigitalInkTopics#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]  
-  
- L'elemento `InkCanvas` può anche contenere elementi figlio, rendendo possibile l'aggiunta di funzionalità di annotazione a penna a quasi tutti i tipi di elementi XAML. Ad esempio, per aggiungere funzionalità di input penna per un elemento di testo, semplicemente renderlo un elemento figlio di un <xref:System.Windows.Controls.InkCanvas>.  
-  
- [!code-xaml[DigitalInkTopics#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]  
-  
- L'aggiunta del supporto per contrassegnare un'immagine con input penna è altrettanto semplice.  
-  
- [!code-xaml[DigitalInkTopics#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]  
-  
-### <a name="inkcollection-modes"></a>Modalità InkCollection  
- Il <xref:System.Windows.Controls.InkCanvas> fornisce supporto per varie modalità di input tramite il relativo <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> proprietà.  
-  
-### <a name="manipulating-ink"></a>Modifica di input penna  
- Il <xref:System.Windows.Controls.InkCanvas> fornisce supporto per molte operazioni di modifica dell'input penna. Ad esempio, <xref:System.Windows.Controls.InkCanvas> supporta back della penna erase senza codice aggiuntivo necessario per aggiungere la funzionalità per l'elemento.  
-  
-#### <a name="selection"></a>Selection  
- Impostazione della modalità di selezione è semplice come l'impostazione di <xref:System.Windows.Controls.InkCanvasEditingMode> proprietà **selezionare**. Il codice seguente imposta la modalità di modifica in base al valore di un <xref:System.Windows.Forms.CheckBox>:  
-  
- [!code-csharp[DigitalInkTopics#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
- [!code-vb[DigitalInkTopics#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]  
-  
-#### <a name="drawingattributes"></a>DrawingAttributes  
- Utilizzare il <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> proprietà per modificare l'aspetto di tratti input penna. Ad esempio, il <xref:System.Windows.Ink.DrawingAttributes.Color%2A> membro di <xref:System.Windows.Ink.DrawingAttributes> imposta il colore dell'oggetto sottoposto a rendering <xref:System.Windows.Ink.Stroke>. L'esempio seguente imposta il colore dei tratti selezionati su rosso.  
-  
- [!code-csharp[DigitalInkTopics#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
- [!code-vb[DigitalInkTopics#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]  
-  
-### <a name="defaultdrawingattributes"></a>DefaultDrawingAttributes  
- Il <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> fornisce l'accesso alle proprietà, ad esempio l'altezza, larghezza e colore dei tratti da creare un <xref:System.Windows.Controls.InkCanvas>. Dopo aver modificato il <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>, tutti i futuri tratti inseriti il <xref:System.Windows.Controls.InkCanvas> vengono sottoposti a rendering con i nuovi valori di proprietà.  
-  
- Oltre a modificare il <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> nel file code-behind, è possibile utilizzare la sintassi XAML per la specifica <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> proprietà. Il codice XAML seguente viene illustrato come impostare il <xref:System.Windows.Ink.DrawingAttributes.Color%2A> proprietà. Per usare questo codice, creare un nuovo progetto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denominato "HelloInkCanvas" in Visual Studio 2005. Sostituire il codice nel file Window1.xaml con il codice seguente.  
-  
- [!code-xaml[HelloInkCanvas#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]  
-  
- Aggiungere poi i gestori eventi di pulsanti seguenti al file code-behind, nella classe Window1.  
-  
- [!code-csharp[HelloInkCanvas#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]  
-  
- Dopo aver copiato questo codice, premere **F5** in Microsoft Visual Studio 2005 per eseguire il programma nel debugger.  
-  
- Si noti come <xref:System.Windows.Controls.StackPanel> colloca i pulsanti in cima il <xref:System.Windows.Controls.InkCanvas>. Se si tenta di input penna nella parte superiore dei pulsanti, il <xref:System.Windows.Controls.InkCanvas> raccoglie ed esegue il rendering dell'input penna sotto i pulsanti. Infatti, i pulsanti sono di pari livello di <xref:System.Windows.Controls.InkCanvas> anziché gli elementi figlio. Il rendering dell'input penna viene eseguito dietro i pulsanti anche perché si trovano più in alto nel z order.  
-  
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Ink.DrawingAttributes>  
- <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>  
- <xref:System.Windows.Ink>
+# <a name="collect-ink"></a>Raccogliere l'input penna
+
+La raccolta di input penna è una delle funzionalità principali della piattaforma [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md). In questo argomento illustra i metodi per la raccolta dell'input penna in Windows Presentation Foundation (WPF).
+
+## <a name="prerequisites"></a>Prerequisiti
+
+Per usare gli esempi seguenti, è innanzitutto necessario installare Visual Studio e [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. È inoltre necessario comprendere come scrivere applicazioni per l'applicazione WPF. Per altre informazioni sulle operazioni iniziali con WPF, vedere [procedura dettagliata: prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+
+## <a name="use-the-inkcanvas-element"></a>Usare l'elemento InkCanvas
+
+Il <xref:System.Windows.Controls.InkCanvas?displayProperty=fullName> elemento fornisce il modo più semplice per raccogliere input penna in WPF. Usare un <xref:System.Windows.Controls.InkCanvas> elemento per ricevere e visualizzare input penna. In genere, l'input penna viene effettuato tramite uno stilo che interagisce con un digitalizzatore per produrre i tratti. È anche possibile usare un mouse al posto dello stilo. I tratti creati sono rappresentati come <xref:System.Windows.Ink.Stroke> degli oggetti e che possono essere modificati sia a livello di codice che per l'utente di input. Il <xref:System.Windows.Controls.InkCanvas> consente agli utenti di selezionare, modificare o eliminare un oggetto esistente <xref:System.Windows.Ink.Stroke>.
+
+Tramite XAML, è possibile impostare la raccolta dell'input penna con la stessa facilità con cui si aggiunge un **InkCanvas** elemento alla struttura ad albero. L'esempio seguente aggiunge un <xref:System.Windows.Controls.InkCanvas> a un progetto WPF predefiniti creato in Visual Studio:
+
+[!code-xaml[DigitalInkTopics#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
+
+Il **InkCanvas** elemento può anche contenere elementi figlio, rendendo possibile l'aggiunta di funzionalità di annotazione a penna a quasi tutti i tipi di elemento XAML. Ad esempio, per aggiungere funzionalità di input penna a un elemento di testo, è sufficiente trasformarlo in un elemento figlio di un <xref:System.Windows.Controls.InkCanvas>:
+
+[!code-xaml[DigitalInkTopics#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
+
+Aggiunta del supporto per contrassegnare un'immagine con input penna è altrettanto semplice:
+
+[!code-xaml[DigitalInkTopics#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
+
+### <a name="inkcollection-modes"></a>Modalità InkCollection
+
+Il <xref:System.Windows.Controls.InkCanvas> offre il supporto per varie modalità di input tramite relativo <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> proprietà.
+
+### <a name="manipulate-ink"></a>Modificare l'input penna
+
+Il <xref:System.Windows.Controls.InkCanvas> fornisce il supporto per molte operazioni di modifica di input penna. Ad esempio, <xref:System.Windows.Controls.InkCanvas> erase supporta back della penna e richiedere codice aggiuntivo non è necessario per aggiungere la funzionalità per l'elemento.
+
+#### <a name="selection"></a>Selection
+
+Impostazione della modalità di selezione è semplice come l'impostazione di <xref:System.Windows.Controls.InkCanvasEditingMode> proprietà **seleziona**.
+
+Il codice seguente imposta la modalità di modifica in base al valore di un <xref:System.Windows.Forms.CheckBox>:
+
+[!code-csharp[DigitalInkTopics#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
+[!code-vb[DigitalInkTopics#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
+
+#### <a name="drawingattributes"></a>DrawingAttributes
+
+Usare il <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> proprietà per modificare l'aspetto dei tratti input penna. Ad esempio, il <xref:System.Windows.Ink.DrawingAttributes.Color%2A> appartenente <xref:System.Windows.Ink.DrawingAttributes> imposta il colore dell'oggetto sottoposto a rendering <xref:System.Windows.Ink.Stroke>.
+
+Nell'esempio seguente modifica il colore dei tratti selezionati su rosso:
+
+[!code-csharp[DigitalInkTopics#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
+[!code-vb[DigitalInkTopics#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
+
+### <a name="defaultdrawingattributes"></a>DefaultDrawingAttributes
+
+Il <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> proprietà offre l'accesso a proprietà quali l'altezza, larghezza e colore dei tratti da creare un <xref:System.Windows.Controls.InkCanvas>. Dopo aver modificato il <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>, tutti i futuri tratti immessi nel <xref:System.Windows.Controls.InkCanvas> vengono sottoposti a rendering con i nuovi valori di proprietà.
+
+Oltre a modificare la <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> nel file code-behind, è possibile usare la sintassi XAML per la specifica <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> proprietà.
+
+L'esempio seguente viene illustrato come impostare il <xref:System.Windows.Ink.DrawingAttributes.Color%2A> proprietà. Per usare questo codice, creare un nuovo progetto WPF denominato "HelloInkCanvas" in Visual Studio. Sostituire il codice nel *MainWindow. XAML* file con il codice seguente:
+
+[!code-xaml[HelloInkCanvas#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
+
+Per il file code-behind, all'interno della classe MainWindow aggiungere quindi i gestori eventi dei pulsanti seguenti:
+
+[!code-csharp[HelloInkCanvas#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
+
+Dopo aver copiato questo codice, premere **F5** in Visual Studio per eseguire il programma nel debugger.
+
+Si noti che il <xref:System.Windows.Controls.StackPanel> colloca i pulsanti nella parte superiore del <xref:System.Windows.Controls.InkCanvas>. Se si prova a input penna nella parte superiore dei pulsanti, il <xref:System.Windows.Controls.InkCanvas> raccoglie ed esegue il rendering dell'input penna dietro i pulsanti. Infatti, i pulsanti sono elementi di pari livello del <xref:System.Windows.Controls.InkCanvas> e non elementi figlio. Il rendering dell'input penna viene eseguito dietro i pulsanti anche perché si trovano più in alto nel z order.
+
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Windows.Ink.DrawingAttributes>
+- <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>
+- <xref:System.Windows.Ink>

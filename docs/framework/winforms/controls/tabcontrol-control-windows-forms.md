@@ -10,12 +10,12 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: 91a9930a3678e08fc0e46335f1eb95330bd171a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536761"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384954"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>Controllo TabControl (Windows Form)
 Il controllo `TabControl` di Windows Form consente di visualizzare più schede, come i divisori di un raccoglitore o le etichette di una serie di cartelle da archivio. Le schede possono contenere immagini e altri controlli. Il controllo `TabControl` può essere usato per creare pagine delle proprietà.  
@@ -36,7 +36,7 @@ Il controllo `TabControl` di Windows Form consente di visualizzare più schede, 
  [Procedura: Disabilitare le schede](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
  Illustra come limitare l'accesso a una pagina della scheda, eventualmente in base alle credenziali utente.  
   
- Vedere anche [procedura: aggiungere e rimuovere schede con Windows Form TabControl mediante la finestra di progettazione](http://msdn.microsoft.com/library/ms233654\(v=vs.110\)), [procedura: aggiungere un controllo a una pagina della scheda mediante la finestra di progettazione](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
+ Vedere anche [procedura: aggiungere e rimuovere schede con il controllo TabControl di Windows di form mediante la finestra di progettazione](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [procedura: aggiungere un controllo a una pagina della scheda mediante la finestra di progettazione](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
 ## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.TabControl>  

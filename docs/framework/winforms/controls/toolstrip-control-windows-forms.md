@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
-ms.openlocfilehash: 49bf94959b2efb19ff6e3a273f4cd09905089b31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72ce238fdcbdcb81fc710a21d1675de67f4adc15
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540706"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393550"
 ---
 # <a name="toolstrip-control-windows-forms"></a>Controllo ToolStrip (Windows Form)
 I controlli <xref:System.Windows.Forms.ToolStrip> sono barre degli strumenti che possono ospitare menu, controlli e controlli utente nelle applicazioni di Windows Form.  
@@ -68,22 +68,22 @@ I controlli <xref:System.Windows.Forms.ToolStrip> sono barre degli strumenti che
  Illustra come creare un form MDI che supporta i controlli <xref:System.Windows.Forms.ToolStrip> e l'unione di menu.  
   
  [Procedura: Creare un controllo ToolStrip professionale](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)  
- Viene descritto come utilizzare il <xref:System.Windows.Forms.ToolStripProfessionalRenderer> classe per creare un controllo composito che imita il **riquadro di spostamento** fornito da Microsoft® Outlook®.  
+ Viene descritto come utilizzare il <xref:System.Windows.Forms.ToolStripProfessionalRenderer> classe per creare un controllo composito che imita la **riquadro di spostamento** fornito da Microsoft® Outlook®.  
   
  [Procedura: Implementare un oggetto ToolStripRenderer personalizzato](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)  
  Illustra come personalizzare l'aspetto di un controllo <xref:System.Windows.Forms.ToolStrip> implementando una classe che deriva da <xref:System.Windows.Forms.ToolStripRenderer>.  
   
--   [Procedura: creare un controllo ToolStrip di base di Windows Form con elementi Standard utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
+-   [Procedura: creare un controllo ToolStrip di base di Windows Form con elementi Standard utilizzando la finestra di progettazione](https://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
   
--   [Procedura: Spostare ToolStrip da ToolStripContainer a un form](http://msdn.microsoft.com/library/ms171701\(v=vs.110\))  
+-   [Procedura: Spostare ToolStrip da ToolStripContainer a un form](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
--   [Procedura dettagliata: Creazione di un controllo ToolStrip professionale](http://msdn.microsoft.com/library/ms233664\(v=vs.110\))  
+-   [Procedura dettagliata: Creazione di un controllo ToolStrip professionale](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
--   [Procedura dettagliata: Creazione di un form MDI con unione di menu e controlli ToolStrip](http://msdn.microsoft.com/library/ms233676\(v=vs.110\))  
+-   [Procedura dettagliata: Creazione di un form MDI con unione di menu e controlli ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
--   [Finestra di dialogo attività di ToolStrip](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   [Finestra di dialogo attività di ToolStrip](https://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
   
--   [Editor raccolta Items di ToolStrip](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   [Editor di raccolta Items di ToolStrip](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
   
 ## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.ToolStrip>  

@@ -2,17 +2,17 @@
 title: Cenni preliminari sulla sicurezza in SQL Server
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 84b6724417d03a30c131700e197744839d3a020d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25f9f96a550438d242ee409da0d09b7df06de33c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362234"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395802"
 ---
 # <a name="overview-of-sql-server-security"></a>Cenni preliminari sulla sicurezza in SQL Server
 Una strategia di difesa in profondità, basata su livelli sovrapposti di sicurezza, costituisce il modo migliore per fronteggiare i rischi per la sicurezza. SQL Server offre un'architettura di sicurezza progettata per consentire ad amministratori e sviluppatori di database di creare applicazioni di database protette e contrastare minacce. Ogni versione di SQL Server è stata migliorata rispetto alle versioni precedenti grazie all'introduzione di nuove funzionalità. La sicurezza non può essere limitata a una o più nuove funzionalità. Ogni applicazione presenta infatti speciali requisiti di sicurezza. Gli sviluppatori devono pertanto individuare la combinazione di funzionalità più appropriate per contrastare le minacce note e prevedere eventuali minacce future.  
   
- Un'istanza di SQL Server contiene una raccolta gerarchica di entità, a partire dal server. Ogni server contiene più database, ciascuno dei quali contiene una raccolta di oggetti a protezione diretta. Ogni entità a protezione diretta di SQL Server sono associate *autorizzazioni* che possono essere concesse a un *principale*, ovvero un singolo utente, gruppo o un processo concesso l'accesso a SQL Server. Il framework di sicurezza di SQL Server gestisce l'accesso alle entità a protezione diretta tramite *autenticazione* e *autorizzazione*.  
+ Un'istanza di SQL Server contiene una raccolta gerarchica di entità, a partire dal server. Ogni server contiene più database, ciascuno dei quali contiene una raccolta di oggetti a protezione diretta. Ogni entità a protezione diretta di SQL Server sono associate *le autorizzazioni* che possono essere concesse a un *dell'entità*, ovvero un singolo utente, gruppo o processo concesso l'accesso a SQL Server. Il framework di sicurezza di SQL Server gestisce l'accesso alle entità a protezione diretta tramite *authentication* e *autorizzazione*.  
   
 -   L'autenticazione è il processo di accesso a SQL Server, in base al quale un'entità di sicurezza richiede l'accesso inviando credenziali che vengono valutate dal server. L'autenticazione consente di stabilire l'identità dell'utente o del processo da autenticare.  
   
@@ -43,4 +43,4 @@ Una strategia di difesa in profondità, basata su livelli sovrapposti di sicurez
  [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Sicurezza di SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,19 +2,19 @@
 title: 'Procedura: richiamare un metodo delegato (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: aca87dd9fa1990d44c99aab7753f2fd7d508adc1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fea3ddbc9fb553041671713a64e4b866ee38b50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646952"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392438"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Procedura: richiamare un metodo delegato (Visual Basic)
-In questo esempio viene illustrato come associare un delegato di un metodo e quindi richiamare il metodo tramite il delegato.  
+In questo esempio viene illustrato come associare un metodo con un delegato e quindi richiamare tale metodo tramite il delegato.  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>Creare il delegato e le procedure corrispondenti  
+### <a name="create-the-delegate-and-matching-procedures"></a>Creare il delegato e le procedure corrispondente  
   
-1.  Crea un delegato denominato `MySubDelegate`.  
+1.  Creare un delegato denominato `MySubDelegate`.  
   
     ```  
     Delegate Sub MySubDelegate(ByVal x As Integer)  
@@ -30,7 +30,7 @@ In questo esempio viene illustrato come associare un delegato di un metodo e qui
     End Class  
     ```  
   
-3.  Definire un metodo che crea un'istanza del delegato e richiama il metodo associato al delegato chiamando predefinito `Invoke` metodo.  
+3.  Definire un metodo che crea un'istanza del delegato e richiama il metodo associato al delegato chiamando predefiniti `Invoke` (metodo).  
   
     ```  
     Protected Sub DelegateTest()  
@@ -46,4 +46,4 @@ In questo esempio viene illustrato come associare un delegato di un metodo e qui
  [Istruzione Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
  [Delegati](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
  [Eventi](../../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Applicazioni multithread](http://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)
+ [Applicazioni multithread](https://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)

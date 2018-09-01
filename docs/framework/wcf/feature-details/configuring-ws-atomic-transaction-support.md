@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: a89caad51f098e17bca1a5ba3df600a6dbf1dd9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d0e0a1bea32fe3be896b80e77de34e04cd9f2f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495158"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396333"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Configurazione del supporto transazioni WS-Atomic
 In questo argomento viene descritto come è possibile configurare il supporto WS-AtomicTransaction (WS-AT) usando l'utilità configurazione WS-AT.  
@@ -21,11 +21,11 @@ In questo argomento viene descritto come è possibile configurare il supporto WS
   
  La finestra della riga di comando può essere aperta nel percorso di installazione di Windows SDK "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation".  
   
- Per ulteriori informazioni sullo strumento da riga di comando, vedere [utilità configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
+ Per altre informazioni sullo strumento da riga di comando, vedere [utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
   
- Se si esegue [!INCLUDE[wxp](../../../../includes/wxp-md.md)] o [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], è possibile accedere lo snap-in MMC passando a **controllo pannello/Administrative Tools/Servizi componenti**, il pulsante destro su **risorse del Computer**, e selezione **proprietà**. Si tratta dello stesso percorso in cui è possibile configurare Microsoft Distributed Transaction Coordinator (MSDTC). Le opzioni disponibili per la configurazione sono raggruppate sotto il **WS-AT** scheda. Se si sta eseguendo Windows Vista o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], lo snap-in MMC è reperibile facendo il **avviare** pulsante e immettendo `dcomcnfg.exe` nel **ricerca** casella. Quando la console MMC viene aperta, passare al **risorse del Computer\Distributed Transaction Coordinator/DTC** nodo, fare clic e selezionare **proprietà**. Le opzioni disponibili per la configurazione sono raggruppate sotto il **WS-AT** scheda.  
+ Se si esegue [!INCLUDE[wxp](../../../../includes/wxp-md.md)] oppure [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], è possibile accedere lo snap-in MMC passando a **controllo pannello/Administrative Tools/Servizi componenti**, facendo **risorse del Computer**, e selezionando **proprietà**. Si tratta dello stesso percorso in cui è possibile configurare Microsoft Distributed Transaction Coordinator (MSDTC). Le opzioni disponibili per la configurazione vengono raggruppate sotto la **WS-AT** scheda. Se si sta eseguendo Windows Vista o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], lo snap-in MMC sono reperibili facendo il **avviare** e immettendo `dcomcnfg.exe` nel **ricerca** casella. Quando viene aperta la console MMC, passare al **risorse del Computer\Distributed Transaction COORDINATOR\DTC locale** nodo, fare clic e selezionare **proprietà**. Le opzioni disponibili per la configurazione vengono raggruppate sotto la **WS-AT** scheda.  
   
- Per ulteriori informazioni sullo snap-in, vedere la [Snap-in MMC di configurazione WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
+ Per altre informazioni sullo snap-in, vedere la [Snap-in MMC di configurazione WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
   
  Per abilitare l'interfaccia utente dello strumento è prima necessario registrare il file WsatUI.dll, disponibile nel percorso seguente:  
   
@@ -52,9 +52,9 @@ In questo argomento viene descritto come è possibile configurare il supporto WS
  Nell'esempio seguente vengono illustrati i passaggi necessari per stabilire il trust tra due computer, A e B.  
   
 ### <a name="creating-and-exporting-certificates"></a>Creazione ed esportazione di certificati  
- Questa procedura richiede lo snap-in MMC Certificati. Per accedere allo snap-in è possibile fare clic sul pulsante Start, scegliere Esegui, digitare "mmc" nella casella di input e fare clic su OK. Quindi, nel **Console1** finestra, passare a **File/Aggiungi / Rimuovi** Snap-in, fare clic su Aggiungi e scegliere **certificati** dal **autonomi disponibili Snap-in** elenco. Infine, selezionare **Account Computer** per gestire e fare clic su **OK**. Il **certificati** nodo viene visualizzato nella console snap-in.  
+ Questa procedura richiede lo snap-in MMC Certificati. Per accedere allo snap-in è possibile fare clic sul pulsante Start, scegliere Esegui, digitare "mmc" nella casella di input e fare clic su OK. Quindi, nella **Console1** finestra, passare alla **il File, aggiungere e rimuovere** Snap-in, fare clic su Aggiungi e scegliere **certificati** dal **disponibili in modalità autonoma Snap-in di** elenco. Selezionare infine **Account Computer** per gestire e fare clic su **OK**. Il **certificati** nodo viene visualizzato nella console snap-in.  
   
- È necessario già essere in possesso dei certificati necessari per stabilire il trust. Per informazioni su come creare e installare nuovi certificati prima dei passaggi seguenti, vedere [procedura: creare e installare i certificati Client temporanei in WCF durante lo sviluppo](http://go.microsoft.com/fwlink/?LinkId=158925).  
+ È necessario già essere in possesso dei certificati necessari per stabilire il trust. Per informazioni su come creare e installare nuovi certificati prima dei passaggi seguenti, vedere [procedura: creare e installare certificati Client temporanei in WCF durante lo sviluppo](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
 1.  Sul computer A, usando lo snap-in MMC Certificati, importare il certificato esistente (certA) negli archivi LocalMachine\MY (nodo personale) e LocalMachine\ROOT (nodo Autorità di certificazione radice attendibile). Per importare un certificato a un nodo specifico, il pulsante destro del nodo e scegliere **tutte le attività/Importa**.  
   
@@ -75,7 +75,7 @@ In questo argomento viene descritto come è possibile configurare il supporto WS
 ### <a name="configuring-msdtc-to-use-certificates"></a>Configurazione di MSDTC per l'uso di certificati  
  Poiché il servizio del protocollo WS-AT funge da client e da server, deve sia ascoltare le connessioni in ingresso sia avviare connessioni in uscita. È quindi necessario configurare MSDTC in modo che sappia quali certificati usare per la comunicazione con parti esterne e quali certificati autorizzare quando si accettano comunicazioni in ingresso.  
   
- Per eseguire questa configurazione è possibile usare lo snap-in MMC WS-AT. Per ulteriori informazioni su questo strumento, vedere la [Snap-in MMC di configurazione WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) argomento. Nei passaggi seguenti viene descritto come stabilire un trust tra due computer che eseguono MSDTC.  
+ Per eseguire questa configurazione è possibile usare lo snap-in MMC WS-AT. Per altre informazioni su questo strumento, vedere la [Snap-in MMC di configurazione WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) argomento. Nei passaggi seguenti viene descritto come stabilire un trust tra due computer che eseguono MSDTC.  
   
 1.  Configurare le impostazioni del computer A. Per "Certificato dell'Endpoint" selezionare certA. Per "Certificati autorizzati", selezionare certB.  
   
@@ -89,22 +89,22 @@ In questo argomento viene descritto come è possibile configurare il supporto WS
 >  Se il nome del computer cambia, come nel caso, ad esempio, di un computer di un gruppo di lavoro che viene associato a un dominio, è necessario rilasciare nuovamente i certificati o configurare manualmente suffissi DNS.  
   
 ## <a name="security"></a>Sicurezza  
- Poiché alcune delle impostazioni relative a MSDTC e WS-AT vengono archiviate nel Registro di sistema, rispettivamente in HKLM\Software\Microsoft\MSDTC e HKLM\Software\Microsoft\WSAT, assicurarsi che queste chiavi del Registro di sistema siano protette, in modo che solo gli amministratori possano scrivere in esse. Nello strumento Editor del Registro di sistema, fare doppio clic sulla chiave che si desidera proteggere e selezionare **autorizzazione** per impostare il controllo di accesso appropriati. È essenziale per la sicurezza e l'integrità del sistema che le chiavi importanti siano di sola lettura per gli utenti con privilegi di basso livello.  
+ Poiché alcune delle impostazioni relative a MSDTC e WS-AT vengono archiviate nel Registro di sistema, rispettivamente in HKLM\Software\Microsoft\MSDTC e HKLM\Software\Microsoft\WSAT, assicurarsi che queste chiavi del Registro di sistema siano protette, in modo che solo gli amministratori possano scrivere in esse. Nello strumento Editor del Registro di sistema, fare doppio clic la chiave di cui si vuole proteggere e selezionare **autorizzazione** per impostare il controllo di accesso appropriato. È essenziale per la sicurezza e l'integrità del sistema che le chiavi importanti siano di sola lettura per gli utenti con privilegi di basso livello.  
   
  Quando si distribuisce MSDTC, l'amministratore deve verificare che qualsiasi scambio di dati MSDTC sia protetto. In una distribuzione in un gruppo di lavoro, isolare l'infrastruttura transazionale dagli utenti malintenzionati; in una distribuzione in cluster, proteggere il Registro di sistema del cluster.  
   
 ## <a name="tracing"></a>Traccia  
- Il servizio di protocollo WS-AT supporta integrato, delle transazioni specifici di traccia che può essere abilitata e gestita tramite l'utilizzo del [Snap-in MMC di configurazione di WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) strumento.  Le tracce possono includere dati che indicano l'ora di creazione di un'integrazione per una specifica transazione, l'ora in cui una transazione raggiunge lo stato finale e il risultato ricevuto da ogni integrazione di transazione. Tutte le tracce possono essere visualizzate utilizzando il [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) strumento.  
+ Il servizio supporta protocollo WS-AT integrata, delle transazioni specifici di traccia che può essere abilitato e gestito tramite l'utilizzo dei [Snap-in MMC di configurazione WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) dello strumento.  Le tracce possono includere dati che indicano l'ora di creazione di un'integrazione per una specifica transazione, l'ora in cui una transazione raggiunge lo stato finale e il risultato ricevuto da ogni integrazione di transazione. Tutte le tracce possono essere visualizzate utilizzando il [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) dello strumento.  
   
  Il servizio del protocollo WS-AT supporta, inoltre, la traccia ServiceModel integrata tramite la sessione di traccia ETW. Questa funzione fornisce tracce specifiche della comunicazione più dettagliate, oltre alle tracce di transazioni esistenti.  Per attivare queste tracce aggiuntive, eseguire la procedura seguente:  
   
 1.  Aprire il **Start/Esegui** menu, digitare "regedit" nella casella di input e selezionare **OK**.  
   
-2.  Nel **Editor del Registro di sistema**, passare alla cartella seguente nel riquadro sinistro, Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\  
+2.  Nel **dell'Editor del Registro di sistema**, passare alla cartella seguente nel riquadro sinistro, Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\  
   
-3.  Fare clic destro la `ServiceModelDiagnosticTracing` valore nel riquadro di destra e selezionare **modifica**.  
+3.  Fare clic il `ServiceModelDiagnosticTracing` il valore nel riquadro di destra e selezionare **Modify**.  
   
-4.  Nel **dati valore** casella di input, immettere uno dei seguenti valori validi per specificare il livello di traccia che si desidera abilitare.  
+4.  Nel **dati valore** casella di input, immettere uno dei seguenti valori validi per specificare il livello di traccia si vuole abilitare.  
   
 -   0: disattivato  
   
