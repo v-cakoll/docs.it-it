@@ -4,12 +4,12 @@ description: Panoramica degli strumenti e delle funzionalità dell'interfaccia d
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.openlocfilehash: e6519ef560026899344c7fc36d91c2409cf1df9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ef69f98171da98b50aae4cdd2f5f88f37ad0c63
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217932"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403406"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Strumenti dell'interfaccia della riga di comando di .NET Core
 
@@ -119,7 +119,6 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-
 ---
 
 ### <a name="driver"></a>Driver
@@ -140,7 +139,7 @@ Gli argomenti passati alla riga di comando sono gli argomenti per il comando ric
 
 ### <a name="options"></a>Opzioni
 
-Le opzioni passate alla riga di comando sono le opzioni per il comando richiamato. Quando si esegue `dotnet publish --output /build_output`, ad esempio, l'opzione `--output` e il relativo valore vengono passati al comando `publish`. 
+Le opzioni passate alla riga di comando sono le opzioni per il comando richiamato. Quando si esegue `dotnet publish --output /build_output`, ad esempio, l'opzione `--output` e il relativo valore vengono passati al comando `publish`.
 
 ## <a name="migration-from-projectjson"></a>Migrazione da project.json
 
@@ -148,5 +147,5 @@ Se si sono usati gli strumenti della Preview 2 per generare progetti basati su *
 
 ## <a name="see-also"></a>Vedere anche
 
- [Repository GitHub dotnet/CLI](https://github.com/dotnet/cli/)  
- [.NET Core installation guide](https://aka.ms/dotnetcoregs) (Guida all'installazione di .NET Core)  
+* [Repository GitHub dotnet/CLI](https://github.com/dotnet/cli/)  
+* [.NET Core installation guide](https://aka.ms/dotnetcoregs) (Guida all'installazione di .NET Core)  

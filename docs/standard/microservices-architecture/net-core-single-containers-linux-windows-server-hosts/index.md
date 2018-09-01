@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per le applicazioni .NET incluse 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 56c41a51cddeca6c74b09710f9536195a6a88904
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 45be99a86a52ed450b795ca5f91c01ab82c7da47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404499"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388628"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Distribuzione di applicazioni Web .NET Core basate su singolo contenitore in host di Linux o Windows Nano Server
 
@@ -25,7 +25,7 @@ Inoltre, nelle prime fasi di sviluppo di un'applicazione i limiti funzionali nat
 
 Alcune di queste condizioni potrebbero essere temporanee. Si potrebbe iniziare creando un'applicazione monolitica e successivamente separare alcune funzionalità da sviluppare e distribuire come microservizi. Altre condizioni potrebbero essere essenziali per i problemi dell'applicazione, vale a dire che l'applicazione potrebbe non essere mai suddivisa in più microservizi.
 
-La separazione di un'applicazione in più processi distinti presenta anche il problema del sovraccarico. La separazione delle funzionalità in processi diversi incrementa la complessità. I protocolli di comunicazione diventano più complessi. Invece delle chiamate ai metodi, è necessario usare comunicazioni asincrone tra i servizi. Quando si passa a un'architettura di microservizi, è necessario aggiungere molti dei blocchi predefiniti implementati nella versione dei microservizi dell'applicazione `eShopOnContainers`: gestione del bus di eventi, resilienza dei messaggi e nuovi tentativi, coerenza futura e altro ancora.
+La separazione di un'applicazione in più processi distinti presenta anche il problema del sovraccarico. La separazione delle funzionalità in processi diversi aumenta la complessità. I protocolli di comunicazione diventano più complessi. Invece delle chiamate ai metodi, è necessario usare comunicazioni asincrone tra i servizi. Quando si passa a un'architettura di microservizi, è necessario aggiungere molti dei blocchi predefiniti implementati nella versione dei microservizi dell'applicazione `eShopOnContainers`: gestione del bus di eventi, resilienza dei messaggi e nuovi tentativi, coerenza futura e altro ancora.
 
 Una versione molto semplificata di eShopOnContainers (denominata [eShopWeb](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebMonolithic) e inclusa nello stesso repository GitHub) viene eseguita come applicazione MVC monolitica. Come descritto, questa scelta di progettazione offre alcuni vantaggi. È possibile scaricare l'origine per questa applicazione da GitHub ed eseguirla in locale. Anche questa applicazione monolitica trae vantaggio dalla distribuzione in un ambiente basato su contenitori.
 
@@ -41,7 +41,7 @@ L'applicazione [eShopWeb](https://github.com/dotnet-architecture/eShopOnContaine
 
 L'applicazione usa un database di SQL Server per l'archiviazione del catalogo. Nelle distribuzioni basate su contenitori questa applicazione monolitica può accedere allo stesso archivio dati dell'applicazione basata su microservizi. L'applicazione è configurata per l'esecuzione di SQL Server in un contenitore insieme all'applicazione monolitica. In un ambiente di produzione SQL Server sarebbe eseguito in un computer a disponibilità elevata, all'esterno dell'host Docker. Per praticità, in un ambiente di sviluppo o di test è consigliabile eseguire SQL Server nel relativo contenitore.
 
-Il set di funzionalità iniziale consente solo l'esplorazione del catalogo. Gli aggiornamenti garantiscono il set di funzionalità completo dell'applicazione inserita nel contenitore. Un'architettura di applicazioni Web monolitiche più avanzata è descritta nell'e-book [ASP.NET Web Application architecture practices](https://aka.ms/webappebook) (Pratiche relative all'architettura dell'applicazione Web ASP.NET) e nella pagina dell'[applicazione di esempio eShopOnWeb](http://aka.ms/WebAppArchitecture) correlata.
+Il set di funzionalità iniziale consente solo l'esplorazione del catalogo. Gli aggiornamenti garantiscono il set di funzionalità completo dell'applicazione inserita nel contenitore. Un'architettura di applicazioni Web monolitiche più avanzata è descritta nell'e-book [ASP.NET Web Application architecture practices](https://aka.ms/webappebook) (Pratiche relative all'architettura dell'applicazione Web ASP.NET) e nella pagina dell'[applicazione di esempio eShopOnWeb](https://aka.ms/WebAppArchitecture) correlata.
 
 ## <a name="docker-support"></a>Supporto per Docker
 

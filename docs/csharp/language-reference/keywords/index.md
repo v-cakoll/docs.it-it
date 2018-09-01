@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: f14cac08a2f110d97b8f9f660eb3dd1e664165c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5926da78a470911af3d8b068107f637406cb0eb9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289152"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391152"
 ---
 # <a name="c-keywords"></a>Parole chiave di C#
 Le parole chiave sono identificatori riservati predefiniti che hanno significati particolari per il compilatore. Non possono essere usati come identificatori nel programma a meno che non includano il prefisso `@`. Ad esempio, `@if` è un identificatore valido mentre `if` non lo è, perché `if` è una parola chiave.  
@@ -59,6 +59,7 @@ Le parole chiave sono identificatori riservati predefiniti che hanno significati
 |[value](../../../csharp/language-reference/keywords/value.md)|[var](../../../csharp/language-reference/keywords/var.md)|[when (condizione di filtro)](when.md)|   
 |[where (vincolo di tipo generico)](../../../csharp/language-reference/keywords/where-generic-type-constraint.md)|[where (clausola query)](../../../csharp/language-reference/keywords/where-clause.md)|[yield](../../../csharp/language-reference/keywords/yield.md)|  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
