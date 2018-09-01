@@ -2,12 +2,12 @@
 title: '&lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-ms.openlocfilehash: f6d3085ce999caad7e605341ecdb6d7099da3590
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 31db3e8e8e441c8496c5e711702111394755a90b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "32751922"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389526"
 ---
 # <a name="ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;
 Rappresenta un'associazione che un servizio Windows Communication Foundation (WCF) è possibile usare per configurare ed esporre endpoint che sono in grado di comunicare tramite HTTP. Nel caso di un contratto duplex, verrà usato Web Sockets. In caso contrario, verrà usato HTTP.  
@@ -87,7 +87,7 @@ Rappresenta un'associazione che un servizio Windows Communication Foundation (WC
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo `NetHttpSecurityElement`.|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -184,5 +184,5 @@ Rappresenta un'associazione che un servizio Windows Communication Foundation (WC
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)
