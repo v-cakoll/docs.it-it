@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 16bdbf3aa2403a3af603b24df90391d36660dbd4
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 37827398ffd6041aa841e23381b6b072b297f089
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808962"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464220"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Procedura: creare un provider di token di sicurezza personalizzati
 In questo argomento viene illustrato come creare nuovi tipi di token con un provider di token di sicurezza personalizzati e come integrare il provider con un gestore di token di sicurezza personalizzati.  
@@ -22,11 +22,11 @@ In questo argomento viene illustrato come creare nuovi tipi di token con un prov
 > [!NOTE]
 >  Creare un provider di token personalizzati se i token forniti dal sistema, presenti nello spazio dei nomi <xref:System.IdentityModel.Tokens>, non corrispondono ai propri requisiti.  
   
- Il provider di token di sicurezza crea una rappresentazione dei token di sicurezza in base alle informazioni presenti nelle credenziali del client o del servizio. Per utilizzare il provider di token di sicurezza personalizzato in sicurezza Windows Communication Foundation (WCF), è necessario creare credenziali personalizzate e implementazioni di gestore del token di sicurezza.  
+ Il provider di token di sicurezza crea una rappresentazione dei token di sicurezza in base alle informazioni presenti nelle credenziali del client o del servizio. Per usare il provider di token di sicurezza personalizzato in sicurezza Windows Communication Foundation (WCF), è necessario creare credenziali personalizzate e implementazioni di gestore del token di sicurezza.  
   
- Per ulteriori informazioni sulle credenziali personalizzate e gestore del token di sicurezza, vedere il [procedura dettagliata: creazione di Client personalizzato e credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+ Per altre informazioni sulle credenziali personalizzate e gestore del token di sicurezza, vedere la [procedura dettagliata: creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
- Per ulteriori informazioni sulle credenziali, token manager, provider e autenticatore classi di protezione, vedere il [architettura di sicurezza](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Per altre informazioni sulle credenziali, token manager, provider e autenticatore classi di sicurezza, vedere la [architettura di sicurezza](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ### <a name="to-create-a-custom-security-token-provider"></a>Per creare un provider di token di sicurezza personalizzati  
   
@@ -43,7 +43,7 @@ In questo argomento viene illustrato come creare nuovi tipi di token con un prov
   
 2.  Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>, se non lo si è già fatto.  
   
-     Il <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> metodo è responsabile della restituzione di un'istanza del <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe appropriato per il <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametro passato al metodo dal framework di sicurezza di WCF. Modificare il metodo per restituire l'implementazione del provider di token di sicurezza personalizzati (creato nella procedura precedente), quando il metodo viene chiamato con un parametro del token di sicurezza appropriato. Per ulteriori informazioni sul gestore di token di sicurezza, vedere il [procedura dettagliata: creazione di Client personalizzato e credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+     Il <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> metodo è responsabile della restituzione di un'istanza del <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe appropriato per il <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametro passato al metodo dal framework di sicurezza di WCF. Modificare il metodo per restituire l'implementazione del provider di token di sicurezza personalizzati (creato nella procedura precedente), quando il metodo viene chiamato con un parametro del token di sicurezza appropriato. Per altre informazioni sul gestore di token di sicurezza, vedere la [procedura dettagliata: creazione di Client personalizzati e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
 3.  Aggiungere logica personalizzata al metodo, per consentire la restituzione del provider di token di sicurezza personalizzati in base al parametro <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>. Nell'esempio seguente viene restituito il provider di token di sicurezza personalizzati, se i requisiti dei token vengono soddisfatti. I requisiti includono un token di sicurezza X.509 e la direzione dei messaggi (è necessario che il token venga usato per l'output dei messaggi). Per tutti gli altri casi, il codice chiama la classe di base per mantenere il comportamento fornito dal sistema per gli altri requisiti dei token di sicurezza.  
   
@@ -63,4 +63,4 @@ In questo argomento viene illustrato come creare nuovi tipi di token con un prov
  <xref:System.IdentityModel.Tokens.X509SecurityToken>  
  [Procedura dettagliata: creazione di credenziali client e del servizio personalizzate](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  [Procedura: Creare un autenticatore del token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [Architettura di sicurezza](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Architettura di sicurezza](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

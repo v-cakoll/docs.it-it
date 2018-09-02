@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c517fe7736fd19fd93926d79ae5709b049adad1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a0df1f3bcf8941b5fe0a8fd19dfc7423e669a766
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747951"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465616"
 ---
 # <a name="runtime-settings-schema"></a>Schema delle impostazioni di runtime
 Le impostazioni di runtime vengono usate da Common Language Runtime per configurare le applicazioni destinate a .NET Framework.  
@@ -133,5 +133,5 @@ Le impostazioni di runtime vengono usate da Common Language Runtime per configur
   
 ## <a name="see-also"></a>Vedere anche  
  [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Procedura: disabilitare Garbage Collection contemporanea](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [Procedura: disabilitare la Garbage Collection simultanea](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
  [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

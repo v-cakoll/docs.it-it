@@ -12,24 +12,24 @@ ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 874eada0714ed0f96248ebac8edb0efe205d9f21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8be813a16e1cdbf8367a358d91cf3b958ac36398
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407183"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466325"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>Esporre il contenuto di una tabella utilizzando l'automazione interfaccia utente
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Questo argomento viene illustrato come [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] possono essere usate per esporre il contenuto e le proprietà intrinseche delle celle all'interno di un controllo tabulare.  
+ Questo argomento viene illustrato come [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] può essere utilizzata per esporre le proprietà intrinseche e contenute di ogni cella all'interno di un controllo tabulare.  
   
 ## <a name="example"></a>Esempio  
- Esempio di codice seguente viene illustrato come ottenere un <xref:System.Windows.Automation.AutomationElement> che rappresenta il contenuto di una cella della tabella; vengono inoltre ottenere le proprietà di cella, ad esempio gli indici di riga e colonna, riga e colonna intervalli e informazioni di intestazione di riga e colonna. In questo esempio viene utilizzato un gestore dell'evento cambia lo stato attivo per simulare l'attraversamento della tastiera di un controllo tabulare che implementa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Informazioni per ogni elemento della tabella viene esposto in un evento di modifica dello stato attivo.  
+ Esempio di codice seguente viene illustrato come ottenere un <xref:System.Windows.Automation.AutomationElement> che rappresenta il contenuto di una cella della tabella, sono anche ottenere le proprietà di cella, ad esempio gli indici di riga e colonna, riga e colonna intervalli e le informazioni di intestazione di riga e colonna. Questo esempio Usa un gestore dell'evento di modifica dello stato attivo per simulare l'attraversamento della tastiera di un controllo in formato tabulare che implementa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Le informazioni per ogni elemento della tabella viene esposta in un evento di modifica dello stato attivo.  
   
 > [!NOTE]
->  Poiché le modifiche di stato attivo sono eventi globali del desktop, eventi di modifica dello stato attivo all'esterno della tabella devono essere filtrati. Vedere il [TrackFocus Sample](http://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9) per un'implementazione correlata.  
+>  Poiché le modifiche dello stato attivo sono eventi globali del desktop, gli eventi di modifica dello stato attivo all'esterno della tabella devono essere filtrati. Vedere le [TrackFocus Sample](https://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9) per un'implementazione correlata.  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  

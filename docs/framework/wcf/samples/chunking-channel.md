@@ -2,15 +2,15 @@
 title: Chunking del canale
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 1acb635be23b9a838abee714156d818abee6bcd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9572ad6f88786af34252cea1f3c62d5067257b8b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508841"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470090"
 ---
 # <a name="chunking-channel"></a>Chunking del canale
-Quando si inviano messaggi di grandi dimensioni utilizzando Windows Communication Foundation (WCF), è spesso opportuno limitare la quantità di memoria utilizzata per memorizzare nel buffer i messaggi. Una possibile soluzione è di trasmettere il corpo del messaggio (presupponendo che il grosso dei dati è contenuto nel corpo). Tuttavia alcuni protocolli richiedono la memorizzazione nel buffer del messaggio intero. Due esempi sono rappresentati dai protocolli di messaggistica affidabile e di sicurezza. Un'altra possibile soluzione è di suddividere il messaggio in messaggi più piccoli, chiamati blocchi, inviare quei blocchi uno alla volta e ricostruire il messaggio originale sul lato ricevente. L'applicazione stessa può eseguire questa suddivisione in blocchi e ricostruzione oppure può usare un canale personalizzato per eseguire queste operazioni. Nell'esempio relativo al canale per la suddivisione in blocchi viene illustrato come è possibile usare un protocollo personalizzato o un canale su più livelli per suddividere in blocchi e ricostruire i messaggi di grandi dimensioni.  
+Quando si inviano messaggi di grandi dimensioni tramite Windows Communication Foundation (WCF), è spesso utile per limitare la quantità di memoria utilizzata per memorizzare nel buffer i messaggi. Una possibile soluzione è di trasmettere il corpo del messaggio (presupponendo che il grosso dei dati è contenuto nel corpo). Tuttavia alcuni protocolli richiedono la memorizzazione nel buffer del messaggio intero. Due esempi sono rappresentati dai protocolli di messaggistica affidabile e di sicurezza. Un'altra possibile soluzione è di suddividere il messaggio in messaggi più piccoli, chiamati blocchi, inviare quei blocchi uno alla volta e ricostruire il messaggio originale sul lato ricevente. L'applicazione stessa può eseguire questa suddivisione in blocchi e ricostruzione oppure può usare un canale personalizzato per eseguire queste operazioni. Nell'esempio relativo al canale per la suddivisione in blocchi viene illustrato come è possibile usare un protocollo personalizzato o un canale su più livelli per suddividere in blocchi e ricostruire i messaggi di grandi dimensioni.  
   
  La suddivisione in blocchi deve essere eseguita solo dopo la costruzione dell'intero messaggio da inviare. Un canale per la suddivisione in blocchi deve sempre distribuito su più livelli al di sotto di un canale di sicurezza e di un canale di sessione affidabile.  
   
@@ -22,7 +22,7 @@ Quando si inviano messaggi di grandi dimensioni utilizzando Windows Communicatio
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`  
   
@@ -203,11 +203,11 @@ as the ChunkingStart message.
   
  Al successivo livello inferiore, il `ChunkingChannel` si basa su molti componenti per implementare il protocollo per la suddivisione in blocchi. Per l'invio, il canale usa un oggetto `XmlDictionaryWriter` personalizzato chiamato `ChunkingWriter` che esegue la vera e propria suddivisione in blocchi. `ChunkingWriter` usa direttamente il canale interno per inviare i blocchi. L'uso di un `XmlDictionaryWriter` personalizzato consente di inviare i blocchi mentre viene scritto il corpo del messaggio originale. Questo significa che non viene memorizzato nel buffer l'intero messaggio originale.  
   
- ![Chunking del canale](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
+ ![Chunking canale](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
   
  Per la ricezione, `ChunkingChannel` esegue il pull dei messaggi dal canale interno e li consegna a un oggetto `XmlDictionaryReader` personalizzato denominato `ChunkingReader`, che ricostruisce il messaggio originale dai blocchi in arrivo. `ChunkingChannel` esegue il wrapping di questo `ChunkingReader` in un'implementazione `Message` personalizzata denominata `ChunkingMessage` e restituisce il messaggio al livello superiore. Questa combinazione di `ChunkingReader` e `ChunkingMessage` consente di ricostruire il corpo del messaggio originale mentre viene letto dal livello superiore, invece di dover memorizzare nel buffer l'intero corpo del messaggio originale. `ChunkingReader` è dotato di una coda in cui memorizza nel buffer i blocchi in arrivo, fino a un numero massimo configurabile di blocchi memorizzati. Quando questo limite massimo viene raggiunto, il lettore attende che i messaggi vengano svuotati dalla coda dal livello superiore (operazione eseguita semplicemente leggendo il corpo del messaggio originale) o fino a raggiungere il timeout di ricezione massimo.  
   
- ![Chunking del canale](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
+ ![Chunking canale](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
   
 ## <a name="chunking-programming-model"></a>Modello di programmazione per la suddivisione in blocchi  
  Gli sviluppatori del servizio possono specificare quali messaggi devono essere suddivisi in blocchi applicando l'attributo `ChunkingBehavior` alle operazioni all'interno del contratto. L'attributo espone una proprietà `AppliesTo` che consente allo sviluppatore di specificare se la suddivisione in blocchi si applica al messaggio di input, al messaggio di output o a entrambi. Nell'esempio seguente viene illustrato l'uso dell'attributo `ChunkingBehavior`:  
@@ -271,7 +271,7 @@ interface ITestService
  `OnOpen` chiama `innerChannel.Open` per aprire il canale interno.  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` prima imposta `stopReceive` su `true` per comunicare al `ReceiveChunkLoop` in sospeso di arrestarsi. Quindi attende la `receiveStopped``ManualResetEvent`, che viene impostato quando `ReceiveChunkLoop` viene arrestata. Presupponendo che `ReceiveChunkLoop` si arresti entro il timeout specificato, `OnClose` chiama `innerChannel.Close` con il timeout rimanente.  
+ `OnClose` prima imposta `stopReceive` su `true` per comunicare al `ReceiveChunkLoop` in sospeso di arrestarsi. Quindi attende la `receiveStopped``ManualResetEvent`, che viene impostato quando `ReceiveChunkLoop` si arresta. Presupponendo che `ReceiveChunkLoop` si arresti entro il timeout specificato, `OnClose` chiama `innerChannel.Close` con il timeout rimanente.  
   
 ### <a name="onabort"></a>OnAbort  
  `OnAbort` chiama `innerChannel.Abort` per interrompere il canale interno. Se c'è un `ReceiveChunkLoop` in sospeso, viene generata un'eccezione dalla chiamata `innerChannel.Receive` in sospeso.  
@@ -290,9 +290,9 @@ interface ITestService
  Il `ChunkingChannelListener` è un wrapper del listener del canale interno. La sua funzione principale, oltre a delegare le chiamate al listener del canale interno, è di eseguire il wrapping dei nuovi `ChunkingDuplexSessionChannels` sui canali accettati dal listener del canale interno. Questa operazione viene eseguita in `OnAcceptChannel` e `OnEndAcceptChannel`. Il nuovo `ChunkingDuplexSessionChannel` viene passato al canale interno insieme agli altri parametri precedentemente descritti.  
   
 ## <a name="implementing-binding-element-and-binding"></a>Implementazione degli elementi di associazione e delle associazioni  
- `ChunkingBindingElement` è responsabile della creazione di `ChunkingChannelFactory` e di `ChunkingChannelListener`. Il `ChunkingBindingElement` controlla se T in `CanBuildChannelFactory` \<T > e `CanBuildChannelListener` \<T > è di tipo `IDuplexSessionChannel` (l'unico canale supportato dal canale per la suddivisione in blocchi) e che gli altri elementi di associazione nell'associazione supportano questo tipo di canale.  
+ `ChunkingBindingElement` è responsabile della creazione di `ChunkingChannelFactory` e di `ChunkingChannelListener`. Il `ChunkingBindingElement` controlla se T in `CanBuildChannelFactory` \<T > e `CanBuildChannelListener` \<T > è di tipo `IDuplexSessionChannel` (l'unico canale supportato dal canale per la suddivisione in blocchi) e che gli altri elementi di associazione nell'associazione supportino questo tipo di canale.  
   
- `BuildChannelFactory`\<T > Controlla prima che il tipo di canale richiesto può essere compilato e quindi Ottiene un elenco di azioni del messaggio da suddividere in blocchi. Per altre informazioni, vedere la sezione successiva. Crea quindi un nuovo `ChunkingChannelFactory` passandogli la channel factory interna (restituita da `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), l'elenco di azioni del messaggio e il numero massimo di blocchi da memorizzare nel buffer. Il numero massimo di blocchi proviene da una proprietà chiamata `MaxBufferedChunks` esposta da `ChunkingBindingElement`.  
+ `BuildChannelFactory`\<T > verifica innanzitutto che il tipo di canale richiesto possa essere compilato, quindi Ottiene un elenco delle azioni del messaggio da suddividere in blocchi. Per altre informazioni, vedere la sezione successiva. Crea quindi un nuovo `ChunkingChannelFactory` passandogli la channel factory interna (restituita da `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), l'elenco di azioni del messaggio e il numero massimo di blocchi da memorizzare nel buffer. Il numero massimo di blocchi proviene da una proprietà chiamata `MaxBufferedChunks` esposta da `ChunkingBindingElement`.  
   
  L'implementazione del metodo `BuildChannelListener<T>` per creare `ChunkingChannelListener` e passare il listener del canale interno è simile.  
   
@@ -303,7 +303,7 @@ interface ITestService
 ### <a name="determining-which-messages-to-chunk"></a>Decidere quali messaggi vanno suddivisi in blocchi  
  Il canale per la suddivisione in blocchi suddivide solo i messaggi identificati dall'attributo `ChunkingBehavior`. La classe `ChunkingBehavior` implementa `IOperationBehavior` e viene implementata chiamando il metodo `AddBindingParameter`. In questo metodo, `ChunkingBehavior` esamina il valore della proprietà `AppliesTo` (`InMessage`, `OutMessage` o entrambi) per determinare quali messaggi vanno suddivisi in blocchi. Ottiene quindi l'azione di ognuno di quei messaggi (dalla raccolta dei messaggi in `OperationDescription`) e la aggiunge a una raccolta di stringhe contenuta all'interno di un'istanza di `ChunkingBindingParameter`. Aggiunge quindi questo `ChunkingBindingParameter` alla raccolta `BindingParameterCollection` fornito  
   
- `BindingParameterCollection` viene passato all'interno di `BindingContext` a ogni elemento di associazione nell'associazione quando l'elemento di associazione compila la channel factory o il listener del canale. Il `ChunkingBindingElement`dell'implementazione di `BuildChannelFactory<T>` e `BuildChannelListener<T>` pull questo `ChunkingBindingParameter` fuori il `BindingContext’`s `BindingParameterCollection`. La raccolta di azioni contenuta all'interno di `ChunkingBindingParameter` viene quindi passata alla `ChunkingChannelFactory` o al `ChunkingChannelListener`, che a sua volta la passa al `ChunkingDuplexSessionChannel`.  
+ `BindingParameterCollection` viene passato all'interno di `BindingContext` a ogni elemento di associazione nell'associazione quando l'elemento di associazione compila la channel factory o il listener del canale. Il `ChunkingBindingElement`dell'implementazione del `BuildChannelFactory<T>` e `BuildChannelListener<T>` pull di questo `ChunkingBindingParameter` fuori il `BindingContext’`s `BindingParameterCollection`. La raccolta di azioni contenuta all'interno di `ChunkingBindingParameter` viene quindi passata alla `ChunkingChannelFactory` o al `ChunkingChannelListener`, che a sua volta la passa al `ChunkingDuplexSessionChannel`.  
   
 ## <a name="running-the-sample"></a>Esecuzione dell'esempio  
   
@@ -315,9 +315,9 @@ interface ITestService
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Per compilare la soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

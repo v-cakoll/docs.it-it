@@ -7,19 +7,19 @@ dev_langs:
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: d291cd3d00f8d0d40e0b8543d5347e1509cb8b90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adc1bf7c51eeef715e98bb67c5f6a2e44e09b35f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498602"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466610"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Protezione del trasporto con l'autenticazione di Windows
-Lo scenario seguente viene illustrato un client Windows Communication Foundation (WCF) e un servizio protetti dalla protezione di Windows. Per ulteriori informazioni sulla programmazione, vedere [procedura: proteggere un servizio con le credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+Lo scenario seguente viene illustrato un client Windows Communication Foundation (WCF) e un servizio protetti dalla protezione di Windows. Per altre informazioni sulla programmazione, vedere [procedura: proteggere un servizio con le credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
  Un servizio Web intranet consente di visualizzare informazioni sulle risorse umane. Il client è un'applicazione Windows Form. L'applicazione è distribuita in un dominio in cui la protezione è affidata a un controller Kerberos.  
   
- ![Trasporto con l'autenticazione di Windows](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
+ ![Sicurezza del trasporto con autenticazione di Windows](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
@@ -122,4 +122,4 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Procedura: Proteggere un servizio con credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

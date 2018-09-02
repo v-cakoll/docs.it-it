@@ -2,12 +2,12 @@
 title: Selezione avanzata del formato
 ms.date: 03/30/2017
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-ms.openlocfilehash: 4913d8dbf69f574aa4f329279bed0d92710512f9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e5c396ce22e9021d453a70f3826b0bd3cc6aaf42
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805590"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466623"
 ---
 # <a name="advanced-format-selection"></a>Selezione avanzata del formato
 In questo esempio viene illustrato come estendere il modello di programmazione REST di Windows Communication Foundation (WCF) per supportare i nuovi formati di risposta in uscita. Nell'esempio viene inoltre usato un modello T4 per restituire la risposta come pagina XHTML, a dimostrazione di come sia possibile implementare un modello di programmazione dello stile di visualizzazione.  
@@ -19,15 +19,15 @@ In questo esempio viene illustrato come estendere il modello di programmazione R
   
  Il formato di risposta restituito dal servizio viene innanzitutto determinato da un parametro della stringa di query `format` e quindi da un'intestazione HTTP Accept fornita con la richiesta. Se il valore del parametro della stringa di query `format` corrisponde a uno dei formati precedenti, la risposta viene restituita in tale formato. Se la stringa di query `format` non è presente, il servizio scorre gli elementi dell'intestazione Accept inclusa nella richiesta e restituisce il formato del primo tipo di contenuto supportato dal servizio.  
   
- È opportuno notare il tipo restituito dall'operazione. Il livello nativo solo modello di programmazione WCF REST supporta i formati di risposta XML e JSON quando un'operazione restituisce un tipo diverso da <xref:System.ServiceModel.Channels.Message>. Tuttavia, quando si usa <xref:System.ServiceModel.Channels.Message> come tipo restituito, lo sviluppatore dispone del controllo completo sulla modalità di formattazione del contenuto del messaggio.  
+ È opportuno notare il tipo restituito dall'operazione. Il modello di programmazione solo in modalità nativa di WCF REST supporta i formati di risposta XML e JSON quando un'operazione restituisce un tipo diverso da <xref:System.ServiceModel.Channels.Message>. Tuttavia, quando si usa <xref:System.ServiceModel.Channels.Message> come tipo restituito, lo sviluppatore dispone del controllo completo sulla modalità di formattazione del contenuto del messaggio.  
   
- Nell'esempio vengono usati i metodi <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> e <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> per serializzare l'elenco di stringhe rispettivamente in messaggi XML, JSON e ATOM. Per il formato di risposta jpeg, viene usato il metodo <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> e l'immagine viene salvata nel flusso. Per la risposta XHTML, viene usato il metodo <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> insieme a un modello T4 pre-elaborato costituito da un file con estensione tt e da un file con estensione cs generato automaticamente. Il file con estensione tt consente a uno sviluppatore di scrivere una risposta in un form del modello contenente variabili e strutture di controllo. Per ulteriori informazioni su T4, vedere [la generazione di elementi di modelli di testo](http://go.microsoft.com/fwlink/?LinkId=166023).  
+ Nell'esempio vengono usati i metodi <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> e <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> per serializzare l'elenco di stringhe rispettivamente in messaggi XML, JSON e ATOM. Per il formato di risposta jpeg, viene usato il metodo <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> e l'immagine viene salvata nel flusso. Per la risposta XHTML, viene usato il metodo <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> insieme a un modello T4 pre-elaborato costituito da un file con estensione tt e da un file con estensione cs generato automaticamente. Il file con estensione tt consente a uno sviluppatore di scrivere una risposta in un form del modello contenente variabili e strutture di controllo. Per altre informazioni su T4, vedere [generazione di elementi di modelli di testo](https://go.microsoft.com/fwlink/?LinkId=166023).  
   
  L'esempio è costituito da un servizio indipendente e da un client in esecuzione in un'applicazione console. Quando l'applicazione console è in esecuzione, il client invia richieste al servizio e scrive nella finestra della console le informazioni pertinenti incluse nelle risposte.  
   
 #### <a name="to-run-this-sample"></a>Per eseguire l'esempio  
   
-1.  Aprire la soluzione per l'esempio relativo alla selezione avanzata del formato. Per garantire l'esecuzione corretta dell'esempio, è necessario che l'avvio di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] venga eseguito come amministratore. Farlo facendo clic con il [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icona e scegliendo **Esegui come amministratore** dal menu di scelta rapida.  
+1.  Aprire la soluzione per l'esempio relativo alla selezione avanzata del formato. Per garantire l'esecuzione corretta dell'esempio, è necessario che l'avvio di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] venga eseguito come amministratore. Eseguire questa operazione facendo clic con il [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icona e scegliendo **Esegui come amministratore** dal menu di scelta rapida.  
   
 2.  Premere CTRL+MAIUSC+B per compilare la soluzione, quindi premere CTRL+F5 per eseguire il progetto AdvancedFormatSelection dell'applicazione console senza eseguirne il debug. Verrà visualizzata la finestra della console in cui saranno disponibili gli URI del servizio in esecuzione e della pagina della Guida HTML per il servizio in esecuzione.  
   
@@ -42,7 +42,7 @@ In questo esempio viene illustrato come estendere il modello di programmazione R
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AdvancedFormatSelection`  
   

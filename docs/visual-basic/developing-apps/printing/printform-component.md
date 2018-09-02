@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
-ms.openlocfilehash: 6cb7cfe022b2b4d23f47a47ec70f08d5c0ccbc7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 879d31c5a572689d84af6b2e46f3d33e1a8841c8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591408"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472085"
 ---
 # <a name="printform-component-visual-basic"></a>Componente PrintForm (Visual Basic)
-Il <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente per Visual Basic consente di stampare un'immagine di un Windows Form in fase di esecuzione. Il relativo comportamento sostituisce quello del metodo `PrintForm` nelle versioni precedenti di Visual Basic.  
+Il <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente Visual Basic consente di stampare un'immagine di un Windows Form in fase di esecuzione. Il relativo comportamento sostituisce quello del metodo `PrintForm` nelle versioni precedenti di Visual Basic.  
   
- I controlli PowerPacks non sono più inclusi in Visual Studio, ma è possibile scaricarli dall' [Area download](http://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ I controlli PowerPacks non sono inclusi in Visual Studio, ma è possibile scaricarli dal [area download](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ## <a name="printform-component-overview"></a>Cenni preliminari sul componente PrintForm  
  Uno scenario comune per Windows Form consiste nel creare un form che è formattato in modo simile a un modulo cartaceo o un report, quindi nello stampare un'immagine del form. Sebbene sia possibile usare un componente <xref:System.Drawing.Printing.PrintDocument> a tale scopo, ciò richiederebbe una grande quantità di codice. Il componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> consente di stampare un'immagine di un form in una stampante, una finestra di anteprima di stampa o un file senza usare un componente <xref:System.Drawing.Printing.PrintDocument> .  

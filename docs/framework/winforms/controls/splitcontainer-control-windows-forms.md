@@ -5,18 +5,18 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 42eccbf88db2a407c6dd40209ecd615f0c19eb7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63b1a4b9b2483d017a686819573f91744d8a565a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539201"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463694"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>Controllo SplitContainer (Windows Form)
 Il controllo `SplitContainer` Windows Form può essere considerato un oggetto composto, poiché è costituito da due pannelli separati da una barra mobile. Quando il puntatore del mouse viene posizionato sopra la barra, assume una forma diversa per indicare che la barra è mobile.  
   
 > [!NOTE]
->  Nel **della casella degli strumenti**, questo controllo sostituisce il <xref:System.Windows.Forms.Splitter> controllo che era presente nella versione precedente di Visual Studio. È consigliabile usare il controllo `SplitContainer` anziché il controllo <xref:System.Windows.Forms.Splitter>. La classe <xref:System.Windows.Forms.Splitter> è ancora inclusa in .NET Framework per assicurare la compatibilità con le applicazioni esistenti, ma per i nuovi progetti si consiglia di usare il controllo `SplitContainer`.  
+>  Nel **casella degli strumenti**, questo controllo sostituisce il <xref:System.Windows.Forms.Splitter> controllo che era presente nella versione precedente di Visual Studio. È consigliabile usare il controllo `SplitContainer` anziché il controllo <xref:System.Windows.Forms.Splitter>. La classe <xref:System.Windows.Forms.Splitter> è ancora inclusa in .NET Framework per assicurare la compatibilità con le applicazioni esistenti, ma per i nuovi progetti si consiglia di usare il controllo `SplitContainer`.  
   
  Il controllo `SplitContainer` consente di creare complesse interfacce utente, in cui l'elemento selezionato in un pannello determina in genere gli oggetti visualizzati nell'altro. Questa disposizione è particolarmente efficace per la visualizzazione e la ricerca di informazioni. Grazie alla presenza dei due pannelli è possibile aggregare le informazioni in aree, mentre la barra di divisione consente di ridimensionare i pannelli.  
   
@@ -33,7 +33,7 @@ Il controllo `SplitContainer` Windows Form può essere considerato un oggetto co
  [Procedura: Creare un'interfaccia utente a più riquadri con Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Crea un'interfaccia utente a più riquadri simile a quella usata in Microsoft Outlook.  
   
- Vedere anche [come: dividere una finestra orizzontalmente utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/ms233667\(v=vs.110\)), [procedura: creare un'interfaccia di tipo Esplora risorse di Windows in un Windows Form](http://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [procedura: creare un'interfaccia utente con Windows Form utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/ms233661\(v=vs.110\)).  
+ Vedere anche [come: suddividere una finestra orizzontalmente utilizzando la finestra di progettazione](how-to-split-a-window-horizontally-using-the-designer.md), [procedura: creare un'interfaccia di tipo Esplora risorse di Windows in un Windows Form](https://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [come: creare un'interfaccia utente con Windows Form usando la finestra di progettazione](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
   
 ## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.SplitContainer>  

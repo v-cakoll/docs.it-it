@@ -2,12 +2,12 @@
 title: Rollback di transazioni
 ms.date: 03/30/2017
 ms.assetid: 7f377147-7529-4689-a588-608cee87fdf8
-ms.openlocfilehash: 15333b159625f07449b0a93634a1a9a854614a57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8134623248b072ec5a095ab9b10840e94a09243c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517157"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464123"
 ---
 # <a name="transaction-rollback"></a>Rollback di transazioni
 In questo esempio viene illustrato come creare un oggetto <xref:System.Activities.NativeActivity> personalizzato che accede all'oggetto <xref:System.Activities.RuntimeTransactionHandle> di ambiente per ottenere la transazione di ambiente ed eseguirne il rollback in modo esplicito.  
@@ -32,7 +32,7 @@ In questo esempio viene illustrato come creare un oggetto <xref:System.Activitie
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactionRollback`  
   

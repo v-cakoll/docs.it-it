@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 587e2086a03e9c9ba57ae3b68de841f12543404e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 98c0dbbbe65d8f8c0b0196c82db1a8fd2b0ee3dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435608"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468246"
 ---
 # <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a>Metodo ICLRStrongName::StrongNameTokenFromPublicKey
-Ottiene un token che rappresenta una chiave pubblica. Un token con nome sicuro è la forma abbreviata di una chiave pubblica.  
+Ottiene un token che rappresenta una chiave pubblica. Un token con nome sicuro è il formato abbreviato di una chiave pubblica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,31 +40,31 @@ HRESULT StrongNameTokenFromPublicKey (
   
 #### <a name="parameters"></a>Parametri  
  `pbPublicKeyBlob`  
- [in] Una struttura di tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) che contiene la parte pubblica della coppia di chiavi usata per generare la firma nome sicuro.  
+ [in] Una struttura di tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) che contiene la parte pubblica della coppia di chiavi usata per generare la firma con nome sicuro.  
   
  `cbPublicKeyBlob`  
  [in] Le dimensioni, in byte, di `pbPublicKeyBlob`.  
   
  `ppbStrongNameToken`  
- [out] Il token con nome sicuro corrispondente alla chiave passata `pbPublicKeyBlob`. Common language runtime alloca la memoria nel quale restituire il token. Il chiamante deve liberare la memoria utilizzando il [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metodo.  
+ [out] Il token di nome sicuro corrispondente alla chiave passato `pbPublicKeyBlob`. Common language runtime alloca la memoria in cui restituire il token. Il chiamante deve liberare la memoria usando il [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) (metodo).  
   
  `pcbStrongNameToken`  
- [out] Le dimensioni in byte, del token restituito con nome sicuro.  
+ [out] Le dimensioni, in byte, del token restituito nome sicuro.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` Se il metodo viene completato correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](http://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
+ `S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
   
 ## <a name="remarks"></a>Note  
- Un token con nome sicuro è la forma abbreviata di una chiave pubblica utilizzata per risparmiare spazio quando si archiviano le informazioni sulla chiave nei metadati. In particolare, vengono utilizzati i token con nome sicuro nei riferimenti ad assembly per fare riferimento all'assembly dipendenti.  
+ Un token con nome sicuro è il formato abbreviato di una chiave pubblica che consente di risparmiare spazio quando si archiviano le informazioni sulla chiave nei metadati. In particolare, i token di nome sicuro vengono usati nei riferimenti ad assembly per fare riferimento all'assembly dipendenti.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. H  
   
  **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  

@@ -2,12 +2,12 @@
 title: CustomDiscoveryMetadata
 ms.date: 03/30/2017
 ms.assetid: c42455fd-3652-4b7e-b698-ab3a2bb52e48
-ms.openlocfilehash: 3e3a173d99f2ba0a2fb33dfd8f91908f03e3e871
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 181910db3f1dd6da892f6ae2ddcbf7bd5859ff17
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501049"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465577"
 ---
 # <a name="customdiscoverymetadata"></a>CustomDiscoveryMetadata
 In questo esempio viene illustrato come inserire metadati XML personalizzati nei metadati di individuazione per un endpoint individuabile esposto da un servizio. Nell'esempio viene quindi illustrato come un client può eseguire la ricerca del servizio ed estrarre questi dati personalizzati. Questo esempio è costituito da due progetti, ovvero il servizio e il client.  
@@ -31,7 +31,7 @@ In questo esempio viene illustrato come inserire metadati XML personalizzati nei
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DiscoveryExtensibility\CustomDiscoveryMetadata`  
   

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - composite shapes [WPF]
 - graphics [WPF], composite shapes
 ms.assetid: 8e5c7ef4-d7ed-4c43-afc9-ca01325c300b
-ms.openlocfilehash: 6bb2a8a32938682af52343b971b840dbed16bcef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9892120d13a067586dbf6472a6873b6a52c2d8b4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559970"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457083"
 ---
 # <a name="how-to-create-a-composite-shape"></a>Procedura: creare una forma composta
-In questo esempio viene illustrato come creare forme composte tramite <xref:System.Windows.Media.Geometry> oggetti e visualizzarle utilizzando un <xref:System.Windows.Shapes.Path> elemento. Nell'esempio seguente, un <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>e un <xref:System.Windows.Media.RectangleGeometry> vengono utilizzati con un <xref:System.Windows.Media.GeometryGroup> per creare una forma composta. Quindi vengono tracciate le geometrie utilizzando un <xref:System.Windows.Shapes.Path> elemento.  
+Questo esempio viene illustrato come creare forme composte tramite <xref:System.Windows.Media.Geometry> degli oggetti e visualizzarli tramite un <xref:System.Windows.Shapes.Path> elemento. Nell'esempio seguente, un <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>e una <xref:System.Windows.Media.RectangleGeometry> vengono usati con un <xref:System.Windows.Media.GeometryGroup> per creare una forma composta. Quindi vengono tracciate le geometrie utilizzando un <xref:System.Windows.Shapes.Path> elemento.  
   
 ## <a name="example"></a>Esempio  
  [!code-xaml[GeometrySample#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#19)]  
@@ -30,6 +30,6 @@ In questo esempio viene illustrato come creare forme composte tramite <xref:Syst
  ![Geometria composta creata con GeometryGroup](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-compositegeometryexample1.jpg "wcpsdk_graphicsmm_compositegeometryexample1")  
 Geometria composta  
   
- Le forme più complesse, ad esempio poligoni e forme con segmenti curvi, possono essere create tramite un <xref:System.Windows.Media.PathGeometry>. Per un esempio che illustra come creare una forma utilizzando un <xref:System.Windows.Media.PathGeometry>, vedere [creare una forma con PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md).  Sebbene in questo esempio viene eseguito il rendering di una forma sullo schermo utilizzando un <xref:System.Windows.Shapes.Path> elemento <xref:System.Windows.Media.Geometry> gli oggetti possono essere utilizzati anche per descrivere il contenuto di un <xref:System.Windows.Media.GeometryDrawing> o un <xref:System.Windows.Media.DrawingContext>. Potrebbe inoltre essere utilizzati per il ritaglio e hit testing.  
+ Forme più complesse, ad esempio i poligoni e le forme con segmenti curvi, possono essere create tramite un <xref:System.Windows.Media.PathGeometry>. Per un esempio che illustra come creare forme tramite un <xref:System.Windows.Media.PathGeometry>, vedere [creare una forma utilizzando un oggetto PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md).  Sebbene questo esempio viene eseguito il rendering di una forma sullo schermo utilizzando un <xref:System.Windows.Shapes.Path> elemento <xref:System.Windows.Media.Geometry> oggetti possono essere usati anche per descrivere il contenuto di un <xref:System.Windows.Media.GeometryDrawing> o un <xref:System.Windows.Media.DrawingContext>. Si può anche essere usati per ritagliare e hit testing.  
   
- Questo esempio fa parte di un esempio più esaustivo. Per l'esempio completo, vedere la pagina [Geometries Sample (esempio di geometrie)](http://go.microsoft.com/fwlink/?LinkID=159989).
+ Questo esempio fa parte di un esempio più esaustivo. Per l'esempio completo, vedere la pagina [Geometries Sample (esempio di geometrie)](https://go.microsoft.com/fwlink/?LinkID=159989).

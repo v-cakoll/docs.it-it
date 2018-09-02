@@ -10,18 +10,18 @@ ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 33a59c8866423e04c5f5174aa894f3489a0a552a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95d383f44d84bb22e6fcc9fca159f8f5efa87434
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400432"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465460"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Argomenti sulle procedure relative ai client di automazione interfaccia utente per il codice gestito
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Questa sezione vengono fornite informazioni dettagliate sull'implementazione delle funzionalità di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in un'applicazione client.  
+ In questa sezione fornisce informazioni dettagliate sull'implementazione della funzionalità di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in un'applicazione client.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Trovare un elemento di automazione interfaccia utente in base a una condizione proprietà](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  

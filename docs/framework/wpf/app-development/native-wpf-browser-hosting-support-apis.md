@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: bff2b51fbc8fec6e7cd2b24700d1c4dc38c007f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550020"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464947"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>API native WPF per il supporto dell'hosting del browser
-Hosting di [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] applicazioni nei browser Web mediante un server di documenti attivi (anche noto come DocObject) registrato l'Host di WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] può attivare e direttamente integrare con un documento attivo. Per l'hosting di XBAP e documenti XAML separati nei browser Mozilla, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] fornisce un plug-in NPAPI, che fornisce un ambiente di hosting simile di [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] server documenti attivi come [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] does. Tuttavia, il modo più semplice pratico per ospitare XBAP e XAML dei documenti in altri browser e applicazioni autonome tramite il controllo Web Browser di Internet Explorer. Il controllo Web Browser fornisce l'ambiente di hosting server documenti attivi complesso, ma include anche un host separato personalizzare, estendere tale ambiente e comunicare direttamente con l'oggetto documento attivo corrente.  
+L'hosting di [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] applicazioni nei Web browser è fornita da un server di documenti attivi (noto anche come DocObject) registrato all'esterno dell'Host WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] direttamente può attivare e integrare con un documento attivo. Per l'hosting di applicazioni XBAP e i documenti XAML loose browser Mozilla [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] offre un plug-in NPAPI, che fornisce un ambiente di hosting simile per il [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] server documenti attivi come [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] viene. Tuttavia, il modo più semplice pratico per ospitare le applicazioni XBAP e XAML documenta negli altri browser e applicazioni autonome tramite il controllo Web Browser di Internet Explorer. Il controllo Web Browser fornisce l'ambiente di hosting server documenti attivi complessa, ma include anche un host separato personalizzare, estendere tale ambiente e comunicare direttamente con l'oggetto documento attivo corrente.  
   
- Il [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] server documenti attivi implementa più interfacce di hosting comuni, quali [IOleObject](http://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](http://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](http://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](http://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](http://go.microsoft.com/fwlink/?LinkId=162047). Quando sono ospitati nel controllo Web Browser, tali interfacce possono essere query dall'oggetto restituito dal [IWebBrowser2:: Document](http://go.microsoft.com/fwlink/?LinkId=162048) proprietà.  
+ Il [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] server documenti attivi implementa diverse interfacce di hosting più comuni, tra cui [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Quando ospitata nel controllo del Browser Web, queste interfacce possono essere query dall'oggetto restituito per il [IWebBrowser2:: Document](https://go.microsoft.com/fwlink/?LinkId=162048) proprietà.  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- Implementazione del server di documenti attivi WPF di [IOleCommandTarget](http://go.microsoft.com/fwlink/?LinkId=162047) supporta numerosi comandi specifici del browser e di navigazione del gruppo di comandi OLE standard (con un valore GUID del gruppo di comandi null). Inoltre, riconosce un gruppo di comando personalizzato denominato CGID_PresentationHost. Attualmente è disponibile solo un comando definito all'interno del gruppo.  
+ Implementazione del server documenti attivi WPF di [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) supporta numerosi comandi di navigazione e specifiche del browser del gruppo di comandi OLE standard (con un valore GUID del gruppo di comando null). Inoltre, riconosce un gruppo di comandi personalizzato denominato CGID_PresentationHost. Attualmente, è solo un comando definito all'interno di questo gruppo.  
   
 ```  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
@@ -29,7 +29,7 @@ enum PresentationHostCommands {
 };  
 ```  
   
- PHCMDID_TABINTO indica a spostare lo stato attivo per il primo o l'ultimo elemento attivabile del relativo contenuto, a seconda dello stato del tasto MAIUSC.  
+ PHCMDID_TABINTO indica a spostare lo stato attivo per il primo o l'ultimo elemento attivabile e del relativo contenuto, a seconda dello stato del tasto MAIUSC.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)  

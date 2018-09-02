@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: 0be428ef3b37222e1e8472591d2b54d950bef59f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8ac320c1edde05074d42652a708320d10690550
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366021"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463325"
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Specifica un'associazione protetta, affidabile e ottimizzata adatta per le comunicazioni fra computer. Per impostazione predefinita, genera uno stack di comunicazione in fase di runtime con Windows per la sicurezza per garantire la sicurezza e l'autenticazione dei messaggi, TCP per il recapito dei messaggi e la codifica binaria dei messaggi.  
@@ -67,7 +67,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 |maxBufferSize|Numero intero positivo che specifica la dimensione massima, in byte, del buffer usato per archiviare messaggi in memoria.<br /><br /> Se l'attributo `transferMode` è uguale a `Buffered`, questo attributo deve essere uguale al valore dell'attributo `maxReceivedMessageSize`.<br /><br /> Se l'attributo `transferMode` è uguale a `Streamed`, questo attributo non può essere superiore al valore dell'attributo `maxReceivedMessageSize` e deve essere uguale almeno alla dimensione delle intestazioni.<br /><br /> Il valore predefinito è 65536. Per altre informazioni, vedere <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>.|  
 |maxConnections|Numero intero che specifica il numero massimo di connessioni in uscita e in ingresso che il servizio creerà e accetterà. Le connessioni in ingresso e in uscita vengono conteggiate in base a un limite distinto specificato da questo attributo.<br /><br /> Le connessioni in ingresso eccedenti il limite vengono messe in coda finché non è disponibile uno spazio inferiore al limite.<br /><br /> Le connessioni in uscita eccedenti il limite vengono messe in coda finché non è disponibile uno spazio inferiore al limite.<br /><br /> Il valore predefinito è 10.|  
 |maxReceivedMessageSize|Integer positivo che specifica la dimensione massima del messaggio, incluse le intestazioni, che è possibile ricevere su un canale configurato con questa associazione. Il mittente di un messaggio che supera questo limite riceverà un errore SOAP. Il destinatario elimina il messaggio e crea una voce dell'evento nel registro di traccia. Il valore predefinito è 65536.|  
-|name|Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e senza nome associazioni e comportamenti, vedere [configurazione semplificata](../../../../../docs/framework/wcf/simplified-configuration.md) e [configurazione semplificata per i servizi WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|name|Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per altre informazioni sulla configurazione predefinita e associazioni privi di nome e i comportamenti, vedere [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) e [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di apertura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
 |portSharingEnabled|Valore booleano che specifica se è attivata la condivisione delle porte TCP per la connessione. Se è `false`, ciascuna associazione usa la propria porta esclusiva. Questa impostazione è appropriata solo per i servizi in quanto non ha effetto per i client.|  
 |receiveTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di ricezione. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:10:00.|  
@@ -81,8 +81,8 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>.|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[reliableSession](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Specifica se vengono stabilite sessioni affidabili tra endpoint del canale.|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[reliableSession](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Specifica se vengono stabilite sessioni affidabili tra endpoint del canale.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -91,9 +91,9 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
- Per impostazione predefinita, questa associazione genera uno stack di comunicazione runtime che, oltre a implementare la codifica binaria dei messaggi, usa la sicurezza del trasporto e il protocollo TCP per il recapito dei messaggi. Questa associazione è un'appropriato scelta fornita dal sistema di Windows Communication Foundation (WCF) di per la comunicazione su una rete Intranet.  
+ Per impostazione predefinita, questa associazione genera uno stack di comunicazione runtime che, oltre a implementare la codifica binaria dei messaggi, usa la sicurezza del trasporto e il protocollo TCP per il recapito dei messaggi. Questa associazione è un Windows Communication Foundation (WCF) fornita dal sistema scelta più appropriata per la comunicazione su una rete Intranet.  
   
- La configurazione predefinita per il `netTcpBinding` è più veloce rispetto alla configurazione fornita dal `wsHttpBinding`, ma serve solo per le comunicazioni di WCF. Il comportamento di sicurezza può essere configurato usando l'attributo `securityMode` facoltativo. L'utilizzo del protocollo WS-ReliableMessaging può essere configurato usando l'attributo facoltativo `reliableSessionEnabled`. La messaggistica affidabile è tuttavia disattivata per impostazione predefinita. Più in generale, le associazioni HTTP fornite dal sistema, ad esempio `wsHttpBinding` e `basicHttpBinding`, sono configurate in modo da attivare modalità di supporto per impostazione predefinita, mentre l'associazione `netTcpBinding` le disattiva per impostazione predefinita e pertanto è necessario fornire un consenso esplicito per ottenere il supporto, ad esempio, per una delle specifiche WS-*. Ciò significa che la configurazione predefinita per le associazioni TCP è più veloce nello scambio dei messaggi tra endpoint rispetto a quelle predefinite per le associazioni HTTP.  
+ La configurazione predefinita per il `netTcpBinding` risulta più veloce rispetto alla configurazione fornita dal `wsHttpBinding`, ma è destinata solo per la comunicazione di WCF. Il comportamento di sicurezza può essere configurato usando l'attributo `securityMode` facoltativo. L'utilizzo del protocollo WS-ReliableMessaging può essere configurato usando l'attributo facoltativo `reliableSessionEnabled`. La messaggistica affidabile è tuttavia disattivata per impostazione predefinita. Più in generale, le associazioni HTTP fornite dal sistema, ad esempio `wsHttpBinding` e `basicHttpBinding`, sono configurate in modo da attivare modalità di supporto per impostazione predefinita, mentre l'associazione `netTcpBinding` le disattiva per impostazione predefinita e pertanto è necessario fornire un consenso esplicito per ottenere il supporto, ad esempio, per una delle specifiche WS-*. Ciò significa che la configurazione predefinita per le associazioni TCP è più veloce nello scambio dei messaggi tra endpoint rispetto a quelle predefinite per le associazioni HTTP.  
   
 ## <a name="example"></a>Esempio  
  L'associazione è specificata nei file di configurazione per il client e il servizio. Il tipo di associazione è specificato nell'attributo `binding` dell'elemento `<endpoint>`. Se si desidera configurare l'associazione netTcpBinding e modificare alcune delle relative impostazioni, è necessario definire una configurazione di associazione. L'endpoint deve fare riferimento alla configurazione di associazione con un attributo `bindingConfiguration`. Nell'esempio seguente viene modificata una configurazione di associazione.  
@@ -147,5 +147,5 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
  <xref:System.ServiceModel.Configuration.NetTcpBindingElement>  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

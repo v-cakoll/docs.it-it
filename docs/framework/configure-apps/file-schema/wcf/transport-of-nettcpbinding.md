@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; di &lt;netTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 9369351e4e197f321feb4ae56939bec2a8280a64
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c2a0de73db2ec4a1c2150fc7e62b7a3a9f086bc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752559"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474005"
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;transport&gt; di &lt;netTcpBinding&gt;
 Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoint configurato con il [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -68,13 +68,13 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
 |EncryptAndSign|-I messaggi vengono crittografati e firmati.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Specifica le funzionalità di sicurezza di [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Specifica le funzionalità di sicurezza del [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
   
 ## <a name="remarks"></a>Note  
  Usare la sicurezza del trasporto garantire l'integrità e la riservatezza del messaggio SOAP, nonché l'esecuzione dell'autenticazione reciproca. Se questa modalità di sicurezza viene selezionata per un'associazione, lo stack di canali viene configurato in modo da usare un trasporto protetto nonché proteggere i messaggi SOAP tramite una sicurezza di trasporto quale Windows (Negotiate) o SSL su TCP.  
@@ -87,5 +87,5 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
  [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

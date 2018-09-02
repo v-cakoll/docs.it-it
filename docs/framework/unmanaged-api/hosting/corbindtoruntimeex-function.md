@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 553bbd79241292e1fa3b4fe718bda391191a10ae
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935322"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461037"
 ---
 # <a name="corbindtoruntimeex-function"></a>Funzione CorBindToRuntimeEx
 Consente l'host non gestiti di caricare common language runtime (CLR) in un processo. Il [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) e `CorBindToRuntimeEx` funzioni eseguono la stessa operazione, ma il `CorBindToRuntimeEx` funzione consente di impostare i flag per specificare il comportamento di CLR.  

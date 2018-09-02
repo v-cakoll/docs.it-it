@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69c7e30168686eeb7d530b167b1f87c567c63874
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408632"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463195"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Procedura: Eseguire il debug di servizi e applicazioni in grado di riconoscere attestazioni con le funzionalità di traccia WIF
 ## <a name="applies-to"></a>Si applica a  
@@ -77,14 +77,14 @@ ms.locfileid: "33408632"
     </system.diagnostics>  
     ```  
   
-3.  La configurazione precedente indica a WIF di generare eventi di traccia dettagliati e registrarli nel file *WIFTrace.e2e*. Per un elenco completo dei valori per l'opzione **switchValue**, fare riferimento alla tabella Livello di traccia nell'argomento [Configurazione delle funzionalità di traccia](http://msdn.microsoft.com/library/ms733025.aspx).  
+3.  La configurazione precedente indica a WIF di generare eventi di traccia dettagliati e registrarli nel file *WIFTrace.e2e*. Per un elenco completo dei valori per l'opzione **switchValue**, fare riferimento alla tabella Livello di traccia nell'argomento [Configurazione delle funzionalità di traccia](../wcf/diagnostics/tracing/configuring-tracing.md).  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>Passaggio 2 - Analizzare i file di traccia di WIF usando lo strumento visualizzatore di tracce dei servizi  
  In questo passaggio si userà lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe) per analizzare i log di traccia di WIF.  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>Per analizzare i log di traccia di WIF con lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe)  
   
-1.  Lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe) è incluso in Windows SDK. Se Windows SDK non è ancora installato, è possibile scaricarlo qui: [Windows SDK](http://www.microsoft.com/download/en/details.aspx?id=8279).  
+1.  Lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe) è incluso in Windows SDK. Se Windows SDK non è ancora installato, è possibile scaricarlo qui: [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
   
 2.  Eseguire lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe) In genere è disponibile nella cartella **Bin** del percorso di installazione.  
   
@@ -105,8 +105,8 @@ ms.locfileid: "33408632"
   
 |**ID errore**|**Messaggio di errore**|**Azione necessaria per correggere l'errore**|  
 |-|-|-|  
-|ID4175|L'emittente del token di sicurezza non è stato riconosciuto da IssuerNameRegistry.  Per accettare token di sicurezza da questa autorità emittente, configurare IssuerNameRegistry per restituire un nome valido per l'emittente.|L'errore può essere causato dall'aver copiato un'identificazione personale dallo snap-in MMC e averla poi incollata nel file *Web. config*. In particolare, copiando dalla finestra delle proprietà del certificato è possibile ottenere un carattere aggiuntivo non stampabile nella stringa di testo. Questo carattere aggiuntivo provoca l'esito negativo della corrispondenza identificazione personale. La procedura per copiare correttamente l'identificazione personale è reperibile qui: [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|L'emittente del token di sicurezza non è stato riconosciuto da IssuerNameRegistry.  Per accettare token di sicurezza da questa autorità emittente, configurare IssuerNameRegistry per restituire un nome valido per l'emittente.|L'errore può essere causato dall'aver copiato un'identificazione personale dallo snap-in MMC e averla poi incollata nel file *Web. config*. In particolare, copiando dalla finestra delle proprietà del certificato è possibile ottenere un carattere aggiuntivo non stampabile nella stringa di testo. Questo carattere aggiuntivo provoca l'esito negativo della corrispondenza identificazione personale. La procedura per copiare correttamente l'identificazione digitale è disponibili qui: [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
   
 ## <a name="related-items"></a>Elementi correlati  
   
--   [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](http://msdn.microsoft.com/library/aa751795.aspx)
+-   [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

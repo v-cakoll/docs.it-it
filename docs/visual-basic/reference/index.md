@@ -5,12 +5,12 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: f9005a25b99b0a17f8e00f350547aa4bc313c4ac
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 773aca8cbbd78f5480e254ff559192955beb18d9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961021"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455679"
 ---
 # <a name="reference-visual-basic"></a>Riferimenti (Visual Basic)
 In questa sezione vengono forniti collegamenti a informazioni di riferimento su diversi aspetti della programmazione in Visual Basic.  
@@ -42,5 +42,5 @@ In questa sezione vengono forniti collegamenti a informazioni di riferimento su 
  [Strumenti XML in Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  Vengono forniti collegamenti ad argomenti sui vari strumenti XML disponibili in Visual Studio.  
   
- [Automation and Extensibility Reference](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf) (Riferimenti su automazione ed estendibilità)  
+ [Automation and Extensibility Reference](https://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf) (Riferimenti su automazione ed estendibilità)  
  Fornisce collegamenti ad argomenti sull'automazione ed estendibilità in Visual Studio per i componenti condivisi sia specifico della lingua.

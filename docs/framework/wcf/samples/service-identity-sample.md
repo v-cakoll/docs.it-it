@@ -2,15 +2,15 @@
 title: Esempio identità del servizio
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: d7eee6070956fb3b9a87a79d79040f94740ad2d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cd6688802628a484cc9fe1fc1dffa82ddecd12a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507592"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466649"
 ---
 # <a name="service-identity-sample"></a>Esempio identità del servizio
-Questo esempio di identità del servizio illustra come impostare l'identità di un servizio. In fase di progettazione, un client può recuperare l'identità utilizzando i metadati del servizio e quindi al runtime il client può autenticare l'identità del servizio. Il concetto di identità del servizio serve per consentire a un client di autenticare un servizio prima di chiamare qualsiasi operazione, proteggendo in questo modo il client da chiamate non autenticate. Su una connessione sicura il servizio autentica anche le credenziali di un client prima di consentirgli l'accesso, ma questo non è il punto centrale dell'esempio. Vedere gli esempi in [Client](../../../../docs/framework/wcf/samples/client.md) che mostra l'autenticazione server.  
+Questo esempio di identità del servizio illustra come impostare l'identità di un servizio. In fase di progettazione, un client può recuperare l'identità utilizzando i metadati del servizio e quindi al runtime il client può autenticare l'identità del servizio. Il concetto di identità del servizio serve per consentire a un client di autenticare un servizio prima di chiamare qualsiasi operazione, proteggendo in questo modo il client da chiamate non autenticate. Su una connessione sicura il servizio autentica anche le credenziali di un client prima di consentirgli l'accesso, ma questo non è il punto centrale dell'esempio. Vedere gli esempi nella [Client](../../../../docs/framework/wcf/samples/client.md) che mostrano l'autenticazione server.  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -107,26 +107,26 @@ class CustomIdentityVerifier : IdentityVerifier
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer  
   
-1.  In [!INCLUDE[wxp](../../../../includes/wxp-md.md)] o [!INCLUDE[wv](../../../../includes/wv-md.md)] importare il file del certificato Identity.pfx nella cartella Identity della soluzione nell'archivio dei certificati LocalMachine/My (personale) utilizzando lo strumento snap-in MMC. Questo file è protetto da password. Durante l'importazione viene richiesta una password. Tipo `xyz` nella casella della password. Per ulteriori informazioni, vedere il [procedura: visualizzare certificati con lo Snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) argomento. Completata questa operazione, eseguire Setup.bat in un prompt dei comandi di Visual Studio con privilegi di amministratore che copia questo certificato nell'archivio CurrentUser/TrustedPeople per l'utilizzo sul client.  
+1.  In [!INCLUDE[wxp](../../../../includes/wxp-md.md)] o [!INCLUDE[wv](../../../../includes/wv-md.md)] importare il file del certificato Identity.pfx nella cartella Identity della soluzione nell'archivio dei certificati LocalMachine/My (personale) utilizzando lo strumento snap-in MMC. Questo file è protetto da password. Durante l'importazione viene richiesta una password. Tipo `xyz` nella casella della password. Per altre informazioni, vedere la [procedura: visualizzare certificati con lo Snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) argomento. Completata questa operazione, eseguire Setup.bat in un prompt dei comandi di Visual Studio con privilegi di amministratore che copia questo certificato nell'archivio CurrentUser/TrustedPeople per l'utilizzo sul client.  
   
 2.  In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] eseguire Setup.bat dalla cartella di installazione dell'esempio in un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.  
   
     > [!NOTE]
     >  Il file batch Setup.bat è progettato per essere eseguito da un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. La variabile di ambiente PATH impostata nel prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] punta alla directory che contiene file eseguibili richiesti dallo script Setup.bat. Assicurarsi di rimuovere i certificati eseguendo Cleanup.bat una volta completato l'esempio. Negli altri esempi relativi alla sicurezza vengono usati gli stessi certificati.  
   
-3.  Avviare Service.exe dalla directory \service\bin. Verificare che il servizio indica che è pronto e viene chiesto di premere \<Invio > per terminare il servizio.  
+3.  Avviare Service.exe dalla directory \service\bin. Assicurarsi che il servizio indichi che è pronto e visualizza un prompt per premere \<Invio > per terminare il servizio.  
   
 4.  Avviare Client.exe dalla directory \client\bin o premendo F5 in Visual Studio per compilare ed eseguire l'esempio. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-5.  Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer  
   
@@ -140,7 +140,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 5.  Copiare i file di programma del client nella directory del client sul computer relativo e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.  
   
-6.  Sul server aprire un prompt dei comandi di Visual Studio con privilegi di amministratore, quindi digitare `setup.bat service`. Esecuzione `setup.bat` con il `service` argomento crea un certificato di servizio con il nome di dominio completo del computer e il certificato di servizio viene esportato in un file denominato Service.cer.  
+6.  Sul server aprire un prompt dei comandi di Visual Studio con privilegi di amministratore, quindi digitare `setup.bat service`. In esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer ed esportare il certificato di servizio in un file denominato CER.  
   
 7.  Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
   
@@ -150,13 +150,13 @@ class CustomIdentityVerifier : IdentityVerifier
   
 10. Sul computer del servizio eseguire Service.exe dal prompt dei comandi.  
   
-11. Sul computer client avviare Client.exe da un prompt dei comandi. Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+11. Sul computer client avviare Client.exe da un prompt dei comandi. Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
 -   Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
   
     > [!NOTE]
-    >  Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se sono stati eseguiti esempi di Windows Communication Foundation (WCF) che usano certificati tra più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. Per eseguire questa operazione, usare il seguente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se è stato eseguito gli esempi di Windows Communication Foundation (WCF) che utilizzano certificati in più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. Per eseguire questa operazione, usare il seguente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Vedere anche

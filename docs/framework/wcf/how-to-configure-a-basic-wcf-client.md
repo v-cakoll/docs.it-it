@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-ms.openlocfilehash: c03bf37c737a19b0a90f12e7ad5db78b75323f5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2866cbd5862bf55286fc771823488cf913863de2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499275"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466571"
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Procedura: configurare un client Windows Communication Foundation di base
-Questa è la quinta delle sei attività necessarie per creare un'applicazione di Windows Communication Foundation (WCF) di base. Per una panoramica di tutte e sei le attività, vedere il [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md) argomento.  
+Questa è la quinta delle sei attività necessarie per creare un'applicazione Windows Communication Foundation (WCF). Per una panoramica di tutte e sei le attività, vedere l'argomento [Esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md).  
   
- Questo argomento viene illustrato il file di configurazione di client che è stato generato utilizzando la funzionalità Aggiungi riferimento al servizio del [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] o il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). La configurazione del client è costituita dalla specifica dell'endpoint usato dal client per accedere al servizio. Un endpoint ha un indirizzo, un'associazione e un contratto, e ognuno di questi elementi deve essere specificato nel processo di configurazione del client.  
+ Questo argomento viene illustrato il file di configurazione client generato utilizzando la funzionalità Aggiungi riferimento al servizio del [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] o il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). La configurazione del client è costituita dalla specifica dell'endpoint usato dal client per accedere al servizio. Un endpoint ha un indirizzo, un'associazione e un contratto, e ognuno di questi elementi deve essere specificato nel processo di configurazione del client.  
   
 ### <a name="to-configure-a-windows-communication-foundation-client"></a>Per configurare un client Windows Communication Foundation  
   
-1.  Aprire il file di configurazione generato (App.config) dal progetto GettingStartedClient. L'esempio seguente è una visualizzazione del file di configurazione generato. Sotto il [ \<System. ServiceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sezione, trovare il [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+1.  Aprire il file di configurazione generato (App.config) dal progetto GettingStartedClient. L'esempio seguente è una visualizzazione del file di configurazione generato. Sotto il [ \<System. ServiceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sezione, trovare il [ \<endpoint >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -48,11 +48,11 @@ Questa è la quinta delle sei attività necessarie per creare un'applicazione di
     </configuration>   
     ```  
   
-     Questo esempio mostra come configurare l'endpoint che il client utilizza per accedere al servizio che si trova all'indirizzo seguente: http://localhost:8000/ServiceModelSamples/Service/CalculatorService  
+     In questo esempio viene configurato l'endpoint utilizzato dal client per accedere al servizio che si trova all'indirizzo seguente: http://localhost:8000/ServiceModelSamples/Service/CalculatorService  
   
-     L'elemento endpoint specifica che il contratto di servizio `ServiceReference1.ICalculator` viene usato per la comunicazione tra il client e il servizio di WCF. Il canale WCF è configurato con fornito dal sistema <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>. Questo contratto è stato generato usando Aggiungi riferimento al servizio in Visual Studio. Si tratta essenzialmente di una copia del contratto che è stato definito nel progetto GettingStartedLib. Il <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> associazione specifica HTTP come trasporto, sicurezza interoperativa e altri dettagli di configurazione.  
+     L'elemento endpoint specifica che il contratto di servizio `ServiceReference1.ICalculator` viene usato per la comunicazione tra il client e il servizio di WCF. Il canale WCF è configurato con l'oggetto <xref:System.ServiceModel.WSHttpBinding> fornito dal sistema. Questo contratto è stato generato usando Aggiungi riferimento al servizio in Visual Studio. Si tratta essenzialmente di una copia del contratto che è stato definito nel progetto GettingStartedLib. Con l'associazione <xref:System.ServiceModel.WSHttpBinding> vengono specificati HTTP come trasporto, la sicurezza interoperativa e altri dettagli di configurazione.  
   
-2.  Per ulteriori informazioni su come usare il client generato con questa configurazione, vedere [procedura: utilizzare un Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).  
+2.  Per altre informazioni su come usare il client generato con questa configurazione, vedere [procedura: usare un Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  

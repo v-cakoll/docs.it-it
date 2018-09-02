@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 7cf688dc2e0ccd10c8bfbe5f0308f0aa808fbef0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88707ed6c0e3e5a0ecf1f0812d31634bbdca3123
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605030"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462519"
 ---
 # <a name="group-by-clause-visual-basic"></a>Clausola Group By (Visual Basic)
 Raggruppa gli elementi di un risultato della query. Può essere usata anche per applicare funzioni di aggregazione a ogni gruppo. L'operazione di raggruppamento è basata su una o più chiavi.  
@@ -71,7 +71,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Query](../../../visual-basic/language-reference/queries/queries.md)  
+ [Query](../../../visual-basic/language-reference/queries/index.md)  
  [Clausola Select](../../../visual-basic/language-reference/queries/select-clause.md)  
  [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Clausola Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)  

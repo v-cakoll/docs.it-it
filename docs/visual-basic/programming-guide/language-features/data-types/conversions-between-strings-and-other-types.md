@@ -10,11 +10,11 @@ helpviewer_keywords:
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
 ms.openlocfilehash: 38acd9056f9517e6d8b62691cdeb1a2960bec800
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998710"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469854"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Conversioni fra stringhe e altri tipi (Visual Basic)
 È possibile convertire un valore numerico, `Boolean`, o valore di data/ora un `String`. È anche possibile convertire in direzione inversa, ovvero da un valore stringa, numerici `Boolean`, o `Date` , purché il contenuto della stringa può essere interpretato come un valore valido del tipo di dati di destinazione. In caso contrario, si verifica un errore di run-time.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: dd68911abfa6bd6315091fb4630134532053efa1
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dc72b86a69d44ad282e30b000313b73211cad09c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999871"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461748"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Procedura dettagliata: creazione di nuovo contenuto WPF in Windows Form in fase di progettazione
 
@@ -61,7 +61,7 @@ Creare un nuovo controllo WPF e aggiungerlo al progetto è facile come aggiunger
 
     - Il file UserControl1.xaml viene aperto in [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].
 
-2. In visualizzazione Progettazione verificare che `UserControl1` sia selezionato. Per altre informazioni, vedere [procedura: selezionare e spostare elementi nella finestra di progettazione](http://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
+2. In visualizzazione Progettazione verificare che `UserControl1` sia selezionato. Per altre informazioni, vedere [procedura: selezionare e spostare elementi nella finestra di progettazione](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
 
 3. Nel **le proprietà** finestra, impostare il valore della <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> le proprietà da **200**.
 
@@ -114,4 +114,4 @@ Windows Form e WPF sono tecnologie diverse progettate per interagire strettament
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migrazione e interoperabilità](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
 - [Uso di controlli WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
-- [WPF Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

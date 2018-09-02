@@ -2,12 +2,12 @@
 title: Token di supporto
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 8d8ff3cf4d5a060d135cbcf40c043681ce72b6e0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 14f1cbf628e0666f0a8e96123cafe29ba300ea78
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808796"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470866"
 ---
 # <a name="supporting-tokens"></a>Token di supporto
 L'esempio dei token di supporto illustra come aggiungere token aggiuntivi a un messaggio che utilizza WS-Security. L'esempio aggiunge un token di sicurezza binario X.509 e un token di sicurezza nome utente. Il token viene passato in un'intestazione di un messaggio WS-Security dal client al servizio e parte del messaggio viene firmata con la chiave privata associata al token di sicurezza X.509 per provare il possesso del certificato X.509 al destinatario. Ciò è utile nel caso in cui vi sia un requisito di più richieste per autenticare o autorizzare il mittente associate a un messaggio. Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.  
@@ -283,7 +283,7 @@ public class EchoService : IEchoService
 ```  
   
 ## <a name="displaying-callers-information"></a>Visualizzazione delle informazioni sul chiamante  
- Per visualizzare le informazioni sul chiamante è possibile utilizzare `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` come mostra il codice seguente. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contiene attestazioni di autorizzazione associate al chiamante corrente. Tali attestazioni vengono fornite automaticamente da Windows Communication Foundation (WCF) per ogni token ricevuto nel messaggio.  
+ Per visualizzare le informazioni sul chiamante è possibile utilizzare `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` come mostra il codice seguente. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contiene attestazioni di autorizzazione associate al chiamante corrente. Tali richieste vengono fornite automaticamente da Windows Communication Foundation (WCF) per ogni token ricevuto nel messaggio.  
   
 ```  
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string   
@@ -346,7 +346,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```  
   
 ## <a name="running-the-sample"></a>Esecuzione dell'esempio  
- Quando si esegue l'esempio, il client innanzitutto richiede nome utente e password per il token del nome utente. Assicurarsi di fornire i valori corretti per l'account di sistema, perché WCF per il servizio viene eseguito il mapping i valori specificati nel token del nome utente nell'identità fornita dal sistema. Successivamente, il client visualizza la risposta del servizio. Premere INVIO nella finestra del client per arrestare il client.  
+ Quando si esegue l'esempio, il client innanzitutto richiede nome utente e password per il token del nome utente. Assicurarsi di specificare i valori corretti per l'account di sistema, poiché WCF per il servizio esegue il mapping di valori forniti nel token del nome utente nell'identità fornita dal sistema. Successivamente, il client visualizza la risposta del servizio. Premere INVIO nella finestra del client per arrestare il client.  
   
 ## <a name="setup-batch-file"></a>File batch di installazione  
  Il file batch Setup.bat incluso in questo esempio consente di configurare il server con i certificati attinenti per eseguire un'applicazione ospitata su Internet Information Services (IIS) che richiede sicurezza server basata su certificato. Questo file batch deve essere modificato per funzionare tra più computer o in caso di applicazioni indipendenti.  
@@ -415,9 +415,9 @@ iisreset
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare la soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni seguenti.  
   
@@ -430,7 +430,7 @@ iisreset
   
 2.  Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-3.  Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ##### <a name="to-run-the-sample-across-machines"></a>Per eseguire l'esempio tra più computer  
   
@@ -442,7 +442,7 @@ iisreset
   
 4.  Copiare i file di programma del client nella directory del client sul computer del client e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.  
   
-5.  Sul server aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire `setup.bat service`. Esecuzione `setup.bat` con il `service` argomento crea un certificato di servizio con il nome di dominio completo del computer e il certificato di servizio viene esportato in un file denominato Service.cer.  
+5.  Sul server aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire `setup.bat service`. In esecuzione `setup.bat` con il `service` argomento crea un certificato di servizio con il nome di dominio completo del computer e consente di esportare il certificato del servizio in un file denominato CER.  
   
 6.  Modificare Web. config per riflettere il nuovo nome del certificato (nel `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) che corrisponde al nome di dominio completo del computer.  
   
@@ -458,13 +458,13 @@ iisreset
   
 12. Eseguire sul server ImportClientCert.bat. In questo modo il certificato client viene importato dal file Client.cer nell'archivio LocalMachine - TrustedPeople.  
   
-13. Sul computer client, avviare Client.exe da una finestra del prompt dei comandi. Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. Sul computer client, avviare Client.exe da una finestra del prompt dei comandi. Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ##### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
 -   Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
   
 > [!NOTE]
->  Questo script non rimuove i certificati del servizio su un client quando si esegue questo esempio tra più computer. Se sono stati eseguiti esempi WCF che utilizzano certificati in più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. Per eseguire questa operazione, usare il seguente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Questo script non rimuove i certificati del servizio su un client quando si esegue questo esempio tra più computer. Se è stato eseguito gli esempi WCF che usano certificati tra più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. Per eseguire questa operazione, usare il seguente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Vedere anche

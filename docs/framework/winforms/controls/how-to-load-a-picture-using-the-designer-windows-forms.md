@@ -8,15 +8,15 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 5eb85c6f3ca232f8b53ac01d57ee71f73415cf83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e01e5d1dc0fad8171e705e85debc2b15d6a506eb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533543"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466534"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Procedura: caricare un'immagine utilizzando la finestra di progettazione (Windows Form)
-Windows Form <xref:System.Windows.Forms.PictureBox> (controllo), è possibile caricare e visualizzare un'immagine in un form in fase di progettazione, impostando il <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà su un'immagine valida. La tabella seguente illustra i tipi di file consentiti.  
+Con i moduli di Windows <xref:System.Windows.Forms.PictureBox> (controllo), è possibile caricare e visualizzare un'immagine in un form in fase di progettazione, impostando il <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà su un'immagine valida. La tabella seguente illustra i tipi di file consentiti.  
   
 |Tipo|Estensione di file|  
 |----------|-------------------------|  
@@ -27,21 +27,21 @@ Windows Form <xref:System.Windows.Forms.PictureBox> (controllo), è possibile ca
 |JPEG|.jpg|  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-display-a-picture-at-design-time"></a>Per visualizzare un'immagine in fase di progettazione  
   
 1.  Disegnare un <xref:System.Windows.Forms.PictureBox> controllo in un form.  
   
-2.  Nella finestra Proprietà, selezionare il <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà, quindi fare clic sul pulsante con i puntini di sospensione per visualizzare il **aprire** la finestra di dialogo.  
+2.  Nella finestra Proprietà selezionare la <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà, quindi fare clic sul pulsante dei puntini di sospensione per visualizzare il **Open** nella finestra di dialogo.  
   
-3.  Se si sta cercando un tipo di file specifico (ad esempio, il file con estensione gif), selezionarla nel **i file di tipo** casella.  
+3.  Se si sta cercando un tipo di file specifico (ad esempio, il file con estensione gif), selezionarla nel **file di tipo** casella.  
   
 4.  Selezionare il file che si desidera visualizzare.  
   
 ### <a name="to-clear-the-picture-at-design-time"></a>Per rimuovere l'immagine in fase di progettazione  
   
-1.  Nel **proprietà** finestra, seleziona il <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà e il pulsante destro del mouse l'immagine di anteprima di piccole dimensioni che viene visualizzato a sinistra del nome dell'oggetto immagine. Scegliere **reimpostare**.  
+1.  Nel **delle proprietà** finestra, seleziona il <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà e il pulsante destro del mouse il piccolo immagine di anteprima visualizzata a sinistra del nome dell'oggetto immagine. Scegli **reimpostare**.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Forms.PictureBox>  

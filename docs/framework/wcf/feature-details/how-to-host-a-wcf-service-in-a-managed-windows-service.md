@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: a50d6c5b52b1a61d7f076f35b5887ecac486cdf2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933543"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466254"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Procedura: ospitare un servizio WCF in un servizio Windows gestito
 
@@ -138,4 +138,4 @@ Analogamente all'opzione di self-hosting, l'ambiente host del servizio Windows r
 - [Configurazione semplificata](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Hosting in un'applicazione gestita](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
 - [Servizi di hosting](../../../../docs/framework/wcf/hosting-services.md)
-- [Windows Server AppFabric con funzionalità di Hosting](http://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server AppFabric con funzionalità di Hosting](https://go.microsoft.com/fwlink/?LinkId=201276)

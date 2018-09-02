@@ -2,12 +2,12 @@
 title: Mapping dei tipi di dati SQL Server
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: 26ba7aa730eb9c30cfeaf50c59d6b9721fe5857d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bc2747dff7b6f2bffdca4186519f2a36083e5f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362465"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456396"
 ---
 # <a name="sql-server-data-type-mappings"></a>Mapping dei tipi di dati SQL Server
 SQL Server e .NET Framework sono basati su sistemi di tipi diversi. La struttura <xref:System.Decimal> .NET Framework dispone ad esempio di una scala massima di 28, mentre i tipi di dati decimali e numerici di SQL Server dispongono di una scala massima di 38. Per mantenere l'integrità dei dati in caso di lettura e scrittura dei dati, <xref:System.Data.SqlClient.SqlDataReader> espone metodi delle funzioni di accesso tipizzate specifici di SQL Server che restituiscono oggetti di <xref:System.Data.SqlTypes>, nonché metodi delle funzioni di accesso che restituiscono tipi .NET Framework. Sia i tipi SQL Server che i tipi .NET Framework sono rappresentati anche dalle enumerazioni nelle classi <xref:System.Data.DbType> e <xref:System.Data.SqlDbType>, che è possibile usare quando si specificano tipi di dati <xref:System.Data.SqlClient.SqlParameter>.  
@@ -50,14 +50,15 @@ SQL Server e .NET Framework sono basati su sistemi di tipi diversi. La struttura
 |xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|none|  
   
 <sup>1</sup> non è possibile impostare il `DbType` proprietà di un `SqlParameter` a `SqlDbType.Date`.  
-<sup>2</sup> se si conosce il tipo sottostante di, utilizzare una funzione di accesso tipizzate specifici di `sql_variant`.  
+<sup>2</sup> se si conosce il tipo sottostante di utilizzare una funzione di accesso tipizzate specifici di `sql_variant`.  
   
-## <a name="sql-server-books-online-reference"></a>Riferimenti alla documentazione online di SQL Server  
- Per ulteriori informazioni sui tipi di dati di SQL Server, vedere [tipi di dati (motore di Database)](http://go.microsoft.com/fwlink/?LinkID=107468).  
+## <a name="sql-server-documentation"></a>Documentazione di SQL Server
+
+Per altre informazioni sui tipi di dati di SQL Server, vedere [tipi di dati (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [Dati binari e con valori elevati SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [Configurazione di parametri e tipi di dati dei parametri](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

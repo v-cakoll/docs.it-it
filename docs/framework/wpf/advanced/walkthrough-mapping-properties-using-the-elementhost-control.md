@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 89d2c6476334080fb162eadd4b2bf5984970f3fd
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 34119d889c8d6600fdda12cac33192c32d8e0fa6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934681"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467124"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Procedura dettagliata: mapping delle proprietà tramite il controllo ElementHost
 
@@ -29,7 +29,7 @@ Le attività illustrate nella procedura dettagliata sono le seguenti:
 
 -   Estensione di un mapping delle proprietà predefinito.
 
-Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [Mapping delle proprietà usando l'esempio di controllo ElementHost](http://go.microsoft.com/fwlink/?LinkID=160018).
+Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [Mapping delle proprietà usando l'esempio di controllo ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
 
 Al termine, sarà possibile eseguire il mapping [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] proprietà corrispondente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le proprietà di un elemento ospitato.
 
@@ -62,7 +62,7 @@ Per completare la procedura dettagliata, è necessario disporre dei componenti s
 
 4.  Aprire `Form1` in Progettazione Windows Form. Fare doppio clic sul form per aggiungere un gestore eventi per il <xref:System.Windows.Forms.Form.Load> evento.
 
-5.  Tornare alla finestra di progettazione Windows Form e aggiungere un gestore eventi per il form <xref:System.Windows.Forms.Control.Resize> evento. Per altre informazioni, vedere [procedura: creare impostazioni delle applicazioni usando la finestra di progettazione](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).
+5.  Tornare alla finestra di progettazione Windows Form e aggiungere un gestore eventi per il form <xref:System.Windows.Forms.Control.Resize> evento. Per altre informazioni, vedere [procedura: creare impostazioni delle applicazioni usando la finestra di progettazione](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).
 
 6.  Dichiarare un <xref:System.Windows.Forms.Integration.ElementHost> campo il `Form1` classe.
 
@@ -146,5 +146,5 @@ Rimuovere un mapping delle proprietà predefinito chiamando il <xref:System.Wind
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Mapping di proprietà di Windows Form e WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [WPF Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Procedura dettaglia: hosting di un controllo WPF composito in Windows Form](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

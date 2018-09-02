@@ -2,12 +2,12 @@
 title: '&lt;net.tcp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 9e44ddcc3a3e983abe6e36d4b6095c5c4a67529f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae6837bf6dc8167e165a3adcd1fca8abc3dcd396
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349883"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467601"
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 Specifica le impostazioni di configurazione per il servizio di condivisione porte NET.TCP, che consente a più processi di condividere la stessa porta TCP.  
@@ -52,7 +52,7 @@ Specifica le impostazioni di configurazione per il servizio di condivisione port
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`listenBacklog`|Valore intero che specifica il numero massimo di connessioni in attesa accettato dalla connessione condivisa, ma che non è ancora stato inviato ai servizi Windows Communication Foundation (WCF). Il valore predefinito è 10.|  
+|`listenBacklog`|Valore intero che specifica i numero massimo di connessioni in attesa accettate dalla connessione condivisa, ma non sono ancora state inviate ai servizi Windows Communication Foundation (WCF). Il valore predefinito è 10.|  
 |`maxPendingAccepts`|Numero intero che specifica il massimo di thread di accettazione contemporaneamente in attesa sull'endpoint di ascolto per il servizio di condivisione. Il valore predefinito è 2.|  
 |`MaxPendingConnections`|Numero massimo di connessioni che il listener può tenere in attesa di essere accettate dall'applicazione. Quando questo valore della quota viene superato, le nuove connessioni in ingresso vengono eliminate anziché restare in attesa di essere accettate. Le funzionalità di connessione, ad esempio la protezione dei messaggi, possono determinare l'apertura di più connessioni da parte di un client. Gli amministratori del servizio devono tener conto delle connessioni aggiuntive durante l'impostazione di questo valore della quota. Il valore predefinito è 10.|  
 |`receiveTimeout`|`TimeSpan` che specifica il timeout per la lettura dei dati sui frame e per l'esecuzione dell'invio della connessione dalle connessioni sottostanti. L'impostazione predefinita è "00:00:10".|  
@@ -62,7 +62,7 @@ Specifica le impostazioni di configurazione per il servizio di condivisione port
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Una raccolta di elementi di configurazione che contengono un `securityIdentifier` attributo per specificare gli account utente per processi che ospitano servizi WCF e vengano concesso l'accesso al servizio di condivisione.|  
+|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Una raccolta di elementi di configurazione che contengono un `securityIdentifier` attributo per specificare gli account utente per processi che ospitano servizi WCF e vengono concesso l'accesso al servizio di condivisione.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -71,9 +71,9 @@ Specifica le impostazioni di configurazione per il servizio di condivisione port
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contiene impostazioni di configurazione per il processo del listener SMSvcHost.exe.|  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni sulla condivisione delle porte, vedere [condivisione porta Net. TCP](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded). Per comprendere come configurare il servizio di condivisione delle porte, vedere [la configurazione del servizio di condivisione porta Net. TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
+ Per altre informazioni sulla condivisione di porte, vedere [condivisione delle porte Net. TCP](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded). Per informazioni su come configurare il servizio di condivisione delle porte, vedere [configurazione del servizio di condivisione porta Net. TCP](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Condivisione delle porte Net.TCP](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
- [Configurazione del servizio di condivisione delle porte Net.TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+ [Condivisione delle porte Net.TCP](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
+ [Configurazione del servizio di condivisione delle porte Net.TCP](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)

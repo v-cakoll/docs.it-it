@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: 3c74bd33e726dc5a34f55989357218a3e2c46e3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551191"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466356"
 ---
 # <a name="combobox"></a>ComboBox
-Il <xref:System.Windows.Controls.ComboBox> consente di visualizzare gli utenti con un elenco di opzioni. L'elenco viene visualizzato e nascosto quando il controllo consente di espandere e compressa. Nello stato predefinito, l'elenco è compressa, la visualizzazione sola opzione. L'utente sceglie un pulsante per visualizzare l'elenco completo delle opzioni.  
+Il <xref:System.Windows.Controls.ComboBox> controllo presenta agli utenti con un elenco di opzioni. L'elenco viene visualizzato e nascosto quando il controllo consente di espandere e compressa. Nello stato predefinito, l'elenco è compressa, la visualizzazione di sola scelta. L'utente fa clic su un pulsante per visualizzare l'elenco completo delle opzioni.  
   
- La figura seguente mostra un <xref:System.Windows.Controls.ComboBox> in stati diversi.  
+ La figura seguente mostra un <xref:System.Windows.Controls.ComboBox> nei suoi diversi stati.  
   
- ![Combinata caselle predefinito e premuto](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
+ ![Casella combinata caselle predefinito e premuto](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
 Comprimere ed espandere  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: ottenere un oggetto ComboBoxItem](http://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+ [Procedura: ottenere un oggetto ComboBoxItem](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.ComboBox>

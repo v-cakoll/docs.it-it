@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6da641ec5da20c80f4c1034ded8a3be7d036b5a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804131"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466491"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemi di sicurezza per la registrazione dei messaggi
 In questo argomento viene illustrato come evitare che i dati riservati vengano esposti nei log dei messaggi e come proteggere gli eventi generati dalla registrazione dei messaggi.  
@@ -17,7 +17,7 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
 ## <a name="security-concerns"></a>Problemi di sicurezza  
   
 ### <a name="logging-sensitive-information"></a>Registrazione di informazioni riservate  
- Windows Communication Foundation (WCF) non modifica i dati nelle intestazioni specifiche dell'applicazione e del corpo. WCF anche non tiene traccia delle informazioni personali nelle intestazioni specifiche dell'applicazione o dati del corpo.  
+ Windows Communication Foundation (WCF) non modifica Nessun dato nelle intestazioni specifiche dell'applicazione e del corpo. WCF non rileva anche le informazioni personali nelle intestazioni specifiche dell'applicazione o i dati del corpo.  
   
  Quando la registrazione dei messaggi è abilitata, le informazioni personali contenute nelle intestazioni specifiche dell'applicazione, ad esempio una stringa di query, e le informazioni contenute nel corpo, ad esempio un numero di carta di credito, possono divenire visibili nei log. Il distributore dell'applicazione è responsabile dell'applicazione del controllo di accesso sui file di log e di configurazione. Se non si desidera che questo tipo di informazioni sia visibile, è necessario disabilitare la registrazione oppure filtrare parte dei dati se si intende condividere i file registro.  
   
@@ -90,7 +90,7 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
   
  Le modifiche diventano effettive solo dopo l'avvio o il riavvio dell'applicazione. Un evento viene registrato all'avvio quando entrambi gli attributi sono impostati su `true`. Un evento viene inoltre registrato se `logKnownPii` è impostato su `true` ma `enableLoggingKnownPii` è `false`.  
   
- L'amministratore del computer e il distributore di applicazioni devono prestare molta attenzione durante l'utilizzo di queste due opzioni. Se la registrazione di informazioni personali è abilitata, vengono registrate chiavi di sicurezza e informazioni personali. Se è disabilitata, i dati riservati e le informazioni specifiche dell'applicazione vengono comunque registrati nell'intestazione e nel corpo dei messaggi. Per una discussione più approfondita su privacy e protezione delle informazioni personali vengano esposti, vedere [Privacy dell'utente](http://go.microsoft.com/fwlink/?LinkID=94647).  
+ L'amministratore del computer e il distributore di applicazioni devono prestare molta attenzione durante l'utilizzo di queste due opzioni. Se la registrazione di informazioni personali è abilitata, vengono registrate chiavi di sicurezza e informazioni personali. Se è disabilitata, i dati riservati e le informazioni specifiche dell'applicazione vengono comunque registrati nell'intestazione e nel corpo dei messaggi. Per una discussione più approfondita sulla privacy e la protezione delle informazioni personali vengano esposte, vedere [Privacy dell'utente](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
 > [!CAUTION]
 >  Le PII non sono nascoste nei messaggi in formato non valido. Tali messaggi vengono registrati così come sono, senza alcuna modifica. Gli attributi menzionati prima non hanno alcun effetto su questa situazione.  
@@ -105,11 +105,11 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
   
 -   Registrazioni messaggi disattivata: questo evento viene emesso quando la registrazione messaggi è disabilitata tramite WMI. Il contenuto dell'evento è "Registrazione messaggi disattivata".  
   
--   Registrazione informazioni personali note attiva: questo evento viene generato quando la registrazione di informazioni personali note è abilitata. Questo errore si verifica quando il `enableLoggingKnownPii` attributo la `machineSettings` del file Machine. config è impostato su `true`e `logKnownPii` attributo del `source` elemento nel file app. config o Web. config è impostato su `true`.  
+-   Registrazione informazioni personali note attiva: questo evento viene generato quando la registrazione di informazioni personali note è abilitata. Ciò si verifica quando il `enableLoggingKnownPii` attributo il `machineSettings` elemento del file Machine. config è impostato su `true`e il `logKnownPii` attributo del `source` elemento nel file app. config o Web. config è impostato su `true`.  
   
--   Registrazione informazioni personali note non consentita: questo evento viene emesso quando la registrazione delle informazioni personali note non è consentita. Questo errore si verifica quando il `logKnownPii` attributo del `source` elemento nel file app. config o Web. config è impostato su `true`, ma la `enableLoggingKnownPii` attributo la `machineSettings` del file Machine. config è impostato su `false`. Non viene generata alcuna eccezione.  
+-   Registrazione informazioni personali note non consentita: questo evento viene emesso quando la registrazione delle informazioni personali note non è consentita. Ciò si verifica quando il `logKnownPii` attributo del `source` elemento nel file app. config o Web. config è impostato su `true`, ma la `enableLoggingKnownPii` attributo il `machineSettings` elemento del file Machine. config è impostato su `false`. Non viene generata alcuna eccezione.  
   
- Questi eventi possono essere visualizzati nello strumento Visualizzatore eventi in dotazione con Windows. Per ulteriori informazioni, vedere [registrazione degli eventi](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+ Questi eventi possono essere visualizzati nello strumento Visualizzatore eventi in dotazione con Windows. Per altre informazioni, vedere [registrazione eventi](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Registrazione messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)  

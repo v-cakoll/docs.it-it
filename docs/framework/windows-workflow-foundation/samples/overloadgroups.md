@@ -2,12 +2,12 @@
 title: OverloadGroups
 ms.date: 03/30/2017
 ms.assetid: d1d547d2-f5fb-4de3-a959-ee6139a4f1ad
-ms.openlocfilehash: 489d27e05c96d3b3893052254a879d1c9d75788c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0773e76d36b25ad5485cc8912c7012815412de9f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515623"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469869"
 ---
 # <a name="overloadgroups"></a>OverloadGroups
 Questo esempio è costituito da un'attività (`CreateLocation`) che dispone di due caratteristiche interessanti:  
@@ -26,7 +26,7 @@ Questo esempio è costituito da un'attività (`CreateLocation`) che dispone di d
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Aprire il **OverloadGroups.sln** soluzione di esempio [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Aprire il **Overloadgroups** nella soluzione di esempio [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
 2.  Compilare ed eseguire la soluzione.  
   
@@ -35,6 +35,6 @@ Questo esempio è costituito da un'attività (`CreateLocation`) che dispone di d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\OverloadGroups`

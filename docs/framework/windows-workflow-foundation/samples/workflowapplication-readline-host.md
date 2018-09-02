@@ -2,12 +2,12 @@
 title: Host ReadLine di WorkflowApplication
 ms.date: 03/30/2017
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4388ff0285de58b0dc6f86af93aad84b2894373f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518538"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470853"
 ---
 # <a name="workflowapplication-readline-host"></a>Host ReadLine di WorkflowApplication
 Questo esempio è un host ReadLine generico. È possibile caricare ed eseguire qualsiasi flusso di lavoro usando l'attività `ReadLine` inclusa (o altre attività quali quelle che ottengono dati dai segnalibri ripresi con le stringhe). L'output dell'attività `WriteLine` o qualsiasi elemento che scrive nell'estensione della proprietà <xref:System.Activities.Statements.WriteLine.TextWriter%2A> è diretto alla finestra host. Quando un'istanza è inattiva, i segnalibri disponibili per tale istanza vengono visualizzati in una casella combinata. Selezionando un segnalibro, inserendo un testo e premendo il pulsante di ripresa del segnalibro viene continuata l'esecuzione del flusso di lavoro. Inoltre, è possibile annullare, interrompere o terminare un flusso di lavoro selezionato. La persistenza è attiva per impostazione predefinita; è possibile arrestare l'host e ripristinarlo in modo che l'elenco di istanze venga popolato con le istanze archiviate nel database. Il rilevamento viene usato per restituire gli eventi a livello dell'oggetto <xref:System.Activities.WorkflowApplication> all'host con la possibilità di aggiungere il rilevamento dettagliato a livello di attività.  
@@ -33,13 +33,13 @@ Questo esempio è un host ReadLine generico. È possibile caricare ed eseguire q
   
 6.  Una volta in esecuzione, è possibile disattivare o attivare la persistenza. Inoltre, è possibile attivare o disattivare il rilevamento dettagliato di attività.  
   
-7.  Fare clic sul pulsante con puntini di sospensione accanto al **eseguire** per cercare un flusso di lavoro definito in un file XAML  
+7.  Fare clic sul pulsante con puntini di sospensione accanto al **eseguiti** per cercare un flusso di lavoro definito in un file XAML  
   
      Nella cartella SampleWorkflows sono disponibili due esempi. L'esempio parallel1.xaml diventa inattivo.  
   
 8.  Dopo aver selezionato un esempio, premere il **eseguire** pulsante.  
   
-9. Se o quando il flusso di lavoro diventa inattivo, il **segnalibri** casella combinata viene popolata con i segnalibri disponibili.  
+9. Se o quando il flusso di lavoro diventa inattivo, il **segnalibri** casella combinata viene popolato con i segnalibri disponibili.  
   
 10. Le opzioni di questa fase servono per riprendere un segnalibro oppure per annullare, interrompere o terminare il flusso di lavoro. Inoltre, è possibile arrestare l'host e riavviarlo. Se la persistenza viene mantenuta attiva, le istanze vengono scaricate all'arresto e ricaricate al riavvio.  
   
@@ -56,6 +56,6 @@ Questo esempio è un host ReadLine generico. È possibile caricare ed eseguire q
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

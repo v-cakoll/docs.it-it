@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e69a15d70b8f1b9e271571be92f1f6717a9f196c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5171022d35c6f9e194ddcf615d29610ea2e0d4fb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461516"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465538"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>Metodo ICorProfilerInfo3::RequestProfilerDetach
 Indica al runtime di disconnettere il profiler.  
@@ -44,11 +44,11 @@ HRESULT RequestProfilerDetach(
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|La richiesta di disconnessione è valida e ora la procedura di disconnessione sta continuando in un altro thread. Quando la disconnessione è completa viene generato un evento `ProfilerDetachSucceeded`.|  
-|E_ CORPROF_E_CALLBACK3_REQUIRED|Il profiler di eseguire un [IUnknown:: QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) tentativo per il [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) interfaccia, è necessario implementare per supportare l'operazione di scollegamento. Non è stato eseguito alcun tentativo di disconnessione.|  
+|E_ CORPROF_E_CALLBACK3_REQUIRED|Il profiler di eseguire un' [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) tentativo per il [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) interfaccia, che deve implementare per supportare l'operazione di scollegamento. Non è stato eseguito alcun tentativo di disconnessione.|  
 |CORPROF_E_IMMUTABLE_FLAGS_SET|La disconnessione risulta impossibile poiché il profiler ha impostato flag non modificabili all'avvio. Non è stato eseguito alcun tentativo di disconnessione e il profiler è ancora connesso completamente.|  
-|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|La disconnessione risulta impossibile poiché il profiler ha usato instrumentato codice Microsoft intermediate language (MSIL) o inserite `enter` / `leave` hook. Non è stato eseguito alcun tentativo di disconnessione e il profiler è ancora connesso completamente.<br /><br /> **Nota** instrumentato MSIL è codice fornito dal profiler usando il [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metodo.|  
-|CORPROF_E_RUNTIME_UNINITIALIZED|Il runtime non è stato ancora inizializzato nell'applicazione gestita, ovvero non è stato caricato completamente. Questo codice di errore può essere restituito quando la disconnessione è richiesto all'interno del callback del profiler [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) metodo.|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` è stato chiamato in un momento non supportato. Questo errore si verifica se il metodo viene chiamato su un thread gestito ma non dall'interno un [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) metodo o in un [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) metodo che non è in grado di tollerare una procedura di garbage collection. Per ulteriori informazioni, vedere [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
+|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|La disconnessione risulta impossibile poiché il profiler ha usato instrumentato codice Microsoft intermediate language (MSIL) o inserite `enter` / `leave` hook. Non è stato eseguito alcun tentativo di disconnessione e il profiler è ancora connesso completamente.<br /><br /> **Nota** instrumentato MSIL è codice fornito dal profiler usando il [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) (metodo).|  
+|CORPROF_E_RUNTIME_UNINITIALIZED|Il runtime non è stato ancora inizializzato nell'applicazione gestita, ovvero non è stato caricato completamente. Questo codice di errore può essere restituito quando la disconnessione viene richiesta all'interno del callback del profiler [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) (metodo).|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` è stato chiamato in un momento non supportato. Ciò si verifica se il metodo viene chiamato su un thread gestito ma non dall'interno un' [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) metodo o in un [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) metodo che non può tollerare una garbage collection. Per altre informazioni, vedere [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
   
 ## <a name="remarks"></a>Note  
  Durante la routine di disconnessione, il thread di disconnessione (ovvero il thread creato in maniera specifica per la disconnessione del profiler) controlla occasionalmente se tutti i thread sono usciti dal codice del profiler. Il profiler deve fornire tramite il parametro `dwExpectedCompletionMilliseconds` una stima del tempo necessario perché questo avvenga. Un valore adeguato da usare è la tipica quantità di tempo impiegata dal profiler in qualsiasi dato metodo `ICorProfilerCallback*`; tale valore non deve essere minore della metà della quantità massima di tempo che il profiler prevede di impiegare.  
@@ -58,13 +58,13 @@ HRESULT RequestProfilerDetach(
  Se il profiler specifica 0 (zero) per `dwExpectedCompletionMilliseconds`, CLR usa il valore predefinito pari a 5000, a indicare che eseguirà una verifica dopo 5 secondi, nuovamente dopo 10 secondi e quindi ogni 10 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  

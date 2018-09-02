@@ -10,11 +10,11 @@ helpviewer_keywords:
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
 ms.openlocfilehash: 671553b496520f2c2ac3fea90b1514a6cdf1764a
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331761"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467281"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>Controllo TableLayoutPanel (Windows Form)
 Il controllo <xref:System.Windows.Forms.TableLayoutPanel> dispone il contenuto in una griglia. Poiché il layout viene effettuato sia in fase di progettazione che in fase di esecuzione, può cambiare dinamicamente in base alle modifiche dell'ambiente di applicazione, consentendo il ridimensionamento proporzionale dei controlli presenti nel pannello in risposta a modifiche quali il ridimensionamento del controllo padre o la variazione della lunghezza del testo dovuta alla localizzazione.  

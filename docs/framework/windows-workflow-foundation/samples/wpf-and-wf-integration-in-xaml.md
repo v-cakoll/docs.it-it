@@ -2,15 +2,15 @@
 title: Integrazione di WPF e WF in XAML
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-ms.openlocfilehash: 2fb145a8511383c37be536a78522a256514c08c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 619f3b7ce2b854e27fe9229fd08727627ce37f1a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518190"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455692"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>Integrazione di WPF e WF in XAML
-In questo esempio viene illustrato come creare un'applicazione che usa le funzionalità di Windows Presentation Foundation (WPF) e Windows Workflow Foundation (WF) in un unico documento XAML. A tale scopo, l'esempio utilizza l'estendibilità di Windows Workflow Foundation (WF) + + e XAML.  
+Questo esempio viene illustrato come creare un'applicazione che usa le funzionalità di Windows Presentation Foundation (WPF) e Windows Workflow Foundation (WF) in un unico documento XAML. A tale scopo, l'esempio utilizza l'estendibilità di Windows Workflow Foundation (WF) e XAML.  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
  Il file ShowWindow.xaml viene deserializzato in un'attività <xref:System.Activities.Statements.Sequence> con due variabili di stringa modificate dalle attività della sequenza: `ShowWindow` e `WriteLine`. L'attività <xref:System.Activities.Statements.WriteLine> invia come output alla finestra della console l'espressione che assegna alla proprietà <xref:System.Activities.Statements.WriteLine.Text%2A>. L'attività `ShowWindow` visualizza una finestra [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] come parte della relativa logica di esecuzione. La proprietà <xref:System.Activities.ActivityContext.DataContext%2A> della finestra include le variabili dichiarate nella sequenza. I controlli della finestra dichiarati nell'attività `ShowWindow` usano l'associazione dati per modificare tali variabili. Infine, nella finestra è contenuto un controllo pulsante. L'evento `Click` per il pulsante viene gestito da un oggetto <xref:System.Activities.ActivityDelegate> denominato `MarkupExtension` che contiene un'attività `CloseWindow`. `MarkUpExtension` richiama l'attività esterna che fornisce come contesto tutti gli oggetti identificati da un oggetto `x:Name` nonché l'oggetto <xref:System.Activities.ActivityContext.DataContext%2A> della finestra contenitore. Pertanto, l'oggetto `CloseWindow.InArgument<Window>` può essere associato usando un'espressione che fa riferimento al nome della finestra.  
@@ -41,6 +41,6 @@ In questo esempio viene illustrato come creare un'applicazione che usa le funzio
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`

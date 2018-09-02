@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: bec890f7937965c314ccf16b4142905c52ceff49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93bba86801ec4971e884cb4703d7a6323a2e94fe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546936"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455744"
 ---
 # <a name="sample-opentype-font-pack"></a>Esempio di pacchetto di tipi di carattere OpenType
 Questo argomento offre una panoramica dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio distribuiti con [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. I tipi di carattere di esempio supportano funzionalità [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] estese che possono essere usate dalle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -34,10 +34,10 @@ Questo argomento offre una panoramica dei tipi di carattere [!INCLUDE[TLA#tla_op
   
  La figura seguente illustra l'aspetto dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
   
- ![Elenco di nomi di carattere nel pacchetto di esempio del tipo di carattere](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")  
+ ![Elenco dei tipi di carattere nel pacchetto di esempio del tipo di carattere](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")  
 Tipi di carattere nel pacchetto di caratteri OpenType  
   
- I tipi di carattere di esempio sono concessi in licenza da Ascender Corporation. Ascender è un provider di tipi di carattere avanzati. Per ottenere in licenza versioni estese o personalizzate dei tipi di carattere di esempio, vedere il [sito Web di Ascender Corporation](http://go.microsoft.com/fwlink/?LinkId=182627).  
+ I tipi di carattere di esempio sono concessi in licenza da Ascender Corporation. Ascender è un provider di tipi di carattere avanzati. Per ottenere in licenza versioni estese o personalizzate dei tipi di carattere di esempio, vedere il [sito Web di Ascender Corporation](https://go.microsoft.com/fwlink/?LinkId=182627).  
   
 > [!NOTE]
 >  È responsabilità degli sviluppatori verificare di disporre dei diritti di licenza necessari per qualsiasi tipo di carattere incorporato all'interno di un'applicazione o ridistribuito in altro modo.  

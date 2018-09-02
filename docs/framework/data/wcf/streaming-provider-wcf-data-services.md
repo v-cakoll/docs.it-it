@@ -10,15 +10,15 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: d65ea58bc2e98ab2607ce105b496ac0a870362b0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805473"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474339"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provider di flusso (WCF Data Services)
-Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono rappresentare flussi audio e video, immagini, file documento o altri tipi di elementi multimediali binari. Quando un'entità del modello di dati include una o più proprietà binarie, il servizio dati restituisce tali dati binari codificati in base 64 all'interno dell'elemento entry presente nel feed di risposta. Poiché il caricamento e la serializzazione di dati binari di grandi dimensioni in questo modo può influire sulle prestazioni, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definisce un meccanismo per recuperare dati binari indipendentemente dell'entità a cui appartiene. Questa operazione viene eseguita separando i dati binari dall'entità in uno o più flussi di dati.  
+Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono rappresentare flussi audio e video, immagini, file documento o altri tipi di elementi multimediali binari. Quando un'entità del modello di dati include una o più proprietà binarie, il servizio dati restituisce tali dati binari codificati in base 64 all'interno dell'elemento entry presente nel feed di risposta. Poiché il caricamento e serializzazione di dati binari di grandi dimensioni in questo modo può influire sulle prestazioni, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definisce un meccanismo per recuperare dati binari indipendentemente dell'entità a cui appartiene. Questa operazione viene eseguita separando i dati binari dall'entità in uno o più flussi di dati.  
   
 -   Risorsa multimediale: dati binari che appartengono a un'entità, quali una risorsa video, audio, immagine o altri tipi di flusso di risorse multimediali.  
   
@@ -38,7 +38,7 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
   
 5.  Abilitare accesso alle risorse binarie sul server o in un'origine dati.  
   
- Gli esempi in questo argomento sono basati su un campione di servizio di foto, come illustrato in dettaglio nel post di streaming [serie Provider di flusso di dati Services: implementazione di un Provider di flusso (parte 1)](http://go.microsoft.com/fwlink/?LinkID=198989). Il codice sorgente per questo servizio di esempio è disponibile il [pagina di esempio di servizio dati foto di flusso](http://go.microsoft.com/fwlink/?LinkID=198988) in MSDN Code Gallery.  
+ Gli esempi in questo argomento sono basati su un campione di servizio di foto, illustrata in dettaglio nel post di streaming [serie Provider di flusso di Data Services: implementazione di un Provider di flusso (parte 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Il codice sorgente per questo servizio di esempio è disponibile nel [pagina di esempio di servizio dati foto di flusso](https://go.microsoft.com/fwlink/?LinkID=198988) su MSDN Code Gallery.  
   
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definizione di un elemento entry di collegamento multimediale nel modello di dati  
  Il provider dell'origine dati determina la modalità di definizione di un'entità come entry di collegamento multimediale nel modello di dati.  
@@ -50,13 +50,13 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
   
  È inoltre necessario aggiungere lo spazio dei nomi `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` all'entità o alla radice del file con estensione edmx o csdl che definisce il modello di dati.  
   
- Per un esempio di un servizio dati che utilizza il [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provider ed espone una risorsa multimediale, vedere il post [serie Provider di flusso di dati Services: implementazione di un Provider di flusso (parte 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
+ Per un esempio di un servizio dati che utilizza il [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provider ed espone una risorsa multimediale, vedere il post [serie Provider di flusso di Data Services: implementazione di un Provider di flusso (parte 1)](https://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Provider di reflection**  
  Per indicare che un'entità è un elemento entry di collegamento multimediale, aggiungere <xref:System.Data.Services.Common.HasStreamAttribute> alla classe che definisce il tipo di entità nel provider di reflection.  
   
  **Provider del servizio dati personalizzato**  
- Quando si usano provider di servizi personalizzati, si implementa l'interfaccia <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> per definire i metadati per il servizio dati. Per ulteriori informazioni, vedere [provider di servizi dati personalizzati](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md). Si indica che un flusso di risorse binarie appartiene a un oggetto <xref:System.Data.Services.Providers.ResourceType> impostando la proprietà <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> su `true` nell'oggetto <xref:System.Data.Services.Providers.ResourceType> che rappresenta il tipo di entità, un elemento entry di collegamento multimediale.  
+ Quando si usano provider di servizi personalizzati, si implementa l'interfaccia <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> per definire i metadati per il servizio dati. Per altre informazioni, vedere [provider di servizi dati personalizzati](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md). Si indica che un flusso di risorse binarie appartiene a un oggetto <xref:System.Data.Services.Providers.ResourceType> impostando la proprietà <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> su `true` nell'oggetto <xref:System.Data.Services.Providers.ResourceType> che rappresenta il tipo di entità, un elemento entry di collegamento multimediale.  
   
 ## <a name="implementing-the-idataservicestreamprovider-interface"></a>Implementazione dell'interfaccia IDataServiceStreamProvider  
  Per creare un servizio dati che supporta i flussi di dati binari, è necessario implementare l'interfaccia <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Questa implementazione consente al servizio dati di restituire al client i dati binari sotto forma di flusso e di usarli come flusso inviato dal client. Il servizio dati crea un'istanza di questa interfaccia ogni volta che deve accedere ai dati binari sotto forma di flusso. L'interfaccia <xref:System.Data.Services.Providers.IDataServiceStreamProvider> specifica i membri seguenti:  
@@ -85,16 +85,16 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
   
   
 > [!NOTE]
->  È necessario utilizzare un <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modalità di trasferimento per garantire che i dati binari nei messaggi di richiesta e risposta vengono trasmessi e non memorizzato nel buffer da WCF.  
+>  È necessario usare un <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modalità di trasferimento per garantire che i dati binari nei messaggi di richiesta e risposta vengono trasmessi e non memorizzato nel buffer da WCF.  
   
- Per ulteriori informazioni, vedere [Streaming di trasferimento messaggi](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) e [delle quote del trasporto](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ Per altre informazioni, vedere [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) e [quote dei trasporti](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- Per impostazione predefinita, Internet Information Services (IIS) consente anche di limitare la dimensione delle richieste a 4 MB. Per abilitare il servizio dati per la ricezione di flussi di dimensioni superiori a 4MB durante l'esecuzione in IIS, è necessario impostare anche la `maxRequestLength` attributo del [elemento httpRuntime (Schema delle impostazioni ASP.NET)](http://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) nel `<system.web />` sezione di configurazione, come Nell'esempio seguente:  
+ Per impostazione predefinita, Internet Information Services (IIS) consente anche di limitare la dimensione delle richieste a 4 MB. Per abilitare il servizio dati di ricevere flussi superiori a 4MB durante l'esecuzione in IIS, è necessario impostare anche il `maxRequestLength` attributo del [elemento httpRuntime (Schema delle impostazioni ASP.NET)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) nel `<system.web />` sezione di configurazione, come illustrato nell'esempio seguente:  
   
   
   
 ## <a name="using-data-streams-in-a-client-application"></a>Utilizzo dei flussi di dati in un'applicazione client  
- La libreria client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di recuperare e aggiornare tali risorse esposte come flussi binari sul client. Per ulteriori informazioni, vedere [funziona con dati binari](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
+ La libreria client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di recuperare e aggiornare tali risorse esposte come flussi binari sul client. Per altre informazioni, vedere [funziona con dati binari](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>Considerazioni sull'utilizzo di un provider di flusso  
  Quando si implementa un provider di flusso e si accede alle risorse multimediali da un servizio dati, è necessario tenere presente le considerazioni seguenti.  
@@ -111,7 +111,7 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
   
     -   Nel modello di dati non devono essere incluse le proprietà binarie che sono risorse multimediali. Tutte le proprietà esposte in un modello di dati vengono restituite nell'elemento entry di un feed di risposta.  
   
-    -   Per migliorare le prestazioni con flussi binari di grandi dimensioni, è consigliabile creare una classe del flusso personalizzata per archiviare i dati binari nel database. Questa classe viene restituita dall'implementazione di <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> e invia i dati binari al database in blocchi. Per un database di SQL Server, è consigliabile usare una classe FILESTREAM per trasmettere dati nel database quando i dati binari sono maggiori di 1MB.  
+    -   Per migliorare le prestazioni con flussi binari di grandi dimensioni, è consigliabile creare una classe del flusso personalizzata per archiviare i dati binari nel database. Questa classe viene restituita dall'implementazione di <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> e invia i dati binari al database in blocchi. Per un database di SQL Server, è consigliabile usare un oggetto FILESTREAM per trasmettere i dati nel database quando i dati binari sono superiori a 1MB.  
   
     -   Assicurarsi che il database sia stato progettato per archiviare flussi binari di grandi dimensioni che devono essere ricevuti dal servizio dati.  
   
@@ -119,7 +119,7 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
   
 -   Quando si implementa il metodo <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>, è necessario usare i valori eTag e Content-Type forniti come parametri dei metodi. Non impostare le intestazioni eTag o Content-Type nell'implementazione del provider <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
--   Per impostazione predefinita, il client invia i flussi binari di grandi dimensioni tramite codifica di trasferimento HTTP Chunked. Poiché il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server non supporta questo tipo di codifica, è possibile utilizzare il server Web per ospitare un servizio dati di flusso che debba accettare flussi binari di grandi dimensioni. Per ulteriori informazioni su [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, vedere [server Web in Visual Studio per progetti Web ASP.NET](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   Per impostazione predefinita, il client invia i flussi binari di grandi dimensioni tramite codifica di trasferimento HTTP Chunked. Poiché il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server non supporta questo tipo di codifica, è possibile utilizzare questo server Web per ospitare un servizio dati di flusso che debba accettare flussi binari di grandi dimensioni. Per ulteriori informazioni sul [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, vedere [server Web in Visual Studio per progetti Web ASP.NET](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Requisiti di versione  
@@ -127,7 +127,7 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
   
 -   Il provider di flusso richiede che il servizio dati supporti la versione 2.0 del protocollo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] e versioni successive.  
   
- Per ulteriori informazioni, vedere [controllo delle versioni del servizio dati](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
+ Per altre informazioni, vedere [controllo delle versioni del servizio dati](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Provider di servizi dati](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  

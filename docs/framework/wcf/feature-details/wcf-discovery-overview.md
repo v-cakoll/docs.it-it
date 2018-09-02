@@ -2,12 +2,12 @@
 title: Panoramica di WCF Discovery
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: c01ded15b3284058d7c5678409936e51fce1ea5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24d758502e360a8368be25c506b8648b12a3eb20
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505900"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468339"
 ---
 # <a name="wcf-discovery-overview"></a>Panoramica di WCF Discovery
 Le API di individuazione offrono un modello di programmazione unificato per la pubblicazione dinamica e l'individuazione di servizi Web utilizzando il protocollo WS-Discovery. Queste API consentono la pubblicazione dei servizi e l'individuazione di tali servizi da parte dei client. Una volta reso individuabile un servizio, quest'ultimo è in grado di inviare messaggi di annuncio nonché di essere in ascolto e di rispondere alle richieste di individuazione. I servizi individuabili possono inviare messaggi Hello per annunciare la propria presenza in rete e messaggi Bye per annunciare la propria uscita dalla rete. Per trovare un servizio, i client inviano una richiesta `Probe` contenente criteri specifici quali il tipo di contratto servizio, le parole chiave e l'ambito nella rete. I servizi ricevono la richiesta `Probe` e determinano se corrisponde ai criteri. Se un servizio corrisponde, risponde restituendo un messaggio `ProbeMatch` al client con le informazioni necessarie per contattare il servizio. I client possono inoltre inviare richieste `Resolve` che consentono loro di individuare i servizi che hanno modificato il relativo indirizzo endpoint. I servizi corrispondenti rispondono alle richieste `Resolve` restituendo al client un messaggio `ResolveMatch`.  
@@ -146,7 +146,7 @@ class Client
 ```  
   
 ## <a name="discovery-and-message-level-security"></a>Sicurezza a livello di individuazione e messaggio  
- Quando si utilizza la sicurezza a livello di messaggio è necessario specificare un oggetto <xref:System.ServiceModel.EndpointIdentity> nell'endpoint di individuazione del servizio e un oggetto <xref:System.ServiceModel.EndpointIdentity> corrispondente nell'endpoint di individuazione del client. Per ulteriori informazioni sulla sicurezza a livello di messaggio, vedere [sicurezza dei messaggi](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ Quando si utilizza la sicurezza a livello di messaggio è necessario specificare un oggetto <xref:System.ServiceModel.EndpointIdentity> nell'endpoint di individuazione del servizio e un oggetto <xref:System.ServiceModel.EndpointIdentity> corrispondente nell'endpoint di individuazione del client. Per altre informazioni sulla sicurezza a livello di messaggio, vedere [protezione del messaggio](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
 ## <a name="discovery-and-web-hosted-services"></a>Individuazione e servizi ospitati su Web  
  I servizi WCF per essere individuabili devono essere in esecuzione. I servizi WCF ospitati in IIS o WAS non vengono eseguiti fino a quando IIS/WAS non riceve un messaggio associato per il servizio, quindi non possono essere individuabili per impostazione predefinita.  Per rendere i servizi ospitati su Web individuabili esistono due opzioni:  
@@ -155,9 +155,9 @@ class Client
   
 2.  Utilizzare un proxy di individuazione per comunicare per conto del servizio  
   
- Windows Server AppFabric dispone di una funzionalità di avvio automatico che consente al servizio di essere avviato prima di ricevere qualsiasi messaggio. Con l'impostazione della funzionalità di avvio automatico, un servizio ospitato in IIS/WAS può essere configurato per essere individuabile. Per ulteriori informazioni sulla funzionalità avvio automatico, vedere [funzionalità di avvio automatico di Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=205545). Oltre ad abilitare la funzionalità di avvio automatico, è necessario configurare il servizio per l'individuazione. Per altre informazioni, vedere [procedura: aggiungere a livello di programmazione di individuazione per un servizio WCF e un Client](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Configuring Discovery in un File di configurazione](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ Windows Server AppFabric dispone di una funzionalità di avvio automatico che consente al servizio di essere avviato prima di ricevere qualsiasi messaggio. Con l'impostazione della funzionalità di avvio automatico, un servizio ospitato in IIS/WAS può essere configurato per essere individuabile. Per altre informazioni sulle funzionalità avvio automatico, vedere [funzionalità di avvio automatico di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=205545). Oltre ad abilitare la funzionalità di avvio automatico, è necessario configurare il servizio per l'individuazione. Per altre informazioni, vedere [procedura: aggiungere a livello di programmazione di individuazione a un Client e servizio WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Configuring Discovery in un File di configurazione](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   
- Un proxy di individuazione può essere utilizzato per comunicare per conto del servizio WCF quando tale servizio non è in esecuzione. Il proxy può mettersi in ascolto del probe o risolvere i messaggi e rispondere al client. Il client può quindi inviare i messaggi direttamente al servizio. Quando il client invia un messaggio al servizio, verrà creata un'istanza di tale servizio per rispondere al messaggio. Per ulteriori informazioni sull'implementazione di un individuazione proxy, vedere [implementazione di un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
+ Un proxy di individuazione può essere utilizzato per comunicare per conto del servizio WCF quando tale servizio non è in esecuzione. Il proxy può mettersi in ascolto del probe o risolvere i messaggi e rispondere al client. Il client può quindi inviare i messaggi direttamente al servizio. Quando il client invia un messaggio al servizio, verrà creata un'istanza di tale servizio per rispondere al messaggio. Per altre informazioni sull'implementazione, vedere proxy una scoperta [implementazione di un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   
 > [!NOTE]
->  Per l'individuazione di WCF funzionare correttamente, tutte le schede di rete (Controller di interfaccia di rete) devono avere solo indirizzo IP 1.
+>  Per l'individuazione di WCF per funzionare correttamente, tutte le schede NIC (Network Interface Controller) deve avere solo 1 indirizzo IP.

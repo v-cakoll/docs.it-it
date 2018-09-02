@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 80d852dd08e935d4c06e9b6d2e52b0a075849ef5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807840"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469830"
 ---
 # <a name="configuring-message-logging"></a>Configurazione della registrazione dei messaggi
 In questo argomento viene illustrato come configurare la registrazione dei messaggi per scenari differenti.  
@@ -22,14 +22,14 @@ In questo argomento viene illustrato come configurare la registrazione dei messa
 ```xml  
 <system.diagnostics>  
   <sources>  
-      <source name="System.ServiceModel.MessageLogging">  
-        <listeners>  
-                 <add name="messages"  
-                 type="System.Diagnostics.XmlWriterTraceListener"  
-                 initializeData="c:\logs\messages.svclog" />  
-          </listeners>  
-      </source>  
-    </sources>  
+    <source name="System.ServiceModel.MessageLogging">  
+      <listeners>  
+         <add name="messages"  
+              type="System.Diagnostics.XmlWriterTraceListener"  
+              initializeData="c:\logs\messages.svclog" />  
+        </listeners>  
+    </source>  
+  </sources>  
 </system.diagnostics>  
   
 <system.serviceModel>  
@@ -45,7 +45,7 @@ In questo argomento viene illustrato come configurare la registrazione dei messa
 </system.serviceModel>  
 ```  
   
- Per ulteriori informazioni sulle impostazioni di registrazione di messaggi, vedere [impostazioni consigliate per la traccia e registrazione dei messaggi](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ Per altre informazioni sulle impostazioni di registrazione dei messaggi, vedere [impostazioni consigliate per la traccia e registrazione dei messaggi](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
  Per specificare il nome e il tipo del listener di traccia che si desidera utilizzare, è possibile utilizzare l'istruzione `add`. Nella configurazione dell'esempio, il listener viene denominato "messages" e come tipo da utilizzare viene aggiunto il listener di traccia standard di .NET Framework, ovvero `System.Diagnostics.XmlWriterTraceListener`. Se si utilizza `System.Diagnostics.XmlWriterTraceListener`, è necessario specificare il percorso e il nome del file di output nel file di configurazione. A tal fine impostare `initializeData` sul nome del file di log. In caso contrario, il sistema genererà un'eccezione. È inoltre possibile implementare un listener personalizzato che genera log in un file predefinito.  
   
@@ -60,7 +60,7 @@ In questo argomento viene illustrato come configurare la registrazione dei messa
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- Se si desidera disattivare l'origine di traccia, è invece necessario utilizzare gli attributi `logMessagesAtServiceLevel`, `logMalformedMessages` e `logMessagesAtTransportLevel` dell'elemento `messageLogging`. Tali attributi devono essere impostati su `false`. È possibile ottenere questo risultato utilizzando il file di configurazione dell'esempio di codice precedente, attraverso l'interfaccia utente dell'Editor di configurazione o utilizzando WMI. Per ulteriori informazioni sullo strumento Editor di configurazione, vedere [strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Per ulteriori informazioni su WMI, vedere [tramite Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Se si desidera disattivare l'origine di traccia, è invece necessario utilizzare gli attributi `logMessagesAtServiceLevel`, `logMalformedMessages` e `logMessagesAtTransportLevel` dell'elemento `messageLogging`. Tali attributi devono essere impostati su `false`. È possibile ottenere questo risultato utilizzando il file di configurazione dell'esempio di codice precedente, attraverso l'interfaccia utente dell'Editor di configurazione o utilizzando WMI. Per altre informazioni sullo strumento Editor di configurazione, vedere [dello strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Per altre informazioni su WMI, vedere [uso di Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ## <a name="logging-levels-and-options"></a>Livelli di registrazione e opzioni  
  Per i messaggi in ingresso, la registrazione avviene immediatamente dopo che il messaggio è stato formato, immediatamente prima che il messaggio raggiunga il codice utente nel livello di servizio e quando vengono rilevati messaggi in formato non valido.  
@@ -78,7 +78,7 @@ In questo argomento viene illustrato come configurare la registrazione dei messa
  I messaggi registrati a questo livello sono pronti per essere codificati o decodificati prima o dopo il trasporto in transito. Se sono stati definiti dei filtri, vengono registrati solo i messaggi che corrispondono a tali filtri. In caso contrario, vengono registrati tutti i messaggi al livello di trasporto. A questo livello vengono registrati tutti i messaggi dell'infrastruttura, compresi i messaggi di messaggistica affidabile. Per i messaggi trasmessi come flusso, vengono registrate solo le intestazioni. Inoltre, a questo livello i messaggi protetti vengono registrati come crittografati, a meno che non si utilizzi un trasporto protetto come HTTPS.  
   
 ### <a name="malformed-level"></a>Livello dei messaggi in formato non valido  
- I messaggi in formato non valido sono messaggi rifiutati dallo stack di WCF in alcuna fase dell'elaborazione. I messaggi in formato non valido vengono registrati così come sono, vale a dire crittografati se lo sono, con XML non corretto e così via. `maxSizeOfMessageToLog` definisce le dimensioni del messaggio da registrare come CDATA. Per impostazione predefinita, la proprietà `maxSizeOfMessageToLog` è uguale a 256 K. Per ulteriori informazioni su questo attributo, vedere la sezione altre opzioni.  
+ I messaggi in formato non valido sono messaggi rifiutati dallo stack di WCF in qualsiasi fase di elaborazione. I messaggi in formato non valido vengono registrati così come sono, vale a dire crittografati se lo sono, con XML non corretto e così via. `maxSizeOfMessageToLog` definisce le dimensioni del messaggio da registrare come CDATA. Per impostazione predefinita, la proprietà `maxSizeOfMessageToLog` è uguale a 256 K. Per altre informazioni su questo attributo, vedere la sezione altre opzioni.  
   
 ### <a name="other-options"></a>Altre opzioni  
  Oltre ai livelli di registrazione, l'utente può specificare le opzioni seguenti:  
@@ -94,11 +94,11 @@ In questo argomento viene illustrato come configurare la registrazione dei messa
   
  Se non si definisce alcun listener di traccia nel file di configurazione, non viene generato alcun output di registrazione, indipendentemente dal livello di registrazione specificato.  
   
- Le opzioni di registrazione dei messaggi, ad esempio gli attributi descritti in questa sezione, possono essere modificati a runtime utilizzando Strumentazione gestione Windows (WMI, Windows Management Instrumentation). Questa operazione può essere eseguita accedendo il [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) istanza, che espone le proprietà booleane: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, e `LogMalformedMessages`. Pertanto, se si configura un listener di traccia per la registrazione dei messaggi, ma si impostano queste opzioni su `false` nella configurazione, è possibile in seguito modificarle in `true` quando l'applicazione è in esecuzione. In questo modo viene abilitata la registrazione dei messaggi al runtime. Analogamente, se si abilita la registrazione dei messaggi nel file di configurazione, è possibile disabilitarla al runtime usando WMI. Per altre informazioni, vedere [tramite Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Le opzioni di registrazione dei messaggi, ad esempio gli attributi descritti in questa sezione, possono essere modificati a runtime utilizzando Strumentazione gestione Windows (WMI, Windows Management Instrumentation). Questa operazione può essere eseguita accedendo il [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) istanza, che espone le proprietà booleane: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, e `LogMalformedMessages`. Pertanto, se si configura un listener di traccia per la registrazione dei messaggi, ma si impostano queste opzioni su `false` nella configurazione, è possibile in seguito modificarle in `true` quando l'applicazione è in esecuzione. In questo modo viene abilitata la registrazione dei messaggi al runtime. Analogamente, se si abilita la registrazione dei messaggi nel file di configurazione, è possibile disabilitarla al runtime usando WMI. Per altre informazioni, vedere [uso di Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Nel campo `source` di un log di messaggi viene specificato il contesto in cui il messaggio viene registrato: durante l'invio/ricezione di un messaggio di richiesta, per una request-reply o una richiesta unidirezionale, a livello di modello di servizio o di trasporto o in caso di messaggio in formato non valido.  
   
- Per i messaggi in formato non corretto, `source` è uguale a `Malformed`. In caso contrario, l'origine ha i valori seguenti in base al contesto.  
+ Per i messaggi in formato non valido, `source` è uguale a `Malformed`. In caso contrario, l'origine ha i valori seguenti in base al contesto.  
   
  Per request/reply  
   
@@ -164,6 +164,6 @@ In questo argomento viene illustrato come configurare la registrazione dei messa
  È necessario tenere presente che l'attributo `type` deve essere impostato su un nome di assembly completo del tipo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [\<registrazione messaggi >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
+ [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
  [Registrazione messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
  [Impostazioni consigliate per la traccia e la registrazione dei messaggi](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

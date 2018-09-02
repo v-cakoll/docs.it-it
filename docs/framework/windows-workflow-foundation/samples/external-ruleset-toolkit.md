@@ -2,12 +2,12 @@
 title: Toolkit di RuleSet esterno
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 0c2dec4d28b60fe5caef13ed6bd0e5826713a56f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f418c71b39611e64afea168ed40418dbe981521a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520396"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457213"
 ---
 # <a name="external-ruleset-toolkit"></a>Toolkit di RuleSet esterno
 Normalmente quando vengono usate all'interno di un'applicazione del flusso di lavoro, le regole fanno parte dell'assembly. In alcuni scenari, può essere necessario gestire il RuleSet separatamente dall'assembly così che possano essere aggiornati senza ricompilare e distribuire l'assembly del flusso di lavoro. In questo esempio viene illustrato come gestire e modificare il RuleSet in un database e accedere ai RuleSet da un flusso di lavoro durante il runtime. Abilita l'esecuzione di istanze del flusso di lavoro per incorporare automaticamente le modifiche del RuleSet.  
@@ -15,7 +15,7 @@ Normalmente quando vengono usate all'interno di un'applicazione del flusso di la
  L'esempio di toolkit di RuleSet esterno contiene uno strumento basato su Windows Form che può essere usato per gestire e modificare le versioni di RuleSet in un database. Include inoltre un'attività e un servizio host per l'esecuzione di tali regole.  
   
 > [!NOTE]
->  In questo esempio richiede [Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=96181).  
+>  Questo esempio richiede [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181).  
   
  [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] provvede un editor di RuleSet come parte di Windows Workflow Foundation (WF). È possibile avviare questo editor facendo doppio clic sull'attività `Policy` in un flusso di lavoro; serializza l'oggetto di RuleSet definito al file con estensione rules associato al flusso di lavoro (un'attività `Policy` esegue un'istanza di RuleSet in base al flusso di lavoro). Il file con estensione rules viene compilato nell'assembly come una risorsa quando si compila il progetto del flusso di lavoro.  
   
@@ -29,7 +29,7 @@ Normalmente quando vengono usate all'interno di un'applicazione del flusso di la
   
  L'interazione dei componenti viene mostrata nella Figura 1. Nelle sezioni seguenti viene descritto ogni componente.  
   
- ![Panoramica dei concetti dell'esempio di RuleSet esterno](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")  
+ ![Panoramica concettuale di esempio di RuleSet esterno](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")  
   
  Figura 1: panoramica dell’esempio  
   
@@ -38,14 +38,14 @@ Normalmente quando vengono usate all'interno di un'applicazione del flusso di la
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ExternalRuleSetToolKit`  
   
 ## <a name="ruleset-tool"></a>Strumento di RuleSet  
- Nella Figura 2 è mostrata una schermata dello strumento di RuleSet. Dal **archivio regole** menu, è possibile caricare gli oggetti ruleSet disponibili dal database e salvare tali oggetti modificati nuovamente nell'archivio. Un file di configurazione dell'applicazione fornisce una stringa di connessione al database per il database di RuleSet. Quando si avvia lo strumento, carica automaticamente RuleSet dal database configurato.  
+ Nella Figura 2 è mostrata una schermata dello strumento di RuleSet. Dal **Store regola** menu, è possibile caricare i ruleSet disponibili dal database e salvare i ruleSet modificati nuovamente all'archivio. Un file di configurazione dell'applicazione fornisce una stringa di connessione al database per il database di RuleSet. Quando si avvia lo strumento, carica automaticamente RuleSet dal database configurato.  
   
- ![Output dell'esempio di Toolkit RuleSet esterno](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetbrowser.gif "RuleSetBrowser")  
+ ![Output dell'esempio di RuleSet esterno](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetbrowser.gif "RuleSetBrowser")  
   
  Figura 2: browser di RuleSet  
   
@@ -57,33 +57,33 @@ Normalmente quando vengono usate all'interno di un'applicazione del flusso di la
   
  Figura 3: editor di RuleSet  
   
- Si tratta di una riallocazione della finestra di dialogo editor che fa parte del componente aggiuntivo di Visual Studio di Windows Workflow Foundation. Fornisce la stessa funzionalità, incluso il supporto di Intellisense. Le regole vengono create in base a un tipo di destinazione (ad esempio un flusso di lavoro) che è associato al RuleSet nello strumento; Quando fa clic su **Sfoglia** nella finestra di dialogo principale dello strumento di **del flusso di lavoro/selettore del tipo** viene visualizzata la finestra, come illustrato nella figura 4.  
+ Si tratta di una riallocazione della finestra di dialogo dell'editor che fa parte del componente aggiuntivo di Windows Workflow Foundation Visual Studio. Fornisce la stessa funzionalità, incluso il supporto di Intellisense. Le regole vengono create in base a un tipo di destinazione (ad esempio, un flusso di lavoro) che viene associato al RuleSet nello strumento; Quando fa clic su **esplorare** nella finestra di dialogo principale dello strumento, il **flusso di lavoro/selettore del tipo** finestra di dialogo viene visualizzata, come illustrato nella figura 4.  
   
- ![Flusso di lavoro &#47;digitare selezione](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
+ ![Flusso di lavoro &#47;tipo di selezione](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
   
  Figura 4: Flusso di lavoro/Selettore del tipo  
   
- È possibile utilizzare il **del flusso di lavoro/selettore del tipo** finestra di dialogo per specificare un assembly e un tipo specifico all'interno di tale assembly. Questo tipo è il tipo di destinazione in base al quale vengono create (ed eseguite) le regole. In molti casi, il tipo di destinazione è un flusso di lavoro o un altro tipo di attività. Tuttavia, è possibile eseguire un RuleSet in base a qualsiasi tipo .NET.  
+ È possibile usare la **flusso di lavoro/selettore del tipo** finestra di dialogo per specificare un assembly e un tipo specifico all'interno di tale assembly. Questo tipo è il tipo di destinazione in base al quale vengono create (ed eseguite) le regole. In molti casi, il tipo di destinazione è un flusso di lavoro o un altro tipo di attività. Tuttavia, è possibile eseguire un RuleSet in base a qualsiasi tipo .NET.  
   
- Il percorso di file di assembly e il tipo `name are stored with the` RuleSet nel database, in modo che quando il RuleSet viene recuperato dal database, lo strumento tenta di caricare automaticamente il tipo di destinazione.  
+ Il percorso del file di assembly e il tipo `name are stored with the` RuleSet nel database, in modo che quando il RuleSet viene recuperato dal database, lo strumento tenta di caricare automaticamente il tipo di destinazione.  
   
- Quando fa clic su **OK** nel **del flusso di lavoro/selettore del tipo** finestra di dialogo, convalida il tipo selezionato rispetto al RuleSet, per assicurarsi che il tipo di destinazione disponga di tutti i membri a cui fa riferimento dalle regole. Gli errori vengono visualizzati un **errori di convalida** finestra di dialogo (vedere Figura 5). È possibile scegliere di continuare con la modifica nonostante gli errori o fare clic su **Annulla**. Dal **strumenti** menu nella finestra di dialogo principale dello strumento, è possibile fare clic su **convalida** per convalidare nuovamente la versione di RuleSet in attività di destinazione.  
+ Quando fa clic su **OK** nel **flusso di lavoro/selettore del tipo** finestra di dialogo Convalida il tipo selezionato per il set di regole, assicurarsi che il tipo di destinazione abbia tutti i membri a cui fanno riferimento le regole. Gli errori vengono visualizzati una **gli errori di convalida** finestra di dialogo (vedere la figura 5). È possibile scegliere di continuare con la modifica nonostante gli errori oppure fare clic su **annullare**. Dal **degli strumenti** dal menu nella finestra di dialogo principale dello strumento, è possibile fare clic **Validate** per convalidare nuovamente la versione di RuleSet rispetto all'attività di destinazione.  
   
- ![Errori di convalida dall'esempio di RuleSet esterno](../../../../docs/framework/windows-workflow-foundation/samples/media/validationerrorsruleset.png "ValidationErrorsRuleSet")  
+ ![Errori di convalida di esempio di RuleSet esterno](../../../../docs/framework/windows-workflow-foundation/samples/media/validationerrorsruleset.png "ValidationErrorsRuleSet")  
   
  Figura 5: errori di convalida  
   
- Dal **dati** menu nello strumento, è possibile importare ed esportare RuleSet. Quando fa clic su **importazione**, viene visualizzata una finestra di dialogo di selezione di file da cui è possibile selezionare un file con estensione rules. Può supportare o potrebbe non essere un file inizialmente creato in Visual Studio. Il file con estensione rules deve contenere un'istanza `RuleDefinitions` serializzata contenente una raccolta di condizioni e una raccolta di RuleSet. Lo strumento non utilizza la raccolta di condizioni, ma usa il `RuleDefinitions` formato con estensione rules per consentire l'interazione con l'ambiente di Visual Studio.  
+ Dal **dati** menu nello strumento, è possibile importare ed esportare RuleSet. Quando fa clic su **importazione**, viene visualizzata una finestra di dialogo di selezione di file, da cui è possibile selezionare un file con estensione rules. Ciò potrebbe o non sia un file inizialmente creato in Visual Studio. Il file con estensione rules deve contenere un'istanza `RuleDefinitions` serializzata contenente una raccolta di condizioni e una raccolta di RuleSet. Lo strumento non usa la raccolta di condizioni, ma usa il `RuleDefinitions` formato con estensione rules per consentire l'interazione con l'ambiente di Visual Studio.  
   
- Dopo aver selezionato un file con estensione rules, un **selettore RuleSet** viene visualizzata la finestra (vedere Figura 6). È possibile usare la finestra di dialogo per selezionare gli oggetti RuleSet dal file che si desidera importare (l'impostazione predefinita specifica tutti gli oggetti RuleSet). I RuleSet nel file con estensione rules non hanno numeri di versione, in quanto il loro controllo delle versioni all’interno di un progetto WF corrisponde alla versione dell'assembly. Durante il processo di importazione, lo strumento assegna automaticamente il numero di versione principale disponibile successivo (che è possibile modificare dopo l'importazione); è possibile visualizzare i numeri di versione assegnato il **selettore RuleSet** elenco.  
+ Dopo aver selezionato un file con estensione rules, un **selettore RuleSet** viene visualizzata la finestra (vedere la figura 6). È possibile usare la finestra di dialogo per selezionare gli oggetti RuleSet dal file che si desidera importare (l'impostazione predefinita specifica tutti gli oggetti RuleSet). I RuleSet nel file con estensione rules non hanno numeri di versione, in quanto il loro controllo delle versioni all’interno di un progetto WF corrisponde alla versione dell'assembly. Durante il processo di importazione, lo strumento assegna automaticamente il numero di versione principale disponibile successivo (che è possibile modificare dopo l'importazione); è possibile visualizzare i numeri di versione assegnato nel **selettore RuleSet** elenco.  
   
- Per ogni RuleSet importato, lo strumento tenta di individuare il tipo associato dalla cartella bin\Debug nel percorso del file con estensione rules (se esiste), basato sui membri usati in RuleSet. Se trova più tipi corrispondenti, lo strumento tenta di scegliere un tipo in base alla corrispondenza tra il nome del file con estensione rules e il nome del tipo (ad esempio, il tipo `Workflow1` corrisponde a Workflow1.rules). Se esistono più corrispondenze, viene richiesto di selezionare il tipo. Se questo meccanismo di identificazione automatica non riesce a individuare un assembly o un tipo corrispondente, quindi dopo l'importazione è possibile fare clic su **Sfoglia** nella finestra di dialogo principale dello strumento per passare al tipo associato.  
+ Per ogni RuleSet importato, lo strumento tenta di individuare il tipo associato dalla cartella bin\Debug nel percorso del file con estensione rules (se esiste), basato sui membri usati in RuleSet. Se trova più tipi corrispondenti, lo strumento tenta di scegliere un tipo in base alla corrispondenza tra il nome del file con estensione rules e il nome del tipo (ad esempio, il tipo `Workflow1` corrisponde a Workflow1.rules). Se esistono più corrispondenze, viene richiesto di selezionare il tipo. Se questo meccanismo di identificazione automatica non riesce a individuare un assembly o un tipo corrispondente, quindi dopo l'importazione è possibile fare clic su **esplorare** nella finestra di dialogo principale dello strumento per passare al tipo associato.  
   
  ![Selettore ruleSet](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetselector.gif "RuleSetSelector")  
   
  Figura 6: Strumento di selezione di RuleSet  
   
- Quando fa clic su **esportazione dei dati** dal menu principale dello strumento di **selettore RuleSet** viene visualizzata la finestra Nuovo, da cui è possibile determinare il ruleSet del database che deve essere esportato. Quando fa clic su **OK**, **Salva File** viene visualizzata la finestra, in cui è possibile specificare il nome e il percorso del file con estensione rules risultante. Dato che il file con estensione rules non contiene informazioni sulla versione, è possibile selezionare soltanto una versione di RuleSet con un determinato nome di RuleSet.  
+ Quando fa clic su **esportazione di dati** dal menu principale dello strumento, il **selettore RuleSet** finestra di dialogo viene visualizzato anche in questo caso, da cui è possibile determinare il ruleSet del database che deve essere esportato. Quando fa clic su **OK**, un **Salva File** finestra di dialogo viene visualizzata, in cui è possibile specificare il nome e il percorso del file con estensione rules risultante. Dato che il file con estensione rules non contiene informazioni sulla versione, è possibile selezionare soltanto una versione di RuleSet con un determinato nome di RuleSet.  
   
 ## <a name="policyfromservice-activity"></a>Attività PolicyFromService  
  Il codice dell’attività `PolicyFromService` è semplice. Funziona in modo molto simile all’attività `Policy` fornita con WF, ma invece di recuperare il RuleSet di destinazione dal file con estensione rules, chiama un servizio host per ottenere l'istanza di RuleSet. Esegue quindi il RuleSet in base all’istanza dell'attività del flusso di lavoro radice.  
@@ -107,17 +107,17 @@ Normalmente quando vengono usate all'interno di un'applicazione del flusso di la
   
 4.  La soluzione Applicazione console del flusso di lavoro sequenziale `RuleSetToolkitUsageSample` include un flusso di lavoro di esempio. Il flusso di lavoro è costituito da un'attività `PolicyFromService` e da due variabili, `orderValue` e `discount`, in base alle quali avviene l’esecuzione del RuleSet di destinazione.  
   
-5.  Per eseguire l'esempio è necessario compilare la soluzione `RuleSetToolkitUsageSample`. Scegliere dal menu principale dello strumento di RuleSet, **importazione dati** e puntare al file Discountruleset nella cartella RuleSetToolkitUsageSample. Fare clic su di **salvataggio archivio Rule** opzione di menu per salvare il RuleSet importato nel database.  
+5.  Per eseguire l'esempio è necessario compilare la soluzione `RuleSetToolkitUsageSample`. Dal menu principale dello strumento RuleSet, quindi scegliere **importazione di dati** e puntare al file Discountruleset Rules nella cartella RuleSetToolkitUsageSample. Fare clic sui **Store-Save Rule** opzione di menu per salvare il RuleSet importato nel database.  
   
 6.  Dato che il progetto del flusso di lavoro di esempio fa riferimento all’assembly `PolicyActivities`, l'attività `PolicyFromService` viene visualizzata nel flusso di lavoro. Tuttavia, non viene visualizzata nella casella degli strumenti per impostazione predefinita. Per aggiungerla alla casella degli strumenti, effettuare le operazioni seguenti:  
   
-    -   Fare clic sulla casella degli strumenti e selezionare **Scegli elementi** (l'operazione potrebbe richiedere un po' di tempo).  
+    -   Fare doppio clic su casella degli strumenti e selezionare **Scegli elementi** (l'operazione potrebbe richiedere un po' di tempo).  
   
-    -   Quando il **Scegli elementi della casella degli strumenti** viene visualizzata la finestra, fare clic su di **attività** scheda.  
+    -   Quando la **Scegli elementi della casella degli strumenti** finestra di dialogo viene visualizzata, fare clic sui **attività** scheda.  
   
-    -   Individuare il `PolicyActivities` assembly nel `ExternalRuleSetToolkit` soluzione e fare clic su **aprire**.  
+    -   Individuare il `PolicyActivities` assembly nel `ExternalRuleSetToolkit` soluzione e fare clic su **Open**.  
   
-    -   Verificare che il `PolicyFromService` selezionato nell'attività di **Scegli elementi della casella degli strumenti** finestra di dialogo e quindi fare clic su **OK**.  
+    -   Assicurarsi che il `PolicyFromService` selezionato nell'attività il **Scegli elementi della casella degli strumenti** finestra di dialogo e quindi fare clic su **OK**.  
   
     -   L'attività verrà quindi visualizzata nella casella degli strumenti di **componenti RuleSetToolkitUsageSample** categoria.  
   

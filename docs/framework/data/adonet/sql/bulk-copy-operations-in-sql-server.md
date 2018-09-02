@@ -2,12 +2,12 @@
 title: Operazioni di copia di massa in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: 87373f55181742a243c60bc4b471334535d88ff7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16709d1bdc03c767d1e3aed808de220bf91e76ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360426"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455666"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Operazioni di copia di massa in SQL Server
 Microsoft SQL Server include una popolare utilità della riga di comando denominata **bcp** per rapidamente la copia di massa file di grandi dimensioni in tabelle o viste nei database di SQL Server. La classe <xref:System.Data.SqlClient.SqlBulkCopy> consente di scrivere soluzioni di codice gestito che offrono funzionalità simili. Esistono altri metodi per caricare dati in una tabella SQL Server (ad esempio con l'istruzione INSERT) ma <xref:System.Data.SqlClient.SqlBulkCopy> offre prestazioni molto più vantaggiose.  
@@ -23,7 +23,7 @@ Microsoft SQL Server include una popolare utilità della riga di comando denomin
 -   Copia bulk all'interno di una transazione  
   
 > [!NOTE]
->  Quando si utilizza .NET Framework versione 1.1 o precedente (che non supporta il <xref:System.Data.SqlClient.SqlBulkCopy> classe), è possibile eseguire SQL Server Transact-SQL **BULK INSERT** istruzione tramite il <xref:System.Data.SqlClient.SqlCommand> oggetto.  
+>  Quando si usa .NET Framework versione 1.1 o precedente (che non supporta il <xref:System.Data.SqlClient.SqlBulkCopy> classe), è possibile eseguire SQL Server Transact-SQL **BULK INSERT** istruzione che usa il <xref:System.Data.SqlClient.SqlCommand> oggetto.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Creazione di esempi di copia di massa](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)  
@@ -40,4 +40,4 @@ Microsoft SQL Server include una popolare utilità della riga di comando denomin
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

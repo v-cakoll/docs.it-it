@@ -2,15 +2,15 @@
 title: Mapping dei tipi di dati OLE DB
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 4287b125b26bc0c7233f59322c84e2ac27c0c594
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2dbea33140e6cdd7370c1822d2bd6513917a31ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758932"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457105"
 ---
 # <a name="ole-db-data-type-mappings"></a>Mapping dei tipi di dati OLE DB
-Nella tabella seguente sono illustrati i tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dedotti per i tipi di dati dal provider di dati .NET Framework per ADO e OLE DB (<xref:System.Data.OleDb>). I metodi delle funzioni di accesso tipizzate per il <xref:System.Data.OleDb.OleDbDataReader> sono inoltre elencati.  
+Nella tabella seguente sono illustrati i tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dedotti per i tipi di dati dal provider di dati .NET Framework per ADO e OLE DB (<xref:System.Data.OleDb>). I metodi tipizzati della funzione di accesso per il <xref:System.Data.OleDb.OleDbDataReader> sono inoltre elencati.  
   
 |Tipo ADO|Tipo OLE DB|Tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|Funzione di accesso tipizzata [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
@@ -18,7 +18,7 @@ Nella tabella seguente sono illustrati i tipi [!INCLUDE[dnprdnshort](../../../..
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  
 |adBoolean|DBTYPE_BOOL|Boolean|GetBoolean()|  
 |adBSTR|DBTYPE_BSTR|String|GetString()|  
-|adChapter|DBTYPE_HCHAPTER|Supportato mediante `DataReader`. Vedere [il recupero dei dati tramite un oggetto DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).|GetValue()|  
+|adChapter|DBTYPE_HCHAPTER|Supportato mediante `DataReader`. Visualizzare [recupero di dati tramite DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).|GetValue()|  
 |adChar|DBTYPE_STR|String|GetString()|  
 |adCurrency|DBTYPE_CY|Decimal|GetDecimal()|  
 |adDate|DBTYPE_DATE|DateTime|GetDateTime()|  
@@ -51,4 +51,4 @@ Nella tabella seguente sono illustrati i tipi [!INCLUDE[dnprdnshort](../../../..
   
 ## <a name="see-also"></a>Vedere anche  
  [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

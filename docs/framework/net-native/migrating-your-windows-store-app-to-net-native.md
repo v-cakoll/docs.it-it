@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a44819e8a8c0b07b3ffbfb2d92533cbdc558ef6
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3909855db109938794fad3e0afc99d492009b81c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874744"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461787"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrazione dell'app di Windows Store a .NET Native
-.NET native fornisce la compilazione statica di App di Windows Store o nel computer dello sviluppatore. Ciò differisce dalla compilazione dinamica eseguita per applicazioni Windows Store dal compilatore just-in-time (JIT) o il [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) sul dispositivo. Nonostante le differenze, .NET Native prova a mantenere la compatibilità con le [le app .NET per Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Nella maggior parte, ciò che funziona sulle app .NET per Windows Store funziona anche con .NET Native.  Tuttavia, in alcuni casi, è possibile riscontrare differenze di comportamento. Questo documento vengono illustrate le differenze tra le app .NET per Windows Store standard e .NET Native nelle aree seguenti:  
+.NET native fornisce la compilazione statica di App di Windows Store o nel computer dello sviluppatore. Ciò differisce dalla compilazione dinamica eseguita per applicazioni Windows Store dal compilatore just-in-time (JIT) o il [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) sul dispositivo. Nonostante le differenze, .NET Native prova a mantenere la compatibilità con le [le app .NET per Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx). Nella maggior parte, ciò che funziona sulle app .NET per Windows Store funziona anche con .NET Native.  Tuttavia, in alcuni casi, è possibile riscontrare differenze di comportamento. Questo documento vengono illustrate le differenze tra le app .NET per Windows Store standard e .NET Native nelle aree seguenti:  
   
 -   [Differenze generali di runtime](#Runtime)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "37874744"
   
 -   I membri pubblici sulle strutture <xref:System.RuntimeFieldHandle> e <xref:System.RuntimeMethodHandle> non sono supportati. Questi tipi sono supportati solo per LINQ, gli alberi delle espressioni e l'inizializzazione di matrice statica.  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> e <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> includono membri nascosi in classi di base e perciò potrebbero essere sottoposti a override esplicito. Ciò vale anche per gli altri metodi [RuntimeReflectionExtensions.GetRuntime*](http://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx) .  
+-   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> e <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> includono membri nascosi in classi di base e perciò potrebbero essere sottoposti a override esplicito. Questo vale anche di altri [Runtimereflectionextensions](https://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx) metodi.  
   
 -   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> e <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> non hanno esito negativo quando si prova a creare determinate combinazioni (ad esempio, una matrice di ByRef).  
   
@@ -151,13 +151,13 @@ ms.locfileid: "37874744"
   
 -   La proprietà <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> genera un'eccezione <xref:System.PlatformNotSupportedException> se un attributo <xref:System.Runtime.InteropServices.GuidAttribute> non viene applicato al tipo. Il GUID viene usato principalmente per il supporto COM.  
   
--   Il <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> metodo analizza correttamente stringhe che contengono date brevi in .NET Native. Tuttavia, non mantiene la compatibilità con le modifiche nell'analisi di data e ora descritte negli articoli della Microsoft Knowledge Base [KB2803771](http://support.microsoft.com/kb/2803771) e [KB2803755](http://support.microsoft.com/kb/2803755).  
+-   Il <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> metodo analizza correttamente stringhe che contengono date brevi in .NET Native. Tuttavia, non mantiene la compatibilità con le modifiche in data analisi e ora descritte negli articoli della Microsoft Knowledge Base [KB2803771](https://support.microsoft.com/kb/2803771) e [KB2803755](https://support.microsoft.com/kb/2803755).  
   
 -   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` è arrotondata correttamente in .NET Native. In alcune versioni di CLR, la stringa di risultato viene troncata anziché arrotondata.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>Differenze di HttpClient  
- In .NET Native, il <xref:System.Net.Http.HttpClientHandler> classe Usa internamente WinINet (tramite il [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) classe) anziché il <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> classi usate in applicazioni .NET per Windows Store standard.  WinINet non supporta tutte le opzioni di configurazione supportate dalla classe <xref:System.Net.Http.HttpClientHandler> .  Di conseguenza, si verifica quanto segue:  
+ In .NET Native, il <xref:System.Net.Http.HttpClientHandler> classe Usa internamente WinINet (tramite il [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) classe) anziché il <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> classi usate in applicazioni .NET per Windows Store standard.  WinINet non supporta tutte le opzioni di configurazione supportate dalla classe <xref:System.Net.Http.HttpClientHandler> .  Di conseguenza, si verifica quanto segue:  
   
 -   Alcune delle proprietà di capacità su <xref:System.Net.Http.HttpClientHandler> restituire `false` in .NET Native, laddove restituiscono `true` nelle app .NET per Windows Store standard.  
   
@@ -167,11 +167,11 @@ ms.locfileid: "37874744"
   
  **Proxy**  
   
- La classe [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) non supporta la configurazione o l'override del proxy in base a ogni richiesta.  Ciò significa che tutte le richieste in .NET Native usano server proxy configurato system o alcun server proxy, in base al valore di <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> proprietà.  In .NET per applicazioni Windows Store il server proxy viene definito dalla proprietà <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>.  In .NET Native, impostando il <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> su un valore diverso da `null` genera un <xref:System.PlatformNotSupportedException> eccezione.  Il <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> proprietà restituisce `false` in .NET Native, laddove restituisce `true` nelle app .NET Framework per Windows Store standard.  
+ Il [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) classe non supporta la configurazione o l'override del proxy su ogni richiesta.  Ciò significa che tutte le richieste in .NET Native usano server proxy configurato system o alcun server proxy, in base al valore di <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> proprietà.  In .NET per applicazioni Windows Store il server proxy viene definito dalla proprietà <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>.  In .NET Native, impostando il <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> su un valore diverso da `null` genera un <xref:System.PlatformNotSupportedException> eccezione.  Il <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> proprietà restituisce `false` in .NET Native, laddove restituisce `true` nelle app .NET Framework per Windows Store standard.  
   
  **Reindirizzamento automatico**  
   
- La classe [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) non consente la configurazione del numero massimo di reindirizzamenti automatici.  Il valore della proprietà <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> è 50 per impostazione predefinita in .NET per applicazioni Windows Store standard e può essere modificato. In .NET Native, il valore di questa proprietà è 10 e se si prova a modificarlo viene generata una <xref:System.PlatformNotSupportedException> eccezione.  Il <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> proprietà restituisce `false` in .NET Native, laddove restituisce `true` nelle app .NET per Windows Store.  
+ Il [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) classe non consente il numero massimo di reindirizzamenti automatici.  Il valore della proprietà <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> è 50 per impostazione predefinita in .NET per applicazioni Windows Store standard e può essere modificato. In .NET Native, il valore di questa proprietà è 10 e se si prova a modificarlo viene generata una <xref:System.PlatformNotSupportedException> eccezione.  Il <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> proprietà restituisce `false` in .NET Native, laddove restituisce `true` nelle app .NET per Windows Store.  
   
  **Decompressione automatica**  
   
@@ -217,9 +217,9 @@ ms.locfileid: "37874744"
 |<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>|  
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> è supportato, ma genera un'eccezione in alcuni scenari, ad esempio quando viene usato con [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) o varianti di byref.  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> è supportato, ma genera un'eccezione in alcuni scenari, ad esempio quando viene usato con [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) o varianti di byref.  
   
- Le API deprecate per [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) supportano:  
+ Le API deprecate per [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) supportano:  
   
 |Tipo|Membro|  
 |----------|------------|  
@@ -318,7 +318,7 @@ ms.locfileid: "37874744"
   
     -   `BStr`  
   
-    -   [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509.aspx)  
+    -   [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
   
  Tuttavia, .NET Native non supporta le operazioni seguenti:  
   
@@ -326,7 +326,7 @@ ms.locfileid: "37874744"
   
 -   Implementazione dell'interfaccia <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> su un tipo gestito  
   
--   Implementa il [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) interfaccia su un tipo gestito tramite il <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> attributo. Notare tuttavia che non è possibile chiamare oggetti COM tramite `IDispatch`e l'oggetto gestito non può implementare `IDispatch`.  
+-   Implementa il [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) interfaccia su un tipo gestito tramite il <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> attributo. Notare tuttavia che non è possibile chiamare oggetti COM tramite `IDispatch`e l'oggetto gestito non può implementare `IDispatch`.  
   
  L'uso della reflection per richiamare un metodo platform invoke non è supportato. È possibile aggirare questa limitazione eseguendo il wrapping della chiamata al metodo in un altro metodo e usando la reflection per chiamare invece il wrapper.  
   
@@ -400,7 +400,7 @@ ms.locfileid: "37874744"
   
  **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**  
   
- I tipi di [spazi dei nomi System.ServiceModel.*](http://msdn.microsoft.com/library/gg145010.aspx) non sono supportati in .NET Native. Sono inclusi i tipi seguenti:  
+ I tipi di [spazi dei nomi System.ServiceModel.*](https://msdn.microsoft.com/library/gg145010.aspx) non sono supportati in .NET Native. Sono inclusi i tipi seguenti:  
   
 ||  
 |-|  
@@ -673,5 +673,5 @@ ms.locfileid: "37874744"
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Panoramica delle app .NET per Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+ [Panoramica delle app .NET per Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
  [.NET Framework Support for Windows Store Apps and Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) (Supporto di .NET Framework per le app di Windows Store e Windows Runtime)

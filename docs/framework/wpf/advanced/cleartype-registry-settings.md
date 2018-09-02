@@ -5,62 +5,62 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: cacdc47a35bfd197bcac29edc6f7c780d3b8578f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6a121e2a95ce4005b43937f83c6c74ec7d8f1c1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541713"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474011"
 ---
 # <a name="cleartype-registry-settings"></a>Impostazioni del Registro di sistema ClearType
-In questo argomento viene fornita una panoramica di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] le impostazioni del Registro di sistema utilizzate da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni.  
+In questo argomento viene fornita una panoramica di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] le impostazioni del Registro di sistema usate dal [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni.  
   
   
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Informazioni generali sulla tecnologia  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni che eseguono il rendering di testo da un dispositivo di visualizzazione utilizzano [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funzionalità per fornire una migliore esperienza di lettura. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] è una tecnologia software sviluppata da [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] che consente di migliorare la leggibilità del testo sui display LCD (Liquid Crystal Display), ad esempio gli schermi di computer portatili, Pocket PC e i monitor a schermo piatto. Il funzionamento della tecnologia [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] si basa sull'accesso a singoli elementi striscia di colore verticali in ogni pixel di uno schermo LCD. Per ulteriori informazioni su [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], vedere [ClearType Overview](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni che eseguono il rendering di testo da un dispositivo di visualizzazione usano [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funzionalità per fornire una migliore esperienza di lettura. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] è una tecnologia software sviluppata da [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] che consente di migliorare la leggibilità del testo sui display LCD (Liquid Crystal Display), ad esempio gli schermi di computer portatili, Pocket PC e i monitor a schermo piatto. Il funzionamento della tecnologia [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] si basa sull'accesso a singoli elementi striscia di colore verticali in ogni pixel di uno schermo LCD. Per ulteriori informazioni sul [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], vedere [Cenni preliminari su ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
   
- Testo che viene eseguito il rendering con [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] possono essere visualizzati in modo significativo diverso quando viene visualizzato su vari dispositivi di visualizzazione. Ad esempio, un numero ridotto di monitoraggi implementa strisce di colore in blu, verde, rosso ordine anziché più comune rosso, verde e blu ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) ordine.  
+ Testo che viene eseguito il rendering con [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] può avere un aspetto diverso quando viene visualizzato nei vari dispositivi di visualizzazione. Ad esempio, un numero limitato di monitor implementa gli elementi striscia di colore nell'ordine blu, verde, rosso anziché il più comune rosso, verde, blu ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) ordine.  
   
- Testo che viene eseguito il rendering con [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] può inoltre avere significativamente diverso quando viene visualizzato da persone con livelli di sensibilità al colore. Alcune persone rilevano leggere differenze di colore meglio di altre.  
+ Testo che viene eseguito il rendering con [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] può anche avere un aspetto diverso quando viene visualizzato da persone con diversi livelli di sensibilità al colore. Alcune persone rilevano leggere differenze di colore meglio di altre.  
   
- In ognuno di questi casi, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funzionalità devono essere modificate per fornire la migliore esperienza di lettura per ogni singolo cliente.  
+ In ognuno di questi casi, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funzionalità devono essere modificate per fornire un'esperienza di lettura per ogni singolo cliente.  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Impostazioni Registro di sistema  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Specifica i quattro impostazioni del Registro di sistema per il controllo [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funzionalità:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Specifica quattro impostazioni del Registro di sistema per il controllo [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funzionalità:  
   
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
-|Livello [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]|Descrive il livello di [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] colore maggiore chiarezza.|  
+|Livello [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]|Descrive il livello di [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] chiarezza del colore.|  
 |Livello di gamma|Descrive il livello della componente cromatica del pixel per un dispositivo di visualizzazione.|  
 |Struttura del pixel|Descrive la disposizione dei pixel per un dispositivo di visualizzazione.|  
 |Livello di contrasto del testo|Descrive il livello di contrasto per il testo visualizzato.|  
   
- Queste impostazioni sono accessibili tramite un'utilità di configurazione esterni in grado di fare riferimento l'oggetto identificato [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] le impostazioni del Registro di sistema. Per creare o modificare queste impostazioni, è possibile accedere ai valori direttamente usando l'editor del Registro di sistema di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
+ Queste impostazioni sono accessibili tramite un'utilità di configurazione esterno che sa come fare riferimento l'oggetto identificato [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] le impostazioni del Registro di sistema. Per creare o modificare queste impostazioni, è possibile accedere ai valori direttamente usando l'editor del Registro di sistema di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
   
- Se il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] le impostazioni del Registro di sistema non vengono impostate (stato predefinito), il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le query dell'applicazione di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] informazioni sui parametri di sistema per le impostazioni di smussatura dei caratteri.  
+ Se il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] le impostazioni del Registro di sistema non vengono impostate (stato predefinito), il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le query dell'applicazione di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] le informazioni sui parametri di sistema per le impostazioni di smussatura dei caratteri.  
   
 > [!NOTE]
->  Per informazioni sull'enumerazione dei nomi dei dispositivi di visualizzazione, vedere il `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] (funzione).  
+>  Per informazioni sull'enumerazione dei nomi dei dispositivi di visualizzazione, vedere la `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] (funzione).  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>Livello ClearType  
- Il [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] livello consente di regolare il rendering del testo in base alla sensibilità al colore e percezione di un singolo. Per alcune persone, il rendering del testo che utilizza [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] al livello più alto non genera la migliore esperienza di lettura.  
+ Il [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] livello consente di regolare il rendering del testo in base alla sensibilità al colore e alla percezione di un individuo. Per alcune persone, il rendering del testo che usa [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] al livello più alto non consente di produrre la migliore esperienza di lettura.  
   
- Il [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] livello è un valore intero compreso tra 0 e 100. Il livello predefinito è 100, ovvero [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] utilizza la capacità massima di strisce di colore del dispositivo di visualizzazione. Tuttavia, un [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] livello pari a 0 esegue il rendering di testo in scala di grigi. Impostando il [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] livello tra 0 e 100, è possibile creare un livello intermedio adatto alla sensibilità al colore dei singoli.  
+ Il [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] livello è un valore intero compreso tra 0 e 100. Il livello predefinito è 100, ovvero [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] della capacità massima degli elementi striscia di colore della periferica di visualizzazione. Tuttavia, un [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] livello pari a 0 esegue il rendering di testo in scala di grigi. Impostando il [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] livello in un punto compreso tra 0 e 100, è possibile creare un livello intermedio adatto alla sensibilità al colore dei singoli.  
   
 ### <a name="registry-setting"></a>Impostazione del Registro di sistema  
- Il percorso di impostazione del Registro di sistema per il [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] livello è un'impostazione di singolo utente che corrisponde a un nome di dispositivo di visualizzazione specifico:  
+ Il percorso di impostazione del Registro di sistema per il [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] livello è un'impostazione del singolo utente che corrisponde a un nome di dispositivo di visualizzazione specifici:  
   
  `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Per ogni nome di dispositivo di visualizzazione per un utente, un `ClearTypeLevel` è definito valore DWORD. Nella schermata seguente viene illustrata l'impostazione dell'Editor del Registro di sistema per il [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] livello.  
+ Per ogni nome di dispositivo di visualizzazione per un utente, un `ClearTypeLevel` viene definito valore DWORD. Lo screenshot seguente mostra l'impostazione dell'Editor del Registro di sistema per il [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] livello.  
   
  ![Impostazioni ClearType nell'Editor del Registro di sistema](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni il rendering del testo in una delle modalità entrambi due, con e senza [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Quando viene eseguito il rendering testo senza [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], viene indicato come per il rendering in scala di grigi.  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni il rendering del testo in una delle due due modalità, con e senza [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Quando viene eseguito rendering del testo senza [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], si intende per il rendering in scala di grigi.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Livello di gamma  
@@ -73,7 +73,7 @@ In questo argomento viene fornita una panoramica di [!INCLUDE[TLA2#tla_winclient
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Per ogni nome di dispositivo di visualizzazione per un utente, un `GammaLevel` è definito valore DWORD. Lo screenshot seguente mostra l'impostazione dell'Editor del Registro di sistema per il livello di gamma.  
+ Per ogni nome di dispositivo di visualizzazione per un utente, un `GammaLevel` viene definito valore DWORD. Lo screenshot seguente mostra l'impostazione dell'Editor del Registro di sistema per il livello di gamma.  
   
  ![Impostazioni ClearType nell'Editor del Registro di sistema](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
   
@@ -90,14 +90,14 @@ In questo argomento viene fornita una panoramica di [!INCLUDE[TLA2#tla_winclient
  La struttura dei pixel corrisponde a un valore intero compreso tra 0 e 2. Il livello predefinito è 0, che rappresenta una struttura del pixel flat.  
   
 > [!NOTE]
->  Per informazioni sull'enumerazione dei nomi dei dispositivi di visualizzazione, vedere il `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] (funzione).  
+>  Per informazioni sull'enumerazione dei nomi dei dispositivi di visualizzazione, vedere la `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] (funzione).  
   
 ### <a name="registry-setting"></a>Impostazione del Registro di sistema  
  Il percorso dell'impostazione del Registro di sistema per la struttura del pixel è un'impostazione del computer locale che corrisponde al nome di uno specifico dispositivo di visualizzazione:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Per ogni nome di dispositivo di visualizzazione per un utente, un `PixelStructure` è definito valore DWORD. Lo screenshot seguente mostra l'impostazione dell'Editor del Registro di sistema per la struttura del pixel.  
+ Per ogni nome di dispositivo di visualizzazione per un utente, un `PixelStructure` viene definito valore DWORD. Lo screenshot seguente mostra l'impostazione dell'Editor del Registro di sistema per la struttura del pixel.  
   
  ![Impostazioni ClearType nell'Editor del Registro di sistema](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
   
@@ -110,10 +110,10 @@ In questo argomento viene fornita una panoramica di [!INCLUDE[TLA2#tla_winclient
   
  `HKEY_CURRENT_USER\Software\Microsoft\Avalon.Graphics\<displayName>`  
   
- Per ogni nome di dispositivo di visualizzazione per un utente, un `TextContrastLevel` è definito valore DWORD. Lo screenshot seguente mostra l'impostazione dell'Editor del Registro di sistema per il livello di contrasto del testo.  
+ Per ogni nome di dispositivo di visualizzazione per un utente, un `TextContrastLevel` viene definito valore DWORD. Lo screenshot seguente mostra l'impostazione dell'Editor del Registro di sistema per il livello di contrasto del testo.  
   
  ![Impostazioni ClearType nell'Editor del Registro di sistema](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica su ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [ClearType Antialiasing (Anti-aliasing ClearType)](https://msdn.microsoft.com/library/dd183433(v=vs.85).aspx)
+ [ClearType Antialiasing (Anti-aliasing ClearType)](/windows/desktop/gdi/cleartype-antialiasing)

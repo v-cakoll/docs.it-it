@@ -2,12 +2,12 @@
 title: 'Endpoint: chiamate non riuscite al secondo'
 ms.date: 03/30/2017
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
-ms.openlocfilehash: 927f5370237b2502899d61f0b8d4bd79c8e00ea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1b2997a0f1e16c897fc319d1833313141f5c4bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33472544"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466830"
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>Endpoint: chiamate non riuscite al secondo
 Nome contatore: chiamate non riuscite al secondo  
@@ -15,7 +15,7 @@ Nome contatore: chiamate non riuscite al secondo
 ## <a name="description"></a>Descrizione  
  Numero di chiamate a questo endpoint che hanno restituito errori in un secondo.  
   
- Questo contatore è di tipo di contatore prestazioni [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), il cui valore viene calcolato usando la formula seguente.  
+ Questo contatore è di tipo di contatore delle prestazioni [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), il cui valore viene calcolato utilizzando la formula seguente.  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
   

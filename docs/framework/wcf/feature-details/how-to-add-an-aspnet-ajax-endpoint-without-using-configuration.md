@@ -3,11 +3,11 @@ title: 'Procedura: aggiungere un endpoint ASP.NET AJAX senza usare la configuraz
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
 ms.openlocfilehash: 18c02644319dd9d11be39ac4956a4dcf50db3078
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930812"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470788"
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Procedura: aggiungere un endpoint ASP.NET AJAX senza usare la configurazione
 Windows Communication Foundation (WCF) consente di creare un servizio che espone un endpoint ASP.NET compatibile con AJAX che può essere chiamato da JavaScript su un sito Web client. Per creare tale endpoint è possibile utilizzare un file di configurazione, come con tutti gli altri endpoint WCF, o un metodo che non richiede elementi di configurazione. In questo argomento viene illustrato il secondo approccio.  

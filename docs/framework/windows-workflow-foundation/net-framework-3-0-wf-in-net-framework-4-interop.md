@@ -2,17 +2,18 @@
 title: Utilizzo delle attività WF di .NET Framework 3.0 in .NET Framework 4 con l'attività Interop
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: 8110c86ab8bf5c557dbf8eb361d4ead2e256a3b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2dac91ffa0f4bf5e1c1afea1fc6f6629c345857
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467505"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Utilizzo delle attività WF di .NET Framework 3.0 in .NET Framework 4 con l'attività Interop
 L'attività <xref:System.Activities.Statements.Interop> è un'attività di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) che esegue il wrapping di un'attività di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) all'interno di un flusso di lavoro di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. L'attività di WF 3 può essere una singola attività foglia o un intero albero di attività. L'esecuzione (annullamento e gestione delle eccezioni inclusi) e la persistenza dell'attività di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] si verificano all'interno del contesto dell'istanza del flusso di lavoro di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] in esecuzione.  
   
 > [!NOTE]
->  Il <xref:System.Activities.Statements.Interop> attività non viene visualizzato nella casella degli strumenti della finestra di progettazione del flusso di lavoro a meno che non dispone di progetto del flusso di lavoro relativo **Framework di destinazione** impostazione **.NET Framework 4.5**.  
+>  Il <xref:System.Activities.Statements.Interop> attività non viene visualizzato nella casella degli strumenti della finestra di progettazione del flusso di lavoro a meno che non dispone di progetto del flusso di lavoro relativi **Framework di destinazione** impostazione **.NET Framework 4.5**.  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Criteri per l'uso di un'attività di WF 3 con un'attività di interoperabilità  
  Affinché un'attività di WF 3 venga eseguita correttamente all'interno di un'attività <xref:System.Activities.Statements.Interop>, devono essere soddisfatti i seguenti criteri:  
@@ -23,7 +24,7 @@ L'attività <xref:System.Activities.Statements.Interop> è un'attività di [!INC
   
 -   L'attività di WF 3 deve disporre di un costruttore predefinito pubblico.  
   
--   A causa delle limitazioni nei tipi di interfaccia che possono essere supportati dall'attività <xref:System.Activities.Statements.Interop>, gli oggetti <xref:System.Workflow.Activities.HandleExternalEventActivity> e <xref:System.Workflow.Activities.CallExternalMethodActivity> non possono essere usati direttamente, tuttavia è possibile usare attività derivative create usando lo strumento relativo alle attività di comunicazione del flusso di lavoro (WCA.exe). Vedere [gli strumenti di Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkId=178889) per informazioni dettagliate.  
+-   A causa delle limitazioni nei tipi di interfaccia che possono essere supportati dall'attività <xref:System.Activities.Statements.Interop>, gli oggetti <xref:System.Workflow.Activities.HandleExternalEventActivity> e <xref:System.Workflow.Activities.CallExternalMethodActivity> non possono essere usati direttamente, tuttavia è possibile usare attività derivative create usando lo strumento relativo alle attività di comunicazione del flusso di lavoro (WCA.exe). Visualizzare [strumenti di Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=178889) per informazioni dettagliate.  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Configurazione di un'attività di WF 3 all'interno di un'attività di interoperabilità  
  Per configurare e passare dati all'interno e all'esterno di un'attività di WF 3, nel limite dell'interazione, le proprietà dei metadati e quelle dell'attività di WF 3 sono esposte dall'attività <xref:System.Activities.Statements.Interop>. Le proprietà dei metadati dell'attività di WF 3 (ad esempio <xref:System.Workflow.ComponentModel.Activity.Name%2A>) sono esposte tramite la raccolta <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A>. Si tratta di una raccolta di coppie nome-valore usata per definire i valori delle proprietà dei metadati dell'attività di WF 3. Una proprietà dei metadati è una proprietà supportata dalla proprietà di dipendenza per la quale viene impostato il flag <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata>.  

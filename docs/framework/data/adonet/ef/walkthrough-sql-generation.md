@@ -2,15 +2,15 @@
 title: 'Procedura dettagliata: generazione SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: ab08b404dc60483a39e5c6ae56d82b63932c3f3e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5551eb4088e7529c61d5c517fed6877c23ae12f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766322"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472072"
 ---
 # <a name="walkthrough-sql-generation"></a>Procedura dettagliata: generazione SQL
-In questo argomento viene illustrato come modalità di generazione SQL nel [Provider di esempio](http://go.microsoft.com/fwlink/?LinkId=180616). Nella query Entity SQL seguente viene usato il modello incluso nel provider di esempio:  
+In questo argomento viene illustrata la modalità di generazione SQL nel [Provider di esempio](https://go.microsoft.com/fwlink/?LinkId=180616). Nella query Entity SQL seguente viene usato il modello incluso nel provider di esempio:  
   
 ```  
 SELECT  j1.ProductId, j1.ProductName, j1.CategoryName, j2.ShipCountry, j2.ProductId  
@@ -126,7 +126,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- Il valore "false" successivo viene inserito nello stack IsParentAJoin e la condizione di join Var(Extent1).CategoryID == Var(Extent2).CategoryID viene elaborata. Var(Extenent1) viene risolto in <symbol_Extent1> dopo una ricerca nella tabella dei simboli. Poiché l'istanza viene risolto in un simbolo semplice, in seguito all'elaborazione Var(Extent1). CategoryID, un oggetto SqlBuilder con \<symbol1 >. " Viene restituito CategoryID". Analogamente, viene elaborato l'altro lato del confronto e il risultato della visita della condizione di join viene aggiunto alla clausola FROM di SelectStatement1 e il valore "false" viene estratto dallo stack IsParentAJoin.  
+ Il valore "false" successivo viene inserito nello stack IsParentAJoin e la condizione di join Var(Extent1).CategoryID == Var(Extent2).CategoryID viene elaborata. Var(Extenent1) viene risolto in <symbol_Extent1> dopo una ricerca nella tabella dei simboli. Poiché l'istanza viene risolta in un simbolo semplice, in seguito all'elaborazione Var(Extent1). CategoryID, un oggetto SqlBuilder con \<symbol1 >. " Viene restituito CategoryID". Analogamente, viene elaborato l'altro lato del confronto e il risultato della visita della condizione di join viene aggiunto alla clausola FROM di SelectStatement1 e il valore "false" viene estratto dallo stack IsParentAJoin.  
   
  A questo punto, l'elaborazione di Join1 è completa e viene estratto un ambito dalla tabella dei simboli.  
   

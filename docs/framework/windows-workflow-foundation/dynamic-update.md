@@ -2,12 +2,12 @@
 title: Aggiornamento dinamico
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207521"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43455770"
 ---
 # <a name="dynamic-update"></a>Aggiornamento dinamico
 L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso di lavoro un meccanismo per aggiornare la definizione del flusso di lavoro di un'istanza persistente del flusso di lavoro. Può servire a implementare una correzione di bug, nuovi requisiti o per implementare modifiche impreviste. In questo argomento viene fornita una panoramica sulla funzionalità di aggiornamento dinamico introdotta in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -17,7 +17,7 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
   
 1.  [Preparare la definizione del flusso di lavoro per l'aggiornamento dinamico](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)  
   
-2.  [Aggiorna la definizione del flusso di lavoro in modo da riflettere le modifiche desiderate](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)  
+2.  [Aggiornare la definizione del flusso di lavoro in modo da riflettere le modifiche desiderate](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)  
   
 3.  [Creare la mappa di aggiornamento](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Create)  
   
@@ -34,7 +34,7 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
  Ai fini della preparazione per l'aggiornamento dinamico, un flusso di lavoro XAML può essere caricato in un oggetto <xref:System.Activities.ActivityBuilder>. L'oggetto <xref:System.Activities.ActivityBuilder> verrà quindi passato a <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Per ulteriori informazioni sull'utilizzo di flussi di lavoro serializzati e <xref:System.Activities.ActivityBuilder>, vedere [la serializzazione di flussi di lavoro e attività da e verso XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
+>  Per altre informazioni sull'uso di flussi di lavoro serializzati e <xref:System.Activities.ActivityBuilder>, vedere [la serializzazione di flussi di lavoro e attività da e verso XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
   
  Nell'esempio riportato di seguito, una definizione di `MortgageWorkflow` (costituita da un oggetto <xref:System.Activities.Statements.Sequence> con varie attività figlio) viene caricata in un oggetto <xref:System.Activities.ActivityBuilder> e successivamente preparata per l'aggiornamento dinamico. Una volta completato il metodo, <xref:System.Activities.ActivityBuilder> contiene la definizione del flusso di lavoro originale nonché una copia.  
   
@@ -57,9 +57,9 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 ```  
   
 > [!NOTE]
->  Per scaricare il codice di esempio che accompagna questo argomento, vedere [il codice di esempio di aggiornamento dinamico](http://go.microsoft.com/fwlink/?LinkId=227905).  
+>  Per scaricare il codice di esempio che accompagna questo argomento, vedere [il codice di esempio di aggiornamento dinamico](https://go.microsoft.com/fwlink/?LinkId=227905).  
   
-###  <a name="Update"></a> Aggiorna la definizione del flusso di lavoro in modo da riflettere le modifiche desiderate  
+###  <a name="Update"></a> Aggiornare la definizione del flusso di lavoro in modo da riflettere le modifiche desiderate  
  Una volta che la definizione del flusso di lavoro è stata preparata per l'aggiornamento, è possibile apportare le modifiche desiderate. È possibile aggiungere o rimuovere attività, aggiungere, spostare o eliminare variabili pubbliche, aggiungere o rimuovere argomenti e apportare modifiche alla firma dei delegati dell'attività. Non è possibile rimuovere un'attività in esecuzione o modificare la firma di un delegato in esecuzione. Tali modifiche possono essere eseguite usando il codice o in una finestra di progettazione del flusso di lavoro rieseguita nell'host. Nell'esempio riportato di seguito viene aggiunta un'attività `VerifyAppraisal` personalizzata alla sequenza che costituisce il corpo dell'oggetto `MortgageWorkflow` usato nell'esempio precedente.  
   
 ```csharp  
@@ -164,7 +164,7 @@ foreach (Guid id in ids)
  Una volta applicato l'aggiornamento dinamico, è possibile riprendere l'istanza del flusso di lavoro. Si noti che è necessario usare la nuova definizione aggiornata e l'oggetto <xref:System.Activities.WorkflowIdentity>.  
   
 > [!NOTE]
->  Per ulteriori informazioni sull'utilizzo di <xref:System.Activities.WorkflowApplication> e <xref:System.Activities.WorkflowIdentity>, vedere [usando WorkflowIdentity e controllo delle versioni](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+>  Per altre informazioni sull'utilizzo con <xref:System.Activities.WorkflowApplication> e <xref:System.Activities.WorkflowIdentity>, vedere [usando WorkflowIdentity e controllo delle versioni](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
  Nell'esempio riportato di seguito, il flusso di lavoro `MortgageWorkflow_v1.1.xaml` dell'esempio precedente è stato compilato e viene caricato e ripreso usando la definizione aggiornata del flusso di lavoro.  
   
@@ -191,4 +191,4 @@ wfApp.Load(InstanceId);
 ```  
   
 > [!NOTE]
->  Per scaricare il codice di esempio che accompagna questo argomento, vedere [il codice di esempio di aggiornamento dinamico](http://go.microsoft.com/fwlink/?LinkId=227905).
+>  Per scaricare il codice di esempio che accompagna questo argomento, vedere [il codice di esempio di aggiornamento dinamico](https://go.microsoft.com/fwlink/?LinkId=227905).

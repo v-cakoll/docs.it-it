@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 80555ad714ffe5cab6722d2d6d45fb6a6bb45609
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540843"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463967"
 ---
 # <a name="annotations-overview"></a>Cenni preliminari sulle annotazioni
 La scrittura di note o commenti su documenti cartacei è un'attività comune che diamo quasi per scontata. Queste note o commenti sono "annotazioni" aggiunte a un documento per contrassegnare informazioni o evidenziare elementi di interesse a cui fare riferimento in un secondo momento. Sebbene la scrittura di note su documenti stampati sia un'operazione semplice e comune, la capacità di aggiungere commenti personali ai documenti elettronici, se disponibile, è in genere molto limitata.  
   
- In questo argomento vengono esaminati molti tipi comuni di annotazioni, in particolare sticky note ed evidenziazioni e viene illustrato il modo in cui [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] facilita questi tipi di annotazioni nelle applicazioni tramite il documento di Windows Presentation Foundation (WPF) controlli di visualizzazione.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] includono i controlli di visualizzazione del documento che supportano le annotazioni <xref:System.Windows.Controls.FlowDocumentReader> e <xref:System.Windows.Controls.FlowDocumentScrollViewer>, nonché controlli derivati dalla <xref:System.Windows.Controls.Primitives.DocumentViewerBase> , ad esempio <xref:System.Windows.Controls.DocumentViewer> e <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ In questo argomento vengono esaminati molti tipi comuni di annotazioni, in modo specifico note di sticky notes ed evidenziazioni e viene illustrato come il [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] facilita questi tipi di annotazioni nelle applicazioni tramite il documento di Windows Presentation Foundation (WPF) controlli di visualizzazione.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] includono i controlli di visualizzazione del documento che supportano le annotazioni <xref:System.Windows.Controls.FlowDocumentReader> e <xref:System.Windows.Controls.FlowDocumentScrollViewer>così come controlli derivati da <xref:System.Windows.Controls.Primitives.DocumentViewerBase> , ad esempio <xref:System.Windows.Controls.DocumentViewer> e <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
   
   
 <a name="caf1_type_stickynotes"></a>   
@@ -43,7 +43,7 @@ La scrittura di note o commenti su documenti cartacei è un'attività comune che
   
  ![Annotazione con evidenziatore](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")  
   
- In genere, gli utenti creano annotazioni selezionando prima del testo o un elemento di interesse, quindi facendo clic per visualizzare un <xref:System.Windows.Controls.ContextMenu> delle opzioni di annotazione.  Nell'esempio seguente il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] è possibile utilizzare per dichiarare un <xref:System.Windows.Controls.ContextMenu> con comandi indirizzati a cui gli utenti possono accedere per creare e gestire le annotazioni.  
+ In genere gli utenti creano annotazioni selezionando innanzitutto un testo o un elemento di interesse e quindi facendo clic su per visualizzare un <xref:System.Windows.Controls.ContextMenu> delle opzioni di annotazione.  L'esempio seguente mostra le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] è possibile usare per dichiarare un <xref:System.Windows.Controls.ContextMenu> con comandi indirizzati che gli utenti possono accedere per creare e gestire le annotazioni.  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
@@ -62,7 +62,7 @@ La scrittura di note o commenti su documenti cartacei è un'attività comune che
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- Un altro scenario di esempio riguarda le applicazioni che consentono lo scambio di annotazioni e sticky notes tra lettori di documenti tramite posta elettronica. Questa funzionalità consente a tali applicazioni di far spostare il lettore alla pagina contenente l'annotazione che viene scambiata.  
+ Un altro scenario di esempio riguarda le applicazioni che consentono lo scambio di annotazioni e note tra lettori di documenti tramite posta elettronica. Questa funzionalità consente a tali applicazioni di far spostare il lettore alla pagina contenente l'annotazione che viene scambiata.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
@@ -75,4 +75,4 @@ La scrittura di note o commenti su documenti cartacei è un'attività comune che
  [Panoramica sull'oggetto ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
  [Panoramica sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [How to: Add a Command to a MenuItem (Procedura: Aggiungere un comando a un MenuItem)](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+ [How to: Add a Command to a MenuItem (Procedura: Aggiungere un comando a un MenuItem)](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

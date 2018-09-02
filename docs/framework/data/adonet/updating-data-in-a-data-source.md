@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 11c3faa85d6d0b77c4e606815aa8252188b6f67d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7b57a9572a285dfdc13afb0a520de67e231a1c0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357793"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463910"
 ---
 # <a name="updating-data-in-a-data-source"></a>Aggiornamento di dati in un'origine dati
-Le istruzioni SQL che modificano i dati, ad esempio INSERT, UPDATE o DELETE, non restituiscono righe. Analogamente, molte stored procedure eseguono un'operazione ma non restituiscono righe. Per eseguire i comandi che non restituiscono righe, creare un **comando** oggetto con il comando SQL appropriato e un **connessione**, incluse le necessarie **parametri**. Eseguire il comando con il **ExecuteNonQuery** metodo il **comando** oggetto.  
+Le istruzioni SQL che modificano i dati, ad esempio INSERT, UPDATE o DELETE, non restituiscono righe. Analogamente, molte stored procedure eseguono un'operazione ma non restituiscono righe. Per eseguire i comandi che non restituiscono righe, creare un **comando** oggetto con il comando SQL appropriato e un **connessione**, inclusi eventuali obbligatorio **parametri**. Eseguire il comando con il **ExecuteNonQuery** metodo per il **comando** oggetto.  
   
- Il **ExecuteNonQuery** metodo restituisce un intero che rappresenta il numero di righe interessate dall'istruzione o stored procedure che è stata eseguita. Se si eseguono più istruzioni, il valore restituito sarà la somma dei record interessati da ognuna delle istruzioni eseguite.  
+ Il **ExecuteNonQuery** metodo restituisce un intero che rappresenta il numero di righe interessate dall'istruzione o dalla stored procedure che è stata eseguita. Se si eseguono più istruzioni, il valore restituito sarà la somma dei record interessati da ognuna delle istruzioni eseguite.  
   
 ## <a name="example"></a>Esempio  
- L'esempio di codice seguente viene eseguita un'istruzione INSERT per inserire un record in un database utilizzando **ExecuteNonQuery**.  
+ Esempio di codice seguente viene eseguita un'istruzione INSERT per inserire un record in un database usando **ExecuteNonQuery**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- L'esempio di codice seguente viene eseguita la stored procedure creata dal codice di esempio in [esecuzione delle operazioni di catalogo](../../../../docs/framework/data/adonet/performing-catalog-operations.md). Non viene restituita dalla stored procedure, pertanto la **ExecuteNonQuery** viene usato il metodo, ma la stored procedure riceve un parametro di input e restituisce un parametro di output e un valore restituito.  
+ Esempio di codice seguente esegue la stored procedure creata dal codice di esempio nella [esecuzione di operazioni di catalogo](../../../../docs/framework/data/adonet/performing-catalog-operations.md). Non viene restituita dalla stored procedure, in modo che il **ExecuteNonQuery** viene usato il metodo, ma la stored procedure riceve un parametro di input e restituisce un valore restituito e un parametro di output.  
   
- Per il <xref:System.Data.OleDb.OleDbCommand> oggetto, il **ReturnValue** parametro deve essere aggiunto al **parametri** raccolta prima.  
+ Per il <xref:System.Data.OleDb.OleDbCommand> oggetti, il **ReturnValue** parametro deve essere aggiunto al **parametri** raccolta prima.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -95,4 +95,4 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
  [Uso di comandi per modificare i dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  [Aggiornamento di origini dati con DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: d4e5b4353b53c382dad2b390db1b8fc224e7f261
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911744"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468630"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Procedura: effettuare chiamate thread-safe a controlli di Windows Form
 
@@ -406,7 +406,7 @@ private:
  L'esempio di codice seguente è un'applicazione Windows Form completa, costituita da un form con tre pulsanti e una casella di testo. Il primo pulsante dimostra un accesso cross-thread non sicuro, il secondo pulsante dimostra un accesso sicuro con <xref:System.Windows.Forms.Control.Invoke%2A>e il terzo pulsante dimostra un accesso sicuro con <xref:System.ComponentModel.BackgroundWorker>.
 
 > [!NOTE]
-> Per istruzioni su come eseguire l'esempio, vedere [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](http://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Questo esempio richiede riferimenti agli assembly System.Drawing e System.Windows.Forms.
+> Per istruzioni su come eseguire l'esempio, vedere [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Questo esempio richiede riferimenti agli assembly System.Drawing e System.Windows.Forms.
 
 ```csharp
 using System;

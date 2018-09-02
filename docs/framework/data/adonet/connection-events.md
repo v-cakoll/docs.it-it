@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: aebd38cf57d602fef61c1ad4e6679f37227b1355
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: c1ef9ff9cc4d77e4951e99ed74c96cf78eb71506
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930862"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465525"
 ---
 # <a name="connection-events"></a>Eventi di connessione
 Tutti i provider di dati .NET Framework dispongono **connessione** gli oggetti con due eventi che è possibile usare per recuperare i messaggi informativi da un'origine dati o per determinare se lo stato di un **connessione** ha stato modificato. Nella tabella seguente vengono descritti gli eventi dei **connessione** oggetto.  
@@ -107,4 +107,4 @@ protected static void OnStateChange(object sender,
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -24,12 +24,12 @@ ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b227ba343db7996d38d5a485b54629a1f4ed28bd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c7aebbfd0d25f6c5a9266857816a1723cb0c660e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744109"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466584"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Schema dei file di configurazione per .NET Framework
 
@@ -78,10 +78,10 @@ Per informazioni sui tipi, il formato e il percorso dei file di configurazione, 
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Schema delle impostazioni remote](http://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) Vengono descritti gli elementi che configurano le applicazioni client e server che implementano i servizi remoti.
+[Schema delle impostazioni remote](https://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) Vengono descritti gli elementi che configurano le applicazioni client e server che implementano i servizi remoti.
 
-[Schema delle impostazioni ASP.NET](http://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) Vengono descritti gli elementi che controllano il comportamento delle applicazioni Web ASP.NET.
+[Schema delle impostazioni ASP.NET](https://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) Vengono descritti gli elementi che controllano il comportamento delle applicazioni Web ASP.NET.
 
-[Schema delle impostazioni dei servizi Web ](http://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) Vengono descritti gli elementi che controllano il comportamento dei servizi Web ASP.NET e dei relativi client.
+[Schema delle impostazioni dei servizi Web ](https://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) Vengono descritti gli elementi che controllano il comportamento dei servizi Web ASP.NET e dei relativi client.
 
-[Configurazione di app .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) Viene descritto come configurare la sicurezza, l'associazione degli assembly e i servizi remoti in .NET Framework.
+[Configurazione di app .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) Viene descritto come configurare la sicurezza, l'associazione degli assembly e i servizi remoti in .NET Framework.

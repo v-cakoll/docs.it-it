@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 60e33f9f3ab767a6fd1d5489721fd2a82950155e
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 685c68967f69e8933ff3dd2cd062e0893c7e2da6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754593"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465988"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Procedura dettagliata: localizzazione di un'applicazione ibrida
 
@@ -28,7 +28,7 @@ Le attività illustrate nella procedura dettagliata sono le seguenti:
 
 -   Utilizzo dello strumento LocBaml per produrre un assembly satellite.
 
-Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [localizzazione di un'applicazione ibrida](http://go.microsoft.com/fwlink/?LinkID=160015).
+Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [localizzazione di un'applicazione ibrida](https://go.microsoft.com/fwlink/?LinkID=160015).
 
 Al termine, sarà disponibile un'applicazione ibrida localizzata.
 
@@ -44,7 +44,7 @@ Il primo passaggio consiste nel creare il [!INCLUDE[TLA#tla_winforms](../../../.
 
 ### <a name="to-create-the-host-project"></a>Per creare il progetto host
 
-1.  Creare un **applicazione WPF** progetto denominato `LocalizingWpfInWf`. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione Windows Form](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).
+1.  Creare un **applicazione WPF** progetto denominato `LocalizingWpfInWf`.  (**File** > **nuova** > **progetto** > **Visual C#** o **Visual Basic**   >  **Desktop classico** > **applicazione WPF**).
 
 2.  Aggiungere un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> elemento denominato `SimpleControl` al progetto.
 
@@ -177,5 +177,5 @@ Il contenuto localizzato viene memorizzato in una risorsa sola *assembly satelli
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Localizzare un'applicazione](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
-- [Procedura dettagliata: Localizzazione di Windows Form](http://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
-- [WPF Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [Procedura dettagliata: Localizzazione di Windows Form](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+- [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

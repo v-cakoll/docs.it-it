@@ -1,13 +1,13 @@
 ---
 title: Riferimenti per simboli e operatori (F#)
-description: Informazioni sui simboli e operatori utilizzati nel linguaggio di programmazione c#.
+description: Informazioni sui simboli e operatori usati nel linguaggio di programmazione c#.
 ms.date: 04/04/2018
-ms.openlocfilehash: 79518b990f3a5c794f7658490bdadc2d5b985504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a52fc7539027f0cf86a82223a5970d86d7ec60c5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566704"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457200"
 ---
 # <a name="symbol-and-operator-reference"></a>Riferimenti per simboli e operatori
 
@@ -82,7 +82,7 @@ Nella tabella seguente sono descritti i simboli usati nel linguaggio F#, vengono
 |`=?`|[Operatori nullable](nullable-operators.md)|<ul><li>Calcola l'operazione "uguale a" quando la parte destra è un tipo nullable.<br /></li><ul/>|
 |`==`|Non applicabile.|<ul><li>Non usato in F#. Usa `=` per le operazioni di uguaglianza.<br /></li><ul/>|
 |`>`|[Operatori aritmetici](arithmetic-operators.md)|<ul><li>Restituisce `true` se il lato sinistro è maggiore del lato destro; in caso contrario, restituisce `false`.<br /></li><ul/>|
-|`>?`|[Operatori nullable](nullable-operators.md)|<ul><li>Calcola l'operazione "maggiore di", quando la parte destra è un tipo nullable.<br /></li><ul/>|
+|`>?`|[Operatori nullable](nullable-operators.md)|<ul><li>Calcola l'operazione "maggiore di" quando la parte destra è un tipo nullable.<br /></li><ul/>|
 |`>>`|[Funzioni](../functions/index.md)|<ul><li>Compone due funzioni (operatore di composizione diretto).<br /></li><ul/>|
 |`>>>`|[Operatori bit per bit](bitwise-operators.md)|<ul><li>Sposta a destra i bit nella quantità sul lato sinistro indicata dal numero di posizioni specificato sul lato destro.<br /></li><ul/>|
 |`>=`|[Operatori aritmetici](arithmetic-operators.md)|<ul><li>Restituisce `true` se il lato sinistro è maggiore o uguale a quello destro; in caso contrario, restituisce `false`.<br /></li><ul/>|
@@ -139,7 +139,7 @@ Nella tabella seguente viene illustrato l'ordine di precedenza degli operatori e
 |`*`*op*, `/`*op*, `%`*op*|Sinistra|
 |`**`*op*|Destra|
 |`f x` (applicazione di funzione)|Sinistro|
-|<code>&#124;</code> (criteri di ricerca)|A destra|
+|<code>&#124;</code> (criteri di corrispondenza)|A destra|
 |operatori di prefisso (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Sinistro|
 |`.`|A sinistra|
 |`f(x)`|Sinistro|

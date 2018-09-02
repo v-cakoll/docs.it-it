@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 7f8a23c32d4c1e2a91cd83770935b071764943e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f1e3fe6d53266a4e1366c1a3d5396688a25df0f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365475"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457021"
 ---
 # <a name="windows-applications-using-callbacks"></a>Applicazioni Windows tramite callback
 Nella maggior parte degli scenari di elaborazione asincrona si desidera avviare un'operazione di database e continuare a eseguire altri processi senza dover attendere il completamento dell'operazione di database. Tuttavia, in molti casi è necessario eseguire ulteriori operazioni dopo che l'operazione di database è stata terminata. In un'applicazione Windows, ad esempio, la delega dell'operazione a esecuzione prolungata a un thread in background consente al thread dell'interfaccia utente di rimanere attivo mentre l'operazione è in esecuzione. Tuttavia, una volta completata l'operazione di database, è possibile che si desideri usare i risultati per compilare il form. La soluzione migliore per implementare questo tipo di scenario è l'uso di un callback.  
@@ -380,4 +380,4 @@ private void Form1_Load(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>Vedere anche  
  [Operazioni asincrone](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

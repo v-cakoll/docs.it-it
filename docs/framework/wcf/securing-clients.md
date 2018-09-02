@@ -6,21 +6,21 @@ helpviewer_keywords:
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: dfbe1fcce8a3b860e88dae4f5af43adfedbe9890
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e0bed1e47302cc80a04498f39144177acdbc9ae6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808445"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470038"
 ---
 # <a name="securing-clients"></a>Protezione di client
-In Windows Communication Foundation (WCF), il servizio impone i requisiti di sicurezza per i client. Ovvero specifica quale modalità di sicurezza utilizzare e se il client deve fornire o meno una credenziale. Il processo di protezione di un client, pertanto, è semplice: utilizzare i metadati ottenuti dal servizio (se è pubblicato) e generare un client. I metadati specificano come configurare il client. Se il servizio richiede al client di fornire una credenziale, è necessario ottenerne una che corrisponda al requisito. In questo argomento viene descritto il processo in modo dettagliato. Per ulteriori informazioni sulla creazione di un servizio protetto, vedere [protezione Services](../../../docs/framework/wcf/securing-services.md).  
+In Windows Communication Foundation (WCF), il servizio impone i requisiti di sicurezza per i client. Ovvero specifica quale modalità di sicurezza utilizzare e se il client deve fornire o meno una credenziale. Il processo di protezione di un client, pertanto, è semplice: utilizzare i metadati ottenuti dal servizio (se è pubblicato) e generare un client. I metadati specificano come configurare il client. Se il servizio richiede al client di fornire una credenziale, è necessario ottenerne una che corrisponda al requisito. In questo argomento viene descritto il processo in modo dettagliato. Per altre informazioni sulla creazione di un servizio sicuro, vedere [Securing Services](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>Il servizio specifica la protezione  
- Per impostazione predefinita, le associazioni WCF dispongono di funzionalità di sicurezza abilitata. a eccezione di <xref:System.ServiceModel.BasicHttpBinding>. Pertanto, se il servizio è stato creato tramite WCF, è probabile che implementerà la protezione per assicurare autenticazione, riservatezza e integrità. In tal caso, i metadati forniti dal servizio indicheranno cosa è necessario per stabilire un canale di comunicazione protetto. Se i metadati del servizio non includono requisiti di sicurezza, non esiste alcuna possibilità di imporre uno schema di sicurezza, ad esempio Secure Sockets Layer (SSL) su HTTP, in un servizio. Se, tuttavia, il servizio richiede al client di fornire una credenziale, lo sviluppatore, il distributore o l'amministratore client deve fornire la credenziale effettiva che verrà utilizzata dal client per l'autenticazione al servizio.  
+ Per impostazione predefinita, le associazioni WCF hanno funzionalità di sicurezza abilitata. a eccezione di <xref:System.ServiceModel.BasicHttpBinding>. Pertanto, se il servizio è stato creato tramite WCF, è probabile che implementerà la protezione per assicurare autenticazione, riservatezza e integrità. In tal caso, i metadati forniti dal servizio indicheranno cosa è necessario per stabilire un canale di comunicazione protetto. Se i metadati del servizio non includono requisiti di sicurezza, non esiste alcuna possibilità di imporre uno schema di sicurezza, ad esempio Secure Sockets Layer (SSL) su HTTP, in un servizio. Se, tuttavia, il servizio richiede al client di fornire una credenziale, lo sviluppatore, il distributore o l'amministratore client deve fornire la credenziale effettiva che verrà utilizzata dal client per l'autenticazione al servizio.  
   
 ## <a name="obtaining-metadata"></a>Recupero di metadati  
- Quando si crea un client, eseguire innanzitutto il recupero di metadati per il servizio con il quale il client comunicherà. Questa operazione può essere eseguita in due modi. Innanzitutto, se il servizio pubblica un endpoint di metadati (MEX) di exchange o rende disponibili i metadati tramite HTTP o HTTPS, è possibile scaricare i metadati utilizzando il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), che genera l'errore sia file di codice per un client, nonché un file di configurazione. (Per ulteriori informazioni sull'uso dello strumento, vedere [accesso ai servizi tramite Client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Se il servizio non pubblica un endpoint MEX e non rende disponibili i metadati su HTTP o HTTPS, è necessario contattare il creatore del servizio per ottenere la documentazione che descrive i requisiti di sicurezza e i metadati.  
+ Quando si crea un client, eseguire innanzitutto il recupero di metadati per il servizio con il quale il client comunicherà. Questa operazione può essere eseguita in due modi. In primo luogo, se il servizio pubblica un endpoint di metadati exchange (MEX) o rende disponibili i metadati tramite HTTP o HTTPS, è possibile scaricare i metadati utilizzando il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), che genera entrambi file di codice per un client, nonché un file di configurazione. (Per altre informazioni sull'uso dello strumento, vedere [accesso ai servizi tramite Client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Se il servizio non pubblica un endpoint MEX e non rende disponibili i metadati su HTTP o HTTPS, è necessario contattare il creatore del servizio per ottenere la documentazione che descrive i requisiti di sicurezza e i metadati.  
   
 > [!IMPORTANT]
 >  È preferibile che i metadati provengano da un'origine attendibile e che non siano stati alterati. I metadati recuperati utilizzando il protocollo HTTP vengono inviati come testo non crittografato e possono essere alterati. Se il servizio utilizza le proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> e <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, utilizzare l'URL fornito dal creatore del servizio per scaricare i dati tramite il protocollo HTTPS.  
@@ -40,9 +40,9 @@ In Windows Communication Foundation (WCF), il servizio impone i requisiti di sic
 2.  Specificare una credenziale client effettiva. La credenziale client effettiva viene chiamata un *valore della credenziale client* per distinguerla dal tipo. Se, ad esempio, il tipo di credenziale client specifica un certificato, è necessario fornire un certificato X.509 emesso da un'autorità di certificazione che il servizio considera attendibile.  
   
 ### <a name="determining-the-client-credential-type"></a>Determinazione del tipo di credenziale client  
- Se si dispone di configurazione dello strumento Svcutil.exe generato del file, esaminare il [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sezione per determinare il tipo di credenziale client è obbligatorio. All'interno della sezione esistono elementi di associazione che specificano i requisiti di sicurezza. In particolare, esaminare il \<sicurezza > dell'elemento di ogni associazione. L'elemento include l'attributo `mode` che è possibile impostare su uno dei tre valori seguenti, `Message`, `Transport` o `TransportWithMessageCredential`. Il valore dell'attributo determina la modalità che a sua volta determina quale degli elementi figlio è significativo.  
+ Se si ha la configurazione lo strumento Svcutil.exe generato del file, esaminare i [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sezione per determinare il tipo di credenziale client è obbligatorio. All'interno della sezione esistono elementi di associazione che specificano i requisiti di sicurezza. In particolare, esaminare il \<sicurezza > elemento di ogni associazione. L'elemento include l'attributo `mode` che è possibile impostare su uno dei tre valori seguenti, `Message`, `Transport` o `TransportWithMessageCredential`. Il valore dell'attributo determina la modalità che a sua volta determina quale degli elementi figlio è significativo.  
   
- Il `<security>` elemento può contenere un `<transport>` o `<message>` o entrambi. L'elemento significativo è quello che corrisponde alla modalità di sicurezza. Nel codice seguente, ad esempio, viene specificato che la modalità di sicurezza è `"Message"` e il tipo di credenziale client per l'elemento `<message>` è `"Certificate"`. In questo caso, l'elemento `<transport>` può essere ignorato. L'elemento `<message>`, tuttavia, specifica che è necessario che venga fornito un certificato X.509.  
+ Il `<security>` elemento può contenere un `<transport>` o `<message>` elemento, o entrambi. L'elemento significativo è quello che corrisponde alla modalità di sicurezza. Nel codice seguente, ad esempio, viene specificato che la modalità di sicurezza è `"Message"` e il tipo di credenziale client per l'elemento `<message>` è `"Certificate"`. In questo caso, l'elemento `<transport>` può essere ignorato. L'elemento `<message>`, tuttavia, specifica che è necessario che venga fornito un certificato X.509.  
   
 ```xml  
 <wsHttpBinding>  
@@ -75,10 +75,10 @@ In Windows Communication Foundation (WCF), il servizio impone i requisiti di sic
   
 -   Tramite la programmazione della credenziale nel codice client (utilizzando il metodo `SetCertificate`).  
   
- Aggiungendo un [ \<comportamenti >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) sezione del file di configurazione per il client e l'utilizzo di `clientCredentials` elemento (mostrato sotto).  
+ Aggiungendo un [ \<comportamenti >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) sezione del file di configurazione per il client e l'uso di `clientCredentials` elemento (mostrato sotto).  
   
 #### <a name="setting-a-clientcredentials-value-in-code"></a>Impostazione di un \<clientCredentials > valore nel codice  
- Per impostare un [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) valore nel codice, è necessario accedere il <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> proprietà la <xref:System.ServiceModel.ClientBase%601> classe. La proprietà restituisce un oggetto <xref:System.ServiceModel.Description.ClientCredentials> che consente l'accesso a vari tipi di credenziali, come illustrato nella tabella seguente.  
+ Per impostare una [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) valore nel codice, è necessario accedere il <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> proprietà del <xref:System.ServiceModel.ClientBase%601> classe. La proprietà restituisce un oggetto <xref:System.ServiceModel.Description.ClientCredentials> che consente l'accesso a vari tipi di credenziali, come illustrato nella tabella seguente.  
   
 |Proprietà ClientCredential|Descrizione|Note|  
 |-------------------------------|-----------------|-----------|  
@@ -90,8 +90,8 @@ In Windows Communication Foundation (WCF), il servizio impone i requisiti di sic
 |<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Restituisce <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>.|Rappresenta una coppia nome utente e password.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Restituisce <xref:System.ServiceModel.Security.WindowsClientCredential>.|Rappresenta una credenziale client di Windows (credenziale Kerberos). Le proprietà della classe sono in sola lettura.|  
   
-#### <a name="setting-a-clientcredentials-value-in-configuration"></a>Impostazione di un \<clientCredentials > valore di configurazione  
- I valori di credenziale vengono specificati utilizzando un comportamento dell'endpoint come elementi figlio del [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento. L'elemento utilizzato dipende dal tipo di credenziale client. Ad esempio, nell'esempio seguente viene illustrata la configurazione per impostare un certificato x. 509 utilizzando il <[\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
+#### <a name="setting-a-clientcredentials-value-in-configuration"></a>Impostazione di un \<clientCredentials > valore nella configurazione  
+ I valori di credenziale vengono specificati utilizzando un comportamento dell'endpoint come elementi figlio del [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento. L'elemento utilizzato dipende dal tipo di credenziale client. Ad esempio, nell'esempio seguente viene illustrata la configurazione per impostare un certificato X.509 utilizzando i <[\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
   
 ```xml  
 <configuration>  
@@ -109,7 +109,7 @@ In Windows Communication Foundation (WCF), il servizio impone i requisiti di sic
 </configuration>  
 ```  
   
- Per impostare la credenziale client nella configurazione, aggiungere un [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elemento nel file di configurazione. Inoltre, l'elemento di comportamento aggiunto deve essere collegato all'endpoint del servizio utilizzando il `behaviorConfiguration` attributo del [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento, come illustrato nell'esempio seguente. Il valore dell'attributo `behaviorConfiguration` deve corrispondere al valore dell'attributo `name` del comportamento.  
+ Per impostare la credenziale client nella configurazione, aggiungere un' [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elemento nel file di configurazione. Inoltre, l'elemento di comportamento aggiunto deve essere collegato all'endpoint del servizio usando il `behaviorConfiguration` attributo del [ \<endpoint >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento, come illustrato nell'esempio seguente. Il valore dell'attributo `behaviorConfiguration` deve corrispondere al valore dell'attributo `name` del comportamento.  
   
  `<configuration>`  
   
@@ -136,7 +136,7 @@ In Windows Communication Foundation (WCF), il servizio impone i requisiti di sic
 > [!NOTE]
 >  È impossibile impostare alcuni dei valori della credenziale client utilizzando i file di configurazione dell'applicazione, ad esempio nome utente e password o i valori utente e password di Windows. È possibile specificare tali valori della credenziale solo nel codice.  
   
- Per ulteriori informazioni sull'impostazione della credenziale client, vedere [procedura: specificare i valori di credenziale Client](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Per altre informazioni sull'impostazione della credenziale client, vedere [procedura: Specify Client Credential Values](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
 >  `ClientCredentialType` viene ignorato quando `SecurityMode` è impostato su `"TransportWithMessageCredential",` come illustrato nell'esempio di configurazione seguente.  

@@ -9,16 +9,16 @@ ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: b9c748ccc695ae67306c293c10248c4f3f22c043
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 300d9df608553f9f8ae999287b3214c8a9eaea21
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408708"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468123"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementazione del pattern di controllo Value di automazione interfaccia utente
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IValueProvider>, incluse le informazioni relative a eventi e proprietà. Alla fine della panoramica sono elencati collegamenti ad altro materiale di riferimento.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33408708"
   
 -   I controlli come <xref:System.Windows.Automation.ControlType.ListItem> e <xref:System.Windows.Automation.ControlType.TreeItem> devono supportare <xref:System.Windows.Automation.ValuePattern> se il valore di uno qualsiasi degli elementi è modificabile, indipendentemente dalla modalità di modifica corrente del controllo. Il controllo padre deve supportare anche <xref:System.Windows.Automation.ValuePattern> se gli elementi figlio sono modificabili.  
   
- ![Elemento di elenco modificabile ] (../../../docs/framework/ui-automation/media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")  
+ ![Elemento dell'elenco modificabile. ](../../../docs/framework/ui-automation/media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")  
 Esempio di elemento elenco modificabile  
   
 -   I controlli di modifica a riga singola supportano l'accesso a livello di codice ai contenuti implementando <xref:System.Windows.Automation.Provider.IValueProvider>. I controlli di modifica a più righe, tuttavia, non implementano <xref:System.Windows.Automation.Provider.IValueProvider>, ma forniscono l'accesso ai contenuti implementando <xref:System.Windows.Automation.Provider.ITextProvider>.  
@@ -41,7 +41,7 @@ Esempio di elemento elenco modificabile
   
 -   <xref:System.Windows.Automation.Provider.IValueProvider> deve essere implementato da controlli come il controllo di selezione **Selezione colori** in [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (illustrato di seguito), che supporta il mapping delle stringhe tra il valore di un colore (ad esempio, "giallo") e una struttura [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] interna equivalente.  
   
- ![Selezione dei colori con il giallo evidenziato. ] (../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
+ ![Selezione colori con il giallo evidenziato. ](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Esempio di mapping delle stringhe dei campioni colore  
   
 -   Un controllo deve avere <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> impostato su `true` e <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> impostato su `false` prima di consentire una chiamata a <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.  
@@ -52,9 +52,9 @@ Esempio di mapping delle stringhe dei campioni colore
   
 |Membri obbligatori|Tipo di membro|Note|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Proprietà|Nessuno|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Proprietà|Nessuno|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Metodo|Nessuno|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Metodo|nessuno|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Eccezioni  
@@ -62,14 +62,14 @@ Esempio di mapping delle stringhe dei campioni colore
   
 |Tipo di eccezione|Condizione|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -Per informazioni specifiche delle impostazioni locali viene passate a un controllo in un formato non corretto, ad esempio una data in formato non corretto.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -Se informazioni specifiche delle impostazioni locali vengono passate a un controllo in un formato non corretto, ad esempio una data non formattata correttamente.|  
 |<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -Se un nuovo valore non può essere convertito da una stringa in un formato riconosciuto dal controllo.|  
-|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -Quando si tenta di modificare un controllo che non è abilitato.|  
+|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -Quando viene effettuato un tentativo di modificare un controllo che non è abilitato.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [TextPattern Insert Text Sample](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
+ [TextPattern Insert Text Sample](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
  [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
  [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

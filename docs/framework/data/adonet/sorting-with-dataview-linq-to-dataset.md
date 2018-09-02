@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 41f6f56765e1a623f8f2bdc8f2322589125d123e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f69b64088093bbdd46239a26f16aeea50b6dee7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365904"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465564"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Ordinamento con DataView (LINQ to DataSet)
-La possibilità di ordinare i dati in base a criteri specifici e quindi di presentarli a un client tramite un controllo dell'interfaccia utente rappresenta un aspetto importante del data binding. Con <xref:System.Data.DataView> è possibile ordinare i dati e restituire righe di dati ordinate in base a criteri specifici in diversi modi. Oltre alla relativa stringa basata su funzionalità, di ordinamento <xref:System.Data.DataView> consente inoltre di utilizzare [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] espressioni per i criteri di ordinamento. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] le espressioni consentono per le operazioni di ordinamento molto più complesse e potenti rispetto a ordinamento basato su stringa. In questo argomento vengono descritti entrambi gli approcci all'ordinamento tramite <xref:System.Data.DataView>.  
+La possibilità di ordinare i dati in base a criteri specifici e quindi di presentarli a un client tramite un controllo dell'interfaccia utente rappresenta un aspetto importante del data binding. Con <xref:System.Data.DataView> è possibile ordinare i dati e restituire righe di dati ordinate in base a criteri specifici in diversi modi. Oltre a basate su stringa, funzionalità di ordinamento <xref:System.Data.DataView> consente inoltre di usare [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] espressioni per i criteri di ordinamento. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] le espressioni consentono le operazioni di ordinamento più complesse e potenti rispetto a ordinamento basato su stringa. In questo argomento vengono descritti entrambi gli approcci all'ordinamento tramite <xref:System.Data.DataView>.  
   
 ## <a name="creating-dataview-from-a-query-with-sorting-information"></a>Creazione di DataView da una query con informazioni di ordinamento  
- È possibile creare un oggetto <xref:System.Data.DataView> da una query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Se la query contiene un <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>, o <xref:System.Linq.Enumerable.ThenByDescending%2A> le espressioni in tali clausole vengono utilizzate come base per l'ordinamento dei dati nella clausola di <xref:System.Data.DataView>. Ad esempio, se la query contiene il `Order By…`e `Then By…` clausole, il valore risultante <xref:System.Data.DataView> Ordina i dati da entrambe le colonne specificate.  
+ È possibile creare un oggetto <xref:System.Data.DataView> da una query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Se la query contiene un' <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>, o <xref:System.Linq.Enumerable.ThenByDescending%2A> le espressioni in tale clausola vengono usate come base per l'ordinamento dei dati nella clausola di <xref:System.Data.DataView>. Ad esempio, se la query contiene il `Order By…`e `Then By…` clausole, risultante <xref:System.Data.DataView> Ordina i dati da entrambe le colonne specificate.  
   
  L'ordinamento basato su espressione è più potente e complesso rispetto a quello più semplice basato su stringa. Notare che l'ordinamento basato su stringa e l'ordinamento basato su espressione si escludono a vicenda. Se si imposta un oggetto <xref:System.Data.DataView.Sort%2A> basato su stringa dopo la creazione di un oggetto <xref:System.Data.DataView> da una query, il filtro basato sull'espressione dedotto dalla query viene cancellato e non può essere ripristinato.  
   
- L'indice relativo a un oggetto <xref:System.Data.DataView> viene compilato sia quando si crea <xref:System.Data.DataView> che quando si modifica una qualsiasi delle informazioni relative all'ordinamento o al filtraggio. Per prestazioni ottimali è preferibile fornire i criteri di ordinamento nella query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] da cui viene creato l'oggetto <xref:System.Data.DataView> ed evitare di modificare le informazioni sull'ordinamento in un secondo momento. Per ulteriori informazioni, vedere [delle prestazioni di DataView](../../../../docs/framework/data/adonet/dataview-performance.md).  
+ L'indice relativo a un oggetto <xref:System.Data.DataView> viene compilato sia quando si crea <xref:System.Data.DataView> che quando si modifica una qualsiasi delle informazioni relative all'ordinamento o al filtraggio. Per prestazioni ottimali è preferibile fornire i criteri di ordinamento nella query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] da cui viene creato l'oggetto <xref:System.Data.DataView> ed evitare di modificare le informazioni sull'ordinamento in un secondo momento. Per altre informazioni, vedere [prestazioni di DataView](../../../../docs/framework/data/adonet/dataview-performance.md).  
   
 > [!NOTE]
 >  Nella maggior parte dei casi le espressioni usate per l'ordinamento non devono presentare effetti collaterali e devono essere deterministiche. Le espressioni non devono inoltre contenere eventuale codice che dipende da un numero impostato di esecuzioni perché è possibile che le operazioni di ordinamento vengano eseguite un numero qualsiasi di volte.  
@@ -48,7 +48,7 @@ La possibilità di ordinare i dati in base a criteri specifici e quindi di prese
   
  Le funzionalità di ordinamento basato su stringa e di ordinamento basato su espressione si escludono a vicenda. L'impostazione della proprietà <xref:System.Data.DataView.Sort%2A> implica la cancellazione dell'ordinamento basato su espressione ereditato dalla query da cui è stato creato l'oggetto <xref:System.Data.DataView>.  
   
- Per ulteriori informazioni su basato su stringa <xref:System.Data.DataView.Sort%2A> filtro, vedere [ordinamento e filtraggio dei dati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Per altre informazioni sulla stringa basata <xref:System.Data.DataView.Sort%2A> applicazione di filtri, vedere [ordinamento e filtro dei dati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene creato un oggetto <xref:System.Data.DataView> dalla tabella Contact e le righe vengono ordinate prima in base al cognome in ordine decrescente e quindi in base al nome in ordine crescente:  
@@ -84,4 +84,4 @@ La possibilità di ordinare i dati in base a criteri specifici e quindi di prese
 ## <a name="see-also"></a>Vedere anche  
  [Data binding e LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
  [Filtro con DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
- [Ordinamento dei dati](http://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)
+ [Ordinamento dei dati](https://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)

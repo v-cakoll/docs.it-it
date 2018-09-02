@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: d5e90d7cab0763dcc1635f8c383c434240498766
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 09f634c870eb78c16192ed30ffbbfdc71fdd5142
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254828"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456438"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Procedura dettagliata: hosting di controlli compositi di WPF in Windows Form
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando è presente un investimento sostanziale [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] codice, può essere più efficace estendere esistente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] dell'applicazione con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] anziché riscriverla da zero. Uno scenario comune è quando si desidera incorporare uno o più controlli implementati con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] all'interno dell'applicazione Windows Form. Per altre informazioni sulla personalizzazione dei controlli WPF, vedere [personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "43254828"
   
 -   Implementazione dell'applicazione host Windows Forms.  
   
- Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [che ospita un controllo WPF composito in Windows Forms Sample](http://go.microsoft.com/fwlink/?LinkID=159996).  
+ Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [che ospita un controllo WPF composito in Windows Forms Sample](https://go.microsoft.com/fwlink/?LinkID=159996).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  

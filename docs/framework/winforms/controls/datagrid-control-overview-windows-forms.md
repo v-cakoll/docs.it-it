@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 1849fd0d81b00f1fa351d2a8cf1d2ed567e04401
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f939175a77ff080b37491a36c15edbb8af15933
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529493"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462464"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Cenni preliminari sul controllo DataGrid (Windows Form)
 > [!NOTE]
@@ -52,9 +52,9 @@ DataGrid associato a dati con più tabelle
 ## <a name="binding-data-to-the-control"></a>Data binding al controllo  
  Per funzionare, il controllo <xref:System.Windows.Forms.DataGrid> deve essere associato a un'origine dati usando le proprietà <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> in fase di progettazione o il metodo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>in fase di esecuzione. Questo binding associa <xref:System.Windows.Forms.DataGrid> a un oggetto origine dati di cui è stata creata un'istanza, ad esempio <xref:System.Data.DataSet> o <xref:System.Data.DataTable>. Il controllo <xref:System.Windows.Forms.DataGrid> mostra i risultati delle azioni eseguite sui dati. La maggior parte delle azioni specifiche dei dati non viene eseguita tramite <xref:System.Windows.Forms.DataGrid>, ma tramite l'origine dati.  
   
- Se i dati nel set di dati associato vengono aggiornati con qualsiasi meccanismo, il controllo <xref:System.Windows.Forms.DataGrid> rispecchia le modifiche. Se la griglia dei dati e stili di tabella e gli stili di colonna dispongono di `ReadOnly` proprietà impostata su `false`, i dati nel set di dati possono essere aggiornati tramite il <xref:System.Windows.Forms.DataGrid> controllo.  
+ Se i dati nel set di dati associato vengono aggiornati con qualsiasi meccanismo, il controllo <xref:System.Windows.Forms.DataGrid> rispecchia le modifiche. Se la griglia dei dati e gli stili tabella e gli stili colonna hanno la `ReadOnly` impostata su `false`, i dati nel set di dati possono essere aggiornati tramite il <xref:System.Windows.Forms.DataGrid> controllo.  
   
- In <xref:System.Windows.Forms.DataGrid> può essere visualizzata una sola tabella per volta. Se viene definita una relazione padre-figlio tra le tabelle, l'utente può spostarsi tra le tabelle correlate per selezionare la tabella da visualizzare nel controllo <xref:System.Windows.Forms.DataGrid>. Per informazioni sull'associazione un <xref:System.Windows.Forms.DataGrid> il controllo a un [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] un'origine dati in fase di progettazione o in fase di esecuzione, vedere [procedura: associare il controllo DataGrid Windows Form a un'origine dati](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+ In <xref:System.Windows.Forms.DataGrid> può essere visualizzata una sola tabella per volta. Se viene definita una relazione padre-figlio tra le tabelle, l'utente può spostarsi tra le tabelle correlate per selezionare la tabella da visualizzare nel controllo <xref:System.Windows.Forms.DataGrid>. Per informazioni sull'associazione un <xref:System.Windows.Forms.DataGrid> il controllo a un' [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] un'origine dati in fase di progettazione o in fase di esecuzione, vedere [procedura: associare il controllo DataGrid di Windows Form a un'origine dati](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
  Le origini dati valide per <xref:System.Windows.Forms.DataGrid> includono:  
   
@@ -90,14 +90,14 @@ DataGrid associato a dati con più tabelle
 |Più tabelle correlate.|La griglia può mostrare una visualizzazione albero con cui selezionare le tabelle oppure è possibile specificare che la griglia mostri la tabella padre. I record nella tabella padre consentono agli utenti di passare alle righe figlio correlate.|  
   
 > [!NOTE]
->  Le tabelle in un set di dati vengono correlate con <xref:System.Data.DataRelation>.  Vedere anche [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" relazioni nei DataSet](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) o [relazioni nei set di dati](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+>  Le tabelle in un set di dati vengono correlate con <xref:System.Data.DataRelation>.  Vedere anche [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" relazioni nei DataSet](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) oppure [relazioni nei DataSet](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
   
  Quando il controllo <xref:System.Windows.Forms.DataGrid> visualizza una tabella e la proprietà <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> è impostata su `true`, i dati possono essere ripristinati facendo clic sulle intestazioni di colonna. L'utente può inoltre aggiungere righe e modificare le celle.  
   
  Le relazioni tra un set di tabelle vengono visualizzate per gli utenti usando una struttura di navigazione padre/figlio. Le tabelle padre sono il livello più elevato di dati e le tabelle figlio sono le tabelle di dati derivate dai singoli elenchi delle tabelle padre. Gli espansori vengono visualizzati in ogni riga padre che contiene una tabella figlio. Facendo clic su un espansore, viene generato un elenco di collegamenti Web alle tabelle figlio. Quando l'utente seleziona un collegamento, viene visualizzata la tabella figlio. Facendo clic sull'icona che consente di mostrare o nascondere le righe padre (![Icona che consente di mostrare o nascondere le righe padre](../../../../docs/framework/winforms/controls/media/vbicon.gif "vbIcon")), le informazioni sulla tabella padre verranno nascoste oppure visualizzate, se l'utente le aveva in precedenza nascoste. L'utente può fare clic su un pulsante Indietro per tornare alla tabella visualizzata in precedenza.  
   
 ## <a name="columns-and-rows"></a>Colonne e righe  
- <xref:System.Windows.Forms.DataGrid> è costituito da una raccolta di oggetti <xref:System.Windows.Forms.DataGridTableStyle> che sono contenuti nella proprietà <xref:System.Windows.Forms.DataGrid.TableStyles%2A> dell'oggetto <xref:System.Windows.Forms.DataGrid>. Uno stile tabella può contenere una raccolta di oggetti <xref:System.Windows.Forms.DataGridColumnStyle> contenuti nella proprietà <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> di <xref:System.Windows.Forms.DataGridTableStyle>. È possibile modificare il <xref:System.Windows.Forms.DataGrid.TableStyles%2A> e <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> proprietà utilizzando l'editor della raccolta tramite il **proprietà** finestra.  
+ <xref:System.Windows.Forms.DataGrid> è costituito da una raccolta di oggetti <xref:System.Windows.Forms.DataGridTableStyle> che sono contenuti nella proprietà <xref:System.Windows.Forms.DataGrid.TableStyles%2A> dell'oggetto <xref:System.Windows.Forms.DataGrid>. Uno stile tabella può contenere una raccolta di oggetti <xref:System.Windows.Forms.DataGridColumnStyle> contenuti nella proprietà <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> di <xref:System.Windows.Forms.DataGridTableStyle>. È possibile modificare il <xref:System.Windows.Forms.DataGrid.TableStyles%2A> e <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> delle proprietà utilizzando l'editor della raccolta accessibili tramite il **proprietà** finestra.  
   
  Qualsiasi <xref:System.Windows.Forms.DataGridTableStyle> associato al controllo <xref:System.Windows.Forms.DataGrid> è accessibile tramite <xref:System.Windows.Forms.GridTableStylesCollection>. <xref:System.Windows.Forms.GridTableStylesCollection> può essere modificato nella finestra di progettazione con l'editor della raccolta <xref:System.Windows.Forms.DataGridTableStyle> o a livello di codice tramite la proprietà <xref:System.Windows.Forms.DataGrid.TableStyles%2A> del controllo <xref:System.Windows.Forms.DataGrid>.  
   
@@ -124,7 +124,7 @@ La figura seguente mostra gli oggetti inclusi nel controllo DataGrid.
   
  Gli stili colonna sono correlati alle colonne in un set di dati proprio come gli stili tabella sono correlati alle tabelle di dati. Come per ogni tabella può essere definito un solo uno stile per volta, anche per ogni colonna può essere definito un solo stile, in un particolare stile tabella. Questa relazione è definita nella proprietà <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> della colonna.  
   
- Se è stato creato uno stile tabella senza aggiungervi stili di colonna, Visual Studio aggiungerà gli stili colonna predefiniti quando il form e la griglia vengono creati in fase di esecuzione. Tuttavia, se si hanno creato uno stile di tabella e aggiungervi tutti gli stili colonna, Visual Studio non creerà alcuno stile colonna. Inoltre, sarà necessario definire stili colonna a cui assegnare il nome di mapping per visualizzare nella griglia le colonne desiderate.  
+ Se è stato creato uno stile di tabella senza aggiungervi stili di colonna, Visual Studio aggiungerà gli stili colonna predefiniti quando il form e la griglia vengono create in fase di esecuzione. Tuttavia, se si hanno creato uno stile di tabella e aggiungervi tutti gli stili colonna, Visual Studio non creerà alcuno stile colonna. Inoltre, sarà necessario definire stili colonna a cui assegnare il nome di mapping per visualizzare nella griglia le colonne desiderate.  
   
  Poiché, per specificare le colonne incluse nella griglia dati, è necessario assegnare uno stile colonna e alle colonne non è stato assegnato alcuno stile colonna, è possibile includere nel set di dati le colonne di dati non visualizzate nella griglia. Tuttavia, poiché la colonna di dati è inclusa nel set di dati, è possibile modificare a livello di codice i dati non visualizzati.  
   

@@ -9,16 +9,16 @@ ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: bef3393cda31e546afdb7b720cb08a2d45cb45bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e3008b710a6fcaba476fd8c425beaa8eb11f9e52
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409470"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470077"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo DataItem
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questo argomento vengono fornite informazioni sul supporto di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] per il tipo di controllo DataItem. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] un tipo di controllo è un set di condizioni che un controllo deve soddisfare per usare la proprietà <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Le condizioni includono linee guida specifiche per la struttura ad albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , i valori delle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e i pattern di controllo.  
   
@@ -81,19 +81,19 @@ ms.locfileid: "33409470"
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Supporto|Note|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> .|Obbligatorio|Nessuno|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|Nessuno|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|A seconda dei casi|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> .|A seconda dei casi|Nessuno|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Obbligatorio|Nessuno|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Obbligatorio|Nessuno|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Obbligatorio|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|A seconda dei casi|Nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> .|A seconda dei casi|Nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> .|Obbligatorio|nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|nessuno|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|A seconda dei casi|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> .|A seconda dei casi|nessuno|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Obbligatorio|nessuno|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Obbligatorio|nessuno|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Obbligatorio|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|A seconda dei casi|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> .|A seconda dei casi|nessuno|  
   
 <a name="Data_Item_Control_Type_Example"></a>   
 ## <a name="dataitem-control-type-example"></a>Esempio del tipo di controllo DataItem  
@@ -105,7 +105,7 @@ ms.locfileid: "33409470"
   
 |Albero di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Visualizzazione controlli|Albero di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Visualizzazione contenuto|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|-Gruppo "Contoso" (tabella, della griglia)<br />-DataItem "account Receivable.doc" (Invoke, SelectionItem, TableItem, GridItem)<br />-Immagine "Accounts Receivable.doc"<br />: Consente di modificare "Nome" (valore TableItem, GridItem, "Accounts Receivable.doc")<br />: Consente di modificare "Data ultima modifica" (valore TableItem, GridItem, "25/8/2006 3:29 PM")<br />: Consente di modificare "Dimensioni" (valore GridItem, TableItem, "11.0 KB)<br />-DataItem "account Payable.doc" (Invoke, SelectionItem, TableItem, GridItem)<br />-   ...|-Gruppo "Contoso" (tabella, della griglia)<br />-DataItem "account Receivable.doc" (Invoke, SelectionItem, TableItem, GridItem)<br />-Immagine "Accounts Receivable.doc"<br />: Consente di modificare "Nome" (valore TableItem, GridItem, "Accounts Receivable.doc")<br />: Consente di modificare "Data ultima modifica" (valore TableItem, GridItem, "25/8/2006 3:29 PM")<br />: Consente di modificare "Dimensioni" (valore GridItem, TableItem, "11.0 KB)<br />-DataItem "account Payable.doc" (Invoke, SelectionItem, TableItem, GridItem)<br />-   …|  
+|-Gruppo "Contoso" (tabella, della griglia)<br />-DataItem "account receivable. doc" (Invoke TableItem, GridItem, SelectionItem,)<br />-Immagine "Accounts receivable. doc"<br />: Consente di modificare "Name" (valore TableItem, GridItem, "Accounts receivable. doc")<br />: Consente di modificare "Data ultima modifica" (TableItem, GridItem, valore "8/25/2006 3 29 PM")<br />: Consente di modificare "Size" (valore GridItem, TableItem, "11.0 KB)<br />-DataItem "account payable. doc" (Invoke TableItem, GridItem, SelectionItem,)<br />-   ...|-Gruppo "Contoso" (tabella, della griglia)<br />-DataItem "account receivable. doc" (Invoke TableItem, GridItem, SelectionItem,)<br />-Immagine "Accounts receivable. doc"<br />: Consente di modificare "Name" (valore TableItem, GridItem, "Accounts receivable. doc")<br />: Consente di modificare "Data ultima modifica" (TableItem, GridItem, valore "8/25/2006 3 29 PM")<br />: Consente di modificare "Size" (valore GridItem, TableItem, "11.0 KB)<br />-DataItem "account payable. doc" (Invoke TableItem, GridItem, SelectionItem,)<br />-   …|  
   
  Se una griglia rappresenta un elenco di elementi selezionabili, è possibile esporre gli elementi dell'interfaccia utente corrispondenti con il tipo di controllo ListItem anziché con DataItem. Nell'esempio precedente, gli elementi DataItem ("Accounts Receivable.doc" e "Accounts Payable.doc") in Group ("Contoso") possono essere migliorati esponendoli come tipi di controllo ListItem, poiché questo tipo già supporta il pattern di controllo SelectionItem.  
   

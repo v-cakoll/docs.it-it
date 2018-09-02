@@ -1,6 +1,6 @@
 ---
 title: Funzione Put (riferimenti alle API non gestite)
-description: La funzione Put assegna un nuovo valore a una proprietà denominata.
+description: La funzione Put assegna un nuovo valore per una proprietà denominata.
 ms.date: 11/06/2017
 api_name:
 - Put
@@ -16,13 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f3ffe27bef6583b733fc04f2f25903d545daa74
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43460985"
 ---
-# <a name="put-function"></a>Put (funzione)
+# <a name="put-function"></a>Funzione Put
 Imposta una proprietà denominata su un nuovo valore.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -46,7 +47,7 @@ HRESULT Put (
 [in] Questo parametro è inutilizzato.
 
 `ptr`  
-[in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
+[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
 `wszName`  
 [in] Il nome della proprietà. Questo parametro non può essere `null`.
@@ -55,49 +56,49 @@ HRESULT Put (
 [in] Riservato. Questo parametro deve essere 0.
 
 `pVal`   
-[in] Un puntatore a un oggetto valido `VARIANT` che diventa il nuovo valore della proprietà. Se `pVal` è `null` o faccia riferimento a un `VARIANT` di tipo `VT_NULL`, la proprietà è impostata su `null`. 
+[in] Un puntatore a un valore valido `VARIANT` che diventa il nuovo valore della proprietà. Se `pVal` viene `null` o punta a un `VARIANT` typu `VT_NULL`, la proprietà è impostata su `null`. 
 
 `vtType`  
-[in] Il tipo di `VARIANT` a cui puntava `pVal`. Vedere il [osservazioni](#remarks) sezione per ulteriori informazioni.
+[in] Il tipo della `VARIANT` a cui punta `pVal`. Vedere le [osservazioni](#remarks) sezione per altre informazioni.
  
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice:
+I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o più parametri non vengono. |
-|`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Il tipo di proprietà non è riconosciuto. Questo valore viene restituito quando si creano istanze di classe, se la classe esiste già. |
+|`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Il tipo di proprietà non è riconosciuto. Questo valore viene restituito durante la creazione di istanze della classe se la classe esiste già. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per completare l'operazione. |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Per le istanze: indica che `pVal` punta a un `VARIANT` di tipo non corretto per la proprietà. <br/> Per le definizioni di classe: la proprietà esiste già nella classe padre e il nuovo tipo COM è diverso dal vecchio tipo COM. |
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata. |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Per le istanze: indica che `pVal` punta a un `VARIANT` di un tipo non corretto per la proprietà. <br/> Per le definizioni delle classi: la proprietà esiste già nella classe padre e il nuovo tipo COM è diverso dal vecchio tipo COM. |
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita. |
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject::Put](https://msdn.microsoft.com/library/aa391455(v=vs.85).aspx) metodo.
+Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) (metodo).
 
-Questa funzione sovrascrive sempre il valore della proprietà corrente con uno nuovo. Se il [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) punta a una definizione di classe `Put` crea o aggiorna il valore della proprietà. Quando [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) punta a un'istanza di CIM `Put` aggiorna il valore della proprietà di sola lettura. `Put` non è possibile creare un valore della proprietà.
+Questa funzione sovrascrive sempre il valore della proprietà corrente con uno nuovo. Se il [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) punta a una definizione di classe, `Put` crea o aggiorna il valore della proprietà. Quando [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) punta a un'istanza di CIM `Put` aggiorna il valore della proprietà di sola lettura. `Put` non è possibile creare un valore della proprietà.
 
-Il `__CLASS` proprietà di sistema è solo scrivibile durante la creazione di classi, quando si potrebbe non essere lasciato vuoto. Tutte le altre proprietà di sistema sono di sola lettura.
+Il `__CLASS` proprietà di sistema è solo scrivibile durante la creazione della classe, quando si potrebbe non essere lasciato vuoto. Tutte le altre proprietà di sistema sono di sola lettura.
 
-Un utente non è possibile creare proprietà con nomi che iniziano o terminano con un carattere di sottolineatura ("_"). Questo è riservato per le proprietà e le classi di sistema.
+Un utente non è possibile creare proprietà con nomi che iniziano o terminano con un carattere di sottolineatura ("_"). Questo è riservato per le proprietà e classi di sistema.
 
-Se la proprietà impostata per il `Put` funzione esiste nella classe padre, il valore predefinito della proprietà viene modificato, a meno che il tipo della proprietà corrisponde al tipo di classe padre. Se la proprietà non esiste e non è un tipo non corrispondente, la proprietà è creata.
+Se la proprietà impostata `Put` funzione presente nella classe padre, il valore predefinito della proprietà viene modificato, a meno che il tipo di proprietà non corrisponde al tipo di classe padre. Se la proprietà non esiste e non è un tipo non corrispondente, la proprietà viene creato.
 
-Utilizzare il `vtType` parametro solo durante la creazione di nuove proprietà in una definizione di classe CIM e `pVal` è `null` o faccia riferimento a un `VARIANT` di tipo `VT_NULL`. In questo caso, il `vType` parametro specifica il tipo CIM della proprietà. In ogni caso, `vtType` deve essere 0. `vtType` deve essere 0 se l'oggetto sottostante è un'istanza (anche se `Val` è `null`) perché il tipo della proprietà è fisso e non può essere modificato.   
+Usare la `vtType` parametro solo durante la creazione di nuove proprietà in una definizione di classe CIM e `pVal` viene `null` o punta a un `VARIANT` di tipo `VT_NULL`. In questo caso, il `vType` parametro specifica il tipo CIM della proprietà. In tutti gli altri casi, `vtType` deve essere 0. `vtType` deve anche essere 0 se l'oggetto sottostante è un'istanza (anche se `Val` è `null`) perché il tipo della proprietà è fisso e non può essere modificato.   
 
 ## <a name="example"></a>Esempio
 
-Per un esempio, vedere il [IWbemClassObject::Put](https://msdn.microsoft.com/library/aa391455(v=vs.85).aspx) metodo.
+Per un esempio, vedere la [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) (metodo).
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
-[WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

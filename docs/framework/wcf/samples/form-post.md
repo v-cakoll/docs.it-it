@@ -2,12 +2,12 @@
 title: Invio del form
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-ms.openlocfilehash: 005aba6ab8a8fcbe4f4e4f79055e04cff059f47d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503763"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464934"
 ---
 # <a name="form-post"></a>Invio del form
 In questo esempio viene descritto come estendere il modello di programmazione WCF REST per supportare i nuovi formati delle richieste in entrata. Nell'esempio è inoltre inclusa l'implementazione di un formattatore in grado di deserializzare una richiesta da un invio di form HTML in un tipo di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Nell'esempio viene infine usato un modello T4 per la restituzione di una pagina HTML, il quale fornisce il form HTML che gli utenti possono usare per eseguire il postback al servizio WCF REST.  
@@ -25,13 +25,13 @@ In questo esempio viene descritto come estendere il modello di programmazione WC
   
  Nel progetto di libreria HtmlFormProcessing è inoltre inclusa una classe di base astratta, ovvero `RequestBodyDispatchFormatter`, che può essere usata per creare altri formattatori di richieste personalizzati. La derivazione da `RequestBodyDispatchFormatter` consente a uno sviluppatore di concentrarsi sulla logica di deserializzazione del corpo della richiesta, permettendo alla classe di base di eseguire il mapping dei parametri del modello di URI ai parametri del metodo dell'operazione. Nel progetto di libreria HtmlFormProcessing è inoltre inclusa la classe `HtmlFormProcessingBehavior`, che illustra come derivare da <xref:System.ServiceModel.Description.WebHttpBehavior> per sostituire il formattatore di richieste predefinito con un formattatore di richieste personalizzato.  
   
- Questo progetto di applicazione console estende il [servizio risorse di base](../../../../docs/framework/wcf/samples/basic-resource-service.md) esempio. Nell'esempio relativo al servizio risorse di base viene illustrato come esporre una risorsa in modo che venga usato il modello di programmazione WCF REST. Nell'esempio relativo al servizio risorse di base una risorsa raccolta di clienti viene esposta in modo tale che i clienti della raccolta possano essere creati, recuperati, aggiornati ed eliminati. Nell'esempio relativo al servizio risorse di base vengono usati esclusivamente due formati per le richieste in entrata supportati a livello nativo, ovvero XML e JSON.  
+ Questo progetto di applicazione console estende la [servizio risorse di base](../../../../docs/framework/wcf/samples/basic-resource-service.md) esempio. Nell'esempio relativo al servizio risorse di base viene illustrato come esporre una risorsa in modo che venga usato il modello di programmazione WCF REST. Nell'esempio relativo al servizio risorse di base una risorsa raccolta di clienti viene esposta in modo tale che i clienti della raccolta possano essere creati, recuperati, aggiornati ed eliminati. Nell'esempio relativo al servizio risorse di base vengono usati esclusivamente due formati per le richieste in entrata supportati a livello nativo, ovvero XML e JSON.  
   
- L'applicazione console in questo esempio relativo all'invio di form usa il formattatore personalizzato incluso nella libreria HtmlFormProcessing che consente agli utenti di creare clienti inviando una richiesta da un invio di form HTML mediante un browser. Consente inoltre di aggiungere un'operazione che restituisce una pagina HTML in cui è incluso il form del quale eseguire il postback al servizio. Questa pagina HTML viene generata usando un modello T4 pre-elaborato costituito da un file con estensione tt e da un file con estensione cs generato automaticamente. Il file con estensione tt consente a uno sviluppatore di scrivere una risposta in un form del modello contenente variabili e strutture di controllo. Per ulteriori informazioni su T4, vedere [la generazione di elementi di modelli di testo](http://go.microsoft.com/fwlink/?LinkId=178139).  
+ L'applicazione console in questo esempio relativo all'invio di form usa il formattatore personalizzato incluso nella libreria HtmlFormProcessing che consente agli utenti di creare clienti inviando una richiesta da un invio di form HTML mediante un browser. Consente inoltre di aggiungere un'operazione che restituisce una pagina HTML in cui è incluso il form del quale eseguire il postback al servizio. Questa pagina HTML viene generata usando un modello T4 pre-elaborato costituito da un file con estensione tt e da un file con estensione cs generato automaticamente. Il file con estensione tt consente a uno sviluppatore di scrivere una risposta in un form del modello contenente variabili e strutture di controllo. Per altre informazioni su T4, vedere [generazione di elementi di modelli di testo](https://go.microsoft.com/fwlink/?LinkId=178139).  
   
 #### <a name="to-run-the-sample"></a>Per eseguire l'esempio  
   
-1.  Aprire la soluzione per l'esempio relativo all'invio del form. Per garantire l'esecuzione corretta dell'esempio, è necessario avviare [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] come amministratore. Farlo facendo clic con il [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icona e scegliere "Esegui come amministratore" dal menu di scelta rapida.  
+1.  Aprire la soluzione per l'esempio relativo all'invio del form. Per garantire l'esecuzione corretta dell'esempio, è necessario avviare [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] come amministratore. Eseguire questa operazione facendo clic con il [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icona e scegliere "Esegui come amministratore" dal menu di scelta rapida.  
   
 2.  Premere CTRL+MAIUSC+B per compilare la soluzione, quindi premere CTRL+F5 per eseguire il progetto di applicazione console FormPost.  
   
@@ -39,7 +39,7 @@ In questo esempio viene descritto come estendere il modello di programmazione WC
   
 4.  Durante l'esecuzione dell'esempio, il client scrive lo stato dell'attività corrente, qualora sia in corso l'aggiunta, l'aggiornamento o l'eliminazione di un cliente oppure il recupero di un elenco dei clienti correnti dal servizio nella finestra della console.  
   
-5.  Verrà quindi richiesto di passare all'URI del form dei clienti. Aprire un browser e passare all'URI specificato. Digitare un nome e l'indirizzo per il cliente e fare clic su di **Invia** pulsante.  
+5.  Verrà quindi richiesto di passare all'URI del form dei clienti. Aprire un browser e passare all'URI specificato. Digitare un nome e indirizzo per il cliente e scegliere il **Submit** pulsante.  
   
 6.  Premere un tasto qualsiasi per fare in modo che l'esempio continui a essere eseguito nella finestra della console.  
   
@@ -52,6 +52,6 @@ In questo esempio viene descritto come estendere il modello di programmazione WC
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Web\FormPost`

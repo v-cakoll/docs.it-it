@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73866ef2dc7069708887c128f977f730519603bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5fd96f390b0bba60d1b95d20273bbf670208d41
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446023"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456532"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>Metodo IMetaDataDispenserEx::OpenScopeOnITypeInfo
-Questo metodo non è implementato. Se chiamato, restituisce E_NOTIMPL.  
+Questo metodo non è implementato. Se chiamato, viene restituito E_NOTIMPL.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,25 +40,25 @@ HRESULT OpenScopeOnITypeInfo (
   
 #### <a name="parameters"></a>Parametri  
  `pITI`  
- [in] Puntatore a un [ITypeInfo](http://msdn.microsoft.com/library/f3356463-3373-4279-bae1-953378aa2680) interfaccia che fornisce le informazioni sul tipo in cui aprire l'ambito.  
+ [in] Puntatore a un [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interfaccia che fornisce le informazioni sul tipo in cui aprire l'ambito.  
   
  `dwOpenFlags`  
- [in] I flag della modalità di apertura.  
+ [in] I flag di modalità di apertura.  
   
  `riid`  
  [in] L'interfaccia desiderata.  
   
  `ppIUnk`  
- [out] Puntatore a un puntatore all'interfaccia restituita.  
+ [out] Puntatore a un puntatore a interfaccia restituito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** visualizzare [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  

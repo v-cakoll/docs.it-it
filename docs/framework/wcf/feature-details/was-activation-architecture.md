@@ -2,12 +2,12 @@
 title: Architettura di attivazione WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64219649e7b743b7dd3a67673c3f2409aeeba486
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497997"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457160"
 ---
 # <a name="was-activation-architecture"></a>Architettura di attivazione WAS
 In questo argomento vengono definiti e illustrati i componenti del servizio di attivazione dei processi di Windows (noto anche come WAS).  
@@ -30,7 +30,7 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
  ![Architettura WAS](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
 ### <a name="listener-adapters"></a>Adattatori listener  
- Gli adattatori listener sono servizi di Windows singoli che implementano la logica di comunicazione di rete utilizzata per ricevere i messaggi tramite il protocollo di rete sul quale ascoltano. Nella tabella seguente sono elencati gli adattatori listener per i protocolli di Windows Communication Foundation (WCF).  
+ Gli adattatori listener sono servizi di Windows singoli che implementano la logica di comunicazione di rete utilizzata per ricevere i messaggi tramite il protocollo di rete sul quale ascoltano. La tabella seguente elenca gli adattatori listener per i protocolli di Windows Communication Foundation (WCF).  
   
 |Nome del servizio dell’adattatore listener|Protocollo|Note|  
 |-----------------------------------|--------------|-----------|  
@@ -87,4 +87,4 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione di WAS per l'uso con WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Windows Server AppFabric con funzionalità di Hosting](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server AppFabric con funzionalità di Hosting](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -2,12 +2,12 @@
 title: Utilizzo di AsyncOperationContext in un esempio di attività
 ms.date: 03/30/2017
 ms.assetid: 0888a0bd-d227-4c00-ad6a-b654a01740e8
-ms.openlocfilehash: da7b62ef9e29621d1e6ee1046afb5455af1164bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4358a364a3f7ec69b7c1c548fcf82fe494f37505
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515497"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464324"
 ---
 # <a name="using-asyncoperationcontext-in-an-activity-sample"></a>Utilizzo di AsyncOperationContext in un esempio di attività
 In questo esempio viene dimostrato come sviluppare un oggetto <xref:System.Activities.CodeActivity> personalizzato che usa <xref:System.Activities.AsyncCodeActivityContext> per eseguire operazioni asincrone al di fuori del flusso di lavoro.  
@@ -26,6 +26,6 @@ In questo esempio viene dimostrato come sviluppare un oggetto <xref:System.Activ
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\Async`

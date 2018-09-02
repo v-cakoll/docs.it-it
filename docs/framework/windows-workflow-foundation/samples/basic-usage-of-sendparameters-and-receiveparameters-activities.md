@@ -2,12 +2,12 @@
 title: Utilizzo di base delle attività SendParameters e ReceiveParameters
 ms.date: 03/30/2017
 ms.assetid: 1b6b1681-3d41-403f-bfe2-3f600f24aa8c
-ms.openlocfilehash: 8732b10f3f96ccf9ed352f9b54c60a4ee0d1664c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c13999ad1571a6413e30e801b6c642000f8e4654
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515398"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467695"
 ---
 # <a name="basic-usage-of-sendparameters-and-receiveparameters-activities"></a>Utilizzo di base delle attività SendParameters e ReceiveParameters
 Nell'esempio seguente viene illustrato l'uso delle attività <xref:System.ServiceModel.Activities.SendParametersContent> e <xref:System.ServiceModel.Activities.ReceiveParametersContent>. Il servizio espone un'operazione che accetta un argomento di tipo stringa e restituisce l'input al client. Nell'esempio viene illustrato come configurare i parametri per queste attività di messaggistica.  
@@ -17,7 +17,7 @@ Nell'esempio seguente viene illustrato l'uso delle attività <xref:System.Servic
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\SendReceiveParameters`  
   

@@ -7,30 +7,30 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 41bef6bf5a69a51738c6848050972a1a4e01c153
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c19169d61a96314e9fcfad94b013af18440e1ff5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808052"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474090"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concetti fondamentali di Windows Communication Foundation
-Questo documento viene fornita una panoramica dell'architettura di Windows Communication Foundation (WCF). Il documento è concepito per spiegare i concetti principali e le modalità di interazione. Per un'esercitazione sulla creazione di quella più semplice di un servizio WCF e un client, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md). Per informazioni su programmazione WCF, vedere [programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md).  
+Questo documento fornisce una panoramica generale dell'architettura Windows Communication Foundation (WCF). Il documento è concepito per spiegare i concetti principali e le modalità di interazione. Per un'esercitazione sulla creazione della versione più semplice di un servizio WCF e un client, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md). Per altre informazioni sulla programmazione di WCF, vedere [programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="wcf-fundamentals"></a>Nozioni fondamentali su WCF  
  WCF è un runtime e un set di API per la creazione di sistemi che inviano messaggi tra servizi e client. La stessa infrastruttura e le stesse API vengono utilizzate per creare applicazioni che comunicano con le altre applicazioni nello stesso computer o su un sistema di un'altra società accessibile tramite Internet.  
   
 ### <a name="messaging-and-endpoints"></a>Messaggistica ed endpoint  
- WCF si basa sulla nozione di comunicazione basata su messaggi e di altri elementi che può essere modellata come un messaggio (ad esempio, una richiesta HTTP o un messaggio di Microsoft Message Queuing (noto anche come MSMQ)) può essere rappresentato in modo uniforme nel modello di programmazione. Questo consente un'API unificata su meccanismi di trasporto differenti.  
+ WCF si basa sulla nozione di comunicazione basata su messaggi e qualsiasi elemento che può essere modellata come un messaggio (ad esempio, una richiesta HTTP o un messaggio di Microsoft Message Queuing (noto anche come MSMQ)) può essere rappresentato in modo uniforme nel modello di programmazione. Questo consente un'API unificata su meccanismi di trasporto differenti.  
   
- Il modello distingue tra *client*, quali sono le applicazioni che avviano le comunicazioni, e *servizi*, che sono in attesa per i client comunicare con essi e rispondere a che le applicazioni comunicazione. Una singola applicazione può comportarsi sia come client, sia come servizio. Per esempi, vedere [servizi Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md) e [rete Peer-to-Peer](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Il modello distingue tra *client*, che sono applicazioni che avviano le comunicazioni, e *services*, quali sono le applicazioni che attendono ai client di comunicare tra loro e rispondere a quella comunicazione. Una singola applicazione può comportarsi sia come client, sia come servizio. Per esempi, vedere [servizi Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md) e [Peer-to-Peer Networking](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
- I messaggi vengono inviati tra endpoint. *Gli endpoint* sono posizioni in cui i messaggi vengono inviati o ricevuti (o entrambe) e definiscono tutte le informazioni necessarie per lo scambio di messaggi. Un servizio espone uno o più endpoint dell'applicazione (così come zero o più endpoint dell'infrastruttura) e il client genera un endpoint che è compatibile con uno degli endpoint del servizio.  
+ I messaggi vengono inviati tra endpoint. *Gli endpoint* sono punti in cui i messaggi vengono inviati o ricevuti (o entrambi) e definiscono tutte le informazioni necessarie per lo scambio di messaggi. Un servizio espone uno o più endpoint dell'applicazione (così come zero o più endpoint dell'infrastruttura) e il client genera un endpoint che è compatibile con uno degli endpoint del servizio.  
   
- Un *endpoint* descrive in modo basato su standard in cui i messaggi devono essere inviati, come devono essere inviati e aspetto dei messaggi. Un servizio può esporre queste informazioni come metadati che i client possono essere elaborati per generare client WCF appropriati e comunicazioni *stack*.  
+ Un' *endpoint* descrive in modo basato su standard in cui i messaggi devono essere inviati, come devono essere inviati e i messaggi di aspetto. Un servizio può esporre queste informazioni come metadati che i client possono essere elaborati per generare client WCF appropriati e comunicazioni *stack*.  
   
 ### <a name="communication-protocols"></a>Protocolli di comunicazione  
- Un elemento obbligatorio dello stack di comunicazione di *protocollo di trasporto*. I messaggi possono essere inviati tramite Intranet e Internet utilizzando trasporti comuni, ad esempio HTTP e TCP. Sono inclusi altri trasporti che supportano la comunicazione con applicazioni di Accodamento messaggi e nodi su una rete peer. Ulteriori meccanismi di trasporto possono essere aggiunti utilizzando i punti di estensione incorporati di WCF.  
+ Un elemento obbligatorio dello stack di comunicazione è la *protocollo di trasporto*. I messaggi possono essere inviati tramite Intranet e Internet utilizzando trasporti comuni, ad esempio HTTP e TCP. Sono inclusi altri trasporti che supportano la comunicazione con applicazioni di Accodamento messaggi e nodi su una rete peer. Ulteriori meccanismi di trasporto possono essere aggiunti utilizzando i punti di estensione incorporati di WCF.  
   
  Un altro elemento obbligatorio nello stack di comunicazione è la codifica che specifica come ogni messaggio viene formattato. WCF fornisce le codifiche seguenti:  
   
@@ -43,10 +43,10 @@ Questo documento viene fornita una panoramica dell'architettura di Windows Commu
  Ulteriori meccanismi di codifica (ad esempio, una codifica di compressione) possono essere aggiunti utilizzando i punti di estensione incorporati di WCF.  
   
 ### <a name="message-patterns"></a>Modelli dei messaggi  
- WCF supporta numerosi modelli di messaggistica, inclusa la comunicazione duplex e request/reply, unidirezionale. Trasporti differenti supportano modelli di messaggistica differenti e in questo modo influenzano i tipi di interazioni supportati. Il runtime e le API di WCF consentono inoltre di inviare messaggi in modo sicuro e affidabile.  
+ WCF supporta diversi modelli di messaggistica, tra cui request-reply, unidirezionale e comunicazione duplex. Trasporti differenti supportano modelli di messaggistica differenti e in questo modo influenzano i tipi di interazioni supportati. Il runtime e le API di WCF consentono anche per inviare i messaggi in modo sicuro e affidabile.  
   
 ## <a name="wcf-terms"></a>Termini WCF  
- Altri concetti e termini utilizzati nella documentazione di WCF seguenti:  
+ Altri concetti e termini usati nella documentazione di WCF includono quanto segue.  
   
  messaggio  
  Unità autonoma di dati che può essere costituita da varie parti, incluso corpo e intestazioni.  
@@ -75,7 +75,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ```  
   
  binding  
- Definisce le modalità di comunicazione tra un endpoint e gli elementi rimanenti. È costituita da un set di componenti denominati elementi di associazione "impilati" uno sopra l'altro per creare l'infrastruttura di comunicazione. Un'associazione definisce almeno il trasporto (ad esempio HTTP o TCP) e la codifica (ad esempio testo o binaria) utilizzati. Un'associazione può contenere elementi di associazione che specificano dettagli come i meccanismi di sicurezza utilizzati per proteggere i messaggi o il modello del messaggio utilizzato da un endpoint. Per ulteriori informazioni, vedere [configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md).  
+ Definisce le modalità di comunicazione tra un endpoint e gli elementi rimanenti. È costituita da un set di componenti denominati elementi di associazione "impilati" uno sopra l'altro per creare l'infrastruttura di comunicazione. Un'associazione definisce almeno il trasporto (ad esempio HTTP o TCP) e la codifica (ad esempio testo o binaria) utilizzati. Un'associazione può contenere elementi di associazione che specificano dettagli come i meccanismi di sicurezza utilizzati per proteggere i messaggi o il modello del messaggio utilizzato da un endpoint. Per altre informazioni, vedere [configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md).  
   
  elemento di associazione  
  Rappresenta una particolare parte dell'associazione, ad esempio un trasporto, una codifica, un'implementazione di un protocollo a livello di infrastruttura (ad esempio WS-ReliableMessaging) o qualsiasi altro componente dello stack di comunicazione.  
@@ -128,23 +128,23 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  client WCF  
  Costrutto dell'applicazione client che espone le operazioni del servizio come metodi nel linguaggio di programmazione [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] scelto, ad esempio Visual Basic o Visual C#. Qualsiasi applicazione può ospitare un client WCF, inclusa un'applicazione che ospita un servizio. È pertanto possibile creare un servizio che include client WCF di altri servizi.  
   
- Un client WCF può essere generato automaticamente tramite il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) e puntandolo a un servizio in esecuzione che pubblica i metadati.  
+ Un client WCF può essere generato automaticamente utilizzando il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) e puntandolo a un servizio in esecuzione che pubblica metadati.  
   
  metadati  
- In un servizio, i metadati descrivono le caratteristiche del servizio che un'entità esterna deve comprendere per comunicare con il servizio. I metadati possono essere utilizzati per il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare un client WCF e una configurazione abbinata, che un'applicazione client può usare per interagire con il servizio.  
+ In un servizio, i metadati descrivono le caratteristiche del servizio che un'entità esterna deve comprendere per comunicare con il servizio. I metadati possono essere utilizzati per il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare un client WCF e una configurazione abbinata, che un'applicazione client può usare per interagire con il servizio.  
   
  I metadati esposti dal servizio includono documenti di XML Schema che definiscono il contratto di dati del servizio e documenti WSDL che descrivono i metodi del servizio.  
   
  Se abilitati, i metadati del servizio vengono generati automaticamente da WCF tramite il controllo del servizio e dei relativi endpoint. Per pubblicare metadati da un servizio, è necessario abilitare esplicitamente il comportamento dei metadati.  
   
  sicurity  
- In WCF include riservatezza (crittografia dei messaggi per impedire l'intercettazione), integrità (mezzi per il rilevamento di manomissioni del messaggio), autenticazione (mezzi per la convalida di server e client) e autorizzazione (controllo di accesso a risorse). Queste funzioni vengono fornite basandosi sui meccanismi di sicurezza esistenti, ad esempio TLS su HTTP (anche noto come HTTPS) o implementando una o più delle varie specifiche di sicurezza WS-*.  
+ In WCF include riservatezza (crittografia dei messaggi per impedire l'intercettazione), integrità (mezzi per il rilevamento di manomissioni del messaggio), l'autenticazione (mezzi per la convalida di server e client) e autorizzazione (controllo di accesso a risorse). Queste funzioni vengono fornite basandosi sui meccanismi di sicurezza esistenti, ad esempio TLS su HTTP (anche noto come HTTPS) o implementando una o più delle varie specifiche di sicurezza WS-*.  
   
  modalità di sicurezza del trasporto  
  Specifica che la riservatezza, l'integrità e l'autenticazione vengono fornite da meccanismi a livello del trasporto, ad esempio HTTPS. In caso di uso di un trasporto come HTTPS, questa modalità presenta il vantaggio di essere efficiente in termini di prestazioni e di essere ben compresa grazie alla sua prevalenza su Internet. Lo svantaggio consiste nel fatto che questo tipo di sicurezza viene applicato separatamente su ogni hop nel percorso di comunicazione, rendendo quest'ultima vulnerabile a un attacco di tipo "man in the middle".  
   
  modalità di sicurezza dei messaggi  
- Specifica che la sicurezza è fornita implementando una o più delle specifiche di sicurezza, ad esempio la specifica denominata [Web Services Security: SOAP Message Security](http://go.microsoft.com/fwlink/?LinkId=94684). Ogni messaggio contiene i meccanismi necessari a fornire sicurezza durante il transito e a consentire ai destinatari di rilevare manomissioni e decrittografare i messaggi. A tale scopo, la sicurezza viene incapsulata all'interno di ogni messaggio, fornendo sicurezza end-to-end tra più hop. Poiché le informazioni sulla sicurezza diventano parte del messaggio, è inoltre possibile includere più tipi di credenziali con il messaggio (queste sono denominate *attestazioni*). Questo approccio presenta inoltre il vantaggio di consentire al messaggio di viaggiare in modo protetto su qualsiasi trasporto, anche se tra l'origine e la destinazione ne esistono diversi. Lo svantaggio di questo approccio consiste nella complessità dei meccanismi di crittografia adottati, con conseguenti implicazioni sulle prestazioni.  
+ Specifica che la sicurezza viene fornita implementando una o più delle specifiche di sicurezza, ad esempio la specifica denominata [Web Services Security: SOAP Message Security](https://go.microsoft.com/fwlink/?LinkId=94684). Ogni messaggio contiene i meccanismi necessari a fornire sicurezza durante il transito e a consentire ai destinatari di rilevare manomissioni e decrittografare i messaggi. A tale scopo, la sicurezza viene incapsulata all'interno di ogni messaggio, fornendo sicurezza end-to-end tra più hop. Poiché le informazioni sulla sicurezza diventano parte del messaggio, è anche possibile includere più tipi di credenziali con il messaggio (queste sono denominate *attestazioni*). Questo approccio presenta inoltre il vantaggio di consentire al messaggio di viaggiare in modo protetto su qualsiasi trasporto, anche se tra l'origine e la destinazione ne esistono diversi. Lo svantaggio di questo approccio consiste nella complessità dei meccanismi di crittografia adottati, con conseguenti implicazioni sulle prestazioni.  
   
  trasporto con modalità di sicurezza delle credenziali messaggio  
  Specifica l'utilizzo del livello trasporto per fornire riservatezza, autenticazione e integrità dei messaggi, mentre ogni messaggio può contenere più credenziali (attestazioni) richieste dai destinatari del messaggio.  
@@ -155,4 +155,4 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Architettura di Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)  
- [Architettura di sicurezza](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Architettura di sicurezza](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
