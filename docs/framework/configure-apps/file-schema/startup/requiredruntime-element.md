@@ -12,15 +12,15 @@ ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 184547dd47e728f17f28105e74b2ca67c1436efc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ac1e1f7bc36d8d2b12b99de2794bb0ba31ddbd7a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749982"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398732"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; elemento
-Specifica che l'applicazione supporta solo la versione 1.0 di Common Language Runtime. Questo elemento è deprecato e non deve più essere usato. Il [ `supportedRuntime` ](supportedruntime-element.md) elemento da utilizzare in sostituzione.
+Specifica che l'applicazione supporta solo la versione 1.0 di Common Language Runtime. Questo elemento è deprecato e non deve più essere utilizzato. Il [ `supportedRuntime` ](supportedruntime-element.md) elemento deve essere usato invece.
   
  \<configuration>  
 \<startup>  
@@ -41,7 +41,7 @@ safemode="true|false"/>
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`version`|Attributo facoltativo.<br /><br /> Valore stringa che specifica la versione di .NET Framework supportata dall'applicazione. Il valore di stringa deve corrispondere al nome di directory presente nella directory principale di installazione di .NET Framework. Il contenuto del valore di stringa non viene analizzato.|  
+|`version`|Attributo facoltativo.<br /><br /> Valore stringa che specifica la versione di .NET Framework supportata dall'applicazione. Il valore della stringa deve corrispondere al nome di directory trovato nella directory radice di installazione di .NET Framework. Il contenuto del valore della stringa non viene analizzato.|  
 |`safemode`|Attributo facoltativo.<br /><br /> Specifica se il codice di avvio di runtime cerca il Registro di sistema per determinare la versione di runtime.|  
   
 ## <a name="safemode-attribute"></a>modalità provvisoria attributo  
@@ -49,7 +49,7 @@ safemode="true|false"/>
 |Valore|Descrizione|  
 |-----------|-----------------|  
 |`false`|Il codice di avvio di runtime cerca nel Registro di sistema. Rappresenta il valore predefinito.|  
-|`true`|Il codice di avvio del runtime non cerca nel Registro di sistema.|  
+|`true`|Il codice di avvio del runtime non cercare nel Registro di sistema.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -62,18 +62,18 @@ safemode="true|false"/>
 |`startup`|Contiene il `<requiredRuntime>` elemento.|  
   
 ## <a name="remarks"></a>Note  
- Nelle applicazioni compilate per supportare esclusivamente la versione 1.0 del runtime è necessario utilizzare il `<requiredRuntime>` elemento. Le applicazioni compilate con la versione 1.1 o successiva del runtime devono utilizzare il `<supportedRuntime>` elemento.  
+ Le applicazioni create per supportare solo la versione 1.0 del runtime è necessario usare il `<requiredRuntime>` elemento. Le applicazioni compilate con la versione 1.1 o versione successiva del runtime devono usare il `<supportedRuntime>` elemento.  
   
 > [!NOTE]
->  Se si utilizza il [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) funzione per specificare il file di configurazione, è necessario utilizzare il `<requiredRuntime>` elemento per tutte le versioni del runtime. Il `<supportedRuntime>` elemento viene ignorato quando si utilizza [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
+>  Se si usa la [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) funzione per specificare il file di configurazione, è necessario usare il `<requiredRuntime>` (elemento) per tutte le versioni del runtime. Il `<supportedRuntime>` elemento viene ignorato quando si usa [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
   
- Il `version` stringa dell'attributo deve corrispondere al nome di cartella di installazione per la versione di .NET Framework specificata. Questa stringa non viene interpretata. Se il codice di avvio del runtime non trova una cartella corrispondente, il runtime non viene caricato; il codice di avvio di un messaggio di errore e viene chiusa.  
+ Il `version` stringa dell'attributo deve corrispondere al nome di cartella di installazione per la versione specificata di .NET Framework. Questa stringa non viene interpretata. Se il codice di avvio del runtime non trova una cartella corrispondente, il runtime non viene caricato; il codice di avvio Mostra un messaggio di errore e viene chiusa.  
   
 > [!NOTE]
 >  Il codice di avvio per un'applicazione ospitata in Microsoft Internet Explorer ignora il `<requiredRuntime>` elemento.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come specificare la versione di runtime in un file di configurazione.  
+ Nell'esempio seguente viene illustrato come specificare la versione del runtime in un file di configurazione.  
   
 ```xml  
 <configuration>  
@@ -86,4 +86,4 @@ safemode="true|false"/>
 ## <a name="see-also"></a>Vedere anche  
  [Schema delle impostazioni di avvio](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> Specifica della versione di runtime da usare](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver> Specifica della versione di runtime da usare](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

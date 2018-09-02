@@ -2,12 +2,12 @@
 title: Elaborazione di ordini con criteri
 ms.date: 03/30/2017
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-ms.openlocfilehash: 15e274a7a513a3208e3a54575dc354310743b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b927d8e7090f96b22c0510f9651070ab999c91be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519418"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398370"
 ---
 # <a name="order-processing-with-policy"></a>Elaborazione di ordini con criteri
 Nell’esempio dei Criteri di elaborazione degli ordini vengono illustrate alcune delle funzionalità principali introdotte nel [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] di Windows Workflow Foundation (WF). Di seguito viene esposta una nuova funzionalità per il motore di regole WF:  
@@ -24,7 +24,7 @@ Nell’esempio dei Criteri di elaborazione degli ordini vengono illustrate alcun
  Nell’esempio viene illustrato un progetto `OrderProcessingPolicy` nel quale viene immesso un ordine del cliente, costituito da un elenco numerato di elementi disponibili e un codice postale. L'ordine viene elaborato correttamente se entrambi le voci sono corrette; in caso contrario, i criteri creano oggetti di errore, usando un operatore `+` di overload e un metodo di estensione predefinito per informare l'utente degli errori.  
   
 > [!NOTE]
->  Per ulteriori informazioni sui metodi di estensione, vedere [c# versione 3.0 Specification](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  Per altre informazioni sui metodi di estensione, vedere [c# Version 3.0 Specification](https://go.microsoft.com/fwlink/?LinkId=95402).  
   
  L’esempio comprende i progetti seguenti:  
   
@@ -64,7 +64,7 @@ Nell’esempio dei Criteri di elaborazione degli ordini vengono illustrate alcun
   
          Questa regola consente di controllare la presenza di eventuali errori aggiunti dalle due regole precedenti nei due oggetti `OrderErrorCollection``invalidItemNumErrorCollection` e `invalidIZipCodeErrorCollection`. Se sono stati rilevati errori ( `invalidItemNumErrorCollection` o `invalidZipCodeErrorCollection` non è `null`), la regola esegue le operazioni seguenti:  
   
-        1.  Chiama il metodo di overload `+` operatore per copiare il contenuto di `invalidItemNumErrorCollection` e `invalidZipCodeErrorCollection` per un `invalidOrdersCollection``OrderErrorCollection` istanza.  
+        1.  Chiama l'overload `+` operatore per copiare il contenuto del `invalidItemNumErrorCollection` e `invalidZipCodeErrorCollection` a un `invalidOrdersCollection``OrderErrorCollection` istanza.  
   
         2.  Chiama il metodo di estensione `PrintOrderErrors` su `invalidOrdersCollection` e restituisce la proprietà `ErrorText` su ogni `orderError` oggetto in `invalidOrdersCollection`.  
   
@@ -140,6 +140,6 @@ Another Order? (Y/N): n
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`

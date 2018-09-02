@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Clipboard [Windows Forms], Windows Forms
 ms.assetid: 7cce79b6-5835-46fd-b690-73f12ad368b2
-ms.openlocfilehash: 05cc79abdeb41cd3bfb7db21ebb206eb309ad5d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2bb3c24298ffe5308af03c5af5bae697a22c33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522572"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398632"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>Supporto delle operazioni di trascinamento della selezione e degli Appunti
 È possibile abilitare le operazioni di trascinamento all'interno di applicazioni per Windows mediante la gestione di una serie di eventi, in particolare gli eventi <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave> e <xref:System.Windows.Forms.Control.DragDrop>.  
@@ -42,4 +42,4 @@ ms.locfileid: "33522572"
  Descrive gli aspetti complessi relativi al metodo fondamentale per l'inizio dell'operazione di trascinamento.  
   
  <xref:System.Windows.Forms.Clipboard>  
- Vedere anche [procedura: inviare dati al figlio MDI attivo](http://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).
+ Vedere anche [procedura: inviare dati al figlio MDI attivo](https://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).
