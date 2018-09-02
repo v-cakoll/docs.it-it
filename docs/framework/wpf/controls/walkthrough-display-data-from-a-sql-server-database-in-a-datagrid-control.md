@@ -8,48 +8,48 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 230d2c6843f9ae80126d9d0a2c949982aae24c76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1421d076ff202ec87a9d861ab2c7d1c1cdcdc1b7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557459"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408190"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Procedura dettagliata: aggiunta di dati di un database di SQL Server in un controllo DataGrid
-In questa procedura dettagliata, si recuperano dati da un database di SQL Server e visualizzarli in un <xref:System.Windows.Controls.DataGrid> controllo. Utilizzare ADO.NET Entity Framework per creare le classi di entità che rappresentano i dati e utilizzano LINQ per scrivere una query che recupera i dati specificati da una classe di entità.  
+In questa procedura dettagliata, si recuperano dati da un database di SQL Server e visualizzare questi dati in un <xref:System.Windows.Controls.DataGrid> controllo. Si usa ADO.NET Entity Framework per creare le classi di entità che rappresentano i dati e usano LINQ per scrivere una query che recupera i dati specificati da una classe di entità.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
   
 -   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
   
--   Accesso a un'istanza di SQL Server o SQL Server Express con il database di esempio AdventureWorks associato in esecuzione. È possibile scaricare il database AdventureWorks dal [GitHub](https://github.com/Microsoft/sql-server-samples/releases).  
+-   Accesso a un'istanza di SQL Server o SQL Server Express che è collegato ad esso il database di esempio AdventureWorks in esecuzione. È possibile scaricare il database AdventureWorks dal [GitHub](https://github.com/Microsoft/sql-server-samples/releases).  
   
 ### <a name="to-create-entity-classes"></a>Per creare classi di entità  
   
-1.  Creare un nuovo progetto applicazione WPF in Visual Basic o c# e denominarlo `DataGridSQLExample`.  
+1.  Creare un nuovo progetto di applicazione WPF in Visual Basic o c# e denominarla `DataGridSQLExample`.  
   
-2.  In Esplora soluzioni, fare clic sul progetto, scegliere **Aggiungi**, quindi selezionare **nuovo elemento**.  
+2.  In Esplora soluzioni, fare clic sul progetto, scegliere **Add**, quindi selezionare **nuovo elemento**.  
   
-     Verrà visualizzata la finestra di dialogo Aggiungi nuovo elemento.  
+     Viene visualizzata la finestra di dialogo Aggiungi nuovo elemento.  
   
-3.  Nel riquadro dei modelli installati, selezionare **dati** e nell'elenco dei modelli, selezionare **ADO.NET Entity Data Model**l.  
+3.  Nel riquadro dei modelli installati selezionare **Data** nell'elenco dei modelli, selezionare **ADO.NET Entity Data Model**l.  
   
      ![Selezionare ADO.NET Entity Data Model](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step1.png "DataGrid_SQL_EF_Step1")  
   
-4.  Nome del file `AdventureWorksModel.edmx` e quindi fare clic su **Aggiungi**.  
+4.  Denominare il file `AdventureWorksModel.edmx` e quindi fare clic su **Add**.  
   
      Verrà visualizzata la procedura guidata Entity Data Model.  
   
-5.  Nella schermata, Scegli contenuto Model selezionare **genera da database** e quindi fare clic su **Avanti**.  
+5.  Nella schermata di Scegli contenuto Model, selezionare **genera da database** e quindi fare clic su **successivo**.  
   
-     ![Selezionare l'opzione di database genera](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step2.png "DataGrid_SQL_EF_Step2")  
+     ![Selezionare Generate dall'opzione di database](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step2.png "DataGrid_SQL_EF_Step2")  
   
-6.  Nella schermata di connessione dati, specificare la connessione al database AdventureWorksLT2008. Per ulteriori informazioni, vedere [dialogo scegliere la connessione dati](http://go.microsoft.com/fwlink/?LinkId=160190).  
+6.  Nella schermata Seleziona connessione dati, specificare la connessione al database AdventureWorksLT2008. Per altre informazioni, vedere [dialogo scegliere la connessione dati](https://go.microsoft.com/fwlink/?LinkId=160190).  
   
      ![Fornire una connessione al database](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step3.png "DataGrid_SQL_EF_Step3")  
   
-7.  Assicurarsi che il nome sia `AdventureWorksLT2008Entities` e che il **Salva entità di impostazioni di connessione in App. config come** casella di controllo è selezionata e quindi fare clic su **Avanti**.  
+7.  Assicurarsi che il nome sia `AdventureWorksLT2008Entities` e che il **Salva impostazioni di connessione entity in App. config come** casella di controllo sia selezionata e quindi fare clic su **successivo**.  
   
 8.  Nella schermata Seleziona oggetti di Database, espandere il nodo tabelle e selezionare il **prodotto** e **ProductCategory** tabelle.  
   
@@ -59,7 +59,7 @@ In questa procedura dettagliata, si recuperano dati da un database di SQL Server
   
 9. Scegliere **Fine**.  
   
-     Le entità Product e ProductCategory vengono visualizzate in Entity Designer.  
+     In Entity Designer vengono visualizzate le entità Product e ProductCategory.  
   
      ![Modelli di entità Product e ProductCategory](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step5.png "DataGrid_SQL_EF_Step5")  
   
@@ -67,9 +67,9 @@ In questa procedura dettagliata, si recuperano dati da un database di SQL Server
   
 1.  Aprire il file MainWindow. Xaml.  
   
-2.  Impostare il <xref:System.Windows.FrameworkElement.Width%2A> proprietà il <xref:System.Windows.Window> a 450.  
+2.  Impostare il <xref:System.Windows.FrameworkElement.Width%2A> proprietà di <xref:System.Windows.Window> a 450.  
   
-3.  Nell'editor XAML, aggiungere le seguenti <xref:System.Windows.Controls.DataGrid> tag tra il `<Grid>` e `</Grid>` tag per aggiungere un <xref:System.Windows.Controls.DataGrid> denominato `dataGrid1`.  
+3.  Nell'editor XAML, aggiungere quanto segue <xref:System.Windows.Controls.DataGrid> tag tra il `<Grid>` e `</Grid>` tag per aggiungere un <xref:System.Windows.Controls.DataGrid> denominato `dataGrid1`.  
   
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#3)]  
   
@@ -77,18 +77,18 @@ In questa procedura dettagliata, si recuperano dati da un database di SQL Server
   
 4.  Selezionare <xref:System.Windows.Window>.  
   
-5.  Utilizzando la finestra proprietà o un editor XAML, creare un gestore eventi per il <xref:System.Windows.Window> denominato `Window_Loaded` per il <xref:System.Windows.FrameworkElement.Loaded> evento. Per ulteriori informazioni, vedere [procedura: creare un semplice gestore](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).  
+5.  Usando la finestra proprietà o l'editor XAML, creare un gestore eventi per il <xref:System.Windows.Window> denominate `Window_Loaded` per il <xref:System.Windows.FrameworkElement.Loaded> evento. Per altre informazioni, vedere [procedura: creare un gestore eventi semplice](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).  
   
-     Di seguito viene illustrato il codice XAML per MainWindow. Xaml.  
+     Di seguito viene illustrato il XAML per MainWindow. Xaml.  
   
     > [!NOTE]
-    >  Se si utilizza Visual Basic, nella prima riga di MainWindow. XAML, sostituire `x:Class="DataGridSQLExample.MainWindow"` con `x:Class="MainWindow"`.  
+    >  Se si usa Visual Basic, nella prima riga del file MainWindow. XAML, sostituire `x:Class="DataGridSQLExample.MainWindow"` con `x:Class="MainWindow"`.  
   
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#1)]  
   
-6.  Aprire il file code-behind (VB o MainWindow.xaml.cs) per il <xref:System.Windows.Window>.  
+6.  Aprire il file code-behind (. Xaml. vb o MainWindow.xaml.cs) per il <xref:System.Windows.Window>.  
   
-7.  Aggiungere il codice seguente per recuperare solo i valori specifici da tabelle unite in join e impostare il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> proprietà del <xref:System.Windows.Controls.DataGrid> ai risultati della query.  
+7.  Aggiungere il codice seguente per recuperare solo specifici valori dalle tabelle unite in join e impostare il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> proprietà del <xref:System.Windows.Controls.DataGrid> ai risultati della query.  
   
      [!code-csharp[DataGrid_SQL_EF_Walkthrough#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml.cs#2)]
      [!code-vb[DataGrid_SQL_EF_Walkthrough#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/VB/MainWindow.xaml.vb#2)]  
@@ -97,10 +97,10 @@ In questa procedura dettagliata, si recuperano dati da un database di SQL Server
   
      Verrà visualizzato un <xref:System.Windows.Controls.DataGrid> che visualizza i dati.  
   
-     ![DataGrid con dati del database SQL](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")  
+     ![DataGrid con i dati dal database SQL](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Controls.DataGrid>  
- [Come iniziare a ricerca per categorie: con Entity Framework nelle applicazioni WPF?](http://go.microsoft.com/fwlink/?LinkId=159868)
+ [Come ricerca per categorie: iniziare a usare Entity Framework nelle applicazioni WPF?](https://go.microsoft.com/fwlink/?LinkId=159868)

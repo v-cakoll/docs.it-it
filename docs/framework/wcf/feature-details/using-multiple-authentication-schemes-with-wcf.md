@@ -2,18 +2,18 @@
 title: Uso di vari schemi di autenticazione con WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 140211f10f7cdc88a3df8eb8ea1c30df73b0c4c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498446"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408973"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Uso di vari schemi di autenticazione con WCF
-Con WCF è ora possibile specificare più schemi di autenticazione in un singolo endpoint. Inoltre, i servizi ospitati dal Web possono ereditare le relative impostazioni di autenticazione direttamente da IIS. Nei servizi self-hosted è possibile specificare gli schemi di autenticazione da usare. Per ulteriori informazioni sulla configurazione delle impostazioni di autenticazione in IIS, vedere [autenticazione IIS](http://go.microsoft.com/fwlink/?LinkId=232458)  
+Con WCF è ora possibile specificare più schemi di autenticazione in un singolo endpoint. Inoltre, i servizi ospitati dal Web possono ereditare le relative impostazioni di autenticazione direttamente da IIS. Nei servizi self-hosted è possibile specificare gli schemi di autenticazione da usare. Per altre informazioni sulla configurazione delle impostazioni di autenticazione in IIS, vedere [autenticazione IIS](https://go.microsoft.com/fwlink/?LinkId=232458)  
   
 ## <a name="iis-hosted-services"></a>Servizi ospitati da IIS  
- Per i servizi ospitati da IIS, impostare gli schemi di autenticazione che si desidera usare in IIS. Nel file Web. config del servizio, nella configurazione dell'associazione specificare il tipo clientCredential come "InheritedFromHost" come mostrato nel frammento XML seguente:  
+ Per i servizi ospitati da IIS, impostare gli schemi di autenticazione che si desidera usare in IIS. Quindi nel file Web. config del servizio nella configurazione del binding specificare il tipo clientCredential come "inheritedfromhost", come illustrato nel frammento di codice XML seguente:  
   
 ```xml  
 <bindings>  
@@ -27,7 +27,7 @@ Con WCF è ora possibile specificare più schemi di autenticazione in un singolo
     </bindings>  
 ```  
   
- È possibile specificare che si desidera solo un subset degli schemi di autenticazione da utilizzare con il servizio utilizzando l'oggetto ServiceAuthenticationBehavior o \<serviceAuthenticationManager > elemento. Quando si configura questo tipo di codice, usare l'oggetto ServiceAuthenticationBehavior come illustrato nel seguente frammento di codice.  
+ È possibile specificare che si vuole solo un subset degli schemi di autenticazione da usare con il servizio utilizzando l'oggetto ServiceAuthenticationBehavior o il \<serviceAuthenticationManager > elemento. Quando si configura questo tipo di codice, usare l'oggetto ServiceAuthenticationBehavior come illustrato nel seguente frammento di codice.  
   
 ```csharp  
 // ...  
@@ -47,7 +47,7 @@ else
 // ...  
 ```  
   
- Quando si applica questa configurazione in un file di configurazione, utilizzare il \<serviceAuthenticationManager > come illustrato nel seguente frammento XML.  
+ Quando si applica questa configurazione in un file di configurazione, usare il \<serviceAuthenticationManager > come illustrato nel frammento di codice XML seguente.  
   
 ```xml  
 <behaviors>  

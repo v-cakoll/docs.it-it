@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: 0b75a4f59cdba4ff732a92996086b77bc65cf46c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5504095814cdfc04699bf24b9b96191e94b22c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535515"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43409020"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida
 I controlli aggiunti a Windows Form hanno proprietà e metodi usati per personalizzare ancora di più l'esperienza utente. Per le applicazioni Windows ben progettate è estremamente importante personalizzare l'interfaccia per soddisfare le esigenze dell'utente.  
@@ -34,4 +34,4 @@ I controlli aggiunti a Windows Form hanno proprietà e metodi usati per personal
  [Controlli Windows Form](../../../../docs/framework/winforms/controls/index.md)  
  Fornisce collegamenti ad altre operazioni di base che è possibile eseguire con i controlli.  
   
- Vedere anche [procedura: creare accesso chiavi per Windows Form controlli usando la finestra di progettazione](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [come: impostare il testo visualizzato da un controllo Form Windows mediante la finestra di progettazione](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [come: impostare l'immagine Visualizzato da un controllo utilizzando la finestra di progettazione Windows Form](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).
+ Vedere anche [come: creare l'accesso delle chiavi per Windows Form controlli usando la finestra di progettazione](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [procedura: impostare il testo visualizzato da un controllo Form di Windows usando la finestra di progettazione](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [come: impostare l'immagine Visualizzato da un Windows Form mediante la finestra di progettazione](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).

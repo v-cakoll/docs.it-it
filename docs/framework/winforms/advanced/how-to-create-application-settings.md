@@ -8,30 +8,30 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: e6e268169949994e1b58b5b8a7dcd0429895fb38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524170"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400530"
 ---
 # <a name="how-to-create-application-settings"></a>Procedura: creare le impostazioni dell'applicazione
 Usando il codice gestito, è possibile creare nuove impostazioni dell'applicazione e associarle alle proprietà nel form o nei controlli del form, in modo che queste impostazioni vengano caricate e salvate automaticamente in fase di esecuzione.  
   
  Nella routine seguente, viene creata manualmente una classe wrapper che deriva da <xref:System.Configuration.ApplicationSettingsBase>. A questa classe è possibile aggiungere una proprietà accessibile pubblicamente per ogni impostazione dell'applicazione da esporre.  
   
- È anche possibile eseguire questa routine usando la quantità minima di codice nella finestra di progettazione di Visual Studio.  Vedere anche [procedura: creare applicazioni le impostazioni utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ È anche possibile eseguire questa routine usando la quantità minima di codice nella finestra di progettazione di Visual Studio.  Vedere anche [procedura: creare applicazioni le impostazioni usando la finestra di progettazione](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Per creare nuove impostazioni dell'applicazione a livello di codice  
   
 1.  Aggiungere una nuova classe al progetto e rinominarlo. Per questa procedura, è la classe verrà chiamata `MyUserSettings`. Modificare la definizione della classe in modo che la classe derivi da <xref:System.Configuration.ApplicationSettingsBase>.  
   
-2.  Definire una proprietà in questa classe wrapper per ogni impostazione dell'applicazione richiesta e applicare la proprietà con <xref:System.Configuration.ApplicationScopedSettingAttribute> o <xref:System.Configuration.UserScopedSettingAttribute>, in base all'ambito dell'impostazione. Per ulteriori informazioni sull'ambito delle impostazioni, vedere [Application Settings Overview](../../../../docs/framework/winforms/advanced/application-settings-overview.md). A questo punto, il codice dovrebbe risultare simile al seguente:  
+2.  Definire una proprietà in questa classe wrapper per ogni impostazione dell'applicazione richiesta e applicare la proprietà con <xref:System.Configuration.ApplicationScopedSettingAttribute> o <xref:System.Configuration.UserScopedSettingAttribute>, in base all'ambito dell'impostazione. Per altre informazioni sull'ambito delle impostazioni, vedere [Application Settings Overview](../../../../docs/framework/winforms/advanced/application-settings-overview.md). A questo punto, il codice dovrebbe risultare simile al seguente:  
   
      [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
      [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
-3.  Creare un'istanza della classe wrapper nell'applicazione. Generalmente è un membro privato del form principale. Dopo aver definito la classe, è necessario associarla a una proprietà. In questo caso, la proprietà <xref:System.Windows.Forms.Form.BackColor%2A> del form. È possibile effettuare questa del modulo `Load` gestore dell'evento.  
+3.  Creare un'istanza della classe wrapper nell'applicazione. Generalmente è un membro privato del form principale. Dopo aver definito la classe, è necessario associarla a una proprietà. In questo caso, la proprietà <xref:System.Windows.Forms.Form.BackColor%2A> del form. È possibile eseguire questa operazione presente nel modulo `Load` gestore dell'evento.  
   
      [!code-csharp[ApplicationSettings.Create#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
      [!code-vb[ApplicationSettings.Create#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  

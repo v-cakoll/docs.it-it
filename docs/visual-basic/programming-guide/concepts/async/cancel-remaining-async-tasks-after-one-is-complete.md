@@ -2,12 +2,12 @@
 title: Annullare le attività asincrone rimanenti dopo che ne è completa (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: baf18ed4c2a4693f0765358d9f9a56842991cf29
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 5dab0c4aa14710fe78d2473675aea8b8c8bb73b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728339"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402257"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Annullare le attività asincrone rimanenti dopo che ne è completa (Visual Basic)
 È possibile usare il metodo <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> insieme a <xref:System.Threading.CancellationToken> per annullare tutte le attività rimanenti dopo il completamento di un'attività. Il metodo `WhenAny` accetta un argomento che rappresenta una raccolta di attività. Il metodo avvia tutte le attività e restituisce una singola attività. La singola attività è completa quando una qualsiasi attività nella raccolta è completata.  
@@ -24,7 +24,7 @@ ms.locfileid: "34728339"
   
 2.  Nella barra dei menu scegliere **File**, **Apri**, **Progetto/Soluzione**.  
   
-3.  Nel **Apri progetto** la finestra di dialogo, aprire la cartella che contiene il codice di esempio che è stato decompresso e quindi aprire il file di soluzione (sln) per AsyncFineTuningVB.  
+3.  Nel **Apri progetto** finestra di dialogo, aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (sln) per AsyncFineTuningVB.  
   
 4.  In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelAfterOneTask** e scegliere **Imposta come progetto di avvio**.  
   
@@ -34,14 +34,14 @@ ms.locfileid: "34728339"
   
 6.  Eseguire il programma più volte per verificare che diversi download terminino prima.  
   
- Se non si desidera scaricare il progetto, è possibile esaminare il file. Xaml. vb alla fine di questo argomento.  
+ Se non si desidera scaricare il progetto, è possibile esaminare il file XAML. vb alla fine di questo argomento.  
   
 ## <a name="building-the-example"></a>Compilazione dell'esempio  
- Nell'esempio di questo argomento viene aggiunto al progetto che è stato sviluppato in [annullare un'attività asincrona o un elenco di attività](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0) per annullare un elenco di attività. L'esempio usa la stessa interfaccia utente, sebbene il pulsante **Annulla** non viene usato in modo esplicito.  
+ Nell'esempio riportato in questo argomento viene aggiunto al progetto sviluppato in [annullare un'attività asincrona o un elenco di attività](https://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0) per annullare un elenco di attività. L'esempio usa la stessa interfaccia utente, sebbene il pulsante **Annulla** non viene usato in modo esplicito.  
   
  Per compilare l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **CancelAListOfTasks** come **progetto di avvio**. Aggiungere al progetto le modifiche illustrate in questo argomento.  
   
- Nel file del file di **CancelAListOfTasks** del progetto, avviare la transizione spostando le fasi di elaborazione per ogni sito Web del ciclo in `AccessTheWebAsync` al metodo asincrono seguenti.  
+ Nel file XAML. vb del **CancelAListOfTasks** del progetto, avviare la transizione spostando le fasi di elaborazione per ogni sito Web dal ciclo in `AccessTheWebAsync` al metodo asincrono seguente.  
   
 ```vb  
 ' ***Bundle the processing steps for a website into one async method.  
@@ -103,7 +103,7 @@ resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:
  Eseguire il programma più volte per verificare che diversi download terminino prima.  
   
 ## <a name="complete-example"></a>Esempio completo  
- Il codice seguente è il file vb o MainWindow.xaml.cs completo per l'esempio. Gli asterischi contrassegnano gli elementi che sono stati aggiunti per questo esempio.  
+ Il codice seguente è il file XAML. vb o MainWindow.xaml.cs completo per l'esempio. Gli asterischi contrassegnano gli elementi che sono stati aggiunti per questo esempio.  
   
  Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.  
   

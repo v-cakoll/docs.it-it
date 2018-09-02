@@ -2,23 +2,23 @@
 title: Provider di token SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 509469404e2c3866c26b5e1817a819519203c175
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808780"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418039"
 ---
 # <a name="saml-token-provider"></a>Provider di token SAML
-Questo esempio dimostra come implementare un provider di token SAML client personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene usato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con il Provider di Token Gestione credenziali predefinito. WCF viene anche fornito con un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provider di token. I provider di token personalizzati sono utili nei casi seguenti:  
+Questo esempio dimostra come implementare un provider di token SAML client personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene usato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con il Provider di Token di gestione credenziali predefinito. WCF viene inoltre fornito con un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provider di token. I provider di token personalizzati sono utili nei casi seguenti:  
   
 -   Se è disponibile un archivio di credenziali con cui questi provider di token non sono in grado di operare.  
   
--   Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il framework di client WCF utilizza le credenziali.  
+-   Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il framework del client WCF utilizza le credenziali.  
   
 -   Se si sta compilando un token personalizzato.  
   
- In questo esempio viene illustrato come compilare un provider di token personalizzato che consente a un token SAML ottenuto di fuori framework client WCF da usare.  
+ Questo esempio viene illustrato come creare un provider di token personalizzato che consente a un token SAML ottenuto da all'esterno del framework client WCF da usare.  
   
  Per riassumere, questo esempio dimostra quanto segue.  
   
@@ -26,7 +26,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
   
 -   Come è possibile passare un token SAML alle credenziali client personalizzate.  
   
--   Modo in cui viene fornito il token SAML al framework client WCF.  
+-   Modo in cui il token SAML viene fornito per il framework del client WCF.  
   
 -   Come viene autenticato il servizio dal client mediante il certificato X.509 del server.  
   
@@ -111,7 +111,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
 </system.serviceModel>  
 ```  
   
- I passaggi seguenti mostrano come sviluppare un provider di token SAML personalizzato e integrarlo con WCF: framework di sicurezza:  
+ La procedura seguente illustra come sviluppare un provider di token SAML personalizzato e integrarlo con WCF: framework di sicurezza:  
   
 1.  Scrivere un provider di token SAML personalizzato.  
   
@@ -353,9 +353,9 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
   
 #### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio  
   
-1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare la soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 > [!NOTE]
 >  Se si usa Svcutil.exe per rigenerare la configurazione di questo esempio, assicurarsi di modificare il nome dell'endpoint nella configurazione client in modo che corrisponda al codice client.  
@@ -371,7 +371,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
   
 3.  Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-4.  Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer  
   
@@ -393,7 +393,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
   
 9. Sul computer client avviare `Client.exe` da una finestra del prompt dei comandi.  
   
-10. Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   

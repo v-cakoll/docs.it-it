@@ -1,5 +1,5 @@
 ---
-title: '&lt;performanceCounter&gt; elemento (impostazioni di rete)'
+title: '&lt;performanceCounter&gt; (impostazioni di rete)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
@@ -11,14 +11,14 @@ ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 5879614fd34fe645899f1b95f41e9b0675418292
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 564cef8ae53bf4a455a2e8032a296aa36e309917
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742637"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402199"
 ---
-# <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; elemento (impostazioni di rete)
+# <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; (impostazioni di rete)
 Abilita o disabilita i contatori delle prestazioni di rete.  
   
  \<configuration>  
@@ -55,14 +55,14 @@ Abilita o disabilita i contatori delle prestazioni di rete.
 ## <a name="remarks"></a>Note  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
- I contatori delle prestazioni della rete devono essere abilitati nel file di configurazione da usare. Tutti i contatori delle prestazioni della rete vengono abilitati o disabilitati con una singola impostazione nel file di configurazione. Non è possibile abilitare o disabilitare singoli contatori delle prestazioni della rete. Per ulteriori informazioni sui contatori di prestazioni di rete specifici, vedere [contatori delle prestazioni della rete](http://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
+ I contatori delle prestazioni della rete devono essere abilitati nel file di configurazione da usare. Tutti i contatori delle prestazioni della rete vengono abilitati o disabilitati con una singola impostazione nel file di configurazione. Non è possibile abilitare o disabilitare singoli contatori delle prestazioni della rete. Per altre informazioni sui contatori di prestazioni di rete specifico, vedere [contatori delle prestazioni della rete](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
   
- Il valore predefinito è che le prestazioni di rete, i contatori sono disabilitati.  
+ Il valore predefinito è che le prestazioni di rete i contatori sono disabilitati.  
   
- Il <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> utilizzabile per ottenere il valore corrente della proprietà di **abilitato** attributo dal file di configurazione applicabili.  
+ Il <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> proprietà può essere utilizzata per ottenere il valore corrente del **abilitata** attributo dal file di configurazione applicabili.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come configurare il <xref:System.Net> e i relativi spazi dei nomi per abilitare i contatori delle prestazioni di rete.  
+ Nell'esempio seguente viene illustrato come configurare il <xref:System.Net> e relativi spazi dei nomi per abilitare i contatori delle prestazioni di rete.  
   
 ```xml  
 <configuration>  
@@ -80,4 +80,4 @@ Abilita o disabilita i contatori delle prestazioni di rete.
  <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
  [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [Contatori delle prestazioni della rete](http://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+ [I contatori delle prestazioni di rete](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)

@@ -2,12 +2,12 @@
 title: 'Introduzione a F # in Visual Studio'
 description: 'Informazioni su come utilizzare F # con Visual Studio.'
 ms.date: 07/03/2018
-ms.openlocfilehash: a4a12a322d7e5144f2d720541f6ef65ca12737dd
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3dac8466501338873aeb308ceac9274a7934a8a9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874715"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415734"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Introduzione a F # in Visual Studio
 
@@ -47,7 +47,7 @@ Un'altra funzione, `main`, viene definito, decorata con il `EntryPoint` attribut
 
 ## <a name="running-your-code"></a>Esecuzione del codice
 
-È possibile eseguire il codice e visualizzare i risultati premendo **CTRL+F5**.  Questo verrà eseguito il programma senza eseguire debug e consente di visualizzare i risultati.  In alternativa, è possibile scegliere il **Debug** menu di primo livello di elemento in Visual Studio e scegliere **Avvia senza eseguire debug**.
+È possibile eseguire il codice e visualizzare i risultati premendo **Ctrl**+**F5**.  Ciò viene eseguito il programma senza eseguire debug e consente di visualizzare i risultati.  In alternativa, è possibile scegliere il **Debug** menu di primo livello di elemento in Visual Studio e scegliere **Avvia senza eseguire debug**.
 
 È ora verrà visualizzato quanto segue nella finestra della console che Visual Studio apparse stampato:
 
@@ -62,4 +62,8 @@ La procedura è stata completata.  È stato creato il primo progetto F # in Visu
 Se hai già fatto, consultare il [Panoramica di F #](../tour.md), che illustra alcune delle principali funzionalità del linguaggio F #.  Verrà offrono una panoramica su alcune delle funzionalità di F # e fornisce esempi di codice molto ampio che è possibile copiare in Visual Studio ed eseguire.  Esistono anche alcune eccezionali risorse esterne è possibile usare, presentati nel [Guida a F #](../index.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Panoramica di F #](../tour.md) [riferimenti al linguaggio F #](../language-reference/index.md) [inferenza](../language-reference/type-inference.md) [simboli e operatore di riferimento](../language-reference/symbol-and-operator-reference/index.md)
+
+- [Panoramica di F#](../tour.md)
+- [Riferimenti al linguaggio F #](../language-reference/index.md)
+- [Inferenza del tipo](../language-reference/type-inference.md)
+- [Simbolo e operatore di riferimento](../language-reference/symbol-and-operator-reference/index.md)

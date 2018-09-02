@@ -2,22 +2,22 @@
 title: Provider di token rilasciati in modo durevole
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7def23a00e42e134d8c0b9bd911710917681ad31
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807551"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404877"
 ---
 # <a name="durable-issued-token-provider"></a>Provider di token rilasciati in modo durevole
 Questo esempio illustra come implementare un provider di token rilasciato del client personalizzato.  
   
 ## <a name="discussion"></a>Discussione  
- Un provider di token in Windows Communication Foundation (WCF) viene utilizzato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provider di token. I provider di token personalizzati sono utili nei casi seguenti:  
+ Un provider di token in Windows Communication Foundation (WCF) viene utilizzato per fornire le credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provider di token. I provider di token personalizzati sono utili nei casi seguenti:  
   
 -   Se è disponibile un archivio di credenziali con cui il provider di token incluso non è in grado di operare.  
   
--   Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il client WCF Usa le credenziali.  
+-   Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il client WCF utilizza le credenziali.  
   
 -   Se si sta compilando un token personalizzato.  
   
@@ -27,7 +27,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
   
 -   Come è possibile configurare un client con un provider personalizzato.  
   
--   La modalità token rilasciati possono essere memorizzati nella cache e fornito al client WCF.  
+-   Come i token rilasciati possono essere memorizzati nella cache e forniti al client di WCF.  
   
 -   Come viene autenticato il servizio dal client mediante il certificato X.509 del server.  
   
@@ -110,7 +110,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
  Il servizio token di sicurezza espone un solo endpoint utilizzando l'elemento wsHttpBinding standard. Il servizio token di sicurezza risponde alle richieste di token dei client e, se il client si autentica utilizzando un account di Windows, emette un token che contiene il nome utente del client come attestazione nel token emesso. Come parte del processo di creazione del token, il servizio token di protezione firma il token utilizzando la chiave privata associata al certificato CN=STS . Crea, inoltre, una chiave simmetrica e la crittografa utilizzando la chiave pubblica associata al certificato CN=localhost. Nel restituire il token al client, il servizio token di protezione restituisce anche la chiave simmetrica. Il client presenta il token emesso al servizio di calcolatrice e dimostra che conosce la chiave simmetrica firmando il messaggio con quella chiave.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>Credenziali client e servizio token di protezione personalizzati  
- I passaggi seguenti mostrano come sviluppare un provider di token personalizzato che memorizza nella cache i token rilasciati e integrarlo con WCF: protezione.  
+ La procedura seguente illustra come sviluppare un provider di token personalizzato che memorizza nella cache i token rilasciati e integrarlo con WCF: sicurezza.  
   
 #### <a name="to-develop-a-custom-token-provider"></a>Per sviluppare un provider di token personalizzato  
   
@@ -235,7 +235,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
   
 1.  Eseguire il file Setup.cmd per creare i certificati richiesti.  
   
-2.  Per compilare la soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Assicurarsi che tutti i progetti nella soluzione siano stati generati  (Shared, RSTRSTR, Service, SecurityTokenService e Client).  
+2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md). Assicurarsi che tutti i progetti nella soluzione siano stati generati  (Shared, RSTRSTR, Service, SecurityTokenService e Client).  
   
 3.  Assicurarsi che Service.exe e SecurityTokenService.exe siano entrambi in esecuzione con privilegi di amministratore.  
   
@@ -250,7 +250,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
   

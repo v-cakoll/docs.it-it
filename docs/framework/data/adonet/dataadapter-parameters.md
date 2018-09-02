@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: ad046e4695365780bc6059617766a488ba85f642
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 41a7b5061a4a90f0b67658440e737c40295d5d5f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759371"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415911"
 ---
 # <a name="dataadapter-parameters"></a>Parametri DataAdapter
 <xref:System.Data.Common.DbDataAdapter> dispone di quattro proprietà che consentono di recuperare e aggiornare i dati dell'origine dati. La proprietà <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> restituisce i dati dall'origine dati, mentre le proprietà <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> e <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> vengono usate per gestire le modifiche nell'origine dati. La proprietà `SelectCommand` deve essere impostata prima di chiamare il metodo `Fill` di `DataAdapter`. È necessario impostare la proprietà `InsertCommand`, `UpdateCommand` o `DeleteCommand` prima di chiamare il metodo `Update` di `DataAdapter` a seconda delle modifiche apportate ai dati in <xref:System.Data.DataTable>, Se ad esempio sono state aggiunte righe, è necessario impostare la proprietà `InsertCommand` prima di chiamare `Update`. Quando `Update` elabora una riga inserita, aggiornata o eliminata, `DataAdapter` usa la rispettiva proprietà `Command` per l'operazione. Le informazioni correnti sulla riga modificata vengono passate all'oggetto `Command` mediante la raccolta `Parameters`.  
@@ -25,7 +25,7 @@ UPDATE Customers SET CompanyName = @CompanyName
 > [!NOTE]
 >  La sintassi per i segnaposto dei parametri varia in base all'origine dati. In questo esempio vengono mostrati i segnaposto per un'origine dati SQL Server. Per i parametri <xref:System.Data.OleDb> e <xref:System.Data.Odbc> vengono usati come segnaposto i punti interrogativi (?).  
   
- In questo esempio di Visual Basic, il `CompanyName` viene aggiornato con il valore del campo il `@CompanyName` parametro della riga in cui `CustomerID` è uguale al valore del `@CustomerID` parametro. I parametri di recupero le informazioni dalla riga modificata utilizzando il <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> proprietà del <xref:System.Data.SqlClient.SqlParameter> oggetto. Di seguito sono riportati i parametri della precedente istruzione UPDATE di esempio. Nel codice si presuppone che la variabile `adapter` rappresenti un oggetto <xref:System.Data.SqlClient.SqlDataAdapter> valido.  
+ In questo esempio di Visual Basic, il `CompanyName` campo viene aggiornato con il valore della `@CompanyName` parametro per la riga in cui `CustomerID` è uguale al valore del `@CustomerID` parametro. I parametri di recupero informazioni dal riga modificata usando il <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> proprietà del <xref:System.Data.SqlClient.SqlParameter> oggetto. Di seguito sono riportati i parametri della precedente istruzione UPDATE di esempio. Nel codice si presuppone che la variabile `adapter` rappresenti un oggetto <xref:System.Data.SqlClient.SqlDataAdapter> valido.  
   
 ```  
 adapter.Parameters.Add( _  
@@ -39,7 +39,7 @@ parameter.SourceVersion = DataRowVersion.Original
  Il metodo `Add` della raccolta `Parameters` accetta il nome del parametro, il tipo di dati, le dimensioni (se applicabili al tipo) e il nome dell'oggetto <xref:System.Data.Common.DbParameter.SourceColumn%2A> da `DataTable`. Notare che la proprietà <xref:System.Data.Common.DbParameter.SourceVersion%2A> del parametro `@CustomerID` è impostata su `Original`. Questo valore assicura che l'aggiornamento della riga esistente nell'origine dati venga eseguito se il valore della colonna o delle colonne identificative è stato cambiato nell'oggetto <xref:System.Data.DataRow> modificato. In questo caso il valore `Original` della riga corrisponde al valore corrente nell'origine dati e il valore `Current` della riga contiene il valore aggiornato. `SourceVersion` non è impostato per il parametro `@CompanyName`, pertanto verrà usato il valore di riga `Current` predefinito.  
   
 > [!NOTE]
->  Per le operazioni `Fill` del `DataAdapter` e i metodi `Get` del `DataReader`, il tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] viene inferito dal tipo restituito dal provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Il derivato [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tipi e metodi di accesso per i tipi di dati Microsoft SQL Server, OLE DB e ODBC sono descritti [mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
+>  Per le operazioni `Fill` del `DataAdapter` e i metodi `Get` del `DataReader`, il tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] viene inferito dal tipo restituito dal provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Il derivato [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] i tipi e metodi di accesso per i tipi di dati di Microsoft SQL Server, OLE DB e ODBC sono descritti nella [mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
   
 ## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter.SourceColumn e Parameter.SourceVersion  
  È possibile passare `SourceColumn` e `SourceVersion` come argomenti del costruttore `Parameter` o impostarli come proprietà di un oggetto `Parameter` esistente. `SourceColumn` è il nome dell'oggetto <xref:System.Data.DataColumn> derivato da <xref:System.Data.DataRow> in cui viene recuperato il valore di `Parameter`. `SourceVersion` specifica la versione di `DataRow` usata da `DataAdapter` per recuperare il valore.  
@@ -53,7 +53,7 @@ parameter.SourceVersion = DataRowVersion.Original
 |`Original`|Il parametro usa il valore originale della colonna.|  
 |`Proposed`|Il parametro usa un valore proposto.|  
   
- Nell'esempio di codice `SqlClient` della sezione successiva viene definito un parametro per un oggetto <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> in cui la colonna `CustomerID` viene usata come `SourceColumn` per due parametri: `@CustomerID` (`SET CustomerID = @CustomerID`) e `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). Il `@CustomerID` parametro viene utilizzato per aggiornare il **CustomerID** colonna sul valore corrente di `DataRow`. Di conseguenza, il `CustomerID` `SourceColumn` con un `SourceVersion` di `Current` viene utilizzato. Il *@OldCustomerID* parametro viene utilizzato per identificare la riga corrente nell'origine dati. Poiché il valore della colonna corrispondente viene individuato nella versione `Original` della riga, verrà usato lo stesso oggetto `SourceColumn` (`CustomerID`) con `SourceVersion` `Original`.  
+ Nell'esempio di codice `SqlClient` della sezione successiva viene definito un parametro per un oggetto <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> in cui la colonna `CustomerID` viene usata come `SourceColumn` per due parametri: `@CustomerID` (`SET CustomerID = @CustomerID`) e `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). Il `@CustomerID` parametro viene usato per aggiornare il **CustomerID** colonna il valore corrente nel `DataRow`. Di conseguenza, il `CustomerID` `SourceColumn` con un `SourceVersion` di `Current` viene usato. Il *@OldCustomerID* parametro viene usato per identificare la riga corrente nell'origine dati. Poiché il valore della colonna corrispondente viene individuato nella versione `Original` della riga, verrà usato lo stesso oggetto `SourceColumn` (`CustomerID`) con `SourceVersion` `Original`.  
   
 ## <a name="working-with-sqlclient-parameters"></a>Uso di parametri SqlClient  
  Nell'esempio seguente viene illustrato come creare un oggetto <xref:System.Data.SqlClient.SqlDataAdapter> e impostare <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> su <xref:System.Data.MissingSchemaAction.AddWithKey> per recuperare informazioni aggiuntive sullo schema dal database. Vengono impostate le proprietà <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> e <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> e i relativi oggetti <xref:System.Data.SqlClient.SqlParameter> corrispondenti vengono aggiunti alla raccolta <xref:System.Data.SqlClient.SqlCommand.Parameters%2A>. Il metodo restituisce un oggetto `SqlDataAdapter`.  
@@ -162,7 +162,7 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
->  Se per un parametro non viene specificato un nome di parametro, il parametro è assegnato il nome predefinito incrementale del parametro*N* *,* inizia con "Parameter1". Si consiglia di evitare il parametro*N* convenzione di denominazione quando si fornisce un nome di parametro, perché il nome specificato potrebbe essere in conflitto con un nome di parametro predefinito esistente nel `ParameterCollection`. Se il nome fornito è già presente, viene generata un'eccezione.  
+>  Se non viene fornito un nome di parametro per un parametro, il parametro viene assegnato un nome predefinito incrementale Parameter*N* *,* inizia con "Parameter1". È consigliabile evitare il parametro*N* convenzione di denominazione quando si specifica il nome del parametro, in quanto il nome che viene fornito in conflitto con un nome di parametro predefinito esistente nel `ParameterCollection`. Se il nome fornito è già presente, viene generata un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
@@ -170,4 +170,4 @@ adapter.Fill(customers, "Customers");
  [Aggiornamento di origini dati con DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [Modifica di dati con stored procedure](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

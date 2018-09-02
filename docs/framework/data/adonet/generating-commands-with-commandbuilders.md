@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: 752cccc9e10dd3056817945d1f9f5f3cf7d84227
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e1071261f45c56655f8e6fb5fec6fccb08fd13c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766283"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415763"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Generazione di comandi tramite CommandBuilders
 Se la proprietà `SelectCommand` viene specificata in modo dinamico in fase di esecuzione, ad esempio mediante uno strumento per query che accetta un comando testuale dell'utente, potrebbe non essere possibile specificare l'appropriato `InsertCommand`, `UpdateCommand` o `DeleteCommand` in fase di progettazione. Se <xref:System.Data.DataTable> esegue il mapping o viene generato da una singola tabella di database, è possibile usare l'oggetto <xref:System.Data.Common.DbCommandBuilder> per generare automaticamente gli oggetti `DeleteCommand`, `InsertCommand` e `UpdateCommand` di <xref:System.Data.Common.DbDataAdapter>.  
@@ -23,9 +23,9 @@ Se la proprietà `SelectCommand` viene specificata in modo dinamico in fase di e
   
  Quando è associato a un `DataAdapter`, <xref:System.Data.Common.DbCommandBuilder> genera automaticamente le proprietà `InsertCommand`, `UpdateCommand` e `DeleteCommand` del `DataAdapter`, se queste sono riferimenti Null. Se esiste già un oggetto `Command` per una proprietà, viene usato l'oggetto `Command` esistente.  
   
- Le visualizzazioni di database create dall'unione di due o più tabelle non vengono considerate un'unica tabella di database. In questo caso non è possibile usare <xref:System.Data.Common.DbCommandBuilder> per generare automaticamente i comandi ed è necessario specificarli in modo esplicito. Per informazioni sull'impostazione esplicita dei comandi per applicare gli aggiornamenti per un `DataSet` all'origine dati, vedere [l'aggiornamento di origini dati con DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+ Le visualizzazioni di database create dall'unione di due o più tabelle non vengono considerate un'unica tabella di database. In questo caso non è possibile usare <xref:System.Data.Common.DbCommandBuilder> per generare automaticamente i comandi ed è necessario specificarli in modo esplicito. Per informazioni sull'impostazione esplicita dei comandi per applicare gli aggiornamenti a un `DataSet` nuovamente all'origine dati, vedere [aggiornamento delle origini dati con DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
- È possibile eseguire il mapping dei parametri di output alla riga aggiornata di un `DataSet`. Un'attività comune sarebbe il recupero del valore di un campo identità generato automaticamente o del timestamp da un'origine dati. Per impostazione predefinita, <xref:System.Data.Common.DbCommandBuilder> non esegue il mapping dei parametri di output sulle colonne in una riga aggiornata. In questo caso è necessario specificare il comando in modo esplicito. Per un esempio di mapping di un campo identità generato automaticamente su una colonna di una riga inserita, vedere [il recupero dei valori di identità o contatore](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
+ È possibile eseguire il mapping dei parametri di output alla riga aggiornata di un `DataSet`. Un'attività comune sarebbe il recupero del valore di un campo identità generato automaticamente o del timestamp da un'origine dati. Per impostazione predefinita, <xref:System.Data.Common.DbCommandBuilder> non esegue il mapping dei parametri di output sulle colonne in una riga aggiornata. In questo caso è necessario specificare il comando in modo esplicito. Per un esempio di un campo identità generato automaticamente esegue il mapping a una colonna di una riga inserita, vedere [Retrieving Identity or Autonumber Values](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
   
 ## <a name="rules-for-automatically-generated-commands"></a>Regole per i comandi generati automaticamente  
  Nella tabella seguente vengono illustrate le regole per generare automaticamente i comandi.  
@@ -37,7 +37,7 @@ Se la proprietà `SelectCommand` viene specificata in modo dinamico in fase di e
 |`DeleteCommand`|Elimina le righe nell'origine dati per tutte le righe della tabella con `RowState` uguale a <xref:System.Data.DataRowState.Deleted>. Vengono eliminate tutte le righe in cui i valori delle colonne corrispondono ai valori delle colonne della chiave primaria della riga e in cui le restanti colonne dell'origine dati corrispondono ai valori originali della riga. Per altre informazioni, vedere la sezione "Modello di concorrenza ottimistica per aggiornamenti ed eliminazioni" contenuta in questo argomento.|  
   
 ## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>Modello di concorrenza ottimistica per aggiornamenti ed eliminazioni  
- La logica per generare automaticamente i comandi per le istruzioni UPDATE e DELETE si basa su *la concorrenza ottimistica*, vale a dire i record non vengono bloccati per la modifica e può essere modificati da altri utenti o processi in qualsiasi momento. Poiché un record può essere modificato dopo che è stato restituito dall'istruzione SELECT, ma prima che sia eseguita l'istruzione UPDATE o DELETE, nell'istruzione UPDATE o DELETE generata automaticamente è contenuta una clausola WHERE, tale che una riga viene aggiornata solo se contiene tutti i valori originali e non è stata eliminata dall'origine dati. In questo modo si evita di sovrascrivere i nuovi dati. Nei casi in cui un comando Update generato automaticamente tenta di aggiornare una riga che è stata eliminata o che non contiene i valori originali rilevati in <xref:System.Data.DataSet>, il comando non ha alcun effetto sui record e viene generata un'eccezione <xref:System.Data.DBConcurrencyException>.  
+ La logica per la generazione automatica di comandi per le istruzioni UPDATE e DELETE è basata sugli *la concorrenza ottimistica*, vale a dire, i record non vengono bloccati per la modifica e può essere modificati da altri utenti o processi in qualsiasi momento. Poiché un record può essere modificato dopo che è stato restituito dall'istruzione SELECT, ma prima che sia eseguita l'istruzione UPDATE o DELETE, nell'istruzione UPDATE o DELETE generata automaticamente è contenuta una clausola WHERE, tale che una riga viene aggiornata solo se contiene tutti i valori originali e non è stata eliminata dall'origine dati. In questo modo si evita di sovrascrivere i nuovi dati. Nei casi in cui un comando Update generato automaticamente tenta di aggiornare una riga che è stata eliminata o che non contiene i valori originali rilevati in <xref:System.Data.DataSet>, il comando non ha alcun effetto sui record e viene generata un'eccezione <xref:System.Data.DBConcurrencyException>.  
   
  Se si desidera che le istruzioni UPDATE o DELETE vengano completate a prescindere dai valori originali, è necessario impostare in modo esplicito `UpdateCommand` per il `DataAdapter` e non usare la generazione automatica dei comandi.  
   
@@ -48,7 +48,7 @@ Se la proprietà `SelectCommand` viene specificata in modo dinamico in fase di e
  La logica per la generazione automatica dei comandi genera un'istruzione INSERT, UPDATE o DELETE per le tabelle autonome senza tenere conto delle relazioni con altre tabelle nell'origine dati. Di conseguenza, è possibile che venga rilevato un errore quando si chiama `Update` per inviare le modifiche a una colonna che fa parte di un vincolo di chiave esterna nel database. Per evitare questa eccezione, non usare <xref:System.Data.Common.DbCommandBuilder> per aggiornare le colonne incluse in un vincolo di chiave esterna e specificare in modo esplicito le istruzioni usate per eseguire l'operazione.  
   
 ### <a name="table-and-column-names"></a>Nomi di tabelle e colonne  
- La logica per la generazione automatica dei comandi potrebbe non essere eseguita correttamente se i nomi delle colonne o delle tabelle contengono caratteri speciali quali spazi, punti, virgolette o altri caratteri non alfanumerici, anche se racchiusi tra parentesi. A seconda del provider, l'impostazione dei parametri QuoteSuffix e QuotePrefix può consentire alla logica di generazione di elaborare gli spazi, ma non i caratteri speciali di escape. Nomi di tabella sotto forma di completi *catalogo* sono supportati.  
+ La logica per la generazione automatica dei comandi potrebbe non essere eseguita correttamente se i nomi delle colonne o delle tabelle contengono caratteri speciali quali spazi, punti, virgolette o altri caratteri non alfanumerici, anche se racchiusi tra parentesi. A seconda del provider, l'impostazione dei parametri QuoteSuffix e QuotePrefix può consentire alla logica di generazione di elaborare gli spazi, ma non i caratteri speciali di escape. I nomi di tabella sotto forma di completi *catalogo* sono supportati.  
   
 ## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>Uso di CommandBuilder per generare automaticamente un'istruzione SQL  
  Per generare automaticamente le istruzioni SQL per un oggetto `DataAdapter`, impostare innanzitutto la proprietà `SelectCommand` di `DataAdapter`. Creare quindi un oggetto `CommandBuilder` e specificare come argomento l'oggetto `DataAdapter` per il quale l'oggetto `CommandBuilder` genererà automaticamente le istruzioni SQL.  
@@ -112,4 +112,4 @@ adapter.Fill(custDS, "Customers");
  [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Esecuzione di un comando](../../../../docs/framework/data/adonet/executing-a-command.md)  
  [DbConnection, DbCommand e DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

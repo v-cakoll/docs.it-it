@@ -7,43 +7,43 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 86901f357c43dc7c0c1402bf313e674603eaccbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566769"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403093"
 ---
 # <a name="path-markup-syntax"></a>Sintassi di markup del percorso
-Vengono descritti i percorsi in [forme e disegno di base di WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) e [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), tuttavia, in questo argomento descrive in dettaglio il potente e complesso mini linguaggio consente di specificare percorso in modo più compatto usando le geometrie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+I tracciati vengono illustrati nella [forme e disegno di base di WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) e il [panoramica delle classi Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), tuttavia, in questo argomento descrive in dettaglio il potente e complesso mini-linguaggio è possibile usare per specificare percorso modo più compatto usando le geometrie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
- Per comprendere questo argomento, è necessario conoscere le funzionalità di base di <xref:System.Windows.Media.Geometry> oggetti. Per ulteriori informazioni, vedere il [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Per comprendere questo argomento, è necessario conoscere le funzionalità di base <xref:System.Windows.Media.Geometry> oggetti. Per altre informazioni, vedere la [panoramica delle classi Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>Mini linguaggi StreamGeometry e PathFigureCollection  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono disponibili due classi che forniscono mini-lingue per la descrizione percorsi geometrici: <xref:System.Windows.Media.StreamGeometry> e <xref:System.Windows.Media.PathFigureCollection>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono disponibili due classi che forniscono mini-linguaggi per descrivere i tracciati geometrici: <xref:System.Windows.Media.StreamGeometry> e <xref:System.Windows.Media.PathFigureCollection>.  
   
--   Utilizzare il <xref:System.Windows.Media.StreamGeometry> lingue ridotto durante l'impostazione di una proprietà di tipo <xref:System.Windows.Media.Geometry>, ad esempio il <xref:System.Windows.UIElement.Clip%2A> proprietà di un <xref:System.Windows.UIElement> o <xref:System.Windows.Shapes.Path.Data%2A> proprietà di un <xref:System.Windows.Shapes.Path> elemento. L'esempio seguente usa la sintassi degli attributi per creare un <xref:System.Windows.Media.StreamGeometry>.  
+-   Si utilizza il <xref:System.Windows.Media.StreamGeometry> mini-linguaggio quando si imposta una proprietà di tipo <xref:System.Windows.Media.Geometry>, ad esempio il <xref:System.Windows.UIElement.Clip%2A> proprietà di un <xref:System.Windows.UIElement> o la <xref:System.Windows.Shapes.Path.Data%2A> proprietà di un <xref:System.Windows.Shapes.Path> elemento. L'esempio seguente usa la sintassi degli attributi per creare un <xref:System.Windows.Media.StreamGeometry>.  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
--   Utilizzare il <xref:System.Windows.Media.PathFigureCollection> lingue ridotto durante l'impostazione di <xref:System.Windows.Media.PathGeometry.Figures%2A> proprietà di un <xref:System.Windows.Media.PathGeometry>. L'esempio seguente usa una sintassi di attributo per creare un <xref:System.Windows.Media.PathFigureCollection> per un <xref:System.Windows.Media.PathGeometry>.  
+-   Si utilizza il <xref:System.Windows.Media.PathFigureCollection> mini-linguaggio quando si imposta la <xref:System.Windows.Media.PathGeometry.Figures%2A> proprietà di un <xref:System.Windows.Media.PathGeometry>. L'esempio seguente usa una sintassi di attributo per creare un <xref:System.Windows.Media.PathFigureCollection> per un <xref:System.Windows.Media.PathGeometry>.  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   
- Come si può notare dagli esempi precedenti, i due mini-linguaggi sono molto simili. È sempre possibile usare un <xref:System.Windows.Media.PathGeometry> in qualsiasi situazione in cui è possibile utilizzare un <xref:System.Windows.Media.StreamGeometry>; pertanto quello che è necessario utilizzare? Utilizzare un <xref:System.Windows.Media.StreamGeometry> quando non è necessario modificare il percorso dopo averlo creato; utilizzare un <xref:System.Windows.Media.PathGeometry> se è necessario modificare il percorso.  
+ Come si può notare dagli esempi precedenti, i due mini-linguaggi sono molto simili. È sempre possibile usare una <xref:System.Windows.Media.PathGeometry> in qualsiasi situazione in cui è possibile usare un <xref:System.Windows.Media.StreamGeometry>; in tal caso quale è opportuno utilizzare? Usare un <xref:System.Windows.Media.StreamGeometry> quando non è necessario modificare il percorso dopo averlo creato; utilizzare un <xref:System.Windows.Media.PathGeometry> se è necessario modificare il percorso.  
   
- Per ulteriori informazioni sulle differenze tra <xref:System.Windows.Media.PathGeometry> e <xref:System.Windows.Media.StreamGeometry> degli oggetti, vedere il [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Per altre informazioni sulle differenze tra <xref:System.Windows.Media.PathGeometry> e <xref:System.Windows.Media.StreamGeometry> oggetti, vedere la [Cenni preliminari sulla geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
   
 ### <a name="a-note-about-white-space"></a>Nota sugli spazi vuoti  
  Per brevità nelle sezioni di sintassi seguenti viene illustrato uno spazio singolo, ma sono accettabili più spazi quando viene visualizzato uno spazio singolo.  
   
- Non è necessario che due numeri siano separati da virgole o spazi vuoti, ma ciò può essere fatto solo quando la stringa risultante è ambigua. Ad esempio, `2..3` è composta da due numeri: "2". e ".3". Analogamente, `2-3` è "2" e "-3". Gli spazi non sono necessari né prima né dopo i comandi.  
+ Due numeri non è necessario essere separati da virgole o spazi vuoti, ma ciò può essere eseguita solo quando la stringa risultante è ambigua. Ad esempio, `2..3` è composta da due numeri: "2". e ".3". Analogamente, `2-3` è "2" e "-3". Gli spazi non sono necessari né prima né dopo i comandi.  
   
 ### <a name="syntax"></a>Sintassi  
- Il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attributo sintassi di utilizzo di un <xref:System.Windows.Media.StreamGeometry> è costituito da un parametro facoltativo <xref:System.Windows.Media.FillRule> valore e uno o più descrizioni di figure.  
+ Il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attributo sintassi di utilizzo di un <xref:System.Windows.Media.StreamGeometry> è composto da facoltativo <xref:System.Windows.Media.FillRule> valore e una o più descrizioni di figure.  
   
 |Utilizzo degli attributi XAML StreamGeometry|  
 |-----------------------------------------|  
@@ -57,11 +57,11 @@ Vengono descritti i percorsi in [forme e disegno di base di WPF Overview](../../
   
 |Termine|Descrizione|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Specifica se il <xref:System.Windows.Media.StreamGeometry> utilizza il <xref:System.Windows.Media.FillRule.EvenOdd> o <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Specifica il <xref:System.Windows.Media.FillRule.EvenOdd> regola di riempimento.<br />-   `F1` Specifica il <xref:System.Windows.Media.FillRule.Nonzero> regola di riempimento.<br /><br /> Se si omette questo comando, il sottopercorso utilizza il comportamento predefinito, ovvero <xref:System.Windows.Media.FillRule.EvenOdd>. Se si specifica questo comando, è necessario inserirlo per primo.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Specifica se il <xref:System.Windows.Media.StreamGeometry> utilizza le <xref:System.Windows.Media.FillRule.EvenOdd> oppure <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Specifica il <xref:System.Windows.Media.FillRule.EvenOdd> regola di riempimento.<br />-   `F1` Specifica il <xref:System.Windows.Media.FillRule.Nonzero> regola di riempimento.<br /><br /> Se si omette questo comando, il tracciato secondario userà il comportamento predefinito, ovvero <xref:System.Windows.Media.FillRule.EvenOdd>. Se si specifica questo comando, è necessario inserirlo per primo.|  
 |*figureDescription*|Figura costituita da un comando di spostamento, da alcuni comandi di disegno e da un comando di chiusura facoltativo.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
-|*moveCommand*|Comando di spostamento che specifica il punto iniziale della figura. Vedere il [comando Sposta](#themovecommand) sezione.|  
-|*drawCommands*|Uno o più comandi di disegno che descrivono il contenuto della figura. Vedere il [comandi Draw](#drawcommands) sezione.|  
-|*closeCommand*|Comando facoltativo di chiusura che consente di chiudere la figura. Vedere il [comando Chiudi](#closecommand) sezione.|  
+|*moveCommand*|Comando di spostamento che specifica il punto iniziale della figura. Vedere le [comando Sposta](#themovecommand) sezione.|  
+|*drawCommands*|Uno o più comandi di disegno che descrivono il contenuto della figura. Vedere le [comandi Draw](#drawcommands) sezione.|  
+|*closeCommand*|Comando facoltativo di chiusura che consente di chiudere la figura. Vedere le [comando Close](#closecommand) sezione.|  
   
 <a name="themovecommand"></a>   
 ## <a name="move-command"></a>Comando Move  
@@ -75,16 +75,16 @@ Vengono descritti i percorsi in [forme e disegno di base di WPF Overview](../../
 |----------|-----------------|  
 |*startPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punto iniziale di una nuova figura.|  
   
- Maiuscoli `M` indica che `startPoint` è un valore assoluto; una minuscola `m` indica che `startPoint` è un offset al punto precedente, oppure (0,0) se non esiste. Se dopo il comando di spostamento vengono elencati più punti, verrà tracciata una linea in direzione di quei punti, anche se il comando della linea è stato specificato.  
+ Maiuscolo `M` indica che `startPoint` è un valore assoluto; una minuscola `m` indica che `startPoint` è un offset al punto precedente, oppure (0,0) se non ne esiste alcuno. Se dopo il comando di spostamento vengono elencati più punti, verrà tracciata una linea in direzione di quei punti, anche se il comando della linea è stato specificato.  
   
 <a name="drawcommands"></a>   
 ## <a name="draw-commands"></a>Comandi Draw  
  Un comando di disegno può essere costituito da diversi comandi di forma. Sono disponibili i comandi di forma seguenti: linea, linea orizzontale, linea verticale, curva di Bézier cubica, curva di Bézier quadratica, curva di Bézier cubica continua, curva di Bézier quadratica continua e arco ellittico.  
   
- Per inserire ciascun comando, usare una lettera maiuscola o una lettera minuscola: le lettere maiuscole indicano valori assoluti, quelle minuscole valori relativi. I punti di controllo del segmento specificato si riferiscono al punto finale dell'esempio precedente. Quando si immette in sequenza più comandi dello stesso tipo, è possibile omettere la voce di comando duplicato. ad esempio, `L 100,200 300,400` equivale a `L 100,200 L 300,400`. Nella tabella seguente vengono descritti il **spostare** e **disegnare** comandi.  
+ Per inserire ciascun comando, usare una lettera maiuscola o una lettera minuscola: le lettere maiuscole indicano valori assoluti, quelle minuscole valori relativi. I punti di controllo del segmento specificato si riferiscono al punto finale dell'esempio precedente. Quando si immette in sequenza più comandi dello stesso tipo, è possibile omettere l'immissione del comando; ad esempio, `L 100,200 300,400` equivale a `L 100,200 L 300,400`. Nella tabella seguente vengono descritte le **spostare** e **disegnare** comandi.  
   
 ### <a name="line-command"></a>Comando Line  
- Crea una linea retta tra il punto corrente e il punto finale specificato. `l 20 30` e `L 20,30` sono esempi di valido **riga** comandi.  
+ Crea una linea retta tra il punto corrente e il punto finale specificato. `l 20 30` e `L 20,30` sono esempi di valida **riga** comandi.  
   
 |Sintassi|  
 |------------|  
@@ -94,7 +94,7 @@ Vengono descritti i percorsi in [forme e disegno di base di WPF Overview](../../
 |----------|-----------------|  
 |*endPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punto finale della linea.|  
 
-Maiuscoli `L` indica che `endPoint` è un valore assoluto; una minuscola `l` indica che `endPoint` è un offset al punto precedente, oppure (0,0) se non esiste.
+Maiuscolo `L` indica che `endPoint` è un valore assoluto; una minuscola `l` indica che `endPoint` è un offset al punto precedente, oppure (0,0) se non ne esiste alcuno.
 
 ### <a name="horizontal-line-command"></a>Comando Horizontal Line  
  Crea una linea orizzontale tra il punto corrente e la coordinata x specificata. `H 90` è un esempio di comando di linea orizzontale valido.
@@ -108,7 +108,7 @@ Maiuscoli `L` indica che `endPoint` è un valore assoluto; una minuscola `l` ind
 |----------|-----------------|  
 |*x*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Coordinata x del punto finale della linea.|  
   
-Maiuscoli `H` indica che `x` è un valore assoluto; una minuscola `h` indica che `x` è un offset al punto precedente, oppure (0,0) se non esiste.
+Maiuscolo `H` indica che `x` è un valore assoluto; una minuscola `h` indica che `x` è un offset al punto precedente, oppure (0,0) se non ne esiste alcuno.
   
 ### <a name="vertical-line-command"></a>Comando Vertical Line  
  Crea una linea verticale tra il punto corrente e la coordinata y specificata. `v 90` è un esempio di comando di linea verticale valido.
@@ -122,10 +122,10 @@ Maiuscoli `H` indica che `x` è un valore assoluto; una minuscola `h` indica che
 |----------|-----------------|  
 |*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Coordinata y del punto finale della linea.|  
 
-Maiuscoli `V` indica che `y` è un valore assoluto; una minuscola `v` indica che `y` è un offset al punto precedente, oppure (0,0) se non esiste.  
+Maiuscolo `V` indica che `y` è un valore assoluto; una minuscola `v` indica che `y` è un offset al punto precedente, oppure (0,0) se non ne esiste alcuno.  
     
 ### <a name="cubic-bezier-curve-command"></a>Comando Cubic Bezier Curve  
- Crea una curva di Bézier cubica tra il punto corrente e il punto finale specificato utilizzando i due punti di controllo (`controlPoint`1 e `controlPoint`2). `C 100,200 200,400 300,200` è un esempio di comando di curva valido.  
+ Crea una curva di Bézier cubica tra il punto corrente e il punto finale specificato usando i due punti di controllo specificato (`controlPoint`1 e `controlPoint`2). `C 100,200 200,400 300,200` è un esempio di comando di curva valido.  
   
 |Sintassi|  
 |------------|  
@@ -138,7 +138,7 @@ Maiuscoli `V` indica che `y` è un valore assoluto; una minuscola `v` indica che
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punto verso il quale viene disegnata la curva.|  
   
 ### <a name="quadratic-bezier-curve-command"></a>Comando Quadratic Bezier Curve  
- Crea una curva di Bézier quadratica tra il punto corrente e il punto finale specificato utilizzando il punto di controllo (`controlPoint`). `q 100,200 300,200` è un esempio di comando di curva di Bézier quadratica valido.  
+ Crea una curva di Bézier quadratica tra il punto corrente e il punto finale specificato usando il punto di controllo specificato (`controlPoint`). `q 100,200 300,200` è un esempio di comando di curva di Bézier quadratica valido.  
   
 |Sintassi|  
 |------------|  
@@ -150,7 +150,7 @@ Maiuscoli `V` indica che `y` è un valore assoluto; una minuscola `v` indica che
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punto verso il quale viene disegnata la curva.|  
   
 ### <a name="smooth-cubic-bezier-curve-command"></a>Comando Smooth cubic Bezier curve  
- Crea una curva di Bézier cubica tra il punto corrente e il punto finale specificato. Il primo punto di controllo viene considerato come reflection del secondo punto di controllo del comando precedente relativo al punto corrente. Se in precedenza non è stato usato alcun comando o se il comando precedente non era un comando di curva di Bézier cubica o un comando di curva di Bézier cubica continua, il punto di controllo coinciderà con il punto corrente. Il secondo punto di controllo, il punto di controllo per la fine della curva, specificato da `controlPoint`2. Ad esempio, `S 100,200 200,300` è un comando di curva di Bézier cubico continua valido.  
+ Crea una curva di Bézier cubica tra il punto corrente e il punto finale specificato. Il primo punto di controllo viene considerato come reflection del secondo punto di controllo del comando precedente relativo al punto corrente. Se in precedenza non è stato usato alcun comando o se il comando precedente non era un comando di curva di Bézier cubica o un comando di curva di Bézier cubica continua, il punto di controllo coinciderà con il punto corrente. Il secondo punto di controllo, il punto di controllo per l'entità finale della curva, specificato da `controlPoint`2. Ad esempio, `S 100,200 200,300` è un comando di curva di Bézier cubico continua valido.  
   
 |Sintassi|  
 |------------|  

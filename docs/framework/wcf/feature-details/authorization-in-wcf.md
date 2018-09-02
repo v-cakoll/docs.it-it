@@ -5,19 +5,19 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: c6bf779c7baeea1f9a253ad0bde966cea67b57aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e7632dda1a1bd2b60b71c385ad58c23e4207534
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488572"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408316"
 ---
 # <a name="authorization-in-wcf"></a>Autorizzazione in WCF
 L'autorizzazione è il processo di controllo dell'accesso e dei diritti alle risorse, ad esempio servizi o file. Gli argomenti in questa sezione illustrano come eseguire questa attività di base in Windows Communication Foundation (WCF) in diversi modi.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Meccanismi del controllo di accesso](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
- Fornisce una breve descrizione dei meccanismi di autorizzazione in WCF e viene utilizzato suggeriti.  
+ Fornisce una breve descrizione dei meccanismi di autorizzazione in WCF e Usa suggerita.  
   
  [Procedura: Limitare l'accesso con la classe PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  Viene illustrato il processo di restrizione dell'accesso a un servizio con l'attributo <xref:System.Security.Permissions.PrincipalPermissionAttribute>.  
@@ -48,4 +48,4 @@ L'autorizzazione è il processo di controllo dell'accesso e dei diritti alle ris
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

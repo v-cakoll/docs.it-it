@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a489e05435ce160c65e936f448688d69b3a965f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ca958f8472d7f7e1a44ad4ab237f582f92713c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435261"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402738"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>Metodo ICLRStrongName::GetHashFromBlob
-Ottiene un hash dell'assembly nell'indirizzo di memoria specificata, utilizzando l'algoritmo hash specificato.  
+Ottiene un hash dell'assembly in corrispondenza dell'indirizzo di memoria specificata, usando l'algoritmo hash specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +48,7 @@ HRESULT GetHashFromBlob (
  [in] La lunghezza, espressa in byte, del blocco di memoria.  
   
  `piHashAlg`  
- [in, out] Costante che specifica l'algoritmo hash. Utilizzare zero per l'algoritmo predefinito.  
+ [in, out] Costante che specifica l'algoritmo hash. Usa lo zero per l'algoritmo predefinito.  
   
  `pbHash`  
  [out] Il buffer di hash restituito.  
@@ -57,19 +57,19 @@ HRESULT GetHashFromBlob (
  [in] La dimensione massima richiesta del `pbHash`.  
   
  `pchHash`  
- [out] Le dimensioni, in byte, dell'oggetto restituito `pbHash`.  
+ [out] Le dimensioni, in byte, del valore restituito `pbHash`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` Se il metodo viene completato correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](http://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
+ `S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. H  
   
  **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

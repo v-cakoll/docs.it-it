@@ -2,12 +2,12 @@
 title: Procedure consigliate per la persistenza
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: 68164cc937c1c718df39c96c3d6ac490ab025fae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520188"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404690"
 ---
 # <a name="persistence-best-practices"></a>Procedure consigliate per la persistenza
 In questo documento vengono descritte le procedure consigliate per la progettazione e la configurazione del flusso di lavoro al fine di mantenerne la persistenza.  
@@ -21,7 +21,7 @@ In questo documento vengono descritte le procedure consigliate per la progettazi
   
  Se il flusso di lavoro è occupato per un periodo di tempo prolungato, si consiglia di rendere persistente la relativa istanza regolarmente durante tutto il periodo. A tale scopo, aggiungere le attività <xref:System.Activities.Statements.Persist> durante tutta la sequenza di operazioni che tengono occupata l'istanza del flusso di lavoro. In questo modo il riciclo del dominio applicazione o eventuali errori nell'host o nel computer non provocano l'esecuzione del rollback del sistema all'inizio del periodo in cui il flusso di lavoro è occupato. Tenere presente che l'aggiunta di attività <xref:System.Activities.Statements.Persist> al flusso di lavoro potrebbe provocare una riduzione delle prestazioni.  
   
- Windows Server AppFabric consente di semplificare notevolmente la configurazione e l'uso della persistenza. Per altre informazioni, vedere [la persistenza dell'infrastruttura di App di Windows Server](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server AppFabric consente di semplificare notevolmente la configurazione e l'uso della persistenza. Per altre informazioni, vedere [la persistenza dell'infrastruttura di App di Windows Server](https://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>Configurazione dei parametri di scalabilità  
  I requisiti relativi alla scalabilità e alle prestazione determinano le impostazioni dei parametri seguenti:  

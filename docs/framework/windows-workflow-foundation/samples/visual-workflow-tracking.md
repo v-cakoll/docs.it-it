@@ -2,18 +2,18 @@
 title: Rilevamento visivo del flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: f010bdcf6004e84fd346d0e8649c87c008cad122
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7433d2497b9a9993093e13e88e073fb40403e3b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516913"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402162"
 ---
 # <a name="visual-workflow-tracking"></a>Rilevamento visivo del flusso di lavoro
 In questo esempio viene illustrato come scrivere un'applicazione visiva di rilevamento flusso di lavoro usando la funzionalità di debug disponibile tramite [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
- L'applicazione esegue un semplice flusso di lavoro del diagramma di flusso (definito in Workflow.xaml) e rialloca la finestra di progettazione del flusso di lavoro per visualizzare il flusso di lavoro attualmente in esecuzione. Mentre viene eseguito il flusso di lavoro, l'attività attualmente in esecuzione viene visualizzata con un contorno giallo e una freccia di debug. Inoltre, i record di rilevamento generati dal flusso di lavoro vengono visualizzati anche nella finestra dell'applicazione. Per ulteriori informazioni sul rilevamento del flusso di lavoro, vedere [flusso di lavoro rilevamento e traccia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Per ulteriori informazioni sull'hosting nuovamente la finestra di progettazione del flusso di lavoro, vedere [riallocazione della finestra di progettazione del flusso di lavoro](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md).  
+ L'applicazione esegue un semplice flusso di lavoro del diagramma di flusso (definito in Workflow.xaml) e rialloca la finestra di progettazione del flusso di lavoro per visualizzare il flusso di lavoro attualmente in esecuzione. Mentre viene eseguito il flusso di lavoro, l'attività attualmente in esecuzione viene visualizzata con un contorno giallo e una freccia di debug. Inoltre, i record di rilevamento generati dal flusso di lavoro vengono visualizzati anche nella finestra dell'applicazione. Per altre informazioni sul rilevamento del flusso di lavoro, vedere [flusso di lavoro di rilevamento e traccia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Per altre informazioni sull'hosting nuovamente la finestra di progettazione del flusso di lavoro, vedere [riallocazione della finestra di progettazione del flusso di lavoro](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md).  
   
  Il funzionamento del simulatore del flusso di lavoro prevede l'uso di due dizionari. Uno contiene un mapping tra l'oggetto attività attualmente in esecuzione e il numero di riga del file XAML in cui viene creata un'istanza dell'attività. L'altro contiene un mapping tra l'ID istanza dell'attività e l'oggetto attività. Quando i record di rilevamento vengono generati usando un profilo di rilevamento personalizzato, l'applicazione determina l'ID istanza dell'attività attualmente in esecuzione e ne esegue di nuovo il mapping al file XAML che ha creato un'istanza dell'attività. In base alle istruzioni, la finestra di progettazione del flusso di lavoro riallocata evidenzia l'attività nell'area di progettazione e usa lo stesso metodo del debugger del flusso di lavoro, in particolare disegnando un bordo giallo intorno all'attività e visualizzando una freccia gialla lungo il lato sinistro della finestra di progettazione.  
   
@@ -25,7 +25,7 @@ In questo esempio viene illustrato come scrivere un'applicazione visiva di rilev
   
 3.  Premere CTRL + F5 per eseguire l'esempio. Viene visualizzato il file Workflow.xaml in una finestra di progettazione del flusso di lavoro riallocata.  
   
-4.  Fare clic su di **File** dal menu **Esegui flusso di lavoro...** .  
+4.  Scegliere il **File** menu e selezionare **Esegui flusso di lavoro...** .  
   
 5.  Come si noterà, l'attività attualmente in esecuzione è evidenziata come descritto in precedenza e i record di rilevamento vengono visualizzati sul lato destro della finestra dell'applicazione.  
   
@@ -36,6 +36,6 @@ In questo esempio viene illustrato come scrivere un'applicazione visiva di rilev
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\VisualWorkflowTracking`

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 8f2d962f40f2b56b1d1dda68129f477e4277ae1d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: c2948cf76f7763eae51689973346965bc6c720a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728352"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404216"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operazioni sincrone e asincrone
 In questo argomento vengono illustrate l'implementazione e la chiamata delle operazioni del servizio asincrone.  
@@ -73,7 +73,7 @@ public class SampleService:ISampleService
 }  
 ```  
   
- L'operazione SampleMethodTaskAsync restituisce Task\<string>, perché l'operazione logica restituisce una stringa. Per altre informazioni sul modello asincrono basato su attività, vedere [The Task-Based Asynchronous Pattern](http://go.microsoft.com/fwlink/?LinkId=232504) (Modello asincrono basato su attività).  
+ L'operazione SampleMethodTaskAsync restituisce Task\<string>, perché l'operazione logica restituisce una stringa. Per altre informazioni sul modello asincrono basato su attività, vedere [The Task-Based Asynchronous Pattern](https://go.microsoft.com/fwlink/?LinkId=232504) (Modello asincrono basato su attività).  
   
 > [!WARNING]
 >  Quando si usa il modello asincrono basato su attività, è possibile che venga generato un oggetto T: System.AggregateException se si verifica un'eccezione nell'attesa del completamento dell'operazione. Questa eccezione può verificarsi nel client o nei servizi.  
@@ -107,7 +107,7 @@ public class AsyncExample
 }  
 ```  
   
- Per altre informazioni sul modello asincrono basato su eventi, vedere [Cenni preliminari sul modello asincrono basato su eventi](http://go.microsoft.com/fwlink/?LinkId=232515).  
+ Per altre informazioni sul modello asincrono basato su eventi, vedere [Cenni preliminari sul modello asincrono basato su eventi](https://go.microsoft.com/fwlink/?LinkId=232515).  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>Modello asincrono IAsyncResult  
  Un'operazione del servizio può essere implementata in modo asincrono usando il modello di programmazione asincrona di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] e contrassegnando il metodo `<Begin>` con la proprietà <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> impostata su `true`. In questo caso, l'operazione asincrona viene esposta nei metadati nella stessa forma di un'operazione sincrona, ovvero come singola operazione con un messaggio di richiesta e un messaggio di risposta correlato. I modelli di programmazione client possono quindi effettuare una scelta. Possono rappresentare questo modello come operazione sincrona o asincrona, a condizione che, quando viene richiamato il servizio, si verifichi uno scambio di messaggi di richiesta-risposta.  

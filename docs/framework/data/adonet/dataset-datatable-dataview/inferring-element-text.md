@@ -2,12 +2,12 @@
 title: Deduzione del testo dell'elemento
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: b32d8f3f89a16166ffc0e903ef1f63c3b97a249c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b70f76d2702ebcb098c64ea84900b723fbc137ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762715"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405788"
 ---
 # <a name="inferring-element-text"></a>Deduzione del testo dell'elemento
 Se un elemento contiene testo e non contiene elementi figlio da inferire come tabelle, ad esempio (elementi con attributi) o elementi ripetuti, una nuova colonna con il nome **TableName_Text** verranno aggiunti alla tabella inferita per l'elemento. Il testo contenuto nell'elemento viene aggiunto a una riga della tabella e archiviato nella nuova colonna. Il **ColumnMapping** della nuova colonna verrà impostata su **MappingType**.  
@@ -20,7 +20,7 @@ Se un elemento contiene testo e non contiene elementi figlio da inferire come ta
 </DocumentElement>  
 ```  
   
- Il processo di inferenza genererà una tabella denominata **Element1** con due colonne: **attr1** e **Element1_Text**. Il **ColumnMapping** proprietà del **attr1** colonna verrà impostata su **MappingType. Attribute**. Il **ColumnMapping** proprietà del **Element1_Text** colonna verrà impostata su **MappingType**.  
+ Il processo di inferenza genererà una tabella denominata **Element1** con due colonne: **attr1** e **Element1_Text**. Il **ColumnMapping** proprietà delle **attr1** colonna verrà impostata su **MappingType**. Il **ColumnMapping** proprietà delle **Element1_Text** colonna verrà impostata su **MappingType**.  
   
  **Set di dati:** DocumentElement  
   
@@ -40,7 +40,7 @@ Se un elemento contiene testo e non contiene elementi figlio da inferire come ta
 </Element1>  
 ```  
   
- Il processo di inferenza genererà una tabella denominata **Element1** con una colonna denominata **ChildElement1**. Il testo per il **ChildElement1** elemento verrà inclusi in una riga nella tabella. Il testo rimanente verrà ignorato. Il **ColumnMapping** proprietà del **ChildElement1** colonna verrà impostata su **MappingType**.  
+ Il processo di inferenza genererà una tabella denominata **Element1** con una sola colonna denominata **ChildElement1**. Il testo per il **ChildElement1** elemento verrà incluso in una riga nella tabella. Il testo rimanente verrà ignorato. Il **ColumnMapping** proprietà delle **ChildElement1** colonna verrà impostata su **MappingType**.  
   
  **Set di dati:** DocumentElement  
   
@@ -56,4 +56,4 @@ Se un elemento contiene testo e non contiene elementi figlio da inferire come ta
  [Caricamento delle informazioni dello schema DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

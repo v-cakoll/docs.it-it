@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Save File dialog box
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
-ms.openlocfilehash: 8fe9580114d6e21e698687ba398d60c0af72d57f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e402f9835f3ca03ac0632d7202000fa3208ed6e3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537138"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403513"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>Componente SaveFileDialog (Windows Form)
 Il componente di Windows Form <xref:System.Windows.Forms.SaveFileDialog> è una finestra di dialogo preconfigurata. È la stessa finestra di dialogo di salvataggio file standard usata da Windows. Il componente eredita dalla classe <xref:System.Windows.Forms.CommonDialog>.  
@@ -33,5 +33,5 @@ Il componente di Windows Form <xref:System.Windows.Forms.SaveFileDialog> è una 
  [Controlli e componenti della finestra di dialogo](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
  Descrive un set di controlli e componenti che consentono agli utenti di eseguire interazioni standard con l'applicazione o il sistema.  
   
- [Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575) (Codice di base per le finestre di dialogo di Windows Form)  
+ [Essential Code for Windows Forms Dialog Boxes](https://go.microsoft.com/fwlink/?LinkID=102575) (Codice di base per le finestre di dialogo di Windows Form)  
  Descrive i controlli di finestra di dialogo di Windows Form, i componenti e il codice necessario per lo svolgimento delle relative funzioni di base. Si tratta di un articolo tecnico della MSDN Online Library.

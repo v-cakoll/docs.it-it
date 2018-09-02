@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72a2ea1393daa7435ae233d1e420cf88b6f5b6af
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508306"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402416"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia di sicurezza di WCF
 Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza possono risultare poco chiari. Questo argomento fornisce brevi spiegazioni di alcuni termini di sicurezza, senza tuttavia offrire una descrizione dettagliata per ognuno degli argomenti correlati.  
   
- Per ulteriori informazioni sui termini utilizzati nella documentazione di Windows Communication Foundation (WCF), vedere [concetti fondamentali di Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Per altre informazioni sui termini usati nella documentazione di Windows Communication Foundation (WCF), vedere [concetti di base Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  elenco di controllo di accesso (ACL)  
  Elenco di protezioni applicate a un oggetto, che può essere un file, un processo, un evento o un qualsiasi altro elemento a cui è associato un descrittore di sicurezza. Una voce appartenente a un ACL è detta voce di controllo di accesso (ACE, Access Control Entry). Esistono due tipi di ACL: discrezionale e di sistema.  
@@ -30,10 +30,10 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  Controllo dell'accesso e dei diritti di accesso a una determinata risorsa. È ad esempio possibile autorizzare i membri di un gruppo a leggere un file, ma consentire esclusivamente ai membri di un altro gruppo di modificare tale file.  
   
  Certificato dell'autorità di certificazione (CA)  
- Indica la CA che rilascia i certificati di autenticazione server e client ai server e ai client che li richiedono. Perché contiene una chiave pubblica utilizzata nelle firme digitali, viene anche indicato come un *certificato di firma*. Se la CA è un'autorità radice, il certificato della CA può essere indicato come un *certificato radice*. Noto anche come un *certificato del sito*.  
+ Indica la CA che rilascia i certificati di autenticazione server e client ai server e ai client che li richiedono. Poiché contiene una chiave pubblica utilizzata nelle firme digitali, è detta anche un *certificato di firma*. Se la CA è un'autorità radice, il certificato della CA può essere indicato semplicemente come un *certificato radice*. Noto anche come un *certificato di sito*.  
   
  Gerarchia di CA  
- Una gerarchia di CA contiene più CA, La tabella è organizzata in modo che ogni autorità di certificazione è certificata da un'altra CA in un livello superiore della gerarchia fino a quando la parte superiore della gerarchia, noto anche come il *autorità principale*, viene raggiunto.  
+ Una gerarchia di CA contiene più CA, È organizzata in modo che ogni autorità di certificazione è certificata da un'altra CA in un livello superiore della gerarchia fino alla parte superiore della gerarchia, noto anche come il *autorità radice*, viene raggiunto.  
   
  certificato  
  Attestato dotato di firma digitale contenente informazioni su un'entità e sulla relativa chiave pubblica. Un certificato consente quindi di associare fra loro questi due dati. I certificati vengono rilasciati da un'organizzazione (o da un'entità) attendibile, detta autorità di certificazione, dopo che quest'ultima ha verificato l'attestazione di identità dell'entità che richiede il certificato.  
@@ -65,7 +65,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  Coppia di chiavi pubblica/privata utilizzata per crittografare le chiavi di sessione affinché possano essere archiviate e scambiate in modo sicuro con altri utenti.  
   
  hash  
- Valore numerico di dimensioni costanti ottenuto applicando una funzione matematica (vedere il termine "algoritmo di hash") a un quantità arbitraria di dati. I dati includono in genere dati casuali, noti come un *nonce*. Sia il servizio sia il client contribuiscono con parametri nonce di scambio per aumentare la complessità del risultato. Il risultato è noto anche come un *digest del messaggio*. L'invio di un valore hash è più sicuro rispetto all'invio di dati riservati, ad esempio una password, anche se quest'ultima è crittografata. Affinché sia possibile verificare il valore hash ricevuto, il mittente e il destinatario dell'hash devono utilizzare lo stesso algoritmo di hash e gli stessi parametri nonce.  
+ Valore numerico di dimensioni costanti ottenuto applicando una funzione matematica (vedere il termine "algoritmo di hash") a un quantità arbitraria di dati. I dati in genere contengono dati casuali, noti come una *nonce*. Sia il servizio sia il client contribuiscono con parametri nonce di scambio per aumentare la complessità del risultato. Il risultato è noto anche come un *digest del messaggio*. L'invio di un valore hash è più sicuro rispetto all'invio di dati riservati, ad esempio una password, anche se quest'ultima è crittografata. Affinché sia possibile verificare il valore hash ricevuto, il mittente e il destinatario dell'hash devono utilizzare lo stesso algoritmo di hash e gli stessi parametri nonce.  
   
  algoritmo di hash  
  Algoritmo utilizzato per generare un valore hash relativo a un dato, ad esempio un messaggio o una chiave di sessione. Alcuni esempi tipici di algoritmi di hash sono MD2, MD4, MD5 e SHA-1.  
@@ -92,7 +92,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  Standard della sintassi dei messaggi crittografati. Si tratta di una sintassi generale per dati crittografabili, come firme digitali e crittografia, che inoltre fornisce una sintassi per distribuire al messaggio certificati o elenchi di revoche di certificati e altri attributi dei messaggi, ad esempio un timestamp.  
   
  testo non crittografato  
- Messaggio Messaggi di testo normale sono dette *come testo non crittografato* messaggi.  
+ Messaggio Messaggi di testo normale sono talvolta detti *come testo non crittografato* messaggi.  
   
  privilegio  
  Diritto di un utente a eseguire varie operazioni di sistema, come l'arresto del sistema, il caricamento dei driver di periferica o la modifica dell'ora del sistema. Il token di accesso di un utente contiene l'elenco dei privilegi assegnati a tale utente o ai gruppi di appartenenza di tale utente.  
@@ -175,10 +175,10 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  Software che decide se un determinato file è attendibile. La decisione si basa sul certificato associato al file.  
   
  nome UPN (User Principal Name)  
- Nome dell'account utente (talvolta detto di *nome accesso utente*) e un nome di dominio che identifica il dominio in cui si trova l'account utente. Questo nome rappresenta il formato standard dei nomi di accesso a un dominio Windows. Il formato è: someone@example.com (per un indirizzo di posta elettronica).  
+ Nome dell'account utente (talvolta detto il *nome di accesso utente*) e un nome di dominio che identifica il dominio in cui si trova l'account utente. Questo nome rappresenta il formato standard dei nomi di accesso a un dominio Windows. Il formato è: someone@example.com (per un indirizzo di posta elettronica).  
   
 > [!NOTE]
->  Oltre a formato standard UPN, WCF accetta nomi UPN in forma di livello inferiore, ad esempio, com\utente.  
+>  Oltre a formato standard UPN, WCF accetta nomi UPN in forma di livello inferiore, ad esempio, cohowinery.com\someone.  
   
  X.509  
  Standard riconosciuto a livello internazionale che definisce le parti obbligatorie dei certificati.  
@@ -186,4 +186,4 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
 ## <a name="see-also"></a>Vedere anche  
  [Concetti fondamentali di Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)  
  [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

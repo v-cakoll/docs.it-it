@@ -3,11 +3,11 @@ title: Panoramica della classe XAttribute (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
 ms.openlocfilehash: 08b8ebf31a39325c98023d4bb333f8e06bbdeb3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646965"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406428"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>Panoramica della classe XAttribute (Visual Basic)
 Gli attributi sono coppie nome/valore associate a un elemento. La classe <xref:System.Xml.Linq.XAttribute> rappresenta gli attributi XML.  
@@ -25,7 +25,7 @@ Gli attributi sono coppie nome/valore associate a un elemento. La classe <xref:S
 |`XAttribute(XName name, object content)`|Crea un oggetto <xref:System.Xml.Linq.XAttribute>. L'argomento `name` specifica il nome dell'attributo, mentre `content` ne specifica il contenuto.|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>Creazione di un elemento con un attributo  
- Il codice seguente viene illustrato un elemento che contiene un attributo mediante valori letterali XML in Visual Basic:  
+ Il codice seguente illustra un elemento che contiene un attributo usando i valori letterali XML in Visual Basic:  
   
 ```vb  
 Dim phone As XElement = <Phone Type="Home">555-555-5555</Phone>  

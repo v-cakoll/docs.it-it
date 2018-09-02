@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: f1c56ed83fa214cf781a833e05642635ac24b0c5
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: e2bf16bd07c7ac9d918a4ae95d7f4aa185d436ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753500"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404671"
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Procedura: ospitare ed eseguire un servizio Windows Communication Foundation di base
 Questa è la terza delle sei attività necessarie per creare un'applicazione Windows Communication Foundation (WCF). Per una panoramica di tutte e sei le attività, vedere l'argomento [Esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md).  
@@ -151,7 +151,7 @@ Questa è la terza delle sei attività necessarie per creare un'applicazione Win
   
     2.  Passaggio 2: viene creata un'istanza della classe <xref:System.ServiceModel.ServiceHost> per ospitare il servizio. Il costruttore accetta due parametri, il tipo di classe che implementa il contratto di servizio e l'indirizzo di base del servizio.  
   
-    3.  Passaggio 3: viene creata un'istanza di <xref:System.ServiceModel.Description.ServiceEndpoint>. Un endpoint di un servizio è composto da un indirizzo, un'associazione e un contratto di servizio. Il costruttore di <xref:System.ServiceModel.Description.ServiceEndpoint> accetta quindi il tipo di interfaccia del contratto di servizio, un'associazione e un indirizzo. Il contratto di servizio è `ICalculator`, definito e implementato nel tipo di servizio. L'associazione utilizzata in questo esempio è <xref:System.ServiceModel.WSHttpBinding>, cioè un'associazione predefinita che viene utilizzata per la connessione agli endpoint conformi alle specifiche WS-*. Per ulteriori informazioni sulle associazioni di WCF, vedere [Panoramica sulle associazioni di Windows Communication Foundation](../../../docs/framework/wcf/bindings-overview.md). L'indirizzo viene accodato all'indirizzo di base per identificare l'endpoint. L'indirizzo specificato in questo codice è "CalculatorService", pertanto l'indirizzo completo per l'endpoint è `"http://localhost:8000/GettingStarted/CalculatorService"`. L'aggiunta di un endpoint del servizio è facoltativa quando si utilizza .NET Framework 4.0 o versione successiva. In queste versioni, se non viene aggiunto alcun endpoint nel codice o nella configurazione, ne viene automaticamente aggiunto uno predefinito per ogni combinazione di indirizzo di base e contratto implementata dal servizio. Per altre informazioni sugli endpoint predefiniti, vedere [Specifica di un indirizzo endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).  
+    3.  Passaggio 3: viene creata un'istanza di <xref:System.ServiceModel.Description.ServiceEndpoint>. Un endpoint di un servizio è composto da un indirizzo, un'associazione e un contratto di servizio. Il costruttore di <xref:System.ServiceModel.Description.ServiceEndpoint> accetta quindi il tipo di interfaccia del contratto di servizio, un'associazione e un indirizzo. Il contratto di servizio è `ICalculator`, definito e implementato nel tipo di servizio. L'associazione utilizzata in questo esempio è <xref:System.ServiceModel.WSHttpBinding>, cioè un'associazione predefinita che viene utilizzata per la connessione agli endpoint conformi alle specifiche WS-*. Per ulteriori informazioni sulle associazioni di WCF, vedere [Panoramica sulle associazioni di Windows Communication Foundation](../../../docs/framework/wcf/bindings-overview.md). L'indirizzo viene accodato all'indirizzo di base per identificare l'endpoint. L'indirizzo specificato in questo codice è "CalculatorService" in modo che l'indirizzo completo per l'endpoint è `"http://localhost:8000/GettingStarted/CalculatorService"`.  
   
         > [!IMPORTANT]
         >  L'aggiunta dell'endpoint di un servizio è facoltativa quando si utilizza .NET Framework 4 o versioni successive. In queste versioni, se non viene aggiunto alcun endpoint nel codice o nella configurazione, ne viene automaticamente aggiunto uno predefinito per ogni combinazione di indirizzo di base e contratto implementata dal servizio. Per altre informazioni sugli endpoint predefiniti, vedere [Specifica di un indirizzo endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).  
@@ -160,6 +160,12 @@ Questa è la terza delle sei attività necessarie per creare un'applicazione Win
   
     5.  Passaggio 5: viene aperto l'oggetto <xref:System.ServiceModel.ServiceHost> per attendere i messaggi in arrivo. Si noti che il codice attende che l'utente prema Invio. In caso contrario, l'applicazione verrà chiusa immediatamente e il servizio verrà arrestato. Si noti inoltre l'utilizzo di un blocco try/catch. Dopo la creazione di un'istanza di <xref:System.ServiceModel.ServiceHost>, tutto l'altro codice viene inserito in un blocco try/catch. Per altre informazioni su una rilevazione sicura delle eccezioni generate da <xref:System.ServiceModel.ServiceHost>, vedere [Avoiding Problems with the Using Statement](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md) (Prevenzione dei problemi con l'istruzione Using)  
   
+> [!IMPORTANT]
+> Modificare app. config in gettingstartedlib diventano in modo da riflettere le modifiche apportate nel codice: 
+> 1. Modificare la riga 14 per `<service name="GettingStartedLib.CalculatorService">`
+> 2. Modificare la riga 17 per `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+> 3. Modificare la riga 22 per `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+        
 ### <a name="to-verify-the-service-is-working"></a>Per verificare il funzionamento del servizio  
   
 1.  Eseguire l'applicazione console GettingStartedHost da [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. In caso di esecuzione in [!INCLUDE[wv](../../../includes/wv-md.md)] e sistemi operativi successivi, il servizio deve essere eseguito con privilegi di amministratore. Poiché Visual Studio è stato eseguito con privilegi di amministratore, anche GettingStartedHost viene eseguito con privilegi di amministratore. È inoltre possibile avviare un nuovo prompt dei comandi che esegua il servizio con privilegi di amministratore e utilizzarlo per eseguire service.exe.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d682533f96b5fb56430a0826d37a9794dc8c5d8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc6453dc188e7621444b6f44b805aab9354d81f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655310"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402061"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scopo di assegnare a un assembly un nome sicuro.  
@@ -28,24 +28,24 @@ Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scop
   
 |Termine|Definizione|  
 |---|---|  
-|`container`|Obbligatorio. File contenitore che contiene la chiave. Racchiudere il nome del file tra virgolette ("") se il nome contiene uno spazio.|  
+|`container`|Obbligatorio. File contenitore che contiene la chiave. Racchiudere il nome file racchiuso tra virgolette ("") se il nome contiene uno spazio.|  
   
 ## <a name="remarks"></a>Note  
- Il compilatore crea il componente condivisibile inserendo una chiave pubblica nel manifesto dell'assembly e la firma l'assembly finale con la chiave privata. Per generare un file di chiave, digitare `sn -k``file` nella riga di comando. Il `-i` opzione installa la coppia di chiavi in un contenitore. Per ulteriori informazioni, vedere [Sn.exe (strumento nome sicuro)][Sn.exe (strumento nome sicuro)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
+ Il compilatore crea il componente condivisibile inserendo una chiave pubblica nel manifesto dell'assembly e firmando l'assembly finale con la chiave privata. Per generare un file di chiave, digitare `sn -k file` nella riga di comando. Il `-i` opzione installa la coppia di chiavi in un contenitore. Per altre informazioni, vedere [Sn.exe (Strong Name Tool)][Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
- Se esegue la compilazione con `-target:module`, verrà conservato nel modulo e incorporato nell'assembly che viene creato quando si compila un assembly con il nome del file di chiave [- /addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
+ Se esegue la compilazione con `-target:module`, il nome del file di chiave verrà mantenuto nel modulo e incorporato nell'assembly che viene creato quando si compila un assembly con [- addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   
  Questa opzione può essere specificata anche come attributo personalizzato <xref:System.Reflection.AssemblyKeyNameAttribute> nel codice sorgente di qualsiasi modulo MSIL (Microsoft Intermediate Language).  
   
  È possibile passare al compilatore le informazioni di crittografia anche tramite [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md). Usare [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) se si vuole un assembly con firma parziale.  
   
- Vedere [creazione e uso degli assembly](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) per ulteriori informazioni su come firmare un assembly.  
+ Visualizzare [creazione e assembly con nome sicuro](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) per altre informazioni su come firmare un assembly.  
   
 > [!NOTE]
->  Il `-keycontainer` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando.  
+>  Il `-keycontainer` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio, è disponibile solo durante la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente compila i file di origine `Input.vb` e specifica un contenitore di chiavi.  
+ Il codice seguente consente di compilare file sorgente `Input.vb` e specifica un contenitore di chiavi.  
   
 ```  
 vbc -keycontainer:key1 input.vb  

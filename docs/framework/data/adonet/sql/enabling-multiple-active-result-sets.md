@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: ab866356e979ec6c041d12620cfb6abfc8928668
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364879"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408399"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Abilitazione di MARS (Multiple Active Result Set)
 MARS (Multiple Active Result Set) è un servizio che funziona in combinazione con SQL Server per consentire l'esecuzione di più batch in un'unica connessione. Quando MARS è abilitato per l'uso con SQL Server, ciascun oggetto comando usato aggiunge una sessione alla connessione.  
@@ -21,7 +21,7 @@ MARS (Multiple Active Result Set) è un servizio che funziona in combinazione co
 ## <a name="enabling-and-disabling-mars-in-the-connection-string"></a>Abilitazione e disabilitazione di MARS nella stringa di connessione  
   
 > [!NOTE]
->  L'esempio di utilizzare le seguenti stringhe di connessione **AdventureWorks** database incluso in SQL Server. e presuppongono che il database sia installato in un server denominato MSSQL1. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
+>  Le stringhe di connessione seguenti utilizzano il codice di esempio **AdventureWorks** database incluso con SQL Server. e presuppongono che il database sia installato in un server denominato MSSQL1. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
   
  Per impostazione predefinita la funzionalità MARS è disabilitata. Può essere abilitata aggiungendo la coppia di parole chiave "MultipleActiveResultSets=True" alla stringa di connessione. "True" è l'unico valore valido per l'attivazione di MARS. Nell'esempio seguente viene mostrato come eseguire la connessione a un'istanza di SQL Server e come specificare l'abilitazione di MARS.  
   
@@ -90,7 +90,7 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="parallel-execution"></a>Esecuzione parallela  
  Il servizio MARS non è progettato per eliminare tutte le esigenze relative a più connessioni in un'applicazione. Se per un'applicazione è necessaria l'esecuzione parallela effettiva di comandi su un server, è necessario usare più connessioni.  
   
- Ad esempio, si consideri il seguente scenario. Vengono creati due oggetti comando, uno per l'elaborazione di un set di risultati e un altro per l'aggiornamento dei dati. Entrambi gli oggetti condividono una connessione comune tramite MARS. In questo scenario, il `Transaction`.`Commit` ha esito negativo dell'aggiornamento fino a quando non sono stati letti tutti i risultati sul primo oggetto comando, restituendo l'eccezione seguente:  
+ Ad esempio, si consideri il seguente scenario. Vengono creati due oggetti comando, uno per l'elaborazione di un set di risultati e un altro per l'aggiornamento dei dati. Entrambi gli oggetti condividono una connessione comune tramite MARS. In questo scenario il `Transaction`.`Commit` ha esito negativo dell'aggiornamento fino a quando non sono stati letti tutti i risultati sul primo oggetto comando, restituendo l'eccezione seguente:  
   
  Messaggio: Il contesto della transazione è in uso in un'altra sessione.  
   
@@ -113,4 +113,4 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## <a name="see-also"></a>Vedere anche  
  [MARS (Multiple Active Result Set)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: 9e67aef2a39a04adfdcc036c008aa80c9151c14b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2f30a578c5233e8b86a165dd220efd45348c5042
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762559"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401264"
 ---
 # <a name="handling-dataview-events"></a>Gestione di eventi DataView
-Per determinare se una visualizzazione è stata aggiornata, è possibile usare l'evento <xref:System.Data.DataView.ListChanged> del <xref:System.Data.DataView>. Gli aggiornamenti che generano l'evento includono l'aggiunta, l'eliminazione o la modifica di una riga nella tabella sottostante; l'aggiunta o l'eliminazione di una colonna nello schema della tabella sottostante e una modifica in una relazione padre o figlio. Il **ListChanged** evento invierà una notifica se l'elenco delle righe visualizzato è stato modificato in modo significativo a causa dell'applicazione di una nuova sequenza di ordinamento o un filtro.  
+Per determinare se una visualizzazione è stata aggiornata, è possibile usare l'evento <xref:System.Data.DataView.ListChanged> del <xref:System.Data.DataView>. Gli aggiornamenti che generano l'evento includono l'aggiunta, l'eliminazione o la modifica di una riga nella tabella sottostante; l'aggiunta o l'eliminazione di una colonna nello schema della tabella sottostante e una modifica in una relazione padre o figlio. Il **ListChanged** evento invierà una notifica se l'elenco di righe visualizzato è stato modificato in modo significativo a causa dell'applicazione di una nuova sequenza di ordinamento o filtro.  
   
- Il **ListChanged** evento implementa il **ListChangedEventHandler** delegare del <xref:System.ComponentModel> dello spazio dei nomi e accetta come input un <xref:System.ComponentModel.ListChangedEventArgs> oggetto. È possibile determinare il tipo di modifica utilizzando il <xref:System.ComponentModel.ListChangedType> valore di enumerazione nel **ListChangedType** proprietà del **ListChangedEventArgs** oggetto. Per le modifiche che implicano l'aggiunta, eliminazione o spostamento di righe, il nuovo indice della riga aggiunta o spostata e all'indice precedente della riga eliminata accessibili tramite il **NewIndex** proprietà del **ListChangedEventArgs** oggetto. Nel caso di una riga spostata, è possibile accedere all'indice precedente della riga spostata utilizzando il **OldIndex** proprietà del **ListChangedEventArgs** oggetto.  
+ Il **ListChanged** evento implementa le **ListChangedEventHandler** delegare del <xref:System.ComponentModel> dello spazio dei nomi e accetta come input un <xref:System.ComponentModel.ListChangedEventArgs> oggetto. È possibile determinare il tipo di modifica si è verificata utilizzando la <xref:System.ComponentModel.ListChangedType> valore di enumerazione nel **ListChangedType** proprietà del **ListChangedEventArgs** oggetto. Per le modifiche che implicano l'aggiunta, eliminazione o spostamento di righe, il nuovo indice della riga aggiunta o spostata e all'indice precedente della riga eliminata è accessibile tramite il **NewIndex** proprietà del **ListChangedEventArgs** oggetti. Nel caso di una riga spostata, è possibile accedere all'indice precedente della riga spostata utilizzando il **OldIndex** proprietà delle **ListChangedEventArgs** oggetto.  
   
- Il **DataViewManager** espone inoltre un **ListChanged** evento per notificare se una tabella è stato aggiunta o rimossa o se è stata apportata una modifica per il **relazioni** insieme del sottostante **DataSet**.  
+ Il **DataViewManager** espone anche una **ListChanged** eventi per ricevere una notifica se una tabella è stato aggiunta o rimossa oppure se è stata apportata una modifica per il **relazioni** raccolta del sottostante **set di dati**.  
   
  Esempio di codice seguente viene illustrato come aggiungere un **ListChanged** gestore dell'evento.  
   
@@ -55,4 +55,4 @@ protected static void OnListChanged(object sender,
  <xref:System.Data.DataView>  
  <xref:System.ComponentModel.ListChangedEventHandler>  
  [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

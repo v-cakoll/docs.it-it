@@ -2,12 +2,12 @@
 title: '&lt;message&gt; di &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: 0e947667c414079f24398b401456efd56bf9922c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65a8b0fa120d23931ad218ac67846c066b050af8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358557"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402244"
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;message&gt; di &lt;netMsmqBinding&gt;
 Definisce le impostazioni di sicurezza dei messaggi SOAP in questa associazione `netMsmqBinding`.  
@@ -40,10 +40,10 @@ Definisce le impostazioni di sicurezza dei messaggi SOAP in questa associazione 
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |algorithmSuite|Imposta la crittografia del messaggio e gli algoritmi di incapsulamento della chiave usati per ottenere la sicurezza basata su messaggi per i messaggi inviati sul trasporto MSMQ.<br /><br /> Il valore predefinito è `Aes256`. L'attributo è di tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
-|clientCredentialType|Specifica il tipo di credenziale da usare se l'autenticazione client viene eseguita per i messaggi inviati sul trasporto MSMQ. Di seguito vengono elencati i valori validi:<br /><br /> -None: Consente al servizio di interagire con client anonimi. Né il servizio né il client richiedono una credenziale.<br />-Windows: Consente lo svolgimento degli scambi SOAP nel contesto autenticato di una credenziale di Windows. In questo caso viene sempre eseguita l'autenticazione basata su Kerberos.<br />-UserName: Consente al servizio di richiedere che il client venga autenticato tramite una credenziale UserName. In questo caso la credenziale deve essere specificata tramite il `clientCredentials` comportamento **attenzione:** Windows Communication Foundation (WCF) non supporta l'invio di una password digest né la derivazione delle chiavi usando la password e l'uso di tali chiavi per sicurezza dei messaggi. WCF impone quindi che lo scambio sia protetto quando si utilizza le credenziali UserName. Questa modalità richiede che sia specificato il certificato del servizio sul lato client mediante il comportamento `clientCredential` e `serviceCertificate`. <br /><br /> -Certificate: Consente al servizio di richiedere che il client venga autenticato tramite un certificato. La credenziale client in questo caso deve essere specificata tramite il comportamento `clientCredentials`. In questo caso la credenziale del servizio deve essere specificata usando il comportamento `clientCredentials` tramite la specifica di `serviceCertificate`.<br />-CardSpace: Consente al servizio di richiedere che il client venga autenticato tramite un CardSpace. Il provisioning del certificato `serviceCertiifcate` deve essere eseguito nel comportamento `clientCredential`.<br /><br /> Il valore predefinito è `Windows`. L'attributo è di tipo <xref:System.ServiceModel.MessageCredentialType>.|  
+|clientCredentialType|Specifica il tipo di credenziale da usare se l'autenticazione client viene eseguita per i messaggi inviati sul trasporto MSMQ. Di seguito vengono elencati i valori validi:<br /><br /> -None: Consente al servizio di interagire con client anonimi. Né il servizio né il client richiedono una credenziale.<br />-Windows: In questo modo l'esecuzione di scambi SOAP nel contesto autenticato di una credenziale Windows. In questo caso viene sempre eseguita l'autenticazione basata su Kerberos.<br />-UserName: Consente al servizio di richiedere che il client venga autenticato tramite una credenziale UserName. La credenziale in questo caso deve essere specificata tramite il `clientCredentials` comportamento **cautela:** Windows Communication Foundation (WCF) non supporta l'invio di una password del digest o la derivazione delle chiavi utilizzano password e l'utilizzo di tali chiavi per sicurezza dei messaggi. WCF impone quindi che lo scambio sia protetto quando si usano credenziali UserName. Questa modalità richiede che sia specificato il certificato del servizio sul lato client mediante il comportamento `clientCredential` e `serviceCertificate`. <br /><br /> -Certificate: Consente al servizio di richiedere che il client venga autenticato tramite un certificato. La credenziale client in questo caso deve essere specificata tramite il comportamento `clientCredentials`. In questo caso la credenziale del servizio deve essere specificata usando il comportamento `clientCredentials` tramite la specifica di `serviceCertificate`.<br />-CardSpace: Consente al servizio di richiedere che il client venga autenticato tramite un CardSpace. Il provisioning del certificato `serviceCertiifcate` deve essere eseguito nel comportamento `clientCredential`.<br /><br /> Il valore predefinito è `Windows`. L'attributo è di tipo <xref:System.ServiceModel.MessageCredentialType>.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -60,5 +60,5 @@ Definisce le impostazioni di sicurezza dei messaggi SOAP in questa associazione 
  [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

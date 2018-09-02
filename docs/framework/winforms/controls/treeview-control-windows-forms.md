@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - TreeView control [Windows Forms]
 ms.assetid: 879438b4-4eac-45c6-b345-0229c9b21ab0
-ms.openlocfilehash: ee6c5583718f871c96929d659fe4a681528b27ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b4db06eedc0ada7c34f3ba6f6c80b783866bed2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538236"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404157"
 ---
 # <a name="treeview-control-windows-forms"></a>Controllo TreeView (Windows Form)
 Il controllo `TreeView` Windows Form visualizza una gerarchia di nodi, come i file e le cartelle visualizzati nel riquadro sinistro della funzionalità Esplora risorse nei sistemi operativi Windows.  
@@ -38,8 +38,8 @@ Il controllo `TreeView` Windows Form visualizza una gerarchia di nodi, come i fi
   
  [Procedura: Associare un menu di scelta rapida a un nodo di TreeView](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
  Illustra come aggiungere un menu di scelta rapida a un nodo di una visualizzazione albero.  
-  
- Vedere anche [procedura: aggiungere e rimuovere nodi con il controllo Windows Form TreeView usando la finestra di progettazione](http://msdn.microsoft.com/library/ms233651\(v=vs.110\)), [procedura: associare un Menu di scelta rapida a un TreeNode usando la finestra di progettazione](http://msdn.microsoft.com/library/ms171708\(v=vs.110\)).  
+
+Vedere anche [procedura: aggiungere e rimuovere nodi con il Windows Form TreeView controllo mediante la finestra di progettazione](add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md), e [procedura: associare un Menu di scelta rapida a un TreeNode usando la finestra di progettazione](how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md).  
   
 ## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.TreeView>  

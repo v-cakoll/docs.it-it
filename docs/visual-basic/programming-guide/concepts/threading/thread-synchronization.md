@@ -2,12 +2,12 @@
 title: Sincronizzazione dei thread (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-ms.openlocfilehash: 9922230e1c7f2bd30c575bd66387feb4850a298b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3278ed1e98f71e11d47f55a0d4cb50f44ae02027
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655091"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406624"
 ---
 # <a name="thread-synchronization-visual-basic"></a>Sincronizzazione dei thread (Visual Basic)
 Le sezioni seguenti descrivono le funzionalità e le classi che possono essere usate per sincronizzare l'accesso alle risorse nelle applicazioni multithreading.  
@@ -26,8 +26,8 @@ Le sezioni seguenti descrivono le funzionalità e le classi che possono essere u
   
 -   [Suggerimenti per l'utilizzo del threading gestito](../../../../standard/threading/managed-threading-best-practices.md)  
   
-## <a name="the-lock-and-synclock-keywords"></a>Il blocco e parole chiave SyncLock  
- Visual Basic `SyncLock` istruzione può essere utilizzata per garantire l'esecuzione di un blocco di codice fino al completamento senza interruzioni da altri thread. Questa operazione viene portata a termine ottenendo un blocco a esclusione reciproca per un determinato oggetto per la durata del blocco del codice.  
+## <a name="the-lock-and-synclock-keywords"></a>Il blocco e le parole chiave SyncLock  
+ Visual Basic `SyncLock` istruzione può essere utilizzata per garantire che un blocco di codice viene eseguito fino al completamento senza interruzioni da altri thread. Questa operazione viene portata a termine ottenendo un blocco a esclusione reciproca per un determinato oggetto per la durata del blocco del codice.  
   
  Un'istruzione `SyncLock` viene assegnata a un oggetto come argomento, seguita da un blocco di codice che deve essere eseguito da un solo thread alla volta. Ad esempio:  
   
@@ -147,7 +147,6 @@ End Module
  <xref:System.Threading>  
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
- [Applicazioni multithreading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
  [Istruzione SyncLock](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
  [Mutex](../../../../standard/threading/mutexes.md)  
  [Operazioni interlocked](../../../../standard/threading/interlocked-operations.md)  

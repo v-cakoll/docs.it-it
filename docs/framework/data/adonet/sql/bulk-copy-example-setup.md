@@ -2,22 +2,22 @@
 title: Creazione di esempi di copia di massa
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: cb4e92529c8e68bd7e47e5943f7e79dcc97603e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71daf489fdf5e7e12594e798bc3ac01b1c76b027
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362439"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402376"
 ---
 # <a name="bulk-copy-example-setup"></a>Creazione di esempi di copia di massa
-La classe <xref:System.Data.SqlClient.SqlBulkCopy> consente di scrivere dati solo su tabelle SQL Server. Database di esempio SQL Server, di utilizzare gli esempi di codice illustrati in questo argomento **AdventureWorks**. Per evitare di modificare gli esempi di codice delle tabelle esistenti, è necessario creare tabelle in cui scrivere i dati.  
+La classe <xref:System.Data.SqlClient.SqlBulkCopy> consente di scrivere dati solo su tabelle SQL Server. Gli esempi di codice illustrati in questo argomento usano il database di esempio di SQL Server, **AdventureWorks**. Per evitare di modificare gli esempi di codice delle tabelle esistenti, è necessario creare tabelle in cui scrivere i dati.  
   
- Il **BulkCopyDemoMatchingColumns** e **BulkCopyDemoDifferentColumns** sono entrambe basate sulle tabelle di **AdventureWorks** **Production**  tabella. Negli esempi di codice che utilizzano queste tabelle, i dati vengono aggiunti dal **Production** tabella a una di queste tabelle di esempio. Il **BulkCopyDemoDifferentColumns** tabella viene utilizzata quando l'esempio illustra come eseguire il mapping di colonne dall'origine dei dati nella tabella di destinazione; **BulkCopyDemoMatchingColumns** viene utilizzato per la maggior parte degli altri esempi.  
+ Il **BulkCopyDemoMatchingColumns** e **BulkCopyDemoDifferentColumns** sono entrambe basate sulle tabelle di **AdventureWorks** **Production. Products**  tabella. Negli esempi di codice che usano queste tabelle, i dati vengono aggiunti dal **Production. Products** tabella a una di queste tabelle di esempio. Il **BulkCopyDemoDifferentColumns** tabella viene utilizzata quando l'esempio illustra come eseguire il mapping di colonne dall'origine dati alla tabella di destinazione. **BulkCopyDemoMatchingColumns** viene usato per la maggior parte degli altri esempi.  
   
- Alcuni degli esempi di codice illustrano come usare una classe <xref:System.Data.SqlClient.SqlBulkCopy> per scrivere più tabelle. Per questi esempi, il **BulkCopyDemoOrderHeader** e **BulkCopyDemoOrderDetail** tabelle vengono utilizzate come tabelle di destinazione. Queste tabelle sono basate sul **Sales. SalesOrderHeader** e **Sales. SalesOrderDetail** nelle tabelle **AdventureWorks**.  
+ Alcuni degli esempi di codice illustrano come usare una classe <xref:System.Data.SqlClient.SqlBulkCopy> per scrivere più tabelle. Per questi esempi, il **BulkCopyDemoOrderHeader** e **BulkCopyDemoOrderDetail** tabelle vengono usate come tabelle di destinazione. Queste tabelle sono basate sulle **Sales. SalesOrderHeader** e **Sales. SalesOrderDetail** nelle tabelle **AdventureWorks**.  
   
 > [!NOTE]
->  Il **SqlBulkCopy** vengono forniti esempi di codice per illustrare la sintassi per l'utilizzo di **SqlBulkCopy** solo. Se la tabella di origine e quella di destinazione risiedono nella stessa istanza di SQL Server, per copiare i dati è più semplice e rapido usare un'istruzione `INSERT … SELECT` Transact-SQL.  
+>  Il **SqlBulkCopy** vengono forniti esempi di codice per illustrare la sintassi per usare **SqlBulkCopy** solo. Se la tabella di origine e quella di destinazione risiedono nella stessa istanza di SQL Server, per copiare i dati è più semplice e rapido usare un'istruzione `INSERT … SELECT` Transact-SQL.  
   
 ## <a name="table-setup"></a>Impostazione delle tabelle  
  Per creare le tabelle necessarie affinché i codici di esempio vengano eseguiti correttamente, è necessario eseguire le seguenti istruzioni Transact-SQL su un database SQL Server.  
@@ -83,4 +83,4 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 ## <a name="see-also"></a>Vedere anche  
  [Operazioni di copia di massa in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

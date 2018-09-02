@@ -2,12 +2,12 @@
 title: SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-ms.openlocfilehash: 37c83a9c1062fe074e41ec5db211fd513355c045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518486"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408765"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 In questo esempio vengono illustrati l'uso e la configurazione delle proprietà promosse nell'archivio di istanze del flusso di lavoro SQL. L'archivio di istanze del flusso di lavoro SQL è un'implementazione basata su SQL di un archivio di istanze. Consente a un'istanza di salvare il relativo stato e caricarlo da e verso un database SQL Server o SQL Server Express. La funzionalità di estensibilità dell'archivio consente all'utente di definire le proprietà che vengono archiviate nell'archivio di istanze. Queste proprietà vengono riportate in una visualizzazione di proprietà promosse che consente all'utente di eseguire query relative alle stesse.  
@@ -48,11 +48,11 @@ In questo esempio vengono illustrati l'uso e la configurazione delle proprietà 
     > [!WARNING]
     >  Se il database è stato installato in un'istanza non predefinita di SQL Server, aggiornare la stringa di connessione nel codice prima di compilare la soluzione.  
   
-3.  Eseguire l'esempio con privilegi di amministratore passando alla directory bin del progetto (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) in [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], destro del mouse su SqlStoreExtensibility.exe e scegliendo **runas Amministratore**.  
+3.  Eseguire l'esempio con privilegi di amministratore passando alla directory bin del progetto (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) in [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], facendo clic SqlStoreExtensibility.exe e selezionando **runas Amministratore**.  
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>Per verificare che l'esempio funzioni correttamente  
   
-1.  Utilizzare SQL Server Management Studio per visualizzare il contenuto della tabella istanza selezionando **database**, **InstanceStore**e quindi  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** in Esplora oggetti, fare doppio clic su **System.ServiceModel.Activities.DurableInstancing.InstanceTable** e selezionare  **Selezionare le prime 1000 righe**. Per ulteriori informazioni su SQL Server Management Studio, vedere [Introduzione a SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  Usare SQL Server Management Studio per visualizzare il contenuto della tabella delle istanze selezionando **database**, **InstanceStore**e quindi  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** in Esplora oggetti, fare doppio clic **System.ServiceModel.Activities.DurableInstancing.InstanceTable** e selezionare  **Seleziona le prime 1000 righe**. Per altre informazioni su SQL Server Management Studio, vedere [Introduzione a SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  Osservare le istanze del flusso di lavoro elencate.  
   
@@ -60,7 +60,7 @@ In questo esempio vengono illustrati l'uso e la configurazione delle proprietà 
   
 4.  Osservare il valore del contatore visualizzato sotto **CountStatus**.  
   
-5.  Eseguire lo script alcune volte per visualizzare il **CountStats** valore modifica.  
+5.  Eseguire lo script più volte per vedere le **CountStats** modifica del valore.  
   
 6.  Premere INVIO per terminare l'applicazione flusso di lavoro.  
   
@@ -73,11 +73,11 @@ In questo esempio vengono illustrati l'uso e la configurazione delle proprietà 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   
 ## <a name="see-also"></a>Vedere anche  
  [Persistenza del flusso di lavoro](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
  [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Hosting di AppFabric ed esempi di persistenza](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hosting di AppFabric e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)

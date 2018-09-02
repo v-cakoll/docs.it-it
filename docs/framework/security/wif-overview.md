@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: e5d668ff2b6c79105ddb4ec3672144a188e0b78c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cfe09e7df28d6f36f6e606802597449dab38212
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400068"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399984"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Panoramica di Windows Identity Foundation 4.5
-Windows Identity Foundation 4.5 è un set di classi .NET Framework per l'implementazione dell'identità basata sulle attestazioni nelle applicazioni. Tramite WIF sarà possibile usufruire più facilmente dei vantaggi offerti dai servizi e dalle applicazioni in grado di riconoscere attestazioni. WIF 4.5 può essere utilizzato in qualsiasi applicazione Web o servizio Web con .NET Framework 4.5 o versione successiva. WIF rappresenta solo una parte della famiglia software di identità federativa di Microsoft con cui viene implementata la visione condivisa del settore basata su standard aperti. L'identità federata include tre componenti: [Active Directory® Federation Services](http://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0, [Servizi di controllo di accesso di Microsoft Azure](http://go.microsoft.com/fwlink/?LinkID=247517) e WIF. Insieme, questi tre componenti formano la base della nuova piattaforma di accesso e identità cloud basata sulle attestazioni di Microsoft.  
+Windows Identity Foundation 4.5 è un set di classi .NET Framework per l'implementazione dell'identità basata sulle attestazioni nelle applicazioni. Tramite WIF sarà possibile usufruire più facilmente dei vantaggi offerti dai servizi e dalle applicazioni in grado di riconoscere attestazioni. WIF 4.5 può essere utilizzato in qualsiasi applicazione Web o servizio Web con .NET Framework 4.5 o versione successiva. WIF rappresenta solo una parte della famiglia software di identità federativa di Microsoft con cui viene implementata la visione condivisa del settore basata su standard aperti. L'identità federata include tre componenti: [Active Directory® Federation Services](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0, [Servizi di controllo di accesso di Microsoft Azure](https://go.microsoft.com/fwlink/?LinkID=247517) e WIF. Insieme, questi tre componenti formano la base della nuova piattaforma di accesso e identità cloud basata sulle attestazioni di Microsoft.  
   
- Per altre informazioni su WIF, vedere la [sito Web di Windows Identity Foundation](http://go.microsoft.com/fwlink/?LinkId=149009) (http://go.microsoft.com/fwlink/?LinkId=149009) in Security Developer Center nel sito Web MSDN. Per un'introduzione alla creazione di applicazioni mediante WIF, vedere [programmazione Windows Identity Foundation](http://go.microsoft.com/fwlink/?LinkId=210158) (http://go.microsoft.com/fwlink/?LinkId=210158) da Vittorio Bertocci (pubblicati da Microsoft Press).  
+ Per altre informazioni su WIF, vedere la [sito Web di Windows Identity Foundation](https://go.microsoft.com/fwlink/?LinkId=149009) in Security Developer Center su MSDN. Per un'introduzione alla creazione di applicazioni mediante WIF, vedere [programmazione di Windows Identity Foundation](https://go.microsoft.com/fwlink/?LinkId=210158) di Vittorio Bertocci (pubblicata da Microsoft Press).  
   
 ## <a name="wif-45-features"></a>Funzionalità di WIF 4.5  
  WIF 4.5 è un framework per la compilazione di applicazioni in grado di riconoscere identità. Tramite il framework vengono estratti i protocolli WS-Trust e WS-Federation e vengono presentati sviluppatori con API per la compilazione di applicazioni in grado di riconoscere attestazioni e, se necessario, servizi token di sicurezza. Tramite le applicazioni è possibile utilizzare WIF per elaborare i token emessi dai servizi token di sicurezza, ad esempio AD FS 2.0 e ACS, e prendere decisioni basate sulle identità nell'applicazione Web o nel servizio Web.  
@@ -29,7 +29,7 @@ Windows Identity Foundation 4.5 è un set di classi .NET Framework per l'impleme
   
      Inoltre, il framework fornisce il supporto per la compilazione di un servizio token di sicurezza che supporta WS-Federation per abilitare i client del Web browser. Un servizio token di sicurezza di questo tipo viene definito anche servizio token di sicurezza passivo.  
   
--   Nuovo strumento Identity and Access Tool for Visual Studio 11 con cui è possibile proteggere l'applicazione con l'identità basata sulle attestazione e accettare utenti da più provider di identità. È possibile scaricare questo strumento WIF dall'URL seguente: [ http://go.microsoft.com/fwlink/?LinkID=245849 ](http://go.microsoft.com/fwlink/?LinkID=245849) o direttamente all'interno di Visual Studio 11 cercando "identity" direttamente in Gestione estensioni. Per altre informazioni, vedere [Identity and Access Tool for Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md) (Identity and Access Tool per Visual Studio 2012).  
+-   Nuovo strumento Identity and Access Tool for Visual Studio 11 con cui è possibile proteggere l'applicazione con l'identità basata sulle attestazione e accettare utenti da più provider di identità. È possibile scaricare questo strumento WIF dall'URL seguente: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) o direttamente da Visual Studio 11 cercando "identità" in Gestione estensioni. Per altre informazioni, vedere [Identity and Access Tool for Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md) (Identity and Access Tool per Visual Studio 2012).  
   
  WIF supporta gli scenari principali seguenti:  
   
@@ -39,4 +39,4 @@ Windows Identity Foundation 4.5 è un set di classi .NET Framework per l'impleme
   
 -   Autenticazione step-up. I requisiti di autenticazione delle diverse risorse in un'applicazione possono variare. WIF offre agli sviluppatori la possibilità di compilare applicazioni che possono richiedere requisiti incrementali di autenticazione, ad esempio l'accesso iniziale con l'autenticazione di nome utente/password e, successivamente, l'aggiornamento all'autenticazione con smart card.  
   
- Grazie a WIF, sarà possibile usufruire più facilmente dei vantaggi offerti dal modello di identità basato sulle attestazioni. Per altre informazioni, vedere il [white paper di Windows Identity Foundation per sviluppatori](http://download.microsoft.com/download/7/d/0/7d0b5166-6a8a-418a-addd-95ee9b046994/windowsidentityfoundationwhitepaperfordevelopers-rtw.pdf).
+ Grazie a WIF, sarà possibile usufruire più facilmente dei vantaggi offerti dal modello di identità basato sulle attestazioni. Per altre informazioni, vedere il [white paper di Windows Identity Foundation per sviluppatori](https://download.microsoft.com/download/7/d/0/7d0b5166-6a8a-418a-addd-95ee9b046994/windowsidentityfoundationwhitepaperfordevelopers-rtw.pdf).

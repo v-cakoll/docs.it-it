@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
-ms.openlocfilehash: 2f705df810e7f3653589ca776a69bbe592458833
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83450e6ace33e89ddd263a1514f74f4d4e231cf7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365553"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405803"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Esecuzione di SqlCommand con SqlNotificationRequest
 È possibile configurare <xref:System.Data.SqlClient.SqlCommand> per generare una notifica quando i dati vengono modificati dopo essere stati recuperati dal server, nel qual caso il set di risultati sarebbe diverso se venisse eseguita nuovamente la query. Questa funzione risulta utile per le situazioni in cui si desidera usare code di notifiche personalizzate sul server o quando non si desidera mantenere oggetti attivi.  
@@ -72,4 +72,4 @@ command.ExecuteReader();
   
 ## <a name="see-also"></a>Vedere anche  
  [Notifiche di query in SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: e21b31805eb0b840866313f16cc85ea33c84e515
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8162dfc898f7965d65de918d2a5b1f7afbfdf9b2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537125"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400849"
 ---
 # <a name="toolbar-control-windows-forms"></a>Controllo ToolBar (Windows Form)
 > [!NOTE]
@@ -34,7 +34,7 @@ ms.locfileid: "33537125"
  [Procedura: Attivare eventi di menu per i pulsanti di una barra degli strumenti](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
  Illustra come scrivere il codice che consente di identificare il pulsante su cui l'utente ha fatto clic in un controllo `ToolBar`.  
   
- Vedere anche [procedura: definire un'icona per un pulsante della barra degli strumenti utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/ms233659\(v=vs.110\)), [procedura: aggiungere pulsanti a un controllo barra degli strumenti utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/ms233650\(v=vs.110\)).  
+ Vedere anche [procedura: definire un'icona per un pulsante della barra degli strumenti usando la finestra di progettazione](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [procedura: aggiungere pulsanti a un controllo ToolBar mediante la finestra di progettazione](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
   
 ## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.ToolBar>  

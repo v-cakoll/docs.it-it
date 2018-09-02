@@ -2,17 +2,17 @@
 title: Generazione di comandi SQL di modifica
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071952"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417247"
 ---
 # <a name="modification-sql-generation"></a>Generazione di comandi SQL di modifica
 Questa sezione descrive come sviluppare un modulo di generazione SQL di modifica per il provider (database conforme a SQL:1999). Tale modulo è responsabile della conversione di un albero dei comandi di modifica nelle istruzioni SQL INSERT, UPDATE o DELETE appropriate.  
   
- Per informazioni sulla generazione SQL per le istruzioni select, vedere [generazione SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md).  
+ Per informazioni sulla generazione SQL per le istruzioni select, vedere [generazione di comandi SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md).  
   
 ## <a name="overview-of-modification-command-trees"></a>Panoramica degli alberi dei comandi di modifica  
  Il modulo di generazione SQL di modifica genera istruzioni SQL di modifica specifiche del database basate su un determinato DbModificationCommandTree di input.  
@@ -25,11 +25,11 @@ Questa sezione descrive come sviluppare un modulo di generazione SQL di modifica
   
 -   DbDeleteCommandTree  
   
- DbModificationCommandTree e le relative implementazioni generate dal [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] rappresentano sempre un'operazione singola riga. Questa sezione descrive questi tipi con i relativi vincoli in .NET Framework versione 3.5.  
+ DbModificationCommandTree e le relative implementazioni prodotte dal [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] rappresentano sempre un'operazione singola riga. Questa sezione descrive questi tipi con i relativi vincoli in .NET Framework versione 3.5.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
- DbModificationCommandTree include una proprietà Target che rappresenta il set di destinazioni per l'operazione di modifica. La proprietà Expression di Target, che definisce il set di input, è sempre DbScanExpression.  Un oggetto DbScanExpression può rappresentare una tabella o una vista o un set di dati definito con una query se la proprietà di metadati "Definizione di Query" di destinazione è diverso da null.  
+ DbModificationCommandTree include una proprietà Target che rappresenta il set di destinazioni per l'operazione di modifica. La proprietà Expression di Target, che definisce il set di input, è sempre DbScanExpression.  Un oggetto DbScanExpression può rappresentare una tabella o una vista o un set di dati definito con una query se la proprietà di metadati "Definizione di Query" del relativo server di destinazione è diverso da null.  
   
  Un oggetto DbScanExpression che rappresenta una query può raggiungere un provider come destinazione della modifica solo se il set è stato definito tramite una query di definizione nel modello, ma non è stata specificata alcuna funzione per la corrispondente operazione di modifica. È possibile che alcuni provider non siano in grado di supportare tale scenario, ad esempio SqlClient.  
   
@@ -83,7 +83,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Generazione di comandi SQL di modifica nel provider di esempio  
- Il [Provider di esempio Entity Framework](http://go.microsoft.com/fwlink/?LinkId=180616) illustra i componenti dei provider di dati ADO.NET che supportano il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. È destinato a un database SQL Server 2005 e viene implementato come wrapper basato sul provider di dati ADO.NET 2.0 System.Data.SqlClient.  
+ Il [Provider di esempio Entity Framework](https://go.microsoft.com/fwlink/?LinkId=180616) illustra i componenti dei provider di dati ADO.NET che supportano il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. È destinato a un database SQL Server 2005 e viene implementato come wrapper basato sul provider di dati ADO.NET 2.0 System.Data.SqlClient.  
   
  Il modulo di generazione SQL di modifica del provider di esempio (disponibile nel file SQL Generation\DmlSqlGenerator.cs) accetta un oggetto DbModificationCommandTree di input e produce una singola istruzione SQL di modifica, eventualmente seguita da un'istruzione Select per restituire un lettore se specificato da DbModificationCommandTree. Tenere presente che la forma dei comandi generati dipende dal database SQL Server di destinazione.  
   
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Generazione di un comando SQL di inserimento  
  Per un determinato DbInsertCommandTree nel provider di esempio, il comando di inserimento generato si basa su uno dei due modelli di inserimento riportati di seguito.  
   
- Il primo modello presenta un comando per l'esecuzione dell'inserimento in base ai valori dell'elenco di SetClauses e un'istruzione SELECT per la restituzione delle proprietà specificate nella proprietà Returning della riga inserita se la proprietà Returning non è null. L'elemento predicato "\@ @ROWCOUNT > 0" è true se è stata inserita una riga. L'elemento predicato "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" assume la forma "keyMemberI = SCOPE_IDENTITY ()" solo se keyMemeberI è una chiave generata dall'archivio, in quanto SCOPE_IDENTITY () restituisce l'ultimo valore identity inserito in un'identità ( colonna generata dall'archivio).  
+ Il primo modello presenta un comando per l'esecuzione dell'inserimento in base ai valori dell'elenco di SetClauses e un'istruzione SELECT per la restituzione delle proprietà specificate nella proprietà Returning della riga inserita se la proprietà Returning non è null. L'elemento predicato "\@ @ROWCOUNT > 0" è true se è stata inserita una riga. L'elemento predicato "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" assume la forma "keyMemberI = SCOPE_IDENTITY ()" solo se keyMemeberI è una chiave generato dall'archivio, in quanto SCOPE_IDENTITY () restituisce l'ultimo valore identity inserito in un'identità ( colonne generate dall'archivio).  
   
 ```  
 -- first insert Template  
@@ -199,7 +199,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]  
 ```  
   
- La clausola set include la clausola set falsa ("@i = 0") solo se non vengono specificate clausole set. In questo modo si garantisce che le colonne calcolate dall'archivio vengano ricalcolate.  
+ La clausola set include la clausola set falsa ("@i = 0") solo se non sono specificate clausole alcun set. In questo modo si garantisce che le colonne calcolate dall'archivio vengano ricalcolate.  
   
  Solo se la proprietà Returning non è null, viene generata un'istruzione Select per restituire le proprietà specificate nella proprietà Returning.  
   

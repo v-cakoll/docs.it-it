@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: bee91a6406fd48894580ce6223a5682dbadab380
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b85fb6ebf56b110330be121c87d2492b0cfac536
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757294"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401944"
 ---
 # <a name="copying-dataset-contents"></a>Copia di contenuti di dataset
-È possibile creare una copia di un <xref:System.Data.DataSet> in modo da poter utilizzare i dati senza influire sui dati originali, o utilizzare un subset dei dati da un **DataSet**. Quando si copia un **DataSet**, è possibile:  
+È possibile creare una copia di un <xref:System.Data.DataSet> in modo da poter usare i dati senza influire sui dati originali, o utilizzare un subset dei dati da un **set di dati**. Quando si copia una **set di dati**, è possibile:  
   
--   Creare una copia esatta del **DataSet**, inclusi schema, dati, le informazioni sullo stato di riga e le versioni di riga.  
+-   Creare una copia esatta del **set di dati**, inclusi dello schema, i dati, le informazioni sullo stato di riga e le versioni di riga.  
   
--   Creare un **DataSet** contenente lo schema di un oggetto esistente **DataSet**, ma solo le righe che sono state modificate. È possibile restituire tutte le righe che sono state modificate oppure specificare un determinato **DataRowState**. Per ulteriori informazioni sugli stati delle righe, vedere [stati delle righe e le versioni di riga](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+-   Creare un **set di dati** che contiene lo schema di esistente **DataSet**, ma solo le righe che sono state modificate. È possibile restituire tutte le righe che sono state modificate oppure specificare un determinato **DataRowState**. Per altre informazioni sugli stati delle righe, vedere [stati e le versioni delle righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
--   Copiare lo schema, o struttura relazionale, del **DataSet** solo, senza copiare alcuna riga. È possibile importare le righe in un tipo <xref:System.Data.DataTable> esistente usando il metodo <xref:System.Data.DataTable.ImportRow%2A>.  
+-   Copiare lo schema o struttura relazionale, del **set di dati** solo, senza copiare alcuna riga. È possibile importare le righe in un tipo <xref:System.Data.DataTable> esistente usando il metodo <xref:System.Data.DataTable.ImportRow%2A>.  
   
- Per creare una copia esatta del **DataSet** che include sia dello schema e dati, utilizzare il <xref:System.Data.DataSet.Copy%2A> metodo il **set di dati**. Esempio di codice seguente viene illustrato come creare una copia esatta del **DataSet**.  
+ Per creare una copia esatta del **set di dati** che include lo schema sia dei dati, utilizzare il <xref:System.Data.DataSet.Copy%2A> metodo il **set di dati**. Esempio di codice seguente viene illustrato come creare una copia esatta del **set di dati**.  
   
 ```vb  
 Dim copyDataSet As DataSet = customerDataSet.Copy()  
@@ -31,7 +31,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Per creare una copia di un **DataSet** che include lo schema e solo i dati che rappresentano **Added**, **Modified**, o **Deleted** righe, utilizzare il <xref:System.Data.DataSet.GetChanges%2A> metodo il **DataSet**. È inoltre possibile utilizzare **GetChanges** per restituire solo le righe con uno stato di riga specificata passando un **DataRowState** valore quando si chiama **GetChanges**. Esempio di codice seguente viene illustrato come passare un **DataRowState** quando si chiama **GetChanges**.  
+ Per creare una copia di un **set di dati** che include lo schema e solo i dati che rappresentano **Added**, **Modified**, o **Deleted** righe, usare il <xref:System.Data.DataSet.GetChanges%2A> metodo per il **set di dati**. È anche possibile usare **GetChanges** da restituire solo le righe con uno stato di riga specificato passando una **DataRowState** valore quando si chiama **GetChanges**. Esempio di codice seguente viene illustrato come passare un **DataRowState** quando si chiama **GetChanges**.  
   
 ```vb  
 ' Copy all changes.  
@@ -48,9 +48,9 @@ DataSet changeDataSet = customerDataSet.GetChanges();
 DataSet addedDataSet= customerDataSet.GetChanges(DataRowState.Added);  
 ```  
   
- Per creare una copia di un **DataSet** che include solo schema, utilizzare il <xref:System.Data.DataSet.Clone%2A> metodo il **set di dati**. È anche possibile aggiungere righe esistenti al **DataSet** utilizzando il **ImportRow** metodo il **DataTable**. **ImportRow** aggiunge i dati, lo stato di riga e le informazioni sulla versione di riga alla tabella specificata. I valori di colonna vengono aggiunti solo nel caso in cui i nomi di colonna corrispondano e il tipo di dati sia compatibile.  
+ Per creare una copia di un **set di dati** che include solo lo schema, usare il <xref:System.Data.DataSet.Clone%2A> metodo per il **set di dati**. È anche possibile aggiungere le righe esistenti al **set di dati** usando la **ImportRow** metodo per il **DataTable**. **ImportRow** aggiunge i dati, lo stato di riga e informazioni sulla versione di riga nella tabella specificata. I valori di colonna vengono aggiunti solo nel caso in cui i nomi di colonna corrispondano e il tipo di dati sia compatibile.  
   
- Esempio di codice seguente crea un clone di un **DataSet** e le righe vengono aggiunte dalla versione originale **set di dati** per il **clienti** tabella il **set di dati**  duplicato per i clienti in cui il **CountryRegion** colonna ha il valore "Germany".  
+ Il codice seguente crea un clone di un **set di dati** e quindi le righe vengono aggiunte dalla versione originale **set di dati** per il **clienti** tabella il **set di dati**  duplicato per i clienti in cui la **CountryRegion** colonna ha il valore "Germany".  
   
 ```vb  
 Dim customerDataSet As New DataSet  
@@ -98,4 +98,4 @@ foreach (DataRow copyRow in copyRows)
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataTable>  
  [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

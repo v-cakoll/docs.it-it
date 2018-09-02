@@ -8,18 +8,18 @@ helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
 ms.openlocfilehash: 13a4e35cd27ed5aa135cec77c4415f223cba70f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596057"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403036"
 ---
 # <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>Tipo del parametro &#39; &lt;parametername&gt; &#39; non è conforme a CLS
-Una stored procedure è contrassegnata come `<CLSCompliant(True)>` ma dichiara un parametro con un tipo contrassegnato come `<CLSCompliant(False)>`, non è contrassegnata o non si qualifica in quanto è un tipo non conforme.  
+Una procedura è contrassegnata come `<CLSCompliant(True)>` ma viene dichiarato un parametro con un tipo contrassegnato come `<CLSCompliant(False)>`, non è contrassegnata o non può essere utilizzato perché è un tipo non conforme.  
   
  Affinché una procedura risulti compatibile con l'[indipendenza del linguaggio e i componenti indipendenti dal linguaggio](../../../standard/language-independence-and-language-independent-components.md) (CLS), deve usare solo tipi conformi a CLS. Questo scenario si applica ai tipi dei parametri, al tipo restituito e ai tipi di tutte le variabili locali.  
   
- I seguenti tipi di dati Visual Basic non sono conformi a CLS:  
+ I seguenti tipi di dati di Visual Basic non sono conformi a CLS:  
   
 -   [Tipo di dati SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
@@ -39,8 +39,8 @@ Una stored procedure è contrassegnata come `<CLSCompliant(True)>` ma dichiara u
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Se la routine deve accettare un parametro di tipo particolare, rimuovere il <xref:System.CLSCompliantAttribute>. La procedura non può essere compatibile con CLS.  
+-   Se la routine deve accettare un parametro di questo tipo specifico, rimuovere il <xref:System.CLSCompliantAttribute>. La procedura non può essere compatibile con CLS.  
   
--   Se la procedura deve essere conforme a CLS, modificare il tipo di questo parametro per il tipo conforme a CLS più vicino. Al posto di `UInteger` ad esempio può essere possibile usare `Integer` se non è necessario l'intervallo di valore al di sopra di 2.147.483.647. Se è necessario l'intervallo esteso, è possibile sostituire `UInteger` con `Long`.  
+-   Se la procedura deve essere conforme a CLS, modificare il tipo di questo parametro di tipo conforme a CLS più vicina. Al posto di `UInteger` ad esempio può essere possibile usare `Integer` se non è necessario l'intervallo di valore al di sopra di 2.147.483.647. Se è necessario l'intervallo esteso, è possibile sostituire `UInteger` con `Long`.  
   
--   Se si prevede l'interazione con gli oggetti COM o di automazione, tenere presente che alcuni tipi hanno un'ampiezza di dati diversa da [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Ad esempio, `int` è spesso a 16 bit in altri ambienti. Se si accetta un valore integer a 16 bit da un componente di questo tipo, dichiararla `Short` invece di `Integer` nel codice gestito di Visual Basic.
+-   Se si prevede l'interazione con gli oggetti COM o di automazione, tenere presente che alcuni tipi hanno un'ampiezza di dati diversa da [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Ad esempio, `int` è spesso a 16 bit in altri ambienti. Se si accetta un intero a 16 bit da tale componente, dichiararlo come `Short` invece di `Integer` nel codice gestito di Visual Basic.

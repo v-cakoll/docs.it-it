@@ -2,19 +2,19 @@
 title: Attività WaitForInput
 ms.date: 03/30/2017
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-ms.openlocfilehash: 750a217699abe8b2eb2eaaa364002137d335a41a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e878e8c91c5da12a68da848694ce790896517c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518996"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401209"
 ---
 # <a name="wait-for-input-activity"></a>Attività WaitForInput
-In questo esempio viene illustrato come creare segnalibri denominati in un flusso di lavoro. Windows Workflow Foundation (WF) non fornisce un'attività per la creazione dichiarativa del segnalibro. Pertanto, quando si desidera creare un segnalibro nel flusso di lavoro, è necessario scrivere un'attività personalizzata. L'attività `WaitForInput` definita in questo esempio fornisce questa funzionalità, in modo che gli utenti possano creare segnalibri in modo dichiarativo all'interno di un flusso di lavoro.  
+In questo esempio viene illustrato come creare segnalibri denominati in un flusso di lavoro. Windows Workflow Foundation (WF) non è incluso un'attività per la creazione dichiarativa del segnalibro. Pertanto, quando si desidera creare un segnalibro nel flusso di lavoro, è necessario scrivere un'attività personalizzata. L'attività `WaitForInput` definita in questo esempio fornisce questa funzionalità, in modo che gli utenti possano creare segnalibri in modo dichiarativo all'interno di un flusso di lavoro.  
   
 ## <a name="projects-in-this-sample"></a>Progetti di questo esempio  
   
-|**Nome del progetto**|**Descrizione**|**File principali**|  
+|**Nome del progetto**|**Descrizione**|**File principali.**|  
 |-|-|-|  
 |WaitForInput|Contiene l'attività `WaitForInput` e la relativa finestra di progettazione|WaitForInput.cs<br /><br /> Definizione dell'attività `WaitForInput`.|  
 |||WaitForInputDesigner.xaml<br /><br /> Finestra di progettazione personalizzata per l'attività `WaitForInput`.|  
@@ -38,7 +38,7 @@ In questo esempio viene illustrato come creare segnalibri denominati in un fluss
 ## <a name="waitforinput-activity-designer"></a>ActivityDesigner WaitForInput  
  L'ActivityDesigner `WaitForInput` viene implementato nel file WaitForInputDesigner.xaml. L'attività `WaitForInput` e la relativa finestra di progettazione sono incluse nello stesso assembly. Nell'elemento grafico seguente viene mostrata l'attività `WaitForInput` nella casella degli strumenti all'interno di una categoria il cui nome è uguale a quello dell'assembly.  
   
- ![Schermata della casella degli strumenti WaitForInput](../../../../docs/framework/windows-workflow-foundation/samples/media/waitforinputtoolbox.jpg "WaitForInputToolbox")  
+ ![Screenshot della casella degli strumenti WaitForInput](../../../../docs/framework/windows-workflow-foundation/samples/media/waitforinputtoolbox.jpg "WaitForInputToolbox")  
   
  Nell'elemento grafico seguente viene mostrata la finestra di progettazione `WaitForInput`. Poiché l'attività `WaitForInput` è molto semplice, la finestra di progettazione consente l'impostazione diretta di tutti i relativi argomenti nell'area di progettazione.  
   
@@ -57,6 +57,6 @@ In questo esempio viene illustrato come creare segnalibri denominati in un fluss
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\WaitForInput`

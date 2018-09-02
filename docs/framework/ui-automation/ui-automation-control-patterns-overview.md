@@ -8,16 +8,16 @@ ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 1b02618676a1162681c67d34a2c6f43def07893c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73ac290c688436e7ce74e1baaf9f7dbbbecb66bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409026"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418739"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questa panoramica vengono presentati i pattern di controllo per [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . I pattern di controllo rappresentano un metodo di classificazione ed esposizione della funzionalità di un controllo indipendentemente dal tipo o dall'aspetto del controllo stesso.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33409026"
   
  I client di automazione interfaccia utente accedono ai metodi e alle proprietà delle classi del pattern di controllo di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e li usano per ottenere informazioni sull' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]o per modificare l' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Queste classi di pattern di controllo sono disponibili nello spazio dei nomi <xref:System.Windows.Automation> , ad esempio <xref:System.Windows.Automation.InvokePattern> e <xref:System.Windows.Automation.SelectionPattern>.  
   
- I client usano <xref:System.Windows.Automation.AutomationElement> metodi (ad esempio <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> o <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) o [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] funzioni di accesso per accedere il [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] proprietà a un criterio di. Ogni classe di pattern di controllo è un membro di campo (ad esempio, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>' o <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) che identifica tale pattern di controllo e può essere passato come parametro a <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> o <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> per recuperare questo pattern per una <xref:System.Windows.Automation.AutomationElement>.  
+ I client usano <xref:System.Windows.Automation.AutomationElement> metodi (, ad esempio <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> o <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) o il [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] funzioni di accesso per accedere al [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] le proprietà di un pattern. Ogni classe di pattern di controllo è un membro del campo (ad esempio, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>' o <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) che identifica tale pattern di controllo e può essere passato come parametro al <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> oppure <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> per recuperare tale modello per un <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>Pattern di controllo dinamici  

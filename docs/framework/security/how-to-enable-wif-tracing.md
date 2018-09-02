@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 459d74f3faf9fab4cba047a87ccff77d193e9026
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17650e06cb505dd778a9c0980c2a32fda8099cb4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399564"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407573"
 ---
 # <a name="how-to-enable-wif-tracing"></a>Procedura: Abilitare la traccia WIF
 ## <a name="applies-to"></a>Si applica a  
@@ -19,7 +19,7 @@ ms.locfileid: "33399564"
 -   Web Form ASP.NET®  
   
 ## <a name="summary"></a>Riepilogo  
- Questo argomento include le procedure dettagliate per abilitare la traccia WIF in un'applicazione ASP.NET. Sono inoltre disponibili istruzioni per testare l'applicazione per verificare che il listener e il log di traccia funzionino correttamente. In questa guida procedurale non sono incluse le istruzioni dettagliate per la creazione di un servizio token di sicurezza (STS, Security Token Service); viene invece utilizzato il servizio token di sicurezza di sviluppo che viene fornito con lo strumento Identity and Access. Il servizio token di sicurezza di sviluppo non esegue una reale autenticazione ed è finalizzato unicamente ai test. Per completare questa guida procedurale sarà necessario installare Identity and Access Tool. Questo strumento può essere scaricato dal seguente percorso: [Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)  
+ Questo argomento include le procedure dettagliate per abilitare la traccia WIF in un'applicazione ASP.NET. Sono inoltre disponibili istruzioni per testare l'applicazione per verificare che il listener e il log di traccia funzionino correttamente. In questa guida procedurale non sono incluse le istruzioni dettagliate per la creazione di un servizio token di sicurezza (STS, Security Token Service); viene invece utilizzato il servizio token di sicurezza di sviluppo che viene fornito con lo strumento Identity and Access. Il servizio token di sicurezza di sviluppo non esegue una reale autenticazione ed è finalizzato unicamente ai test. Per completare questa guida procedurale sarà necessario installare Identity and Access Tool. Questo strumento può essere scaricato dal seguente percorso: [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 > [!IMPORTANT]
 >  L'abilitazione della traccia WIF per le applicazioni passive, ovvero le applicazioni che usano il protocollo WS-Federation, possono esporre potenzialmente l'applicazione ad attacchi Denial of Service (DoS) o alla divulgazione di informazioni a malintenzionati. Sono inclusi sia i relying party passivi che i servizi token di sicurezza passivi. Per questo motivo, è consigliabile non abilitare la traccia WIF per relying party passivi o servizi token di sicurezza passivi in ambiente di produzione.  

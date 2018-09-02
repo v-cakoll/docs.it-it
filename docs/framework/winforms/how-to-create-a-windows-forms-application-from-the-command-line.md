@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe7c1eddd67e678e7086d948efb854a6b4b52f6e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539491"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400380"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Procedura: creare un'applicazione Windows Forms dalla riga di comando
-Le procedure seguenti descrivono i passaggi di base che è necessario completare per creare ed eseguire un'applicazione Windows Forms dalla riga di comando. Esiste un supporto completo per queste procedure in Visual Studio.  Vedere anche [procedura dettagliata: creazione di un Windows Form semplice](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
+Le procedure seguenti descrivono i passaggi di base che è necessario completare per creare ed eseguire un'applicazione Windows Forms dalla riga di comando. Esiste un supporto completo per queste procedure in Visual Studio.  Vedere anche [procedura dettagliata: creazione di un semplice Form di Windows](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
   
 ## <a name="procedure"></a>Routine  
   
@@ -44,7 +44,7 @@ Le procedure seguenti descrivono i passaggi di base che è necessario completare
   
 4.  Aggiungere un metodo `Main` alla classe.  
   
-    1.  Applicare il <xref:System.STAThreadAttribute> c# `Main` metodo per specificare che l'applicazione Windows Form è un apartment a thread singolo. (L'attributo non è necessario in Visual Basic, poiché le applicazioni Windows Form sviluppate con Visual Basic Usa un modello di apartment a thread singolo per impostazione predefinita.)  
+    1.  Si applicano i <xref:System.STAThreadAttribute> c# `Main` metodo per specificare l'applicazione Windows Forms è un apartment a thread singolo. (L'attributo non è necessario in Visual Basic, poiché le applicazioni di Windows forms sviluppate con Visual Basic usare un modello di apartment a thread singolo per impostazione predefinita.)  
   
     2.  Chiamare <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> per applicare gli stili del sistema operativo all'applicazione.  
   
@@ -68,9 +68,9 @@ Le procedure seguenti descrivono i passaggi di base che è necessario completare
 3.  Al prompt dei comandi, digitare: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Aggiunta di un controllo e gestione di un evento  
- I passaggi della precedente procedura hanno illustrato come creare un Windows Form di base che viene compilato ed eseguito. La procedura successiva mostrerà come creare e aggiungere un controllo al form e come gestire un evento per il controllo. Per ulteriori informazioni sui controlli è possibile aggiungere a un Windows Form, vedere [controlli Windows Form](../../../docs/framework/winforms/controls/index.md).  
+ I passaggi della precedente procedura hanno illustrato come creare un Windows Form di base che viene compilato ed eseguito. La procedura successiva mostrerà come creare e aggiungere un controllo al form e come gestire un evento per il controllo. Per altre informazioni sui controlli è possibile aggiungere a un Windows Form, vedere [Windows Forms Controls](../../../docs/framework/winforms/controls/index.md).  
   
- Oltre a saper creare applicazioni Windows Forms, è consigliabile conoscere la programmazione basata sugli eventi e come gestire l'input utente. Per altre informazioni, vedere [creazione di gestori eventi in Windows Form](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), e [gestione Input dell'utente](../../../docs/framework/winforms/controls/handling-user-input.md)  
+ Oltre a saper creare applicazioni Windows Forms, è consigliabile conoscere la programmazione basata sugli eventi e come gestire l'input utente. Per altre informazioni, vedere [creazione di gestori di eventi in Windows Form](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), e [la gestione degli Input dell'utente](../../../docs/framework/winforms/controls/handling-user-input.md)  
   
 #### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>Per dichiarare un pulsante e gestirne l'evento click  
   

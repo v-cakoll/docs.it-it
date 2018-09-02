@@ -13,43 +13,43 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 26c9ec247a0b848d46df063bc7b85ceec30d81c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27dad8b2fbfbc8d17090df201bf36eb080966f51
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650894"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407373"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Caratteristiche di elementi dichiarati (Visual Basic)
-Oggetto *caratteristica* di un elemento dichiarato è un aspetto di tale elemento che influisce sulla modalità di interazione con il codice. Ogni elemento dichiarato con uno o più delle seguenti caratteristiche associate:  
+Oggetto *caratteristica* di un elemento dichiarato è un aspetto di tale elemento che influisce sulla modalità di interazione con il codice. Ogni elemento dichiarato con uno o più delle caratteristiche seguenti associate:  
   
--   *Tipo di dati* , ovvero i valori che può contenere l'elemento, e come archivia tali valori. Per ulteriori informazioni, vedere [tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+-   *Tipo di dati* , ovvero i valori che può contenere l'elemento e modalità di archiviazione di tali valori. Per altre informazioni, vedere [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md).  
   
--   *Durata* , ovvero il periodo di tempo di esecuzione durante il quale l'elemento è disponibile per l'utilizzo. Per ulteriori informazioni, vedere [durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+-   *Durata* , ovvero il periodo di tempo di esecuzione durante il quale l'elemento è disponibile per l'uso. Per altre informazioni, vedere [durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   *Ambito* , ovvero il set di tutto il codice può fare riferimento all'elemento senza qualificarne il nome. Per ulteriori informazioni, vedere [procedura: controllare l'ambito di una variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+-   *Ambito* , ovvero il set di tutto il codice che può fare riferimento all'elemento senza il nome completo. Per altre informazioni, vedere [procedura: controllare l'ambito di una variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
--   *Livello di accesso* , ovvero l'autorizzazione per il codice all'utilizzo dell'elemento. Per ulteriori informazioni, vedere [procedura: controllare la disponibilità di una variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+-   *Livello di accesso* , ovvero l'autorizzazione per il codice all'utilizzo dell'elemento. Per altre informazioni, vedere [procedura: controllare la disponibilità di una variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
 ## <a name="characteristics-of-the-elements"></a>Caratteristiche degli elementi  
- La tabella seguente illustra gli elementi dichiarati e le caratteristiche che si applicano a ognuna di esse.  
+ La tabella seguente illustra gli elementi dichiarati e le caratteristiche che si applicano a ognuno di essi.  
   
 |Elemento|Tipo di dati|Durata|Ambito <sup>1</sup>|Livello di accesso|  
 |-------------|---------------|--------------|------------------------|------------------|  
-|Variabile|Yes|Sì|Sì|Yes|  
-|Costante|Yes|No|Sì|Yes|  
-|Enumerazione|Yes|No|Sì|Yes|  
-|Struttura|No|No|Sì|Yes|  
-|Proprietà|Yes|Sì|Sì|Yes|  
-|Metodo|No|Sì|Sì|Yes|  
-|Procedure (`Sub` o `Function`)|No|Sì|Sì|Yes|  
-|Parametro di routine|Yes|Sì|Sì|No|  
-|Valore restituito di funzione|Yes|Sì|Sì|No|  
-|Operatore|Yes|No|Sì|Yes|  
-|Interfaccia|No|No|Sì|Yes|  
-|Classe|No|No|Sì|Yes|  
-|event|No|No|Sì|Yes|  
-|delegato|No|No|Sì|Yes|  
+|Variabile|Yes|Yes|Yes|Yes|  
+|Costante|Yes|No|Yes|Yes|  
+|Enumerazione|Yes|No|Yes|Yes|  
+|Struttura|No|No|Yes|Yes|  
+|Proprietà|Yes|Yes|Yes|Yes|  
+|Metodo|No|Yes|Yes|Yes|  
+|Procedure (`Sub` o `Function`)|No|Yes|Yes|Yes|  
+|Parametro di routine|Yes|Yes|Yes|No|  
+|Restituito dalla funzione|Yes|Yes|Yes|No|  
+|Operatore|Yes|No|Yes|Yes|  
+|Interfaccia|No|No|Yes|Yes|  
+|Classe|No|No|Yes|Yes|  
+|event|No|No|Yes|Yes|  
+|delegato|No|No|Yes|Yes|  
   
  <sup>1</sup> ambito è talvolta detta *visibilità*.  
   
