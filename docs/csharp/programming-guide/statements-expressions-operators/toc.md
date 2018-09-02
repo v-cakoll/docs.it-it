@@ -13,7 +13,6 @@
 ### [Uso degli operatori di conversione](using-conversion-operators.md)
 ### [Procedura: Implementare conversioni tra struct definite dall'utente](how-to-implement-user-defined-conversions-between-structs.md)
 ## [Espressioni con valore predefinito](default-value-expressions.md)
-## [Procedura: Usare l'overload degli operatori per creare una classe di numeri complessi](how-to-use-operator-overloading-to-create-a-complex-number-class.md)
 ## [Confronti di uguaglianza](equality-comparisons.md)
 ### [Procedura: Definire l'uguaglianza di valori per un tipo](how-to-define-value-equality-for-a-type.md)
 ### [Procedura: Testare l'uguaglianza dei riferimenti (identità)](how-to-test-for-reference-equality-identity.md)
