@@ -15,16 +15,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a43863477e902f6f02007ba291a25d2469283e91
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43003255"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425172"
 ---
-# <a name="iclrdatatarget3getexceptionrecord-method"></a><span data-ttu-id="0796b-102">Metodo ICLRDataTarget3::GetExceptionRecord</span><span class="sxs-lookup"><span data-stu-id="0796b-102">ICLRDataTarget3::GetExceptionRecord Method</span></span>
-<span data-ttu-id="0796b-103">Chiamato dai servizi di accesso ai dati di Common Language Runtime (CLR) per recuperare il record di eccezione associato al processo destinazione.</span><span class="sxs-lookup"><span data-stu-id="0796b-103">Called by the common language runtime (CLR) data access services to retrieve the exception record associated with the target process.</span></span> <span data-ttu-id="0796b-104">Ad esempio, per una destinazione del dump, sarebbe equivalente al record di eccezione passato tramite la `ExceptionParam` argomento per il [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) (funzione) in Windows eseguire il Debug della Guida Library (DbgHelp).</span><span class="sxs-lookup"><span data-stu-id="0796b-104">For example, for a dump target, this would be equivalent to the exception record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
+# <a name="iclrdatatarget3getexceptionrecord-method"></a><span data-ttu-id="097f9-102">Metodo ICLRDataTarget3::GetExceptionRecord</span><span class="sxs-lookup"><span data-stu-id="097f9-102">ICLRDataTarget3::GetExceptionRecord Method</span></span>
+<span data-ttu-id="097f9-103">Chiamato dai servizi di accesso ai dati di Common Language Runtime (CLR) per recuperare il record di eccezione associato al processo destinazione.</span><span class="sxs-lookup"><span data-stu-id="097f9-103">Called by the common language runtime (CLR) data access services to retrieve the exception record associated with the target process.</span></span> <span data-ttu-id="097f9-104">Ad esempio, per una destinazione del dump, sarebbe equivalente al record di eccezione passato tramite la `ExceptionParam` argomento per il [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) (funzione) in Windows eseguire il Debug della Guida Library (DbgHelp).</span><span class="sxs-lookup"><span data-stu-id="097f9-104">For example, for a dump target, this would be equivalent to the exception record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0796b-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0796b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="097f9-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="097f9-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetExceptionRecord(  
@@ -34,40 +34,40 @@ HRESULT GetExceptionRecord(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0796b-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="0796b-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="097f9-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="097f9-106">Parameters</span></span>  
  `bufferSize`  
- <span data-ttu-id="0796b-107">[in] La dimensione del buffer di input, in byte.</span><span class="sxs-lookup"><span data-stu-id="0796b-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="0796b-108">Deve essere uguale a `sizeof(` [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.</span><span class="sxs-lookup"><span data-stu-id="0796b-108">This must be equal to `sizeof(`[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.</span></span>  
+ <span data-ttu-id="097f9-107">[in] La dimensione del buffer di input, in byte.</span><span class="sxs-lookup"><span data-stu-id="097f9-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="097f9-108">Deve essere uguale a `sizeof(` [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.</span><span class="sxs-lookup"><span data-stu-id="097f9-108">This must be equal to `sizeof(`[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.</span></span>  
   
  `bufferUsed`  
- <span data-ttu-id="0796b-109">[out] Un puntatore a un tipo `ULONG32` che riceve il numero di byte effettivamente scritti nel buffer.</span><span class="sxs-lookup"><span data-stu-id="0796b-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
+ <span data-ttu-id="097f9-109">[out] Un puntatore a un tipo `ULONG32` che riceve il numero di byte effettivamente scritti nel buffer.</span><span class="sxs-lookup"><span data-stu-id="097f9-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
   
  `buffer`  
- <span data-ttu-id="0796b-110">[out] Un puntatore a un buffer di memoria che riceve una copia del record di eccezione.</span><span class="sxs-lookup"><span data-stu-id="0796b-110">[out] A pointer to a memory buffer that receives a copy of the exception record.</span></span> <span data-ttu-id="0796b-111">Il record di eccezione viene restituito come un [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) tipo.</span><span class="sxs-lookup"><span data-stu-id="0796b-111">The exception record is returned as a [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) type.</span></span>  
+ <span data-ttu-id="097f9-110">[out] Un puntatore a un buffer di memoria che riceve una copia del record di eccezione.</span><span class="sxs-lookup"><span data-stu-id="097f9-110">[out] A pointer to a memory buffer that receives a copy of the exception record.</span></span> <span data-ttu-id="097f9-111">Il record di eccezione viene restituito come un [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) tipo.</span><span class="sxs-lookup"><span data-stu-id="097f9-111">The exception record is returned as a [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0796b-112">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="0796b-112">Return Value</span></span>  
- <span data-ttu-id="0796b-113">Il valore restituito è `S_OK` in caso di esito positivo o un codice di errore `HRESULT` in caso di esito negativo.</span><span class="sxs-lookup"><span data-stu-id="0796b-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="0796b-114">I codici `HRESULT` possono includere, ma non sono limitati a, quanto segue:</span><span class="sxs-lookup"><span data-stu-id="0796b-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="097f9-112">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="097f9-112">Return Value</span></span>  
+ <span data-ttu-id="097f9-113">Il valore restituito è `S_OK` in caso di esito positivo o un codice di errore `HRESULT` in caso di esito negativo.</span><span class="sxs-lookup"><span data-stu-id="097f9-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="097f9-114">I codici `HRESULT` possono includere, ma non sono limitati a, quanto segue:</span><span class="sxs-lookup"><span data-stu-id="097f9-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
   
-|<span data-ttu-id="0796b-115">Codice restituito</span><span class="sxs-lookup"><span data-stu-id="0796b-115">Return code</span></span>|<span data-ttu-id="0796b-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0796b-116">Description</span></span>|  
+|<span data-ttu-id="097f9-115">Codice restituito</span><span class="sxs-lookup"><span data-stu-id="097f9-115">Return code</span></span>|<span data-ttu-id="097f9-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="097f9-116">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="0796b-117">Il metodo è riuscito.</span><span class="sxs-lookup"><span data-stu-id="0796b-117">Method succeeded.</span></span> <span data-ttu-id="0796b-118">Il record di eccezione è stato copiato nel buffer di output.</span><span class="sxs-lookup"><span data-stu-id="0796b-118">The exception record has been copied to the output buffer.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="0796b-119">Nessun record di eccezione è associato alla destinazione.</span><span class="sxs-lookup"><span data-stu-id="0796b-119">No exception record is associated with the target.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="0796b-120">La dimensione del buffer di input non è uguale a `sizeof(MINIDUMP_EXCEPTION)`.</span><span class="sxs-lookup"><span data-stu-id="0796b-120">The input buffer size is not equal to `sizeof(MINIDUMP_EXCEPTION)`.</span></span>|  
+|`S_OK`|<span data-ttu-id="097f9-117">Il metodo è riuscito.</span><span class="sxs-lookup"><span data-stu-id="097f9-117">Method succeeded.</span></span> <span data-ttu-id="097f9-118">Il record di eccezione è stato copiato nel buffer di output.</span><span class="sxs-lookup"><span data-stu-id="097f9-118">The exception record has been copied to the output buffer.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="097f9-119">Nessun record di eccezione è associato alla destinazione.</span><span class="sxs-lookup"><span data-stu-id="097f9-119">No exception record is associated with the target.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="097f9-120">La dimensione del buffer di input non è uguale a `sizeof(MINIDUMP_EXCEPTION)`.</span><span class="sxs-lookup"><span data-stu-id="097f9-120">The input buffer size is not equal to `sizeof(MINIDUMP_EXCEPTION)`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0796b-121">Note</span><span class="sxs-lookup"><span data-stu-id="0796b-121">Remarks</span></span>  
- <span data-ttu-id="0796b-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) è una struttura definita in dbghelp. h e Imagehlp. h in Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="0796b-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) is a structure defined in dbghelp.h and imagehlp.h in the Windows SDK.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="097f9-121">Note</span><span class="sxs-lookup"><span data-stu-id="097f9-121">Remarks</span></span>  
+ <span data-ttu-id="097f9-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) è una struttura definita in dbghelp. h e Imagehlp. h in Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="097f9-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) is a structure defined in dbghelp.h and imagehlp.h in the Windows SDK.</span></span>  
   
- <span data-ttu-id="0796b-123">Questo metodo è implementato dal writer dell'applicazione di debug.</span><span class="sxs-lookup"><span data-stu-id="0796b-123">This method is implemented by the writer of the debugging application.</span></span>  
+ <span data-ttu-id="097f9-123">Questo metodo è implementato dal writer dell'applicazione di debug.</span><span class="sxs-lookup"><span data-stu-id="097f9-123">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0796b-124">Requisiti</span><span class="sxs-lookup"><span data-stu-id="0796b-124">Requirements</span></span>  
- <span data-ttu-id="0796b-125">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0796b-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="097f9-124">Requisiti</span><span class="sxs-lookup"><span data-stu-id="097f9-124">Requirements</span></span>  
+ <span data-ttu-id="097f9-125">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="097f9-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0796b-126">**Intestazione:** Clrdata. idl, Clrdata. H</span><span class="sxs-lookup"><span data-stu-id="0796b-126">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="097f9-126">**Intestazione:** Clrdata. idl, Clrdata. H</span><span class="sxs-lookup"><span data-stu-id="097f9-126">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="0796b-127">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0796b-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="097f9-127">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="097f9-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0796b-128">**Versioni di .NET Framework:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0796b-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span></span>  
+ <span data-ttu-id="097f9-128">**Versioni di .NET Framework:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span><span class="sxs-lookup"><span data-stu-id="097f9-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0796b-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0796b-129">See Also</span></span>  
- [<span data-ttu-id="0796b-130">Interfaccia ICLRDataTarget3</span><span class="sxs-lookup"><span data-stu-id="0796b-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
- [<span data-ttu-id="0796b-131">Metodo GetExceptionContextRecord</span><span class="sxs-lookup"><span data-stu-id="0796b-131">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)  
- [<span data-ttu-id="0796b-132">Metodo GetExceptionThreadID</span><span class="sxs-lookup"><span data-stu-id="0796b-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+## <a name="see-also"></a><span data-ttu-id="097f9-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="097f9-129">See Also</span></span>  
+ [<span data-ttu-id="097f9-130">Interfaccia ICLRDataTarget3</span><span class="sxs-lookup"><span data-stu-id="097f9-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
+ [<span data-ttu-id="097f9-131">Metodo GetExceptionContextRecord</span><span class="sxs-lookup"><span data-stu-id="097f9-131">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)  
+ [<span data-ttu-id="097f9-132">Metodo GetExceptionThreadID</span><span class="sxs-lookup"><span data-stu-id="097f9-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
