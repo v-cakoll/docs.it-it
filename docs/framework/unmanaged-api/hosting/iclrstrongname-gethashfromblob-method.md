@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a489e05435ce160c65e936f448688d69b3a965f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ca958f8472d7f7e1a44ad4ab237f582f92713c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435261"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402738"
 ---
-# <a name="iclrstrongnamegethashfromblob-method"></a><span data-ttu-id="5739d-102">Metodo ICLRStrongName::GetHashFromBlob</span><span class="sxs-lookup"><span data-stu-id="5739d-102">ICLRStrongName::GetHashFromBlob Method</span></span>
-<span data-ttu-id="5739d-103">Ottiene un hash dell'assembly nell'indirizzo di memoria specificata, utilizzando l'algoritmo hash specificato.</span><span class="sxs-lookup"><span data-stu-id="5739d-103">Gets a hash of the assembly at the specified memory address, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamegethashfromblob-method"></a><span data-ttu-id="66498-102">Metodo ICLRStrongName::GetHashFromBlob</span><span class="sxs-lookup"><span data-stu-id="66498-102">ICLRStrongName::GetHashFromBlob Method</span></span>
+<span data-ttu-id="66498-103">Ottiene un hash dell'assembly in corrispondenza dell'indirizzo di memoria specificata, usando l'algoritmo hash specificato.</span><span class="sxs-lookup"><span data-stu-id="66498-103">Gets a hash of the assembly at the specified memory address, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5739d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5739d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66498-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="66498-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromBlob (  
@@ -40,36 +40,36 @@ HRESULT GetHashFromBlob (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5739d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="5739d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="66498-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="66498-105">Parameters</span></span>  
  `pbBlob`  
- <span data-ttu-id="5739d-106">[in] Un puntatore all'indirizzo del blocco di memoria per eseguire l'hashing.</span><span class="sxs-lookup"><span data-stu-id="5739d-106">[in] A pointer to the address of the memory block to be hashed.</span></span>  
+ <span data-ttu-id="66498-106">[in] Un puntatore all'indirizzo del blocco di memoria per eseguire l'hashing.</span><span class="sxs-lookup"><span data-stu-id="66498-106">[in] A pointer to the address of the memory block to be hashed.</span></span>  
   
  `cchBlob`  
- <span data-ttu-id="5739d-107">[in] La lunghezza, espressa in byte, del blocco di memoria.</span><span class="sxs-lookup"><span data-stu-id="5739d-107">[in] The length, in bytes, of the memory block.</span></span>  
+ <span data-ttu-id="66498-107">[in] La lunghezza, espressa in byte, del blocco di memoria.</span><span class="sxs-lookup"><span data-stu-id="66498-107">[in] The length, in bytes, of the memory block.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="5739d-108">[in, out] Costante che specifica l'algoritmo hash.</span><span class="sxs-lookup"><span data-stu-id="5739d-108">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="5739d-109">Utilizzare zero per l'algoritmo predefinito.</span><span class="sxs-lookup"><span data-stu-id="5739d-109">Use zero for the default algorithm.</span></span>  
+ <span data-ttu-id="66498-108">[in, out] Costante che specifica l'algoritmo hash.</span><span class="sxs-lookup"><span data-stu-id="66498-108">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="66498-109">Usa lo zero per l'algoritmo predefinito.</span><span class="sxs-lookup"><span data-stu-id="66498-109">Use zero for the default algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="5739d-110">[out] Il buffer di hash restituito.</span><span class="sxs-lookup"><span data-stu-id="5739d-110">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="66498-110">[out] Il buffer di hash restituito.</span><span class="sxs-lookup"><span data-stu-id="66498-110">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="5739d-111">[in] La dimensione massima richiesta del `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="5739d-111">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="66498-111">[in] La dimensione massima richiesta del `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="66498-111">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="5739d-112">[out] Le dimensioni, in byte, dell'oggetto restituito `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="5739d-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
+ <span data-ttu-id="66498-112">[out] Le dimensioni, in byte, del valore restituito `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="66498-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5739d-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="5739d-113">Return Value</span></span>  
- <span data-ttu-id="5739d-114">`S_OK` Se il metodo viene completato correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](http://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).</span><span class="sxs-lookup"><span data-stu-id="5739d-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="66498-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="66498-113">Return Value</span></span>  
+ <span data-ttu-id="66498-114">`S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).</span><span class="sxs-lookup"><span data-stu-id="66498-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5739d-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5739d-115">Requirements</span></span>  
- <span data-ttu-id="5739d-116">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5739d-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="66498-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="66498-115">Requirements</span></span>  
+ <span data-ttu-id="66498-116">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="66498-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5739d-117">**Intestazione:** Metahost. H</span><span class="sxs-lookup"><span data-stu-id="5739d-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="66498-117">**Intestazione:** Metahost. H</span><span class="sxs-lookup"><span data-stu-id="66498-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="5739d-118">**Libreria:** inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="5739d-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="66498-118">**Libreria:** inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="66498-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5739d-119">**Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5739d-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="66498-119">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66498-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5739d-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5739d-120">See Also</span></span>  
- [<span data-ttu-id="5739d-121">Interfaccia ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="5739d-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="66498-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="66498-120">See Also</span></span>  
+ [<span data-ttu-id="66498-121">Interfaccia ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="66498-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
