@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 2b0441dfebb6692cbea0d1ab7909d7b8f04490cb
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 30e4942934e5d65b214d24a0948f70169d625485
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "34457608"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461076"
 ---
 # <a name="c-operators"></a>Operatori [C#]
 C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (matematiche, indicizzazione, chiamate di funzione e così via) eseguire in un'espressione. È possibile eseguire l'[overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) di diversi operatori per cambiarne il significato quando vengono applicati a un tipo definito dall'utente.  
@@ -207,10 +207,11 @@ C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (
 -   L'overflow aritmetico a virgola mobile o la divisione per zero non genera mai un'eccezione, perché i tipi a virgola mobile si basano su IEEE 754 e quindi dispongono del provisioning per la rappresentazione dell'infinito e di NaN (Not a Number).  
   
 -   L'overflow aritmetico [decimale](../../../csharp/language-reference/keywords/decimal.md) genera sempre un'eccezione <xref:System.OverflowException>. La divisione di decimali per zero genera sempre un'eccezione <xref:System.DivideByZeroException>.  
-  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [C#](../../../csharp/index.md) [Operatori che supportano l'overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [C#](../../../csharp/index.md)
+- [Operatori che supportano l'overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
