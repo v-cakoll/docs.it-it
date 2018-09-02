@@ -9,51 +9,51 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 2dd048fb074d1ec5bb7bc0a67f196d5d51281545
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528477"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422549"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Procedura: aggiungere controlli a un Windows Form
-La maggior parte dei moduli sono progettati con l'aggiunta di controlli all'area del modulo per definire un'interfaccia utente (UI). Oggetto *controllo* è un componente in un form utilizzato per visualizzare informazioni o accettare l'input dell'utente. Per ulteriori informazioni sui controlli, vedere [controlli Windows Form](../../../../docs/framework/winforms/controls/index.md).  
+La maggior parte dei moduli sono progettati con l'aggiunta di controlli alla superficie del form per definire l'interfaccia utente (UI). Oggetto *controllo* è un componente in un formato utilizzato per visualizzare informazioni o accettare l'input dell'utente. Per altre informazioni sui controlli, vedere [Windows Forms Controls](../../../../docs/framework/winforms/controls/index.md).  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-draw-a-control-on-a-form"></a>Per disegnare un controllo in un form  
   
-1.  Aprire il form. Per ulteriori informazioni, vedere [procedura: visualizzare Windows Form nella finestra di progettazione](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Aprire il form. Per altre informazioni, vedere [procedura: visualizzare Windows Form nella finestra di progettazione](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
-2.  Nel **della casella degli strumenti**, fare clic sul controllo a cui si desidera aggiungere al form.  
+2.  Nel **casella degli strumenti**, fare clic sul controllo da aggiungere al form.  
   
-3.  Nel form, fare clic nel punto nell'angolo superiore sinistro del controllo deve essere collocato e trascinare nella posizione desiderata nell'angolo in basso a destra del controllo da individuare.  
+3.  Nel form, fare clic su cui l'angolo superiore sinistro del controllo da trovare e trascinare in cui si desidera l'angolo inferiore destro del controllo da individuare.  
   
      Il controllo viene aggiunto al form con il percorso specificato e le dimensioni.  
   
     > [!NOTE]
-    >  Ogni controllo ha dimensioni predefinite. È possibile aggiungere un controllo al form nella dimensione predefinita del controllo trascinandolo dal **della casella degli strumenti** al form.  
+    >  Ogni controllo ha una dimensione predefinita definita. È possibile aggiungere un controllo al form nella dimensione predefinita del controllo trascinandolo dal **casella degli strumenti** al form.  
   
-### <a name="to-drag-a-control-to-a-form"></a>Trascinare un controllo in un form  
+### <a name="to-drag-a-control-to-a-form"></a>Trascinare un controllo a un form  
   
-1.  Aprire il form. Per ulteriori informazioni, vedere [procedura: visualizzare Windows Form nella finestra di progettazione](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Aprire il form. Per altre informazioni, vedere [procedura: visualizzare Windows Form nella finestra di progettazione](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
-2.  Nel **della casella degli strumenti**, scegliere il controllo desiderato e trascinarlo nel form.  
+2.  Nel **casella degli strumenti**, scegliere il controllo desiderato e trascinarlo nel form.  
   
      Il controllo viene aggiunto al form nella posizione specificata nella dimensione predefinita.  
   
     > [!NOTE]
-    >  È possibile fare doppio clic su un controllo nel **della casella degli strumenti** verrà aggiunto nell'angolo superiore sinistro del form nella dimensione predefinita.  
+    >  È possibile fare doppio clic su un controllo nel **casella degli strumenti** per aggiungerlo all'angolo superiore sinistro del form nella dimensione predefinita.  
   
-     È anche possibile aggiungere controlli in modo dinamico a un form in fase di esecuzione. Nell'esempio di codice seguente, un <xref:System.Windows.Forms.TextBox> controllo verrà aggiunto al form quando un <xref:System.Windows.Forms.Button> si fa clic sul controllo.  
+     È anche possibile aggiungere dinamicamente controlli a un form in fase di esecuzione. Nell'esempio di codice seguente, un <xref:System.Windows.Forms.TextBox> controllo verrà aggiunto al modulo quando un <xref:System.Windows.Forms.Button> si fa clic sul controllo.  
   
     > [!NOTE]
-    >  La procedura seguente presuppone l'esistenza di un form con un **pulsante** controllo `Button1`, già posizionato su di esso.  
+    >  La procedura seguente presuppone l'esistenza di un form con un **sul pulsante** controllo `Button1`, già posizionato su di esso.  
   
 ### <a name="to-add-a-control-to-a-form-programmatically"></a>Per aggiungere un controllo a un form a livello di codice  
   
-1.  Nel metodo che gestisce il pulsante `Click` evento all'interno della classe del form, inserire codice simile al seguente per aggiungere un riferimento alla variabile di controllo, imposta il controllo `Location`e aggiungere il controllo.  
+1.  Nel metodo che gestisce il pulsante `Click` evento all'interno di classe del modulo, inserire il codice simile al seguente per aggiungere un riferimento alla variabile di controllo, imposta il controllo `Location`e aggiungere il controllo.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -84,10 +84,10 @@ La maggior parte dei moduli sono progettati con l'aggiunta di controlli all'area
     ```  
   
     > [!NOTE]
-    >  È anche possibile aggiungere codice per inizializzare altre proprietà del controllo.  
+    >  È anche possibile aggiungere codice per inizializzare le altre proprietà del controllo.  
   
     > [!IMPORTANT]
-    >  Si potrebbe esporre il computer locale a un rischio per la sicurezza attraverso la rete facendo riferimento a un malintenzionato `UserControl`. Questo potrebbe essere solo un problema nel caso di un utente con un controllo personalizzato, seguito da si aggiunga al progetto.  
+    >  Si potrebbe esporre il computer locale a un rischio per la sicurezza attraverso la rete facendo riferimento a un malintenzionato `UserControl`. Questa è solo un problema nel caso di un utente con un controllo personalizzato, seguito dall'utente erroneamente aggiungendolo al progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Controlli Windows Form](../../../../docs/framework/winforms/controls/index.md)  

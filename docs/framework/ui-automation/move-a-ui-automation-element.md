@@ -12,16 +12,16 @@ ms.assetid: 4042cb44-e27e-4a03-ac36-9be1eed65b47
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: dc60887aaf21db996ad12dade2cece794bffd37b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb239adc6dfb11c83fb983a41ea40ad8bf714038
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403657"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418860"
 ---
 # <a name="move-a-ui-automation-element"></a>Spostare un elemento di automazione interfaccia utente
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questo esempio viene illustrato come spostare un elemento [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in una posizione dello schermo specificata.  
   
@@ -34,4 +34,4 @@ ms.locfileid: "33403657"
 [!code-vb[WindowMove#1300](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowMove/VisualBasic/windowmove.vb#1300)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di WindowPattern](http://msdn.microsoft.com/library/598b695c-8baf-406e-bbfb-2a1c7842a1de)
+ [Esempio WindowPattern](https://msdn.microsoft.com/library/598b695c-8baf-406e-bbfb-2a1c7842a1de)

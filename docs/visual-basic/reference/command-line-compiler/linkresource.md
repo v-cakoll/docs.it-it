@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 38740ed7ab7904feb2ca95eb70c916fbdbaef71e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f4b3db768b5466f8912b66a0a4709d0f773c1f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654343"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425518"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 Crea un collegamento a una risorsa gestita.  
@@ -29,27 +29,27 @@ Crea un collegamento a una risorsa gestita.
   
 ## <a name="arguments"></a>Argomenti  
  `filename`  
- Obbligatorio. File di risorse da collegare all'assembly. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette ("").  
+ Obbligatorio. Il file di risorse da collegare all'assembly. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette ("").  
   
  `identifier`  
- Facoltativo. Il nome logico per la risorsa. Il nome utilizzato per caricare la risorsa. L'impostazione predefinita corrisponde al nome del file. Facoltativamente, è possibile specificare se il file è pubblica o privata nel manifesto dell'assembly, ad esempio: `-linkres:filename.res,myname.res,public`. Per impostazione predefinita, `filename` è pubblico nell'assembly.  
+ Facoltativo. Il nome logico per la risorsa. Il nome usato per caricare la risorsa. L'impostazione predefinita corrisponde al nome del file. Facoltativamente, è possibile specificare se il file è pubblica o privata nel manifesto dell'assembly, ad esempio: `-linkres:filename.res,myname.res,public`. Per impostazione predefinita, `filename` è pubblico nell'assembly.  
   
 ## <a name="remarks"></a>Note  
- Il `-linkresource` opzione consente di incorporare il file di risorse nel file di output, utilizzare il `-resource` opzione per eseguire questa operazione.  
+ Il `-linkresource` opzione consente di incorporare il file di risorse nel file di output, usare il `-resource` opzione per eseguire questa operazione.  
   
- Il `-linkresource` necessaria un'opzione di `-target` diversa da `-target:module`.  
+ Il `-linkresource` necessaria un'opzione il `-target` diversa da `-target:module`.  
   
- Se `filename` è un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse creato, ad esempio, mediante il [Resgen.exe (Generatore di File di risorse)](http://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) oppure nell'ambiente di sviluppo, è possibile accedervi con i membri il <xref:System.Resources> dello spazio dei nomi. Per altre informazioni, vedere <xref:System.Resources.ResourceManager>. Per accedere a tutte le altre risorse in fase di esecuzione, utilizzare i metodi che iniziano con `GetManifestResource` nel <xref:System.Reflection.Assembly> classe.  
+ Se `filename` è un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse creato, ad esempio, mediante il [Resgen.exe (Resource File Generator)](https://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri di <xref:System.Resources> dello spazio dei nomi. Per altre informazioni, vedere <xref:System.Resources.ResourceManager>. Per accedere a tutte le altre risorse in fase di esecuzione, usare i metodi che iniziano con `GetManifestResource` nella <xref:System.Reflection.Assembly> classe.  
   
- Il nome del file può essere qualsiasi formato di file. Può ad esempio risultare opportuno rendere una DLL nativa parte dell'assembly in modo che possa essere installata nella Global Assembly Cache e che sia possibile accedervi dal codice gestito nell'assembly.  
+ Il nome del file può avere qualsiasi formato di file. Può ad esempio risultare opportuno rendere una DLL nativa parte dell'assembly in modo che possa essere installata nella Global Assembly Cache e che sia possibile accedervi dal codice gestito nell'assembly.  
   
  La forma breve di `-linkresource` è `-linkres`.  
   
 > [!NOTE]
->  Il `-linkresource` opzione non è disponibile dall'ambiente di sviluppo di Visual Studio; è disponibile solo quando esegue la compilazione dalla riga di comando.  
+>  Il `-linkresource` opzione non è disponibile dall'ambiente di sviluppo Visual Studio, è disponibile solo quando esegue la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente Compila `in.vb` e collegamenti a file di risorse `rf.resource`.  
+ Il codice seguente Compila `in.vb` e i collegamenti al file di risorse `rf.resource`.  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  

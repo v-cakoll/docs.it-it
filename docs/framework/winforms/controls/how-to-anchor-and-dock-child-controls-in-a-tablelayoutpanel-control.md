@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: eee67d739de13b125aa1eb8ee86de19ba645a2f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad09c30b2118a08f4249433c4f531e5bcef4acd5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529097"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418952"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Procedura: agganciare e ancorare controlli figlio in un controllo TableLayoutPanel
 Il controllo <xref:System.Windows.Forms.TableLayoutPanel> supporta le proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> nei controlli figlio.  
@@ -26,7 +26,7 @@ Il controllo <xref:System.Windows.Forms.TableLayoutPanel> supporta le proprietà
   
 1.  Creare un controllo <xref:System.Windows.Forms.TableLayoutPanel> nel form.  
   
-2.  Impostare il valore della <xref:System.Windows.Forms.TableLayoutPanel> del controllo <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> e <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> proprietà **1**.  
+2.  Impostare il valore della <xref:System.Windows.Forms.TableLayoutPanel> del controllo <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> e <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> delle proprietà per **1**.  
   
 3.  Creare un controllo <xref:System.Windows.Forms.Button> nel controllo <xref:System.Windows.Forms.TableLayoutPanel>. <xref:System.Windows.Forms.Button> occupa l'angolo superiore sinistro della cella.  
   
@@ -37,7 +37,7 @@ Il controllo <xref:System.Windows.Forms.TableLayoutPanel> supporta le proprietà
   
 5.  Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Anchor%2A>, su `Top, Left`. Il controllo <xref:System.Windows.Forms.Button> viene spostato in modo che occupi l'angolo superiore sinistro della cella.  
   
-6.  Ripetere il passaggio 5 con un valore di `Top, Right` per spostare il <xref:System.Windows.Forms.Button> controllo nell'angolo superiore destro della cella. Ripetere l'operazione con i valori di `Bottom, Left` e `Bottom, Right`.  
+6.  Ripetere il passaggio 5 con un valore di `Top, Right` spostare il <xref:System.Windows.Forms.Button> controllo nell'angolo superiore destro della cella. Ripetere l'operazione con i valori di `Bottom, Left` e `Bottom, Right`.  
   
 ### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>Per estendere un controllo figlio in una cella TableLayoutPanel  
   
@@ -82,7 +82,7 @@ Il controllo <xref:System.Windows.Forms.TableLayoutPanel> supporta le proprietà
   
 -   Riferimenti agli assembly System, System.Data, System.Drawing e System.Windows.Forms.  
   
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo con Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Per informazioni sulla compilazione di questo esempio dalla riga di comando per visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Forms.TableLayoutPanel>  

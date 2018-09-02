@@ -2,15 +2,15 @@
 title: Protezione dei messaggi in WCF
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 27f8354cf4d96f8da408cffa3cef42ab9609c76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81d9acde3c8fab1860904074199066cca55c7186
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493891"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420801"
 ---
 # <a name="message-security-in-wcf"></a>Protezione dei messaggi in WCF
-Windows Communication Foundation (WCF) sono disponibili due modalità principali per garantire la protezione (`Transport` e `Message`) e una terza modalità (`TransportWithMessageCredential`) che combina i due. In questo argomento viene illustrata la sicurezza dei messaggi e i motivi per cui è consigliabile utilizzarla.  
+Windows Communication Foundation (WCF) sono disponibili due modalità principali per fornire una sicurezza (`Transport` e `Message`) e una terza modalità (`TransportWithMessageCredential`) che combina i due. In questo argomento viene illustrata la sicurezza dei messaggi e i motivi per cui è consigliabile utilizzarla.  
   
 ## <a name="what-is-message-security"></a>Informazioni sulla sicurezza dei messaggi  
  La sicurezza dei messaggi si avvale della specifica WS-Security per proteggere i messaggi. Tale specifica descrive i miglioramenti apportati alla messaggistica SOAP per assicurare riservatezza, integrità e autenticazione a livello di messaggio SOAP (anziché a livello del trasporto).  
@@ -22,11 +22,11 @@ Windows Communication Foundation (WCF) sono disponibili due modalità principali
   
 -   Protezione end-to-end. La sicurezza del trasporto, ad esempio Secure Sockets Layer (SSL), protegge i messaggi solo quando la comunicazione è da punto a punto. Se il messaggio viene instradato a uno o più intermediari SOAP (ad esempio un router) prima di raggiungere il destinatario finale, il messaggio stesso non è più protetto dopo essere stato letto da un intermediario durante la trasmissione. Inoltre, le informazioni di autenticazione del client sono disponibili solo per il primo intermediario e devono essere ritrasmesse al destinatario finale in modalità fuori banda, se necessario. Questo si applica anche se l'intera route utilizza la protezione SSL tra i singoli hop. Poiché la sicurezza dei messaggi si applica direttamente al messaggio e protegge il codice XML in esso contenuto, la sicurezza segue il messaggio indipendentemente dal numero di intermediari coinvolti prima che il messaggio raggiunga il destinatario finale. Ciò rende possibile un reale scenario di sicurezza end-to-end.  
   
--   Maggiore flessibilità. È possibile firmare o crittografare parti del messaggio, anziché l'intero messaggio. Di conseguenza, gli intermediari possono visualizzare le parti del messaggio destinate a loro. Se il mittente vuole rendere visibili alcune informazioni nel messaggio agli intermediari ma vuole assicurare che non vengano manomesse, può scegliere di firmarlo solamente, senza crittografarlo. Poiché la firma è parte del messaggio, il destinatario finale può verificare che le informazioni nel messaggio siano state ricevute intatte. In uno scenario potrebbe essere presente un servizio intermedio SOAP che indirizza il messaggio secondo il valore dell'intestazione Action. Per impostazione predefinita, WCF non crittografa il valore Action ma lo firma se viene utilizzata la sicurezza dei messaggi. Pertanto, queste informazioni sono disponibili a tutti gli intermediari, ma nessuno può modificarle.  
+-   Maggiore flessibilità. È possibile firmare o crittografare parti del messaggio, anziché l'intero messaggio. Di conseguenza, gli intermediari possono visualizzare le parti del messaggio destinate a loro. Se il mittente vuole rendere visibili alcune informazioni nel messaggio agli intermediari ma vuole assicurare che non vengano manomesse, può scegliere di firmarlo solamente, senza crittografarlo. Poiché la firma è parte del messaggio, il destinatario finale può verificare che le informazioni nel messaggio siano state ricevute intatte. In uno scenario potrebbe essere presente un servizio intermedio SOAP che indirizza il messaggio secondo il valore dell'intestazione Action. Per impostazione predefinita, WCF non consente di crittografare il valore dell'azione, ma lo firma se viene utilizzata la sicurezza dei messaggi. Pertanto, queste informazioni sono disponibili a tutti gli intermediari, ma nessuno può modificarle.  
   
 -   Supporto di più trasporti. È possibile inviare messaggi protetti sui più trasporti diversi, ad esempio named pipe e TCP, senza dover utilizzare il protocollo per la protezione. Con la protezione a livello di trasporto, tutte le informazioni di sicurezza sono limitate all'ambito di una sola particolare connessione del trasporto e non sono disponibili dal contenuto del messaggio stesso. La sicurezza dei messaggi protegge il messaggio indipendentemente dal trasporto utilizzato per trasmettere il messaggio e il contesto di sicurezza è direttamente incorporato nel messaggio.  
   
--   Supporto per un ampio set di credenziali e attestazioni. La sicurezza dei messaggi è basata sulla specifica WS-Security che fornisce un framework estensibile capace di trasmettere qualsiasi tipo di attestazione all'interno del messaggio SOAP. A differenza della sicurezza del trasporto, il set di meccanismi di autenticazione, o attestazioni, che è possibile utilizzare non è limitato dalle funzionalità di trasporto. Sicurezza dei messaggi WCF include più tipi di autenticazione e trasmissione delle attestazioni e può essere estesa per supportare tipi aggiuntivi in base alle esigenze. Per questi motivi, ad esempio, un scenario di credenziali federate non è possibile senza la sicurezza dei messaggi. Per ulteriori informazioni sulla federazione scenari WCF supporta, vedere [federazione e i token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+-   Supporto per un ampio set di credenziali e attestazioni. La sicurezza dei messaggi è basata sulla specifica WS-Security che fornisce un framework estensibile capace di trasmettere qualsiasi tipo di attestazione all'interno del messaggio SOAP. A differenza della sicurezza del trasporto, il set di meccanismi di autenticazione, o attestazioni, che è possibile utilizzare non è limitato dalle funzionalità di trasporto. Sicurezza dei messaggi WCF include più tipi di autenticazione e trasmissione delle attestazioni e può essere estesa per supportare tipi aggiuntivi in base alle esigenze. Per questi motivi, ad esempio, un scenario di credenziali federate non è possibile senza la sicurezza dei messaggi. Per altre informazioni sulla federazione scenari WCF supporta, vedere [federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="how-message-and-transport-security-compare"></a>Confronto tra la sicurezza dei messaggi e del trasporto  
   
@@ -62,4 +62,4 @@ Windows Communication Foundation (WCF) sono disponibili due modalità principali
  [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security.md)  
  [Procedura: Usare le funzionalità di sicurezza del trasporto e le credenziali a livello di messaggio](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
- [Microsoft Patterns and Practices, capitolo 3: implementazione di trasporto e messaggio di sicurezza di livello](http://go.microsoft.com/fwlink/?LinkId=88897)
+ [Microsoft Patterns and Practices, capitolo 3: implementazione di trasporto e messaggio di sicurezza di livello](https://go.microsoft.com/fwlink/?LinkId=88897)

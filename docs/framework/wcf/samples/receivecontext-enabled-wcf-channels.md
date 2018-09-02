@@ -2,12 +2,12 @@
 title: Canali WCF abilitati per ReceiveContext
 ms.date: 03/30/2017
 ms.assetid: d990d119-7321-4b8c-852b-10256f59f9b0
-ms.openlocfilehash: 3e5ac914ae4d0c97ed617ea4a8d5a893ec740179
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f80d0874606129876fbf7dfa30c0327680b922
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502934"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442746"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>Canali WCF abilitati per ReceiveContext
 In questo esempio viene illustrata l'utilità dei canali WCF abilitati per <xref:System.ServiceModel.Channels.ReceiveContext>. In questo esempio viene implementato un servizio per trovare il prodotto di due numeri usando un canale NetMSMQ.  
@@ -19,7 +19,7 @@ In questo esempio viene illustrata l'utilità dei canali WCF abilitati per <xref
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\ReceiveContextProductGenerator`  
   
@@ -29,25 +29,25 @@ In questo esempio viene illustrata l'utilità dei canali WCF abilitati per <xref
   
     1.  Per installare MSMQ in [!INCLUDE[lserver](../../../../includes/lserver-md.md)]  
   
-        1.  In **Server Manager**, fare clic su **funzionalità**.  
+        1.  Nelle **Server Manager**, fare clic su **funzionalità**.  
   
-        2.  Nel riquadro destro selezionare **Riepilogo funzionalità**, fare clic su **Aggiungi funzionalità**.  
+        2.  Nel riquadro destro sotto **Riepilogo funzionalità**, fare clic su **Aggiungi funzionalità**.  
   
-        3.  Nella finestra risulta, espandere **Accodamento**.  
+        3.  Nella finestra risulta, espandere **Accodamento messaggi**.  
   
         4.  Espandere **servizi di accodamento dei messaggi**.  
   
         5.  Fare clic su **integrazione servizi Directory** (per i computer aggiunti a un dominio), quindi fare clic su **supporto HTTP**.  
   
-        6.  Fare clic su **Avanti**, quindi fare clic su **installare**.  
+        6.  Fare clic su **successivo**, quindi fare clic su **installare**.  
   
     2.  Per installare MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)]  
   
         1.  Aprire il **Pannello di controllo**.  
   
-        2.  Fare clic su **programmi** e quindi in **programmi e funzionalità**, fare clic su **funzionalità di Windows di attivare e disattivare**.  
+        2.  Fare clic su **i programmi** e quindi selezionare **programmi e funzionalità**, fare clic su **Attiva funzionalità Windows attivare e disattivare**.  
   
-        3.  Espandere **Microsoft Message Queue (MSMQ) Server**, espandere **Microsoft Message Queue (MSMQ) Server Core**, quindi selezionare le caselle di controllo per le seguenti funzionalità installare il servizio Accodamento messaggi:  
+        3.  Espandere **Microsoft Message Queue (MSMQ) Server**, espandere **Microsoft Message Queue (MSMQ) Server Core**e quindi selezionare le caselle di controllo per le seguenti funzionalità installare Accodamento messaggi:  
   
             -   Message Queuing Server  
   

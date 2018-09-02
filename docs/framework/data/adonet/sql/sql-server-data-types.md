@@ -2,17 +2,17 @@
 title: Mapping dei tipi di dati SQL Server e ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: da98ac72fab0bc3934cef79aeec9b12d003b6888
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 878bbe41f259f1e50cd0a41669c7a352e78bc0f1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363502"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424353"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Mapping dei tipi di dati SQL Server e ADO.NET
 SQL Server e .NET Framework sono basati su sistemi di tipi diversi che possono comportare una potenziale perdita di dati. Per mantenere l'integrità dei dati, il provider di dati .NET Framework per SQL Server (<xref:System.Data.SqlClient>) fornisce metodi delle funzioni di accesso tipizzate per l'uso dei dati SQL Server. È possibile usare le enumerazioni nelle classi <xref:System.Data.SqlDbType> per specificare i tipi di dati <xref:System.Data.SqlClient.SqlParameter>.  
   
- Per ulteriori informazioni e una tabella che descrive i dati di tipo di mapping tra SQL Server e i tipi di dati .NET Framework, vedere [mapping dei tipi di dati di SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md).  
+ Per altre informazioni e una tabella che descrive i dati di tipo i mapping tra SQL Server e i tipi di dati .NET Framework, vedere [mapping dei tipi di dati di SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md).  
   
  In SQL Server 2008 vengono introdotti nuovi tipi di dati progettati per soddisfare le esigenze aziendali di uso di dati relativi a data e ora, strutturati, semistrutturati e non strutturati. Questi tipi sono illustrati nella documentazione online di SQL Server 2008.  
   
@@ -20,7 +20,7 @@ SQL Server e .NET Framework sono basati su sistemi di tipi diversi che possono c
   
  **Documentazione online di SQL Server**  
   
-1.  [Tipi di dati (motore di Database)](http://go.microsoft.com/fwlink/?LinkID=107468)  
+1.  [Tipi di dati (motore di Database)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [SqlTypes e DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
@@ -59,4 +59,4 @@ SQL Server e .NET Framework sono basati su sistemi di tipi diversi che possono c
  [Configurazione di parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [Parametri valutati a livello di tabella](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  [Dati binari e con valori elevati SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Utilizzo delle attività di raccolta
 ms.date: 03/30/2017
 ms.assetid: e1977cf8-1695-4071-b946-7046fe39601e
-ms.openlocfilehash: 3c30a7fb46d9b155ec645a7b6845715d808d63b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a92208583ddf1c0d5d85b5af6a250a15ac8851b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516597"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422627"
 ---
 # <a name="using-collection-activities"></a>Utilizzo delle attività di raccolta
 In questo esempio viene illustrato come usare le attività della raccolta (<xref:System.Activities.Statements.AddToCollection%601>, <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601> e <xref:System.Activities.Statements.RemoveFromCollection%601>) con una classe che implementa l'interfaccia <xref:System.Collections.ICollection> e come creare un'attività personalizzata che scorre una raccolta per stampare il contenuto di ogni elemento nella raccolta. L'attività personalizzata, denominata `PrintCollection`, stampa nella console i membri degli elementi di una raccolta denominata `Numbers`.  
@@ -25,8 +25,8 @@ In questo esempio viene illustrato come usare le attività della raccolta (<xref
   
 |Soluzione|Descrizione|File principali|  
 |-|-|-|  
-|CodedWorkflow|Applicazione client di esempio in cui viene illustrato come richiamare a livello di codice le attività della raccolta.|**PrintCollection.cs**: attività di supporto per stampare la console di ogni elemento in una raccolta.<br /><br /> **Program.cs**: Compila a livello di codice un'attività sequence che contiene una serie di attività della raccolta e la esegue.|  
-|DesignerWorkflow|Applicazione client di esempio in cui viene illustrato come usare le attività della raccolta in modo dichiarativo nella progettazione flussi di lavoro.|**Collectionworkflow**: un flusso di lavoro creato in modo dichiarativo con la finestra di progettazione che usa le attività della raccolta.<br /><br /> **PrintCollection.cs**: attività di supporto per stampare la console di ogni elemento in una raccolta.<br /><br /> **Program.cs**: richiama il flusso di lavoro descritto in Collectionworkflow.|  
+|CodedWorkflow|Applicazione client di esempio in cui viene illustrato come richiamare a livello di codice le attività della raccolta.|**PrintCollection.cs**: attività di supporto per stampare sulla console ogni elemento in una raccolta.<br /><br /> **Program.cs**: a livello di codice crea un'attività sequence che contiene una serie di attività della raccolta e la esegue.|  
+|DesignerWorkflow|Applicazione client di esempio in cui viene illustrato come usare le attività della raccolta in modo dichiarativo nella progettazione flussi di lavoro.|**Collectionworkflow**: flusso di lavoro creato in modo dichiarativo con la finestra di progettazione che usa le attività della raccolta.<br /><br /> **PrintCollection.cs**: attività di supporto per stampare sulla console ogni elemento in una raccolta.<br /><br /> **Program.cs**: richiama il flusso di lavoro descritto in Collectionworkflow.|  
   
  Nella dimostrazione, i membri degli elementi della raccolta `Numbers` vengono stampati nella console usando un'attività personalizzata denominata `PrintCollection`.  
   
@@ -43,6 +43,6 @@ In questo esempio viene illustrato come usare le attività della raccolta (<xref
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Collection`

@@ -2,12 +2,12 @@
 title: 'Codificatore di messaggi personalizzato: codificatore di testi personalizzato'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 369706ecdc2e37a5fb62a448a273b045fe424df8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: aeb1690d7ead9116bd9c4afe3c64d65d8f51ad50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808065"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418826"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Codificatore di messaggi personalizzato: codificatore di testi personalizzato
 In questo esempio viene illustrato come implementare un codificatore di messaggi di testo personalizzato utilizzando Windows Communication Foundation (WCF).  
@@ -17,7 +17,7 @@ In questo esempio viene illustrato come implementare un codificatore di messaggi
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`  
   
@@ -41,14 +41,14 @@ In questo esempio viene illustrato come implementare un codificatore di messaggi
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Per compilare la soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>Factory di codificatori di messaggi e codificatori dei messaggi.  
- Quando la classe <xref:System.ServiceModel.ServiceHost> o il canale client vengono aperti, il componente della fase di progettazione `CustomTextMessageBindingElement` crea `CustomTextMessageEncoderFactory`. La factory crea `CustomTextMessageEncoder`. Il codificatore di messaggi aziona entrambi in modalità di trasmissione e in modalità di memorizzazione nel buffer. Utilizza le classi <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> per leggere e scrivere i messaggi, rispettivamente. Ottimizzato lettori XML e i writer di WCF che supportano solo UTF-8, UTF-16 e Big endian Unicode, questi lettori e writer supportano ogni piattaforma supportata codifica.  
+ Quando la classe <xref:System.ServiceModel.ServiceHost> o il canale client vengono aperti, il componente della fase di progettazione `CustomTextMessageBindingElement` crea `CustomTextMessageEncoderFactory`. La factory crea `CustomTextMessageEncoder`. Il codificatore di messaggi aziona entrambi in modalità di trasmissione e in modalità di memorizzazione nel buffer. Utilizza le classi <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> per leggere e scrivere i messaggi, rispettivamente. Anziché l'ottimizzato lettori e writer XML di WCF che supportano solo UTF-8, UTF-16 e Big endian Unicode questi lettori e writer supportano ogni piattaforma supportata codifica.  
   
  Nel codice seguente viene illustrato il codificatore di messaggio personalizzato.  
   
@@ -191,11 +191,11 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 ```  
   
 ## <a name="message-encoding-binding-element"></a>Elemento di associazione di codifica dei messaggi  
- Gli elementi di associazione consentono la configurazione dello stack di runtime WCF. Per utilizzare il codificatore di messaggi personalizzato in un'applicazione WCF, è necessario un elemento di associazione che crea la factory del codificatore di messaggi con le impostazioni appropriate al livello appropriato nello stack di runtime.  
+ Gli elementi di associazione consentono la configurazione dello stack di runtime WCF. Per usare il codificatore di messaggi personalizzato in un'applicazione WCF, è necessario un elemento di associazione che crea la factory di codificatori di messaggi con le impostazioni appropriate al livello appropriato nello stack di runtime.  
   
- La classe `CustomTextMessageBindingElement` deriva dalla classe base <xref:System.ServiceModel.Channels.BindingElement> ed eredita dalla classe <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. In questo modo altri componenti WCF di riconoscere questo elemento di associazione come un elemento associazione di codifica dei messaggi. L'implementazione del metodo <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> restituisce un'istanza della factory del codificatore di messaggi corrispondente con le impostazioni appropriate.  
+ La classe `CustomTextMessageBindingElement` deriva dalla classe base <xref:System.ServiceModel.Channels.BindingElement> ed eredita dalla classe <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. In questo modo agli altri componenti WCF di riconoscere questo elemento di associazione come un elemento di binding codifica messaggi. L'implementazione del metodo <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> restituisce un'istanza della factory del codificatore di messaggi corrispondente con le impostazioni appropriate.  
   
- `CustomTextMessageBindingElement` espone impostazioni per `MessageVersion`, `ContentType` e `Encoding` tramite proprietà. Il codificatore supporta le versioni Soap11Addressing e Soap12Addressing1. L'impostazione predefinita è Soap11Addressing1. Il valore predefinito della proprietà `ContentType` è "text/xml". La proprietà `Encoding` consente di impostare il valore della codifica dei caratteri desiderata. Il client di esempio e il servizio utilizza la codifica dei caratteri ISO-8859-1 (Latin1), che non è supportato per il <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> di WCF.  
+ `CustomTextMessageBindingElement` espone impostazioni per `MessageVersion`, `ContentType` e `Encoding` tramite proprietà. Il codificatore supporta le versioni Soap11Addressing e Soap12Addressing1. L'impostazione predefinita è Soap11Addressing1. Il valore predefinito della proprietà `ContentType` è "text/xml". La proprietà `Encoding` consente di impostare il valore della codifica dei caratteri desiderata. Il client di esempio e il servizio Usa la codifica dei caratteri ISO-8859-1 (Latin1), che non è supportato per il <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> di WCF.  
   
  Nel codice seguente viene illustrato come creare l'associazione a livello di codice utilizzando il codificatore del messaggio di testo personalizzato.  
   
@@ -211,7 +211,7 @@ CustomBinding binding = new CustomBinding(bindingElements);
 ## <a name="adding-metadata-support-to-the-message-encoding-binding-element"></a>Aggiunta del supporto dei metadati per un elemento di associazione di codifica dei messaggi  
  Qualsiasi tipo che deriva da <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> deve eseguire l'aggiornamento della versione dell'associazione SOAP nel documento WSDL generato per il servizio. Ciò viene fatto implementando il metodo `ExportEndpoint` sull'interfaccia <xref:System.ServiceModel.Description.IWsdlExportExtension> e modificando quindi il WSDL generato. In questo esempio, `CustomTextMessageBindingElement` utilizza la logica di esportazione WSDL di `TextMessageEncodingBinidngElement`.  
   
- Per questo esempio, la configurazione del client è manuale. Non è possibile utilizzare Svcutil.exe per generare la configurazione del client perché `CustomTextMessageBindingElement` non esporta un'asserzione di criteri per descrivere il comportamento. Generalmente si deve implementare l'interfaccia <xref:System.ServiceModel.Description.IPolicyExportExtension> su un elemento di associazione personalizzato per esportare un'asserzione di criteri personalizzata che descrive il comportamento o la funzionalità implementata dall'elemento di associazione. Per un esempio di come esportare un'asserzione di criteri per un elemento di associazione personalizzato, vedere il [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio.  
+ Per questo esempio, la configurazione del client è manuale. Non è possibile utilizzare Svcutil.exe per generare la configurazione del client perché `CustomTextMessageBindingElement` non esporta un'asserzione di criteri per descrivere il comportamento. Generalmente si deve implementare l'interfaccia <xref:System.ServiceModel.Description.IPolicyExportExtension> su un elemento di associazione personalizzato per esportare un'asserzione di criteri personalizzata che descrive il comportamento o la funzionalità implementata dall'elemento di associazione. Per un esempio di come esportare un'asserzione di criteri per un elemento di associazione personalizzato, vedere la [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio.  
   
 ## <a name="message-encoding-binding-configuration-handler"></a>Gestore di configurazione dell'associazione di codifica dei messaggi  
  La sezione precedente mostra come utilizzare il codificatore dei messaggi di testo personalizzato a livello di codice. `CustomTextMessageEncodingBindingSection` implementa un gestore di configurazione che consente di specificare l'utilizzo di un codificatore dei messaggi di testo personalizzato all'interno di un file di configurazione. La classe `CustomTextMessageEncodingBindingSection` deriva dalla classe <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. La proprietà `BindingElementType` informa il sistema di configurazione del tipo di elemento di associazione da creare per questa sezione.  

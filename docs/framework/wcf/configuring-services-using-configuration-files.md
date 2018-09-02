@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 19ba0e585dfdd2ee47781b04a3d1a5bbdba60371
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 904abff4f3cae5873fe3cc9705dee84f73e2a523
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807433"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419744"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurazione dei servizi tramite file di configurazione
-Configurazione di un servizio Windows Communication Foundation (WCF) con un file di configurazione offre la possibilità di fornire endpoint e dati sul comportamento di servizio al momento della distribuzione invece che in fase di progettazione. In questo argomento vengono delineate le principali tecniche disponibili.  
+Configurazione di un servizio Windows Communication Foundation (WCF) con un file di configurazione ti offre la possibilità di fornire endpoint e i dati sul comportamento del servizio al momento della distribuzione invece che in fase di progettazione. In questo argomento vengono delineate le principali tecniche disponibili.  
   
- È un servizio WCF può essere configurato utilizzando il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tecnologia di configurazione. In genere, gli elementi XML vengono aggiunti al file Web. config per un sito Internet Information Services (IIS) che ospita un servizio WCF. Gli elementi consentono di modificare dettagli, quali gli indirizzi degli endpoint (gli indirizzi effettivi usati per comunicare con il servizio), per i singoli computer. WCF include inoltre diversi elementi forniti dal sistema che consentono di selezionare rapidamente le funzionalità di base per un servizio. A partire da [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF viene fornito con un nuovo modello di configurazione predefinito che semplifica i requisiti di configurazione WCF. Se non si specifica alcuna configurazione WCF per un determinato servizio, il runtime configura automaticamente il servizio con alcuni endpoint standard e comportamento/associazione predefinito. In pratica, la creazione della configurazione è un'importante parte della programmazione di applicazioni WCF.  
+ È un servizio WCF può essere configurato utilizzando il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] la tecnologia di configurazione. In genere, gli elementi XML vengono aggiunti al file Web. config per un sito Internet Information Services (IIS) che ospita un servizio WCF. Gli elementi consentono di modificare dettagli, quali gli indirizzi degli endpoint (gli indirizzi effettivi usati per comunicare con il servizio), per i singoli computer. Inoltre, WCF include diversi elementi forniti dal sistema che consentono di selezionare rapidamente le funzionalità di base per un servizio. A partire da [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF viene fornito con un nuovo modello di configurazione predefinito che semplifica i requisiti di configurazione WCF. Se non si specifica alcuna configurazione di WCF per un determinato servizio, il runtime configura automaticamente il servizio con alcuni endpoint standard e comportamento/associazione predefinito. In pratica, la creazione della configurazione è un'importante parte della programmazione di applicazioni WCF.  
   
- Per altre informazioni, vedere [configurazione di associazioni per servizi](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Per un elenco di più comunemente utilizzati elementi, vedere [associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md). Per ulteriori informazioni sull'endpoint predefiniti, associazioni e comportamenti, vedere [configurazione semplificata](../../../docs/framework/wcf/simplified-configuration.md) e [configurazione semplificata per i servizi WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Per altre informazioni, vedere [configurazione di associazioni per i servizi](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Per un elenco di più comunemente utilizzati elementi, vedere [System-provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).  
   
 > [!IMPORTANT]
 >  Nel caso di distribuzione di scenari affiancati in cui vengono implementate due versioni diverse di un servizio, è necessario specificare nomi parziali di assembly a cui viene fatto riferimento nei file di configurazione. Questa operazione è necessaria perché il file di configurazione è condiviso tra tutte le versioni di un servizio che potrebbero essere in esecuzione in versioni diverse di .NET Framework.  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config e App.config  
- WCF Usa il sistema di configurazione System. Configuration del [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ WCF utilizza il sistema di configurazione di System. Configuration del [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Quando si configura un servizio in Visual Studio, usare un file Web. config o App. config per specificare le impostazioni. La scelta del nome del file di configurazione è determinata dall'ambiente host scelto per il servizio. Se si sta usando IIS per ospitare il servizio, usare un file Web.config. Se si sta usando un altro ambiente host, usare un file App.config.  
   
- In Visual Studio, il file denominato app. config viene usato per creare il file di configurazione finale. Il nome finale effettivamente usato per la configurazione dipende dal nome dell'assembly. Ad esempio, un assembly denominato "Cohowinery.exe" ha un file di configurazione finale denominato "Cohowinery.exe.config". Tuttavia, è sufficiente modificare il file App.config. Le modifiche apportate al file vengono automaticamente apportate al file di configurazione finale dell'applicazione in fase di compilazione.  
+ In Visual Studio, il file denominato app. config viene utilizzato per creare il file di configurazione finale. Il nome finale effettivamente usato per la configurazione dipende dal nome dell'assembly. Ad esempio, un assembly denominato "Cohowinery.exe" ha un file di configurazione finale denominato "Cohowinery.exe.config". Tuttavia, è sufficiente modificare il file App.config. Le modifiche apportate al file vengono automaticamente apportate al file di configurazione finale dell'applicazione in fase di compilazione.  
   
- Quando si usa un file App.config, il sistema di configurazione unisce il file App.config al contenuto del file Machine.config, al momento dell'avvio dell'applicazione e dell'applicazione della configurazione. Questo meccanismo consente di definire impostazioni a livello di computer nel file Machine.config. Il file App.config può essere usato per eseguire l'override del file Machine.config; è inoltre possibile bloccare le impostazioni nel file Machine.config in modo che vengano usate. Nel caso di Web.config, il sistema di configurazione esegue il merge dei file Web.config in tutte le directory che conducono alla directory dell'applicazione nella configurazione che viene applicata. Per ulteriori informazioni sulla configurazione e sulle priorità delle impostazioni, vedere gli argomenti in di <xref:System.Configuration> dello spazio dei nomi.  
+ Quando si usa un file App.config, il sistema di configurazione unisce il file App.config al contenuto del file Machine.config, al momento dell'avvio dell'applicazione e dell'applicazione della configurazione. Questo meccanismo consente di definire impostazioni a livello di computer nel file Machine.config. Il file App.config può essere usato per eseguire l'override del file Machine.config; è inoltre possibile bloccare le impostazioni nel file Machine.config in modo che vengano usate. Nel caso di Web.config, il sistema di configurazione esegue il merge dei file Web.config in tutte le directory che conducono alla directory dell'applicazione nella configurazione che viene applicata. Per altre informazioni sulla configurazione e la priorità delle impostazioni, vedere gli argomenti in di <xref:System.Configuration> dello spazio dei nomi.  
   
 ## <a name="major-sections-of-the-configuration-file"></a>Principali sezioni del file di configurazione  
  Le sezioni principali del file di configurazione includono gli elementi seguenti.  
@@ -91,7 +91,7 @@ Configurazione di un servizio Windows Communication Foundation (WCF) con un file
   
 -   `contract`. Specifica l'interfaccia che definisce il contratto. Si tratta dell'interfaccia implementata nel tipo CLR (Common Language Runtime) specificato dall'attributo `name` dell'elemento `service` .  
   
--   [\<endpoint > riferimento all'elemento](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<endpoint > riferimento all'elemento](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
   
 ### <a name="the-bindings-element"></a>Il \<associazioni > elemento  
  L'elemento `bindings` contiene le specifiche per tutte le associazioni usabili da qualsiasi endpoint definito in qualsiasi servizio.  
@@ -101,7 +101,7 @@ Configurazione di un servizio Windows Communication Foundation (WCF) con un file
 ### <a name="the-binding-element"></a>Il \<associazione > elemento  
  L'elemento `binding` contenuto nell'elemento `bindings` può essere una delle associazioni fornite dal sistema (vedere [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) o un'associazione personalizzata (vedere [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)). L'elemento `binding` ha un attributo `name` che mette in correlazione l'associazione e l'endpoint specificato nell'attributo `bindingConfiguration` dell'elemento `endpoint` . Se non è specificato alcun nome, l'associazione corrisponde all'impostazione predefinita del tipo di associazione.  
   
- Per ulteriori informazioni sulla configurazione di servizi e client, vedere [configurazione di applicazioni di Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ Per altre informazioni sulla configurazione dei servizi e client, vedere [configurazione di applicazioni di Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
  [\<binding>](../../../docs/framework/misc/binding.md)  
   
@@ -148,7 +148,7 @@ Configurazione di un servizio Windows Communication Foundation (WCF) con un file
 </configuration>  
 ```  
   
- L'attributo `name` di `bindingConfiguration` è impostato nell'elemento `<binding>` . Il `name` deve essere una stringa univoca all'interno dell'ambito del tipo di associazione, in questo caso il [< basicHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), o un valore vuoto per fare riferimento all'associazione predefinita. L'endpoint si collega alla configurazione impostando l'attributo `bindingConfiguration` su questa stringa.  
+ L'attributo `name` di `bindingConfiguration` è impostato nell'elemento `<binding>` . Il `name` deve essere una stringa univoca all'interno dell'ambito del tipo di associazione, ovvero in questo caso il [< basicHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), o un valore vuoto per fare riferimento all'associazione predefinita. L'endpoint si collega alla configurazione impostando l'attributo `bindingConfiguration` su questa stringa.  
   
  Un attributo `behaviorConfiguration` viene implementato nello stesso modo, come illustrato nell'esempio seguente.  
   
@@ -222,7 +222,7 @@ Configurazione di un servizio Windows Communication Foundation (WCF) con un file
   
  Il servizio presente in ~\Child\Service.svc si comporterà come se disponesse di entrambi i comportamenti di serviceDebug e serviceMetadata, mentre il servizio in ~ \Service.svc disporrà solo del comportamento di serviceDebug. In pratica vengono unite le due raccolte di comportamenti con lo stesso nome (in questo caso la stringa vuota).  
   
- È anche possibile cancellare raccolte di comportamenti tramite il \<deselezionare > tag e rimuovere comportamenti individuali dalla raccolta utilizzando la \<rimuovere > tag. Le due configurazioni seguenti, ad esempio, determinano il solo comportamento di serviceMetadata per il servizio figlio:  
+ È anche possibile cancellare raccolte di comportamenti tramite il \<cancellare > tag e rimuovere comportamenti individuali dalla raccolta utilizzando il \<rimuovere > tag. Le due configurazioni seguenti, ad esempio, determinano il solo comportamento di serviceMetadata per il servizio figlio:  
   
 ```xml  
 <configuration>  
@@ -260,10 +260,10 @@ Configurazione di un servizio Windows Communication Foundation (WCF) con un file
   
  L'unione di comportamenti si applica sia comportamenti dell'endpoint che a comportamenti del servizio nella configurazione.  
   
- Se una raccolta di comportamenti figlio contiene un comportamento già presente nella raccolta di comportamenti padre, il comportamento figlio sostituisce quello del padre. Pertanto, se una raccolta di comportamenti padre fosse `<serviceMetadata httpGetEnabled="False" />` e una raccolta di comportamenti figlio fosse associato `<serviceMetadata httpGetEnabled="True" />`, il comportamento figlio sostituirebbe il comportamento padre nella raccolta di comportamenti e httpGetEnabled sarebbe "true".  
+ Se una raccolta di comportamenti figlio contiene un comportamento già presente nella raccolta di comportamenti padre, il comportamento figlio sostituisce quello del padre. Pertanto, se una raccolta di comportamenti padre fosse `<serviceMetadata httpGetEnabled="False" />` e una raccolta di comportamenti figlio fosse `<serviceMetadata httpGetEnabled="True" />`, il comportamento figlio sostituirebbe il comportamento padre nella raccolta di comportamenti e httpGetEnabled sarebbe "true".  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione semplificata](../../../docs/framework/wcf/simplified-configuration.md)  
- [Configurazione di applicazioni Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [Configurazione di applicazioni Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
  [\<binding>](../../../docs/framework/misc/binding.md)

@@ -2,12 +2,12 @@
 title: Utilizzo dell'ambito di modifica
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 67b79ebe558578ca612d59d48eb7ee291a6db501
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 268849c584c235a21a0818baa60f119cf8e49305
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517391"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419984"
 ---
 # <a name="using-editing-scope"></a>Utilizzo dell'ambito di modifica
 In questo esempio viene illustrato come raggruppare un set di modifiche in modo che possano essere annullate in un'unica unità atomica. Per impostazione predefinita, le azioni intraprese da un autore dell'ActivityDesigner vengono integrate automaticamente nel sistema di annullamento/ripristino.  
@@ -32,13 +32,13 @@ In questo esempio viene illustrato come raggruppare un set di modifiche in modo 
   
     2.  Vengono quindi aggiunte tre attività all'oggetto <xref:System.Activities.Presentation.Model.ModelItem> selezionato. Notare che se l'ambito di modifica non è stato aperto con <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, le tre nuove attività vengono visualizzate nell'area di disegno della finestra di progettazione. Poiché questa operazione è ancora in sospeso all'interno di <xref:System.Activities.Presentation.Model.EditingScope>, la finestra di progettazione non viene ancora aggiornata.  
   
-3.  Premere **chiusura dell'ambito di modifica** per eseguire il commit dell'ambito di modifica. Nella finestra di progettazione vengono visualizzate tre attività.  
+3.  Premere **ambito di modifica Chiudi** per eseguire il commit all'ambito di modifica. Nella finestra di progettazione vengono visualizzate tre attività.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

@@ -2,15 +2,15 @@
 title: Traccia dati in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 6dd385cd58d1c8400c45139492d84e6ca4fe1bd7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 037db6f4e5695e00401c81e1490953efe2fc9b99
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758503"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421099"
 ---
 # <a name="data-tracing-in-adonet"></a>Traccia dati in ADO.NET
-ADO.NET funzionalità dei dati incorporata la funzionalità di traccia che è supportato dal provider di dati .NET per SQL Server, Oracle, OLE DB e ODBC, nonché ADO.NET <xref:System.Data.DataSet>e i protocolli di rete SQL Server.  
+ADO.NET dotato di funzionalità di analisi di dati incorporati che è supportata dal provider di dati .NET per SQL Server, Oracle, OLE DB e ODBC, nonché ADO.NET <xref:System.Data.DataSet>e i protocolli di rete SQL Server.  
   
  L'analisi delle chiamate API di accesso ai dati consente di diagnosticare i seguenti problemi:  
   
@@ -26,12 +26,12 @@ ADO.NET funzionalità dei dati incorporata la funzionalità di traccia che è su
   
  Per supportare tecnologie di traccia diverse, questa funzionalità è estensibile, pertanto uno sviluppatore può tracciare un problema a qualsiasi livello dello stack dell'applicazione. Sebbene la funzionalità di analisi non sia esclusiva di ADO.NET, i provider Microsoft usano l'analisi generalizzata e le API della strumentazione.  
   
- Per ulteriori informazioni sulla configurazione dell'analisi gestita in ADO.NET, vedere [accesso ai dati di traccia](http://msdn.microsoft.com/library/hh880086.aspx).  
+ Per altre informazioni sull'impostazione e configurazione dell'analisi gestita in ADO.NET, vedere [Tracing Data Access](https://msdn.microsoft.com/library/hh880086.aspx).  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accesso alle informazioni diagnostiche nel registro di eventi esteso  
- Nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server, accesso ai dati di traccia ([traccia di accesso ai dati](http://msdn.microsoft.com/library/hh880086.aspx)) è stata aggiornata per semplificare la più facile correlare gli eventi client con informazioni di diagnostica, ad esempio gli errori di connessione dal connettività del server prevista buffer e applicazione delle prestazioni informazioni nel log degli eventi estesi. Per informazioni sulla lettura del log di eventi estesi, vedere [visualizzare i dati di sessione eventi](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
+ Nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server, accesso ai dati traccia ([traccia di accesso ai dati](https://msdn.microsoft.com/library/hh880086.aspx)) è stata aggiornata per semplificare la più facile correlare gli eventi client con informazioni di diagnostica, ad esempio gli errori di connessione dal connettività del server circolare del buffer e l'applicazione informazioni sulle prestazioni nel registro eventi esteso. Per informazioni sulla lettura del registro eventi esteso, vedere [visualizzare i dati della sessione eventi](https://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
   
- Per le operazioni di connessione, ADO.NET invierà un ID della connessione client. Se la connessione non riesce, è possibile accedere al buffer circolare ([la risoluzione dei problemi di connettività in SQL Server 2008 con il Buffer circolare di connettività](http://go.microsoft.com/fwlink/?LinkId=207752)) e individuare il `ClientConnectionID` campo e ottenere informazioni di diagnostica di Errore di connessione. Gli ID della connessione client vengono registrati nel buffer circolare solo se si verifica un errore. Se la connessione non riesce prima di inviare il pacchetto di preaccesso, non verrà generato un ID di connessione client. L'ID di connessione client è un GUID a 16 byte. È anche possibile trovare l'ID di connessione client nell'output di destinazione di eventi estesi, se l'azione `client_connection_id` viene aggiunta agli eventi in una sessione di eventi estesi. È possibile abilitare l'analisi di accesso ai dati ed eseguire di nuovo il comando di connessione e osservare il campo `ClientConnectionID` nell'analisi di accesso ai dati, se si necessita di ulteriore assistenza per la diagnostica dei driver del client.  
+ Per le operazioni di connessione, ADO.NET invierà un ID della connessione client. Se la connessione non riesce, è possibile accedere al buffer circolare ([risoluzione dei problemi di connettività in SQL Server 2008 con il Buffer circolare della connettività](https://go.microsoft.com/fwlink/?LinkId=207752)) e individuare il `ClientConnectionID` campo e ottenere informazioni diagnostiche Errore di connessione. Gli ID della connessione client vengono registrati nel buffer circolare solo se si verifica un errore. Se la connessione non riesce prima di inviare il pacchetto di preaccesso, non verrà generato un ID di connessione client. L'ID di connessione client è un GUID a 16 byte. È anche possibile trovare l'ID di connessione client nell'output di destinazione di eventi estesi, se l'azione `client_connection_id` viene aggiunta agli eventi in una sessione di eventi estesi. È possibile abilitare l'analisi di accesso ai dati ed eseguire di nuovo il comando di connessione e osservare il campo `ClientConnectionID` nell'analisi di accesso ai dati, se si necessita di ulteriore assistenza per la diagnostica dei driver del client.  
   
  È possibile ottenere l'ID di connessione cliente a livello di codice usando la proprietà `SqlConnection.ClientConnectionID`.  
   
@@ -54,4 +54,4 @@ add target ring_buffer with (track_causality=on)
 ## <a name="see-also"></a>Vedere anche  
  [Traccia di rete in .NET Framework](../../../../docs/framework/network-programming/network-tracing.md)  
  [Traccia e strumentazione di applicazioni](../../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

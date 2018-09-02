@@ -2,20 +2,20 @@
 title: Intestazioni di indirizzo
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: 276649c17a04822eb27eb4e3ed9cbe711b384edc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d2e38c674e0a3ea10df2e8363e90f4adf7edc9da
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803790"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420557"
 ---
 # <a name="address-headers"></a>Intestazioni di indirizzo
-Nell'esempio delle intestazioni di indirizzo viene illustrato come i client possano passare parametri per riferimento a un servizio utilizzando Windows Communication Foundation (WCF).  
+Nell'esempio di intestazioni di indirizzo viene illustrato come i client possono passare i parametri di riferimento a un servizio che utilizza Windows Communication Foundation (WCF).  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- La specifica WS-Addressing definisce la nozione di un riferimento dell'endpoint come un modo di indirizzare un particolare endpoint servizio Web. In WCF, i riferimenti all'endpoint vengono modellati utilizzando la `EndpointAddress` class - `EndpointAddress` è il tipo di campo dell'indirizzo di `ServiceEndpoint` (classe).  
+ La specifica WS-Addressing definisce la nozione di un riferimento dell'endpoint come un modo di indirizzare un particolare endpoint servizio Web. In WCF, i riferimenti all'endpoint vengono modellati utilizzando il `EndpointAddress` classe - `EndpointAddress` è il tipo di campo dell'indirizzo di `ServiceEndpoint` classe.  
   
  Parte del modello di riferimento all'endpoint è che ogni riferimento può portare alcuni parametri per riferimento che aggiungono informazioni di identificazione aggiuntive. In WCF, questi parametri per riferimento vengono modellati come istanze di `AddressHeader` classe.  
   
@@ -68,7 +68,7 @@ return "Hello, " + id;
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -79,7 +79,7 @@ return "Hello, " + id;
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\AddressHeaders`  
   

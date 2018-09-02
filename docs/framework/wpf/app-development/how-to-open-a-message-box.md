@@ -8,21 +8,21 @@ helpviewer_keywords:
 - message boxes [WPF], opening
 - opening message boxes [WPF]
 ms.assetid: acaad17f-af43-4eca-a004-f1c9e7c6f292
-ms.openlocfilehash: dd79d69c9b1b54c5158b58ee2f1675e7d11a386a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f05190030ed6324917348fa1926abd5385e30f7e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545636"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425812"
 ---
 # <a name="how-to-open-a-message-box"></a>Procedura: aprire una finestra di messaggio
 In questo esempio viene illustrato come aprire una finestra di messaggio.  
   
 ## <a name="example"></a>Esempio  
- Una finestra di messaggio è una finestra modale preimpostata per la visualizzazione di informazioni per gli utenti. Viene aperta una finestra di messaggio chiamando il metodo statico <xref:System.Windows.MessageBox.Show%2A> metodo la <xref:System.Windows.MessageBox> classe. Quando <xref:System.Windows.MessageBox.Show%2A> viene chiamato, il messaggio viene passato tramite un parametro di stringa. Diversi overload di <xref:System.Windows.MessageBox.Show%2A> consentono di configurare la modalità in cui verrà visualizzata una finestra di messaggio (vedere <xref:System.Windows.MessageBox>).  
+ Una finestra di messaggio è una finestra di dialogo modale predefiniti per la visualizzazione di informazioni agli utenti. Viene aperta una finestra di messaggio chiamando il metodo statico <xref:System.Windows.MessageBox.Show%2A> metodo di <xref:System.Windows.MessageBox> classe. Quando si <xref:System.Windows.MessageBox.Show%2A> viene chiamato, il messaggio viene passato usando un parametro di stringa. Diversi overload del <xref:System.Windows.MessageBox.Show%2A> consentono di configurare la modalità in cui verrà visualizzata una finestra di messaggio (vedere <xref:System.Windows.MessageBox>).  
   
  [!code-csharp[MessageBoxSnippets#MessageBoxShow1CODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MessageBoxSnippets/CSharp/Show1Window.xaml.cs#messageboxshow1code)]
  [!code-vb[MessageBoxSnippets#MessageBoxShow1CODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show1window.xaml.vb#messageboxshow1code)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di MessageBox](http://go.microsoft.com/fwlink/?LinkID=160023)
+ [Esempio di MessageBox](https://go.microsoft.com/fwlink/?LinkID=160023)

@@ -2,18 +2,18 @@
 title: Proprietà e separazione tra schemi e utenti in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 69d0c0dee6141b80908c8cdc36dfe21ff318f423
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b1cda211fdc89732afa8eed1eaaf2c98309a969
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358407"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421577"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Proprietà e separazione tra schemi e utenti in SQL Server
 Uno dei concetti principali in merito alla sicurezza di SQL Server è che i proprietari di oggetti dispongono di autorizzazioni irrevocabili per amministrarli. Non è possibile rimuovere privilegi dal proprietario di un oggetto, né eliminare utenti da un database che contiene oggetti di cui sono proprietari.  
   
 ## <a name="user-schema-separation"></a>Distinzione tra utente e schema  
- La distinzione tra utente e schema offre una maggiore flessibilità nella gestione delle autorizzazioni per gli oggetti di database. Oggetto *schema* è un contenitore denominato per gli oggetti di database, che consente agli oggetti gruppo in spazi dei nomi separato. Ad esempio, il database di esempio AdventureWorks contiene gli schemi per Production, Sales e HumanResources.  
+ La distinzione tra utente e schema offre una maggiore flessibilità nella gestione delle autorizzazioni per gli oggetti di database. Oggetto *schema* è un contenitore denominato per gli oggetti di database, che consente di raggruppare gli oggetti in spazi dei nomi separato. Ad esempio, il database di esempio AdventureWorks contiene gli schemi per Production, Sales e HumanResources.  
   
  Usando la sintassi di denominazione in quattro parti per fare riferimento agli oggetti viene specificato il nome dello schema.  
   
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Distinzione tra utente e Schema](http://msdn.microsoft.com/library/ms190387.aspx) nella documentazione Online di SQL Server|Vengono descritte le modifiche introdotte dalla distinzione tra utente e schema, tra cui il nuovo comportamento, l'impatto sulla proprietà, le visualizzazioni del catalogo e le autorizzazioni.|  
+|[Separazione tra schemi utente](https://msdn.microsoft.com/library/ms190387.aspx) nella documentazione Online di SQL Server|Vengono descritte le modifiche introdotte dalla distinzione tra utente e schema, tra cui il nuovo comportamento, l'impatto sulla proprietà, le visualizzazioni del catalogo e le autorizzazioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -63,4 +63,4 @@ Server.Database.DatabaseSchema.DatabaseObject
  [Autenticazione in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [Ruoli server e database in SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [Autorizzazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

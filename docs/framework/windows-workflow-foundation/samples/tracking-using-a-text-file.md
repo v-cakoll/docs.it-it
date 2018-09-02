@@ -2,12 +2,12 @@
 title: Rilevamento tramite un file di testo
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 19b4d544bc1d1c5bc9ebfa51b4ba28eb82c525d0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805798"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422889"
 ---
 # <a name="tracking-using-a-text-file"></a>Rilevamento tramite un file di testo
 In questo esempio viene illustrato come estendere il rilevamento in Windows Workflow Foundation (WF) creando un partecipante del rilevamento personalizzato. I partecipanti di rilevamento sono classi .NET Framework che ricevono record di rilevamento dal runtime man mano che vengono generati. È possibile creare un partecipante di rilevamento per trasportare gli eventi di rilevamento a qualunque destinazione necessaria per lo specifico scenario. Ad esempio, il partecipante di rilevamento Analisi eventi per Windows (ETW) viene fornito come parte di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Il partecipante di rilevamento in questo esempio scrive i record in formato XML in un file di testo.  
@@ -55,13 +55,13 @@ In questo esempio viene illustrato come estendere il rilevamento in Windows Work
   
 5.  Nel browser viene visualizzata la **StockPriceService** pagina, che contiene l'indirizzo wsdl del servizio locale. Copiare questo indirizzo.  
   
-     Un esempio di indirizzo wsdl del servizio locale è http://localhost:53797/StockPriceService.xamlx?wsdl.  
+     Un esempio dell'indirizzo wsdl del servizio locale è http://localhost:53797/StockPriceService.xamlx?wsdl.  
   
 6.  Da [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] passare alla cartella [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] (la cartella di installazione predefinita è %SystemDrive%\Programmi\Microsoft Visual Studio 10.0). Individuare quindi la sottocartella Common7\IDE\.  
   
 7.  Fare doppio clic sul file WcfTestClient.exe per avviare il client di prova WCF.  
   
-8.  Nel Client di prova WCF selezionare **Aggiungi servizio...** dal **File** menu.  
+8.  Nel Client di prova WCF selezionare **aggiunta di un servizio...** dal **File** menu.  
   
 9. Incollare l'URL appena copiato nella casella di testo.  
   
@@ -69,9 +69,9 @@ In questo esempio viene illustrato come estendere il rilevamento in Windows Work
   
 11. Testare il servizio usando il client di prova WCF.  
   
-    1.  Nel Client di prova WCF fare doppio clic su **getstockprice ()** sotto il **IStockPriceService** nodo.  
+    1.  Nel Client di prova WCF fare doppio clic **getstockprice ()** sotto il **IStockPriceService** nodo.  
   
-         Il **getstockprice ()** metodo verrà visualizzato nel riquadro di destra, con un parametro.  
+         Il **getstockprice ()** metodo viene visualizzato nel riquadro di destra, con un solo parametro.  
   
     2.  Digitare Contoso come valore per il parametro.  
   
@@ -80,16 +80,16 @@ In questo esempio viene illustrato come estendere il rilevamento in Windows Work
 12. Vedere gli eventi rilevati nel file di log presente nella directory dei dati dell'applicazione in %APPDATA%\trackingRecords.log.  
   
     > [!NOTE]
-    >  % APPDATA % è una variabile di ambiente che viene risolta in %SystemDrive%\Users\\< nome utente\>\AppData\Roaming in [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], o Windows Server 2008.  
+    >  % APPDATA % è una variabile di ambiente che viene risolta in %systemdrive%\users.\\< nomeutente\>\AppData\Roaming in [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], o Windows Server 2008.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\TextFileTracking`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di monitoraggio di AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

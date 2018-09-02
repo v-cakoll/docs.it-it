@@ -2,12 +2,12 @@
 title: Criteri di ricerca personalizzati
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 6c9363add13e38ded75685e4115a5084629d6505
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503210"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421450"
 ---
 # <a name="custom-find-criteria"></a>Criteri di ricerca personalizzati
 In questo esempio viene illustrato come creare una corrispondenza degli ambiti personalizzata utilizzando la logica e come implementare un servizio di individuazione personalizzato. I client utilizzano la funzionalità di corrispondenza degli ambiti personalizzata per rifinire ed eseguire l'ulteriore compilazione sulla funzionalità di individuazione fornita dal sistema di WCF Discovery. Lo scenario analizzato in questo esempio è il seguente:  
@@ -25,7 +25,7 @@ In questo esempio viene illustrato come creare una corrispondenza degli ambiti p
 -   Implementazione di una corrispondenza degli ambiti personalizzata mediante un algoritmo.  
   
 ## <a name="discussion"></a>Discussione  
- Il client esegue la ricerca di tipo "OR" criteri di corrispondenza. Un servizio risponde se gli ambiti sui relativi endpoint corrispondono a uno qualsiasi degli ambiti forniti dal client. In questo caso, il client esegue la ricerca di un servizio calcolatrice che dispone di uno qualsiasi degli ambiti riportati nell'elenco seguente:  
+ Il client esegue la ricerca per il tipo "OR" criteri di corrispondenza. Un servizio risponde se gli ambiti sui relativi endpoint corrispondono a uno qualsiasi degli ambiti forniti dal client. In questo caso, il client esegue la ricerca di un servizio calcolatrice che dispone di uno qualsiasi degli ambiti riportati nell'elenco seguente:  
   
 1.  `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
@@ -39,9 +39,9 @@ In questo esempio viene illustrato come creare una corrispondenza degli ambiti p
   
  Aprire il progetto del servizio. Per implementare il servizio di individuazione personalizzato vengono utilizzati i tre file seguenti:  
   
-1.  **AsyncResult.cs**: si tratta dell'implementazione del `AsyncResult` che è richiesta dai metodi di individuazione.  
+1.  **AsyncResult.cs**: si tratta dell'implementazione del `AsyncResult` richiesta dai metodi di individuazione.  
   
-2.  **CustomDiscoveryService.cs**: questo file implementa il servizio di individuazione personalizzato. L'implementazione estende la classe <xref:System.ServiceModel.Discovery.DiscoveryService> ed esegue l'override dei metodi necessari. Si noti l'implementazione del metodo <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>. Il metodo esegue un controllo per determinare se la corrispondenza degli ambiti personalizzata definita da una regola è stata specificata dal client. Si tratta dello stesso URI personalizzato specificato dal client in precedenza. Se la regola personalizzata viene specificata, verrà seguito il percorso di codice che implementa la logica di corrispondenza "OR".  
+2.  **CustomDiscoveryService.cs**: questo file implementa il servizio di individuazione personalizzato. L'implementazione estende la classe <xref:System.ServiceModel.Discovery.DiscoveryService> ed esegue l'override dei metodi necessari. Si noti l'implementazione del metodo <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>. Il metodo esegue un controllo per determinare se la corrispondenza degli ambiti personalizzata definita da una regola è stata specificata dal client. Si tratta dello stesso URI personalizzato specificato dal client in precedenza. Se la regola personalizzata viene specificata, verrà seguito il percorso del codice che implementa la logica di corrispondenza "OR".  
   
      Questa logica personalizzata passa attraverso tutti gli ambiti in ognuno degli endpoint di cui dispone il servizio. Se uno degli ambiti dell'endpoint corrisponde a uno qualsiasi degli ambiti forniti dal client, il servizio di individuazione aggiungerà tale endpoint alla risposta restituita al client.  
   
@@ -66,6 +66,6 @@ In questo esempio viene illustrato come creare una corrispondenza degli ambiti p
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365878"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425756"
 ---
 # <a name="code-contracts"></a>Contratti di codice
 I contratti di codice consentono di specificare precondizioni, postcondizioni e invarianti dell'oggetto nel codice. Le precondizioni sono requisiti da soddisfare quando si accede a un metodo o a una proprietà. Le postcondizioni descrivono le aspettative al momento dell'uscita dal codice del metodo o della proprietà. Le invarianti dell'oggetto descrivono lo stato previsto per una classe in stato integro.  
@@ -35,7 +35,7 @@ I contratti di codice consentono di specificare precondizioni, postcondizioni e 
   
  La maggior parte dei metodi nella classe dei contratti sono compilati in modo condizionale; in altre parole, il compilatore genera chiamate a questi metodi solo quando si definisce un simbolo speciale, CONTRACTS_FULL, tramite la direttiva `#define`. CONTRACTS_FULL consente di scrivere contratti nel codice senza usare le direttive `#ifdef`; è possibile produrre build diverse, alcune con contratti e altre senza.  
   
- Per gli strumenti e le istruzioni dettagliate per l'uso dei contratti di codice, vedere [Code Contracts](http://go.microsoft.com/fwlink/?LinkId=152461)(Contratti di codice) nel sito Web MSDN DevLabs.  
+ Per gli strumenti e le istruzioni dettagliate per l'uso dei contratti di codice, vedere [Code Contracts](https://go.microsoft.com/fwlink/?LinkId=152461)(Contratti di codice) nel sito Web MSDN DevLabs.  
   
 ## <a name="preconditions"></a>Preconditions  
  È possibile esprimere delle precondizioni usando il metodo <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>. Le precondizioni specificano lo stato nel momento in cui viene richiamato un metodo. In genere, vengono usate per specificare valori di parametro validi. Tutti i membri menzionati nelle precondizioni devono essere accessibili almeno quanto il metodo stesso; in caso contrario, la precondizione potrebbe non essere compresa da tutti i chiamanti di un metodo. La condizione non deve avere effetti collaterali. Il comportamento in fase di esecuzione delle precondizioni con errori è determinato dall'analizzatore di runtime.  

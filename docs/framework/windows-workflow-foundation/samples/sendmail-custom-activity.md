@@ -2,12 +2,12 @@
 title: Attività personalizzata SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4ad250b42ca06867d307148f93e11c59846a61f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9d27711754c3aa8ff7f68c23f528c9f5c4356f7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519704"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423400"
 ---
 # <a name="sendmail-custom-activity"></a>Attività personalizzata SendMail
 In questo esempio viene illustrato come creare un'attività personalizzata che deriva da <xref:System.Activities.AsyncCodeActivity> per inviare messaggi di posta elettronica tramite il protocollo SMTP da usare in un'applicazione flusso di lavoro. L'attività personalizzata Usa le funzionalità di <xref:System.Net.Mail.SmtpClient> per inviare posta elettronica in modo asincrono e per inviare posta elettronica con l'autenticazione. Nell'attività sono inoltre disponibili funzionalità per l'utente finale, ad esempio la modalità test, la sostituzione dei token, i modelli di file e il percorso di rilascio di prova.  
@@ -23,15 +23,15 @@ In questo esempio viene illustrato come creare un'attività personalizzata che d
 |Password|String|Password per configurare le credenziali per l'autenticazione della proprietà <xref:System.Net.Mail.SmtpClient.Credentials%2A> del mittente.|  
 |Oggetto|<xref:System.Activities.InArgument%601>\<string>|Oggetto del messaggio.|  
 |Body|<xref:System.Activities.InArgument%601>\<string>|Corpo del messaggio.|  
-|Allegati|<xref:System.Activities.InArgument%601>\<string>|Raccolta di allegati usati per archiviare i dati allegati al messaggio di posta elettronica.|  
+|Allegati|<xref:System.Activities.InArgument%601>\<string>|Insieme di allegati utilizzato per archiviare i dati allegati al messaggio di posta elettronica.|  
 |Da|<xref:System.Net.Mail.MailAddress>|Indirizzo del mittente per questo messaggio di posta elettronica.|  
 |A|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Raccolta di indirizzi contenente i destinatari del messaggio di posta elettronica.|  
-|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Raccolta contenente i destinatari in copia per conoscenza (CC) per questo messaggio di posta elettronica di indirizzi.|  
+|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Raccolta contenente i destinatari della copia per conoscenza (CC) per questo messaggio di posta elettronica di indirizzi.|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Raccolta di indirizzi contenente i destinatari della copia per conoscenza nascosta (Ccn) per questo messaggio di posta elettronica.|  
 |token|<xref:System.Activities.InArgument%601>< IDictionary\<stringa, stringa >>|Token da sostituire nel corpo del messaggio. Questa funzionalità consente agli utenti di specificare alcuni valori nel corpo del messaggio che possono essere sostituiti in un secondo momento dai token specificati usando questa proprietà.|  
 |BodyTemplateFilePath|String|Percorso di un modello per il corpo del messaggio. L'attività `SendMail` copia il contenuto di questo file nella relativa proprietà del corpo.<br /><br /> Il modello può contenere token sostituiti dal contenuto della proprietà Token.|  
-|TestMailTo|<xref:System.Net.Mail.MailAddress>|Quando questa proprietà è impostata, tutti i messaggi di posta elettronica vengono inviati all'indirizzo specificato in essa contenuti.<br /><br /> Questa proprietà deve essere usata quando si esegue il test di flussi di lavoro, Ad esempio, quando si desidera assicurarsi che tutti i messaggi di posta elettronica vengono inviati senza inviarli ai destinatari effettivi.|  
-|TestDropPath|Stringa|Quando questa proprietà è impostata, tutti i messaggi di posta elettronica vengono salvati nel file specificato.<br /><br /> Questa proprietà deve essere utilizzato quando si desidera testare o il debug dei flussi di lavoro, assicurarsi che il formato e il contenuto dei messaggi in uscita sia appropriato.|  
+|TestMailTo|<xref:System.Net.Mail.MailAddress>|Quando questa proprietà è impostata, tutti i messaggi di posta elettronica vengono inviati all'indirizzo specificato in esso.<br /><br /> Questa proprietà deve essere usata quando si esegue il test di flussi di lavoro, Ad esempio, quando si desidera assicurarsi che tutti i messaggi di posta elettronica vengono inviati senza inviarli ai destinatari effettivi.|  
+|TestDropPath|Stringa|Quando questa proprietà è impostata, tutti i messaggi di posta elettronica vengono salvati nel file specificato.<br /><br /> Questa proprietà dovrà essere utilizzato quando si esegue il test o il debug dei flussi di lavoro, assicurarsi che il formato e il contenuto dei messaggi di posta elettronica in uscita sia appropriato.|  
   
 ## <a name="solution-contents"></a>Contenuto della soluzione  
  Nella soluzione sono contenuti due progetti.  
@@ -84,7 +84,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>Invio di messaggi di posta elettronica in modalità test  
- Frammento di codice seguente viene illustrato come impostare due proprietà di test: impostando `TestMailTo` a tutti i messaggi verranno inviati a john.doe@contoso.con (senza tenere conto dei valori di a, Cc, Ccn). Se si imposta TestDropPath, tutti i messaggi di posta elettronica in uscita verranno inoltre salvati nel percorso specificato. È possibile impostare queste proprietà in modo indipendente l'una dall'altra perché non sono correlate.  
+ Questo frammento di codice viene illustrato come impostare le due proprietà di test: impostando `TestMailTo` a tutti i messaggi verranno inviati a john.doe@contoso.con (senza tenere conto dei valori di a, Cc, Ccn). Se si imposta TestDropPath, tutti i messaggi di posta elettronica in uscita verranno inoltre salvati nel percorso specificato. È possibile impostare queste proprietà in modo indipendente l'una dall'altra perché non sono correlate.  
   
 ```  
 new SendMail  
@@ -105,15 +105,15 @@ new SendMail
 ## <a name="set-up-instructions"></a>Istruzioni di configurazione  
  Per eseguire l'esempio, è necessario disporre dell'accesso a un server SMTP.  
   
- Per ulteriori informazioni sulla configurazione di un server SMTP, vedere i collegamenti seguenti.  
+ Per altre informazioni sulla configurazione di un server SMTP, vedere i collegamenti seguenti.  
   
--   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
+-   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [Configurazione del servizio SMTP (IIS 6.0)](http://go.microsoft.com/fwlink/?LinkId=150456)  
+-   [Configurazione del servizio SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0: Configurare la posta elettronica SMTP](http://go.microsoft.com/fwlink/?LinkId=150457)  
+-   [IIS 7.0: Configurare la posta elettronica SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [Come installare il servizio SMTP](http://go.microsoft.com/fwlink/?LinkId=150458)  
+-   [Come installare il servizio SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  Per eseguire il download, sono disponibili emulatori SMTP forniti da terze parti.  
   
@@ -125,7 +125,7 @@ new SendMail
   
 3.  Configurare il programma con l'indirizzo del server e da e a indirizzi di posta elettronica.  
   
-     Per eseguire correttamente questo esempio, si potrebbe essere necessario configurare il valore da e a indirizzi di posta elettronica e l'indirizzo del server SMTP in Program.cs e in Sequence. Poiché i messaggi di posta elettronica vengono inviati in due modalità diverse, sarà necessario modificare l'indirizzo in entrambi i percorsi.  
+     Per eseguire correttamente questo esempio, si potrebbe essere necessario configurare il valore di dal e indirizzi di posta elettronica e l'indirizzo del server SMTP in Program.cs e in Sequence. Poiché i messaggi di posta elettronica vengono inviati in due modalità diverse, sarà necessario modificare l'indirizzo in entrambi i percorsi.  
   
 4.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
@@ -136,6 +136,6 @@ new SendMail
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SendMail`

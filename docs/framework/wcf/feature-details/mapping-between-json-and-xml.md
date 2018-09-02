@@ -2,12 +2,12 @@
 title: Mapping tra JSON e XML
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: e8cc356a30d11a6f07cf4444efbeda2faf5b0471
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 079ca9cebefcc96bffdb0ec4601a675ed83adefe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931469"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421723"
 ---
 # <a name="mapping-between-json-and-xml"></a>Mapping tra JSON e XML
 I lettori e i writer prodotti da <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> forniscono una API XML sul contenuto JSON (JavaScript Object Notation). JSON codifica i dati utilizzando un sottoinsieme dei valori letterali di oggetto di JavaScript. I lettori e i writer prodotti da questa factory vengono usati anche quando il contenuto JSON viene inviato o ricevuto da applicazioni di Windows Communication Foundation (WCF) usando il <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> o il <xref:System.ServiceModel.WebHttpBinding>.  
@@ -38,7 +38,7 @@ I lettori e i writer prodotti da <xref:System.Runtime.Serialization.Json.JsonRea
  Inoltre, se il messaggio JSON nell'esempio viene ricevuto da WCF e registrato, si vedrebbe il frammento XML nel log precedente.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Mapping tra JSON e l'InfoSet XML  
- Formalmente, il mapping è tra JSON come descritto in [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (tranne che con alcune restrizioni ridotte e altre restrizioni aggiunte) e il XML infoset (e XML non testuale) come descritto in [informazioni XML Impostare](http://go.microsoft.com/fwlink/?LinkId=98809) . Per le definizioni di vedere l'argomento *voci di informazioni* e i campi in [parentesi quadre].  
+ Formalmente, il mapping è tra JSON come descritto in [RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) (tranne che con alcune restrizioni ridotte e altre restrizioni aggiunte) e il XML infoset (e XML non testuale) come descritto in [informazioni XML Impostare](https://go.microsoft.com/fwlink/?LinkId=98809) . Per le definizioni di vedere l'argomento *voci di informazioni* e i campi in [parentesi quadre].  
   
  Un documento JSON vuoto esegue il mapping a un documento XML vuoto e un documento XML vuoto esegue il mapping a un documento JSON vuoto. Nel mapping da XML a JSON, che precede lo spazio vuoto e lo spazio vuoto finale dopo il documento non sono consentiti.  
   

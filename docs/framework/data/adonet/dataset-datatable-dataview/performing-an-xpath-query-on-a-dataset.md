@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: c785cc69289440918f45974c711ae0b112130c5d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762410"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423703"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Esecuzione di una query XPath in un dataset
-La relazione tra un oggetto sincronizzato <xref:System.Data.DataSet> e <xref:System.Xml.XmlDataDocument> consente di usare XML servizi, ad esempio le query XML Path Language (XPath), che accedono al **XmlDataDocument** e possono eseguire determinate funzionalità in modo più semplice rispetto all'accesso al **DataSet** direttamente. Ad esempio, anziché usare il **selezionare** metodo di un <xref:System.Data.DataTable> per esplorare le relazioni ad altre tabelle un **set di dati**, è possibile eseguire una query XPath su un **XmlDataDocument**  sincronizzato con il **DataSet**, per ottenere un elenco di elementi XML sotto forma di un <xref:System.Xml.XmlNodeList>. I nodi il **XmlNodeList**, sottoposto a cast come <xref:System.Xml.XmlElement> nodi, quindi può essere passato al **GetRowFromElement** metodo il **XmlDataDocument**, per restituire una corrispondenza <xref:System.Data.DataRow> i riferimenti alle righe della tabella in sincronizzato **DataSet**.  
+La relazione tra un oggetto sincronizzato <xref:System.Data.DataSet> e <xref:System.Xml.XmlDataDocument> consente di utilizzare XML servizi che accedono, ad esempio la query XML Path Language (XPath), il **XmlDataDocument** e possono eseguire determinate funzionalità in modo più semplice rispetto all'accesso ai **set di dati** direttamente. Ad esempio, invece di usare la **selezionare** metodo di un <xref:System.Data.DataTable> spostarsi nelle relazioni ad altre tabelle in una **set di dati**, è possibile eseguire una query XPath in un **XmlDataDocument**  sincronizzato con il **set di dati**, per ottenere un elenco di elementi XML sotto forma di un <xref:System.Xml.XmlNodeList>. I nodi il **XmlNodeList**, eseguire il cast come <xref:System.Xml.XmlElement> nodi, può quindi essere passato al **GetRowFromElement** metodo del **XmlDataDocument**, per restituire una corrispondenza <xref:System.Data.DataRow> riferimenti alle righe della tabella in sincronizzato **set di dati**.  
   
- Nell'esempio di codice seguente viene eseguita una query XPath "nipote". Il **DataSet** viene riempita con tre tabelle: **clienti**, **ordini**, e **OrderDetails**. Nell'esempio, è innanzitutto viene creata una relazione padre-figlio tra il **clienti** e **ordini** tabelle e tra il **ordini** e **OrderDetails** tabelle. Viene quindi eseguita una query XPath per restituire un **XmlNodeList** di **clienti** nodi in cui un nipote **OrderDetails** nodo dispone di un **ProductID**nodo con valore 43. In pratica, l'esempio Usa la query XPath per determinare quali clienti hanno ordinato il prodotto che ha il **ProductID** 43.  
+ Nell'esempio di codice seguente viene eseguita una query XPath "nipote". Il **set di dati** sono presenti tre tabelle: **clienti**, **ordini**, e **OrderDetails**. Nell'esempio, è prima di tutto viene creata una relazione padre-figlio tra il **clienti** e **ordini** tabelle così come tra la **ordini** e **OrderDetails** tabelle. Viene quindi eseguita una query XPath per restituire un **XmlNodeList** dei **clienti** nodi in cui un nipote **OrderDetails** nodo dispone di un **ProductID**nodi con valore 43. In sostanza, l'esempio Usa la query XPath per determinare quali clienti hanno ordinato il prodotto che ha il **ProductID** 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -103,4 +103,4 @@ foreach (XmlNode xmlNode in nodeList)
   
 ## <a name="see-also"></a>Vedere anche  
  [Sincronizzazione di DataSet e XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

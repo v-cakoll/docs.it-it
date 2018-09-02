@@ -5,15 +5,15 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: c43d5ad9203afad67601d9e36447db7c49a5a98e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1189da9fa0b76ede3261cf6da5305a09147bba5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539400"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452986"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funzionalità di trascinamento della selezione in Windows Form
-Windows Forms include un set di metodi, eventi e classi che implementano il comportamento di trascinamento e rilascio. Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione in Windows Forms.  Vedere anche [operazioni di trascinamento e rilascio e supporto per gli Appunti](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
+Windows Forms include un set di metodi, eventi e classi che implementano il comportamento di trascinamento e rilascio. Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione in Windows Forms.  Vedere anche [operazioni di trascinamento e rilascio e supporto per gli Appunti](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Esecuzione di operazioni di trascinamento e rilascio  
  Per eseguire un'operazione di trascinamento della selezione, usare il metodo <xref:System.Windows.Forms.Control.DoDragDrop%2A> della classe <xref:System.Windows.Forms.Control>. Per altre informazioni su come viene eseguita un'operazione di trascinamento e rilascio, vedere <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Per ottenere il rettangolo sul quale deve essere trascinato il puntatore del mouse prima che inizi un'operazione di trascinamento della selezione, usare la proprietà <xref:System.Windows.Forms.SystemInformation.DragSize%2A> della classe <xref:System.Windows.Forms.SystemInformation>.  

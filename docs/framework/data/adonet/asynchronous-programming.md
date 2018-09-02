@@ -2,12 +2,12 @@
 title: Programmazione asincrona
 ms.date: 03/30/2017
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 29324a07ffdaf99d1b7631ad8e94e773ed509fcc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759907"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425725"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -86,7 +86,7 @@ In questo argomento viene descritto il supporto per la programmazione asincrona 
   
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
- Sono stati aggiunti altri membri asincroni per supportare [SqlClient Streaming supporta](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
+ Altri membri asincroni sono stati aggiunti per supportare [SqlClient Streaming supporta](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
   
 ### <a name="synchronous-to-asynchronous-connection-open"></a>Apertura della connessione da sincrona ad asincrona  
  È possibile aggiornare un'applicazione esistente in modo da usare la nuova funzionalità asincrona. Ad esempio, si presupponga che un'applicazione disponga di un algoritmo di connessione sincrono e che blocchi il thread UI ogni volta che si connette al database e che, una volta che connessa, l'applicazione chiami una stored procedure che segnala agli altri utenti l'utente che ha appena effettuato l'accesso.  
@@ -172,7 +172,7 @@ class A {
 ### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>Uso del modello di provider di base e la nuova funzionalità asincrona  
  Potrebbe essere necessario creare uno strumento in grado di connettersi al database e di eseguire query. È possibile usare il modello di provider di base e la nuova funzionalità asincrona  
   
- È necessario abilitare il servizio Microsoft Distributed Transaction Controller (MSDTC) sul server per usare transazioni distribuite. Per informazioni su come abilitare MSDTC, vedere [abilitare MSDTC su un Server Web](http://msdn.microsoft.com/library/dd327979.aspx).  
+ È necessario abilitare il servizio Microsoft Distributed Transaction Controller (MSDTC) sul server per usare transazioni distribuite. Per informazioni su come abilitare MSDTC, vedere [come abilitare MSDTC su un Server Web](https://msdn.microsoft.com/library/dd327979.aspx).  
   
 ```csharp
 using System;  
@@ -627,10 +627,10 @@ namespace SqlBulkCopyAsyncCodeSample {
 ```  
   
 ## <a name="asynchronously-using-multiple-commands-with-mars"></a>Uso in modo asincrono di più comandi con MARS  
- Nell'esempio viene aperta una sola connessione per il **AdventureWorks** database. Usando un oggetto <xref:System.Data.SqlClient.SqlCommand> viene creato un tipo <xref:System.Data.SqlClient.SqlDataReader>. Poiché viene usato il lettore, viene aperto un secondo <xref:System.Data.SqlClient.SqlDataReader>, usando i dati del primo <xref:System.Data.SqlClient.SqlDataReader> come input per la clausola WHERE per il secondo lettore.  
+ L'esempio apre una singola connessione per il **AdventureWorks** database. Usando un oggetto <xref:System.Data.SqlClient.SqlCommand> viene creato un tipo <xref:System.Data.SqlClient.SqlDataReader>. Poiché viene usato il lettore, viene aperto un secondo <xref:System.Data.SqlClient.SqlDataReader>, usando i dati del primo <xref:System.Data.SqlClient.SqlDataReader> come input per la clausola WHERE per il secondo lettore.  
   
 > [!NOTE]
->  L'esempio seguente usa l'esempio **AdventureWorks** database fornito con SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
+>  L'esempio seguente usa il codice di esempio **AdventureWorks** database incluso con SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
   
 ```csharp
 using System;  
@@ -697,12 +697,12 @@ class Class1 {
 ```  
   
 ## <a name="asynchronously-reading-and-updating-data-with-mars"></a>Lettura e aggiornamento asincroni dei dati con MARS  
- MARS consente di usare una connessione per operazioni di lettura e operazioni DML (Data Manipulation Language) con più di un'operazione in sospeso. Questa funzionalità elimina la necessità, da parte di un'applicazione, di dover gestire errori dovuti a una connessione non disponibile. Inoltre, MARS è in grado di sostituire l'uso di cursori sul lato server, che di norma usano più risorse. Infine, poiché più operazioni possono essere eseguite su una singola connessione, queste possono condividere lo stesso contesto di transazione, eliminando la necessità di utilizzare **sp_getbindtoken** e **sp_bindsession** system archiviati procedure.  
+ MARS consente di usare una connessione per operazioni di lettura e operazioni DML (Data Manipulation Language) con più di un'operazione in sospeso. Questa funzionalità elimina la necessità, da parte di un'applicazione, di dover gestire errori dovuti a una connessione non disponibile. Inoltre, MARS è in grado di sostituire l'uso di cursori sul lato server, che di norma usano più risorse. Infine, in quanto più operazioni possono operare su una singola connessione, possono condividere lo stesso contesto di transazione, eliminando la necessità di usare **sp_getbindtoken** e **sp_bindsession** system archiviati procedure.  
   
- Nella seguente applicazione console viene mostrato come usare due oggetti <xref:System.Data.SqlClient.SqlDataReader> con tre oggetti <xref:System.Data.SqlClient.SqlCommand> e un singolo oggetto <xref:System.Data.SqlClient.SqlConnection> con MARS abilitato. Il primo oggetto comando recupera un elenco di fornitori la cui posizione creditizia corrisponde a 5. Il secondo oggetto comando usa l'identificatore fornitore fornito da un oggetto <xref:System.Data.SqlClient.SqlDataReader> per caricare il secondo oggetto <xref:System.Data.SqlClient.SqlDataReader> con tutti i prodotti per il fornitore specifico. Il record di ciascun prodotto viene visitato dal secondo <xref:System.Data.SqlClient.SqlDataReader>. Viene eseguito un calcolo per determinare il nuovo **OnOrderQty** deve essere. Il terzo oggetto comando viene quindi utilizzato per aggiornare il **ProductVendor** tabella con il nuovo valore. L'intero processo viene eseguito all'interno di una singola transazione, che viene quindi sottoposta a rollback.  
+ Nella seguente applicazione console viene mostrato come usare due oggetti <xref:System.Data.SqlClient.SqlDataReader> con tre oggetti <xref:System.Data.SqlClient.SqlCommand> e un singolo oggetto <xref:System.Data.SqlClient.SqlConnection> con MARS abilitato. Il primo oggetto comando recupera un elenco di fornitori la cui posizione creditizia corrisponde a 5. Il secondo oggetto comando usa l'identificatore fornitore fornito da un oggetto <xref:System.Data.SqlClient.SqlDataReader> per caricare il secondo oggetto <xref:System.Data.SqlClient.SqlDataReader> con tutti i prodotti per il fornitore specifico. Il record di ciascun prodotto viene visitato dal secondo <xref:System.Data.SqlClient.SqlDataReader>. Viene eseguito un calcolo per il nuovo **OnOrderQty** dovrebbe essere. Il terzo oggetto comando viene quindi usato per aggiornare il **ProductVendor** tabella con il nuovo valore. L'intero processo viene eseguito all'interno di una singola transazione, che viene quindi sottoposta a rollback.  
   
 > [!NOTE]
->  L'esempio seguente usa l'esempio **AdventureWorks** database fornito con SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
+>  L'esempio seguente usa il codice di esempio **AdventureWorks** database incluso con SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
   
 ```csharp
 using System;  

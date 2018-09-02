@@ -6,22 +6,22 @@ helpviewer_keywords:
 - split windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: 3872a176-891f-4c70-9779-b2ce85b0b102
-ms.openlocfilehash: ec2a369566737ce421f731ae2855f353344496f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2b605a08ea29d1d0a1e92cb2b7e4dc1f2059c26
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532714"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421378"
 ---
 # <a name="how-to-split-a-window-horizontally-using-the-designer"></a>Procedura: dividere una finestra orizzontalmente utilizzando la finestra di progettazione
-In questo esempio rende la barra di divisione che divide il <xref:System.Windows.Forms.SplitContainer> controllo orizzontale.  
+Questo esempio permette il divisore che divide il <xref:System.Windows.Forms.SplitContainer> controllo orizzontale.  
   
 > [!NOTE]
->  Il <xref:System.Windows.Forms.SplitContainer.Orientation%2A> proprietà del <xref:System.Windows.Forms.SplitContainer> controllo determina la direzione della barra di divisione, non del controllo stesso. Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Il <xref:System.Windows.Forms.SplitContainer.Orientation%2A> proprietà del <xref:System.Windows.Forms.SplitContainer> controllo determina la direzione della barra di divisione, non del controllo stesso. Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-split-a-window-horizontally"></a>Per dividere una finestra orizzontalmente  
+### <a name="to-split-a-window-horizontally"></a>Per suddividere una finestra orizzontalmente  
   
-1.  Nel **proprietà** finestra, impostare il <xref:System.Windows.Forms.SplitContainer.Orientation%2A> proprietà del <xref:System.Windows.Forms.SplitContainer> il controllo a <xref:System.Windows.Forms.Orientation.Horizontal>.  
+1.  Nel **le proprietà** impostare nella finestra di <xref:System.Windows.Forms.SplitContainer.Orientation%2A> proprietà del <xref:System.Windows.Forms.SplitContainer> il controllo a <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Forms.SplitContainer>  

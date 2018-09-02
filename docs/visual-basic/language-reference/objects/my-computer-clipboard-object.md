@@ -1,27 +1,27 @@
 ---
-title: Oggetto My.Computer.Clipboard
+title: Clipboard (oggetto) (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-ms.openlocfilehash: 484f676070a1447067304dba1795d799c046dec6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f44908668fc48e8a45cd6f2dc686f3bb7ba4f67
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595160"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418363"
 ---
 # <a name="mycomputerclipboard-object"></a>Oggetto My.Computer.Clipboard
 Specifica i metodi per la modifica degli Appunti.  
   
 ## <a name="remarks"></a>Note  
- Per informazioni sui metodi e proprietà del `My.Computer.Clipboard` , vedere <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
+ Per informazioni sui metodi e proprietà del `My.Computer.Clipboard` oggetti, vedere <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
   
- Per ulteriori informazioni, vedere [l'archiviazione e lettura dei dati dagli Appunti](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
+ Per altre informazioni, vedere [l'archiviazione e lettura dati dagli Appunti](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
   
 > [!NOTE]
->  È inoltre possibile utilizzare i metodi di <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> classe per gestire negli Appunti.  
+>  È anche possibile usare i metodi del <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> classe per manipolare gli Appunti.  
   
 ## <a name="requirements"></a>Requisiti  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  

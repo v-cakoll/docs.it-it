@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 99863e79-5b00-467e-a105-4ffa42de3ff7
-ms.openlocfilehash: 66dc61a3eb71fcc6657a455f13aa1d67cca554ed
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 78e1a2ce73be1e83284a1d8caa657ff645262e09
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761610"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420672"
 ---
 # <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>Compilazione di un dataset mediante uno o più oggetti REF CURSOR
 Nell'esempio Visual Basic seguente viene eseguita una stored procedure PL/SQL che restituisce due parametri REF CURSOR e consente la compilazione di un tipo <xref:System.Data.DataSet> con le righe restituite.  
@@ -48,4 +48,4 @@ Private Sub Button1_Click(ByVal sender As Object, _
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetti REF CURSOR Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

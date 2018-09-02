@@ -5,46 +5,46 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: f3a00d78f6406e3f507ce91651efe5c29a5dd453
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546279"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421710"
 ---
 # <a name="printing-how-to-topics"></a>Procedure relative alla stampa
-Negli argomenti di questa sezione viene illustrato come utilizzare la stampa e le funzionalità di gestione del sistema di stampa incluse con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nonché il nuovo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] percorso di stampa.  
+Gli argomenti in questa sezione illustrano come usare la stampa e le funzionalità di gestione del sistema di stampa è incluso con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , nonché il nuovo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] percorso di stampa.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Richiamare una finestra di dialogo di stampa](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)  
- Istruzioni per il markup XAML dichiarare un [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] Stampa oggetto finestra di dialogo o il codice per richiamare la finestra di dialogo dall'interno di un'applicazione Windows Presentation Foundation (WPF).  
+ Le istruzioni per il markup XAML dichiarare un [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] Stampa oggetto finestra di dialogo e il codice per richiamare la finestra di dialogo all'interno di un'applicazione Windows Presentation Foundation (WPF).  
   
  [Duplicare una stampante](../../../../docs/framework/wpf/advanced/how-to-clone-a-printer.md)  
- Coda di stampa le istruzioni su come installare una seconda coda di stampa con le stesse proprietà di un oggetto esistente.  
+ Coda di stampa le istruzioni su come installare una seconda coda di stampa con esattamente le stesse proprietà di un oggetto esistente.  
   
  [Diagnosticare processi di stampa problematici](../../../../docs/framework/wpf/advanced/how-to-diagnose-problematic-print-job.md)  
- Istruzioni per l'utilizzo delle proprietà delle code di stampa e i processi di stampa per la diagnosi di un processo di stampa non è in corso la stampa.  
+ Istruzioni per l'uso delle proprietà di code di stampa e i processi di stampa per la diagnosi di un processo di stampa che non è in corso la stampa.  
   
  [Verificare l'eventuale possibilità di eseguire un processo di stampa in questo preciso momento](../../../../docs/framework/wpf/advanced/how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
- Istruzioni per l'utilizzo delle proprietà delle code di stampa e i processi di stampa a livello di programmazione decidere quali ore del giorno che il processo può essere stampato.  
+ Istruzioni per usare le proprietà di code di stampa e i processi di stampa a livello di programmazione decidere quali ore del giorno che il processo può essere stampato.  
   
  [Enumerare un sottoinsieme di code di stampa](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Istruzioni per la generazione di un elenco delle stampanti con determinate caratteristiche.  
   
- [NOTINBUILD: Procedura: estendere lo Schema di stampa e creare nuove classi di sistema di stampa](http://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
- Analisi approfondita di illustrato il codice gestito i programmatori possono estendere lo Schema di stampa per i dispositivi di stampa speciali o le stampanti con le funzionalità nuove o non comuni.  
+ [NOTINBUILD: Procedura: estendere lo Schema di stampa e creare nuove classi di sistema di stampa](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
+ Analisi approfondita del codice gestito come i programmatori possono estendere lo Schema di stampa a dispositivi di stampa speciali o le stampanti con funzionalità nuove o non comuni.  
   
  [Ottenere le proprietà dell'oggetto del sistema di stampa senza reflection](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
- Proprietà dell'oggetto di sistema e i relativi tipi di stampa le istruzioni su come individuare in fase di esecuzione.  
+ Le istruzioni su come individuare in fase di esecuzione stampa di proprietà dell'oggetto di sistema e i relativi tipi.  
   
  [Stampa di file XPS a livello di codice](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)  
- Istruzioni per la stampa rapida di [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] file senza la necessità di un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
+ Le istruzioni per la stampa rapida dei [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] i file senza la necessità di un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
   
  [Verificare lo stato delle stampanti da postazione remota](../../../../docs/framework/wpf/advanced/how-to-remotely-survey-the-status-of-printers.md)  
- Istruzioni per la creazione di un'utilità che verrà controllo delle stampanti per individuare quelli che hanno fogli bloccati o altri problemi.  
+ Istruzioni per la creazione di un'utilità che verrà controllo delle stampanti per individuare quelli che hanno un inceppamento o un altro problema.  
   
  [Convalidare e unire PrintTicket](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
- Vengono fornite istruzioni relative alla verifica che un ticket di stampato sia valido e che non richieda tutto ciò che non è supportata dalla stampante.  
+ Istruzioni per la verifica che un ticket di stampa sia valido e che non richieda alcuna operazione che non è supportata dalla stampante.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Printing>  
@@ -52,4 +52,4 @@ Negli argomenti di questa sezione viene illustrato come utilizzare la stampa e l
  <xref:System.Printing.Interop>  
  [Panoramica della stampa](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](http://www.microsoft.com/xps)
+ [XPS](https://www.microsoft.com/xps)

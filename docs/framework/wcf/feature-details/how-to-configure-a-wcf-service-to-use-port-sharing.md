@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 0a3aca2bac546c9142137afc025133bc1154ff90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2715e319772e4e0ae4cb38f3dbd1dd5133a2eef3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495242"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43451610"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Procedura: configurare un servizio Windows Communication Foundation per l'uso della condivisione delle porte
-Il modo più semplice da utilizzare nell'applicazione Windows Communication Foundation (WCF) di condivisione delle porte net.tcp:// consiste nell'esporre un servizio utilizzando il <xref:System.ServiceModel.NetTcpBinding>.  
+Il modo più semplice da utilizzare nell'applicazione Windows Communication Foundation (WCF) di condivisione delle porte net.tcp:// consiste nell'esporre un servizio usando il <xref:System.ServiceModel.NetTcpBinding>.  
   
  Questa associazione fornisce una proprietà <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> che controlla se la condivisione delle porte net.tcp:// è attivata per il servizio configurato con questa associazione.  
   
@@ -21,7 +21,7 @@ Il modo più semplice da utilizzare nell'applicazione Windows Communication Foun
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>Per attivare in codice la condivisione delle porte net.tcp:// in un'associazione NetTcpBinding  
   
-1.  Creare un servizio per implementare un contratto denominato `IMyService` e chiamarlo `MyService`,.  
+1.  Creare un servizio per implementare un contratto denominato `IMyService` e denominarlo `MyService`,.  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
@@ -61,5 +61,5 @@ Il modo più semplice da utilizzare nell'applicazione Windows Communication Foun
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Condivisione delle porte Net.TCP](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
+ [Condivisione delle porte Net.TCP](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
  [Procedura: Abilitare il servizio di condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

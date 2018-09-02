@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 44c67470def430a9ba924483899f0db6a9c798a2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d66b74f06abe6b337c24859c444f7a8c2aa52c13
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999909"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421523"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Procedura: chiamare una funzione Windows che accetta tipi senza segno (Visual Basic)
 Se si sta utilizzando una classe, modulo o una struttura con membri dei tipi di integer senza segno, è possibile accedere a questi membri con Visual Basic.  
@@ -75,7 +75,7 @@ Se si sta utilizzando una classe, modulo o una struttura con membri dei tipi di 
     >  Effettua una chiamata a codice non gestito, ad esempio l'interfaccia di programmazione dell'applicazione di Windows (API), espone il codice a potenziali rischi di sicurezza.  
   
     > [!IMPORTANT]
-    >  Chiamare l'API di Windows richiede l'autorizzazione di accesso al codice non gestito, che possono influire sull'esecuzione in situazioni di attendibilità parziale. Per altre informazioni, vedere <xref:System.Security.Permissions.SecurityPermission> e [le autorizzazioni di accesso di codice](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
+    >  Chiamare l'API di Windows richiede l'autorizzazione di accesso al codice non gestito, che possono influire sull'esecuzione in situazioni di attendibilità parziale. Per altre informazioni, vedere <xref:System.Security.Permissions.SecurityPermission> e [le autorizzazioni di accesso di codice](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)  

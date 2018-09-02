@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8936fa3d22cfde4c2536fccf9d46c1990133db1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fe1ba15f8a9f8ee79582158209049c1e502a61d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445312"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418655"
 ---
 # <a name="loadlibraryshim-function"></a>Funzione LoadLibraryShim
 Carica una versione specifica di una DLL che è incluso nel pacchetto ridistribuibile di .NET Framework.  
   
- Questa funzione è stata deprecata nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Utilizzare il [ICLRRuntimeInfo:: LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) metodo invece.  
+ Questa funzione è stata deprecata nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Usare la [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) metodo invece.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,10 +42,10 @@ HRESULT LoadLibraryShim (
   
 #### <a name="parameters"></a>Parametri  
  `szDllName`  
- [in] Stringa con terminazione zero che rappresenta il nome della DLL da caricare dalla libreria .NET Framework.  
+ [in] Una stringa con terminazione zero che rappresenta il nome della DLL da caricare dalla libreria di .NET Framework.  
   
  `szVersion`  
- [in] Stringa con terminazione zero che rappresenta la versione della DLL da caricare. Se `szVersion` è null, la versione selezionata per il caricamento è la versione più recente della DLL specificata che è inferiore alla versione 4. Vale a dire tutte le versioni uguale o maggiore della versione 4 vengono ignorate se `szVersion` è null, e se non è installata alcuna versione inferiore alla versione 4, è Impossibile caricare la DLL. In questo modo l'installazione di viene il [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] non influisce sul pre-esistente applicazioni o componenti. Vedere la voce [SxS In-Process e migrazione](http://go.microsoft.com/fwlink/?LinkId=200329) nel blog del team CLR.  
+ [in] Una stringa con terminazione zero che rappresenta la versione della DLL da caricare. Se `szVersion` è null, la versione selezionata per il caricamento è la versione più recente del file DLL specificata che è inferiore alla versione 4. Vale a dire tutte le versioni uguale o maggiore della versione 4 vengono ignorate se `szVersion` è null, e se non è installata alcuna versione inferiore alla versione 4, la DLL non riesce a caricare. Questo modo si garantisce che l'installazione del [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] non influiscono sulle applicazioni preesistenti o componenti. Vedere l'intervento [SxS In-Process e avvio rapido di migrazione](https://go.microsoft.com/fwlink/?LinkId=200329) nel blog del team CLR.  
   
  `pvReserved`  
  Riservato per utilizzi futuri.  
@@ -54,7 +54,7 @@ HRESULT LoadLibraryShim (
  [out] Un puntatore all'handle del modulo.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce codici di errore standard del modello COM (Component Object), come definito nel file Winerror. H, oltre ai valori seguenti.  
+ Questo metodo restituisce codici di errore standard modello COM (Component Object), come definito nel file Winerror. H, oltre ai valori seguenti.  
   
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
@@ -62,17 +62,17 @@ HRESULT LoadLibraryShim (
 |CLR_E_SHIM_RUNTIMELOAD|Il caricamento `szDllName` richiede il caricamento non è possibile caricare common language runtime (CLR) e la versione necessaria di CLR.|  
   
 ## <a name="remarks"></a>Note  
- Questa funzione viene utilizzata per caricare le DLL che vengono inclusi nel pacchetto ridistribuibile di .NET Framework. Non è possibile caricare le DLL generati dall'utente.  
+ Questa funzione viene utilizzata per caricare le DLL incluse nel pacchetto ridistribuibile di .NET Framework. Non è possibile caricare le DLL generati dall'utente.  
   
 > [!NOTE]
->  A partire da .NET Framework versione 2.0, caricare il file Fusion.dll fa sì che Common Language Runtime da caricare. Questo avviene perché le funzioni in Fusion sono ora wrapper le cui implementazioni sono forniti dal runtime.  
+>  A partire da .NET Framework versione 2.0, il caricamento Fusion fa sì che Common Language Runtime da caricare. Questo avviene perché le funzioni in Fusion. dll sono ora le cui implementazioni sono fornite dal runtime del wrapper.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Mscoree. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

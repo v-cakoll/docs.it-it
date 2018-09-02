@@ -1,5 +1,5 @@
 ---
-title: Oggetto My.Settings
+title: Oggetto My. Settings (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.MySettingsProperty.Settings
@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 54176ae6706311b17227c7dc21a5060c9b369753
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83bba35340a917b649369fc1eb7a01a2bc6a2188
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603032"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442772"
 ---
 # <a name="mysettings-object"></a>Oggetto My.Settings
-Fornisce proprietà e metodi per accedere alle impostazioni dell'applicazione.  
+Fornisce proprietà e metodi per l'accesso alle impostazioni dell'applicazione.  
   
 ## <a name="remarks"></a>Note  
- Il `My.Settings` oggetto fornisce accesso alle impostazioni dell'applicazione e consente di archiviare e recuperare le impostazioni delle proprietà e altre informazioni per l'applicazione in modo dinamico. Per altre informazioni, vedere [Gestione delle impostazioni di un'applicazione (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+ Il `My.Settings` oggetto consente di accedere alle impostazioni dell'applicazione e consente di archiviare e recuperare le impostazioni delle proprietà e altre informazioni per l'applicazione in modo dinamico. Per altre informazioni, vedere [Gestione delle impostazioni di un'applicazione (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="properties"></a>Proprietà  
- Le proprietà dell'oggetto `My.Settings` offrono accesso alle impostazioni dell'applicazione. Per aggiungere o rimuovere le impostazioni, utilizzare il **Progettazione impostazioni**.  
+ Le proprietà dell'oggetto `My.Settings` offrono accesso alle impostazioni dell'applicazione. Per aggiungere o rimuovere le impostazioni, usare il **Progettazione impostazioni**.  
   
- Ogni impostazione abbia un **nome**, **tipo**, **ambito**, e **valore**, e queste impostazioni determinano come la proprietà di accesso a ogni impostazione è presente il `My.Settings` oggetto:  
+ Ciascuna impostazione dispone di un **Name**, **tipo**, **ambito**, e **valore**, e queste impostazioni determinano come la proprietà di accesso a ogni impostazione viene visualizzato nei `My.Settings` oggetto:  
   
 -   **Nome** determina il nome della proprietà.  
   
 -   **Tipo** determina il tipo della proprietà.  
   
--   **Ambito** indica se la proprietà è di sola lettura. Se il valore è **applicazione**, la proprietà è di sola lettura; se il valore è **utente**, la proprietà è di sola lettura.  
+-   **Ambito** indica se la proprietà è di sola lettura. Se il valore è **Application**, la proprietà è di sola lettura; se il valore è **utente**, la proprietà è di lettura / scrittura.  
   
 -   **Valore** è il valore predefinito della proprietà.  
   
@@ -40,17 +40,17 @@ Fornisce proprietà e metodi per accedere alle impostazioni dell'applicazione.
 |`Reload`|Consente di ricaricare le impostazioni utente da ultimi valori salvati.|  
 |`Save`|Salva le impostazioni utente correnti.|  
   
- Il `My.Settings` oggetto fornisce inoltre le proprietà avanzate ed ereditati dalla <xref:System.Configuration.ApplicationSettingsBase> classe.  
+ Il `My.Settings` oggetto fornisce anche le proprietà avanzate e i metodi, ereditati dal <xref:System.Configuration.ApplicationSettingsBase> classe.  
   
 ## <a name="tasks"></a>Attività  
- Nella tabella seguente sono elencati esempi di attività che coinvolgono la `My.Settings` oggetto.  
+ La tabella seguente elenca alcuni esempi di attività che implicano il `My.Settings` oggetto.  
   
 |A|Vedere|  
 |---|---|  
 |Leggere un'impostazione dell'applicazione|[Procedura: Leggere le impostazioni dell'applicazione in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
 |Modificare un'impostazione utente|[Procedura: Modificare le impostazioni utente in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
 |Mantenere le impostazioni utente|[Procedura: Mantenere le impostazioni utente in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Creare una griglia delle proprietà per le impostazioni utente|[Procedura: Creare griglie di proprietà per impostazioni utente in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|Creare una griglia delle proprietà per impostazioni utente|[Procedura: Creare griglie di proprietà per impostazioni utente in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio riportato di seguito viene mostrato il valore dell'impostazione `Nickname`.  

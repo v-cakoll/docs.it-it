@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566652"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423244"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Informazioni su strutture e concetti del flusso del nodo XAML
 I reader XAML e i writer XAML implementati nei servizi XAML di .NET Framework sono basati sul concetto di progettazione di un flusso di nodi XAML. Il flusso di nodi XAML è una concettualizzazione di un set di nodi XAML. In questa concettualizzazione, un processore XAML attraversa la struttura delle relazioni tra i nodi in XAML, una alla volta. In qualsiasi momento, in un flusso di nodi XAML aperto è presente solo un record o una posizione corrente e molti aspetti dell'API segnalano unicamente le informazioni disponibili da tale posizione. Il nodo corrente in un flusso di nodi XAML può essere descritto come un oggetto, un membro o un valore. Trattando XAML come flusso di nodi XAML, i reader XAML possono comunicare con i writer XAML e consentire a un programma di visualizzare, interagire con o modificare i contenuti di un flusso di nodi XAML durante un'operazione relativa a un percorso di salvataggio o di caricamento che usa XAML. La progettazione delle API di reader e writer XAML e il concetto di flusso di nodi XAML sono analoghi a concetti e progettazioni di reader e writer correlati precedenti, come [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] e le classi <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> . Questo argomento illustra i concetti correlati al flusso di nodi XAML e descrive come scrivere routine che interagiscono con rappresentazioni XAML a livello di nodi XAML.  
@@ -80,7 +80,7 @@ while (xxr.Read()) {
  Vi sono altri modi, non legati al concetto di ciclo di nodi, per usare una rappresentazione XAML. Potrebbe ad esempio essere disponibile un reader XAML in grado di leggere un nodo indicizzato oppure di accedere direttamente ai nodi tramite `x:Name`, `x:Uid`o altri identificatori. I servizi XAML di .NET Framework non forniscono un'implementazione completa, ma forniscono un modello consigliato tramite servizi e tipi di supporto. Per altre informazioni, vedere <xref:System.Xaml.IXamlIndexingReader> e <xref:System.Xaml.XamlNodeList>.  
   
 > [!TIP]
->  Microsoft produce inoltre un rilascio fuori programma noto come Microsoft XAML Toolkit. Tale soluzione è al momento disponibile in una versione non definitiva. Per chi tuttavia è disposto a lavorare con componenti non definitivi, Microsoft XAML Toolkit fornisce alcune risorse interessanti per strumenti XAML e analisi statica del codice XAML. Microsoft XAML Toolkit include un'API DOM XAML, supporto per l'analisi FxCop e un contesto dello schema XAML per Silverlight. Per ulteriori informazioni, vedere la pagina relativa a [Microsoft XAML Toolkit](http://code.msdn.microsoft.com/XAML).  
+>  Microsoft produce inoltre un rilascio fuori programma noto come Microsoft XAML Toolkit. Tale soluzione è al momento disponibile in una versione non definitiva. Per chi tuttavia è disposto a lavorare con componenti non definitivi, Microsoft XAML Toolkit fornisce alcune risorse interessanti per strumenti XAML e analisi statica del codice XAML. Microsoft XAML Toolkit include un'API DOM XAML, supporto per l'analisi FxCop e un contesto dello schema XAML per Silverlight. Per altre informazioni, vedere [Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML).  
   
 <a name="working_with_the_current_node"></a>   
 ## <a name="working-with-the-current-node"></a>Uso del nodo corrente  

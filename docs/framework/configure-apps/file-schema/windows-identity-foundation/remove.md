@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: dfea0b0eb4b133308f10b523a659cc00f87252b8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 596cab4494ef3ba200fd0a046d7935f648fb7c4f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755077"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422188"
 ---
 # <a name="ltremovegt"></a>&lt;remove&gt;
 Rimuove il gestore di token di sicurezza specificato dalla raccolta di gestori di token.  
@@ -39,10 +39,10 @@ Rimuove il gestore di token di sicurezza specificato dalla raccolta di gestori d
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|tipo|Il nome del tipo CLR il gestore dei token da rimuovere. Per ulteriori informazioni su come specificare il `type` attributo, vedere [riferimenti al tipo personalizzato](http://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Obbligatorio.|  
+|tipo|Il nome del tipo CLR il gestore dei token da rimuovere. Per altre informazioni su come specificare il `type` dell'attributo, vedere [riferimenti a tipi personalizzati](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Obbligatorio.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

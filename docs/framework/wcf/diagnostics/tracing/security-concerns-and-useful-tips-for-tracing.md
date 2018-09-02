@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 664785bc97574eff73dc1c2be64f407641df6b00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccb16a0996386f3518bc52e95c1892c56e8bbad2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484569"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420832"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Problemi di sicurezza e suggerimenti utili per la traccia
 In questo argomento viene descritto come proteggere informazioni riservate e vengono elencati suggerimenti utili durante l'utilizzo di WebHost.  
@@ -86,9 +86,9 @@ In questo argomento viene descritto come proteggere informazioni riservate e ven
   
  Le modifiche diventano effettive solo dopo l'avvio o il riavvio dell'applicazione. Un evento viene registrato all'avvio quando entrambi gli attributi sono impostati su `true`. Un evento viene inoltre registrato se `logKnownPii` è impostato su `true` ma `enableLoggingKnownPii` è `false`.  
   
- Per ulteriori informazioni sulla registrazione di informazioni personali, vedere [blocco di protezione delle informazioni personali](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) esempio.  
+ Per altre informazioni sulla registrazione di informazioni personali, vedere [blocco di sicurezza delle informazioni personali](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) esempio.  
   
- L'amministratore del computer e il distributore di applicazioni devono prestare molta attenzione durante l'utilizzo di queste due opzioni. Se la registrazione di informazioni personali è abilitata, vengono registrate chiavi di sicurezza e informazioni personali. Se è disabilitata, i dati riservati e le informazioni specifiche dell'applicazione vengono comunque registrati nell'intestazione e nel corpo dei messaggi. Per una descrizione più dettagliata sulla privacy e sulla protezione delle informazioni personali vengano esposti, vedere [Privacy dell'utente](http://go.microsoft.com/fwlink/?LinkID=94647).  
+ L'amministratore del computer e il distributore di applicazioni devono prestare molta attenzione durante l'utilizzo di queste due opzioni. Se la registrazione di informazioni personali è abilitata, vengono registrate chiavi di sicurezza e informazioni personali. Se è disabilitata, i dati riservati e le informazioni specifiche dell'applicazione vengono comunque registrati nell'intestazione e nel corpo dei messaggi. Per una discussione più approfondita sulla privacy e protezione delle informazioni personali vengano esposte, vedere [Privacy dell'utente](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
  L'indirizzo IP del mittente del messaggio, inoltre, viene registrato una volta per ogni connessione per trasporti orientati alla connessione e una volta per ogni messaggio inviato diversamente. Ciò avviene senza il consenso del mittente. Questa registrazione, tuttavia, avviene solo ai livelli di traccia Informazioni o Dettagliato, ovvero i livelli non predefiniti né consigliati in produzione, tranne che per il debug attivo.  
   

@@ -2,12 +2,12 @@
 title: Pubblicazione WSDL personalizzata
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: b75aa2269d9c21a6f6d7f579d3c0b6f547a92332
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 725b62a26d640e242010a01ff810ea90d5cc53bc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807879"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418435"
 ---
 # <a name="custom-wsdl-publication"></a>Pubblicazione WSDL personalizzata
 Nell'esempio viene illustrato come eseguire le seguenti operazioni:  
@@ -18,7 +18,7 @@ Nell'esempio viene illustrato come eseguire le seguenti operazioni:
   
 -   Implementare <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> e <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> rispettivamente su un comportamento del contratto personalizzato e un comportamento dell'operazione personalizzato per scrivere le annotazioni importate come commenti in CodeDom per il contratto e l'operazione importati.  
   
--   Usare la <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> per scaricare il WSDL, una <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> per importare il WSDL mediante l'utilità di importazione WSDL personalizzata e il <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> per generare codice client di Windows Communication Foundation (WCF) con le annotazioni WSDL quali / / / e ' ' commenti in c# e Visual Autenticazione di base.  
+-   Usare la <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> per scaricare il WSDL, una <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> per importare il WSDL mediante l'utilità di importazione WSDL personalizzata e il <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> per generare codice client di Windows Communication Foundation (WCF) con le annotazioni WSDL quali / / / e ' ' commenti in c# e Visual Base.  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -231,7 +231,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- Dopo che l'unità di importazione personalizzata è stata specificata, il sistema di metadati WCF carica l'utilità di importazione personalizzata in qualsiasi <xref:System.ServiceModel.Description.WsdlImporter> creato a tale scopo. In questo esempio viene utilizzato <xref:System.ServiceModel.Description.MetadataExchangeClient> per scaricare i metadati, l'elemento <xref:System.ServiceModel.Description.WsdlImporter> configurato correttamente per importare i metadati utilizzando l'unità di importazione personalizzata creata dall'esempio e <xref:System.ServiceModel.Description.ServiceContractGenerator> per compilare le informazioni del contratto modificate nel codice client Visual Basic e C# che possono essere utilizzate in Visual Studio per supportare Intellisense o possono essere compilate nella documentazione XML.  
+ Una volta che l'utilità di importazione personalizzata è stata specificata, il sistema dei metadati WCF carica l'utilità di importazione personalizzata in qualsiasi <xref:System.ServiceModel.Description.WsdlImporter> creato a tale scopo. In questo esempio viene utilizzato <xref:System.ServiceModel.Description.MetadataExchangeClient> per scaricare i metadati, l'elemento <xref:System.ServiceModel.Description.WsdlImporter> configurato correttamente per importare i metadati utilizzando l'unità di importazione personalizzata creata dall'esempio e <xref:System.ServiceModel.Description.ServiceContractGenerator> per compilare le informazioni del contratto modificate nel codice client Visual Basic e C# che possono essere utilizzate in Visual Studio per supportare Intellisense o possono essere compilate nella documentazione XML.  
   
 ```  
 /// From WSDL Documentation:  
@@ -289,7 +289,7 @@ public interface ICalculator
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -300,7 +300,7 @@ public interface ICalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
   

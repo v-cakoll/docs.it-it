@@ -2,12 +2,12 @@
 title: Tipi di dati e funzioni
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: a7205d7fbdeb2b6cffcf49fb30e2ff2a25137403
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f8f0a59f1a962eaa6a747e124f47d1570ca455
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362185"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418065"
 ---
 # <a name="data-types-and-functions"></a>Tipi di dati e funzioni
 Negli argomenti elencati nella tabella seguente viene descritto il supporto LINQ to SQL per membri, costrutti e cast CRL (Common Language Runtime). I membri e i costrutti supportati sono disponibili per l'uso in query LINQ to SQL.  
@@ -34,4 +34,4 @@ Negli argomenti elencati nella tabella seguente viene descritto il supporto LINQ
 ## <a name="see-also"></a>Vedere anche  
  [Tipi SQL-CLR non corrispondenti](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
  [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Libreria di classi .NET framework in Visual Studio](http://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)
+ [Libreria di classi .NET framework in Visual Studio](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

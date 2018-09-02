@@ -4,12 +4,12 @@ description: Questo argomento descrive il processo di creazione di una soluzione
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314698"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457043"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac
 
@@ -95,7 +95,7 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
            public void IgnoreCasing()
            {
                var wordCount = WordCount.GetWordCount("Jack", "Jack jack");
-   
+
                Assert.NotEqual(2, wordCount);
            }
        }
@@ -117,7 +117,7 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
    ![Icona di ancoraggio del pannello Unit test](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. Fare clic sul pulsante **Esegui tutto**.
-   
+
    Il test ha esito negativo, che è il risultato previsto. Il metodo di test indica che dalla stringa "Jack Jack" fornita al metodo `GetWordCount` non vengono restituite due istanze della stringa `inputString`, "Jack". Poiché nel metodo `GetWordCount` è stato escluso l'uso delle maiuscole/minuscole, vengono invece restituite due istanze. L'asserzione che 2 *non è uguale a* 2 ha esito negativo. Questo è il risultato previsto e la logica del test è corretta.
 
    ![Errore del test](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
@@ -135,8 +135,8 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
    [InlineData(0, "Ting", "Does not appear in the string.")]
    [InlineData(1, "Ting", "Ting appears once.")]
    [InlineData(2, "Ting", "Ting appears twice with Ting.")]
-   public void CountInstancesCorrectly(int count, 
-                                       string searchWord, 
+   public void CountInstancesCorrectly(int count,
+                                       string searchWord,
                                        string inputString)
    {
        Assert.NotEqual(count, WordCount.GetWordCount(searchWord,
@@ -145,7 +145,7 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
    ```
 
    `CountInstancesCorrectly` verifica che il metodo `GetWordCount` esegua il conteggio in modo corretto. L'oggetto `InlineData` fornisce un conteggio, una parola di ricerca e una stringa di input da verificare. Il metodo di test viene eseguito una volta per ogni riga di dati. Tenere presente che, ancora una volta, si sta asserendo un esito negativo prima di tutto tramite `Assert.NotEqual`, anche se si è certi che i conteggi dei dati siano corretti e che i valori corrispondano ai conteggi restituiti dal metodo `GetWordCount`. Anche se, in un primo momento, l'esecuzione del test con esito negativo sembra una perdita di tempo, la verifica della logica del test tramite la generazione di un esito negativo consente in realtà di attestarne la correttezza. Quando si riscontra un metodo di test che ha esito positivo quando invece dovrebbe avere esito negativo, si è trovato un bug nella logica del test. Vale quindi la pena eseguire questo passaggio ogni volta che si crea un metodo di test.
-   
+
 1. Salvare il file ed eseguire di nuovo i test. Il test delle maiuscole/minuscole ha esito positivo, mentre i tre test del conteggio hanno esito negativo. Questo è esattamente il risultato previsto.
 
    ![Errore del test](./media/using-on-mac-vs-full-solution/vsmacfull11.png)
@@ -192,4 +192,4 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Note sulla versione di Visual Studio 2017 per Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)
+* [Note sulla versione di Visual Studio 2017 per Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)
