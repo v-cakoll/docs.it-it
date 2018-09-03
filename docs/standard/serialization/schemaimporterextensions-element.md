@@ -7,16 +7,16 @@ helpviewer_keywords:
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
 ms.openlocfilehash: 8bcd8abb138c645f61bf833b49cda2631d1778dd
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255629"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478013"
 ---
-# <a name="ltschemaimporterextensionsgt-element"></a><span data-ttu-id="59e1c-102">Elemento &lt;schemaImporterExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="59e1c-102">&lt;schemaImporterExtensions&gt; Element</span></span>
-<span data-ttu-id="59e1c-103">Contiene tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'esecuzione del mapping dei tipi XSD ai tipi .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="59e1c-103">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> for mapping of XSD types to .NET Framework types.</span></span> <span data-ttu-id="59e1c-104">Per altre informazioni sui file di configurazione, vedere [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md).</span><span class="sxs-lookup"><span data-stu-id="59e1c-104">For more information about configuration files, see [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
+# <a name="ltschemaimporterextensionsgt-element"></a><span data-ttu-id="7631b-102">Elemento &lt;schemaImporterExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="7631b-102">&lt;schemaImporterExtensions&gt; Element</span></span>
+<span data-ttu-id="7631b-103">Contiene tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'esecuzione del mapping dei tipi XSD ai tipi .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7631b-103">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> for mapping of XSD types to .NET Framework types.</span></span> <span data-ttu-id="7631b-104">Per altre informazioni sui file di configurazione, vedere [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md).</span><span class="sxs-lookup"><span data-stu-id="7631b-104">For more information about configuration files, see [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59e1c-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="59e1c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7631b-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="7631b-105">Syntax</span></span>  
   
 ```xml  
 <schemaImporterExtensions>  
@@ -24,20 +24,20 @@ ms.locfileid: "43255629"
 </schemaImporterExtensions>  
 ```  
   
-## <a name="child-elements"></a><span data-ttu-id="59e1c-106">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="59e1c-106">Child Elements</span></span>  
+## <a name="child-elements"></a><span data-ttu-id="7631b-106">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="7631b-106">Child Elements</span></span>  
   
-|<span data-ttu-id="59e1c-107">Elemento</span><span class="sxs-lookup"><span data-stu-id="59e1c-107">Element</span></span>|<span data-ttu-id="59e1c-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="59e1c-108">Description</span></span>|  
+|<span data-ttu-id="7631b-107">Elemento</span><span class="sxs-lookup"><span data-stu-id="7631b-107">Element</span></span>|<span data-ttu-id="7631b-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7631b-108">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="59e1c-109">\<aggiungere > (elemento) per \<schemaImporterExtensions ></span><span class="sxs-lookup"><span data-stu-id="59e1c-109">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|<span data-ttu-id="59e1c-110">Aggiunge tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per creare i mapping.</span><span class="sxs-lookup"><span data-stu-id="59e1c-110">Adds types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> to create mappings.</span></span>|  
+|[<span data-ttu-id="7631b-109">\<aggiungere > (elemento) per \<schemaImporterExtensions ></span><span class="sxs-lookup"><span data-stu-id="7631b-109">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|<span data-ttu-id="7631b-110">Aggiunge tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per creare i mapping.</span><span class="sxs-lookup"><span data-stu-id="7631b-110">Adds types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> to create mappings.</span></span>|  
   
-## <a name="parent-elements"></a><span data-ttu-id="59e1c-111">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="59e1c-111">Parent Elements</span></span>  
+## <a name="parent-elements"></a><span data-ttu-id="7631b-111">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="7631b-111">Parent Elements</span></span>  
   
-|<span data-ttu-id="59e1c-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="59e1c-112">Element</span></span>|<span data-ttu-id="59e1c-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="59e1c-113">Description</span></span>|  
+|<span data-ttu-id="7631b-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="7631b-112">Element</span></span>|<span data-ttu-id="7631b-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7631b-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="59e1c-114">Elemento \<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="59e1c-114">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)|<span data-ttu-id="59e1c-115">L'elemento di primo livello per il controllo della serializzazione XML.</span><span class="sxs-lookup"><span data-stu-id="59e1c-115">The top-level element for controlling XML serialization.</span></span>|  
+|[<span data-ttu-id="7631b-114">Elemento \<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="7631b-114">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)|<span data-ttu-id="7631b-115">L'elemento di primo livello per il controllo della serializzazione XML.</span><span class="sxs-lookup"><span data-stu-id="7631b-115">The top-level element for controlling XML serialization.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="59e1c-116">Esempio</span><span class="sxs-lookup"><span data-stu-id="59e1c-116">Example</span></span>  
- <span data-ttu-id="59e1c-117">Nell'esempio di codice riportato di seguito viene illustrato come aggiungere tipi utilizzati da <xref:System.Xml.Serialization.XmlSchemaImporter> in caso di esecuzione del mapping di tipi XSD ai tipi .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="59e1c-117">The following code example illustrates how to add types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> when mapping XSD types to .NET Framework types.</span></span>  
+## <a name="example"></a><span data-ttu-id="7631b-116">Esempio</span><span class="sxs-lookup"><span data-stu-id="7631b-116">Example</span></span>  
+ <span data-ttu-id="7631b-117">Nell'esempio di codice riportato di seguito viene illustrato come aggiungere tipi utilizzati da <xref:System.Xml.Serialization.XmlSchemaImporter> in caso di esecuzione del mapping di tipi XSD ai tipi .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7631b-117">The following code example illustrates how to add types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> when mapping XSD types to .NET Framework types.</span></span>  
   
 ```xml  
 <system.xml.serialization>  
@@ -50,10 +50,10 @@ ms.locfileid: "43255629"
 </system.xml.serialization>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="59e1c-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="59e1c-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7631b-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7631b-118">See Also</span></span>  
  <xref:System.Xml.Serialization.XmlSchemaImporter>  
  <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
- [<span data-ttu-id="59e1c-119">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="59e1c-119">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="59e1c-120">Elemento \<dateTimeSerialization></span><span class="sxs-lookup"><span data-stu-id="59e1c-120">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)  
- [<span data-ttu-id="59e1c-121">\<aggiungere > (elemento) per \<schemaImporterExtensions ></span><span class="sxs-lookup"><span data-stu-id="59e1c-121">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
- [<span data-ttu-id="59e1c-122">Elemento \<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="59e1c-122">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)
+ [<span data-ttu-id="7631b-119">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="7631b-119">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="7631b-120">Elemento \<dateTimeSerialization></span><span class="sxs-lookup"><span data-stu-id="7631b-120">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)  
+ [<span data-ttu-id="7631b-121">\<aggiungere > (elemento) per \<schemaImporterExtensions ></span><span class="sxs-lookup"><span data-stu-id="7631b-121">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
+ [<span data-ttu-id="7631b-122">Elemento \<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="7631b-122">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)
