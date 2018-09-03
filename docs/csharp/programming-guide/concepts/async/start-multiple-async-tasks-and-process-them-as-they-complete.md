@@ -2,12 +2,12 @@
 title: Avviare più attività asincrone ed elaborarle quando vengono completate (C#)
 ms.date: 07/20/2015
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 29dc629abae13bb7ba3a9b0cb87300e6d1cbe2d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59b65e456c528c63c79c97f6c75c328066be631
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333723"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43416398"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Avviare più attività asincrone ed elaborarle quando vengono completate (C#)
 Usando <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, è possibile avviare più attività contemporaneamente ed elaborarle una ad una quando vengono completate, invece che nell'ordine in cui vengono avviate.  
@@ -37,7 +37,7 @@ Usando <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType
  Se non si vuole scaricare il progetto, è possibile rivedere il file MainWindow.xaml.cs alla fine di questo argomento.  
   
 ## <a name="building-the-example"></a>Compilazione dell'esempio  
- In questo esempio viene aggiunto al codice sviluppato in [Annullare le attività asincrone rimanenti dopo che ne è stata completata una (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)[Annullare le attività asincrone rimanenti dopo che ne è stata completata una](http://msdn.microsoft.com/library/8e800b58-235a-44b7-a02c-fa4375591d76) e usa la stessa interfaccia utente.  
+ In questo esempio viene aggiunto al codice sviluppato in [Annullare le attività asincrone rimanenti dopo che ne è stata completata una (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)[Annullare le attività asincrone rimanenti dopo che ne è stata completata una](https://msdn.microsoft.com/library/8e800b58-235a-44b7-a02c-fa4375591d76) e usa la stessa interfaccia utente.  
   
  Per compilare l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **CancelAfterOneTask** come **progetto di avvio**. Aggiungere le modifiche in questo argomento al metodo `AccessTheWebAsync` in tale progetto. Le modifiche sono contrassegnate con asterischi.  
   

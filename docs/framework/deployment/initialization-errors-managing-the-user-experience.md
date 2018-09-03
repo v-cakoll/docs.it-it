@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fe59075f04443ba40c209b6cda5a5071d16c79e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a30fe0aac4bfacc71137474837b95371e7d85b09
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392148"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43394741"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Errori di inizializzazione di .NET Framework: gestione dell'interfaccia utente
 Il sistema di attivazione di Common Language Runtime (CLR) determina la versione di CLR che verrà usata per eseguire il codice dell'applicazione gestita. In alcuni casi il sistema di attivazione potrebbe non riuscire a trovare una versione di CLR da caricare. In genere questa situazione si verifica quando un'applicazione richiede una versione di CLR che non è valida o non è installata in un determinato computer. Se la versione richiesta non viene trovata, il sistema di attivazione di CLR restituisce un codice di errore HRESULT dalla funzione o dall'interfaccia che è stata chiamata e visualizza un messaggio di errore all'utente che sta eseguendo l'applicazione. In questo articolo vengono elencati i codici HRESULT e viene illustrato come evitare che venga visualizzato il messaggio di errore.  
@@ -55,7 +55,7 @@ Messaggio di errore tipico per errori di inizializzazione
   
  Il metodo [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) accetta un membro di enumerazione [METAHOST_POLICY_FLAGS](../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) come input. È possibile includere il flag METAHOST_POLICY_SHOW_ERROR_DIALOG per richiedere un messaggio di errore se la versione richiesta di CLR non viene trovata. Per impostazione predefinita, il messaggio di errore non viene visualizzato. Il metodo [ICLRMetaHost:: GetRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) non accetta questo flag e non offre alcun altro modo per visualizzare il messaggio di errore.  
   
- In Windows è disponibile una funzione [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkID=255242) che può essere usata per dichiarare se si vuole che i messaggi di errore vengano visualizzati in seguito all'esecuzione di codice all'interno del processo. È possibile specificare il flag SEM_FAILCRITICALERRORS per evitare che venga visualizzato il messaggio di errore.  
+ In Windows è disponibile una funzione [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242) che può essere usata per dichiarare se si vuole che i messaggi di errore vengano visualizzati in seguito all'esecuzione di codice all'interno del processo. È possibile specificare il flag SEM_FAILCRITICALERRORS per evitare che venga visualizzato il messaggio di errore.  
   
  Tuttavia, in alcuni scenari è importante sostituire l'impostazione SEM_FAILCRITICALERRORS impostata da un processo dell'applicazione. Ad esempio, se si ha un componente COM nativo che ospita CLR e che è ospitato in un processo in cui è impostato SEM_FAILCRITICALERRORS, potrebbe essere necessario sostituire il flag, in base all'impatto della visualizzazione dei messaggi di errore all'interno del processo di applicazione specifico. In questo caso è possibile usare uno dei flag seguenti per sostituire SEM_FAILCRITICALERRORS:  
   

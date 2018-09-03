@@ -5,12 +5,12 @@ helpviewer_keywords:
 - types [C#]
 - data types [C#], type system
 ms.assetid: 16b984df-f417-4e02-b1e6-4589d4a614ea
-ms.openlocfilehash: d0fe09092b438af90658d599b6a5e63cb62af580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5c29f5d9a1a4e25e2d5f8816a0df31fa9a91fb1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270425"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463312"
 ---
 # <a name="types-c-reference"></a>Tipi (Riferimenti per C#)
 Il sistema di tipizzazione di C# contiene le categorie seguenti:  
@@ -29,10 +29,11 @@ Il sistema di tipizzazione di C# contiene le categorie seguenti:
   
  I tipi valore sono inoltre nullable, il che significa che possono archiviare uno stato aggiuntivo diverso da un valore. Per altre informazioni, vedere [Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Tabelle di riferimento per i tipi](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [Tipi](../../../csharp/programming-guide/types/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tabelle di riferimento per i tipi](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [Tipi](../../../csharp/programming-guide/types/index.md)

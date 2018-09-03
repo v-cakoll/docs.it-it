@@ -7,12 +7,12 @@ helpviewer_keywords:
 - left shift operator (<<) [C#]
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
-ms.openlocfilehash: bacb444c08b1f9d6e18278337015d8a427fdbe46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 036acd6159bcf5ca1677ee6383c9db357625cd67
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286175"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478104"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt; Operatore (Riferimenti per C#)
 L'operatore di spostamento a sinistra (`<<`) sposta verso sinistra il primo operando del numero di bit specificato dal secondo operando. Il tipo del secondo operando deve essere un [int](../../../csharp/language-reference/keywords/int.md) o un tipo con una conversione numerica implicita predefinita in `int`.  
@@ -32,7 +32,8 @@ L'operatore di spostamento a sinistra (`<<`) sposta verso sinistra il primo oper
 ## <a name="comments"></a>Commenti  
  Osservare come `i<<1` e `i<<33` generino lo stesso risultato, poiché 1 e 33 hanno gli stessi cinque bit meno significativi.  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Operatori C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Operatori C#](../../../csharp/language-reference/operators/index.md)

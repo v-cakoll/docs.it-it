@@ -2,12 +2,12 @@
 title: Operazioni di join (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: caf93848450bcef35fef492985ef9703321b1dcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23d1432d32b22964c333640ccd3ac8dc7a2394d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325344"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480309"
 ---
 # <a name="join-operations-c"></a>Operazioni di join (C#)
 Un *join* di due origini dati è un'associazione di oggetti in un'origine dati con oggetti che condividono un attributo comune in un'altra origine dati.  
@@ -31,7 +31,7 @@ Un *join* di due origini dati è un'associazione di oggetti in un'origine dati c
  <xref:System.Linq>  
  [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [Tipi anonimi](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [Formulare join e query di prodotto incrociato](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [Formulare join e query di prodotto incrociato](https://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
  [Clausola join](../../../../csharp/language-reference/keywords/join-clause.md)  
  [Procedura: Eseguire un join usando una chiave composta](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
  [Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  

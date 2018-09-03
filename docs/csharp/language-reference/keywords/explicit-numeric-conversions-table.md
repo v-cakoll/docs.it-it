@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 7363df3e4b2449924222745de409fd68349b93de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ca052dea4ee4abc866d2b02055188b0707499d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218384"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43475933"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabella delle conversioni numeriche esplicite (Riferimenti per C#)
 La conversione numerica esplicita viene usata per convertire qualsiasi tipo numerico in qualsiasi altro tipo numerico, per il quale non c'è alcuna conversione implicita, usando un'espressione cast. La tabella seguente illustra queste conversioni.  
@@ -56,11 +56,12 @@ La conversione numerica esplicita viene usata per convertire qualsiasi tipo nume
   
  Per altre informazioni sulla conversione esplicita, vedere Explicit nella specifica del linguaggio C#. Per altre informazioni su come accedere alla specifica, vedere [Specifica del linguaggio C#](../../../csharp/language-reference/language-specification/index.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [Operatore ()](../../../csharp/language-reference/operators/invocation-operator.md)  
- [Tabella dei tipi integrali](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [Operatore ()](../../../csharp/language-reference/operators/invocation-operator.md)  
+- [Tabella dei tipi integrali](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)

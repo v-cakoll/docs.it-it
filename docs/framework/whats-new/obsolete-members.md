@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b39962d2d716d88d139ccaba5f4c445dad9ef6c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0a36e08c9b54dd6b47b11b36fd20993bff8c805e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999481"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386343"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Membri obsoleti in .NET Framework
 Nelle tabelle di questo articolo sono elencati i tipi obsoleti in .NET Framework 4.5 e versioni successive, organizzati per assembly. Usare i seguenti collegamenti per vedere un elenco di membri obsoleti e le alternative consigliate in ogni assembly. In questo argomento non vengono elencati i membri di tipi obsoleti. Per un elenco dei tipi obsoleti, vedere [Tipi obsoleti](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -624,8 +624,8 @@ Nelle tabelle di questo articolo sono elencati i tipi obsoleti in .NET Framework
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|L'alternativa consigliata è <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType> in System.Web.dll.|  
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicode%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> Questo metodo produce output non conforme agli standard e ha problemi di interoperabilità. L'alternativa migliore è <xref:System.Web.HttpUtility.UrlEncode%28System.String%29>.|  
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicodeToBytes%2A>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> Questo metodo produce output non conforme agli standard e ha problemi di interoperabilità. L'alternativa migliore è <xref:System.Web.HttpUtility.UrlEncodeToBytes%28System.String%29>.|  
-|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|Questo campo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](http://go.microsoft.com/fwlink/?LinkId=733413).|  
-|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Questa proprietà è obsoleta. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](http://go.microsoft.com/fwlink/?LinkId=733413).|  
+|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|Questo campo è obsoleto. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](https://go.microsoft.com/fwlink/?LinkId=733413).|  
+|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Questa proprietà è obsoleta. Il prodotto di autenticazione Passport non è più supportato ed è stato sostituito dall'[account Microsoft](https://go.microsoft.com/fwlink/?LinkId=733413).|  
 |<xref:System.Web.Configuration.HttpCapabilitiesBase?displayProperty=nameWithType>|<xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A>|L'alternativa consigliata è la proprietà <xref:System.Web.Configuration.HttpCapabilitiesBase.EcmaScriptVersion%2A?displayProperty=nameWithType>. Un valore della versione <xref:System.Version.Major%2A?displayProperty=nameWithType> maggiore di o uguale a 1 implica il supporto JavaScript.|  
 |<xref:System.Web.Configuration.SystemWebSectionGroup?displayProperty=nameWithType>|<xref:System.Web.Configuration.SystemWebSectionGroup.MobileControls%2A>|System.Web.Mobile.dll è obsoleto.|  
 |<xref:System.Web.Routing.UrlRoutingModule?displayProperty=nameWithType>|<xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>|Questo metodo è obsoleto. Eseguire l'override del metodo <xref:System.Web.Routing.UrlRoutingModule.Init%2A> per usare l'evento <xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>.|  

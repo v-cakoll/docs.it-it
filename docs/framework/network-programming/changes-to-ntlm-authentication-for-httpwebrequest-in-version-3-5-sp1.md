@@ -5,12 +5,12 @@ ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f5affc15607ddae76ec90a90928cb42fa0ad49e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 619aa1f34b91c1a883f9c76351302880ff453c13
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397910"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400168"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Modifiche apportate all'autenticazione NTLM per HttpWebRequest nella versione 3.5 SP1
 In .NET Framework 3.5 SP1 e versioni successive sono state apportate modifiche per la sicurezza che influiscono sul modo in cui l'autenticazione integrata di Windows viene gestita da <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> e dalle classi correlate nello spazio dei nomi System.Net. Queste modifiche possono avere effetto sulle applicazioni che usano queste classi per eseguire richieste Web e ricevere risposte in cui viene usata l'autenticazione integrata di Windows basata su NTLM. Possono inoltre influire sulle applicazioni client e sui server Web configurati per l'utilizzo dell'autenticazione integrata di Windows.  
@@ -51,7 +51,7 @@ In .NET Framework 3.5 SP1 e versioni successive sono state apportate modifiche p
   
  7. Chiudere l'editor del Registro di sistema e quindi riavviare il servizio IISAdmin ed eseguire IISReset.  
   
- Una soluzione alternativa meno sicura consiste nel disabilitare il controllo del loopback, come descritto in [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657). Questa operazione ha l'effetto di disabilitare la protezione contro attacchi di tipo reflection. È pertanto preferibile limitare l'impostazione di nomi alternativi a quelli che si presume vengano effettivamente usati dal computer.  
+ Una soluzione alternativa meno sicura consiste nel disabilitare il controllo del loopback, come descritto in [http://support.microsoft.com/kb/896861](https://go.microsoft.com/fwlink/?LinkID=179657). Questa operazione ha l'effetto di disabilitare la protezione contro attacchi di tipo reflection. È pertanto preferibile limitare l'impostazione di nomi alternativi a quelli che si presume vengano effettivamente usati dal computer.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  

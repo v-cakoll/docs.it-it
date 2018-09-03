@@ -3,12 +3,12 @@ title: Criteri di ricerca - Guida a C#
 description: Informazioni sulle espressioni di criteri di ricerca in C#
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 635ab45c89a38f3dedac2d60ea1e31ebf394c9b2
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231476"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255341"
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca #
 
@@ -21,7 +21,7 @@ Per descrivere questi nuovi termini, verranno usate strutture che rappresentano 
 Queste tecniche non sono possibili con dati che non sono strutturati in una gerarchia di classi. Quando dati e metodi sono separati, è necessario usare altri strumenti. I costrutti dei nuovi *criteri di ricerca* offrono una sintassi più chiara per esaminare i dati e modificare il flusso di controllo in base a qualsiasi condizione dei dati. Si scrivono già istruzioni `if` e `switch` che testano il valore di una variabile. Si scrivono istruzioni `is` che testano il tipo di una variabile. I *criteri di ricerca* aggiungono nuove funzionalità alle istruzioni.
 
 In questo argomento verrà creato un metodo che calcola l'area di diverse forme geometriche. L'operazione verrà tuttavia eseguita senza ricorrere a tecniche orientate a oggetti compilare una gerarchia di classi per le diverse forme.
-Verranno usati invece i *criteri di ricerca*. Per sottolineare ulteriormente che non verrà usata l'ereditarietà, ogni forma verrà specificata come `struct` anziché come classe. Si noti che poiché tipi `struct` diversi non possono specificare un tipo di base comune definito dall'utente, l'ereditarietà non è una progettazione possibile.
+Verranno usati invece i *criteri di ricerca*.
 Procedendo nell'esempio, confrontare il codice a un eventuale codice strutturato come gerarchia di oggetti. Quando i dati in cui è necessario eseguire le query e che devono essere modificati non sono costituiti da una gerarchia di classi, i criteri di ricerca offrono progettazioni molto eleganti.
 
 Anziché iniziare con una definizione della forma astratta e l'aggiunta di diverse classi di forme specifiche, iniziare con definizioni di soli dati semplici per ogni forma geometrica:

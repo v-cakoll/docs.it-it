@@ -4,12 +4,12 @@ description: HttpClientFactory è una solida factory, disponibile a partire da .
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 89382f266eacc97b5e1ee5416c92dbd662427cd1
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 6fd30a9358ca9c07b2a6e2ec591e4c5d7db54ccb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878678"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43395540"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Usare HttpClientFactory per l'implementazione di richieste HTTP resilienti
 
@@ -78,7 +78,7 @@ Il pooling dei gestori è opportuno poiché ogni gestore si occupa in genere di 
 Gli oggetti HttpMessageHandler nel pool hanno una durata che è l'intervallo di tempo in cui un'istanza di HttpMessageHandler nel pool può essere usata nuovamente. Il valore predefinito è due minuti, ma può essere sostituito in base al cliente denominato o tipizzato. Per eseguirne l'override, chiamare SetHandlerLifetime() nell'oggetto IHttpClientBuilder che viene restituito quando si crea il client, come illustrato nel codice seguente.
 
 ```csharp
-//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Basket Typed Client 
+//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
 services.AddHttpClient<ICatalogService, CatalogService>()
                  .SetHandlerLifetime(TimeSpan.FromMinutes(5));  
 ```

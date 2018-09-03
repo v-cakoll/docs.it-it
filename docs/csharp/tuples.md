@@ -3,12 +3,12 @@ title: Tipi tupla - Guida a C#
 description: Informazioni sui tipi di tupla denominati e non denominati in C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 6c3b6edb0481b8c2e4d92989b605f657aac607fa
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b0c838791e640c9813005b8a32d009153a794c14
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208299"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404314"
 ---
 # <a name="c-tuple-types"></a>Tipi tupla in C# #
 
@@ -71,7 +71,7 @@ Se viene fornito un nome esplicito, esso ha la precedenza su qualsiasi nome prev
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Per i campi in cui non viene specificato un nome esplicito, viene proiettato un nome implicito applicabile. Non è obbligatorio fornire nomi semantici, in modo esplicito o implicito. L'inizializzatore seguente ha nomi di campo `Item1` con valore `42`, e `StringContent` con valore "The answer to everything":
+Per i campi in cui non viene specificato un nome esplicito, viene proiettato un nome implicito applicabile. Non è obbligatorio fornire nomi semantici, in modo esplicito o implicito. L'inizializzatore seguente ha nomi di campo `Item1` con valore `42`, e `stringContent` con valore "The answer to everything":
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
@@ -92,7 +92,7 @@ A partire da C# 7.3, i tipi tupla supportano gli operatori `==` e `!=`. Questi o
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-Esistono diverse regole che rendono più comodi i test di uguaglianza delle tuple. I test di uguaglianza delle tuple eseguono [conversioni con elevazione](/dotnet/csharp/language-reference/language-specification/conversions#lifted-conversion-operators) se una delle tuple è una tupla nullable, come illustrato nel codice seguente:
+Esistono diverse regole che rendono più comodi i test di uguaglianza delle tuple. I test di uguaglianza delle tuple eseguono [conversioni con elevazione](language-reference/language-specification/index.md) se una delle tuple è una tupla nullable, come illustrato nel codice seguente:
 
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]

@@ -4,11 +4,11 @@ description: Il visualizzatore di sintassi è uno strumento visivo che consente 
 ms.date: 03/07/2018
 ms.custom: mvc
 ms.openlocfilehash: 3029c868ad9b0384cf11e57a00b123acd1177806
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354660"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456464"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Esplorare il codice con il visualizzatore di sintassi Roslyn in Visual Studio
 

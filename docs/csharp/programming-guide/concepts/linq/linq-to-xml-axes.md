@@ -3,11 +3,11 @@ title: Assi LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
 ms.openlocfilehash: d12d35a6f9b02056946ba201a7bd5a961f64ba36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331490"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43408655"
 ---
 # <a name="linq-to-xml-axes-c"></a>Assi LINQ to XML (C#)
 Dopo aver creato un albero XML o aver caricato un documento XML in un albero XML, è possibile eseguire query su di essa per cercare elementi e attributi e recuperarne i valori.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: b00b01cb82f7fa2f1d9af42438c37592bb1e8181
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 04bdc94bceeed313d519658afb853a77e218989e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198876"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398593"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Quando implementare il modello asincrono basato su eventi
 Il modello asincrono basato su eventi fornisce un modello per esporre il comportamento asincrono di una classe. Con l'introduzione di questo modello, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definisce due modelli per l'esposizione del comportamento asincrono: il modello asincrono basato sull'interfaccia <xref:System.IAsyncResult?displayProperty=nameWithType> e il modello basato su eventi. Questo argomento illustra quando è appropriato implementare entrambi i modelli.  
@@ -81,9 +81,8 @@ Il modello asincrono basato su eventi fornisce un modello per esporre il comport
 -   Esporre il modello <xref:System.IAsyncResult> solo se è stato verificato che i requisiti di prestazioni non possono essere soddisfatti dal modello basato su eventi, ma possono essere soddisfatti dal modello <xref:System.IAsyncResult>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura dettagliata: implementazione di un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [Procedura: Implementare un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
  [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)  
- [Programmazione multithreading con il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
  [Implementazione del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
  [Suggerimenti per l'implementazione del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
  [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
-ms.openlocfilehash: c380df1cb473fcd187e56bb0a338a909dd3ac894
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c15308d27b504f22b266e28f6db0caf837ae36c5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217347"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421211"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly (opzioni del compilatore C#)
 
@@ -41,5 +41,6 @@ Gli assembly di riferimento rimuovono ulteriormente i metadati (membri privati) 
 Le opzioni `-refonly` e [`-refout`](refout-compiler-option.md) si escludono reciprocamente.
 
 ## <a name="see-also"></a>Vedere anche
- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

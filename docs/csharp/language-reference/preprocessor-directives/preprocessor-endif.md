@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#endif directive [C#]'
 ms.assetid: 6a5fca55-5aee-441f-86f6-1c99fbe9ec05
-ms.openlocfilehash: 1686e706ce5cae3b2eaa28a7e1c89b5694b2be88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a652c1226f8f0c624ec8ebf0e665a4aa77ddf6f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269977"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43420814"
 ---
 # <a name="endif-c-reference"></a>#endif (Riferimenti per C#)
 `#endif` specifica la fine di una direttiva condizionale iniziata con la direttiva [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md). Ad esempio,  
@@ -27,7 +27,8 @@ ms.locfileid: "33269977"
 ## <a name="remarks"></a>Note  
  Una direttiva condizionale che inizia con `#if` deve terminare in modo esplicito con una direttiva `#endif`. Per un esempio di utilizzo di `#endif`, vedere [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Direttive per il preprocessore C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Direttive per il preprocessore C#](../../../csharp/language-reference/preprocessor-directives/index.md)

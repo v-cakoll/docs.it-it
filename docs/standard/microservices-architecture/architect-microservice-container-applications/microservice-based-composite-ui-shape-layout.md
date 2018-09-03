@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4e1e1671238d3cc5944bfe53b49f7d0ddd969aff
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 79b63c376d25725b2bcb6c16cdb4d06e107d5c07
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105369"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43418640"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Creazione dell'interfaccia utente composita basata su microservizi, tra cui la forma visiva dell'interfaccia utente e il layout generato da più microservizi
 
@@ -35,7 +35,7 @@ Ogni microservizio di composizione dell'interfaccia utente dovrebbe essere simil
 
 Un approccio basato sull'interfaccia utente composita gestito dai microservizi può essere più o meno complesso a seconda delle tecnologie usate per l'interfaccia utente. Per compilare una tradizionale applicazione Web, ad esempio, non si useranno le stesse tecniche usate per compilare un'applicazione a pagina singola o per le app per dispositivi mobili native (come nello sviluppo di app Xamarin, che può essere più complesso per questo approccio).
 
-L'applicazione di esempio [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) usa l'approccio basato sull'interfaccia utente monolitica per più motivi. Prima di tutto, è un'introduzione a microservizi e contenitori. Un'interfaccia utente composita è più avanzata, ma presenta anche un livello di complessità più elevato quando si progetta e sviluppa l'interfaccia utente. In secondo luogo, eShopOnContainers fornisce anche un'app per dispositivi mobili nativa basata su Xamarin, che ne aumenterà la complessità sul lato C\# del client.
+L'applicazione di esempio [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) usa l'approccio basato sull'interfaccia utente monolitica per più motivi. Prima di tutto, è un'introduzione a microservizi e contenitori. Un'interfaccia utente composita è più avanzata, ma presenta anche un livello di complessità più elevato quando si progetta e sviluppa l'interfaccia utente. In secondo luogo, eShopOnContainers fornisce anche un'app per dispositivi mobili nativa basata su Xamarin, che ne aumenterà la complessità sul lato C\# del client.
 
 Per altre informazioni sull'interfaccia utente composita basata sui microservizi, è consigliabile vedere i riferimenti seguenti.
 

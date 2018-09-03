@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: e2d788b27f54ac068922f0ebe558a2aea8a475ca
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960010"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43403434"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Procedura: Analizzare le stringhe con String.Split (guida a C#)
 
@@ -32,9 +32,11 @@ Ogni istanza di un carattere separatore genera un valore nella matrice restituit
 
 Questo comportamento semplifica l'uso di alcuni formati, ad esempio dei file con valori delimitati da virgole (CSV, Comma Separated Value) che rappresentano dati tabulari. Due virgole consecutive rappresentano una colonna vuota.
 
-È possibile passare un parametro <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> facoltativo per escludere tutte le stringhe vuote nella matrice restituita. Per un'elaborazione più complessa della raccolta restituita, è possibile modificare la sequenza di risultati tramite [LINQ](../programming-guide/concepts/linq/index.md).    
+È possibile passare un parametro <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> facoltativo per escludere tutte le stringhe vuote nella matrice restituita. Per un'elaborazione più complessa della raccolta restituita, è possibile modificare la sequenza di risultati tramite [LINQ](../programming-guide/concepts/linq/index.md).
 
-<xref:System.String.Split%2A?displayProperty=nameWithType> può usare più caratteri separatori. L'esempio seguente usa spazi, virgole, punti, due punti e tabulazioni, tutti passati a <xref:System.String.Split%2A> in una matrice contenente questi caratteri di separazione.  Il ciclo nella parte inferiore del codice visualizza ogni parola nella matrice restituita.  
+<xref:System.String.Split%2A?displayProperty=nameWithType> può usare più caratteri separatori.
+L'esempio seguente usa spazi, virgole, punti, due punti e tabulazioni, tutti passati a <xref:System.String.Split%2A> in una matrice contenente questi caratteri di separazione.
+Il ciclo nella parte inferiore del codice visualizza ogni parola nella matrice restituita.  
 
 [!code-csharp-interactive[split strings using multiple separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#3)]
 
@@ -48,7 +50,8 @@ Istanze consecutive di un separatore generano una stringa vuota nella matrice di
 
 È possibile provare questi esempi esaminando il codice nel [repository GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Oppure è possibile scaricare gli esempi [come file ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../programming-guide/index.md)  
- [Stringhe](../programming-guide/strings/index.md)  
- [Espressioni regolari .NET](../../standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../programming-guide/index.md)  
+- [Stringhe](../programming-guide/strings/index.md)  
+- [Espressioni regolari .NET](../../standard/base-types/regular-expressions.md)

@@ -5,12 +5,12 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: e37f0e72ee02915d16509fb2ff48bd114e8ad466
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2469e8a0fbf8181a720201637ab5ac5ef02055d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217974"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400865"
 ---
 # <a name="lambda-expressions"></a>Espressioni lambda #
 
@@ -78,7 +78,7 @@ Per altre informazioni su come creare e usare i metodi asincroni, vedere [Progra
 
 ## <a name="lambda-expressions-and-tuples"></a>Espressioni lambda e tuple ##
 
-A partire da C# 7.0, il linguaggio C# offre supporto predefinito delle tuple. È possibile specificare una tupla come argomento di un'espressione lambda e l'espressione lambda può restituire una tupla. In alcuni casi, il compilatore C# usa l'inferenza del tipo per determinare i tipi di componenti della tupla. 
+A partire da C# 7.0, il linguaggio C# offre supporto predefinito delle tuple. È possibile specificare una tupla come argomento di un'espressione lambda e l'espressione lambda può restituire una tupla. In alcuni casi, il compilatore C# usa l'inferenza del tipo per determinare i tipi di componenti della tupla.
 
 Per definire una tupla, è necessario racchiudere tra parentesi un elenco di componenti delimitato da virgole. L'esempio riportato sotto usa una tupla con 5 componenti per passare una sequenza di numeri a un'espressione lambda, la quale raddoppia ogni valore e restituisce una tupla con 5 componenti che contiene il risultato delle moltiplicazioni.
 
@@ -154,6 +154,6 @@ Le espressioni lambda possono fare riferimento alle *variabili esterne* (vedere 
 
 ## <a name="see-also"></a>Vedere anche ##
 
-[LINQ (Language Integrated Query)](../standard/using-linq.md)   
-[Metodi anonimi](programming-guide/statements-expressions-operators/anonymous-methods.md)   
-[Alberi delle espressioni](expression-trees.md)
+- [LINQ (Language-Integrated Query)](../standard/using-linq.md)
+- [Metodi anonimi](programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Alberi delle espressioni](expression-trees.md)

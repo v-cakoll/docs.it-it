@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc181d0aecd6a0c7c0800544ea00a818573c954c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc3c611cf043538e7f069cc1634bd5be5e70dfab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393816"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43392276"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migrazione da .NET Framework 1.1
 [!INCLUDE[win7](../../../includes/win7-md.md)] e le versioni successive del sistema operativo Windows non supportano [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. Di conseguenza, le applicazioni destinate a [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] non verranno eseguite senza modifica in [!INCLUDE[win7](../../../includes/win7-md.md)] o nelle versioni successive del sistema operativo. Questo argomento illustra i passaggi richiesti per eseguire un'applicazione destinata a [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] in [!INCLUDE[win7](../../../includes/win7-md.md)] e nelle versioni successive del sistema operativo Windows. Per altre informazioni su [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] e [!INCLUDE[win8](../../../includes/win8-md.md)], vedere [Esecuzione delle applicazioni .NET Framework 1.1 in Windows 8 e versioni successive](../../../docs/framework/install/run-net-framework-1-1-apps.md).  
@@ -55,9 +55,9 @@ ms.locfileid: "33393816"
   
  Per stimare l'impatto di possibili modifiche di interruzione sull'applicazione, è necessario rivedere i seguenti elenchi di modifiche:  
   
--   Modifiche ai documenti relative alle[Modifiche sostanziali in .NET Framework 2.0](http://go.microsoft.com/fwlink/?LinkId=125263) in [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] che possono interessare un'applicazione destinata a [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)].  
+-   Modifiche ai documenti relative alle[Modifiche sostanziali in .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkId=125263) in [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] che possono interessare un'applicazione destinata a [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)].  
   
--   Modifiche ai documenti relative alle[Modifiche in .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkID=186989) tra [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] e [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].  
+-   Modifiche ai documenti relative alle[Modifiche in .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkID=186989) tra [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] e [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].  
   
 -   Modifiche ai documenti relativi ai[Problemi di migrazione di .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) tra [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] e [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   

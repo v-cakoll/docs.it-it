@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 668476beb2eefa7a818f60606443ae06ae26a17d
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 00cfda489feb468c7e3c140ab63369b408b09152
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930963"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484452"
 ---
 # <a name="-link-c-compiler-options"></a>-link (opzioni del compilatore C#)
 Indica al compilatore di rendere disponibili al progetto in fase di compilazione le informazioni sui tipi COM presenti negli assembly specificati.  
@@ -81,10 +81,11 @@ Indica al compilatore di rendere disponibili al progetto in fase di compilazione
 csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
- [-reference (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)  
- [-noconfig (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)  
- [Compilazione dalla riga di comando con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
- [Cenni preliminari sull'interoperabilità](../../../csharp/programming-guide/interop/interoperability-overview.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [-reference (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)  
+- [-noconfig (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)  
+- [Compilazione dalla riga di comando con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+- [Cenni preliminari sull'interoperabilità](../../../csharp/programming-guide/interop/interoperability-overview.md)

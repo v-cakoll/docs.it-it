@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 904657175d87e0d78e518248ed89b3720227360f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96cad879c843a7b70dc748675123b792137d290e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339170"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43463117"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- Il primo programma (Guida per programmatori C#)
 La procedura seguente crea una versione C# del programma "Hello World!" tradizionale. Il programma visualizza la stringa `Hello World!`  
@@ -78,7 +78,7 @@ La procedura seguente crea una versione C# del programma "Hello World!" tradizio
   
  Il parametro del metodo `Main`, `args`, è una matrice `string` che contiene gli argomenti della riga di comando usati per richiamare il programma. A differenza di C++, la matrice non include il nome del file eseguibile con estensione exe.  
   
- Per altre informazioni sull'uso degli argomenti della riga di comando, vedere gli esempi in [Main() e argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/index.md) e [Procedura: Creare e usare assembly dalla riga di comando](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ Per altre informazioni sull'uso degli argomenti della riga di comando, vedere gli esempi in [Main() e argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/index.md) e [Procedura: Creare e usare assembly dalla riga di comando](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
   
  La chiamata a <xref:System.Console.ReadKey%2A> alla fine del metodo `Main` evita che la finestra della console si chiuda prima che sia possibile leggere l'output quando si esegue il programma in modalità di debug, premendo F5.  
   
@@ -130,7 +130,7 @@ La procedura seguente crea una versione C# del programma "Hello World!" tradizio
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
  [Contenuto di un programma C#](../../../csharp/programming-guide/inside-a-program/index.md)  
  [Stringhe](../../../csharp/programming-guide/strings/index.md)  
- [\<Applicazioni di esempio di C#](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [\<Applicazioni di esempio di C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
  [Riferimenti per C#](../../../csharp/language-reference/index.md)  
  [Main() e argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Getting Started with Visual C# and Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic) (Introduzione a Visual C# e Visual Basic)

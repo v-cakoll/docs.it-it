@@ -8,12 +8,12 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 3ac2b60b5e638290ea7e17e539519e3a0d355c12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88932ad30e30d53312e6d76f70415969b9e86675
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214958"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43468228"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (opzioni del compilatore C#)
 Usare l'opzione **-win32manifest** per specificare un file manifesto dell'applicazione Win32 definito dall'utente da incorporare nel file PE (Portable Executable) di un progetto.  
@@ -67,6 +67,7 @@ Usare l'opzione **-win32manifest** per specificare un file manifesto dell'applic
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
- [-nowin32manifest (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)  
- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [-nowin32manifest (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)  
+- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

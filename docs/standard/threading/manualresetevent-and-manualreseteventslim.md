@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 465fdcf9-ba24-4d8d-a43f-d983b7cb0cc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d69336bd9e4f4ec06e8319d19c1cdab5cf6e1c89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4a6950d17fef60298a2e47b63bec068554b2b8b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583318"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390501"
 ---
 # <a name="manualresetevent-and-manualreseteventslim"></a>ManualResetEvent e ManualResetEventSlim
 La classe <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> rappresenta un evento di handle di attesa locale che deve essere reimpostato manualmente dopo essere stato segnalato. Questa classe rappresenta un caso speciale della relativa classe di base, <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>. Vedere la documentazione concettuale [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) per l'uso e le caratteristiche degli eventi di impostazione del manuale.  
@@ -25,7 +25,7 @@ La classe <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 
 ## <a name="see-also"></a>Vedere anche  
  [Threading](../../../docs/standard/threading/index.md)  
  [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)  
- [Handle di attesa](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ [Handle di attesa](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  [AutoResetEvent](../../../docs/standard/threading/autoresetevent.md)  
  [SpinWait](../../../docs/standard/threading/spinwait.md)  
  [Semaphore e SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)

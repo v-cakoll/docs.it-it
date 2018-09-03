@@ -16,12 +16,12 @@ ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7a6b52509899431907a432ba7b620603dcb65aca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 158a68d97a52bb5a72985d260a3dd5c6bfd0bd41
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394865"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43408487"
 ---
 # <a name="using-application-protocols"></a>Uso di protocolli applicativi
 .NET Framework supporta i protocolli applicativi Internet di uso comune. Questa sezione include informazioni sull'uso dei protocolli [HTTP](../../../docs/framework/network-programming/http.md), "TCP" e "UDP", nonché informazioni sull'uso dell'interfaccia [Windows Sockets](../../../docs/framework/network-programming/sockets.md) per implementare protocolli personalizzati.  
@@ -29,4 +29,4 @@ ms.locfileid: "33394865"
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)  
  [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Esempi di rete per .NET in MSDN Code Gallery](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [Esempi di rete per .NET in MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

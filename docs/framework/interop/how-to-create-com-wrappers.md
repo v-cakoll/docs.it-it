@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4deb355a7b523437ae31a1d2b9c79e3b8d4f40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e30b1a5a4d3b50c80edaac29cbd6b90f3ddd103b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391225"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43400503"
 ---
 # <a name="how-to-create-com-wrappers"></a>Procedura: creare wrapper COM
 È possibile creare wrapper COM (Component Object Model) usando le funzionalità [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] degli strumenti Tlbimp.exe e Regasm.exe di .NET Framework. Entrambi i metodi generano due tipi di wrapper COM:  
@@ -40,7 +40,7 @@ ms.locfileid: "33391225"
  È ora possibile scrivere codice per accedere all'oggetto COM. È possibile iniziare dichiarando l'oggetto, ad esempio con un'istruzione `Imports` per [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] o un'istruzione `Using` per [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].  
   
 > [!NOTE]
->  Per programmare componenti di Microsoft Office, installare innanzitutto gli [assembly di interoperabilità primari di Microsoft Office](http://go.microsoft.com/fwlink/?LinkId=50479) dall'Area download Microsoft. Nel passaggio 4 selezionare la versione più recente della libreria di oggetti disponibile per il prodotto Office desiderato, ad esempio la **libreria di oggetti di Microsoft Word 11.0**.  
+>  Per programmare componenti di Microsoft Office, installare innanzitutto gli [assembly di interoperabilità primari di Microsoft Office](https://go.microsoft.com/fwlink/?LinkId=50479) dall'Area download Microsoft. Nel passaggio 4 selezionare la versione più recente della libreria di oggetti disponibile per il prodotto Office desiderato, ad esempio la **libreria di oggetti di Microsoft Word 11.0**.  
   
 #### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Per creare un Runtime Callable Wrapper con gli strumenti di .NET Framework  
   

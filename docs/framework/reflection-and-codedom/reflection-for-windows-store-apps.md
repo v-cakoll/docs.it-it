@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 598acd746949369ffec7d153b6870bebeeafe532
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 192ac28610f596bc6b6f4ebf1c80962ab2d71cbf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398791"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463565"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflection in .NET Framework per applicazioni Windows Store
-A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], in .NET Framework è incluso un set di tipi e membri di reflection che possono essere utilizzati nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Questi tipi e membri sono disponibili nella versione completa di .NET Framework, nonché in [.NET per app di Windows Store](http://go.microsoft.com/fwlink/?LinkID=225700). In questo documento vengono illustrate le differenze principali tra questi e le relative controparti in .NET Framework 4 e versioni precedenti.  
+A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], in .NET Framework è incluso un set di tipi e membri di reflection che possono essere utilizzati nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Questi tipi e membri sono disponibili nella versione completa di .NET Framework, nonché in [.NET per app di Windows Store](https://go.microsoft.com/fwlink/?LinkID=225700). In questo documento vengono illustrate le differenze principali tra questi e le relative controparti in .NET Framework 4 e versioni precedenti.  
   
  Se si crea un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], è necessario utilizzare i tipi e i membri di reflection in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Questi tipi e membri sono anche disponibili, ma non obbligatori, per l'utilizzo nelle applicazioni desktop, pertanto è possibile utilizzare lo stesso codice per entrambi i tipi di applicazioni.  
   
@@ -36,11 +36,11 @@ A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], in .NET Frame
  In un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] l'accesso ad alcuni tipi e membri di .NET Framework è limitato. Ad esempio, non è possibile chiamare i metodi di .NET Framework che non sono inclusi in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] tramite un oggetto <xref:System.Reflection.MethodInfo>. Inoltre, alcuni tipi e membri che non sono considerati sicuri nel contesto di un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] vengono bloccati, come i membri <xref:System.Runtime.InteropServices.Marshal> e <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal>. Questa restrizione influisce solo sui tipi e sui membri di .NET Framework; il proprio codice o quello di terze parti può essere chiamato normalmente.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio vengono utilizzati i tipi e i membri di reflection in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] per recuperare i metodi e le proprietà del tipo <xref:System.Globalization.Calendar>, inclusi i metodi e le proprietà ereditati. Per eseguire questo codice, incollarlo nel file di codice di una pagina di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] in cui è contenuto un controllo [Windows.UI.Xaml.Controls.Textblock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominato `textblock1` in un progetto denominato Reflection. Se si incolla il codice nel progetto con un nome diverso, assicurarsi di modificare il nome dello spazio dei nomi affinché corrisponda al progetto.  
+ In questo esempio vengono utilizzati i tipi e i membri di reflection in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] per recuperare i metodi e le proprietà del tipo <xref:System.Globalization.Calendar>, inclusi i metodi e le proprietà ereditati. Per eseguire questo codice, incollarlo nel file di codice di una pagina di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] in cui è contenuto un controllo [Windows.UI.Xaml.Controls.Textblock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominato `textblock1` in un progetto denominato Reflection. Se si incolla il codice nel progetto con un nome diverso, assicurarsi di modificare il nome dello spazio dei nomi affinché corrisponda al progetto.  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [.NET per app di Windows Store – API supportate](http://go.microsoft.com/fwlink/?LinkID=225700)
+ [.NET per app di Windows Store – API supportate](https://go.microsoft.com/fwlink/?LinkID=225700)

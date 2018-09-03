@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 079045f4eb52f03afa8733620029396d80cb75fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89ff8151d55ac58a1b114f7727297704ce26b9a7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273657"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481930"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning (Riferimenti per C#)
 `#pragma warning` consente di abilitare o disabilitare alcuni avvisi.  
@@ -58,8 +58,9 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Direttive per il preprocessore C#](../../../csharp/language-reference/preprocessor-directives/index.md)  
- [Errori del compilatore C#](../../../csharp/language-reference/compiler-messages/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Direttive per il preprocessore C#](../../../csharp/language-reference/preprocessor-directives/index.md)  
+- [Errori del compilatore C#](../../../csharp/language-reference/compiler-messages/index.md)

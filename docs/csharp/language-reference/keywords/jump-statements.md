@@ -6,11 +6,11 @@ helpviewer_keywords:
 - branch statements [C#]
 ms.assetid: 58da6ae7-7388-491e-828f-e74485d87d53
 ms.openlocfilehash: 1eb72fc599eae85b6c51b5030ffcd5072b7d7cef
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934100"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390357"
 ---
 # <a name="jump-statements-c-reference"></a>Istruzioni di spostamento (Riferimenti per C#)
 Le diramazioni vengono eseguite usando istruzioni di salto che provocano l'immediato trasferimento del controllo del programma. Nelle istruzioni di salto vengono usate le parole chiave seguenti:  

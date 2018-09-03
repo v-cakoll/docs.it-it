@@ -5,12 +5,12 @@ ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 01e0bd36b35319c90fc46d8f5f97161147852c7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70c49198c0198610eaa5001971b7de7efd2951aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397000"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482343"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocollo PNRP (Peer Name Resolution Protocol)
 Negli ambienti peer-to-peer, i peer usano sistemi di risoluzione dei nomi specifici per dedurre l'ubicazione di rete reciproca (indirizzi, protocolli e porte) dai nomi o altri tipi di identificatori. Nel passato, la risoluzione dei nomi peer era complicata dalla transitorietà intrinseca della connettività e da altri inconvenienti nel sistema DNS (Domain Name System).  
@@ -65,4 +65,4 @@ Negli ambienti peer-to-peer, i peer usano sistemi di risoluzione dei nomi specif
  <xref:System.ServiceModel.PeerResolvers>  
  <xref:System.Net.PeerToPeer>  
  [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)  
- [PeerToPeer Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179571) (Esempio di tecnologia PeerToPeer)
+ [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571) (Esempio di tecnologia PeerToPeer)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e54dcb585c06f2bf49c41f763e03e5624a033442
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7e45a863c46090dd62d5e1c80b5f0149d9460cf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388908"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43424077"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5
-Il programma di installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa [Gestione riavvio](http://go.microsoft.com/fwlink/?LinkId=231425) per evitare, quando possibile, i riavvii del sistema durante l'installazione. Se il programma di installazione dell'app installa .NET Framework, può interagire con la Gestione riavvio per sfruttare i vantaggi di questa funzionalità. Per altre informazioni, vedere [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
+Il programma di installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa [Gestione riavvio](https://go.microsoft.com/fwlink/?LinkId=231425) per evitare, quando possibile, i riavvii del sistema durante l'installazione. Se il programma di installazione dell'app installa .NET Framework, può interagire con la Gestione riavvio per sfruttare i vantaggi di questa funzionalità. Per altre informazioni, vedere [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
   
 ## <a name="reasons-for-a-restart"></a>Motivi di un riavvio  
  L'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] richiede un riavvio del sistema se l'app .NET Framework 4 è in uso durante l'installazione. Ciò si verifica perché [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sostituisce i file di .NET Framework 4 e richiede che tali file siano disponibili durante l'installazione. In molti casi, il riavvio può essere evitato identificando e chiudendo le app .NET Framework 4 in uso prima dell'installazione. Tuttavia, alcune app di sistema non possono essere chiuse. In questi casi, non è possibile evitare un riavvio.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed6519cb6bb7006f62ef83cd6baf8f2e32a44d19
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c3bd568cf504125bc99801815d08764417b42cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744382"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43468998"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Procedura: installare un assembly nella Global Assembly Cache
 Esistono due modi per installare un assembly con nome sicuro nella Global Assembly Cache:  
@@ -23,7 +23,7 @@ Esistono due modi per installare un assembly con nome sicuro nella Global Assemb
 > [!IMPORTANT]
 >  Nella GAC possono essere installati solo assembly con nome sicuro. Per informazioni su come creare un assembly con nome sicuro, vedere [Procedura: Firmare un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
--   Usando [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx).  
+-   Usando [Windows Installer](/windows/desktop/Msi/windows-installer-portal).  
   
      Eseguire questa operazione in Visual Studio 2012 e Visual Studio 2013 creando un progetto InstallShield Limited Edition.  
   
@@ -82,4 +82,4 @@ gacutil -i hello.dll
  [Procedura: Rimuovere un assembly dalla Global Assembly Cache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  [Gacutil.exe (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [Procedura: Firmare un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Distribuzione con Windows Installer](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)
+ [Distribuzione con Windows Installer](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)

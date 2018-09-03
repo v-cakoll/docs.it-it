@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fa942af6558c16431cd716e3dd1ea1271fabab6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 843b791177b57134483a7076dbc6ec979956ef60
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408818"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43421855"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (utilità di esportazione della libreria dei tipi)
 L'utilità di esportazione della libreria dei tipi genera una libreria di tipi che descrive i tipi definiti in un assembly di Common Language Runtime.  
@@ -90,7 +90,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  Si noti che il campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> viene ignorato.  
   
- Poiché le librerie dei tipi non possono contenere tutte le informazioni presenti negli assembly, può accadere che in Tlbexp.exe vengano ignorati alcuni dati durante il processo di esportazione. Per informazioni sul processo di trasformazione e sull'identificazione dell'origine di tutti i dati emessi in una libreria dei tipi, vedere [Riepilogo della conversione da assembly a libreria dei tipi](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
+ Poiché le librerie dei tipi non possono contenere tutte le informazioni presenti negli assembly, può accadere che in Tlbexp.exe vengano ignorati alcuni dati durante il processo di esportazione. Per informazioni sul processo di trasformazione e sull'identificazione dell'origine di tutti i dati emessi in una libreria dei tipi, vedere [Riepilogo della conversione da assembly a libreria dei tipi](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
   
  L'utilità di esportazione della libreria dei tipi esporta i metodi con parametri <xref:System.TypedReference> di tipo `VARIANT`, anche se l'oggetto <xref:System.TypedReference> non ha significato nel codice non gestito. Quando si esportano metodi con parametri <xref:System.TypedReference>, l'utilità in questione non genera un avviso o un errore e il codice non gestito che utilizza la libreria dei tipi risultante non viene eseguito correttamente.  
   
@@ -133,6 +133,6 @@ tlbexp Sample.dll
  <xref:System.Runtime.InteropServices.TypeLibExporterFlags>  
  [Strumenti](../../../docs/framework/tools/index.md)  
  [Regasm.exe (strumento di registrazione di assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
- [Riepilogo della conversione da assembly a libreria dei tipi](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
+ [Riepilogo della conversione da assembly a libreria dei tipi](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
  [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

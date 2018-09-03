@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 608211221d0f6f6a24b85561cd16fb21e15c336b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c038b66e4ed62d614a25e717c52fdcc9c5f9a23
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409906"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483788"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (estensione del debugger SOS)
-L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di programmi gestiti in Visual Studio e nel debugger Windows (WinDbg.exe) fornendo informazioni sull'ambiente Common Language Runtime (CLR) interno. L'uso di questo strumento richiede l'abilitazione del debug non gestito nel progetto. SOS.dll viene installato automaticamente con .NET Framework. Per usare SOS.dll in Visual Studio, installare [Windows Driver Kit (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362).  
+L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di programmi gestiti in Visual Studio e nel debugger Windows (WinDbg.exe) fornendo informazioni sull'ambiente Common Language Runtime (CLR) interno. L'uso di questo strumento richiede l'abilitazione del debug non gestito nel progetto. SOS.dll viene installato automaticamente con .NET Framework. Per usare SOS.dll in Visual Studio, installare [Windows Driver Kit (WDK)](https://msdn.microsoft.com/windows/hardware/hh852362).  
   
 > [!NOTE]
 >  Se si utilizza [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], SOS.dll è supportato nel debugger Windows all'interno di Visual Studio, ma non nella finestra di controllo immediato del debugger di Visual Studio.  
@@ -89,7 +89,7 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 |**Token2EE** \<*nome modulo*> \<*token*>|Trasforma il token di metadati specificato del modulo specificato in una struttura `MethodTable` o `MethodDesc`.<br /><br /> È possibile passare `*` come parametro del nome del modulo per trovare il mapping del token in ogni modulo gestito caricato. È anche possibile passare il nome del debugger di un modulo, ad esempio `mscorlib` o `image00400000`.|  
 |**Threads** [**-live**] [**-special**]|Visualizza tutti i thread gestiti del processo.<br /><br /> Il comando **Threads** visualizza l'ID abbreviato del debugger, l'ID del thread di CLR e l'ID del thread del sistema operativo.  Il comando **Threads** visualizza anche una colonna Domain in cui viene indicato il dominio dell'applicazione in cui è in esecuzione un thread, una colonna APT in cui viene indicata la modalità apartment COM e una colonna Exception in cui viene visualizzata l'ultima eccezione generata nel thread.<br /><br /> L'opzione **-live** visualizza i thread associati a un thread attivo.<br /><br /> L'opzione **-special** visualizza tutti i thread speciali creati da CLR. Tra i thread speciali sono inclusi i thread della Garbage Collection (nell'esecuzione contemporanea e su server), i thread di supporto del debugger, i thread del finalizzatore, i thread di scaricamento di <xref:System.AppDomain> e i thread di timer del pool di thread.|  
 |**ThreadState \<** *campo valore State* **>**|Visualizza lo stato del thread. Il parametro `value` è il valore del campo `State` nell'output del report **Threads**.<br /><br /> Esempio:<br /><br /> `0:003> !Threads     ThreadCount:      2     UnstartedThread:  0     BackgroundThread: 1     PendingThread:    0     DeadThread:       0     Hosted Runtime:   no                                           PreEmptive   GC Alloc           Lock            ID OSID ThreadOBJ    State     GC       Context       Domain   Count APT Exception        0    1  250 0019b068      a020 Disabled 02349668:02349fe8 0015def0     0 MTA        2    2  944 001a6020      b220 Enabled  00000000:00000000 0015def0     0 MTA (Finalizer)     0:003> !ThreadState b220         Legal to Join         Background         CLR Owns         CoInitialized         In Multi Threaded Apartment`|  
-|**TraverseHeap** [**-xml**] \<*nomefile*>|Scrive informazioni sull'heap nel file specificato, in un formato leggibile dal profiler CLR. L'opzione **-xml** fa sì che il comando **TraverseHeap** formatti il file come XML.<br /><br /> Il profiler CLR può essere scaricato dall'[Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=67325).|  
+|**TraverseHeap** [**-xml**] \<*nomefile*>|Scrive informazioni sull'heap nel file specificato, in un formato leggibile dal profiler CLR. L'opzione **-xml** fa sì che il comando **TraverseHeap** formatti il file come XML.<br /><br /> Il profiler CLR può essere scaricato dall'[Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=67325).|  
 |**U** [**-gcinfo**] [**-ehinfo**] [**-n**] \<*indirizzo MethodDesc*> &#124; \<*indirizzo codice*>|Visualizza un disassembly annotato di un metodo gestito specificato da un puntatore alla struttura `MethodDesc` del metodo o da un indirizzo di codice all'interno del corpo del metodo. Il comando **U** visualizza l'intero metodo dall'inizio alla fine, con annotazioni che convertono i token di metadati in nomi.<br /><br /> L'opzione **-gcinfo** fa sì che il comando **U** visualizzi la struttura `GCInfo` del metodo.<br /><br /> L'opzione **-ehinfo** visualizza informazioni sulle eccezioni del metodo. È possibile ottenere queste informazioni anche con il comando **EHInfo**.<br /><br /> L'opzione **-n** disabilita la visualizzazione dei nomi dei file di origine e dei numeri di riga. Se nel debugger è specificata l'opzione SYMOPT_LOAD_LINES, vengono ricercati i simboli di ogni frame gestito e, in caso di esito positivo, vengono visualizzati il nome del file di origine e il numero di riga corrispondenti. È possibile specificare l'opzione **-n** per disabilitare questo comportamento.|  
 |**VerifyHeap**|Cerca segni di danneggiamento nell'heap del Garbage Collector e visualizza gli eventuali errori trovati.<br /><br /> L'heap può danneggiarsi a causa di chiamate di pInvoke costruite in modo non corretto.|  
 |**VerifyObj** \<*indirizzo oggetto*>|Cerca segni di danneggiamento nell'oggetto passato come argomento.|  
@@ -99,9 +99,9 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 ## <a name="remarks"></a>Note  
  L'estensione del debugger SOS consente di visualizzare informazioni sul codice in esecuzione nell'ambiente CLR. È ad esempio possibile utilizzarla per visualizzare informazioni sull'heap gestito, cercare eventuali danneggiamenti dell'heap, visualizzare i tipi di dati interni utilizzati dal runtime e visualizzare informazioni su tutto il codice gestito in esecuzione nel runtime.  
   
- Per usare l'estensione del debugger SOS in Visual Studio, installare [Windows Driver Kit (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362). Per informazioni sull'ambiente di debug integrato in Visual Studio, vedere la pagina [Debugging Environments](http://msdn.microsoft.com/library/windows/hardware/hh406268.aspx) (Ambienti di debug) nel Centro sviluppatori Windows.  
+ Per usare l'estensione del debugger SOS in Visual Studio, installare [Windows Driver Kit (WDK)](https://msdn.microsoft.com/windows/hardware/hh852362). Per informazioni sull'ambiente di debug integrato in Visual Studio, vedere la pagina [Debugging Environments](https://msdn.microsoft.com/library/windows/hardware/hh406268.aspx) (Ambienti di debug) nel Centro sviluppatori Windows.  
   
- È anche possibile usare l'estensione del debugger SOS caricandola nel debugger WinDbg.exe, disponibile dal [sito Web per il download di WDK e degli strumenti di sviluppo](http://go.microsoft.com/fwlink/?LinkId=103787), ed eseguendo i comandi in WinDbg.exe.  
+ È anche possibile usare l'estensione del debugger SOS caricandola nel debugger WinDbg.exe, disponibile dal [sito Web per il download di WDK e degli strumenti di sviluppo](https://go.microsoft.com/fwlink/?LinkId=103787), ed eseguendo i comandi in WinDbg.exe.  
   
  Per caricare l'estensione del debugger SOS nel debugger WinDbg.exe, eseguire il comando riportato sotto nello strumento:  
   

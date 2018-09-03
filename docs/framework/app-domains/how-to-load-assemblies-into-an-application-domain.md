@@ -11,11 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0925f7445c4451f61bd1c878cc66300d62bdc855
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fd6f14f89d143edd03f8b5d028ec84315b2f2e97
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455718"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Procedura: caricare assembly in un dominio applicazione
 È possibile caricare un assembly in un dominio dell'applicazione in diversi modi. Il modo consigliato consiste nell'usare il metodo `static` (`Shared` in Visual Basic) <xref:System.Reflection.Assembly.Load%2A> della classe <xref:System.Reflection.Assembly?displayProperty=nameWithType>. Gli assembly possono essere caricati anche nei modi seguenti:  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  A partire da .NET Framework versione 2.0 il runtime non caricherà un assembly compilato con una versione di .NET Framework con numero di versione superiore a quello del runtime attualmente caricato. Questo vale per la combinazione dei componenti numero principale e numero secondario del numero di versione.  
   
- È possibile specificare la modalità di condivisione del codice con compilazione JIT degli assembly caricati tra i domini dell'applicazione. Per altre informazioni, vedere [Domini applicazione e assembly](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346).  
+ È possibile specificare la modalità di condivisione del codice con compilazione JIT degli assembly caricati tra i domini dell'applicazione. Per altre informazioni, vedere [Domini applicazione e assembly](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346).  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente carica un assembly denominato "example.exe" o "example.dll" nel dominio dell'applicazione corrente, ottiene un tipo denominato `Example` dall'assembly, ottiene un metodo senza parametri denominato `MethodA` per il tipo ed esegue il metodo. Per una descrizione completa di come ottenere informazioni da un assembly caricato, vedere [Caricamento e uso dinamico dei tipi](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
@@ -51,4 +52,4 @@ ms.lasthandoff: 05/03/2018
  [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)  
  [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)  
  [Procedura: Caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
- [Domini applicazione e assembly](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)
+ [Domini applicazione e assembly](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)

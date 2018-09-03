@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ac78e6a2952761632edb95bc3d73d75a7675711
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0fbf40c6af63cfabe7b35e2bdf3e0998761b801
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390136"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420946"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile è un subset di .NET Framework fornito con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] e le versioni precedenti e ottimizzato per le applicazioni client. .NET Framework è una piattaforma di sviluppo per Windows, Windows Phone e Microsoft Azure e fornisce un ambiente di esecuzione applicazioni gestito e la libreria di classi .NET Framework. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] e versioni precedenti forniscono due opzioni di distribuzione: la versione completa di .NET Framework e Client Profile. Client Profile consente una distribuzione più veloce e pacchetti di installazione di dimensioni ridotte rispetto alla versione completa di .NET Framework.  
   
  A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Client Profile è stato interrotto ed è disponibile solo il pacchetto ridistribuibile. Le ottimizzazioni fornite da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], come una minore dimensione del download e una distribuzione più veloce, hanno eliminato l'esigenza di un pacchetto di distribuzione separato. La presenza di un solo ridistribuibile ottimizza il processo di installazione e semplifica le opzioni di distribuzione dell'applicazione.  
   
- Se tuttavia si fa riferimento a .NET Framework 4 o 3.5, per altre informazioni su Client Profile e sul relativo uso vedere [.NET Framework Client Profile](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx) nella documentazione di .NET Framework 4.  
+ Se tuttavia si fa riferimento a .NET Framework 4 o 3.5, per altre informazioni su Client Profile e sul relativo uso vedere [.NET Framework Client Profile](https://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx) nella documentazione di .NET Framework 4.  
   
  Al momento dell'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4 Client Profile viene aggiornato alla versione completa di .NET Framework. Per informazioni sull'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] vedere [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md) (Installare .NET Framework per sviluppatori).  
   
 ## <a name="see-also"></a>Vedere anche  
- [.NET Framework Client Profile (.NET Framework 4)](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)  
- [Panoramica del multitargeting di Visual Studio](http://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
- [Risoluzione dei problemi relativi agli errori di impostazione di .NET Framework come destinazione](http://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
+ [.NET Framework Client Profile (.NET Framework 4)](https://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)  
+ [Panoramica del multitargeting di Visual Studio](https://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
+ [Risoluzione dei problemi relativi agli errori di impostazione di .NET Framework come destinazione](https://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
  [Procedura: Destinare una versione di .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 42e1fb080ac0af34c621cef3a991cad7bcf603ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0045dd8d947cfbf7da0ecfec6bbae9561eae652d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410020"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485768"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (strumento per l'ottimizzazione guidata da profilo gestito)
 Lo strumento per l'ottimizzazione guidata da profilo gestito (Mpgo.exe) è uno strumento da riga di comando che usa scenari comuni dell'utente finale per ottimizzare gli assembly di immagini native creati dal [generatore di immagini native (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). Attraverso questo strumento è possibile eseguire scenari di training che generano dati di profilatura, Il [generatore di immagini native (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) usa questi dati per ottimizzare gli assembly di applicazioni di immagini native generati. Uno scenario di training è un'esecuzione di test di un uso previsto dell'applicazione. Mpgo.exe è disponibile in Visual Studio Ultimate 2012 e versioni successive. A partire da [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], è possibile utilizzare Mpgo.exe anche per ottimizzare le app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
  L'ottimizzazione PGO migliora i tempi di avvio dell'applicazione, l'utilizzo della memoria (dimensioni del working set) e la velocità effettiva raccogliendo dati dagli scenari di prova e utilizzandoli per ottimizzare il layout delle immagini native.  
   
- Quando si verificano problemi di prestazioni relativi al tempo di avvio e alle dimensioni del working set per gli assembly di linguaggio intermedio (IL), è consigliabile innanzitutto utilizzare Ngen.exe per eliminare i costi della compilazione just-in-time (JIT) e per facilitare la condivisione del codice. Se sono necessari miglioramenti aggiuntivi, è possibile utilizzare Mpgo.exe per ottimizzare ulteriormente l'applicazione. È possibile utilizzare i dati delle prestazioni degli assembly di immagini native non ottimizzati come base di riferimento per valutare l'incremento delle prestazioni. L'utilizzo di Mpgo.exe può produrre tempi di avvio a freddo più rapidi e un working set di dimensioni più ridotte. Mpgo.exe aggiunge informazioni agli assembly IL utilizzati da Ngen.exe per creare assembly di immagini native ottimizzati. Per altre informazioni, vedere il post [Improving Launch Performance for your Desktop Applications](http://go.microsoft.com/fwlink/p/?LinkId=248943) (Miglioramento delle prestazioni di avvio per le applicazioni desktop) nel blog di .NET.  
+ Quando si verificano problemi di prestazioni relativi al tempo di avvio e alle dimensioni del working set per gli assembly di linguaggio intermedio (IL), è consigliabile innanzitutto utilizzare Ngen.exe per eliminare i costi della compilazione just-in-time (JIT) e per facilitare la condivisione del codice. Se sono necessari miglioramenti aggiuntivi, è possibile utilizzare Mpgo.exe per ottimizzare ulteriormente l'applicazione. È possibile utilizzare i dati delle prestazioni degli assembly di immagini native non ottimizzati come base di riferimento per valutare l'incremento delle prestazioni. L'utilizzo di Mpgo.exe può produrre tempi di avvio a freddo più rapidi e un working set di dimensioni più ridotte. Mpgo.exe aggiunge informazioni agli assembly IL utilizzati da Ngen.exe per creare assembly di immagini native ottimizzati. Per altre informazioni, vedere il post [Improving Launch Performance for your Desktop Applications](https://go.microsoft.com/fwlink/p/?LinkId=248943) (Miglioramento delle prestazioni di avvio per le applicazioni desktop) nel blog di .NET.  
   
  Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, utilizzare il prompt dei comandi per gli sviluppatori (o il prompt dei comandi di Visual Studio in Windows 7) con credenziali di amministratore e digitare quanto segue. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -99,7 +99,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
  Questo processo assicura che tutti gli assembly abbiano dati di ottimizzazione. Se si archiviano assembly ottimizzati aggiornati (passaggi 1 e 2) più spesso, le prestazioni risulteranno più coerenti durante lo sviluppo del prodotto.  
   
 ## <a name="using-mpgoexe-from-visual-studio"></a>Utilizzo di Mpgo.exe da Visual Studio  
- È possibile eseguire Mpgo.exe da Visual Studio (vedere l'articolo [Procedura: Specificare eventi di compilazione (C#)](http://msdn.microsoft.com/library/b4ce1ad9-5215-4b6f-b6a2-798b249aa335)) con le restrizioni seguenti:  
+ È possibile eseguire Mpgo.exe da Visual Studio (vedere l'articolo [Procedura: Specificare eventi di compilazione (C#)](https://msdn.microsoft.com/library/b4ce1ad9-5215-4b6f-b6a2-798b249aa335)) con le restrizioni seguenti:  
   
 -   Non è possibile usare percorsi tra virgolette con la barra finale, perché anche le macro di Visual Studio usano la barra finale per impostazione predefinita Ad esempio, `–OutDir "C:\Output Folder\"` non è valido. Per ovviare a questa limitazione, è possibile anteporre un carattere o una sequenza di escape alla barra finale Ad esempio, usare invece `-OutDir "$(OutDir)\"`.  
   
@@ -128,5 +128,5 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ## <a name="see-also"></a>Vedere anche  
  [Ngen.exe (generatore di immagini native)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
  [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [Improving Launch Performance for your Desktop Applications](http://go.microsoft.com/fwlink/p/?LinkId=248943) (Miglioramento delle prestazioni di avvio per le applicazioni desktop)  
- [An Overview of Performance Improvements in .NET 4.5](http://go.microsoft.com/fwlink/p/?LinkId=249131) (Panoramica dei miglioramenti delle prestazioni in .NET 4.5)
+ [Improving Launch Performance for your Desktop Applications](https://go.microsoft.com/fwlink/p/?LinkId=248943) (Miglioramento delle prestazioni di avvio per le applicazioni desktop)  
+ [An Overview of Performance Improvements in .NET 4.5](https://go.microsoft.com/fwlink/p/?LinkId=249131) (Panoramica dei miglioramenti delle prestazioni in .NET 4.5)

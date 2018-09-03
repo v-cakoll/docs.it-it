@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 0f33f003f31a3a668342c517d1562e80b0410e00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea371dc968c8d8bf1569d17531cf7f6faff1d315
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218748"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418580"
 ---
 # <a name="-out-c-compiler-options"></a>-out (opzioni del compilatore C#)
 L'opzione **-out** specifica il nome del file di output.  
@@ -65,6 +65,7 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Assembly Friend](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Assembly Friend](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

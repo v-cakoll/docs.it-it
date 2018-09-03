@@ -2,12 +2,12 @@
 title: Creazione della classe GamePieceCollection
 ms.date: 03/30/2017
 ms.assetid: e4b037ee-1201-4a55-b198-0d6532ed6f35
-ms.openlocfilehash: 6473f7afce1422ee31d4f1872f8310bdeeb9a3b6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6323122735273f77bfe9d61bf2df84cabe3e5d6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742140"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395841"
 ---
 # <a name="creating-the-gamepiececollection-class"></a>Creazione della classe GamePieceCollection
 La classe **GamePieceCollection** deriva dalla classe generica List e introduce metodi per che consentono di gestire più facilmente più oggetti **GamePiece**.  
@@ -17,7 +17,7 @@ La classe **GamePieceCollection** deriva dalla classe generica List e introduce 
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_PrivateMembersAndConstructor](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_privatemembersandconstructor)]  
   
- I metodi **ProcessInertia** e **Draw** semplificano il codice necessario nei metodi [Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) e [Game.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) del gioco tramite l'enumerazione di tutte le parti del gioco nella raccolta e la chiamata del rispettivo metodo per ogni oggetto **GamePiece**.  
+ I metodi **ProcessInertia** e **Draw** semplificano il codice necessario nei metodi [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) e [Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) del gioco tramite l'enumerazione di tutte le parti del gioco nella raccolta e la chiamata del rispettivo metodo per ogni oggetto **GamePiece**.  
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_ProcessInertiaAndDraw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_processinertiaanddraw)]  
   

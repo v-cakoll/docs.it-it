@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 7248f352f95f2883fda9c92386f6ed769f9f2bf8
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 5211e1cc55c4af9735f59e4ddecc11acb24b8ea0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792373"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43452794"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Procedure dettagliate relative al linguaggio Visual Basic
 Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, che li rende un ottimo strumento per apprendere l'utilizzo del prodotto o di una determinata area funzionale.  
@@ -47,7 +47,7 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  [Implementazione dell'ereditarietà con gli oggetti COM](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Spiega come usare Visual Basic 6.0 per creare un oggetto COM contenente una classe che verrà poi usata come classe di base in Visual Basic.  
   
- [Multithreading](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
+ [Multithreading](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  Viene illustrato come creare un'applicazione multithreading che cerca le occorrenze di una parola in un file di testo.  
   
  [Individuazione della posizione di inserimento delle informazioni con My.Application.Log](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
@@ -62,7 +62,7 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  [Creazione di listener di log personalizzati](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  Spiega come creare un listener di log personalizzato e configurarlo in modo che resti in ascolto dell'output dell'oggetto `My.Application.Log`.  
   
- [Incorporamento dei tipi da assembly gestiti](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Incorporamento dei tipi da assembly gestiti](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
  Viene descritto come creare un assembly e un programma client che ne incorpori i tipi.  
   
  [Verifica della complessità delle password (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
@@ -77,8 +77,8 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  [Modifica di file mediante i metodi .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Viene illustrato come usare i metodi [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per determinare informazioni su un file, cercare una stringa in un file e scrivere in un file.  
   
- [Persistenza di un oggetto in Visual Basic](http://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
+ [Persistenza di un oggetto in Visual Basic](https://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
  Viene illustrato come creare un oggetto semplice e rendere persistenti i relativi dati in un file.  
   
- [Supporto test preliminare con la funzionalità di generazione dall'utilizzo](http://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [Supporto test preliminare con la funzionalità di generazione dall'utilizzo](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
  Spiega come eseguire uno sviluppo con test preliminare, in cui prima si scrivono gli unit test e successivamente il codice sorgente in modo che il test abbia esito positivo.

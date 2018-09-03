@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84bd96f27e8276546bef0dd9994163ccd843ac20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393309"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472046"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procedura: ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] è un runtime ridistribuibile. Se si sviluppano applicazioni per questa versione di .NET Framework, è possibile includere (a catena) l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] come un componente prerequisito nell'impostazione dell'applicazione. Per offrire un'esperienza d'installazione personalizzata o unificata, si consiglia di avviare l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] in modo invisibile all'utente, tenendone traccia visualizzando lo stato di avanzamento dell'installazione dell'app. Per abilitare la gestione invisibile, l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], che può essere controllata, definisce un protocollo usando un segmento di I/O mappato alla memoria (MMIO) per comunicare con l'installazione, ovvero con il watcher o il chainer. Questo protocollo definisce una modalità per il chainer per ottenere lo stato di avanzamento, i risultati dettagliati, per rispondere ai messaggi e per annullare l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -55,13 +55,13 @@ ms.locfileid: "33393309"
 > [!WARNING]
 >  È necessario eseguire l'esempio come amministratore.  
   
- È possibile scaricare la soluzione Visual Studio completa per l'[esempio di chainer di .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkId=231345) dalla raccolta di esempi di MSDN.  
+ È possibile scaricare la soluzione Visual Studio completa per l'[esempio di chainer di .NET Framework 4.5](https://go.microsoft.com/fwlink/?LinkId=231345) dalla raccolta di esempi di MSDN.  
   
  Le sezioni seguenti descrivono i file significativi in questo esempio: MMIOChainer.h, ChainingdotNet4.cpp e IProgressObserver.h.  
   
 #### <a name="mmiochainerh"></a>MMIOChainer.h  
   
--   Il file MMIOChainer.h (vedere il [codice completo](http://go.microsoft.com/fwlink/?LinkId=231369)) contiene la definizione della struttura dei dati e la classe di base dalla quale deve essere derivata la classe del chainer. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] estende la struttura dei dati MMIO per gestire i dati necessari al programma di installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Poiché le modifiche alla struttura MMIO sono compatibili con le versioni precedenti, un chainer di .NET Framework 4 può essere usato con l'installazione di .NET Framework 4.5 senza richiedere una ricompilazione. Tuttavia, questo scenario non supporta la funzionalità per ridurre il numero di riavvii del sistema.  
+-   Il file MMIOChainer.h (vedere il [codice completo](https://go.microsoft.com/fwlink/?LinkId=231369)) contiene la definizione della struttura dei dati e la classe di base dalla quale deve essere derivata la classe del chainer. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] estende la struttura dei dati MMIO per gestire i dati necessari al programma di installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Poiché le modifiche alla struttura MMIO sono compatibili con le versioni precedenti, un chainer di .NET Framework 4 può essere usato con l'installazione di .NET Framework 4.5 senza richiedere una ricompilazione. Tuttavia, questo scenario non supporta la funzionalità per ridurre il numero di riavvii del sistema.  
   
      Un campo della versione consente di identificare le revisioni alla struttura e al formato dei messaggi.  L'installazione di .NET Framework determina la versione dell'interfaccia del chainer chiamando la funzione `VirtualQuery` per determinare la dimensione del mapping del file.  Se la dimensione è abbastanza grande per contenere il campo della versione, l'installazione di .NET Framework usa il valore specificato. Se il mapping del file è troppo piccolo per contenere un campo della versione, come avviene nel caso di .NET Framework 4, il processo di installazione presuppone che la versione sia la versione 0 (4). Se il chainer non supporta la versione del messaggio che l'installazione di .NET Framework vuole inviare, l'installazione di .NET Framework presuppone una risposta Ignora.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "33393309"
   
 #### <a name="iprogressobserverh"></a>IProgressObserver.h  
   
--   Il file IProgressObserver.h file implementa un osservatore dello stato di avanzamento (vedere il [codice completo](http://go.microsoft.com/fwlink/?LinkId=231370)). L'osservatore riceve notifica dello stato di avanzamento del download e dell'installazione (specificato come `char` senza segno, da 0 a 255, che indica il completamento dall'1% al 100%). L'osservatore riceve anche la notifica dell'invio di un messaggio da parte del chainer e invia una risposta.  
+-   Il file IProgressObserver.h file implementa un osservatore dello stato di avanzamento (vedere il [codice completo](https://go.microsoft.com/fwlink/?LinkId=231370)). L'osservatore riceve notifica dello stato di avanzamento del download e dell'installazione (specificato come `char` senza segno, da 0 a 255, che indica il completamento dall'1% al 100%). L'osservatore riceve anche la notifica dell'invio di un messaggio da parte del chainer e invia una risposta.  
   
     ```cpp  
         class IProgressObserver  
@@ -112,7 +112,7 @@ ms.locfileid: "33393309"
   
 #### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp  
   
--   Il file [ChainingdotNet4.5.cpp](http://go.microsoft.com/fwlink/?LinkId=231368) implementa la classe `Server`, derivata dalla classe `MmioChainer` ed esegue l'override dei metodi appropriati per visualizzare le informazioni sullo stato di avanzamento. MmioChainer crea una sezione con il nome specificato e inizializza il chainer con il nome dell'evento specificato. Il nome dell'evento viene salvato nella struttura dei dati mappata. Specificare nomi di sezione ed evento univoci. La classe `Server` nel codice seguente avvia il programma di installazione specificato, esegue il monitoraggio dello stato di avanzamento e restituisce un codice di uscita.  
+-   Il file [ChainingdotNet4.5.cpp](https://go.microsoft.com/fwlink/?LinkId=231368) implementa la classe `Server`, derivata dalla classe `MmioChainer` ed esegue l'override dei metodi appropriati per visualizzare le informazioni sullo stato di avanzamento. MmioChainer crea una sezione con il nome specificato e inizializza il chainer con il nome dell'evento specificato. Il nome dell'evento viene salvato nella struttura dei dati mappata. Specificare nomi di sezione ed evento univoci. La classe `Server` nel codice seguente avvia il programma di installazione specificato, esegue il monitoraggio dello stato di avanzamento e restituisce un codice di uscita.  
   
     ```cpp  
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: 46b3f6b95e3b80ab324267704ead1f0187a56385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d96301e083b5c5340bea8b04943ca90c90e71ac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266568"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43471900"
 ---
 # <a name="using-c-reference"></a>using (Riferimenti per C#)
 La parola chiave `using` ha due usi principali:  
@@ -23,10 +23,11 @@ La parola chiave `using` ha due usi principali:
   
 La direttiva [using static](using-static.md) consente inoltre di definire un tipo i cui membri statici sono accessibili senza specificare un nome di tipo.
 
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md)  
- [extern](../../../csharp/language-reference/keywords/extern.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md)  
+- [extern](../../../csharp/language-reference/keywords/extern.md)

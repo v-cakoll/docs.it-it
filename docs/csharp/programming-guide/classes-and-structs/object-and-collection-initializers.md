@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: ad8127bfdd7178051077e6f3fe75c777acf5d345
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9986a91b18c536773f4ca20b71c54588c3e95f32
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321948"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476131"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Inizializzatori di oggetto e di raccolte (Guida per programmatori C#)
 Gli inizializzatori di oggetto consentono di assegnare valori a qualsiasi proprietà o campo accessibile di un oggetto in fase di creazione senza dover richiamare un costruttore seguito da righe di istruzioni di assegnazione. La sintassi dell'inizializzatore di oggetto consente di specificare gli argomenti per un costruttore o di omettere gli argomenti (e la sintassi di parentesi).  Nell'esempio seguente viene illustrato come utilizzare un inizializzatore di oggetto con un tipo denominato, `Cat` e come richiamare il costruttore predefinito. Si noti l'uso di proprietà implementate automaticamente nella classe `Cat`. Per altre informazioni, vedere [Proprietà implementate automaticamente](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
@@ -43,9 +43,6 @@ foreach(var p in productInfos){...}
 ```csharp
 select new {p.ProductName, Price = p.UnitPrice};  
 ```  
-  
-## <a name="object-initializers-with-nullable-types"></a>Inizializzatori di oggetto con tipi nullable  
- L'uso di un inizializzatore di oggetto con struct nullable genera un errore in fase di compilazione.  
   
 ## <a name="collection-initializers"></a>Inizializzatori di raccolta  
  Gli inizializzatori di raccolta consentono di specificare uno o più inizializzatori di elemento quando si inizializza un tipo di raccolta che implementa <xref:System.Collections.IEnumerable> e ha un metodo `Add` con una firma appropriata come metodo di istanza o metodo di estensione. Gli inizializzatori di elemento possono essere un semplice valore, un'espressione o un inizializzatore di oggetto. Se si utilizza un inizializzatore di raccolta, non è necessario specificare più chiamate al metodo `Add` della classe nel codice sorgente, in quanto le chiamate vengono aggiunte dal compilatore.  

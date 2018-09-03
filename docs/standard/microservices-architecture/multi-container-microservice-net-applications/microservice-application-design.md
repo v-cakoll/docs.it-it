@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 6cbe4512c8ed89540599d1257046bd080b464165
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4adf7e759d4475d0bb9b3aa0abe8dbdc5e57edd3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105959"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470116"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Progettazione di un'applicazione orientata ai microservizi
 
@@ -63,7 +63,7 @@ Ogni microservizio dispone del proprio database, in modo da poter essere complet
 
 ### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: un'applicazione di riferimento per .NET Core e microservizi distribuiti tramite contenitori
 
-Nell'intento di concentrarsi maggiormente sull'architettura e le tecnologie anziché pensare a un ipotetico dominio aziendale sconosciuto, è stato scelto un dominio aziendale noto, per l'esattezza un'applicazione e-commerce (e-shop) semplificata che presenta un catalogo di prodotti, accetta gli ordini dei clienti, verifica l'inventario ed esegue altre funzioni aziendali. Il codice sorgente di questa applicazione basata su contenitori è disponibile nel repository GitHub [eShopOnContainers](http://aka.ms/MicroservicesArchitecture).
+Nell'intento di concentrarsi maggiormente sull'architettura e le tecnologie anziché pensare a un ipotetico dominio aziendale sconosciuto, è stato scelto un dominio aziendale noto, per l'esattezza un'applicazione e-commerce (e-shop) semplificata che presenta un catalogo di prodotti, accetta gli ordini dei clienti, verifica l'inventario ed esegue altre funzioni aziendali. Il codice sorgente di questa applicazione basata su contenitori è disponibile nel repository GitHub [eShopOnContainers](https://aka.ms/MicroservicesArchitecture).
 
 L'applicazione è costituita da più sottosistemi, inclusi diversi front-end con interfaccia utente per negozi (un'applicazione Web e un'app per dispositivi mobili nativa), insieme ai microservizi e ai contenitori back-end per tutte le operazioni richieste sul lato server. La figura 8-1 illustra l'architettura dell'applicazione di riferimento.
 
@@ -171,7 +171,7 @@ Esistono molti schemi architetturali usati dagli sviluppatori e dai progettisti 
 
 -   [Progettazione basata su domini a N livelli](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 
--   [Architettura pulita](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (come quella usata con [eShopOnWeb](http://aka.ms/WebAppArchitecture))
+-   [Architettura pulita](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (come quella usata con [eShopOnWeb](https://aka.ms/WebAppArchitecture))
 
 -   [Command and Query Responsibility Segregation](https://martinfowler.com/bliki/CQRS.html) (CQRS).
 

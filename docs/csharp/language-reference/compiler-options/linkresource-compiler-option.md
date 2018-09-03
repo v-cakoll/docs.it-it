@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 5c666b1c6440ac323830780ca5ca6930327ad9d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: feca4713fe0e704799e2abbae3818edd0f3a5c84
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219180"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43407737"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (opzioni del compilatore C#)
 Crea un collegamento a una risorsa di .NET Framework nel file di output. Il file di risorse non viene aggiunto al file di output. Questa opzione è diversa dall'opzione [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md), che invece incorpora un file di risorse nel file di output.  
@@ -42,7 +42,7 @@ Crea un collegamento a una risorsa di .NET Framework nel file di output. Il file
   
  Per **-linkresource** è necessaria un'opzione [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) diversa da **-target:module**.  
   
- Se `filename` è un file di risorse .NET Framework creato ad esempio da [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri dello spazio dei nomi <xref:System.Resources>. Per altre informazioni, vedere <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Per tutte le altre risorse, per accedere alla risorsa in fase di esecuzione usare i metodi `GetManifestResource` della classe <xref:System.Reflection.Assembly>.  
+ Se `filename` è un file di risorse .NET Framework creato ad esempio da [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri dello spazio dei nomi <xref:System.Resources>. Per ulteriori informazioni, vedere <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Per tutte le altre risorse, per accedere alla risorsa in fase di esecuzione usare i metodi `GetManifestResource` della classe <xref:System.Reflection.Assembly>.  
   
  Il file specificato in `filename` può avere qualsiasi formato. Può ad esempio risultare opportuno rendere una DLL nativa parte dell'assembly in modo che possa essere installata nella Global Assembly Cache e che sia possibile accedervi dal codice gestito nell'assembly. Nel secondo degli esempi seguenti viene illustrato come effettuare questa operazione. È possibile eseguire la stessa operazione in Assembly Linker. Nel terzo degli esempi seguenti viene illustrato come effettuare questa operazione. Per altre informazioni, vedere [Al.exe (Assembly Linker)](../../../framework/tools/al-exe-assembly-linker.md) e [Uso di assembly e della Global Assembly Cache](../../../framework/app-domains/working-with-assemblies-and-the-gac.md).  
   
@@ -75,7 +75,8 @@ gacutil -i A.dll
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Al.exe (Assembly Linker)](../../../framework/tools/al-exe-assembly-linker.md)  
- [Uso di assembly e della Global Assembly Cache](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Al.exe (Assembly Linker)](../../../framework/tools/al-exe-assembly-linker.md)  
+- [Uso di assembly e della Global Assembly Cache](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)  
+- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

@@ -5,12 +5,12 @@ description: Informazioni sull'installazione di .NET Framework in Windows 8
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: f912013773759c6c8f52734f74bdca867f60e7a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1edc928318ec56853df06c1382465e24d9604c9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386909"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43416454"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Installare .NET Framework in Windows 8 e Windows Server 2012
 
@@ -18,7 +18,7 @@ ms.locfileid: "33386909"
 
 ![Impossibile avviare l'applicazione](./media/this-application-could-not-be-started.png)
 
-Queste istruzioni saranno utili per installare le versioni di .NET Framework necessarie. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) è la versione più recente. È supportata in Windows Server 2012 ma non in Windows 8. È inclusa nell'[Aggiornamento di Windows 10 (aprile 2018)](https://www.microsoft.com/software-download/windows10).
+Queste istruzioni saranno utili per installare le versioni di .NET Framework necessarie. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) è la versione più recente. È supportata in Windows Server 2012 ma non in Windows 8. È inclusa nell'[Aggiornamento di Windows 10 (aprile 2018)](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
@@ -27,7 +27,7 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 
 .NET Framework 4.7.2 è supportata in Windows Server 2012. Non è supportato in Windows 8.
 
-[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) può essere usato per eseguire le applicazioni compilate per .NET Framework 4.0 o versioni successive.
+[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) può essere usato per eseguire le applicazioni compilate per .NET Framework 4.0 o versioni successive.
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 

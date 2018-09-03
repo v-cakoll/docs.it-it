@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -publicsign compiler option [C#]
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
-ms.openlocfilehash: ec25f9c1f2ef943db41bcfa20c8efd1d05866acd
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 01ce30b9ac5997f56f29dcbbfa43a27738fa5556
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472824"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474252"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (opzioni del compilatore C#)
 
@@ -42,8 +42,9 @@ Talvolta denominata "firma falsa" o "firma OSS", la firma pubblica include la ch
 1. Modificare la proprietà **Solo firma ritardata**.
 
 ## <a name="see-also"></a>Vedere anche
- [Opzione -delaysign del compilatore C#](delaysign-compiler-option.md)  
- [Opzione - keyfile del compilatore C#](keyfile-compiler-option.md)  
- [Opzione -keycontainer del compilatore C#](keycontainer-compiler-option.md)  
- [Opzioni del compilatore C#](index.md)  
- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opzione -delaysign del compilatore C#](delaysign-compiler-option.md)  
+- [Opzione - keyfile del compilatore C#](keyfile-compiler-option.md)  
+- [Opzione -keycontainer del compilatore C#](keycontainer-compiler-option.md)  
+- [Opzioni del compilatore C#](index.md)  
+- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

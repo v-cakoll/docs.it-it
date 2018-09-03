@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fabf1a133ca3c3b3ba39a4898ce0aceb378f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbea588604ebd5ad39e134a4ecfe771c89fb1121
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571982"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390568"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Costrutti vari nelle espressioni regolari
 Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno consente di abilitare o disabilitare opzioni di corrispondenza specifiche all'interno di un modello dell'espressione regolare. I restanti due consentono di includere commenti in un'espressione regolare.  
@@ -63,7 +63,7 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
 ## <a name="inline-comment"></a>Commento inline  
  Il costrutto `(?#` *comment*`)` consente di includere un commento inline in un'espressione regolare. Il motore delle espressioni regolari non usa una parte del commento nella corrispondenza tra modelli, anche se il commento è incluso nella stringa restituita dal metodo <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>. Il commento termina in corrispondenza della prima parentesi chiusa.  
   
- Nell'esempio seguente viene ripetuto il primo criterio dell'espressione regolare dell'esempio nella sezione precedente. Vengono aggiunti due commenti inline all'espressione regolare per indicare se il confronto fa distinzione tra maiuscole e minuscole. Il modello dell'espressione regolare, `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b`, viene definito nel modo seguente.  
+ Nell'esempio seguente viene ripetuto il primo criterio dell'espressione regolare dell'esempio nella sezione precedente. Vengono aggiunti due commenti inline all'espressione regolare per indicare se il confronto fa distinzione tra maiuscole e minuscole. Il modello dell'espressione regolare, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, viene definito nel modo seguente.  
   
 |Modello|Descrizione|  
 |-------------|-----------------|  
@@ -92,7 +92,6 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
 |`\d+`|Trova la corrispondenza con una o più cifre decimali.|  
 |`(,-*\d+)*`|Trovare la corrispondenza con zero o una occorrenza di una virgola, seguita da un segno di sottrazione, seguito da una o più cifre decimali.|  
 |`(\:\w{1,4}?)*`|Trovare la corrispondenza con zero o una occorrenza del segno di due punti, seguito dal numero minimo possibile di caratteri di spazio vuoto tra uno e quattro.|  
-|`(?#case insensitive comparison)`|Un commento inline. Non ha effetto sul comportamento della corrispondenza tra modelli.|  
 |`\}`|Trovare la corrispondenza con una parentesi graffa di chiusura.|  
 |`(?x)`|Abilitare l'opzione per ignorare gli spazi vuoti nel modello in modo che il commento di fine riga venga riconosciuto.|  
 |`# Looks for a composite format item.`|Un commento di fine riga.|  

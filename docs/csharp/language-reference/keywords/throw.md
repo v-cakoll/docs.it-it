@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7e944f224ff9bf6dc3b8cefc293182bb79f74f2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 831c4cce14e902697d84129e54cc54f07d26b9f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457495"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43417358"
 ---
 # <a name="throw-c-reference"></a>throw (Riferimenti per C#)
 Segnala l'occorrenza di un'eccezione durante l'esecuzione del programma.  
@@ -65,11 +65,12 @@ A partire da C# 7.0 è possibile usare `throw` come espressione e come istruzion
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [Istruzioni try, catch e throw in C++](../../../csharp/language-reference/keywords/try-catch.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Istruzioni di gestione delle eccezioni](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
- [Procedura: Come generare in modo esplicito le eccezioni](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [Istruzioni try, catch e throw in C++](../../../csharp/language-reference/keywords/try-catch.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Istruzioni di gestione delle eccezioni](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+- [Procedura: Come generare in modo esplicito le eccezioni](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

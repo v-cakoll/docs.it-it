@@ -2,12 +2,12 @@
 title: Programmazione orientata a oggetti (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 0dee6edf966e8e2a3e430e60f1c3d51354d08bf3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6194cb93b10d5b9f5d25fc42cff6c071627d411
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340593"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43415488"
 ---
 # <a name="object-oriented-programming-c"></a>Programmazione orientata a oggetti (C#)
 C# offre un supporto completo per la programmazione orientata a oggetti che include incapsulamento, ereditarietà e polimorfismo.  
@@ -307,7 +307,7 @@ var sampleObject =
  Per ereditare da una classe base:  
   
 ```csharp  
-class DerivedClass:BaseClass{}  
+class DerivedClass:BaseClass {}  
 ```  
   
  Per impostazione predefinita, tutte le classi possono essere ereditate. Tuttavia, è possibile specificare se una classe non deve essere utilizzata come classe base oppure creare una classe utilizzabile solo come classe base.  

@@ -2,12 +2,12 @@
 title: Informazioni generali sulle modifiche e sull'inerzia
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 7aec2756bfc3a7d4ccd394d54f19428d73b44fcb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744395"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401225"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Informazioni generali sulle modifiche e sull'inerzia
 Le *modifiche* consentono agli utenti di spostare, ruotare e ridimensionare elementi dell'interfaccia utente tramite *modificatori*. Un manipolatore può essere un mouse, uno stilo (in uno scenario abilitato per il tocco) o un dito.  
@@ -25,23 +25,23 @@ Le *modifiche* consentono agli utenti di spostare, ruotare e ridimensionare elem
   
  Immagine modificata da due manipolatori  
   
- L'elaborazione delle modifiche fornisce un framework che consente di monitorare un subset di manipolatori e di interpretarli collettivamente, anziché in modo indipendente. È possibile creare diversi oggetti del processore di modifica contemporaneamente, uno per ogni elemento dell'interfaccia utente da modificare in un'applicazione. Un processore di modifica viene informato sui dispositivi di input che può usare e segnala le modifiche tramite [eventi .NET](http://msdn.microsoft.com/library/17sde2xt.aspx).  
+ L'elaborazione delle modifiche fornisce un framework che consente di monitorare un subset di manipolatori e di interpretarli collettivamente, anziché in modo indipendente. È possibile creare diversi oggetti del processore di modifica contemporaneamente, uno per ogni elemento dell'interfaccia utente da modificare in un'applicazione. Un processore di modifica viene informato sui dispositivi di input che può usare e segnala le modifiche tramite [eventi .NET](https://msdn.microsoft.com/library/17sde2xt.aspx).  
   
  Un processore di modifica non dispone di informazioni sul particolare elemento modificato. Un'applicazione applica separatamente le modifiche a un elemento specifico dell'applicazione. Ad esempio, un'applicazione applica le trasformazioni a un'immagine o la ridisegna per visualizzarla in una nuova posizione oppure con una nuova dimensione o orientamento.  
   
- Le modifiche vengono create per [trasformazioni affini ](http://msdn.microsoft.com/library/ms533810\(VS.85\).aspx) bidimensionali (2D). Queste trasformazioni includono la traslazione, la rotazione e il ridimensionamento.  
+ Le modifiche vengono create per [trasformazioni affini ](/windows/desktop/gdiplus/-gdiplus-transformations-use) bidimensionali (2D). Queste trasformazioni includono la traslazione, la rotazione e il ridimensionamento.  
   
 ### <a name="parts-of-a-manipulation"></a>Parti di una modifica  
  Una modifica è una raccolta di oggetti <xref:System.Windows.Input.Manipulations.Manipulator2D>. Questa modifica aggregata è rappresentata da un punto di origine e da un'ellisse. Il punto di origine è la posizione media di tutti i manipolatori che stanno modificando un elemento. L'ellisse ha un raggio che corrisponde alla distanza media tra l'origine e ciascuno degli oggetti <xref:System.Windows.Input.Manipulations.Manipulator2D>.  
   
- ![Parti di una modifica. ] (../../../docs/framework/common-client-technologies/media/manipulation-definition.png "Manipulation_Definition")  
+ ![Parti di una modifica. ](../../../docs/framework/common-client-technologies/media/manipulation-definition.png "Manipulation_Definition")  
   
  Due manipolatori (1 e 2), un'origine e un'ellisse specificano una modifica  
   
  Quando i manipolatori vengono aggiunti, spostati o rimossi in un elemento dell'interfaccia utente, un'applicazione aggiorna l'oggetto <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> chiamando il metodo <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>. Quando la modifica viene avviata per prima volta, viene generato l'evento <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started>.  
   
 > [!NOTE]
->  L'elaborazione delle modifiche è più efficace se usata in un ambiente di aggiornamento basato su frame. L'uso dell'elaborazione di modifiche in un'applicazione Microsoft XNA non presenta problemi perché il framework XNA offre i corrispondenti aggiornamenti tramite il metodo [Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx). In un altro ambiente (ad esempio Windows Form) potrebbe essere necessario fornire una propria logica basata su frame per raccogliere le modifiche e inviarle periodicamente in batch al metodo <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>.  
+>  L'elaborazione delle modifiche è più efficace se usata in un ambiente di aggiornamento basato su frame. L'uso dell'elaborazione di modifiche in un'applicazione Microsoft XNA non presenta problemi perché il framework XNA offre i corrispondenti aggiornamenti tramite il metodo [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx). In un altro ambiente (ad esempio Windows Form) potrebbe essere necessario fornire una propria logica basata su frame per raccogliere le modifiche e inviarle periodicamente in batch al metodo <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>.  
   
  Quando cambia il numero o la posizione dei manipolatori, viene generato l'evento <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta>. Le proprietà dell'oggetto <xref:System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs> passato al gestore dell'evento <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> specificano le modifiche apportate a origine, scala, rotazione e conversione dopo l'ultimo evento. L'origine della modifica cambia in caso di spostamento, aggiunta o rimozione dei manipolatori. I valori di conversione specificano l'entità del movimento di X o Y inclusa nella modifica.  
   

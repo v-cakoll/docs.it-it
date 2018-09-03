@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd378798ad6909175b2342b0d79584e2667f1eea
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 0cf81b5a86d55cf3d7872e0e5281c35f41ad1c31
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911880"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390663"
 ---
 # <a name="custom-timespan-format-strings"></a>Stringhe di formato TimeSpan personalizzate
 
@@ -67,11 +67,12 @@ Le stringhe in formato <xref:System.TimeSpan> personalizzato sono usate anche da
 |"FFFFF"|I centesimi di millesimo di secondo in un intervallo di tempo. Eventuali zeri finali frazionari non sono inclusi.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "FFFFF"](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|
 |"FFFFFF"|I milionesimi di secondo in un intervallo di tempo. Eventuali zeri finali frazionari non sono visualizzati.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |"FFFFFFF"|I decimilionesimi di secondo in un intervallo di tempo. Eventuali zeri finali frazionari o gruppi di sette zeri non sono visualizzati.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
-|*'string*'|Delimitatore di stringa letterale.<br /><br /> Altre informazioni: [Altri caratteri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|'*string*'|Delimitatore di stringa letterale.<br /><br /> Altre informazioni: [Altri caratteri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
 |\\|Il carattere di escape.<br /><br /> Altre informazioni: [Altri caratteri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |Qualsiasi altro carattere|Qualsiasi altro carattere senza escape viene interpretato come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [Altri caratteri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
-<a name="dSpecifier"></a>
+<a name="dSpecifier"></a> 
+
 ## <a name="the-d-custom-format-specifier"></a>Identificatore di formato personalizzato "d"
 
 L'identificatore di formato personalizzato "d" restituisce il valore della proprietà <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>, che rappresenta il numero di giorni completi nell'intervallo di tempo. Restituisce il numero completo di giorni di un valore <xref:System.TimeSpan>, anche se il valore ha più di una cifra. Se il valore della proprietà <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> è zero, l'identificatore restituisce "0".
@@ -89,6 +90,7 @@ Nell'esempio seguente viene illustrato l'uso dell'identificatore di formato pers
 [Torna alla tabella](#table)
 
 <a name="ddSpecifier"></a> 
+
 ## <a name="the-dd-dddddddd-custom-format-specifiers"></a>Identificatori di formato personalizzato "dd"-"dddddddd"
 Gli identificatori di formato personalizzato "dd", "ddd", "dddd", "ddddd", "dddddd", "ddddddd" e "dddddddd" restituiscono il valore della proprietà <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>, che rappresenta il numero di giorni completi nell'intervallo di tempo.
 
@@ -102,6 +104,7 @@ L'esempio seguente usa gli identificatori di formato per visualizzare la rappres
 [Torna alla tabella](#table)
 
 <a name="hSpecifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>Identificatore di formato personalizzato "h"
 L'identificatore di formato personalizzato "h" restituisce il valore della proprietà <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>, che rappresenta il numero di tutte le ore nell'intervallo di tempo non conteggiate come parte del relativo componente giorno. Restituisce un valore stringa a una cifra se il valore della proprietà <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> è compreso tra 0 e 9 e restituisce un valore stringa a due cifre se il valore della proprietà <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> è compreso tra 10 e 23.
 
@@ -123,6 +126,7 @@ Nell'esempio seguente viene illustrato l'uso dell'identificatore di formato pers
 [Torna alla tabella](#table)
 
 <a name="hhSpecifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>Identificatore di formato personalizzato "hh"
 L'identificatore di formato personalizzato "hh" restituisce il valore della proprietà <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>, che rappresenta il numero di tutte le ore nell'intervallo di tempo non conteggiate come parte del relativo componente giorno. Per valori compresi tra 0 e 9, la stringa di output include uno zero iniziale.
 
@@ -139,6 +143,7 @@ Nell'esempio seguente viene illustrato l'uso dell'identificatore di formato pers
 [Torna alla tabella](#table)
 
 <a name="mSpecifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>Identificatore di formato personalizzato "m"
 L'identificatore di formato personalizzato "m" restituisce il valore della proprietà <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>, che rappresenta il numero di tutti i minuti nell'intervallo di tempo non conteggiati come parte del relativo componente giorno. Restituisce un valore stringa a una cifra se il valore della proprietà <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> è compreso tra 0 e 9 e restituisce un valore stringa a due cifre se il valore della proprietà <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> è compreso tra 10 e 59.
 
@@ -160,6 +165,7 @@ Nell'esempio seguente viene illustrato l'uso dell'identificatore di formato pers
 [Torna alla tabella](#table)
 
 <a name="mmSpecifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>Identificatore di formato personalizzato "mm"
 L'identificatore di formato personalizzato "mm" restituisce il valore della proprietà <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>, che rappresenta il numero di tutti i minuti nell'intervallo di tempo non inclusi come parte del relativo componente ore o giorni. Per valori compresi tra 0 e 9, la stringa di output include uno zero iniziale.
 
@@ -176,6 +182,7 @@ Nell'esempio seguente viene illustrato l'uso dell'identificatore di formato pers
 [Torna alla tabella](#table)
 
 <a name="sSpecifier"></a> 
+
 ## <a name="the-s-custom-format-specifier"></a>Identificatore di formato personalizzato "s"
 L'identificatore di formato personalizzato "s" restituisce il valore della proprietà <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>, che rappresenta il numero di tutti i secondi nell'intervallo di tempo non inclusi come parte del relativo componente ore, giorni o minuti. Restituisce un valore stringa a una cifra se il valore della proprietà <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> è compreso tra 0 e 9 e restituisce un valore stringa a due cifre se il valore della proprietà <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> è compreso tra 10 e 59.
 
@@ -197,6 +204,7 @@ Nell'esempio seguente viene illustrato l'uso dell'identificatore di formato pers
 [Torna alla tabella](#table)
 
 <a name="ssSpecifier"></a> 
+
 ## <a name="the-ss-custom-format-specifier"></a>Identificatore di formato personalizzato "ss"
 L'identificatore di formato personalizzato "ss" restituisce il valore della proprietà <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>, che rappresenta il numero di tutti i secondi nell'intervallo di tempo non inclusi come parte del relativo componente ore, giorni o minuti. Per valori compresi tra 0 e 9, la stringa di output include uno zero iniziale.
 
@@ -213,6 +221,7 @@ Nell'esempio seguente viene illustrato l'uso dell'identificatore di formato pers
 [Torna alla tabella](#table)
 
 <a name="fSpecifier"></a> 
+
 ## <a name="thef-custom-format-specifier"></a>Identificatore di formato personalizzato "f"
 L'identificatore di formato personalizzato "f" restituisce i decimi di secondo in un intervallo di tempo. In un'operazione di formattazione qualsiasi cifra frazionaria rimanente viene troncata. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la stringa di input deve contenere esattamente una sola cifra frazionaria.
 
@@ -226,6 +235,7 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "f"
 [Torna alla tabella](#table)
 
 <a name="ffSpecifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>Identificatore di formato personalizzato "ff"
 L'identificatore di formato personalizzato "ff" restituisce i centesimi di secondo in un intervallo di tempo. In un'operazione di formattazione qualsiasi cifra frazionaria rimanente viene troncata. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la stringa di input deve contenere esattamente due cifre frazionarie.
 
@@ -237,6 +247,7 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "ff
 [Torna alla tabella](#table)
 
 <a name="f3Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>Identificatore di formato personalizzato "fff"
 L'identificatore di formato personalizzato "fff" (con tre caratteri "f") restituisce i millisecondi in un intervallo di tempo. In un'operazione di formattazione qualsiasi cifra frazionaria rimanente viene troncata. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la stringa di input deve contenere esattamente tre cifre frazionarie.
 
@@ -248,6 +259,7 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "ff
 [Torna alla tabella](#table)
 
 <a name="f4Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>Identificatore di formato personalizzato "ffff"
 L'identificatore di formato personalizzato "ffff" (con quattro caratteri "f") restituisce i decimillesimi di secondo in un intervallo di tempo. In un'operazione di formattazione qualsiasi cifra frazionaria rimanente viene troncata. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la stringa di input deve contenere esattamente quattro cifre frazionarie.
 
@@ -259,6 +271,7 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "ff
 [Torna alla tabella](#table)
 
 <a name="f5Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>Identificatore di formato personalizzato "fffff"
 L'identificatore di formato personalizzato "fffff" (con cinque caratteri "f") restituisce i centesimi di millesimo di secondo in un intervallo di tempo. In un'operazione di formattazione qualsiasi cifra frazionaria rimanente viene troncata. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la stringa di input deve contenere esattamente cinque cifre frazionarie.
 
@@ -270,6 +283,7 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "ff
 [Torna alla tabella](#table)
 
 <a name="f6Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>Identificatore di formato personalizzato "ffffff"
 L'identificatore di formato personalizzato "ffffff" (con sei caratteri "f") restituisce i milionesimi di secondo in un intervallo di tempo. In un'operazione di formattazione qualsiasi cifra frazionaria rimanente viene troncata. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la stringa di input deve contenere esattamente sei cifre frazionarie.
 
@@ -281,6 +295,7 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "ff
 [Torna alla tabella](#table)
 
 <a name="f7Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>Identificatore di formato personalizzato "fffffff"
 L'identificatore di formato personalizzato "fffffff" (con sette caratteri "f") restituisce i decimilionesimi di secondo (o il numero frazionario di tick) in un intervallo di tempo. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la stringa di input deve contenere esattamente sette cifre frazionarie.
 
@@ -292,6 +307,7 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "ff
 [Torna alla tabella](#table)
 
 <a name="F_Specifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>Identificatore di formato personalizzato "F"
 L'identificatore di formato personalizzato "F" restituisce i decimi di secondo in un intervallo di tempo. In un'operazione di formattazione qualsiasi cifra frazionaria rimanente viene troncata. Se il valore dei decimi di secondo dell'intervallo di tempo è zero, non viene incluso nella stringa del risultato. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la presenza della cifra dei decimi di secondo è facoltativa.
 
@@ -305,6 +321,7 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "F"
 [Torna alla tabella](#table)
 
 <a name="FF_Specifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>Identificatore di formato personalizzato "FF"
 L'identificatore di formato personalizzato "FF" restituisce i centesimi di secondo in un intervallo di tempo. In un'operazione di formattazione qualsiasi cifra frazionaria rimanente viene troncata. Se sono presenti zeri frazionari finali, non vengono inclusi nella stringa del risultato. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la presenza della cifra dei decimi e dei centesimi di secondo è facoltativa.
 
@@ -316,6 +333,7 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "FF
 [Torna alla tabella](#table)
 
 <a name="F3_Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>Identificatore di formato personalizzato "FFF"
 L'identificatore di formato personalizzato "FFF" (con tre caratteri "F") restituisce i millisecondi in un intervallo di tempo. In un'operazione di formattazione qualsiasi cifra frazionaria rimanente viene troncata. Se sono presenti zeri frazionari finali, non vengono inclusi nella stringa del risultato. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la presenza della cifra dei decimi, dei centesimi e dei millesimi di secondo è facoltativa.
 
@@ -327,6 +345,7 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "FF
 [Torna alla tabella](#table)
 
 <a name="F4_Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>Identificatore di formato personalizzato "FFFF"
 L'identificatore di formato personalizzato "FFFF" (con quattro caratteri "F") restituisce i decimillesimi di secondo in un intervallo di tempo. In un'operazione di formattazione qualsiasi cifra frazionaria rimanente viene troncata. Se sono presenti zeri frazionari finali, non vengono inclusi nella stringa del risultato. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la presenza della cifra dei decimi, dei centesimi, dei millesimi e dei decimillesimi di secondo è facoltativa.
 
@@ -338,6 +357,7 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "FF
 [Torna alla tabella](#table)
 
 <a name="F5_Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>Identificatore di formato personalizzato "FFFFF"
 L'identificatore di formato personalizzato "FFFFF" (con cinque caratteri "F") restituisce i centesimi di millesimo di secondo in un intervallo di tempo. In un'operazione di formattazione qualsiasi cifra frazionaria rimanente viene troncata. Se sono presenti zeri frazionari finali, non vengono inclusi nella stringa del risultato. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la presenza della cifra dei decimi, dei centesimi, dei millesimi, dei decimillesimi e dei centesimi di millesimi di secondo è facoltativa.
 
@@ -349,6 +369,7 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "FF
 [Torna alla tabella](#table)
 
 <a name="F6_Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>Identificatore di formato personalizzato "FFFFFF"
 L'identificatore di formato personalizzato "FFFFFF" (con sei caratteri "F") restituisce i milionesimi di secondo in un intervallo di tempo. In un'operazione di formattazione qualsiasi cifra frazionaria rimanente viene troncata. Se sono presenti zeri frazionari finali, non vengono inclusi nella stringa del risultato. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la presenza della cifra dei decimi, dei centesimi, dei millesimi, dei decimillesimi, dei centesimi di millesimi e dei milionesimi di secondo è facoltativa.
 
@@ -360,6 +381,7 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "FF
 [Torna alla tabella](#table)
 
 <a name="F7_Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>Identificatore di formato personalizzato "FFFFFFF"
 L'identificatore di formato personalizzato "FFFFFFF" (con sette caratteri "F") restituisce i decimilionesimi di secondo (o il numero frazionario di tick) in un intervallo di tempo. Se sono presenti zeri frazionari finali, non vengono inclusi nella stringa del risultato. In un'operazione di analisi che chiama il metodo <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> o <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> la presenza delle sette cifre frazionarie nella stringa di input è facoltativa.
 
@@ -370,7 +392,8 @@ Nell'esempio seguente viene usato l'identificatore di formato personalizzato "FF
 
 [Torna alla tabella](#table)
 
-<a name="Other"></a>
+<a name="Other"></a> 
+
 ## <a name="other-characters"></a>Altri caratteri
 
 Qualsiasi altro carattere senza codice di escape in una stringa di formato, incluso un carattere di spazio vuoto, viene interpretato come identificatore di formato personalizzato. Nella maggior parte dei casi la presenza di qualsiasi altro carattere senza codice di escape restituisce un oggetto <xref:System.FormatException>.

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36433dcce1e47b329f5407e86ce3923a44cb6444
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa31641cc325f15b9afe677038deb33c57e77fd1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389529"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43388352"
 ---
 # <a name="mitigation-path-normalization"></a>Migrazione: Normalizzazione del percorso
 A partire dalle applicazioni destinate a [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], la normalizzazione del percorso in .NET Framework è stata modificata.  
@@ -28,7 +28,7 @@ A partire dalle applicazioni destinate a [!INCLUDE[net_v462](../../../includes/n
 ## <a name="the-changes"></a>Le modifiche  
  A partire dalle applicazioni destinate a [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], la normalizzazione è stata modificata così come segue:  
   
--   Il runtime viene rinviato alla funzione [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963\(v=vs.85\).aspx) del sistema operativo per normalizzare i percorsi.  
+-   Il runtime viene rinviato alla funzione [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) del sistema operativo per normalizzare i percorsi.  
   
 -   La normalizzazione non consiste più nel rimuovere la fine dei segmenti di directory (ad esempio uno spazio alla fine di un nome di directory).  
   

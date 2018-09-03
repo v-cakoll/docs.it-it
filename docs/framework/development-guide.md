@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ee74c0f2ae316c7dd36dd943dc5c8636ee53fb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c42311368bf94a2629f656b61b09cb7c2c5f68b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391098"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387989"
 ---
 # <a name="net-framework-development-guide"></a>Guida di sviluppo per .NET Framework
 Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere e distribuire app .NET Framework. In questa sezione vengono fornite informazioni sulle aree tecnologiche, ad esempio programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.  
@@ -65,7 +65,7 @@ Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere
  [Prestazioni](../../docs/framework/performance/index.md)  
  Vengono fornite informazioni sulla memorizzazione nella cache, l'inizializzazione differita, l'affidabilità e gli eventi ETW.  
   
- <!--zz [Advanced Reading for the .NET Framework](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)  
+ <!--zz [Advanced Reading for the .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)  
  Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
   
 ## <a name="reference"></a>Riferimenti  
@@ -82,5 +82,5 @@ Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere
  [Strumenti](../../docs/framework/tools/index.md)  
  Vengono descritti gli strumenti che consentono di sviluppare, configurare e distribuire app tramite le tecnologie .NET Framework.  
   
- [Esempi di .NET Framework](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
+ [Esempi di .NET Framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
  Vengono forniti collegamenti alla raccolta di esempi di codice di MSDN per app di esempio che illustrano le tecnologie .NET Framework.

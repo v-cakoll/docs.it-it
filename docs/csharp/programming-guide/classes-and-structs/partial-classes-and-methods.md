@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
 ms.openlocfilehash: aa0baf50b9e4aabf0bb5dfa229ecd245db391a8b
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314734"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484028"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classi e metodi parziali (Guida per programmatori C#)
 È possibile suddividere la definizione di una [classe](../../../csharp/language-reference/keywords/class.md) di uno [struct](../../../csharp/language-reference/keywords/struct.md), di un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) o di un metodo tra due o più file di origine. Ogni file di origine contiene una sezione della definizione di tipo o metodo e tutte le parti vengono combinate al momento della compilazione dell'applicazione.  

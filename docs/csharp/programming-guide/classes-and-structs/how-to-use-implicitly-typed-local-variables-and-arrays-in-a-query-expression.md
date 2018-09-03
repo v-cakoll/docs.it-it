@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: c2bc990f9dda4b91928c176cf7f10bfb349ba343
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef3a411bc51fcc5f644f9d53bde67f7116289678
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319325"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481579"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Procedura: utilizzare variabili e matrici locali tipizzate in modo implicito in un'espressione di query (Guida per programmatori C#)
 È possibile usare le variabili locali tipizzate in modo implicito ogni volta che si vuole che il compilatore determini il tipo di una variabile locale. È necessario usare le variabili locali tipizzate in modo implicito per archiviare i tipi anonimi, che vengono spesso usati nelle espressioni di query. Gli esempi seguenti illustrano tipi d'uso facoltativi e obbligatori delle variabili locali tipizzate in modo implicito nelle query.  
@@ -29,6 +29,6 @@ ms.locfileid: "33319325"
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
  [Metodi di estensione](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ (Language-Integrated Query)](../../../csharp/linq/index.md)  
  [var](../../../csharp/language-reference/keywords/var.md)  
  [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

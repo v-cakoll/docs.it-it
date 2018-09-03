@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: c9dab959628343cd99f75ffeda30e3f423f2aaf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409802"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396922"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (strumento per la generazione del codice)
 Lo strumento da riga di comando SqlMetal genera codice e mapping per il componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Mediante l'applicazione delle opzioni riportate più avanti in questo argomento è possibile usare SqlMetal per eseguire diverse operazioni, fra cui:  
@@ -25,7 +25,7 @@ Lo strumento da riga di comando SqlMetal genera codice e mapping per il componen
   
 -   A partire da un file .dbml, generare codice e attributi di mapping oppure un file di mapping.  
   
- Viene installato automaticamente con Visual Studio. Per impostazione predefinita, il file si trova in `drive`:\Programmi\Microsoft SDKs\Windows\v`n.nn`\bin. Se non si installa Visual Studio, è possibile ottenere il file SQLMetal anche scaricando [Windows SDK](http://go.microsoft.com/fwlink/?LinkId=142225).  
+ Viene installato automaticamente con Visual Studio. Per impostazione predefinita, il file si trova in `drive`:\Programmi\Microsoft SDKs\Windows\v`n.nn`\bin. Se non si installa Visual Studio, è possibile ottenere il file SQLMetal anche scaricando [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225).  
   
 > [!NOTE]
 >  Gli sviluppatori che usano Visual Studio possono usare anche [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] per generare classi di entità. Quando si usano database di grandi dimensioni, l'approccio basato sulla riga di comando rappresenta la scelta più adeguata. In quanto strumento da riga di comando, SqlMetal può essere usato in un processo di compilazione.  

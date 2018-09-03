@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: 194e4f7efaebd9523791090bcab09c019f8554a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a2d3ea2bda56caf6a16f52877ad36b3947357e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218829"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391110"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (opzioni del compilatore C#)
 L'opzione **-target:exe** indica al compilatore di creare un file eseguibile (EXE), applicazione console.  
@@ -54,5 +54,6 @@ csc in.cs
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [-target (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+
+- [-target (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)

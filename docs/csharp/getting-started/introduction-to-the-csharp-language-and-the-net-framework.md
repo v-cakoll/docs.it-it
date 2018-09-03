@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: cabd39307b6928302b40931c39fc61c3898821ed
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 75ef14032ee2211d3b8d355f050ced67b4a04930
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929644"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254476"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introduzione al linguaggio C# e a .NET Framework
 
@@ -66,7 +66,7 @@ C# è un linguaggio elegante, orientato a oggetti e indipendente dai tipi che co
   
  Per altre informazioni su .NET Framework, vedere [Overview of the Microsoft .NET Framework](../../framework/get-started/overview.md) (Cenni preliminari su Microsoft .NET Framework).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 
 - [C#](../../csharp/index.md)
 - [Getting Started with Visual C# and Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic) (Introduzione a Visual C# e Visual Basic)

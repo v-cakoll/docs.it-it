@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a6e6219d6449fedabe6e7cb0b349efb6fc74ee6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aca04c191234686de5a15cb3dc1336080a3a344
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399691"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485703"
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Creazione del pacchetto e distribuzione delle risorse in applicazioni desktop
 Per recuperare le risorse localizzate le applicazioni usano .NET Framework Resource Manager, rappresentato dalla classe <xref:System.Resources.ResourceManager>. Resource Manager presuppone l'uso di un modello hub e spoke per la creazione di pacchetti e la distribuzione delle risorse. L'hub è l'assembly principale che contiene il codice eseguibile non localizzabile e le risorse di un singolo set di impostazioni cultura, denominate impostazioni cultura neutre o predefinite. Le impostazioni cultura predefinite sono le impostazioni di fallback per l'applicazione, ovvero le impostazioni che vengono usate quando non si trovano le risorse localizzate. Ogni spoke si connette a un assembly satellite contenente le risorse di determinate impostazioni cultura, ma non contiene alcun codice.  
@@ -53,7 +53,7 @@ Per recuperare le risorse localizzate le applicazioni usano .NET Framework Resou
 -   Il costo iniziale del test un'applicazione è più elevato, perché è necessario sottoporre a test diverse configurazioni. Si noti che a lungo termine sarà più semplice ed economico testare un'applicazione centrale con vari satelliti che testare e gestire più versioni internazionali parallele.  
   
 ## <a name="resource-naming-conventions"></a>Convenzioni di denominazione delle risorse  
- Quando si includono nel pacchetto le risorse dell'applicazione è necessario denominarle in base alle convenzioni previste dal Common Language Runtime. Il runtime identifica una risorsa in base al nome delle impostazioni cultura. A ogni set di impostazioni cultura viene assegnato un nome univoco, in genere una combinazione di un nome impostazioni cultura di due lettere minuscole associato a una lingua e (se necessario) un nome impostazioni cultura secondarie di due lettere maiuscole associato a un paese o a una regione. Il nome delle impostazioni cultura secondarie segue il nome delle impostazioni cultura ed è separato da un trattino (-). Ad esempio ja-JP corrisponde al giapponese parlato in Giappone, en-US corrisponde all'inglese parlato negli Stati Uniti d'America, de-DE corrisponde al tedesco parlato in Germania, de-AT corrisponde al tedesco parlato in Austria. Per un elenco completo dei nomi delle impostazioni cultura, vedere la pagina del [riferimento all'API NLS (National Language Support)](http://go.microsoft.com/fwlink/?LinkId=200048) nel Globalization Developer Center.  
+ Quando si includono nel pacchetto le risorse dell'applicazione è necessario denominarle in base alle convenzioni previste dal Common Language Runtime. Il runtime identifica una risorsa in base al nome delle impostazioni cultura. A ogni set di impostazioni cultura viene assegnato un nome univoco, in genere una combinazione di un nome impostazioni cultura di due lettere minuscole associato a una lingua e (se necessario) un nome impostazioni cultura secondarie di due lettere maiuscole associato a un paese o a una regione. Il nome delle impostazioni cultura secondarie segue il nome delle impostazioni cultura ed è separato da un trattino (-). Ad esempio ja-JP corrisponde al giapponese parlato in Giappone, en-US corrisponde all'inglese parlato negli Stati Uniti d'America, de-DE corrisponde al tedesco parlato in Germania, de-AT corrisponde al tedesco parlato in Austria. Per un elenco completo dei nomi delle impostazioni cultura, vedere la pagina del [riferimento all'API NLS (National Language Support)](https://go.microsoft.com/fwlink/?LinkId=200048) nel Globalization Developer Center.  
   
 > [!NOTE]
 >  Per informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) e [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  

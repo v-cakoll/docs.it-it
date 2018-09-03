@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - true keyword [C#]
 ms.assetid: 7d0adcdb-02e9-478c-8c84-2e671d4acef3
-ms.openlocfilehash: 8c5746d58bc481f4ccf9767e841fa2904f5bd3f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41d689c4a781999a939a578e8ac3c85f594ece45
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265259"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43476157"
 ---
 # <a name="true-c-reference"></a>true (Riferimenti per C#)
 Usato come operatore di overload o come valore letterale:  
@@ -21,7 +21,8 @@ Usato come operatore di overload o come valore letterale:
   
  [Valore letterale true](../../../csharp/language-reference/keywords/true-literal.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)

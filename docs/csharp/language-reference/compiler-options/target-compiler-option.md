@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 7736b8850a7b09f7212e83e05acf0e1994bce0fe
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a337ecbc614ff40eda42fc5263dbb52aa92b905f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000004"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43397729"
 ---
 # <a name="-target-c-compiler-options"></a>-target (opzioni del compilatore C#)
 L'opzione del compilatore **-target** può essere specificata in una delle quattro forme seguenti:  
@@ -63,6 +63,7 @@ public class TestClass
  Per altre informazioni sull'impostazione di questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)  
- [-subsystemversion (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
+
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)  
+- [-subsystemversion (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)

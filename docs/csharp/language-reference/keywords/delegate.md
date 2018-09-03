@@ -9,12 +9,12 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: ba1cfdcc56b3d2301a07ffa4af793e7002da21bb
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 7a5f46d137e22da01b2ab6cd3eee57d66c411e8f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948423"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43442733"
 ---
 # <a name="delegate-c-reference"></a>delegate (Riferimenti per C#)
 
@@ -45,11 +45,11 @@ I delegati sono la base degli [eventi](../../../csharp/programming-guide/events/
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti per C#](../../../csharp/language-reference/index.md)  
-[Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-[Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
-[Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)  
-[Delegati](../../../csharp/programming-guide/delegates/index.md)  
-[Eventi](../../../csharp/programming-guide/events/index.md)  
-[Delegati con metodi denominati o metodi anonimi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
-[Metodi anonimi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Delegati](../../../csharp/programming-guide/delegates/index.md)  
+- [Eventi](../../../csharp/programming-guide/events/index.md)  
+- [Delegati con metodi denominati o metodi anonimi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+- [Metodi anonimi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)

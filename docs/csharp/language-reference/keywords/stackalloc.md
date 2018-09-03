@@ -6,12 +6,12 @@ f1_keywords:
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 905873cf7f576ff35a9bc1c182ce7ebe17920288
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5926550eea1f5a2f8fb74645f22ca54c2bed3136
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269168"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484054"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Riferimenti per C#)
 La parola chiave `stackalloc` viene usata in un contesto di codice unsafe per allocare un blocco di memoria nello stack.
@@ -63,8 +63,9 @@ Il codice di tipo unsafe è meno sicuro delle alternative di tipo safe. Tuttavia
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Parole chiave per gli operatori](../../../csharp/language-reference/keywords/operator-keywords.md)  
- [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Parole chiave per gli operatori](../../../csharp/language-reference/keywords/operator-keywords.md)  
+- [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 0772fcb32ce4d7500b358db312241e489b3a24c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb93e53e7b77ee2747bce3fb9a45d7061450e65c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404953"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390260"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)
 MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando Mage.exe, ma con un'interfaccia utente basata su Windows. Con questo strumento è possibile creare, modificare e firmare manifesti di distribuzione e di applicazione. I nuovi manifesti creati con MageUI.exe sono destinati a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. È necessario usare versioni precedenti di MageUI.exe per le versioni precedenti di .NET Framework. In caso di aggiunta o rimozione di assembly da un manifesto o di apposizione di una nuova firma a manifesti esistenti, MageUI.exe non aggiorna il manifesto per destinarlo a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Per altre informazioni, vedere [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -65,7 +65,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
 |**Nuovo**|Genera un nuovo file .pfx non verificabile tramite un'Autorità di certificazione (CA). Per altre informazioni sui tipi di certificati usati per firmare le distribuzioni di [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], vedere [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview).|  
 |**Password**|Fornisce un'area per digitare la password usata per la firma con il certificato. Se la password non è applicabile, il campo può essere lasciato vuoto.|  
 |**Firma con certificato archiviato**|Visualizza un elenco selezionabile di certificati digitali presenti nell'archivio certificati del computer.|  
-|**TimeStamp URI**|Visualizza l'URI (Uniform Resource Locator) di un servizio di aggiunta di timestamp digitale. L'aggiunta di timestamp nei manifesti evita la necessità di firmarli nuovamente in caso di scadenza del certificato digitale prima della distribuzione della versione successiva dell'applicazione. Per altre informazioni, vedere [Membri del programma Root Certificate di Windows](http://go.microsoft.com/fwlink/?LinkId=159000) e [ClickOnce e Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
+|**TimeStamp URI**|Visualizza l'URI (Uniform Resource Locator) di un servizio di aggiunta di timestamp digitale. L'aggiunta di timestamp nei manifesti evita la necessità di firmarli nuovamente in caso di scadenza del certificato digitale prima della distribuzione della versione successiva dell'applicazione. Per altre informazioni, vedere [Membri del programma Root Certificate di Windows](https://go.microsoft.com/fwlink/?LinkId=159000) e [ClickOnce e Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
 |**Non firmare**|Consente di salvare il manifesto senza aggiungere una firma da un certificato digitale.|  
   
 ## <a name="tab-and-panel-descriptions"></a>Descrizioni di schede e pannelli  
@@ -127,7 +127,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
   
 |Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
-|**Tipo di set di autorizzazioni**|Il set di autorizzazioni minimo richiesto per eseguire l'applicazione nel client. Per una descrizione di questi set di autorizzazioni e delle autorizzazioni obbligatorie o facoltative, vedere [NIB: Set di autorizzazioni denominati](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**Tipo di set di autorizzazioni**|Il set di autorizzazioni minimo richiesto per eseguire l'applicazione nel client. Per una descrizione di questi set di autorizzazioni e delle autorizzazioni obbligatorie o facoltative, vedere [NIB: Set di autorizzazioni denominati](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
 |**Dettagli**|Il file XML creato per il manifesto dell'applicazione al fine di rappresentare il set di autorizzazioni. Se non si è esperti del formato XML del manifesto dell'applicazione, è consigliabile non modificare manualmente il file XML. Per altre informazioni, vedere [Manifesto dell'applicazione ClickOnce](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Scheda Manifesto della distribuzione  

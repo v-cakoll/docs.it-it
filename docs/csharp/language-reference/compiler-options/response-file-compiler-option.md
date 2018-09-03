@@ -7,12 +7,12 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: facf2d45aff424d54dde45973cfec8cc8f93cb6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f342f26ee8abe29e6c5a1477469c8b7292cd702e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215069"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43456503"
 ---
 # <a name="-c-compiler-options"></a>@ (opzioni del compilatore C#)
 L'opzione @ consente di specificare un file che contiene le opzioni del compilatore e i file di codice sorgente da compilare.  
@@ -55,4 +55,5 @@ L'opzione @ consente di specificare un file che contiene le opzioni del compilat
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)

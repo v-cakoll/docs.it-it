@@ -5,12 +5,12 @@ description: Informazioni su come installare .NET Framework in Windows 7 SP1.
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 4f63bed0bad41c31bd28ae63b50440e4144a9bda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 828680c0591f9603d14c57dd9e82fe1f3970ede3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387978"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476248"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Installare .NET Framework in Windows 7 SP1 e Windows Server 2008 R2
 
@@ -18,14 +18,14 @@ ms.locfileid: "33387978"
 
 ![Impossibile avviare l'applicazione](./media/this-application-could-not-be-started.png)
 
-Queste istruzioni saranno utili per installare le versioni di .NET Framework necessarie. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) è la versione più recente. È supportata in Windows 7 SP1 e Windows Server 2008 R2 e inclusa nell'[Aggiornamento di Windows 10 (aprile 2018)](https://www.microsoft.com/software-download/windows10).
+Queste istruzioni saranno utili per installare le versioni di .NET Framework necessarie. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) è la versione più recente. È supportata in Windows 7 SP1 e Windows Server 2008 R2 e inclusa nell'[Aggiornamento di Windows 10 (aprile 2018)](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 > [!div class="button"]
 [Scaricare .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) può essere usato per eseguire le applicazioni compilate per .NET Framework 4.0 o versioni successive.
+[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) può essere usato per eseguire le applicazioni compilate per .NET Framework 4.0 o versioni successive.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 

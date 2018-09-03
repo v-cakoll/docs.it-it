@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: af5b7e3efdc98910ebbe7e061eba250cbe2d0c50
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 384cc442e51ec96cafe9b44ef945bb913b0e65f6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207349"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484041"
 ---
 # <a name="virtual-c-reference"></a>virtual (Riferimenti per C#)
 La parola chiave `virtual` viene usata per modificare una dichiarazione di metodo, proprietà, indicizzatore o evento e consentire che sia sottoposta a override in una classe derivata. Ad esempio, questo metodo può essere sottoposto a override da qualsiasi classe che lo eredita:  
@@ -57,12 +57,13 @@ public Cylinder(double r, double h): base(r, h) {}
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
- [abstract](../../../csharp/language-reference/keywords/abstract.md)  
- [override](../../../csharp/language-reference/keywords/override.md)  
- [new](../../../csharp/language-reference/keywords/new.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
+- [abstract](../../../csharp/language-reference/keywords/abstract.md)  
+- [override](../../../csharp/language-reference/keywords/override.md)  
+- [new](../../../csharp/language-reference/keywords/new.md)

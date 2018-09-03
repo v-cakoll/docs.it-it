@@ -10,12 +10,12 @@ ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ed8de7c4271483a878ee422aac188adbf4700985
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 703d3c2260f46f46e85831f809386d5a3af647a4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395356"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406534"
 ---
 # <a name="network-programming-how-to-topics"></a>Procedure per la programmazione di rete
 Di seguito vengono elencati i collegamenti ad alcune procedure contenute nella documentazione concettuale relativa alla programmazione di rete.  
@@ -83,4 +83,4 @@ Di seguito vengono elencati i collegamenti ad alcune procedure contenute nella d
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)  
  [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Esempi di rete per .NET in MSDN Code Gallery](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [Esempi di rete per .NET in MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

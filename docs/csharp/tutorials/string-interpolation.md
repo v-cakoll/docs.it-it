@@ -4,11 +4,11 @@ description: Informazioni su come includere risultati di espressione formattati 
 author: pkulikov
 ms.date: 05/09/2018
 ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058939"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43419099"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolazione di stringhe in C# #
 

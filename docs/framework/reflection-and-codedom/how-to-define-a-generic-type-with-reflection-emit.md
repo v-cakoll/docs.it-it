@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34ed0d4752eb42f0bd3df8167d498b99d7af1080
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32e06790ffebe49c7917ba4fc7344f86f7a49762
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396919"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483827"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedura: definire un tipo generico tramite reflection emit
 Questo argomento illustra come creare un tipo generico semplice con due parametri di tipo, come applicare vincoli speciali, di classe e di interfaccia ai parametri di tipo e come creare membri che usano i parametri di tipo della classe come tipi di parametro o tipi restituiti.  
@@ -137,5 +137,5 @@ Questo argomento illustra come creare un tipo generico semplice con due parametr
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [Uso della reflection emit](http://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Scenari relativi ad assembly dinamici della reflection emit](http://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+ [Uso della reflection emit](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
+ [Scenari relativi ad assembly dinamici della reflection emit](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

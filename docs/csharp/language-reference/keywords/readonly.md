@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 96607f1dd7f019169446e29a08496fb54e1ed493
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: d09ce4ea972a3064298eebdf0b8b80999ee8441e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961183"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480981"
 ---
 # <a name="readonly-c-reference"></a>readonly (Riferimenti per C#)
 
@@ -24,49 +24,47 @@ La parola chiave `readonly` è un modificatore che può essere usato in tre cont
 
 I due contesti finali sono stati aggiunti in C# 7.2.
 
-## <a name="readonly-field-example"></a>Esempio di campo di sola lettura  
+## <a name="readonly-field-example"></a>Esempio di campo di sola lettura
 
-In questo esempio, il valore del campo `year` non può essere modificato nel metodo `ChangeYear`, anche se gli viene assegnato un valore nel costruttore della classe:  
-  
-[!code-csharp[Readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyField)]  
-  
-È possibile assegnare un valore a un campo `readonly` solo nei contesti seguenti:  
-  
-- Quando la variabile viene inizializzata nella dichiarazione, ad esempio:  
+In questo esempio, il valore del campo `year` non può essere modificato nel metodo `ChangeYear`, anche se gli viene assegnato un valore nel costruttore della classe:
+
+[!code-csharp[Readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyField)]
+
+È possibile assegnare un valore a un campo `readonly` solo nei contesti seguenti:
+
+- Quando la variabile viene inizializzata nella dichiarazione, ad esempio:
 
 ```csharp
-public readonly int y = 5;  
+public readonly int y = 5;
 ```
 
 - In un costruttore di istanze della classe che contiene la dichiarazione del campo di istanza.
 - Nel costruttore statico della classe che contiene la dichiarazione del campo statico.
 
-Questi contesti di costruttore sono anche gli unici contesti in cui è possibile passare un campo `readonly` come parametro [out](out-parameter-modifier.md) o [ref](ref.md).  
-  
+Questi contesti di costruttore sono anche gli unici contesti in cui è possibile passare un campo `readonly` come parametro [out](out-parameter-modifier.md) o [ref](ref.md).
+
 > [!NOTE]
-> La parola chiave `readonly` è diversa dalla parola chiave [const](const.md). Un campo `const` può essere inizializzato solo nella dichiarazione del campo. Un campo `readonly` può essere inizializzato nella dichiarazione o in un costruttore. I campi `readonly` possono quindi presentare valori diversi a seconda del costruttore usato. Inoltre, mentre un campo `const` rappresenta una costante in fase di compilazione, il campo `readonly` può essere usato per le costanti in fase di esecuzione, come nell'esempio seguente:  
+> La parola chiave `readonly` è diversa dalla parola chiave [const](const.md). Un campo `const` può essere inizializzato solo nella dichiarazione del campo. Un campo `readonly` può essere inizializzato nella dichiarazione o in un costruttore. I campi `readonly` possono quindi presentare valori diversi a seconda del costruttore usato. Inoltre, mentre un campo `const` rappresenta una costante in fase di compilazione, il campo `readonly` può essere usato per le costanti in fase di esecuzione, come nell'esempio seguente:
 
 ```csharp
-public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;  
+public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
 ```
 
-[!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]  
-  
-Nell'esempio precedente, se si usa un'istruzione simile all'esempio seguente:  
-  
-`p2.y = 66;        // Error`  
-  
-si otterrà il messaggio di errore del compilatore:  
-  
-`The left-hand side of an assignment must be an l-value`  
-  
-ovvero lo stesso errore che si ottiene quando si tenta di assegnare un valore a una costante.  
+[!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]
+
+Nell'esempio precedente, se si usa un'istruzione simile all'esempio seguente:
+
+`p2.y = 66;        // Error`
+
+si otterrà il messaggio di errore del compilatore:
+
+`A readonly field cannot be assigned to (except in a constructor or a variable initializer)`
 
 ## <a name="readonly-struct-example"></a>Esempio di struct di sola lettura
 
 Il modificatore `readonly` in una definizione `struct` dichiara che struct **non è modificabile**. Tutti i campi di istanza di `struct` devono essere contrassegnati `readonly`, come illustrato nell'esempio seguente:
 
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]  
+[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]
 
 Nell'esempio precedente vengono usate le [proprietà automatiche di sola lettura](../../properties.md#read-only) per dichiarare la risorsa di archiviazione. Ciò indica al compilatore di creare campi sottostanti `readonly` per le proprietà. È inoltre possibile dichiarare i campi `readonly` direttamente:
 
@@ -88,16 +86,18 @@ L'aggiunta di un campo non contrassegnato `readonly` genera l'errore del compila
 
 Il modificatore `readonly` in un `ref return` indica che il riferimento restituito non può essere modificato. L'esempio seguente restituisce un riferimento all'origine. Usa il modificatore `readonly` per indicare che i chiamanti non possono modificare l'origine:
 
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]  
+[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
 Il tipo restituito può non essere `readonly struct`. Qualsiasi tipo che può essere restituito da `ref` può essere restituito da `ref readonly`
 
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Vedere anche  
-[Riferimenti per C#](../../../csharp/language-reference/index.md)  
-[Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-[Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
-[Modificatori](../../../csharp/language-reference/keywords/modifiers.md)  
-[const](../../../csharp/language-reference/keywords/const.md)  
-[Campi](../../../csharp/programming-guide/classes-and-structs/fields.md)
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](index.md)
+- [Modificatori](modifiers.md)
+- [const](const.md)
+- [Campi](../../programming-guide/classes-and-structs/fields.md)

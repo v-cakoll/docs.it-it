@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bf162a3ef9f66e7c7d74c96f13c055857818a2b
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: f414e5b0463e28427c8c60e2f8b8774ad6973da2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070954"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464137"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Parallelismo dei dati (Task Parallel Library)
 Con l'espressione *parallelismo dei dati* ci si riferisce a scenari in cui la stessa operazione viene eseguita contemporaneamente (ovvero in parallelo) sugli elementi di una matrice o una raccolta di origine. Nelle operazioni in parallelo su dati la raccolta di origine viene suddivisa in partizioni in modo che più thread possano agire simultaneamente su segmenti diversi.  
   
- La libreria Task Parallel Library (TPL) supporta il parallelismo dei dati tramite la classe <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>. Questa classe fornisce le implementazioni in parallelo basate su metodo dei cicli [for](~/docs/csharp/language-reference/keywords/for.md) e [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) (`For` e `For Each` in Visual Basic). La scrittura della logica di un ciclo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> è molto simile a quella della logica di un ciclo sequenziale. Non è necessario creare thread o accodare elementi di lavoro. Nei cicli di base non è necessario acquisire blocchi. La libreria TPL gestisce automaticamente tutto il lavoro di basso livello. Per informazioni dettagliate sull'uso di <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, scaricare il documento [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](http://www.microsoft.com/download/details.aspx?id=19222) (Modelli per la programmazione parallela: informazioni sui modelli paralleli con .NET Framework 4 e su come applicarli). L'esempio di codice seguente mostra un ciclo `foreach` semplice e il relativo equivalente parallelo.  
+ La libreria Task Parallel Library (TPL) supporta il parallelismo dei dati tramite la classe <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>. Questa classe fornisce le implementazioni in parallelo basate su metodo dei cicli [for](~/docs/csharp/language-reference/keywords/for.md) e [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) (`For` e `For Each` in Visual Basic). La scrittura della logica di un ciclo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> è molto simile a quella della logica di un ciclo sequenziale. Non è necessario creare thread o accodare elementi di lavoro. Nei cicli di base non è necessario acquisire blocchi. La libreria TPL gestisce automaticamente tutto il lavoro di basso livello. Per informazioni dettagliate sull'uso di <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, scaricare il documento [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) (Modelli per la programmazione parallela: informazioni sui modelli paralleli con .NET Framework 4 e su come applicarli). L'esempio di codice seguente mostra un ciclo `foreach` semplice e il relativo equivalente parallelo.  
   
 > [!NOTE]
 >  Questa documentazione usa espressioni lambda per definire delegati in TPL. Se non si ha familiarità con le espressioni lambda in C# o Visual Basic, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
@@ -31,7 +31,7 @@ Con l'espressione *parallelismo dei dati* ci si riferisce a scenari in cui la st
  Quando viene eseguito un ciclo parallelo, la libreria TPL esegue il partizionamento dell'origine dati in modo che il ciclo possa agire simultaneamente su più parti. L'utilità di pianificazione esegue automaticamente il partizionamento dell'attività in base alle risorse di sistema e al carico di lavoro. Quando risulta possibile, se si verifica uno sbilanciamento del carico di lavoro, l'utilità di pianificazione ridistribuisce il lavoro fra più thread e processori.  
   
 > [!NOTE]
->  È anche possibile fornire un partitioner o un'utilità di pianificazione personalizzata, Per altre informazioni, vedere [Partitioner personalizzati per PLINQ e TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) e [Utilità di pianificazione delle attività](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+>  È anche possibile fornire un partitioner o un'utilità di pianificazione personalizzata, Per altre informazioni, vedere [Partitioner personalizzati per PLINQ e TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) e [Utilità di pianificazione delle attività](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
   
  Sia il metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> sia il metodo <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> presentano vari overload che consentono di arrestare o interrompere l'esecuzione del ciclo, monitorare lo stato del ciclo in altri thread, gestire lo stato di thread locale, completare gli oggetti di thread locali, controllare il livello di concorrenza e così via. I tipi di supporto che consentono di usare queste funzionalità prevedono <xref:System.Threading.Tasks.ParallelLoopState>, <xref:System.Threading.Tasks.ParallelOptions>, <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.CancellationToken> e <xref:System.Threading.CancellationTokenSource>.  
   

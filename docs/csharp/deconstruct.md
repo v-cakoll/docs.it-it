@@ -5,22 +5,22 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 726a391a4a747e5446e252e669c5b16248a5e0ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48724c65de4fe71294eb5c61c1891d9d56c9b5a4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217745"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392972"
 ---
-# <a name="deconstructing-tuples-and-other-types"></a>Decostruzione di tuple e altri tipi #
+# <a name="deconstructing-tuples-and-other-types"></a>Decostruzione di tuple e altri tipi
 
 Una tupla è un metodo semplice per recuperare più valori da una chiamata a un metodo. Tuttavia dopo aver recuperato la tupla è necessario gestirne i singoli elementi. Se eseguita un elemento alla volta, questa operazione può risultare molto laboriosa, come visualizzato nell'esempio seguente. Il metodo `QueryCityData` restituisce una tupla con 3 elementi e ogni elemento viene assegnato a una variabile in un'operazione separata.
 
 [!code-csharp[WithoutDeconstruction](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple1.cs)]
 
-Il recupero di più valori di campi e proprietà da un oggetto può essere altrettanto complesso: è necessario assegnare un valore di campo o proprietà a una variabile, un membro alla volta. 
+Il recupero di più valori di campi e proprietà da un oggetto può essere altrettanto complesso: è necessario assegnare un valore di campo o proprietà a una variabile, un membro alla volta.
 
-A partire da C# 7.0 è possibile recuperare più elementi da una tupla o recuperare più valori di campi, proprietà e valori calcolati da un oggetto in una singola operazione di *decostruzione*. Quando si decostruisce una tupla gli elementi corrispondenti vengono assegnati a singole variabili. Quando si decostruisce un oggetto si assegnano valori selezionati a singole variabili. 
+A partire da C# 7.0 è possibile recuperare più elementi da una tupla o recuperare più valori di campi, proprietà e valori calcolati da un oggetto in una singola operazione di *decostruzione*. Quando si decostruisce una tupla gli elementi corrispondenti vengono assegnati a singole variabili. Quando si decostruisce un oggetto si assegnano valori selezionati a singole variabili.
 
 ## <a name="deconstructing-a-tuple"></a>Decostruzione di una tupla
 
@@ -37,10 +37,10 @@ Esistono tre modi per decostruire una tupla:
     [!code-csharp[Deconstruction-Explicit](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple2.cs#1)]
 
 - È possibile usare la parola chiave `var` in modo che C# deduca il tipo di ogni variabile. Posizionare la parola chiave `var` all'esterno delle parentesi. Nell'esempio seguente viene usata l'inferenza del tipo questo approccio per decostruire la tupla con 3 elementi restituita dal metodo `QueryCityData`.
- 
+
     [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
 
-    È anche possibile usare la parola chiave `var` individualmente con una o con tutte le dichiarazioni di variabili all'interno delle parentesi. 
+    È anche possibile usare la parola chiave `var` individualmente con una o con tutte le dichiarazioni di variabili all'interno delle parentesi.
 
     [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
 
@@ -82,7 +82,7 @@ L'esempio che segue implementa l'overload del metodo `Deconstruct` per restituir
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
 
-Poiché è possibile eseguire l'overload del metodo `Deconstruct` in modo da riflettere gruppi di dati estratti comunemente da un oggetto, è importante definire metodi `Deconstruct` con firme uniche e non ambigue. Più metodi `Deconstruct` che hanno lo stesso numero di parametri `out` o lo stesso numero e tipo di parametri `out` in un ordine diverso possono provocare confusione. 
+Poiché è possibile eseguire l'overload del metodo `Deconstruct` in modo da riflettere gruppi di dati estratti comunemente da un oggetto, è importante definire metodi `Deconstruct` con firme uniche e non ambigue. Più metodi `Deconstruct` che hanno lo stesso numero di parametri `out` o lo stesso numero e tipo di parametri `out` in un ordine diverso possono provocare confusione.
 
 Il metodo `Deconstruct` con overload dell'esempio seguente visualizza una possibile causa di confusione. Il primo overload restituisce il nome, il secondo nome, il cognome e l'età di un oggetto `Person` in quest'ordine. Il secondo overload restituisce solo le informazioni del nome oltre al reddito annuale, ma i dati relativi a nome, secondo nome e cognome sono in un ordine diverso. In questo modo è più facile confondere l'ordine degli argomenti quando si esegue la decostruzione di un'istanza di `Person`.
 
@@ -98,12 +98,13 @@ L'esempio seguente esegue la decostruzione di un oggetto `Person` in quattro str
 
 ## <a name="deconstructing-a-user-defined-type-with-an-extension-method"></a>Decostruzione di un tipo definito dall'utente con un metodo di estensione
 
-Anche un utente che non ha creato una classe, uno struct o un'interfaccia può eseguire la decostruzione di oggetti di questo tipo implementando uno o più `Deconstruct` [metodi di estensione](programming-guide/classes-and-structs/extension-methods.md) per restituire i valori che risultano di interesse. 
+Anche un utente che non ha creato una classe, uno struct o un'interfaccia può eseguire la decostruzione di oggetti di questo tipo implementando uno o più `Deconstruct` [metodi di estensione](programming-guide/classes-and-structs/extension-methods.md) per restituire i valori che risultano di interesse.
 
 L'esempio riportato di seguito illustra due metodi di estensione `Deconstruct` per la classe <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType>. Il primo metodo restituisce un set di valori che indicano le caratteristiche della proprietà: il tipo, se è statica o di istanza, se è di sola lettura e se è indicizzata. Il secondo indica l'accessibilità della proprietà. Dato che l'accessibilità delle funzioni di accesso get e set può essere diversa, i valori booleani indicano se la proprietà ha funzioni di accesso get e set separate e in questo caso se tali funzioni presentano la stessa accessibilità. Se è presente solo una funzione di accesso o se le funzioni di accesso get e set hanno la stessa accessibilità, la variabile `access` indica l'accessibilità della proprietà nel suo complesso. In caso contrario l'accessibilità delle funzioni di accesso get e set è indicata dalle variabili `getAccess` e `setAccess`.
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
- 
+
 ## <a name="see-also"></a>Vedere anche
-[Variabili discard](discards.md)   
-[Tuple](tuples.md)  
+
+- [Variabili discard](discards.md)
+- [Tuple](tuples.md)  
