@@ -4,12 +4,12 @@ description: Il comando dotnet tool install installa lo strumento globale .NET C
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: f3068848910d6672a10ecfb639bac8e18a72818d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: aad5a3e815936749d90f40975a8b13d34e89386c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697287"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43418721"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -21,7 +21,7 @@ ms.locfileid: "34697287"
 
 ## <a name="synopsis"></a>Riepilogo
 
-```
+```console
 dotnet tool install <PACKAGE_NAME> <-g|--global> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <PACKAGE_NAME> <--tool-path> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <-h|--help>
@@ -98,4 +98,4 @@ Installa la versione 2.0.0 dello strumento globale [dotnetsay](https://www.nuget
 
 ## <a name="see-also"></a>Vedere anche
 
-[Strumenti globali .NET Core](global-tools.md)
+* [Strumenti globali .NET Core](global-tools.md)

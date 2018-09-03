@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: f6500fa5f8f5022c4e910da894f182dcc5525be5
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 04561adb254d001b5e4c7867a4017ede74972011
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207379"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486196"
 ---
 # <a name="c-programming-guide"></a>Guida per programmatori C#
 Questa sezione include informazioni dettagliate sulle principali funzionalità del linguaggio C# e sulle funzionalità accessibili a C# tramite .NET Framework.  
@@ -69,7 +69,7 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
  [Commenti relativi alla documentazione XML](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
 ## <a name="platform-sections"></a>Sezioni relative alla piattaforma  
- [Domini applicazione (C# e Visual Basic)](http://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+ [Domini applicazione (C# e Visual Basic)](https://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [Assembly e Global Assembly Cache](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
   

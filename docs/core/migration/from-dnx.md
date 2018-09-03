@@ -5,11 +5,11 @@ author: blackdwarf
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.openlocfilehash: dd3c31b88b619799e6b2e2596127d64d84918ca0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217451"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388774"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrazione da DNX all'interfaccia della riga di comando di .NET Core (project.json)
 

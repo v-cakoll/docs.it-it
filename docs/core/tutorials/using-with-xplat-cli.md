@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 03/08/2017
 ms.technology: dotnet-cli
-ms.openlocfilehash: 57045a91ce62a730493d219bdf7c30e90fe57759
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ec7168ebc2ee4fc428d1ab520e986842f111ca7
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216340"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256765"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introduzione all'uso di .NET Core su Windows/Linux/macOS dalla riga di comando
 
@@ -29,7 +29,7 @@ Se non si ha familiarità con il set di strumenti dell'interfaccia della riga di
 
 Aprire un prompt dei comandi e creare una cartella denominata *Hello*. Passare alla cartella creata e digitare:
 
-```
+```console
 $ dotnet new console
 $ dotnet restore
 $ dotnet run
@@ -40,10 +40,10 @@ Ecco una descrizione rapida dei comandi digitati:
 1. `$ dotnet new console`
 
    [`dotnet new`](../tools/dotnet-new.md) crea un file di progetto `Hello.csproj` aggiornato con le dipendenze necessarie per compilare un'applicazione console.  Crea inoltre un file `Program.cs` di base contenente il punto di ingresso per l'applicazione.
-   
+
    `Hello.csproj`:
 
-   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]   
+   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    Il file di progetto specifica tutti gli elementi necessari per recuperare le dipendenze e compilare il programma.
 
@@ -52,7 +52,7 @@ Ecco una descrizione rapida dei comandi digitati:
 
    `Program.cs`:
 
-   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]   
+   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
 
    Il programma inizia con `using System`, che significa "porta tutti gli elementi presenti nello spazio dei nomi `System` nell'ambito relativo a questo file". Lo spazio dei nomi `System` include costrutti di base come `string` o tipi numerici.
 
@@ -63,21 +63,21 @@ Ecco una descrizione rapida dei comandi digitati:
 2. `$ dotnet restore`
 
    [`dotnet restore`](../tools/dotnet-restore.md) chiama [NuGet](https://www.nuget.org/) (gestione dei pacchetti per .NET) per ripristinare l'albero delle dipendenze. NuGet analizza il file *Hello.csproj*, scarica le dipendenze indicate nel file (o li estrae da una cache nel computer) e scrive il file *obj/project.assets.json*.  Il file *project.assets.json* è necessario per la compilazione e l'esecuzione.
-   
+
    Il file *project.assets.json* è un set completo e persistente del grafico delle dipendenze NuGet e di altre informazioni che descrivono un'applicazione.  Questo file viene letto da altri strumenti, ad esempio [`dotnet build`](../tools/dotnet-build.md) e [`dotnet run`](../tools/dotnet-run.md), abilitandoli a elaborare il codice sorgente con un set corretto di dipendenze NuGet e risoluzioni di binding.
-   
+
 3. `$ dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) chiama [`dotnet build`](../tools/dotnet-build.md) per assicurarsi che le destinazioni siano state compilate e quindi chiama `dotnet <assembly.dll>` per eseguire l'applicazione di destinazione.
-   
-    ```
+
+    ```console
     $ dotnet run
     Hello World!
     ```
 
     In alternativa, è possibile eseguire [`dotnet build`](../tools/dotnet-build.md) per compilare il codice senza eseguire la compilazione di applicazioni console. In questo modo si ottiene un'applicazione compilata come file DLL che può essere eseguita con `dotnet bin\Debug\netcoreapp1.0\Hello.dll` in Windows (usare `/` per sistemi diversi da Windows). È anche possibile specificare argomenti per l'applicazione come verrà illustrato più avanti nell'argomento.
 
-    ```
+    ```console
     $ dotnet bin\Debug\netcoreapp1.0\Hello.dll
     Hello World!
     ```
@@ -90,13 +90,13 @@ Modificare la logica di programma. I numeri di Fibonacci sono molto divertenti e
 
 1. Sostituire il contenuto del file *Program.cs* con il codice seguente:
 
-   [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
+   [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]
 
 2. Eseguire [`dotnet build`](../tools/dotnet-build.md) per compilare le modifiche.
 
 3. Eseguire il programma passando un parametro all'app:
 
-   ```
+   ```console
    $ dotnet run -- John
    Hello John!
    Fibonacci Numbers 1-15:
@@ -121,11 +121,11 @@ L'operazione è ora completata.  `Program.cs` offre innumerevoli possibilità di
 
 ## <a name="working-with-multiple-files"></a>Uso di più file
 
-I file singoli vanno bene per semplici programmi One-Off, ma se si crea un'app più complessa, molto probabilmente si avranno più file di risorse nel progetto. Dall'esempio precedente con i numeri di Fibonacci si crea ora un'app inserendo alcuni valori di Fibonacci nella cache e aggiungendo alcune funzionalità ricorsive. 
+I file singoli vanno bene per semplici programmi One-Off, ma se si crea un'app più complessa, molto probabilmente si avranno più file di risorse nel progetto. Dall'esempio precedente con i numeri di Fibonacci si crea ora un'app inserendo alcuni valori di Fibonacci nella cache e aggiungendo alcune funzionalità ricorsive.
 
 1. Aggiungere un nuovo file nella directory *Hello* denominato *FibonacciGenerator.cs* con il codice seguente:
 
-   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
+   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
 2. Modificare il metodo `Main` del file *Program.cs* per creare un'istanza della nuova classe e chiamare il metodo come illustrato nell'esempio seguente :
 
@@ -135,7 +135,8 @@ I file singoli vanno bene per semplici programmi One-Off, ma se si crea un'app p
 
 4. Avviare l'app eseguendo [`dotnet run`](../tools/dotnet-run.md). Di seguito viene illustrato l'output del programma:
 
-   ```
+   ```console
+   $ dotnet run
    0
    1
    1
@@ -159,4 +160,4 @@ Si noti che i comandi e i passaggi illustrati in questa esercitazione per esegui
 
 ## <a name="see-also"></a>Vedere anche
 
-[Organizing and testing projects with the .NET Core CLI tools](testing-with-cli.md) (Organizzazione e test di progetti con gli strumenti dell'interfaccia della riga di comando di .NET Core)
+* [Organizing and testing projects with the .NET Core CLI tools](testing-with-cli.md) (Organizzazione e test di progetti con gli strumenti dell'interfaccia della riga di comando di .NET Core)

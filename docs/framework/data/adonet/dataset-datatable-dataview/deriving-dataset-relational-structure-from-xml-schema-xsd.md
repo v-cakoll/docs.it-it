@@ -2,19 +2,19 @@
 title: Derivazione della struttura relazionale di dataset da XML Schema (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 7599577c4e0f485e336e7f79a6c3bd17f0f0c316
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fd5c41272d3b050427804f08f7387328012065f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759608"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417204"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Derivazione della struttura relazionale di dataset da XML Schema (XSD)
-Questa sezione fornisce una panoramica della compilazione dello schema relazionale di un tipo `DataSet` da un documento basato sullo schema XSD (XML Schema Definition Language). In generale, per ogni `complexType` elemento figlio di un elemento dello schema, in cui viene generata una tabella di `DataSet`. La struttura della tabella è determinata dalla definizione del tipo complesso. Le tabelle vengono create nel `DataSet` per gli elementi di primo livello nello schema. Tuttavia, una tabella viene creata solo per un livello superiore `complexType` elemento quando il `complexType` è annidato l'elemento all'interno di un altro `complexType` elemento, in cui caso nidificata `complexType` elemento viene mappato a un `DataTable` all'interno del `DataSet`.  
+Questa sezione fornisce una panoramica della compilazione dello schema relazionale di un tipo `DataSet` da un documento basato sullo schema XSD (XML Schema Definition Language). In generale, per ognuno `complexType` nell'elemento figlio di un elemento dello schema, viene generata una tabella di `DataSet`. La struttura della tabella è determinata dalla definizione del tipo complesso. Le tabelle vengono create nel `DataSet` per gli elementi di primo livello nello schema. Tuttavia, una tabella viene creata solo per un livello superiore `complexType` elemento quando il `complexType` è annidato all'interno di un altro elemento `complexType` elemento, nel quale caso annidata `complexType` elemento viene mappato a una `DataTable` all'interno del `DataSet`.  
   
- Per ulteriori informazioni su XSD, vedere di World Wide Web Consortium (W3C) XML Schema Part 0: Primer raccomandazione, XML Schema Part 1: Structures Recommendation e XML Schema Part 2: Datatypes Recommendation, disponibile all'indirizzo [ http://www.w3.org/ ](http://www.w3.org/TR/).  
+ Per altre informazioni su XSD, vedere il World Wide Web Consortium (W3C) XML Schema Part 0: raccomandazione Primer, XML Schema Part 1: Structures e XML Schema Part 2: Datatypes Recommendation, disponibile all'indirizzo [ http://www.w3.org/ ](http://www.w3.org/TR/).  
   
- Nell'esempio seguente viene illustrato un XML Schema in cui `customers` è l'elemento figlio del `MyDataSet` elemento, ovvero un **DataSet** elemento.  
+ Nell'esempio seguente viene illustrato un XML Schema in cui `customers` è l'elemento figlio del `MyDataSet` elemento, che è un **DataSet** elemento.  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -50,9 +50,9 @@ Customers (CustomerID , CompanyName, Phone)
  Il tipo di dati relativo a ogni colonna della tabella viene derivato dal tipo di XML Schema relativo al corrispondente elemento o attributo specificato.  
   
 > [!NOTE]
->  Se l'elemento `customers` è di un tipo di dati XML Schema semplice, ad esempio **intero**, verrà generata alcuna tabella. Le tabelle vengono create solo per gli elementi di livello principale di tipo complesso.  
+>  Se l'elemento `customers` è un tipo di dati XML Schema semplice, ad esempio **integer**, verrà generata alcuna tabella. Le tabelle vengono create solo per gli elementi di livello principale di tipo complesso.  
   
- Nello Schema XML seguente, il **Schema** elemento dispone di due elementi figlio, `InStateCustomers` e `OutOfStateCustomers`.  
+ Nello Schema XML seguente, il **Schema** elemento ha due figli, `InStateCustomers` e `OutOfStateCustomers`.  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -75,7 +75,7 @@ Customers (CustomerID , CompanyName, Phone)
  </xs:schema>  
 ```  
   
- Entrambi gli elementi figlio `InStateCustomers` e `OutOfStateCustomers` sono elementi di tipo complesso (`customerType`). Pertanto, il processo di mapping genera le due tabelle identiche seguenti nel `DataSet`.  
+ Entrambi gli elementi figlio `InStateCustomers` e `OutOfStateCustomers` sono elementi di tipo complesso (`customerType`). Pertanto, il processo di mapping che genera l'errore di due tabelle identiche seguenti nel `DataSet`.  
   
 ```  
 InStateCustomers (CustomerID , CompanyName, Phone)  
@@ -84,10 +84,10 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Mapping tra vincoli XML Schema (XSD) e vincoli di DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Vengono descritti gli elementi di XML Schema utilizzati per creare vincoli di chiave esterni e univoci in un `DataSet`.  
+ Vengono descritti gli elementi di XML Schema utilizzati per creare i vincoli di chiave univoci ed esterni in un `DataSet`.  
   
  [Generazione di relazioni tra DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- Vengono descritti gli elementi di XML Schema utilizzati per creare relazioni tra le colonne della tabella in un `DataSet`.  
+ Vengono descritti gli elementi di XML Schema usati per creare relazioni tra le colonne della tabella in un `DataSet`.  
   
  [Vincoli e relazioni di XML Schema](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
  Viene descritto come le relazioni vengono create in modo implicito quando si usano elementi di XML Schema per creare vincoli in un `DataSet`.  
@@ -97,4 +97,4 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  Viene descritto come caricare e mantenere la struttura relazionale e i dati in un `DataSet` come dati XML.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ description: Informazioni sulle nuove funzionalità in .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 59a1f61de365218d649e3392fbce84cd6d530ed5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566339"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456887"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novità di .NET Core 2.0
 
@@ -30,7 +30,7 @@ Nelle versioni precedenti di .NET Core, era necessario eseguire il comando [dotn
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-È anche possibile disabilitare la chiamata automatica di `dotnet restore` passando l'opzione `--no-restore` ai comandi `new`, `run`, `build`, `publish`, `pack` e `test`. 
+È anche possibile disabilitare la chiamata automatica di `dotnet restore` passando l'opzione `--no-restore` ai comandi `new`, `run`, `build`, `publish`, `pack` e `test`.
 
 ### <a name="retargeting-to-net-core-20"></a>Ridestinazione a .NET Core 2.0
 
@@ -76,7 +76,7 @@ Ad esempio, per creare un'applicazione Visual Basic "Hello World", eseguire i pa
 
    Il comando crea un file di progetto con estensione `.vbproj` oltre a un file di codice sorgente di Visual Basic denominato *Program.vb*. Questo file contiene il codice sorgente per scrivere la stringa "Hello World!" nella finestra della console.
 
-1.  Immettere il comando `dotnet run`. L'[interfaccia della riga di comando di .NET Core](../tools/index.md) compila ed esegue automaticamente l'applicazione, che visualizza il messaggio "Hello World!" nella finestra della console.
+1. Immettere il comando `dotnet run`. L'[interfaccia della riga di comando di .NET Core](../tools/index.md) compila ed esegue automaticamente l'applicazione, che visualizza il messaggio "Hello World!" nella finestra della console.
 
 ### <a name="support-for-c-71"></a>Supporto per C# 7.1
 
@@ -162,4 +162,5 @@ Dalla pagina [.NET Application Architecture](https://www.microsoft.com/net/learn
 - [Applicazioni distribuite nel cloud con Azure](/azure/architecture/reference-architectures/index.md)
 
 ## <a name="see-also"></a>Vedere anche
-[Novità di ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
+
+* [Novità di ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
