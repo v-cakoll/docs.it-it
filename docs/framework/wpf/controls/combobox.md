@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: 3c74bd33e726dc5a34f55989357218a3e2c46e3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551191"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466356"
 ---
-# <a name="combobox"></a><span data-ttu-id="14799-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="14799-102">ComboBox</span></span>
-<span data-ttu-id="14799-103">Il <xref:System.Windows.Controls.ComboBox> consente di visualizzare gli utenti con un elenco di opzioni.</span><span class="sxs-lookup"><span data-stu-id="14799-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="14799-104">L'elenco viene visualizzato e nascosto quando il controllo consente di espandere e compressa.</span><span class="sxs-lookup"><span data-stu-id="14799-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="14799-105">Nello stato predefinito, l'elenco è compressa, la visualizzazione sola opzione.</span><span class="sxs-lookup"><span data-stu-id="14799-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="14799-106">L'utente sceglie un pulsante per visualizzare l'elenco completo delle opzioni.</span><span class="sxs-lookup"><span data-stu-id="14799-106">The user clicks a button to see the complete list of options.</span></span>  
+# <a name="combobox"></a><span data-ttu-id="a8283-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="a8283-102">ComboBox</span></span>
+<span data-ttu-id="a8283-103">Il <xref:System.Windows.Controls.ComboBox> controllo presenta agli utenti con un elenco di opzioni.</span><span class="sxs-lookup"><span data-stu-id="a8283-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="a8283-104">L'elenco viene visualizzato e nascosto quando il controllo consente di espandere e compressa.</span><span class="sxs-lookup"><span data-stu-id="a8283-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="a8283-105">Nello stato predefinito, l'elenco è compressa, la visualizzazione di sola scelta.</span><span class="sxs-lookup"><span data-stu-id="a8283-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="a8283-106">L'utente fa clic su un pulsante per visualizzare l'elenco completo delle opzioni.</span><span class="sxs-lookup"><span data-stu-id="a8283-106">The user clicks a button to see the complete list of options.</span></span>  
   
- <span data-ttu-id="14799-107">La figura seguente mostra un <xref:System.Windows.Controls.ComboBox> in stati diversi.</span><span class="sxs-lookup"><span data-stu-id="14799-107">The following illustration shows a <xref:System.Windows.Controls.ComboBox> in different states.</span></span>  
+ <span data-ttu-id="a8283-107">La figura seguente mostra un <xref:System.Windows.Controls.ComboBox> nei suoi diversi stati.</span><span class="sxs-lookup"><span data-stu-id="a8283-107">The following illustration shows a <xref:System.Windows.Controls.ComboBox> in different states.</span></span>  
   
- <span data-ttu-id="14799-108">![Combinata caselle predefinito e premuto](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span><span class="sxs-lookup"><span data-stu-id="14799-108">![Combo boxes in default and pressed states](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span></span>  
-<span data-ttu-id="14799-109">Comprimere ed espandere</span><span class="sxs-lookup"><span data-stu-id="14799-109">Collapsed and expanded</span></span>  
+ <span data-ttu-id="a8283-108">![Casella combinata caselle predefinito e premuto](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span><span class="sxs-lookup"><span data-stu-id="a8283-108">![Combo boxes in default and pressed states](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span></span>  
+<span data-ttu-id="a8283-109">Comprimere ed espandere</span><span class="sxs-lookup"><span data-stu-id="a8283-109">Collapsed and expanded</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="14799-110">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="14799-110">In This Section</span></span>  
- [<span data-ttu-id="14799-111">Procedura: ottenere un oggetto ComboBoxItem</span><span class="sxs-lookup"><span data-stu-id="14799-111">How to: Get a ComboBoxItem</span></span>](http://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+## <a name="in-this-section"></a><span data-ttu-id="a8283-110">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="a8283-110">In This Section</span></span>  
+ [<span data-ttu-id="a8283-111">Procedura: ottenere un oggetto ComboBoxItem</span><span class="sxs-lookup"><span data-stu-id="a8283-111">How to: Get a ComboBoxItem</span></span>](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
-## <a name="reference"></a><span data-ttu-id="14799-112">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="14799-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a8283-112">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="a8283-112">Reference</span></span>  
  <xref:System.Windows.Controls.ComboBox>
