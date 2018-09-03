@@ -4,12 +4,12 @@ description: Informazioni su come eseguire test sull'output pubblicato con il co
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.openlocfilehash: dbce1b6e616916e60e56318b773e8fcecbc55580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e99000996f5dfa9f9d4f9b823e36ecbe325da835
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210253"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42936026"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Testare l'output pubblicato con dotnet vstest
 
@@ -34,5 +34,6 @@ dotnet vstest out/MyProject.Tests.dll
 > Nota: se l'app specifica come destinazione un framework diverso da `netcoreapp`, è possibile eseguire il comando `dotnet vstest` passando il framework di destinazione con un flag framework. Ad esempio `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. In Visual Studio 2017 Update 5 il framework desiderato viene rilevato automaticamente.
 
 ## <a name="see-also"></a>Vedere anche
- [Unit test con test dotnet e xUnit](unit-testing-with-dotnet-test.md)  
- [Unit test con test dotnet e MSTest](unit-testing-with-mstest.md)  
+- [Unit test con test dotnet e xUnit](unit-testing-with-dotnet-test.md)
+- [Unit test con test dotnet e NUnit](unit-testing-with-nunit.md)
+- [Unit test con test dotnet e MSTest](unit-testing-with-mstest.md)

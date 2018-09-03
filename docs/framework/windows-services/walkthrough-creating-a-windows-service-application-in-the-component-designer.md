@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
-ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73f61ee3358edf50c11ae10ee53650c66b1c1400
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520513"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925802"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti
 Questo articolo illustra come creare una semplice applicazione del servizio Windows in Visual Studio che scrive messaggi in un log eventi. I passaggi di base da eseguire per la creazione e l'uso del servizio includono:  
@@ -161,7 +161,7 @@ Questo articolo illustra come creare una semplice applicazione del servizio Wind
   
 <a name="BK_SetStatus"></a>   
 ## <a name="setting-service-status"></a>Impostazione dello stato del servizio  
- I servizi segnalano il relativo stato in Gestione controllo servizi, in modo che gli utenti possano stabilire se un servizio funziona correttamente. Per impostazione predefinita, i servizi che ereditano da <xref:System.ServiceProcess.ServiceBase> segnalano un set limitato di impostazioni di stato, tra cui Arrestato, In pausa e in esecuzione. Se l'avvio di un servizio richiede un po' di tempo, potrebbe essere utile segnalare lo stato Avvio in sospeso. È anche possibile implementare le impostazioni di stato Avvio in sospeso e Arresto in sospeso aggiungendo il codice che chiama la [funzione SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx)di Windows.  
+ I servizi segnalano il relativo stato in Gestione controllo servizi, in modo che gli utenti possano stabilire se un servizio funziona correttamente. Per impostazione predefinita, i servizi che ereditano da <xref:System.ServiceProcess.ServiceBase> segnalano un set limitato di impostazioni di stato, tra cui Arrestato, In pausa e in esecuzione. Se l'avvio di un servizio richiede un po' di tempo, potrebbe essere utile segnalare lo stato Avvio in sospeso. È anche possibile implementare le impostazioni di stato Avvio in sospeso e Arresto in sospeso aggiungendo il codice che chiama la [funzione SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) di Windows.  
   
 #### <a name="to-implement-service-pending-status"></a>Per implementare lo stato in sospeso del servizio  
   
@@ -225,7 +225,7 @@ Questo articolo illustra come creare una semplice applicazione del servizio Wind
     End Structure  
     ```  
   
-3.  A questo punto, nella classe `MyNewService` dichiarare la [funzione SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) mediante pInvoke:  
+3.  A questo punto, nella classe `MyNewService` dichiarare la [funzione SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) mediante pInvoke:  
   
     ```csharp  
     [DllImport("advapi32.dll", SetLastError=true)]  
@@ -271,7 +271,7 @@ Questo articolo illustra come creare una semplice applicazione del servizio Wind
 6.  Ripetere questa procedura per il metodo <xref:System.ServiceProcess.ServiceBase.OnStop%2A> (facoltativo).  
   
 > [!CAUTION]
->  Verrà visualizzata la finestra di dialogo [Gestione controllo servizi](http://msdn.microsoft.com/library/windows/desktop/ms685150.aspx) usa i membri `dwWaitHint` e `dwCheckpoint` della [struttura SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996.aspx) per determinare il tempo di attesa per l'avvio o l'arresto di un servizio Windows. Se l'esecuzione dei metodi <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> si prolunga, il servizio può richiedere più tempo chiamando di nuovo [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) con un valore `dwCheckPoint` incrementato.  
+>  La finestra di dialogo [Gestione controllo servizi](/windows/desktop/Services/service-control-manager) usa i membri `dwWaitHint` e `dwCheckpoint` della [struttura SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) per determinare il tempo di attesa per l'avvio o l'arresto di un servizio Windows. Se l'esecuzione dei metodi <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> si prolunga, il servizio può richiedere più tempo chiamando di nuovo [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) con un valore `dwCheckPoint` incrementato.  
   
 <a name="BK_AddInstallers"></a>   
 ## <a name="adding-installers-to-the-service"></a>Aggiunta di programmi di installazione al servizio  

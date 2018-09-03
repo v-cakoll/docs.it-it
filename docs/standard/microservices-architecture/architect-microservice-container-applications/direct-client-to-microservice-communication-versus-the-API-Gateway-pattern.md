@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 83ec054239814ba20ebeec1f3d50b9f7e6dcdd87
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: f820b0ed866c539beda641164ef42631263490d3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106278"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000071"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Confronto tra schema API Gateway e comunicazione da client a microservizio diretta
 
@@ -96,11 +96,11 @@ L'immagine precedente mostra un'architettura semplificata con più gateway API c
 
 Lo schema API Gateway può offrire più funzionalità. A seconda del prodotto, le funzionalità possono essere più o meno avanzate, tuttavia quelle più importanti e fondamentali per qualsiasi gateway API sono gli schemi progettuali seguenti:
 
-**Proxy inverso o routing del gateway**. Lo schema API Gateway offre un proxy inverso per reindirizzare o instradare le richieste (routing di livello 7, in genere richieste Http) agli endpoint dei microservizi interni. Il gateway fornisce un singolo endpoint o URL per le app client e quindi associa internamente le richieste a un gruppo di microservizi interni. Questa funzionalità di routing consente di separare le app client dai microservizi, ma risulta anche molto utile quando si modernizza un'API monolitica posizionando il gateway API tra l'API monolitica e le app client; quindi è possibile aggiungere nuove API come nuovi microservizi mentre l'API monolitica legacy è ancora in uso, finché non viene suddivisa successivamente in molti microservizi. A causa del gateway API, le app client non rileveranno se le API in uso sono implementate come microservizi interni o come API monolitica e, cosa ancora più importante, quando si sviluppa e si effettua il refactoring dell'API monolitica in microservizi, grazie al routing del gateway API, le app client non saranno interessate da eventuali modifiche a livello di URI.
+**Proxy inverso o routing del gateway**. Lo schema API Gateway offre un proxy inverso per reindirizzare o instradare le richieste (routing di livello 7, in genere richieste HTTP) agli endpoint dei microservizi interni. Il gateway fornisce un singolo endpoint o URL per le app client e quindi associa internamente le richieste a un gruppo di microservizi interni. Questa funzionalità di routing consente di separare le app client dai microservizi, ma risulta anche molto utile quando si modernizza un'API monolitica posizionando il gateway API tra l'API monolitica e le app client; quindi è possibile aggiungere nuove API come nuovi microservizi mentre l'API monolitica legacy è ancora in uso, finché non viene suddivisa successivamente in molti microservizi. A causa del gateway API, le app client non rileveranno se le API in uso sono implementate come microservizi interni o come API monolitica e, cosa ancora più importante, quando si sviluppa e si effettua il refactoring dell'API monolitica in microservizi, grazie al routing del gateway API, le app client non saranno interessate da eventuali modifiche a livello di URI.
 
 Per altre informazioni, vedere [Modello di routing gateway](https://docs.microsoft.com/azure/architecture/patterns/gateway-routing).
 
-**Aggregazione di richieste**. Nell'ambito dello schema del gateway è possibile aggregare più richieste client (in genere richieste Http) destinate a più microservizi interni in una singola richiesta client. Questo schema è particolarmente utile quando una pagina/schermata del client necessita di informazioni da svariati microservizi. Con questo approccio, l'app client invia una singola richiesta al gateway API che invia diverse richieste ai microservizi interni, per poi aggregare i risultati e inviare nuovamente tutti i dati all'app client. Il vantaggio e l'obiettivo principali di questo schema progettuale consistono nel ridurre le comunicazioni frammentate tra le app client e l'API back-end, un aspetto particolarmente importante per le app remote all'esterno del data center in cui si trovano i microservizi, come le app per dispositivi mobili o le richieste dalle app a pagina singola provenienti da Javascript nei browser dei client remoti. Per le app Web regolari che eseguono le richieste nell'ambiente server (come un'app Web ASP.NET Core MVC), questo schema non è così importante dal momento che la latenza è molto inferiore rispetto a quella per le app client remote.
+**Aggregazione di richieste**. Nell'ambito dello schema del gateway è possibile aggregare più richieste client (in genere richieste HTTP) destinate a più microservizi interni in una singola richiesta client. Questo schema è particolarmente utile quando una pagina/schermata del client necessita di informazioni da svariati microservizi. Con questo approccio, l'app client invia una singola richiesta al gateway API che invia diverse richieste ai microservizi interni, per poi aggregare i risultati e inviare nuovamente tutti i dati all'app client. Il vantaggio e l'obiettivo principali di questo schema progettuale consistono nel ridurre le comunicazioni frammentate tra le app client e l'API back-end, un aspetto particolarmente importante per le app remote all'esterno del data center in cui si trovano i microservizi, come le app per dispositivi mobili o le richieste dalle app a pagina singola provenienti da Javascript nei browser dei client remoti. Per le app Web regolari che eseguono le richieste nell'ambiente server (come un'app Web ASP.NET Core MVC), questo schema non è così importante dal momento che la latenza è molto inferiore rispetto a quella per le app client remote.
 
 A seconda del gateway API in uso, potrebbe essere possibile eseguire questa aggregazione. Tuttavia, in molti casi è più flessibile creare microservizi di aggregazione nell'ambito del gateway API, definendo l'aggregazione nel codice (vale a dire, il codice C#).
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d97d38c903cbb33097db0e109758d98527e00f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14c046094db52f2db55bb095839d354c7e6c691e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591937"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912042"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Concatenamento di attività tramite attività di continuazione
 Nella programmazione asincrona è molto comune che un'operazione asincrona, al completamento, richiami una seconda operazione e vi passi i dati. Tradizionalmente, a questo scopo vengono usati metodi callback. In Task Parallel Library la stessa funzionalità viene resa possibile dalle *attività di continuazione*. Un'attivazione di continuazione, chiamata anche semplicemente continuazione, è un'attività asincrona richiamata da un'altra attività, denominata *attività precedente*, al termine di quest'ultima.  
@@ -44,7 +44,7 @@ Nella programmazione asincrona è molto comune che un'operazione asincrona, al c
  Una continuazione è essa stessa un oggetto <xref:System.Threading.Tasks.Task> e non blocca il thread su cui viene avviata. Chiamare il metodo <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> per bloccare il thread fino al termine dell'attività di continuazione.  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>Creazione di una continuazione per una singola attività precedente  
- Per creare una continuazione che viene eseguita una volta completata l'attività precedente, chiamare il metodo <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. L'esempio seguente mostra il modello di base. Per chiarezza, viene omessa la gestione delle eccezioni. Viene eseguita un'attività precedente, `taskA`, che restituisce un oggetto <xref:System.DayOfWeek> che indica il nome del giorno corrente della settimana. Al termine dell'attività precedente, all'attività di continuazione `taskB`viene passata l'attività precedente e viene visualizzata una stringa che ne include i risultati.  
+ Per creare una continuazione che viene eseguita una volta completata l'attività precedente, chiamare il metodo <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. L'esempio seguente mostra il modello di base. Per chiarezza, viene omessa la gestione delle eccezioni. Viene eseguita un'attività precedente, `taskA`, che restituisce un oggetto <xref:System.DayOfWeek> che indica il nome del giorno corrente della settimana. Al termine dell'attività precedente, all'attività di continuazione `continuation` viene passata l'attività precedente e viene visualizzata una stringa che ne include i risultati.  
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  

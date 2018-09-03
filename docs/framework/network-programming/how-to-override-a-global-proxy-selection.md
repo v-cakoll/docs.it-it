@@ -8,15 +8,15 @@ ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c10cff979a18d8e07a1e7089f96157e4c38f040e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 244315b5df4200524685bc5b9fb75a0d7fd9b39e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393906"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930828"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>Procedura: Eseguire l'override di una selezione proxy globale
-Questo esempio invia un oggetto **WebRequest** a www.contoso.com che esegue l'override della selezione del proxy globale con un server proxy denominato `alternateproxy` sulla porta 80.  
+Questo esempio invia un oggetto **WebRequest** a `www.contoso.com` che esegue l'override della selezione del proxy globale con un server proxy denominato `alternateproxy` sulla porta 80.  
   
 ## <a name="example"></a>Esempio  
   
@@ -33,7 +33,7 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti allo spazio dei nomi **System.Net**.  
+-   [Direttiva `using`](~/docs/csharp/language-reference/keywords/using-directive.md) per lo spazio dei nomi **System.Net**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso di protocolli applicativi](../../../docs/framework/network-programming/using-application-protocols.md)  

@@ -3,12 +3,12 @@ title: Funzioni locali ed espressioni lambda
 description: Informazioni sui motivi per cui le funzioni locali possono essere una scelta migliore rispetto alle espressioni lambda.
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 4fb8ea78b783871a19a8d5578d571e00da37642a
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 2b98ebeeb3866779715fa629c2518f739e196ae8
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472607"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931576"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Confronto tra funzioni locali ed espressioni lambda
 

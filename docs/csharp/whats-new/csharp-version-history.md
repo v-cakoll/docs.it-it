@@ -3,12 +3,12 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404593"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752099"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C# #
 
@@ -105,7 +105,11 @@ L'associazione dinamica è suscettibile di errori ma offre anche la possibilità
 C# versione 5.0 è una versione incentrata sul linguaggio. Quasi tutto l'impegno per questa versione è stato indirizzato verso un altro concetto rivoluzionario: il modello `async` e `await` per la programmazione asincrona.  Ecco l'elenco delle funzionalità principali:
 
 - [Membri asincroni](../async.md)
-- [Attributi informativi sul chiamante](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [Attributi informativi sul chiamante](../programming-guide/concepts/caller-information.md)
+
+### <a name="see-also"></a>Vedere anche
+
+* [Progetto di codice: Attributi informativi sul chiamante in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 Gli attributi informativi sul chiamante consentono di recuperare facilmente informazioni sul contesto di esecuzione senza dover ricorrere a una grande quantità di codice di reflection boilerplate. Questi attributi hanno molte applicazioni nelle attività di diagnostica e di registrazione.
 

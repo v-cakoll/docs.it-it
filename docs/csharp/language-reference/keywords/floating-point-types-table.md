@@ -1,32 +1,36 @@
 ---
 title: Tabella dei tipi a virgola mobile (Riferimenti per C#)
-ms.date: 07/20/2015
+description: Panoramica dei tipi a virgola mobile incorporati di C#
+ms.date: 08/20/2018
 helpviewer_keywords:
 - floating-point numbers [C#]
 - ranges of floating-point types [C#]
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
-ms.openlocfilehash: 0a0d59e653138d5037eaec8d494313222e526ad8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 804e6529e67785ed5bcdb0db9efaeccb6b3a1a61
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219274"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933268"
 ---
 # <a name="floating-point-types-table-c-reference"></a>Tabella dei tipi a virgola mobile (Riferimenti per C#)
+
 La tabella seguente mostra la precisione e gli intervalli approssimativi per i tipi a virgola mobile.  
   
 |Tipo|Intervallo approssimativo|Precisione|  
 |----------|-----------------------|---------------|  
-|[float](float.md)|Da ±1,5e−45 a ±3,4e38|7 cifre|  
-|[double](double.md)|Da ±5,0e−324 a ±1,7e308|15-16 cifre|  
+|[float](float.md)|Compreso tra ±1.5 x 10<sup>−45</sup> e ±3.4 x 10<sup>38</sup>|7 cifre|  
+|[double](double.md)|Compreso tra ±5,0 × 10<sup>−324</sup> e ±1,7 × 10<sup>308</sup>|15-16 cifre|  
+|[decimal](decimal.md)|Compreso tra ±1.0 x 10<sup>-28</sup> e ±7.9228 x 10<sup>28</sup>|28-29 cifre|  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Tabella dei valori predefiniti](default-values-table.md)  
- [Tabella dei tipi incorporati](built-in-types-table.md)  
- [Tabella dei tipi integrali](integral-types-table.md)  
- [Tabella di formattazione dei risultati numerici](formatting-numeric-results-table.md)  
- [Tabelle di riferimento per i tipi](reference-tables-for-types.md)  
- [decimal](decimal.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](index.md)
+- [Tabelle di riferimento per i tipi](reference-tables-for-types.md)
+- [Tabella dei tipi integrali](integral-types-table.md)
+- [Tabella dei valori predefiniti](default-values-table.md)
+- [Tabella di formattazione dei risultati numerici](formatting-numeric-results-table.md)
+- [Tabella dei tipi incorporati](built-in-types-table.md)
