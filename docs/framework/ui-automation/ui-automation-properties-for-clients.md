@@ -11,16 +11,16 @@ ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 66ae453a8b82ea78acfb0dc423bce546324f901f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1ab9a9eeae6de29fc838e263225050ec4122f2d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410072"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480242"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Proprietà di automazione interfaccia utente per i client
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questa panoramica sono presentate le proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] così come vengono esposte nelle applicazioni client di automazione interfaccia utente.  
   
@@ -30,13 +30,13 @@ ms.locfileid: "33410072"
   
  Le proprietà di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sono di sola lettura. Per impostare le proprietà di un controllo, è necessario usare i metodi del pattern di controllo appropriato. Ad esempio, usare il metodo <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> per modificare i valori di posizione di una finestra a scorrimento.  
   
- Per migliorare le prestazioni, è possibile memorizzare nella cache i valori di proprietà di controlli e pattern di controllo quando vengono recuperati oggetti <xref:System.Windows.Automation.AutomationElement> . Per ulteriori informazioni, vedere [la memorizzazione nella cache nel client di automazione interfaccia utente](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
+ Per migliorare le prestazioni, è possibile memorizzare nella cache i valori di proprietà di controlli e pattern di controllo quando vengono recuperati oggetti <xref:System.Windows.Automation.AutomationElement> . Per altre informazioni, vedere [memorizzazione nella cache in UI Automation Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
   
 <a name="Property_IDs"></a>   
 ## <a name="property-ids"></a>ID di proprietà  
  Gli [!INCLUDE[TLA#tla_id#plural](../../../includes/tlasharptla-idsharpplural-md.md)] di proprietà sono valori univoci e costanti incapsulati in oggetti <xref:System.Windows.Automation.AutomationProperty> . Le applicazioni client di automazione interfaccia utente ottengono questi [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] dalla classe <xref:System.Windows.Automation.AutomationElement> o dalla classe di pattern di controllo appropriata, ad esempio <xref:System.Windows.Automation.ScrollPattern>. I provider di automazione interfaccia utente li ottengono da <xref:System.Windows.Automation.AutomationElementIdentifiers> o da una delle classi di identificatori di pattern di controllo, ad esempio <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
   
- Il valore numerico <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> di un <xref:System.Windows.Automation.AutomationProperty> viene usata dai provider per identificare le proprietà che vengono eseguite query nella <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> metodo. In genere, non è necessario che le applicazioni client esaminino la proprietà <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>. La proprietà <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> viene usata solo a scopi di debug e diagnostica.  
+ Il valore numerico <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> di un' <xref:System.Windows.Automation.AutomationProperty> viene utilizzato dai provider per identificare le proprietà che vengono eseguite query nella <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> (metodo). In genere, non è necessario che le applicazioni client esaminino la proprietà <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>. La proprietà <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> viene usata solo a scopi di debug e diagnostica.  
   
 <a name="Property_Conditions"></a>   
 ## <a name="property-conditions"></a>Condizioni della proprietà  
@@ -80,7 +80,7 @@ ms.locfileid: "33410072"
 ## <a name="default-property-values"></a>Valori di proprietà predefiniti  
  Se un provider di automazione interfaccia utente non implementa una proprietà, il sistema di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è in grado di fornire un valore predefinito. Ad esempio, se il provider per un controllo non supporta la proprietà identificata da <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] restituisce una stringa vuota. Analogamente, se il provider non supporta la proprietà identificata da <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] restituisce `false`.  
   
- È possibile modificare questo comportamento utilizzando la <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> e <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> overload del metodo. Quando si specifica `true` come secondo parametro, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] non restituisce un valore predefinito, ma restituisce il valore speciale <xref:System.Windows.Automation.AutomationElement.NotSupported>.  
+ È possibile modificare questo comportamento usando il <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> e <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> overload del metodo. Quando si specifica `true` come secondo parametro, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] non restituisce un valore predefinito, ma restituisce il valore speciale <xref:System.Windows.Automation.AutomationElement.NotSupported>.  
   
  Nel codice di esempio riportato di seguito si tenta di recuperare una proprietà da un elemento e, se la proprietà non è supportata, viene usato in alternativa un valore definito dall'applicazione.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a8a454919a195a0f0c03ed6890e51b2723f64fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5d82f41e3722ab568f14fbbb00bb0972d759a329
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754106"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485913"
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt; elemento
 Specifica che un'applicazione può fare riferimento allo stesso assembly in due implementazioni diverse di .NET Framework, disabilitando il comportamento predefinito che tratta gli assembly come equivalenti per scopi di portabilità dell'applicazione.  
@@ -36,14 +36,14 @@ Specifica che un'applicazione può fare riferimento allo stesso assembly in due 
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |PKT|Attributo obbligatorio.<br /><br /> Specifica il token di chiave pubblica dell'assembly interessato, sotto forma di stringa.|  
-|enabled|Attributo facoltativo.<br /><br /> Specifica se deve essere abilitato il supporto per la portabilità tra le implementazioni dell'assembly .NET Framework specificato.|  
+|enabled|Attributo facoltativo.<br /><br /> Specifica se deve essere abilitato il supporto per la portabilità tra diverse implementazioni dell'assembly .NET Framework specificato.|  
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|true|Abilitare il supporto per la portabilità tra implementazioni dell'assembly .NET Framework specificato. Questa è l'impostazione predefinita.|  
-|False|Disabilitare il supporto per la portabilità tra le implementazioni dell'assembly .NET Framework specificato. In questo modo l'applicazione di riferimenti a più implementazioni dell'assembly specificato.|  
+|true|Abilitare il supporto per la portabilità tra diverse implementazioni dell'assembly .NET Framework specificato. Questa è l'impostazione predefinita.|  
+|False|Disabilitare il supporto per la portabilità tra diverse implementazioni dell'assembly .NET Framework specificato. In questo modo l'applicazione affinché i riferimenti a più implementazioni dell'assembly specificato.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -57,15 +57,15 @@ Specifica che un'applicazione può fare riferimento allo stesso assembly in due 
 |`assemblyBinding`|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
   
 ## <a name="remarks"></a>Note  
- A partire dal [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], il supporto viene fornito automaticamente per le applicazioni che è possono utilizzare uno dei due implementazioni di .NET Framework, ad esempio l'implementazione di .NET Framework o .NET Framework per Silverlight. Le due implementazioni di un particolare assembly di .NET Framework vengono considerate equivalenti dal gestore di associazione di assembly. In alcuni scenari, questa funzionalità di portabilità dell'applicazione può causare problemi. In tali scenari, il `<supportPortability>` elemento può essere usato per disabilitare la funzionalità.  
+ A partire dal [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], il supporto viene fornito automaticamente per le applicazioni che è possono usare uno dei due implementazioni di .NET Framework, ad esempio l'implementazione di .NET Framework o .NET Framework per l'implementazione di Silverlight. Le due implementazioni di un particolare assembly di .NET Framework sono considerate equivalenti dal binder di assembly. In alcuni scenari, questa funzionalità di portabilità dell'applicazione può causare problemi. In questi scenari il `<supportPortability>` elemento può essere usato per disabilitare la funzionalità.  
   
- Uno scenario di questo tipo è un assembly che deve fare riferimento all'implementazione di .NET Framework sia .NET Framework per Silverlight di implementazione di un particolare assembly di riferimento. Ad esempio, una finestra di progettazione XAML scritta in Windows Presentation Foundation (WPF) potrebbe essere necessario fare riferimento sia all'implementazione Desktop WPF, per l'interfaccia utente della finestra di progettazione e il subset di WPF incluso nell'implementazione di Silverlight. Per impostazione predefinita, i riferimenti separati provocano un errore del compilatore, poiché l'associazione di assembly considera uguali i due assembly. Questo elemento disabilita il comportamento predefinito e consente la compilazione abbia esito positivo.  
+ Uno scenario di questo tipo è un assembly che deve fare riferimento sia l'implementazione di .NET Framework e .NET Framework per l'implementazione di Silverlight di un particolare assembly di riferimento. Ad esempio, una finestra di progettazione XAML scritta in Windows Presentation Foundation (WPF) potrebbe essere necessario fare riferimento a entrambi l'implementazione Desktop WPF, per interfaccia utente della finestra di progettazione e il subset di WPF è incluso nell'implementazione di Silverlight. Per impostazione predefinita, i riferimenti separati provocano un errore del compilatore, poiché l'associazione di assembly considera uguali i due assembly. Questo elemento consente di disattivare il comportamento predefinito e consente la compilazione abbia esito positivo.  
   
 > [!IMPORTANT]
->  Affinché il compilatore passare le informazioni per la logica di associazione di assembly di common language runtime, è necessario utilizzare il `/appconfig` l'opzione del compilatore per specificare il percorso del file app. config che contiene questo elemento.  
+>  Affinché il compilatore può passare le informazioni per la logica di associazione degli assembly di common language runtime, è necessario usare il `/appconfig` opzione del compilatore per specificare il percorso del file app. config che contiene questo elemento.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente consente a un'applicazione di riferimenti all'implementazione di .NET Framework sia .NET Framework per Silverlight di implementazione di un assembly di .NET Framework presente in entrambe le implementazioni. Il `/appconfig` opzione del compilatore deve essere usata per specificare il percorso del file app. config.  
+ L'esempio seguente Abilita i riferimenti sia l'implementazione di .NET Framework a .NET Framework per Silverlight per qualsiasi assembly di .NET Framework presente in entrambe le implementazioni a un'applicazione. Il `/appconfig` opzione del compilatore deve essere usata per specificare il percorso del file app. config.  
   
 ```xml  
 <configuration>  
@@ -79,5 +79,5 @@ Specifica che un'applicazione può fare riferimento allo stesso assembly in due 
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [/appconfig (opzioni del compilatore c#)](http://msdn.microsoft.com/library/ee523958.aspx)  
- [Panoramica di unificazione degli Assembly di .NET framework](http://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+ [/appconfig (opzioni del compilatore c#)](https://msdn.microsoft.com/library/ee523958.aspx)  
+ [Cenni preliminari sull'unificazione degli Assembly di .NET framework](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

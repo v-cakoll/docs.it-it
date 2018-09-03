@@ -8,31 +8,31 @@ helpviewer_keywords:
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2bef9e1671b8487a6702cce71106c84a2984317
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9a32f68566fc6fe53020c4e9b13482355b62ed21
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436160"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485954"
 ---
 # <a name="hosting-interfaces"></a>Interfacce di hosting
-In questa sezione vengono descritte le interfacce non gestite host consente di integrare common language runtime (CLR) nelle relative applicazioni.  
+In questa sezione vengono descritte le interfacce non gestite gli host possono usare per l'integrazione common language runtime (CLR) nelle proprie applicazioni.  
   
- Le interfacce di hosting di .NET Framework versione 2.0 sostituiscono le interfacce di .NET Framework versioni 1.0 e 1.1. Esistono differenze significative tra i due set di interfacce. Combinazione di essi potrebbero causare un comportamento imprevisto e non è consigliata.  
+ Le interfacce di hosting di .NET Framework versione 2.0 sostituiscono le interfacce di .NET Framework versioni 1.0 e 1.1. Esistono differenze significative tra i due set di interfacce. Combinazione di essi potrebbe causare un comportamento imprevisto e non è consigliata.  
   
- Le versioni di .NET Framework 3.0 e 3.5 utilizzano le interfacce di hosting di .NET Framework versione 2.0 e non introducono funzionalità di hosting.  
+ Le versioni di .NET Framework 3.0 e 3.5 usano le interfacce di hosting di .NET Framework versione 2.0 e non introducono funzionalità di hosting.  
   
  Il [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] interfacce di hosting sostituiscono le interfacce di .NET Framework 2.0.
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Interfacce di hosting CLR deprecate e coclassi](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
- Descrive le interfacce di hosting introdotte in .NET Framework versioni 1.0 e 1.1.  
+ Descrive le interfacce di hosting introdotte nelle versioni 1.0 e 1.1 di .NET Framework.  
   
  [Interfacce di hosting CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
  Descrive le interfacce di hosting introdotte in .NET Framework versione 2.0.  
   
  [Interfacce di hosting CLR aggiunte in .NET Framework 4 e 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- Vengono descritte le interfacce di hosting introdotte nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Vengono descritte le interfacce di hosting introdotta nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Coclassi di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
@@ -45,4 +45,4 @@ In questa sezione vengono descritte le interfacce non gestite host consente di i
   
  [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)  
   
- [Host di runtime](http://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)
+ [Host di runtime](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)

@@ -2,12 +2,12 @@
 title: Sicurezza Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 4e8d1502096dc452d21158e4fb3684298be9b982
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361939"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481731"
 ---
 # <a name="security-overview"></a>Cenni preliminari sulla sicurezza
 La protezione di un'applicazione è un processo costante. Lo sviluppatore non sarà mai in grado di garantire l'assoluta sicurezza di un'applicazione da tutti gli attacchi, in quanto non è possibile prevedere i tipi di attacchi che consentiranno di elaborare le nuove tecnologie. Al contrario, proprio perché nessuno ha ancora individuato (o pubblicato) i punti deboli nella sicurezza di un sistema, questo non implica che non ne esista nessuno. Durante la fase di progettazione del progetto è necessario pianificare la sicurezza nonché le procedure previste di manutenzione per l'intera durata dell'applicazione.  
@@ -18,7 +18,7 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
  Se la sicurezza viene implementata nella fase finale, si verificherà anche un maggior numero di bug, in quanto il software non sarà in grado di supportare le nuove restrizioni o dovrà essere riscritto per consentire l'inserimento di una funzionalità non prevista. In ogni riga di codice modificato può essere introdotto un nuovo bug. Per questo motivo, è necessario prendere in considerazione la sicurezza in una fase iniziale del processo di sviluppo, in modo che questo possa procedere congiuntamente allo sviluppo di nuove funzionalità.  
   
 ### <a name="threat-modeling"></a>Classificazione dei rischi  
- Non è possibile proteggere un sistema se non si comprendono tutti i potenziali attacchi ai quali è esposto. Il processo di valutazione di minacce alla sicurezza, denominato *una modellazione delle minacce*, è necessario determinare la probabilità e le implicazioni delle violazioni della sicurezza nell'applicazione ADO.NET.  
+ Non è possibile proteggere un sistema se non si comprendono tutti i potenziali attacchi ai quali è esposto. Il processo di valutazione delle minacce alla sicurezza, chiamato *modellazione delle minacce*, è necessario determinare la probabilità e le implicazioni delle violazioni della sicurezza nell'applicazione ADO.NET.  
   
  La classificazione dei rischi si compone di tre passaggi generali: identificare il punto di vista dell'antagonista, caratterizzare la sicurezza del sistema e determinare i rischi.  
   
@@ -28,7 +28,7 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|Il [di modellazione delle minacce](http://go.microsoft.com/fwlink/?LinkId=98353) sito MSDN Security Developer Center|Le risorse riportate in questa pagina contengono informazioni sul processo di classificazione dei rischi e consentono di compilare modelli di rischio da usare per proteggere le applicazioni|  
+|Il [Threat Modeling](https://go.microsoft.com/fwlink/?LinkId=98353) sito in MSDN Security Developer Center|Le risorse riportate in questa pagina contengono informazioni sul processo di classificazione dei rischi e consentono di compilare modelli di rischio da usare per proteggere le applicazioni|  
   
 ## <a name="the-principle-of-least-privilege"></a>Principio dei privilegi minimi  
  Durante la progettazione, la compilazione e la distribuzione di un'applicazione, è necessario presupporre che sarà sottoposta ad attacchi. Spesso si tratta di attacchi di malware che viene eseguito con le autorizzazioni dell'utente che esegue il codice. In altri casi derivano da codice corretto che è stato sfruttato da un utente non autorizzato. Nel pianificare la sicurezza è opportuno presupporre sempre che possa verificarsi l'ipotesi più pessimistica.  
@@ -67,7 +67,7 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Sicurezza dell'accesso di codice e ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Vengono descritte le interazioni tra la sicurezza dall'accesso del codice, la sicurezza basata sui ruoli e gli ambienti parzialmente attendibili dal punto di vista delle applicazioni ADO.NET.|  
-|[Sicurezza dall'accesso di codice](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contiene collegamenti ad argomenti aggiuntivi in cui viene descritta la sicurezza dall'accesso di codice in .NET Framework.|  
+|[Sicurezza dall'accesso di codice](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contiene collegamenti ad argomenti aggiuntivi in cui viene descritta la sicurezza dall'accesso di codice in .NET Framework.|  
   
 ## <a name="database-security"></a>Sicurezza dei database  
  Il principio dei privilegi minimi si applica anche all'origine dati. Le linee guida generali per la sicurezza dei database includono:  
@@ -89,7 +89,7 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Sicurezza di SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Viene fornita una panoramica delle funzionalità di sicurezza di SQL Server, nonché scenari per la creazione di applicazioni ADO.NET protette da usare con SQL Server.|  
-|[Consigli per strategie di accesso ai dati](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Vengono forniti suggerimenti per l'accesso ai dati e l'esecuzione di operazioni di database.|  
+|[Raccomandazioni per strategie di accesso ai dati](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Vengono forniti suggerimenti per l'accesso ai dati e l'esecuzione di operazioni di database.|  
   
 ## <a name="security-policy-and-administration"></a>Amministrazione e criteri di sicurezza  
  Se i criteri di sicurezza dall'accesso di codice vengono amministrati in modo non corretto, possono verificarsi problemi di sicurezza. Una volta distribuita l'applicazione, è necessario usare tecniche per il monitoraggio della sicurezza e valutare i rischi quando emergono nuove minacce.  
@@ -98,11 +98,11 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[NIB: Gestione criteri di protezione](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Fornisce informazioni sulla creazione e sull'amministrazione dei criteri di sicurezza.|  
-|[NIB: Criteri le procedure consigliate](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Vengono forniti collegamenti ad argomenti in cui viene descritto come amministrare i criteri di sicurezza.|  
+|[NIB: Gestione criteri di sicurezza](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Fornisce informazioni sulla creazione e sull'amministrazione dei criteri di sicurezza.|  
+|[NIB: Sicurezza dei criteri consigliate](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Vengono forniti collegamenti ad argomenti in cui viene descritto come amministrare i criteri di sicurezza.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [PAVE Security in Native and .NET Framework Code](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784) (PAVE: Sicurezza nel codice nativo e .NET Framework)  
+ [PAVE Security in Native and .NET Framework Code](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784) (PAVE: Sicurezza nel codice nativo e .NET Framework)  
  [Sicurezza di SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

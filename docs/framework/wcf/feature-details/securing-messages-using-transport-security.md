@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 50e450f4241abc7d8b688c58a121f64c3ca0e709
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ab04326404a4b90e30036594a7152e6118c2138
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499463"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482841"
 ---
 # <a name="securing-messages-using-transport-security"></a>Protezione dei messaggi mediante protezione del trasporto
 Contenuto della sezione viene descritta la protezione del trasporto di Accodamento messaggi (MSMQ), che è possibile utilizzare per proteggere messaggi inviati a una coda.  
   
 > [!NOTE]
->  Prima di leggere questo argomento, è consigliabile leggere [concetti sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+>  Prima di leggere questo argomento, è consigliabile leggere [concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
  Nella figura seguente fornisce un modello concettuale della comunicazione in coda utilizzando Windows Communication Foundation (WCF). L'illustrazione e la terminologia vengono utilizzate per spiegare i concetti di sicurezza del trasporto.  
   
- ![In coda applicazione diagramma](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "figura coda distribuita")  
+ ![Diagramma applicazioni accodate](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-coda-figura")  
   
  Quando l'invio di messaggi in coda mediante WCF con <xref:System.ServiceModel.NetMsmqBinding>, il messaggio WCF viene allegato come corpo del messaggio MSMQ. La protezione del trasporto rende sicuro l'intero messaggio MSMQ: intestazioni o proprietà del messaggio MSMQ e corpo del messaggio. Poiché si tratta del corpo del messaggio MSMQ, utilizzando la sicurezza del trasporto consente inoltre di proteggere il messaggio WCF.  
   
@@ -52,7 +52,7 @@ Contenuto della sezione viene descritta la protezione del trasporto di Accodamen
  Quando la protezione del trasporto è attivata, l'impostazione predefinita è <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
   
 #### <a name="windows-domain-authentication-mode"></a>Modalità di autenticazione del dominio Windows  
- La scelta di utilizzare la sicurezza di Windows comporta l'integrazione di Active Directory. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> è la modalità di sicurezza del trasporto predefinita. Quando questo valore è impostato, il canale WCF Allega il SID di Windows al messaggio MSMQ e utilizza il certificato interno ottenuto da Active Directory. Questo certificato interno viene quindi utilizzato per proteggere il messaggio. Il gestore delle code di destinazione utilizza Active Directory per cercare e trovare un certificato corrispondente per autenticare il client e controlla inoltre che il SID corrisponda a quello del client. Questo passaggio di autenticazione viene eseguito se un certificato, generato internamente nel caso della modalità di autenticazione `WindowsDomain` o generato esternamente nel caso della modalità di autenticazione `Certificate`, è allegato al messaggio anche se la coda di destinazione non è contrassegnata per l'autenticazione.  
+ La scelta di utilizzare la sicurezza di Windows comporta l'integrazione di Active Directory. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> è la modalità di sicurezza del trasporto predefinita. Quando è impostato, il canale WCF Allega il SID di Windows al messaggio MSMQ e utilizza il certificato interno ottenuto da Active Directory. Questo certificato interno viene quindi utilizzato per proteggere il messaggio. Il gestore delle code di destinazione utilizza Active Directory per cercare e trovare un certificato corrispondente per autenticare il client e controlla inoltre che il SID corrisponda a quello del client. Questo passaggio di autenticazione viene eseguito se un certificato, generato internamente nel caso della modalità di autenticazione `WindowsDomain` o generato esternamente nel caso della modalità di autenticazione `Certificate`, è allegato al messaggio anche se la coda di destinazione non è contrassegnata per l'autenticazione.  
   
 > [!NOTE]
 >  Durante la creazione di una coda, è possibile contrassegnare la coda come autenticata per indicare che richiede l'autenticazione del client che invia messaggi alla coda. In questo modo si ha la certezza che nessun messaggio non autenticato venga accettato nella coda.  
@@ -64,7 +64,7 @@ Contenuto della sezione viene descritta la protezione del trasporto di Accodamen
   
  Quando si invia un messaggio WCF con <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>, il canale WCF non viene associato un SID di Windows al messaggio MSMQ. In tal caso l'ACL della coda di destinazione deve consentire l'accesso utente `Anonymous` per l'invio alla coda. Il gestore delle code di destinazione controlla se il messaggio MSMQ è stato firmato con il certificato ma non esegue alcuna autenticazione.  
   
- Il certificato con le attestazioni e le informazioni di identità viene popolato nel <xref:System.ServiceModel.ServiceSecurityContext> dal canale di trasporto in coda WCF. Il servizio può utilizzare queste informazioni per eseguire la propria autenticazione del mittente.  
+ Il certificato con le attestazioni e le informazioni di identità viene popolato nel <xref:System.ServiceModel.ServiceSecurityContext> dal canale di trasporto in coda di WCF. Il servizio può utilizzare queste informazioni per eseguire la propria autenticazione del mittente.  
   
 ### <a name="msmq-protection-level"></a>Livello di protezione MSMQ  
  Il livello di protezione determina la modalità di sicurezza del messaggio MSMQ per avere la certezza che non venga manomesso. È specificato nella proprietà <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. Il valore predefinito è <xref:System.Net.Security.ProtectionLevel.Sign>.  
@@ -99,6 +99,6 @@ Contenuto della sezione viene descritta la protezione del trasporto di Accodamen
  Gli algoritmi supportati sono `MD5`, `SHA1`, `SHA256` e `SHA512`. Il valore predefinito è `SHA1`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accodamento messaggi](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
+ [Accodamento messaggi](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
  [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

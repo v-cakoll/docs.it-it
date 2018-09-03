@@ -2,12 +2,12 @@
 title: Configurazione predefinita
 ms.date: 03/30/2017
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-ms.openlocfilehash: 8488a753cb1c540d9c34d9bcf7b2a3112302a122
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e76c019d9fc1b416e6fa8175a70b5fd01d9ff53e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518620"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476118"
 ---
 # <a name="built-in-configuration"></a>Configurazione predefinita
 In questo esempio vengono illustrati l'uso e la configurazione dell'archivio di istanze del flusso di lavoro SQL. L'archivio di istanze del flusso di lavoro SQL è un'implementazione basata su SQL di un archivio di istanze. Consente a un'istanza di salvare e caricare il proprio stato da e verso un database SQL Server o SQL Server Express.  
@@ -17,7 +17,7 @@ In questo esempio vengono illustrati l'uso e la configurazione dell'archivio di 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al (pagina di download) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, passare a (pagina di download) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
@@ -26,7 +26,7 @@ In questo esempio vengono illustrati l'uso e la configurazione dell'archivio di 
   
  Il flusso di lavoro del conteggio è indipendente in un host del servizio flusso di lavoro. Il metodo `Main` del programma crea un'istanza dell'host del servizio flusso di lavoro che ospita il flusso di lavoro del conteggio e definisce gli endpoint in cui quest'ultimo può essere raggiunto. Definisce quindi un comportamento dell'archivio di istanze del flusso di lavoro SQL usato per configurare l'archivio di istanze del flusso di lavoro SQL. Successivamente il programma crea un client che chiama il metodo di avvio del flusso di lavoro del conteggio.  
   
- Dopo l'avvio del programma, il contatore avvia automaticamente il conteggio. Notare che potrebbero essere necessari alcuni secondi per caricare l'istanza e configurare l'archivio di istanze del flusso di lavoro SQL. Per ulteriori informazioni sull'archivio di istanze del flusso di lavoro, vedere [archivio di istanze del flusso di lavoro SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
+ Dopo l'avvio del programma, il contatore avvia automaticamente il conteggio. Notare che potrebbero essere necessari alcuni secondi per caricare l'istanza e configurare l'archivio di istanze del flusso di lavoro SQL. Per altre informazioni sull'archivio di istanze del flusso di lavoro, vedere [Store di istanza del flusso di lavoro SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
   
  L'esempio è costituito da due parti:  
   
@@ -71,11 +71,11 @@ In questo esempio vengono illustrati l'uso e la configurazione dell'archivio di 
   
 3.  Se i privilegi di amministratore non sono disponibili, creare un account di accesso di SQL Server. Passare a `Security`, **gli account di accesso**. Fare doppio clic su **gli account di accesso** e creare un nuovo account di accesso.  
   
-4.  Aggiungere l'utente ACL al ruolo SQL. Aprire **database**, **InstanceStore**, **sicurezza**. Fare doppio clic su **utenti** e selezionare **nuovi utenti**. Impostare il **nome account di accesso** sull'utente creato nel passaggio precedente. Aggiungere l'utente all'appartenenza al ruolo del Database **System.Activities.DurableInstancing.InstanceStoreUsers** (e altri). Notare che l'utente potrebbe essere già presente (ad esempio, utente dbo).  
+4.  Aggiungere l'utente ACL al ruolo SQL. Aprire **database**, **InstanceStore**, **sicurezza**. Fare doppio clic su **gli utenti** e selezionare **nuovi utenti**. Impostare il **nome account di accesso** sull'utente creato nel passaggio precedente. Aggiungere l'utente per l'appartenenza al ruolo di Database **instancestoreusers** (e altri). Notare che l'utente potrebbe essere già presente (ad esempio, utente dbo).  
   
 5.  Aprire il file InstanceStore.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] e compilare la soluzione premendo CTRL+MAIUSC+B.  
   
-6.  In [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], passare alla directory dell'esempio appropriata bin\debug (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug), fare clic con il pulsante destro InstanceStore.exe e selezionare **Esegui come amministratore**. È necessario eseguire questo esempio con i privilegi di amministratore perché viene aperto un listener del canale.  
+6.  Nelle [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], passare alla directory dell'esempio appropriata bin\debug (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug), fare clic con il pulsante destro InstanceStore.exe e selezionare **Esegui come amministratore**. È necessario eseguire questo esempio con i privilegi di amministratore perché viene aperto un listener del canale.  
   
 7.  Se è stato creato l'archivio di istanze in un database diverso da un'installazione locale di SQL Server Express, è necessario aggiornare la stringa di connessione al database (`const string ConnectionString` in Program.cs del progetto InstanceStore1 e l'attributo `connectionString` in App.config del progetto InstanceStore2) nell'esempio e ricompilarlo.  
   
@@ -83,13 +83,13 @@ In questo esempio vengono illustrati l'uso e la configurazione dell'archivio di 
   
 1.  Mentre l'esempio è in esecuzione, avviare SQL Server Management Studio.  
   
-2.  Nel **Esplora oggetti**selezionare **database**, **InstanceStore**, **tabelle**e quindi  **Instancetable**.  
+2.  Nel **Esplora oggetti**, selezionare **database**, **InstanceStore**, **tabelle**e quindi  **Instancetable**.  
   
 3.  Fare clic destro **InstanceTable** e selezionare **seleziona le prime 1000 righe**.  
   
-4.  Osservare che è presente una nuova voce e che il **la scadenza del blocco** viene modificato ogni 5 secondi (fare clic su della barra delle applicazioni **Execute** pulsante per aggiornare la query). Si tratta di una conseguenza dell'impostazione di **Host Lock Renewal Period** a 5.  
+4.  Osservare che è presente una nuova voce e che il **la scadenza del blocco** modificato ogni 5 secondi (fare clic su della barra delle applicazioni **Execute** pulsante per aggiornare la query). Si tratta di una conseguenza dell'impostazione di **Host Lock Renewal Period** a 5.  
   
-5.  Osservare che dopo il completamento del conteggio, la voce nella tabella dell'istanza viene rimossa. Si tratta di una conseguenza dell'impostazione **Instance Completion Action** a **DeleteAll**.  
+5.  Osservare che dopo il completamento del conteggio, la voce nella tabella dell'istanza viene rimossa. Si tratta di una conseguenza dell'impostazione **Instance Completion Action** al **DeleteAll**.  
   
 6.  Premere INVIO per terminare l'applicazione host del flusso di lavoro e osservare che il **LockOwnersTable** viene eliminato.  
   
@@ -102,9 +102,9 @@ In questo esempio vengono illustrati l'uso e la configurazione dell'archivio di 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Hosting di AppFabric ed esempi di persistenza](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hosting di AppFabric e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)

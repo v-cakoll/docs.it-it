@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: aeafaa8e618e02cab127593a19dda1d72780e091
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998684"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480665"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemi e soluzioni per la gestione dei dati distribuiti
 
@@ -43,7 +43,7 @@ Se però la progettazione dell'applicazione implica l'aggregazione costante di i
 
 Come affermato in precedenza, i dati di proprietà di ogni microservizio sono privati per il microservizio specifico ed è possibile accedervi solo usando la rispettiva API di microservizio. Di conseguenza uno dei problemi da affrontare è come implementare processi business end-to-end, garantendo al contempo la coerenza tra più microservizi.
 
-Per analizzare il problema, esaminiamo un esempio tratto dall'[applicazione di riferimento eShopOnContainers](http://aka.ms/eshoponcontainers). Il microservizio Catalog contiene le informazioni relative a tutti i prodotti, incluso il relativo livello delle scorte. Il microservizio Ordering gestisce gli ordini e deve verificare che un nuovo ordine non superi le scorte di prodotto disponibili nel catalogo. In alternativa, lo scenario può implicare logica che gestisce i prodotti relativi a ordini inevasi. In un'ipotetica versione monolitica di questa applicazione, il sottosistema di ordinazione potrebbe usare semplicemente una transazione ACID per controllare la disponibilità in magazzino, creare l'ordine nella tabella Orders e aggiornare le scorte disponibili nella tabella Products.
+Per analizzare il problema, esaminiamo un esempio tratto dall'[applicazione di riferimento eShopOnContainers](https://aka.ms/eshoponcontainers). Il microservizio Catalog contiene le informazioni relative a tutti i prodotti, incluso il relativo livello delle scorte. Il microservizio Ordering gestisce gli ordini e deve verificare che un nuovo ordine non superi le scorte di prodotto disponibili nel catalogo. In alternativa, lo scenario può implicare logica che gestisce i prodotti relativi a ordini inevasi. In un'ipotetica versione monolitica di questa applicazione, il sottosistema di ordinazione potrebbe usare semplicemente una transazione ACID per controllare la disponibilità in magazzino, creare l'ordine nella tabella Orders e aggiornare le scorte disponibili nella tabella Products.
 
 In un'applicazione basata su microservizi le tabelle Order e Product appartengono ai rispettivi microservizi. Nessun microservizio deve sempre includere database di proprietà di un altro microservizio nelle proprie transazioni o query, come illustrato nella figura 4-9.
 
@@ -51,7 +51,7 @@ In un'applicazione basata su microservizi le tabelle Order e Product appartengon
 
 **Figura 4-9**. Un microservizio non può accedere direttamente a una tabella in un altro microservizio
 
-Il microservizio Ordering non deve aggiornare direttamente la tabella Products perché tale tabella è di proprietà del microservizio Catalog. Per eseguire un aggiornamento nel microservizio Catalog, il microservizio Ordering deve usare solo la comunicazione asincrona, ad esempio gli eventi di integrazione (comunicazione basata su messaggi ed eventi). Ecco come l'applicazione di riferimento [eShopOnContainers](http://aka.ms/eshoponcontainers) esegue questo tipo di aggiornamento.
+Il microservizio Ordering non deve aggiornare direttamente la tabella Products perché tale tabella è di proprietà del microservizio Catalog. Per eseguire un aggiornamento nel microservizio Catalog, il microservizio Ordering deve usare solo la comunicazione asincrona, ad esempio gli eventi di integrazione (comunicazione basata su messaggi ed eventi). Ecco come l'applicazione di riferimento [eShopOnContainers](https://aka.ms/eshoponcontainers) esegue questo tipo di aggiornamento.
 
 Come dichiarato nel [teorema CAP](https://en.wikipedia.org/wiki/CAP_theorem), è necessario scegliere tra disponibilità e coerenza assoluta ACID. La maggior parte degli scenari basati su microservizio richiede disponibilità e scalabilità elevata anziché la coerenza assoluta. Le applicazioni mission-critical devono rimanere attive e in esecuzione e gli sviluppatori possono aggirare la coerenza assoluta usando tecniche per operare con la coerenza finale o debole. Si tratta dell'approccio adottato per la maggior parte delle architetture basate su microservizi.
 

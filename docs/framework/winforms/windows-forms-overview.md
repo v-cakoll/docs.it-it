@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 50c88aec8ac57be2ab317ac91464d68503607738
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 897d6fb8e0a150cc7fa498bb904b10d89ece9943
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541726"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486235"
 ---
 # <a name="windows-forms-overview"></a>Panoramica sui Windows Form
 Nella panoramica seguente sono illustrati i vantaggi delle applicazioni client intelligenti, le principali funzionalità della programmazione di Windows Form e come è possibile usare Windows Form per compilare client intelligenti che rispondono alle esigenze delle aziende e degli utenti finali attuali.  
@@ -19,7 +19,7 @@ Nella panoramica seguente sono illustrati i vantaggi delle applicazioni client i
  Con Windows Form è possibile sviluppare applicazioni Smart Client. Gli *smart client* sono applicazioni grafiche che possono essere distribuite e aggiornate facilmente, che possono funzionare anche quando non sono collegate a Internet e che consentono di accedere alle risorse sul computer locale in maniera molto più protetta rispetto alle tradizionali applicazioni Windows.  
   
 ### <a name="building-rich-interactive-user-interfaces"></a>Compilazione di interfacce utente complete e interattive  
- Windows Form è una tecnologia Smart Client per [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], un gruppo di librerie gestite che semplificano l'esecuzione di attività comuni, ad esempio la lettura e la scrittura nel file system. Quando si usa un ambiente di sviluppo come Visual Studio, è possibile creare applicazioni smart client Windows Form che visualizzano informazioni, richiedono l'input dagli utenti e comunicano con i computer remoti in rete.  
+ Windows Form è una tecnologia Smart Client per [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], un gruppo di librerie gestite che semplificano l'esecuzione di attività comuni, ad esempio la lettura e la scrittura nel file system. Quando si usa un ambiente di sviluppo come Visual Studio, è possibile creare applicazioni smart client Windows Form che visualizzano informazioni, richiedono l'input dagli utenti e comunicano con i computer remoti tramite una rete.  
   
  In Windows Forms un *modulo* è una superficie visiva sulla quale è possibile visualizzare informazioni per l'utente. Per compilare applicazioni Windows Forms, in genere si aggiungono i controlli nei form e quindi si definiscono le risposte alle azioni degli utenti, ad esempio i clic con il mouse o le pressioni dei tasti. Un *controllo* è un elemento separato dell'interfaccia utente usato per visualizzare dati o accettare input di dati.  
   
@@ -29,7 +29,7 @@ Nella panoramica seguente sono illustrati i vantaggi delle applicazioni client i
   
  Windows Form dispone di controlli UI completi che simulano le funzioni delle applicazioni di fascia alta quali Microsoft Office. Usando i controlli <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.MenuStrip> è possibile creare barre degli strumenti e menu contenenti testo e immagini, visualizzare sottomenu nonché includere altri controlli, ad esempio caselle di testo e caselle combinate.  
   
- Con Progettazione form Windows trascinamento e rilascio Visual Studio, è possibile creare facilmente applicazioni Windows Forms. È sufficiente selezionare i controlli con il cursore e aggiungerli nel punto desiderato del form. Per facilitare l'allineamento dei controlli, nella finestra di progettazione vengono forniti strumenti quali linee della griglia e guide di allineamento. E se utilizza Visual Studio o eseguire la compilazione dalla riga di comando, è possibile usare il <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> e <xref:System.Windows.Forms.SplitContainer> layout di form controlli per creare avanzati in meno tempo.  
+ Con Progettazione form di Windows trascinamento e rilascio di Visual Studio, è possibile creare facilmente applicazioni Windows Form. È sufficiente selezionare i controlli con il cursore e aggiungerli nel punto desiderato del form. Per facilitare l'allineamento dei controlli, nella finestra di progettazione vengono forniti strumenti quali linee della griglia e guide di allineamento. E se si usa Visual Studio o la compilazione dalla riga di comando, è possibile usare la <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> e <xref:System.Windows.Forms.SplitContainer> layout di form controlli per creare avanzati in meno tempo.  
   
  Infine, se è necessario creare elementi dell'interfaccia utente personalizzati, lo spazio dei nomi <xref:System.Drawing> contiene diverse classi che consentono di creare linee, cerchi e altre forme direttamente in un form.  
   
@@ -62,7 +62,7 @@ Nella panoramica seguente sono illustrati i vantaggi delle applicazioni client i
 |-----------------|----------------|  
 |Uso del componente <xref:System.Windows.Forms.BindingSource>|[Procedura: associare controlli Windows Forms al componente BindingSource usando la finestra di progettazione](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
 |Uso delle origini dati di [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Forms](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|  
-|Uso della finestra Origini dati|[Procedura dettagliata: visualizzazione di dati in un Windows Form](http://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|  
+|Uso della finestra Origini dati|[Procedura dettagliata: visualizzazione di dati in un Windows Form](https://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|  
 |Uso delle impostazioni dell'applicazione|[Procedura: creare le impostazioni applicazione](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
 ### <a name="deploying-applications-to-client-computers"></a>Distribuzione delle applicazioni ai client  

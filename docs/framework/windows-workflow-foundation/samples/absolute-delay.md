@@ -2,11 +2,12 @@
 title: Ritardo assoluto
 ms.date: 03/30/2017
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-ms.openlocfilehash: 3a104f6b879e9cdc899bad2201ad1ed320a38a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30719a4340b738a7462584c4dca00f6d5d90ac72
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486102"
 ---
 # <a name="absolute-delay"></a>Ritardo assoluto
 Lo scenario principale di questo esempio è ritardare un flusso di lavoro fino a una <xref:System.DateTime> specificata usando timer durevoli in un'applicazione flusso di lavoro. Si tratta di uno scenario diverso rispetto all'utilizzo dell'attività <xref:System.Activities.Statements.Delay> incorporata in quanto in questo caso sarà possibile ritardare un flusso di lavoro solo per un determinato <xref:System.TimeSpan> (o numero di minuti/secondi).  
@@ -38,7 +39,7 @@ Lo scenario principale di questo esempio è ritardare un flusso di lavoro fino a
   
  Questo esempio dimostra inoltre come attivare la persistenza per una <xref:System.Activities.WorkflowApplication>. Per questo particolare esempio, verranno usati timer durevoli in cui i dati del flusso di lavoro verranno scaricati nel database di persistenza durante il tempo di inattività in attesa della scadenza del timer. Questa implementazione può essere usata anche per altre azioni di persistenza. Questo esempio mostra come configurare la stringa di connessione della persistenza con SQL Server e come creare l'archivio di istanze per rendere persistenti i dati delle istanze del flusso di lavoro. Viene fornita la logica per riprendere il flusso di lavoro una volta generato un evento che rende eseguibile l'istanza del flusso di lavoro.  
   
- Mentre si esegue questo esempio, si noterà che il tempo in cui inizia il ritardo predefinito e viene completato, che a sua volta causerà un messaggio di posta elettronica da inviare. A questo punto, l'attività AbsoluteDelay verrà interrotta fino a una determinata <xref:System.DateTime> (o 0 secondi se <xref:System.DateTime> è scaduta), che a sua volta invierà un messaggio di posta elettronica alla scadenza. In questo modo verranno mostrati i due diversi casi di utilizzo della funzionalità <xref:System.Activities.Statements.Delay> incorporata rispetto all'utilizzo di un'attività AbsoluteDelay.  
+ Durante l'esecuzione in questo esempio, si noterà l'ora in cui inizia il ritardo incorporato e viene completato, che a sua volta causerà un messaggio di posta elettronica da inviare. A questo punto, l'attività AbsoluteDelay verrà interrotta fino a una determinata <xref:System.DateTime> (o 0 secondi se <xref:System.DateTime> è scaduta), che a sua volta invierà un messaggio di posta elettronica alla scadenza. In questo modo verranno mostrati i due diversi casi di utilizzo della funzionalità <xref:System.Activities.Statements.Delay> incorporata rispetto all'utilizzo di un'attività AbsoluteDelay.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
@@ -66,6 +67,6 @@ Lo scenario principale di questo esempio è ritardare un flusso di lavoro fino a
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\AbsoluteDelay`

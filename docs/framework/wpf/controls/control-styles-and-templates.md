@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 0fe20ffa19d14dcaecac30198c5c0e2d19fb9fa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556913"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482976"
 ---
 # <a name="control-styles-and-templates"></a>Stili e modelli di Control
-Controlli Windows Presentation Foundation (WPF) hanno un <xref:System.Windows.Controls.ControlTemplate> che contiene la struttura ad albero visuale del controllo. È possibile modificare la struttura e l'aspetto di un controllo modificando il <xref:System.Windows.Controls.ControlTemplate> del controllo. Non è possibile sostituire solo in parte la struttura ad albero visuale di un controllo. Per modificare la struttura ad albero visuale di un controllo è necessario impostare il <xref:System.Windows.Controls.Control.Template%2A> proprietà del controllo per il nuovo e completo <xref:System.Windows.Controls.ControlTemplate>.  
+I controlli in Windows Presentation Foundation (WPF) dispongono di un <xref:System.Windows.Controls.ControlTemplate> che contiene la struttura ad albero visuale del controllo. È possibile modificare la struttura e l'aspetto di un controllo modificando il <xref:System.Windows.Controls.ControlTemplate> di tale controllo. Non è possibile sostituire solo una parte della struttura visiva di un controllo. Per modificare la struttura ad albero visuale di un controllo è necessario impostare il <xref:System.Windows.Controls.Control.Template%2A> proprietà del controllo per il nuovo e completo <xref:System.Windows.Controls.ControlTemplate>.  
   
- I temi del desktop determinano quale dizionario risorse viene usato. Per ottenere i dizionari risorse per i temi del desktop, vedere [Temi WPF predefiniti](http://go.microsoft.com/fwlink/?LinkID=158252).  
+ I temi del desktop determinano quale dizionario risorse viene usato. Per ottenere i dizionari risorse per i temi del desktop, vedere [Temi WPF predefiniti](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
  La tabella seguente contiene i nomi file dei dizionari risorse e i corrispondenti temi del desktop.  
   
@@ -50,10 +50,10 @@ Controlli Windows Presentation Foundation (WPF) hanno un <xref:System.Windows.Co
  [Stili e modelli di ListView](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
  [Stili e modelli di Menu](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
  [Stili e modelli di NavigationWindow](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [Modelli e stili del controllo PasswordBox](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
+ [PasswordBox stili e modelli](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
  [Stili e modelli di ProgressBar](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
  [Stili e modelli di RadioButton](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [Stili e modelli RepeatButton](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
+ [I modelli e stili di RepeatButton](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
  [Stili e modelli di ScrollBar](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
  [Stili e modelli di ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
  [Stili e modelli di Slider](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
@@ -61,7 +61,7 @@ Controlli Windows Presentation Foundation (WPF) hanno un <xref:System.Windows.Co
  [Stili e modelli di TabControl](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [Stili e modelli di TextBox](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
  [Thumb stili e modelli](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [Stili e modelli ToggleButton](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
+ [ToggleButton stili e modelli](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [Stili e modelli di ToolBar](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [Stili e modelli di ToolTip](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
  [Stili e modelli di TreeView](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  

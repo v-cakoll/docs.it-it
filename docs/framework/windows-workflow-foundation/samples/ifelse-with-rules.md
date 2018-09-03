@@ -2,17 +2,17 @@
 title: IfElse con regole
 ms.date: 03/30/2017
 ms.assetid: c4ad9bb2-9037-413a-8b14-59ed7b927a9e
-ms.openlocfilehash: 179ec29f957894433fb527a14048460f5ff6ee5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31906f04149a0ca7659201965ca565c7fa2af305
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515121"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483006"
 ---
 # <a name="ifelse-with-rules"></a>IfElse con regole
 In questo esempio viene mostrato l'uso di una condizione della regola con un'attività <xref:System.Workflow.Activities.IfElseActivity>.  
   
- L'esempio passa un parametro `OrderValue` dall'host. Il valore del parametro viene usato in una condizione della regola sul primo ramo dell'attività <xref:System.Workflow.Activities.IfElseActivity>. Se il valore è minore di 10.000, viene eseguito il primo ramo e <xref:System.Workflow.Activities.CodeActivity> attività nel primo branch stampa **ottenere l'approvazione Manager** nella console. Se il valore è maggiore di 10.000, il <xref:System.Workflow.Activities.CodeActivity> attività nel secondo branch esegue e stampa **ottenere approvazione VP**.  
+ L'esempio passa un parametro `OrderValue` dall'host. Il valore del parametro viene usato in una condizione della regola sul primo ramo dell'attività <xref:System.Workflow.Activities.IfElseActivity>. Se il valore è minore di 10.000, viene eseguito il primo ramo e il <xref:System.Workflow.Activities.CodeActivity> attività nel primo branch stampa **Get Manager Approval** nella console. Se il valore è maggiore di 10.000, il <xref:System.Workflow.Activities.CodeActivity> attività nel secondo branch viene eseguita e viene stampato **ottenere approvazione del VP**.  
   
 ### <a name="to-build-the-sample"></a>Per compilare l'esempio  
   
@@ -31,7 +31,7 @@ In questo esempio viene mostrato l'uso di una condizione della regola con un'att
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\IfElseWithRules`  
   

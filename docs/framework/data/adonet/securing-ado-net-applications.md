@@ -2,12 +2,12 @@
 title: Protezione delle applicazioni ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: efe25082b4e4de9170179ebeff6a1dca8f67446c
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e5b99621989e9f14c6c734a497f210780f3c7e57
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728602"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481078"
 ---
 # <a name="securing-adonet-applications"></a>Protezione delle applicazioni ADO.NET
 Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i problemi più comuni di codifica, ad esempio la mancata convalida dell'input dell'utente. Un'applicazione che consente di accedere ai dati può presentare molti punti di errore, che possono essere sfruttati da utenti non autorizzati per recuperare, modificare o distruggere dati sensibili. È pertanto importante considerare tutti gli aspetti della sicurezza, a partire dal processo di classificazione dei rischi durante la fase di progettazione dell'applicazione, fino all'eventuale distribuzione e alla manutenzione costante.  
@@ -42,10 +42,10 @@ Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i prob
  [Sicurezza](../../../../docs/standard/security/index.md)  
  Contiene collegamenti ad argomenti in cui vengono descritti tutti gli aspetti della sicurezza in .NET.  
   
- [Strumenti di sicurezza](http://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
+ [Strumenti di sicurezza](https://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
  Vengono fornite informazioni sugli strumenti di .NET Framework per la protezione e l'amministrazione dei criteri di sicurezza.  
   
- [Risorse per la creazione di applicazioni sicure](http://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [Risorse per la creazione di applicazioni sicure](https://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
  Vengono forniti collegamenti ad argomenti relativi alla creazione di applicazioni protette.  
   
  [Bibliografia sulla sicurezza](/visualstudio/ide/security-bibliography)  
@@ -53,4 +53,4 @@ Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i prob
   
 ## <a name="see-also"></a>Vedere anche  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

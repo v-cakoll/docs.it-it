@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: f0267a774d284cac1672ff971d6af3ec3439c84d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb4c59c76142420f479b0b16a6d80317e98d159
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540644"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486010"
 ---
 # <a name="windows-forms-data-binding"></a>Data binding di Windows Form
 Data binding in Windows Form consente di visualizzare e modificare le informazioni da un'origine dati nei controlli del form. È possibile effettuare associazioni alle origini dati tradizionali e a quasi ogni struttura che contiene dati.  
@@ -37,7 +37,7 @@ Data binding in Windows Form consente di visualizzare e modificare le informazio
  Mostra come implementare l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged>. L'interfaccia comunica a un controllo associato le modifiche delle proprietà di un oggetto business.  
   
  [Procedura: Applicare il modello PropertyNameChanged](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
- Viene illustrato come applicare il *PropertyName*modello Changed alle proprietà di un controllo utente Windows Form.  
+ Viene illustrato come applicare la *PropertyName*modello Changed alle proprietà di un controllo utente Windows Form.  
   
  [Procedura: Implementare l'interfaccia ITypedList](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
  Mostra come abilitare l'individuazione dello schema per un elenco associabile mediante l'implementazione dell'interfaccia <xref:System.ComponentModel.ITypedList>.  
@@ -51,7 +51,7 @@ Data binding in Windows Form consente di visualizzare e modificare le informazio
  [Procedura: Garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
  Mostra come garantire che la riga selezionata di una tabella figlio non venga modificata quando viene apportata una modifica a un campo della tabella padre.  
   
- Vedere anche [interfacce correlate all'associazione di dati](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [procedura: passare dati in Windows Form](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [procedura: creare un controllo con associazione semplice in un Windows Form](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
+ Vedere anche [interfacce correlate al Data Binding](https://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [procedura: esplorare dati in Windows Form](https://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [come: creare un controllo con associazione semplice in un Windows Form](https://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
@@ -67,4 +67,4 @@ Data binding in Windows Form consente di visualizzare e modificare le informazio
  [Controllo DataGridView](../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  Fornisce un elenco di argomenti in cui viene illustrato come usare un controllo Datagrid associabile.  
   
- Vedere anche [accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).
+ Vedere anche [l'accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).

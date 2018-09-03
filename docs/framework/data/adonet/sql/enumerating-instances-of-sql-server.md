@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: d9456926b228fadca940f6c4698829494382e237
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 043f156f96d6ebc9ac5a6487287ad327928d9bf0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355522"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481788"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Enumerazione di istanze di SQL Server (ADO.NET)
-SQL Server consente alle applicazioni di individuare le istanze di SQL Server all'interno della rete corrente. Mediante la classe <xref:System.Data.Sql.SqlDataSourceEnumerator> queste informazioni vengono esposte allo sviluppatore dell'applicazione che in tal modo dispone di una <xref:System.Data.DataTable> contenente dati relativi a tutti i server visibili. La tabella restituita contiene un elenco di istanze del server disponibile in rete che corrisponde all'elenco fornito quando un utente tenta di creare una nuova connessione ed espande l'elenco di riepilogo a discesa contenente tutti i server disponibili nella **connessione Proprietà** la finestra di dialogo. I risultati visualizzati non sono sempre completi.  
+SQL Server consente alle applicazioni di individuare le istanze di SQL Server all'interno della rete corrente. Mediante la classe <xref:System.Data.Sql.SqlDataSourceEnumerator> queste informazioni vengono esposte allo sviluppatore dell'applicazione che in tal modo dispone di una <xref:System.Data.DataTable> contenente dati relativi a tutti i server visibili. La tabella restituita contiene un elenco di istanze del server disponibile in rete che corrisponde all'elenco fornito quando un utente tenta di creare una nuova connessione ed espande l'elenco a discesa che contiene tutti i server disponibili nel **connessione Proprietà** nella finestra di dialogo. I risultati visualizzati non sono sempre completi.  
   
 > [!NOTE]
 >  Come nel caso della maggior parte dei servizi Windows, è consigliabile eseguire il servizio Visualizzatore SQL con meno privilegi possibile. Per ulteriori informazioni sul servizio Visualizzatore SQL e su come gestirne il comportamento, vedere la documentazione online di SQL Server.  
@@ -48,7 +48,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|Nome del server.|  
 |**NomeIstanza**|Nome dell'istanza del server. Resta vuoto se il server è in esecuzione come istanza predefinita.|  
 |**IsClustered**|Indica se il server è parte di un cluster.|  
-|**Version**|Versione del server. Ad esempio:<br /><br /> -9.00. x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
+|**Version**|Versione del server. Ad esempio:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>Limitazioni delle enumerazioni  
  È possibile elencare o non elencare tutti i server disponibili. L'elenco può variare in base a fattori come i timeout e il traffico di rete. Pertanto l'elenco può risultare diverso durante due chiamate consecutive. Verranno elencati solo i server nella stessa rete. Normalmente i pacchetti di broadcast non passeranno dai router. Per questo motivo è possibile che l'utente non visualizzi un server elencato, ma tale server resterà stabile durante le chiamate.  
@@ -58,7 +58,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 > [!NOTE]
 >  L'enumerazione di server è disponibile solo in caso di attendibilità totale. Gli assembly eseguiti in un ambiente di attendibilità parziale non saranno in grado di usare la funzionalità, anche se dispongono dell'autorizzazione CAS (Code Access Security, Sicurezza dall'accesso di codice) <xref:System.Data.SqlClient.SqlClientPermission>.  
   
- SQL Server vengono fornite informazioni per il <xref:System.Data.Sql.SqlDataSourceEnumerator> tramite l'utilizzo di un servizio Windows esterno denominato Visualizzatore SQL. Questo servizio è abilitato per impostazione predefinita, ma gli amministratori possono disattivarlo o disabilitarlo per rendere l'istanza del server invisibile a questa classe.  
+ SQL Server fornisce informazioni per il <xref:System.Data.Sql.SqlDataSourceEnumerator> tramite l'uso di un servizio Windows esterno denominato Visualizzatore SQL. Questo servizio è abilitato per impostazione predefinita, ma gli amministratori possono disattivarlo o disabilitarlo per rendere l'istanza del server invisibile a questa classe.  
   
 ## <a name="example"></a>Esempio  
  L'applicazione console riportata di seguito consente di recuperare informazioni su tutte le istanze di SQL Server visibili e di visualizzarle nella finestra della console.  
@@ -126,4 +126,4 @@ class Program
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

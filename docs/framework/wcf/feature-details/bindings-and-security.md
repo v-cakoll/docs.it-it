@@ -9,31 +9,31 @@ helpviewer_keywords:
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7d2e55f84ed99ccb25e9966dc72112c0113eabc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496758"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487255"
 ---
 # <a name="bindings-and-security"></a>Associazioni e protezione
 Le associazioni fornite dal sistema incluse con Windows Communication Foundation (WCF) offrono un modo rapido per programmare le applicazioni WCF. Tutte le associazioni, tranne una, dispongono di uno schema di sicurezza predefinito attivo. In questo argomento viene illustrato come selezionare l'associazione corretta per la sicurezza desiderata.  
   
- Per una panoramica della sicurezza WCF, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). Per ulteriori informazioni sulla programmazione usando le associazioni WCF, vedere [programmazione sicurezza WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Per una panoramica della sicurezza WCF, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). Per altre informazioni sulla programmazione WCF utilizzando associazioni, vedere [Programming WCF Security](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
- Se è già stata selezionata un'associazione, è possibile trovare ulteriori informazioni sui comportamenti in fase di esecuzione associati di sicurezza in [comportamenti di sicurezza](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Se è già stato selezionato un binding, è possibile trovare informazioni sui comportamenti associati con la sicurezza in fase di esecuzione [comportamenti di sicurezza](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Alcune funzionalità di sicurezza non sono programmabili tramite le associazioni fornite dal sistema. Per un maggiore controllo utilizzando un'associazione personalizzata, vedere [funzionalità di sicurezza con associazioni personalizzate](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Funzionalità di sicurezza delle associazioni  
- WCF include numerose associazioni fornite dal sistema che soddisfano la maggior parte delle proprie esigenze. È inoltre possibile creare un'associazione personalizzata se una determinata associazione non è sufficiente. Per un elenco di associazioni fornite dal sistema, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md). Per ulteriori informazioni sulle associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ WCF include numerose associazioni fornite dal sistema che soddisfano la maggior parte delle esigenze. È inoltre possibile creare un'associazione personalizzata se una determinata associazione non è sufficiente. Per un elenco delle associazioni fornite dal sistema, vedere [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md). Per altre informazioni sulle associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- Ogni associazione in WCF presenta due forme: come API e come elemento XML utilizzato in un file di configurazione. Ad esempio, il `WSHttpBinding` (API) ha una controparte nel [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+ Ogni associazione in WCF presenta due formati: come API e come elemento XML usato in un file di configurazione. Ad esempio, il `WSHttpBinding` (API) ha un equivalente nel [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  Nella sezione seguente vengono elencate entrambe le forme per ogni associazione e vengono riepilogate le funzionalità di sicurezza.  
   
 ### <a name="basichttp"></a>BasicHttp  
- Nel codice, utilizzare il <xref:System.ServiceModel.BasicHttpBinding> classe; in configurazione, utilizzare il [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
+ Nel codice, usare il <xref:System.ServiceModel.BasicHttpBinding> classe; nella configurazione, usare il [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
  Questa associazione è progettata per l'utilizzo con una gamma di tecnologie esistenti, incluse le seguenti:  
   
@@ -41,7 +41,7 @@ Le associazioni fornite dal sistema incluse con Windows Communication Foundation
   
 -   Applicazioni Web Service Enhancements (WSE).  
   
--   Basic profilo in base a quanto definito in Web Services Interoperability (WS-I) specifica ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955)).  
+-   Basic Profile come definito in Web Services Interoperability (WS-I) specifica ([https://go.microsoft.com/fwlink/?LinkId=38955](https://go.microsoft.com/fwlink/?LinkId=38955)).  
   
 -   Basic Security Profile come definito in WS-I.  
   
@@ -56,7 +56,7 @@ Le associazioni fornite dal sistema incluse con Windows Communication Foundation
  Per altre informazioni, vedere<xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>e <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
 ### <a name="wshttpbinding"></a>WSHttpBinding  
- Nel codice, utilizzare il <xref:System.ServiceModel.WSHttpBinding> classe; in configurazione, utilizzare il [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+ Nel codice, usare il <xref:System.ServiceModel.WSHttpBinding> classe; nella configurazione, usare il [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  Per impostazione predefinita, questa associazione implementa la specifica WS-Security e fornisce interoperabilità con servizi che implementano le specifiche WS-*. Sono supportati:  
   
@@ -69,7 +69,7 @@ Le associazioni fornite dal sistema incluse con Windows Communication Foundation
  Per altre informazioni, vedere <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, e <xref:System.ServiceModel.HttpProxyCredentialType>.  
   
 ### <a name="wsdualhttpbinding"></a>WSDualHttpBinding  
- Nel codice, utilizzare il <xref:System.ServiceModel.WSDualHttpBinding> classe; in configurazione, utilizzare il [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
+ Nel codice, usare il <xref:System.ServiceModel.WSDualHttpBinding> classe; nella configurazione, usare il [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
   
  Questa associazione è progettata per consentire applicazioni di servizio duplex. Implementa la specifica WS-Security per la protezione del trasferimento basata sul messaggio. La protezione del trasporto non è disponibile. Per impostazione predefinita, fornisce le funzionalità seguenti:  
   
@@ -94,7 +94,7 @@ Le associazioni fornite dal sistema incluse con Windows Communication Foundation
  Per altre informazioni, vedere <xref:System.ServiceModel.WSDualHttpSecurity> e <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
- Nel codice, utilizzare il <xref:System.ServiceModel.NetTcpBinding> classe; in configurazione, utilizzare il [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
+ Nel codice, usare il <xref:System.ServiceModel.NetTcpBinding> classe; nella configurazione, usare il [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
  Questa associazione è ottimizzata per le comunicazioni tra computer. Per impostazione predefinita, dispone delle caratteristiche seguenti:  
   
@@ -117,7 +117,7 @@ Le associazioni fornite dal sistema incluse con Windows Communication Foundation
  Per altre informazioni, vedere <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, e <xref:System.ServiceModel.MessageCredentialType>.  
   
 ### <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
- Nel codice, utilizzare il <xref:System.ServiceModel.NetNamedPipeBinding> classe; in configurazione, utilizzare il [ \<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).  
+ Nel codice, usare il <xref:System.ServiceModel.NetNamedPipeBinding> classe; nella configurazione, usare il [ \<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).  
   
  Questa associazione è ottimizzata per le comunicazioni tra processi (in genere nello stesso computer). Per impostazione predefinita, questa associazione dispone delle caratteristiche seguenti:  
   
@@ -136,9 +136,9 @@ Le associazioni fornite dal sistema incluse con Windows Communication Foundation
  Per altre informazioni, vedere <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> e <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- Nel codice, utilizzare il <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe; in configurazione, utilizzare il [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
+ Nel codice, usare il <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe; nella configurazione, usare il [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
   
- Questa associazione è ottimizzata per la creazione di client WCF e servizi che interagiscono con endpoint non - WCF Microsoft Message Queuing MSMQ.  
+ Questa associazione è ottimizzata per la creazione di client WCF e servizi che interagiscono con gli endpoint non - WCF Microsoft Message Queuing MSMQ.  
   
  Per impostazione predefinita, questa associazione utilizza la sicurezza del trasporto e fornisce le caratteristiche di sicurezza seguenti:  
   
@@ -149,9 +149,9 @@ Le associazioni fornite dal sistema incluse con Windows Communication Foundation
  Per altre informazioni, vedere <xref:System.ServiceModel.NetMsmqSecurity> e <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- Nel codice, utilizzare il <xref:System.ServiceModel.NetMsmqBinding> classe; in configurazione, utilizzare il [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
+ Nel codice, usare il <xref:System.ServiceModel.NetMsmqBinding> classe; nella configurazione, usare il [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
   
- Questa associazione viene utilizzata per l'utilizzo durante la creazione di servizi WCF che richiedono MSMQ supporto di messaggi in coda.  
+ Questa associazione viene utilizzata per l'uso durante la creazione di servizi WCF che richiedono MSMQ in coda il supporto di messaggi.  
   
  Per impostazione predefinita, questa associazione utilizza la sicurezza del trasporto e fornisce le caratteristiche di sicurezza seguenti:  
   
@@ -170,7 +170,7 @@ Le associazioni fornite dal sistema incluse con Windows Communication Foundation
  Per altre informazioni, vedere <xref:System.ServiceModel.MessageSecurityOverMsmq> e <xref:System.ServiceModel.MsmqTransportSecurity>.  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
- Nel codice, utilizzare il <xref:System.ServiceModel.WSFederationHttpBinding> classe; in configurazione, utilizzare il [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ Nel codice, usare il <xref:System.ServiceModel.WSFederationHttpBinding> classe; nella configurazione, usare il [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  Per impostazione predefinita, questa associazione utilizza WS-Security (sicurezza a livello di messaggio).  
   
@@ -192,14 +192,14 @@ Le associazioni fornite dal sistema incluse con Windows Communication Foundation
   
 |Binding|Supporto modalità trasporto|Supporto modalità messaggio|Supporto TransportWithMessageCredential|  
 |-------------|----------------------------|--------------------------|--------------------------------------------|  
-|`BasicHttpBinding`|Yes|Sì|Sì|  
-|`WSHttpBinding`|Sì|Sì|Sì|  
+|`BasicHttpBinding`|Yes|Yes|Yes|  
+|`WSHttpBinding`|Yes|Yes|Yes|  
 |`WSDualHttpBinding`|No|Sì|No|  
-|`NetTcpBinding`|Sì|Sì|Sì|  
-|`NetNamedPipeBinding`|Sì|No|No|  
-|`NetMsmqBinding`|Sì|Sì|No|  
+|`NetTcpBinding`|Yes|Yes|Yes|  
+|`NetNamedPipeBinding`|Yes|No|No|  
+|`NetMsmqBinding`|Yes|Yes|No|  
 |`MsmqIntegrationBinding`|Sì|No|No|  
-|`wsFederationHttpBinding`|No|Sì|Yes|  
+|`wsFederationHttpBinding`|No|Yes|Yes|  
   
 ## <a name="transport-credentials-in-bindings"></a>Credenziali di trasporto nelle associazioni  
  Nella tabella seguente vengono elencati i tipi di credenziali client disponibili quando si utilizza `BasicHttpBinding` o `WSHttpBinding` nella modalità di sicurezza del trasporto.  
@@ -207,21 +207,21 @@ Le associazioni fornite dal sistema incluse con Windows Communication Foundation
 |Tipo|Descrizione|  
 |----------|-----------------|  
 |None|Specifica che il client non deve presentare alcuna credenziale. Il client viene pertanto autenticato come anonimo.|  
-|Basic|Autenticazione di base. Per altre informazioni, vedere RFC 2617 – HTTP Authentication: Basic and Digest Authentication, disponibile all'indirizzo [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Digest|Autenticazione digest. Per altre informazioni, vedere RFC 2617 – HTTP Authentication: Basic and Digest Authentication, disponibile all'indirizzo [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Basic|Autenticazione di base. Per altre informazioni, vedere RFC 2617 – HTTP Authentication: Basic and Digest Authentication, disponibile all'indirizzo [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Digest|Autenticazione digest. Per altre informazioni, vedere RFC 2617 – HTTP Authentication: Basic and Digest Authentication, disponibile all'indirizzo [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|Autenticazione NT LAN Manager (NTLM).|  
 |WINDOWS|Autenticazione Windows.|  
 |Certificato|Autenticazione eseguita mediante un certificato.|  
-|IssuedToken|Consente al servizio di richiedere l'autenticazione del client tramite un token emesso da un servizio token di sicurezza o da [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Per ulteriori informazioni, vedere [federazione e i token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|IssuedToken|Consente al servizio di richiedere l'autenticazione del client tramite un token emesso da un servizio token di sicurezza o da [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Per altre informazioni, vedere [federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="message-client-credentials-in-bindings"></a>Credenziali client dei messaggi nelle associazioni  
  Nella tabella seguente vengono elencati i tipi di credenziali client disponibili quando si utilizza un'associazione nella modalità di sicurezza dei messaggi.  
   
 |Tipo|Descrizione|  
 |----------|-----------------|  
-|Nessuno|Consente al servizio di interagire con client anonimi.|  
+|nessuno|Consente al servizio di interagire con client anonimi.|  
 |WINDOWS|Consente gli scambi di messaggi SOAP nel contesto autenticato di una credenziale di Windows.|  
-|UserName|Consente al servizio di richiedere che l'autenticazione del client sia eseguita tramite una credenziale UserName. Si noti che quando la modalità di sicurezza è impostata su `TransportWithMessageCredential`, WCF non supporta l'invio di una password digest né la derivazione delle chiavi usando la password e l'uso di tali chiavi per la protezione della modalità messaggio. Di conseguenza, WCF richiede che il trasporto sia protetto quando si usano credenziali nome utente.|  
+|UserName|Consente al servizio di richiedere che l'autenticazione del client sia eseguita tramite una credenziale UserName. Si noti che quando la modalità di sicurezza è impostata su `TransportWithMessageCredential`, WCF non supporta l'invio di una password del digest o la derivazione delle chiavi utilizzano password e l'utilizzo di tali chiavi per la protezione della modalità messaggio. Di conseguenza, WCF richiede che il trasporto sia protetto quando si usano credenziali nome utente.|  
 |Certificato|Consente al servizio di richiedere che l'autenticazione del client si basi su un certificato.|  
 |IssuedToken|Consente al servizio di utilizzare un servizio token di sicurezza per fornire un token personalizzato.|  
   
@@ -231,4 +231,4 @@ Le associazioni fornite dal sistema incluse con Windows Communication Foundation
  [Selezione di un tipo di credenziale](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Funzionalità di sicurezza con associazioni personalizzate](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
  [Comportamenti di sicurezza](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

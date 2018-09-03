@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f097a14486b9a07df867ffa5514da33f3db6d4b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eb2485f2ecf0426360dba80d443500a92b5a7af6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744525"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482223"
 ---
 # <a name="add-ins-and-extensibility"></a>Componenti aggiuntivi ed estensibilità
 <a name="top"></a> I componenti aggiuntivi forniscono funzionalità o servizi estesi per un'applicazione host. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre un modello di programmazione che gli sviluppatori possono usare per sviluppare componenti aggiuntivi e attivarli nella propria applicazione host. Ciò avviene attraverso la costruzione di una pipeline di comunicazione tra l'host e il componente aggiuntivo. Il modello viene implementato usando i tipi inclusi negli spazi dei nomi <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>e <xref:System.AddIn.Contract> .  
@@ -35,7 +35,7 @@ ms.locfileid: "32744525"
 -   [Riferimento](#reference)  
   
 > [!NOTE]
->  Altro codice di esempio e alcuni strumenti per la compilazione di pipeline dei componenti aggiuntivi in versione Customer Technology Preview sono disponibili nel [sito del framework di estendibilità gestita e dei componenti aggiuntivi su CodePlex](http://go.microsoft.com/fwlink/?LinkId=121190).  
+>  È possibile trovare ulteriori esempi di codice e customer technology Preview di strumenti per compilazione componente aggiuntivo di pipeline nel [sito di estendibilità gestita e Framework del componente aggiuntivo nel sito CodePlex](https://go.microsoft.com/fwlink/?LinkId=121190).  
   
 <a name="addin_model"></a>   
 ## <a name="add-in-model"></a>Modello dei componenti aggiuntivi  
@@ -43,7 +43,7 @@ ms.locfileid: "32744525"
   
  L'illustrazione seguente mostra la pipeline.  
   
- ![Aggiungere&#45;nel modello di pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Aggiungere&#45;nel modello di pipeline. ](../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Pipeline del componente aggiuntivo  
   
  Gli assembly per questi segmenti non devono trovarsi nello stesso dominio applicazione. È possibile caricare un componente aggiuntivo nel suo nuovo dominio applicazione, in uno esistente o persino in quello dell'host. È possibile caricare più componenti aggiuntivi nello stesso dominio applicazione, in modo che condividano le risorse e i contesti di sicurezza.  
@@ -72,7 +72,7 @@ Pipeline del componente aggiuntivo
 ### <a name="discovery-and-activation"></a>Individuazione e attivazione  
  È possibile attivare un componente aggiuntivo usando un token da una raccolta che rappresenta i componenti aggiuntivi trovati in un archivio di informazioni. Per trovare i componenti aggiuntivi, è necessario cercare il tipo che definisce la visualizzazione dell'host del componente aggiuntivo. È possibile trovare un componente aggiuntivo anche in base al tipo che lo definisce. L'archivio di informazioni è costituito da due file di cache: l'archivio della pipeline e l'archivio del componente aggiuntivo.  
   
- Per informazioni sull'aggiornamento e la ricompilazione dell'archivio informazioni, vedere [aggiuntivo individuazione](http://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421). Per informazioni sull'attivazione di componenti aggiuntivi, vedere [aggiuntivo attivazione](http://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f) e [procedura: attivare componenti aggiuntivi con isolamento diverso e sicurezza](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Per informazioni sull'aggiornamento e la ricompilazione dell'archivio informazioni, vedere [componente aggiuntivo individuazione](https://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421). Per informazioni sull'attivazione di componenti aggiuntivi, vedere [componente aggiuntivo attivazione](https://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f) e [procedura: attivare componenti aggiuntivi con isolamento e sicurezza diversi](https://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="isolation-levels-and-external-processes"></a>Livelli di isolamento e processi esterni  
  Il modello dei componenti aggiuntivi supporta diversi livelli di isolamento tra il componente aggiuntivo e il relativo host o tra componenti aggiuntivi diversi. Partendo dal meno isolato, i livelli sono i seguenti:  
@@ -87,16 +87,16 @@ Pipeline del componente aggiuntivo
   
 -   Ogni componente aggiuntivo viene caricato in modo esclusivo nel proprio dominio applicazione in un processo esterno. Questo è lo scenario più isolato.  
   
- Per ulteriori informazioni sull'utilizzo di processi esterni, vedere [procedura: attivare componenti aggiuntivi con isolamento diverso e sicurezza](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Per altre informazioni sull'uso di processi esterni, vedere [procedura: attivare componenti aggiuntivi con isolamento e sicurezza diversi](https://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="lifetime-management"></a>Gestione della durata  
- Poiché il modello dei componenti aggiuntivi si estende oltre i limiti del dominio applicazione e del processo, Garbage Collection non è in sé sufficiente per rilasciare e recuperare oggetti. Il modello dei componenti aggiuntivi offre un meccanismo di gestione della durata che usa token e conteggio dei riferimenti e che in genere non richiede programmazione aggiuntiva. Per ulteriori informazioni, vedere [la gestione della durata](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Poiché il modello dei componenti aggiuntivi si estende oltre i limiti del dominio applicazione e del processo, Garbage Collection non è in sé sufficiente per rilasciare e recuperare oggetti. Il modello dei componenti aggiuntivi offre un meccanismo di gestione della durata che usa token e conteggio dei riferimenti e che in genere non richiede programmazione aggiuntiva. Per altre informazioni, vedere [la gestione della durata](https://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
  [Torna all'inizio](#top)  
   
 <a name="distinguishing_between_addins_and_hosts"></a>   
 ## <a name="distinguishing-between-add-ins-and-hosts"></a>Distinzione tra componenti aggiuntivi e host  
- La differenza tra un componente aggiuntivo e un host consiste semplicemente nel fatto che l'host è quello che attiva il componente aggiuntivo. L'host può essere il più grande dei due, ad esempio un'applicazione di elaborazione di testo e i suoi correttori ortografici, oppure può essere anche il più piccolo dei due, ad esempio un client di messaggistica immediata che incorpora un lettore multimediale. Il modello dei componenti aggiuntivi supporta componenti aggiuntivi in scenari client e server. Esempi di componenti aggiuntivi server includono i componenti aggiuntivi che forniscono server di posta elettronica con ricerca di virus, filtri antispam e protezione IP. Esempi di componenti aggiuntivi client includono aggiuntivi di riferimento per elaboratori di testo, funzionalità specializzate per programmi di grafica e giochi e ricerca di virus per client di posta elettronica locale.  
+ La differenza tra un componente aggiuntivo e un host consiste semplicemente nel fatto che l'host è quello che attiva il componente aggiuntivo. L'host può essere il più grande dei due, ad esempio un'applicazione di elaborazione di testo e i suoi correttori ortografici, oppure può essere anche il più piccolo dei due, ad esempio un client di messaggistica immediata che incorpora un lettore multimediale. Il modello dei componenti aggiuntivi supporta componenti aggiuntivi in scenari client e server. Esempi di componenti aggiuntivi server includono i componenti aggiuntivi che forniscono server di posta elettronica con ricerca di virus, filtri antispam e protezione IP. Esempi di componente aggiuntivo client includono componenti aggiuntivi a riferimento per elaboratori di testo, funzionalità specializzate per programmi di grafica e giochi e ricerca di virus per client di posta elettronica locale.  
   
  [Torna all'inizio](#top)  
   
@@ -105,8 +105,8 @@ Pipeline del componente aggiuntivo
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Descrive la pipeline di comunicazione dei segmenti dall'applicazione host al componente aggiuntivo. Vengono forniti esempi di codice negli argomenti di questa procedura dettagliata che descrivono come costruire la pipeline e implementare segmenti nella pipeline in Visual Studio.|  
-|[Domini applicazione e assembly](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Descrive la relazione tra domini applicazione, che forniscono un limite di isolamento per sicurezza, affidabilità e controllo delle versioni, e assembly.|  
+|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Descrive la pipeline di comunicazione dei segmenti dall'applicazione host al componente aggiuntivo. Vengono forniti esempi di codice in argomenti di questa procedura dettagliata che descrivono come costruire la pipeline e implementare segmenti nella pipeline in Visual Studio.|  
+|[Domini applicazione e assembly](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Descrive la relazione tra domini applicazione, che forniscono un limite di isolamento per sicurezza, affidabilità e controllo delle versioni, e assembly.|  
   
  [Torna all'inizio](#top)  
   

@@ -2,15 +2,15 @@
 title: DataAdapter e DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 7fd7013478bbf30c2a7e915045e3dd192ca92540
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758100"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476222"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter e DataReader
-È possibile utilizzare ADO.NET **DataReader** per recuperare un flusso forward-only in sola lettura di dati da un database. Vengono restituiti all'esecuzione della query e vengono archiviati nel buffer di rete nel client fino a quando non ne fanno richiesta utilizzando il **lettura** metodo il **DataReader**. Utilizzo di **DataReader** può aumentare le prestazioni dell'applicazione per il recupero dei dati non appena è disponibile e (per impostazione predefinita) archiviando solo una riga alla volta in memoria, riducendo l'overhead di sistema.  
+È possibile usare ADO.NET **DataReader** per recuperare un flusso forward-only in sola lettura di dati da un database. I risultati vengono restituiti quando viene eseguita la query e vengono archiviati nel buffer di rete nel client fino a quando non vengono richiesti utilizzando il **lettura** metodo per il **DataReader**. Usando il **DataReader** può aumentare le prestazioni dell'applicazione recuperando i dati non appena è disponibile sia (per impostazione predefinita) archiviando solo una riga alla volta in memoria, riducendo l'overhead di sistema.  
   
  Un oggetto <xref:System.Data.Common.DataAdapter> viene usato per recuperare i dati da un'origine dati e compilare le tabelle all'interno di un oggetto <xref:System.Data.DataSet>. Il `DataAdapter` risolve inoltre le modifiche apportate al `DataSet` nell'origine dati. Il `DataAdapter` usa l'oggetto `Connection` del provider di dati .NET Framework per effettuare la connessione a un'origine dati e gli oggetti `Command` per recuperare i dati e risolvere le modifiche apportate all'origine dati.  
   
@@ -18,7 +18,7 @@ ms.locfileid: "32758100"
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Recupero di dati tramite DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
- Viene descritto ADO.NET **DataReader** oggetto e come usarlo per restituire un flusso di risultati da un'origine dati.  
+ Viene descritto il ADO.NET **DataReader** oggetto e come usarlo per restituire un flusso di risultati da un'origine dati.  
   
  [Popolamento di un set di dati da un oggetto DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  Viene descritto come compilare un `DataSet` con tabelle, colonne e righe usando un `DataAdapter`.  
@@ -49,4 +49,4 @@ ms.locfileid: "32758100"
  [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [Oggetti DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,28 +9,28 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 1f9db293cdfbba0be960513034cfe122d80d66bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbec87c0746962396a3088751803a6091ecfcb48
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533926"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480091"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Procedura: ridimensionare i controlli di un Windows Form
-È possibile ridimensionare singoli controlli e per ridimensionare più controlli del tipo uguale o diverso, ad esempio <xref:System.Windows.Forms.Button> e <xref:System.Windows.Forms.GroupBox> controlli.  
+È possibile ridimensionare i singoli controlli ed è possibile ridimensionare più controlli di tipo uguale o diverso, ad esempio <xref:System.Windows.Forms.Button> e <xref:System.Windows.Forms.GroupBox> controlli.  
   
-### <a name="to-resize-a-control"></a>Per ridimensionare un controllo  
+### <a name="to-resize-a-control"></a>Ridimensionare un controllo  
   
-1.  Fare clic sul controllo per ridimensionare e trascinare uno dei quadratini di otto ridimensionamento.  
+1.  Fare clic sul controllo da ridimensionare e trascinare uno dei quadratini di otto ridimensionamento.  
   
     > [!NOTE]
-    >  Selezionare il controllo e premere i tasti di direzione tenendo premuto il tasto MAIUSC per ridimensionare il controllo di un pixel alla volta. Premere i tasti di direzione verso il basso o a destra tenendo premuto il tasto MAIUSC e CTRL per ridimensionare il controllo in incrementi di grandi dimensioni.  
+    >  Selezionare il controllo e premere i tasti di direzione e tenendo premuto il tasto MAIUSC per ridimensionare il controllo di un pixel in una fase. Premere i tasti di direzione a destra o verso il basso mentre vengono premuti i tasti MAIUSC + CTRL per ridimensionare il controllo in incrementi di grandi dimensioni.  
   
 ### <a name="to-resize-multiple-controls-on-a-form"></a>Per ridimensionare più controlli in un form  
   
-1.  Tenere premuto il tasto CTRL o MAIUSC e selezionare i controlli da ridimensionare. La dimensione del primo controllo selezionato viene utilizzato per gli altri controlli.  
+1.  Tenere premuto il tasto CTRL o MAIUSC e selezionare i controlli che si intende ridimensionare. Viene utilizzata la dimensione del primo controllo che scelto per gli altri controlli.  
   
-2.  Nel **formato** menu, scegliere **Rendi uguali**e selezionare una delle quattro opzioni. I primi tre comandi modificano le dimensioni dei controlli in modo che corrisponda il primo controllo selezionato.  
+2.  Nel **formato** menu, scegliere **Rendi uguali**, selezionare una delle quattro opzioni. I primi tre comandi modificano le dimensioni dei controlli in modo che corrisponda il primo controllo selezionato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Controlli Windows Form](../../../../docs/framework/winforms/controls/index.md)  
@@ -38,4 +38,4 @@ ms.locfileid: "33533926"
  [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
  [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  [Controlli Windows Form per funzione](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [Procedura: ridimensionare Windows Form utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)
+ [Procedura: ridimensionare Windows Form usando la finestra di progettazione](https://msdn.microsoft.com/library/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)

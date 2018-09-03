@@ -1,5 +1,5 @@
 ---
-title: CorElementType Enumeration1
+title: Enumerazione1 CorElementType
 ms.date: 03/30/2017
 api_name:
 - CorElementType
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebe2cf95f5637e6924b85c2389f1c59679580298
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5112c3c8d5fef6efada4bffdfa575716503515e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449170"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488248"
 ---
-# <a name="corelementtype-enumeration1"></a>CorElementType Enumeration1
+# <a name="corelementtype-enumeration1"></a>Enumerazione1 CorElementType
 Specifica un common language runtime <xref:System.Type>, un modificatore di tipo o informazioni su un tipo in una firma del tipo di metadati.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -80,20 +80,20 @@ typedef enum CorElementType {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`ELEMENT_TYPE_END`|Utilizzata internamente.|  
+|`ELEMENT_TYPE_END`|Utilizzato internamente.|  
 |`ELEMENT_TYPE_VOID`|Un tipo void.|  
-|`ELEMENT_TYPE_BOOLEAN`|Un tipo booleano|  
+|`ELEMENT_TYPE_BOOLEAN`|Un tipo Boolean|  
 |`ELEMENT_TYPE_CHAR`|Tipo carattere.|  
-|`ELEMENT_TYPE_I1`|Intero con segno a 1 byte.|  
+|`ELEMENT_TYPE_I1`|Un intero con segno a 1 byte.|  
 |`ELEMENT_TYPE_U1`|Intero senza segno a 1 byte.|  
-|`ELEMENT_TYPE_I2`|Intero con segno a 2 byte.|  
-|`ELEMENT_TYPE_U2`|Intero senza segno a 2 byte.|  
-|`ELEMENT_TYPE_I4`|Intero con segno a 4 byte.|  
-|`ELEMENT_TYPE_U4`|Intero senza segno a 4 byte.|  
-|`ELEMENT_TYPE_I8`|Intero con segno a 8 byte.|  
-|`ELEMENT_TYPE_U8`|Intero senza segno a 8 byte.|  
+|`ELEMENT_TYPE_I2`|Un intero con segno a 2 byte.|  
+|`ELEMENT_TYPE_U2`|Valore intero senza segno a 2 byte.|  
+|`ELEMENT_TYPE_I4`|Un intero con segno a 4 byte.|  
+|`ELEMENT_TYPE_U4`|Valore intero senza segno a 4 byte.|  
+|`ELEMENT_TYPE_I8`|Un intero con segno a 8 byte.|  
+|`ELEMENT_TYPE_U8`|Valore intero senza segno a 8 byte.|  
 |`ELEMENT_TYPE_R4`|Virgola mobile a 4 byte.|  
-|`ELEMENT_TYPE_R8`|Un punto a virgola mobile a 8 byte.|  
+|`ELEMENT_TYPE_R8`|Una virgola mobile a 8 byte.|  
 |`ELEMENT_TYPE_STRING`|Un tipo System. String.|  
 |`ELEMENT_TYPE_PTR`|Un modificatore di tipo puntatore.|  
 |`ELEMENT_TYPE_BYREF`|Un modificatore di tipo riferimento.|  
@@ -103,47 +103,47 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_ARRAY`|Un modificatore di tipo matrice multidimensionale.|  
 |`ELEMENT_TYPE_GENERICINST`|Un modificatore di tipo per i tipi generici.|  
 |`ELEMENT_TYPE_TYPEDBYREF`|Riferimento tipizzato.|  
-|`ELEMENT_TYPE_I`|Dimensioni di un numero intero nativo.|  
-|`ELEMENT_TYPE_U`|Dimensione dell'intero senza segno nativo.|  
+|`ELEMENT_TYPE_I`|Dimensioni di un integer nativo.|  
+|`ELEMENT_TYPE_U`|Dimensione dell'integer nativo senza segno.|  
 |`ELEMENT_TYPE_FNPTR`|Un puntatore a una funzione.|  
 |`ELEMENT_TYPE_OBJECT`|Un tipo System. Object.|  
-|`ELEMENT_TYPE_SZARRAY`|Unidimensionale, zero modificatore di tipo matrice con limite inferiore.|  
-|`ELEMENT_TYPE_MVAR`|Un modificatore di tipo della variabile di metodo.|  
-|`ELEMENT_TYPE_CMOD_REQD`|Modificatore richiesto da un linguaggio C.|  
+|`ELEMENT_TYPE_SZARRAY`|Un singolo-dimensionale, zero modificatore di tipo matrice con limite inferiore.|  
+|`ELEMENT_TYPE_MVAR`|Un modificatore di tipo di variabile (metodo).|  
+|`ELEMENT_TYPE_CMOD_REQD`|Modificatore obbligatorio del linguaggio C.|  
 |`ELEMENT_TYPE_CMOD_OPT`|Un modificatore facoltativo del linguaggio C.|  
-|`ELEMENT_TYPE_INTERNAL`|Utilizzata internamente.|  
+|`ELEMENT_TYPE_INTERNAL`|Utilizzato internamente.|  
 |`ELEMENT_TYPE_MAX`|Tipo non valido.|  
-|`ELEMENT_TYPE_MODIFIER`|Utilizzata internamente.|  
-|`ELEMENT_TYPE_SENTINEL`|Un modificatore di tipo è sentinel per un elenco di un numero variabile di parametri.|  
-|`ELEMENT_TYPE_PINNED`|Utilizzata internamente.|  
+|`ELEMENT_TYPE_MODIFIER`|Utilizzato internamente.|  
+|`ELEMENT_TYPE_SENTINEL`|Un modificatore di tipo che è un sentinel per un elenco di un numero variabile di parametri.|  
+|`ELEMENT_TYPE_PINNED`|Utilizzato internamente.|  
   
 ## <a name="remarks"></a>Note  
- I modificatori di tipo costituiscono la base per la rappresentazione di tipi complessi. Oggetto `CorElementType` valore del modificatore del tipo viene applicato a quello che segue immediatamente nella firma del tipo. Il valore che segue il `CorElementType` valore del modificatore del tipo può essere un `CorElementType` valore di tipo semplice, un token di metadati o altri valori, come specificato nella tabella seguente.  
+ I modificatori di tipo costituiscono la base per la rappresentazione di tipi più complessi. Oggetto `CorElementType` valore del modificatore del tipo viene applicato al valore che lo segue immediatamente nella firma del tipo. Il valore che segue il `CorElementType` valore del modificatore del tipo può essere un `CorElementType` valore di tipo semplice, un token di metadati o altro valore, come specificato nella tabella seguente.  
   
 > [!NOTE]
->  Tutti i numeri (*numero*, *argomento Count*, *token di metadati*, *rank*, *conteggio*e *associato*) vengono archiviati come numeri interi compressi. Vedere [Standard ECMA-335: Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=116487) nel sito Web di ECMA per informazioni dettagliate.  
+>  Tutti i numeri (*numero*, *argomento conteggio*, *token di metadati*, *rank*, *conteggio*e *associata*) vengono archiviate come numeri interi compressi. Visualizzare [Standard ECMA-335: Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) sul sito Web di ECMA per informazioni dettagliate.  
   
-|Modificatore di tipo|Formato|  
+|Modificatore tipo|Formato|  
 |-------------------|------------|  
 |`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR < un `CorElementType` valore >|  
 |`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF < un `CorElementType` valore >|  
 |`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE < un `mdTypeDef` token di metadati >|  
 |`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS < un `mdTypeDef` token di metadati >|  
 |`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<numero >|  
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY < un `CorElementType` valore > \<rank > \<count1 > \<bound1 >... \<countN > \<boundN >|  
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST < un `mdTypeDef` token di metadati > \<argomento Count > \<arg1 >... \<argN >|  
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY < una `CorElementType` valore > \<rank > \<count1 > \<bound1 >... \<countN > \<boundN >|  
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST < un' `mdTypeDef` token di metadati > \<argument Count > \<arg1 >... \<argN >|  
 |`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<firma completa per la funzione, inclusi la convenzione di chiamata >|  
 |`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY < un `CorElementType` valore >|  
 |`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<numero >|  
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE _ < un `mdTypeRef` o `mdTypeDef` token di metadati >|  
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT < un `mdTypeRef` o `mdTypeDef` token di metadati >|  
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE _ < una `mdTypeRef` o `mdTypeDef` token di metadati >|  
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT < una `mdTypeRef` o `mdTypeDef` token di metadati >|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

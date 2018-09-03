@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: f2c3aab20dc5bcf9b0f9f7053323ccd7a04443cc
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755051"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485729"
 ---
 # <a name="xaml-syntax-in-detail"></a>Descrizione dettagliata della sintassi XAML
 In questo argomento definisce le condizioni che vengono usate per descrivere gli elementi della sintassi XAML. Questi termini vengono utilizzati spesso in tutto il resto della presente documentazione, sia per la documentazione di WPF in modo specifico e per gli altri modelli che usano XAML o i concetti di base XAML abilitati per il supporto del linguaggio XAML a livello di System. Xaml. In questo argomento consente di espandere la terminologia di base introdotta nell'argomento [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -45,7 +45,7 @@ In questo argomento definisce le condizioni che vengono usate per descrivere gli
 ## <a name="the-xaml-language-specification"></a>La specifica del linguaggio XAML  
  La terminologia di sintassi XAML definita in questa sezione viene inoltre definita o fare riferimento all'interno di specifiche del linguaggio XAML. XAML è un linguaggio basato su XML e segue o si espande sulla regole strutturali XML. Alcuni termini è una condivisione o è basato su termini comunemente utilizzati che descrive il linguaggio XML o un modello a oggetti documento XML.  
   
- Per altre informazioni sulle specifiche del linguaggio XAML, scaricare [ \[MS-XAML\] ](http://go.microsoft.com/fwlink/?LinkId=114525) dal Microsoft Download Center.  
+ Per altre informazioni sulle specifiche del linguaggio XAML, scaricare [ \[MS-XAML\] ](https://go.microsoft.com/fwlink/?LinkId=114525) dal Microsoft Download Center.  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML e CLR  

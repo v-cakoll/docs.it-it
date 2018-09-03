@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 71327fb5a86c30d15ff060eff5cce170695e86a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e70958ab20ff70462e7301630b36db3df79fd13e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408967"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479906"
 ---
 # <a name="wif-claims-programming-model"></a>Modello di programmazione attestazioni WIF
 Gli sviluppatori ASP.NET e Windows Communication Foundation (WCF) usano in genere le interfacce IIdentity e IPrincipal per lavorare con le informazioni sull'identità dell'utente. In .NET 4.5 è stato integrato Windows Identity Foundation (WIF), in modo che le attestazioni siano ora sempre presenti per qualsiasi entità di sicurezza, come illustrato nel diagramma seguente:  
@@ -24,7 +24,7 @@ Gli sviluppatori ASP.NET e Windows Communication Foundation (WCF) usano in gener
   
 -   <xref:System.Security.Claims.Claim.Value%2A> contiene il valore dell'attestazione e viene rappresentato come stringa. Ad esempio, l'indirizzo di posta elettronica può essere rappresentato come "someone@contoso.com".  
   
--   <xref:System.Security.Claims.Claim.ValueType%2A> rappresenta il tipo di valore dell'attestazione ed è in genere un URI. Ad esempio, il tipo di stringa è rappresentato come `http://www.w3.org/2001/XMLSchema#string`. Il tipo valore deve essere un oggetto QName in base allo standard XML Schema. Il valore deve essere nel formato `namespace#format` per consentire a WIF di restituire un valore QName valido. Se lo spazio dei nomi non è uno spazio dei nomi ben definito, il codice XML generato probabilmente non può essere convalidato dallo schema, perché non ci sarà un file XSD pubblicato per tale spazio dei nomi. Il tipo valore predefinito è `http://www.w3.org/2001/XMLSchema#string`. Consultare [ http://www.w3.org/2001/XMLSchema ](http://go.microsoft.com/fwlink/?LinkId=209155) per i tipi di valore noto che è possibile utilizzare in modo sicuro.  
+-   <xref:System.Security.Claims.Claim.ValueType%2A> rappresenta il tipo di valore dell'attestazione ed è in genere un URI. Ad esempio, il tipo di stringa è rappresentato come `http://www.w3.org/2001/XMLSchema#string`. Il tipo valore deve essere un oggetto QName in base allo standard XML Schema. Il valore deve essere nel formato `namespace#format` per consentire a WIF di restituire un valore QName valido. Se lo spazio dei nomi non è uno spazio dei nomi ben definito, il codice XML generato probabilmente non può essere convalidato dallo schema, perché non ci sarà un file XSD pubblicato per tale spazio dei nomi. Il tipo valore predefinito è `http://www.w3.org/2001/XMLSchema#string`. Vedi [ http://www.w3.org/2001/XMLSchema ](https://go.microsoft.com/fwlink/?LinkId=209155) per i tipi valore noti che è possibile usare in modo sicuro.  
   
 -   <xref:System.Security.Claims.Claim.Issuer%2A> è l'identificatore del servizio token di sicurezza che ha rilasciato l'attestazione. Può essere rappresentato come URL del servizio token di sicurezza o come nome che rappresenta il servizio token di sicurezza, ad esempio `https://sts1.contoso.com/sts`.  
   

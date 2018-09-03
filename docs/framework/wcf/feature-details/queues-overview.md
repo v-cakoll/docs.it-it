@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497013"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480404"
 ---
 # <a name="queues-overview"></a>Panoramica delle code
-Contenuto della sezione vengono introdotti i concetti generali e fondamentali alla base delle comunicazioni in coda. Nelle sezioni successive esplorare in dettaglio come i concetti di Accodamento descritti di seguito si applicano in Windows Communication Foundation (WCF).  
+Contenuto della sezione vengono introdotti i concetti generali e fondamentali alla base delle comunicazioni in coda. Nelle sezioni successive esplorare in dettaglio come i concetti dell'accodamento descritti di seguito si applicano in Windows Communication Foundation (WCF).  
   
 ## <a name="basic-queuing-concepts"></a>Concetti di base dell'accodamento  
  Durante la progettazione di un'applicazione distribuita, è importante scegliere il trasporto giusto per la comunicazione tra i servizi e i client. Molti fattori influiscono sul tipo di trasporto da usare. Un fattore importante, ovvero l'isolamento tra il servizio, il client e il trasporto, impone l'uso di un trasporto in coda o un trasporto diretto, ad esempio TCP o HTTP. A causa della natura dei trasporti diretti quali TCP e HTTP, la comunicazione si arresta completamente se il servizio o il client smette di funzionare o in caso di errore nella rete. Il servizio, il client e la rete devono essere in esecuzione contemporaneamente per consentire il funzionamento dell'applicazione. I trasporti in coda forniscono l'isolamento, ovvero se si verifica un errore nel servizio o nel client oppure nei collegamenti di comunicazione tra questi, il client e servizio possono continuare a funzionare.  
   
- Le code assicurano una comunicazione affidabile anche in caso di errori nelle parti in comunicazione o nella rete. I messaggi scambiati tra le parti in comunicazione vengono acquisiti e recapitati dalle code. In genere le code sono associate a qualche tipo di archivio che può essere volatile o durevole. Le code archiviano i messaggi di un client per conto di un servizio e in un secondo momento li inoltrano al servizio. Poiché le code di riferimento indiretto forniscono un isolamento garantito delle parti rispetto agli errori, questo rappresenta il meccanismo di comunicazione preferito per i sistemi a elevata disponibilità e i servizi non connessi. Il riferimento indiretto comporta tuttavia un elevato costo di latenza. *Latenza* il ritardo di tempo tra il momento in cui il client invia un messaggio e l'ora il servizio lo riceve. Di conseguenza, quando il messaggio è stato inviato, non è possibile stabilire quando tale messaggio verrà elaborato. La maggior parte delle applicazioni in coda deve gestire una latenza elevata. Nella figura seguente viene mostrato un modello concettuale della comunicazione in coda.  
+ Le code assicurano una comunicazione affidabile anche in caso di errori nelle parti in comunicazione o nella rete. I messaggi scambiati tra le parti in comunicazione vengono acquisiti e recapitati dalle code. In genere le code sono associate a qualche tipo di archivio che può essere volatile o durevole. Le code archiviano i messaggi di un client per conto di un servizio e in un secondo momento li inoltrano al servizio. Poiché le code di riferimento indiretto forniscono un isolamento garantito delle parti rispetto agli errori, questo rappresenta il meccanismo di comunicazione preferito per i sistemi a elevata disponibilità e i servizi non connessi. Il riferimento indiretto comporta tuttavia un elevato costo di latenza. *Latenza* è l'intervallo di tempo tra il momento in cui il client invia un messaggio e l'ora il servizio lo riceve. Di conseguenza, quando il messaggio è stato inviato, non è possibile stabilire quando tale messaggio verrà elaborato. La maggior parte delle applicazioni in coda deve gestire una latenza elevata. Nella figura seguente viene mostrato un modello concettuale della comunicazione in coda.  
   
  ![Modello di comunicazione in coda](../../../../docs/framework/wcf/feature-details/media/qconceptual-figure1c.gif "QConceptual Figure1c")  
   
@@ -27,7 +27,7 @@ Contenuto della sezione vengono introdotti i concetti generali e fondamentali al
   
  Quando un client invia un messaggio a una coda, lo indirizza alla coda di destinazione, che è la coda gestita dal gestore delle code del servizio. Il gestore delle code sul client invia il messaggio a una coda di trasmissione (o in uscita), ovvero una coda sul gestore delle code client che archivia i messaggi destinati alla trasmissione alla coda di destinazione. Il gestore delle code cerca quindi un percorso per il gestore delle code proprietario della coda di destinazione e trasferisce ad esso il messaggio. Per assicurare una comunicazione affidabile, i gestori delle code implementano un protocollo di trasferimento affidabile che consente di impedire la perdita di dati. Il gestore delle code di destinazione accetta i messaggi indirizzati alle code di destinazione di cui è proprietario e archivia i messaggi. Il servizio invia una richiesta per leggere dalla coda di destinazione, quindi il gestore delle code recapita il messaggio all'applicazione di destinazione. Nella figura seguente viene mostrata la comunicazione tra le quattro parti.  
   
- ![In coda applicazione diagramma](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "figura coda distribuita")  
+ ![Diagramma applicazioni accodate](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-coda-figura")  
   
  Comunicazione in coda in uno scenario di distribuzione tipico  
   
@@ -81,6 +81,6 @@ Contenuto della sezione vengono introdotti i concetti generali e fondamentali al
  [Comunicazione volatile in coda](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  [Da Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [Installazione accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Esempi di associazione di integrazione di Accodamento messaggi](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [Esempi di associazione di integrazione dell'accodamento dei messaggi](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [Accodamento messaggi in Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

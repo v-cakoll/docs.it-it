@@ -1,23 +1,24 @@
 ---
 title: '&lt;loadFromRemoteSources&gt; elemento'
-ms.date: 03/30/2017
+ms.date: 05/24/2018
 helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acd66cdff9f2c68e7d665b1fd236b18eeb9b4bac
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 7a8858059159edddb4456561719c572fb9268be7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484067"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; elemento
-Specifica se gli assembly da origini remote devono essere concesso l'attendibilità totale.  
+Specifica se gli assembly caricati da origini remote devono essere concessa l'attendibilità in .NET Framework 4 e versioni successive.
   
 > [!NOTE]
->  Se si viene indirizzati a questo argomento, a causa di un messaggio di errore nell'elenco di errori di progetto Visual Studio o un errore di compilazione, vedere [procedura: utilizzare un Assembly dal Web in Visual Studio](http://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
+>  Se a causa di un messaggio di errore nell'elenco di errori di progetto Visual Studio o un errore di compilazione, si viene reindirizzati a questo argomento, vedere [procedura: usare un Assembly dal Web in Visual Studio](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
   
  \<configuration>  
 \<runtime>  
@@ -30,21 +31,21 @@ Specifica se gli assembly da origini remote devono essere concesso l'attendibili
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a>Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se un assembly caricato da origini remote deve essere concessa l'attendibilità totale.|  
+|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se un assembly caricato da un'origine remota deve essere concessa attendibilità totale.|  
   
-## <a name="enabled-attribute"></a>Attributo enabled  
+## <a name="enabled-attribute"></a>attributo Enabled  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|`false`|Non concedere l'attendibilità totale alle applicazioni provenienti da origini remote. Questa è l'impostazione predefinita.|  
-|`true`|Concedere l'attendibilità totale alle applicazioni provenienti da origini remote.|  
+|`false`|Non concedere l'attendibilità totale alle applicazioni da origini remote. Questa è l'impostazione predefinita.|  
+|`true`|Concedere l'attendibilità totale alle applicazioni da origini remote.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -56,49 +57,68 @@ Specifica se gli assembly da origini remote devono essere concesso l'attendibili
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`runtime`|Contiene informazioni sulle opzioni di inizializzazione in fase di esecuzione.|  
   
-## <a name="remarks"></a>Note  
- In .NET Framework versione 3.5 e versioni precedenti, se un assembly caricato da una posizione remota, l'assembly parzialmente attendibile con un set di concessioni che dipende dalla zona in cui è stato caricato. Ad esempio, se un assembly caricato da un sito Web, è stato caricato nella zona Internet e concesso il set di autorizzazioni Internet. In altre parole, eseguita in un ambiente sandbox Internet. Se si tenta di eseguire tale assembly nel [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] e versioni successive, viene generata un'eccezione; è necessario creare esplicitamente una sandbox per l'assembly (vedere [procedura: eseguire codice parzialmente attendibile in un ambiente Sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)), oppure eseguirlo con attendibilità totale.  
-  
- Il `<loadFromRemoteSources>` elemento consente specificare che devono essere eseguiti gli assembly che si sarebbero verificati parzialmente attendibile in versioni precedenti di .NET Framework con attendibilità totale nel [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] e versioni successive. Per impostazione predefinita, assembly remoti a non eseguire il [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] e versioni successive. Per eseguire un assembly remoto, è necessario eseguirla come completamente attendibile o creare una sandbox <xref:System.AppDomain> in cui si desidera eseguirlo.  
-  
-> [!NOTE]
->  Nel [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], gli assembly nelle condivisioni di rete locale vengono eseguiti con attendibilità totale per impostazione predefinita; non è necessario abilitare il `<loadFromRemoteSources>` elemento.  
-  
-> [!NOTE]
->  Se un'applicazione è stata copiata dal web, questa viene contrassegnata da Windows come un'applicazione web, anche se si trova nel computer locale. È possibile modificare tale designazione modificando le proprietà del file, oppure è possibile utilizzare il `<loadFromRemoteSources>` elemento da concedere all'assembly con attendibilità totale. In alternativa, è possibile utilizzare il <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> per caricare un assembly locale che il sistema operativo è contrassegnato come se fosse stato caricato dal web.  
-  
- Il `enabled` attributo per questo elemento è efficace solo quando sicurezza dall'accesso di codice (CAS) è disabilitato. Per impostazione predefinita, le autorità di certificazione è disattivato nel [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] e versioni successive. Se si imposta `enabled` a `true`, le applicazioni remote vengono concessa l'attendibilità.  
-  
- Se `<loadFromRemoteSources>` `enabled` non è impostata su `true`, viene generata un'eccezione nelle condizioni seguenti:  
-  
--   Il comportamento di sandboxing del dominio corrente è diverso dal comportamento nel [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]. Sono necessari criteri Autorità di certificazione deve essere disabilitata e il dominio corrente non deve essere creata mediante sandbox.  
-  
--   Il caricamento dell'assembly non è il `MyComputer` zona.  
-  
-> [!NOTE]
->  È possibile ottenere un <xref:System.IO.FileLoadException> in un'applicazione Windows Virtual PC quando si tenta di caricare un file dalle cartelle collegate sul computer host. Questo errore può verificarsi anche quando si tenta di caricare un file da una cartella collegata tramite [Servizi Desktop remoto](http://go.microsoft.com/fwlink/?LinkId=182775) (servizi Terminal). Per evitare l'eccezione, impostare `enabled` a `true`.  
-  
- L'impostazione di `<loadFromRemoteSources>` elemento `true` impedisce che venga generata questa eccezione. Consente di specificare che non si in common language runtime per la sandbox gli assembly caricati per la sicurezza e che può concedere l'esecuzione con attendibilità totale.  
-  
+## <a name="remarks"></a>Note
+
+In .NET Framework 3.5 e versioni precedenti, se si carica un assembly da una posizione remota, il codice nell'assembly viene eseguito in attendibilità parziale con un set di concessioni che varia a seconda della zona da cui viene caricato. Ad esempio, se si carica un assembly da un sito Web, viene caricato nella zona Internet e concesso il set di autorizzazioni Internet. In altre parole, viene eseguito in una sandbox di Internet.
+
+A partire da .NET Framework 4, criteri di sicurezza dall'accesso di codice sono disabilitato e gli assembly vengono caricati con attendibilità totale. In genere, ciò potrebbe concedere l'attendibilità per gli assembly caricati con il <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> metodo che in precedenza era stato creato mediante sandbox. Per evitare questo problema, la possibilità di eseguire il codice negli assembly caricati da un'origine remota è disabilitata per impostazione predefinita. Per impostazione predefinita, se si tenta di caricare un assembly remoto, un <xref:System.IO.FileLoadException> con un messaggio di eccezione, ad esempio, viene generata la seguente:
+
+```text
+System.IO.FileNotFoundException: Could not load file or assembly 'file:assem.dll' or one of its dependencies. Operation is not supported. 
+(Exception from HRESULT: 0x80131515)
+File name: 'file:assem.dll' ---> 
+System.NotSupportedException: An attempt was made to load an assembly from a network location which would have caused the assembly 
+to be sandboxed in previous versions of the .NET Framework. This release of the .NET Framework does not enable CAS policy by default, 
+so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. 
+```
+
+Per caricare l'assembly ed eseguire il codice, è necessario:
+
+- Creare in modo esplicito un ambiente sandbox per l'assembly (vedere [procedura: eseguire codice parzialmente attendibile in un ambiente Sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
+
+- Eseguire il codice dell'assembly con attendibilità totale. A tale scopo, la configurazione di `<loadFromRemoteSources>` elemento. Consente di specificare che gli assembly eseguiti in attendibilità parziale in versioni precedenti di .NET Framework ora eseguito con attendibilità totale in .NET Framework 4 e versioni successive.
+
 > [!IMPORTANT]
->  Se l'assembly non deve essere eseguito con attendibilità totale, non impostare questo elemento di configurazione. In alternativa, creare una sandbox <xref:System.AppDomain> in cui caricare l'assembly.  
-  
-## <a name="configuration-file"></a>File di configurazione  
- Questo elemento viene in genere utilizzato nel file di configurazione dell'applicazione, ma può essere utilizzato in altri file di configurazione in base al contesto. Per ulteriori informazioni, vedere l'articolo [più implicita Usa di questi criteri: loadFromRemoteSources](http://go.microsoft.com/fwlink/p/?LinkId=266839) nel blog di sicurezza di .NET.  
-  
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come concedere l'attendibilità totale alle applicazioni provenienti da origini remote.  
-  
-```xml  
+> Se l'assembly non deve essere eseguito con attendibilità totale, non impostare questo elemento di configurazione. In alternativa, creare un sandbox <xref:System.AppDomain> in cui caricare l'assembly.
+
+Il `enabled` dell'attributo per il `<loadFromRemoteSources>` elemento è efficace solo quando è disabilitato sicurezza dall'accesso di codice (CAS). Per impostazione predefinita, tali criteri sono disabilitati in .NET Framework 4 e versioni successive. Se si imposta `enabled` a `true`, agli assembly remoti viene concessa l'attendibilità totale.
+
+Se `enabled` non è impostata su `true`, un <xref:System.IO.FileLoadException> viene generata in presenza delle condizioni seguenti:
+
+- Il comportamento di sandboxing del dominio corrente è diverso dal comportamento in .NET Framework 3.5. Ciò richiede criteri CAS deve essere disabilitata e il dominio corrente non deve essere creata mediante sandbox.
+
+- Il caricamento dell'assembly non proviene dal `MyComputer` zona.
+
+Impostando il `<loadFromRemoteSources>` elemento `true` impedisce che venga generata questa eccezione. Consente di specificare che non fare affidamento sul common language runtime a sandbox gli assembly caricati per la sicurezza e che può essere autorizzato per l'esecuzione in attendibilità totale.
+
+## <a name="notes"></a>Note
+
+- In .NET Framework 4.5 e versioni successive, assembly nelle condivisioni di rete locale vengono eseguiti con attendibilità totale per impostazione predefinita. non è necessario abilitare il `<loadFromRemoteSources>` elemento.
+
+- Se un'applicazione è stata copiata dal web, questa viene contrassegnata da Windows come un'applicazione web, anche se si trova nel computer locale. È possibile modificare tale designazione modificandone le proprietà di file, oppure è possibile usare il `<loadFromRemoteSources>` elemento da concedere all'assembly con attendibilità totale. In alternativa, è possibile usare il <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> per caricare un assembly locale che il sistema operativo ha contrassegnato come se fosse stato caricato dal web.
+
+- È possibile che venga visualizzato un <xref:System.IO.FileLoadException> in un'applicazione in esecuzione in un'applicazione Windows Virtual PC. Questa situazione può verificarsi quando si prova a caricare un file da cartelle collegate al computer host. Può verificarsi anche quando si prova a caricare un file da una cartella collegata a [Servizi Desktop remoto](https://go.microsoft.com/fwlink/?LinkId=182775) (servizi Terminal). Per evitare l'eccezione, impostare `enabled` a `true`.
+
+## <a name="configuration-file"></a>File di configurazione
+
+Questo elemento viene in genere usato nel file di configurazione dell'applicazione, ma può essere usato in altri file di configurazione a seconda del contesto. Per altre informazioni, vedere l'articolo [altre implicita Usa del criterio CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839) nel blog .NET Security.  
+
+## <a name="example"></a>Esempio
+
+Nell'esempio seguente viene illustrato come concedere l'attendibilità totale per gli assembly caricati da origini remote.
+
+```xml
 <configuration>  
    <runtime>  
       <loadFromRemoteSources enabled="true"/>  
    </runtime>  
 </configuration>  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Più impliciti utilizzi di questi criteri: loadFromRemoteSources](http://go.microsoft.com/fwlink/p/?LinkId=266839)  
- [Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Utilizzi più impliciti dei criteri CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
+[Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
+[Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+[Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  

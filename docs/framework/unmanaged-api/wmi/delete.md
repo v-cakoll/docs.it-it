@@ -1,6 +1,6 @@
 ---
 title: Eliminare la funzione (riferimenti alle API non gestite)
-description: La funzione Delete Elimina la proprietà specificata e tutti i relativi qualificatori da una definizione di classe CIM.
+description: La funzione di eliminazione Elimina la proprietà specificata e tutti i relativi qualificatori da una definizione di classe CIM.
 ms.date: 11/06/2017
 api_name:
 - Delete
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460243"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479864"
 ---
-# <a name="delete-function"></a>Eliminare la funzione
-Elimina la proprietà specificata e tutti i relativi qualificatori da una definizione di classe CIM.
+# <a name="delete-function"></a>Elimina funzione
+Elimina la proprietà specificata e tutti i relativi i qualificatori da una definizione di classe CIM.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -44,14 +44,14 @@ HRESULT Delete (
 [in] Questo parametro è inutilizzato.
 
 `ptr`  
-[in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
+[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
 `wszName`  
 [in] Il nome della proprietà da eliminare. `wszName` deve essere un puntatore a un valore valido `LPCWSTR`.
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice:
+I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
@@ -62,19 +62,19 @@ I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* fi
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Non è disponibile memoria sufficiente per completare l'operazione. |
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | La proprietà viene ereditata da una classe base. |
 | `WBEM_E_SYSTEM_PROPERTY` | | La proprietà è una proprietà di sistema. |
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | La funzione eliminata di un valore predefinito di sostituzione per la classe corrente. Il valore predefinito per questa proprietà nella classe padre è stata reactiviated. | 
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | La funzione eliminato un valore sostitutivo predefinito per la classe corrente. Il valore predefinito per questa proprietà nella classe padre è stata reactiviated. | 
 
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject::Delete](https://msdn.microsoft.com/library/aa391438(v=vs.85).aspx) metodo.
+Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) (metodo).
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
-[WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

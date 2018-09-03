@@ -2,12 +2,12 @@
 title: Partecipanti del rilevamento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 34f807cd8c6c227e5e60b40d1ecc01ef693f31f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e346e0df3417f6ac83854bd96d6e64dcf103ea93
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519818"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488274"
 ---
 # <a name="tracking-participants"></a>Partecipanti del rilevamento
 I partecipanti del rilevamento sono punti di estensibilità che consentono a uno sviluppatore di flussi di lavoro di accedere a oggetti <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> e di elaborarli. In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] viene fornito un partecipante del rilevamento standard che scrive record di rilevamento come eventi ETW (Event Tracing for Windows). Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato.  
@@ -15,7 +15,7 @@ I partecipanti del rilevamento sono punti di estensibilità che consentono a uno
 ## <a name="tracking-participants"></a>Partecipanti del rilevamento  
  L'infrastruttura di rilevamento consente l'applicazione di un filtro ai record di rilevamento in uscita in modo che un partecipante possa sottoscrivere un subset dei record. Il meccanismo di applicazione di un filtro avviene tramite un profilo di rilevamento.  
   
- Windows Workflow Foundation (WF) in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] fornisce un partecipante del rilevamento che scrive i record di rilevamento in una sessione ETW. Il partecipante viene configurato su un servizio flusso di lavoro aggiungendo un comportamento specifico del rilevamento in un file di configurazione. L'abilitazione di un partecipante del rilevamento ETW consente la visualizzazione dei record di rilevamento nel Visualizzatore eventi. L'esempio SDK per il rilevamento basato su ETW rappresenta un buon metodo per acquisire familiarità con il rilevamento WF tramite il partecipante del rilevamento basato su ETW.  
+ Windows Workflow Foundation (WF) in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] fornisce un partecipante del rilevamento che scrive record di rilevamento in una sessione ETW. Il partecipante viene configurato su un servizio flusso di lavoro aggiungendo un comportamento specifico del rilevamento in un file di configurazione. L'abilitazione di un partecipante del rilevamento ETW consente la visualizzazione dei record di rilevamento nel Visualizzatore eventi. L'esempio SDK per il rilevamento basato su ETW rappresenta un buon metodo per acquisire familiarità con il rilevamento WF tramite il partecipante del rilevamento basato su ETW.  
   
 ## <a name="etw-tracking-participant"></a>Partecipante del rilevamento ETW  
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] include un partecipante del rilevamento ETW mediante il quale vengono scritti i record di rilevamento in una sessione ETW. Questa operazione viene eseguita in modo molto efficiente con un impatto minimo sulle prestazioni dell'applicazione o sulla velocità effettiva del server. Un vantaggio associato all'utilizzo del partecipante del rilevamento ETW standard è la possibilità di visualizzare i record di rilevamento ricevuti con altri registri applicazioni e di sistema nel Visualizzatore eventi di Windows.  
@@ -60,14 +60,14 @@ I partecipanti del rilevamento sono punti di estensibilità che consentono a uno
   
  Nell'illustrazione seguente viene mostrato il flusso di dati di rilevamento tramite il partecipante del rilevamento ETW. Una volta che i dati di rilevamento hanno raggiunto la sessione ETW, è possibile accedervi in diversi modi. Uno dei modi più utili per accedere a questi eventi è tramite il Visualizzatore eventi, uno strumento Windows comune usato per la visualizzazione di log e di tracce da applicazioni e servizi.  
   
- ![Il flusso di rilevamento e Provider di traccia ETW](../../../docs/framework/windows-workflow-foundation/media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![Il flusso di rilevamento e Provider di rilevamento ETW](../../../docs/framework/windows-workflow-foundation/media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
   
 ## <a name="tracking-participant-event-data"></a>Dati evento del partecipante del rilevamento  
- Un partecipante del rilevamento serializza i dati evento rilevati in una sessione ETW nel formato di un evento per il record di rilevamento.  Un evento viene identificato usando un ID compreso nell'intervallo tra 100 e 199. Per le definizioni di evento di rilevamento i record generati da un partecipante del rilevamento, vedere il [riferimento agli eventi di rilevamento](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md) argomento.  
+ Un partecipante del rilevamento serializza i dati evento rilevati in una sessione ETW nel formato di un evento per il record di rilevamento.  Un evento viene identificato usando un ID compreso nell'intervallo tra 100 e 199. Per le definizioni di evento di rilevamento i record generati da un partecipante del rilevamento, vedere la [riferimento agli eventi di rilevamento](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md) argomento.  
   
  La dimensione di un evento ETW è limitata da quella del buffer ETW o dal payload massimo per un evento ETW, a seconda di quale dimensione è minore. Se la dimensione dell'evento supera entrambi questi limiti ETW, l'evento viene troncato e il relativo contenuto rimosso in maniera arbitraria. Variabili, argomenti, annotazioni e dati personalizzati non vengono rimossi in modo selettivo. In caso di troncamento, tutti gli elementi vengono troncati indipendentemente dal valore che ha causato il superamento del limite ETW della dimensione dell'evento.  I dati rimossi vengono sostituiti con `<item>..<item>`.  
   
- I tipi complessi in variabili, argomenti ed elementi di dati personalizzati vengono serializzati nel record dell'evento ETW usando la [classe NetDataContractSerializer](http://go.microsoft.com/fwlink/?LinkId=177537). Questa classe include informazioni sul tipo CLR nel flusso XML serializzato.  
+ I tipi complessi in variabili, argomenti ed elementi di dati personalizzati vengono serializzati i record degli eventi ETW utilizzando la [classe NetDataContractSerializer](https://go.microsoft.com/fwlink/?LinkId=177537). Questa classe include informazioni sul tipo CLR nel flusso XML serializzato.  
   
  Il troncamento di dati payload dovuto ai limiti ETW può comportare l'invio di record di rilevamento duplicati a una sessione ETW. Questa situazione si può verificare se più sessioni restano in ascolto di eventi. Le sessioni presentano limiti di payload differenti per gli eventi.  
   
@@ -85,9 +85,9 @@ I partecipanti del rilevamento sono punti di estensibilità che consentono a uno
   
 2.  Selezionare **Visualizzatore eventi, registri applicazioni e servizi, Microsoft, Windows, Server applicazioni-applicazioni**.  
   
-3.  Pulsante destro del mouse e assicurarsi che **Visualizza, Visualizza registri analitici e Debug** è selezionata. In caso contrario, selezionarlo in modo che accanto venga visualizzato il segno di spunta. Consente di visualizzare il **analitico**, **prestazioni**, e **Debug** log.  
+3.  Pulsante destro del mouse e assicurarsi che **visualizzazione, Visualizza registri analitici e Debug** sia selezionata. In caso contrario, selezionarlo in modo che accanto venga visualizzato il segno di spunta. Ciò consente di visualizzare il **analitico**, **Perf**, e **Debug** i log.  
   
-4.  Fare doppio clic su di **analitico** accedere e quindi selezionare **Attiva registro**. Il log sarà disponibile nel file %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
+4.  Fare doppio clic il **analitico** accedere e quindi selezionare **Attiva registro**. Il log sarà disponibile nel file %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
   
 ## <a name="custom-tracking-participant"></a>Partecipante di rilevamento personalizzato  
  L'API del partecipante del rilevamento consente l'estensione del runtime di rilevamento con un partecipante del rilevamento fornito dall'utente che può includere la logica personalizzata per gestire i record di rilevamento creati dall'esecuzione del flusso di lavoro. Per scrivere un partecipante del rilevamento personalizzato, lo sviluppatore deve implementare il metodo `Track` sulla classe <xref:System.Activities.Tracking.TrackingParticipant>. Questo metodo viene chiamato quando un record di rilevamento viene creato dall'esecuzione del flusso di lavoro.  
@@ -141,5 +141,5 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitoraggio dell'infrastruttura di App di Windows Server](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Monitoraggio delle applicazioni con App Fabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Monitoraggio dell'infrastruttura di App di Windows Server](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Monitoraggio delle applicazioni con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

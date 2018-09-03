@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 65523fcc1d08bd48a432e6cf599dfcb73ade8747
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: dfdafbcdc461c80192e310a86d5bff50f0885283
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805746"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486909"
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
-In questo esempio viene illustrato come creare WCF e [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). In questo esempio illustra l'implementazione di un [Crea connessione](http://go.microsoft.com/fwlink/?LinkId=178141) canale che può essere composte con la messaggistica affidabile e, facoltativamente, un canale sicuro per creare un'associazione sicura affidabile basato sulla specifica RSP.  
+Questo esempio viene illustrato come creare WCF e [Reliable Secure Profile](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). In questo esempio illustra l'implementazione di un [Crea connessione](https://go.microsoft.com/fwlink/?LinkId=178141) canale che può essere composti insieme a messaggi affidabili e, facoltativamente, un canale sicuro per creare un'associazione sicura affidabile basata sulla specifica RSP.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
@@ -30,9 +30,9 @@ In questo esempio viene illustrato come creare WCF e [Reliable Secure Profile](h
   
 1.  Aprire il **ReliableSecureProfile** soluzione.  
   
-2.  Fare clic il **servizio** nel progetto **Esplora**selezionare **Debug**, **Avvia nuova istanza** dal menu di scelta rapida. In questo modo, viene avviato l'host del servizio.  
+2.  Fare clic il **Service** del progetto **Esplora soluzioni**, selezionare **Debug**, **Avvia nuova istanza** dal menu di scelta rapida. In questo modo, viene avviato l'host del servizio.  
   
-3.  Fare clic il **Client** nel progetto **Esplora**selezionare **Debug**, **Avvia nuova istanza** dal menu di scelta rapida. In questo modo, il client viene avviato.  
+3.  Fare clic il **Client** del progetto **Esplora soluzioni**, selezionare **Debug**, **Avvia nuova istanza** dal menu di scelta rapida. In questo modo, il client viene avviato.  
   
 4.  Digitare qualsiasi stringa nel messaggio di richiesta nella finestra della console client e fare clic su INVIO. In questo modo, la stringa di input viene inviata al servizio, che calcola un hash di tale stringa.  
   

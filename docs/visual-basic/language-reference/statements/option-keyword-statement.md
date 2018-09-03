@@ -1,23 +1,23 @@
 ---
-title: Opzione &lt;parola chiave&gt; istruzione
+title: Opzione &lt;parola chiave&gt; istruzione (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: c5a53faec01b8c10de5802eccb21d66350193696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598230"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484527"
 ---
 # <a name="option-ltkeywordgt-statement"></a>Opzione &lt;parola chiave&gt; istruzione
 Introduce un'istruzione che specifica un'opzione del compilatore applicabili all'intero file di origine.  
   
 ## <a name="remarks"></a>Note  
- Le opzioni del compilatore è possono controllare se tutte le variabili devono essere dichiarate in modo esplicito, le conversioni di restrizione che devono essere esplicite o se le stringhe devono essere confrontate come testo o come quantità binarie.  
+ Le opzioni del compilatore possono controllare se tutte le variabili devono essere dichiarate in modo esplicito, se le conversioni di tipo di restrizione devono essere esplicita o se le stringhe devono essere confrontate come testo o binari quantities.  
   
  È possibile usare la parola chiave `Option` nei contesti seguenti:  
   

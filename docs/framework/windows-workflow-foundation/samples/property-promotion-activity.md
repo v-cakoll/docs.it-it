@@ -2,12 +2,12 @@
 title: Attività di promozione proprietà
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-ms.openlocfilehash: 46e74c8c479e545778db92e15de3cb8798dafa11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519925"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481137"
 ---
 # <a name="property-promotion-activity"></a>Attività di promozione proprietà
 In questo esempio viene fornita una soluzione end-to-end che integra direttamente la funzionalità di promozione <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> nella creazione di flussi di lavoro. Vengono forniti inoltre una raccolta di elementi di configurazione, attività ed estensioni del flusso di lavoro che semplificano l'uso della funzionalità di promozione. Nell'esempio è contenuto infine un semplice flusso di lavoro che dimostra come usare la raccolta.  
@@ -25,7 +25,7 @@ In questo esempio viene fornita una soluzione end-to-end che integra direttament
   
 -   Il **PropertyPromotionActivity** progetto contiene file relativi agli elementi di configurazione specifica dell'innalzamento di livello, le attività del flusso di lavoro e le estensioni del flusso di lavoro.  
   
--   Il **CounterServiceApplication** progetto contiene un flusso di lavoro di esempio che utilizza il **SqlWorkflowInstanceStorePromotion** progetto.  
+-   Il **CounterServiceApplication** progetto contiene un flusso di lavoro di esempio che usa le **SqlWorkflowInstanceStorePromotion** progetto.  
   
 -   Uno script SQL (PropertyPromotionActivitySQLSample.sql) che è necessario eseguire nel database <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>.  
   
@@ -37,11 +37,11 @@ In questo esempio viene fornita una soluzione end-to-end che integra direttament
   
     1.  Passare alla directory di esempio (\WF\Basic\Persistence\PropertyPromotionActivity) ed eseguire CreateInstanceStore.cmd.  
   
-    2.  Se i privilegi di amministratore non sono disponibili, creare un account di accesso di SQL Server. In SQL Server Management Studio, andare a **sicurezza**, **gli account di accesso**. Fare doppio clic su **gli account di accesso** e creare un nuovo account di accesso. Aggiungere l'utente ACL al ruolo SQL aprendo **database**, **InstanceStore**, **sicurezza**. Fare doppio clic su **utenti** e selezionare **nuovo utente**. Impostare il **nome account di accesso** all'utente creato in precedenza. Aggiungere l'utente all'appartenenza ai ruoli del database System.Activities.DurableInstancing.InstanceStoreUsers (e altri). Notare che l'utente potrebbe essere già presente (ad esempio, utente dbo).  
+    2.  Se i privilegi di amministratore non sono disponibili, creare un account di accesso di SQL Server. In SQL Server Management Studio, passare a **sicurezza**, **accessi**. Fare doppio clic su **gli account di accesso** e creare un nuovo account di accesso. Aggiungere l'utente ACL al ruolo SQL aprendo **database**, **InstanceStore**, **sicurezza**. Fare doppio clic su **gli utenti** e selezionare **nuovo utente**. Impostare il **nome account di accesso** all'utente creato in precedenza. Aggiungere l'utente all'appartenenza ai ruoli del database System.Activities.DurableInstancing.InstanceStoreUsers (e altri). Notare che l'utente potrebbe essere già presente (ad esempio, utente dbo).  
   
 2.  Aprire il file della soluzione PropertyPromotionActivity.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-3.  Se l'archivio di istanze è stato creato in un database diverso da un'installazione locale di SQL Server Express, è necessario aggiornare la stringa di connessione di database. Modificare il file app. config sotto il **CounterServiceApplication** impostando il valore della `connectionString` attributo il `sqlWorkflowInstanceStorePromotion` nodo in modo che punti al database di persistenza inizializzato nel passaggio 1.  
+3.  Se l'archivio di istanze è stato creato in un database diverso da un'installazione locale di SQL Server Express, è necessario aggiornare la stringa di connessione di database. Modificare il file app. config sotto il **CounterServiceApplication** impostando il valore della `connectionString` dell'attributo sul `sqlWorkflowInstanceStorePromotion` nodo in modo che punti al database di persistenza inizializzato nel passaggio 1.  
   
 4.  Compilare ed eseguire la soluzione. Verranno avviati il servizio Counter WF e, automaticamente, un'istanza del flusso di lavoro.  
   
@@ -62,9 +62,9 @@ In questo esempio viene fornita una soluzione end-to-end che integra direttament
   
 -   **CounterServiceApplication** è un'applicazione console che ospita un servizio Counter WF semplice. Alla ricezione di un messaggio unidirezionale tramite l'endpoint `Start`, il flusso di lavoro conta da 0 a 29, incrementando una variabile del contatore ogni due secondi. Dopo ogni incremento del contatore, il flusso di lavoro è persistente e le proprietà promosse vengono aggiornate nella vista [dbo].[CounterService]. Quando viene eseguita, l'applicazione console ospita il servizio WF e invia un messaggio all'endpoint `Start`, creando un'istanza di Counter WF.  
   
--   **PropertyPromotionActivity** è una libreria di classi che contiene gli elementi di configurazione, le attività del flusso di lavoro e le estensioni del flusso di lavoro che il **CounterServiceApplication** utilizza.  
+-   **PropertyPromotionActivity** è una libreria di classi che contiene gli elementi di configurazione, le attività del flusso di lavoro e le estensioni del flusso di lavoro che il **CounterServiceApplication** Usa.  
   
--   **Propertypromotionactivitysqlsample** crea e aggiunge la vista [dbo]. [ CounterService] al database.  
+-   **Propertypromotionactivitysqlsample. SQL** crea e aggiunge la vista [dbo]. [ CounterService] al database.  
   
 ### <a name="counterserviceapplication"></a>CounterServiceApplication  
   
@@ -99,7 +99,7 @@ go
  L'ordine degli elementi di `promotedValue` è correlato alla posizione delle proprietà promosse nella visualizzazione `InstancePromotedProperties`. `Count` è il primo elemento di `promotedValue`. Di conseguenza, tale elemento viene mappato alla colonna `Value1` nella vista `InstancePromotedProperties`. `LastIncrementedAt` è il secondo elemento di `promotedValue`. Di conseguenza, tale elemento viene mappato alla colonna `Value2` nella vista `InstancePromotedProperties`.  
   
 #### <a name="using-the-promotevalue-activity"></a>Utilizzo dell'attività PromoteValue  
- Esaminare il file Counterservice in Progettazione Windows Workflow Foundation. Si noti che sono presenti due attività speciali nella definizione WF, ovvero `PromoteValue<DateTime>` e `PromoteValue<Int32>`.  
+ Esaminare il file Counterservice in Windows Workflow Foundation Designer. Si noti che sono presenti due attività speciali nella definizione WF, ovvero `PromoteValue<DateTime>` e `PromoteValue<Int32>`.  
   
  All'attività `PromoteValue<Int32>` è associato il membro `Name` definito come `Count`. che corrisponde al primo elemento `promotedValue` nella configurazione e per cui il relativo elemento `Value` è definito come variabile del flusso di lavoro `Counter`. Quando il flusso di lavoro è persistente, la variabile del flusso di lavoro `Counter` viene resa persistente come proprietà promossa nella colonna `Value1` della vista `InstancePromotedProperties`.  
   
@@ -107,17 +107,17 @@ go
   
  Si noti che all'attività `PromotedValue` è inoltre associato un membro di tipo Boolean denominato `ClearExistingPromotedData`. Quando questo membro è impostato su `true`, vengono cancellate tutti i valori della proprietà promossa fino al punto specifico nel flusso di lavoro. Se ad esempio un'attività Sequence è definita come segue:  
   
-1.  PromoteValue {nome = "Count", valore = 3}  
+1.  PromoteValue {Name = "Conteggio", valore = 3}  
   
-2.  PromoteValue {nome = "LastIncrementedAt", valore = 1-1-2000}  
+2.  PromoteValue {Name = "LastIncrementedAt", valore = 1-1 a 2000}  
   
 3.  Persist  
   
-4.  PromoteValue {nome = "Count", valore = 4, ClearExistingPromotedData = true}  
+4.  PromoteValue {Name = "Conteggio", valore = 4, ClearExistingPromotedData = true}  
   
 5.  Persist  
   
- Al secondo Persist, il valore promosso per `Count` sarà 4 Tuttavia, il valore promosso per `LastIncrementedAt` sarà `NULL`. Se `ClearExistingPromotedData` non fosse stato impostato su `true` nel passaggio 4, dopo il secondo Persist il valore promosso per Count sarebbe 4. Di conseguenza, il valore promosso per `LastIncrementedAt` sarebbe ancora 1-1-2000.  
+ Al secondo Persist, il valore promosso per `Count` sarà 4 Tuttavia, il valore promosso per `LastIncrementedAt` saranno `NULL`. Se `ClearExistingPromotedData` non fosse stato impostato su `true` nel passaggio 4, dopo il secondo Persist il valore promosso per Count sarebbe 4. Di conseguenza, il valore promosso per `LastIncrementedAt` sarebbe ancora 1-1-2000.  
   
 ### <a name="propertypromotionactivity"></a>PropertyPromotionActivity  
  Questa libreria di classi contiene le seguenti classi pubbliche che consentono di semplificare l'uso della funzionalità di promozione <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>.  
@@ -142,7 +142,7 @@ public class PromoteValue<T> : CodeActivity
  Cancella tutti i valori promossi prima di questa attività.  
   
  Name (stringa)  
- Nome che rappresenta la proprietà. L'attributo del nome deve corrispondere un \<promotedValue > nella configurazione dell'elemento.  
+ Nome che rappresenta la proprietà. Deve corrispondere all'attributo name di un \<promotedValue > nella configurazione dell'elemento.  
   
  Valore (InArgument\<T >)  
  La variabile o il valore da desidera archiviare nella colonna.  
@@ -186,9 +186,9 @@ public class SqlWorkflowInstanceStorePromotionBehavior :
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Hosting di AppFabric ed esempi di persistenza](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hosting di AppFabric e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)

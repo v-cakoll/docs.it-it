@@ -2,12 +2,12 @@
 title: Transazioni distribuite
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1f45f572b4336e52f7eee224ec80d9b7f423f991
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766088"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486327"
 ---
 # <a name="distributed-transactions"></a>Transazioni distribuite
 Una transazione consiste in una set di attività correlate che costituiscono una singola unità, la quale può riuscire (ovvero viene eseguito il commit della transazione) o non riuscire (il processo viene interrotto). Oggetto *transazione distribuita* è una transazione che influenza varie risorse. Per eseguire il commit di una transazione distribuita è necessario che tutti i partecipanti garantiscano che le eventuali modifiche apportate ai dati siano permanenti. Le modifiche devono essere definitive anche in caso di arresti anomali del sistema o altri eventi imprevisti. Se anche un unico partecipante non è in grado di garantire tale requisito, l'intera transazione verrà annullata e verrà effettuato il rollback di tutte le modifiche apportate ai dati nell'ambito della transazione.  
@@ -16,11 +16,11 @@ Una transazione consiste in una set di attività correlate che costituiscono una
 >  Se si tenta di eseguire il commit o il rollback di una transazione in cui è stato avviato un `DataReader` mentre la transazione è attiva, verrà generata un'eccezione.  
   
 ## <a name="working-with-systemtransactions"></a>Uso di System.Transactions  
- In .NET Framework, le transazioni distribuite vengono gestite tramite l'API nello spazio dei nomi <xref:System.Transactions>. L'API <xref:System.Transactions> delega quindi la gestione della transazione a un monitoraggio delle transazioni, quale Microsoft Distributed Transaction Coordinator (MS DTC), quando sono interessati più gestori di risorse persistenti. Per ulteriori informazioni, vedere [concetti fondamentali sulle transazioni](../../../../docs/framework/data/transactions/transaction-fundamentals.md).  
+ In .NET Framework, le transazioni distribuite vengono gestite tramite l'API nello spazio dei nomi <xref:System.Transactions>. L'API <xref:System.Transactions> delega quindi la gestione della transazione a un monitoraggio delle transazioni, quale Microsoft Distributed Transaction Coordinator (MS DTC), quando sono interessati più gestori di risorse persistenti. Per altre informazioni, vedere [nozioni fondamentali sulle transazioni](../../../../docs/framework/data/transactions/transaction-fundamentals.md).  
   
- In ADO.NET 2.0 è stato introdotto il supporto per l'inserimento in una transazione distribuita usando il metodo `EnlistTransaction`, che inserisce una connessione in un'istanza di <xref:System.Transactions.Transaction>. Nelle versioni precedenti di ADO.NET l'inserimento esplicito nelle transazioni distribuite veniva eseguito tramite il metodo `EnlistDistributedTransaction` di una connessione per inserire una connessione in un'istanza di <xref:System.EnterpriseServices.ITransaction>, che è supportata per la compatibilità con le versioni precedenti. Per ulteriori informazioni sulle transazioni di Enterprise Services, vedere [interoperabilità con servizi aziendali e le transazioni COM+](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
+ In ADO.NET 2.0 è stato introdotto il supporto per l'inserimento in una transazione distribuita usando il metodo `EnlistTransaction`, che inserisce una connessione in un'istanza di <xref:System.Transactions.Transaction>. Nelle versioni precedenti di ADO.NET l'inserimento esplicito nelle transazioni distribuite veniva eseguito tramite il metodo `EnlistDistributedTransaction` di una connessione per inserire una connessione in un'istanza di <xref:System.EnterpriseServices.ITransaction>, che è supportata per la compatibilità con le versioni precedenti. Per altre informazioni sulle transazioni Enterprise Services, vedere [interoperabilità con transazioni COM+ ed Enterprise Services](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
- Quando si usa una transazione <xref:System.Transactions> con il provider .NET Framework per SQL Server con un database SQL Server, viene usato automaticamente un tipo semplice <xref:System.Transactions.Transaction>. La transazione può quindi essere promossa a una piena transazione distribuita in base alle esigenze. Per ulteriori informazioni, vedere [integrazione di System. Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
+ Quando si usa una transazione <xref:System.Transactions> con il provider .NET Framework per SQL Server con un database SQL Server, viene usato automaticamente un tipo semplice <xref:System.Transactions.Transaction>. La transazione può quindi essere promossa a una piena transazione distribuita in base alle esigenze. Per altre informazioni, vedere [integrazione di System. Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
   
 > [!NOTE]
 >  Il numero massimo di transazioni distribuite cui un database Oracle può partecipare contemporaneamente è impostato su 10 per impostazione predefinita. Dopo la decima transazione con una connessione a un database Oracle, viene generata un'eccezione. Oracle non supporta `DDL` in una transazione distribuita.  
@@ -42,7 +42,7 @@ Una transazione consiste in una set di attività correlate che costituiscono una
 >  Il metodo `EnlistTransaction` genera un'eccezione se la connessione ha già iniziato una transazione usando il metodo <xref:System.Data.Common.DbConnection.BeginTransaction%2A> della connessione. Tuttavia, nel caso di una transazione locale avviata nell'origine dati (ad esempio eseguendo in modo esplicito l'istruzione BEGIN TRANSACTION tramite <xref:System.Data.SqlClient.SqlCommand>), la chiamata a `EnlistTransaction` comporterà il rollback della transazione locale e l'inserimento nella transazione distribuita esistente, come richiesto. Non verrà notificato che è stato eseguito il rollback della transazione locale e l'utente dovrà gestire le transazioni locali non avviate tramite il metodo <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Se si usa il provider di dati .NET Framework per SQL Server (`SqlClient`) con SQL Server, un tentativo di inserimento genererà un'eccezione. Tutti gli altri casi non verranno rilevati.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Transazioni promuovibili in SQL Server  
- SQL Server supporta transazioni promuovibili in cui una transazione semplice locale può essere automaticamente promossa a transazione distribuita soltanto nel caso in cui ciò sia richiesto. Una transazione promuovibile non richiama l'overhead aggiunto di una transazione distribuita, a meno che non sia necessario. Per ulteriori informazioni e un esempio di codice, vedere [integrazione di System. Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
+ SQL Server supporta transazioni promuovibili in cui una transazione semplice locale può essere automaticamente promossa a transazione distribuita soltanto nel caso in cui ciò sia richiesto. Una transazione promuovibile non richiama l'overhead aggiunto di una transazione distribuita, a meno che non sia necessario. Per altre informazioni e un esempio di codice, vedere [integrazione di System. Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
   
 ## <a name="configuring-distributed-transactions"></a>Configurazione di transazioni distribuite  
  Può essere necessario abilitare MS DTC sulla rete per usare le transazioni distribuite. Se Windows Firewall è abilitato, è necessario consentire al servizio MS DTC di usare la rete o aprire la porta MS DTC.  
@@ -50,4 +50,4 @@ Una transazione consiste in una set di attività correlate che costituiscono una
 ## <a name="see-also"></a>Vedere anche  
  [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [Integrazione di System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

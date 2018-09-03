@@ -11,18 +11,18 @@ ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 35fe0d8c3131f150549c042e993532c364e9fe4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 351f0a2bc35ed1dd90be926e272f6aa3e92e495e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408073"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488144"
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>Argomenti sulle procedure relative ai provider di automazione interfaccia utente per il codice gestito
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- In questa sezione contiene esempi di codice che illustrano le attività nella scrittura [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] provider per [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementi.  
+ In questa sezione contiene esempi di codice che illustrano le attività iscritto [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers per [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementi.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Esporre un provider di automazione interfaccia utente lato server](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  

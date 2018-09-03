@@ -2,11 +2,12 @@
 title: Scenario StateMachine utilizzando una combinazione attività FlowChart e Pick
 ms.date: 03/30/2017
 ms.assetid: 88d81395-f7a3-41d8-8439-20a425c538a6
-ms.openlocfilehash: 0f7fc809b2fb7107de355546ca52a4d2ba2b39f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0f8e884a8a6c62c4e7edaf5cc9727bf7bfe8603
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485493"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>Scenario StateMachine utilizzando una combinazione attività FlowChart e Pick
 In questo esempio, viene illustrato come implementare uno scenario StopWatch semplice usando una combinazione di attività <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Pick>. Vengono usate attività Receive e Send all'interno dell'attività Pick per rimanere in ascolto di eventi Stopwatch.  
@@ -16,7 +17,7 @@ In questo esempio, viene illustrato come implementare uno scenario StopWatch sem
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al (pagina di download) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, passare a (pagina di download) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\StateMachineWithPick`  
   
@@ -34,15 +35,15 @@ In questo esempio, viene illustrato come implementare uno scenario StopWatch sem
   
 2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
-3.  Avviare StopWatchService.exe da [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] come amministratore facendo clic il file .exe e selezionando **Esegui come amministratore**.  
+3.  Avviare il StopWatchService.exe dal [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] come amministratore con il pulsante destro facendo clic su file .exe e selezionando **Esegui come amministratore**.  
   
     1.  Passare alla cartella StateMachineWithPick\CS\StopWatchService\bin\Debug.  
   
-    2.  Fare clic sul file StopWatchService.exe e selezionare **Esegui come amministratore**.  
+    2.  Fare doppio clic sul file StopWatchService.exe e selezionare **Esegui come amministratore**.  
   
 4.  Avviare l'applicazione client StopWatchClient dall'interno di [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-    1.  In **Esplora**, selezionare il **StopWatchClient** del progetto e fare doppio clic su **imposta come progetto di avvio**.  
+    1.  Nelle **Esplora soluzioni**, selezionare la **StopWatchClient** del progetto e fare doppio clic su **imposta come progetto di avvio**.  
   
     2.  Per eseguire la soluzione, premere CTRL+F5.  
   
@@ -53,6 +54,6 @@ In questo esempio, viene illustrato come implementare uno scenario StopWatch sem
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\StateMachineWithPick`
