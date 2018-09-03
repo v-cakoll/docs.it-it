@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 17bbb0280c4db7d91e5d3cc3d3b6233b8db89cdc
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754969"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487065"
 ---
 # <a name="value-types-c-reference"></a>Tipi di valore (Riferimenti per C#)
 I tipi valore comprendono due categorie principali:  
@@ -97,11 +97,12 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  Per informazioni sulla formattazione dell'output dei tipi numerici, vedere [Tabella di formattazione dei risultati numerici](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Tipi](../../../csharp/language-reference/keywords/types.md)  
- [Tabelle di riferimento per i tipi](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)  
- [Tipi nullable](../../programming-guide/nullable-types/index.md)  
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tipi](../../../csharp/language-reference/keywords/types.md)  
+- [Tabelle di riferimento per i tipi](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Tipi nullable](../../programming-guide/nullable-types/index.md)  

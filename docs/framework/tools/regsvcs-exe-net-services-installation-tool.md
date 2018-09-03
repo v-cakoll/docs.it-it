@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a13912d006b522e86997fc7850befb996db4b7bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3de5b196d6ec35febe4ba30f7ac41bacacf884cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400250"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487432"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (strumento di installazione dei servizi .NET)
 Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:  
@@ -67,7 +67,7 @@ Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:
 ## <a name="remarks"></a>Note  
  Regsvcs.exe richiede un file di assembly di origine specificato da *FileAssembly.dll*. L'assembly deve essere firmato con un nome sicuro. Per altre informazioni sulla firma con un nome sicuro, vedere [Firma di un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md). I nomi dell'applicazione di destinazione e del file della libreria dei tipi sono facoltativi. L'argomento *nomeApplicazione* può essere generato dal file di assembly di origine e, se non esiste già, viene creato da Regsvcs.exe. L'argomento *filelibreriatipi* può specificare il nome di una libreria dei tipi. Se non lo si specifica, come impostazione predefinita verrà usato il nome dell'assembly.  
   
- Quando Regsvcs.exe registra i metodi di un componente, lo strumento è soggetto a [richieste](http://msdn.microsoft.com/library/e5283e28-2366-4519-b27d-ef5c1ddc1f48) e [richieste di collegamento](../../../docs/framework/misc/link-demands.md) su tali metodi. Poiché lo strumento viene eseguito in un ambiente completamente attendibile, molte richieste di autorizzazione vengono completate. Regsvcs.exe non è tuttavia in grado di registrare componenti con metodi protetti da una richiesta o una richiesta di collegamento per <xref:System.Security.Permissions.StrongNameIdentityPermission> o <xref:System.Security.Permissions.PublisherIdentityPermission>.  
+ Quando Regsvcs.exe registra i metodi di un componente, lo strumento è soggetto a [richieste](https://msdn.microsoft.com/library/e5283e28-2366-4519-b27d-ef5c1ddc1f48) e [richieste di collegamento](../../../docs/framework/misc/link-demands.md) su tali metodi. Poiché lo strumento viene eseguito in un ambiente completamente attendibile, molte richieste di autorizzazione vengono completate. Regsvcs.exe non è tuttavia in grado di registrare componenti con metodi protetti da una richiesta o una richiesta di collegamento per <xref:System.Security.Permissions.StrongNameIdentityPermission> o <xref:System.Security.Permissions.PublisherIdentityPermission>.  
   
  Per usare Regsvcs.exe, è necessario disporre dei privilegi amministrativi sul computer locale.  
   

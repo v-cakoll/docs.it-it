@@ -11,14 +11,15 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53142ffa38bda036dd558dd6d23912ebd2e393ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 865d9aa6806e00bb9cf7b3991b4f323d361cbb63
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487458"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Procedura: definire ed eseguire metodi dinamici
-Le procedure seguenti illustrano come definire ed eseguire un metodo dinamico semplice e un metodo dinamico associato a un'istanza di una classe. Per altre informazioni sui metodi dinamici, vedere la classe <xref:System.Reflection.Emit.DynamicMethod> e [Scenari relativi a metodi dinamici della reflection emit](http://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e).  
+Le procedure seguenti illustrano come definire ed eseguire un metodo dinamico semplice e un metodo dinamico associato a un'istanza di una classe. Per altre informazioni sui metodi dinamici, vedere la classe <xref:System.Reflection.Emit.DynamicMethod> e [Scenari relativi a metodi dinamici della reflection emit](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Per definire ed eseguire un metodo dinamico  
   
@@ -123,5 +124,5 @@ Le procedure seguenti illustrano come definire ed eseguire un metodo dinamico se
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Reflection.Emit.DynamicMethod>  
- [Uso della reflection emit](http://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Scenari relativi a metodi dinamici della reflection emit](http://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)
+ [Uso della reflection emit](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
+ [Scenari relativi a metodi dinamici della reflection emit](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)

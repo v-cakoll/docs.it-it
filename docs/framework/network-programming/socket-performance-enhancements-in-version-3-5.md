@@ -5,12 +5,12 @@ ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: db52123167648744141657d885f3d3dcc524dd3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0570241fa81b0870500daa9d6e94b45c28042737
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395879"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487275"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Miglioramenti apportati alle prestazioni socket nella versione 3.5
 La classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> è stata migliorata nella versione 3.5 per l'uso da applicazioni che usano I/O di rete asincrono per ottenere le massime prestazioni. È stata aggiunta una serie di nuove classi nell'ambito di una serie di miglioramenti apportati alla classe <xref:System.Net.Sockets.Socket> che forniscono un modello asincrono alternativo che può essere usato da applicazioni socket ad alte prestazioni specializzate. Questi miglioramenti sono stati progettati in modo specifico per le applicazioni server di rete che richiedono prestazioni elevate. Un'applicazione può usare il modello asincrono migliorato in modo esclusivo o solo nelle aree dell'applicazione con esigenze particolari individuate, ad esempio per la ricezione di grandi quantità di dati.  
@@ -42,4 +42,4 @@ La classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> è stata
  <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  
  <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>  
  [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Socket Performance Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179570) (Esempio di tecnologia per le prestazioni del socket)
+ [Esempi di codice socket](socket-code-examples.md)

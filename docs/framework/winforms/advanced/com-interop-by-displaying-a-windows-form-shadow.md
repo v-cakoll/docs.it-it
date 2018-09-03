@@ -22,7 +22,7 @@ ms.locfileid: "33519717"
   
 -   Usare il metodo <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> per visualizzare il Windows Form.  
   
--   Visualizzare ogni Windows Form in un thread separato. Per altre informazioni, vedere [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+-   Visualizzare ogni Windows Form in un thread separato. Per altre informazioni, vedere [Procedura: supportare l'interoperabilità COM mediante la visualizzazione di ogni Windows Form nel relativo thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="procedure"></a>Routine  
  Il metodo <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> può offrire la soluzione più semplice per visualizzare un form in un ciclo di messaggi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] poiché, di tutti gli approcci, è quello che richiede l'implementazione della minore quantità di codice.  
