@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935393"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396116"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Creazione di un microservizio CRUD semplice basato sui dati
 
@@ -326,7 +326,7 @@ Microsoft Flow, PowerApps e le app per la logica di Azure usano proprio i metada
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Come automatizzare la generazione di metadati di Swagger per le API con il pacchetto NuGet Swashbuckle
 
-La generazione manuale di metadati di Swagger, in un file JSON o YAML, può essere un lavoro noioso. È però possibile automatizzare l'individuazione delle API per i servizi delle API Web ASP.NET usando il [pacchetto NuGet Swashbuckle](http://aka.ms/swashbuckledotnetcore) per generare dinamicamente i metadati di Swagger per le API.
+La generazione manuale di metadati di Swagger, in un file JSON o YAML, può essere un lavoro noioso. È però possibile automatizzare l'individuazione delle API per i servizi delle API Web ASP.NET usando il [pacchetto NuGet Swashbuckle](https://aka.ms/swashbuckledotnetcore) per generare dinamicamente i metadati di Swagger per le API.
 
 Swashbuckle genera automaticamente i metadati di Swagger per i progetti di API Web ASP.NET. Supporta i progetti API Web ASP.NET Core e l'API Web ASP.NET tradizionale, oltre a qualsiasi altra versione, ad esempio i microservizi delle app per le API di Azure, per le app per dispositivi mobili di Azure e Azure Service Fabric basati su ASP.NET. Supporta anche API Web semplici distribuite nei contenitori, come nel caso dell'applicazione di riferimento.
 

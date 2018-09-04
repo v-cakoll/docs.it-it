@@ -1,8 +1,9 @@
 ---
-title: Risorse nelle applicazioni desktop
-ms.date: 03/30/2017
+title: Risorse nelle app .NET
+ms.date: 07/25/2018
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
 - application resources
 - resource files
 - satellite assemblies
@@ -12,23 +13,21 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 023099adeeebf21b7dba631bde75332524eb0cc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bc91f5f3872ee5f4a55f3e3cd9e0e9de9bcc422
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399257"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408285"
 ---
-# <a name="resources-in-desktop-apps"></a>Risorse nelle applicazioni desktop
+# <a name="resources-in-net-apps"></a>Risorse nelle app .NET
 L'utilizzo di risorse è richiesto in quasi tutte le applicazioni destinate a un impiego professionale. Una risorsa è costituita da dati non eseguibili che vengono distribuiti in modo logico con un'applicazione. Una risorsa può essere visualizzata in un'applicazione sotto forma di messaggi di errore o come parte dell'interfaccia utente. Le risorse possono contenere dati in diversi formati, tra cui stringhe, immagini e oggetti persistenti. Per scrivere oggetti persistenti in un file di risorse, è necessario che gli oggetti siano serializzabili. L'archiviazione dei dati in un file di risorse consente di modificare i dati senza ricompilare l'intera applicazione. Inoltre permette di archiviare i dati in un'unica posizione e non è più necessario basarsi sui dati specificati a livello di codice archiviati in più posizioni.  
   
- .NET Framework offre ampio supporto per la creazione e la localizzazione delle risorse nelle applicazioni desktop. .NET Framework supporta inoltre un modello semplice per la creazione del pacchetto e la distribuzione delle risorse localizzate nella applicazioni desktop.  
+ .NET Framework e .NET Core offrono ampio supporto per la creazione e la localizzazione di risorse. .NET supporta inoltre un modello semplice per la creazione del pacchetto di risorse localizzate e la relativa distribuzione.  
   
- Per informazioni sulle risorse in ASP.NET, vedere [Cenni preliminari sulle risorse delle pagine Web ASP.NET](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd) nel Centro per sviluppatori Internet Explorer.  
+ Per informazioni sulle risorse in ASP.NET, vedere [Cenni preliminari sulle risorse delle pagine Web ASP.NET](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
   
- Nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] viene utilizzato un modello di risorse diverso dalle applicazioni desktop e le relative risorse vengono archiviate in un singolo file indice di risorse del pacchetto (PRI). Per informazioni sulle risorse nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], vedere [Creazione e recupero di risorse nelle applicazioni Windows Store](http://go.microsoft.com/fwlink/p/?LinkId=241674) nel Centro per sviluppatori Windows.  
-  
-## <a name="creating-and-localizing-resources"></a>Creazione e localizzazione di risorse  
+ ## <a name="creating-and-localizing-resources"></a>Creazione e localizzazione di risorse  
  In un'applicazione non localizzata, è possibile utilizzare i file di risorse come repository per i dati dell'applicazione, in particolare per le stringhe che altrimenti possono essere hard-coded in più posizioni nel codice sorgente. In genere, le risorse vengono create come testo, con estensione txt o come o file XML (RESX) e si utilizza [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) per compilarle in file binari con estensione resources. Questi file possono quindi essere incorporati nel file eseguibile dell'applicazione tramite un compilatore di linguaggio. Per altre informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
   
  È anche possibile localizzare le risorse dell'applicazione per impostazioni cultura specifiche. In questo modo è possibile compilare versioni localizzate (tradotte) delle applicazioni. Quando si sviluppa un'applicazione in cui vengono utilizzate risorse localizzate, è possibile definire delle impostazioni cultura che fungono da impostazioni cultura non associate ad alcun paese o di fallback le cui risorse vengono utilizzate se non ve ne sono di appropriate. In genere, le risorse delle impostazioni cultura non associate ad alcun paese vengono archiviate nel file eseguibile dell'applicazione. Le risorse rimanenti per le singole impostazioni cultura localizzate vengono archiviate in assembly satellite autonomi. Per altre informazioni, vedere [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  
@@ -47,11 +46,11 @@ L'utilizzo di risorse è richiesto in quasi tutte le applicazioni destinate a un
   
 -   Se le impostazioni cultura non vengono assegnate in modo esplicito, recuperando le impostazioni cultura dell'interfaccia utente del thread predefinito dalla proprietà <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.  
   
--   Se le impostazioni cultura dell'interfaccia utente di un thread predefinito non vengono assegnate in modo esplicito, recuperando le impostazioni cultura per l'utente corrente del computer locale chiamando la funzione `GetUserDefaultUILanguage` di Windows.  
+-   Se le impostazioni cultura dell'interfaccia utente di un thread predefinito non vengono assegnate in modo esplicito, recuperando le impostazioni cultura per l'utente corrente del computer locale. Nelle implementazioni .NET in esecuzione in Windows viene chiamata la funzione [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) di Windows.  
   
  Per ulteriori informazioni su come vengono impostate le impostazioni cultura correnti dell'interfaccia utente, vedere le pagine di riferimento <xref:System.Globalization.CultureInfo> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
- È quindi possibile recuperare le risorse per le impostazioni cultura correnti dell'interfaccia utente o per impostazioni cultura specifiche utilizzando la classe <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Sebbene la classe <xref:System.Resources.ResourceManager> sia maggiormente utilizzata per recuperare le risorse nelle applicazioni desktop, nello spazio dei nomi <xref:System.Resources?displayProperty=nameWithType> sono contenuti tipi aggiuntivi utilizzabili per recuperare le risorse. Sono inclusi:  
+ È quindi possibile recuperare le risorse per le impostazioni cultura correnti dell'interfaccia utente o per impostazioni cultura specifiche utilizzando la classe <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Sebbene la classe <xref:System.Resources.ResourceManager> sia maggiormente usata per il recupero delle risorse, nello spazio dei nomi <xref:System.Resources?displayProperty=nameWithType> sono contenuti tipi aggiuntivi utilizzabili per recuperare le risorse. Sono inclusi:  
   
 -   La classe <xref:System.Resources.ResourceReader>, che consente di enumerare le risorse incorporate in un assembly o archiviate in un file binario autonomo con estensione resources. È utile quando non si conoscono i nomi esatti delle risorse disponibili in fase di esecuzione.  
   

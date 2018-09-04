@@ -8,41 +8,31 @@ helpviewer_keywords:
 ms.assetid: 14c68e84-657e-49c2-aa8b-4978dbaf4454
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 581f42dc83622712dbb30ef556a481388bafe259
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75df075cd39375084a7d5a4489694ec937e15d99
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455572"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404462"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>Profilatura (riferimenti alle API non gestite)
-L'API di profilatura consente a un profiler monitorare l'esecuzione di un programma da common language runtime (CLR).  
-  
-## <a name="in-this-section"></a>In questa sezione  
- [Panoramica della profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
- Descrive i servizi e interfacce fornite da CLR per supportare l'analisi nell'ambiente .NET Framework.  
-  
- [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- Descrive le interfacce non gestite usate dall'API di profilatura.  
-  
- [Configurazione di un ambiente di profilatura](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)  
- Descrive i passaggi da effettuare per profilare un'applicazione .NET Framework.  
-  
- [Profiler CLR e applicazioni Windows Store](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md)  
- Viene descritto come eseguire il porting di strumenti di diagnostica che utilizzano l'API di profilatura di CLR a funzionare correttamente con le applicazioni Windows Store.  
-  
- [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)  
- Le condizioni in cui una chiamata al metodo restituisce i documenti di `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT.  
-  
- [Funzioni statiche globali di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
- Descrive le funzioni statiche globali non gestite usate dall'API di profilatura.  
-  
- [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
- Descrive le enumerazioni non gestite usate dall'API di profilatura.  
-  
- [Strutture di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)  
- Descrive le strutture non gestite usate dall'API di profilatura.  
-  
-## <a name="related-sections"></a>Sezioni correlate  
- [Procedura dettagliata: Identificazione dei problemi di prestazioni](/visualstudio/profiling/walkthrough-identifying-performance-problems)  
- Viene illustrato come utilizzare gli strumenti di profilatura incorporati in Microsoft Visual Studio 2005 Team System. Questi strumenti offrono un'alternativa all'uso dell'API di profilatura.
+
+L'API di profilatura consente a un profiler di monitorare l'esecuzione di un programma da parte di Common Language Runtime (CLR).
+
+## <a name="in-this-section"></a>In questa sezione
+
+ [Panoramica della profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md) descrive i servizi e le interfacce offerti da CLR per supportare la profilatura nell'ambiente .NET Framework.
+
+ [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md) descrive le interfacce non gestite usate dall'API di profilatura.
+
+ [Configurazione di un ambiente di profilatura](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md) descrive i passaggi necessari per profilare un'applicazione .NET Framework.
+
+ [Profiler CLR e applicazioni Windows Store](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md) illustra come convertire gli strumenti di diagnostica che usano l'API di profilatura CLR per il corretto funzionamento con le app Windows Store.
+
+ [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md) documenta le condizioni in cui una chiamata al metodo restituisce `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT.
+
+ [Funzioni statiche globali di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md) descrive le funzioni statiche globali non gestite usate dall'API di profilatura.
+
+ [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md) descrive le enumerazioni non gestite usate dall'API di profilatura.
+
+ [Strutture di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md) descrive le strutture non gestite usate dall'API di profilatura.

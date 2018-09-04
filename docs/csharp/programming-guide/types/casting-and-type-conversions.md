@@ -9,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 971f85b2cabe79237ff62eb36de43873df1d2ae5
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 5587708a6ce7218498e5e695466887c6146c75a4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933587"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43389966"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Cast e conversioni di tipi (Guida per programmatori C#)
 
@@ -91,6 +91,6 @@ Giraffe g2 = (Giraffe) a;
  [explicit](../../../csharp/language-reference/keywords/explicit.md)  
  [implicit](../../../csharp/language-reference/keywords/implicit.md)  
  [Operatori di conversione](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
- [Conversione di tipi generalizzati](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
- [Conversione di tipi esportati](http://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
+ [Conversione di tipi generalizzati](https://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
+ [Conversione di tipi esportati](https://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
  [Procedura: Convertire una stringa in un numero](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

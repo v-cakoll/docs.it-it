@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
-ms.translationtype: HT
+ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753630"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403189"
 ---
 # <a name="standard-numeric-format-strings"></a>Stringhe di formato numerico standard
 
@@ -33,8 +33,10 @@ Le stringhe di formato numerico standard vengono usate per formattare tipi numer
   
 -   `xx` è un numero intero facoltativo denominato *identificatore di precisione*. L'identificatore di precisione, compreso tra 0 e 99, controlla il numero di cifre nel risultato. L'identificatore di precisione controlla il numero di cifre nella rappresentazione di stringa di un numero. Non arrotonda il numero stesso. Per eseguire un'operazione di arrotondamento, usare il metodo <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> o <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
-     Quando l'*identificatore di precisione* controlla il numero di cifre frazionarie nella stringa di risultato, le stringhe di risultato riflettono numeri che vengono arrotondati per eccesso (vale a dire usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
-  
+    Quando l'*identificatore di precisione* controlla il numero di cifre frazionali nella stringa del risultato, quest'ultima riflette un numero arrotondato al risultato rappresentabile più vicino al risultato con precisione all'infinito. In presenza di due risultati rappresentabili equivalenti:
+    - **In .NET Framework e .NET Core fino alla versione .NET Core 2.0** il runtime seleziona il risultato con la cifra meno significativa maggiore, ovvero usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>.
+    - **In .NET Core 2.1 e versioni successive** il runtime seleziona il risultato con una cifra meno significativa pari, ovvero usando <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>. 
+
     > [!NOTE]
     >  L'identificatore di precisione determina il numero di cifre nella stringa risultato. Per riempire una stringa risultato con spazi iniziali o finali, usare la funzionalità di [formattazione composita](../../../docs/standard/base-types/composite-formatting.md) e definire un *componente allineamento* nell'elemento di formato.  
   

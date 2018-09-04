@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 9711b3c52f6d28d37e0b0d4d4de2f1be6bb46283
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3924d070ea012faf33f1d808b92b1328626ef567
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499538"
+ms.locfileid: "43558410"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegati (Guida per programmatori C#)
 Un [delegate](../../../csharp/language-reference/keywords/delegate.md) è un tipo che rappresenta riferimenti ai metodi con un elenco di parametri e un tipo restituito particolari. Quando si crea un'istanza di un delegato, è possibile associare l'istanza a qualsiasi metodo con una firma compatibile e un tipo restituito. Tramite l'istanza di delegato è possibile richiamare (o chiamare) il metodo.  
@@ -65,7 +65,8 @@ Un [delegate](../../../csharp/language-reference/keywords/delegate.md) è un tip
   
  [Delegati ed eventi](https://msdn.microsoft.com/library/orm-9780596521066-01-17.aspx) (Delegati, eventi ed espressioni lambda) in [Learning C# 3.0: Master the fundamentals of C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Delegate>  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Eventi](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Delegate>  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Eventi](../../../csharp/programming-guide/events/index.md)

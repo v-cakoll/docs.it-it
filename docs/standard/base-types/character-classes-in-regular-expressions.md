@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 241bc9756118cd2db15356dcc2c724a24c84d0fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a83f99faa5beaf0fd6a5a53f41cdcba5015fa27
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579691"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931180"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classi di caratteri nelle espressioni regolari
 <a name="Top"></a> Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può verificarsi in una stringa di input per trovare una corrispondenza. Il linguaggio delle espressioni regolari di .NET supporta le classi di caratteri seguenti:  
@@ -168,7 +168,7 @@ ms.locfileid: "33579691"
 > [!NOTE]
 >  Poiché corrisponde a qualsiasi carattere eccetto `\n`, la classe di caratteri `.` corrisponde anche a `\r` (il carattere di ritorno a capo, \u000D).  
   
--   In un gruppo di caratteri positivi o negativi un punto viene interpretato come carattere punto letterale e non come classe di caratteri. Per altre informazioni, vedere [Gruppo di caratteri positivi](#PositiveGroup) e [Gruppo di caratteri negativi](#NegativeGroup) descritti in precedenza in questo argomento. Nell'esempio seguente viene fornita un'illustrazione mediante la definizione di un'espressione regolare che include il carattere punto (`.`) sia come classe di caratteri che come membro di un gruppo di caratteri positivi. L'espressione regolare `\b.*[.?!;:](\s|\z)` inizia in corrispondenza di confine di parola, corrisponde a qualsiasi carattere fino a quando non incontra uno dei quattro segni di punteggiatura, incluso un punto, quindi individua la corrispondenza con uno spazio vuoto o con la fine della stringa.  
+-   In un gruppo di caratteri positivi o negativi un punto viene interpretato come carattere punto letterale e non come classe di caratteri. Per altre informazioni, vedere [Gruppo di caratteri positivi](#PositiveGroup) e [Gruppo di caratteri negativi](#NegativeGroup) descritti in precedenza in questo argomento. Nell'esempio seguente viene fornita un'illustrazione mediante la definizione di un'espressione regolare che include il carattere punto (`.`) sia come classe di caratteri che come membro di un gruppo di caratteri positivi. L'espressione regolare `\b.*[.?!;:](\s|\z)` inizia in corrispondenza di un confine di parola, corrisponde a qualsiasi carattere fino a quando non incontra uno dei cinque segni di punteggiatura, incluso un punto, quindi individua la corrispondenza con uno spazio vuoto o con la fine della stringa.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
@@ -188,7 +188,7 @@ ms.locfileid: "33579691"
   
  corrisponde a qualsiasi carattere appartenente a una categoria generale Unicode o a un blocco denominato, dove *name* è l'abbreviazione della categoria o il nome del blocco denominato. Per un elenco di abbreviazioni della categoria, vedere la sezione [Categorie generali Unicode supportate](#SupportedUnicodeGeneralCategories) successiva in questo argomento. Per un elenco dei blocchi denominati, vedere la sezione [Blocchi denominati supportati](#SupportedNamedBlocks) successiva in questo argomento.  
   
- L'esempio seguente usa il costrutto `\p{`*name*`}` per individuare una corrispondenza per una categoria generale Unicode (in questo caso la categoria `Pd` o Punctuation,Dash) e un blocco denominato (i blocchi denominati `IsGreek` e `IsBasicLatin`).  
+ Nell'esempio seguente viene usato il costrutto `\p{`*name*`}` per individuare una corrispondenza per una categoria generale Unicode (in questo caso la categoria `Pd` o Punctuation, Dash) e un blocco denominato (i blocchi denominati `IsGreek` e `IsBasicLatin`).  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/category1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/category1.vb#6)]  
