@@ -63,6 +63,7 @@
 
 <!-- .NET Core Content -->
 # [Guida a .NET Core](core/index.md)
+## [Informazioni su .NET Core](core/about.md)
 ## [Introduzione](core/get-started.md)
 ### [Introduzione a C# e Visual Studio Code](core/tutorials/with-visual-studio-code.md)
 ### [Compilare un'app Hello World usando C# con .NET Core in Visual Studio 2017](core/tutorials/with-visual-studio.md)
@@ -108,6 +109,7 @@
 ### [Compilazione di immagini Docker per applicazioni .NET Core](core/docker/building-net-docker-images.md)
 ### [Visual Studio Tools per Docker](/aspnet/core/publishing/visual-studio-tools-for-docker)
 ## [Testing unità](core/testing/index.md)
+### [Procedure consigliate per gli unit test](core/testing/unit-testing-best-practices.md)
 ### [Unit test C# con xUnit](core/testing/unit-testing-with-dotnet-test.md)
 ### [Unit test C# con NUnit](core/testing/unit-testing-with-nunit.md)
 ### [Unit test C# con MSTest](core/testing/unit-testing-with-mstest.md)
@@ -121,7 +123,10 @@
 ### [Output pubblicato degli unit test](core/testing/unit-testing-published-output.md)
 ### [Live Unit Testing di progetti .NET Core con Visual Studio](/visualstudio/test/live-unit-testing-start)
 ## [Controllo delle versioni](core/versions/index.md)
+### [Cronologia delle versioni di .NET Core](core/versions/version-history.md)
 ### [Selezione versione .NET Core](core/versions/selection.md)
+### [Gestione dell'installazione di .NET Core](core/versions/install-management.md)
+### [Rimozione di SDK e runtime non aggiornati](core/versions/remove-runtime-sdk-versions.md)
 ## [Catalogo Runtime IDentifier](core/rid-catalog.md)
 ## [Panoramica di .NET Core SDK](core/sdk.md)
 ## [Strumenti dell'interfaccia della riga di comando di .NET Core](core/tools/index.md)
@@ -293,7 +298,6 @@
 <!-- F# Content -->
 # [Guida a F#](fsharp/index.md)
 
-## [Panoramica di F#](fsharp/tour.md)
 ## [Introduzione](fsharp/get-started/index.md)
 ### [Installazione di F#](fsharp/get-started/install-fsharp.md)
 ### [Introduzione a Visual Studio](fsharp/get-started/get-started-visual-studio.md)
@@ -301,38 +305,19 @@
 ### [Introduzione a Visual Studio Code e Ionide](fsharp/get-started/get-started-vscode.md)
 ### [Introduzione all'interfaccia della riga di comando di .NET Core](fsharp/get-started/get-started-command-line.md)
 
-## [Guida di stile di F#](fsharp/style-guide/index.md)
-### [Linee guida per la formattazione del codice F#](fsharp/style-guide/formatting.md)
-### [Convenzioni di codifica C#](fsharp/style-guide/conventions.md)
-### [Linee guida di progettazione del componente F#](fsharp/style-guide/component-design-guidelines.md)
+## [Cos'è F#](fsharp/what-is-fsharp.md)
+## [Panoramica di F#](fsharp/tour.md)
 
 ## Esercitazioni
-### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
+### Introduzione alla programmazione funzionale
+#### [Funzioni come valori di prima classe](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
+### Programmazione asincrona e simultanea
+#### [Programmazione asincrona](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 ### [Provider di tipi](fsharp/tutorials/type-providers/index.md)
 #### [Creare un provider di tipi](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [Sicurezza dei provider di tipi](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [Risoluzione dei problemi relativi ai provider di tipi](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
-
-<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
-## Introduzione alla programmazione funzionale
-### [Funzioni come valori di prima classe](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
-
-<!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
-### Programmazione asincrona e simultanea
-#### [Programmazione asincrona](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-
-<!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
-### [Funzionalità dell'ambiente di sviluppo di Visual F#](fsharp/using-fsharp-in-visual-studio/visual-fsharp-development-environment-features.md)
-### [Configurazione di progetti](fsharp/using-fsharp-in-visual-studio/configuring-projects.md)
-### [Definizione di versioni precedenti di .NET come destinazione](fsharp/using-fsharp-in-visual-studio/targeting-older-versions-of-net.md)
-
-## [Uso di F# in Azure](fsharp/using-fsharp-on-azure/index.md)
-### [Introduzione all'archiviazione BLOB di Azure con F#](fsharp/using-fsharp-on-azure/blob-storage.md)
-### [Introduzione all'archiviazione file di Azure con F#](fsharp/using-fsharp-on-azure/file-storage.md)
-### [Introduzione all'archiviazione code di Azure con #](fsharp/using-fsharp-on-azure/queue-storage.md)
-### [Introduzione all'archiviazione tabelle di Azure con F#](fsharp/using-fsharp-on-azure/table-storage.md)
-<!--### [Using F# on Azure Service Fabric](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)-->
-### [Gestione dei pacchetti per le dipendenze F# di Azure](fsharp/using-fsharp-on-azure/package-management.md)
+### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
 
 ## [Riferimenti per il linguaggio F#](fsharp/language-reference/index.md)
 ### [Riferimento per parole chiave](fsharp/language-reference/keyword-reference.md)
@@ -361,6 +346,7 @@
 ### [Tipi di raccolta F#](fsharp/language-reference/fsharp-collection-types.md)
 ### [Elenchi](fsharp/language-reference/lists.md)
 ### [Opzioni](fsharp/language-reference/options.md)
+### [Opzioni Value](fsharp/language-reference/value-options.md)
 ### [Risultati](fsharp/language-reference/results.md)
 ### [Sequenze](fsharp/language-reference/sequences.md)
 ### [Array](fsharp/language-reference/arrays.md)
@@ -431,26 +417,37 @@
 ### [Identificatori riga, file e percorso di origine](fsharp/language-reference/source-line-file-path-identifiers.md)
 ### [Informazioni sul chiamante](fsharp/language-reference/caller-information.md)
 ### [Sintassi dettagliata](fsharp/language-reference/verbose-syntax.md)
-### [Linee guida per la formattazione del codice](fsharp/language-reference/code-formatting-guidelines.md)
+
+## [Guida di stile di F#](fsharp/style-guide/index.md)
+### [Linee guida per la formattazione del codice F#](fsharp/style-guide/formatting.md)
+### [Convenzioni di codifica C#](fsharp/style-guide/conventions.md)
+### [Linee guida di progettazione del componente F#](fsharp/style-guide/component-design-guidelines.md)
+
+## [Uso di F# in Azure](fsharp/using-fsharp-on-azure/index.md)
+### [Introduzione all'archiviazione BLOB di Azure con F#](fsharp/using-fsharp-on-azure/blob-storage.md)
+### [Introduzione all'archiviazione file di Azure con F#](fsharp/using-fsharp-on-azure/file-storage.md)
+### [Introduzione all'archiviazione code di Azure con #](fsharp/using-fsharp-on-azure/queue-storage.md)
+### [Introduzione all'archiviazione tabelle di Azure con F#](fsharp/using-fsharp-on-azure/table-storage.md)
+### [Gestione dei pacchetti per le dipendenze F# di Azure](fsharp/using-fsharp-on-azure/package-management.md)
 <!-- End F# Content -->
 
 <!-- VB Content -->
 # [Guida a Visual Basic](visual-basic/index.md)
+## [Novità in Visual Basic](visual-basic/getting-started/whats-new.md)
 ## [Introduzione](visual-basic/getting-started/index.md)
-### [Novità in Visual Basic](visual-basic/getting-started/whats-new.md)
 ### [Modifiche importanti apportate a Visual Basic in Visual Studio ](visual-basic/getting-started/breaking-changes-in-visual-studio.md)
 ### [Risorse aggiuntive per i programmatori Visual Basic](visual-basic/getting-started/additional-resources.md)
 
 ## [Sviluppo di applicazioni](visual-basic/developing-apps/index.md)
 
 ### [Programmazione in Visual Basic](visual-basic/developing-apps/programming/index.md)
-#### [Accesso alle risorse del computer](visual-basic/developing-apps/programming/computer-resources/computer-resources.md)
-#### [Registrazione di informazioni relative all'applicazione](visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+#### [Accesso alle risorse del computer](visual-basic/developing-apps/programming/computer-resources/index.md)
+#### [Registrazione di informazioni relative all'applicazione](visual-basic/developing-apps/programming/log-info/index.md)
 #### [Accesso ai dati utente](visual-basic/developing-apps/programming/accessing-user-data.md)
 #### [Accesso ai form di un'applicazione](visual-basic/developing-apps/programming/accessing-application-forms.md)
 #### [Accesso ai servizi Web dell'applicazione](visual-basic/developing-apps/programming/accessing-application-web-services.md)
 ##### [Procedura: Chiamare un servizio Web in modo asincrono](visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)
-#### [Accesso alle impostazioni dell'applicazione](visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)
+#### [Accesso alle impostazioni dell'applicazione](visual-basic/developing-apps/programming/app-settings/index.md)
 #### [Elaborazione di unità, directory e file](visual-basic/developing-apps/programming/drives-directories-files/processing.md)
 
 ### [Sviluppo con My](visual-basic/developing-apps/development-with-my/index.md)
@@ -463,7 +460,7 @@
 ### [Accesso ai dati](visual-basic/developing-apps/accessing-data.md)
 ### [Creazione e uso di componenti](visual-basic/developing-apps/creating-and-using-components.md)
 
-### [Stampa e generazione di report](visual-basic/developing-apps/printing/printing-and-reporting.md)
+### [Stampa e generazione di report](visual-basic/developing-apps/printing/index.md)
 #### [Componente PrintForm](visual-basic/developing-apps/printing/printform-component.md)
 #### [Procedura: Stampare un form scorrevole](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
 #### [Procedura: Stampare aree client e non client di un form](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
@@ -472,29 +469,9 @@
 #### [Distribuzione di applicazioni che fanno riferimento al componente PrintForm](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
 #### [Aggiunta di report stampabili ad applicazioni Visual Studio](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
 
-### [Nozioni di base sulle applicazioni Windows Forms](visual-basic/developing-apps/windows-forms/windows-forms-application-basics.md)
-### [Controlli Power Pack](visual-basic/developing-apps/windows-forms/power-packs-controls.md)
-### [Controllo DataRepeater](visual-basic/developing-apps/windows-forms/datarepeater-control-visual-studio.md)
-#### [Introduzione al controllo DataRepeater](visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
-#### [Modalità virtuale nel controllo DataRepeater](visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md)
-#### [Procedura: Visualizzare i dati associati in un controllo DataRepeater](visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)
-#### [Procedura: Visualizzare i controlli non associati in un controllo DataRepeater](visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)
-#### [Procedura: Modificare il layout di un controllo DataRepeater](visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)
-#### [Procedura: Modificare l'aspetto di un controllo DataRepeater](visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
-#### [Procedura: Visualizzare le intestazioni degli elementi in un controllo DataRepeater](visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)
-#### [Procedura: Disabilitare l'aggiunta e l'eliminazione di elementi DataRepeater](visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)
-#### [Procedura: Cercare dati in un controllo DataRepeater](visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)
-#### [Procedura: Creare un form Master-Details mediante due controlli DataRepeater](visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)
-#### [Procedura dettagliata: Visualizzazione di dati in un controllo DataRepeater](visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)
-#### [Risoluzione dei problemi relativi al controllo DataRepeater](visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
-### [Controlli Line e Shape](visual-basic/developing-apps/windows-forms/line-and-shape-controls-visual-studio.md)
-#### [Introduzione ai controlli Line e Shape](visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
-#### [Procedura: Disegnare linee con il controllo LineShape](visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
-#### [Procedura: Disegnare forme con i controlli OvalShape e RectangleShape](visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)
-#### [Procedura: Abilitare la tabulazione tra forme](visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)
-#### [Distribuzione di applicazioni che fanno riferimento a controlli Power Pack](visual-basic/developing-apps/windows-forms/deploying-applications-that-reference-power-packs-controls-visual-studio.md)
+### [Nozioni di base sulle applicazioni Windows Forms](visual-basic/developing-apps/windows-forms/index.md)
 
-### [Personalizzazione di progetti ed estensione di oggetti My in Visual Basic](visual-basic/developing-apps/customizing-extending-my/customizing-projects-and-extending-my.md)
+### [Personalizzazione di progetti ed estensione di oggetti My in Visual Basic](visual-basic/developing-apps/customizing-extending-my/index.md)
 #### [Estensione dello spazio dei nomi My](visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)
 #### [Assemblaggio e distribuzione delle estensioni My personalizzate](visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)
 #### [Estensione del modello di applicazione Visual Basic](visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
@@ -588,7 +565,7 @@
 #### [Riepilogo della modifica delle stringhe](visual-basic/language-reference/keywords/string-manipulation-summary.md)
 ### [Attributi](visual-basic/language-reference/attributes.md)
 ### [Costanti ed enumerazioni](visual-basic/language-reference/constants-and-enumerations.md)
-### [Riepilogo dei tipi di dati](visual-basic/language-reference/data-types/data-type-summary.md)
+### [Riepilogo dei tipi di dati](visual-basic/language-reference/data-types/index.md)
 #### [Tipo di dati Boolean](visual-basic/language-reference/data-types/boolean-data-type.md)
 #### [Tipo di dati Byte](visual-basic/language-reference/data-types/byte-data-type.md)
 #### [Tipo di dati Char](visual-basic/language-reference/data-types/char-data-type.md)
@@ -606,7 +583,7 @@
 #### [Tipo di dati ULong](visual-basic/language-reference/data-types/ulong-data-type.md)
 #### [Tipo di dati definito dall'utente](visual-basic/language-reference/data-types/user-defined-data-type.md)
 #### [Tipo di dati UShort](visual-basic/language-reference/data-types/ushort-data-type.md)
-### [Direttive](visual-basic/language-reference/directives/directives.md)
+### [Direttive](visual-basic/language-reference/directives/index.md)
 #### [Direttiva #Const](visual-basic/language-reference/directives/const-directive.md)
 #### [Direttiva #ExternalSource](visual-basic/language-reference/directives/externalsource-directive.md)
 #### [Direttive #If...Then...#Else](visual-basic/language-reference/directives/if-then-else-directives.md)
@@ -737,7 +714,7 @@
 #### [Operatori logici/bit per bit](visual-basic/language-reference/operators/logical-bitwise-operators.md)
 #### [Operatori vari](visual-basic/language-reference/operators/miscellaneous-operators.md)
 ### [Proprietà](visual-basic/language-reference/properties.md)
-### [Query](visual-basic/language-reference/queries/queries.md)
+### [Query](visual-basic/language-reference/queries/index.md)
 #### [Clausola Aggregate](visual-basic/language-reference/queries/aggregate-clause.md)
 #### [Clausola Distinct](visual-basic/language-reference/queries/distinct-clause.md)
 #### [Clausola Equals](visual-basic/language-reference/queries/equals-clause.md)
@@ -827,7 +804,7 @@
 #### [Elenco degli attributi](visual-basic/language-reference/statements/attribute-list.md)
 #### [Elenco dei parametri](visual-basic/language-reference/statements/parameter-list.md)
 #### [Elenco dei tipi](visual-basic/language-reference/statements/type-list.md)
-### [Tag di commento XML](visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+### [Tag di commento XML](visual-basic/language-reference/xmldoc/index.md)
 #### [<c>](visual-basic/language-reference/xmldoc/c.md)
 #### [<code>](visual-basic/language-reference/xmldoc/code.md)
 #### [<example>](visual-basic/language-reference/xmldoc/example.md)
@@ -845,7 +822,7 @@
 #### [<summary>](visual-basic/language-reference/xmldoc/summary.md)
 #### [<typeparam>](visual-basic/language-reference/xmldoc/typeparam.md)
 #### [<value>](visual-basic/language-reference/xmldoc/value.md)
-### [Proprietà Axis XML](visual-basic/language-reference/xml-axis/xml-axis-properties.md)
+### [Proprietà Axis XML](visual-basic/language-reference/xml-axis/index.md)
 #### [Proprietà axis dell'attributo XML](visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 #### [Proprietà Child Axis XML](visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
 #### [Proprietà axis descendant XML](visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)
@@ -1140,6 +1117,7 @@
 ### [Glossario dell'apprendimento automatico](machine-learning/resources/glossary.md)
 ### [Nozioni fondamentali sull'apprendimento automatico](machine-learning/resources/basics.md)
 ### [Attività di apprendimento automatico](machine-learning/resources/tasks.md)
+### [Trasformazioni di dati](machine-learning/resources/transforms.md)
 
 <!-- End ML.NET Content -->
 
