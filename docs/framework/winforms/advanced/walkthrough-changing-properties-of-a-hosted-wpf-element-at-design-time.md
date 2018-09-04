@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF content [Windows Forms], hosting in Windows Forms
 - interoperability [WPF]
 ms.assetid: a1f7a90c-0bbb-4781-8c3c-8cc8bef2488d
-ms.openlocfilehash: d17273f52d0cef118b79fef03af72522f6677073
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15cab9266af5840aa4b37a62b71bd5010b7a859a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529821"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535642"
 ---
 # <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a>Procedura dettagliata: modifica delle proprietà di un elemento WPF ospitato in fase di progettazione
 Questa procedura dettagliata mostra come cambiare i valori delle proprietà di un controllo Windows Presentation Foundation (WPF) incluso in un Windows Form.  
@@ -28,7 +28,7 @@ Questa procedura dettagliata mostra come cambiare i valori delle proprietà di u
 -   Usare WPF Designer per Visual Studio per cambiare i valori delle proprietà.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
@@ -43,16 +43,16 @@ Questa procedura dettagliata mostra come cambiare i valori delle proprietà di u
   
 #### <a name="to-create-the-project"></a>Per creare il progetto  
   
--   Creare un nuovo progetto applicazione Windows Forms in Visual Basic o Visual c# denominato `WpfHost`.  
+-   Creare un nuovo progetto Windows Forms Application in Visual Basic o Visual c# denominato `WpfHost`.  
   
 ## <a name="creating-the-wpf-control"></a>Creazione del controllo WPF  
  Dopo avere aggiunto un controllo WPF al progetto, è possibile disporlo sul form.  
   
 #### <a name="to-create-wpf-controls"></a>Per creare controlli WPF  
   
-1.  Aggiungere un nuovo <xref:System.Windows.Controls.UserControl> WPF al progetto. Usare il nome predefinito per il tipo di controllo, `UserControl1.xaml`. Per ulteriori informazioni, vedere [procedura dettagliata: creazione di nuovo contenuto WPF in Windows Form in fase di progettazione](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Aggiungere un nuovo <xref:System.Windows.Controls.UserControl> WPF al progetto. Usare il nome predefinito per il tipo di controllo, `UserControl1.xaml`. Per altre informazioni, vedere [procedura dettagliata: creazione di nuovo contenuto WPF in Windows Form in fase di progettazione](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  Nel **proprietà** finestra, impostare il valore della <xref:System.Windows.Controls.Control.Background%2A> proprietà `Blue`.  
+2.  Nel **delle proprietà** finestra, impostare il valore della <xref:System.Windows.Controls.Control.Background%2A> proprietà `Blue`.  
   
 3.  Compilare il progetto.  
   
@@ -63,7 +63,7 @@ Questa procedura dettagliata mostra come cambiare i valori delle proprietà di u
   
 1.  Aprire `Form1` in Progettazione Windows Form.  
   
-2.  Nel **della casella degli strumenti**nella **controlli utente WPF** scheda, fare doppio clic su `UserControl1` per creare un'istanza di `UserControl1` nel form.  
+2.  Nel **casella degli strumenti**, nella **controlli utente WPF** scheda, fare doppio clic su `UserControl1` per creare un'istanza di `UserControl1` nel form.  
   
      L'istanza di `UserControl1` viene inclusa in un nuovo controllo <xref:System.Windows.Forms.Integration.ElementHost> denominato `elementHost1`.  
   
@@ -71,7 +71,7 @@ Questa procedura dettagliata mostra come cambiare i valori delle proprietà di u
   
      UserControl1.xaml viene aperto in WPF Designer.  
   
-4.  Nel **proprietà** finestra, impostare il valore della <xref:System.Windows.Controls.Control.Background%2A> proprietà `Red`.  
+4.  Nel **delle proprietà** finestra, impostare il valore della <xref:System.Windows.Controls.Control.Background%2A> proprietà `Red`.  
   
 5.  Ricompilare il progetto.  
   
@@ -87,4 +87,4 @@ Questa procedura dettagliata mostra come cambiare i valori delle proprietà di u
  [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Migrazione e interoperabilità](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [Uso di controlli WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [WPF Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+ [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

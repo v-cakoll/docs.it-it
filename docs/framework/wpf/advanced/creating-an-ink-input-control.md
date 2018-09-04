@@ -15,11 +15,11 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 3113b953c1c547035883a4f4b51f53e4aefdf0a6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392422"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537873"
 ---
 # <a name="creating-an-ink-input-control"></a>Creazione di un controllo di input penna
 È possibile creare un controllo personalizzato che in modo dinamico e in modo statico viene eseguito il rendering dell'input penna. Vale a dire, eseguire il rendering dell'input penna come un utente consente di disegnare un tratto, causando l'input penna venga visualizzato "fluire" dalla penna del tablet PC e visualizzarlo dopo che viene aggiunto al controllo, tramite la penna del tablet PC, incollato dagli Appunti o caricato da un file. Per eseguire il rendering dinamico, è necessario usare il controllo un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Per eseguire il rendering statico, è necessario eseguire l'override dei metodi di evento dello stilo (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, e <xref:System.Windows.UIElement.OnStylusUp%2A>) per raccogliere <xref:System.Windows.Input.StylusPoint> dati, creare i tratti e aggiungerle a un <xref:System.Windows.Controls.InkPresenter> (che esegue il rendering dell'input penna in del controllo).  

@@ -9,11 +9,11 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec3a7e01e62b60688080fee95cf70e0ed38917f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656178"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552192"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Consente di specificare la versione di Common Language Runtime (CLR) in grado di eseguire il file di output.  
@@ -50,7 +50,7 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
   
 -   Uso dell'interoperabilità pInvoke o COM con componenti non disponibili in tutte le piattaforme.  
   
- Il **-piattaforma** opzione sarà possibile limitare alcuni problemi se si conosce presenti le premesse sull'architettura verrà eseguito il codice. In particolare:  
+ Il **-piattaforma** opzione sarà possibile limitare alcuni problemi se si conosce presenti le premesse sull'architettura in cui verrà eseguito il codice. In particolare:  
   
 -   Se si specifica l'opzione per una piattaforma a 64 bit e l'applicazione viene eseguita su un computer a 32 bit, il messaggio di errore verrà visualizzato con maggiore anticipo e sarà maggiormente descrittivo del problema specifico rispetto all'errore che si verifica senza usare questa opzione.  
   
@@ -66,15 +66,15 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
   
 -   Gli eseguibili compilati con l'opzione `-platform:anycpu32bitpreferred` potranno essere eseguiti da CLR a 32 bit.  
   
- Per ulteriori informazioni su come sviluppare un'applicazione da eseguire in una versione a 64 bit di Windows, vedere [applicazioni a 64 bit](../../../framework/64-bit-apps.md).  
+ Per altre informazioni su come sviluppare un'applicazione da eseguire su una versione a 64 bit di Windows, vedere [applicazioni a 64 bit](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a>Per impostare - piattaforma nell'IDE di Visual Studio  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>Impostare - piattaforma nell'IDE di Visual Studio  
   
-1.  In **Esplora**, scegliere il progetto, aprire il **progetto** menu e quindi fare clic su **proprietà**.  
+1.  Nelle **Esplora soluzioni**, scegliere il progetto, aprire il **Project** menu e quindi fare clic su **proprietà**.  
   
-2.  Nel **compilare** selezionare o deselezionare il **preferisci 32 bit** casella di controllo, o, nel **CPU di destinazione** elenco, scegliere un valore.  
+2.  Nel **compilare** scheda, selezionare o deselezionare il **preferisci 32 bit** casella di controllo, o, nel **CPU destinazione** scegliere un valore.  
   
-     Per ulteriori informazioni, vedere [pagina Compila, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+     Per altre informazioni, vedere [pagina compilazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente mostra come usare l'opzione del compilatore `-platform`.  

@@ -2,12 +2,12 @@
 title: Esempio di elemento di associazione di individuazione
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d906d9a389c50095f2af5d52e3874c3e43199e68
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805668"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535777"
 ---
 # <a name="discovery-binding-element-sample"></a>Esempio di elemento di associazione di individuazione
 In questo esempio viene illustrato come utilizzare l'elemento di associazione del client di individuazione per individuare un servizio. Questa funzionalità consente agli sviluppatori di aggiungere un canale client di individuazione allo stack dei canali del client esistente, rendendo il modello di programmazione estremamente intuitivo. Quando il canale associato viene aperto, l'indirizzo del servizio viene risolto utilizzando la funzionalità di individuazione. L'esempio è costituito dai progetti seguenti:  
@@ -16,14 +16,14 @@ In questo esempio viene illustrato come utilizzare l'elemento di associazione de
   
 -   **CalculatorClient**: applicazione client WCF che utilizza il canale client di individuazione per cercare e chiamare CalculatorService.  
   
--   **DynamicCalculatorClient**: applicazione client WCF che utilizza un endpoint dinamico per cercare e chiamare CalculatorService.  
+-   **DynamicCalculatorClient**: applicazione client WCF che usa un endpoint dinamico per cercare e chiamare CalculatorService.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryBindingElement`  
   
@@ -82,7 +82,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- Dopo aver creato un'istanza di <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, lo sviluppatore specifica i criteri da utilizzare durante la ricerca di un servizio. In questo caso, il criterio di ricerca dell'individuazione è il tipo `ICalculatorService`. Lo sviluppatore specifica inoltre un oggetto <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> che restituisce un oggetto <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> che specifica la posizione in cui eseguire la ricerca dei servizi. <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> restituisce una nuova istanza di <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>. Per altre informazioni, vedere [utilizzando un'associazione personalizzata con il canale Client di individuazione](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
+ Dopo aver creato un'istanza di <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, lo sviluppatore specifica i criteri da utilizzare durante la ricerca di un servizio. In questo caso, il criterio di ricerca dell'individuazione è il tipo `ICalculatorService`. Lo sviluppatore specifica inoltre un oggetto <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> che restituisce un oggetto <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> che specifica la posizione in cui eseguire la ricerca dei servizi. <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> restituisce una nuova istanza di <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>. Per altre informazioni, vedere [usando un'associazione personalizzata con il canale Client di individuazione](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  

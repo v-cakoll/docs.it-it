@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 435bc1c04bfd2f9b8a94ff8151369b5ef2fae6f8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385872"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534310"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Procedura dettagliata: implementazione di un form che utilizza un'operazione in background
 Se si dispone di un'operazione che richiederà molto tempo per il completamento, e il blocco non desiderate l'interfaccia utente (UI) o "blocco", è possibile usare il <xref:System.ComponentModel.BackgroundWorker> classe per eseguire l'operazione in un altro thread.  

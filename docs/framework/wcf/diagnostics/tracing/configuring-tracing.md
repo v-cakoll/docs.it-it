@@ -4,35 +4,35 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: f9603f79992c31ad1af3b6c672b448ab031ba78d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807368"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542297"
 ---
 # <a name="configuring-tracing"></a>Configurazione delle funzionalità di traccia
 In questo argomento viene illustrato come attivare la funzionalità di traccia, configurare origini di traccia affinché vengano create tracce e impostati livelli di traccia, impostare traccia e propagazione di attività per supportare la correlazione tra tracce end-to-end e configurare i listener di traccia affinché accedano alle tracce.  
   
- Per indicazioni di impostazioni di traccia nell'ambiente di debug o di produzione, vedere [impostazioni consigliate per la traccia e registrazione dei messaggi](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ Per consigli sulle impostazioni di traccia nell'ambiente di produzione o debug, fare riferimento alla [impostazioni consigliate per la traccia e registrazione dei messaggi](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
 > [!IMPORTANT]
 >  In Windows 8 è necessario eseguire l'applicazione con privilegi elevati (Esegui come amministratore) affinché l'applicazione generi i log di traccia.  
   
 ## <a name="enabling-tracing"></a>Abilitazione della traccia  
- Windows Communication Foundation (WCF) restituisce i dati seguenti per la traccia diagnostica:  
+ Windows Communication Foundation (WCF) restituisce i dati seguenti per l'analisi diagnostica:  
   
 -   Tracce per le attività cardine dei processi in tutti i componenti delle applicazioni, ad esempio chiamate dell'operazione, eccezioni del codice, avvisi e altri eventi di elaborazione significativi.  
   
--   Eventi di errore di Windows quando la funzionalità di traccia non viene eseguita correttamente. Vedere [la registrazione degli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+-   Eventi di errore di Windows quando la funzionalità di traccia non viene eseguita correttamente. Visualizzare [la registrazione degli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
- La traccia di WCF viene compilata in cima <xref:System.Diagnostics>. Per utilizzare la funzionalità di traccia, è necessario definire le origini di traccia nel file di configurazione o nel codice. WCF definisce un'origine di traccia per ogni assembly WCF. Il `System.ServiceModel` origine di traccia è l'origine di traccia WCF più generale e registra le attività cardine di elaborazione attraverso lo stack di comunicazione WCF, dall'immissione/abbandono del trasporto all'immissione/abbandono di codice utente. L'origine della traccia `System.ServiceModel.MessageLogging` registra tutti i messaggi che vengono propagati nel sistema.  
+ Traccia di WCF si basa su <xref:System.Diagnostics>. Per utilizzare la funzionalità di traccia, è necessario definire le origini di traccia nel file di configurazione o nel codice. WCF definisce un'origine di traccia per ogni assembly WCF. Il `System.ServiceModel` origine di traccia è l'origine di traccia WCF più generale e Registra attività cardine di elaborazione attraverso lo stack di comunicazione WCF, dall'immissione/abbandono del trasporto all'immissione/abbandono di codice utente. L'origine della traccia `System.ServiceModel.MessageLogging` registra tutti i messaggi che vengono propagati nel sistema.  
   
- Per impostazione predefinita, la traccia non è attivata. Per attivare la traccia, è necessario creare un listener di traccia e impostare un livello di traccia diverso da "Off" per l'origine di traccia selezionata nella configurazione; in caso contrario, WCF non genera tracce. Se non si specifica un listener, la traccia verrà disattivata automaticamente. Se viene definito un listener ma non è specificato alcun livello, per impostazione predefinita viene selezionato il livello "Disattivo", ovvero non viene generata alcuna traccia.  
+ Per impostazione predefinita, la traccia non è attivata. Per attivare la traccia, è necessario creare un listener di traccia e impostare un livello di traccia diverso da "Off" per l'origine di traccia selezionata nella configurazione. in caso contrario, WCF genera tracce. Se non si specifica un listener, la traccia verrà disattivata automaticamente. Se viene definito un listener ma non è specificato alcun livello, per impostazione predefinita viene selezionato il livello "Disattivo", ovvero non viene generata alcuna traccia.  
   
- Se si usano punti di estendibilità WCF, ad esempio invoker di operazioni personalizzati, è necessario generare tracce proprie. Infatti, se si implementa un punto di estensibilità, WCF non è più possibile creare tracce standard nel percorso predefinito. Se non si implementa il supporto della traccia manuale creando tracce, è possibile che le tracce previste non vengano visualizzate.  
+ Se si usano punti di estendibilità WCF, ad esempio invoker di operazioni personalizzati, è necessario generare tracce proprie. Infatti, se si implementa un punto di estendibilità, WCF non è più possibile creare tracce standard nel percorso predefinito. Se non si implementa il supporto della traccia manuale creando tracce, è possibile che le tracce previste non vengano visualizzate.  
   
- È possibile configurare la funzionalità di traccia modificando il file di configurazione dell'applicazione, Web.config per applicazioni di tipo host Web o Appname.exe.config per applicazioni indipendenti. Di seguito è riportato un esempio di modifica applicabile. Per ulteriori informazioni su queste impostazioni, vedere la sezione "Configurazione di traccia nei listener per l'utilizzo di tracce".  
+ È possibile configurare la funzionalità di traccia modificando il file di configurazione dell'applicazione, Web.config per applicazioni di tipo host Web o Appname.exe.config per applicazioni indipendenti. Di seguito è riportato un esempio di modifica applicabile. Per altre informazioni su queste impostazioni, vedere la sezione "Configurazione di traccia nei listener per l'utilizzo di tracce".  
   
 ```xml  
 <configuration>  
@@ -53,12 +53,12 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
 ```  
   
 > [!NOTE]
->  Per modificare il file di configurazione di un progetto di servizio WCF in Visual Studio, con il pulsante destro fare clic sul file di configurazione dell'applicazione, Web. config per applicazioni ospitate da Web o appname. exe per l'applicazione self-hosted in **Esplora soluzioni** . Scegliere quindi il **Modifica configurazione WCF** menu di scelta rapida. Verrà avviata il [strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), che consente di modificare le impostazioni di configurazione per i servizi WCF utilizzando un'interfaccia utente grafica.  
+>  Per modificare il file di configurazione di un progetto di servizio WCF in Visual Studio, con il pulsante destro fare clic sul file di configurazione dell'applicazione, ovvero Web. config per le applicazioni ospitate sul Web o appname per applicazione self-hosted in **Esplora soluzioni** . Quindi scegliere il **Modifica configurazione WCF** menu di scelta rapida. Verrà avviata il [dello strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), che consente di modificare le impostazioni di configurazione dei servizi WCF tramite un'interfaccia utente grafica.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configurazione delle origini di traccia per la generazione di tracce  
  WCF definisce un'origine di traccia per ogni assembly. I listener definiti per tale origine accedono alle tracce generate all'interno di un assembly. Vengono definite le origini di traccia seguenti:  
   
--   System. ServiceModel: Registra tutte le fasi di elaborazione di WCF, ogni volta che viene letto configurazione, viene elaborato un messaggio nel trasporto, sicurezza, l'elaborazione di un messaggio viene inviata nel codice utente e così via.  
+-   System. ServiceModel: Registra tutte le fasi dell'elaborazione di WCF, ogni volta che la configurazione viene letta, viene elaborato un messaggio nel trasporto, sicurezza, l'elaborazione di un messaggio viene inviata nel codice utente e così via.  
   
 -   System.ServiceModel.MessageLogging: registra tutti i messaggi propagati nel sistema.  
   
@@ -133,7 +133,7 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
 </system.diagnostics>  
 ```  
   
- Per ulteriori informazioni sulla creazione di origini di traccia definita dall'utente, vedere [estensione traccia](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ Per altre informazioni sulla creazione di origini di traccia definite dall'utente, vedere [estendendo Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configurazione dei listener di traccia per l'utilizzo di tracce  
  In fase di esecuzione, WCF feed di dati di traccia ai listener che elaborano i dati. WCF fornisce vari listener predefiniti per <xref:System.Diagnostics>, diversi a livello del formato utilizzato per l'output. È inoltre possibile aggiungere tipi di listener personalizzati.  
@@ -142,7 +142,7 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
   
  È possibile configurare un listener di traccia personalizzato per l'invio di tracce in transito, ad esempio a un database remoto. I distributori di applicazioni devono applicare un apposito controllo di accesso nei log di traccia del computer remoto.  
   
- È inoltre possibile configurare un listener di traccia a livello di programmazione. Per altre informazioni, vedere [procedura: creare e inizializzare listener di traccia](http://go.microsoft.com/fwlink/?LinkId=94648) e [creazione di un listener di traccia personalizzato](http://go.microsoft.com/fwlink/?LinkId=96239).  
+ È inoltre possibile configurare un listener di traccia a livello di programmazione. Per altre informazioni, vedere [procedura: creare e inizializzare listener di traccia](https://go.microsoft.com/fwlink/?LinkId=94648) e [creazione di un TraceListener personalizzato](https://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Poiché `System.Diagnostics.XmlWriterTraceListener` non è thread-safe, è possibile che l'origine di traccia blocchi le risorse in modo esclusivo durante la restituzione di tracce. Quando molti thread restituiscono tracce a un'origine configurata per l'utilizzo di questo listener, può verificarsi un conflitto di risorse con conseguente calo delle prestazioni. Per risolvere il problema, è necessario implementare un listener personalizzato di tipo thread-safe.  
@@ -153,12 +153,12 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
 |Livello di traccia|Natura degli eventi registrati|Contenuto degli eventi registrati|Eventi registrati|Destinazione utente|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
 |Disattivato|N/D|N/D|Non vengono create tracce.|N/D|  
-|Critico|Eventi "negativi": eventi che indicano un'elaborazione imprevista o una condizione di errore.||Vengono registrate eccezioni non gestite comprese le seguenti:<br /><br /> -OutOfMemoryException<br />-Eccezione ThreadAbortException (il CLR richiama qualsiasi ThreadAbortExceptionHandler)<br />-StackOverflowException (non intercettabile)<br />-ConfigurationErrorsException<br />-SEHException<br />-Errori di avvio applicazione<br />-Eventi Failfast<br />-Blocchi di sistema<br />-Messaggi non elaborabili: tracce di messaggi che l'applicazione avrà esito negativo.|Amministratori<br /><br /> Sviluppatori di applicazioni|  
+|Critico|Eventi "negativi": eventi che indicano un'elaborazione imprevista o una condizione di errore.||Vengono registrate eccezioni non gestite comprese le seguenti:<br /><br /> -OutOfMemoryException<br />-ThreadAbortException (il CLR richiama qualsiasi ThreadAbortExceptionHandler)<br />-StackOverflowException (non intercettabile)<br />-ConfigurationErrorsException<br />-SEHException<br />-Errori di avvio applicazione<br />-Eventi Failfast<br />-Il sistema si blocca<br />-Messaggi non elaborabili: tracce di messaggi che l'applicazione avrà esito negativo.|Amministratori<br /><br /> Sviluppatori di applicazioni|  
 |Error|Eventi "negativi": eventi che indicano un'elaborazione imprevista o una condizione di errore.|Si è verificata un'elaborazione imprevista. L'applicazione non è stata in grado di eseguire un'attività come previsto. L'applicazione, tuttavia, è ancora in esecuzione.|Vengono registrate tutte le eccezioni.|Amministratori<br /><br /> Sviluppatori di applicazioni|  
 |Avviso|Eventi "negativi": eventi che indicano un'elaborazione imprevista o una condizione di errore.|Un possibile problema si è verificato o potrebbe verificarsi, ma l'applicazione funziona ancora correttamente. Tuttavia, potrebbe smettere di farlo.|-L'applicazione riceve più richieste superiore a quello consentiranno dalle impostazioni di limitazione.<br />-La coda di ricezione è prossimo alla capacità massima configurata.<br />-Tempo scaduto.<br />-Le credenziali sono rifiutate.|Amministratori<br /><br /> Sviluppatori di applicazioni|  
-|Informazioni|Eventi "Positivi": eventi che contrassegnano attività cardine eseguite correttamente|Attività cardine importanti e corrette di esecuzione dell'applicazione, indipendentemente dal funzionamento corretto o non corretto dell'applicazione.|In generale il sistema genera messaggi informativi utili per il monitoraggio e la diagnosi dello stato di sistema, la valutazione delle prestazioni o il profiling. È possibile utilizzare queste informazioni per la pianificazione della capacità e la gestione delle prestazioni:<br /><br /> -Vengono creati canali.<br />-Listener endpoint vengono creati.<br />-Messaggio entra o abbandona il trasporto.<br />Token di sicurezza viene recuperato.<br />-Impostazione di configurazione viene letto.|Amministratori<br /><br /> Sviluppatori di applicazioni<br /><br /> Sviluppatori di prodotti|  
-|Dettagliato|Eventi "Positivi": eventi che contrassegnano attività cardine eseguite correttamente.|Vengono generati eventi di basso livello per codice utente e manutenzione.|In genere è possibile utilizzare questo livello per il debug o l'ottimizzazione dell'applicazione.<br /><br /> -Intestazione del messaggio riconosciuta.|Amministratori<br /><br /> Sviluppatori di applicazioni<br /><br /> Sviluppatori di prodotti|  
-|ActivityTracing||Eventi di flusso tra attività di elaborazione e componenti.|Questo livello consente ad amministratori e sviluppatori di mettere in correlazione applicazioni nello stesso dominio applicazione:<br /><br /> -Le tracce per limiti di attività, ad esempio avviare o arrestare.<br />-Tracce per trasferimenti.|Tutti|  
+|Informazioni|Eventi "Positivi": eventi che contrassegnano attività cardine eseguite correttamente|Attività cardine importanti e corrette di esecuzione dell'applicazione, indipendentemente dal funzionamento corretto o non corretto dell'applicazione.|In generale il sistema genera messaggi informativi utili per il monitoraggio e la diagnosi dello stato di sistema, la valutazione delle prestazioni o il profiling. È possibile utilizzare queste informazioni per la pianificazione della capacità e la gestione delle prestazioni:<br /><br /> -I canali vengono creati.<br />-Vengono creati i listener endpoint.<br />-Messaggio entra o abbandona il trasporto.<br />-Token di sicurezza viene recuperato.<br />-L'impostazione configurazione viene letta.|Amministratori<br /><br /> Sviluppatori di applicazioni<br /><br /> Sviluppatori di prodotti|  
+|Dettagliato|Eventi "Positivi": eventi che contrassegnano attività cardine eseguite correttamente.|Vengono generati eventi di basso livello per codice utente e manutenzione.|In genere è possibile utilizzare questo livello per il debug o l'ottimizzazione dell'applicazione.<br /><br /> -Intestazione del messaggio comprensibile.|Amministratori<br /><br /> Sviluppatori di applicazioni<br /><br /> Sviluppatori di prodotti|  
+|ActivityTracing||Eventi di flusso tra attività di elaborazione e componenti.|Questo livello consente ad amministratori e sviluppatori di mettere in correlazione applicazioni nello stesso dominio applicazione:<br /><br /> -Le tracce per limiti di attività, ad esempio avviare o arrestare.<br />-Le tracce per trasferimenti.|Tutti|  
 |Tutti||L'applicazione può funzionare correttamente. Vengono generati tutti gli eventi.|Tutti gli eventi precedenti.|Tutti|  
   
  I livelli da Dettagliato a Critico sono inclusi l'uno dentro l'altro, ovvero ogni livello di traccia comprende tutti i livelli che lo precedono ad eccezione del livello Disattivo. Un listener in ascolto al livello Avviso, ad esempio, riceve le tracce Critico, Errore e Avviso. Il livello Tutto comprende gli eventi da Dettagliato a Critico ed eventi di Traccia attività.  
@@ -170,18 +170,18 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
  Il valore `activityTracing` specificato per l'attributo `switchValue` consente di attivare la traccia di attività, che genera tracce per limiti e trasferimenti di attività all'interno di endpoint.  
   
 > [!NOTE]
->  Quando si usa alcune funzionalità di estendibilità in WCF, è possibile che venga visualizzato un <xref:System.NullReferenceException> quando è abilitata la traccia di attività. Per risolvere questo problema, controllare il file di configurazione dell'applicazione e verificare che l'attributo `switchValue` per l'origine di traccia non sia impostato su `activityTracing`.  
+>  Quando si usa alcune funzionalità di estendibilità in WCF, potrebbe ottenere un <xref:System.NullReferenceException> quando è abilitata la traccia di attività. Per risolvere questo problema, controllare il file di configurazione dell'applicazione e verificare che l'attributo `switchValue` per l'origine di traccia non sia impostato su `activityTracing`.  
   
  L'attributo `propagateActivity` indica se l'attività deve essere propagata ad altri endpoint che partecipano nello scambio di messaggi. Impostando questo valore su `true`, è possibile osservare file di traccia generati da due endpoint qualsiasi e notare come un set di tracce in un endpoint venga propagato a un set di tracce in un altro endpoint.  
   
- Per ulteriori informazioni sulla traccia di attività e della propagazione, vedere [propagazione](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ Per altre informazioni sulla traccia di attività e la propagazione, vedere [propagazione](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
- Entrambi `propagateActivity` e `ActivityTracing` booleani valori validi per la proprietà TraceSource System. ServiceModel. Il `ActivityTracing` valore si applica anche a qualsiasi origine di traccia, tra cui WCF o quelli definiti dall'utente.  
+ Entrambe `propagateActivity` e `ActivityTracing` valori booleani si applicano a System. ServiceModel TraceSource. Il `ActivityTracing` valore si applica anche a qualsiasi origine di traccia, tra cui WCF o quelle definite dall'utente.  
   
  Non è possibile utilizzare l'attributo `propagateActivity` con le origini di traccia definite dall'utente. Per la propagazione di ID attività di codice utente, accertarsi di non impostare l'attributo `ActivityTracing` di ServiceModel, mantenendo l'attributo `propagateActivity` di ServiceModel impostato su `true`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Procedura: creare e inizializzare listener di traccia](http://go.microsoft.com/fwlink/?LinkId=94648)  
- [Creazione di un listener di traccia personalizzato](http://go.microsoft.com/fwlink/?LinkId=96239)
+ [Procedura: creare e inizializzare listener di traccia](https://go.microsoft.com/fwlink/?LinkId=94648)  
+ [Creazione di un TraceListener personalizzato](https://go.microsoft.com/fwlink/?LinkId=96239)

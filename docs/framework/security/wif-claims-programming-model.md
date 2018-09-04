@@ -5,11 +5,11 @@ ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: e70958ab20ff70462e7301630b36db3df79fd13e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43479906"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528722"
 ---
 # <a name="wif-claims-programming-model"></a>Modello di programmazione attestazioni WIF
 Gli sviluppatori ASP.NET e Windows Communication Foundation (WCF) usano in genere le interfacce IIdentity e IPrincipal per lavorare con le informazioni sull'identità dell'utente. In .NET 4.5 è stato integrato Windows Identity Foundation (WIF), in modo che le attestazioni siano ora sempre presenti per qualsiasi entità di sicurezza, come illustrato nel diagramma seguente:  

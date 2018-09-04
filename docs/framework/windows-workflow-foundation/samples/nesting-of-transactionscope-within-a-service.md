@@ -3,11 +3,11 @@ title: Annidamento di TransactionScope all'interno di un servizio
 ms.date: 03/30/2017
 ms.assetid: e7e1ba64-1384-4eba-add8-415636e2d6d0
 ms.openlocfilehash: cf73c0c2d061f1c997a8ade5d7b2bf61887915ca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482904"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533825"
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>Annidamento di TransactionScope all'interno di un servizio
 Questo esempio è costituito da due scenari che vengono eseguiti per illustrare come gestire le istanze dell'attività <xref:System.Activities.Statements.TransactionScope> all'interno di un servizio. Innanzitutto viene iniziata la transazione usando l'attività <xref:System.Activities.Statements.TransactionScope> per creare una nuova transazione nel client e l'attività <xref:System.ServiceModel.Activities.TransactedReceiveScope> per ricevere e definire l'ambito della durata della transazione sul server. Il primo scenario all'interno del servizio esegue un'attività <xref:System.Activities.Statements.TransactionScope> secondaria per dimostrare l'annidamento delle attività <xref:System.Activities.Statements.TransactionScope> all'interno del servizio. Nel secondo scenario viene illustrato il rispetto dei timeout all'interno delle attività <xref:System.Activities.Statements.TransactionScope> annidate.  

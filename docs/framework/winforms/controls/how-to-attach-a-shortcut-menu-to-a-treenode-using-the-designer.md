@@ -5,30 +5,30 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], attaching to TreeNodes
 - TreeNode [Windows Forms], attaching a shortcut menu using Designer
 ms.assetid: 8e45e184-1313-4f8f-90ff-2cd5789b2268
-ms.openlocfilehash: 2700be06ceb4c20926d6af9c962799db4afc31da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77c4b01100aec2df16d5eb844f73f7a2bfa115aa
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527836"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534778"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Procedura: Associare un menu di scelta rapida a un TreeNode usando la finestra di progettazione
-Windows Form <xref:System.Windows.Forms.TreeView> controllo Visualizza una gerarchia di nodi, simile ai file e cartelle vengono visualizzati nel riquadro sinistro della funzionalità Esplora risorse nei sistemi operativi Windows. Impostando il <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> proprietà, è possibile fornire operazioni sensibili al contesto per l'utente quando sono destro la <xref:System.Windows.Forms.TreeView> controllo. Associando un <xref:System.Windows.Forms.ContextMenuStrip> componente con singoli <xref:System.Windows.Forms.TreeNode> elementi, è possibile aggiungere un livello di funzionalità del menu di scelta rapida per personalizzato il <xref:System.Windows.Forms.TreeView> controlli.  
+I moduli di Windows <xref:System.Windows.Forms.TreeView> controllo Visualizza una gerarchia di nodi, simile ai file e cartelle vengono visualizzati nel riquadro a sinistra della funzionalità di Windows Explorer in sistemi operativi Windows. Impostando il <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> proprietà, è possibile fornire operazioni sensibili al contesto per l'utente quando sono fare doppio clic il <xref:System.Windows.Forms.TreeView> controllo. Associando un <xref:System.Windows.Forms.ContextMenuStrip> componenti con singolo <xref:System.Windows.Forms.TreeNode> gli elementi, è possibile aggiungere un livello di funzionalità dal menu di scelta rapida per personalizzato di <xref:System.Windows.Forms.TreeView> controlli.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-associate-a-shortcut-menu-with-a-treenode-at-design-time"></a>Per associare un menu di scelta rapida a un TreeNode in fase di progettazione  
   
-1.  Aggiungere un <xref:System.Windows.Forms.TreeView> il controllo al form e quindi aggiungere i nodi per il <xref:System.Windows.Forms.TreeView> in base alle esigenze. Per ulteriori informazioni, vedere [procedura: aggiungere e rimuovere nodi con il controllo TreeView Windows Form](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md).  
+1.  Aggiungere un <xref:System.Windows.Forms.TreeView> controllo al form e quindi aggiungere nodi di <xref:System.Windows.Forms.TreeView> in base alle esigenze. Per altre informazioni, vedere [procedura: aggiungere e rimuovere nodi con il controllo TreeView di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md).  
   
-2.  Aggiungere un <xref:System.Windows.Forms.ContextMenuStrip> componente al form, quindi aggiungere le voci di menu al menu di scelta rapida che rappresentano le operazioni a livello di nodo che si desidera rendere disponibili in fase di esecuzione. Per ulteriori informazioni, vedere [procedura: aggiungere voci di Menu a un ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md).  
+2.  Aggiungere un <xref:System.Windows.Forms.ContextMenuStrip> al form, quindi aggiungere le voci di menu al menu di scelta rapida che rappresentano operazioni a livello di nodo che si desidera rendere disponibili in fase di esecuzione. Per altre informazioni, vedere [procedura: aggiungere voci di Menu a un ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md).  
   
-3.  Riaprire il **Editor TreeNode** la finestra di dialogo per la <xref:System.Windows.Forms.TreeView> di controllo, selezionare il nodo da modificare e impostare il relativo <xref:System.Windows.Forms.ContextMenuStrip> proprietà per il menu di scelta rapida che è stato aggiunto.  
+3.  Riaprire il **Editor TreeNode** finestra di dialogo per il <xref:System.Windows.Forms.TreeView> controllare, selezionare il nodo da modificare e impostare relativo <xref:System.Windows.Forms.ContextMenuStrip> proprietà per il menu di scelta rapida che è stato aggiunto.  
   
 4.  Quando questa proprietà è impostata, verrà visualizzato il menu di scelta rapida si fa clic con il pulsante destro del nodo.  
   
-     Inoltre, è possibile scrivere codice per gestire il <xref:System.Windows.Forms.ToolStripItem.Click> gli eventi per queste voci di menu.  
+     Inoltre, è opportuno scrivere codice per gestire il <xref:System.Windows.Forms.ToolStripItem.Click> gli eventi per queste voci di menu.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Controllo TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  

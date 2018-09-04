@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 51b63a11fd2987d82f9a7599b39d15856a0abb1d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243828"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533642"
 ---
 # <a name="imports-statement-xml-namespace"></a>Istruzione Imports (spazio dei nomi XML)
 Importa i prefissi dello spazio dei nomi XML per l'utilizzo in valori letterali XML e proprietà axis XML.  
@@ -35,7 +35,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="remarks"></a>Note  
  È possibile usare la `Imports` istruzione per definire spazi dei nomi XML globale che è possibile usare con i valori letterali XML e proprietà axis XML o come parametri passati al `GetXmlNamespace` operatore. (Per informazioni sull'uso di `Imports` per importare un alias che può essere utilizzato in cui vengono usati i nomi dei tipi nel codice, vedere [istruzione Imports (tipo e .NET Namespace)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) La sintassi per dichiarare uno spazio dei nomi XML usando la `Imports` istruzione è identica a quella usata nel codice XML. Pertanto, è possibile copiare una dichiarazione dello spazio dei nomi da un file XML e usarla in un `Imports` istruzione.  
   
- I prefissi dello spazio dei nomi XML sono utili quando si desidera creare ripetutamente gli elementi XML che provengono dallo stesso spazio dei nomi. Il prefisso dello spazio dei nomi XML dichiarati con la `Imports` istruzione è globale nel senso che sia disponibile per tutto il codice nel file. È possibile utilizzarlo quando si creano valori letterali dell'elemento XML e quando si accede proprietà axis XML. Per altre informazioni, vedere [letterale elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) e [proprietà Axis XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).  
+ I prefissi dello spazio dei nomi XML sono utili quando si desidera creare ripetutamente gli elementi XML che provengono dallo stesso spazio dei nomi. Il prefisso dello spazio dei nomi XML dichiarati con la `Imports` istruzione è globale nel senso che sia disponibile per tutto il codice nel file. È possibile utilizzarlo quando si creano valori letterali dell'elemento XML e quando si accede proprietà axis XML. Per altre informazioni, vedere [letterale elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) e [proprietà Axis XML](../../../visual-basic/language-reference/xml-axis/index.md).  
   
  Se si definisce uno spazio dei nomi XML globale senza un prefisso dello spazio dei nomi (ad esempio, `Imports <xmlns="http://SomeNameSpace>"`), tale spazio dei nomi viene considerato lo spazio dei nomi XML predefinito. Lo spazio dei nomi XML predefinito viene usato per qualsiasi valori letterali dell'elemento XML o una proprietà di asse attributo XML che non specificano in modo esplicito uno spazio dei nomi. Spazio dei nomi predefinito viene usato anche se lo spazio dei nomi specificato è lo spazio dei nomi vuoto (vale a dire `xmlns=""`). Lo spazio dei nomi XML predefinito non è applicabile agli attributi XML nei valori letterali XML o di proprietà dell'asse degli attributi XML che non hanno uno spazio dei nomi.  
   
@@ -90,6 +90,6 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="see-also"></a>Vedere anche  
  [Valore letterale elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Proprietà Axis XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [Proprietà Axis XML](../../../visual-basic/language-reference/xml-axis/index.md)  
  [Nomi di elementi e attributi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
  [Operatore GetXmlNamespace](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

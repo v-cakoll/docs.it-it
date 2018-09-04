@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95ef445d41672c5c2895bd7115afb6a73a57e8f9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460421"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542167"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue (funzione)
-Converte un valore di dati delle prestazioni non elaborati nel formato specificato o due valori di tali dati se la conversione di formato è basato sul tempo.   
+Converte un valore di dati sulle prestazioni non elaborati nel formato specificato o due valori di dati sulle prestazioni non elaborati se la conversione del formato è basata sul tempo.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,18 +44,18 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parametri
 
 `dwCounterType`  
-[in] Il tipo di contatore. Per un elenco di tipi di contatori, vedere [tipi di contatori delle prestazioni WMI](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType` può essere qualsiasi tipo di contatore, ad eccezione di `PERF_LARGE_RAW_FRACTION` e `PERF_LARGE_RAW_BASE`. 
+[in] Il tipo di contatore. Per un elenco di tipi di contatori, vedere [tipi di contatore delle prestazioni WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` può essere qualsiasi tipo di contatore, ad eccezione di `PERF_LARGE_RAW_FRACTION` e `PERF_LARGE_RAW_BASE`. 
 
 `dwFormat`  
 [in] Il formato nel quale convertire i dati sulle prestazioni non elaborati. Può essere uno dei valori seguenti:
 
 |Costante  |Valore  |Descrizione |
 |---------|---------|---------|
-| `PDH_FMT_DOUBLE` |0x00000200 | Restituisce il valore calcolato come valore a virgola mobile a precisione doppia. | 
+| `PDH_FMT_DOUBLE` |0x00000200 | Restituisce il valore calcolato come un valore a virgola mobile a precisione doppia. | 
 | `PDH_FMT_LARGE` | 0x00000400 | Restituisce il valore calcolato come intero a 64 bit. |
 | `PDH_FMT_LONG` | 0x00000100 | Restituisce il valore calcolato come intero a 32 bit. |
 
-Può essere uno dei valori precedenti dall'operatore OR con uno dei flag di scala seguenti:
+Uno dei valori precedenti può essere introdotte con uno dei flag di ridimensionamento seguenti:
 
 |Costante  |Valore  |Descrizione |
 |---------|---------|---------|
@@ -63,17 +63,17 @@ Può essere uno dei valori precedenti dall'operatore OR con uno dei flag di scal
 | `PDH_FMT_1000` | 0x00002000 | Moltiplicare il valore finale per 1.000. | 
 
 `pTimeBase`  
-[in] Puntatore alla base di tempo, se necessario per la conversione di formato. Se le informazioni di base di ora non sono necessarie per la conversione di formato, il valore di questo parametro viene ignorato.
+[in] Puntatore alla base di tempo, se necessario per la conversione di formato. Se le informazioni di base di tempo non sono necessarie per la conversione di formato, il valore di questo parametro viene ignorato.
 
 `pRawValue1` [in] Un puntatore a un [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) struttura che rappresenta un valore delle prestazioni raw.
 
-`pRawValue2` [in] Un puntatore a un [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) struttura che rappresenta un secondo valore delle prestazioni raw. Se un tale valore non è necessario, questo parametro deve essere `null`.
+`pRawValue2` [in] Un puntatore a un [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) struttura che rappresenta un secondo valore sulle prestazioni non elaborati. Se un secondo valore delle prestazioni raw non è necessario, questo parametro deve essere `null`.
 
-`pFmtValue` [out] Un puntatore a un [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) struttura che riceve il valore formattato delle prestazioni.
+`pFmtValue` [out] Un puntatore a un [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) struttura che riceve il valore formattato le prestazioni.
 
 ## <a name="return-value"></a>Valore restituito
 
-Questa funzione, vengono restituiti i valori seguenti:
+I valori seguenti vengono restituiti da questa funzione:
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
@@ -83,14 +83,14 @@ Questa funzione, vengono restituiti i valori seguenti:
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata al [FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx) (funzione).
+Questa funzione esegue il wrapping di una chiamata per il [FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx) (funzione).
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Libreria:** PerfCounter  
+ **Libreria:** PerfCounter. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
-[WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

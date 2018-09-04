@@ -9,21 +9,21 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbe14e6c05fd6ef155b564e499157e00c5d809e5
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208610"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540086"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Supporto bidirezionale per le applicazioni Windows Forms
-È possibile utilizzare Visual Studio per creare applicazioni basate su Windows che supportano lingue (da destra a sinistra) bidirezionali, ad esempio arabo e l'ebraico. Sono inclusi form standard, finestre di dialogo, form MDI e tutti i controlli che è possibile usare in questi form, ovvero tutti gli oggetti nello spazio dei nomi <xref:System.Windows.Forms.Control>.  
+È possibile usare Visual Studio per creare applicazioni basate su Windows che supportano lingue (right-to-left) bidirezionali, ad esempio arabo ed ebraico. Sono inclusi form standard, finestre di dialogo, form MDI e tutti i controlli che è possibile usare in questi form, ovvero tutti gli oggetti nello spazio dei nomi <xref:System.Windows.Forms.Control>.  
   
 ## <a name="culture-support"></a>Supporto delle impostazioni cultura  
- Le impostazioni cultura e le impostazioni cultura dell'interfaccia utente determinano il funzionamento di un'applicazione rispetto a date, orari, valuta e altre informazioni. Il supporto per le impostazioni cultura e le impostazioni cultura dell'interfaccia utente per le lingue bidirezionali è uguale a quello per le altre lingue.   Vedere anche [Classi specifiche delle impostazioni cultura per Windows Form e Web Form globali](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) o [Classi specifiche delle impostazioni cultura per Windows Form e Web Form globali](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
+ Le impostazioni cultura e le impostazioni cultura dell'interfaccia utente determinano il funzionamento di un'applicazione rispetto a date, orari, valuta e altre informazioni. Il supporto per le impostazioni cultura e le impostazioni cultura dell'interfaccia utente per le lingue bidirezionali è uguale a quello per le altre lingue.   Vedere anche [Classi specifiche delle impostazioni cultura per Windows Form e Web Form globali](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) o [Classi specifiche delle impostazioni cultura per Windows Form e Web Form globali](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>Proprietà RightToLeft e RightToLeftLayout  
- La classe base <xref:System.Windows.Forms.Control> da cui derivano i form include una proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> che è possibile impostare per modificare l'ordine di lettura di un form e dei relativi controlli. Se si imposta la proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A>, i controlli sul form erediteranno questa impostazione per impostazione predefinita. Tuttavia, è anche possibile impostare singolarmente la proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> nella maggior parte dei controlli. Vedere anche [Procedura: visualizzare il testo da destra a sinistra in Windows Form per la globalizzazione](http://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
+ La classe base <xref:System.Windows.Forms.Control> da cui derivano i form include una proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> che è possibile impostare per modificare l'ordine di lettura di un form e dei relativi controlli. Se si imposta la proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A>, i controlli sul form erediteranno questa impostazione per impostazione predefinita. Tuttavia, è anche possibile impostare singolarmente la proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> nella maggior parte dei controlli. Vedere anche [Procedura: visualizzare il testo da destra a sinistra in Windows Form per la globalizzazione](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
   
  L'effetto della proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> può essere diverso da un controllo a un altro. In alcuni controlli, questa proprietà imposta soltanto l'ordine di lettura, come nei controlli <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> e <xref:System.Windows.Forms.ToolTip>. In altri controlli, la proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> modifica sia ordine di lettura che il layout, ad esempio, nei controlli <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.CheckBox>. Altri controlli richiedono che la proprietà <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> venga applicata per eseguire il mirroring del layout da destra a sinistra. La tabella seguente fornisce informazioni dettagliate sugli effetti delle proprietà <xref:System.Windows.Forms.Control.RightToLeft%2A> e <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> sui singoli controlli di Windows Form.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36208610"
 |<xref:System.Windows.Forms.MonthCalendar>|Non interessato. Dipende dal linguaggio del sistema operativo|Esegue il mirroring del controllo|Yes|  
 |<xref:System.Windows.Forms.NotifyIcon>|Non supportato|Non supportato|No|  
 |<xref:System.Windows.Forms.NumericUpDown>|I pulsanti SU e GIÙ sono allineati a sinistra|Nessun effetto|No|  
-|<xref:System.Windows.Forms.OpenFileDialog>|Nei sistemi operativi da destra a sinistra, l'impostazione del modulo contenente <xref:System.Windows.Forms.Control.RightToLeft> proprietà <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> localizza la finestra di dialogo |Nessun effetto|No|  
+|<xref:System.Windows.Forms.OpenFileDialog>|Nei sistemi operativi di destra a sinistra, l'impostazione del modulo che lo contiene <xref:System.Windows.Forms.Control.RightToLeft> proprietà <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> localizza la finestra di dialogo |Nessun effetto|No|  
 |<xref:System.Windows.Forms.PageSetupDialog>|Non interessato. Dipende dal linguaggio del sistema operativo|Nessun effetto|No|  
 |<xref:System.Windows.Forms.Panel>|I controlli figlio possono ereditare questa proprietà|Usare <xref:System.Windows.Forms.TableLayoutPanel> all'interno del controllo per il supporto da destra a sinistra|Yes|  
 |<xref:System.Windows.Forms.PictureBox>|Non supportato|Nessun effetto|No|  
@@ -119,5 +119,5 @@ ms.locfileid: "36208610"
   
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto bidirezionale per applicazioni Web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+[Supporto bidirezionale per applicazioni Web ASP.NET](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
 [Globalizzazione di applicazioni Windows Form](globalizing-windows-forms.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 ms.openlocfilehash: 773aca8cbbd78f5480e254ff559192955beb18d9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43455679"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532474"
 ---
 # <a name="reference-visual-basic"></a>Riferimenti (Visual Basic)
 In questa sezione vengono forniti collegamenti a informazioni di riferimento su diversi aspetti della programmazione in Visual Basic.  

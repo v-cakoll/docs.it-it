@@ -2,18 +2,18 @@
 title: Supporto SqlClient per LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 33368ca4b2dc5397087d29e515db6c1094e350bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359797"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532709"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Supporto SqlClient per LocalDB
 A partire da SQL Server nome in codice Denali, una versione leggera di SQL Server, chiamata LocalDB, sarà disponibile. In questo argomento viene illustrato come connettersi a un database di LocalDB.  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni su LocalDB, ad esempio come installarlo e configurare l'istanza di LocalDB, vedere la documentazione Online di SQL Server.  
+ Per ulteriori informazioni su LocalDB, incluse le procedure per installarlo e configurare l'istanza di Local DB, vedere la documentazione Online di SQL Server.  
   
  Per riepilogare le operazioni che è possibile eseguire con LocalDB:  
   
@@ -31,7 +31,7 @@ A partire da SQL Server nome in codice Denali, una versione leggera di SQL Serve
   
  `User Instance=True` non è consentito quando ci si connette a un database di LocalDB.  
   
- È possibile scaricare LocalDB da [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065). Se si utilizzerà sqlcmd.exe per modificare i dati nell'istanza di LocalDB, sarà necessario sqlcmd da SQL Server 2012, è inoltre possibile ottenere dal Feature Pack di SQL Server 2012.  
+ È possibile scaricare LocalDB da [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Se si utilizzerà sqlcmd.exe per modificare i dati nell'istanza di LocalDB, sarà necessario sqlcmd da SQL Server 2012, è anche possibile ottenere dal Feature Pack di SQL Server 2012.  
   
 ## <a name="programmatically-create-a-named-instance"></a>Creare un'istanza denominata a livello di codice  
  Un'applicazione può creare un'istanza denominata e specificare un database come segue:  
@@ -60,4 +60,4 @@ A partire da SQL Server nome in codice Denali, una versione leggera di SQL Serve
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

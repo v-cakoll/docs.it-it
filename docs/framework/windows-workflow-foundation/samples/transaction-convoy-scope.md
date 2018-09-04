@@ -2,12 +2,12 @@
 title: Ambito di istruzioni della transazione
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
-ms.openlocfilehash: 4b053c15768a20ade4a469c9a40af797f49c268b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516565"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536091"
 ---
 # <a name="transaction-convoy-scope"></a>Ambito di istruzioni della transazione
 In questo esempio viene illustrato come creare un modello di attività di messaggistica di una serie di istruzioni parallele insieme a un oggetto <xref:System.ServiceModel.Activities.TransactedReceiveScope> per modellare un protocollo in cui possono verificarsi diverse operazioni in qualsiasi ordine, tutte nella stessa transazione. In questo esempio viene inoltre illustrato in che modo <xref:System.ServiceModel.Activities.TransactedReceiveScope> crea automaticamente una nuova transazione quando non ne viene propagata una al server, in modo che il client non utilizzi alcuna transazione.  
@@ -24,9 +24,9 @@ In questo esempio viene illustrato come creare un modello di attività di messag
   
 3.  Assicurarsi che entrambi i progetti siano impostati per l'avvio.  
   
-    1.  In **Esplora**, la soluzione e scegliere **Imposta progetti di avvio**.  
+    1.  Nelle **Esplora soluzioni**, la soluzione e scegliere **Imposta progetti di avvio**.  
   
-    2.  Selezionare **più progetti di avvio** e assicurarsi che l'azione per entrambi i progetti è impostata su **avviare**.  
+    2.  Selezionare **progetti di avvio multipli** e verificare che l'azione per entrambi i progetti è impostata su **avviare**.  
   
 4.  Per eseguire la soluzione, premere CTRL+F5.  
   
@@ -39,6 +39,6 @@ In questo esempio viene illustrato come creare un modello di attività di messag
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`

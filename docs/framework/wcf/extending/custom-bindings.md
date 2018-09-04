@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 6880b04a3f8a82c1e109c32674804c5241913a8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694b4faaafea62799a96aabe8f023a0d495f8d50
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487072"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540205"
 ---
 # <a name="custom-bindings"></a>Associazioni personalizzate
-Quando una delle associazioni fornite dal sistema non soddisfa i requisiti del servizio è possibile utilizzare la classe <xref:System.ServiceModel.Channels.CustomBinding>. Tutte le associazioni sono costruite a partire da un set ordinato di elementi di associazione. Le associazioni personalizzate possono essere compilate a partire da un set di elementi di associazione forniti dal sistema oppure possono includere elementi di associazione personalizzati definiti dall'utente. È ad esempio possibile utilizzare elementi di associazione personalizzati per consentire l'utilizzo di nuovi trasporti o codificatori presso un endpoint di servizio. Per esempi di utilizzo, vedere [esempi di associazione personalizzate](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Per altre informazioni, vedere [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+Quando una delle associazioni fornite dal sistema non soddisfa i requisiti del servizio è possibile utilizzare la classe <xref:System.ServiceModel.Channels.CustomBinding>. Tutte le associazioni sono costruite a partire da un set ordinato di elementi di associazione. Le associazioni personalizzate possono essere compilate a partire da un set di elementi di associazione forniti dal sistema oppure possono includere elementi di associazione personalizzati definiti dall'utente. È ad esempio possibile utilizzare elementi di associazione personalizzati per consentire l'utilizzo di nuovi trasporti o codificatori presso un endpoint di servizio. Per alcuni esempi funzionanti, vedere [esempi di associazione personalizzate](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Per altre informazioni, vedere [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 ## <a name="construction-of-a-custom-binding"></a>Costruzione di un'associazione personalizzata  
  Un'associazione personalizzata viene costruita utilizzando il costruttore <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> a partire da una raccolta di elementi di associazione contenuti in uno stack ordinato nel modo seguente:  
@@ -42,7 +42,7 @@ Quando una delle associazioni fornite dal sistema non soddisfa i requisiti del s
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
- Segue infine un elemento di trasporto obbligatorio. È possibile utilizzare un trasporto personalizzato oppure uno dei seguenti elementi di associazione di trasporto fornisce Windows Communication Foundation (WCF):  
+ Segue infine un elemento di trasporto obbligatorio. È possibile usare un trasporto personalizzato o uno dei seguenti elementi di associazione di trasporto fornisce Windows Communication Foundation (WCF):  
   
 -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   

@@ -3,11 +3,11 @@ title: Attività personalizzata Hello World
 ms.date: 03/30/2017
 ms.assetid: 72b1dd0a-9aad-47d5-95a9-a1024ee1d0a1
 ms.openlocfilehash: fde745fae7470ec763b6b5030a60436a6525e3c0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470775"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533496"
 ---
 # <a name="hello-world-custom-activity"></a>Attività personalizzata Hello World
 Questo esempio illustra diverse funzionalità principali di Windows Workflow Foundation (WF), incluse quelle sulla creazione di una semplice attività personalizzata. Alcune delle funzionalità illustrate in questo esempio creano un'attività personalizzata in C# e usano argomenti `in` e `out` (<xref:System.Activities.InArgument> e <xref:System.Activities.OutArgument>).  

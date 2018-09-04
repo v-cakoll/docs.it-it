@@ -3,11 +3,11 @@ title: Profili di rilevamento
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
 ms.openlocfilehash: 6651b79a474125f57c1cad773ae858dc7654d58a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396990"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532523"
 ---
 # <a name="tracking-profiles"></a>Profili di rilevamento
 I profili di rilevamento contengono query di rilevamento che consentono a un partecipante del rilevamento di sottoscrivere gli eventi del flusso di lavoro creati quando lo stato di un'istanza del flusso di lavoro viene modificato in fase di esecuzione.  

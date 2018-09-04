@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0ed1021bdc45d0d64a20ff19410ad56e0d304ed3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c525344b18322cef05f64e46c75cdab7b271561a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750960"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540033"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;security&gt; di &lt;netMsmqBinding&gt;
 Definisce le impostazioni di sicurezza per un'associazione MSMQ. e specifica se è stata abilitata la sicurezza basata sul trasporto o la sicurezza SOAP. In tal caso, indica la modalità di autenticazione e i livelli di protezione in uso.  
@@ -41,7 +41,7 @@ Definisce le impostazioni di sicurezza per un'associazione MSMQ. e specifica se 
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|modalità|Specifica il tipo di sicurezza che controlla integrità, riservatezza e autenticazione. Di seguito vengono elencati i valori validi:<br /><br /> -None: Disabilita la sicurezza.<br />-Transport: Protezione e autenticazione sono offerte dal trasporto. Si applica alla sicurezza del messaggio tra i due gestori delle code. Tra l'applicazione e il gestore della coda non viene offerta alcuna sicurezza. Le applicazioni Msmq esistenti sono funzionalmente equivalenti con questo tipo di modalità di sicurezza.<br />-Message: Specifica la sicurezza dell'applicazione-end. A livello del trasporto non viene offerta alcuna sicurezza. È simile alla sicurezza offerta da altre associazioni standard.<br />-Both: Offre sicurezza a livello di messaggistica SOAP sia il trasporto. A entrambi i livelli è richiesta la stessa credenziale.<br /><br /> L'impostazione predefinita è Transport. L'attributo è di tipo <xref:System.ServiceModel.NetMsmqSecurityMode>.|  
+|modalità|Specifica il tipo di sicurezza che controlla integrità, riservatezza e autenticazione. Di seguito vengono elencati i valori validi:<br /><br /> -None: Disabilita la sicurezza.<br />-Transport: La protezione e autenticazione sono offerte dal trasporto. Si applica alla sicurezza del messaggio tra i due gestori delle code. Tra l'applicazione e il gestore della coda non viene offerta alcuna sicurezza. Le applicazioni Msmq esistenti sono funzionalmente equivalenti con questo tipo di modalità di sicurezza.<br />-Message: Specifica la sicurezza dell'applicazione-end. A livello del trasporto non viene offerta alcuna sicurezza. È simile alla sicurezza offerta da altre associazioni standard.<br />-Both: Offre sicurezza a livello di messaggistica SOAP sia il trasporto. A entrambi i livelli è richiesta la stessa credenziale.<br /><br /> L'impostazione predefinita è Transport. L'attributo è di tipo <xref:System.ServiceModel.NetMsmqSecurityMode>.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -54,7 +54,7 @@ Definisce le impostazioni di sicurezza per un'associazione MSMQ. e specifica se 
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|binding|L'elemento di associazione di [ \<netMsmqBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|  
+|binding|L'elemento di associazione del [ \<netMsmqBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>  
@@ -64,6 +64,6 @@ Definisce le impostazioni di sicurezza per un'associazione MSMQ. e specifica se 
  [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)  
  [Code in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - scrollable form [Visual Basic], printing
 ms.assetid: 1196e1cf-b77f-4928-a3e4-85b51ba3787d
 ms.openlocfilehash: 4a509b7c48f2bff705bc95e58fb88252cb8ca4b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486620"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532657"
 ---
 # <a name="how-to-print-a-scrollable-form-visual-basic"></a>Procedura: stampare un form scorrevole (Visual Basic)
 Il componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> consente di stampare rapidamente un'immagine di un form senza usare un componente <xref:System.Drawing.Printing.PrintDocument> . Per impostazione predefinita, viene stampata solo la parte visibile del form. Se un utente ha ridimensionato il form in fase di esecuzione, l'immagine potrebbe non essere stampata come previsto. La procedura seguente illustra come stampare l'intera area client di un form scorrevole, anche se il form è stato ridimensionato.  
