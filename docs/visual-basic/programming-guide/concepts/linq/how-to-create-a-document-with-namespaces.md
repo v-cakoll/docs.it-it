@@ -3,27 +3,27 @@ title: 'Procedura: creare un documento con spazi dei nomi (LINQ to XML) (Visual 
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754170"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499926"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a><span data-ttu-id="75a53-102">Procedura: creare un documento con spazi dei nomi (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75a53-102">How to: Create a Document with Namespaces (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="75a53-103">In questo argomento viene illustrato come creare un documento con spazi dei nomi in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="75a53-103">This topic shows how to create a document with namespaces in Visual Basic.</span></span>  
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a><span data-ttu-id="a2971-102">Procedura: creare un documento con spazi dei nomi (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2971-102">How to: Create a Document with Namespaces (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="a2971-103">In questo argomento viene illustrato come creare un documento con spazi dei nomi in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a2971-103">This topic shows how to create a document with namespaces in Visual Basic.</span></span>  
   
- <span data-ttu-id="75a53-104">Quando si usano valori letterali XML in Visual Basic, gli utenti possono definire un unico spazio dei nomi XML predefinito globale.</span><span class="sxs-lookup"><span data-stu-id="75a53-104">When using XML literals in Visual Basic, users can define one global default XML namespace.</span></span> <span data-ttu-id="75a53-105">Tale spazio dei nomi è quello predefinito sia per i valori letterali XML che per le proprietà XML.</span><span class="sxs-lookup"><span data-stu-id="75a53-105">This namespace is the default namespace for both XML literals and XML properties.</span></span> <span data-ttu-id="75a53-106">Lo spazio dei nomi XML predefinito può essere definito a livello di progetto o di file.</span><span class="sxs-lookup"><span data-stu-id="75a53-106">The default XML namespace can be defined at either the project level or the file level.</span></span> <span data-ttu-id="75a53-107">Se viene definito a livello di file, sostituisce quello predefinito a livello di progetto.</span><span class="sxs-lookup"><span data-stu-id="75a53-107">If it is defined at the file level, it overrides the default namespace at the project level.</span></span>  
+ <span data-ttu-id="a2971-104">Quando si usano valori letterali XML in Visual Basic, gli utenti possono definire un unico spazio dei nomi XML predefinito globale.</span><span class="sxs-lookup"><span data-stu-id="a2971-104">When using XML literals in Visual Basic, users can define one global default XML namespace.</span></span> <span data-ttu-id="a2971-105">Tale spazio dei nomi è quello predefinito sia per i valori letterali XML che per le proprietà XML.</span><span class="sxs-lookup"><span data-stu-id="a2971-105">This namespace is the default namespace for both XML literals and XML properties.</span></span> <span data-ttu-id="a2971-106">Lo spazio dei nomi XML predefinito può essere definito a livello di progetto o di file.</span><span class="sxs-lookup"><span data-stu-id="a2971-106">The default XML namespace can be defined at either the project level or the file level.</span></span> <span data-ttu-id="a2971-107">Se viene definito a livello di file, sostituisce quello predefinito a livello di progetto.</span><span class="sxs-lookup"><span data-stu-id="a2971-107">If it is defined at the file level, it overrides the default namespace at the project level.</span></span>  
   
- <span data-ttu-id="75a53-108">È inoltre possibile definire altri spazi dei nomi e specificarne i prefissi.</span><span class="sxs-lookup"><span data-stu-id="75a53-108">You can also define other namespaces, and specify the namespace prefixes for those namespaces.</span></span>  
+ <span data-ttu-id="a2971-108">È inoltre possibile definire altri spazi dei nomi e specificarne i prefissi.</span><span class="sxs-lookup"><span data-stu-id="a2971-108">You can also define other namespaces, and specify the namespace prefixes for those namespaces.</span></span>  
   
- <span data-ttu-id="75a53-109">Per definire spazi dei nomi predefiniti e spazi dei nomi con prefissi, usare la parola chiave `Imports`.</span><span class="sxs-lookup"><span data-stu-id="75a53-109">You define both default namespaces and namespaces with a prefix by using the `Imports` keyword.</span></span>  
+ <span data-ttu-id="a2971-109">Per definire spazi dei nomi predefiniti e spazi dei nomi con prefissi, usare la parola chiave `Imports`.</span><span class="sxs-lookup"><span data-stu-id="a2971-109">You define both default namespaces and namespaces with a prefix by using the `Imports` keyword.</span></span>  
   
- <span data-ttu-id="75a53-110">Per altre informazioni, vedere [Introduzione ai valori letterali XML in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).</span><span class="sxs-lookup"><span data-stu-id="75a53-110">For more information, see [Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).</span></span>  
+ <span data-ttu-id="a2971-110">Per altre informazioni, vedere [Introduzione ai valori letterali XML in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).</span><span class="sxs-lookup"><span data-stu-id="a2971-110">For more information, see [Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).</span></span>  
   
- <span data-ttu-id="75a53-111">Notare che lo spazio dei nomi XML predefinito si applica solo agli elementi e non agli attributi.</span><span class="sxs-lookup"><span data-stu-id="75a53-111">Note that the default XML namespace only applies to elements and not to attributes.</span></span> <span data-ttu-id="75a53-112">Per impostazione predefinita, gli attributi non sono inclusi in nessuno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="75a53-112">Attributes are by default always in no namespace.</span></span> <span data-ttu-id="75a53-113">È tuttavia possibile usare un prefisso dello spazio dei nomi per inserire un attributo in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="75a53-113">However, you can use a namespace prefix to put an attribute in a namespace.</span></span>  
+ <span data-ttu-id="a2971-111">Notare che lo spazio dei nomi XML predefinito si applica solo agli elementi e non agli attributi.</span><span class="sxs-lookup"><span data-stu-id="a2971-111">Note that the default XML namespace only applies to elements and not to attributes.</span></span> <span data-ttu-id="a2971-112">Per impostazione predefinita, gli attributi non sono inclusi in nessuno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="a2971-112">Attributes are by default always in no namespace.</span></span> <span data-ttu-id="a2971-113">È tuttavia possibile usare un prefisso dello spazio dei nomi per inserire un attributo in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="a2971-113">However, you can use a namespace prefix to put an attribute in a namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="75a53-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="75a53-114">Example</span></span>  
- <span data-ttu-id="75a53-115">In questo esempio viene creato un documento contenente uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="75a53-115">This example creates a document that contains a namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="a2971-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="a2971-114">Example</span></span>  
+ <span data-ttu-id="a2971-115">In questo esempio viene creato un documento contenente uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="a2971-115">This example creates a document that contains a namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -38,7 +38,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="75a53-116">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="75a53-116">This example produces the following output:</span></span>  
+ <span data-ttu-id="a2971-116">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="a2971-116">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  
@@ -46,8 +46,8 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="75a53-117">Esempio</span><span class="sxs-lookup"><span data-stu-id="75a53-117">Example</span></span>  
- <span data-ttu-id="75a53-118">In questo esempio viene creato un documento contenente due spazi dei nomi, uno dei quali è quello predefinito.</span><span class="sxs-lookup"><span data-stu-id="75a53-118">This example creates a document that contains two namespaces, one of which is the default namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="a2971-117">Esempio</span><span class="sxs-lookup"><span data-stu-id="a2971-117">Example</span></span>  
+ <span data-ttu-id="a2971-118">In questo esempio viene creato un documento contenente due spazi dei nomi, uno dei quali è quello predefinito.</span><span class="sxs-lookup"><span data-stu-id="a2971-118">This example creates a document that contains two namespaces, one of which is the default namespace.</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -67,7 +67,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="75a53-119">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="75a53-119">This example produces the following output:</span></span>  
+ <span data-ttu-id="a2971-119">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="a2971-119">This example produces the following output:</span></span>  
   
 ```xml  
 <Root xmlns:fc="www.fourthcoffee.com" xmlns="http://www.adventure-works.com">  
@@ -76,10 +76,10 @@ End Module
 </Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="75a53-120">Esempio</span><span class="sxs-lookup"><span data-stu-id="75a53-120">Example</span></span>  
- <span data-ttu-id="75a53-121">Nell'esempio seguente viene creato un documento contenente più spazi dei nomi, tutti con prefisso.</span><span class="sxs-lookup"><span data-stu-id="75a53-121">The following example creates a document that contains multiple namespaces, both with namespace prefixes.</span></span>  
+## <a name="example"></a><span data-ttu-id="a2971-120">Esempio</span><span class="sxs-lookup"><span data-stu-id="a2971-120">Example</span></span>  
+ <span data-ttu-id="a2971-121">Nell'esempio seguente viene creato un documento contenente più spazi dei nomi, tutti con prefisso.</span><span class="sxs-lookup"><span data-stu-id="a2971-121">The following example creates a document that contains multiple namespaces, both with namespace prefixes.</span></span>  
   
- <span data-ttu-id="75a53-122">Quando si serializza un albero XML, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] genera dichiarazioni degli spazi dei nomi in base alle necessità in modo che ogni elemento venga inserito nel relativo spazio dei nomi definito.</span><span class="sxs-lookup"><span data-stu-id="75a53-122">When serializing an XML tree, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] emits namespace declarations as required so that each element is in its designated namespace.</span></span>  
+ <span data-ttu-id="a2971-122">Quando si serializza un albero XML, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] genera dichiarazioni degli spazi dei nomi in base alle necessità in modo che ogni elemento venga inserito nel relativo spazio dei nomi definito.</span><span class="sxs-lookup"><span data-stu-id="a2971-122">When serializing an XML tree, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] emits namespace declarations as required so that each element is in its designated namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -102,7 +102,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="75a53-123">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="75a53-123">This example produces the following output:</span></span>  
+ <span data-ttu-id="a2971-123">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="a2971-123">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:fc="www.fourthcoffee.com" xmlns:aw="http://www.adventure-works.com">  
@@ -114,5 +114,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="75a53-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="75a53-124">See Also</span></span>  
- [<span data-ttu-id="75a53-125">Utilizzo di spazi dei nomi XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75a53-125">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="a2971-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a2971-124">See Also</span></span>  
+ [<span data-ttu-id="a2971-125">Utilizzo di spazi dei nomi XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2971-125">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
