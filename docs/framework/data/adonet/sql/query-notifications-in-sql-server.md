@@ -2,12 +2,12 @@
 title: Notifiche di query in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 60ab686437f764a006fca5a2043d02288ea46d0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4e58a3eecc18fb5693e9850163533b0a1a6a574
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364071"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563658"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notifiche di query in SQL Server
 Basate sull'infrastruttura Service Broker, le notifiche di query consentono di inviare notifiche alle applicazioni quando i dati vengono modificati. Questa funzionalità è particolarmente utile per le applicazioni che forniscono una cache di informazioni da un database, ad esempio un'applicazione Web, e che richiedono una notifica quando i dati di origine vengono modificati.  
@@ -24,19 +24,19 @@ Basate sull'infrastruttura Service Broker, le notifiche di query consentono di i
   
  È possibile impostare le notifiche per le istruzioni SELECT ed EXECUTE. Quando si usa un'istruzione EXECUTE, SQL Server registra una notifica per il comando eseguito anziché per l'istruzione EXECUTE stessa. Il comando deve soddisfare i requisiti e le limitazioni previste per un'istruzione SELECT. Quando un comando che registra una notifica contiene più di un'istruzione, il Motore di database crea una notifica per ogni istruzione inclusa nel batch.  
   
- Se si sviluppa un'applicazione in cui è necessario notifiche frazioni di secondo affidabili quando i dati, rivedere le sezioni **pianificazione di una strategia di notifiche di Query efficienti** e **alternative alle Query Le notifiche** nel [pianificazione per le notifiche](http://go.microsoft.com/fwlink/?LinkId=211984) argomento nella documentazione Online di SQL Server. Per altre informazioni sulle notifiche di query e su SQL Server Service Broker, vedere i collegamenti seguenti agli argomenti della documentazione online di SQL Server.  
+ Se si sviluppa un'applicazione in cui è necessario le notifiche di frazioni di secondo affidabili quando i dati vengono modificati, consultare le sezioni **pianificazione di una strategia di notifiche di Query efficienti** e **alternative alla Query Le notifiche** nella [pianificazione delle notifiche](https://go.microsoft.com/fwlink/?LinkId=211984) argomento nella documentazione Online di SQL Server. Per altre informazioni sulle notifiche di query e su SQL Server Service Broker, vedere i collegamenti seguenti agli argomenti della documentazione online di SQL Server.  
   
  **Documentazione online di SQL Server**  
   
--   [Uso delle notifiche di Query](http://msdn.microsoft.com/library/ms175110.aspx)  
+-   [Uso delle notifiche di Query](https://msdn.microsoft.com/library/ms175110.aspx)  
   
--   [Creazione di una Query da notificare](http://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Creazione di una Query per la notifica](https://msdn.microsoft.com/library/ms181122.aspx)  
   
--   [Service Broker](http://msdn.microsoft.com/library/bb522889.aspx)  
+-   [Service Broker](https://msdn.microsoft.com/library/bb522889.aspx)  
   
--   [Centro informazioni per sviluppatori di Service Broker](http://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Centro informazioni per sviluppatori di Service Broker](https://msdn.microsoft.com/library/ms166100.aspx)  
   
--   [Sviluppo (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Sviluppo (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Abilitazione di notifiche di query](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
@@ -63,4 +63,4 @@ Basate sull'infrastruttura Service Broker, le notifiche di query consentono di i
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

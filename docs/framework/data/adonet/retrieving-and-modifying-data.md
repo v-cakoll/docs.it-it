@@ -2,15 +2,15 @@
 title: Recupero e modifica di dati in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 0c970c01352aecf6a25bac1b89b9f79c96f80d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ef5191cf89f22fbaf0bb1bf4fbf47db1d4c06a1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361543"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562563"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recupero e modifica di dati in ADO.NET
-La connessione a un'origine dati e il recupero dei dati in essa contenuti sono funzioni fondamentali nelle applicazioni di database. I provider di dati .NET Framework di ADO.NET fungono da ponte tra un'applicazione e un'origine dati, consentendo di eseguire comandi e di recuperare i dati utilizzando un **DataReader** o **DataAdapter** . Una funzione chiave di qualsiasi applicazione di database è la capacità di aggiornare i dati archiviati nel database. In ADO.NET l'aggiornamento dei dati prevede l'uso di **DataAdapter** e <xref:System.Data.DataSet>, e **comando** degli oggetti può anche comprendere l'utilizzo delle transazioni.  
+La connessione a un'origine dati e il recupero dei dati in essa contenuti sono funzioni fondamentali nelle applicazioni di database. I provider di dati .NET Framework di ADO.NET fungono da ponte tra un'applicazione e un'origine dati, consentendo di eseguire comandi e recuperare i dati utilizzando un **DataReader** o una **DataAdapter** . Una funzione chiave di qualsiasi applicazione di database è la capacità di aggiornare i dati archiviati nel database. In ADO.NET, l'aggiornamento dei dati prevede l'uso di **DataAdapter** e <xref:System.Data.DataSet>, e **comando** degli oggetti può anche comprendere l'utilizzo delle transazioni.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
@@ -32,10 +32,10 @@ La connessione a un'origine dati e il recupero dei dati in essa contenuti sono f
  Sono inclusi argomenti in cui viene descritto come eseguire transazioni locali e transazioni distribuite e come usare concorrenza ottimistica.  
   
  [Recupero di identità o di valori numerati automaticamente](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- Fornisce un esempio di mapping i valori generati per un **identità** colonna in una tabella di SQL Server o per un **contatore** campo in una tabella di Microsoft Access, a una colonna di una riga inserita in una tabella. Viene descritta l'unione di valori Identity in un oggetto `DataTable`.  
+ Fornisce un esempio di mapping i valori generati per un **identity** colonna in una tabella di SQL Server o per un' **Autonumber** campo in una tabella di Microsoft Access, a una colonna di una riga inserita in una tabella. Viene descritta l'unione di valori Identity in un oggetto `DataTable`.  
   
  [Recupero di dati binari](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- Viene descritto come recuperare dati binari o strutture di dati di grandi dimensioni utilizzando `CommandBehavior`.`SequentialAccess` Per modificare il comportamento predefinito di un `DataReader`.  
+ Viene descritto come recuperare dati binari o strutture di dati di grandi dimensioni tramite `CommandBehavior`.`SequentialAccess` Per modificare il comportamento predefinito di un `DataReader`.  
   
  [Modifica di dati con stored procedure](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  Viene descritto come usare i parametri di input e di output della stored procedure per inserire una riga in un database, restituendo un nuovo valore Identity.  
@@ -56,11 +56,11 @@ La connessione a un'origine dati e il recupero dei dati in essa contenuti sono f
  Viene descritto il supporto di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] per la programmazione asincrona.  
   
  [Supporto per flusso SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- Viene illustrato come scrivere applicazioni che i dati del flusso da SQL Server senza che venga completamente caricata in memoria.  
+ Viene illustrato come scrivere applicazioni che trasmettere dati da SQL Server senza che siano completamente caricata in memoria.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [Oggetti DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

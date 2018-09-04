@@ -2,23 +2,23 @@
 title: Emulazione di interruzione in un'attività While
 ms.date: 03/30/2017
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-ms.openlocfilehash: 37c64c2b8dc03d58f9c2802edef644fe4888e87d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4938e07364609520f6528688877bce112be26d3f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514713"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560425"
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>Emulazione di interruzione in un'attività While
 In questo esempio viene illustrato come interrompere il meccanismo di ciclo delle attività seguenti: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> e <xref:System.Activities.Statements.ParallelForEach%601>.  
   
- Ciò è utile perché Windows Workflow Foundation (WF) non è inclusa alcuna attività per interrompere l'esecuzione di questi cicli.  
+ Ciò è utile perché Windows Workflow Foundation (WF) non include alcuna attività per interrompere l'esecuzione di questi cicli.  
   
 ## <a name="scenario"></a>Scenario  
  Nell'esempio viene rilevato il primo fornitore affidabile in un elenco di fornitori (istanze della classe `Vendor`). Ogni fornitore dispone di un oggetto `ID`, di un oggetto `Name` e di un valore di affidabilità numerico che determina l'affidabilità del fornitore. Nell'esempio viene creata un'attività personalizzata denominata `FindReliableVendor` che riceve due parametri di input (un elenco di fornitori e un valore di affidabilità minimo) e restituisce il primo fornitore dell'elenco che corrisponde ai criteri forniti.  
   
 ## <a name="breaking-a-loop"></a>Interruzione di un ciclo  
- Windows Workflow Foundation (WF) non include un'attività per interrompere un ciclo. Nell'esempio di codice viene eseguita l'interruzione di un ciclo tramite un'attività <xref:System.Activities.Statements.If> e diverse variabili. Nell'esempio, l'attività <xref:System.Activities.Statements.While> viene interrotta dopo che alla variabile `reliableVendor` viene assegnato un valore diverso da `null`.  
+ Windows Workflow Foundation (WF) non è inclusa un'attività per interrompere un ciclo. Nell'esempio di codice viene eseguita l'interruzione di un ciclo tramite un'attività <xref:System.Activities.Statements.If> e diverse variabili. Nell'esempio, l'attività <xref:System.Activities.Statements.While> viene interrotta dopo che alla variabile `reliableVendor` viene assegnato un valore diverso da `null`.  
   
  Nell'esempio di codice seguente viene illustrato il modo in cui l'esempio interrompe un ciclo while.  
   
@@ -77,6 +77,6 @@ new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`

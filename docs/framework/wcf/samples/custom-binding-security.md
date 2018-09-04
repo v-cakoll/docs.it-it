@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2a0d716c3689b506ad29d99f006f1a4bb7c53a3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61e8be6f7f621340a684bff69ec5c9d64ab36c61
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507029"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565190"
 ---
 # <a name="custom-binding-security"></a>Sicurezza delle associazioni personalizzate
 In questo esempio viene illustrato come configurare la sicurezza mediante un'associazione personalizzata. Viene mostrato come usare un'associazione personalizzata per abilitare la sicurezza a livello di messaggio insieme con un trasporto sicuro. Questo è utile quando è necessario un trasporto protetto per trasmettere i messaggi tra client e servizio e simultaneamente i messaggi devono essere protetti a livello di messaggio. Questa configurazione non è supportata dalle associazioni fornite dal sistema.  
@@ -25,7 +25,7 @@ In questo esempio viene illustrato come configurare la sicurezza mediante un'ass
   
 -   Sicurezza dei messaggi di Windows  
   
- La configurazione dell'associazione personalizzata consente il trasporto protetto abilitando simultaneamente la sicurezza a livello di messaggio. L'ordine degli elementi di associazione è importante nella definizione di un'associazione personalizzata, perché ognuna rappresenta un livello nello stack dei canali (vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md)). L'associazione personalizzata viene definita nei file di configurazione del servizio e del client, come illustrato nell'esempio di configurazione seguente.  
+ La configurazione dell'associazione personalizzata consente il trasporto protetto abilitando simultaneamente la sicurezza a livello di messaggio. L'ordinamento degli elementi di associazione è importante nel definire un'associazione personalizzata, perché ognuna rappresenta un livello nello stack dei canali (vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md)). L'associazione personalizzata viene definita nei file di configurazione del servizio e del client, come illustrato nell'esempio di configurazione seguente.  
   
 ```xml  
 <bindings>  
@@ -59,7 +59,7 @@ In questo esempio viene illustrato come configurare la sicurezza mediante un'ass
 </behaviors>  
 ```  
   
- L'associazione personalizzata usa inoltre la sicurezza dei messaggi con tipo di credenziale di Windows, che è il tipo di credenziale predefinito. Ciò viene ottenuto dall'elemento di associazione `security`. Sia il client che il servizio vengono autenticati mediante la sicurezza a livello di messaggio se è disponibile l'autenticazione Kerberos. Questa situazione si verifica se l'esempio viene eseguito nell'ambiente di Active Directory. Se il meccanismo di autenticazione Kerberos non è disponibile, viene usata l'autenticazione NTLM. Tale autenticazione viene eseguita tra il client e il servizio, ma non tra il servizio e il client. Il `security` elemento di associazione è configurato per utilizzare `SecureConversation``authenticationType`, che comporta la creazione di una sessione di sicurezza nel client e il servizio. Questa operazione è necessaria per consentire il funzionamento del contratto duplex del servizio.  
+ L'associazione personalizzata usa inoltre la sicurezza dei messaggi con tipo di credenziale di Windows, che è il tipo di credenziale predefinito. Ciò viene ottenuto dall'elemento di associazione `security`. Sia il client che il servizio vengono autenticati mediante la sicurezza a livello di messaggio se è disponibile l'autenticazione Kerberos. Questa situazione si verifica se l'esempio viene eseguito nell'ambiente di Active Directory. Se il meccanismo di autenticazione Kerberos non è disponibile, viene usata l'autenticazione NTLM. Tale autenticazione viene eseguita tra il client e il servizio, ma non tra il servizio e il client. Il `security` elemento di associazione è configurato per usare `SecureConversation``authenticationType`, che comporta la creazione di una sessione di sicurezza nel client e il servizio. Questa operazione è necessaria per consentire il funzionamento del contratto duplex del servizio.  
   
  Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Premere INVIO nella finestra del client per arrestare il client.  
   
@@ -107,11 +107,11 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer  
   
@@ -124,7 +124,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 3.  Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-4.  Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer  
   
@@ -141,7 +141,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         > [!NOTE]
         >  Il file batch Setup.bat è progettato per essere eseguito da un prompt dei comandi di Visual Studio 2010 e richiede che la variabile di ambiente PATH punti alla directory in cui è installato SDK. Questa variabile di ambiente viene impostata automaticamente in un prompt dei comandi di Visual Studio 2010.  
   
-    5.  Modifica il [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) all'interno di file Service.exe config in modo da riflettere il nome del soggetto del certificato generato nel passaggio precedente.  
+    5.  Modifica il [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) all'interno del file Service.exe.config in modo da riflettere il nome del soggetto del certificato generato nel passaggio precedente.  
   
     6.  Eseguire Service.exe da un prompt dei comandi.  
   
@@ -180,7 +180,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>  
         ```  
   
-    7.  Se il servizio viene eseguito in un account diverso da NetworkService o LocalSystem in un ambiente del dominio, potrebbe essere necessario modificare l'identità dell'endpoint del servizio nel file App.config del client per impostare il nome UPN o SPN appropriato basato sull'account utilizzato per eseguire il servizio. Per ulteriori informazioni sull'identità dell'endpoint, vedere il [autenticazione e identità del servizio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) argomento.  
+    7.  Se il servizio viene eseguito in un account diverso da NetworkService o LocalSystem in un ambiente del dominio, potrebbe essere necessario modificare l'identità dell'endpoint del servizio nel file App.config del client per impostare il nome UPN o SPN appropriato basato sull'account utilizzato per eseguire il servizio. Per altre informazioni sull'identità dell'endpoint, vedere la [identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) argomento.  
   
     8.  Eseguire Client.exe da un prompt dei comandi.  
   

@@ -2,12 +2,12 @@
 title: '&lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 4141b0f6493c51048ad60accdc1d5ee9bac01231
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 92590f556d93859e8681eea8f8f05da4f560e150
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751077"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563939"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei trasferimenti per un'associazione personalizzata.  
@@ -63,12 +63,12 @@ Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei tr
 |maxPendingConnections|Ottiene o imposta il numero massimo di connessioni in attesa dell'invio nel servizio.|  
 |maxReceivedMessageSize|Ottiene e imposta la dimensione massima consentita del messaggio che può essere ricevuto.|  
 |portSharingEnabled|Valore booleano che specifica se è attivata la condivisione delle porte TCP per la connessione. Se è `false`, ciascuna associazione userà la propria porta esclusiva. Il valore predefinito è `false`.<br /><br /> Questa impostazione è pertinente solo per i servizi. I client non ne sono interessati.<br /><br /> L'uso di questa impostazione richiede l'attivazione del servizio di condivisione porte TCP di Windows Communication Foundation (WCF) modificando il relativo Tipo di avvio su Manuale o Automatico.|  
-|teredoEnabled|Valore booleano che specifica se Teredo (una tecnologia per l'indirizzamento dei client dietro a firewall) è attivata. Il valore predefinito è `false`.<br /><br /> Questa proprietà abilita Teredo per il socket TCP sottostante. Per ulteriori informazioni, vedere [Panoramica di Teredo](http://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Questa proprietà è applicabile solo su [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] e [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. [!INCLUDE[wv](../../../../../includes/wv-md.md)] ha un'opzione di configurazione a livello di computer per Teredo, pertanto quando viene eseguito Vista, questa proprietà viene ignorata. L'uso di Teredo richiede che lo stack IPv6 di Microsoft sia installato sia nei computer client che in quelli di servizio e che tutti siano configurati correttamente. Per ulteriori informazioni sulla configurazione di Teredo, vedere [Panoramica di Teredo](http://go.microsoft.com/fwlink/?LinkId=95339). Per ulteriori informazioni, vedere [Technology Center di Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=49888).|  
+|teredoEnabled|Valore booleano che specifica se Teredo (una tecnologia per l'indirizzamento dei client dietro a firewall) è attivata. Il valore predefinito è `false`.<br /><br /> Questa proprietà abilita Teredo per il socket TCP sottostante. Per altre informazioni, vedere [Panoramica di Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Questa proprietà è applicabile solo su [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] e [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. [!INCLUDE[wv](../../../../../includes/wv-md.md)] ha un'opzione di configurazione a livello di computer per Teredo, pertanto quando viene eseguito Vista, questa proprietà viene ignorata. L'uso di Teredo richiede che lo stack IPv6 di Microsoft sia installato sia nei computer client che in quelli di servizio e che tutti siano configurati correttamente. Per altre informazioni sulla configurazione di Teredo, vedere [Panoramica di Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Per altre informazioni, vedere [centri tecnologici Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=49888).|  
 |transferMode|Ottiene o imposta un valore che indica se i messaggi vengono memorizzati nel buffer o trasmessi con il trasporto orientato alla connessione.|  
 |impostazioniPoolConnessioni|Specifica impostazioni aggiuntive del pool di connessioni per un'associazione con named pipe.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

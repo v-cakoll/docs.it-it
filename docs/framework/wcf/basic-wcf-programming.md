@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: cbdc693197344fe570c1462f6ca3115018eb69d6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803741"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558891"
 ---
 # <a name="basic-wcf-programming"></a>Programmazione WCF di base
 Questa sezione vengono presentate le nozioni di base per la creazione di applicazioni Windows Communication Foundation (WCF).  
@@ -26,13 +26,13 @@ Questa sezione vengono presentate le nozioni di base per la creazione di applica
  Descrive come progettare e implementare un contratto di servizio, scegliere un modello per lo scambio di messaggi, specificare un contratto di errore e altri aspetti di base dei servizi.  
   
  [Configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md)  
- Viene descritto come configurare un servizio WCF per supportare i requisiti del contratto, personalizzare il comportamento di runtime locale e indicare l'indirizzo per pubblicare il servizio.  
+ Viene descritto come configurare un servizio WCF per supportare i requisiti del contratto, personalizzare il comportamento di runtime database locale e indicare l'indirizzo per pubblicare il servizio.  
   
  [Servizi di hosting](../../../docs/framework/wcf/hosting-services.md)  
  Descrive le caratteristiche fondamentali dei servizi host in un'applicazione.  
   
  [Creazione di client](../../../docs/framework/wcf/building-clients.md)  
- Viene descritto come ottenere metadati dai servizi, convertirli in codice client WCF, gestire i problemi di sicurezza e creare, configurare e ospitare un client WCF.  
+ Viene descritto come ottenere metadati dai servizi, convertirli in codice client WCF, gestire i problemi di sicurezza, creare, configurare e ospitare un client WCF.  
   
  [Introduzione all'estendibilità](../../../docs/framework/wcf/introduction-to-extensibility.md)  
  Viene descritto come estendere WCF per creare soluzioni personalizzate.  
@@ -61,7 +61,7 @@ Questa sezione vengono presentate le nozioni di base per la creazione di applica
   
  [Strumenti Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
   
- [Esempi di Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Esempi di Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Introduzione](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   

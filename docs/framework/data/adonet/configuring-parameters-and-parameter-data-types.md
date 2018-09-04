@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 320a45af1c2f3b460c23d8320c456120643902f7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7bb68a7d08d983e93119804db6c1f5a01cd047c9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759543"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659389"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurazione dei parametri e tipi di dati dei parametri
 Gli oggetti comando usano i parametri per passare valori a istruzioni o stored procedure SQL, fornendo la verifica e la convalida dei tipi. A differenza del testo dei comandi, l'input dei parametri viene trattato come valore letterale, non come codice eseguibile. In questo modo è possibile difendersi da attacchi SQL injection, in cui l'autore di un attacco inserisce un comando che compromette la sicurezza del server in un'istruzione SQL.  
   
- I comandi con parametri possono anche migliorare le prestazioni di esecuzione delle query in quanto aiutano il server database a ottenere una corrispondenza accurata tra il comando in arrivo e un piano di query memorizzato nella cache appropriato. Per altre informazioni, vedere [Memorizzazione nella cache e riutilizzo del piano di esecuzione](http://go.microsoft.com/fwlink/?LinkId=120424) e [Parametri e riutilizzo del piano di esecuzione](http://go.microsoft.com/fwlink/?LinkId=120423) nella documentazione online di SQL Server. Oltre ai vantaggi in termini di sicurezza e prestazioni, i comandi con parametri offrono un metodo pratico per organizzare i valori passati a un'origine dati.  
+ I comandi con parametri possono anche migliorare le prestazioni di esecuzione delle query in quanto aiutano il server database a ottenere una corrispondenza accurata tra il comando in arrivo e un piano di query memorizzato nella cache appropriato. Per altre informazioni, vedere [esecuzione prevede la memorizzazione nella cache e riutilizzo](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) e [i parametri e riutilizzo del piano esecuzione](/sql/relational-databases/query-processing-architecture-guide#PlanReuse). Oltre ai vantaggi in termini di sicurezza e prestazioni, i comandi con parametri offrono un metodo pratico per organizzare i valori passati a un'origine dati.  
   
  Per creare un oggetto <xref:System.Data.Common.DbParameter> , è possibile usare il relativo costruttore o aggiungerlo all'oggetto <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> chiamando il metodo `Add` della raccolta <xref:System.Data.Common.DbParameterCollection> . Il metodo `Add` accetta come input argomenti del costruttore o un oggetto parametro esistente, a seconda del provider di dati.  
   
@@ -48,7 +48,7 @@ Gli oggetti comando usano i parametri per passare valori a istruzioni o stored p
 |-------------------------|------------|---------------|---------------|--------------|----------------|  
 |<xref:System.Boolean>|Boolean|Bit|Booleano|Bit|Byte|  
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|  
-|byte[]|Binario|VarBinary`.` la conversione implicita non riesce se la matrice di byte è più grande rispetto alla dimensione massima di VarBinary, che è di 8000 byte. Per le matrici di byte maggiori di 8000 byte, impostare in modo esplicito il <xref:System.Data.SqlDbType>.|VarBinary|Binario|Raw|  
+|byte[]|Binario|VarBinary`.` la conversione implicita non riesce se la matrice di byte è maggiore della dimensione massima di VarBinary, che è di 8000 byte. Per le matrici di byte maggiori di 8000 byte, impostare in modo esplicito il <xref:System.Data.SqlDbType>.|VarBinary|Binario|Raw|  
 |<xref:System.Char>|``|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da char non è supportata.|Char|Char|Byte|  
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|  
 |<xref:System.DateTimeOffset>|DateTimeOffset|DateTimeOffset in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da DateTimeOffset non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|||DateTime|  
@@ -56,7 +56,7 @@ Gli oggetti comando usano i parametri per passare valori a istruzioni o stored p
 |<xref:System.Double>|Double|Float|Double|Double|Double|  
 |<xref:System.Single>|Single|Real|Single|Real|Float|  
 |<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|  
-|<xref:System.Int16 >|Int16|SmallInt|SmallInt|SmallInt|Int16|  
+|<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|  
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|  
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Numero|  
 |<xref:System.Object>|Oggetto|Variante|Variante|L'inferenza di un oggetto OdbcType da Object non è supportata.|Blob|  
@@ -87,13 +87,13 @@ Gli oggetti comando usano i parametri per passare valori a istruzioni o stored p
 > [!NOTE]
 >  La derivazione di informazioni sui parametri implica una riduzione delle prestazioni, in quando richiede un round trip aggiuntivo con l'origine dati per recuperare le informazioni. Se le informazioni sui parametri sono note in fase di progettazione, è possibile migliorare le prestazioni dell'applicazione impostando i parametri in modo esplicito.  
   
- Per ulteriori informazioni, vedere [la generazione di comandi tramite commandbuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+ Per altre informazioni, vedere [generazione di comandi tramite commandbuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
   
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Uso di parametri con SqlCommand e una stored procedure  
- Le stored procedure offrono numerosi vantaggi nelle applicazioni guidate dai dati. Usando le stored procedure, le operazioni nel database possono essere incapsulate in un unico comando, ottimizzate per migliorare le prestazioni e rese più sicure con funzioni di sicurezza aggiuntive. Anche se una stored procedure può essere chiamata passando il nome della stored procedure seguito dagli argomenti dei parametri come istruzione SQL, l'uso di <xref:System.Data.Common.DbCommand.Parameters%2A> insieme del [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> oggetto consente di definire in modo più esplicito stored parametri di stored procedure e per accedere ai parametri di output e valori restituiti.  
+ Le stored procedure offrono numerosi vantaggi nelle applicazioni guidate dai dati. Usando le stored procedure, le operazioni nel database possono essere incapsulate in un unico comando, ottimizzate per migliorare le prestazioni e rese più sicure con funzioni di sicurezza aggiuntive. Anche se una stored procedure può essere chiamata passando il nome della stored procedure seguito dagli argomenti dei parametri come istruzione SQL, tramite il <xref:System.Data.Common.DbCommand.Parameters%2A> raccolta del [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> consente di definire in modo più esplicito stored parametri di procedure e per accedere ai parametri di output e valori restituiti.  
   
 > [!NOTE]
->  Le istruzioni con parametri vengono eseguite sul server tramite `sp_executesql,` , che consente il riutilizzo del piano di query. I cursori o le variabili locali del batch `sp_executesql` non sono visibili per il batch che chiama `sp_executesql`. Le modifiche apportate al contesto del database durano solo fino al termine dell'esecuzione dell'istruzione `sp_executesql` . Per altre informazioni, vedere la documentazione online di SQL Server.  
+> Le istruzioni con parametri vengono eseguite sul server tramite `sp_executesql,` , che consente il riutilizzo del piano di query. I cursori o le variabili locali del batch `sp_executesql` non sono visibili per il batch che chiama `sp_executesql`. Le modifiche apportate al contesto del database durano solo fino al termine dell'esecuzione dell'istruzione `sp_executesql` . Per altre informazioni, vedere [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
   
  Quando si usano parametri con <xref:System.Data.SqlClient.SqlCommand> per eseguire una stored procedure di SQL Server, i nomi dei parametri aggiunti alla raccolta <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> devono corrispondere ai nomi dei marcatori dei parametri nella stored procedure. Con il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per SQL Server non è possibile usare il punto interrogativo (?) come segnaposto per passare i parametri a un'istruzione SQL o a una stored procedure. I parametri nella stored procedure vengono trattati come parametri denominati e vengono ricercati marcatori di parametri corrispondenti. Ad esempio, la stored procedure `CustOrderHist` è definita con un parametro denominato `@CustomerID`. Quando il codice esegue la stored procedure deve usare anche un parametro denominato `@CustomerID`.  
   
@@ -199,4 +199,4 @@ parameter.Direction = ParameterDirection.Output;
  [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Parametri DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

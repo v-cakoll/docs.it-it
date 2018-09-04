@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
 ms.openlocfilehash: 9f1e3fe6d53266a4e1366c1a3d5396688a25df0f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43457021"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565132"
 ---
 # <a name="windows-applications-using-callbacks"></a>Applicazioni Windows tramite callback
 Nella maggior parte degli scenari di elaborazione asincrona si desidera avviare un'operazione di database e continuare a eseguire altri processi senza dover attendere il completamento dell'operazione di database. Tuttavia, in molti casi è necessario eseguire ulteriori operazioni dopo che l'operazione di database è stata terminata. In un'applicazione Windows, ad esempio, la delega dell'operazione a esecuzione prolungata a un thread in background consente al thread dell'interfaccia utente di rimanere attivo mentre l'operazione è in esecuzione. Tuttavia, una volta completata l'operazione di database, è possibile che si desideri usare i risultati per compilare il form. La soluzione migliore per implementare questo tipo di scenario è l'uso di un callback.  

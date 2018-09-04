@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
 ms.openlocfilehash: ee15fd37390f8bf4ca3bc287f9a3dbd5f8ebd935
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396783"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658990"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Trasporto dell'associazione personalizzata e codifica
 Un'associazione personalizzata viene definita da un elenco ordinato di elementi di associazione discreti. Questo esempio illustra come configurare un'associazione personalizzata con vari elementi di codifica di trasporto e messaggio.  

@@ -2,19 +2,19 @@
 title: Stringhe di connessione
 ms.date: 03/30/2017
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: ac9c3b3b0fce4d6b7e0eb74e23c07c82faf9f722
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792419"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552506"
 ---
 # <a name="connection-strings"></a>Stringhe di connessione
 Una stringa di connessione contiene informazioni di inizializzazione che vengono passate come parametro da un provider di dati a un'origine dati. La sintassi dipende dal provider di dati e la stringa di connessione viene analizzata durante il tentativo di aprire una connessione. Le stringhe di connessione usate da Entity Framework contengono informazioni che consentono di connettersi al provider di dati ADO.NET sottostante che supporta Entity Framework, nonché informazioni sui file di modello e di mapping richiesti.  
   
  La stringa di connessione viene usata dal provider EntityClient quando si accede ai metadati di modello e di mapping e quando si effettua la connessione all'origine dati. Per impostare o accedere alla stringa di connessione, usare la proprietà <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> di <xref:System.Data.EntityClient.EntityConnection>. La classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder> può essere usata a livello di codice per costruire o accedere ai parametri nella stringa di connessione. Per altre informazioni, vedere [procedura: compilare una stringa di connessione EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
- Il [strumenti di Entity Data Model](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) genera una stringa di connessione archiviata nel file di configurazione dell'applicazione. L'oggetto <xref:System.Data.Objects.ObjectContext> consente di recuperare automaticamente queste informazioni di connessione quando si creano query di oggetto. È possibile accedere all'oggetto <xref:System.Data.EntityClient.EntityConnection> usato da un'istanza di <xref:System.Data.Objects.ObjectContext> direttamente dalla proprietà <xref:System.Data.Objects.ObjectContext.Connection%2A>. Per altre informazioni, vedere [alla gestione delle connessioni e transazioni](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+ Il [strumenti di Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) genera una stringa di connessione archiviata nel file di configurazione dell'applicazione. L'oggetto <xref:System.Data.Objects.ObjectContext> consente di recuperare automaticamente queste informazioni di connessione quando si creano query di oggetto. È possibile accedere all'oggetto <xref:System.Data.EntityClient.EntityConnection> usato da un'istanza di <xref:System.Data.Objects.ObjectContext> direttamente dalla proprietà <xref:System.Data.Objects.ObjectContext.Connection%2A>. Per altre informazioni, vedere [alla gestione delle connessioni e transazioni](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
   
 ## <a name="connection-string-parameters"></a>Parametri della stringa di connessione  
  Il formato di una stringa di connessione è un elenco delimitato da punti e virgola composto da coppie di parametri chiave/valore:  
@@ -30,7 +30,7 @@ Una stringa di connessione contiene informazioni di inizializzazione che vengono
 |`Metadata`|Obbligatoria se la parola chiave `Name` non è specificata. Elenco di percorsi di directory, file e risorse delimitato da barre verticali in cui cercare informazioni relative a metadati e mapping. Di seguito è riportato un esempio:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Gli spazi vuoti a ogni lato del separatore vengono ignorati.<br /><br /> Questa parola chiave e la parola chiave `Name` si escludono a vicenda.|  
 |`Name`|L'applicazione può eventualmente specificare il nome della connessione in un file di configurazione dell'applicazione che fornisce i valori della stringa di connessione parola chiave/valore obbligatori. In questo caso, non è possibile specificare tali valori direttamente nella stringa di connessione. L'utilizzo della parola chiave `Name` non è consentito in un file di configurazione.<br /><br /> Quando la parola chiave `Name` non è inclusa nella stringa di connessione, per la parola chiave Provider è necessario specificare valori non vuoti.<br /><br /> Questa parola chiave e tutte le altre parole chiave per la stringa di connessione si escludono a vicenda.|  
   
- Di seguito è riportato un esempio di una stringa di connessione per il [modello Sales di AdventureWorks](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) archiviati nel file di configurazione dell'applicazione:  
+ Di seguito è riportato un esempio di una stringa di connessione per il [modello Sales di AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) archiviati nel file di configurazione dell'applicazione:  
   
   
   
@@ -110,5 +110,5 @@ Metadata=.\
 ## <a name="see-also"></a>Vedere anche  
  [Uso di provider di dati](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
  [Considerazioni sulla distribuzione](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Gestione di connessioni e transazioni](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [Gestione di connessioni e transazioni](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
  [Stringhe di connessione](../../../../../docs/framework/data/adonet/connection-strings.md)

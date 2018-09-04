@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 1658db83c809f875914036e9e10ac86cc6a821c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9c395ffe4f715b6d6ea034c848cbb277d60d560
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501970"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553642"
 ---
 # <a name="multiple-endpoints"></a>Più endpoint
-L'esempio Più endpoint mostra come configurare più endpoint in un servizio e come comunicare con ogni endpoint a partire da un client. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md). La configurazione del servizio è stata modificata per definire due endpoint che supportano il contratto `ICalculator`, ma ognuno con un indirizzo diverso e una diversa associazione. La configurazione client e il codice sono stati modificati per comunicare con entrambi gli endpoint del servizio.  
+L'esempio Più endpoint mostra come configurare più endpoint in un servizio e come comunicare con ogni endpoint a partire da un client. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md). La configurazione del servizio è stata modificata per definire due endpoint che supportano il contratto `ICalculator`, ma ognuno con un indirizzo diverso e una diversa associazione. La configurazione client e il codice sono stati modificati per comunicare con entrambi gli endpoint del servizio.  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -50,7 +50,7 @@ L'esempio Più endpoint mostra come configurare più endpoint in un servizio e c
   <!-- Passing "secure" into the constructor of the CalculatorClient  
        class selects this endpoint.-->  
   <endpoint name="secure"  
-address="http://localhost/servicemodelsamples/service.svc/secure"   
+            address="http://localhost/servicemodelsamples/service.svc/secure"   
             binding="wsHttpBinding"   
             contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 </client>  
@@ -58,7 +58,7 @@ address="http://localhost/servicemodelsamples/service.svc/secure"
   
  Il client utilizza entrambi gli endpoint come mostra il codice seguente.  
   
-```  
+```csharp  
 static void Main()  
 {  
     // Create a client to the basic endpoint configuration.  
@@ -104,7 +104,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -115,7 +115,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  
   

@@ -6,19 +6,19 @@ helpviewer_keywords:
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: e4219553f97f272577e8efdeb106b43e5f76ee59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bad963db8d0e3644204824645f702c7b7b84963d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496025"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558384"
 ---
 # <a name="auditing-security-events"></a>Controllo degli eventi di sicurezza
-Le applicazioni create con Windows Communication Foundation (WCF) è possono registrare gli eventi di sicurezza (esito positivo, negativo o entrambi) con funzionalità di controllo. Gli eventi vengono scritti nel registro eventi del sistema Windows e possono essere esaminati tramite il Visualizzatore eventi.  
+Le applicazioni create con Windows Communication Foundation (WCF) è possono registrare gli eventi di sicurezza (esito positivo, errore o entrambi) con la funzionalità di controllo. Gli eventi vengono scritti nel registro eventi del sistema Windows e possono essere esaminati tramite il Visualizzatore eventi.  
   
  La funzionalità di controllo consente a un amministratore di individuare un attacco mentre è ancora in corso o quando è già avvenuto. Tale funzionalità consente inoltre agli sviluppatori di semplificare il debug dei problemi di sicurezza. Ad esempio, se per un errore nella configurazione dei criteri di autorizzazione o di verifica il sistema nega l'accesso a un utente autorizzato, uno sviluppatore può individuare e isolare rapidamente la causa di questo errore esaminando il registro eventi.  
   
- Per ulteriori informazioni sulla sicurezza WCF, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). Per ulteriori informazioni sulla programmazione WCF, vedere [programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Per altre informazioni sulla sicurezza WCF, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). Per altre informazioni sulla programmazione WCF, vedere [programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Livelli e comportamenti di controllo  
  Esistono due livelli di controllo di sicurezza:  
@@ -27,7 +27,7 @@ Le applicazioni create con Windows Communication Foundation (WCF) è possono reg
   
 -   Livello di messaggio, in cui WCF controlla la validità di messaggio e autentica il chiamante.  
   
- È possibile controllare controllo su entrambi i livelli per esito positivo o negativo, che è noto come il *comportamento di controllo*.  
+ È possibile controllare un controllo su entrambi i livelli per esito positivo o negativo, che è noto come il *comportamento di controllo*.  
   
 ## <a name="audit-log-location"></a>Posizione del registro di controllo  
  Dopo aver determinato un livello e un comportamento di controllo, è possibile specificare la posizione del registro di controllo. Sono disponibili tre opzioni: Predefinito, Applicazione e Protezione. Quando si specifica l'opzione Predefinito, la posizione effettiva del registro varia in base al sistema utilizzato e alla possibilità di quest'ultimo di supportare la scrittura nel registro di sicurezza. Per altre informazioni, vedere la sezione "Sistema operativo" più avanti in questo argomento.  
@@ -53,10 +53,10 @@ Le applicazioni create con Windows Communication Foundation (WCF) è possono reg
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|Specifica il livello Autorizzazione servizio utilizzato per i controlli a livello di servizio. Sono disponibili le opzioni `None`, `Failure`, `Success`, e `SuccessOrFailure`.|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|Specifica la modalità di elaborazione della richiesta del client quando un controllo ha esito negativo. Ciò ad esempio si verifica quando il servizio tenta di scrivere nel registro protezione senza tuttavia disporre del privilegio `SeAuditPrivilege`. Il valore predefinito `true` indica che gli errori vengono ignorati e che la richiesta del client viene elaborata normalmente.|  
   
- Per un esempio di configurazione di un'applicazione di registrare eventi di controllo, vedere [procedura: controllare gli eventi di sicurezza](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ Per un esempio di configurazione di un'applicazione affinché registri eventi di controllo, vedere [procedura: controllare gli eventi di sicurezza](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ### <a name="configuration"></a>Configurazione  
- È inoltre possibile utilizzare configurazione per specificare il comportamento di controllo aggiungendo un [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) sotto il [ \<comportamenti >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md). È necessario aggiungere l'elemento in un [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) come illustrato nel codice seguente.  
+ È anche possibile usare configurazione per specificare il comportamento di controllo aggiungendo un [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) sotto il [ \<comportamenti >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md). È necessario aggiungere l'elemento in un [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) come illustrato nel codice seguente.  
   
 ```xml  
 <configuration>  
@@ -78,7 +78,7 @@ Le applicazioni create con Windows Communication Foundation (WCF) è possono reg
  Se il controllo è attivo e non è stata specificata alcuna posizione `auditLogLocation`, la posizione predefinita del registro è "Protezione" se la piattaforma supporta la scrittura in tale registro. In caso contrario, tale posizione è "Applicazione". Solo i sistemi operativi [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wv](../../../../includes/wv-md.md)] supportano la scrittura nel registro di sicurezza. Per altre informazioni, vedere la sezione "Sistema operativo" più avanti in questo argomento.  
   
 ## <a name="security-considerations"></a>Considerazioni sulla sicurezza  
- Un utente malintenzionato a conoscenza del fatto che il controllo è attivo può inviare messaggi non validi che comportano la scrittura di voci di controllo. Ciò comporta a sua volta la generazione di errori nel sistema di controllo. Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. Per altre informazioni, vedere l'articolo di supporto tecnico Microsoft sulla visualizzazione e gestione dei registri eventi tramite Visualizzatore eventi in Windows XP disponibile all'indirizzo [come visualizzare e gestire i registri eventi nel Visualizzatore eventi in Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).  
+ Un utente malintenzionato a conoscenza del fatto che il controllo è attivo può inviare messaggi non validi che comportano la scrittura di voci di controllo. Ciò comporta a sua volta la generazione di errori nel sistema di controllo. Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. Per altre informazioni, vedere l'articolo di supporto tecnico Microsoft sulla visualizzazione e gestione dei registri eventi tramite il Visualizzatore eventi in Windows XP disponibile all'indirizzo [come visualizzare e gestire i registri eventi nel Visualizzatore eventi in Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
   
  Gli eventi di controllo scritti nel registro applicazioni in [!INCLUDE[wxp](../../../../includes/wxp-md.md)] sono visualizzabili da qualsiasi utente autenticato.  
   
@@ -108,4 +108,4 @@ Le applicazioni create con Windows Communication Foundation (WCF) è possono reg
  [Procedura: Controllare gli eventi di sicurezza](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
  [\<i comportamenti >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
- [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

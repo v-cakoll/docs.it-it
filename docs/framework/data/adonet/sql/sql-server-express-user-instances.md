@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 0af929de17a29d497ce6cf6c8cb055d416ab8761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31c0efbe953b56304c264444082185b9a9227d60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365410"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658977"
 ---
 # <a name="sql-server-express-user-instances"></a>Connessione alle istanze utente di SQL Server Express
 In Microsoft SQL Server Express Edition (SQL Server Express) è supportata la funzionalità istanze utente, disponibile solo quando si usa il provider di dati .NET Framework per SQL Server (`SqlClient`). Un'istanza utente è un'istanza distinta del motore di database di SQL Server Express generata da un'istanza padre. Le istanze utente consentono agli utenti non amministratori di collegarsi e connettersi ai database SQL Server Express dai propri computer locali. Ogni istanza viene eseguita nel contesto di sicurezza del singolo utente, a livello di un'istanza per ogni utente.  
@@ -24,7 +24,7 @@ In Microsoft SQL Server Express Edition (SQL Server Express) è supportata la fu
 >  Le istanze utente non sono necessarie per gli utenti che sono già amministratori del proprio computer o negli scenari che implicano più utenti di database.  
   
 ## <a name="enabling-user-instances"></a>Abilitazione delle istanze utente  
- Per generare le istanze utente, è necessario che sia in esecuzione un'istanza padre di SQL Server Express. Le istanze utente sono abilitate per impostazione predefinita, quando SQL Server Express viene installato ed è possibile in modo esplicito abilitate o disabilitate dall'amministratore di sistema in esecuzione il **sp_configure** stored procedure di sistema nell'istanza padre.  
+ Per generare le istanze utente, è necessario che sia in esecuzione un'istanza padre di SQL Server Express. Le istanze utente sono abilitate per impostazione predefinita, quando SQL Server Express viene installato e possano essere esplicitamente abilitati o disabilitati da un amministratore di sistema eseguendo il **sp_configure** stored procedure di sistema nell'istanza padre.  
   
 ```  
 -- Enable user instances.  
@@ -58,7 +58,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  È inoltre possibile utilizzare il <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> e <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> proprietà per compilare una stringa di connessione in fase di esecuzione.  
+>  È anche possibile usare la <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> e <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> proprietà per compilare una stringa di connessione in fase di esecuzione.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Tramite il &#124;DataDirectory&#124; stringa di sostituzione  
  `AttachDbFileName` è stata estesa in ADO.NET 2.0 con l'introduzione della stringa di sostituzione `|DataDirectory|` (racchiusa tra barre verticali). `DataDirectory` viene usata insieme a `AttachDbFileName` per indicare un percorso relativo di un file di dati, consentendo agli sviluppatori di creare stringhe di connessione basate su un percorso relativo dell'origine dati senza che sia necessario specificare un percorso completo.  
@@ -119,13 +119,13 @@ private static void OpenSqlConnection()
 >  Le istanze utente non sono supportate nel codice CLR (Common Language Runtime) in esecuzione in SQL Server. Se viene eseguita una chiamata a <xref:System.InvalidOperationException> su un oggetto `Open` nella cui stringa di connessione è presente <xref:System.Data.SqlClient.SqlConnection>, viene generata un'eccezione `User Instance=true`.  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>Durata di una connessione a un'istanza utente  
- A differenza delle versioni di SQL Server che vengono eseguite come servizio, le istanze di SQL Server Express non devono necessariamente essere avviate e interrotte manualmente. Ogni volta che un utente vi accede e si connette, l'istanza utente viene avviata se non è già in esecuzione. Nei database dell'istanza utente è impostata l'opzione `AutoClose`, quindi il database viene automaticamente arrestato dopo un periodo di inattività. Il processo sqlservr.exe che viene avviato rimane in esecuzione per un periodo di timeout limitato dopo la chiusura dell'ultima connessione all'istanza, quindi non deve essere riavviato se prima della scadenza del timeout viene aperta un'altra connessione. L'istanza utente viene automaticamente arrestata se non vengono aperte nuove connessioni prima della scadenza del timeout. Un amministratore di sistema nell'istanza padre può impostare la durata del periodo di timeout per un'istanza utente utilizzando **sp_configure** per modificare il **timeout dell'istanza utente** opzione. Il valore predefinito è 60 minuti.  
+ A differenza delle versioni di SQL Server che vengono eseguite come servizio, le istanze di SQL Server Express non devono necessariamente essere avviate e interrotte manualmente. Ogni volta che un utente vi accede e si connette, l'istanza utente viene avviata se non è già in esecuzione. Nei database dell'istanza utente è impostata l'opzione `AutoClose`, quindi il database viene automaticamente arrestato dopo un periodo di inattività. Il processo sqlservr.exe che viene avviato rimane in esecuzione per un periodo di timeout limitato dopo la chiusura dell'ultima connessione all'istanza, quindi non deve essere riavviato se prima della scadenza del timeout viene aperta un'altra connessione. L'istanza utente viene automaticamente arrestata se non vengono aperte nuove connessioni prima della scadenza del timeout. Un amministratore di sistema nell'istanza padre può impostare la durata del periodo di timeout per un'istanza utente usando **sp_configure** per modificare le **timeout istanza utente** opzione. Il valore predefinito è 60 minuti.  
   
 > [!NOTE]
 >  Se nella stringa di connessione si usa `Min Pool Size` con un valore maggiore di zero, il pool di connessioni manterrà sempre alcune connessioni aperte, quindi l'istanza utente non verrà automaticamente arrestata.  
   
 ## <a name="how-user-instances-work"></a>Funzionamento delle istanze utente  
- La prima volta per ogni utente, viene generata un'istanza utente di **master** e **msdb** database di sistema vengono copiati dalla cartella Template Data in un percorso nel repository dei dati dell'applicazione locale dell'utente Directory per l'utilizzo esclusivo da parte dell'istanza utente. Questo percorso è in genere `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Quando viene avviata un'istanza utente, il **tempdb**, registrare e analizzare i file vengono scritti anche a questa directory. Per l'istanza viene generato un nome, che è assolutamente univoco per ogni utente.  
+ La prima volta che un'istanza utente viene generata per ogni utente, il **master** e **msdb** i database di sistema vengono copiati dalla cartella Template Data in un percorso nel repository dei dati dell'applicazione locale dell'utente Directory per l'utilizzo esclusivo da parte dell'istanza utente. Questo percorso è in genere `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Quando viene avviata un'istanza utente, il **tempdb**, registrare e tracciare i file vengono scritti anche questa directory. Per l'istanza viene generato un nome, che è assolutamente univoco per ogni utente.  
   
  Per impostazione predefinita, a tutti i membri del gruppo Windows Builtin\\Users sono concesse le autorizzazioni per connettersi all'istanza locale, nonché le autorizzazioni di lettura ed esecuzione sui binari di SQL Server. Dopo la verifica delle credenziali dell'utente chiamante che ospita l'istanza utente, tale utente assume il ruolo di `sysadmin` sull'istanza. Per le istanze utente è abilitata solo la memoria condivisa, il che significa che sono consentite soltanto operazioni nel computer locale.  
   
@@ -146,7 +146,7 @@ private static void OpenSqlConnection()
   
 -   Qualsiasi applicazione in modalità utente singolo in cui non è necessario condividere dati.  
   
--   Distribuzione ClickOnce. Se .NET Framework 2.0 (o versione successiva) e SQL Server Express sono già installati nel computer di destinazione, il pacchetto di installazione scaricato come risultato di un'azione ClickOnce può essere installato e usato da utenti non amministratori. Si noti che un amministratore deve installare SQL Server Express se fa parte dell'installazione. Per ulteriori informazioni, vedere [distribuzione ClickOnce per le applicazioni di Windows Form](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
+-   Distribuzione ClickOnce. Se .NET Framework 2.0 (o versione successiva) e SQL Server Express sono già installati nel computer di destinazione, il pacchetto di installazione scaricato come risultato di un'azione ClickOnce può essere installato e usato da utenti non amministratori. Si noti che un amministratore deve installare SQL Server Express se fa parte dell'installazione. Per altre informazioni, vedere [distribuzione ClickOnce per le applicazioni di Windows Forms](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
   
 -   Hosting ASP.NET dedicato con autenticazione di Windows. Una Intranet può contenere una singola istanza di SQL Server Express. L'applicazione si connette usando l'account di Windows ASPNET, non tramite rappresentazione. Le istanze utente non devono essere usate per scenari di hosting di terze parti o condivisi in cui tutte le applicazioni condividerebbero la stessa istanza utente e non rimarrebbero più isolate una dall'altra.  
   
@@ -154,4 +154,4 @@ private static void OpenSqlConnection()
  [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [Stringhe di connessione](../../../../../docs/framework/data/adonet/connection-strings.md)  
  [Connessione a un'origine dati](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

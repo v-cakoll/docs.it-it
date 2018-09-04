@@ -1,5 +1,5 @@
 ---
-title: '#Direttiva ExternalSource'
+title: '#ExternalSource (direttiva) (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - '#Externalsource'
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: 146ab41d74b45acc4063e2463baca26c7caa4652
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcde8507eb033d0a47d5c5d3fa36176cd63b0856
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586591"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556318"
 ---
 # <a name="externalsource-directive"></a>Direttiva #ExternalSource
-Indica un mapping tra righe specifiche del codice sorgente e testo esterno al codice sorgente.  
+Indica un mapping tra le righe specifiche del codice sorgente e testo esterno al codice sorgente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,9 +46,9 @@ Indica un mapping tra righe specifiche del codice sorgente e testo esterno al co
 ## <a name="remarks"></a>Note  
  Questa direttiva viene usata solo dal compilatore e il debugger.  
   
- Un file di origine può includere le direttive origine esterna, che indicano un mapping tra righe specifiche di codice nel file di origine e testo esterno per l'origine, ad esempio un file con estensione aspx. Se vengono rilevati errori nel codice sorgente designato durante la compilazione, vengono identificati come provenienti dall'origine esterna.  
+ Un file di origine può includere le direttive origine esterna, che indicano un mapping tra righe di codice nel file di origine specifiche e testo esterno per l'origine, ad esempio un file con estensione aspx. Se si verificano errori nel codice sorgente designata durante la compilazione, sono identificate come provenienti dall'origine esterna.  
   
- Direttive origine esterna non hanno alcun effetto sulla compilazione e non possono essere annidate. Questi sono solo per uso interno da parte dell'applicazione.  
+ Direttive origine esterna non hanno alcun effetto sulla compilazione e non possono essere annidate. Essi sono destinati all'utilizzo interno da parte dell'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione condizionale](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

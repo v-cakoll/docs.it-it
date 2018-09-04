@@ -1,27 +1,27 @@
 ---
-title: Oggetto My.Application
+title: Oggetto My. Application (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
-ms.openlocfilehash: 08291e51464823fb95c6f2d60031b01e46a5a51f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6eaf0c580c86b60db76cc6630f210b7c1474c681
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595225"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556961"
 ---
 # <a name="myapplication-object"></a>Oggetto My.Application
-Fornisce le proprietà, metodi ed eventi correlati all'applicazione corrente.  
+Fornisce proprietà, metodi ed eventi correlati all'applicazione corrente.  
   
 ## <a name="remarks"></a>Note  
- Per informazioni sui metodi e proprietà del `My.Application` , vedere le risorse seguenti:  
+ Per informazioni sui metodi e proprietà del `My.Application` oggetti, vedere le risorse seguenti:  
   
 -   <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> per i membri che sono disponibili in tutti i progetti.  
   
 -   <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> per i membri che sono disponibili nelle applicazioni Windows Forms.  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> per i membri che sono disponibili nelle applicazioni console.  
+-   <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> per i membri che sono disponibili in applicazioni console.  
   
 ## <a name="requirements"></a>Requisiti  
  **Namespace:** <xref:Microsoft.VisualBasic.ApplicationServices>  

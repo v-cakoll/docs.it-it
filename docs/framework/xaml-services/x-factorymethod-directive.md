@@ -6,17 +6,17 @@ helpviewer_keywords:
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-ms.openlocfilehash: 75225e624abdd3dc0862a04fae409da48b3f0d1e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 436caa9b93467dcf2a0763bcc0962a2beb722315
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563415"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560195"
 ---
 # <a name="xfactorymethod-directive"></a>Direttiva x:FactoryMethod
-Specifica un metodo diverso da un costruttore che un processore XAML deve utilizzare per inizializzare un oggetto dopo aver risolto il relativo tipo sottostante.  
+Specifica un metodo diverso da un costruttore che un processore XAML deve usare per inizializzare un oggetto dopo aver risolto il relativo tipo sottostante.  
   
-## <a name="xaml-attribute-usage-no-xarguments"></a>Utilizzo dell'attributo XAML, nessun X:Arguments  
+## <a name="xaml-attribute-usage-no-xarguments"></a>Utilizzo dell'attributo XAML, non X:Arguments  
   
 ```  
 <object x:FactoryMethod="methodname"...>  
@@ -44,17 +44,17 @@ Specifica un metodo diverso da un costruttore che un processore XAML deve utiliz
 ## <a name="remarks"></a>Note  
  Se `methodname` è un metodo di istanza, non può essere qualificato.  
   
- I metodi come metodi factory statici sono supportati. Se `methodname` è un metodo statico, `methodname` viene fornito come un *typeName*. *NomeMetodo* combinazione, in cui *typeName* denomina la classe che definisce il metodo factory statico. *typeName* può essere qualificato prefisso se si fa riferimento a un tipo in un xmlns mappato. *typeName* può essere un tipo diverso da quello `typeof(``object``)`.  
+ Sono supportati i metodi statici come i metodi factory. Se `methodname` è un metodo statico `methodname` fornita come una *nomeTipo*. *methodName* combinazione, in cui *typeName* denomina la classe che definisce il metodo factory statico. *typeName* può essere qualificato come prefisso se si fa riferimento a un tipo in un xmlns mappato. *typeName* può essere un tipo diverso da `typeof(object)`.  
   
- Il metodo factory deve essere un metodo pubblico dichiarato del tipo che supporta l'elemento oggetto pertinente.  
+ Il metodo factory deve essere un metodo dichiarato pubblico del tipo che supporta l'elemento oggetto pertinente.  
   
- Il metodo factory deve restituire un'istanza può essere assegnato all'oggetto pertinente. Metodi factory non devono mai restituire null.  
+ Il metodo factory deve restituire un'istanza che può essere assegnata all'oggetto pertinente. I metodi factory non devono mai restituire null.  
   
- `x:Arguments` opera su un principio di corrispondenza più appropriata per le firme dei metodi factory. Corrispondenza prima valuta il numero dei parametri. Se è presente più di una corrispondenza possibile per un numero di parametri, tipo di parametro viene quindi valutata e la migliore corrispondenza viene determinata. Se è ancora ambiguità dopo questa fase della valutazione, non è definito il comportamento del processore XAML.  
+ `x:Arguments` opera su un principio di corrispondenza migliore per le firme dei metodi factory. Corrispondenza valuta innanzitutto il numero dei parametri. Se è presente più di una corrispondenza possibile per un numero di parametri, tipo di parametro viene quindi valutata e la migliore corrispondenza viene determinata. Se c'è ancora ambiguità dopo questa fase della valutazione, il comportamento del processore XAML è definito.  
   
- Il `x:FactoryMethod` utilizzo dell'elemento non è utilizzo dell'elemento proprietà in senso tradizionale, perché il markup della direttiva non fa riferimento il tipo dell'elemento oggetto contenitore. È previsto che l'utilizzo elemento è meno comune dell'utilizzo dell'attributo. `x:Arguments` (l'attributo o elemento di utilizzo) può essere usato insieme a `x:FactoryMethod` utilizzo dell'elemento, ma ciò non è specificamente mostrati nelle sezioni utilizzo.  
+ Il `x:FactoryMethod` utilizzo dell'elemento non utilizzo dell'elemento di proprietà nel senso tradizionale, perché il markup della direttiva non fa riferimento il tipo dell'elemento oggetto che lo contiene. È previsto che l'utilizzo elemento è meno comune rispetto all'utilizzo dell'attributo. `x:Arguments` (utilizzo di attributo o elemento) può essere utilizzato insieme a `x:FactoryMethod` utilizzo dell'elemento, ma questo non è specificamente illustrato nelle sezioni dell'utilizzo.  
   
- `x:FactoryMethod` come un elemento deve precedere qualsiasi altro elemento proprietà, devono precedere qualsiasi `x:Arguments` anche fornita come elementi e devono precedere qualsiasi testo contenuto/interno testo di inizializzazione.  
+ `x:FactoryMethod` come un elemento deve precedere qualsiasi altro elemento proprietà, devono precedere qualsiasi `x:Arguments` anche fornita come elementi e devono precedere qualsiasi testo contenuto/interno. il testo di inizializzazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [x:Arguments (direttiva)](../../../docs/framework/xaml-services/x-arguments-directive.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ec8af8c7df9335774b1f3953f88c2aad438963b6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ca85a620638509e183703f7e80c01ea20fadbc81
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809030"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555196"
 ---
 # <a name="pii-security-lockdown"></a>Blocco della sicurezza delle informazioni personali
-In questo esempio viene illustrato come controllare svariate funzionalità correlate alla sicurezza di un servizio Windows Communication Foundation (WCF) da:  
+In questo esempio viene illustrato come controllare diverse funzionalità correlate alla sicurezza di un servizio Windows Communication Foundation (WCF) da:  
   
 -   Crittografando informazioni riservate nel file di configurazione di un servizio.  
   
@@ -25,18 +25,18 @@ In questo esempio viene illustrato come controllare svariate funzionalità corre
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>Discussione  
- Queste funzionalità possono essere usate separatamente o tutte insieme per controllare gli aspetti della sicurezza di un servizio. Non si tratta di una Guida definitiva alla sicurezza di un servizio WCF.  
+ Queste funzionalità possono essere usate separatamente o tutte insieme per controllare gli aspetti della sicurezza di un servizio. Non è una guida completa alla protezione di un servizio WCF.  
   
  I file di configurazione di .NET Framework possono contenere informazioni riservate, ad esempio stringhe di connessione per connettersi ai database. Negli scenari condivisi, ospitati da Web, potrebbe essere auspicabile crittografare queste informazioni nel file di configurazione per un servizio, in modo che i dati contenuti all'interno del file di configurazione siano protetti dagli osservatori esterni. Nella versione 2.0 e successive di .NET Framework è possibile crittografare parti del file di configurazione usando la DPAPI (Windows Data Protection API) o il provider di crittografia RSA. L'aspnet_regiis.exe che usa DPAPI o RSA è in grado di crittografare parti selezionate di un file di configurazione.  
   
- Negli scenari ospitati da Web è possibile che alcuni servizi siano all'interno di sottodirectory di altri servizi. La semantica predefinita per determinare i valori di configurazione consente ai file di configurazione che si trovano nelle directory annidate di eseguire l'override dei valori di configurazione della directory padre. In alcune situazioni questo può essere inaccettabile per molteplici ragioni. Supporta la configurazione del servizio WCF il blocco dei valori di configurazione in modo che la configurazione annidata genera eccezioni quando viene eseguito un servizio annidato usando l'override di valori di configurazione.  
+ Negli scenari ospitati da Web è possibile che alcuni servizi siano all'interno di sottodirectory di altri servizi. La semantica predefinita per determinare i valori di configurazione consente ai file di configurazione che si trovano nelle directory annidate di eseguire l'override dei valori di configurazione della directory padre. In alcune situazioni questo può essere inaccettabile per molteplici ragioni. Supporta la configurazione del servizio WCF il blocco dei valori di configurazione in modo che la configurazione annidata genera eccezioni quando viene eseguito un servizio annidato utilizzando l'override di valori di configurazione.  
   
- In questo esempio viene illustrato come controllare la registrazione di informazioni personali nei registri di traccia e dei messaggi, come il nome utente e la password. Per impostazione predefinita, la registrazione di informazioni personali note è disattivata. Tuttavia in alcune situazioni la registrazione delle informazioni personali può essere importante per eseguire il debug di un'applicazione. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md). Questo esempio usa inoltre la registrazione di traccia e dei messaggi. Per ulteriori informazioni, vedere il [traccia e registrazione dei messaggi](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) esempio.  
+ In questo esempio viene illustrato come controllare la registrazione di informazioni personali nei registri di traccia e dei messaggi, come il nome utente e la password. Per impostazione predefinita, la registrazione di informazioni personali note è disattivata. Tuttavia in alcune situazioni la registrazione delle informazioni personali può essere importante per eseguire il debug di un'applicazione. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md). Questo esempio usa inoltre la registrazione di traccia e dei messaggi. Per altre informazioni, vedere la [traccia e registrazione dei messaggi](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) esempio.  
   
 ## <a name="encrypting-configuration-file-elements"></a>Crittografia degli elementi del file di configurazione  
  Per motivi di sicurezza in un ambiente di hosting Web condiviso, potrebbe essere auspicabile crittografare alcuni elementi di configurazione, ad esempio le stringhe di connessione al database che potrebbero contenere informazioni riservate. Un elemento di configurazione può essere crittografato usando lo strumento aspnet_regiis.exe situato nella cartella .NET Framework, ad esempio %WINDIR%\Micrsoft.NET\Framework\v4.0.20728.  
@@ -49,7 +49,7 @@ In questo esempio viene illustrato come controllare svariate funzionalità corre
   
 3.  Crittografare le impostazioni di configurazione appSettings nella cartella Web.config eseguendo il comando seguente: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- Ulteriori informazioni sulla crittografia delle sezioni del file di configurazione sono reperibile leggendo una procedura su DPAPI nella configurazione di ASP.NET ([creazione di applicazioni ASP.NET sicure: autenticazione, autorizzazione e comunicazioni protette](http://go.microsoft.com/fwlink/?LinkId=95137)) e una procedura in RSA nella configurazione di ASP.NET ([procedura: crittografare sezioni di configurazione in ASP.NET 2.0 tramite RSA](http://go.microsoft.com/fwlink/?LinkId=95138)).  
+ Altre informazioni sulla crittografia delle sezioni del file di configurazione sono reperibile leggendo una procedura su DPAPI nella configurazione di ASP.NET ([Building Secure ASP.NET Applications: autenticazione, autorizzazione e comunicazioni protette](https://go.microsoft.com/fwlink/?LinkId=95137)) e procedure su RSA nella configurazione di ASP.NET ([procedura: crittografare sezioni di configurazione in ASP.NET 2.0 utilizzando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
   
 ## <a name="locking-configuration-file-elements"></a>Blocco degli elementi del file di configurazione  
  Negli scenari ospitati da Web è possibile che alcuni servizi siano all'interno di sottodirectory di altri servizi. In queste situazioni, i valori di configurazione per il servizio nella sottodirectory vengono calcolati esaminando i valori in Machine.config e unendoli successivamente con i file Web.config delle directory padre, facendo scorrere verso il basso l'albero di directory e unendo infine il file Web.config alla directory che contiene il servizio. Il comportamento predefinito della maggior parte degli elementi di configurazione è di consentire che i file di configurazione presenti nelle sottodirectory eseguano l'override dei valori impostati nelle directory padre. In alcune situazioni potrebbe essere auspicabile impedire che i file di configurazione presenti nelle sottodirectory eseguano l'override dei valori impostati nella configurazione della directory padre.  
@@ -126,23 +126,23 @@ In questo esempio viene illustrato come controllare svariate funzionalità corre
   
  È anche possibile crittografare gli elementi del file di configurazione usando DPAPI e RSA. Per altre informazioni, vedere i collegamenti che seguono.  
   
--   [Compilazione di applicazioni ASP.NET sicure: Autenticazione, autorizzazione e comunicazioni protette](http://go.microsoft.com/fwlink/?LinkId=95137)  
+-   [Creazione di applicazioni ASP.NET protette: Autenticazione, autorizzazione e comunicazioni protette](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [Procedura: Crittografare sezioni di configurazione in ASP.NET 2.0 tramite RSA](http://go.microsoft.com/fwlink/?LinkId=95138)  
+-   [Procedura: Crittografare sezioni di configurazione in ASP.NET 2.0 utilizzando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Modificare Machine.config per impostare l'attributo `enableLoggingKnownPii` su `true`, aggiungendo i nodi padre se necessario.  
   
 3.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 #### <a name="to-clean-up-the-sample"></a>Per eseguire la pulizia dell'esempio  
   
 1.  Modificare Machine.config per impostare l'attributo `enableLoggingKnownPii` su `false`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di monitoraggio di AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

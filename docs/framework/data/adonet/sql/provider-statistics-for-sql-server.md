@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: f32b1c9f800a1ec2d80511cbbf46aba9840075d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d52c6bfdadf0a53ac4c5f62c37f1056c6702a82c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365989"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553764"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Statistiche di provider per SQL Server
 A partire da .NET Framework versione 2.0, il provider di dati .NET Framework per SQL Server supporta le statistiche in fase di esecuzione. È necessario abilitare le statistiche impostando la proprietà <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection> su `True` dopo aver creato un oggetto di connessione valido. Dopo aver abilitato le statistiche, è possibile visualizzarle come "snapshot" recuperando un riferimento <xref:System.Collections.IDictionary> mediante il metodo <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection>. È possibile enumerare l'elenco come un set di voci di dizionario delle coppie nome/valore. Queste coppie nome/valore non seguono alcun ordine. È possibile chiamare il metodo <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection> per azzerare i contatori in qualsiasi momento. Se non è stata abilitata la raccolta delle statistiche, non viene generata alcuna eccezione. Inoltre, se il metodo <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> viene chiamato senza la proprietà <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>, i valori recuperati sono i valori iniziali per ciascuna voce. Se vengono abilitate le statistiche, eseguire l'applicazione, quindi disabilitare le statistiche. I valori recuperati rifletteranno i valori raccolti fino al momento in cui le statistiche sono state disabilitate. Tutti i valori delle statistiche vengono raccolti in base alla connessione.  
   
 ## <a name="statistical-values-available"></a>Valori statistici disponibili  
- Attualmente sono disponibili 18 voci diverse del provider Microsoft SQL Server. Il numero di elementi disponibili è possibile accedere tramite il **conteggio** proprietà del <xref:System.Collections.IDictionary> interfaccia riferimento restituito dal <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. Tutti i contatori per le statistiche del provider utilizzare common language runtime <xref:System.Int64> tipo (**lungo** in c# e Visual Basic), che è a 64 bit. Il valore massimo del **int64** il tipo di dati, come definito dal **int64. MaxValue** campo, ((2^63)-1)). Quando i valori del contatore raggiungono il valore massimo, non possono più essere considerati esatti. Ciò significa che **int64. MaxValue**-1((2^63)-2) è in realtà il valore massimo valido per le statistiche.  
+ Attualmente sono disponibili 18 voci diverse del provider Microsoft SQL Server. Il numero di elementi disponibili è accessibile tramite il **conteggio** proprietà delle <xref:System.Collections.IDictionary> restituito dal riferimento all'interfaccia <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. Tutti i contatori per statistiche di provider usano common language runtime <xref:System.Int64> tipo (**lungo** in c# e Visual Basic), ovvero con ampiezza 64 bit. Il valore massimo dei **int64** tipo di dati, come definito dal **int64. MaxValue** campo, ((2^63)-1)). Quando i valori del contatore raggiungono il valore massimo, non possono più essere considerati esatti. Ciò significa che **int64. MaxValue**-1((2^63)-2) è effettivamente il valore massimo valido per le statistiche.  
   
 > [!NOTE]
 >  Viene usato un dizionario per restituire le statistiche del provider poiché il numero, i nomi e l'ordine delle statistiche restituite può variare nel tempo. Le applicazioni non devono fare riferimento a un valore specifico rilevato nel dizionario, ma devono controllare se il valore è presente e creare rami di conseguenza.  
@@ -48,7 +48,7 @@ A partire da .NET Framework versione 2.0, il provider di dati .NET Framework per
  Nell'applicazione console seguente viene illustrato come abilitare le statistiche su una connessione, recuperare quattro singoli valori statistici e riportarli nella finestra della console.  
   
 > [!NOTE]
->  L'esempio seguente usa l'esempio **AdventureWorks** database fornito con SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
+>  L'esempio seguente usa il codice di esempio **AdventureWorks** database incluso con SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
   
 ```vb  
 Option Strict On  
@@ -204,7 +204,7 @@ namespace CS_Stats_Console_GetValue
  Nell'applicazione console seguente viene illustrato come abilitare le statistiche su una connessione, recuperare tutti i valori statistici con l'enumeratore e riportarli nella finestra della console.  
   
 > [!NOTE]
->  L'esempio seguente usa l'esempio **AdventureWorks** database fornito con SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
+>  L'esempio seguente usa il codice di esempio **AdventureWorks** database incluso con SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
   
 ```vb  
 Option Strict On  
@@ -340,4 +340,4 @@ namespace CS_Stats_Console_GetAll
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

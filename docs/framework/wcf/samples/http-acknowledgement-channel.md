@@ -2,12 +2,12 @@
 title: Canale di riconoscimento HTTP
 ms.date: 03/30/2017
 ms.assetid: 469f3056-5ef2-4753-8acf-b574d23d83cf
-ms.openlocfilehash: c56b2fbe9d0bac3143ee7d234fd36a75f7b8071c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d83f3aa590471aa3d83b8f7bd1464ec1e6e106fc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502832"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559543"
 ---
 # <a name="http-acknowledgement-channel"></a>Canale di riconoscimento HTTP
 Il canale di riconoscimento HTTP è un esempio di canale su più livelli in grado di modificare il modello di messaggistica unidirezionale, consentendo a un servizio di riconoscere o rifiutare i messaggi in arrivo anziché inviare automaticamente un riconoscimento al momento della ricezione. Il canale di riconoscimento HTTP consente inoltre al servizio di ritardare il riconoscimento fino a quando non è possibile garantire a livello aziendale che il messaggio verrà elaborato.  
@@ -28,9 +28,9 @@ Il canale di riconoscimento HTTP è un esempio di canale su più livelli in grad
   
 2.  Aprire il **HttpAckChannel** soluzione.  
   
-3.  Avviare una nuova istanza di **servizio** progetto facendo clic sul progetto in **Esplora soluzioni**e selezionando **Debug**, **Avvia nuova istanza** dal menu di scelta rapida.  
+3.  Avviare una nuova istanza della **Service** progetto facendo clic su pulsante destro del mouse il progetto in **Esplora soluzioni**e selezionando **Debug**, **Avvia nuova istanza** dal menu di scelta rapida.  
   
-4.  Avviare una nuova istanza di **Client** progetto facendo clic sul progetto in **Esplora soluzioni**e selezionando **Debug**, e **Avvia nuova istanza** dal menu di scelta rapida.  
+4.  Avvia una nuova istanza del **Client** facendo clic su pulsante destro del mouse il progetto in project **Esplora soluzioni**e selezionando **Debug**, e **Avvia nuova istanza** dal menu di scelta rapida.  
   
 5.  Una volta avviato il servizio, premere INVIO nella finestra del client per consentire al client di inviare un messaggio al servizio.  
   
@@ -43,6 +43,6 @@ Il canale di riconoscimento HTTP è un esempio di canale su più livelli in grad
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpAckChannel`

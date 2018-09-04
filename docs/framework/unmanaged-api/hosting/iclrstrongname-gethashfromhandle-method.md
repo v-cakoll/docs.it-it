@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97d4a6bfd7a8a7aa257ad2f52d005ccc5bcd6fb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20c5f6bbb58b85f42ec00e356eccc5fb41ce813c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432037"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560335"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>Metodo ICLRStrongName::GetHashFromHandle
 Genera un hash per il contenuto del file che contiene l'handle di file specificato, usando l'algoritmo hash specificato.  
@@ -45,7 +45,7 @@ HRESULT GetHashFromHandle (
  [in] L'handle del file di cui eseguire l'hashing.  
   
  `piHashAlg`  
- [in, out] Costante che specifica l'algoritmo hash. Utilizzare zero per l'algoritmo predefinito.  
+ [in, out] Costante che specifica l'algoritmo hash. Usa lo zero per l'algoritmo predefinito.  
   
  `pbHash`  
  [out] Il buffer di hash restituito.  
@@ -54,19 +54,19 @@ HRESULT GetHashFromHandle (
  [in] La dimensione massima richiesta del `pbHash`.  
   
  `pchHash`  
- [out] Le dimensioni, in byte, dell'oggetto restituito `pbHash`.  
+ [out] Le dimensioni, in byte, del valore restituito `pbHash`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` Se il metodo viene completato correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](http://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
+ `S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. H  
   
  **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

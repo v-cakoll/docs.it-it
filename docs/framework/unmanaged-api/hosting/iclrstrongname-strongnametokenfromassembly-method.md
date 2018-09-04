@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aea9fb2bb9c4535e30a42ad956b04b3bb06a798a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3dd083193fa8fed2abc8a1a498325f7edd89bc96
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433988"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658000"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassembly-method"></a>Metodo ICLRStrongName::StrongNameTokenFromAssembly
 Crea un token con nome sicuro dal file di assembly specificato.  
@@ -45,24 +45,24 @@ HRESULT StrongNameTokenFromAssembly (
  [out] Il token restituito con nome sicuro.  
   
  `pcbStrongNameToken`  
- [out] Le dimensioni in byte, del token con nome sicuro.  
+ [out] Le dimensioni, in byte, del token con nome sicuro.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` Se il metodo viene completato correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](http://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
+ `S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
   
 ## <a name="remarks"></a>Note  
- Un token con nome sicuro è la forma abbreviata di una chiave pubblica. Il token è un hash a 64 bit che viene creato dalla chiave pubblica utilizzata per firmare l'assembly. Il token fa parte del nome sicuro per l'assembly e può essere letti dai metadati dell'assembly.  
+ Un token con nome sicuro è il formato abbreviato di una chiave pubblica. Il token è un hash a 64 bit che viene creato dalla chiave pubblica usata per firmare l'assembly. Il token fa parte del nome sicuro dell'assembly e può essere letti dai metadati dell'assembly.  
   
- Dopo aver creato il token, è necessario chiamare il [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metodo per rilasciare la memoria allocata.  
+ Dopo aver creato il token, è necessario chiamare il [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metodo per rilasciare la memoria allocata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. H  
   
  **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo StrongNameTokenFromAssemblyEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)  

@@ -2,12 +2,12 @@
 title: Firma di stored procedure in SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 7ef43f403a300e58a27df2de1f980dc8bcc58c02
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c24edd59992c246c33944e6693ff5ac69311886a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253644"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555164"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Firma di stored procedure in SQL Server
  Un firma digitale è un digest di dati crittografato con la chiave privata del firmatario. La chiave privata garantisce che la firma digitale è univoca per il titolare o il proprietario. È possibile firmare gli assembly, funzioni (ad eccezione delle funzioni inline con valori di tabella), trigger e stored procedure.  
@@ -51,7 +51,7 @@ Se il modulo deve disporre di autorizzazioni a livello di server aggiuntivi:
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Firma del modulo](http://go.microsoft.com/fwlink/?LinkId=98590) nella documentazione Online di SQL Server|Viene descritta la procedura di firma dei moduli e vengono forniti uno scenario di esempio e collegamenti agli argomenti Transact-SQL attinenti.|  
+|[Firma del modulo](https://go.microsoft.com/fwlink/?LinkId=98590) nella documentazione Online di SQL Server|Viene descritta la procedura di firma dei moduli e vengono forniti uno scenario di esempio e collegamenti agli argomenti Transact-SQL attinenti.|  
 |[Stored procedure con un certificato di firma](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) nella documentazione Online di SQL Server|Viene fornita un'esercitazione per firmare una stored procedure con un certificato.|  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -62,4 +62,4 @@ Se il modulo deve disporre di autorizzazioni a livello di server aggiuntivi:
  [Scrittura dinamica sicura in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [Personalizzazione delle autorizzazioni con rappresentazione in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [Modifica di dati con stored procedure](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

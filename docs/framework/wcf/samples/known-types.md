@@ -2,12 +2,12 @@
 title: Tipi conosciuti
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: 003f2e39804bb393c9d8c54a6fc208fdd1b22e97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1dfa426c19b5471acb1c359f5068854fa8aa71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503819"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554950"
 ---
 # <a name="known-types"></a>Tipi conosciuti
 Questo esempio illustra come specificare informazioni sui tipi derivati in un contratto dati. I contratti dati consentono di passare dati strutturati a e da i servizi. Nella programmazione orientata a oggetti, un tipo che eredita da un altro tipo può essere utilizzato al posto del tipo originale. Nella programmazione orientata al servizio, vengono comunicati schemi piuttosto che tipi e, pertanto, la relazione tra tipi non viene mantenuta. L'attributo <xref:System.Runtime.Serialization.KnownTypeAttribute> consente alle informazioni sui tipi derivati di essere incluse nel contratto dati. Se questo meccanismo non viene utilizzato, un tipo derivato non può essere inviato o ricevuto se è atteso un tipo base.  
@@ -71,7 +71,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- Per dimostrare la funzionalità dei tipi noti, il servizio viene implementato in tale modo viene restituito un `ComplexNumberWithMagnitude` solo per addizione e sottrazione. Anche se il contratto specifica `ComplexNumber`, ciò è consentito a causa dell'attributo `KnownTypeAttribute`. Moltiplicazione e divisione restituiscono sempre la base `ComplexNumber` tipo.  
+ Per illustrare la funzionalità dei tipi noti, il servizio viene implementato in tale modo che restituisca un `ComplexNumberWithMagnitude` solo per addizione e sottrazione. Anche se il contratto specifica `ComplexNumber`, ciò è consentito a causa dell'attributo `KnownTypeAttribute`. Moltiplicazione e divisione restituiscono sempre la base `ComplexNumber` tipo.  
   
 ```  
 public class DataContractCalculatorService : IDataContractCalculator  
@@ -114,7 +114,7 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- Nel client, sia il contratto di servizio e il contratto di dati sono definiti nel file generatedClient.cs origine, che viene generato mediante la [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) dai metadati del servizio. Poiché l'attributo <xref:System.Runtime.Serialization.KnownTypeAttribute> è specificato nel contratto dati del servizio, il client è in grado di ricevere entrambe le classi `ComplexNumber` e `ComplexNumberWithMagnitude` in caso di utilizzo del servizio. Il client rileva se ottiene una `ComplexNumberWithMagnitude` e genera l'output adatto:  
+ Sul client, il contratto di servizio e il contratto dati sono definiti nel file di origine generatedClient.cs, generato dal [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) dai metadati del servizio. Poiché l'attributo <xref:System.Runtime.Serialization.KnownTypeAttribute> è specificato nel contratto dati del servizio, il client è in grado di ricevere entrambe le classi `ComplexNumber` e `ComplexNumberWithMagnitude` in caso di utilizzo del servizio. Il client rileva se ottiene una `ComplexNumberWithMagnitude` e genera l'output adatto:  
   
 ```  
 // Create a client  
@@ -156,7 +156,7 @@ No magnitude was sent from the service
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -167,7 +167,7 @@ No magnitude was sent from the service
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
   
