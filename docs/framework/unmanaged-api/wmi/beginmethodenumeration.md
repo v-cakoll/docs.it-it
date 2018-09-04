@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e69625184aca7d1ebd4bb0b7dc7c4958596b906a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43476092"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536385"
 ---
-# <a name="beginenumeration-function"></a><span data-ttu-id="55022-103">BeginEnumeration (funzione)</span><span class="sxs-lookup"><span data-stu-id="55022-103">BeginEnumeration function</span></span>
-<span data-ttu-id="55022-104">Avvia un'enumerazione dei metodi disponibili per l'oggetto.</span><span class="sxs-lookup"><span data-stu-id="55022-104">Begins an enumeration of the methods available for the object.</span></span>  
+# <a name="beginenumeration-function"></a><span data-ttu-id="6367c-103">BeginEnumeration (funzione)</span><span class="sxs-lookup"><span data-stu-id="6367c-103">BeginEnumeration function</span></span>
+<span data-ttu-id="6367c-104">Avvia un'enumerazione dei metodi disponibili per l'oggetto.</span><span class="sxs-lookup"><span data-stu-id="6367c-104">Begins an enumeration of the methods available for the object.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="55022-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="55022-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6367c-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6367c-105">Syntax</span></span>  
   
 ``` 
 HRESULT BeginMethodEnumeration (
@@ -38,43 +38,43 @@ HRESULT BeginMethodEnumeration (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="55022-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="55022-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="6367c-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="6367c-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="55022-107">[in] Questo parametro è inutilizzato.</span><span class="sxs-lookup"><span data-stu-id="55022-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="6367c-107">[in] Questo parametro è inutilizzato.</span><span class="sxs-lookup"><span data-stu-id="6367c-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="55022-108">[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.</span><span class="sxs-lookup"><span data-stu-id="55022-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="6367c-108">[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.</span><span class="sxs-lookup"><span data-stu-id="6367c-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `lEnumFlags`  
-<span data-ttu-id="55022-109">[in] Zero (0) per tutti i metodi, o un flag che specifica l'ambito dell'enumerazione.</span><span class="sxs-lookup"><span data-stu-id="55022-109">[in] Zero (0) for all methods, or a flag that specifies the scope of the enumeration.</span></span> <span data-ttu-id="55022-110">I flag seguenti sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="55022-110">The following flags are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="6367c-109">[in] Zero (0) per tutti i metodi, o un flag che specifica l'ambito dell'enumerazione.</span><span class="sxs-lookup"><span data-stu-id="6367c-109">[in] Zero (0) for all methods, or a flag that specifies the scope of the enumeration.</span></span> <span data-ttu-id="6367c-110">I flag seguenti sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="6367c-110">The following flags are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-<span data-ttu-id="55022-111">Costante</span><span class="sxs-lookup"><span data-stu-id="55022-111">Constant</span></span>  |<span data-ttu-id="55022-112">Valore</span><span class="sxs-lookup"><span data-stu-id="55022-112">Value</span></span>  |<span data-ttu-id="55022-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="55022-113">Description</span></span>  |
+<span data-ttu-id="6367c-111">Costante</span><span class="sxs-lookup"><span data-stu-id="6367c-111">Constant</span></span>  |<span data-ttu-id="6367c-112">Valore</span><span class="sxs-lookup"><span data-stu-id="6367c-112">Value</span></span>  |<span data-ttu-id="6367c-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6367c-113">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="55022-114">0x10</span><span class="sxs-lookup"><span data-stu-id="55022-114">0x10</span></span> | <span data-ttu-id="55022-115">Limitare l'enumerazione per i metodi definiti nella classe stessa.</span><span class="sxs-lookup"><span data-stu-id="55022-115">Limit the enumeration to methods that are defined in the class itself.</span></span> |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="55022-116">0x20</span><span class="sxs-lookup"><span data-stu-id="55022-116">0x20</span></span> | <span data-ttu-id="55022-117">Limitare l'enumerazione delle proprietà ereditate dalle classi di base.</span><span class="sxs-lookup"><span data-stu-id="55022-117">Limit the enumeration to properties that are inherited from base classes.</span></span> |
+| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="6367c-114">0x10</span><span class="sxs-lookup"><span data-stu-id="6367c-114">0x10</span></span> | <span data-ttu-id="6367c-115">Limitare l'enumerazione per i metodi definiti nella classe stessa.</span><span class="sxs-lookup"><span data-stu-id="6367c-115">Limit the enumeration to methods that are defined in the class itself.</span></span> |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="6367c-116">0x20</span><span class="sxs-lookup"><span data-stu-id="6367c-116">0x20</span></span> | <span data-ttu-id="6367c-117">Limitare l'enumerazione delle proprietà ereditate dalle classi di base.</span><span class="sxs-lookup"><span data-stu-id="6367c-117">Limit the enumeration to properties that are inherited from base classes.</span></span> |
 
-## <a name="return-value"></a><span data-ttu-id="55022-118">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="55022-118">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="6367c-118">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="6367c-118">Return value</span></span>
 
-<span data-ttu-id="55022-119">I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="55022-119">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="6367c-119">I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="6367c-119">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="55022-120">Costante</span><span class="sxs-lookup"><span data-stu-id="55022-120">Constant</span></span>  |<span data-ttu-id="55022-121">Valore</span><span class="sxs-lookup"><span data-stu-id="55022-121">Value</span></span>  |<span data-ttu-id="55022-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="55022-122">Description</span></span>  |
+|<span data-ttu-id="6367c-120">Costante</span><span class="sxs-lookup"><span data-stu-id="6367c-120">Constant</span></span>  |<span data-ttu-id="6367c-121">Valore</span><span class="sxs-lookup"><span data-stu-id="6367c-121">Value</span></span>  |<span data-ttu-id="6367c-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6367c-122">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="55022-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="55022-123">0x80041008</span></span> | <span data-ttu-id="55022-124">`lEnnumFlags` è diverso da zero e non è uno dei flag specificati.</span><span class="sxs-lookup"><span data-stu-id="55022-124">`lEnnumFlags` is non-zero and is not one of the specified flags.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="55022-125">0</span><span class="sxs-lookup"><span data-stu-id="55022-125">0</span></span> | <span data-ttu-id="55022-126">La chiamata di funzione è riuscita.</span><span class="sxs-lookup"><span data-stu-id="55022-126">The function call was successful.</span></span>  |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="6367c-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="6367c-123">0x80041008</span></span> | <span data-ttu-id="6367c-124">`lEnnumFlags` è diverso da zero e non è uno dei flag specificati.</span><span class="sxs-lookup"><span data-stu-id="6367c-124">`lEnnumFlags` is non-zero and is not one of the specified flags.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="6367c-125">0</span><span class="sxs-lookup"><span data-stu-id="6367c-125">0</span></span> | <span data-ttu-id="6367c-126">La chiamata di funzione è riuscita.</span><span class="sxs-lookup"><span data-stu-id="6367c-126">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="55022-127">Note</span><span class="sxs-lookup"><span data-stu-id="55022-127">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="6367c-127">Note</span><span class="sxs-lookup"><span data-stu-id="6367c-127">Remarks</span></span>
 
-<span data-ttu-id="55022-128">Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) (metodo).</span><span class="sxs-lookup"><span data-stu-id="55022-128">This function wraps a call to the [IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) method.</span></span>
+<span data-ttu-id="6367c-128">Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) (metodo).</span><span class="sxs-lookup"><span data-stu-id="6367c-128">This function wraps a call to the [IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) method.</span></span>
 
-<span data-ttu-id="55022-129">Questa chiamata al metodo è supportata solo se l'oggetto corrente è una definizione di classe.</span><span class="sxs-lookup"><span data-stu-id="55022-129">This method call is only supported if the current object is a class definition.</span></span> <span data-ttu-id="55022-130">Manipolazione di metodo non è disponibile dal [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) puntatori che puntano a istanze.</span><span class="sxs-lookup"><span data-stu-id="55022-130">Method manipulation is not available from [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to instances.</span></span> <span data-ttu-id="55022-131">L'ordine in cui vengono enumerati i metodi è garantito a essere invariante per una determinata istanza del [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).</span><span class="sxs-lookup"><span data-stu-id="55022-131">The order in which methods are enumerated is guaranteed to be invariant for a given instance of [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).</span></span>
+<span data-ttu-id="6367c-129">Questa chiamata al metodo è supportata solo se l'oggetto corrente è una definizione di classe.</span><span class="sxs-lookup"><span data-stu-id="6367c-129">This method call is only supported if the current object is a class definition.</span></span> <span data-ttu-id="6367c-130">Manipolazione di metodo non è disponibile dal [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) puntatori che puntano a istanze.</span><span class="sxs-lookup"><span data-stu-id="6367c-130">Method manipulation is not available from [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to instances.</span></span> <span data-ttu-id="6367c-131">L'ordine in cui vengono enumerati i metodi è garantito a essere invariante per una determinata istanza del [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).</span><span class="sxs-lookup"><span data-stu-id="6367c-131">The order in which methods are enumerated is guaranteed to be invariant for a given instance of [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="55022-132">Requisiti</span><span class="sxs-lookup"><span data-stu-id="55022-132">Requirements</span></span>  
- <span data-ttu-id="55022-133">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55022-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6367c-132">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6367c-132">Requirements</span></span>  
+ <span data-ttu-id="6367c-133">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6367c-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="55022-134">**Intestazione:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="55022-134">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="6367c-134">**Intestazione:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="6367c-134">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="55022-135">**Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="55022-135">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="6367c-135">**Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="6367c-135">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55022-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="55022-136">See also</span></span>  
-[<span data-ttu-id="55022-137">WMI e contatori delle prestazioni (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="55022-137">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="6367c-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6367c-136">See also</span></span>  
+[<span data-ttu-id="6367c-137">WMI e contatori delle prestazioni (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="6367c-137">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
