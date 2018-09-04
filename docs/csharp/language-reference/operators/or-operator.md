@@ -8,23 +8,26 @@ helpviewer_keywords:
 - '| operator [C#]'
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
-ms.openlocfilehash: 7b62af53f0d8b7cba29f4496887717f1726eabf9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d95fe29aa7ffab9938e8edc57999445268fe41a8
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265687"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001230"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="78097-102">Operatore | (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="78097-102">| Operator (C# Reference)</span></span>
-<span data-ttu-id="78097-103">Gli operatori `|` binari sono predefiniti per i tipi integrali e `bool`.</span><span class="sxs-lookup"><span data-stu-id="78097-103">Binary `|` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="78097-104">Per i tipi integrali, `|` calcola l'operatore OR bit per bit dei relativi operandi.</span><span class="sxs-lookup"><span data-stu-id="78097-104">For integral types, `|` computes the bitwise OR of its operands.</span></span> <span data-ttu-id="78097-105">Per gli operandi `bool`, `|` calcola l'operatore OR logico dei relativi operandi, ovvero, il risultato è `false` se e solo se entrambi gli operandi sono `false`.</span><span class="sxs-lookup"><span data-stu-id="78097-105">For `bool` operands, `|` computes the logical OR of its operands; that is, the result is `false` if and only if both its operands are `false`.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="e7a35-102">Operatore | (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="e7a35-102">| Operator (C# Reference)</span></span>
+<span data-ttu-id="e7a35-103">Gli operatori `|` binari sono predefiniti per i tipi integrali e `bool`.</span><span class="sxs-lookup"><span data-stu-id="e7a35-103">Binary `|` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="e7a35-104">Per i tipi integrali, `|` calcola l'operatore OR bit per bit dei relativi operandi.</span><span class="sxs-lookup"><span data-stu-id="e7a35-104">For integral types, `|` computes the bitwise OR of its operands.</span></span> <span data-ttu-id="e7a35-105">Per gli operandi `bool`, `|` calcola l'operatore OR logico dei relativi operandi, ovvero, il risultato è `false` se e solo se entrambi gli operandi sono `false`.</span><span class="sxs-lookup"><span data-stu-id="e7a35-105">For `bool` operands, `|` computes the logical OR of its operands; that is, the result is `false` if and only if both its operands are `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="78097-106">Note</span><span class="sxs-lookup"><span data-stu-id="78097-106">Remarks</span></span>  
- <span data-ttu-id="78097-107">I tipi definiti dall'utente possono eseguire l'overload dell'operatore `|` (vedere [operatore](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="78097-107">User-defined types can overload the `|` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e7a35-106">Note</span><span class="sxs-lookup"><span data-stu-id="e7a35-106">Remarks</span></span>  
+ <span data-ttu-id="e7a35-107">L'operatore binario `|` valuta entrambi gli operandi indipendentemente dal valore del primo, diversamente dall'[operatore OR condizionale] (conditional-or-operator.md) `||`.</span><span class="sxs-lookup"><span data-stu-id="e7a35-107">The binary `|` operator evaluates both operands regardless of the first one's value, in contrast to the [conditional-OR operator]     (conditional-or-operator.md) `||`.</span></span>
+ 
+ <span data-ttu-id="e7a35-108">I tipi definiti dall'utente possono eseguire l'overload dell'operatore `|` (vedere [operatore](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="e7a35-108">User-defined types can overload the `|` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="78097-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="78097-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e7a35-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="e7a35-109">Example</span></span>  
  [!code-csharp[csRefOperators#31](../../../csharp/language-reference/operators/codesnippet/CSharp/or-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="78097-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="78097-109">See Also</span></span>  
- [<span data-ttu-id="78097-110">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="78097-110">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="78097-111">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="78097-111">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="78097-112">Operatori C#</span><span class="sxs-lookup"><span data-stu-id="78097-112">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="e7a35-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e7a35-110">See Also</span></span>
+
+- [<span data-ttu-id="e7a35-111">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="e7a35-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="e7a35-112">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="e7a35-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="e7a35-113">Operatori C#</span><span class="sxs-lookup"><span data-stu-id="e7a35-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
