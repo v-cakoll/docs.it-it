@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7855007c7566d3be0012bbff2cb124ee2681cb6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59416ea2d9a2d7b001421271b9907bb3e84c086
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398053"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536953"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Eventi ETW in Common Language Runtime
 Common Language Runtime (CLR) fornisce utili informazioni di diagnostica ETW (Event Tracing for Windows) tramite svariati eventi di debug e profilatura. Gli eventi ETW di CLR sfruttano il sistema di traccia Windows ETW per migliorare il supporto esistente per la profilatura e il debug offerto da Common Language Runtime.  
   
- Per altre informazioni su ETW, vedere l'articolo [Improve Debugging and Performance Tuning with ETW](http://go.microsoft.com/fwlink/?LinkID=161142) (Migliorare il debug e l'ottimizzazione delle prestazioni con ETW) su MSDN. Per informazioni su Xperf, vedere la voce [Windows Performance Toolkit - Xperf](http://go.microsoft.com/fwlink/?LinkID=161144) (Xperf di Windows Performance Toolkit) nel blog NTDebugging.  
+ Per altre informazioni su ETW, vedere l'articolo [Improve Debugging and Performance Tuning with ETW](https://go.microsoft.com/fwlink/?LinkID=161142) (Migliorare il debug e l'ottimizzazione delle prestazioni con ETW) su MSDN. Per informazioni su Xperf, vedere la voce [Windows Performance Toolkit - Xperf](https://go.microsoft.com/fwlink/?LinkID=161144) (Xperf di Windows Performance Toolkit) nel blog NTDebugging.  
   
  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] o versioni successive è richiesto per tutti gli eventi descritti in questi argomenti. Il sistema operativo Windows Vista è il client minimo supportato e Windows Server 2008 è il server minimo supportato.  
   

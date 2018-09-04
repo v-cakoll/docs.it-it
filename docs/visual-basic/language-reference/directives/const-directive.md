@@ -1,5 +1,5 @@
 ---
-title: '#Const (direttiva)'
+title: '#Const (direttiva) (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: a3b3318f6b44f7d1798e08195be5aeb920b61c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d786c5e16b1e667f7c7c78b0f7857cd9711239
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588067"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541614"
 ---
 # <a name="const-directive"></a>Direttiva #Const
 Definisce le costanti del compilatore condizionale per Visual Basic.  
@@ -33,15 +33,15 @@ Definisce le costanti del compilatore condizionale per Visual Basic.
   
 ## <a name="parts"></a>Parti  
  `constname`  
- Obbligatorio. Nome della costante definita.  
+ Obbligatorio. Nome della costante da definire.  
   
  `expression`  
- Obbligatorio. Valore letterale, altra costante di compilazione condizionale o qualsiasi combinazione che include qualsiasi o tutti gli operatori aritmetici o logici, ad eccezione di `Is`.  
+ Obbligatorio. Valore letterale, altra costante di compilazione condizionale o qualsiasi combinazione che include uno o tutti gli operatori aritmetici o logici, tranne `Is`.  
   
 ## <a name="remarks"></a>Note  
- Costanti del compilatore condizionale sono sempre private per il file in cui appaiono. Non è possibile creare costanti del compilatore pubblica utilizzando il `#Const` direttiva; è possibile creare solo nell'interfaccia utente o con il `/define` l'opzione del compilatore.  
+ Costanti del compilatore condizionale sono sempre private per il file in cui vengono visualizzati. Non è possibile creare le costanti del compilatore pubblico usando il `#Const` direttiva; è possibile creare solo nell'interfaccia utente o con il `/define` opzione del compilatore.  
   
- È possibile utilizzare solo costanti di compilazione condizionale e valori letterali in `expression`. Utilizzo di una costante standard definita con `Const` causa un errore. Al contrario, è possibile utilizzare costanti definite con la `#Const` parola chiave solo per la compilazione condizionale. Costanti possono anche essere non definite, nel qual caso hanno un valore di `Nothing`.  
+ È possibile utilizzare solo costanti del compilatore condizionale e i valori letterali in `expression`. Utilizzo di una costante di standard definita con `Const` provoca un errore. Al contrario, è possibile utilizzare costanti definite con la `#Const` parola chiave solo per la compilazione condizionale. Costanti può anche essere indefinito, nel qual caso hanno un valore di `Nothing`.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene usata la direttiva `#Const`.  

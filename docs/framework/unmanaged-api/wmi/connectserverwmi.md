@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 163e61eef8a753b5b6470285e5e3ce63789e25a4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416137"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540883"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi (funzione)
-Crea una connessione mediante DCOM per uno spazio dei nomi WMI in un computer specifico.  
+Crea una connessione tramite DCOM a uno spazio dei nomi WMI in un computer specifico.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
