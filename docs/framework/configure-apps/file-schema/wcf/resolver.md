@@ -2,12 +2,12 @@
 title: '&lt;resolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: f29c34f53a8bdaee4b30c72bb5d764ae3935fe7a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 48b6b6ca315f7ab63a8f7a64b97167fa04fe1e4e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749023"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489734"
 ---
 # <a name="ltresolvergt"></a>&lt;resolver&gt;
 Specifica un resolver peer usato per risolvere un ID della rete di peer in un insieme di indirizzi di nodo peer che rappresenta alcuni nodi che partecipano nella rete.  
@@ -16,7 +16,7 @@ Specifica un resolver peer usato per risolvere un ID della rete di peer in un in
 \<le associazioni >  
 \<netPeerBinding>  
 \<binding>  
-\<sistema di risoluzione >  
+\<resolver >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,10 +46,10 @@ Specifica un resolver peer usato per risolvere un ID della rete di peer in un in
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione di [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione del [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
   
 ## <a name="remarks"></a>Note  
- Un resolver di nomi peer è un servizio di individuazione usato dai canali peer per trovare i nodi che partecipano a una rete peer. Un resolver di nomi peer consente inoltre di "registrare" un nodo in una rete di peer, ovvero di renderlo individuabile e disponibile all'interno della rete. Per ulteriori informazioni sul resolver peer, vedere [i resolver del Peer](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).  
+ Un resolver di nomi peer è un servizio di individuazione usato dai canali peer per trovare i nodi che partecipano a una rete peer. Un resolver di nomi peer consente inoltre di "registrare" un nodo in una rete di peer, ovvero di renderlo individuabile e disponibile all'interno della rete. Per altre informazioni sui resolver del peer, vedere [i resolver del Peer](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.PeerResolver>  
@@ -58,4 +58,4 @@ Specifica un resolver peer usato per risolvere un ID della rete di peer in un in
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement>  
  [Resolver del peer](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [Aggiunta di un Resolver personalizzato a un'applicazione di PeerChannel](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+ [Aggiunta di un Resolver personalizzato a un'applicazione PeerChannel](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

@@ -2,12 +2,12 @@
 title: Utilizzo di delegati di attività
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 96a412a066342fb9c459e1388c5b58847ebac390
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb23f6a79b6f2390952f9aadc1cf08099acb289b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518952"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489929"
 ---
 # <a name="using-activity-delegates"></a>Utilizzo di delegati di attività
 I delegati di attività consentono agli autori di attività di esporre callback con firme specifiche, per cui gli utenti dell'attività possono fornire gestori in base all'attività. Sono disponibili due tipi di delegati di attività: <xref:System.Activities.ActivityAction%601>, usato per definire i delegati di attività senza un valore restituito, e <xref:System.Activities.ActivityFunc%601>, usato per definire i delegati di attività con un valore restituito.  
@@ -27,9 +27,9 @@ Negli esempi di questo argomento viene usata la sintassi di inizializzazione ogg
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- Per ulteriori informazioni sugli inizializzatori di oggetti, vedere [procedura: inizializzare oggetti senza chiamare un costruttore (Guida per programmatori c#)](http://go.microsoft.com/fwlink/?LinkId=161015) e [procedura: dichiarare un oggetto usando un inizializzatore di oggetto](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ Per altre informazioni sugli inizializzatori di oggetto, vedere [procedura: inizializzare oggetti senza chiamare un costruttore (Guida per programmatori c#)](https://go.microsoft.com/fwlink/?LinkId=161015) e [procedura: dichiarare un oggetto usando un inizializzatore di oggetto](https://go.microsoft.com/fwlink/?LinkId=161016).  
   
- Nell'esempio seguente, un'attività <xref:System.Activities.Statements.TryCatch> è usata in un flusso di lavoro. Un'eccezione <xref:System.ApplicationException> viene generata dal flusso di lavoro e gestita da un'attività <xref:System.Activities.Statements.Catch%601>. Il gestore per il <xref:System.Activities.Statements.Catch%601> azione dell'attività è un <xref:System.Activities.Statements.WriteLine> attività e i dettagli dell'eccezione vengono propagati mediante il `ex` <xref:System.Activities.DelegateInArgument%601>.  
+ Nell'esempio seguente, un'attività <xref:System.Activities.Statements.TryCatch> è usata in un flusso di lavoro. Un'eccezione <xref:System.ApplicationException> viene generata dal flusso di lavoro e gestita da un'attività <xref:System.Activities.Statements.Catch%601>. Il gestore per il <xref:System.Activities.Statements.Catch%601> azione dell'attività è una <xref:System.Activities.Statements.WriteLine> attività e il dettaglio dell'eccezione vengono propagati tramite il `ex` <xref:System.Activities.DelegateInArgument%601>.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#33](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]  
   

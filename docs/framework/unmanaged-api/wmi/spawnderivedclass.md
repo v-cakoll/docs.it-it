@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe93b7ee28db8151345871b0dd716d41227ed565
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04df65a29584f7e2de44389d815b915a541e38f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462299"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489799"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass (funzione)
-Crea un oggetto appena derivata da un oggetto specificato.    
+Crea un oggetto classe appena derivata da un oggetto specificato.    
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,41 +44,41 @@ HRESULT SpawnDerivedClass (
 [in] Questo parametro è inutilizzato.
 
 `ptr`  
-[in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
+[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
 `lFlags`  
 [in] Riservato. Questo parametro deve essere 0.
 
 `ppNewClass`  
-[out] Riceve il puntatore al nuovo oggetto di definizione di classe. Se si verifica un errore, non è un nuovo oggetto restituito, e `ppNewClass` è invariato a sinistra. Il valore non può essere `null`.
+[out] Riceve il puntatore al nuovo oggetto di definizione di classe. Se si verifica un errore, non è un nuovo oggetto restituito, e `ppNewClass` è invariata a sinistra. Il valore non può essere `null`.
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice:
+I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
-| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Un'operazione non valida, ad esempio l'installazione di una classe da un'istanza, è stato richiesto. |
-| `WBEM_E_INCOMPLETE_CLASS` | La classe di origine non è completamente definita o registrata con gestione di Windows, pertanto non è consentita una nuova classe derivata. |
+| `WBEM_E_INVALID_OPERATION` | 0x80041016 | È stata richiesta un'operazione non è valida, come la generazione di una classe da un'istanza. |
+| `WBEM_E_INCOMPLETE_CLASS` | La classe di origine non completamente definita o registrata con la gestione di Windows, in modo che non è consentita una nuova classe derivata. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per completare l'operazione. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` è `null`. |
-| `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
+| `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject::SpawnDerivedClass](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) metodo.
+Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) (metodo).
 
 `ptr` deve essere una definizione di classe che diventa la classe padre dell'oggetto generato. L'oggetto restituito diventa una sottoclasse dell'oggetto corrente.
 
-Il nuovo oggetto restituito `ppNewClass` diventa automaticamente una sottoclasse dell'oggetto corrente. Impossibile eseguire l'override di questo comportamento. Non vi è alcun altro metodo per cui è possono creare le sottoclassi (classi derivate).
+Il nuovo oggetto restituito in `ppNewClass` diventa automaticamente una sottoclasse dell'oggetto corrente. Impossibile eseguire l'override di questo comportamento. Non vi è alcun altro metodo per cui è possono creare sottoclassi (classi derivate).
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
-[WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

@@ -2,12 +2,12 @@
 title: Utilizzo di XML in un dataset
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-ms.openlocfilehash: c5a4df5f2c77853864f51ee9b226f412f382dd09
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cbdc6135a819e2141426f432d163cd49a7b78ac4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760333"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489877"
 ---
 # <a name="using-xml-in-a-dataset"></a>Utilizzo di XML in un dataset
 ADO.NET consente di compilare un tipo <xref:System.Data.DataSet> con i dati contenuti in un flusso o documento XML. È possibile usare il flusso o il documento XML per fornire al tipo <xref:System.Data.DataSet> dati o informazioni relative allo schema oppure entrambi. Le informazioni fornite dal flusso o documento XML possono essere combinate con i dati o le informazioni relative allo schema già presenti nel tipo <xref:System.Data.DataSet>.  
@@ -48,4 +48,4 @@ ADO.NET consente di compilare un tipo <xref:System.Data.DataSet> con i dati cont
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
