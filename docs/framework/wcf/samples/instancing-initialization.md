@@ -3,11 +3,11 @@ title: Inizializzazione della creazione di istanze
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
 ms.openlocfilehash: 651029783f4632fc0b404bea8df8bd3790622bfd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388261"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516138"
 ---
 # <a name="instancing-initialization"></a>Inizializzazione della creazione di istanze
 Questo esempio estende il [Pooling](../../../../docs/framework/wcf/samples/pooling.md) esempio definendo un'interfaccia, `IObjectControl`, che Personalizza l'inizializzazione di un oggetto attivandolo e disattivandolo. Il client richiama metodi che restituiscono l'oggetto al pool e che non restituiscono l'oggetto al pool.  

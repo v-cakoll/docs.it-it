@@ -3,11 +3,11 @@ title: Supporto delle associazioni a più siti IIS
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
 ms.openlocfilehash: 2c42ba7cf3713e5d165d10ce7049df8200d612fb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482207"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517875"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Supporto delle associazioni a più siti IIS
 Quando si ospita un servizio Windows Communication Foundation (WCF) in Internet Information Services (IIS) 7.0, è possibile specificare più indirizzi di base che utilizzano lo stesso protocollo nello stesso sito. In questo modo lo stesso servizio può rispondere a diversi URI. Ciò è utile quando si desidera ospitare un servizio che è in ascolto sulla http://www.contoso.com e http://contoso.com. È inoltre utile per creare un servizio che dispone di un indirizzo di base per gli utenti interni e un indirizzo di base separato per gli utenti esterni. Ad esempio: http://internal.contoso.com e http://www.contoso.com.  

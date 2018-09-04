@@ -3,11 +3,11 @@ title: Bridging e gestione degli errori
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
 ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389068"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514542"
 ---
 # <a name="bridging-and-error-handling"></a>Bridging e gestione degli errori
 Questo esempio viene illustrato come il servizio di routing di Windows Communication Foundation (WCF) viene usato per il collegamento delle comunicazioni tra un client e un servizio che impiegano associazioni diverse. L'esempio mostra inoltre come utilizzare un servizio di backup per scenari di failover. Il servizio di routing è un componente WCF che rende più semplice includere un router basato sul contenuto nell'applicazione. In questo esempio si adatta l'esempio di calcolatrice standard di WCF per comunicare con il servizio di routing.  

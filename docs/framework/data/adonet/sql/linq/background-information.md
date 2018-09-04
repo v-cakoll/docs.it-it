@@ -2,23 +2,23 @@
 title: Informazioni di base
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: 66d2047a064663cfe93823d92d30f682d557c493
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd2531dd141cfc6f0b67d1f58766327c218610f5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363217"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515632"
 ---
 # <a name="background-information"></a>Informazioni di base
 Gli argomenti di questa sezione riguardano i concetti e le procedure che vanno oltre le nozioni di base relative all'utilizzo di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  Per trovare esempi aggiuntivi di codice e applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], attenersi alla procedura riportata di seguito:  
   
--   Cercare Microsoft Docs problemi specifici.  
+-   Cercare problemi specifici di Microsoft Docs.  
   
--   Partecipare il [forum su LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti.  
+-   Partecipare il [forum su LINQ](https://go.microsoft.com/fwlink/?LinkId=76488)in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti.  
   
--   Studiare il white paper che descrive in dettaglio [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la tecnologia di esempi di codice Visual Basic e c#. Per ulteriori informazioni, vedere [LINQ to SQL: Language-Integrated Query per i dati relazionali](http://go.microsoft.com/fwlink/?LinkId=93205).  
+-   Studiare il white paper che illustra in dettaglio [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, con esempi di codice Visual Basic e c#. Per altre informazioni, vedere [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [ADO.NET e LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
@@ -31,7 +31,7 @@ Gli argomenti di questa sezione riguardano i concetti e le procedure che vanno o
  Viene illustrato come aggiungere codice di convalida e altre personalizzazioni.  
   
  [Data binding](../../../../../../docs/framework/data/adonet/sql/linq/data-binding.md)  
- Viene descritto come [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilizza <xref:System.ComponentModel.IListSource> per supportare l'associazione dati.  
+ Descrive la modalità [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Usa <xref:System.ComponentModel.IListSource> per supportare il data binding.  
   
  [Supporto dell'ereditarietà](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)  
  Viene spiegato il ruolo dell'ereditarietà nel modello a oggetti [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e come usare operatori correlati nelle query.  

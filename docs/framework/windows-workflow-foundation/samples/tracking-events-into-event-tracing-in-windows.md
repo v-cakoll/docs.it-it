@@ -2,15 +2,15 @@
 title: Eventi di rilevamento in Traccia eventi per Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 82de8ee74c12019f815adc63f2ca4441ad95d325
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b2e43e169faade06d8816d9ae517b6957fbf1ee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519506"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527096"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventi di rilevamento in Traccia eventi per Windows
-In questo esempio viene illustrato come abilitare la traccia in un servizio flusso di lavoro Windows Workflow Foundation (WF) e generare gli eventi di rilevamento in ETW traccia eventi per Windows (). Per creare record di rilevamento del flusso di lavoro in ETW, nell'esempio viene usato il partecipante del rilevamento ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
+In questo esempio viene illustrato come abilitare la traccia in un servizio del flusso di lavoro Windows Workflow Foundation (WF) e creare gli eventi di rilevamento in Event Tracing for Windows (ETW). Per creare record di rilevamento del flusso di lavoro in ETW, nell'esempio viene usato il partecipante del rilevamento ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
   
  Il flusso di lavoro nell'esempio riceve una richiesta, assegna il reciproco dei dati di input alla variabile di input e restituisce di nuovo il reciproco al client. Quando i dati di input sono pari a 0, si verifica un'eccezione di divisione per zero non gestita che causa l'interruzione del flusso di lavoro. Con il rilevamento abilitato, il record di rilevamento errori viene creato in ETW consentendo la risoluzione dell'errore in un secondo momento. Il partecipante del rilevamento ETW viene configurato con un profilo di rilevamento per sottoscrivere i record di rilevamento. Il profilo di rilevamento viene definito nel file Web.config e fornito come parametro di configurazione al partecipante del rilevamento ETW. Quest'ultimo viene configurato nel file Web.config del servizio flusso di lavoro e viene applicato al servizio come comportamento del servizio. In questo esempio gli eventi di rilevamento vengono visualizzati nel registro eventi tramite Visualizzatore eventi.  
   
@@ -49,23 +49,23 @@ In questo esempio viene illustrato come abilitare la traccia in un servizio flus
   
 4.  Usando [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], aprire il client di WCF.  
   
-     Client di prova WCF (WcfTestClient.exe) si trova nella \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] cartella di installazione > \Common7\IDE\ cartella.  
+     Il client di prova WCF (WcfTestClient.exe) si trova nel \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] cartella di installazione > cartella \Common7\IDE\.  
   
      La cartella di installazione di [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] predefinita è C:\Programmi\Microsoft Visual Studio 10.0.  
   
-5.  Nel client di prova WCF selezionare **Aggiungi servizio** dal **File** menu.  
+5.  Nel client di prova WCF selezionare **aggiunta di un servizio** dalle **File** menu.  
   
      Aggiungere l'indirizzo dell'endpoint nella casella di input. Il valore predefinito è http://localhost:53797/SampleWorkflowService.xamlx.  
   
 6.  Aprire l'applicazione Visualizzatore eventi.  
   
-     Prima di richiamare il servizio, avviare Visualizzatore eventi dal **avviare** dal menu **eseguire** e digitare `eventvwr.exe`. Assicurarsi che il registro eventi sia in ascolto di eventi di rilevamento creati dal servizio flusso di lavoro.  
+     Prima di richiamare il servizio, avviare Visualizzatore eventi dal **avviare** dal menu **eseguito** e digitare `eventvwr.exe`. Assicurarsi che il registro eventi sia in ascolto di eventi di rilevamento creati dal servizio flusso di lavoro.  
   
-7.  Nella visualizzazione struttura ad albero del Visualizzatore eventi, passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, e **Microsoft**. Fare doppio clic su **Microsoft** e selezionare **vista** e quindi **Visualizza registri analitici e Debug** per abilitare l'analisi e registri di debug  
+7.  Nella visualizzazione albero del Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, e **Microsoft**. Fare doppio clic su **Microsoft** e selezionare **View** e quindi **Visualizza registri analitici e Debug** per abilitare l'analisi e i registri di debug  
   
      Verificare che il **Visualizza registri analitici e Debug** opzione è selezionata.  
   
-8.  Nella visualizzazione struttura ad albero in Visualizzatore eventi, passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**,  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Attiva registro** per abilitare il **analitico** log.  
+8.  Nella visualizzazione albero in Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**,  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Attiva registro** per abilitare il **analitico** log.  
   
 9. Eseguire il test del servizio tramite il client di prova WCF facendo doppio clic su `GetData`.  
   
@@ -75,7 +75,7 @@ In questo esempio viene illustrato come abilitare la traccia in un servizio flus
   
 10. Osservare gli eventi creati dal flusso di lavoro.  
   
-     Tornare a Visualizzatore eventi e passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**,  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **aggiornamento**.  
+     Tornare a Visualizzatore eventi e passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**,  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **aggiornare**.  
   
      Gli eventi del flusso di lavoro vengono visualizzati nel visualizzatore eventi. Si noti che vengono visualizzati gli eventi di esecuzione del flusso di lavoro e che uno di questi è un'eccezione non gestita che corrisponde all'errore nel flusso di lavoro. Inoltre, viene creato un evento di avviso dall'attività del flusso di lavoro indicante che l'attività sta generando un errore.  
   
@@ -125,18 +125,18 @@ In questo esempio viene illustrato come abilitare la traccia in un servizio flus
   
 1.  Aprire Visualizzatore eventi.  
   
-2.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **applicazione Applicazioni server**. Fare doppio clic su **analitico** e selezionare **Disattiva registro**.  
+2.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **dell'applicazione Le applicazioni server**. Fare doppio clic su **analitico** e selezionare **Disattiva registro**.  
   
-3.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **applicazione Applicazioni server**. Fare doppio clic su **analitico** e selezionare **Cancella Log**.  
+3.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **dell'applicazione Le applicazioni server**. Fare doppio clic su **analitico** e selezionare **Cancella Log**.  
   
-4.  Scegliere il **deselezionare** opzione per cancellare gli eventi.  
+4.  Scegliere il **cancellare** opzione per cancellare gli eventi.  
   
 ## <a name="known-issue"></a>Problema noto  
   
 > [!NOTE]
 >  Nel Visualizzatore eventi potrebbe non essere possibile decodificare gli eventi ETW. Si potrebbe visualizzare un messaggio di errore simile al seguente.  
 >   
->  La descrizione per l'ID evento \<id > dall'origine Microsoft-Windows-Application Server applicazioni non è state trovate. Il componente che ha generato l'evento non è installato nel computer locale oppure l'installazione è danneggiata. È possibile installare o ripristinare il componente nel computer locale.  
+>  La descrizione per l'ID evento \<id > dall'origine Microsoft-Windows Server applicazioni-applicazioni nebyla nalezena. Il componente che ha generato l'evento non è installato nel computer locale oppure l'installazione è danneggiata. È possibile installare o ripristinare il componente nel computer locale.  
 >   
 >  Se si rileva questo errore, fare clic su Aggiorna nel riquadro Azioni. La decodifica dell'evento dovrebbe ora essere eseguita in modo corretto.  
   
@@ -145,9 +145,9 @@ In questo esempio viene illustrato come abilitare la traccia in un servizio flus
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di monitoraggio di AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

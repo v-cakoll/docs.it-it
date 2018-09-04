@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 ms.openlocfilehash: 718a0c086181546ba7b7fb3b31fce0732dd99382
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401767"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517116"
 ---
 # <a name="specifying-an-endpoint-address"></a>Specifica di un indirizzo endpoint
 Si verificano tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) tramite i relativi endpoint. Ogni <xref:System.ServiceModel.Description.ServiceEndpoint> contiene una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> e una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Il contratto specifica quali operazioni sono disponibili. L'associazione specifica come comunicare con il servizio e l'indirizzo specifica dove trovare il servizio. Ogni endpoint deve avere un indirizzo univoco. L'indirizzo dell'endpoint è rappresentato dalla classe <xref:System.ServiceModel.EndpointAddress>, che contiene un URI (Uniform Resource Identifier), che rappresenta l'indirizzo del servizio, una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A>, che rappresenta l'identità di sicurezza del servizio, e una raccolta di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Le intestazioni facoltative forniscono informazioni di indirizzamento più dettagliate che consentono di identificare o interagire con l'endpoint. Ad esempio, le intestazioni possono indicare come elaborare un messaggio in ingresso, dove l'endpoint deve inviare un messaggio di risposta o quale istanza di un servizio usare per elaborare un messaggio in ingresso di un particolare utente, quando sono disponibili più istanze.  

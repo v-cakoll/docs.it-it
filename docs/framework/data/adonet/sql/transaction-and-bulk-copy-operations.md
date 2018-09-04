@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
 ms.openlocfilehash: 24657f541daf5bb098f8db3b59a3241ecf832d39
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398865"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515079"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transazioni e operazioni di copia bulk
 Le operazioni di copia bulk possono essere eseguite come operazioni isolate oppure come un singolo passaggio di una transazione a più passaggi. Quest'ultima opzione consente di eseguire più operazioni di copia di massa all'interno della stessa transazione, nonché di eseguire altre operazioni di database, ad esempio inserimenti, aggiornamenti ed eliminazioni, e di eseguire comunque il commit o il rollback dell'intera transazione.  

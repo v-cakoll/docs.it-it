@@ -2,12 +2,12 @@
 title: Schema di database di persistenza
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 4dd49d08e522c842d0f21f176b4d77ac0adb4b47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c8d74413be64cdf88f7f1821c3678b2bcd2e2b1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519449"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515258"
 ---
 # <a name="persistence-database-schema"></a>Schema di database di persistenza
 In questo argomento vengono descritte le visualizzazioni pubbliche supportate dall'archivio di istanze del flusso di lavoro SQL.  
@@ -27,11 +27,11 @@ In questo argomento vengono descritte le visualizzazioni pubbliche supportate da
 |ActiveBookmarks|Nvarchar(max)|Se l'istanza del flusso di lavoro è inattiva, questa proprietà indica i segnalibri sui quali è bloccata l'istanza. Se l'istanza non è inattiva, questa colonna è NULL.|  
 |CurrentMachine|Nvarchar(128)|Indica il nome del computer in cui l'istanza del flusso di lavoro è attualmente caricata in memoria.|  
 |Last Machine.|Nvarchar(450)|Indica l'ultimo computer in cui è stata caricata l'istanza del flusso di lavoro.|  
-|ExecutionStatus|Nvarchar(450)|Indica lo stato di esecuzione corrente del flusso di lavoro. Possibili stati includono **durante l'esecuzione di**, **Idle**, **chiuso**.|  
+|ExecutionStatus|Nvarchar(450)|Indica lo stato di esecuzione corrente del flusso di lavoro. Includono gli stati possibili **Executing**, **Idle**, **Closed**.|  
 |IsInitialized|Bit|Indica se l'istanza del flusso di lavoro è stata inizializzata. Un'istanza del flusso di lavoro inizializzata è stata salvata in modo permanente almeno una volta.|  
 |IsSuspended|Bit|Indica se l'istanza del flusso di lavoro è stata sospesa.|  
 |IsCompleted|Bit|Indica se l'esecuzione dell'istanza del flusso di lavoro è stata completata. **Nota:** Iif il **InstanceCompletionAction** è impostata su **DeleteAll**, le istanze vengono rimosse dalla visualizzazione al completamento.|  
-|EncodingOption|TinyInt|Descrive la codifica usata per serializzare le proprietà dei dati.<br /><br /> -0-Nessuna codifica<br />-1 – GzipStream|  
+|EncodingOption|TinyInt|Descrive la codifica usata per serializzare le proprietà dei dati.<br /><br /> -0-Nessuna codifica<br />-1-GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary(max)|Contiene le proprietà dei dati dell'istanza serializzata che saranno restituiti all'esecuzione del flusso di lavoro quando l'istanza viene caricata.<br /><br /> Ogni proprietà primitiva è un tipo CLR nativo e indica che non sono necessari assembly speciali per deserializzare il BLOB.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary(max)|Contiene le proprietà dei dati dell'istanza serializzata che non vengono restituiti all'esecuzione del flusso di lavoro quando l'istanza viene caricata.<br /><br /> Ogni proprietà primitiva è un tipo CLR nativo e indica che non sono necessari assembly speciali per deserializzare il BLOB.|  
 |ReadWriteComplexDataProperties|Varbinary(max)|Contiene le proprietà dei dati dell'istanza serializzata che saranno restituiti all'esecuzione del flusso di lavoro quando l'istanza viene caricata.<br /><br /> Un deserializzatore richiederebbe la conoscenza di tutti i tipi di oggetti archiviati in questo BLOB.|  
@@ -47,7 +47,7 @@ In questo argomento vengono descritte le visualizzazioni pubbliche supportate da
 >  Il **istanze** vista contiene inoltre un trigger Delete. Gli utenti con autorizzazioni appropriate possono eseguire istruzioni di eliminazione a fronte di questa visualizzazione per la rimozione forzata delle istanze del flusso di lavoro dal database. Si consiglia di procedere all'eliminazione diretta dalla visualizzazione solo come ultima risorsa, perché l'eliminazione di un'istanza dall'esecuzione del flusso di lavoro potrebbe comportare conseguenze impreviste. Usare invece l'endpoint di gestione dell'istanza del flusso di lavoro affinché l'istanza venga terminata dall'esecuzione del flusso di lavoro. Se si desidera eliminare un numero elevato di istanze dalla visualizzazione, assicurarsi che non siano presenti esecuzioni attive che potrebbe essere in corso su queste istanze.  
   
 ## <a name="servicedeployments-view"></a>Visualizzazione ServiceDeployments  
- Il **ServiceDeployments** vista contiene informazioni sulla distribuzione per tutte le applicazioni Web (IIS / WAS) Servizi flussi di lavoro ospitato. Ogni istanza del flusso di lavoro che è ospitato su Web conterrà un **ServiceDeploymentId** che fa riferimento a una riga in questa vista.  
+ Il **ServiceDeployments** vista contiene informazioni sulla distribuzione per tutte le applicazioni Web (IIS / WAS) ospitati servizi flusso di lavoro. Ogni istanza del flusso di lavoro in cui è ospitato su Web conterrà un **ServiceDeploymentId** che fa riferimento a una riga in questa visualizzazione.  
   
 |Nome colonna|Tipo di colonna|Descrizione|  
 |-----------------|-----------------|-----------------|  
@@ -62,7 +62,7 @@ In questo argomento vengono descritte le visualizzazioni pubbliche supportate da
   
 1.  L'eliminazione di voci da questa visualizzazione consuma molte risorse, in quanto è necessario bloccare l'intero database prima dell'esecuzione di questa operazione. Ciò è necessario per evitare lo scenario in cui un'istanza del flusso di lavoro potrebbe fare riferimento a una voce di ServiceDeployment inesistente. Procedere all'eliminazione da questa visualizzazione solo durante i periodi di inattività o manutenzione.  
   
-2.  Qualsiasi tentativo di eliminare una riga di ServiceDeployment a cui viene fatto riferimento da voci di **istanze** visualizzazione comporterà alcuna operazione. È possibile eliminare solo righe di ServiceDeployment prive di riferimenti.  
+2.  Qualsiasi tentativo di eliminare una riga di ServiceDeployment cui viene fatto riferimento da voci presenti nella **istanze** visualizzazione comporterà no-op. È possibile eliminare solo righe di ServiceDeployment prive di riferimenti.  
   
 ## <a name="instancepromotedproperties-view"></a>Visualizzazione InstancePromotedProperties  
  Il **InstancePromotedProperties** vista contiene informazioni per tutte le proprietà promosse specificate dall'utente. Una proprietà promossa funziona come una proprietà di prima classe che può essere usata da un utente nelle query per recuperare istanze.  Ad esempio, un utente è stato possibile aggiungere la promozione di un PurchaseOrder che archivia sempre il costo di un ordine in cui il **Value1** colonna. Ciò consentirebbe a un utente di eseguire una query per tutti gli ordini di acquisto il cui costo supera un determinato valore.  
@@ -70,7 +70,7 @@ In questo argomento vengono descritte le visualizzazioni pubbliche supportate da
 |Tipo di colonna|Tipo di colonna|Descrizione|  
 |-|-|-|  
 |InstanceId|UniqueIdentifier|ID dell'istanza del flusso di lavoro.|  
-|EncodingOption|TinyInt|Descrive la codifica usata per serializzare le proprietà binarie promosse.<br /><br /> -0-Nessuna codifica<br />-1 – GZipStream|  
+|EncodingOption|TinyInt|Descrive la codifica usata per serializzare le proprietà binarie promosse.<br /><br /> -0-Nessuna codifica<br />-1-GZipStream|  
 |PromotionName|Nvarchar(400)|Nome della promozione associata a questa istanza. PromotionName è necessario per aggiungere contesto alle colonne generiche in questa riga.<br /><br /> Ad esempio, un PromotionName di PurchaseOrder potrebbe indicare che Value1 contiene il costo dell'ordine, Value2 contiene il nome del cliente che ha inserito l'ordine, Value3 contiene l'indirizzo del cliente e così via.|  
 |Value[1-32]|SqlVariant|Value[1-32] contiene valori che possono essere archiviati in una colonna SqlVariant. Una singola promozione non può contenere più di 32 SqlVariant.|  
 |Value[33-64]|Varbinary(max)|Value[33-64] contiene valori serializzati. Ad esempio, Value33 potrebbe contenere un'immagine JPEG di un elemento in fase di acquisto. Una singola promozione non può contenere più di 32 proprietà binarie.|  
@@ -78,4 +78,4 @@ In questo argomento vengono descritte le visualizzazioni pubbliche supportate da
  La visualizzazione InstancePromotedProperties è associata allo schema e ciò significa che gli utenti possono aggiungere indici in una o più colonne per ottimizzare le query basate su questa visualizzazione.  
   
 > [!NOTE]
->  Una visualizzazione indicizzata richiede più spazio di archiviazione e comporta un aumento del sovraccarico di elaborazione. Consultare [miglioramento delle prestazioni con viste indicizzate di SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=179529) per ulteriori informazioni.
+>  Una visualizzazione indicizzata richiede più spazio di archiviazione e comporta un aumento del sovraccarico di elaborazione. Consultare [miglioramento delle prestazioni con le viste indicizzate di SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=179529) per altre informazioni.

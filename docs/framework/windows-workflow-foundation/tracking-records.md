@@ -2,12 +2,12 @@
 title: Record di rilevamento
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: b07175943f85b61024030c1e0251e24d1eb35c86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2be8dbcdd740dee1c5cddd1121716058bfa5c175
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520279"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527039"
 ---
 # <a name="tracking-records"></a>Record di rilevamento
 L'esecuzione del flusso di lavoro è instrumentata per creare record di rilevamento per seguire l'esecuzione di un'istanza del flusso di lavoro.  
@@ -36,11 +36,11 @@ L'esecuzione del flusso di lavoro è instrumentata per creare record di rilevame
   
 -   **WorkflowInstanceTerminatedRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato ogni volta che un'istanza del flusso di lavoro viene terminata. Il record contiene il motivo per il quale l'istanza del flusso di lavoro viene terminata. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>.  
   
--   **ActivityStateRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato quando viene eseguita un'attività all'interno di un flusso di lavoro. Questi record indicano lo stato dell'attività all'interno dell'istanza del flusso di lavoro. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.ActivityStateRecord>.  
+-   **Oggetto ActivityStateRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato quando viene eseguita un'attività all'interno di un flusso di lavoro. Questi record indicano lo stato dell'attività all'interno dell'istanza del flusso di lavoro. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.ActivityStateRecord>.  
   
 -   **ActivityScheduledRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato quando un'attività pianifica un'attività figlio. Questo record contiene dettagli relativi sia all'attività padre (attività di pianificazione) sia all'attività figlio pianificata. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.ActivityScheduledRecord>.  
   
--   **FaultPropagationRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato per ogni gestore che esamina il record fino a quando non viene gestita. Viene usato per indicare il percorso di un errore all'interno dell'istanza del flusso di lavoro. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.FaultPropagationRecord>.  
+-   **Oggetto FaultPropagationRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato per ogni gestore che esamina il record finché non viene gestito. Viene usato per indicare il percorso di un errore all'interno dell'istanza del flusso di lavoro. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.FaultPropagationRecord>.  
   
 -   **CancelRequestedRecord** - questo <xref:System.Activities.Tracking.TrackingRecord> viene generato ogni volta che un'attività tenta di annullare un'attività figlio. Questo record contiene dettagli relativi sia all'attività padre sia a quella figlio annullata. I dettagli relativi a questo record sono disponibili nell'oggetto <xref:System.Activities.Tracking.CancelRequestedRecord>.  
   
@@ -61,5 +61,5 @@ L'esecuzione del flusso di lavoro è instrumentata per creare record di rilevame
 5.  L'oggetto <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica che il flusso di lavoro è in fase di completamento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitoraggio dell'infrastruttura di App di Windows Server](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Monitoraggio delle applicazioni con App Fabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Monitoraggio dell'infrastruttura di App di Windows Server](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Monitoraggio delle applicazioni con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

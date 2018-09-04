@@ -2,12 +2,12 @@
 title: Creazione di ruoli applicazione in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: cb3bcb08877d8a17ea40ea48440c1d71560d0e5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 811654b73cd1cc0b8c17565b45613253de3c0e81
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362527"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522013"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Creazione di ruoli applicazione in SQL Server
 I ruoli applicazione consentono di assegnare autorizzazioni a un'applicazione anziché a un ruolo o a un utente del database. Gli utenti possono connettersi al database, attivare il ruolo applicazione e assumere le autorizzazioni concesse all'applicazione. Le autorizzazioni concesse al ruolo applicazione sono effettive per la durata della connessione.  
@@ -47,19 +47,19 @@ I ruoli applicazione consentono di assegnare autorizzazioni a un'applicazione an
   
  Può essere opportuno considerare le seguenti alternative.  
   
--   Usare il passaggio di contesto con l'istruzione EXECUTE AS e le relative clausole NO REVERT e WITH COOKIE. È possibile creare un account utente in un database non mappato a un account di accesso. Assegnare quindi le autorizzazioni a questo account. L'uzo di EXECUTE AS con un utente senza account di accesso è un sistema più sicuro, perché si basa su autorizzazioni e non su password. Per ulteriori informazioni, vedere [personalizzazione delle autorizzazioni con rappresentazione in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+-   Usare il passaggio di contesto con l'istruzione EXECUTE AS e le relative clausole NO REVERT e WITH COOKIE. È possibile creare un account utente in un database non mappato a un account di accesso. Assegnare quindi le autorizzazioni a questo account. L'uzo di EXECUTE AS con un utente senza account di accesso è un sistema più sicuro, perché si basa su autorizzazioni e non su password. Per altre informazioni, vedere [personalizzazione delle autorizzazioni con rappresentazione in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
--   Firmare le stored procedure con certificati, concedendo solo l'autorizzazione per eseguirle. Per ulteriori informazioni, vedere [firma di Stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+-   Firmare le stored procedure con certificati, concedendo solo l'autorizzazione per eseguirle. Per altre informazioni, vedere [firma di Stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Per altre informazioni, vedere le risorse seguenti.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[I ruoli applicazione](http://msdn.microsoft.com/library/ms190998.aspx) nella documentazione Online di SQL Server|Viene descritto come creare e usare i ruoli applicazione in SQL Server 2008.|  
+|[Ruoli applicazione](/sql/relational-databases/security/authentication-access/application-roles)|Viene descritto come creare e usare i ruoli applicazione in SQL Server 2008.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

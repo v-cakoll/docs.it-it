@@ -2,73 +2,61 @@
 title: Risoluzione dei problemi relativi all'esercitazione introduttiva
 ms.date: 03/30/2017
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 12812bd1ef88eab14a8defed0b71657b0d33c618
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 43128743ba16aefc8669ace85070a16d80145a71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807788"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519421"
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Risoluzione dei problemi relativi all'esercitazione introduttiva
 In questo argomento vengono elencati i problemi più comuni che possono verificarsi durante l'Esercitazione introduttiva e le relative soluzioni.  
   
-1.  [Non riesco a trovare i file di progetto sul disco rigido.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q1)  
+**Non riesco a trovare i file di progetto sul disco rigido.**
+
+ Visual Studio salva i file di progetto in c:\users\\<user name>\Documents\\< versione di Visual Studio\>\Projects.  
   
-2.  [Tentativo di eseguire l'applicazione di servizio: HTTP non è stato possibile registrare l'URL http://+:8000/ServiceModelSamples/Service/. Il processo non dispone dei diritti di accesso a questo spazio dei nomi.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q2)  
+**Provare a eseguire l'applicazione di servizio: HTTP non è stato possibile registrare l'URL `http://+:8000/ServiceModelSamples/Service/`.** 
+ **Il processo non dispone dei diritti di accesso per questo spazio dei nomi.** 
+
+ Il processo che ospita un servizio WCF deve eseguire con privilegi amministrativi. Se si esegue il servizio da Visual Studio, è necessario eseguire Visual Studio come amministratore. Per eseguire questa operazione, selezionare **avviare**, fare doppio clic su **Visual Studio \< *versione* >**  selezionare **Esegui come amministratore**. Se si esegue il servizio da un prompt della riga di comando nella finestra della console, è necessario avviare la finestra della console con privilegi di amministratore in modo analogo. Fare clic su **avviare**, fare doppio clic su **prompt dei comandi** e selezionare **Esegui come amministratore**.  
   
-3.  [Tentativo di utilizzare lo strumento Svcutil.exe: 'svcutil' non è riconosciuto come comando interno o esterno, programma eseguibile o file batch.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q3)  
-  
-4.  [Impossibile trovare il file app. config generato da Svcutil.exe.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q4)  
-  
-5.  [La compilazione dell'applicazione client: 'CalculatorClient' non contiene una definizione per '&lt;nome del metodo&gt;'e alcun metodo di estensione'&lt;nome del metodo&gt;' che accetta un primo argomento di tipo 'CalculatorClient' è stato possibile trovare (probabilmente manca un utilizzo della direttiva o un riferimento all'assembly?)](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q5)  
-  
-6.  [La compilazione dell'applicazione client: il nome di tipo o spazio dei nomi 'CalculatorClient' non è stato trovato (probabilmente manca un utilizzo della direttiva o un riferimento all'assembly?)](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q6)  
-  
-7.  [Esecuzione del client: eccezione non gestita: EndpointNotFoundException: Impossibile connettersi al http://localhost:8000/ServiceModelSamples/Service/CalculatorService. Codice di errore TCP 10061: non è stato possibile connettersi perché il computer di destinazione rifiuto.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q7)  
-  
-<a name="BKMK_q1"></a>   
-## <a name="i-am-unable-to-find-the-project-files-on-my-hard-drive"></a>Impossibile trovare i file di progetto nell'unità disco rigido.  
- Visual Studio salva i file di progetto in c:\users\\< utente name\Documents\\< versione di Visual Studio\>\Projects nelle [!INCLUDE[wv](../../../includes/wv-md.md)] e [!INCLUDE[win7_client_secondref](../../../includes/win7-client-secondref-md.md)]e c:\Documents and Settings\\< nome utente \>Documenti \My\\< versione di Visual Studio\>\Projects nelle versioni precedenti di Windows.  
-  
-<a name="BKMK_q2"></a>   
-## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>Tentativo di eseguire l'applicazione di servizio: HTTP non è stato possibile registrare l'URL http://+:8000/ServiceModelSamples/Service/. Il processo non dispone dei diritti di accesso a questo spazio dei nomi.  
- Con privilegi amministrativi, è necessario eseguire il processo che ospita un servizio WCF. Se il servizio viene eseguito da [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], è necessario eseguire [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] come amministratore. Per fare **avviare**, fare doppio clic su [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] e selezionare **Esegui come amministratore**. Se il servizio viene eseguito da un prompt della riga di comando, è necessario avviare il prompt della riga di comando come amministratore. Fare clic su **avviare**, fare doppio clic su **prompt dei comandi** e selezionare **Esegui come amministratore**.  
-  
-<a name="BKMK_q3"></a>   
-## <a name="attempting-to-use-the-svcutilexe-tool-svcutil-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>Se si tenta di utilizzare lo strumento Svcutil.exe, viene visualizzato l'errore seguente: 'svcutil' non è riconosciuto come comando interno o esterno, un programma eseguibile o un file batch.  
- Svcutil.exe deve trovarsi nel percorso di sistema. La soluzione più semplice consiste nell'utilizzare il prompt dei comandi. Fare clic su **avviare**selezionare **tutti i programmi**, [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], **Visual Studio Tools**, e [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] **prompt dei comandi**. Questo prompt dei comandi consente di impostare il percorso di sistema sui percorsi corretti per tutti gli strumenti forniti con [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
-  
-<a name="BKMK_q4"></a>   
-## <a name="unable-to-find-the-appconfig-file-generated-by-svcutilexe"></a>Impossibile trovare il file App.config generato da Svcutil.exe.  
- Il **Aggiungi elemento esistente** finestra di dialogo vengono visualizzati solo i file con le seguenti estensioni per impostazione predefinita:. cs, resx, Settings, XSD e WSDL. È possibile specificare che si desidera visualizzare tutti i tipi di file selezionando **tutti i file (\*.\*)**  nella casella di riepilogo nell'angolo inferiore destro di a discesa di **Aggiungi elemento esistente** la finestra di dialogo.  
-  
-<a name="BKMK_q5"></a>   
-## <a name="compiling-the-client-application-calculatorclient-does-not-contain-a-definition-for-method-name-and-no-extension-method-method-name-accepting-a-first-argument-of-type-calculatorclient-could-be-found-are-you-missing-a-using-directive-or-an-assembly-reference"></a>La compilazione dell'applicazione client: 'CalculatorClient' non contiene una definizione per '\<nome metodo >' e alcun metodo di estensione '\<nome metodo >' che accetta un primo argomento di tipo 'CalculatorClient' è stato possibile trovare (probabilmente manca un utilizzo della direttiva o un riferimento all'assembly?)  
- Solo i metodi contrassegnati con `ServiceOperationAttribute` vengono esposti al mondo esterno. Se è stato omesso l'attributo `ServiceOperationAttribute` da uno dei metodi nell'interfaccia `ICalculator`, durante la compilazione di un'applicazione client che effettua una chiamata all'operazione a cui manca l'attributo viene visualizzato questo messaggio di errore.  
-  
-<a name="BKMK_q6"></a>   
-## <a name="compiling-the-client-application-the-type-or-namespace-name-calculatorclient-could-not-be-found-are-you-missing-a-using-directive-or-an-assembly-reference"></a>Durante la compilazione dell'applicazione client, viene visualizzato l'errore seguente: Impossibile trovare il tipo o il nome dello spazio dei nomi 'CalculatorClient'; probabilmente manca una direttiva using o un riferimento a un assembly.  
+**Tentativo di utilizzare lo strumento Svcutil.exe: 'svcutil' non è riconosciuto come comando interno o esterno, programma eseguibile o file batch.**
+
+ Svcutil.exe deve trovarsi nel percorso di sistema. La soluzione più semplice consiste nell'utilizzare il prompt dei comandi. Fare clic su **avviare**, selezionare **tutti i programmi**, **Visual Studio \< *versione*>**,  **Strumenti di Visual Studio**, e **prompt dei comandi per gli sviluppatori per Visual Studio**. Questo prompt dei comandi imposta il percorso di sistema per i percorsi corretti per tutti gli strumenti forniti come parte di Visual Studio.  
+
+**Impossibile trovare il file app. config generato da Svcutil.exe.**
+
+ Il **Aggiungi elemento esistente** finestra di dialogo Visualizza solo i file con le estensioni seguenti per impostazione predefinita: cs, resx, Settings, XSD,. WSDL. È possibile specificare che si desidera vedere tutti i tipi di file selezionando **tutti i file (\*.\*)**  nella casella di riepilogo discesa nell'angolo inferiore destro del **Aggiungi elemento esistente** nella finestra di dialogo.  
+
+
+**La compilazione dell'applicazione client: 'CalculatorClient' non contiene una definizione per '\<nome metodo >' e alcun metodo di estensione '\<nome metodo >' che accetta un primo argomento di tipo 'CalculatorClient' è stato possibile trovare (sei manca un utilizzo della direttiva o un riferimento all'assembly?)**  
+
+Solo i metodi contrassegnati con `ServiceOperationAttribute` vengono esposti al mondo esterno. Se omette il `ServiceOperationAttribute` attributo da uno dei metodi nel `ICalculator` interfaccia, viene visualizzato questo messaggio di errore durante la compilazione di un'applicazione client che effettua una chiamata all'operazione di attributo mancante.  
+
+**La compilazione dell'applicazione client: il nome di tipo o spazio dei nomi 'CalculatorClient' non è stato trovato (probabilmente manca un utilizzo della direttiva o un riferimento all'assembly?)**
+
  Questo errore si verifica se il file Proxy.cs o Proxy.vb non viene aggiunto al progetto client.  
+
+**Esegue il client: eccezione non gestita: EndpointNotFoundException: Impossibile connettersi al `http://localhost:8000/ServiceModelSamples/Service/CalculatorService`. Codice di errore TCP 10061: non è stato possibile connettersi perché rifiuto persistente del computer di destinazione.**
+
+Si verifica questo errore se l'applicazione client viene eseguita senza eseguire il servizio.  
   
-<a name="BKMK_q7"></a>   
-## <a name="running-the-client-unhandled-exception-systemservicemodelendpointnotfoundexception-could-not-connect-to-httplocalhost8000servicemodelsamplesservicecalculatorservice-tcp-error-code-10061-no-connection-could-be-made-because-the-target-machine-actively-refused-it"></a>Esecuzione del client: eccezione non gestita: EndpointNotFoundException: Impossibile connettersi al http://localhost:8000/ServiceModelSamples/Service/CalculatorService. Codice di errore TCP 10061: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.  
- Si verifica questo errore se l'applicazione client viene eseguita senza eseguire il servizio.  
+**Eccezione non gestita: SecurityNegotiationException: negoziazione di sicurezza SOAP con `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` per la destinazione `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` non è riuscita**  
+
+Questo errore si verifica in un computer aggiunto a un dominio senza connettività di rete. Connettere il computer alla rete o disattivare la sicurezza sia per il client che per il servizio. Per quest'ultimo, modificare inoltre il codice che crea WSHttpBinding nel modo seguente.  
   
-<a name="BKMK_q8"></a>   
-## <a name="unhandled-exception-systemservicemodelsecuritysecuritynegotiationexception-soap-security-negotiation-with-httplocalhost8000servicemodelsamplesservicecalculatorservice-for-target-httplocalhost8000servicemodelsamplesservicecalculatorservice-failed"></a>Eccezione non gestita: SecurityNegotiationException: negoziazione di sicurezza SOAP con 'http://localhost:8000/ServiceModelSamples/Service/CalculatorService'per la destinazione'http://localhost:8000/ServiceModelSamples/Service/CalculatorService' non è riuscita  
- Questo errore si verifica in un computer aggiunto a un dominio senza connettività di rete. Connettere il computer alla rete o disattivare la sicurezza sia per il client che per il servizio. Per quest'ultimo, modificare inoltre il codice che crea WSHttpBinding nel modo seguente.  
-  
-```  
+```csharp
 // Step 3 of the hosting procedure: Add a service endpoint  
 selfhost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.None), "CalculatorService");  
-```  
+```
+
+Per il client, modificare il  **\<sicurezza >** elemento sotto il  **\<associazione >** elemento al seguente:  
   
- Per il client, modificare il  **\<sicurezza >** elemento sotto il  **\<associazione >** il seguente:  
-  
-```xml  
+```xml
 <security mode="Node" />  
 ```  
-  
+
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md)  
  [Guida rapida alla risoluzione dei problemi di WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  

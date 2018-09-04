@@ -8,18 +8,18 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: da80d46f27d7cd721af7a9600d2b0cde84876d23
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a0eea1930699ed85fcf0eaf184ba0aabe398d73
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534583"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43531745"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Procedura: ereditare dalla classe Control
-Se si desidera creare un controllo completamente personalizzato da utilizzare in un Windows Form, è necessario ereditare la <xref:System.Windows.Forms.Control> classe. Durante l'eredità dalla <xref:System.Windows.Forms.Control> classe richiede che si esegue la pianificazione e implementazione più, vengono inoltre la più vasta gamma di opzioni. Quando si eredita da <xref:System.Windows.Forms.Control>, si eredita la funzionalità di base che consente di attivare i controlli. La funzionalità intrinseca di <xref:System.Windows.Forms.Control> classe gestisce l'input dell'utente tramite la tastiera e mouse, definire i limiti e dimensioni del controllo, fornisce un handle di windows e fornisce la gestione dei messaggi e la protezione. Non incorpora nessun disegno, che in questo caso è il rendering reale dell'interfaccia grafica del controllo, e non consente di incorporare alcuna funzionalità di interazione utente specifica. È necessario fornire tutti questi aspetti tramite codice personalizzato.  
+Se si desidera creare un controllo completamente personalizzato da usare in un Form di Windows, è necessario ereditare dal <xref:System.Windows.Forms.Control> classe. Durante l'eredità dal <xref:System.Windows.Forms.Control> classe richiede che si esegue la pianificazione e implementazione più, nonché è la più vasta gamma di opzioni. Quando si eredita da <xref:System.Windows.Forms.Control>, si ereditano le funzionalità di base che consentono di attivare i controlli. La funzionalità riguardante il <xref:System.Windows.Forms.Control> classe gestisce l'input dell'utente tramite tastiera e mouse, definisce i limiti e le dimensioni del controllo, fornisce un handle di windows e fornisce la gestione dei messaggi e sicurezza. Non incorpora nessun disegno, che in questo caso è il rendering reale dell'interfaccia grafica del controllo, e non consente di incorporare alcuna funzionalità di interazione utente specifica. È necessario fornire tutti questi aspetti tramite codice personalizzato.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-create-a-custom-control"></a>Per creare un controllo personalizzato  
   
@@ -33,7 +33,7 @@ Se si desidera creare un controllo completamente personalizzato da utilizzare in
   
 4.  Premere F7 per aprire l'**Editor di codice** per il controllo personalizzato.  
   
-5.  Individuare il <xref:System.Windows.Forms.Control.OnPaint%2A> che sarà vuoto, ad eccezione di una chiamata al metodo di <xref:System.Windows.Forms.Control.OnPaint%2A> metodo della classe di base.  
+5.  Individuare il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo, che sarà vuoto, ad eccezione di una chiamata al <xref:System.Windows.Forms.Control.OnPaint%2A> metodo della classe di base.  
   
 6.  Modificare il codice per incorporare il disegno personalizzato desiderato per il controllo.  
   

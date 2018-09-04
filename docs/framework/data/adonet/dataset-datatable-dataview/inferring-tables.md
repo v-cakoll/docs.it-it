@@ -3,11 +3,11 @@ title: Deduzione di tabelle
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
 ms.openlocfilehash: 38709f91e01c7f85d9e8482bdd49bc0892121f09
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332853"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528172"
 ---
 # <a name="inferring-tables"></a>Deduzione di tabelle
 Durante l'inferenza di uno schema per un tipo <xref:System.Data.DataSet> da un documento XML, ADO.NET determina innanzitutto quali elementi XML rappresentano tabelle. Le strutture XML seguente come risultato una tabella per la **set di dati** dello schema:  

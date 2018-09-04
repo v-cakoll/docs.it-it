@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
 ms.openlocfilehash: 4370a7a700a01943548bf067827e6640245caf4e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482164"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516791"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Recupero di dati tramite un oggetto DataReader
 Recupero di dati usando un **DataReader** comporta la creazione di un'istanza del **comando** oggetto e quindi creando un **DataReader** chiamando  **Command. ExecuteReader** per recuperare righe da un'origine dati. Nell'esempio seguente viene illustrato l'utilizzo un **DataReader** in cui `reader` rappresenta un DataReader valido e `command` rappresenta un oggetto Command valido.  

@@ -3,11 +3,11 @@ title: Ruoli server e database in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403144"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517905"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Ruoli server e database in SQL Server
 In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che consente di assegnare le autorizzazioni a un ruolo, ovvero un gruppo di utenti, anziché ai singoli utenti. Ai ruoli predefiniti del server e del database è assegnato un set predefinito di autorizzazioni.  

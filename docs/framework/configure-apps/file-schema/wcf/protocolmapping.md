@@ -2,23 +2,25 @@
 title: '&lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: 4afdaaa62c1ac3241eb7382d0995bed51bde73e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c50ca451052c9ad9d7ab6a0cb5387e644196191e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748906"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525006"
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
-Rappresenta una sezione di configurazione per la definizione di un set di mapping del protocollo predefinito tra gli schemi di protocollo di trasporto (ad esempio, http, net.tcp, NET. pipe, e così via) e le associazioni WCF. Quando si creano endpoint predefiniti in fase di esecuzione, Windows Communication Foundation (WCF) analizza i mapping configurati e determina l'associazione da usare per un particolare indirizzo di base.  
+Rappresenta una sezione di configurazione per la definizione di un set di mapping del protocollo predefinito tra gli schemi di protocollo di trasporto (ad esempio, http, NET. TCP, NET. pipe, e così via) e le associazioni di WCF. Quando si creano endpoint predefiniti in fase di esecuzione, Windows Communication Foundation (WCF) esamina i mapping configurati e decide l'associazione da utilizzare per un determinato indirizzo di base.  
   
- \<system.serviceModel>  
-\<protocolMapping >  
+[**\<System. ServiceModel >**](system-servicemodel.md)  
+&nbsp;&nbsp;**\<protocolMapping >**  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml
-   <protocolMapping>    <add binding="String"         bindingConfiguration="String"         scheme="http/net.msmq/net.pipe/net.tcp"/></protocolMapping>  
+<protocolMapping>
+   <add binding="String" bindingConfiguration="String" scheme="http/net.msmq/net.pipe/net.tcp"/>
+</protocolMapping>  
 ```
 
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -31,13 +33,13 @@ Rappresenta una sezione di configurazione per la definizione di un set di mappin
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<i filtri >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Contiene un mapping del protocollo predefinito tra una combinazione di protocollo di trasporto (ad esempio, http, net.tcp, NET. pipe, e così via) e un binding WCF.|  
+|[\<i filtri >](filters-of-routing.md)|Contiene un mapping del protocollo predefinito tra una combinazione di protocollo di trasporto (ad esempio, http, NET. TCP, NET. pipe, e così via) e un binding WCF.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|system.ServiceModel|Elemento radice di tutti gli elementi di configurazione WCF.|  
+|[\<system.serviceModel>](system-servicemodel.md)|Elemento radice di tutti gli elementi di configurazione WCF.|  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio di configurazione seguente viene illustrato il mapping del protocollo predefinito nel file machine.config. È possibile eseguire l'override di questo mapping predefinito al livello di computer modificando il file machine.config. In alternativa, se si desidera eseguirne l'override solo nell'ambito di un'applicazione, è possibile eseguire l'override di questa sezione all'interno del file di configurazione dell'applicazione e modificare il mapping per i singoli schemi di protocollo.  

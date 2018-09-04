@@ -2,21 +2,21 @@
 title: Endpoint SOAP e HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: 4c8a4695dbcaee2f0e7584418fbeac12815fa967
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: be050eecebb050ec41c3d548ea993d9e035e471c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809518"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523191"
 ---
 # <a name="soap-and-http-endpoints"></a>Endpoint SOAP e HTTP
-In questo esempio viene illustrato come implementare un servizio basato su RPC e come esporlo nel formato SOAP e il formato "Plain Old XML" (POX) utilizzando il modello di programmazione Web WCF. Vedere il [servizio HTTP di base](../../../../docs/framework/wcf/samples/basic-http-service.md) per ulteriori dettagli sul binding HTTP per il servizio. Questo esempio si concentra sui dettagli che riguardano l'esposizione dello stesso servizio su SOAP e HTTP tramite associazioni diverse.  
+In questo esempio viene illustrato come implementare un servizio basato su RPC e come esporlo nel formato SOAP e il formato "Plain Old XML" (POX) usando il modello di programmazione Web WCF. Vedere le [servizio HTTP di base](../../../../docs/framework/wcf/samples/basic-http-service.md) esempio per altri dettagli sul binding HTTP per il servizio. Questo esempio si concentra sui dettagli che riguardano l'esposizione dello stesso servizio su SOAP e HTTP tramite associazioni diverse.  
   
 ## <a name="demonstrates"></a>Dimostrazione  
- Esposizione di un servizio RPC su SOAP e HTTP tramite WCF.  
+ Esposizione di un servizio RPC su SOAP e HTTP con WCF.  
   
 ## <a name="discussion"></a>Discussione  
- Questo esempio è costituito da due componenti: un progetto di applicazione Web (servizio) che contiene un servizio WCF e un'applicazione console (Client) che richiama le operazioni del servizio usando associazioni SOAP e HTTP.  
+ Questo esempio è costituito da due componenti: un progetto di applicazione Web (servizio) che contiene un servizio WCF e un'applicazione console (Client) che richiama le operazioni di servizio usando associazioni SOAP e HTTP.  
   
  Il servizio WCF espone 2 operazioni, ovvero`GetData` e `PutData` – che eseguono l'eco la stringa passata come input. Le operazioni del servizio vengono annotate con <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>. Questi attributi controllano la proiezione HTTP di queste operazioni. Vengono inoltre annotate con <xref:System.ServiceModel.OperationContractAttribute>, consentendone l'esposizione su associazioni SOAP. Il metodo `PutData` del servizio genera un oggetto <xref:System.ServiceModel.Web.WebFaultException> che viene inviato di nuovo su HTTP usando il codice di stato HTTP e su SOAP come errore SOAP.  
   
@@ -40,11 +40,11 @@ In questo esempio viene illustrato come implementare un servizio basato su RPC e
   
 2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
-3.  Se non è già aperto, premere CTRL + W, S per aprire la **Esplora** finestra.  
+3.  Se non è già aperto, premere CTRL + W, S per aprire la **Esplora soluzioni** finestra.  
   
-4.  Dal **Esplora soluzioni** finestra, fare doppio clic sul **servizio** del progetto e posizionare il cursore sul **Debug** opzione del menu di scelta in modo che il **Avvia nuovo Istanza** menu di scelta rapida visualizzato. Fare clic su **Avvia nuova istanza**. Verrà avviato il server di sviluppo ASP.NET che ospita il servizio.  
+4.  Dal **Esplora soluzioni** finestra, fare doppio clic sul **servizio** del progetto e posizionare il cursore sul **Debug** opzione del menu di scelta rapida in modo che il **Avvia nuovo Istanza** menu di scelta rapida viene visualizzata. Fare clic su **Avvia nuova istanza**. Verrà avviato il server di sviluppo ASP.NET che ospita il servizio.  
   
-5.  Da Esplora soluzioni, fare clic sul progetto Client e posizionare il cursore di **Debug** opzione del menu di scelta in modo che il **Avvia nuova istanza** menu di scelta rapida viene visualizzato. Fare clic su **Avvia nuova istanza**.  
+5.  Da Esplora soluzioni, fare clic sul progetto Client e posizionare il cursore sul **eseguire il Debug** opzione di menu di scelta rapida in modo che le **Avvia nuova istanza** menu di scelta rapida viene visualizzata. Fare clic su **Avvia nuova istanza**.  
   
 6.  Verrà visualizzata la finestra della console client in cui sono inclusi l'URI del servizio in esecuzione e l'URI della pagina della Guida HTML per il servizio in esecuzione. In qualsiasi momento è possibile visualizzare la pagina della Guida HTML digitando l'URI della pagina della Guida in un browser.  
   
@@ -61,6 +61,6 @@ In questo esempio viene illustrato come implementare un servizio basato su RPC e
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\SoapAndHttpEndpoints`

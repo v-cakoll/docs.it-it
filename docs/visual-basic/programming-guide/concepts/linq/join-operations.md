@@ -3,11 +3,11 @@ title: Join di operazioni (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
 ms.openlocfilehash: 2c7d6592f0dee221eb2f6fb3a2f2c484064364ce
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425374"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516960"
 ---
 # <a name="join-operations-visual-basic"></a>Join di operazioni (Visual Basic)
 Un *join* di due origini dati è un'associazione di oggetti in un'origine dati con oggetti che condividono un attributo comune in un'altra origine dati.  

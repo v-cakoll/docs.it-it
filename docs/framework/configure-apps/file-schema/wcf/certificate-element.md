@@ -3,11 +3,11 @@ title: Elemento &lt;certificate&gt;
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
 ms.openlocfilehash: 5329fb276766ca2bd24f0fd3aef793fbb3b1f8b8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397994"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515395"
 ---
 # <a name="ltcertificategt-element"></a>Elemento &lt;certificate&gt;
 Specifica un certificato X.509 da usare per firmare e crittografare i messaggi di client peer-to-peer.  

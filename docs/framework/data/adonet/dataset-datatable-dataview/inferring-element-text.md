@@ -3,11 +3,11 @@ title: Deduzione del testo dell'elemento
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
 ms.openlocfilehash: b70f76d2702ebcb098c64ea84900b723fbc137ab
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405788"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516494"
 ---
 # <a name="inferring-element-text"></a>Deduzione del testo dell'elemento
 Se un elemento contiene testo e non contiene elementi figlio da inferire come tabelle, ad esempio (elementi con attributi) o elementi ripetuti, una nuova colonna con il nome **TableName_Text** verranno aggiunti alla tabella inferita per l'elemento. Il testo contenuto nell'elemento viene aggiunto a una riga della tabella e archiviato nella nuova colonna. Il **ColumnMapping** della nuova colonna verrà impostata su **MappingType**.  

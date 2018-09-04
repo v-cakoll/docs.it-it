@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
 ms.openlocfilehash: bbe6ae2adfe364e41f6627e6b067aa8e18e6e079
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488080"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517277"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Procedura: disporre i controlli con guide di allineamento e la griglia in Windows Form
 Tramite le caratteristiche di layout di Visual Studio è possibile indicare precisamente in cui i controlli vengono posizionati in un form. I controlli aggiunti a un form o spostati in un form possono essere automaticamente allineati a righe e colonne della griglia di Windows Form della finestra di progettazione oppure è possibile allineare i controlli usando la funzionalità di guide di allineamento.  

@@ -3,11 +3,11 @@ title: Rete peer-to-peer
 ms.date: 03/30/2017
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
 ms.openlocfilehash: 16416ec467caa10216930ae3c961869cbfcd59d8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456985"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516332"
 ---
 # <a name="peer-to-peer-networking"></a>Rete peer-to-peer
 Il canale peer è a più parti, peer-to-peer (P2P) tecnologia di comunicazione in Windows Communication Foundation (WCF). Fornisce un canale di comunicazione P2P basato su messaggi sicuro e scalabile per gli sviluppatori di applicazioni. Un esempio comune di applicazione a più parti che può trarre vantaggio da un canale peer è rappresentato da un'applicazione collaborativa, ad esempio una chat, in cui un gruppo di persone comunica l'una con l'altra mediante un sistema peer-to-peer senza server. Il canale peer consente la collaborazione P2P, la distribuzione di contenuti, il bilanciamento del carico e l'elaborazione distribuita per scenari aziendali e relativi a utenti.  

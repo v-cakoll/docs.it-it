@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f74b0d30a1a8899d3c8d0a2bf0f108ea11165cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7cdf34ff6ae506ba209300685da3752820b250a2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461855"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516750"
 ---
 # <a name="putmethod-function"></a>PutMethod (funzione)
 Crea un metodo.
@@ -47,7 +47,7 @@ HRESULT PutMethod (
 [in] Questo parametro è inutilizzato.
 
 `ptr`  
-[in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
+[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
 `wszName`  
 [in] Il nome del metodo da creare. 
@@ -56,50 +56,50 @@ HRESULT PutMethod (
 [in] Riservato. Questo parametro deve essere 0.
 
 `pSignatureIn`  
-[in] Un puntatore a una copia del [classe di sistema Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx) che contiene il `in` parametri per il metodo. Questo parametro viene ignorato se impostato su `null`.  
+[in] Un puntatore a una copia del [classe di sistema Parameters](/windows/desktop/WmiSdk/--parameters) che contiene il `in` parametri del metodo. Questo parametro viene ignorato se impostato su `null`.  
 
 `pSignatureOut`  
-[in]  Un puntatore a una copia del [classe di sistema Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx) che contiene il `out` parametri per il metodo. Questo parametro viene ignorato se impostato su `null`.
+[in]  Un puntatore a una copia del [classe di sistema Parameters](/windows/desktop/WmiSdk/--parameters) che contiene il `out` parametri del metodo. Questo parametro viene ignorato se impostato su `null`.
  
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice:
+I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o più parametri non vengono. |
-| `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | Il `[in, out]` parametro del metodo specificato in entrambe le *pInSignature* e *pOutSignature* oggetti hanno qualificatori diversi.
-| `WBEM_E_MISSING_PARAMETER_ID` | 0x80041036 | Manca la specifica di un parametro del metodo di **ID** qualificatore. |
-| `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS` | 0x80041038 | La serie di ID assegnato ai parametri del metodo non è consecutiva o non iniziano da 0. |
+| `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | Il `[in, out]` parametro del metodo specificato in entrambe le *pInSignature* e *pOutSignature* gli oggetti hanno qualificatori diversi.
+| `WBEM_E_MISSING_PARAMETER_ID` | 0x80041036 | Un parametro del metodo manca la specifica del **ID** qualificatore. |
+| `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS` | 0x80041038 | La serie di ID viene assegnata ai parametri del metodo non consecutiva o non iniziano da 0. |
 | `WBEM_E_PARAMETER_ID_ON_RETVAL` | 0x80041039 | Il valore restituito per un metodo ha un **ID** qualificatore. |
-| `WBEM_E_PROPAGATED_METHOD` | 0x80041034 | Si è verificato un tentativo di riutilizzare un nome di metodo esistente da una classe padre e le firme non corrispondono. |
-| `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata. |
+| `WBEM_E_PROPAGATED_METHOD` | 0x80041034 | Si è verificato un tentativo di riusare un nome di metodo esistente da una classe padre e le firme non corrispondono. |
+| `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita. |
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject::PutMethod](https://msdn.microsoft.com/library/aa391456(v=vs.85).aspx) metodo.
+Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) (metodo).
 
-Questa chiamata al metodo è supportata solo se `ptr` è una definizione di classe CIM. Manipolazione di metodo non è disponibile da [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) puntatori che puntano a istanze CIM.
+Questa chiamata al metodo è supportata solo se `ptr` è una definizione di classe CIM. Manipolazione di metodo non è disponibile dal [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) puntatori che puntano a istanze CIM.
 
-Gli utenti non è possibile creare metodi con nomi che iniziano o terminano con un carattere di sottolineatura. Questo è riservato per le proprietà e le classi di sistema.
+Gli utenti non è possibile creare metodi con nomi che iniziano o terminano con un carattere di sottolineatura. Questo è riservato per le proprietà e classi di sistema.
 
-Per un metodo, il `in` e `out` sono descritti i parametri come proprietà in [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) oggetti.
+Per un metodo, il `in` e `out` sono descritti i parametri come proprietà nella [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) oggetti.
 
-Un `[in/out]` parametro può essere definito aggiungendo la stessa proprietà a entrambi gli oggetti a cui fa riferimento il `pInSignature` e `pOutSignature` parametri. In questo caso, le proprietà condividono lo stesso **ID** valore qualificatore.
+Un' `[in/out]` parametro può essere definito aggiungendo la stessa proprietà per entrambi gli oggetti a cui punta il `pInSignature` e `pOutSignature` parametri. In questo caso, le proprietà condividono lo stesso **ID** valore del qualificatore.
 
-Ogni proprietà in un [Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx) classe oggetto diverso da `ReturnValue` deve avere un **ID** qualificatore, un valore numerico in base zero che identifica l'ordine in cui vengono visualizzati i parametri. Nessun due parametri possono avere lo stesso **ID** valore e nessun **ID** valore può essere ignorato. Se si verifica una delle due condizioni, il `PutMethod` risultato della funzione `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS`.
+Ogni proprietà in un [Parameters](/windows/desktop/WmiSdk/--parameters) classe oggetto diverso da `ReturnValue` deve avere un' **ID** qualificatore, un valore numerico in base zero che identifica l'ordine in cui vengono visualizzati i parametri. Nessuna due parametri possono avere lo stesso **ID** valore e nessun **ID** valore può essere ignorato. Se si verifica una delle due condizioni, il `PutMethod` funzione restituisce `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS`.
 
 ## <a name="example"></a>Esempio
 
-Per un esempio, vedere il [IWbemClassObject::PutMethod](https://msdn.microsoft.com/library/aa391456(v=vs.85).aspx) metodo.
+Per un esempio, vedere la [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) (metodo).
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
-[WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

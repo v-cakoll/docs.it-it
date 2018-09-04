@@ -3,11 +3,11 @@ title: Mapping dei tipi di dati in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
 ms.openlocfilehash: aba1eb4fdaaf43d66337ca764fe01b7d3f4624bd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423663"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516927"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Mapping dei tipi di dati in ADO.NET
 .NET Framework è basato su Common Type System, che definisce come vengono dichiarati, usati e gestiti i tipi nel runtime. È costituito sia da tipi di valore che da tipi di riferimento, che derivano tutti dal tipo di base <xref:System.Object>. Quando si usa un'origine dati, il tipo di dati viene dedotto dal provider di dati, se non è specificato in modo esplicito. Un oggetto <xref:System.Data.DataSet> è ad esempio indipendente da qualsiasi origine dati specifica. I dati in un oggetto `DataSet` vengono recuperati da un'origine dati e le modifiche vengono applicate nell'origine dati usando un oggetto `DataAdapter`. Questo significa che quando un `DataAdapter` compila un oggetto <xref:System.Data.DataTable> in un `DataSet` con valori provenienti da un'origine dati, i tipi di dati che si ottengono nelle colonne dell'oggetto `DataTable` sono tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] anziché tipi specifici del provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] usato per la connessione all'origine dati.  

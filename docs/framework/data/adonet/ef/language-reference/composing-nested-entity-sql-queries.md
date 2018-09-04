@@ -2,15 +2,15 @@
 title: Composizione di query Entity SQL annidate
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 92e3153350787ef75c48ee52f1b6c68e09e15b4b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8a0efa672a57a9255af2d90af1725b34be75600e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760856"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528157"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Composizione di query Entity SQL annidate
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] è un linguaggio funzionale completo. Il blocco predefinito di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è un'espressione. A differenza dei tradizionali SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è limitato a un set di risultati tabulari: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta la creazione di espressioni complesse che possono contenere valori letterali, parametri o le espressioni nidificate. Un valore nell'espressione può essere con parametri o composto da un'altra espressione.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] è un linguaggio funzionale completo. Il blocco predefinito di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è un'espressione. A differenza, linguaggio SQL convenzionale [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è limitato a un set di risultati tabulari: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta la creazione di espressioni complesse che possono avere valori letterali, parametri o espressioni annidate. Un valore nell'espressione può essere parametrizzato o composto da altre espressioni.  
   
 ## <a name="nested-expressions"></a>Espressioni annidate  
  Un'espressione annidata può essere inserita in una posizione qualsiasi in cui è accettato un valore del tipo restituito dall'espressione. Ad esempio:  
@@ -46,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- Nell'esempio riportato di seguito viene illustrato come annidare correttamente le espressioni in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [procedura: ordinare l'unione di due query](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
+ Nell'esempio seguente viene illustrato come annidare correttamente le espressioni nelle [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [procedura: ordinare l'unione di due query](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
   
 ## <a name="nested-queries-in-projection"></a>Query  annidate nella proiezione  
  Le query annidate nella clausola del progetto potrebbero essere tradotte in query del prodotto cartesiano sul server. In alcuni server di back-end, tra cui Server SLQ, questo può provocare l'aumento delle dimensioni della tabella TempDB, con effetti negativi sulle prestazioni del server.  

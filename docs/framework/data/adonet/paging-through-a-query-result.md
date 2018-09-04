@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
 ms.openlocfilehash: 5d86095586af273f62980fcf8ddf10804b1cfa5a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406810"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514329"
 ---
 # <a name="paging-through-a-query-result"></a>Spostarsi tra il risultato delle query
 Il paging del risultato di una query corrisponde al processo di restituzione dei risultati di una query in subset di dati di dimensioni inferiori o pagine. Si tratta di una tecnica comunemente usata per la visualizzazione di risultati in blocchi di dimensioni ridotte e di facile gestione.  
