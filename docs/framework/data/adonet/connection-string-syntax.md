@@ -3,11 +3,11 @@ title: Sintassi delle stringhe di connessione
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 3d8b37315ab3ceea2ddedd139787627e86b6a131
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469921"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522473"
 ---
 # <a name="connection-string-syntax"></a>Sintassi delle stringhe di connessione
 Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita da <xref:System.Data.Common.DbConnection> oltre a una proprietà <xref:System.Data.Common.DbConnection.ConnectionString%2A> specifica del provider. La sintassi della stringa di connessione specifica per ogni provider è documentata in questa proprietà `ConnectionString`. Nella tabella seguente sono elencati i quattro provider di dati inclusi in .NET Framework.  

@@ -2,12 +2,12 @@
 title: Elemento &lt;message&gt; di &lt;netTcpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 4a487d695cab259fc6b82fdf44b4c1bfdf5d04e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f88de91fa14ce06a69939441ad47e5ae5fb6b126
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364126"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524102"
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>Elemento &lt;message&gt; di &lt;netTcpBinding&gt;
 Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoint configurato con il [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -64,12 +64,12 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
 |-----------|-----------------|  
 |None|None: consente al servizio di interagire con i client anonimi. Sul servizio, indica che il servizio non richiede alcuna credenziale client. Sul client, indica che il client non fornisce alcuna credenziale client.|  
 |Windows|consente lo svolgimento degli scambi SOAP nel contesto autenticato di una credenziale di Windows.|  
-|UserName|Consente al servizio di richiedere che l'autenticazione del client sia eseguita tramite una credenziale UserName. WCF non supporta l'invio di un digest delle password, né la derivazione delle chiavi password e l'uso di tali chiavi per la sicurezza del messaggio. Di conseguenza, WCF richiede che il trasporto sia protetto quando si utilizza le credenziali UserName. Questa modalità di credenziale produce un scambio interoperabile o una negoziazione non interoperabile basata sull'attributo `negotiateServiceCredential`.|  
+|UserName|Consente al servizio di richiedere che l'autenticazione del client sia eseguita tramite una credenziale UserName. WCF non supporta l'invio di un digest delle password o la derivazione delle chiavi utilizzano password e l'utilizzo di tali chiavi per la sicurezza dei messaggi. Di conseguenza, WCF richiede che il trasporto sia protetto quando si usano credenziali UserName. Questa modalità di credenziale produce un scambio interoperabile o una negoziazione non interoperabile basata sull'attributo `negotiateServiceCredential`.|  
 |Certificato|Consente al servizio di richiedere che l'autenticazione del client si basi su un certificato. Se viene usata la modalità di sicurezza del messaggio e l'attributo `negotiateServiceCredential` è impostato su `false`, sarà necessario eseguire il provisioning del client tramite il certificato del servizio.|  
 |IssuedToken|Specifica un token personalizzato, emesso da un servizio di token di sicurezza.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -88,5 +88,5 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
  [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

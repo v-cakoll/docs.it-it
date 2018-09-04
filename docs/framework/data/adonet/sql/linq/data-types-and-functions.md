@@ -3,11 +3,11 @@ title: Tipi di dati e funzioni
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
 ms.openlocfilehash: 34f8f0a59f1a962eaa6a747e124f47d1570ca455
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418065"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520739"
 ---
 # <a name="data-types-and-functions"></a>Tipi di dati e funzioni
 Negli argomenti elencati nella tabella seguente viene descritto il supporto LINQ to SQL per membri, costrutti e cast CRL (Common Language Runtime). I membri e i costrutti supportati sono disponibili per l'uso in query LINQ to SQL.  

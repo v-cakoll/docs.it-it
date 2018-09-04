@@ -2,12 +2,12 @@
 title: Pool di connessioni OLE DB, ODBC e Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3ce65036605b7693955c3a6064fca80263d3538f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803124"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527376"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Pool di connessioni OLE DB, ODBC e Oracle
 Il pool di connessioni consente di migliorare notevolmente le prestazioni e di aumentare la scalabilità dell'applicazione. Questa sezione descrive il pool di connessioni per i provider di dati .NET Framework per OLE DB, ODBC e Oracle.  
@@ -21,12 +21,12 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  Al termine dell'uso chiudere o eliminare sempre la connessione, in modo da restituirla al pool. Le connessioni che non vengono chiuse in modo esplicito potrebbero non essere restituite al pool. Ad esempio, una connessione che esce dall'ambito ma non viene chiusa in modo esplicito verrà restituita al pool di connessioni solo se è stata raggiunta la dimensione massima del pool e la connessione è ancora valida.  
   
- Per ulteriori informazioni sulle sessioni OLE DB o il pool di risorse, nonché come disabilitare il pool eseguendo l'override delle impostazioni predefinite dei servizi del provider OLE DB, vedere il [Guida per programmatori OLE DB](http://go.microsoft.com/fwlink/?linkid=45232).  
+ Per altre informazioni sulle sessioni OLE DB o il pool di risorse, nonché come disabilitare il pool eseguendo l'override delle impostazioni predefinite dei servizi del provider OLE DB, vedere la [Guida per programmatori OLE DB](https://go.microsoft.com/fwlink/?linkid=45232).  
   
 ## <a name="connection-pooling-for-odbc"></a>Pool di connessioni per Odbc  
  Il pool di connessioni per il provider di dati .NET Framework per ODBC è gestito da Gestione driver ODBC, che viene usato anche per la connessione e non è influenzato dal provider di dati .NET Framework per ODBC.  
   
- Per abilitare o disabilitare il pool di connessioni, aprire **Amministrazione origine dati ODBC** nella cartella Strumenti di amministrazione nel Pannello di controllo. Il **il pool di connessioni** scheda consente di specificare i parametri per ogni driver ODBC installato del pool di connessioni. Notare che le modifiche apportate al pool di connessioni per uno specifico driver ODBC avranno effetto su tutte le applicazioni che usano tale driver ODBC.  
+ Per abilitare o disabilitare il pool di connessioni, aprire **Amministrazione origine dati ODBC** nella cartella Strumenti di amministrazione nel Pannello di controllo. Il **pool di connessioni** scheda consente di specificare i parametri per ogni driver ODBC installato di pool di connessioni. Notare che le modifiche apportate al pool di connessioni per uno specifico driver ODBC avranno effetto su tutte le applicazioni che usano tale driver ODBC.  
   
 ## <a name="connection-pooling-for-oracleclient"></a>Pool di connessioni per client Oracle  
  Il provider di dati .NET Framework per Oracle fornisce automaticamente pool di connessioni per l'applicazione client ADO.NET. È possibile inoltre specificare diversi modificatori delle stringhe di connessione per controllare il comportamento del pool. Per altre informazioni, vedere "Controllo del pool di connessioni con le parole chiave delle stringhe di connessione" in questo argomento.  
@@ -48,10 +48,10 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  Se esiste una connessione a un server non più disponibile, la connessione può essere recuperata dal pool anche se nessuna connessione è stata rilevata come interrotta e pertanto non è stata contrassegnata come non valida. Quando si verifica questa situazione, viene generata un'eccezione. È necessario, tuttavia, chiudere la connessione in modo da rilasciarla nel pool.  
   
- Non chiamare `Close` o `Dispose` su un oggetto `Connection`, `DataReader` o su qualsiasi altro oggetto gestito nel metodo `Finalize` della classe. Nei finalizzatori rilasciare solo le risorse non gestite che la classe controlla direttamente. Se nella classe non sono presenti risorse non gestite, non includere un metodo `Finalize` nella relativa definizione della classe. Per ulteriori informazioni, vedere [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  
+ Non chiamare `Close` o `Dispose` su un oggetto `Connection`, `DataReader` o su qualsiasi altro oggetto gestito nel metodo `Finalize` della classe. Nei finalizzatori rilasciare solo le risorse non gestite che la classe controlla direttamente. Se nella classe non sono presenti risorse non gestite, non includere un metodo `Finalize` nella relativa definizione della classe. Per altre informazioni, vedere [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  
   
 ### <a name="transaction-support"></a>Supporto delle transazioni  
- Le connessioni vengono recuperate dal pool e assegnate in base al contesto della transazione. Il contesto del thread richiedente e la connessione assegnata devono corrispondere. Pertanto, ogni pool di connessioni viene effettivamente suddiviso in connessioni senza alcun contesto di transazione associato e in *N* suddivisioni, ognuna delle quali contiene connessioni con un particolare contesto di transazione.  
+ Le connessioni vengono recuperate dal pool e assegnate in base al contesto della transazione. Il contesto del thread richiedente e la connessione assegnata devono corrispondere. Pertanto, ogni pool di connessioni viene effettivamente suddiviso in connessioni senza alcun contesto di transazione associato e in *N* suddivisioni ciascuna delle quali contiene connessioni con un particolare contesto di transazione.  
   
  Una volta chiusa, la connessione viene rilasciata nel pool e nella suddivisione appropriata in base al relativo contesto di transazione. La connessione può quindi essere chiusa senza generare un errore anche se è ancora in sospeso una transazione distribuita. Questo sistema consente di eseguire o interrompere la transazione distribuita in un secondo momento.  
   
@@ -71,4 +71,4 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ## <a name="see-also"></a>Vedere anche  
  [Pool di connessioni](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [Contatori delle prestazioni](../../../../docs/framework/data/adonet/performance-counters.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

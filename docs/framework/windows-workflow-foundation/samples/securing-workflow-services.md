@@ -2,12 +2,12 @@
 title: Protezione di servizi flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 53f84ad5-1ed1-4114-8d0d-b12e8a021c6e
-ms.openlocfilehash: 5dbd724f3a2f8febfc74719584f4d69cbf75b567
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 28c34ecf7d6d781bfa461b2737cb9325a657f47e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806669"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524335"
 ---
 # <a name="securing-workflow-services"></a>Protezione di servizi flusso di lavoro
 Nell'esempio di servizio flusso di lavoro protetto vengono illustrate le procedure riportate di seguito:  
@@ -22,7 +22,7 @@ Nell'esempio di servizio flusso di lavoro protetto vengono illustrate le procedu
  Utilizzo della sicurezza WCF per proteggere la comunicazione tra client e servizio flusso di lavoro,con autorizzazione basata sulle attestazioni  
   
 ## <a name="discussion"></a>Discussione  
- In questo esempio illustra l'uso di infrastruttura di sicurezza WCF per proteggere un servizio flusso di lavoro esattamente come si farebbe con un normale servizio WCF. In particolare, viene usata una richiesta personalizzata per l'autorizzazione. In questo caso, viene usato <xref:System.ServiceModel.WSHttpBinding> e la sicurezza in modalità messaggio con credenziali di Windows.  
+ In questo esempio illustra l'uso dell'infrastruttura di sicurezza WCF per proteggere un servizio del flusso di lavoro come si farebbe con un normale servizio WCF. In particolare, viene usata una richiesta personalizzata per l'autorizzazione. In questo caso, viene usato <xref:System.ServiceModel.WSHttpBinding> e la sicurezza in modalità messaggio con credenziali di Windows.  
   
  L'oggetto personalizzato <xref:System.IdentityModel.Policy.IAuthorizationPolicy> (`CustomNameCheckerPolicy`) esegue il controllo del nome utente di Windows del client e di un carattere specifico. Se tale carattere è presente, la richiesta viene creata e aggiunta a <xref:System.IdentityModel.Policy.EvaluationContext>. In questo modo, i criteri personalizzati dichiarano che il client dispone di questo carattere nel nome utente. È possibile eseguire query su questa richiesta per tutta la durata della chiamata. È possibile trovare il carattere in `Constants.cs`.  
   
@@ -49,6 +49,6 @@ Nell'esempio di servizio flusso di lavoro protetto vengono illustrate le procedu
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\SecuringWorkflowServices`

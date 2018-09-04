@@ -3,11 +3,11 @@ title: Configurazione del client
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
 ms.openlocfilehash: eef3d4743c26a06bd114618522aff9f68e46628c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423755"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527716"
 ---
 # <a name="client-configuration"></a>Configurazione del client
 È possibile usare la configurazione del client Windows Communication Foundation (WCF) per specificare l'indirizzo, associazione, comportamento e contratto, le proprietà di "ABC" dell'endpoint client, quali i client usano per connettersi agli endpoint del servizio. Il [ \<client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento dispone di un [ \<endpoint >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) cui attributi consentono di configurare l'endpoint di base sull'elemento. Questi attributi sono descritti nella sezione "Configurazione degli endpoint" di questo argomento.  

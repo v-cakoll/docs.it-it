@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 4c5d911bfbfcd33248e15b9fc822abdc9cf4046c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a13ab73e48616b38e583b1c9948fc1bf5eb8a64
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505010"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522288"
 ---
 # <a name="impersonating-the-client"></a>Rappresentazione di client
 L'esempio Rappresentazione di client mostra come rappresentare l'applicazione del chiamante al servizio così che il servizio possa accedere a risorse di sistema per conto del chiamante.  
   
- Questo esempio è basato sul [indipendente](../../../../docs/framework/wcf/samples/self-host.md) esempio. File di configurazione del servizio e client sono uguali a quelli del [indipendente](../../../../docs/framework/wcf/samples/self-host.md) esempio.  
+ In questo esempio si basa sul [self-hosting](../../../../docs/framework/wcf/samples/self-host.md) esempio. I file di configurazione del servizio e client sono uguale a quello del [self-hosting](../../../../docs/framework/wcf/samples/self-host.md) esempio.  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -102,14 +102,14 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nelle finestre della console client e del servizio. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.  
   
 > [!NOTE]
->  Il servizio deve eseguire con un account amministrativo o l'account viene eseguito con necessario disporre dei diritti per registrare il http://localhost:8000/ServiceModelSamples URI con il livello HTTP. È possibile assegnare tali diritti configurando un [prenotazione Namespace](http://go.microsoft.com/fwlink/?LinkId=95012) utilizzando il [strumento Httpcfg.exe](http://go.microsoft.com/fwlink/?LinkId=95010).  
+>  Il servizio deve eseguire con un account amministrativo o l'account di cui viene eseguito deve essere concessi i diritti per registrare il http://localhost:8000/ServiceModelSamples URI con il livello HTTP. Tali diritti possono essere concessi configurando una [Namespace prenotazione](https://go.microsoft.com/fwlink/?LinkId=95012) usando la [strumento Httpcfg.exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
->  In computer che eseguono [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], la rappresentazione è supportata solo se l'applicazione Host.exe ha il privilegio di rappresentazione. Per impostazione predefinita, solo gli amministratori dispongono di questa autorizzazione. Per aggiungere questo privilegio a un account è in esecuzione il servizio, passare a **strumenti di amministrazione**aprire **criteri di sicurezza locali**aprire **criteri locali**, fare clic su **Assegnazione diritti utente**e selezionare **rappresenta un Client dopo l'autenticazione** fare doppio clic su **proprietà** per aggiungere un utente o gruppo.  
+>  In computer che eseguono [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], la rappresentazione è supportata solo se l'applicazione Host.exe ha il privilegio di rappresentazione. Per impostazione predefinita, solo gli amministratori dispongono di questa autorizzazione. Per aggiungere questo privilegio a un account è in esecuzione il servizio, passare **strumenti di amministrazione**aprire **criteri di sicurezza locali**Open **criteri locali**, fare clic su **Assegnazione diritti utente**e selezionare **rappresenta un Client dopo l'autenticazione** e fare doppio clic su **proprietà** per aggiungere un utente o gruppo.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   

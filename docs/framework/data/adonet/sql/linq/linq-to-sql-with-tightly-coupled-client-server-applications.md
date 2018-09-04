@@ -3,11 +3,11 @@ title: LINQ to SQL con applicazioni client/server strettamente accoppiate
 ms.date: 03/30/2017
 ms.assetid: e083d805-dcf6-459d-b9af-9ef0563f2dd7
 ms.openlocfilehash: 9c36fc1f402d3791611af47a3a6d997db4f31167
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408960"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521880"
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>LINQ to SQL con applicazioni client/server strettamente accoppiate
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] può essere usato nel livello intermedio con i client intelligenti strettamente collegati nel livello di presentazione. Gli scenari che prevedono l'accesso ai dati di sola lettura, nessun controllo di concorrenza ottimistica o concorrenza ottimistica con timestamp, non sono molto più complessi degli scenari non remoti. Tuttavia, quando un database richiede i controlli di concorrenza ottimistica con valori originali, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non fornisce il livello di supporto per eseguire un round trip dei dati presenti nei dataset. Un livello intermedio di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] può però scambiare dati con client su qualsiasi piattaforma.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
 ms.openlocfilehash: e2cfb3068a416da40b99072a0c7dfd751d3578c3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407357"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524184"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Procedura: creare un flusso di lavoro sequenziale
 I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate. In questo argomento illustra la creazione di un flusso di lavoro che vengono usate sia attività incorporate, ad esempio la <xref:System.Activities.Statements.Sequence> attività e le attività personalizzate dal precedente [procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) argomento. Il flusso di lavoro consente di modellare un gioco per determinare un numero.  

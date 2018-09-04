@@ -7,11 +7,11 @@ helpviewer_keywords:
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
 ms.openlocfilehash: 25705b573be74ea5a2d71537b0c165a6f619d1d9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399583"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519153"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Panoramica dei convertitori di tipi per XAML
 I convertitori di tipi forniscono la logica per un writer di oggetti che esegue una conversione da una stringa nel markup XAML in particolari oggetti in un oggetto grafico. Nei servizi XAML di .NET Framework, il convertitore di tipi deve essere una classe che deriva da <xref:System.ComponentModel.TypeConverter>. Alcuni convertitori supportano anche il percorso di salvataggio XAML e possono essere usati per serializzare un oggetto in un formato stringa nel markup di serializzazione. Questo argomento descrive come e quando vengono richiamati i convertitori di tipi in XAML e vengono forniti consigli di implementazione per gli override del metodo di <xref:System.ComponentModel.TypeConverter>.  

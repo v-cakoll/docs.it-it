@@ -2,12 +2,12 @@
 title: Durata chiamata
 ms.date: 03/30/2017
 ms.assetid: e4973ec3-3c66-4c0b-b5d0-294b62c83f7d
-ms.openlocfilehash: df361774373d08ad6e9e027314c0529ea97d6b12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a18e35ba351f6a87da9dd61af223aed2bf647dea
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33472853"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525212"
 ---
 # <a name="call-duration"></a>Durata chiamata
 Nome contatore: durata chiamata  
@@ -19,4 +19,4 @@ Nome contatore: durata chiamata
 >  Quando viene usato in un servizio WCF asincrono, il contatore della durata della chiamata restituirà sempre -1.  
   
 ## <a name="see-also"></a>Vedere anche  
- [PERF_AVERAGE_TIMER](http://go.microsoft.com/fwlink/?LinkId=95015)
+ [PERF_AVERAGE_TIMER](https://go.microsoft.com/fwlink/?LinkId=95015)

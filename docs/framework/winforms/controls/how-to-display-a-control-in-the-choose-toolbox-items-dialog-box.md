@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Choose Toolbox Items dialog box [Windows Forms], display control
 ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
 ms.openlocfilehash: fdda72d60b0f18e76b03e9b7f05060a09763a3f7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488261"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527623"
 ---
 # <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>Procedura: visualizzare un controllo nella finestra di dialogo Scegli elementi della Casella degli strumenti
 Quando si sviluppa e Distribuisci i controlli, è possibile i controlli dalla finestra di **Scegli elementi della casella degli strumenti** nella finestra di dialogo viene visualizzata facendo clic sul **della casella degli strumenti** e selezionare  **Scegli elementi**. È possibile abilitare il controllo venga visualizzato nella finestra di dialogo mediante la procedura di registrazione AssemblyFoldersEx.  

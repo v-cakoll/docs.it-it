@@ -3,11 +3,11 @@ title: DataTableReader
 ms.date: 03/30/2017
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
 ms.openlocfilehash: b3881ecfd895bd22a476bdac7dd0b7c1b112092e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425185"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526378"
 ---
 # <a name="datatablereaders"></a>DataTableReader
 Il tipo <xref:System.Data.DataTableReader> presenta il contenuto di un tipo <xref:System.Data.DataTable> o di un tipo <xref:System.Data.DataSet> sotto forma di uno o più set di risultati forward-only in sola lettura.  

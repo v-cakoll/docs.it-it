@@ -3,11 +3,11 @@ title: Attività composta personalizzata tramite l'oggetto NativeActivity
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
 ms.openlocfilehash: d9caa6e950af8f800644793db84aa85cc8255914
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406836"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528686"
 ---
 # <a name="custom-composite-using-native-activity"></a>Attività composta personalizzata tramite l'oggetto NativeActivity
 In questo esempio viene illustrato come scrivere un oggetto <xref:System.Activities.NativeActivity> che pianifica altri oggetti <xref:System.Activities.Activity> per controllare il flusso dell'esecuzione di un flusso di lavoro. In questo esempio vengono usati due flussi di controllo comuni, Sequence e While, per illustrate le operazioni da eseguire.  

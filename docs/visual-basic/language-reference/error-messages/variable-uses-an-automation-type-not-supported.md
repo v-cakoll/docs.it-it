@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID458
 ms.assetid: bde4f4da-493b-452c-b6e4-1d370edba4cd
 ms.openlocfilehash: ae9fe183fd3ac2cf9e122b161f5456dc3eef6b58
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43474142"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519369"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>La variabile utilizza un tipo di automazione non supportato in Visual Basic
 Si è provato a usare una variabile definita in una libreria dei tipi o una raccolta di oggetti con un tipo di dati non supportato da Visual Basic.  

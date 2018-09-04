@@ -3,11 +3,11 @@ title: Programmazione dell'albero degli elementi del modello
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
 ms.openlocfilehash: a24e52ec2b7cab10471d756a721611c6dd10516e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393488"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521970"
 ---
 # <a name="programming-model-item-tree"></a>Programmazione dell'albero degli elementi del modello
 Questo esempio viene illustrato come passare il <xref:System.Activities.Presentation.Model.ModelItem> albero tramite associazione dati dichiarativa dalla visualizzazione albero Windows Presentation Foundation (WPF).  

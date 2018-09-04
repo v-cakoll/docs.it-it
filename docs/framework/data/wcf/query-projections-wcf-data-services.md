@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
 ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461063"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526688"
 ---
 # <a name="query-projections-wcf-data-services"></a>Proiezioni di query (WCF Data Services)
 Proiezione fornisce un meccanismo nel [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] per ridurre la quantità di dati nel feed restituito da una query specificando che solo determinate proprietà di un'entità vengano restituite nella risposta. Per altre informazioni, vedere [OData: opzione Select System Query ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).  
