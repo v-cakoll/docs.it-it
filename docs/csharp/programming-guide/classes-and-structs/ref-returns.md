@@ -4,12 +4,12 @@ description: Informazioni su come definire e usare valori restituiti e variabili
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33339618"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510565"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valori restituiti e variabili locali ref
 
@@ -124,5 +124,5 @@ Questa seconda versione è più efficiente con sequenze più lunghe negli scenar
 
 ## <a name="see-also"></a>Vedere anche
 
-[ref (parola chiave)](../../language-reference/keywords/ref.md)  
-[Semantica di riferimento con i tipi valore](../../../csharp/reference-semantics-with-value-types.md)
+- [ref (parola chiave)](../../language-reference/keywords/ref.md)  
+- [Semantica di riferimento con i tipi valore](../../../csharp/reference-semantics-with-value-types.md)
