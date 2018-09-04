@@ -2,18 +2,18 @@
 title: Estrarre dati di WF utilizzando il rilevamento
 ms.date: 03/30/2017
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-ms.openlocfilehash: 22b147521d4ce0c72fadfb7adc81e05f10ce52b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef8118df2c5834e32c40760ef31f75660893d89b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519873"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501583"
 ---
 # <a name="extract-wf-data-using-tracking"></a>Estrarre dati di WF utilizzando il rilevamento
 In questo esempio viene illustrato come usare il rilevamento del flusso di lavoro per estrarre variabili e argomenti del flusso di lavoro dalle attività. Vengono inoltre illustrate l'aggiunta di annotazioni ai record di rilevamento e l'estrazione del payload di dati all'interno dei record di rilevamento personalizzati. Nell'esempio viene usato il partecipante del rilevamento Traccia eventi per Windows (ETW) per estrarre i dati dal flusso di lavoro.  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
- Windows Workflow Foundation (WF) fornisce il rilevamento per ottenere visibilità nell'esecuzione di un'istanza del flusso di lavoro. Il runtime di rilevamento crea record di rilevamento del flusso di lavoro durante l'esecuzione di quest'ultimo. Insieme ai record di rilevamento del flusso di lavoro, da quest'ultimo è possibile estrarre i dati presenti nell'istanza del flusso di lavoro. Nell'elenco seguente sono indicati in dettaglio i tipi di dati che possono essere estratti dai record di rilevamento:  
+ Windows Workflow Foundation (WF) fornisce il rilevamento per ottenere visibilità per l'esecuzione di un'istanza del flusso di lavoro. Il runtime di rilevamento crea record di rilevamento del flusso di lavoro durante l'esecuzione di quest'ultimo. Insieme ai record di rilevamento del flusso di lavoro, da quest'ultimo è possibile estrarre i dati presenti nell'istanza del flusso di lavoro. Nell'elenco seguente sono indicati in dettaglio i tipi di dati che possono essere estratti dai record di rilevamento:  
   
 1.  Variabili del flusso di lavoro all'interno di un'attività e record di rilevamento durante l'esecuzione dell'attività.  
   
@@ -98,29 +98,29 @@ In questo esempio viene illustrato come usare il rilevamento del flusso di lavor
   
 7.  Dal **avviare** dal menu **strumenti di amministrazione** e quindi **Visualizzatore eventi**.  
   
-8.  Nella visualizzazione struttura ad albero in Visualizzatore eventi, passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, e **Microsoft**. Fare doppio clic su **Microsoft** e selezionare **vista** e quindi **Visualizza registri analitici e Debug**.  
+8.  Nella visualizzazione albero in Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, e **Microsoft**. Fare doppio clic su **Microsoft** e selezionare **View** e quindi **Visualizza registri analitici e Debug**.  
   
      Verificare che il **Visualizza registri analitici e Debug** opzione è selezionata.  
   
-9. Nella visualizzazione struttura ad albero in Visualizzatore eventi, passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**,  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Attiva registro**.  
+9. Nella visualizzazione albero in Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**,  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Attiva registro**.  
   
 10. Usando [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], aprire il client di WCF.  
   
-     Client di prova WCF (WcfTestClient.exe) si trova nella \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] cartella di installazione > \Common7\IDE\ cartella.  
+     Il client di prova WCF (WcfTestClient.exe) si trova nel \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] cartella di installazione > cartella \Common7\IDE\.  
   
      La cartella di installazione di [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] predefinita è C:\Programmi\Microsoft Visual Studio 10.0.  
   
-11. Nel client di prova WCF selezionare **Aggiungi servizio** dal **File** menu.  
+11. Nel client di prova WCF selezionare **aggiunta di un servizio** dalle **File** menu.  
   
      Aggiungere l'indirizzo WSDL del servizio locale che è stato copiato precedentemente nella casella di input.  
   
 12. Nel client di prova WCF fare doppio clic su `GetStockPrice`.  
   
-     Verrà visualizzato il metodo `GetStockPrice`. La richiesta accetta un parametro. Utilizzare il valore **Contoso**.  
+     Verrà visualizzato il metodo `GetStockPrice`. La richiesta accetta un parametro. Usare il valore **Contoso**.  
   
 13. Fare clic su **richiamare**.  
   
-14. Tornare a Visualizzatore eventi e passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**,  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **aggiornamento**. Gli ID degli eventi flusso di lavoro sono compresi tra 100 e 199.  
+14. Tornare a Visualizzatore eventi e passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**,  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **aggiornare**. Gli ID degli eventi flusso di lavoro sono compresi tra 100 e 199.  
   
      Gli eventi contengono annotazioni, variabili, argomenti e record di rilevamento personalizzati che possono essere visualizzati nel visualizzatore eventi.  
   
@@ -131,11 +131,11 @@ In questo esempio viene illustrato come usare il rilevamento del flusso di lavor
   
 1.  Aprire Visualizzatore eventi.  
   
-2.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **applicazione Applicazioni server**. Fare doppio clic su **analitico** e selezionare **Disattiva registro**.  
+2.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **dell'applicazione Le applicazioni server**. Fare doppio clic su **analitico** e selezionare **Disattiva registro**.  
   
-3.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **applicazione Applicazioni server**. Fare doppio clic su **analitico** e selezionare **Cancella Log**.  
+3.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **dell'applicazione Le applicazioni server**. Fare doppio clic su **analitico** e selezionare **Cancella Log**.  
   
-     Scegliere il **deselezionare** opzione per cancellare gli eventi.  
+     Scegliere il **cancellare** opzione per cancellare gli eventi.  
   
 ## <a name="known-issue"></a>Problema noto  
   
@@ -144,16 +144,16 @@ In questo esempio viene illustrato come usare il rilevamento del flusso di lavor
 >   
 >  `The description for Event ID <id> from source Microsoft-Windows-Application Server-Applications cannot be found. Either the component that raises this event is not installed on your local computer or the installation is corrupted. You can install or repair the component on the local computer.`  
 >   
->  Se si verifica questo errore, fare clic su **aggiornamento** nel riquadro azioni. La decodifica dell'evento dovrebbe ora essere eseguita in modo corretto.  
+>  Se si verifica questo errore, fare clic su **Aggiorna** nel riquadro azioni. La decodifica dell'evento dovrebbe ora essere eseguita in modo corretto.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\ExtractWfData`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di monitoraggio di AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

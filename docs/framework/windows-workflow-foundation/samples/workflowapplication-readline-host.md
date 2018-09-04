@@ -3,11 +3,11 @@ title: Host ReadLine di WorkflowApplication
 ms.date: 03/30/2017
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
 ms.openlocfilehash: 4388ff0285de58b0dc6f86af93aad84b2894373f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470853"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502935"
 ---
 # <a name="workflowapplication-readline-host"></a>Host ReadLine di WorkflowApplication
 Questo esempio è un host ReadLine generico. È possibile caricare ed eseguire qualsiasi flusso di lavoro usando l'attività `ReadLine` inclusa (o altre attività quali quelle che ottengono dati dai segnalibri ripresi con le stringhe). L'output dell'attività `WriteLine` o qualsiasi elemento che scrive nell'estensione della proprietà <xref:System.Activities.Statements.WriteLine.TextWriter%2A> è diretto alla finestra host. Quando un'istanza è inattiva, i segnalibri disponibili per tale istanza vengono visualizzati in una casella combinata. Selezionando un segnalibro, inserendo un testo e premendo il pulsante di ripresa del segnalibro viene continuata l'esecuzione del flusso di lavoro. Inoltre, è possibile annullare, interrompere o terminare un flusso di lavoro selezionato. La persistenza è attiva per impostazione predefinita; è possibile arrestare l'host e ripristinarlo in modo che l'elenco di istanze venga popolato con le istanze archiviate nel database. Il rilevamento viene usato per restituire gli eventi a livello dell'oggetto <xref:System.Activities.WorkflowApplication> all'host con la possibilità di aggiungere il rilevamento dettagliato a livello di attività.  

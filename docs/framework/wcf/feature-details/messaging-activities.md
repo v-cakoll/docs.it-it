@@ -3,11 +3,11 @@ title: Attività di messaggistica
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
 ms.openlocfilehash: 5ccace3ebea42957e1cc66602579d85cd8634435
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461774"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502713"
 ---
 # <a name="messaging-activities"></a>Attività di messaggistica
 Le attività di messaggistica consentono ai flussi di lavoro di inviare e ricevere messaggi WCF. Aggiungendo attività di messaggistica a un flusso di lavoro, è possibile modellare qualsiasi modello di scambio dei messaggi con la complessità desiderata.

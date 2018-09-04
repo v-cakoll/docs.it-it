@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 314ceb86219ce143e84a00392727d610c0779e48
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: bdec49d077a41ea0b578aaff9ce7fcf9e0c7dc8c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258069"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505832"
 ---
 # <a name="securing-method-access"></a>Protezione dell'accesso ai metodi
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -30,7 +30,7 @@ ms.locfileid: "43258069"
   
 -   Limitare l'ambito di accessibilità alla classe, all'assembly o alle classi derivate, se possono essere attendibili. Questo è il modo più semplice per limitare l'accesso del metodo. Si noti che, in generale, le classi derivate possono essere meno affidabili rispetto alla classe da cui derivano, anche se in alcuni casi condividono l'identità della classe padre. In particolare, non attribuire attendibilità alla parola chiave **protetti**, che non è necessariamente usata nel contesto di sicurezza.  
   
--   Limitare l'accesso al metodo ai chiamanti di un'identità specificata, in pratica, qualsiasi particolare [evidenza](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (nome sicuro, publisher, zona e così via) scelto.  
+-   Limitare l'accesso al metodo ai chiamanti di un'identità specificata, in pratica, qualsiasi particolare [evidenza](https://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (nome sicuro, publisher, zona e così via) scelto.  
   
 -   Limitare l'accesso al metodo ai chiamanti che dispongono delle autorizzazioni selezionate.  
   

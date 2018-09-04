@@ -3,11 +3,11 @@ title: 'Procedura dettagliata: generazione SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: 5551eb4088e7529c61d5c517fed6877c23ae12f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43472072"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510500"
 ---
 # <a name="walkthrough-sql-generation"></a>Procedura dettagliata: generazione SQL
 In questo argomento viene illustrata la modalità di generazione SQL nel [Provider di esempio](https://go.microsoft.com/fwlink/?LinkId=180616). Nella query Entity SQL seguente viene usato il modello incluso nel provider di esempio:  

@@ -3,11 +3,11 @@ title: IfElse con regole
 ms.date: 03/30/2017
 ms.assetid: c4ad9bb2-9037-413a-8b14-59ed7b927a9e
 ms.openlocfilehash: 31906f04149a0ca7659201965ca565c7fa2af305
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483006"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500529"
 ---
 # <a name="ifelse-with-rules"></a>IfElse con regole
 In questo esempio viene mostrato l'uso di una condizione della regola con un'attività <xref:System.Workflow.Activities.IfElseActivity>.  

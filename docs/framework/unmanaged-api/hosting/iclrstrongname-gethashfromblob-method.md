@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ca958f8472d7f7e1a44ad4ab237f582f92713c3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402738"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501034"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>Metodo ICLRStrongName::GetHashFromBlob
-Ottiene un hash dell'assembly in corrispondenza dell'indirizzo di memoria specificata, usando l'algoritmo hash specificato.  
+Ottiene un hash dell'assembly all'indirizzo di memoria specificato usando l'algoritmo hash specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   

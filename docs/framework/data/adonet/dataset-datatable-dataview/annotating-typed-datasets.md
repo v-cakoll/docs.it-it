@@ -5,16 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 1974ac71e367203b8b94375e43d4fde13f2df51f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c66a11e0662cd007797243c136ec0617ce5be47c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513147"
 ---
 # <a name="annotating-typed-datasets"></a>Annotazione di dataset tipizzati
-Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.Data.DataSet> tipizzato senza modificare lo schema sottostante. Modifica i nomi degli elementi dello schema sottostante causerebbe l'oggetto tipizzato **DataSet** fare riferimento a oggetti che non esiste nell'origine dati, nonché perderebbe un riferimento per gli oggetti presenti nell'origine dati.  
+Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.Data.DataSet> tipizzato senza modificare lo schema sottostante. Modifica i nomi degli elementi dello schema sottostante causerebbe l'oggetto tipizzato **set di dati** per fare riferimento a oggetti che non esiste nell'origine dati, nonché perderebbe un riferimento agli oggetti che sono presenti nell'origine dati.  
   
- Utilizzo delle annotazioni, è possibile personalizzare i nomi degli oggetti in tipizzato **DataSet** con nomi più significativi, rendendo più leggibili codice e tipizzato **DataSet** più semplice per i client da utilizzare, lasciando schema sottostante intatto. Ad esempio, il seguente elemento di schema per il **clienti** tabella del **Northwind** database comporta la un **DataRow** il nome dell'oggetto  **CustomersRow** e <xref:System.Data.DataRowCollection> denominato **clienti**.  
+ Uso delle annotazioni, è possibile personalizzare i nomi degli oggetti in tipizzato **set di dati** con nomi più significativi, rendendo più leggibile codice e tipizzato **DataSet** più semplice per i client da usare, lasciando intatto lo schema sottostante. Ad esempio, l'elemento schema seguente per il **clienti** tabella del **Northwind** database comporta la un **DataRow** il nome dell'oggetto  **CustomersRow** e una <xref:System.Data.DataRowCollection> denominate **clienti**.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -26,7 +27,7 @@ Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.D
 </xs:element>  
 ```  
   
- A **DataRowCollection** nome di **clienti** è significativo nel codice client, ma un **DataRow** nome di **CustomersRow** è fuorviante perché si tratta di un singolo oggetto. In comune scenari, l'oggetto potrebbe essere indicato anche senza il **riga** identificatore e invece potrebbe essere semplicemente considerato come un **cliente** oggetto. La soluzione consiste nell'annotare lo schema e identificare nuovi nomi per il **DataRow** e **DataRowCollection** oggetti. Di seguito viene riportata una versione annotata dello schema precedente.  
+ Un **DataRowCollection** nome del **clienti** risulta significativo nel codice client, ma un **DataRow** nome del **CustomersRow** è fuorviante perché è un singolo oggetto. Inoltre, in comune scenari, l'oggetto si riferisce al senza il **riga** identificatore e invece sarebbe riferimento semplicemente come un **cliente** oggetto. La soluzione consiste nell'annotare lo schema e identificare nuovi nomi per il **DataRow** e **DataRowCollection** oggetti. Di seguito viene riportata una versione annotata dello schema precedente.  
   
 ```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
@@ -38,7 +39,7 @@ Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.D
 </xs:element>  
 ```  
   
- Specifica un **typedName** valore **cliente** comporterà un **DataRow** il nome dell'oggetto **cliente**. Specifica un **typedPlural** valore **clienti** mantiene il **DataRowCollection** nome di **clienti**.  
+ Specifica un **typedName** pari a **Customer** comporterà un **DataRow** il nome dell'oggetto **cliente**. Che specifica un **typedPlural** pari a **clienti** mantiene il **DataRowCollection** nome del **clienti**.  
   
  Nella seguente tabella sono indicate le annotazioni disponibili.  
   
@@ -48,38 +49,38 @@ Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.D
 |**typedPlural**|Nome della raccolta di oggetti.|  
 |**typedParent**|Nome dell'oggetto quando si fa riferimento a tale oggetto in una relazione padre.|  
 |**typedChildren**|Nome del metodo per la restituzione di oggetti da una relazione figlio.|  
-|**nullValue**|Il valore se il valore sottostante è **DBNull**. Vedere la tabella seguente per **nullValue** annotazioni. Il valore predefinito è **throw**.|  
+|**nullValue**|Valore se il valore sottostante è **DBNull**. Vedere la tabella seguente per **nullValue** annotazioni. Il valore predefinito è **throw**.|  
   
- Nella tabella seguente vengono illustrati i valori che possono essere specificati per il **nullValue** annotazione.  
+ Nella tabella seguente mostra i valori che possono essere specificati per il **nullValue** annotazione.  
   
 |Valore nullValue|Descrizione|  
 |---------------------|-----------------|  
 |*Valore di sostituzione*|Specifica il valore da restituire. È necessario che il valore restituito corrisponda al tipo dell'elemento. Usare ad esempio `nullValue="0"` per restituire 0 per i campi integer null.|  
 |**_throw**|Generazione di un'eccezione. Questa è l'impostazione predefinita.|  
 |**_null**|Consente di restituire un riferimento null o di generare un'eccezione se viene rilevato un tipo primitivo.|  
-|**_empty**|Per le stringhe, restituire **Empty**, in caso contrario, restituire un oggetto creato da un costruttore vuoto. Se viene rilevato un tipo primitivo, consente di generare un'eccezione.|  
+|**_empty**|Per le stringhe, restituire **String. Empty**, in caso contrario, restituisce un oggetto creato da un costruttore vuoto. Se viene rilevato un tipo primitivo, consente di generare un'eccezione.|  
   
- Nella tabella seguente mostra i valori predefiniti per gli oggetti in una classe tipizzata **DataSet** e le annotazioni disponibili.  
+ La tabella seguente mostra i valori predefiniti per gli oggetti in un oggetto tipizzato **set di dati** e le annotazioni disponibili.  
   
 |Oggetto/Metodo/Evento|Default|Annotazione|  
 |---------------------------|-------------|----------------|  
-|**DataTable**|TableNameDataTable|typedPlural|  
+|**Oggetto DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable** metodi|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
-|**dataRow**|TableNameRow|typedName|  
+|**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
 |**Property**|PropertyName|typedName|  
 |**Figlio** della funzione di accesso|GetChildTableNameRows|typedChildren|  
 |**Padre** della funzione di accesso|TableNameRow|typedParent|  
 |**Set di dati** eventi|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Utilizzare tipizzati **DataSet** annotazioni, è necessario includere il seguente **xmlns** riferimento nello schema XML Schema definition language (XSD). (Per creare un file xsd dalle tabelle di database, vedere <xref:System.Data.DataSet.WriteXmlSchema%2A> o [uso di dataset in Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
+ Usare tipizzata **set di dati** annotazioni, è necessario includere quanto segue **xmlns** riferimento nello schema XML Schema definition language (XSD). (Per creare uno schema xsd dalle tabelle di database, vedere <xref:System.Data.DataSet.WriteXmlSchema%2A> oppure [utilizzo di dataset in Visual Studio](https://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- Di seguito è riportato un esempio di schema con annotazioni che espone il **clienti** tabella il **Northwind** database con una relazione con il **ordini** tabella inclusa.  
+ Di seguito è riportato un esempio di schema con annotazioni che espone il **clienti** tabella del **Northwind** database con una relazione con il **ordini** tabella inclusa.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -133,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- L'esempio di codice seguente viene utilizzato un oggetto fortemente tipizzato **DataSet** creato dallo schema di esempio. Viene utilizzato uno <xref:System.Data.SqlClient.SqlDataAdapter> per popolare il **clienti** tabella e un altro <xref:System.Data.SqlClient.SqlDataAdapter> per popolare il **ordini** tabella. L'oggetto fortemente tipizzato **DataSet** definisce il **DataRelations**.  
+ Esempio di codice seguente usa un oggetto fortemente tipizzato **set di dati** creata dallo schema di esempio. Usa una <xref:System.Data.SqlClient.SqlDataAdapter> per popolare le **clienti** tabella e un altro <xref:System.Data.SqlClient.SqlDataAdapter> per popolare il **ordini** tabella. L'oggetto fortemente tipizzato **set di dati** definisce le **DataRelation**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -158,7 +159,7 @@ AddHandler customers.Customers.CustomerChanged, &
   
 ' Add a strongly typed DataRow.  
 Dim newCustomer As CustomerDataSet.Customer = _  
-    customers.Customers.NewCustomeromer()  
+    customers.Customers.NewCustomer()  
 newCustomer.CustomerID = "NEW01"  
 newCustomer.CompanyName = "My New Company"  
 customers.Customers.AddCustomer(newCustomer)  
@@ -202,7 +203,7 @@ customers.Customers.CustomerChanged += new
   
 // Add a strongly typed DataRow.  
 CustomerDataSet.Customer newCustomer =   
-    customers.Customers.NewCustomeromer();  
+    customers.Customers.NewCustomer();  
 newCustomer.CustomerID = "NEW01";  
 newCustomer.CompanyName = "My New Company";  
 customers.Customers.AddCustomer(newCustomer);  
@@ -226,4 +227,4 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
  <xref:System.Data.DataSet>  
  [Set di dati tipizzati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
  [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

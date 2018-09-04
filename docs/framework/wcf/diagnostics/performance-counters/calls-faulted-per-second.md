@@ -2,12 +2,12 @@
 title: Chiamate non riuscite al secondo
 ms.date: 03/30/2017
 ms.assetid: 81c88073-8e32-4520-a71a-2c56b71ee515
-ms.openlocfilehash: af84a379a36324131861aaa7e8577b5a44273917
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03ee2155504a021efadac00df6f7b9271baa5a65
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33471341"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505779"
 ---
 # <a name="calls-faulted-per-second"></a>Chiamate non riuscite al secondo
 Nome contatore: chiamate non riuscite al secondo  
@@ -15,7 +15,7 @@ Nome contatore: chiamate non riuscite al secondo
 ## <a name="description"></a>Descrizione  
  Numero di chiamate che hanno restituito errori a questa operazione al secondo.  
   
- Questo contatore è di tipo di contatore prestazioni [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), il cui valore viene calcolato usando la formula seguente.  
+ Questo contatore è di tipo di contatore delle prestazioni [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), il cui valore viene calcolato utilizzando la formula seguente.  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
   

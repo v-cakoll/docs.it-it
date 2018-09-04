@@ -2,40 +2,40 @@
 title: 'Procedura: creare una credenziale di supporto'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 6ec7412d1de2bca349c7cfbf4a37c98ca60cc78d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef4d9a406e6fc929e4ad59911d587e462c9b2b65
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495886"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499991"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Procedura: creare una credenziale di supporto
-È possibile avere uno schema di sicurezza personalizzato che richiede più di una credenziale. Ad esempio, è possibile che un servizio richieda a un client non solo un nome utente e una password, ma anche una credenziale che dimostri che l'utente del client abbia un'età superiore a 18 anni. La seconda credenziale è un *credenziale di supporto*. In questo argomento viene illustrato come implementare tali credenziali in un client Windows Communication Foundation (WCF).  
+È possibile avere uno schema di sicurezza personalizzato che richiede più di una credenziale. Ad esempio, è possibile che un servizio richieda a un client non solo un nome utente e una password, ma anche una credenziale che dimostri che l'utente del client abbia un'età superiore a 18 anni. La seconda credenziale è un *credenziale di supporto*. Questo argomento illustra come implementare tali credenziali in un client Windows Communication Foundation (WCF).  
   
 > [!NOTE]
->  La specifica per supportare le credenziali è parte della specifica SecurityPolicy-WS. Per altre informazioni, vedere [specifiche di sicurezza di servizi Web](http://go.microsoft.com/fwlink/?LinkId=88537).  
+>  La specifica per supportare le credenziali è parte della specifica SecurityPolicy-WS. Per altre informazioni, vedere [specifiche di sicurezza di servizi Web](https://go.microsoft.com/fwlink/?LinkId=88537).  
   
 ## <a name="supporting-tokens"></a>Token di supporto  
- In breve, quando si utilizza la sicurezza dei messaggi, un *credenziale primaria* viene sempre utilizzata per proteggere il messaggio (ad esempio, un certificato x. 509 o un ticket Kerberos).  
+ In breve, quando si Usa protezione dei messaggi, un *credenziale primaria* viene sempre utilizzata per proteggere il messaggio (ad esempio, un certificato X.509 o un ticket Kerberos).  
   
- Come definito dalla specifica, un'associazione di sicurezza Usa *token* per proteggere lo scambio di messaggi. Oggetto *token* è una rappresentazione di una credenziale di sicurezza.  
+ Come definito dalla specifica, viene utilizzata un'associazione di sicurezza *token* per proteggere lo scambio di messaggi. Oggetto *token* è una rappresentazione di una credenziale di sicurezza.  
   
- L'associazione di sicurezza usa un token primario identificato nei criteri dell'associazione di sicurezza per creare una firma. Questa firma è detto di *firma del messaggio*.  
+ L'associazione di sicurezza usa un token primario identificato nei criteri dell'associazione di sicurezza per creare una firma. Questa firma viene definita come il *firma messaggio*.  
   
  È possibile specificare token aggiuntivi per aumentare le attestazioni fornite dal token associato alla firma del messaggio.  
   
 ## <a name="endorsing-signing-and-encrypting"></a>Verifica dell'autenticità, firma e crittografia  
- Una credenziale di supporto produce un *token di supporto* trasmesso all'interno del messaggio. La specifica WS-SecurityPolicy definisce quattro modalità per allegare un token di supporto al messaggio, come descritto nella tabella seguente.  
+ Una credenziale di supporto produce un *token di supporto* trasmessi all'interno del messaggio. La specifica WS-SecurityPolicy definisce quattro modalità per allegare un token di supporto al messaggio, come descritto nella tabella seguente.  
   
 |Scopo|Descrizione|  
 |-------------|-----------------|  
 |Firmato|Il token di supporto viene incluso nell'intestazione di sicurezza e viene firmato con la firma del messaggio.|  
-|Verifica dell'autenticità|Un *token di verifica dell'autenticità* firma del messaggio.|  
+|Verifica dell'autenticità|Un' *token di verifica dell'autenticità* firma la firma del messaggio.|  
 |Firmato e di verifica dell'autenticità|I token di verifica dell'autenticità firmati firmano l'intero elemento `ds:Signature` prodotto dalla firma del messaggio e sono essi stessi firmati con la firma del messaggio; ovvero, entrambi i token, quello usato per la firma del messaggio e quello di verifica dell'autenticità firmato, si firmano l'un l'altro.|  
 |Firmato e di crittografia|I token di supporto crittografati firmati sono token di supporto firmati che vengono anche crittografati quando sono presenti in `wsse:SecurityHeader`.|  
   
 ## <a name="programming-supporting-credentials"></a>Programmazione di credenziali di supporto  
- Per creare un servizio che utilizza i token di supporto è necessario creare un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Per altre informazioni, vedere [procedura: creare un personalizzato Binding Using SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Per creare un servizio che usa i token di supporto è necessario creare un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Per altre informazioni, vedere [procedura: creare un Custom Binding Using SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  Quando si crea un'associazione personalizzata, il primo passaggio consiste nel creare un elemento di associazione di sicurezza che può essere di uno dei tre tipi seguenti:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "33495886"
   
 -   *Endpoint token di supporto* supportano tutte le operazioni di un endpoint. In altre parole, la credenziale rappresentata dal token di supporto può essere usata ogni volta che vengono richiamate le operazioni di un endpoint.  
   
--   *Token di supporto operazioni* supporta solo un'operazione di endpoint specifico.  
+-   *Token di supporto operazioni* supportano solo una specifica operazione dell'endpoint.  
   
  Come indicato dai nomi delle proprietà, le credenziali di supporto possono essere obbligatorie o facoltative. In altre parole, se la credenziale di supporto viene usata se presente, anche se non necessaria, l'autenticazione non avrà esito negativo se la credenziale non è presente.  
   

@@ -3,11 +3,11 @@ title: Tipi di vincoli
 ms.date: 03/30/2017
 ms.assetid: b6b246e6-1130-4698-9625-c5c42abcbfed
 ms.openlocfilehash: 202a2c7b3a3fc400552e42c8606457964af66af2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401532"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506612"
 ---
 # <a name="constraint-types"></a>Tipi di vincoli
 In questo esempio vengono illustrate due modalità diverse per applicare vincoli a un flusso di lavoro: uno dall'interno dell'attività (compilazione) e un altro dall'esterno (criteri). In questo scenario, un autore di attività (di una società di software di terze parti) desidera convalidare la relazione tra due argomenti. In questo caso, il costo deve essere minore o uguale al prezzo. Si tratta di un vincolo di compilazione di convalida generale.  

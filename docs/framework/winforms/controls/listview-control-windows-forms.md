@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 396553ce72e34a6af40f54fa45035a218b7fdb17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e30f4b21d8b8f1a4c5a168402ce5cc386d932f86
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539689"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510611"
 ---
 # <a name="listview-control-windows-forms"></a>Controllo ListView (Windows Form)
 Il controllo `ListView` di Windows Forms visualizza un elenco di elementi con icone. È possibile usare una visualizzazione elenco per creare un'interfaccia utente simile al riquadro destro di Esplora risorse.  
@@ -58,15 +58,15 @@ Il controllo `ListView` di Windows Forms visualizza un elenco di elementi con ic
  [Procedura: Aggiungere funzionalità di ricerca a un controllo ListView](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
  Illustra come individuare a livello di codice un elemento usando la ricerca di testo o le coordinate dello schermo.  
   
--   [Procedura: Abilitare la visualizzazione affiancata in un controllo ListView di Windows Form con la finestra di progettazione](http://msdn.microsoft.com/library/ms233655\(v=vs.110\))  
+-   [Procedura: Abilitare la visualizzazione affiancata in un controllo ListView di Windows Form con la finestra di progettazione](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [Procedura: Aggiungere e rimuovere elementi nel controllo ListView Windows Form con la finestra di progettazione](http://msdn.microsoft.com/library/ms233671\(v=vs.110\))  
+-   [Procedura: Aggiungere e rimuovere elementi nel controllo ListView Windows Form con la finestra di progettazione](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [Procedura: Aggiungere colonne al controllo ListView di Windows Form usando la finestra di progettazione](http://msdn.microsoft.com/library/ms233652\(v=vs.110\))  
+-   [Procedura: Aggiungere colonne al controllo ListView di Windows Form usando la finestra di progettazione](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [Procedura: Raggruppare elementi in un controllo ListView di Windows Form usando la finestra di progettazione](http://msdn.microsoft.com/library/ms233663\(v=vs.110\))  
+-   [Procedura: Raggruppare elementi in un controllo ListView di Windows Form usando la finestra di progettazione](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [Procedura dettagliata: Creazione di un'interfaccia di tipo Esplora risorse con i controlli ListView e TreeView usando la finestra di progettazione](http://msdn.microsoft.com/library/ms171645\(v=vs.110\))  
+-   [Procedura dettagliata: Creazione di un'interfaccia di tipo Esplora risorse con i controlli ListView e TreeView usando la finestra di progettazione](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.ListView>  
@@ -82,7 +82,7 @@ Il controllo `ListView` di Windows Forms visualizza un elenco di elementi con ic
  [Procedura: Creare un'interfaccia utente a più riquadri con Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Fornisce le istruzioni per creare un Windows Form con layout a più riquadri.  
   
- [Funzionalità di Windows XP e controlli di Windows Forms](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
+ [Funzionalità di Windows XP e controlli di Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
  Illustra come sfruttare le funzionalità specifiche di Windows XP che si applicano al controllo <xref:System.Windows.Forms.ListView>.  
   
 ## <a name="see-also"></a>Vedere anche  

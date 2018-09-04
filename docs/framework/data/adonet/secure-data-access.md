@@ -2,12 +2,12 @@
 title: Accesso sicuro ai dati
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 85f40000ed1c4901342c697c97069a7ba55ed7f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7083f68457aa8f87b01f523abc5742d24bafcbfd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362711"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513787"
 ---
 # <a name="secure-data-access"></a>Accesso sicuro ai dati
 Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di sicurezza disponibili nell'archivio dati o nel database sottostante. Considerare inoltre le implicazioni di sicurezza di altre funzionalità o componenti che potrebbero essere inclusi nell'applicazione.  
@@ -24,7 +24,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Vengono descritte le procedure consigliate e le tecniche in materia di sicurezza per la protezione delle informazioni di connessione, ad esempio l'uso della configurazione protetta per crittografare le stringhe di connessione.|  
-|[Consigli per strategie di accesso ai dati](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Vengono forniti suggerimenti per l'accesso ai dati e l'esecuzione di operazioni di database.|  
+|[Raccomandazioni per strategie di accesso ai dati](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Vengono forniti suggerimenti per l'accesso ai dati e l'esecuzione di operazioni di database.|  
 |[Generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md)|Viene descritto come compilare stringhe di esecuzione dall'input dell'utente in fase di esecuzione.|  
 |[Cenni preliminari sulla sicurezza in SQL Server](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Viene descritta l'architettura di sicurezza di SQL Server.|  
   
@@ -46,7 +46,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Panoramica di attacchi tramite script](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Viene descritto come salvaguardarsi da attacchi tramite script e istruzioni SQL.|  
+|[Panoramica di attacchi tramite script](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Viene descritto come salvaguardarsi da attacchi tramite script e istruzioni SQL.|  
   
 ## <a name="probing-attacks"></a>Attacchi di tipo probe  
  Gli utenti non autorizzati usano spesso informazioni provenienti da un'eccezione, quale un nome di server, database o tabella, per eseguire un tentativo di attacco al sistema. Dal momento che le eccezioni possono presentare informazioni specifiche sull'applicazione o sull'origine dati, è possibile migliorarne la protezione esponendo al client solo le informazioni necessarie.  
@@ -65,11 +65,11 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Considerazioni sulla sicurezza e al materiale sussidiario per Access 2007](http://go.microsoft.com/fwlink/?LinkId=98354)|Vengono descritte le tecniche di sicurezza disponibili per Access 2007, ad esempio crittografia dei file, amministrazione delle password, conversione dei database nei nuovi formati ACCDB e ACCDE e uso di altre opzioni di sicurezza.|  
-|[Proteggere un database di Access con sicurezza a livello di utente (MDB)](http://go.microsoft.com/fwlink/?LinkId=47697)|Per Access 2003, vengono fornite le istruzioni per implementare la sicurezza dei dati a livello di utente.|  
-|[Informazioni sul ruolo del file di informazioni sul gruppo di lavoro nella sicurezza dall'accesso di](http://support.microsoft.com/kb/305542)|Vengono illustrati il ruolo e la relazione del file di informazioni sul gruppo di lavoro nella sicurezza di Access 2003.|  
-|[Spesso frequenti domande sulla sicurezza per le versioni di Microsoft Access 2.0 a 2000](http://go.microsoft.com/fwlink/?LinkId=47698)|Versione scaricabile delle domande frequenti sulla sicurezza di Microsoft Access.|  
-|[Risolvere i problemi di sicurezza e protezione](http://go.microsoft.com/fwlink/?LinkId=47703)|Vengono fornite soluzioni a problemi comuni relativi alla sicurezza di Excel 2003.|  
+|[Considerazioni sulla sicurezza e indicazioni per Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Vengono descritte le tecniche di sicurezza disponibili per Access 2007, ad esempio crittografia dei file, amministrazione delle password, conversione dei database nei nuovi formati ACCDB e ACCDE e uso di altre opzioni di sicurezza.|  
+|[Proteggere un database di Access con sicurezza a livello di utente (MDB)](https://go.microsoft.com/fwlink/?LinkId=47697)|Per Access 2003, vengono fornite le istruzioni per implementare la sicurezza dei dati a livello di utente.|  
+|[Informazioni sul ruolo del file di informazioni sul gruppo di lavoro nella sicurezza dall'accesso di](https://support.microsoft.com/kb/305542)|Vengono illustrati il ruolo e la relazione del file di informazioni sul gruppo di lavoro nella sicurezza di Access 2003.|  
+|[Domande frequenti su Microsoft Access sicurezza per le versioni di Microsoft Access 2.0 a 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Versione scaricabile delle domande frequenti sulla sicurezza di Microsoft Access.|  
+|[Risolvere i problemi di sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkId=47703)|Vengono fornite soluzioni a problemi comuni relativi alla sicurezza di Excel 2003.|  
   
 ## <a name="enterprise-services"></a>Servizi aziendali  
  In COM+ è incluso un modello di sicurezza che si basa sugli account di Windows NT e sulla rappresentazione di processi e thread. Lo spazio dei nomi <xref:System.EnterpriseServices> fornisce dei wrapper che consentono alle applicazioni .NET di integrare codice non gestito con i servizi di sicurezza COM+ tramite la classe <xref:System.EnterpriseServices.ServicedComponent>.  
@@ -78,7 +78,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Sicurezza basata sui ruoli di applicazioni COM+ e .NET Framework](http://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|Viene illustrato come integrare codice gestito con i servizi di sicurezza COM+.|  
+|[Sicurezza basata sui ruoli COM+ e .NET Framework](https://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|Viene illustrato come integrare codice gestito con i servizi di sicurezza COM+.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>Interoperabilità con codice non gestito  
  .NET Framework rende disponibile l'interazione con codice non gestito, inclusi componenti COM, servizi COM+, librerie dei tipi esterni e numerosi servizi del sistema operativo. L'uso di codice non gestito implica l'allontanamento del perimetro di sicurezza disponibile per il codice gestito. Sia il codice sia il codice da cui viene chiamato devono disporre dell'autorizzazione <xref:System.Security.Permissions.SecurityPermission> per codice non gestito con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> specificato. Il codice non gestito può introdurre vulnerabilità di sicurezza impreviste nell'applicazione. Pertanto, è necessario evitare di interoperare con codice non gestito a meno che non sia assolutamente necessario.  
@@ -88,12 +88,12 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md)|Contiene argomenti in cui viene descritto come esporre componenti COM a .NET Framework e componenti .NET Framework a COM.|  
-|[Interoperabilità COM avanzata](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Contiene componenti avanzati relativi, ad esempio, ad assembly di interoperabilità primari, threading e marshalling personalizzato.|  
+|[Interoperabilità COM avanzata](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Contiene componenti avanzati relativi, ad esempio, ad assembly di interoperabilità primari, threading e marshalling personalizzato.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Sicurezza di SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Consigli per strategie di accesso ai dati](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [Raccomandazioni per strategie di accesso ai dati](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [Generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

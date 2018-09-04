@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
 ms.openlocfilehash: 24fbf17f02072b2d9922ca0998805b916afc41b6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463709"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510160"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Sviluppo di un controllo Windows Form composto
 È possibile sviluppare un controllo Windows Form composito combinando altri controlli Windows Form. I controlli compositi che derivano da <xref:System.Web.UI.UserControl> sono denominati controlli utente. La classe base, <xref:System.Windows.Forms.UserControl>, fornisce il routing della tastiera per i controlli figlio, garantendo così che i controlli figlio possano ricevere lo stato attivo. Per un esempio di un controllo utente, vedere la <xref:System.Windows.Forms.UserControl> esempio nella [procedura: applicare attributi nei controlli di Windows Form](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  

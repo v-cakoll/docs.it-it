@@ -2,18 +2,18 @@
 title: Duplex durevole
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 107c617fa4a8ee0279dcaa07e495587c617b866e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809427"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513353"
 ---
 # <a name="durable-duplex"></a>Duplex durevole
 In questo esempio viene illustrato come impostare e configurare lo scambio durevole di messaggi duplex usando le attività di messaggistica in Windows Workflow Foundation (WF). Un scambio durevole di messaggi duplex è un scambio di messaggi bidirezionale che si verifica in un lungo periodo di tempo. È possibile che la durata dello scambio di messaggi sia superiore alla durata del canale di comunicazione e alla durata in memoria delle istanze del servizio.  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
- In questo esempio, due servizi di Windows Communication Foundation (WCF) implementati utilizzando Windows Workflow Foundation sono configurati per avere un scambio durevole di messaggi duplex. Lo scambio durevole di messaggi duplex è composta da due messaggi unidirezionali inviati tramite MSMQ e correlati usando [scambio del contesto .NET](http://go.microsoft.com/fwlink/?LinkID=166059). I messaggi vengono inviati tramite le attività di messaggistica <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.Receive>. Lo scambio del contesto di .NET viene usato per specificare l'indirizzo di callback nei messaggi inviati. Entrambi i servizi sono ospitati tramite i servizi Attivazione processo Windows (WAS) e sono configurati per abilitare la persistenza delle istanze dei servizi.  
+ In questo esempio, due servizi Windows Communication Foundation (WCF) implementati utilizzando Windows Workflow Foundation sono configurati per avere un scambio durevole di messaggi duplex. Lo scambio durevole di messaggi duplex è composto da due messaggi unidirezionali inviati tramite MSMQ e correlati usando [scambio del contesto .NET](https://go.microsoft.com/fwlink/?LinkID=166059). I messaggi vengono inviati tramite le attività di messaggistica <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.Receive>. Lo scambio del contesto di .NET viene usato per specificare l'indirizzo di callback nei messaggi inviati. Entrambi i servizi sono ospitati tramite i servizi Attivazione processo Windows (WAS) e sono configurati per abilitare la persistenza delle istanze dei servizi.  
   
  Il primo servizio (Service1.xamlx) invia una richiesta al servizio di invio (Service2.xamlx) per l'esecuzione di un'operazione. Al termine, per indicare che l'operazione è stata completata, Service2.xamlx restituisce una notifica a Service1.xamlx. Un'applicazione console del flusso di lavoro configura le code su cui i servizi sono in ascolto e invia il messaggio di avvio per l'attivazione di Service1.xamlx. Una volta che Service1.xamlx ha ricevuto da Service2.xamlx la notifica che l'operazione richiesta è stata completata, il risultato viene salvato da Service1.xamlx in un file XML. In attesa del messaggio di callback, Service1.xamlx salva in modo permanente lo stato dell'istanza usando l'oggetto <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> predefinito. Service2.xamlx salva in modo permanente lo stato dell'istanza come parte del completamento dell'operazione richiesta da Service1.xamlx.  
   
@@ -42,7 +42,7 @@ In questo esempio viene illustrato come impostare e configurare lo scambio durev
 >  L'associazione usata da questo esempio non è sicura. In caso di distribuzione dell'applicazione è necessario configurare l'associazione in base ai requisiti di sicurezza dell'applicazione stessa.  
   
 > [!NOTE]
->  Le code usate in questo esempio non sono transazionali. Per un esempio che illustra come configurare lo scambio di messaggi WCF usando le code di transazione, vedere la [attivazione MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) esempio.  
+>  Le code usate in questo esempio non sono transazionali. Per un esempio che illustra come configurare lo scambio di messaggi WCF usando code di transazioni, vedere la [attivazione MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) esempio.  
   
  Per l'invio del messaggio da Service1.xamlx a Service2.xamlx viene usato un endpoint client configurato con l'indirizzo di Service2.xamlx e con l'associazione personalizzata definita precedentemente. Il callback da Service2.xamlx a Service1.xamlx viene inviato usando un endpoint client senza indirizzo configurato in modo esplicito, perché l'indirizzo viene rilevato dal contesto di callback inviato da Service1.xamlx. Nel codice seguente vengono definiti gli endpoint client.  
   
@@ -120,7 +120,7 @@ In questo esempio viene illustrato come impostare e configurare lo scambio durev
         aspnet_regiis -i  
         ```  
   
-    2.  Eseguire [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con autorizzazioni di amministratore facendo clic [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] e selezionando **Esegui come amministratore**.  
+    2.  Eseguire [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con autorizzazioni di amministratore facendo [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] e selezionando **Esegui come amministratore**.  
   
     3.  Tramite [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file DurableDuplex.sln.  
   
@@ -130,17 +130,17 @@ In questo esempio viene illustrato come impostare e configurare lo scambio durev
   
     2.  Aprire il **Gestione Computer** console eseguendo `Compmgmt.msc` da un prompt dei comandi.  
   
-    3.  Espandere **servizi e applicazioni**, **Accodamento**. **Code private**.  
+    3.  Espandere **applicazioni e servizi**, **Accodamento**. **Code private**.  
   
-    4.  Le code durableduplex/service1.xamlx e durableduplex/service2.xamlx di mouse e scegliere **proprietà**.  
+    4.  Le code durableduplex/service1.xamlx e durableduplex/service2.xamlx e scegliere **proprietà**.  
   
-    5.  Selezionare il **sicurezza** scheda e consentono **tutti ricevono messaggi**, **Visualizza il messaggio** e **Invia messaggio** le autorizzazioni per entrambe le code.  
+    5.  Selezionare il **sicurezza** scheda e consentire **tutti gli utenti ricevono messaggi**, **Visualizza il messaggio** e **invio messaggio** le autorizzazioni per entrambe le code.  
   
     6.  Aprire Gestione Internet Information Services (IIS).  
   
-    7.  Passare a **Server**, **siti**, **sito Web predefinito**, **privata**, **Duplex durevole** e selezionare **Opzioni avanzate**.  
+    7.  Passare a **Server**, **siti**, **Default Web site**, **privata**, **Duplex durevole** e selezionare **Le opzioni avanzate**.  
   
-    8.  Modifica il **protocolli abilitati** a **MSMQ**.  
+    8.  Modifica il **protocolli abilitati** al **MSMQ**.  
   
 4.  Eseguire l'esempio.  
   
@@ -162,13 +162,13 @@ In questo esempio viene illustrato come impostare e configurare lo scambio durev
   
     1.  Aprire Gestione Internet Information Services (IIS) eseguendo `Inetmgr.exe` da un prompt dei comandi.  
   
-    2.  Passare al sito Web predefinito e rimuovere il **privata** directory virtuale.  
+    2.  Passare al sito Web predefinito e rimuovere i **privato** directory virtuale.  
   
 3.  Rimuovere le code impostate per questo esempio.  
   
     1.  Aprire la console Gestione Computer eseguendo `Compmgmt.msc` da un prompt dei comandi.  
   
-    2.  Espandere **servizi e applicazioni**, **Accodamento**, **code Private**.  
+    2.  Espandere **applicazioni e servizi**, **Accodamento**, **code Private**.  
   
     3.  Eliminare le code durableduplex/service1.xamlx e durableduplex/service2.xamlx.  
   
@@ -179,6 +179,6 @@ In questo esempio viene illustrato come impostare e configurare lo scambio durev
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

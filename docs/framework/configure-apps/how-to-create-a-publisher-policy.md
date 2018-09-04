@@ -11,11 +11,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 3fdc3786be3307e8c882a33b5139ee34344733b8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404410"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504818"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Procedura: creare criteri editore
 I fornitori di assembly possono indicare che le applicazioni devono utilizzare una versione più recente di un assembly includendo un file dei criteri editore con l'assembly aggiornato. File dei criteri editore specifica il reindirizzamento di assembly e le impostazioni della codebase e Usa lo stesso formato di un file di configurazione dell'applicazione. File dei criteri editore viene compilato in un assembly e inserito nella global assembly cache.  
@@ -92,7 +92,7 @@ I fornitori di assembly possono indicare che le applicazioni devono utilizzare u
   
 1.  Digitare il comando seguente al prompt dei comandi:  
   
-     **gacutil /i***publisherPolicyAssemblyFile*   
+     **gacutil /i***publisherPolicyAssemblyFile*  
   
      Il seguente comando aggiunge `policy.1.0.myAssembly.dll` alla global assembly cache.  
   

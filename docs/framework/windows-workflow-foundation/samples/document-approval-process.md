@@ -2,29 +2,29 @@
 title: Processo di approvazione dei documenti
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809492"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508930"
 ---
 # <a name="document-approval-process"></a>Processo di approvazione dei documenti
-Questo esempio viene illustrato l'utilizzo di molte funzionalità di Windows Workflow Foundation (WF) e Windows Communication Foundation (WCF) insieme. Insieme implementano uno scenario del processo di approvazione dei documenti. Un'applicazione client può inviare documenti da sottoporre ad approvazione e approvare documenti. Un'applicazione di gestione delle approvazioni è utile per semplificare le comunicazioni tra i client e per applicare le regole del processo di approvazione che consiste in un flusso di lavoro che può eseguire molti tipi di approvazione. Le attività servono per ottenere un processo di approvazione singola, di approvazione a quorum (una percentuale del gruppo di responsabili approvazione) e di approvazione complessa costituito da un'approvazione a quorum e una singola in sequenza.  
+In questo esempio illustra l'uso di molte funzionalità di Windows Workflow Foundation (WF) e Windows Communication Foundation (WCF) tra loro. Insieme implementano uno scenario del processo di approvazione dei documenti. Un'applicazione client può inviare documenti da sottoporre ad approvazione e approvare documenti. Un'applicazione di gestione delle approvazioni è utile per semplificare le comunicazioni tra i client e per applicare le regole del processo di approvazione che consiste in un flusso di lavoro che può eseguire molti tipi di approvazione. Le attività servono per ottenere un processo di approvazione singola, di approvazione a quorum (una percentuale del gruppo di responsabili approvazione) e di approvazione complessa costituito da un'approvazione a quorum e una singola in sequenza.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
  Nell'elemento grafico seguente viene illustrato il flusso di lavoro del processo di approvazione dei documenti.  
   
- ![Un documento processo di approvazione](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ ![Un flusso di lavoro documenti processo approvazione](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
   
  Dalla prospettiva del client, il processo di approvazione funziona nel modo seguente:  
   
@@ -54,13 +54,13 @@ Questo esempio viene illustrato l'utilizzo di molte funzionalità di Windows Wor
   
 13. L'utente può approvare o rifiutare il documento.  
   
-14. Un client WCF viene utilizzato per inviare una risposta di approvazione all'applicazione di gestione delle approvazioni.  
+14. Un client WCF viene usato per inviare una risposta di approvazione all'applicazione di gestione delle approvazioni.  
   
  Dal punto di vista dell'applicazione di gestione delle approvazioni, il processo di approvazione funziona nel modo seguente:  
   
 1.  Un client richiede la partecipazione al sistema del processo di approvazione.  
   
-2.  Un servizio WCF del gestore di approvazione riceve una richiesta da parte del sistema del processo di approvazione.  
+2.  Un servizio WCF in responsabile dell'approvazione riceve una richiesta a far parte del sistema del processo di approvazione.  
   
 3.  Viene generato un ID univoco per il client. Le informazioni utente vengono archiviate in un database.  
   
@@ -88,7 +88,7 @@ Questo esempio viene illustrato l'utilizzo di molte funzionalità di Windows Wor
   
 2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
-3.  Per eseguire la soluzione, avviare l'applicazione di approvazione Manager facendo clic con il progetto ApprovalManager nel **Esplora** e facendo clic su **Debug**->**avviare**  nuova istanza dal menu di scelta rapida.  
+3.  Per eseguire la soluzione, avviare l'applicazione di approvazione Manager facendo clic con il progetto ApprovalManager nel **Esplora soluzioni** e facendo clic su **Debug**->**Start**  nuova istanza di dal menu di scelta rapida.  
   
      Attendere l'output del responsabile per sapere che è pronta.  
   
@@ -100,13 +100,13 @@ Questo esempio viene illustrato l'utilizzo di molte funzionalità di Windows Wor
   
 3.  Passare alla cartella ApprovalClient\Bin\Debug ed eseguire due istanze di ApprovalClient.exe.  
   
-4.  Fare clic su **individuare**, attendere finché il **sottoscrizione** pulsante è abilitato.  
+4.  Fare clic su **individua**, attendere finché il **sottoscrivere** pulsante è abilitato.  
   
-5.  Digitare qualsiasi nome utente e fare clic su **sottoscrizione**. Per un client usare `UserType1` e per l'altro il tipo `UserType2`.  
+5.  Digitare un nome utente e fare clic su **sottoscrivere**. Per un client usare `UserType1` e per l'altro il tipo `UserType2`.  
   
-6.  Nel client `UserType1` selezionare il tipo di approvazione singola dal menu a discesa e digitare un nome e il contenuto del documento. Fare clic su **richiedere l'approvazione**.  
+6.  Nel client `UserType1` selezionare il tipo di approvazione singola dal menu a discesa e digitare un nome e il contenuto del documento. Fare clic su **Richiedi l'approvazione**.  
   
-7.  Nel client `UserType2` viene visualizzato un documento in attesa di approvazione. Selezionarlo e premere **approvare** o **rifiutare**. I risultati devono essere visualizzati nel client `UserType1`.  
+7.  Nel client `UserType2` viene visualizzato un documento in attesa di approvazione. Selezionarlo e premere **approvare** oppure **rifiutare**. I risultati devono essere visualizzati nel client `UserType1`.  
   
 ##### <a name="to-run-the-quorum-approval-scenario"></a>Per eseguire lo scenario di approvazione a quorum  
   
@@ -116,13 +116,13 @@ Questo esempio viene illustrato l'utilizzo di molte funzionalità di Windows Wor
   
 3.  Passare alla cartella ApprovalClient\Bin\Debug ed eseguire tre istanze di ApprovalClient.exe.  
   
-4.  Fare clic su **individuare**, attendere finché il **sottoscrizione** pulsante è abilitato.  
+4.  Fare clic su **individua**, attendere finché il **sottoscrivere** pulsante è abilitato.  
   
-5.  Digitare qualsiasi nome utente e fare clic su **sottoscrizione**. Per un client usare `UserType1` e per gli altri due usare il tipo `UserType2`.  
+5.  Digitare un nome utente e fare clic su **sottoscrivere**. Per un client usare `UserType1` e per gli altri due usare il tipo `UserType2`.  
   
-6.  Nel client `UserType1` selezionare il tipo di approvazione a quorum dal menu a discesa e digitare un nome e il contenuto del documento. Fare clic su **richiedere l'approvazione**. In questo modo viene richiesto che i due client `UserType2` approvino o rifiutino il documento. Mentre entrambi i client `UserType2` devono rispondere, solo un client deve approvare il documento.  
+6.  Nel client `UserType1` selezionare il tipo di approvazione a quorum dal menu a discesa e digitare un nome e il contenuto del documento. Fare clic su **Richiedi l'approvazione**. In questo modo viene richiesto che i due client `UserType2` approvino o rifiutino il documento. Mentre entrambi i client `UserType2` devono rispondere, solo un client deve approvare il documento.  
   
-7.  Nei client `UserType2` viene visualizzato un documento in attesa di approvazione. Selezionarlo e premere **approvare** o **rifiutare**. I risultati devono essere visualizzati nel client `UserType1`.  
+7.  Nei client `UserType2` viene visualizzato un documento in attesa di approvazione. Selezionarlo e premere **approvare** oppure **rifiutare**. I risultati devono essere visualizzati nel client `UserType1`.  
   
 ##### <a name="to-run-the-complex-approval-scenario"></a>Per eseguire lo scenario di approvazione complesso  
   
@@ -132,11 +132,11 @@ Questo esempio viene illustrato l'utilizzo di molte funzionalità di Windows Wor
   
 3.  Passare alla cartella ApprovalClient\Bin\Debug ed eseguire quattro istanze di ApprovalClient.exe.  
   
-4.  Fare clic su **individuare**, attendere finché il **sottoscrizione** pulsante è abilitato.  
+4.  Fare clic su **individua**, attendere finché il **sottoscrivere** pulsante è abilitato.  
   
-5.  Digitare qualsiasi nome utente e fare clic su **sottoscrizione**. Per un client usare `UserType1`, per il secondo usare il tipo `UserType2` e per l'ultimo usare `UserType3`.  
+5.  Digitare un nome utente e fare clic su **sottoscrivere**. Per un client usare `UserType1`, per il secondo usare il tipo `UserType2` e per l'ultimo usare `UserType3`.  
   
-6.  Nel client `UserType1` selezionare il tipo di approvazione singola dal menu a discesa e digitare un nome e il contenuto del documento. Fare clic su **richiedere l'approvazione**.  
+6.  Nel client `UserType1` selezionare il tipo di approvazione singola dal menu a discesa e digitare un nome e il contenuto del documento. Fare clic su **Richiedi l'approvazione**.  
   
 7.  Nei client `UserType2` viene visualizzato un documento in attesa di approvazione. Selezionarlo e premere **approvare**, il documento viene passato per il `UserType3` client.  
   

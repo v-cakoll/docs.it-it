@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
 ms.openlocfilehash: b1551583079c66d1bf5f6963a42d5d24e518fff3
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255297"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499425"
 ---
 # <a name="join-clause-visual-basic"></a>Clausola Join (Visual Basic)
 Combina due raccolte in un'unica raccolta. L'operazione di join è basata su chiavi corrispondenti e viene utilizzato il `Equals` operatore.  

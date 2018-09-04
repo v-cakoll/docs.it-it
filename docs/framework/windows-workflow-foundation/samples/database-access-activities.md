@@ -2,22 +2,22 @@
 title: Attività di accesso al database
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: e9c7627738d3c5313a4f3e6e4451daf78b87839a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e315742226ab086a865fa53d7aab9e7f15add08
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520409"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502828"
 ---
 # <a name="database-access-activities"></a>Attività di accesso al database
-Le attività di accesso al database consentono di accedere a un database all'interno di un flusso di lavoro. Queste attività consentono l'accesso a database per recuperare o modificare le informazioni e usare [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) per accedere al database.  
+Le attività di accesso al database consentono di accedere a un database all'interno di un flusso di lavoro. Queste attività consentono l'accesso ai database per recuperare o modificare informazioni e utilizzare [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) per accedere al database.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al (pagina di download) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, passare a (pagina di download) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`  
   
@@ -88,7 +88,7 @@ Public class DbUpdate: AsyncCodeActivity
   
  La query da eseguire viene configurata nella relativa proprietà `Sql` e i parametri vengono passati tramite la raccolta `Parameters`.  
   
- Dopo `DbQueryScalar` viene eseguita, viene restituito il valore scalare nel `Result``out` argomento (di tipo `TResult`, che è definito nella classe base <xref:System.Activities.AsyncCodeActivity%601>).  
+ Dopo aver `DbQueryScalar` viene eseguita, viene restituito il valore scalare nel `Result``out` argomento (di tipo `TResult`, vale a dire definito nella classe di base <xref:System.Activities.AsyncCodeActivity%601>).  
   
 ```  
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>  
@@ -139,7 +139,7 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
   
  La query da eseguire viene configurata nella relativa proprietà `Sql` e i parametri vengono passati tramite la raccolta `Parameters`.  
   
- I risultati della query SQL vengono recuperati usando un oggetto `DbDataReader`. L'attività scorre `DbDataReader` ed esegue il mapping delle righe in `DbDataReader` a un'istanza di `TResult`. L'utente di `DbQuery` deve fornire il codice di mapping e ciò può essere eseguite in due modi: utilizzando un <xref:System.Func%601> < `DbDataReader`, `TResult`> o un <xref:System.Activities.ActivityFunc%601> < `DbDataReader`, `TResult`>. Nel primo caso, il mapping viene eseguito in un singolo impulso. È pertanto più veloce, ma non può essere serializzato in XAML. Nel secondo caso, il mapping viene eseguito in più impulsi. Può quindi risultare più lento, ma può essere serializzato in XAML e modificato in modo dichiarativo (qualsiasi attività esistente può partecipare al mapping).  
+ I risultati della query SQL vengono recuperati usando un oggetto `DbDataReader`. L'attività scorre `DbDataReader` ed esegue il mapping delle righe in `DbDataReader` a un'istanza di `TResult`. L'utente del `DbQuery` deve fornire il codice di mapping e ciò può essere eseguite in due modi: utilizzando un <xref:System.Func%601> < `DbDataReader`, `TResult`> o un <xref:System.Activities.ActivityFunc%601> < `DbDataReader`, `TResult`>. Nel primo caso, il mapping viene eseguito in un singolo impulso. È pertanto più veloce, ma non può essere serializzato in XAML. Nel secondo caso, il mapping viene eseguito in più impulsi. Può quindi risultare più lento, ma può essere serializzato in XAML e modificato in modo dichiarativo (qualsiasi attività esistente può partecipare al mapping).  
   
 ```  
 public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult : class  
@@ -189,8 +189,8 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 |CommandType|Tipo di <xref:System.Data.Common.DbCommand> da eseguire.|  
 |Sql|Comando SQL da eseguire.|  
 |Parametri|Raccolta di parametri della query SQL.|  
-|Mapper|Funzione di mapping (<xref:System.Func%601><`DbDataReader`, `TResult`>) che accetta un record di `DataReader` ottenuto come risultato dell'esecuzione della query e restituisce un'istanza di un oggetto di tipo `TResult` da aggiungere al `Result` insieme.<br /><br /> In questo caso, il mapping viene eseguito in un singolo impulso, ma non può essere modificato in modo dichiarativo tramite la finestra di progettazione.|  
-|MapperFunc|Funzione di mapping (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>) che accetta un record di `DataReader` ottenuto come risultato dell'esecuzione della query e restituisce un'istanza di un oggetto di tipo `TResult` da aggiungere al `Result` insieme.<br /><br /> In questo caso, il mapping viene eseguito in più impulsi. Questa funzione può essere serializzata in XAML e modificata in modo dichiarativo (qualsiasi attività esistente può partecipare al mapping).|  
+|Mapper|Funzione di mapping (<xref:System.Func%601><`DbDataReader`, `TResult`>) che accetta un record `DataReader` ottenuto come risultato dell'esecuzione della query e restituisce un'istanza di un oggetto di tipo `TResult` da aggiungere al `Result` collection.<br /><br /> In questo caso, il mapping viene eseguito in un singolo impulso, ma non può essere modificato in modo dichiarativo tramite la finestra di progettazione.|  
+|MapperFunc|Funzione di mapping (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>) che accetta un record `DataReader` ottenuto come risultato dell'esecuzione della query e restituisce un'istanza di un oggetto di tipo `TResult` da aggiungere al `Result` collection.<br /><br /> In questo caso, il mapping viene eseguito in più impulsi. Questa funzione può essere serializzata in XAML e modificata in modo dichiarativo (qualsiasi attività esistente può partecipare al mapping).|  
 |Risultato|Elenco di oggetti ottenuto come risultato dell'esecuzione della query e dell'esecuzione della funzione di mapping per ogni record in `DataReader`.|  
   
 ## <a name="dbquerydataset"></a>DbQueryDataSet  
@@ -200,7 +200,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
   
  La query da eseguire viene configurata nella relativa proprietà `Sql` e i parametri vengono passati tramite la raccolta `Parameters`.  
   
- Dopo il `DbQueryDataSet` viene eseguito il `DataSet` viene restituito nel `Result``out` argomento (di tipo `TResult`, che viene definito nella classe base <xref:System.Activities.AsyncCodeActivity%601>).  
+ Dopo il `DbQueryDataSet` viene eseguita la `DataSet` viene restituito nel `Result``out` argomento (di tipo `TResult`, vale a dire definito nella classe base <xref:System.Activities.AsyncCodeActivity%601>).  
   
 ```  
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>  
@@ -303,7 +303,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
   
 2.  Passare alla cartella di esempio DbActivities.  
   
-3.  Digitare "setup.cmd" e premere INVIO.  
+3.  Digitare "Setup. cmd" e premere INVIO.  
   
     > [!NOTE]
     >  Setup.cmd tenta di installare l'esempio nell'istanza di SqlExpress del computer locale. Se si desidera installarlo in un'altra istanza del server SQL, modificare Setup.cmd specificando il nome della nuova istanza.  
@@ -325,6 +325,6 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

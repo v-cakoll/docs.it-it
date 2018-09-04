@@ -2,18 +2,18 @@
 title: Raccolte di schemi OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f1cb5e1fe967088b44fa4045dfe50c1c57d963eb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1ab6426875b73b400a59b7e4cf155615d7472d05
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766933"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514489"
 ---
 # <a name="ole-db-schema-collections"></a>Raccolte di schemi OLE DB
 Contenuto della sezione viene descritto il supporto delle raccolte di schemi per i provider OLE DB per Microsoft SQL Server, Oracle e Microsoft Jet.  
   
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Provider OLE DB per Microsoft SQL Server  
- Il Driver OLE DB Microsoft SQL Server supporta le raccolte di schemi specifici seguenti oltre alle raccolte di schemi comuni:  
+ Il Driver OLE DB Microsoft SQL Server supporta le seguenti raccolte di schemi specifici oltre alle raccolte di schemi comuni:  
   
 -   Tabelle  
   
@@ -412,4 +412,4 @@ Contenuto della sezione viene descritto il supporto delle raccolte di schemi per
 |INTEGRATED|Booleano|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

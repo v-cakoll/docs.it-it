@@ -3,11 +3,11 @@ title: Messaggi non elaborabili in coda al secondo
 ms.date: 03/30/2017
 ms.assetid: d193fdd1-02f1-44a0-906e-f632a8f574c3
 ms.openlocfilehash: d4c921b105dfd1c1a364d2c86f54ab920078dd4a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420689"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509339"
 ---
 # <a name="queued-poison-messages-per-second"></a>Messaggi non elaborabili in coda al secondo
 Nome contatore: messaggi non elaborabili in coda al secondo.  

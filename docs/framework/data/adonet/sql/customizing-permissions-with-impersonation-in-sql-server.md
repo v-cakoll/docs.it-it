@@ -2,12 +2,12 @@
 title: Personalizzazione delle autorizzazioni con rappresentazione in SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: ac2c6805a9ab49d95f68e56306d7d9fb8aab2a2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfee153a1293ec89285dbeabd1ed64a89764a717
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362643"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513972"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personalizzazione delle autorizzazioni con rappresentazione in SQL Server
 In molte applicazioni vengono usate le stored procedure per accedere ai dati, basandosi sul concatenamento delle proprietà per restringere l'accesso alle tabelle di base. È possibile concedere autorizzazioni EXECUTE sulle stored procedure, revocando o negando le autorizzazioni sulle tabelle di base. SQL Server non verifica le autorizzazioni del chiamante se il proprietario della stored procedure coincide con quello delle tabelle. Il concatenamento delle proprietà non funziona se i proprietari degli oggetti sono diversi oppure se si usano istruzioni SQL dinamiche.  
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>Uso di EXECUTE AS con REVERT  
  È possibile usare l'istruzione REVERT Transact-SQL per ripristinare il contesto di esecuzione originale.  
   
- La clausola facoltativa WITH NO REVERT COOKIE = @variableName, consente passare il contesto di esecuzione al chiamante se il @variableName variabile contiene il valore corretto. Viene quindi ripristinato il contesto di esecuzione del chiamante negli ambienti in cui viene usato il pool di connessioni. Poiché il valore di @variableName è noto solo al chiamante di EXECUTE AS istruzione, il chiamante può garantire che il contesto di esecuzione non può essere modificato dall'utente finale che richiama l'applicazione. Alla chiusura della connessione, il contesto viene restituito al pool. Per ulteriori informazioni sulla connessione pool di connessioni in ADO.NET, vedere [SQL Server Connection Pooling (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ La clausola facoltativa WITH NO REVERT COOKIE = @variableName, consente passare il contesto di esecuzione al chiamante se il @variableName variabile contiene il valore corretto. Viene quindi ripristinato il contesto di esecuzione del chiamante negli ambienti in cui viene usato il pool di connessioni. Poiché il valore di @variableName è noto solo al chiamante di EXECUTE AS istruzione, il chiamante può garantire che il contesto di esecuzione non venga modificato dall'utente finale che richiama l'applicazione. Alla chiusura della connessione, il contesto viene restituito al pool. Per altre informazioni sulla connessione pool di connessioni in ADO.NET, vedere [SQL Server Connection pool (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ### <a name="specifying-the-execution-context"></a>Specifica del contesto di esecuzione  
  Oltre a specificare un utente, è inoltre possibile usare EXECUTE AS con le parole chiave seguenti.  
@@ -65,14 +65,6 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 -   SELF. Con questa parola chiave la stored procedure viene eseguita nel contesto di sicurezza del creatore. Questa opzione equivale all'esecuzione come utente specificato, dove l'utente specificato è la persona che crea o modifica la stored procedure.  
   
-## <a name="external-resources"></a>Risorse esterne  
- Per altre informazioni, vedere le risorse seguenti.  
-  
-|Risorsa|Descrizione|  
-|--------------|-----------------|  
-|[Cambio di contesto](http://msdn.microsoft.com/library/ms188268.aspx) nella documentazione Online di SQL Server|Sono inclusi collegamenti ad argomenti in cui viene descritto l'uso della clausola EXECUTE AS.|  
-|[Utilizzo di EXECUTE AS per creare set di autorizzazioni personalizzati](http://msdn.microsoft.com/library/ms190384.aspx) e [utilizzo di EXECUTE AS nei moduli](http://msdn.microsoft.com/library/ms178106.aspx) nella documentazione Online di SQL Server|Argomenti in cui viene descritto l'uso della clausola EXECUTE AS.|  
-  
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
@@ -81,4 +73,4 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
  [Scrittura dinamica sicura in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [Firma di stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [Modifica di dati con stored procedure](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

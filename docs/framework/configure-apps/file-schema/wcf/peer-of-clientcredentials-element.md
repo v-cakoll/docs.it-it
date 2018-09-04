@@ -3,11 +3,11 @@ title: Elemento &lt;peer&gt; di &lt;clientCredentials&gt;
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
 ms.openlocfilehash: 9d63aaaa6404b791559d1288730098075f1fd8eb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385476"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504483"
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>Elemento &lt;peer&gt; di &lt;clientCredentials&gt;
 Specifica le credenziali usate per l'autenticazione di client peer-to-peer.  

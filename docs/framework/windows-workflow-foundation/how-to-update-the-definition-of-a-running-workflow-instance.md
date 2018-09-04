@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-ms.openlocfilehash: 6492b08b45cf9e7767a14233c6aeb0dd648a3c82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3d870e9e5ad8129a5cf24c63c2a7884e91f9630
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43498987"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Procedura: aggiornare la definizione di un'istanza del flusso di lavoro in esecuzione
-L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso di lavoro un meccanismo per aggiornare la definizione del flusso di lavoro di un'istanza persistente del flusso di lavoro. La modifica richiesta può servire a implementare la correzione di un bug, nuovi requisiti o modifiche impreviste. Questo passaggio dell'esercitazione viene illustrato come utilizzare aggiornamento dinamico per modificare le istanze persistenti del `v1` numero un'ipotesi del flusso di lavoro in modo che corrisponda a nuove funzionalità introdotte nella [come: più versioni di Host di un flusso di lavoro Side-by-Side ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso di lavoro un meccanismo per aggiornare la definizione del flusso di lavoro di un'istanza persistente del flusso di lavoro. La modifica richiesta può servire a implementare la correzione di un bug, nuovi requisiti o modifiche impreviste. Questo passaggio dell'esercitazione viene illustrato come utilizzare aggiornamento dinamico per modificare le istanze persistenti del `v1` numero un'ipotesi del flusso di lavoro in modo che corrisponda alla nuova funzionalità introdotta [come: Host più versioni di un flusso di lavoro Side-by-Side ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
 > [!NOTE]
->  Per scaricare una versione completa o visualizzare una procedura dettagliata video dell'esercitazione, vedere [Windows Workflow Foundation (WF45) - esercitazione introduttiva](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Per scaricare una versione completa o visualizzare una procedura dettagliata video dell'esercitazione, vedere [Windows Workflow Foundation (WF45) - esercitazione introduttiva](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ## <a name="in-this-topic"></a>Contenuto dell'argomento  
   
@@ -29,36 +30,36 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
   
 -   [Per compilare ed eseguire l'applicazione CreateUpdateMaps](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)  
   
--   [Per compilare l'assembly del flusso di lavoro aggiornato](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
+-   [Per compilare l'assembly del flusso di lavoro aggiornata](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
   
 -   [Per aggiornare WorkflowVersionMap con le nuove versioni](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)  
   
 -   [Per applicare gli aggiornamenti dinamici](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)  
   
--   [Per eseguire l'applicazione con i flussi di lavoro aggiornati](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
+-   [Per eseguire l'applicazione con i flussi di lavoro aggiornate](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
   
 -   [Per abilitare l'avvio delle versioni precedenti dei flussi di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
 ###  <a name="BKMK_CreateProject"></a> Per creare il progetto CreateUpdateMaps  
   
-1.  Fare doppio clic su **WF45GettingStartedTutorial** in **Esplora** e scegliere **Aggiungi**, **nuovo progetto**.  
+1.  Fare doppio clic su **WF45GettingStartedTutorial** nelle **Esplora soluzioni** e scegliere **Add**, **nuovo progetto**.  
   
-2.  Nel **installato** nodo, seleziona **Visual c#**, **Windows** (o **Visual Basic**, **Windows**).  
+2.  Nel **Installed** nodo, seleziona **Visual c#**, **Windows** (oppure **Visual Basic**, **Windows**).  
   
     > [!NOTE]
     >  A seconda del linguaggio di programmazione configurato come linguaggio principale in Visual Studio, sotto il nodo **Altri linguaggi** del nodo **Installato** viene visualizzato il nodo **Visual C#** o **Visual Basic** .  
   
-     Assicurarsi che nell'elenco a discesa della versione di .NET Framework sia selezionata l'opzione **.NET Framework 4.5** . Selezionare **applicazione Console** dal **Windows** elenco. Tipo **CreateUpdateMaps** nel **nome** casella e fare clic su **OK**.  
+     Assicurarsi che nell'elenco a discesa della versione di .NET Framework sia selezionata l'opzione **.NET Framework 4.5** . Selezionare **applicazione Console** dalle **Windows** elenco. Tipo di **CreateUpdateMaps** nel **Name** casella e fare clic su **OK**.  
   
-3.  Fare doppio clic su **CreateUpdateMaps** in **Esplora** e scegliere **Aggiungi riferimento**.  
+3.  Fare doppio clic su **CreateUpdateMaps** nelle **Esplora soluzioni** e scegliere **Aggiungi riferimento**.  
   
-4.  Selezionare **Framework** dal **assembly** nodo il **Aggiungi riferimento** elenco. Tipo **System. Activities** nel **cerca assembly** casella per filtrare gli assembly e rendere più semplice selezionare i riferimenti desiderati.  
+4.  Selezionare **Framework** dal **assembly** nodo il **Aggiungi riferimento** elenco. Tipo di **System. Activities** nel **cerca assembly** casella per filtrare gli assembly e rendere più semplice selezionare i riferimenti desiderati.  
   
-5.  Selezionare la casella di controllo accanto a **System. Activities** dal **risultati della ricerca** elenco.  
+5.  Selezionare la casella di controllo accanto **System. Activities** dalle **i risultati della ricerca** elenco.  
   
-6.  Tipo **serializzazione** nel **cerca assembly** casella e selezionare la casella di controllo accanto a **Serialization** dal **i risultati della ricerca**  elenco.  
+6.  Tipo di **serializzazione** nel **cerca assembly** casella e selezionare la casella di controllo accanto a **Serialization** dal **i risultati della ricerca**  elenco.  
   
-7.  Tipo **System. XAML** nel **cerca assembly** casella e selezionare la casella di controllo accanto a **System. XAML** dal **risultati della ricerca** elenco.  
+7.  Tipo di **System. XAML** nel **cerca assembly** casella e selezionare la casella di controllo accanto a **System. XAML** dal **i risultati della ricerca** elenco.  
   
 8.  Fare clic su **OK** per chiudere **gestione riferimenti** e aggiungere i riferimenti.  
   
@@ -255,7 +256,7 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
     StateMachine sm = wf.Implementation as StateMachine;  
     ```  
   
-3.  Successivamente, aggiornare le espressioni dei due `WriteLine` le attività che indica se l'ipotesi dell'utente è troppo alti o troppo bassi, in modo che corrispondano a quelli eseguiti in precedenza [come: più versioni di Host di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+3.  Successivamente, aggiornare le espressioni delle due `WriteLine` le attività che consentono di visualizzare se l'ipotesi dell'utente è troppo alta o troppo basso in modo che corrispondano gli aggiornamenti apportati nel [procedura: Host più versioni di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
     ```vb  
     'Update the Text of the two WriteLine activities that write the  
@@ -635,30 +636,30 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
     }  
     ```  
   
-2.  Fare doppio clic su **CreateUpdateMaps** in **Esplora** e scegliere **imposta come progetto di avvio**.  
+2.  Fare doppio clic su **CreateUpdateMaps** nelle **Esplora soluzioni** e scegliere **imposta come progetto di avvio**.  
   
 3.  Premere CTRL+MAIUSC+B per compilare la soluzione, quindi premere CTRL+F5 per eseguire l'applicazione `CreateUpdateMaps`.  
   
     > [!NOTE]
-    >  Il `CreateUpdateMaps` applicazione non viene visualizzata alcuna informazione sullo stato durante l'esecuzione, ma se si osservano le **NumberGuessWorkflowActivities_du** cartella e **PreviousVersions** cartella verrà visualizzato i file di definizione del flusso di lavoro aggiornato e i mapping di aggiornamento.  
+    >  Il `CreateUpdateMaps` applicazione non viene visualizzata alcuna informazione sullo stato durante l'esecuzione, ma se si osservano le **NumberGuessWorkflowActivities_du** cartella e il **PreviousVersions** cartella verrà visualizzato i file di definizione aggiornata del flusso di lavoro e i mapping di aggiornamento.  
   
      Una volta creati i mapping di aggiornamento e aggiornate le definizioni del flusso di lavoro, il passaggio successivo consiste nel compilare un assembly aggiornato del flusso di lavoro contenente le definizioni aggiornate.  
   
-###  <a name="BKMK_BuildAssembly"></a> Per compilare l'assembly del flusso di lavoro aggiornato  
+###  <a name="BKMK_BuildAssembly"></a> Per compilare l'assembly del flusso di lavoro aggiornata  
   
 1.  Aprire una seconda istanza di [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
-2.  Scegliere **aprire**, **progetto/soluzione** dal **File** menu.  
+2.  Scegli **aperto**, **progetto/soluzione** dal **File** menu.  
   
-3.  Passare il **NumberGuessWorkflowActivities_du** cartella creata nel [come: più versioni di Host di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)selezionare **NumberGuessWorkflowActivities.csproj**  (o **vbproj**), fare clic su **aprire**.  
+3.  Passare al **NumberGuessWorkflowActivities_du** creato nella cartella [procedura: Host più versioni di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), selezionare **numberguessworkflowactivities. csproj**  (o **vbproj**), fare clic su **Open**.  
   
-4.  In **Esplora**, fare clic destro **Sequentialnumberguessworkflow** e scegliere **Escludi dal progetto**. Eseguire la stessa operazione **Flowchartnumberguessworkflow** e **Statemachinenumberguessworkflow**. Questo passaggio consente di rimuovere le versioni precedenti delle definizioni del flusso di lavoro dal progetto.  
+4.  Nelle **Esplora soluzioni**, fare clic destro **sequentialnumberguessworkflow. XAML** e scegliere **Escludi dal progetto**. Eseguire la stessa operazione **Flowchartnumberguessworkflow** e **Statemachinenumberguessworkflow**. Questo passaggio consente di rimuovere le versioni precedenti delle definizioni del flusso di lavoro dal progetto.  
   
-5.  Scegliere **Aggiungi elemento esistente** dal **progetto** menu.  
+5.  Scegli **Aggiungi elemento esistente** dalle **progetto** menu.  
   
-6.  Passare il **NumberGuessWorkflowActivities_du** creato nella cartella [come: più versioni di Host di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+6.  Passare al **NumberGuessWorkflowActivities_du** creato nella cartella [procedura: Host più versioni di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
-7.  Scegliere **file XAML (\*XAML;\*. xoml)** dal **i file di tipo** elenco a discesa.  
+7.  Scegli **i file XAML (\*XAML;\*. xoml)** dal **file di tipo** elenco a discesa.  
   
 8.  Selezionare **sequentialnumberguessworkflow_du. XAML**, **flowchartnumberguessworkflow_du. XAML**, e **statemachinenumberguessworkflow_du. XAML** e fare clic su  **Aggiungere**.  
   
@@ -669,17 +670,17 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
   
 9. Premere CTRL+MAIUSC+B per compilare il progetto.  
   
-10. Scegliere **Chiudi soluzione** dal **File** menu. Un file di soluzione per il progetto non è richiesto, quindi fare clic su **No** per chiudere Visual Studio senza salvare un file di soluzione. Scegliere **uscita** dal **File** menu per chiudere Visual Studio.  
+10. Scegli **Chiudi soluzione** dalle **File** menu. Un file di soluzione per il progetto non è necessario, quindi fare clic su **No** per chiudere Visual Studio senza salvare un file di soluzione. Scegli **Exit** dal **File** menu per chiudere Visual Studio.  
   
-11. Aprire Esplora risorse e passare al **NumberGuessWorkflowActivities_du\bin\Debug** cartella (o **bin\Release** a seconda delle impostazioni di progetto).  
+11. Aprire Windows Explorer e passare al **NumberGuessWorkflowActivities_du\bin\Debug** cartella (o **bin\Release** a seconda delle impostazioni di progetto).  
   
-12. Rinominare **NumberGuessWorkflowActivities.dll** a **NumberGuessWorkflowActivities_v15.dll**e copiare il **PreviousVersions** cartella creata nel [Procedura: ospitare più versioni di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+12. Rinominare **numberguessworkflowactivities. dll** al **NumberGuessWorkflowActivities_v15.dll**e copiarlo per la **PreviousVersions** cartella creata nel [Procedura: ospitare più versioni di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
 ###  <a name="BKMK_UpdateWorkflowVersionMap"></a> Per aggiornare WorkflowVersionMap con le nuove versioni  
   
 1.  Tornare all'istanza iniziale di [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
-2.  Fare doppio clic su **workflowversionmap. cs** (o **workflowversionmap. vb**) sotto il **NumberGuessWorkflowHost** per aprirlo.  
+2.  Fare doppio clic su **WorkflowVersionMap.cs** (o **workflowversionmap. vb**) sotto il **NumberGuessWorkflowHost** per aprirlo.  
   
 3.  Aggiungere tre nuove identità del flusso di lavoro subito dopo le sei dichiarazioni di identità del flusso di lavoro esistenti. In questa esercitazione `1.5.0.0` viene usato come `WorkflowIdentity.Version` per le identità dinamiche di aggiornamento. Queste nuove identità del flusso di lavoro `v15` verranno usate per fornire la definizione corretta del flusso di lavoro per le istanze persistenti del flusso di lavoro aggiornate in modo dinamico.  
   
@@ -1064,30 +1065,30 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
   
 ###  <a name="BKMK_ApplyUpdate"></a> Per applicare gli aggiornamenti dinamici  
   
-1.  Fare doppio clic su **WF45GettingStartedTutorial** in **Esplora** e scegliere **Aggiungi**, **nuovo progetto**.  
+1.  Fare doppio clic su **WF45GettingStartedTutorial** nelle **Esplora soluzioni** e scegliere **Add**, **nuovo progetto**.  
   
-2.  Nel **installato** nodo, seleziona **Visual c#**, **Windows** (o **Visual Basic**, **Windows**).  
+2.  Nel **Installed** nodo, seleziona **Visual c#**, **Windows** (oppure **Visual Basic**, **Windows**).  
   
     > [!NOTE]
     >  A seconda del linguaggio di programmazione configurato come linguaggio principale in Visual Studio, sotto il nodo **Altri linguaggi** del nodo **Installato** viene visualizzato il nodo **Visual C#** o **Visual Basic** .  
   
-     Assicurarsi che nell'elenco a discesa della versione di .NET Framework sia selezionata l'opzione **.NET Framework 4.5** . Selezionare **applicazione Console** dal **Windows** elenco. Tipo **ApplyDynamicUpdate** nel **nome** casella e fare clic su **OK**.  
+     Assicurarsi che nell'elenco a discesa della versione di .NET Framework sia selezionata l'opzione **.NET Framework 4.5** . Selezionare **applicazione Console** dalle **Windows** elenco. Tipo di **ApplyDynamicUpdate** nel **Name** casella e fare clic su **OK**.  
   
-3.  Fare doppio clic su **ApplyDynamicUpdate** in **Esplora** e scegliere **Aggiungi riferimento**.  
+3.  Fare doppio clic su **ApplyDynamicUpdate** nelle **Esplora soluzioni** e scegliere **Aggiungi riferimento**.  
   
 4.  Fare clic su **soluzione** e selezionare la casella accanto a **NumberGuessWorkflowHost**. Questo riferimento è necessario affinché la classe `ApplyDynamicUpdate` possa essere usata dall'oggetto `NumberGuessWorkflowHost.WorkflowVersionMap`.  
   
-5.  Selezionare **Framework** dal **assembly** nodo il **Aggiungi riferimento** elenco. Tipo **System. Activities** nel **cerca assembly** casella. Gli assembly verranno filtrati e sarà più semplice selezionare i riferimenti desiderati.  
+5.  Selezionare **Framework** dal **assembly** nodo il **Aggiungi riferimento** elenco. Tipo di **System. Activities** nel **cerca assembly** casella. Gli assembly verranno filtrati e sarà più semplice selezionare i riferimenti desiderati.  
   
-6.  Selezionare la casella di controllo accanto a **System. Activities** dal **risultati della ricerca** elenco.  
+6.  Selezionare la casella di controllo accanto **System. Activities** dalle **i risultati della ricerca** elenco.  
   
-7.  Tipo **serializzazione** nel **cerca assembly** casella e selezionare la casella di controllo accanto a **Serialization** dal **i risultati della ricerca**  elenco.  
+7.  Tipo di **serializzazione** nel **cerca assembly** casella e selezionare la casella di controllo accanto a **Serialization** dal **i risultati della ricerca**  elenco.  
   
-8.  Tipo **DurableInstancing** nel **cerca assembly** casella e selezionare la casella di controllo accanto a **System.Activities.DurableInstancing** e  **System.Runtime.DurableInstancing** dal **risultati della ricerca** elenco.  
+8.  Tipo di **DurableInstancing** nel **cerca assembly** casella e selezionare la casella di controllo accanto a **System.Activities.DurableInstancing** e  **System.Runtime.DurableInstancing** dal **i risultati della ricerca** elenco.  
   
 9. Fare clic su **OK** per chiudere **gestione riferimenti** e aggiungere i riferimenti.  
   
-10. Fare doppio clic su **ApplyDynamicUpdate** in Esplora soluzioni e scegliere **Aggiungi**, **classe**. Tipo `DynamicUpdateInfo` nel **nome** casella e fare clic su **Aggiungi**.  
+10. Fare doppio clic su **ApplyDynamicUpdate** in Esplora soluzioni e scegliere **Add**, **classe**. Tipo di `DynamicUpdateInfo` nella **Name** casella e fare clic su **Add**.  
   
 11. Aggiungere i due membri riportati di seguito alla classe `DynamicUpdateInfo`. Nell'esempio seguente viene mostrata la classe `DynamicUpdateInfo` completata. In questa classe sono contenute le informazioni sul mapping di aggiornamento e la nuova identità del flusso di lavoro usata quando un'istanza del flusso di lavoro viene aggiornata.  
   
@@ -1118,7 +1119,7 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
     using System.Activities.DynamicUpdate;  
     ```  
   
-13. Fare doppio clic su **Program.cs** (o **Module1. vb**) in Esplora soluzioni.  
+13. Fare doppio clic su **Program.cs** (o **Module1.vb**) in Esplora soluzioni.  
   
 14. Aggiungere le seguenti istruzioni `using` (o `Imports`) nella parte superiore del file con le altre istruzioni `using` (o `Imports`).  
   
@@ -1407,77 +1408,77 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
     }  
     ```  
   
-20. Fare doppio clic su **ApplyDynamicUpdate** in **Esplora** e scegliere **imposta come progetto di avvio**.  
+20. Fare doppio clic su **ApplyDynamicUpdate** nelle **Esplora soluzioni** e scegliere **imposta come progetto di avvio**.  
   
 21. Premere CTRL+MAIUSC+B per compilare la soluzione, quindi premere CTRL+F5 per eseguire l'applicazione `ApplyDynamicUpdate` e aggiornare le istanze del flusso di lavoro persistente. Si dovrebbe visualizzare un output simile a quello riportato di seguito. I flussi di lavoro della versione 1.0.0.0 vengono aggiornati alla versione 1.5.0.0, mentre i flussi di lavoro della versione 2.0.0.0 non vengono aggiornati.  
   
- **Controllo: StateMachineNumberGuessWorkflow; Versione Version=1.0.0.0**  
-**Aggiornato per: StateMachineNumberGuessWorkflow; Versione 1.5.0.0 =**   
-**Controllo: StateMachineNumberGuessWorkflow; Versione Version=1.0.0.0**   
-**Aggiornato per: StateMachineNumberGuessWorkflow; Versione 1.5.0.0 =**   
-**Controllo: FlowchartNumberGuessWorkflow; Versione Version=1.0.0.0**   
-**Aggiornato per: FlowchartNumberGuessWorkflow; Versione 1.5.0.0 =**   
-**Controllo: FlowchartNumberGuessWorkflow; Versione Version=1.0.0.0**   
-**Aggiornato per: FlowchartNumberGuessWorkflow; Versione 1.5.0.0 =**   
-**Controllo: SequentialNumberGuessWorkflow; Versione Version=1.0.0.0**   
-**Aggiornato per: SequentialNumberGuessWorkflow; Versione 1.5.0.0 =**   
-**Controllo: SequentialNumberGuessWorkflow; Versione Version=1.0.0.0**   
-**Aggiornato per: SequentialNumberGuessWorkflow; Versione 1.5.0.0 =**   
-**Controllo: SequentialNumberGuessWorkflow; Versione Version=1.0.0.0**   
-**Aggiornato per: SequentialNumberGuessWorkflow; Versione 1.5.0.0 =**   
-**Controllo: StateMachineNumberGuessWorkflow; Versione Version=1.0.0.0**   
-**Aggiornato per: StateMachineNumberGuessWorkflow; Versione 1.5.0.0 =**   
-**Controllo: FlowchartNumberGuessWorkflow; Versione Version=1.0.0.0**   
-**Aggiornato per: FlowchartNumberGuessWorkflow; Versione 1.5.0.0 =**   
-**Controllo: StateMachineNumberGuessWorkflow; Versione 2.0.0.0 =**   
-**Controllo: StateMachineNumberGuessWorkflow; Versione 2.0.0.0 =**   
-**Controllo: FlowchartNumberGuessWorkflow; Versione 2.0.0.0 =**   
-**Controllo: FlowchartNumberGuessWorkflow; Versione 2.0.0.0 =**   
-**Controllo: SequentialNumberGuessWorkflow; Versione 2.0.0.0 =**   
-**Controllo: SequentialNumberGuessWorkflow; Versione 2.0.0.0 =**   
+ **Esaminare: StateMachineNumberGuessWorkflow; Versione Version=1.0.0.0**  
+**Aggiornato da: StateMachineNumberGuessWorkflow; Versione 1.5.0.0 =**   
+**Esaminare: StateMachineNumberGuessWorkflow; Versione Version=1.0.0.0**   
+**Aggiornato da: StateMachineNumberGuessWorkflow; Versione 1.5.0.0 =**   
+**Esaminare: FlowchartNumberGuessWorkflow; Versione Version=1.0.0.0**   
+**Aggiornato da: FlowchartNumberGuessWorkflow; Versione 1.5.0.0 =**   
+**Esaminare: FlowchartNumberGuessWorkflow; Versione Version=1.0.0.0**   
+**Aggiornato da: FlowchartNumberGuessWorkflow; Versione 1.5.0.0 =**   
+**Esaminare: SequentialNumberGuessWorkflow; Versione Version=1.0.0.0**   
+**Aggiornato da: SequentialNumberGuessWorkflow; Versione 1.5.0.0 =**   
+**Esaminare: SequentialNumberGuessWorkflow; Versione Version=1.0.0.0**   
+**Aggiornato da: SequentialNumberGuessWorkflow; Versione 1.5.0.0 =**   
+**Esaminare: SequentialNumberGuessWorkflow; Versione Version=1.0.0.0**   
+**Aggiornato da: SequentialNumberGuessWorkflow; Versione 1.5.0.0 =**   
+**Esaminare: StateMachineNumberGuessWorkflow; Versione Version=1.0.0.0**   
+**Aggiornato da: StateMachineNumberGuessWorkflow; Versione 1.5.0.0 =**   
+**Esaminare: FlowchartNumberGuessWorkflow; Versione Version=1.0.0.0**   
+**Aggiornato da: FlowchartNumberGuessWorkflow; Versione 1.5.0.0 =**   
+**Esaminare: StateMachineNumberGuessWorkflow; Versione = 2.0.0.0**   
+**Esaminare: StateMachineNumberGuessWorkflow; Versione = 2.0.0.0**   
+**Esaminare: FlowchartNumberGuessWorkflow; Versione = 2.0.0.0**   
+**Esaminare: FlowchartNumberGuessWorkflow; Versione = 2.0.0.0**   
+**Esaminare: SequentialNumberGuessWorkflow; Versione = 2.0.0.0**   
+**Esaminare: SequentialNumberGuessWorkflow; Versione = 2.0.0.0**   
 **Premere un tasto qualsiasi per continuare...**  
   
-###  <a name="BKMK_BuildAndRun"></a> Per eseguire l'applicazione con i flussi di lavoro aggiornati  
+###  <a name="BKMK_BuildAndRun"></a> Per eseguire l'applicazione con i flussi di lavoro aggiornate  
   
-1.  Fare doppio clic su **NumberGuessWorkflowHost** in **Esplora** e scegliere **imposta come progetto di avvio**.  
+1.  Fare doppio clic su **NumberGuessWorkflowHost** nelle **Esplora soluzioni** e scegliere **imposta come progetto di avvio**.  
   
 2.  Premere CTRL+F5 per eseguire l'applicazione.  
   
-3.  Fare clic su **nuova partita** per avviare un nuovo flusso di lavoro e annotare le informazioni sulla versione sotto la finestra di stato che indica il flusso di lavoro è un `v2` flusso di lavoro.  
+3.  Fare clic su **nuova partita** per avviare un nuovo flusso di lavoro e tenere presente le informazioni sulla versione sotto la finestra di stato che indica il flusso di lavoro è un `v2` flusso di lavoro.  
   
-4.  Selezionare una del `v1` iniziare all'inizio di flussi di lavoro di [come: più versioni di Host di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) argomento. Si noti che le informazioni sulla versione nella finestra di stato indica che il flusso di lavoro è una versione **1.5.0.0** flusso di lavoro. Si noti inoltre che non sono disponibili informazioni sui tentativi precedenti, eccetto se troppo alti o troppo bassi.  
+4.  Selezionare una delle `v1` flussi di lavoro avviati all'inizio del [come: Host più versioni di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) argomento. Si noti che le informazioni sulla versione nella finestra di stato indica che il flusso di lavoro è una versione **1.5.0.0** flusso di lavoro. Si noti inoltre che non sono disponibili informazioni sui tentativi precedenti, eccetto se troppo alti o troppo bassi.  
   
  **Immettere un numero compreso tra 1 e 10**  
-**La stima è troppo bassa.**  
+**Il valore indicato è troppo basso.**  
   
 5.  Prendere nota dell'oggetto `InstanceId`, quindi immettere dei tentativi finché il flusso di lavoro non viene completato. Nella finestra di stato vengono visualizzate le informazioni sul contenuto del tentativo, dal momento che le attività `WriteLine` sono state aggiornate dall'aggiornamento dinamico.  
   
  **Immettere un numero compreso tra 1 e 10**  
-**La stima è troppo bassa.**   
+**Il valore indicato è troppo basso.**   
 **Immettere un numero compreso tra 1 e 10**   
-**5 è troppo basso.**   
+**5 è un valore troppo basso.**   
 **Immettere un numero compreso tra 1 e 10**   
 **7 è troppo alto.**   
 **Immettere un numero compreso tra 1 e 10**   
-**Complimenti, si immaginare il numero a sua 4 volta.**  
+**Complimenti, è stata ipotizzata il numero a sua 4 volta.**  
   
-6.  Aprire Esplora risorse e passare al **NumberGuessWorkflowHost\bin\debug** cartella (o **bin\release** a seconda delle impostazioni di progetto) e aprire il file di rilevamento mediante blocco note corrispondente per il flusso di lavoro completato. Se invece non hai apportato annotare il `InstanceId` potrebbe essere in grado di individuare il file di rilevamento corretto usando il **data modificata** informazioni in Esplora risorse. Nell'ultima riga delle informazioni di rilevamento è contenuto l'output dell'attività `WriteLine` appena aggiunta.  
+6.  Aprire Windows Explorer e passare al **NumberGuessWorkflowHost\bin\debug** cartella (o **bin\release** a seconda delle impostazioni di progetto) e aprire il file di rilevamento mediante blocco note corrispondente per il flusso di lavoro completato. Se non si è presa nota del `InstanceId` sarà in grado di identificare i file di rilevamento corretto usando la **data modificata** in Windows Explorer. Nell'ultima riga delle informazioni di rilevamento è contenuto l'output dell'attività `WriteLine` appena aggiunta.  
   
  **Immettere un numero compreso tra 1 e 10**  
-**La stima è troppo bassa.**   
+**Il valore indicato è troppo basso.**   
 **Immettere un numero compreso tra 1 e 10**   
-**5 è troppo basso.**   
+**5 è un valore troppo basso.**   
 **Immettere un numero compreso tra 1 e 10**   
 **7 è troppo alto.**   
 **Immettere un numero compreso tra 1 e 10**   
-**6 è corretto. Esatto a sua 4 volta.**  
+**6 è corretto. Avete indovinato a sua 4 volta.**  
   
 ###  <a name="BKMK_StartPreviousVersions"></a> Per abilitare l'avvio delle versioni precedenti dei flussi di lavoro  
  Se si esauriscono i flussi di lavoro da aggiornare, è possibile modificare l'applicazione `NumberGuessWorkflowHost` per abilitare l'avvio delle versioni precedenti dei flussi di lavoro.  
   
-1.  Fare doppio clic su **WorkflowHostForm** in **Esplora**e selezionare il **WorkflowType** casella combinata.  
+1.  Fare doppio clic su **WorkflowHostForm** nelle **Esplora soluzioni**e selezionare il **WorkflowType** casella combinata.  
   
-2.  Nel **proprietà** finestra, seleziona il **elementi** proprietà e fare clic sul pulsante con i puntini di sospensione per modificare il **elementi** insieme.  
+2.  Nel **delle proprietà** finestra, seleziona il **elementi** proprietà e fare clic sul pulsante dei puntini di sospensione per modificare il **elementi** raccolta.  
   
 3.  Aggiungere alla raccolta i seguenti tre elementi.  
   
@@ -1498,9 +1499,9 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
     SequentialNumberGuessWorkflow v1  
     ```  
   
-4.  Fare doppio clic su **WorkflowHostForm** in **Esplora**e selezionare **Visualizza codice**.  
+4.  Fare doppio clic su **WorkflowHostForm** nelle **Esplora soluzioni**e selezionare **Visualizza codice**.  
   
-5.  Aggiungere tre nuovi casi al `switch` (o `Select Case`) istruzione il `NewGame_Click` gestore per eseguire il mapping di nuovi elementi del **WorkflowType** casella combinata per le identità del flusso di lavoro corrispondente.  
+5.  Aggiungere tre nuovi casi al `switch` (o `Select Case`) istruzione il `NewGame_Click` gestore per eseguire il mapping di nuovi elementi nel **WorkflowType** casella combinata per le identità del flusso di lavoro corrispondente.  
   
     ```vb  
     Case "SequentialNumberGuessWorkflow v1"  
@@ -1580,4 +1581,4 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
     };  
     ```  
   
-6.  Premere CTRL+F5 per compilare ed eseguire l'applicazione. È possibile avviare le versioni `v1` del flusso di lavoro nonché le versioni correnti. Per aggiornare dinamicamente le nuove istanze, eseguire il **ApplyDynamicUpdate** dell'applicazione.
+6.  Premere CTRL+F5 per compilare ed eseguire l'applicazione. È possibile avviare le versioni `v1` del flusso di lavoro nonché le versioni correnti. Per aggiornare dinamicamente questi nuove istanze, eseguire la **ApplyDynamicUpdate** dell'applicazione.
