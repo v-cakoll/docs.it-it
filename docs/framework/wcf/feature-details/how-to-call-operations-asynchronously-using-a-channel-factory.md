@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: 292fd92ebab9d1af2a2623ab55c3324fab2a69dc
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: a45ba48408fd98c89db8664aec679a437ce8af24
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754657"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559921"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Procedura: chiamare le operazioni in modo asincrono tramite una channel factory
 In questo argomento viene illustrato in che modo un client può accedere a un'operazione del servizio in modalità asincrona quando si usa un'applicazione client basata su <xref:System.ServiceModel.ChannelFactory%601>. Quando si usa un oggetto <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> per richiamare un servizio, è possibile usare il modello di chiamata asincrono basato su eventi. Per altre informazioni, vedere [procedura: chiamare servizio operazioni in modo asincrono](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Per altre informazioni sul modello di chiamata asincrono basato su eventi, vedere [basato su eventi asincroni Pattern (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
@@ -48,4 +48,4 @@ In questo argomento viene illustrato in che modo un client può accedere a un'op
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Del contratto di servizio: Esempio asincrono](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)
+ [Del contratto di servizio: Esempio asincrono](https://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)

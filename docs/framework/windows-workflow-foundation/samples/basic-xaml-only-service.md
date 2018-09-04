@@ -2,15 +2,15 @@
 title: Servizio solo XAML di base
 ms.date: 03/30/2017
 ms.assetid: c106feb0-0245-43b5-aefe-93ce0e4d38eb
-ms.openlocfilehash: aa6b6ec6930ac90fe95b1cdfcd4cb027de8e5902
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4f296a97b9c3093874c5ec8e05023e84b0af44a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517199"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556469"
 ---
 # <a name="basic-xaml-only-service"></a>Servizio solo XAML di base
-In questo esempio viene illustrato come creare un servizio solo XAML. Lo scenario è quello di un servizio di diagnostica per problemi correlati all'auto. Il servizio viene implementato come flusso di lavoro che pone al client una serie di domande per diagnosticare il problema. Esistono due tipi di problema diagnosticabili dal servizio (l'auto non parte oppure l'aria condizionata non funziona). Il flusso di lavoro usa il modello Request/Reply della finestra di progettazione per esporre tre operazioni di servizio semplici. Il servizio viene ospitato in IIS creando una directory virtuale in IIS e copiando i file service1.xamlx e Web.config nella directory virtuale. Non è richiesto alcun codice compilato. Per impostazione predefinita in questo esempio copierà automaticamente i file necessari nella directory virtuale creata quando si seguono le istruzioni di installazione per gli esempi di WCF e WF: [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) quando compilato in Visual Studio 2010.  
+In questo esempio viene illustrato come creare un servizio solo XAML. Lo scenario è quello di un servizio di diagnostica per problemi correlati all'auto. Il servizio viene implementato come flusso di lavoro che pone al client una serie di domande per diagnosticare il problema. Esistono due tipi di problema diagnosticabili dal servizio (l'auto non parte oppure l'aria condizionata non funziona). Il flusso di lavoro usa il modello Request/Reply della finestra di progettazione per esporre tre operazioni di servizio semplici. Il servizio viene ospitato in IIS creando una directory virtuale in IIS e copiando i file service1.xamlx e Web.config nella directory virtuale. Non è richiesto alcun codice compilato. Per impostazione predefinita in questo esempio copierà automaticamente i file necessari nella directory virtuale creata quando si seguono le istruzioni di installazione per gli esempi di WCF e WF: [monouso procedura di installazione per gli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) quando compilato in Visual Studio 2010.  
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
@@ -27,6 +27,6 @@ In questo esempio viene illustrato come creare un servizio solo XAML. Lo scenari
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLService`

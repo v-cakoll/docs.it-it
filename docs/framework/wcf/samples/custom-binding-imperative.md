@@ -3,11 +3,11 @@ title: Codice imperativo per associazioni personalizzate
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
 ms.openlocfilehash: dac98d2c08a207019b9ec5b18340afc02e62f836
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398280"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560743"
 ---
 # <a name="custom-binding-imperative"></a>Codice imperativo per associazioni personalizzate
 L'esempio illustra come scrivere codice imperativo per definire e utilizzare associazioni personalizzate senza utilizzare un file di configurazione o un client Windows Communication Foundation (WCF) generato. Questo esempio combina le funzionalità fornite dal trasporto HTTP e il canale di sessione attendibile per creare un'associazione basata su HTTP attendibile. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.  

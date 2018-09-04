@@ -3,11 +3,11 @@ title: Filtro messaggi personalizzato
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
 ms.openlocfilehash: c9a6e436548d4d1f009833f80899721c4c085513
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400139"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555952"
 ---
 # <a name="custom-message-filter"></a>Filtro messaggi personalizzato
 In questo esempio viene illustrato come sostituire i filtri messaggi che utilizza Windows Communication Foundation (WCF) per distribuire messaggi agli endpoint.  

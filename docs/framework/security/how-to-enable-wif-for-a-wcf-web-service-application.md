@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: bd0ad5392010772c3205d8f148c985de2706de01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71897299d68c2f0e43def8e70730ea456d6e9e24
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398989"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564717"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Procedura: Abilitare WIF per un'applicazione del servizio Web WCF
 ## <a name="applies-to"></a>Si applica a  
@@ -19,7 +19,7 @@ ms.locfileid: "33398989"
 -   Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Riepilogo  
- In questa guida procedurale vengono fornite le procedure dettagliate per abilitare WIF in un servizio Web WCF. Vengono inoltre fornite le istruzioni su come testare l'applicazione per verificare il corretto funzionamento del servizio Web presentando delle attestazioni quando l'applicazione viene eseguita. In questa guida procedurale non sono incluse le istruzioni dettagliate per la creazione di un servizio token di sicurezza (STS, Security Token Service); viene invece utilizzato il servizio token di sicurezza di sviluppo che viene fornito con lo strumento Identity and Access. Il servizio token di sicurezza di sviluppo non esegue una reale autenticazione ed è finalizzato unicamente ai test. Per completare questa guida procedurale sarà necessario installare Identity and Access Tool. Questo strumento può essere scaricato dal seguente percorso: [Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)  
+ In questa guida procedurale vengono fornite le procedure dettagliate per abilitare WIF in un servizio Web WCF. Vengono inoltre fornite le istruzioni su come testare l'applicazione per verificare il corretto funzionamento del servizio Web presentando delle attestazioni quando l'applicazione viene eseguita. In questa guida procedurale non sono incluse le istruzioni dettagliate per la creazione di un servizio token di sicurezza (STS, Security Token Service); viene invece utilizzato il servizio token di sicurezza di sviluppo che viene fornito con lo strumento Identity and Access. Il servizio token di sicurezza di sviluppo non esegue una reale autenticazione ed è finalizzato unicamente ai test. Per completare questa guida procedurale sarà necessario installare Identity and Access Tool. Questo strumento può essere scaricato dal seguente percorso: [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Sommario  
   

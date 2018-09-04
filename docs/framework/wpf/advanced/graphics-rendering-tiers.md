@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 4f9de7736851027c9f6b851984953e37b96d456a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fb24e13ab684170baf5ac3001d3a2d4bcd6df7e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547895"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563264"
 ---
 # <a name="graphics-rendering-tiers"></a>Livelli di rendering della grafica
 Un livello di rendering definisce un livello di prestazioni e funzionalità hardware grafiche per un dispositivo che esegue un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -42,7 +42,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
   
 -   **Livello di rendering 2** La maggior parte delle funzionalità grafiche usa l'accelerazione hardware grafico. Il livello della versione di [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] è superiore o uguale alla versione 9.0.  
   
- Il <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> proprietà consente di recuperare il livello per il rendering in esecuzione dell'applicazione. Il livello di rendering consente di determinare se il dispositivo supporta determinate funzionalità grafiche con accelerazione hardware. L'applicazione può quindi usare percorsi di codice diversi in fase di esecuzione a seconda del livello di rendering supportato dal dispositivo.  
+ Il <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> proprietà consente di recuperare il livello di rendering in fase di esecuzione dell'applicazione. Il livello di rendering consente di determinare se il dispositivo supporta determinate funzionalità grafiche con accelerazione hardware. L'applicazione può quindi usare percorsi di codice diversi in fase di esecuzione a seconda del livello di rendering supportato dal dispositivo.  
   
 ### <a name="rendering-tier-0"></a>Livello di rendering 0  
  Il valore 0 del livello di rendering indica che l'accelerazione hardware grafico non è disponibile per l'applicazione sul dispositivo. A questo livello, si deve presupporre che il rendering tutta la grafica verrà eseguito dal software senza accelerazione hardware. La funzionalità di questo livello corrisponde a una versione di [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] inferiore alla 9.0.  
@@ -71,8 +71,8 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 |Rendering 2D|È supportata la maggior parte del rendering 2D.|  
 |Rasterizzazione 3D|È supportata la maggior parte delle rasterizzazioni 3D.|  
 |Filtro anisotropico 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prova a usare il filtro anisotropico quando viene eseguito il rendering del contenuto 3D. Il filtro anisotropico consente di migliorare la qualità delle trame di un'immagine su superfici lontane e molto inclinate rispetto alla fotocamera.|  
-|Mapping MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prova a usare il mapping MIP quando viene eseguito il rendering del contenuto 3D. Mapping MIP migliora la qualità di rendering della trama quando quest'ultima occupa un campo visivo ridotto in un <xref:System.Windows.Controls.Viewport3D>.|  
-|Sfumature radiali|Se supportato, evitare l'utilizzo di <xref:System.Windows.Media.RadialGradientBrush> su oggetti di grandi dimensioni.|  
+|Mapping MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prova a usare il mapping MIP quando viene eseguito il rendering del contenuto 3D. Mapping MIP migliora la qualità del rendering della trama quando una trama occupa un campo di vista più piccola in un <xref:System.Windows.Controls.Viewport3D>.|  
+|Sfumature radiali|Anche se supportato, evitare l'uso di <xref:System.Windows.Media.RadialGradientBrush> su oggetti di grandi dimensioni.|  
 |Calcoli per l'illuminazione 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] esegue l'illuminazione per vertice, in cui l'intensità della luce deve essere calcolata in ogni vertice per ogni materiale applicato a un mesh.|  
 |Rendering del testo|Il rendering dei tipi di carattere a livello di sub-pixel usa i pixel shader disponibili nell'hardware grafico.|  
   
@@ -87,11 +87,11 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 |Funzionalità|Note|  
 |-------------|-----------|  
 |Contenuti stampati|Il rendering di tutto il contenuto stampato viene eseguito con la pipeline software [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
-|Contenuto rasterizzato che utilizza <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Qualsiasi contenuto sottoposto a rendering utilizzando il <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> metodo <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
-|Contenuto affiancato che utilizza <xref:System.Windows.Media.TileBrush>|Qualsiasi contenuto affiancato in cui il <xref:System.Windows.Media.TileBrush.TileMode%2A> proprietà del <xref:System.Windows.Media.TileBrush> è impostato su <xref:System.Windows.Media.TileMode.Tile>.|  
+|Contenuto rasterizzato che usa <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Qualsiasi contenuto sottoposto a rendering utilizzando il <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> metodo <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
+|Contenuto affiancato che usa <xref:System.Windows.Media.TileBrush>|Qualsiasi contenuto affiancato in cui il <xref:System.Windows.Media.TileBrush.TileMode%2A> proprietà del <xref:System.Windows.Media.TileBrush> è impostata su <xref:System.Windows.Media.TileMode.Tile>.|  
 |Superfici che superano le dimensioni massime della trama dell'hardware grafico|Per la maggior parte dell'hardware grafico, le superfici di grandi dimensioni sono pari a 2048x2048 o 4096x4096 pixel.|  
-|Qualsiasi operazione il cui requisito per la RAM video supera la memoria dell'hardware grafico|È possibile monitorare l'utilizzo della RAM video dell'applicazione usando lo strumento Perforator incluso nella [famiglia di prodotti per l'analisi delle prestazioni WPF](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) in Windows SDK.|  
-|Finestre a livelli|Le finestre a livelli consentono alle applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di eseguire il rendering del contenuto sullo schermo in una finestra non rettangolare. Nei sistemi operativi che supportano Windows Display Driver Model (WDDM), ad esempio [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] e [!INCLUDE[win7](../../../../includes/win7-md.md)], le finestre a livelli sono con accelerazione hardware. Negli altri sistemi, ad esempio [!INCLUDE[winxp](../../../../includes/winxp-md.md)], il rendering delle finestre a livelli viene eseguito dal software senza accelerazione hardware.<br /><br /> È possibile abilitare le finestre sovrapposte in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] impostando gli elementi seguenti <xref:System.Windows.Window> proprietà:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|Qualsiasi operazione il cui requisito per la RAM video supera la memoria dell'hardware grafico|È possibile monitorare l'utilizzo della RAM video dell'applicazione usando lo strumento Perforator incluso nella [famiglia di prodotti per l'analisi delle prestazioni WPF](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) in Windows SDK.|  
+|Finestre a livelli|Le finestre a livelli consentono alle applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di eseguire il rendering del contenuto sullo schermo in una finestra non rettangolare. Nei sistemi operativi che supportano Windows Display Driver Model (WDDM), ad esempio [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] e [!INCLUDE[win7](../../../../includes/win7-md.md)], le finestre a livelli sono con accelerazione hardware. Negli altri sistemi, ad esempio [!INCLUDE[winxp](../../../../includes/winxp-md.md)], il rendering delle finestre a livelli viene eseguito dal software senza accelerazione hardware.<br /><br /> È possibile abilitare le finestre sovrapposte nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] impostando gli elementi seguenti <xref:System.Windows.Window> proprietà:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>Altre risorse  
@@ -117,7 +117,7 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
 |Perforator|Da usare per l'analisi del comportamento di rendering.|  
 |Visual Profiler|Da usare per la profilatura dell'uso dei servizi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], come gestione del layout e degli eventi, per gli elementi nella struttura ad albero visuale.|  
   
- WPF Performance Suite offre una visualizzazione grafica avanzata dei dati sulle prestazioni. Per altre informazioni sugli strumenti per le prestazioni WPF, vedere [Famiglia di prodotti per l'analisi delle prestazioni WPF](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e).  
+ WPF Performance Suite offre una visualizzazione grafica avanzata dei dati sulle prestazioni. Per altre informazioni sugli strumenti per le prestazioni WPF, vedere [Famiglia di prodotti per l'analisi delle prestazioni WPF](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e).  
   
 ### <a name="directx-diagnostic-tool"></a>Strumento di diagnostica DirectX  
  Lo strumento di diagnostica [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], Dxdiag.exe, consente di risolvere i problemi relativi a [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. La cartella di installazione predefinita per lo strumento di diagnostica [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] è:  
@@ -126,13 +126,13 @@ Un livello di rendering definisce un livello di prestazioni e funzionalità hard
   
  Quando si esegue lo strumento di diagnostica [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], la finestra principale contiene un set di schede che consentono di visualizzare e diagnosticare le informazioni relative a [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. La scheda **Sistema**, ad esempio, fornisce informazioni di sistema sul computer e specifica la versione di [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] installata nel computer.  
   
- ![Schermata: Strumento di diagnostica DirectX](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Screenshot: Strumento di diagnostica DirectX](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Finestra principale dello strumento di diagnostica DirectX  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Media.RenderCapability>  
  <xref:System.Windows.Media.RenderOptions>  
  [Ottimizzazione delle prestazioni di applicazioni WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [Famiglia di prodotti per l'analisi delle prestazioni WPF](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)  
+ [Famiglia di prodotti per l'analisi delle prestazioni WPF](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)  
  [Impostazioni del Registro di sistema per il rendering della grafica](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
  [Suggerimenti sulle animazioni](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

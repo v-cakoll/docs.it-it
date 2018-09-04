@@ -21,11 +21,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481969"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560588"
 ---
 # <a name="strongnameerrorinfo-function"></a>Funzione StrongNameErrorInfo
 Ottiene l'ultimo codice di errore che è stato generato da una delle funzioni con nome sicuro.  
@@ -54,4 +54,4 @@ HRESULT StrongNameErrorInfo ();
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni statiche globali dei nomi sicuri](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)
+ [Funzioni statiche globali per la gestione del nome sicuro](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

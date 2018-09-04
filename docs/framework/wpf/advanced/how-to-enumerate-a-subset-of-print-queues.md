@@ -9,22 +9,22 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: 3e616b3b61b4b1b561d5bdb7e51525f391901a22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf45d6fb3fb161ca5171e94b9ab7af1e0e6f0c3d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543589"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562069"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>Procedura: enumerare un sottoinsieme di code di stampa
-Una situazione comune riscontrata da professionisti IT (IT) la gestione di un set a livello aziendale di stampanti consiste nel generare un elenco delle stampanti con determinate caratteristiche. Questa funzionalità viene fornita per il <xref:System.Printing.PrintServer.GetPrintQueues%2A> metodo di un <xref:System.Printing.PrintServer> oggetto e <xref:System.Printing.EnumeratedPrintQueueTypes> enumerazione.  
+Una situazione comune affrontata dai professionisti informatici (IT) gestisce un set a livello aziendale delle stampanti consiste nel generare un elenco delle stampanti con determinate caratteristiche. Questa funzionalità viene fornita per il <xref:System.Printing.PrintServer.GetPrintQueues%2A> metodo di un <xref:System.Printing.PrintServer> oggetto e il <xref:System.Printing.EnumeratedPrintQueueTypes> enumerazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, il codice inizia creando una matrice di flag che specificano le caratteristiche delle code di stampa che si desidera elencare. In questo esempio, si sta cercando le code di stampa vengono installate localmente nel server di stampa e condivise. Il <xref:System.Printing.EnumeratedPrintQueueTypes> enumerazione offre molte altre possibilità.  
+ Nell'esempio seguente, il codice inizia creando una matrice di flag che specificano le caratteristiche delle code di stampa che si desidera elencare. In questo esempio, si ricercano le code di stampa che vengono installate localmente nei server di stampa e sono condivisi. Il <xref:System.Printing.EnumeratedPrintQueueTypes> enumerazione fornisce molte altre possibilità.  
   
- Il codice crea quindi un <xref:System.Printing.LocalPrintServer> dell'oggetto, una classe derivata da <xref:System.Printing.PrintServer>. Server di stampa locale è il computer in cui è in esecuzione l'applicazione.  
+ Il codice crea quindi una <xref:System.Printing.LocalPrintServer> dell'oggetto, una classe derivata da <xref:System.Printing.PrintServer>. Il server di stampa locale è il computer in cui viene eseguita l'applicazione.  
   
- L'ultimo passaggio significativo consiste nel passare la matrice di <xref:System.Printing.PrintServer.GetPrintQueues%2A> metodo.  
+ L'ultimo passaggio significativo consiste nel passare la matrice di <xref:System.Printing.PrintServer.GetPrintQueues%2A> (metodo).  
   
  Infine, i risultati vengono presentati all'utente.  
   
@@ -32,7 +32,7 @@ Una situazione comune riscontrata da professionisti IT (IT) la gestione di un se
  [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
  [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
   
- È possibile estendere questo esempio con il `foreach` ciclo che scorre ogni coda di stampa ulteriormente screening. Ad esempio, è possibile escludere le stampanti che non supportano la stampa fronte retro con la chiamata di ciclo ogni coda di stampa <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> metodo e il valore restituito di test per la presenza di stampa fronte retro.  
+ È possibile estendere questo esempio facendo in modo che il `foreach` ciclo che eseguire ulteriori passaggi attraverso ogni coda di stampa screening. Ad esempio, è possibile escludere le stampanti che non supportano la stampa fronte retro facendo in modo che la chiamata di ciclo ogni coda di stampa <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> metodo ed eseguire test del valore restituito per la presenza di stampa fronte retro.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
@@ -43,4 +43,4 @@ Una situazione comune riscontrata da professionisti IT (IT) la gestione di un se
  <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
  [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Panoramica della stampa](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Microsoft XPS Document Writer](http://go.microsoft.com/fwlink/?LinkId=147319)
+ [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)

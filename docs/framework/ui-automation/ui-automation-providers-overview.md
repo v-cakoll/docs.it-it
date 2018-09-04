@@ -8,16 +8,16 @@ ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e48e2eb0df8fbc4daf4db68b0c27493b122adfa3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40ad2eb09b4e3a8f78f493311cdb5c0da410943b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407493"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560528"
 ---
 # <a name="ui-automation-providers-overview"></a>Cenni preliminari sui provider di automazione interfaccia utente
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  I provider di automazione interfaccia utente abilitano la comunicazione dei controlli con le applicazioni client di automazione interfaccia utente. In generale, ogni controllo o un altro elemento distinto in una [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] è rappresentato da un provider. Il provider espone informazioni sull'elemento e facoltativamente implementa i pattern di controllo che consentono all'applicazione client di interagire con il controllo.  
   
@@ -30,12 +30,12 @@ ms.locfileid: "33407493"
  I provider di automazione interfaccia utente rientrano in due categorie, ovvero provider lato client e provider lato server.  
   
 ### <a name="client-side-providers"></a>Provider lato client  
- I provider lato client vengono implementati dai client di automazione interfaccia utente per comunicare con un'applicazione che non supporta parzialmente o completamente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Provider lato client in genere comunicano con il server attraverso il limite di processo inviando e ricevendo messaggi di Windows.  
+ I provider lato client vengono implementati dai client di automazione interfaccia utente per comunicare con un'applicazione che non supporta parzialmente o completamente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Provider lato client comunicano in genere con il server attraverso il limite di processo inviando e ricevendo messaggi di Windows.  
   
- Poiché i provider di automazione interfaccia utente per i controlli [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Form o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] applicazioni viene fornita come parte del sistema operativo, le applicazioni client raramente sono devono implementare i propri provider e questa panoramica non vengono forniti dettagli ulteriori.  
+ Poiché i provider di automazione interfaccia utente per i controlli [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Form, o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] applicazioni viene fornita come parte del sistema operativo, le applicazioni client raramente sono devono implementare i propri provider e questa panoramica non vengono forniti dettagli più avanti.  
   
 ### <a name="server-side-providers"></a>Provider lato server  
- I provider lato server vengono implementati da controlli personalizzati o da applicazioni che si basano su un framework dell'interfaccia utente diverso da [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Form o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Provider lato server vengono implementati da controlli personalizzati o da applicazioni basate su un framework interfaccia utente diverso da [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Form, o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
  I provider lato server comunicano con le applicazioni client attraverso il limite di processo esponendo le interfacce al sistema principale di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , che a sua volta gestisce le richieste dai client.  
   

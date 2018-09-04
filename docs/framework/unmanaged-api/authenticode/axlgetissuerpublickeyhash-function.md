@@ -11,11 +11,11 @@ ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 408b71bf38427d12418e05f8b509fe841bc95ef1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395234"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563676"
 ---
 # <a name="axlgetissuerpublickeyhash-function"></a>Funzione _AxlGetIssuerPublicKeyHash
 Recupera l'hash SHA-1 della chiave pubblica associata alla chiave privata usata per firmare il certificato specificato.  

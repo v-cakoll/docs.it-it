@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
 ms.openlocfilehash: 816ac0d81ddcaa461a842c0f69fe5ed5b21a32d1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466284"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559833"
 ---
 # <a name="toolbar-overview"></a>Cenni preliminari sui controlli ToolBar
 <xref:System.Windows.Controls.ToolBar> i controlli sono contenitori per un gruppo di comandi o controlli che sono in genere correlati alla funzione. Oggetto <xref:System.Windows.Controls.ToolBar> contiene in genere pulsanti che richiamano comandi.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
 ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401849"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562855"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Procedura: verificare se .NET Framework 3.0 è installato
 Prima che gli amministratori possono distribuire le applicazioni di Microsoft .NET Framework in un sistema, è necessario verificare che il runtime di .NET Framework. In questo argomento fornisce uno script scritto in HTML/JavaScript che gli amministratori possono utilizzare per determinare se è presente in un sistema di .NET Framework.  

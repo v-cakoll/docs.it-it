@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 author: tdykstra
 ms.openlocfilehash: 4d9451f99b0253d0a4de6550b64fedd7fdfeda77
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464973"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558034"
 ---
 # <a name="caching-in-net-framework-applications"></a>Memorizzazione nella cache in applicazioni .NET Framework
 La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando accedono nuovamente ai dati, le applicazioni possono recuperarli dalla cache anziché dall'origine. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.  

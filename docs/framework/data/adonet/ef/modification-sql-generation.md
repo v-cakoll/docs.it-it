@@ -3,11 +3,11 @@ title: Generazione di comandi SQL di modifica
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417247"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560756"
 ---
 # <a name="modification-sql-generation"></a>Generazione di comandi SQL di modifica
 Questa sezione descrive come sviluppare un modulo di generazione SQL di modifica per il provider (database conforme a SQL:1999). Tale modulo è responsabile della conversione di un albero dei comandi di modifica nelle istruzioni SQL INSERT, UPDATE o DELETE appropriate.  
