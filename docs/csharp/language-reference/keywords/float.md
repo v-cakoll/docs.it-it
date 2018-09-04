@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 9500aceed62904e68d6b7ee8bec569d12103bb18
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 98f89ba3d79f7679b69ce10fd875b3caf69c5257
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028240"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932910"
 ---
 # <a name="float-c-reference"></a>float (Riferimenti per C#)
 
@@ -21,7 +21,7 @@ La parola chiave `float` indica un tipo semplice che archivia valori a virgola m
 
 |Tipo|Intervallo approssimativo|Precisione|Tipo .NET|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|da -3,4 × 10<sup>38</sup> a +3,4 × 10<sup>38</sup>|7 cifre|<xref:System.Single?displayProperty=nameWithType>|  
+|`float`|Compreso tra ±1.5 x 10<sup>−45</sup> e ±3.4 x 10<sup>38</sup>|7 cifre|<xref:System.Single?displayProperty=nameWithType>|  
 
 ## <a name="literals"></a>Valori letterali
 
@@ -37,9 +37,9 @@ Se nella dichiarazione precedente non si usa il suffisso, verrà generato un err
 
 In una stessa espressione è possibile combinare tipi integrali numerici e tipi a virgola mobile. In questo caso i tipi integrali vengono convertiti in tipi a virgola mobile. La valutazione dell'espressione viene eseguita in base alle regole seguenti:
 
-- Se uno dei tipi a virgola mobile è [double](double.md), l'espressione restituirà un valore [double](double.md) o [bool](bool.md) in caso di espressioni relazionali o booleane.
+- Se uno dei tipi a virgola mobile è [double](double.md), l'espressione restituirà un valore [double](double.md) o [bool](bool.md) nei confronti relazionali o nei confronti per l'uguaglianza.
 
-- Se l'espressione non contiene alcun tipo [double](double.md), restituirà un valore `float` o [bool](bool.md) in caso di espressioni relazionali o booleane.
+- Se nell'espressione non è presente alcun tipo [double](double.md), l'espressione restituirà un valore `float` o [bool](bool.md) nei confronti relazionali o nei confronti per l'uguaglianza.
 
 Un'espressione a virgola mobile può contenere gli insiemi di valori seguenti:
 
@@ -65,12 +65,12 @@ Nell'esempio seguente [int](int.md), [short](short.md) e `float` sono inclusi in
 
 ## <a name="see-also"></a>Vedere anche
 
-<xref:System.Single>  
-[Riferimenti per C#](../index.md)  
-[Guida per programmatori C#](../../programming-guide/index.md)  
-[Cast e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md)  
-[Parole chiave di C#](index.md)  
-[Tabella dei tipi integrali](integral-types-table.md)  
-[Tabella dei tipi incorporati](built-in-types-table.md)  
-[Tabella delle conversioni numeriche implicite](implicit-numeric-conversions-table.md)  
-[Tabella delle conversioni numeriche esplicite](explicit-numeric-conversions-table.md)  
+- <xref:System.Single>  
+- [Riferimenti per C#](../index.md)  
+- [Guida per programmatori C#](../../programming-guide/index.md)  
+- [Cast e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md)  
+- [Parole chiave di C#](index.md)  
+- [Tabella dei tipi integrali](integral-types-table.md)  
+- [Tabella dei tipi incorporati](built-in-types-table.md)  
+- [Tabella delle conversioni numeriche implicite](implicit-numeric-conversions-table.md)  
+- [Tabella delle conversioni numeriche esplicite](explicit-numeric-conversions-table.md)  

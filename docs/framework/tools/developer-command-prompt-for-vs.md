@@ -1,6 +1,6 @@
 ---
 title: Prompt dei comandi per gli sviluppatori per Visual Studio
-ms.date: 06/18/2018
+ms.date: 08/14/2018
 helpviewer_keywords:
 - command prompt, Windows SDK
 - Visual Studio command prompt
@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e64facffd4face929b28d660ffd5210f127c3bd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 4c95074190419dd3e984c7659ede917b83b97f08
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315225"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754357"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Prompt dei comandi per gli sviluppatori per Visual Studio
 
-Il prompt dei comandi per gli sviluppatori per Visual Studio imposta automaticamente le variabili di ambiente che consentono di usare facilmente gli strumenti di .NET Framework. Il prompt dei comandi per gli sviluppatori viene installato con le versioni complete o della Community di Visual Studio. Non viene installato con le versioni Express di Visual Studio.
+Il prompt dei comandi per gli sviluppatori per Visual Studio imposta automaticamente le variabili di ambiente che consentono di usare facilmente gli strumenti di .NET Framework.
 
 > [!div class="button"]
 [Download di Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
 ## <a name="searching-for-the-command-prompt-on-your-machine"></a>Ricerca del prompt dei comandi nel computer
 
-Si potrebbero notare molti prompt dei comandi, in base alla versione di Visual Studio e agli SDK aggiuntivi installati. Ad esempio, le versioni a 64 bit di Visual Studio forniscono prompt dei comandi sia a 32 bit che a 64 bit. Le versioni a 32 bit e a 64 bit della maggior parte degli strumenti sono uguali; tuttavia, alcuni strumenti apportano modifiche specifiche per gli ambienti a 32 bit e a 64 bit. Se i passaggi seguenti non funzionano, è possibile provare [Individuazione manuale dei file nel computer](#manually-locating-the-files-on-your-machine) o [Esecuzione del prompt dei comandi dall'interno di Visual Studio](#running-command-prompt-from-inside-visual-studio).
+Si potrebbero avere più prompt dei comandi, in base alla versione di Visual Studio e agli SDK aggiuntivi installati. Ad esempio, le versioni a 64 bit di Visual Studio forniscono prompt dei comandi sia a 32 bit che a 64 bit. Le versioni a 32 bit e a 64 bit della maggior parte degli strumenti sono uguali; tuttavia, alcuni strumenti apportano modifiche specifiche per gli ambienti a 32 bit e a 64 bit. Se i passaggi seguenti non funzionano, è possibile provare [Individuazione manuale dei file nel computer](#manually-locating-the-files-on-your-machine) o [Esecuzione del prompt dei comandi dall'interno di Visual Studio](#running-command-prompt-from-inside-visual-studio).
 
 ### <a name="in-windows-10"></a>In Windows 10
 
@@ -62,17 +62,17 @@ Si potrebbero notare molti prompt dei comandi, in base alla versione di Visual S
 
 Se ci sono altri SDK installati, ad esempio [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) o [versioni precedenti](https://developer.microsoft.com/windows/downloads/sdk-archive), si potranno notare prompt dei comandi aggiuntivi per le architetture ARM, x86 o x64. Consultare la documentazione dei diversi strumenti per determinare quale versione del prompt dei comandi usare.
 
-## <a name="manually-locating-the-files-on-your-machine"></a>Individuazione manuale dei file nel computer
+## <a name="manually-locate-the-files-on-your-machine"></a>Trovare manualmente i file nel computer
 
 In genere, i collegamenti per i prompt dei comandi installati verranno posizionati nella cartella **Menu Start** per Visual Studio, ad esempio in C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools. Tuttavia, se per qualche motivo la ricerca del prompt dei comandi non produce i risultati previsti, è possibile provare a trovare manualmente il collegamento nel computer. Provare a cercare il nome del file del prompt dei comandi, ad esempio *VsDevCmd.bat* o passare alla cartella Tools, ad esempio C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools (il percorso cambierà a seconda del percorso di installazione, della versione e dell'edizione di Visual Studio).
 
-## <a name="running-command-prompt-from-inside-visual-studio"></a>Esecuzione del prompt dei comandi dall'interno di Visual Studio
+## <a name="run-command-prompt-from-inside-visual-studio"></a>Eseguire il prompt dei comandi dall'interno di Visual Studio
 
-Per semplificare l'accesso, è possibile aggiungere il prompt dei comandi per gli sviluppatori Visual Studio o qualsiasi altro prompt dei comandi al menu Strumenti in Visual Studio aggiungendolo all'elenco di strumenti esterni. Di seguito è illustrata la procedura per eseguire questa operazione:
+Per semplificare l'accesso, è possibile aggiungere il prompt dei comandi per gli sviluppatori Visual Studio o qualsiasi altro prompt dei comandi al menu **Strumenti** in Visual Studio. Per rendere lo strumento disponibile, aggiungerlo all'elenco degli strumenti esterni. Di seguito la procedura:
 
 1. Aprire Visual Studio.
 
-2. Selezionare il menu **Strumenti** e scegliere **Strumenti esterni**.
+2. Selezionare il menu **Strumenti** e quindi scegliere **Strumenti esterni**.
 
 3. Nella finestra di dialogo **Strumenti esterni** scegliere il pulsante **Aggiungi**. Verrà visualizzata una nuova voce.
 
@@ -86,9 +86,9 @@ Per semplificare l'accesso, è possibile aggiungere il prompt dei comandi per gl
 
 8. Fare clic sul pulsante **OK** .
 
-Successivamente, viene aggiunta la nuova voce di menu ed è possibile accedere al prompt dei comandi dal menu **Strumenti**.
+   Verrà aggiunta la nuova voce di menu e sarà possibile accedere al prompt dei comandi dal menu **Strumenti**.
 
 ## <a name="see-also"></a>Vedere anche
 
- [Strumenti](../../../docs/framework/tools/index.md)  
- [Gestione di strumenti esterni](/visualstudio/ide/managing-external-tools)  
+- [Strumenti](../../../docs/framework/tools/index.md)
+- [Gestione di strumenti esterni](/visualstudio/ide/managing-external-tools)

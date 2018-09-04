@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314643"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931553"
 ---
 # <a name="tour-of-net"></a>Panoramica di .NET
 
@@ -79,7 +79,7 @@ L'indipendenza dai tipi viene inoltre usata per forzare l'incapsulamento garante
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, VB e F# supportano l'*inferenza del tipo* locale. Con l'inferenza del tipo, il compilatore deduce il tipo dell'espressione sul lato sinistro dall'espressione sul lato destro. Questo non significa che l'indipendenza dai tipi è interrotta o evitata. Il tipo risultante ha un tipo sicuro, con tutto quello che implica tale caratteristica. Nell'esempio precedente `dog` e `cat` vengono riscritti per introdurre l'inferenza del tipo e il resto dell'esempio non subisce modifiche:
+C#, VB e F# supportano l'*inferenza del tipo* locale. Con l'inferenza del tipo, il compilatore deduce il tipo dell'espressione sul lato sinistro dall'espressione sul lato destro. Questo non significa che l'indipendenza dai tipi è interrotta o evitata. Il tipo risultante ha un tipo sicuro, con tutto quello che implica tale caratteristica. Nell'esempio precedente `dog` viene riscritto per introdurre l'inferenza del tipo e il resto dell'esempio non subisce modifiche:
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 

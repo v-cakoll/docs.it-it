@@ -3,22 +3,22 @@ title: Tipi di framework che supportano alberi delle espressioni
 description: Informazioni sui tipi di framework che supportano gli alberi delle espressioni, sulla creazione di alberi delle espressioni e sulle tecniche per l'uso delle API degli alberi delle espressioni.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 3110f2a9534085aba95fcb5c8e76f66229e79f86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214945"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934792"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipi di framework che supportano alberi delle espressioni
 
 [Precedente -- Expression Trees Explained (Nozioni di base sugli alberi delle espressioni)](expression-trees-explained.md)
 
 In .NET Core Framework esiste un lungo elenco di classi che funzionano con gli alberi delle espressioni.
-È possibile visualizzare l'elenco completo [qui](/dotnet/core/api/System.Linq.Expressions).
+È possibile visualizzare l'elenco completo in <xref:System.Linq.Expressions>.
 Anziché rivedere l'elenco completo, cerchiamo di comprendere come sono state progettate le classi del framework.
 
-Nella progettazione del linguaggio, un'espressione è un corpo di codice che valuta e restituisce un valore. Le espressioni possono essere molto semplici: l'espressione costante `1` restituisce il valore costante 1. Possono essere più complicate: l'espressione `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` restituisce una radice di un'equazione quadratica (nel caso in cui l'equazione abbia una soluzione).  
+Nella progettazione del linguaggio, un'espressione è un corpo di codice che valuta e restituisce un valore. Le espressioni possono essere molto semplici: l'espressione costante `1` restituisce il valore costante 1. Possono essere più complicate: l'espressione `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` restituisce una radice di un'equazione quadratica (nel caso in cui l'equazione abbia una soluzione).  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>Tutto inizia con System.Linq.Expression
 

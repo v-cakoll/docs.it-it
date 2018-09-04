@@ -6,24 +6,24 @@ helpviewer_keywords:
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9b7508c6e751f83fdc16a700ad68aa7de36e497
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e7368a6b6a4453f2dd07c7afdc0bffa7473ed1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285135"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929678"
 ---
 # <a name="using-static-directive-c-reference"></a>Direttiva using static (Riferimenti per C#)
 
-La direttiva `using static` consente di definire un tipo i cui membri statici sono accessibili senza specificare un nome di tipo. La sintassi è la seguente:
+La direttiva `using static` consente di definire un tipo i cui membri statici e i tipi nidificati sono accessibili senza specificare un nome di tipo. La sintassi è la seguente:
 
 ```csharp
-using static <fully-qualified-type-name>
+using static <fully-qualified-type-name>;
 ```
 
-dove *fully-qualified-type-name* è il nome del tipo i cui membri statici possono essere usati come riferimento senza specificare un nome di tipo. Se non si specifica un nome di tipo completo (il nome completo dello spazio dei nomi con il nome del tipo), C# genera l'errore del compilatore CS0246: "Impossibile trovare il nome del tipo o dello spazio dei nomi '<type-name>'."
+dove *fully-qualified-type-name* è il nome del tipo i cui membri statici e i tipi nidificati possono essere usati come riferimento senza specificare un nome di tipo. Se non si specifica un nome di tipo completo (il nome completo dello spazio dei nomi con il nome del tipo), C# genera l'errore del compilatore [CS0246](../compiler-messages/cs0246.md): "Impossibile trovare il nome del tipo o dello spazio dei nomi 'type/namespace' (probabilmente manca una direttiva using o un riferimento a un assembly)".
 
-La direttiva `using static` si applica a qualsiasi tipo che includa membri statici, anche qualora siano presenti membri di istanza. Tuttavia, i membri di istanza possono essere chiamati solo tramite l'istanza del tipo.
+La direttiva `using static` si applica a qualsiasi tipo che includa membri statici (o tipi nidificati), anche qualora siano presenti membri di istanza. Tuttavia, i membri di istanza possono essere chiamati solo tramite l'istanza del tipo.
 
 La direttiva `using static` è stata introdotta in C# 6.
 
@@ -53,9 +53,9 @@ Nell'esempio la direttiva `using static` può anche essere stata applicata al ti
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttiva using](using-directive.md)   
-[Riferimenti per C#](../../../csharp/language-reference/index.md)   
-[Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
-[Uso degli spazi dei nomi](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
-[Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)   
-[Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md)   
+- [Direttiva using](using-directive.md)
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+- [Uso degli spazi dei nomi](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md)

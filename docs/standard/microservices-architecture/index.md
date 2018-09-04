@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/06/2018
-ms.openlocfilehash: 154cb0eafb8f14d61191b7cad749cb93d269ff34
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6b57f66068409ade24eecff636b9dd3f4084fd71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105064"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516151"
 ---
 ![](./media/cover.png)
 
@@ -143,7 +143,7 @@ La seconda parte della guida inizia con la sezione [Processo di sviluppo per le 
 
 L'applicazione eShopOnContainers è un'applicazione di riferimento per .NET Core e i microservizi, progettata per la distribuzione mediante i contenitori Docker. L'applicazione è costituita da più sottosistemi, inclusi diversi front-end con interfaccia utente per negozi online (un'app Web e un'app per dispositivi mobili nativa). Include inoltre i microservizi e i contenitori back-end per tutte le operazioni lato server necessarie.
 
-Il codice sorgente di questa applicazione basata su microservizi e contenitori è open source ed disponibile nel repository GitHub [eShopOnContainers](http://aka.ms/MicroservicesArchitecture).
+Il codice sorgente di questa applicazione basata su microservizi e contenitori è open source ed disponibile nel repository GitHub [eShopOnContainers](https://aka.ms/MicroservicesArchitecture).
 
 ## <a name="send-us-your-feedback"></a>Inviateci i vostri commenti!
 

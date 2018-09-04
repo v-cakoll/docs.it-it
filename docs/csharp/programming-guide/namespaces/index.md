@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 60e4c6e98ca9e71d1a095a0c7ee1df6be6d13f4b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0e678f6577c07e4d56c485e0fd104397eddbd079
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934873"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517455"
 ---
 # <a name="namespaces-c-programming-guide"></a>Spazi dei nomi (Guida per programmatori C#)
 Gli spazi dei nomi vengono usati frequentemente nella programmazione C# in due modi. Primo, .NET Framework usa gli spazi dei nomi per organizzare numerose classi, come indicato di seguito:  
@@ -52,9 +52,10 @@ Gli spazi dei nomi vengono usati frequentemente nella programmazione C# in due m
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [Direttiva using](../../../csharp/language-reference/keywords/using-directive.md)  
- [Operatore ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
- [. (operatore)](../../../csharp/language-reference/operators/member-access-operator.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [Direttiva using](../../../csharp/language-reference/keywords/using-directive.md)  
+- [Operatore ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [. (operatore)](../../../csharp/language-reference/operators/member-access-operator.md)

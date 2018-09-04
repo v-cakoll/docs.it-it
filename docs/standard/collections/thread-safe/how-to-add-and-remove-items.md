@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6aa309f2c6c44934f491229ac43003a05301bacb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8bb84f2e26471e004678afde99a1dd725db6832
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569746"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755106"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Procedura: aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary
 In questo esempio viene illustrato come aggiungere, recuperare, aggiornare e rimuovere elementi da un oggetto <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Questa classe di raccolta è un'implementazione thread-safe. È consigliabile usarla ogni volta che più thread tentano di accedere contemporaneamente agli elementi.  
@@ -36,15 +36,15 @@ In questo esempio viene illustrato come aggiungere, recuperare, aggiornare e rim
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> è progettato per gli scenari multithreading. Non è necessario usare blocchi nel codice per aggiungere o rimuovere elementi dalla raccolta. Tuttavia, è sempre possibile per un thread recuperare un valore, e per un altro thread aggiornare immediatamente la raccolta assegnando un nuovo valore alla stessa chiave.  
   
- Sebbene tutti i metodi di <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sono thread-safe, non tutti i metodi sono atomici, in particolare <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. Il delegato utenti passato a questi metodi viene richiamato fuori dal blocco interno del dizionario. (Questa operazione viene eseguita per impedire a un codice sconosciuto di bloccare tutti i thread). Pertanto è possibile che per questa sequenza di eventi si verifichi quanto segue:  
+ Sebbene tutti i metodi di <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sono thread-safe, non tutti i metodi sono atomici, in particolare <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. Il delegato utenti passato a questi metodi viene richiamato fuori dal blocco interno del dizionario (questa operazione viene eseguita per impedire a un codice sconosciuto di bloccare tutti i thread). Pertanto, è possibile che per questa sequenza di eventi si verifichi quanto segue:  
   
  1\) threadA chiama <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, non trova nessun elemento e ne crea uno nuovo da aggiungere richiamando il delegato valueFactory.  
   
  2\) threadB chiama <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> contemporaneamente, il relativo delegato valueFactory viene richiamato e arriva al blocco interno prima di threadA, quindi la nuova coppia chiave-valore viene aggiunta al dizionario.  
   
- Il delegato utenti di 3\)threadA completa l'operazione, il thread arriva nel blocco, ma ora rileva che l'elemento esiste già  
+ 3\) Il delegato utenti di threadA completa l'operazione, il thread arriva nel blocco, ma ora rileva che l'elemento esiste già.  
   
- 4\)threadA esegue un'operazione "Get" e restituisce i dati aggiunti precedentemente da threadB.  
+ 4\) threadA esegue un'operazione "Get" e restituisce i dati aggiunti precedentemente da threadB.  
   
  Non è comunque garantito che i dati restituiti da <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> sono gli stessi dati creati dal delegato valueFactory del thread. Una sequenza di eventi simile può verificarsi quando viene chiamato <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>.  
   

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#error directive [C#]'
 ms.assetid: f2a7f3af-4cf9-4111-b369-70204d24b26b
-ms.openlocfilehash: 9ea4c24dcc3c0a4d39499bee5900cb9c6cc768c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed43c1f85142ec6c54e44db5e3b0b7de3ef36bb8
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269399"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935294"
 ---
 # <a name="error-c-reference"></a>#error (Riferimenti per C#)
-`#error` consente di generare un errore da una posizione specifica nel codice. Ad esempio:  
+`#error` consente di generare l'errore definito dall'utente [CS1029](../compiler-messages/cs1029.md) da una posizione specifica nel codice. Ad esempio:  
   
 ```csharp
 #error Deprecated code in this method.  
@@ -42,7 +42,8 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Direttive per il preprocessore C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Direttive per il preprocessore C#](../../../csharp/language-reference/preprocessor-directives/index.md)

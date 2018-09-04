@@ -5,12 +5,12 @@ ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f163de89a3edbf3a4ca8509fdecd10f1aa1adf1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdeb0e92dca723b64ee82b70f58fe910fd0c2edb
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396792"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931050"
 ---
 # <a name="certificate-selection-and-validation"></a>Selezione e convalida dei certificati
 Le classi <xref:System.Net> supportano diversi modi per selezionare e convalidare <xref:System.Security.Cryptography.X509Certificates> per le connessioni SSL (Secure Socket Layer). Un client può selezionare uno o più certificati per autenticarsi a un server, mentre un server può richiedere che un certificato client abbia uno o più attributi specifici per l'autenticazione.  
@@ -43,7 +43,7 @@ Le classi <xref:System.Net> supportano diversi modi per selezionare e convalidar
   
  Per configurare i certificati client è possibile usare *Winhttpcertcfg.exe*. Lo strumento *Winhttpcertcfg.exe* è incluso in Windows Server 2003 Resource Kit ed è anche disponibile come download in Windows Server 2003 Resource Kit Tools sul sito www.microsoft.com.  
   
- Per configurare i certificati server per la classe <xref:System.Net.HttpListener> è possibile usare *HttpCfg.exe*. Lo strumento *HttpCfg.exe* è incluso tra gli strumenti di supporto per Windows Server 2003 e Windows XP Service Pack 2. *HttpCfg.exe* e gli altri strumenti di supporto non vengono installati per impostazione predefinita in Windows Server 2003 o Windows XP. Per Windows Server 2003 gli strumenti di supporto vengono installati separatamente dalla cartella e dal file seguenti sul CD del sistema operativo:  
+Per configurare i certificati server per la classe <xref:System.Net.HttpListener> è possibile usare lo strumento *HttpCfg.exe*. Lo strumento *HttpCfg.exe* è incluso tra gli strumenti di supporto per Windows Server 2003 e Windows XP Service Pack 2. *HttpCfg.exe* e gli altri strumenti di supporto non vengono installati per impostazione predefinita in Windows Server 2003 o Windows XP. Per Windows Server 2003 gli strumenti di supporto vengono installati separatamente dalla cartella e dal file seguenti sul CD del sistema operativo:  
   
  \Support\Tools\Suptools.msi  
   

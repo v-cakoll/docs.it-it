@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: 41814129d038f8cb1ab98db0c7a4e0cbd7e7cd54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397260"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925504"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedure consigliate per Transport Layer Security (TLS) con .NET Framework
 
@@ -119,7 +119,7 @@ Impostare l'opzione `DontEnableSystemDefaultTlsVersions` `AppContext` su `false`
 
 Il framework WCF sceglie automaticamente il protocollo più alto disponibile fino a TLS 1.2, a meno che non si configuri in modo esplicito una versione del protocollo. Per altre informazioni, vedere la sezione precedente [Per il trasporto TCP WCF con sicurezza del trasporto con credenziali del certificato](#wcf-tcp-cert).
 
-### <a name="for-net-framework-35---451-and-not-wcf"></a>Per .NET Framework 3.5 - 4.5.1 e non WCF
+### <a name="for-net-framework-35---452-and-not-wcf"></a>Per .NET Framework 3.5 - 4.5.2 e non WCF
 
 È consigliabile aggiornare l'app a .NET Framework 4.7 o versioni successive. Se non è possibile eseguire l'aggiornamento, procedere come segue. A un certo punto in futuro, l'applicazione potrebbe non funzionare più fino a quando non viene aggiornata a .NET Framework 4.7 o versioni successive.
 
