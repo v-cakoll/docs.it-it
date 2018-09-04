@@ -2,32 +2,32 @@
 title: Finestre di progettazione composte personalizzate - relatore dell'elemento del flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 5bdc952bb4b920f0b5a7d272423ec2d922a94798
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7519ea560bab1e0c6651ad0b37c8477297b0d64d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517118"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526830"
 ---
-# <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="0dde0-102">Finestre di progettazione composte personalizzate - relatore dell'elemento del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="0dde0-102">Custom Composite Designers - Workflow Item Presenter</span></span>
-<span data-ttu-id="0dde0-103">Il <xref:System.Activities.Presentation.WorkflowItemPresenter> è un tipo chiave nel modello di programmazione della finestra di progettazione di WF che consente la creazione di un' "area di rilascio" in cui è possibile posizionare un'attività arbitraria.</span><span class="sxs-lookup"><span data-stu-id="0dde0-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="0dde0-104">In questo esempio viene illustrato come compilare un ActivityDesigner che espone tale "area di rilascio."</span><span class="sxs-lookup"><span data-stu-id="0dde0-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>  
+# <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="54520-102">Finestre di progettazione composte personalizzate - relatore dell'elemento del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="54520-102">Custom Composite Designers - Workflow Item Presenter</span></span>
+<span data-ttu-id="54520-103">Il <xref:System.Activities.Presentation.WorkflowItemPresenter> è un tipo di chiave nel modello di programmazione della finestra di progettazione di WF che consente la creazione di un' "area di rilascio" in cui è possibile posizionare un'attività arbitraria.</span><span class="sxs-lookup"><span data-stu-id="54520-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="54520-104">In questo esempio viene illustrato come compilare un ActivityDesigner che espone tale "area di rilascio."</span><span class="sxs-lookup"><span data-stu-id="54520-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>  
   
- <span data-ttu-id="0dde0-105">In questo esempio viene illustrato quanto segue:</span><span class="sxs-lookup"><span data-stu-id="0dde0-105">This sample demonstrates:</span></span>  
+ <span data-ttu-id="54520-105">In questo esempio viene illustrato quanto segue:</span><span class="sxs-lookup"><span data-stu-id="54520-105">This sample demonstrates:</span></span>  
   
-## <a name="demonstrates"></a><span data-ttu-id="0dde0-106">Dimostrazione</span><span class="sxs-lookup"><span data-stu-id="0dde0-106">Demonstrates</span></span>  
+## <a name="demonstrates"></a><span data-ttu-id="54520-106">Dimostrazione</span><span class="sxs-lookup"><span data-stu-id="54520-106">Demonstrates</span></span>  
   
--   <span data-ttu-id="0dde0-107">Creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span><span class="sxs-lookup"><span data-stu-id="0dde0-107">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
+-   <span data-ttu-id="54520-107">Creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span><span class="sxs-lookup"><span data-stu-id="54520-107">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
   
--   <span data-ttu-id="0dde0-108">Registrazione della finestra di progettazione personalizzata usando l'archivio di metadati.</span><span class="sxs-lookup"><span data-stu-id="0dde0-108">Registering the custom designer using the metadata store.</span></span>  
+-   <span data-ttu-id="54520-108">Registrazione della finestra di progettazione personalizzata usando l'archivio di metadati.</span><span class="sxs-lookup"><span data-stu-id="54520-108">Registering the custom designer using the metadata store.</span></span>  
   
--   <span data-ttu-id="0dde0-109">Programmazione della casella degli strumenti riallocata in modo dichiarativo e imperativo.</span><span class="sxs-lookup"><span data-stu-id="0dde0-109">Programming the rehosted toolbox declaratively and imperatively.</span></span>  
+-   <span data-ttu-id="54520-109">Programmazione della casella degli strumenti riallocata in modo dichiarativo e imperativo.</span><span class="sxs-lookup"><span data-stu-id="54520-109">Programming the rehosted toolbox declaratively and imperatively.</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="0dde0-110">Dettagli dell'esempio</span><span class="sxs-lookup"><span data-stu-id="0dde0-110">Sample Details</span></span>  
- <span data-ttu-id="0dde0-111">Il codice per questo esempio illustra:</span><span class="sxs-lookup"><span data-stu-id="0dde0-111">The code for this sample shows:</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="54520-110">Dettagli dell'esempio</span><span class="sxs-lookup"><span data-stu-id="54520-110">Sample Details</span></span>  
+ <span data-ttu-id="54520-111">Il codice per questo esempio illustra:</span><span class="sxs-lookup"><span data-stu-id="54520-111">The code for this sample shows:</span></span>  
   
--   <span data-ttu-id="0dde0-112">L'ActivityDesigner personalizzato compilato per la classe `SimpleNativeActivity`.</span><span class="sxs-lookup"><span data-stu-id="0dde0-112">The custom activity designer is built for the `SimpleNativeActivity` class.</span></span>  
+-   <span data-ttu-id="54520-112">L'ActivityDesigner personalizzato compilato per la classe `SimpleNativeActivity`.</span><span class="sxs-lookup"><span data-stu-id="54520-112">The custom activity designer is built for the `SimpleNativeActivity` class.</span></span>  
   
--   <span data-ttu-id="0dde0-113">La creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span><span class="sxs-lookup"><span data-stu-id="0dde0-113">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
+-   <span data-ttu-id="54520-113">La creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span><span class="sxs-lookup"><span data-stu-id="54520-113">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
   
 ```xaml  
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"  
@@ -63,23 +63,23 @@ ms.locfileid: "33517118"
 </sap:ActivityDesigner>  
 ```  
   
- <span data-ttu-id="0dde0-114">Notare l'uso dell'associazione dati WPF per eseguire l'associazione a `ModelItem.Body`.</span><span class="sxs-lookup"><span data-stu-id="0dde0-114">Note the use of WPF data binding to bind to `ModelItem.Body`.</span></span> <span data-ttu-id="0dde0-115">`ModelItem` è la proprietà su <xref:System.Activities.Presentation.ActivityDesigner> che fa riferimento all'oggetto sottostante la finestra di progettazione viene utilizzato per, in questo caso **SimpleNativeActivity**.</span><span class="sxs-lookup"><span data-stu-id="0dde0-115">`ModelItem` is the property on <xref:System.Activities.Presentation.ActivityDesigner> that refers to the underlying object the designer is being used for, in this case, **SimpleNativeActivity**.</span></span>  
+ <span data-ttu-id="54520-114">Notare l'uso dell'associazione dati WPF per eseguire l'associazione a `ModelItem.Body`.</span><span class="sxs-lookup"><span data-stu-id="54520-114">Note the use of WPF data binding to bind to `ModelItem.Body`.</span></span> <span data-ttu-id="54520-115">`ModelItem` è la proprietà su <xref:System.Activities.Presentation.ActivityDesigner> che fa riferimento all'oggetto sottostante la finestra di progettazione utilizzato, in questo caso **SimpleNativeActivity**.</span><span class="sxs-lookup"><span data-stu-id="54520-115">`ModelItem` is the property on <xref:System.Activities.Presentation.ActivityDesigner> that refers to the underlying object the designer is being used for, in this case, **SimpleNativeActivity**.</span></span>  
   
-#### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="0dde0-116">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="0dde0-116">To setup, build, and run the sample</span></span>  
+#### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="54520-116">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="54520-116">To setup, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="0dde0-117">Aprire la soluzione in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0dde0-117">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="54520-117">Aprire la soluzione in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="54520-117">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="0dde0-118">Premere F5 per compilare ed eseguire l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="0dde0-118">Press F5 to compile and run the application.</span></span>  
+2.  <span data-ttu-id="54520-118">Premere F5 per compilare ed eseguire l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="54520-118">Press F5 to compile and run the application.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="0dde0-119">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="0dde0-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="0dde0-120">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="0dde0-120">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="54520-119">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="54520-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="54520-120">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="54520-120">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="0dde0-121">Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="0dde0-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="0dde0-122">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="0dde0-122">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="54520-121">Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="54520-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="54520-122">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="54520-122">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
-## <a name="see-also"></a><span data-ttu-id="0dde0-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0dde0-123">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="54520-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="54520-123">See Also</span></span>  
  <xref:System.Activities.Presentation.WorkflowItemPresenter>  
- [<span data-ttu-id="0dde0-124">Sviluppo di applicazioni con Progettazione flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="0dde0-124">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+ [<span data-ttu-id="54520-124">Sviluppo di applicazioni con Progettazione flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="54520-124">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
