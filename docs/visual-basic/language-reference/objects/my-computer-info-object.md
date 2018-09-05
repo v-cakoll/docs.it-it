@@ -5,24 +5,24 @@ helpviewer_keywords:
 - My.Computer.Info object
 ms.assetid: 2eb2aa5f-303d-426c-918d-989c8b7b08d0
 ms.openlocfilehash: 9eabd2538d43c5a0104032c501da8cbf81b5c74d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483632"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748388"
 ---
-# <a name="mycomputerinfo-object"></a><span data-ttu-id="85c70-102">Oggetto My.Computer.Info</span><span class="sxs-lookup"><span data-stu-id="85c70-102">My.Computer.Info Object</span></span>
-<span data-ttu-id="85c70-103">Offre proprietà che consentono di ottenere informazioni su memoria del computer, assembly caricati, nome e sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="85c70-103">Provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>  
+# <a name="mycomputerinfo-object"></a><span data-ttu-id="0a11e-102">Oggetto My.Computer.Info</span><span class="sxs-lookup"><span data-stu-id="0a11e-102">My.Computer.Info Object</span></span>
+<span data-ttu-id="0a11e-103">Offre proprietà che consentono di ottenere informazioni su memoria del computer, assembly caricati, nome e sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="0a11e-103">Provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="85c70-104">Note</span><span class="sxs-lookup"><span data-stu-id="85c70-104">Remarks</span></span>  
- <span data-ttu-id="85c70-105">Per informazioni sulle proprietà dei `My.Computer.Info` oggetti, vedere <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.</span><span class="sxs-lookup"><span data-stu-id="85c70-105">For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0a11e-104">Note</span><span class="sxs-lookup"><span data-stu-id="0a11e-104">Remarks</span></span>  
+ <span data-ttu-id="0a11e-105">Per informazioni sulle proprietà dei `My.Computer.Info` oggetti, vedere <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.</span><span class="sxs-lookup"><span data-stu-id="0a11e-105">For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="85c70-106">Requisiti</span><span class="sxs-lookup"><span data-stu-id="85c70-106">Requirements</span></span>  
- <span data-ttu-id="85c70-107">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="85c70-107">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a11e-106">Requisiti</span><span class="sxs-lookup"><span data-stu-id="0a11e-106">Requirements</span></span>  
+ <span data-ttu-id="0a11e-107">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="0a11e-107">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="85c70-108">**Classe:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo></span><span class="sxs-lookup"><span data-stu-id="85c70-108">**Class:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo></span></span>  
+ <span data-ttu-id="0a11e-108">**Classe:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo></span><span class="sxs-lookup"><span data-stu-id="0a11e-108">**Class:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo></span></span>  
   
- <span data-ttu-id="85c70-109">**Assembly:** libreria di Runtime di Visual Basic (in VisualBasic)</span><span class="sxs-lookup"><span data-stu-id="85c70-109">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="0a11e-109">**Assembly:** libreria di Runtime di Visual Basic (in VisualBasic)</span><span class="sxs-lookup"><span data-stu-id="0a11e-109">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="85c70-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="85c70-110">See Also</span></span>  
- [<span data-ttu-id="85c70-111">Oggetto My.Computer</span><span class="sxs-lookup"><span data-stu-id="85c70-111">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="0a11e-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0a11e-110">See Also</span></span>  
+ [<span data-ttu-id="0a11e-111">Oggetto My.Computer</span><span class="sxs-lookup"><span data-stu-id="0a11e-111">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

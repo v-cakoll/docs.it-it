@@ -1,19 +1,19 @@
 ---
 title: 'Risultati (F #)'
-description: "Informazioni su come utilizzare il tipo di 'Generare' F # per semplificare la scrittura di codice a tolleranza di errore."
+description: "Informazioni su come usare il tipo 'Generare' di F # per semplificare la scrittura di codice a tolleranza di errore."
 ms.date: 04/24/2017
-ms.openlocfilehash: 432e420ba7c2005caa46250dde82c2c67c9d3ae3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563008"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749249"
 ---
-# <a name="results"></a><span data-ttu-id="9e69c-103">Risultati</span><span class="sxs-lookup"><span data-stu-id="9e69c-103">Results</span></span>
+# <a name="results"></a><span data-ttu-id="03fcc-103">Risultati</span><span class="sxs-lookup"><span data-stu-id="03fcc-103">Results</span></span>
 
-<span data-ttu-id="9e69c-104">A partire da F # 4.1, sussiste un `Result<'T,'TFailure>` tipo che è possibile utilizzare per la scrittura di codice a tolleranza di errore che può essere composte.</span><span class="sxs-lookup"><span data-stu-id="9e69c-104">Starting with F# 4.1, there is a `Result<'T,'TFailure>` type which you can use for writing error-tolerant code which can be composed.</span></span>
+<span data-ttu-id="03fcc-104">A partire da F # 4.1, vi è un `Result<'T,'TFailure>` tipo che è possibile usare per la scrittura di codice a tolleranza di errore che può essere creato.</span><span class="sxs-lookup"><span data-stu-id="03fcc-104">Starting with F# 4.1, there is a `Result<'T,'TFailure>` type which you can use for writing error-tolerant code which can be composed.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="9e69c-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9e69c-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="03fcc-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="03fcc-105">Syntax</span></span>
 
 ```fsharp
 // The definition of Result in FSharp.Core
@@ -25,11 +25,11 @@ type Result<'T,'TError> =
     | Error of ErrorValue:'TError
 ```
 
-## <a name="remarks"></a><span data-ttu-id="9e69c-106">Note</span><span class="sxs-lookup"><span data-stu-id="9e69c-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="03fcc-106">Note</span><span class="sxs-lookup"><span data-stu-id="03fcc-106">Remarks</span></span>
 
-<span data-ttu-id="9e69c-107">Si noti che il tipo di risultato è un [unione discriminata struct](discriminated-unions.md#struct-discriminated-unions), ovvero un'altra funzionalità introdotta in F # 4.1.</span><span class="sxs-lookup"><span data-stu-id="9e69c-107">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions), which is another feature introduced in F# 4.1.</span></span>  <span data-ttu-id="9e69c-108">Semantica di uguaglianza strutturale applicate.</span><span class="sxs-lookup"><span data-stu-id="9e69c-108">Structural equality semantics apply here.</span></span>
+<span data-ttu-id="03fcc-107">Si noti che il tipo di risultato è un [unione discriminata di struct](discriminated-unions.md#struct-discriminated-unions), ovvero un'altra funzionalità introdotta in F # 4.1.</span><span class="sxs-lookup"><span data-stu-id="03fcc-107">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions), which is another feature introduced in F# 4.1.</span></span>  <span data-ttu-id="03fcc-108">Vengono applicate la semantica di uguaglianza strutturale.</span><span class="sxs-lookup"><span data-stu-id="03fcc-108">Structural equality semantics apply here.</span></span>
 
-<span data-ttu-id="9e69c-109">Il `Result` tipo viene utilizzato in genere monadic gestione degli errori, che viene spesso definito come [programmazione orientata a ferroviario](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) all'interno della community di F #.</span><span class="sxs-lookup"><span data-stu-id="9e69c-109">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="9e69c-110">Questo semplice esempio viene illustrato questo approccio.</span><span class="sxs-lookup"><span data-stu-id="9e69c-110">The following trivial example demonstrates this approach.</span></span>
+<span data-ttu-id="03fcc-109">Il `Result` tipo viene generalmente utilizzato in monadic gestione degli errori, che è spesso detta [programmazione orientata ad ferroviarie](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) all'interno della community di F #.</span><span class="sxs-lookup"><span data-stu-id="03fcc-109">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="03fcc-110">L'esempio di semplice seguente illustra questo approccio.</span><span class="sxs-lookup"><span data-stu-id="03fcc-110">The following trivial example demonstrates this approach.</span></span>
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,10 +80,9 @@ let test() =
 test()
 ```
 
-<span data-ttu-id="9e69c-111">Come si può notare, è piuttosto semplice concatenare varie funzioni di convalida se si forza il loro tutti per restituire un `Result`.</span><span class="sxs-lookup"><span data-stu-id="9e69c-111">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="9e69c-112">Questo consente di interrompere la funzionalità simile al seguente in porzioni più piccole, ovvero come componibile secondo le esigenze di.</span><span class="sxs-lookup"><span data-stu-id="9e69c-112">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="9e69c-113">Questo è anche il valore aggiunto del *applicazione* l'utilizzo di [criteri di ricerca](pattern-matching.md) alla fine di una sessione di convalida, che a sua volta applica un livello più elevato di correttezza di programma.</span><span class="sxs-lookup"><span data-stu-id="9e69c-113">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
+<span data-ttu-id="03fcc-111">Come può notare, è piuttosto semplice concatenare diverse funzioni di convalida se si forza vengano tutte restituite una `Result`.</span><span class="sxs-lookup"><span data-stu-id="03fcc-111">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="03fcc-112">Questo consente di interrompere la funzionalità simile al seguente in porzioni più piccole che sono componibili come necessari in qualsiasi momento per essere.</span><span class="sxs-lookup"><span data-stu-id="03fcc-112">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="03fcc-113">Ciò ha anche il valore aggiunto del *applicando* l'uso di [criteri di ricerca](pattern-matching.md) alla fine di un ciclo di convalida, che a sua volta applica un livello più elevato della correttezza del programma.</span><span class="sxs-lookup"><span data-stu-id="03fcc-113">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="9e69c-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9e69c-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03fcc-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="03fcc-114">See also</span></span>
 
-[<span data-ttu-id="9e69c-115">Unioni discriminate</span><span class="sxs-lookup"><span data-stu-id="9e69c-115">Discriminated Unions</span></span>](discriminated-unions.md)
-
-[<span data-ttu-id="9e69c-116">Criteri di ricerca</span><span class="sxs-lookup"><span data-stu-id="9e69c-116">Pattern Matching</span></span>](pattern-matching.md)
+- [<span data-ttu-id="03fcc-115">Unioni discriminate</span><span class="sxs-lookup"><span data-stu-id="03fcc-115">Discriminated Unions</span></span>](discriminated-unions.md)
+- [<span data-ttu-id="03fcc-116">Criteri di ricerca</span><span class="sxs-lookup"><span data-stu-id="03fcc-116">Pattern Matching</span></span>](pattern-matching.md)

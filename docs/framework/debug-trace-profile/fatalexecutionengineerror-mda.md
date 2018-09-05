@@ -15,55 +15,55 @@ ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f12b94198b88111d559cfe372c28bdbf4b37e3fe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553064"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742644"
 ---
-# <a name="fatalexecutionengineerror-mda"></a><span data-ttu-id="bb218-102">MDA fatalExecutionEngineError</span><span class="sxs-lookup"><span data-stu-id="bb218-102">fatalExecutionEngineError MDA</span></span>
-<span data-ttu-id="bb218-103">L'assistente al debug gestito `fatalExecutionEngineError` viene attivato quando Common Language Runtime (CLR) rileva un errore irreversibile.</span><span class="sxs-lookup"><span data-stu-id="bb218-103">The `fatalExecutionEngineError` managed debugging assistant (MDA) is activated when a fatal error in the common language runtime (CLR) has been detected.</span></span> <span data-ttu-id="bb218-104">Il processo viene terminato.</span><span class="sxs-lookup"><span data-stu-id="bb218-104">The process will be terminated.</span></span>  
+# <a name="fatalexecutionengineerror-mda"></a><span data-ttu-id="d5f4e-102">MDA fatalExecutionEngineError</span><span class="sxs-lookup"><span data-stu-id="d5f4e-102">fatalExecutionEngineError MDA</span></span>
+<span data-ttu-id="d5f4e-103">L'assistente al debug gestito `fatalExecutionEngineError` viene attivato quando Common Language Runtime (CLR) rileva un errore irreversibile.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-103">The `fatalExecutionEngineError` managed debugging assistant (MDA) is activated when a fatal error in the common language runtime (CLR) has been detected.</span></span> <span data-ttu-id="d5f4e-104">Il processo viene terminato.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-104">The process will be terminated.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="bb218-105">Sintomi</span><span class="sxs-lookup"><span data-stu-id="bb218-105">Symptoms</span></span>  
- <span data-ttu-id="bb218-106">Chiusura imprevista del processo.</span><span class="sxs-lookup"><span data-stu-id="bb218-106">Unexpected process termination.</span></span> <span data-ttu-id="bb218-107">Non è possibile identificare altri sintomi perché un errore CLR può verificarsi per diversi motivi.</span><span class="sxs-lookup"><span data-stu-id="bb218-107">Other symptoms cannot be determined because a CLR failure can occur for a variety of reasons.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="d5f4e-105">Sintomi</span><span class="sxs-lookup"><span data-stu-id="d5f4e-105">Symptoms</span></span>  
+ <span data-ttu-id="d5f4e-106">Chiusura imprevista del processo.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-106">Unexpected process termination.</span></span> <span data-ttu-id="d5f4e-107">Non è possibile identificare altri sintomi perché un errore CLR può verificarsi per diversi motivi.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-107">Other symptoms cannot be determined because a CLR failure can occur for a variety of reasons.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="bb218-108">Causa</span><span class="sxs-lookup"><span data-stu-id="bb218-108">Cause</span></span>  
- <span data-ttu-id="bb218-109">CLR è stato danneggiato in modo irreversibile.</span><span class="sxs-lookup"><span data-stu-id="bb218-109">The CLR has been fatally corrupted.</span></span> <span data-ttu-id="bb218-110">La causa più frequente può essere data dal danneggiamento dei dati che può derivare da diversi problemi, quali chiamate a funzioni P/Invoke dal formato non corretto e passaggio di dati non validi a CLR.</span><span class="sxs-lookup"><span data-stu-id="bb218-110">This is most often caused by data corruption, which can be caused by a number of problems, such as calls to malformed platform invoke functions and passing invalid data to the CLR.</span></span>  
+## <a name="cause"></a><span data-ttu-id="d5f4e-108">Causa</span><span class="sxs-lookup"><span data-stu-id="d5f4e-108">Cause</span></span>  
+ <span data-ttu-id="d5f4e-109">CLR è stato danneggiato in modo irreversibile.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-109">The CLR has been fatally corrupted.</span></span> <span data-ttu-id="d5f4e-110">La causa più frequente può essere data dal danneggiamento dei dati che può derivare da diversi problemi, quali chiamate a funzioni P/Invoke dal formato non corretto e passaggio di dati non validi a CLR.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-110">This is most often caused by data corruption, which can be caused by a number of problems, such as calls to malformed platform invoke functions and passing invalid data to the CLR.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="bb218-111">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="bb218-111">Resolution</span></span>  
- <span data-ttu-id="bb218-112">L'identificazione del problema può essere agevolata dall'attivazione di altri assistenti.</span><span class="sxs-lookup"><span data-stu-id="bb218-112">Enabling additional MDAs might help identify the problem.</span></span> <span data-ttu-id="bb218-113">Gli assistenti al debug gestito riportati di seguito possono essere particolarmente utili per una diagnosi del problema:</span><span class="sxs-lookup"><span data-stu-id="bb218-113">The following MDAs can be particularly helpful in diagnosing the issue:</span></span>  
+## <a name="resolution"></a><span data-ttu-id="d5f4e-111">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="d5f4e-111">Resolution</span></span>  
+ <span data-ttu-id="d5f4e-112">L'identificazione del problema può essere agevolata dall'attivazione di altri assistenti.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-112">Enabling additional MDAs might help identify the problem.</span></span> <span data-ttu-id="d5f4e-113">Gli assistenti al debug gestito riportati di seguito possono essere particolarmente utili per una diagnosi del problema:</span><span class="sxs-lookup"><span data-stu-id="d5f4e-113">The following MDAs can be particularly helpful in diagnosing the issue:</span></span>  
   
--   [<span data-ttu-id="bb218-114">invalidOverlappedToPinvoke</span><span class="sxs-lookup"><span data-stu-id="bb218-114">invalidOverlappedToPinvoke</span></span>](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)  
+-   [<span data-ttu-id="d5f4e-114">invalidOverlappedToPinvoke</span><span class="sxs-lookup"><span data-stu-id="d5f4e-114">invalidOverlappedToPinvoke</span></span>](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)  
   
--   [<span data-ttu-id="bb218-115">overlappedFreeError</span><span class="sxs-lookup"><span data-stu-id="bb218-115">overlappedFreeError</span></span>](../../../docs/framework/debug-trace-profile/overlappedfreeerror-mda.md)  
+-   [<span data-ttu-id="d5f4e-115">overlappedFreeError</span><span class="sxs-lookup"><span data-stu-id="d5f4e-115">overlappedFreeError</span></span>](../../../docs/framework/debug-trace-profile/overlappedfreeerror-mda.md)  
   
--   [<span data-ttu-id="bb218-116">pInvokeStackImbalance</span><span class="sxs-lookup"><span data-stu-id="bb218-116">pInvokeStackImbalance</span></span>](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)  
+-   [<span data-ttu-id="d5f4e-116">pInvokeStackImbalance</span><span class="sxs-lookup"><span data-stu-id="d5f4e-116">pInvokeStackImbalance</span></span>](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)  
   
--   [<span data-ttu-id="bb218-117">gcUnmanagedToManaged</span><span class="sxs-lookup"><span data-stu-id="bb218-117">gcUnmanagedToManaged</span></span>](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)  
+-   [<span data-ttu-id="d5f4e-117">gcUnmanagedToManaged</span><span class="sxs-lookup"><span data-stu-id="d5f4e-117">gcUnmanagedToManaged</span></span>](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)  
   
--   [<span data-ttu-id="bb218-118">gcManagedToUnmanaged</span><span class="sxs-lookup"><span data-stu-id="bb218-118">gcManagedToUnmanaged</span></span>](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)  
+-   [<span data-ttu-id="d5f4e-118">gcManagedToUnmanaged</span><span class="sxs-lookup"><span data-stu-id="d5f4e-118">gcManagedToUnmanaged</span></span>](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)  
   
--   [<span data-ttu-id="bb218-119">callbackOnCollectedDelegate</span><span class="sxs-lookup"><span data-stu-id="bb218-119">callbackOnCollectedDelegate</span></span>](../../../docs/framework/debug-trace-profile/callbackoncollecteddelegate-mda.md)  
+-   [<span data-ttu-id="d5f4e-119">callbackOnCollectedDelegate</span><span class="sxs-lookup"><span data-stu-id="d5f4e-119">callbackOnCollectedDelegate</span></span>](../../../docs/framework/debug-trace-profile/callbackoncollecteddelegate-mda.md)  
   
--   [<span data-ttu-id="bb218-120">reportAvOnComRelease</span><span class="sxs-lookup"><span data-stu-id="bb218-120">reportAvOnComRelease</span></span>](../../../docs/framework/debug-trace-profile/reportavoncomrelease-mda.md)  
+-   [<span data-ttu-id="d5f4e-120">reportAvOnComRelease</span><span class="sxs-lookup"><span data-stu-id="d5f4e-120">reportAvOnComRelease</span></span>](../../../docs/framework/debug-trace-profile/reportavoncomrelease-mda.md)  
   
--   [<span data-ttu-id="bb218-121">invalidVariant</span><span class="sxs-lookup"><span data-stu-id="bb218-121">invalidVariant</span></span>](../../../docs/framework/debug-trace-profile/invalidvariant-mda.md)  
+-   [<span data-ttu-id="d5f4e-121">invalidVariant</span><span class="sxs-lookup"><span data-stu-id="d5f4e-121">invalidVariant</span></span>](../../../docs/framework/debug-trace-profile/invalidvariant-mda.md)  
   
--   [<span data-ttu-id="bb218-122">invalidIUnknown</span><span class="sxs-lookup"><span data-stu-id="bb218-122">invalidIUnknown</span></span>](../../../docs/framework/debug-trace-profile/invalidiunknown-mda.md)  
+-   [<span data-ttu-id="d5f4e-122">invalidIUnknown</span><span class="sxs-lookup"><span data-stu-id="d5f4e-122">invalidIUnknown</span></span>](../../../docs/framework/debug-trace-profile/invalidiunknown-mda.md)  
   
--   [<span data-ttu-id="bb218-123">raceOnRCWCleanup</span><span class="sxs-lookup"><span data-stu-id="bb218-123">raceOnRCWCleanup</span></span>](../../../docs/framework/debug-trace-profile/raceonrcwcleanup-mda.md)  
+-   [<span data-ttu-id="d5f4e-123">raceOnRCWCleanup</span><span class="sxs-lookup"><span data-stu-id="d5f4e-123">raceOnRCWCleanup</span></span>](../../../docs/framework/debug-trace-profile/raceonrcwcleanup-mda.md)  
   
--   [<span data-ttu-id="bb218-124">invalidFunctionPointerInDelegate</span><span class="sxs-lookup"><span data-stu-id="bb218-124">invalidFunctionPointerInDelegate</span></span>](../../../docs/framework/debug-trace-profile/invalidfunctionpointerindelegate-mda.md)  
+-   [<span data-ttu-id="d5f4e-124">invalidFunctionPointerInDelegate</span><span class="sxs-lookup"><span data-stu-id="d5f4e-124">invalidFunctionPointerInDelegate</span></span>](../../../docs/framework/debug-trace-profile/invalidfunctionpointerindelegate-mda.md)  
   
--   [<span data-ttu-id="bb218-125">invalidGCHandleCookie</span><span class="sxs-lookup"><span data-stu-id="bb218-125">invalidGCHandleCookie</span></span>](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)  
+-   [<span data-ttu-id="d5f4e-125">invalidGCHandleCookie</span><span class="sxs-lookup"><span data-stu-id="d5f4e-125">invalidGCHandleCookie</span></span>](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="bb218-126">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="bb218-126">Effect on the Runtime</span></span>  
- <span data-ttu-id="bb218-127">Questo assistente al debug gestito non produce effetti sul comportamento del runtime.</span><span class="sxs-lookup"><span data-stu-id="bb218-127">This MDA has no effect on the runtime's behavior.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="d5f4e-126">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="d5f4e-126">Effect on the Runtime</span></span>  
+ <span data-ttu-id="d5f4e-127">Questo assistente al debug gestito non produce effetti sul comportamento del runtime.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-127">This MDA has no effect on the runtime's behavior.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="bb218-128">Output</span><span class="sxs-lookup"><span data-stu-id="bb218-128">Output</span></span>  
- <span data-ttu-id="bb218-129">L'indirizzo della funzione CLR che ha causato l'errore irreversibile, l'ID del thread in cui si è verificato l'errore e il codice dell'errore.</span><span class="sxs-lookup"><span data-stu-id="bb218-129">The address of the CLR function that caused the fatal error, the ID of the thread where the error occurred, and the error code.</span></span>  
+## <a name="output"></a><span data-ttu-id="d5f4e-128">Output</span><span class="sxs-lookup"><span data-stu-id="d5f4e-128">Output</span></span>  
+ <span data-ttu-id="d5f4e-129">L'indirizzo della funzione CLR che ha causato l'errore irreversibile, l'ID del thread in cui si è verificato l'errore e il codice dell'errore.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-129">The address of the CLR function that caused the fatal error, the ID of the thread where the error occurred, and the error code.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="bb218-130">Configurazione</span><span class="sxs-lookup"><span data-stu-id="bb218-130">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="d5f4e-130">Configurazione</span><span class="sxs-lookup"><span data-stu-id="d5f4e-130">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -73,7 +73,7 @@ ms.locfileid: "43553064"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bb218-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bb218-131">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d5f4e-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d5f4e-131">See Also</span></span>  
  <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>  
  <xref:System.Runtime.ConstrainedExecution.Cer>  
- [<span data-ttu-id="bb218-132">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="bb218-132">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [<span data-ttu-id="d5f4e-132">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="d5f4e-132">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

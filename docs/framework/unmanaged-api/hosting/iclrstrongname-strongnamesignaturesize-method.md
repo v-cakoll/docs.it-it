@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc5a40a0e26f116ce1700973a5000e8d6bbbd890
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423831"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732942"
 ---
-# <a name="iclrstrongnamestrongnamesignaturesize-method"></a><span data-ttu-id="a9e8e-102">Metodo ICLRStrongName::StrongNameSignatureSize</span><span class="sxs-lookup"><span data-stu-id="a9e8e-102">ICLRStrongName::StrongNameSignatureSize Method</span></span>
-<span data-ttu-id="a9e8e-103">Restituisce le dimensioni della firma con nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="a9e8e-103">Returns the size of the strong name signature.</span></span> <span data-ttu-id="a9e8e-104">Questo metodo viene in genere utilizzato dai compilatori per determinare la quantità di spazio da riservare nel file durante la creazione di un assembly con firma ritardata.</span><span class="sxs-lookup"><span data-stu-id="a9e8e-104">This method is typically used by compilers to determine how much space to reserve in the file when creating a delay-signed assembly.</span></span>  
+# <a name="iclrstrongnamestrongnamesignaturesize-method"></a><span data-ttu-id="f0580-102">Metodo ICLRStrongName::StrongNameSignatureSize</span><span class="sxs-lookup"><span data-stu-id="f0580-102">ICLRStrongName::StrongNameSignatureSize Method</span></span>
+<span data-ttu-id="f0580-103">Restituisce le dimensioni della firma con nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="f0580-103">Returns the size of the strong name signature.</span></span> <span data-ttu-id="f0580-104">Questo metodo viene in genere utilizzato dai compilatori per determinare la quantità di spazio da riservare nel file durante la creazione di un assembly con firma ritardata.</span><span class="sxs-lookup"><span data-stu-id="f0580-104">This method is typically used by compilers to determine how much space to reserve in the file when creating a delay-signed assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a9e8e-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a9e8e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f0580-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f0580-105">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameSignatureSize (   
@@ -37,27 +37,27 @@ HRESULT StrongNameSignatureSize (
 );   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a9e8e-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="a9e8e-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f0580-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="f0580-106">Parameters</span></span>  
  `pbPublicKeyBlob`  
- <span data-ttu-id="a9e8e-107">[in] Una struttura di tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) che contiene la parte pubblica della coppia di chiavi usata per generare la firma con nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="a9e8e-107">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
+ <span data-ttu-id="f0580-107">[in] Una struttura di tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) che contiene la parte pubblica della coppia di chiavi usata per generare la firma con nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="f0580-107">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
   
  `cbPublicKeyBlob`  
- <span data-ttu-id="a9e8e-108">[in] Le dimensioni, in byte, di `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="a9e8e-108">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
+ <span data-ttu-id="f0580-108">[in] Le dimensioni, in byte, di `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="f0580-108">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="a9e8e-109">[in] Il numero di byte necessari per archiviare la firma con nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="a9e8e-109">[in] The number of bytes required to store the strong name signature.</span></span>  
+ <span data-ttu-id="f0580-109">[in] Il numero di byte necessari per archiviare la firma con nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="f0580-109">[in] The number of bytes required to store the strong name signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a9e8e-110">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="a9e8e-110">Return Value</span></span>  
- <span data-ttu-id="a9e8e-111">`S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).</span><span class="sxs-lookup"><span data-stu-id="a9e8e-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f0580-110">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="f0580-110">Return Value</span></span>  
+ <span data-ttu-id="f0580-111">`S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).</span><span class="sxs-lookup"><span data-stu-id="f0580-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a9e8e-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a9e8e-112">Requirements</span></span>  
- <span data-ttu-id="a9e8e-113">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a9e8e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f0580-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f0580-112">Requirements</span></span>  
+ <span data-ttu-id="f0580-113">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f0580-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a9e8e-114">**Intestazione:** Metahost. H</span><span class="sxs-lookup"><span data-stu-id="a9e8e-114">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="f0580-114">**Intestazione:** Metahost. H</span><span class="sxs-lookup"><span data-stu-id="f0580-114">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="a9e8e-115">**Libreria:** inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="a9e8e-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f0580-115">**Libreria:** inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="f0580-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a9e8e-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9e8e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="f0580-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f0580-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a9e8e-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a9e8e-117">See Also</span></span>  
- [<span data-ttu-id="a9e8e-118">Interfaccia ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="a9e8e-118">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f0580-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f0580-117">See Also</span></span>  
+ [<span data-ttu-id="f0580-118">Interfaccia ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="f0580-118">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
