@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: c0cc0834dc087df89131a720f517cd34f757a0f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763670"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672261"
 ---
 # <a name="merging-dataset-contents"></a>Unione di contenuti di dataset
 È possibile usare il metodo <xref:System.Data.DataSet.Merge%2A> per unire il contenuto di un oggetto <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o una matrice <xref:System.Data.DataRow> in un `DataSet` esistente. L'unione di nuovi dati in un `DataSet` esistente è influenzata da diversi fattori e opzioni.  
@@ -31,7 +31,7 @@ ms.locfileid: "32763670"
 >  Questo comportamento è stato modificato in .NET Framework versione 2.0. Nella versione 1.1 gli spazi dei nomi sono supportati ma vengono ignorati durante le operazioni di unione. Per questo motivo il comportamento di un oggetto <xref:System.Data.DataSet> che usa i valori della proprietà <xref:System.Data.DataTable.Namespace%2A> a seconda della versione di .NET Framework in esecuzione. Ad esempio, si supponga di disporre di due `DataSets` contenenti `DataTables` con lo stesso valore della proprietà <xref:System.Data.DataTable.TableName%2A> ma valori diversi della proprietà <xref:System.Data.DataTable.Namespace%2A>. Nella versione 1.1 di .NET Framework, i diversi nomi di <xref:System.Data.DataTable.Namespace%2A> verranno ignorati durante l'unione dei due oggetti <xref:System.Data.DataSet>. A partire dalla versione 2.0, invece, in seguito all'unione vengono creati due nuovi oggetti `DataTables` nell'oggetto <xref:System.Data.DataSet> di destinazione. I `DataTables` originali non verranno interessati dall'unione.  
   
 ## <a name="preservechanges"></a>PreserveChanges  
- Quando si passa una matrice `DataSet`, `DataTable` o `DataRow` al metodo `Merge`, è possibile includere parametri facoltativi che consentano di specificare se mantenere o meno le modifiche nel `DataSet` esistente e come gestire i nuovi elementi dello schema individuati nei dati in arrivo. Il primo di tali parametri successivi ai dati in arrivo è un flag booleano, <xref:System.Data.LoadOption.PreserveChanges>, che consente di specificare se conservare o meno le modifiche nel `DataSet` esistente. Se il flag `PreserveChanges` è impostato su `true`, i valori esistenti nella versione di riga `Current` della riga esistente non verranno sovrascritti dai valori in arrivo. Se il flag `PreserveChanges` è impostato su `false`, i valori esistenti nella versione di riga `Current` della riga esistente verranno sovrascritti dai valori in arrivo. Se non è specificato, il flag `PreserveChanges` viene impostato su `false` per impostazione predefinita. Per ulteriori informazioni sulle versioni delle righe, vedere [stati delle righe e le versioni di riga](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Quando si passa una matrice `DataSet`, `DataTable` o `DataRow` al metodo `Merge`, è possibile includere parametri facoltativi che consentano di specificare se mantenere o meno le modifiche nel `DataSet` esistente e come gestire i nuovi elementi dello schema individuati nei dati in arrivo. Il primo di tali parametri successivi ai dati in arrivo è un flag booleano, <xref:System.Data.LoadOption.PreserveChanges>, che consente di specificare se conservare o meno le modifiche nel `DataSet` esistente. Se il flag `PreserveChanges` è impostato su `true`, i valori esistenti nella versione di riga `Current` della riga esistente non verranno sovrascritti dai valori in arrivo. Se il flag `PreserveChanges` è impostato su `false`, i valori esistenti nella versione di riga `Current` della riga esistente verranno sovrascritti dai valori in arrivo. Se non è specificato, il flag `PreserveChanges` viene impostato su `false` per impostazione predefinita. Per altre informazioni sulle versioni delle righe, vedere [stati e le versioni delle righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
  Se `PreserveChanges` è `true`, i dati della riga esistente verranno mantenuti nella versione di riga <xref:System.Data.DataRowVersion.Current> della riga esistente, mentre i dati della versione di riga <xref:System.Data.DataRowVersion.Original> della riga esistente verranno sovrascritti dai dati della versione di riga `Original` della riga in arrivo. La proprietà <xref:System.Data.DataRow.RowState%2A> della riga esistente è impostata su <xref:System.Data.DataRowState.Modified>. Vengono applicate le seguenti eccezioni:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "32763670"
  Si consideri il caso in cui una riga esistente di un `DataSet` è una riga `Unchanged` con un valore di chiave primaria di 1. Durante un'operazione di unione con una riga in arrivo `Modified` in cui il valore di chiave primaria `Original` è 2 il valore di chiave primaria `Current` è 1, la riga esistente e la riga in arrivo non vengono considerate corrispondenti perché i valori della chiave primaria di `Original` sono diversi. Tuttavia, una volta completata l'unione e verificati i vincoli, verrà generata un'eccezione, poiché i valori di chiave primaria `Current` violano il vincolo univoco per la colonna di chiave primaria.  
   
 > [!NOTE]
->  Quando si inseriscono righe in una tabella di database contenente una colonna a incremento automatico ad esempio una colonna Identity, è possibile che il valore della colonna Identity restituito dall'inserimento non corrisponda al valore di `DataSet`, pertanto le righe restituite verranno aggiunte anziché unite. Per ulteriori informazioni, vedere [il recupero dei valori di identità o contatore](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
+>  Quando si inseriscono righe in una tabella di database contenente una colonna a incremento automatico ad esempio una colonna Identity, è possibile che il valore della colonna Identity restituito dall'inserimento non corrisponda al valore di `DataSet`, pertanto le righe restituite verranno aggiunte anziché unite. Per altre informazioni, vedere [Retrieving Identity or Autonumber Values](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
   
  Nell'esempio di codice seguente viene eseguito il merge di due oggetti `DataSet` con schemi diversi in un unico `DataSet` contenente una combinazione degli schemi dei due oggetti `DataSet` in arrivo.  
   
@@ -84,4 +84,4 @@ ms.locfileid: "32763670"
  [DataAdapter e DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Recupero e modifica di dati in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Recupero di identità o di valori numerati automaticamente](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

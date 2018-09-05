@@ -2,15 +2,15 @@
 title: Token personalizzato
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 03472f76310fa99568f13f0aa49d9e2a3453ac30
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809849"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671099"
 ---
 # <a name="custom-token"></a>Token personalizzato
-In questo esempio viene illustrato come aggiungere un'implementazione del token personalizzata in un'applicazione Windows Communication Foundation (WCF). Nell'esempio viene usato un `CreditCardToken` per passare in modo protetto le informazioni sulle carte di credito del client al servizio. Il token viene passato nell'intestazione del messaggio WS-Security e viene firmato e crittografato usando l'elemento di associazione di sicurezza simmetrica, il corpo del messaggio e altre intestazioni del messaggio. Questa operazione è utile nei casi in cui i token incorporati non sono sufficienti In questo esempio viene illustrato come fornire un token di sicurezza personalizzato a un servizio, invece di usare uno dei token incorporati. Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.  
+Questo esempio viene illustrato come aggiungere un'implementazione del token personalizzata in un'applicazione Windows Communication Foundation (WCF). Nell'esempio viene usato un `CreditCardToken` per passare in modo protetto le informazioni sulle carte di credito del client al servizio. Il token viene passato nell'intestazione del messaggio WS-Security e viene firmato e crittografato usando l'elemento di associazione di sicurezza simmetrica, il corpo del messaggio e altre intestazioni del messaggio. Questa operazione è utile nei casi in cui i token incorporati non sono sufficienti In questo esempio viene illustrato come fornire un token di sicurezza personalizzato a un servizio, invece di usare uno dei token incorporati. Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -21,7 +21,7 @@ In questo esempio viene illustrato come aggiungere un'implementazione del token 
   
 -   In che modo il servizio può usare e convalidare un token di sicurezza personalizzato.  
   
--   Modo in cui il codice del servizio WCF può ottenere le informazioni sui token di sicurezza ricevuto includendo il token di sicurezza personalizzato.  
+-   Modo in cui il codice del servizio WCF è possibile ottenere le informazioni sui token di sicurezza ricevuto includendo il token di sicurezza personalizzato.  
   
 -   Come viene usato il certificato X.509 del server per proteggere la chiave simmetrica usata per crittografare il messaggio e la firma.  
   
@@ -115,9 +115,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>Implementazione del token di sicurezza personalizzato  
- Per abilitare un token di sicurezza personalizzato in WCF, creare una rappresentazione dell'oggetto del token di sicurezza personalizzato. Nell'esempio la rappresentazione si trova nella classe `CreditCardToken`. La rappresentazione dell'oggetto contiene tutte le informazioni del token di sicurezza pertinenti e fornisce un elenco di chiavi di sicurezza contenute nel token di sicurezza. In questo caso, il token di sicurezza della carta di credito non contiene chiavi di sicurezza.  
+ Per abilitare un token di sicurezza personalizzato in WCF, creare una rappresentazione di oggetto del token di sicurezza personalizzato. Nell'esempio la rappresentazione si trova nella classe `CreditCardToken`. La rappresentazione dell'oggetto contiene tutte le informazioni del token di sicurezza pertinenti e fornisce un elenco di chiavi di sicurezza contenute nel token di sicurezza. In questo caso, il token di sicurezza della carta di credito non contiene chiavi di sicurezza.  
   
- La prossima sezione descrive cosa deve essere eseguita per abilitare un token personalizzato deve essere trasmesso in rete e utilizzata da un endpoint WCF.  
+ La sezione successiva descrive ciò che deve essere eseguita per abilitare un token personalizzato essere trasmessi in rete e utilizzati da un endpoint WCF.  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -155,7 +155,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Recupero del token della carta di credito personalizzato a e da il messaggio  
- I serializzatori di token di sicurezza in WCF sono responsabili per la creazione di una rappresentazione dell'oggetto del token di sicurezza dal codice XML nel messaggio e la creazione di un modulo XML dei token di sicurezza. Sono inoltre responsabili per altre funzionalità, ad esempio per la lettura e la scrittura degli identificatori di chiave che puntano ai token di sicurezza, ma in questo esempio viene usata solo la funzionalità relativa al token di sicurezza. Per abilitare un token personalizzato è necessario implementare un serializzatore del token di sicurezza. In questo esempio viene usata la classe `CreditCardSecurityTokenSerializer` a questo scopo.  
+ I serializzatori di token di sicurezza in WCF sono responsabili per la creazione di una rappresentazione di oggetto del token di sicurezza dal XML nel messaggio e la creazione di un formato XML del token di sicurezza. Sono inoltre responsabili per altre funzionalità, ad esempio per la lettura e la scrittura degli identificatori di chiave che puntano ai token di sicurezza, ma in questo esempio viene usata solo la funzionalità relativa al token di sicurezza. Per abilitare un token personalizzato è necessario implementare un serializzatore del token di sicurezza. In questo esempio viene usata la classe `CreditCardSecurityTokenSerializer` a questo scopo.  
   
  Nel servizio, il serializzatore personalizzato legge il modulo XML del token personalizzato e lo usa per creare la rappresentazione dell'oggetto del token personalizzato.  
   
@@ -593,9 +593,9 @@ string GetCallerCreditCardNumber()
   
 #### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio  
   
-1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare la soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer  
   
@@ -606,7 +606,7 @@ string GetCallerCreditCardNumber()
   
 1.  Avviare Client.exe dalla directory client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-2.  Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+2.  Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computer"></a>Per eseguire l'esempio tra più computer  
   
@@ -628,7 +628,7 @@ string GetCallerCreditCardNumber()
   
 9. Sul computer client avviare Client.exe da una finestra del prompt dei comandi.  
   
-10. Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   

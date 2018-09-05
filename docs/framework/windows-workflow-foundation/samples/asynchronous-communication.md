@@ -2,12 +2,12 @@
 title: Comunicazione asincrona
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: 9eafeab89aefb181ae016dc0219f9155d9bd2a25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e85f7efb0de1326ceb5091c305b20f34809eab57
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515160"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670717"
 ---
 # <a name="asynchronous-communication"></a>Comunicazione asincrona
 Questo esempio viene illustrato come la comunicazione tra due diversi servizi di Windows Workflow Foundation (WF) viene eseguita in modo asincrono per impostazione predefinita.  
@@ -31,11 +31,11 @@ Questo esempio viene illustrato come la comunicazione tra due diversi servizi di
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Fare doppio clic su di **AsynchronousCommunication** soluzioni e selezionare **proprietà**.  
+1.  Fare doppio clic il **AsynchronousCommunication** soluzioni e selezionare **proprietà**.  
   
-2.  In **proprietà comuni**selezionare **progetto di avvio**e selezionare **più progetti di avvio**.  
+2.  Nelle **proprietà comuni**, selezionare **progetto di avvio**e selezionare **progetti di avvio multipli**.  
   
-3.  Spostare **RentalApprovalService** nella prima posizione nell'elenco, seguito da **CreditCheckService**, seguito da **Client**. Impostare il **avviare** azione in tutti e tre i progetti.  
+3.  Spostare **RentalApprovalService** alla prima posizione nell'elenco, seguito da **CreditCheckService**, quindi su **Client**. Impostare il **avviare** azione su tutti e tre i progetti.  
   
 4.  Fare clic su **OK**, premere F5 per eseguire l'esempio.  
   
@@ -44,6 +44,6 @@ Questo esempio viene illustrato come la comunicazione tra due diversi servizi di
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\AsynchronousCommunication`
