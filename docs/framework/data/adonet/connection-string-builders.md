@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 01bbf726ffa8d1c595b1ef53df420431bf28560f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1c65b0c2c9ae19aa008ecd8fb453d8e41b7c4167
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758477"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43737503"
 ---
 # <a name="connection-string-builders"></a>Generatori di stringhe di connessione
-Nelle versioni precedenti di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], controllo delle stringhe di connessione con la stringa concatenata valori non è stata eseguita, in modo che in fase di esecuzione, una parola chiave non generato in fase di compilazione un <xref:System.ArgumentException>. Poiché ogni provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] supporta una sintassi diversa per le parole chiave delle stringhe di connessione, la costruzione manuale di stringhe di connessione valide risulta difficile. Per risolvere questo problema, in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 sono stati introdotti nuovi generatori di stringhe di connessione per ogni provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Ogni provider di dati include una classe di generatori di stringhe di connessione fortemente tipizzata che eredita da <xref:System.Data.Common.DbConnectionStringBuilder>. Nella tabella seguente sono elencati i provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e le classi di compilatori di stringhe di connessione associate.  
+Nelle versioni precedenti di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]controllo delle stringhe di connessione con la stringa concatenata valori non sia stato eseguito, in modo che in fase di esecuzione, una parola chiave non corretta generata in fase di compilazione, un <xref:System.ArgumentException>. Poiché ogni provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] supporta una sintassi diversa per le parole chiave delle stringhe di connessione, la costruzione manuale di stringhe di connessione valide risulta difficile. Per risolvere questo problema, in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 sono stati introdotti nuovi generatori di stringhe di connessione per ogni provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Ogni provider di dati include una classe di generatori di stringhe di connessione fortemente tipizzata che eredita da <xref:System.Data.Common.DbConnectionStringBuilder>. Nella tabella seguente sono elencati i provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e le classi di compilatori di stringhe di connessione associate.  
   
 |Provider|Classe ConnectionStringBuilder|  
 |--------------|-----------------------------------|  
@@ -59,7 +59,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  Uno dei costruttori di overload per un generatore di stringhe di connessione accetta <xref:System.String> come argomento, consentendo di specificare una stringa di connessione parziale che può essere quindi completata dall'input dell'utente. La stringa di connessione parziale può essere archiviata in un file di configurazione e recuperata in fase di esecuzione.  
   
 > [!NOTE]
->  Lo spazio dei nomi <xref:System.Configuration> consente l'accesso a livello di codice ai file di configurazione che usano <xref:System.Web.Configuration.WebConfigurationManager> per le applicazioni Web e <xref:System.Configuration.ConfigurationManager> per le applicazioni Windows. Per ulteriori informazioni sull'utilizzo delle stringhe di connessione e i file di configurazione, vedere [stringhe di connessione e i file di configurazione](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+>  Lo spazio dei nomi <xref:System.Configuration> consente l'accesso a livello di codice ai file di configurazione che usano <xref:System.Web.Configuration.WebConfigurationManager> per le applicazioni Web e <xref:System.Configuration.ConfigurationManager> per le applicazioni Windows. Per altre informazioni sull'utilizzo delle stringhe di connessione e i file di configurazione, vedere [stringhe di connessione e i file di configurazione](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 ### <a name="example"></a>Esempio  
  In questo esempio vengono illustrati il recupero di una stringa di connessione da un file di configurazione e il relativo completamento tramite l'impostazione delle proprietà <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A> e <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> di <xref:System.Data.SqlClient.SqlConnectionStringBuilder>. Il file di configurazione viene definito come segue.  
@@ -82,4 +82,4 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ## <a name="see-also"></a>Vedere anche  
  [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)  
  [Privacy e sicurezza dei dati](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
 ms.openlocfilehash: e422c008ae3051ecd69b3278eb05fc0e2d1b1a0b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480796"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734733"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>Procedura: controllare un'animazione mediante i valori From, To e By
 Un "From/To/By" o "un'animazione base" Crea una transizione tra due valori di destinazione (vedere [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) per un'introduzione ai diversi tipi di animazioni). Per impostare i valori di destinazione di un'animazione di base, usare il <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, e <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> proprietà.  La tabella seguente riepiloga il <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, e <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> proprietà possono essere usate insieme o separatamente per destinazione di un'animazione di determinare i valori.  

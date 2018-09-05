@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 81a75007f1d4a13828867e6419412ea9f4c28906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365060"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735527"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Scenari di applicazione (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] supporta un set principale di scenari per l'esposizione di dati e di utilizzarli come [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. In questo argomento vengono elencati gli argomenti relativi a questi scenari.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] supporta un set di scenari di base per l'esposizione e utilizzo dei dati come [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. In questo argomento vengono elencati gli argomenti relativi a questi scenari.  
   
  Esporre dati relazionali da un database come un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.  
  -   [Guida rapida](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
@@ -37,18 +37,18 @@ ms.locfileid: "33365060"
 -   [Libreria client WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Usare un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in un'applicazione client basata su Silverlight.  
- -   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
 -   [Operazioni asincrone](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Procedura: associare dati del servizio dati a controlli (WCF Data Services/Silverlight)](http://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Procedura: associare dati del servizio dati a controlli (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  Usare un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in un'applicazione client basata su AJAX.  
  -   [Utilizzo di un servizio dati in un'applicazione client](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
--   [OData: Convenzioni URI](http://go.microsoft.com/fwlink/?LinkId=185564)  
+-   [OData: Convenzioni URI](https://go.microsoft.com/fwlink/?LinkId=185564)  
   
--   [OData: Formato JavaScript Object Notation (JSON)](http://go.microsoft.com/fwlink/?LinkId=185790)  
+-   [OData: Formato JavaScript Object Notation (JSON)](https://go.microsoft.com/fwlink/?LinkId=185790)  
   
  Creare una soluzione end-to-end dati che utilizza [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] per trasferire dati tra client e server.  
  -   [Guida rapida](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
@@ -62,14 +62,14 @@ ms.locfileid: "33365060"
   
 -   [Operazioni asincrone](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
- Esporre e usare un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed con un oggetto binario di grandi dimensioni che è accessibile e modificato come flusso.  
+ Esporre e utilizzare un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed con un oggetto binario di grandi dimensioni che è accessibile e modificato come flusso.  
  -   [Provider di flusso](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  
   
 -   [Utilizzo di dati binari](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
   
- Associare [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed ai controlli in un'applicazione Windows Presentation Framework (WPF).  
+ Associare [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed a controlli in un'applicazione Windows Presentation Framework (WPF).  
  -   [Associazione di dati a controlli](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
   
 -   [Procedura: Associare dati a elementi Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  

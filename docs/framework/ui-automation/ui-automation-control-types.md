@@ -10,15 +10,15 @@ ms.assetid: 261dcc59-3a62-4e40-91dd-63ff9d2241c0
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 0ef4422da7457e53c7e101c8b7e7b2f592d135d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52dcb71a033ba4c2943ccda6787bf4a4e41d53d3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403227"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724204"
 ---
 # <a name="ui-automation-control-types"></a>Tipi di controllo per l'automazione dell'interfaccia utente
-**Nota** in questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare gestito [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classi definite nel <xref:System.Windows.Automation> dello spazio dei nomi. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
+**Nota** in questa documentazione è destinata agli sviluppatori di .NET Framework che intendono usare managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classi definite nel <xref:System.Windows.Automation> dello spazio dei nomi. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questa sezione contiene informazioni sul supporto per i tipi di controllo in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   

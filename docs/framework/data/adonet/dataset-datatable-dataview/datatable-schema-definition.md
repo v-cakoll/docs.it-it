@@ -3,11 +3,11 @@ title: Definizione dello schema di DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
 ms.openlocfilehash: 60e7f6a13bd7fd10398d300690bd73c3abc0d700
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552153"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748859"
 ---
 # <a name="datatable-schema-definition"></a>Definizione dello schema di DataTable
 Lo schema, o struttura, di una tabella viene rappresentato da colonne e vincoli. Lo schema di un tipo <xref:System.Data.DataTable> viene definito usando gli oggetti <xref:System.Data.DataColumn> oltre agli oggetti <xref:System.Data.ForeignKeyConstraint> e <xref:System.Data.UniqueConstraint>. Le colonne di una tabella possono essere associate a colonne di un'origine dati, contenere valori calcolati da espressioni, incrementare automaticamente i propri valori o contenere valori di chiavi primarie.  

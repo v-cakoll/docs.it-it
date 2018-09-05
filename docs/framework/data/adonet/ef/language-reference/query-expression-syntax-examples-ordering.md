@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
 ms.openlocfilehash: bc8bfaabb9e90e66e4ec81e551fd66319a78ca7e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387858"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745284"
 ---
 # <a name="query-expression-syntax-examples-ordering"></a>Esempi di sintassi dell'espressione di query: ordinamento
 Gli esempi in questo argomento illustrano come usare il `OrderBy` e `OrderByDescending` metodi per eseguire una query il [modello Sales di AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando la sintassi di espressione di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  

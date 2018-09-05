@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 1dac93145b6e11a0d149f03b43e1e0b28b770925
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462437"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724084"
 ---
 # <a name="user-defined-data-type"></a>Tipo di dati definito dall'utente
 Contiene i dati in un formato definito. Il `Structure` istruzione definisce il formato.  

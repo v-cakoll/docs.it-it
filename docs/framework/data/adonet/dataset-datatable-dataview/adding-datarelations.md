@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
 ms.openlocfilehash: d0f481979ead7af775d462a2624ec43080e2c5a9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555523"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749957"
 ---
 # <a name="adding-datarelations"></a>Aggiunta di oggetti DataRelation
 In un <xref:System.Data.DataSet> contenente più oggetti <xref:System.Data.DataTable> è possibile usare gli oggetti <xref:System.Data.DataRelation> per creare relazioni tra le tabelle, navigare tra di esse e restituire le righe padre o figlio da una tabella correlata.  

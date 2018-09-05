@@ -3,11 +3,11 @@ title: Esempio Individuare un servizio con modalità Uri di ascolto univoco
 ms.date: 03/30/2017
 ms.assetid: 9a6d35b2-0469-43c8-a0c9-63623e3d2733
 ms.openlocfilehash: 7e1c5ae0cb1a44c72a27566035b4bc20acbf1614
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416210"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748129"
 ---
 # <a name="discover-a-service-with-unique-listen-uri-mode-sample"></a>Esempio Individuare un servizio con modalità Uri di ascolto univoco
 In questo esempio viene illustrato come individuare un servizio che dispone della proprietà <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> impostata su <xref:System.ServiceModel.Description.ListenUriMode.Unique>. L'impostazione della proprietà <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> su <xref:System.ServiceModel.Description.ListenUriMode.Unique> garantisce l'univocità di ListenUri attraverso l'impostazione della porta che deve essere univoca o del percorso che deve essere univoco mediante l'aggiunta di un GUID.  

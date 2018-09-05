@@ -3,11 +3,11 @@ title: Proprietà di esecuzione
 ms.date: 03/30/2017
 ms.assetid: 31c009db-397c-4653-87e2-32dc77fa4b13
 ms.openlocfilehash: 4906c2ad11c8b5822764435d2b39a5b51f2673ba
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409089"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748194"
 ---
 # <a name="execution-properties"></a>Proprietà di esecuzione
 In questo esempio viene illustrato come definire e usare una proprietà di esecuzione in un'attività personalizzata. In questo esempio la proprietà di esecuzione determina il colore di primo piano della console. Un flusso di lavoro di esempio illustra come i diversi percorsi logici di esecuzione (rami di un'attività <xref:System.Activities.Statements.Parallel> ) possono gestire diversi colori della console nonostante esecuzione interleave delle attività (attraverso i rami dell'attività <xref:System.Activities.Statements.Parallel> ).  

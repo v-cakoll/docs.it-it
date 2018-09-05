@@ -2,12 +2,12 @@
 title: Raccolte di schemi Oracle
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766855"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745346"
 ---
 # <a name="oracle-schema-collections"></a>Raccolte di schemi Oracle
 Il provider di dati Microsoft .NET Framework per Oracle, oltre alle raccolte di schemi comuni, supporta le seguenti raccolte di schemi specifici:  
@@ -104,7 +104,7 @@ Il provider di dati Microsoft .NET Framework per Oracle, oltre alle raccolte di 
 |PARTITIONED|Stringa|Indica se l'indice è partizionato (YES &#124; NO).|  
 |TEMPORARY|String|Indica se l'indice è in una tabella temporanea.|  
 |GENERATED|Stringa|Se il nome dell'indice è generato dal sistema (Y&#124;N).|  
-|SECONDARY|Stringa|Se l'indice è un oggetto secondario creato dal metodo ODCIIndexCreate di Oracle9i Data Cartridge (Y&#124;N).|  
+|SECONDARY|Stringa|Indica se l'indice è un oggetto secondario creato dal metodo ODCIIndexCreate di Oracle9i Data Cartridge (Y&#124;N).|  
 |BUFFER_POOL|String|Il nome del pool di buffer predefinito da usare per il blocchi dell'indice.|  
 |USER_STATS|String|Indica se le statistiche sono state immesse direttamente dall'utente.|  
 |DURATION|String|Indica la durata di una tabella temporanea. 1) SYS$SESSION: le righe vengono mantenute per la durata della sessione. 2) SYS$TRANSACTION: le righe vengono eliminate dopo COMMIT. 3) Null per una tabella permanente.|  
@@ -380,4 +380,4 @@ Il provider di dati Microsoft .NET Framework per Oracle, oltre alle raccolte di 
 |CHAR_USED|String|Indica se il limite di byte (B) o il limite di caratteri (C) è ufficiale per la stringa.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

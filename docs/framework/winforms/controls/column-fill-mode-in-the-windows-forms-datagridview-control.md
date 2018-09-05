@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: 372ee5b0eb0101a13e7eb458ee8a8bcc06d3baff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a023d8d8c31131db46cc8535d0e903c2a8d8a345
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528844"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733014"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Modalità di riempimento di colonna nel controllo DataGridView Windows Form
 In modalità riempimento delle colonne il controllo <xref:System.Windows.Forms.DataGridView> ridimensiona automaticamente le proprie colonne in modo da occupare tutta la larghezza dell'area di visualizzazione disponibile. Il controllo non visualizza la barra di scorrimento orizzontale se non quando è necessario per mantenere la larghezza di ogni colonna uguale o maggiore al relativo valore della proprietà <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
@@ -60,7 +60,7 @@ In modalità riempimento delle colonne il controllo <xref:System.Windows.Forms.D
   
 -   Riferimenti agli assembly System, System.Drawing e System.Windows.Forms.  
   
--   Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo con Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+-   Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Forms.DataGridView>  

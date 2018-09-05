@@ -2,17 +2,17 @@
 title: Specifica di relazioni tra elementi senza alcun annidamento
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: 1d178287150dfca4c379cf6e934370434c3cfc98
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d04a3d946b87c7203497313c6e21a75ef69f50eb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760089"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724308"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Specifica di relazioni tra elementi senza alcun annidamento
 Se gli elementi non sono annidati, non viene creata alcuna relazione implicita. Tuttavia, è possibile specificare esplicitamente relazioni tra gli elementi non annidati mediante il **msdata: Relationship** annotazione.  
   
- Nell'esempio seguente viene illustrato un XML Schema in cui il **msdata: Relationship** annotazione viene specificata tra la **ordine** e **OrderDetail** elementi, che non sono annidati. Il **msdata: Relationship** annotazione viene specificata come elemento figlio del **Schema** elemento.  
+ Nell'esempio seguente viene illustrato un XML Schema in cui il **msdata: Relationship** annotazione viene specificata tra la **ordine** e **OrderDetail** elementi, che non sono annidati. Il **msdata: Relationship** annotazione viene specificata come elemento figlio delle **Schema** elemento.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -53,7 +53,7 @@ Se gli elementi non sono annidati, non viene creata alcuna relazione implicita. 
 </xs:schema>  
 ```  
   
- Il processo di mapping dello schema di XML Schema definition language (XSD) crea un <xref:System.Data.DataSet> con **ordine** e **OrderDetail** tabelle e una relazione specificata tra le due tabelle, come illustrato di seguito.  
+ Il processo di mapping dello schema di XML Schema definition language (XSD) crea un <xref:System.Data.DataSet> con **ordine** e **OrderDetail** tabelle e una relazione specificata tra queste due tabelle, come illustrato di seguito.  
   
 ```  
 RelationName: OrdOrderDetailRelation  
@@ -67,4 +67,4 @@ Nested: False
 ## <a name="see-also"></a>Vedere anche  
  [Generazione di relazioni tra DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [Mapping tra vincoli XML Schema (XSD) e vincoli di DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

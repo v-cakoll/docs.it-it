@@ -3,11 +3,11 @@ title: Scelta di un filtro
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
 ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558805"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743144"
 ---
 # <a name="choosing-a-filter"></a>Scelta di un filtro
 Quando si configura il servizio di routing, è importante selezionare i filtri messaggi corretti e configurarli per consentire l'individuazione di corrispondenze esatte con i messaggi ricevuti. Se i filtri selezionati non sono sufficientemente precisi o non sono configurati correttamente, i messaggi vengono indirizzati in modo non corretto. Se i filtri sono troppo restrittivi, è possibile che non vengano individuate route valide disponibili per alcuni messaggi.  

@@ -2,12 +2,12 @@
 title: Correlazione basata sul contenuto
 ms.date: 03/30/2017
 ms.assetid: 8638b5d6-1d59-456d-8acd-179a5b39b260
-ms.openlocfilehash: b90d076d96e1bae5c44dc1c2b06f826d256f7463
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0367f480701468dcd5024ea3439bdcd38acc78f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518832"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731722"
 ---
 # <a name="content-based-correlation"></a>Correlazione basata sul contenuto
 In questo esempio viene illustrato come è possibile usare le attività di messaggistica (<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>e <xref:System.ServiceModel.Activities.ReceiveReply>) con una e con più correlazioni basate sul contenuto. In questo scenario una correlazione viene prima inizializzata in base a un ID dell'ordine di acquisto, quindi in un secondo momento viene creata l'altra correlazione in base all'ID cliente. Illustra come un'attività <xref:System.ServiceModel.Activities.Receive> possa seguire una correlazione esistente e inizializzarne una nuova in base allo stesso messaggio in arrivo.  
@@ -20,7 +20,7 @@ In questo esempio viene illustrato come è possibile usare le attività di messa
   
 ## <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1.  Aprire [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con autorizzazioni elevate facendo clic con il [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] e selezionando **Esegui come amministratore**.  
+1.  Aprire [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con autorizzazioni elevate facendo clic con il [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] icona e selezionando **Esegui come amministratore**.  
   
 2.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione CascadingCorrelation.sln.  
   
@@ -35,6 +35,6 @@ In questo esempio viene illustrato come è possibile usare le attività di messa
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\ContentBasedCorrelation`

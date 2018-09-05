@@ -11,16 +11,16 @@ ms.assetid: d91edaf2-be28-41ec-a508-af421cb43c3d
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 5a391215bb03ca7af010e90443479848f05e4985
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8763277052a15e7cde1a5b03e124551bc91328df
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403715"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738233"
 ---
 # <a name="create-a-client-side-ui-automation-provider"></a>Creare un provider di automazione interfaccia utente lato client
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Questo argomento contiene codice di esempio che illustra come implementare un provider di automazione interfaccia utente sul lato client.  
   

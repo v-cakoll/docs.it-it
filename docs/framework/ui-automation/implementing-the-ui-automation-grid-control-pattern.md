@@ -9,16 +9,16 @@ ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 0038202fb7c7f1a6e0b4f21592d7a1056c4dfa2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 036680ea908f2cbe58db398dc315fccd997c4148
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409994"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738488"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementazione del pattern di controllo Grid di automazione interfaccia utente
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IGridProvider>, incluse le informazioni relative a proprietà, metodi ed eventi. Alla fine della panoramica sono elencati collegamenti a ulteriore materiale di riferimento.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33409994"
   
 -   Se una cella è vuota, è necessario che venga restituito un elemento di automazione interfaccia utente per supportare la proprietà <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> per tale cella. Ciò è possibile quando il layout degli elementi figlio nella griglia è simile a una matrice irregolare (vedere l'esempio riportato di seguito).  
   
- ![Esplora risorse di Windows Vista con layout irregolare. ] (../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
+ ![Esplora Windows Vista con layout irregolare. ](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 Esempio di controllo griglia con coordinate vuote  
   
 -   Una griglia contenente un singolo elemento deve comunque implementare <xref:System.Windows.Automation.Provider.IGridProvider> se viene logicamente considerata una griglia. Il numero di elementi figlio nella griglia non ha importanza.  
@@ -51,9 +51,9 @@ Esempio di controllo griglia con coordinate vuote
   
 |Membri obbligatori|Tipo|Note|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Proprietà|Nessuno|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Metodo|Nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Proprietà|nessuno|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Metodo|nessuno|  
   
  Questo pattern di controllo non è associato a eventi.  
   
@@ -63,8 +63,8 @@ Esempio di controllo griglia con coordinate vuote
   
 |Tipo di eccezione|Condizione|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -Se la coordinata di riga richiesta è maggiore di <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> o la coordinata di colonna è maggiore di <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -Se la riga richiesta o una colonna coordinate è minore di zero.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -Se la coordinata di riga richiesta è maggiore di <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> o la coordinata della colonna è maggiore di <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -Se uno della riga o colonna richiesta coordinate è minore di zero.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  

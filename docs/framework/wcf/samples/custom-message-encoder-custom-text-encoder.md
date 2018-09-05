@@ -3,11 +3,11 @@ title: 'Codificatore di messaggi personalizzato: codificatore di testi personali
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
 ms.openlocfilehash: aeb1690d7ead9116bd9c4afe3c64d65d8f51ad50
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418826"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732222"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Codificatore di messaggi personalizzato: codificatore di testi personalizzato
 In questo esempio viene illustrato come implementare un codificatore di messaggi di testo personalizzato utilizzando Windows Communication Foundation (WCF).  

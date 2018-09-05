@@ -5,11 +5,11 @@ ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 59e6c3792571b8b712da1f36e66ff89a98b6bebb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387830"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736672"
 ---
 # <a name="ws-transport-security"></a>Sicurezza del trasporto WS
 In questo esempio viene illustrato l'utilizzo della sicurezza del trasporto SSL con l'associazione <xref:System.ServiceModel.WSHttpBinding>. Per impostazione predefinita, l'associazione `wsHttpBinding` consente la comunicazione HTTP. Se viene configurata per la sicurezza del trasporto, l'associazione supporta la comunicazione HTTPS. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice. L'associazione `wsHttpBinding` è specificata e configurata nei file di configurazione dell'applicazione per il client e il servizio.  

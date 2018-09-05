@@ -5,11 +5,11 @@ ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 169a16126df395eabecfa969f63a004b9e27cb41
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43670678"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745297"
 ---
 # <a name="claims-based-identity-model"></a>Modello di identità basata sulle attestazioni
 Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identità dell'utente è rappresentata come un set di attestazioni nell'applicazione. Un'attestazione può essere il nome dell'utente, un altro potrebbe essere un indirizzo di posta elettronica. L'idea è che viene configurato un sistema di identità esterno per fornire all'applicazione tutti gli elementi necessari per ottenere informazioni sull'utente con ogni richiesta effettuata, con la garanzia crittografica che i dati di identità ricevuti provengono da un'origine attendibile.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: a9721b7e13c24af6256d692fef879b08f2858a68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b76e07a23b105f2c1b4fb55a0d25bb52bcb9dc2
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529537"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741146"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Distribuzione ClickOnce per Windows Form
 Gli argomenti riportati di seguito descrivono la tecnologia [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], usata per semplificare la distribuzione delle applicazioni Windows Form ai computer client.  
@@ -66,6 +66,6 @@ Gli argomenti riportati di seguito descrivono la tecnologia [!INCLUDE[ndptecclic
  [Cenni preliminari sulle impostazioni delle applicazioni](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
  [Pubblicazione di applicazioni ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)  
  [Compilazione di applicazioni ClickOnce dalla riga di comando](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)  
- [Debug di applicazioni ClickOnce in cui si usa System.Deployment.Application](http://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)  
+ [Debug di applicazioni ClickOnce in cui si usa System.Deployment.Application](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)  
  [Distribuzione di componenti COM con ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)  
  [Procedura: Pubblicare un'applicazione ClickOnce mediante la Pubblicazione guidata](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

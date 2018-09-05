@@ -3,11 +3,11 @@ title: Formattatore di feed (JSON)
 ms.date: 03/30/2017
 ms.assetid: f9c0b295-55e7-48ea-b308-ba51c7d31143
 ms.openlocfilehash: bc73ae11f66d2c325fab274f8deec11355ce8b99
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407282"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724334"
 ---
 # <a name="feed-formatter-json"></a>Formattatore di feed (JSON)
 In questo esempio viene illustrato come serializzare un'istanza di una classe <xref:System.ServiceModel.Syndication.SyndicationFeed> in JSON (JavaScript Object Notation) usando un <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> personalizzato e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  

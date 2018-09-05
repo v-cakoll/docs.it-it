@@ -2,15 +2,15 @@
 title: Attività di espressioni regolari
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
-ms.openlocfilehash: 34b1f18f26f0b79c4b8711d65da5707a85cf3bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519834"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743164"
 ---
 # <a name="regular-expression-activities"></a>Attività di espressioni regolari
-In questo esempio viene illustrato come creare un set di attività che espongono la funzionalità delle espressioni regolari dello spazio dei nomi <xref:System.Text.RegularExpressions>. Queste attività personalizzate possono essere usate all'interno di un'applicazione flusso di lavoro. Per ulteriori informazioni sulle espressioni regolari, vedere [n: System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
+In questo esempio viene illustrato come creare un set di attività che espongono la funzionalità delle espressioni regolari dello spazio dei nomi <xref:System.Text.RegularExpressions>. Queste attività personalizzate possono essere usate all'interno di un'applicazione flusso di lavoro. Per altre informazioni sulle espressioni regolari, vedere [N:System.Text.RegularExpressions](https://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
   
  Nella tabella seguente sono indicate in dettaglio le attività personalizzate in questo esempio.  
   
@@ -29,7 +29,7 @@ In questo esempio viene illustrato come creare un set di attività che espongono
 |------------------------------|-----------------|  
 |Pattern (obbligatorio)|Espressione regolare con cui eseguire la ricerca.|  
 |Input (obbligatorio)|Stringa di input da cercare.|  
-|RegexOptions|Combinazione OR bit per bit di [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) valori di enumerazione.|  
+|RegexOptions|Combinazione bit per bit dei [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) valori di enumerazione.|  
 |Valore restituito|`true` se l'input trova una corrispondenza nel criterio di ricerca specificato; in caso contrario, `false`.|  
   
  Nell'esempio di codice riportato di seguito viene illustrato come usare l'attività personalizzata `IsMatch`.  
@@ -51,7 +51,7 @@ new IsMatch
 |------------------------------|-----------------|  
 |Pattern (obbligatorio)|Espressione regolare con cui eseguire la ricerca.|  
 |Input (obbligatorio)|Stringa di input da cercare.|  
-|RegexOptions|Combinazione OR bit per bit di [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) valori di enumerazione.|  
+|RegexOptions|Combinazione bit per bit dei [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) valori di enumerazione.|  
 |Valore restituito|Oggetto <xref:System.Text.RegularExpressions.MatchCollection> che contiene la raccolta di corrispondenze esatte.|  
   
  Nell'esempio di codice riportato di seguito viene illustrato come usare l'attività personalizzata `Matches`.  
@@ -75,7 +75,7 @@ new Matches
 |Input (obbligatorio)|Stringa di input da cercare.|  
 |Replacement|Stringa di sostituzione.<br /><br /> Se viene specificato `Replacement`, la proprietà `MatchEvaluator` viene ignorata. Deve essere impostata la proprietà `Replacement` o `MatchEvaluator`.|  
 |MatchEvaluator|Metodo personalizzato che esamina ogni corrispondenza e restituisce la stringa corrispondente originale o una stringa di sostituzione.<br /><br /> Se viene specificato `Replacement`, la proprietà `MatchEvaluator` viene ignorata. Deve essere impostata la proprietà `Replacement` o `MatchEvaluator`.|  
-|RegexOptions|Combinazione OR bit per bit di [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) valori di enumerazione.|  
+|RegexOptions|Combinazione bit per bit dei [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) valori di enumerazione.|  
 |Valore restituito|Oggetto <xref:System.Text.RegularExpressions.MatchCollection> che contiene la raccolta di corrispondenze esatte.|  
   
  Nell'esempio di codice riportato di seguito viene illustrato come usare l'attività personalizzata `Replace`.  
@@ -111,6 +111,6 @@ new Replace
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Regex`

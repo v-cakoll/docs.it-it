@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 32268fe2-de18-4065-8060-f250def83837
 ms.openlocfilehash: 36823b02d581b47493950b6393bda323b2e8f9b7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467084"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749184"
 ---
 # <a name="query-expression-syntax-examples-element-operators"></a>Esempi di sintassi di espressione di query: operatori di elemento
 Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumerable.First%2A> metodo di query di [modello Sales di AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando la sintassi di espressione di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  

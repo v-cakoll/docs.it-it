@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing key-fram animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
 ms.openlocfilehash: d65bf6f7643adf1d98d468853ae8017a4a6554ac
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401238"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731384"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>Procedura: controllare la durata delle animazioni con fotogrammi chiave
 In questo esempio viene illustrato come controllare l'intervallo di fotogrammi chiave all'interno di un'animazione con fotogrammi chiave. Analogamente alle altre animazioni, animazioni con fotogrammi chiave hanno un <xref:System.Windows.Media.Animation.Timeline.Duration%2A> proprietà. Oltre a specificare la durata di un'animazione, è necessario specificare quale parte di tale durata viene assegnata a ciascuno dei relativi fotogrammi chiave. Per assegnare l'ora, specificare un <xref:System.Windows.Media.Animation.KeyTime> per ogni fotogramma chiave l'animazione.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
 ms.openlocfilehash: c2edf1bc8505b7bda2cc31ded2d2bf53a96243ac
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480049"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732884"
 ---
 # <a name="how-to-animate-a-rectangle"></a>Procedura: animare un rettangolo
 Questo esempio illustra come animare le modifiche apportate alle dimensioni e alla posizione di un rettangolo.  

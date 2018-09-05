@@ -3,11 +3,11 @@ title: Analisi circolare
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
 ms.openlocfilehash: 1f6c5287e6a53ed26ee5c9ed477e08dafc512e3f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406182"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739981"
 ---
 # <a name="circular-tracing"></a>Analisi circolare
 Questo esempio illustra l'implementazione di un listener traccia circolare del buffer. Un scenario comune per i servizi in un ambiente di produzione è avere servizi disponibili per lunghi periodi e avere la registrazione analisi attivata a un livello basso. Questi servizi utilizzano molto spazio su disco. Durante la risoluzione dei problemi di un servizio, i dati più recenti del registro di traccia sono attinenti alla risoluzione di un problema. Questo esempio illustra l'implementazione di un listener di traccia circolare del buffer in cui solo tracce più recenti vengono tenute su disco fino al raggiungimento di una quantità configurabile di dati. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) e include un listener di traccia personalizzato.  

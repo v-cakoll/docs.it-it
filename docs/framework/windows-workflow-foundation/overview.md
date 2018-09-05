@@ -3,11 +3,11 @@ title: Panoramica sul flusso di lavoro di Windows
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
 ms.openlocfilehash: a516f454abc81ae8f6f1c15c815fe2b671ecd98f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672674"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749515"
 ---
 # <a name="windows-workflow-overview"></a>Panoramica sul flusso di lavoro di Windows
 Un flusso di lavoro è un set di unità elementari chiamate *attività* che vengono archiviati come un modello che descrive un processo reale. I flussi di lavoro forniscono un metodo per descrivere l'ordine di esecuzione e le relazioni dipendenti tra porzioni di lavoro di breve o lunga durata. Questo lavoro passa attraverso il modello dall'inizio alla fine e le attività possono essere eseguite da persone o da funzioni del sistema.  

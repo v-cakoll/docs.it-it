@@ -28,11 +28,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 4bd30b26a3e05f97904200cab40234d00924820c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43673648"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746009"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurazione delle app tramite file di configurazione
 .NET Framework, tramite i file di configurazione, offre agli sviluppatori e agli amministratori controllo e flessibilità sulle modalità di esecuzione delle applicazioni. I file di configurazione sono file XML che è possibile modificare in base alle specifiche esigenze. Un amministratore è in grado di controllare le risorse protette alle quali può accedere un'applicazione, le versioni di assembly che verranno usate dall'applicazione e la posizione in cui risiedono applicazioni e oggetti remoti. Gli sviluppatori possono definire le impostazioni all'interno dei file di configurazione senza dover ricompilare un'applicazione dopo ogni modifica di un'impostazione. In questa sezione viene descritto cosa è possibile configurare e l'utilità della configurazione di un'applicazione.  

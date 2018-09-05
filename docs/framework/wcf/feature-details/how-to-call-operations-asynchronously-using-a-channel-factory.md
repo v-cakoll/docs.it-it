@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
 ms.openlocfilehash: a45ba48408fd98c89db8664aec679a437ce8af24
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559921"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749132"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Procedura: chiamare le operazioni in modo asincrono tramite una channel factory
 In questo argomento viene illustrato in che modo un client può accedere a un'operazione del servizio in modalità asincrona quando si usa un'applicazione client basata su <xref:System.ServiceModel.ChannelFactory%601>. Quando si usa un oggetto <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> per richiamare un servizio, è possibile usare il modello di chiamata asincrono basato su eventi. Per altre informazioni, vedere [procedura: chiamare servizio operazioni in modo asincrono](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Per altre informazioni sul modello di chiamata asincrono basato su eventi, vedere [basato su eventi asincroni Pattern (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  

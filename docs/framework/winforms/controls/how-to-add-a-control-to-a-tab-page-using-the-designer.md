@@ -7,11 +7,11 @@ helpviewer_keywords:
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
 ms.openlocfilehash: 07326156fabbb8b991538a7e3bbaff7d807a1e94
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534069"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740857"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Procedura: aggiungere un controllo a una pagina della scheda mediante la finestra di progettazione
 L'uso di moduli di Windows <xref:System.Windows.Forms.TabControl> consiste nel visualizzare gli altri controlli in modo organizzato. È possibile usare queste istruzioni per visualizzare un'immagine nella parte principale di una pagina. Per informazioni sull'aggiunta di un'icona di parte dell'etichetta di una pagina della scheda, vedere [procedura: modificare l'aspetto del controllo TabControl Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  

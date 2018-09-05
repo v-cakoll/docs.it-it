@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
 ms.openlocfilehash: 0a938f2f4d4cc790fe03db1e2b57862e54af48a7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661009"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748567"
 ---
 # <a name="workflow-persistence"></a>Persistenza del flusso di lavoro
 La persistenza del flusso di lavoro è l'acquisizione durevole di uno stato di un'istanza del flusso di lavoro, indipendentemente dalle informazioni relative al processo o al computer. In questo modo viene fornito un punto noto di ripristino dell'istanza del flusso di lavoro in caso di errore di sistema o viene conservata memoria scaricando istanze del flusso di lavoro il cui funzionamento non viene eseguito in modo attivo o ancora viene spostato lo stato dell'istanza del flusso di lavoro da un nodo a un altro in una server farm.  

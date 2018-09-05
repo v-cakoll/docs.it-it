@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
 ms.openlocfilehash: eeea3933446a401ad8f556dc546f54122a19a8b5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396769"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723886"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Procedura: implementare un'operazione del servizio asincrona
 Nelle applicazioni Windows Communication Foundation (WCF), un'operazione del servizio può essere implementata in modo asincrono o in modo sincrono senza imporre al client come chiamarlo. È possibile, ad esempio, che operazioni del servizio asincrone vengano chiamate in modo sincrono e che operazioni del servizio sincrone vengano chiamate in modo asincrono. Per un esempio che illustra come chiamare un'operazione in modo asincrono in un'applicazione client, vedere [procedura: chiamare servizio operazioni in modo asincrono](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Per altre informazioni sulle operazioni sincrone e asincrone, vedere [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) e [sincrono e alle operazioni asincrone](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). In questo argomento viene descritta la struttura di base di un'operazione del servizio asincrona (il codice non è completo). Per un esempio completo di lati client e servizio vedere [asincrono](https://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  

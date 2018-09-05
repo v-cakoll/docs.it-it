@@ -11,20 +11,20 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: 5751bcdb9fe7a16138680f34a4fcc1760f85a1d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47833e734c09e402ab1824b9c629b2ba39acfb9f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523874"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43725007"
 ---
 # <a name="how-to-display-pop-up-help"></a>Procedura: visualizzare la Guida rapida
-È un modo per visualizzare la Guida in Windows Form tramite il **Guida** pulsante posizionate sul lato destro della barra del titolo, accessibile tramite la <xref:System.Windows.Forms.Form.HelpButton%2A> proprietà. Questo tipo di visualizzazione della Guida è ideale con le finestre di dialogo. Con le finestre di dialogo visualizzate come modali (con il metodo <xref:System.Windows.Forms.Form.ShowDialog%2A>) risulta difficile accedere a sistemi di Guida esterni, perché le finestre di dialogo modali devono venire chiuse prima che lo stato attivo possa passare a un'altra finestra. Inoltre, l'uso di **Guida** pulsante richiede che sia presente alcun **Riduci a icona** pulsante o **Ingrandisci** pulsante nella barra del titolo. Questa è una convenzione di dialogo standard, mentre i form dispongono in genere **Riduci a icona** e **Ingrandisci** pulsanti.  
+Un modo per visualizzare la Guida sui moduli di Windows è usare il **aiutare** pulsante, che si trova sul lato destro della barra del titolo, accessibile tramite il <xref:System.Windows.Forms.Form.HelpButton%2A> proprietà. Questo tipo di visualizzazione della Guida è ideale con le finestre di dialogo. Con le finestre di dialogo visualizzate come modali (con il metodo <xref:System.Windows.Forms.Form.ShowDialog%2A>) risulta difficile accedere a sistemi di Guida esterni, perché le finestre di dialogo modali devono venire chiuse prima che lo stato attivo possa passare a un'altra finestra. Inoltre, tramite il **aiutare** pulsante richiede che sia presente alcun **Riduci a icona** pulsante o **Ingrandisci** pulsante visualizzato nella barra del titolo. Questa è una convenzione standard-finestra di dialogo, mentre i form dispongono in genere **Riduci a icona** e **Ingrandisci** pulsanti.  
   
- Tenere presente che è possibile usare anche il componente <xref:System.Windows.Forms.HelpProvider> per collegare i controlli ai file in un sistema di Guida, anche se è stata implementata la Guida rapida. Per ulteriori informazioni, vedere [visualizzazione della Guida in un'applicazione Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md).  
+ Tenere presente che è possibile usare anche il componente <xref:System.Windows.Forms.HelpProvider> per collegare i controlli ai file in un sistema di Guida, anche se è stata implementata la Guida rapida. Per altre informazioni, vedere [visualizzazione della Guida in un'applicazione Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md).  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-display-pop-up-help"></a>Per visualizzare la Guida rapida  
   
@@ -36,11 +36,11 @@ ms.locfileid: "33523874"
   
 3.  Per visualizzare <xref:System.Windows.Forms.Form.HelpButton%2A>, è necessario impostare le proprietà <xref:System.Windows.Forms.Form.MinimizeBox%2A> e <xref:System.Windows.Forms.Form.MaximizeBox%2A> del form su `false`, la proprietà <xref:System.Windows.Forms.Form.ControlBox%2A> su `true` e la proprietà <xref:System.Windows.Forms.Form.FormBorderStyle%2A> su uno dei valori seguenti: <xref:System.Windows.Forms.FormBorderStyle.FixedSingle>, <xref:System.Windows.Forms.FormBorderStyle.Fixed3D>, <xref:System.Windows.Forms.FormBorderStyle.FixedDialog> o <xref:System.Windows.Forms.FormBorderStyle.Sizable>.  
   
-4.  Selezionare il controllo per il quale si desidera visualizzare la Guida nel form e impostare la stringa della Guida nella finestra Proprietà. Questa è la stringa di testo che verrà visualizzato in una finestra simile a un [descrizione comando](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md).  
+4.  Selezionare il controllo per il quale si desidera visualizzare la Guida nel form e impostare la stringa della Guida nella finestra Proprietà. Si tratta della stringa di testo che verrà visualizzato in una finestra simile a un [ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md).  
   
 5.  Premere **F5**.  
   
-6.  Premere il **Guida** pulsante sulla barra del titolo e fare clic sul controllo su cui impostare la stringa della Guida.  
+6.  Premere il **aiutare** pulsante sulla barra del titolo e fare clic sul controllo su cui impostare la stringa della Guida.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzazione della Guida relativa a un controllo tramite le descrizioni comandi](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  

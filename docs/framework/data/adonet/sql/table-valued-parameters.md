@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 2cf517e3bd10dbed51c8a98d150bafcb023e438b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365943"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742520"
 ---
 # <a name="table-valued-parameters"></a>Parametri valutati a livello di tabella
 I parametri valutati a livello di tabella consentono di eseguire facilmente il marshaling di più righe di dati di un'applicazione client in SQL Server senza richiedere più round trip o logica speciale lato server per l'elaborazione dei dati. È possibile usare i parametri con valori di tabella per incapsulare le righe di dati in un'applicazione client e inviare i dati al server in un singolo comando con parametri. Le righe di dati in arrivo vengono archiviate in una variabile di tabella che può quindi essere usata tramite [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -24,8 +24,8 @@ I parametri valutati a livello di tabella consentono di eseguire facilmente il m
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Parametri con valori di tabella (motore di Database)](http://go.microsoft.com/fwlink/?LinkId=98363) nella documentazione Online di SQL Server|Viene descritto come creare e usare i parametri con valori di tabella.|  
-|[Tipi di tabella definiti dall'utente](http://go.microsoft.com/fwlink/?LinkId=98364) nella documentazione Online di SQL Server|Vengono descritti i tipi di tabella definiti dall'utente usati per dichiarare i parametri con valori di tabella.|  
+|[Parametri con valori di tabella (motore di Database)](https://go.microsoft.com/fwlink/?LinkId=98363) nella documentazione Online di SQL Server|Viene descritto come creare e usare i parametri con valori di tabella.|  
+|[Tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkId=98364) nella documentazione Online di SQL Server|Vengono descritti i tipi di tabella definiti dall'utente usati per dichiarare i parametri con valori di tabella.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passaggio di più righe nelle versioni precedenti di SQL Server  
  Prima di parametri con valori di tabella sono stati introdotti in SQL Server 2008, le opzioni per passare più righe di dati a una stored procedure o un comando SQL con parametri erano limitate. Per passare più righe al server, uno sviluppatore poteva scegliere tra le opzioni seguenti:  
@@ -39,7 +39,7 @@ I parametri valutati a livello di tabella consentono di eseguire facilmente il m
 -   Usare l'utilità `bcp` o l'oggetto <xref:System.Data.SqlClient.SqlBulkCopy> per caricare numerose righe di dati in una tabella. Sebbene questa tecnica sia molto efficace, non supporta l'elaborazione sul lato server, a meno che i dati non vengano caricati in una tabella temporanea o in una variabile di tabella.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Creazione di tipi di parametri con valori di tabella  
- I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni CREATE TYPE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Per poter utilizzare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per ulteriori informazioni sulla creazione di tipi di tabella, vedere [tipi di tabella definiti dall'utente](http://go.microsoft.com/fwlink/?LinkID=98364) nella documentazione Online di SQL Server.  
+ I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni CREATE TYPE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Per poter utilizzare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per altre informazioni sulla creazione di tipi di tabella, vedere [tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkID=98364) nella documentazione Online di SQL Server.  
   
  L'istruzione seguente consente di creare un tipo di tabella denominato CategoryTableType, costituito dalle colonne CategoryID e CategoryName:  
   
@@ -77,7 +77,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="limitations-of-table-valued-parameters"></a>Limitazioni relative ai parametri con valori di tabella  
  Per i parametri con valori di tabella sono previste diverse limitazioni:  
   
--   È possibile passare parametri con valori di tabella per [funzioni CLR definite dall'utente](http://msdn.microsoft.com/library/ms131077.aspx).  
+-   Non è possibile passare parametri con valori di tabella [funzioni definite dall'utente CLR](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions).  
   
 -   I parametri con valori di tabella possono essere indicizzati solo per supportare vincoli UNIQUE o PRIMARY KEY. In SQL Server non vengono gestite statistiche relative ai parametri con valori di tabella.  
   
@@ -275,4 +275,4 @@ insertCommand.ExecuteNonQuery()
  [Comandi e parametri](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Parametri DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Operazioni sui dati SQL Server in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

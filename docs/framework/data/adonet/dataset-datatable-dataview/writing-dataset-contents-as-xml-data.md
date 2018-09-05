@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
 ms.openlocfilehash: ff63c63be9bbfab7c3a9600f259abdea81be4260
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482261"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724474"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Scrittura del contenuto di dataset come dati XML
 In ADO.NET è possibile scrivere una rappresentazione XML di un <xref:System.Data.DataSet>, con o senza schema. Se le informazioni relative allo schema sono incluse inline con il flusso o documento XML, tali informazioni verranno scritte usando il linguaggio XSD (XML Schema Definition Language). Nello schema sono contenute le definizioni delle tabelle del <xref:System.Data.DataSet>, oltre alle definizioni delle relazioni e dei vincoli.  

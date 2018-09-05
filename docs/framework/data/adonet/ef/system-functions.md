@@ -2,12 +2,12 @@
 title: Funzioni di sistema
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
-ms.openlocfilehash: 91c8e178fc6903dddc287ac2ca00c3152a9e3ce7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 277f2f9c69610b134f3f95787f065f65b01712d2
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765724"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749301"
 ---
 # <a name="system-functions"></a>Funzioni di sistema
 Il provider di dati .NET Framework per SQL Server (SqlClient) fornisce le funzioni di sistema seguenti:  
@@ -28,7 +28,7 @@ Il provider di dati .NET Framework per SQL Server (SqlClient) fornisce le funzio
   
 |SQL Server 2000|SQL Server 2005|SQL Server 2008|  
 |---------------------|---------------------|---------------------|  
-|[Sistema funzioni Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115918)|[Sistema funzioni Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115917)|[Funzioni di sistema (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115919)|  
+|[Sistema funzioni Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115918)|[Sistema funzioni Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115917)|[Funzioni di sistema (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115919)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Linguaggio Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  

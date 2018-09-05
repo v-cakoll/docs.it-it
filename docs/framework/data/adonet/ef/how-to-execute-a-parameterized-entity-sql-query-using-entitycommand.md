@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e93fea43-7e03-4d7d-9fee-2517b8b88cba
 ms.openlocfilehash: 12304064a20adf66ac5db2195ae2d103ffa22c09
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542683"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773998"
 ---
 # <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Procedura: eseguire una query Entity SQL con parametri tramite EntityCommand
 In questo argomento viene illustrato come eseguire un' [!INCLUDE[esql](../../../../../includes/esql-md.md)] query con parametri utilizzando un <xref:System.Data.EntityClient.EntityCommand> oggetto.  

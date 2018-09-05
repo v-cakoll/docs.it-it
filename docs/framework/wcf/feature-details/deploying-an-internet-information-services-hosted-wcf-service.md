@@ -3,11 +3,11 @@ title: Distribuzione di un servizio WCF ospitato in Internet Information Service
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: b2b58de703a0864ac0666cb4738a95726e28bcaf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395515"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740101"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Distribuzione di un servizio WCF ospitato in Internet Information Services (IIS)
 Lo sviluppo e distribuzione di un servizio Windows Communication Foundation (WCF) ospitato in Internet Information Services (IIS) include le attività seguenti:  

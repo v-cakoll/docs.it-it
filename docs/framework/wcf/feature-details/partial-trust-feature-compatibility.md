@@ -3,11 +3,11 @@ title: Compatibilità con la funzionalità di trust parziale
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43451662"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745596"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilità con la funzionalità di trust parziale
 Windows Communication Foundation (WCF) supporta un subset limitato di funzionalità durante l'esecuzione in un ambiente parzialmente attendibile. Le funzionalità supportate in un contesto parzialmente attendibile sono progettate sulla base di uno specifico set di scenari, come descritto nell'argomento [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
 ms.openlocfilehash: a8b5c0f9492941cf0e01e016d9fb097e1df44d2e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389715"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731975"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>Procedura: impostare le colonne come in sola lettura nel controllo DataGridView di Windows Form
 Non tutti i dati sono concepiti per la modifica. Nel controllo <xref:System.Windows.Forms.DataGridView>, il valore della proprietà <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> di una colonna determina se gli utenti possono modificare le celle di tale colonna. Per informazioni su come rendere il controllo interamente di sola lettura, vedere [procedura: impedire l'aggiunta di riga e l'eliminazione nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md).  

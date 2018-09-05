@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 1922351ffb11d5ff6541ef22dee623c20d153d6a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482922"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747067"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalizzazione di feed (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Usa il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] per esporre i dati come feed. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] supporta i formati Atom e JavaScript Object Notation (JSON) per i feed di dati. Quando si usa un feed Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fornisce un metodo standard per serializzare i dati, ad esempio le entità e relazioni, in formato XML che può essere incluso nel corpo del messaggio HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] definisce un mapping di proprietà di entità predefinito tra i dati contenuti nelle entità e gli elementi Atom. Per altre informazioni, vedere [OData: formato Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  

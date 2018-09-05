@@ -3,11 +3,11 @@ title: Invio e gestione di errori
 ms.date: 03/30/2017
 ms.assetid: 98e8e04d-2ac9-4a33-ae08-462f757a7a14
 ms.openlocfilehash: 896f209e7daeeab2bb33c1fde15298aae96c8776
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406658"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733365"
 ---
 # <a name="sending-and-handling-faults"></a>Invio e gestione di errori
 In questo esempio viene illustrato come usare le attività di messaggistica <xref:System.ServiceModel.Activities.SendReply> e <xref:System.ServiceModel.Activities.ReceiveReply> per inviare e ricevere errori previsti e imprevisti. In questo scenario, la prima richiesta del client comporta un errore previsto incluso nella raccolta <xref:System.ServiceModel.Activities.Send.KnownTypes%2A>. Le successive richieste del client comportano la ricezione di errori imprevisti, prima del completamento della richiesta finale.  

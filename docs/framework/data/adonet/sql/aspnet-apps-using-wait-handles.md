@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
 ms.openlocfilehash: 608cec63f08869ebb3a6519f9de0fe7fa02a344f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386282"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738966"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Applicazioni ASP.NET tramite handle di attesa
 I modelli di callback e di polling per la gestione di operazioni asincrone sono utili quando l'applicazione elabora una sola operazione asincrona alla volta. I modelli di attesa offrono un metodo più flessibile per l'elaborazione di più operazioni asincrone. Sono disponibili due modelli Wait, denominati in base ai metodi <xref:System.Threading.WaitHandle> usati per implementarli: Il modello Wait (Any) e il modello Wait (All).  

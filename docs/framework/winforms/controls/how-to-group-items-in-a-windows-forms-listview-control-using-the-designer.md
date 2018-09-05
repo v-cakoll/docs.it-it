@@ -7,11 +7,11 @@ helpviewer_keywords:
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
 ms.openlocfilehash: 40105ba9ffdc6f61cd9a9e382ba5d2610cbcbca2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417308"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749012"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Procedura: raggruppare elementi in un controllo ListView Windows Form utilizzando la finestra di progettazione
 La caratteristica di raggruppamento del <xref:System.Windows.Forms.ListView> controllo consente di visualizzare insiemi di elementi correlati in gruppi. Questi gruppi vengono separati nella schermata dalle intestazioni del gruppo orizzontali che contengono i titoli di gruppo. È possibile usare <xref:System.Windows.Forms.ListView> gruppi per semplificare lo spostamento di elenchi di grandi dimensioni più facili raggruppando gli elementi in ordine alfabetico, per data o da qualsiasi altra forma di raggruppamento logico. L'immagine seguente mostra alcuni elementi raggruppati.  

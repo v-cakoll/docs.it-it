@@ -7,11 +7,11 @@ helpviewer_keywords:
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 ms.openlocfilehash: d1c69d2e9e89e0a4fed767216e8743a0ac9ac81d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537034"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741133"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Procedura dettagliata: esecuzione di attività comuni utilizzando gli smart tag nei controlli Windows Form
 Come si costruisce form e controlli per l'applicazione Windows Forms, esistono molte attività che verranno eseguite più volte. Queste sono alcune delle attività comuni eseguite che si verifica:  

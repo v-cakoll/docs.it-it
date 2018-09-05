@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
 ms.openlocfilehash: 1a0d92c7acad58d3618c3f50b7463022352cf542
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560857"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741961"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>Recupero di un valore singolo da un database
 Può essere necessario restituire informazioni del database costituite semplicemente da un singolo valore anziché da una tabella o da un flusso di dati. Ad esempio, è possibile restituire il risultato di una funzione di aggregazione, ad esempio COUNT (\*), SUM (price) o AVG (Quantity). Il **comandi** oggetto offre la possibilità di restituire singoli valori usando la **ExecuteScalar** (metodo). Il **ExecuteScalar** restituisce come un valore scalare, il valore della prima colonna della prima riga del set di risultati.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
 ms.openlocfilehash: 1819d468d12c03ce0c4faac11f4b20b8fe0f9c33
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482006"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731274"
 ---
 # <a name="navigating-datarelations"></a>Esplorazione di oggetti DataRelation
 Una delle funzioni principali di un oggetto <xref:System.Data.DataRelation> è di consentire la navigazione da una <xref:System.Data.DataTable> all'altra all'interno di un <xref:System.Data.DataSet>. In questo modo è possibile recuperare tutti i relativi <xref:System.Data.DataRow> oggetti in una **DataTable** quando viene fornito un singolo **DataRow** da un correlati **DataTable**. Ad esempio, dopo aver stabilito una **DataRelation** tra una tabella di clienti e una tabella di ordini, è possibile recuperare tutte le righe di ordine per un particolare cliente usando **GetChildRows**.  

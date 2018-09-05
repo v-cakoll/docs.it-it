@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-ms.openlocfilehash: 76e0e8d4757f29bb5df82ea1482beff3dd43c0e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d362f181921a39d274eaee78e85976522ce4fc15
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598014"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736192"
 ---
 # <a name="lttypeparamgt-visual-basic"></a>&lt;typeparam&gt; (Visual Basic)
 Definisce un parametro di tipo nome e una descrizione.  
@@ -29,14 +29,14 @@ Definisce un parametro di tipo nome e una descrizione.
  Descrizione del parametro di tipo.  
   
 ## <a name="remarks"></a>Note  
- Utilizzare il `<typeparam>` tag nel commento per un tipo generico o una dichiarazione di membro generico descrivere uno dei parametri di tipo.  
+ Usare il `<typeparam>` tag del commento per un tipo generico o dichiarazione di un membro generico descrivere uno dei parametri di tipo.  
   
  Compilare con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio viene utilizzato il `<typeparam>` tag per descrivere il `id` parametro.  
+ Questo esempio Usa la `<typeparam>` tag per descrivere il `id` parametro.  
   
  [!code-vb[VbVbcnXmlDocComments#8](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/typeparam_1.vb)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)

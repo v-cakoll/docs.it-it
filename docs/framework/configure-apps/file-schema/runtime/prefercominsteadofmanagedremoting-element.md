@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cac4ebb46fabad49e2e4e6a7d566522ca027094
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c05e27226a58086c806e8977ba50a55873d1167e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745474"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735888"
 ---
 # <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt; elemento
-Specifica se il runtime utilizzerà l'interoperabilità COM anziché remoti per tutte le chiamate tra i limiti del dominio applicazione.  
+Specifica se il runtime userà l'interoperabilità COM anziché la comunicazione remota per tutte le chiamate tra i limiti del dominio applicazione.  
   
  \<configuration>  
 \<runtime>  
@@ -34,14 +34,14 @@ Specifica se il runtime utilizzerà l'interoperabilità COM anziché remoti per 
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Indica se il runtime utilizzerà l'interoperabilità COM anziché remoting limiti del dominio applicazione.|  
+|`enabled`|Attributo obbligatorio.<br /><br /> Indica se il runtime userà l'interoperabilità COM anziché la comunicazione remota attraverso i limiti del dominio applicazione.|  
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|`false`|Il runtime utilizza comunicazione remota di limiti del dominio applicazione. Questa è l'impostazione predefinita.|  
-|`true`|Il runtime utilizzerà l'interoperabilità COM limiti del dominio applicazione.|  
+|`false`|Il runtime Usa .NET remoting superando i limiti di dominio di applicazione. Questa è l'impostazione predefinita.|  
+|`true`|Il runtime userà l'interoperabilità COM superando i limiti di dominio di applicazione.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -54,16 +54,16 @@ Specifica se il runtime utilizzerà l'interoperabilità COM anziché remoti per 
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- Quando si imposta la `enabled` attributo `true`, il runtime si comporta come segue:  
+ Quando si impostano i `enabled` dell'attributo `true`, il runtime si comporta come segue:  
   
--   Il runtime non chiami [IUnknown:: QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) per un [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interfaccia quando un [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) interfaccia accede al dominio tramite un'interfaccia COM. Invece, costruisce una [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) attorno all'oggetto.  
+-   Il runtime non chiami [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) per un' [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interfaccia quando un' [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) interfaccia accede al dominio tramite un'interfaccia COM. In alternativa, crea una [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) attorno all'oggetto.  
   
--   Il runtime restituisce E_NOINTERFACE quando riceve un `QueryInterface` chiamare per un [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interfaccia per qualsiasi [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) che è stato creato in questo dominio.  
+-   E_NOINTERFACE viene restituito dal runtime quando riceve un `QueryInterface` chiamare per un [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interfaccia per qualsiasi [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) che è stato creato in questo dominio.  
   
- Questi due comportamenti assicurarsi che tutte le chiamate tramite COM interfacce tra gli oggetti gestiti attraverso l'utilizzo di limiti di dominio dell'applicazione COM e l'interoperabilità COM anziché servizi remoti.  
+ Questi due comportamenti assicurarsi che tutte le chiamate su COM interfacce tra gli oggetti gestiti attraverso l'utilizzo dei limiti di dominio dell'applicazione COM e l'interoperabilità COM anziché la comunicazione remota.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come specificare che il runtime deve utilizzare COM interoperabilità attraverso i limiti di isolamento:  
+ Nell'esempio seguente viene illustrato come specificare che il runtime deve utilizzare COM interoperabilità tra i limiti di isolamento:  
   
 ```xml  
 <configuration>  

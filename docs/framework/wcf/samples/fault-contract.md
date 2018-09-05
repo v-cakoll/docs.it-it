@@ -2,15 +2,15 @@
 title: Contratto di errore
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 37b9d7e3ec2135d60215232fae114baef1b54f36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b3348f31d239d6bf7e64852ba02010115062669
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504159"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724915"
 ---
 # <a name="fault-contract"></a>Contratto di errore
-Nell'esempio di contratto di errore viene illustrato come comunicare informazioni relative all'errore da un servizio a un client. L'esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md), con altro codice aggiunto al servizio per convertire un errore di un'eccezione interna. Il client tenta di eseguire una divisione per zero per imporre una condizione di errore al servizio.  
+Nell'esempio di contratto di errore viene illustrato come comunicare informazioni relative all'errore da un servizio a un client. L'esempio è basato sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), con ulteriore codice aggiunto al servizio per convertire un'eccezione interna in un errore. Il client tenta di eseguire una divisione per zero per imporre una condizione di errore al servizio.  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -121,7 +121,7 @@ catch (FaultException<MathFault> e)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -132,7 +132,7 @@ catch (FaultException<MathFault> e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
   

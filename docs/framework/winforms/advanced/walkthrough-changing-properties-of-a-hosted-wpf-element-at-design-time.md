@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: a1f7a90c-0bbb-4781-8c3c-8cc8bef2488d
 ms.openlocfilehash: 15cab9266af5840aa4b37a62b71bd5010b7a859a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535642"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741020"
 ---
 # <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a>Procedura dettagliata: modifica delle proprietà di un elemento WPF ospitato in fase di progettazione
 Questa procedura dettagliata mostra come cambiare i valori delle proprietà di un controllo Windows Presentation Foundation (WPF) incluso in un Windows Form.  

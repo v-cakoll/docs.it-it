@@ -2,12 +2,12 @@
 title: 'Esercitazione: Creare un Provider di tipi (F #)'
 description: 'Informazioni su come creare il proprio provider di tipi F # in F # 3.0 esaminando i diversi provider di tipo semplice per illustrare i concetti di base.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 25b11a0c6328fc74832e13b6380c983fb14a74a0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499328"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745726"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Esercitazione: Creare un Provider di tipi
 
@@ -24,7 +24,6 @@ L'ecosistema di F # contiene una gamma di provider di tipi per uso comune Intern
 - [Typeproviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) è un precedente set di provider di tipi per l'uso solo con la programmazione di .NET Framework per l'accesso ai servizi di dati SQL, Entity Framework, OData e WSDL.
 
 Se necessario, è possibile creare provider di tipi personalizzati, oppure è possibile fare riferimento a provider di tipi creati da altri. Ad esempio, l'organizzazione potrebbe avere un servizio dati che fornisce un numero elevato e continuamente crescente di set di dati denominati, ciascuno con il proprio schema dati stabile. È possibile creare un provider di tipi che legge gli schemi e presenta i set di dati correnti per il programmatore in una modalità fortemente tipizzata.
-
 
 ## <a name="before-you-start"></a>Prima di iniziare
 
@@ -51,7 +50,6 @@ Prima di iniziare, si potrebbero chiedere alle domande seguenti:
 - Verrà modificato durante l'esecuzione del programma?
 
 Provider di tipi sono particolarmente adatti alle situazioni in cui lo schema è stabile in fase di esecuzione e nel corso della durata del codice compilato.
-
 
 ## <a name="a-simple-type-provider"></a>Un Provider di tipi semplici
 
@@ -93,8 +91,7 @@ type Type100 =
 
 Si noti che il set di tipi e membri forniti sia noto staticamente. In questo esempio non sfrutta la possibilità di provider forniscono i tipi che dipendono da uno schema. Nel codice seguente viene descritta l'implementazione del provider del tipo e i dettagli sono descritti nelle sezioni successive di questo argomento.
 
-
->[!WARNING] 
+>[!WARNING]
 Possono essere presenti differenze tra il codice e gli esempi online.
 
 ```fsharp
@@ -168,7 +165,6 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 In alternativa, aprire Visual Studio, aprire il menu di Debug, scegli `Debug/Attach to process…`e associare a un altro `devenv` processo in cui si sta modificando lo script. Con questo metodo, è possibile assegnare più facilmente particolare per la logica nel provider di tipi, in modo interattivo digitando le espressioni nella seconda istanza (con funzionalità complete di IntelliSense e altre funzionalità).
 
 È possibile disabilitare Just My Code per identificare più facilmente gli errori nel codice generato del debug. Per informazioni su come abilitare o disabilitare questa funzionalità, vedere [spostarsi nel codice con il Debugger](/visualstudio/debugger/navigating-through-code-with-the-debugger). Inoltre, è anche possibile impostare le eccezioni first-chance rilevamento, aprire il `Debug` menu e scegliendo `Exceptions` oppure scegliendo i tasti Ctrl + Alt + E aprire il `Exceptions` nella finestra di dialogo. Nella finestra di dialogo, sotto `Common Language Runtime Exceptions`, selezionare il `Thrown` casella di controllo.
-
 
 ### <a name="implementation-of-the-type-provider"></a>Implementazione del Provider di tipo
 
@@ -376,7 +372,6 @@ L'esempio in questa sezione vengono fornite solo *cancellati tipi specificati*, 
 
 In questo esempio, ogni fornito di tipo verrà cancellato al tipo `obj`, e tutti gli usi del tipo verranno visualizzato come tipo `obj` nel codice compilato. In effetti, gli oggetti sottostanti in questi esempi sono stringhe, ma il tipo verrà visualizzato come `System.Object` in .NET codice compilato. Come con tutti gli usi di cancellazione di tipo, è possibile usare la conversione boxing esplicito, conversione unboxing ed eseguendo il cast a compromettere cancellati i tipi. In questo caso, un'eccezione di cast non valida potrebbe quando l'oggetto viene usato. Un provider runtime è possibile definire un proprio tipo di rappresentazione privata per proteggersi da rappresentazioni false. Non è possibile definire i tipi cancellati in F # se stesso. Solo i tipi specificati possono essere cancellati. È necessario comprendere le ramificazioni, entrambi pratici e semantici, di usare uno tipi cancellati per il provider di tipo o un provider che fornisce cancellati tipi. Un tipo cancellato non dispone di alcun tipo .NET reale. Pertanto, non è possibile eseguire sul tipo di reflection accurata e si potrebbero compromettere i tipi cancellati se si usano i cast di runtime e altre tecniche che si basano sulla semantica del tipo esatto di runtime. Subversion dei tipi cancellati spesso comporta eccezioni di cast di tipo in fase di esecuzione.
 
-
 ### <a name="choosing-representations-for-erased-provided-types"></a>Scelta di rappresentazioni per cancellare i tipi forniti
 
 Per alcuni casi di utilizzo dei tipi forniti cancellati, non è necessaria alcuna rappresentazione. Ad esempio, è il cancellato fornito tipo potrebbe contenere solo le proprietà statiche e membri e alcun costruttore, e nessuna proprietà o metodi restituisce un'istanza del tipo. Se è possibile raggiungere le istanze di un cancellato fornito di tipo, è necessario considerare le domande seguenti:
@@ -435,11 +430,9 @@ ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), �
 
 La sezione precedente è stato spiegato come creare un provider di tipi cancellazione semplice che offre una gamma di tipi, proprietà e metodi. In questa sezione viene inoltre illustrato il concetto di cancellazione di tipo, tra cui alcuni dei vantaggi e svantaggi di fornire i tipi cancellati da un provider di tipi e illustrate rappresentazioni di tipi cancellati.
 
-
 ## <a name="a-type-provider-that-uses-static-parameters"></a>Un Provider di tipi che utilizza parametri statici
 
 La possibilità di impostare i parametri provider di tipi da dati statici consente molti scenari interessanti, anche in casi in cui il provider non è necessario accedere ai dati locali o remoti. In questa sezione si apprenderà alcune tecniche di base per la creazione di un provider di questo tipo.
-
 
 ### <a name="type-checked-regex-provider"></a>Tipo controllato Provider Regex
 
@@ -737,16 +730,13 @@ do ()
 
 In questa sezione viene spiegato come creare un provider di tipi che agisce sui relativi parametri statici. Il provider controlla il parametro static e offre operazioni in base al relativo valore.
 
-
 ## <a name="a-type-provider-that-is-backed-by-local-data"></a>Un Provider di tipi supportato da dati locali
 
 Spesso è possibile che il provider di tipi per presentare le API basate su non solo parametri statici, ma anche informazioni provenienti da sistemi locali o remoti. Questa sezione vengono illustrati i provider di tipi che si basano sui dati locali, ad esempio file di dati locali.
 
-
 ### <a name="simple-csv-file-provider"></a>Provider di File CSV semplice
 
 Un esempio semplice, prendere in considerazione un provider di tipi per l'accesso ai dati scientifici in formato CSV (Comma Separated Value). In questa sezione si presuppone che i file CSV deve contenere una riga di intestazione seguita da dati a virgola mobile, come illustrato nella tabella seguente:
-
 
 |Distanza (misurazione)|Tempo (secondo)|
 |----------------|-------------|
@@ -893,11 +883,9 @@ Tenere presente i punti seguenti circa l'implementazione:
 
 In questa sezione viene spiegato come creare un provider di tipi per un'origine dati locale con un semplice schema contenuta nell'origine dati stessa.
 
-
 ## <a name="going-further"></a>Approfondimenti
 
 Le sezioni seguenti includono alcuni suggerimenti per approfondire l'argomento.
-
 
 ### <a name="a-look-at-the-compiled-code-for-erased-types"></a>Esaminare il codice compilato per i tipi cancellati
 
@@ -939,8 +927,8 @@ IL_0017:  ret
 
 Come illustrato nell'esempio, tutti i riferimenti di tipo `Type1` e il `InstanceProperty` proprietà sono state cancellate, lasciando solo le operazioni sui tipi di runtime coinvolti.
 
-
 ### <a name="design-and-naming-conventions-for-type-providers"></a>Progettazione e convenzioni di denominazione per i provider di tipi
+
 Osservare le convenzioni seguenti durante la creazione di provider di tipi.
 
 **Provider per i protocolli di connettività** In generale, i nomi del provider la maggior parte delle DLL per i protocolli di connettività dei dati e il servizio, ad esempio le connessioni di OData o SQL, devono terminare `TypeProvider` o `TypeProviders`. Ad esempio, usare un nome DLL che è simile alla stringa seguente:
@@ -980,13 +968,12 @@ let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 
 Per altre informazioni, vedere il `GetConnection` progettare convenzione che è descritti più avanti in questo argomento.
 
-
 ### <a name="design-patterns-for-type-providers"></a>Schemi progettuali per provider di tipi
 
 Le sezioni seguenti descrivono i modelli di progettazione che è possibile usare durante la creazione di provider di tipi.
 
-
 #### <a name="the-getconnection-design-pattern"></a>Lo schema progettuale GetConnection
+
 La maggior parte dei provider di tipi deve essere scritto per utilizzare il `GetConnection` modello viene usato per il provider di tipi in FSharp.Data.TypeProviders.dll, come illustrato nell'esempio seguente:
 
 ```fsharp
@@ -1147,10 +1134,7 @@ Si possono spesso il debug di provider di tipi più facilmente usando fsc.exe in
 
   È possibile usare la registrazione di stampa-a-stdout.
 
-
 ## <a name="see-also"></a>Vedere anche
 
-* [Provider di tipi](index.md)
-
-* [il SDK del Provider di tipo](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
-
+- [Provider di tipi](index.md)
+- [il SDK del Provider di tipo](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

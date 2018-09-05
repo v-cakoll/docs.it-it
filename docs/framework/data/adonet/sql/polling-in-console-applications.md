@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
 ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537219"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739516"
 ---
 # <a name="polling-in-console-applications"></a>Polling in applicazioni console
 Le operazioni asincrone in ADO.NET consentono di avviare operazioni di database che potrebbero richiedere molto tempo su un singolo thread e di eseguire altre attività su un thread diverso. Tuttavia, nella maggior parte degli scenari si raggiungerà un punto in cui l'applicazione non continuerà finché l'operazione di database non è completata. In questi casi, risulta utile effettuare il polling dell'operazione asincrona per determinare se l'operazione è stata completata.  

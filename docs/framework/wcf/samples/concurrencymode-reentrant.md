@@ -3,11 +3,11 @@ title: ConcurrencyMode.Reentrant
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
 ms.openlocfilehash: c5fa690ca3b8ffe14eb9f19f0bb096b867ab992f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533451"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740529"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode.Reentrant
 In questo esempio vengono descritte la necessità e le implicazioni dell'utilizzo di ConcurrencyMode.Reentrant in un'implementazione del servizio. ConcurrencyMode.Reentrant implica che il servizio (o callback) elabora solo uno messaggio a un'ora specificata (come per `ConcurencyMode.Single`). Per garantire la thread safety, Windows Communication Foundation (WCF) consente di bloccare il `InstanceContext` elaborando un messaggio in modo che nessun altro messaggio possa essere elaborato. Nel caso della modalità Reentrant, `InstanceContext` viene sbloccato poco prima che il servizio effettui una chiamata in uscita, consentendo alla chiamata successiva (che può essere rientrante, come illustrato nell'esempio) di eseguire il blocco la prossima volta che entra nel servizio. Per descrivere il comportamento, nell'esempio viene illustrato come un client e un servizio possono inviarsi messaggi utilizzando un contratto duplex.  

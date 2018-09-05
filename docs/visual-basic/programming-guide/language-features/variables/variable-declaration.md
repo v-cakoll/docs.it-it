@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 6890ddfd8b463cd731ab3d8f39565b50a31a1192
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 92a20e5fbe60c71ec3375ed35c919e1f88cf0a9c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332733"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43737555"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Dichiarazione di variabili in Visual Basic
 Si dichiara una variabile per specificare il nome e le caratteristiche. Istruzione di dichiarazione delle variabili è il [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). La posizione e il contenuto determinano le caratteristiche della variabile.  
@@ -61,7 +61,7 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- Per altre informazioni sui tipi di dati, vedere [tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Per altre informazioni sugli oggetti, vedere [oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) e [programmazione con i componenti](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
+ Per altre informazioni sui tipi di dati, vedere [tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Per altre informazioni sugli oggetti, vedere [oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) e [programmazione con i componenti](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
   
 ## <a name="local-type-inference"></a>Inferenza del tipo di variabile locale  
  *L'inferenza del tipo* viene usato per determinare i tipi di dati delle variabili locali dichiarate senza un `As` clausola. Il compilatore deduce il tipo della variabile dal tipo dell'espressione di inizializzazione. In questo modo è possibile dichiarare le variabili senza specificare esplicitamente un tipo. Nell'esempio seguente, entrambe `num1` e `num2` sono fortemente tipizzati come numeri interi.  
@@ -80,7 +80,7 @@ Dim l, m As Long, x, y As Single
 ## <a name="see-also"></a>Vedere anche  
  [Procedura: Creare una nuova variabile](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
  [Procedura: Spostare i dati all'interno e all'esterno di una variabile](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
- [Tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md)  
  [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)  
  [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)  
  [Static](../../../../visual-basic/language-reference/modifiers/static.md)  

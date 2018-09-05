@@ -3,11 +3,11 @@ title: Client tipizzati
 ms.date: 03/30/2017
 ms.assetid: 62c40e8f-e9b4-4b1a-939a-93c37393d343
 ms.openlocfilehash: 0e4b52b81d30f61e30116dc1480e6c4e7f271a93
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43540776"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746194"
 ---
 # <a name="typed-client"></a>Client tipizzati
 Nell'esempio viene illustrato come ottenere informazioni da un client tipizzato generato dal [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice. In questo esempio, il client è un'applicazione console (.exe) e il servizio è ospitato da Internet Information Services (IIS).  

@@ -3,11 +3,11 @@ title: Esempio relativo al proxy di individuazione
 ms.date: 03/30/2017
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
 ms.openlocfilehash: 6fc0680bc6b61a6fe1b4b141c8b1e5081df5a124
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393021"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747913"
 ---
 # <a name="discovery-proxy-sample"></a>Esempio relativo al proxy di individuazione
 Questo esempio mostra come creare un'implementazione di un proxy di individuazione per archiviare informazioni sui servizi esistenti e come i client possono eseguire una query su tale proxy per ricevere informazioni. L'esempio è costituito da tre progetti:  

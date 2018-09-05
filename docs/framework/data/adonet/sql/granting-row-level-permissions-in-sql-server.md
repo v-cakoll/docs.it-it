@@ -2,12 +2,12 @@
 title: Concessione di autorizzazioni a livello di riga in SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 5f777b47c9b2f92c40fec01b4ff0c35fc28dbd89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361306"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749155"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Concessione di autorizzazioni a livello di riga in SQL Server
 In alcuni scenari è necessario controllare l'accesso a un livello caratterizzato da una maggior granularità rispetto a quanto consentito dalla semplice concessione, revoca o negazione delle autorizzazioni sui dati. Ad esempio, in un'applicazione di database usata in un ospedale potrebbe essere necessario consentire ai medici di visualizzare solo le informazioni correlate ai propri pazienti. Scenari simili sono presenti in molti ambienti, tra cui quelli delle applicazioni destinate al settore finanziario, legale, statale e militare. Per contribuire a gestire questi scenari, SQL Server 2016 fornisce una funzionalità di [sicurezza a livello di riga](https://msdn.microsoft.com/library/dn765131.aspx) che semplifica e centralizza la logica di accesso a livello di riga in un criterio di sicurezza. Per le versioni precedenti di SQL Server, una funzionalità simile può essere ottenuta usando le visualizzazioni per applicare filtri a livello di riga.  
@@ -21,7 +21,7 @@ In alcuni scenari è necessario controllare l'accesso a un livello caratterizzat
   
 -   Abilitare l'applicazione di filtri a livello di riga:  
   
-    -   Se si utilizza SQL Server 2016 o versioni successive, o [Database SQL di Azure](https://docs.microsoft.com/azure/sql-database/), creare un criterio di sicurezza che consente di aggiungere un predicato nella tabella per limitare le righe restituite a quelle che corrispondono a uno utente del database corrente (tramite il CURRENT_USER() la funzione predefinita) o il nome di account di accesso corrente (tramite la funzione predefinita SUSER_SNAME ()):  
+    -   Se si usa SQL Server 2016 o versioni successive, oppure [Database SQL di Azure](https://docs.microsoft.com/azure/sql-database/), creare un criterio di sicurezza che consente di aggiungere un predicato nella tabella per limitare le righe restituite a quelle che corrispondono a uno utente del database corrente (utilizzo di CURRENT_USER funzione predefinita) o il nome di account di accesso corrente (usando la funzione predefinita SUSER_SNAME ()):  
   
         ```tsql  
         CREATE SCHEMA Security  
@@ -64,7 +64,7 @@ In alcuni scenari è necessario controllare l'accesso a un livello caratterizzat
   
 |||  
 |-|-|  
-|[Implementazione della sicurezza a livello di riga e di cella nei database classificati con SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=98227) nel sito SQL Server TechCenter.|Viene descritto come usare la sicurezza a livello di riga e di cella per soddisfare requisiti di sicurezza dei database classificati.|  
+|[Implementazione della sicurezza a livello di riga e di cella nei database classificati tramite SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=98227) sul sito TechCenter di SQL Server.|Viene descritto come usare la sicurezza a livello di riga e di cella per soddisfare requisiti di sicurezza dei database classificati.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza a livello di riga](https://msdn.microsoft.com/library/dn765131.aspx)  
@@ -73,4 +73,4 @@ In alcuni scenari è necessario controllare l'accesso a un livello caratterizzat
  [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [Gestione delle autorizzazioni con stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [Scrittura dinamica sicura in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

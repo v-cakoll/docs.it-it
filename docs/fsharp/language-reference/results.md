@@ -1,17 +1,17 @@
 ---
 title: 'Risultati (F #)'
-description: "Informazioni su come utilizzare il tipo di 'Generare' F # per semplificare la scrittura di codice a tolleranza di errore."
+description: "Informazioni su come usare il tipo 'Generare' di F # per semplificare la scrittura di codice a tolleranza di errore."
 ms.date: 04/24/2017
-ms.openlocfilehash: 432e420ba7c2005caa46250dde82c2c67c9d3ae3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563008"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749249"
 ---
 # <a name="results"></a>Risultati
 
-A partire da F # 4.1, sussiste un `Result<'T,'TFailure>` tipo che è possibile utilizzare per la scrittura di codice a tolleranza di errore che può essere composte.
+A partire da F # 4.1, vi è un `Result<'T,'TFailure>` tipo che è possibile usare per la scrittura di codice a tolleranza di errore che può essere creato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,9 +27,9 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>Note
 
-Si noti che il tipo di risultato è un [unione discriminata struct](discriminated-unions.md#struct-discriminated-unions), ovvero un'altra funzionalità introdotta in F # 4.1.  Semantica di uguaglianza strutturale applicate.
+Si noti che il tipo di risultato è un [unione discriminata di struct](discriminated-unions.md#struct-discriminated-unions), ovvero un'altra funzionalità introdotta in F # 4.1.  Vengono applicate la semantica di uguaglianza strutturale.
 
-Il `Result` tipo viene utilizzato in genere monadic gestione degli errori, che viene spesso definito come [programmazione orientata a ferroviario](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) all'interno della community di F #.  Questo semplice esempio viene illustrato questo approccio.
+Il `Result` tipo viene generalmente utilizzato in monadic gestione degli errori, che è spesso detta [programmazione orientata ad ferroviarie](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) all'interno della community di F #.  L'esempio di semplice seguente illustra questo approccio.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,10 +80,9 @@ let test() =
 test()
 ```
 
-Come si può notare, è piuttosto semplice concatenare varie funzioni di convalida se si forza il loro tutti per restituire un `Result`.  Questo consente di interrompere la funzionalità simile al seguente in porzioni più piccole, ovvero come componibile secondo le esigenze di.  Questo è anche il valore aggiunto del *applicazione* l'utilizzo di [criteri di ricerca](pattern-matching.md) alla fine di una sessione di convalida, che a sua volta applica un livello più elevato di correttezza di programma.
+Come può notare, è piuttosto semplice concatenare diverse funzioni di convalida se si forza vengano tutte restituite una `Result`.  Questo consente di interrompere la funzionalità simile al seguente in porzioni più piccole che sono componibili come necessari in qualsiasi momento per essere.  Ciò ha anche il valore aggiunto del *applicando* l'uso di [criteri di ricerca](pattern-matching.md) alla fine di un ciclo di convalida, che a sua volta applica un livello più elevato della correttezza del programma.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Unioni discriminate](discriminated-unions.md)
-
-[Criteri di ricerca](pattern-matching.md)
+- [Unioni discriminate](discriminated-unions.md)
+- [Criteri di ricerca](pattern-matching.md)

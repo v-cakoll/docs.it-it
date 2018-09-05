@@ -9,17 +9,17 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: 1aaaca43-5340-447e-99c0-9177d9776aa1
-ms.openlocfilehash: ed7ff720d8ef4aa2caa858ea61c4d38866cf50a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 072a9ce7e28983683ac1104b70c160cf5eea12b7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538680"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734041"
 ---
 # <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>Procedura: impostare stili di cella predefiniti per il controllo DataGridView di Windows Form
-Con il controllo <xref:System.Windows.Forms.DataGridView> è possibile specificare gli stili di cella predefiniti per l'intero controllo e per specifiche colonne e righe. Queste impostazioni predefinite filtrano dal livello di controllo al livello di colonna, quindi al livello di riga e infine di cella. Se una particolare proprietà <xref:System.Windows.Forms.DataGridViewCellStyle> non è impostata a livello di cella, viene usata l'impostazione predefinita della proprietà a livello di riga. Se la proprietà non è impostata neanche a livello di riga, viene usata l'impostazione predefinita della colonna. Infine, se la proprietà non è impostata neanche a livello di colonna, viene usata l'impostazione predefinita <xref:System.Windows.Forms.DataGridView>. Con questa impostazione è possibile evitare di duplicare le impostazioni della proprietà a più livelli. A ogni livello è sufficiente specificare gli stili che differiscono dai livelli superiori. Per ulteriori informazioni, vedere [stili della cella nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+Con il controllo <xref:System.Windows.Forms.DataGridView> è possibile specificare gli stili di cella predefiniti per l'intero controllo e per specifiche colonne e righe. Queste impostazioni predefinite filtrano dal livello di controllo al livello di colonna, quindi al livello di riga e infine di cella. Se una particolare proprietà <xref:System.Windows.Forms.DataGridViewCellStyle> non è impostata a livello di cella, viene usata l'impostazione predefinita della proprietà a livello di riga. Se la proprietà non è impostata neanche a livello di riga, viene usata l'impostazione predefinita della colonna. Infine, se la proprietà non è impostata neanche a livello di colonna, viene usata l'impostazione predefinita <xref:System.Windows.Forms.DataGridView>. Con questa impostazione è possibile evitare di duplicare le impostazioni della proprietà a più livelli. A ogni livello è sufficiente specificare gli stili che differiscono dai livelli superiori. Per altre informazioni, vedere [stili della cella nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
   
- In Visual Studio è disponibile supporto completo per questa attività.  Vedere anche [procedura: impostare stili di cella predefiniti e formati di dati per il controllo Windows Form DataGridView usando la finestra di progettazione](http://msdn.microsoft.com/library/95y5fz2x\(v=vs.110\)).  
+ In Visual Studio è disponibile supporto completo per questa attività.  Vedere anche [procedura: impostare stili di cella predefiniti e i formati di dati per il Windows Forms DataGridView controllo usando la finestra di progettazione](https://msdn.microsoft.com/library/95y5fz2x\(v=vs.110\)).  
   
 ### <a name="to-set-the-default-cell-styles-programmatically"></a>Per impostare gli stili della cella predefiniti a livello di codice  
   
@@ -50,7 +50,7 @@ Con il controllo <xref:System.Windows.Forms.DataGridView> è possibile specifica
 -   Riferimenti agli assembly <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
- Per ottenere la massima scalabilità quando si lavora con set di dati molto grandi, è opportuno condividere gli oggetti <xref:System.Windows.Forms.DataGridViewCellStyle> su più righe, colonne o celle che usano lo stesso stile anziché impostare separatamente le proprietà di stile per i singoli elementi. È anche necessario creare righe condivise e accedervi mediante la proprietà <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType>. Per ulteriori informazioni, vedere [procedure consigliate per ridimensionare il controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Per ottenere la massima scalabilità quando si lavora con set di dati molto grandi, è opportuno condividere gli oggetti <xref:System.Windows.Forms.DataGridViewCellStyle> su più righe, colonne o celle che usano lo stesso stile anziché impostare separatamente le proprietà di stile per i singoli elementi. È anche necessario creare righe condivise e accedervi mediante la proprietà <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Forms.DataGridView>  

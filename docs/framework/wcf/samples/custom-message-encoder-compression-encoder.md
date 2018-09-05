@@ -2,12 +2,12 @@
 title: 'Codificatore di messaggi personalizzato: codificatore di compressione'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 5dc665da3b28a98f1b3016d38ce706bf77dce06f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808741"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735874"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificatore di messaggi personalizzato: codificatore di compressione
 In questo esempio viene illustrato come implementare un codificatore personalizzato utilizzando la piattaforma di Windows Communication Foundation (WCF).  
@@ -17,7 +17,7 @@ In questo esempio viene illustrato come implementare un codificatore personalizz
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
@@ -25,9 +25,9 @@ In questo esempio viene illustrato come implementare un codificatore personalizz
  Questo esempio è costituito da un programma di console client (con estensione exe), da un programma di console del servizio ospitato (exe) e da una libreria di codificatori di messaggi di compressione (dll). Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta. Il contratto viene definito dall'interfaccia `ISampleServer` che espone operazioni di ripetizione di stringhe di base (`Echo` e `BigEcho`). Il client esegue richieste sincrone a un'operazione specificata e il servizio risponde ripetendo il messaggio al client. L'attività del client e del servizio è visibile nella finestra della console. Lo scopo di questo esempio è illustrare come scrivere un codificatore personalizzato e dimostrare l'impatto della compressione di un messaggio sulla rete. È possibile aggiungere strumenti al codificatore di messaggi di compressione per calcolare la dimensione del messaggio, il tempo di elaborazione o entrambi.  
   
 > [!NOTE]
->  In .NET Framework 4, la decompressione automatica è stata abilitata in un client WCF, se il server invia una risposta compressa (creata con un algoritmo quale GZip o Deflate). Se il servizio è ospitato su Web in Internet Information Server (IIS), IIS è in grado di essere configurato per il servizio per inviare una risposta compressa. Questo esempio può essere utilizzato se il requisito è effettuare compressione e decompressione sia nel client che nel servizio o se il servizio è indipendente.  
+>  In .NET Framework 4, la decompressione automatica è stata abilitata in un client WCF se il server invia una risposta compressa (creata con un algoritmo quale GZip o Deflate). Se il servizio è ospitato su Web in Internet Information Server (IIS), IIS è in grado di essere configurato per il servizio per inviare una risposta compressa. Questo esempio può essere utilizzato se il requisito è effettuare compressione e decompressione sia nel client che nel servizio o se il servizio è indipendente.  
   
- L'esempio illustra come compilare e integrare un codificatore di messaggi personalizzato in un'applicazione WCF. La libreria GZipEncoder.dll viene distribuita con il client e il servizio. In questo esempio viene inoltre illustrato l'impatto della compressione dei messaggi. Il codice in GZipEncoder.dll dimostra le operazioni seguenti:  
+ L'esempio illustra come creare e integrare un codificatore di messaggi personalizzato in un'applicazione WCF. La libreria GZipEncoder.dll viene distribuita con il client e il servizio. In questo esempio viene inoltre illustrato l'impatto della compressione dei messaggi. Il codice in GZipEncoder.dll dimostra le operazioni seguenti:  
   
 -   Compilazione di un codificatore personalizzato e di una factory del codificatore.  
   
@@ -57,13 +57,13 @@ In questo esempio viene illustrato come implementare un codificatore personalizz
   
 5.  Il livello del codificatore viene implementato come una class factory. Solo la class factory del codificatore deve essere esposta pubblicamente per il codificatore personalizzato. L'oggetto della factory viene restituito dall'elemento di associazione quando viene creato l'oggetto <xref:System.ServiceModel.ServiceHost> o <xref:System.ServiceModel.ChannelFactory%601>. I codificatori di messaggi possono operare in modalità di memorizzazione nel buffer o di trasmissione. In questo esempio vengono illustrate entrambe le modalità.  
   
- A ogni modalità è associato un metodo `ReadMessage` e un metodo `WriteMessage` sulla classe `MessageEncoder` astratta. La maggior parte del lavoro di codifica si verifica in questi metodi. Nell'esempio viene eseguito il wrapping dei codificatori di testo e di messaggi binari esistenti. In questo modo l'esempio può delegare la lettura e la scrittura della rappresentazione in rete dei messaggi al codificatore interno e il codificatore di compressione può comprimere o decomprimere i risultati. Poiché non è presente una pipeline per la codifica dei messaggi, questo è l'unico modello per l'utilizzo di più codificatori in WCF. Quando il messaggio è stato decompresso, il messaggio risultante viene passato sullo stack affinché venga gestito dallo stack di canali. Durante la compressione, il messaggio compresso risultante viene scritto direttamente nel flusso fornito.  
+ A ogni modalità è associato un metodo `ReadMessage` e un metodo `WriteMessage` sulla classe `MessageEncoder` astratta. La maggior parte del lavoro di codifica si verifica in questi metodi. Nell'esempio viene eseguito il wrapping dei codificatori di testo e di messaggi binari esistenti. In questo modo l'esempio può delegare la lettura e la scrittura della rappresentazione in rete dei messaggi al codificatore interno e il codificatore di compressione può comprimere o decomprimere i risultati. Poiché non è presente una pipeline per la codifica dei messaggi, questo è l'unico modello per l'uso di più codificatori in WCF. Quando il messaggio è stato decompresso, il messaggio risultante viene passato sullo stack affinché venga gestito dallo stack di canali. Durante la compressione, il messaggio compresso risultante viene scritto direttamente nel flusso fornito.  
   
  In questo esempio vengono utilizzati metodi helper (`CompressBuffer` e `DecompressBuffer`) per eseguire la conversione da buffer a flussi allo scopo di utilizzare la classe `GZipStream`.  
   
  Le classi `ReadMessage` e `WriteMessage` memorizzate nel buffer utilizzano la classe `BufferManager`. Il codificatore è accessibile solo tramite la factory del codificatore. La classe `MessageEncoderFactory` astratta fornisce una proprietà denominata `Encoder` per l'accesso al codificatore corrente e un metodo denominato `CreateSessionEncoder` per la creazione di un codificatore che supporta le sessioni. Tale codificatore può essere utilizzato nello scenario in cui il canale supporta le sessioni, è ordinato e affidabile. Questo scenario consente l'ottimizzazione in ogni sessione dei dati scritti in rete. Se non si desidera questo aspetto, non deve essere eseguito l'overload del metodo di base. La proprietà `Encoder` fornisce un meccanismo di accesso al codificatore senza sessione e l'implementazione predefinita del metodo `CreateSessionEncoder` restituisce il valore della proprietà. Poiché nell'esempio viene eseguito il wrapping di un codificatore esistente per fornire la compressione, l'implementazione `MessageEncoderFactory` accetta un elemento `MessageEncoderFactory` che rappresenta la factory del codificatore interna.  
   
- Ora che il codificatore e la factory del codificatore sono definiti, possono essere utilizzati con un client e servizio WCF. Tuttavia, questi codificatori devono essere aggiunti allo stack di canali. È possibile dedurre le classi dalle classi <xref:System.ServiceModel.ServiceHost> e <xref:System.ServiceModel.ChannelFactory%601> ed eseguire l'override dei metodi `OnInitialize` per aggiungere manualmente questa factory del codificatore. È inoltre possibile esporre la factory del codificatore tramite un elemento di associazione personalizzato.  
+ Ora che il codificatore e factory del codificatore sono definite, possono essere utilizzati con un client WCF e un servizio. Tuttavia, questi codificatori devono essere aggiunti allo stack di canali. È possibile dedurre le classi dalle classi <xref:System.ServiceModel.ServiceHost> e <xref:System.ServiceModel.ChannelFactory%601> ed eseguire l'override dei metodi `OnInitialize` per aggiungere manualmente questa factory del codificatore. È inoltre possibile esporre la factory del codificatore tramite un elemento di associazione personalizzato.  
   
  Per creare un nuovo elemento di associazione personalizzato, derivare una classe dalla classe <xref:System.ServiceModel.Channels.BindingElement>. Sono tuttavia disponibili molti tipi di elementi di associazione. Per assicurare che l'elemento di associazione personalizzato venga riconosciuto come un elemento di associazione di codifica dei messaggi, è necessario implementare anche <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> espone un metodo per la creazione di una nuova factory del codificatore di messaggi (`CreateMessageEncoderFactory`), che viene implementato per restituire un'istanza della factory del codificatore di messaggi corrispondente. Inoltre, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> dispone di una proprietà per indicare la versione Addressing. Poiché in questo esempio viene eseguito il wrapping dei codificatori esistenti, l'implementazione di esempio esegue il wrapping anche degli elementi di associazione del codificatore esistente e accetta un elemento di associazione del codificatore interno come parametro del costruttore e lo espone tramite una proprietà. Nell'esempio di codice seguente viene illustrata l'implementazione della classe `GZipMessageEncodingBindingElement`.  
   
@@ -293,7 +293,7 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 <gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />  
 ```  
   
- Per utilizzare questo gestore di configurazione, devono essere registrato all'interno di [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, come illustrato nell'esempio di configurazione seguente.  
+ Per utilizzare questo gestore di configurazione, è necessario registrarlo all'interno di [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, come illustrato nell'esempio di configurazione seguente.  
   
 ```xml  
 <extensions>  
@@ -340,9 +340,9 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Per compilare la soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -351,7 +351,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   

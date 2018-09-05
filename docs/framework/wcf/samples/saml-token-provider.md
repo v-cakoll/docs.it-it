@@ -3,11 +3,11 @@ title: Provider di token SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
 ms.openlocfilehash: 509469404e2c3866c26b5e1817a819519203c175
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557139"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747847"
 ---
 # <a name="saml-token-provider"></a>Provider di token SAML
 Questo esempio dimostra come implementare un provider di token SAML client personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene usato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con il Provider di Token di gestione credenziali predefinito. WCF viene inoltre fornito con un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provider di token. I provider di token personalizzati sono utili nei casi seguenti:  

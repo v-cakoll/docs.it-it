@@ -3,11 +3,11 @@ title: 'Procedura: ospitare un servizio WCF in WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
 ms.openlocfilehash: fd48957f7f8410b4b0df39fe125c35e4fc98cb8e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560295"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746816"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Procedura: ospitare un servizio WCF in WAS
 Questo argomento illustra i passaggi di base necessari per creare un servizio di attivazione processo Windows (noto anche come WAS) servizio di Windows Communication Foundation (WCF) ospitato. WAS è il nuovo servizio di attivazione dei processi che rappresenta una generalizzazione delle funzionalità di Internet Information Services (IIS) utilizzabili con protocolli di trasporto non HTTP. WCF Usa l'interfaccia dell'adattatore listener per comunicare le richieste di attivazione ricevute su protocolli non HTTP supportati da WCF, ad esempio TCP, named pipe e Accodamento messaggi.  

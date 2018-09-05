@@ -7,11 +7,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
 ms.openlocfilehash: 844e38fc62fc9fb04a723c1a4a8ad834e957c8ce
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417699"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744475"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Procedura: creare controlli per Windows Form
 Un controllo rappresenta un collegamento grafico tra l'utente e il programma. Un controllo può fornire o elaborare dati, accettare input dall'utente, rispondere a eventi o eseguire qualsiasi numero di altre funzioni che connettono l'utente e l'applicazione. Poiché un controllo è essenzialmente un componente con un'interfaccia grafica, può essere utilizzato per le stesse funzioni di un componente oltre che per consentire l'interazione dell'utente. I controlli vengono creati per scopi specifici e la creazione di controlli è semplicemente un'altra attività di programmazione. Tenendo conto di questo, i passaggi seguenti rappresentano una panoramica del processo di creazione di un controllo. I collegamenti forniscono altre informazioni sui singoli passaggi.  

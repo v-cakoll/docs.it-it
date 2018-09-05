@@ -3,11 +3,11 @@ title: Dati FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
 ms.openlocfilehash: eef03d171d288cb2bc62c3aaa477a95a5ce718c3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463169"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741088"
 ---
 # <a name="filestream-data"></a>Dati FILESTREAM
 L'attributo di archiviazione FILESTREAM è per i dati (BLOB) binari archiviati in una colonna varbinary(max). Prima di FILESTREAM, l'archiviazione dei dati binari richiedeva una gestione speciale. I dati non strutturati, come documenti di testo, immagini e video, sono spesso archiviati fuori dal database e questo ne rende complessa la gestione.  

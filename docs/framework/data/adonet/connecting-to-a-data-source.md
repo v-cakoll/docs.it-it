@@ -2,15 +2,15 @@
 title: Connessione a un'origine dati in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: 27653c3e1f14e08fc8b5e1225a441072778a0cc8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f5788b9b0b19f32d03c917575db7b3f40324c0a2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757112"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724604"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Connessione a un'origine dati in ADO.NET
-In ADO.NET viene utilizzato un **connessione** oggetto per la connessione a un'origine dati specifica fornendo informazioni di autenticazione necessarie in una stringa di connessione. Il **connessione** utilizzato dipende dal tipo di origine dati.  
+In ADO.NET si utilizza un **connessione** oggetto per la connessione a un'origine dati specifica, fornendo informazioni di autenticazione necessarie in una stringa di connessione. Il **connessione** oggetto da usare dipende dal tipo di origine dati.  
   
  Per ogni provider di dati .NET Framework incluso in .NET Framework è disponibile un oggetto <xref:System.Data.Common.DbConnection>: nel provider di dati .NET Framework per OLE DB è incluso un oggetto <xref:System.Data.OleDb.OleDbConnection>, in quello per SQL Server è incluso un oggetto <xref:System.Data.SqlClient.SqlConnection>, in quello per ODBC è incluso un oggetto <xref:System.Data.Odbc.OdbcConnection> e in quello per Oracle è incluso un oggetto <xref:System.Data.OracleClient.OracleConnection>.  
   
@@ -27,4 +27,4 @@ In ADO.NET viene utilizzato un **connessione** oggetto per la connessione a un'o
  [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

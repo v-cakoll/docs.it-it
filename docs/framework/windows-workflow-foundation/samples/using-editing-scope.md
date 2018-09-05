@@ -3,11 +3,11 @@ title: Utilizzo dell'ambito di modifica
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 268849c584c235a21a0818baa60f119cf8e49305
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538082"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749048"
 ---
 # <a name="using-editing-scope"></a>Utilizzo dell'ambito di modifica
 In questo esempio viene illustrato come raggruppare un set di modifiche in modo che possano essere annullate in un'unica unità atomica. Per impostazione predefinita, le azioni intraprese da un autore dell'ActivityDesigner vengono integrate automaticamente nel sistema di annullamento/ripristino.  

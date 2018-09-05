@@ -10,11 +10,11 @@ helpviewer_keywords:
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
 ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463967"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731628"
 ---
 # <a name="annotations-overview"></a>Cenni preliminari sulle annotazioni
 La scrittura di note o commenti su documenti cartacei è un'attività comune che diamo quasi per scontata. Queste note o commenti sono "annotazioni" aggiunte a un documento per contrassegnare informazioni o evidenziare elementi di interesse a cui fare riferimento in un secondo momento. Sebbene la scrittura di note su documenti stampati sia un'operazione semplice e comune, la capacità di aggiungere commenti personali ai documenti elettronici, se disponibile, è in genere molto limitata.  

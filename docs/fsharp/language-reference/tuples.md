@@ -1,17 +1,17 @@
 ---
 title: Tuple (F#)
-description: 'Informazioni su F # tupla, un raggruppamento di valori senza nome ma ordinati, tipi potenzialmente diversi.'
+description: 'Scopri la tupla F #, un raggruppamento di valori senza nome, ma ordinati, tipi potenzialmente diversi.'
 ms.date: 05/16/2016
-ms.openlocfilehash: d017a2ce8a6ad9b3cec8dfa2ee15b47f06d8f67c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7628e4c4b538c2fe52fca25d2597b10fec28d1c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564789"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749223"
 ---
 # <a name="tuples"></a>Tuple
 
-Oggetto *tupla* è un raggruppamento di valori senza nome ma ordinati, tipi potenzialmente diversi.  Tuple possono essere tipi di riferimento o struct.
+Oggetto *tupla* è un raggruppamento di valori senza nome, ma ordinati, tipi potenzialmente diversi.  Le tuple possono essere tipi riferimento o struct.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -19,72 +19,78 @@ Oggetto *tupla* è un raggruppamento di valori senza nome ma ordinati, tipi pote
 (element, ... , element)
 struct(element, ... ,element )
 ```
+
 ## <a name="remarks"></a>Note
-Ogni *elemento* nella sintassi precedente può essere qualsiasi espressione valida di F #.
+
+Ciascuna *elemento* nella sintassi precedente può essere qualsiasi espressione valida con F #.
 
 ## <a name="examples"></a>Esempi
-Sono esempi di tuple coppie, Triple e così via, di tipo stesso o diversi. Alcuni esempi sono illustrati nel codice seguente.
+
+Coppie Triple e così via, dei tipi uguali o diversi esempi di tuple. Nel codice seguente sono illustrati alcuni esempi.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L6-L21)]
-    
+
 ## <a name="obtaining-individual-values"></a>Recupero di singoli valori
-È possibile utilizzare criteri di ricerca per accedere e assegnare i nomi degli elementi di tupla, come illustrato nel codice seguente.
+
+È possibile utilizzare criteri di ricerca per accedere e assegnare i nomi per gli elementi di tupla, come illustrato nel codice seguente.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L27-L29)]
 
-È anche possibile annullare una tupla tramite criteri di ricerca di fuori di un `match` espressione tramite `let` associazione:
+È anche possibile decostruire una tupla tramite criteri di ricerca di fuori di una `match` espressione tramite `let` associazione:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L34-L37)]
 
-O creare una serie di corrispondenza tuple come input per le funzioni:
+Oppure potete creare una serie corrispondono in tuple come input per le funzioni:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L43-L47)]
 
-Se è necessario un solo elemento della tupla, è possibile utilizzare il carattere jolly (carattere di sottolineatura) per evitare di creare un nuovo nome per un valore che non è necessario.
+Se è necessario un solo elemento di tupla, il carattere jolly (il carattere di sottolineatura) è utilizzabile per evitare di creare un nuovo nome per un valore che non è necessario.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L53-L54)]
 
-È inoltre semplice copia di elementi da una tupla di riferimento in una tupla di struct:
+Copia gli elementi da una tupla di riferimento in una tupla di uno struct è anche semplice:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L62-L66)]
 
-Le funzioni `fst` e `snd` (fare riferimento solo tuple) restituiscono il primo e secondo elemento di una tupla, rispettivamente.
+Le funzioni `fst` e `snd` (fanno riferimento le tuple solo) restituiscono il primo e secondo elemento di una tupla, rispettivamente.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L72-L73)]
 
-Non vi è alcuna funzione predefinita che restituisce il terzo elemento di una tripla, ma è possibile scrivere facilmente uno come indicato di seguito.
+Non vi è alcuna funzione predefinita che restituisce il terzo elemento di una triple, ma è possibile scrivere facilmente uno come indicato di seguito.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L78-L78)]
 
-In genere, si consiglia di utilizzare criteri di ricerca per accedere agli elementi di tupla individuali.
+In generale, è preferibile usare criteri di ricerca per accedere agli elementi di tupla individuali.
 
-## <a name="using-tuples"></a>Utilizzo di tuple
-Le tuple offrono un modo pratico per restituire più valori da una funzione, come illustrato nell'esempio seguente. In questo esempio esegue la divisione di interi e restituisce il risultato arrotondato dell'operazione come primo membro di una coppia di tupla e il resto come secondo membro della coppia.
+## <a name="using-tuples"></a>Usare le tuple
+
+Le tuple forniscono un modo pratico per restituire più valori da una funzione, come illustrato nell'esempio seguente. In questo esempio esegue la divisione di interi e restituisce il risultato arrotondato dell'operazione come membro di una coppia di tuple prima che il resto come secondo membro della coppia.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L83-L86)]
 
-Tuple anche essere utilizzate come argomenti della funzione quando si desidera evitare il currying implicito gli argomenti della funzione è implicita la normale sintassi della funzione.
+Le tuple sono anche utilizzabile come argomenti della funzione quando si desidera evitare il currying implicita degli argomenti della funzione che è in cui è inclusa la sintassi della funzione normale.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L88-L88)]
 
-La sintassi comune per definire la funzione `let sum a b = a + b` consente di definire una funzione che è l'applicazione parziale del primo argomento della funzione, come illustrato nel codice seguente.
+La sintassi comune per la definizione di funzione `let sum a b = a + b` consente di definire una funzione che rappresenta l'applicazione parziale del primo argomento della funzione, come illustrato nel codice seguente.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L90-L94)]
 
-L'utilizzo di una tupla come parametro Disattiva currying. Per ulteriori informazioni, vedere "Applicazione parziale di argomenti" in [funzioni](functions/index.md).
+Uso di una tupla come parametro disabilita currying. Per altre informazioni, vedere "Applicazione parziale di argomenti" nella [funzioni](functions/index.md).
 
 ## <a name="names-of-tuple-types"></a>Nomi dei tipi di tupla
-Quando si scrive il nome di un tipo che è una tupla, utilizzare il `*` simbolo per separare gli elementi. Per una tupla costituita da un `int`, un `float`e un `string`, ad esempio `(10, 10.0, "ten")`, il tipo verrebbe scritto come indicato di seguito.
+
+Quando si scrive il nome di un tipo che è una tupla, è utilizzare il `*` simbolo per separare gli elementi. Per una tupla costituita da un `int`, un `float`e una `string`, ad esempio `(10, 10.0, "ten")`, il tipo viene scritto come indicato di seguito.
 
 ```fsharp
 int * float * string
 ```
 
-## <a name="interoperation-with-c-tuples"></a>Interoperabilità con c# Tuple
+## <a name="interoperation-with-c-tuples"></a>Interoperabilità con tuple in c#
 
-C# 7.0 introdotti tuple per la lingua.  Le tuple in c# sono strutture e sono equivalenti alle tuple struct in F #.  Se è necessario interoperare con c#, è necessario utilizzare tuple struct.
+C# 7.0 ha introdotto le tuple del linguaggio.  Le tuple in c# sono strutture e sono equivalenti alle tuple di struct in F #.  Se è necessario per l'interoperabilità con c#, è necessario usare le tuple struct.
 
-Si tratta di un'operazione semplice.  Si supponga, ad esempio, che è necessario passare una tupla a una classe c# e quindi utilizzare il risultato, che è anche una tupla:
+Si tratta di un'operazione semplice.  Si supponga, ad esempio passare una tupla a una classe c# e quindi utilizzare il risultato, che è anche una tupla:
 
 ```csharp
 namespace CSharpTupleInterop
@@ -97,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-Nel codice F #, è quindi possibile passare una tupla di struttura come parametro e utilizzare il risultato come una tupla di struct.
+Nel codice F #, è quindi possibile passare una tupla di uno struct come parametro e utilizzare il risultato come una tupla di uno struct.
 
 ```fsharp
 open TupleInterop
@@ -106,26 +112,27 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 // newX is now 2, and newY is now 3
 ```
 
-### <a name="converting-between-reference-tuples-and-struct-tuples"></a>La conversione tra le tuple di riferimento e Struct Tuple
+### <a name="converting-between-reference-tuples-and-struct-tuples"></a>Conversione tra le tuple di riferimento e le tuple Struct
 
-Le tuple di riferimento e Struct Tuples dispone di una rappresentazione sottostante completamente diversa, pertanto non sono convertibili in modo implicito.  Ovvero, non verrà compilato il codice seguente:
+Poiché le tuple di riferimento e Struct Tuples hanno una rappresentazione sottostante completamente diversa, non sono convertibili in modo implicito.  Vale a dire, non verrà compilato il codice seguente:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-È necessario criteri di corrispondenza per una tupla e costruire l'altro con le parti costitutive.  Ad esempio:
+È necessario criteri di corrispondenza per una tupla e costruire l'altro con le parti costituenti.  Ad esempio:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 
-## <a name="compiled-form-of-reference-tuples"></a>Form compilato di tuple di riferimento
-Questa sezione viene illustrato il formato di tuple quando essi è compilati.  Le informazioni riportate di seguito non sono necessaria per leggere, a meno che la destinazione di .NET Framework 3.5 o inferiore.
+## <a name="compiled-form-of-reference-tuples"></a>Formato compilato di tuple di riferimento
 
-Le tuple vengono compilate in oggetti di uno dei vari tipi generici, tutti i `System.Tuple`, che sono sottoposti a overload in grado o sul numero di parametri di tipo. Tipi di tupla vengono visualizzati in questo modulo quando visualizzati da un altro linguaggio, ad esempio c# o Visual Basic, o quando si utilizza uno strumento che non è a conoscenza dei costrutti di F #. Il `Tuple` tipi sono stati introdotti in .NET Framework 4. Se la destinazione è una versione precedente di .NET Framework, il compilatore utilizza le versioni di [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) dalla versione 2.0 della libreria di base F #. I tipi in questa libreria vengono utilizzati solo per le applicazioni destinate a 2.0, 3.0 e 3.5 versioni di .NET Framework. Inoltro dei tipi viene usato per garantire la compatibilità binaria tra i componenti di .NET Framework 2.0 e .NET Framework 4 F #.
+Questa sezione illustra la forma di tuple quando essi è compilati.  Le informazioni qui non sono necessari per la lettura a meno che non si usa .NET Framework 3.5 o inferiore.
 
-### <a name="compiled-form-of-struct-tuples"></a>Form compilato di tuple Struct
+Le tuple vengono compilate in oggetti di uno dei vari tipi generici, tutte il nome `System.Tuple`, che sono sottoposti a overload in grado o sul numero di parametri di tipo. Tipi di tupla vengono visualizzati in questo modulo quando vengono visualizzati da un altro linguaggio, ad esempio c# o Visual Basic, oppure quando si usa uno strumento che non riconosce i costrutti F #. Il `Tuple` tipi sono stati introdotti in .NET Framework 4. Se la destinazione è una versione precedente di .NET Framework, il compilatore Usa le versioni di [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) dalla versione 2.0 della libreria di base F #. I tipi in questa raccolta vengono utilizzati solo per le applicazioni che usano la versione 2.0, 3.0 e 3.5 versioni di .NET Framework. L'inoltro dei tipi viene usato per garantire la compatibilità binaria tra i componenti di .NET Framework 2.0 e .NET Framework 4 F #.
 
-Struct Tuple (ad esempio, `struct (x, y)`), sono completamente diversi da tuple di riferimento.  Vengono compilate nel <xref:System.ValueTuple> tipo, dal grado, o il numero di parametri di tipo di overload.  Sono equivalenti a [c# 7.0 Tuple](../../csharp/tuples.md) e [Visual Basic 2017 Tuple](../../visual-basic/programming-guide/language-features/data-types/tuples.md)e interagire in modalità bidirezionale.
+### <a name="compiled-form-of-struct-tuples"></a>Formato compilato di tuple di Struct
+
+Le tuple struct (ad esempio, `struct (x, y)`), sono fondamentalmente diversi da tuple di riferimento.  Vengono compilate nel <xref:System.ValueTuple> tipo, sottoposti a overload da arietà o il numero di parametri di tipo.  Queste saranno equivalenti a [tuple in c# 7.0](../../csharp/tuples.md) e [tuple di Visual Basic 2017](../../visual-basic/programming-guide/language-features/data-types/tuples.md)e l'interoperabilità bidirezionale.
 
 ## <a name="see-also"></a>Vedere anche
-[Riferimenti per il linguaggio F#](index.md)
 
-[Tipi F#](fsharp-types.md)
+- [Riferimenti per il linguaggio F#](index.md)
+- [Tipi F#](fsharp-types.md)
