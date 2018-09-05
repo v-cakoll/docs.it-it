@@ -2,15 +2,15 @@
 title: Attivazione MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 4dc8cc2a3c6d9178f6507c87ae512a8929bd1380
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a03f5783e732c4a0f3f13cf6abd7ec4803c07c8f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808130"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559582"
 ---
 # <a name="msmq-activation"></a>Attivazione MSMQ
-In questo esempio viene illustrato come ospitare le applicazioni del servizio di attivazione dei processi di Windows (WAS) lette da una coda di messaggi. Questo esempio viene utilizzata la `netMsmqBinding` e si basa sul [comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md) esempio. Il servizio in questo caso è un'applicazione ospitata su Web. Il client è indipendente e genera output sulla console per osservare lo stato degli ordini di acquisto inviati.  
+In questo esempio viene illustrato come ospitare le applicazioni del servizio di attivazione dei processi di Windows (WAS) lette da una coda di messaggi. Questo esempio Usa la `netMsmqBinding` e si basa sul [comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md) esempio. Il servizio in questo caso è un'applicazione ospitata su Web. Il client è indipendente e genera output sulla console per osservare lo stato degli ordini di acquisto inviati.  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
@@ -20,11 +20,11 @@ In questo esempio viene illustrato come ospitare le applicazioni del servizio di
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Se questa directory non esiste, andare a Windows Communication Foundation (WCF) HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t blank"e gli esempi di Windows Workflow Foundation (WF) per [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] per scaricare tutti WCF e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare a Windows Communication Foundation (WCF) HYPERLINK "https://go.microsoft.com/fwlink/?LinkId=150780" \t blank"e gli esempi di Windows Workflow Foundation (WF) per [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] per scaricare tutti WCF e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Il servizio Attivazione processo Windows (WAS), il nuovo meccanismo di attivazione del processo di [!INCLUDE[lserver](../../../../includes/lserver-md.md)], fornisce funzionalità simili a IIS che in precedenza erano disponibili solo per applicazioni basate su HTTP e applicazioni che usano protocolli non HTTP. Windows Communication Foundation (WCF) utilizza l'interfaccia dell'adattatore Listener per comunicare le richieste di attivazione ricevute su protocolli non HTTP supportati da WCF, ad esempio TCP, Named pipe e MSMQ. La funzionalità per ricevere richieste su protocolli non HTTP viene ospitata dai servizi Windows gestiti in esecuzione su SMSvcHost.exe.  
+ Il servizio Attivazione processo Windows (WAS), il nuovo meccanismo di attivazione del processo di [!INCLUDE[lserver](../../../../includes/lserver-md.md)], fornisce funzionalità simili a IIS che in precedenza erano disponibili solo per applicazioni basate su HTTP e applicazioni che usano protocolli non HTTP. Windows Communication Foundation (WCF) usa l'interfaccia dell'adattatore Listener per comunicare le richieste di attivazione ricevute su protocolli non HTTP supportati da WCF, ad esempio TCP, Named pipe e MSMQ. La funzionalità per ricevere richieste su protocolli non HTTP viene ospitata dai servizi Windows gestiti in esecuzione su SMSvcHost.exe.  
   
  Il servizio di adattatore listener Net.Msmq (NetMsmqActivator) attiva le applicazioni in coda in base ai messaggi nella coda.  
   
@@ -84,7 +84,7 @@ public class OrderProcessorService : IOrderProcessor
  Il nome della coda MSMQ è specificato in una sezione appSettings del file di configurazione. L'endpoint per il servizio è definito nella sezione System.serviceModel del file di configurazione.  
   
 > [!NOTE]
->  Il nome della coda MSMQ e l'indirizzo endpoint usano convenzioni di indirizzamento leggermente diverse. Nel nome della coda MSMQ viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso. L'indirizzo dell'endpoint WCF specifica un NET. MSMQ: schema, viene usato "localhost" per il computer locale e barre nel percorso. Per leggere da una coda ospitata sul computer remoto, sostituire "." e "localhost" con il nome computer remoto.  
+>  Il nome della coda MSMQ e l'indirizzo endpoint usano convenzioni di indirizzamento leggermente diverse. Nel nome della coda MSMQ viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso. L'indirizzo dell'endpoint WCF specifica un NET. MSMQ: lo schema, viene usato "localhost" per il computer locale e le barre nel relativo percorso. Per leggere da una coda ospitata sul computer remoto, sostituire "." e "localhost" con il nome computer remoto.  
   
  Viene usato un file con estensione svc con il nome della classe per ospitare il codice del servizio in WAS.  
   
@@ -216,17 +216,17 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 1.  Verificare che [!INCLUDE[iisver](../../../../includes/iisver-md.md)] sia installato in quanto è necessario per l'attivazione tramite il servizio di attivazione dei processi di Windows (WAS).  
   
-2.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Inoltre, è necessario installare i componenti di attivazione non HTTP di WCF:  
+2.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Inoltre, è necessario installare i componenti di attivazione non HTTP di WCF:  
   
     1.  Dal **avviare** menu, scegliere **Pannello di controllo**.  
   
     2.  Selezionare **programmi e funzionalità**.  
   
-    3.  Fare clic su **funzionalità di Windows di attivare o disattivare**.  
+    3.  Fare clic su **attiva Windows o disattivazione delle funzionalità**.  
   
-    4.  In **Riepilogo funzionalità**, fare clic su **Aggiungi funzionalità**.  
+    4.  Sotto **Riepilogo funzionalità**, fare clic su **Aggiungi funzionalità**.  
   
-    5.  Espandere il **Microsoft .NET Framework 3.0** nodo e selezionare il **attivazione Non HTTP di Windows Communication Foundation** funzionalità.  
+    5.  Espandere la **Microsoft .NET Framework 3.0** nodo e selezionare il **attivazione Non HTTP di Windows Communication Foundation** funzionalità.  
   
 3.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -234,15 +234,15 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 5.  Il servizio di attivazione MSMQ viene eseguito come impostazione predefinita come Servizio di rete. Pertanto, la coda usata per attivare l'applicazione deve disporre delle autorizzazioni di ricezione e di lettura per il Servizio di rete. Queste autorizzazioni possono essere aggiunte usando il sistema di accodamento messaggi MMC:  
   
-    1.  Dal **avviare** menu, fare clic su **eseguire**, quindi digitare `Compmgmt.msc` e premere INVIO.  
+    1.  Dal **avviare** menu, fare clic su **eseguito**, quindi digitare `Compmgmt.msc` e premere INVIO.  
   
-    2.  In **servizi e applicazioni**, espandere **Accodamento**.  
+    2.  Sotto **applicazioni e servizi**, espandere **Accodamento**.  
   
     3.  Fare clic su **code Private**.  
   
-    4.  Fare doppio clic su coda (servicemodelsamples/Service.svc) e scegliere **proprietà**.  
+    4.  Fare clic sulla coda (servicemodelsamples) e scegliere **proprietà**.  
   
-    5.  Nel **sicurezza** scheda, fare clic su **Aggiungi** e assegnare peek e ricevono le autorizzazioni al servizio di rete.  
+    5.  Nel **sicurezza** scheda, fare clic su **Add** e assegnare peek e ricevere le autorizzazioni al servizio di rete.  
   
 6.  Configurare il servizio di attivazione dei processi di Windows (WAS) per supportare l'attivazione MSMQ.  
   
@@ -269,11 +269,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  Questo comando è una singola riga di testo.  
   
-         Questo comando abilita l'accesso tramite l'applicazione /servicemodelsamples http://localhost/servicemodelsamples e MSMQ: //localhost/servicemodelsamples.  
+         Questo comando consente di accedervi usando l'applicazione /servicemodelsamples http://localhost/servicemodelsamples e MSMQ: //localhost/servicemodelsamples.  
   
-7.  Se in precedenza non è stato fatto, assicurarsi che il servizio di attivazione MSMQ sia abilitato. Dal **avviare** menu, fare clic su **eseguire**e il tipo `Services.msc`. Eseguire ricerche nell'elenco dei servizi per il **adattatore Listener NET. MSMQ**. Mouse e scegliere **proprietà**. Impostare il **tipo di avvio** a **automatica**, fare clic su **applica** e fare clic su di **avviare** pulsante. È necessario eseguire questo passaggio solo la prima volta che si usa il servizio di adattatore listener Net.Msmq.  
+7.  Se in precedenza non è stato fatto, assicurarsi che il servizio di attivazione MSMQ sia abilitato. Dal **avviare** menu, fare clic su **eseguito**e il tipo `Services.msc`. Eseguire ricerche nell'elenco dei servizi per il **adattatore Listener NET. MSMQ**. Fare doppio clic e selezionare **proprietà**. Impostare il **tipo di avvio** al **automatica**, fare clic su **applica** e fare clic sul **avviare** pulsante. È necessario eseguire questo passaggio solo la prima volta che si usa il servizio di adattatore listener Net.Msmq.  
   
-8.  Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Modificare inoltre il codice nel client che invia l'ordine di acquisto in modo che corrisponda al nome del computer nell'URI della coda durante l'invio di ordini di acquisto. Usare il codice riportato di seguito.  
+8.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Modificare inoltre il codice nel client che invia l'ordine di acquisto in modo che corrisponda al nome del computer nell'URI della coda durante l'invio di ordini di acquisto. Usare il codice riportato di seguito.  
   
     ```  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
@@ -331,7 +331,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     1.  Eseguire Inetmgr.exe.  
   
-    2.  In **pool di applicazioni**, fare doppio clic su di **AppPool** (in genere **DefaultAppPool**) e scegliere **impostazioni predefinite Pool di applicazioni...** .  
+    2.  Sotto **pool di applicazioni**, fare doppio clic il **AppPool** (in genere **DefaultAppPool**) e scegliere **impostazioni predefinite Pool di applicazioni...** .  
   
     3.  Modificare le proprietà dell'identità per usare l'account utente specifico.  
   
@@ -339,9 +339,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     1.  Eseguire Services.msc.  
   
-    2.  Fare doppio clic su di **adattatore**e scegliere **proprietà**.  
+    2.  Fare doppio clic sul **Adapter NET**, quindi scegliere **proprietà**.  
   
-4.  Modificare l'account nel **accesso** scheda.  
+4.  Modificare l'account, il **LogOn** scheda.  
   
 5.  In un gruppo di lavoro è inoltre necessario che il servizio venga eseguito usando un token di accesso senza restrizioni. A tale scopo, eseguire il comando seguente:  
   
@@ -350,4 +350,4 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Hosting di AppFabric ed esempi di persistenza](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hosting di AppFabric e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)

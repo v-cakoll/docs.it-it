@@ -2,12 +2,12 @@
 title: Vincoli (F#)
 description: 'Informazioni sui vincoli di F # che si applicano ai parametri di tipo generico per specificare i requisiti per un argomento di tipo in una funzione o un tipo generico.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7af064159d2722256f0db8286a99fc02435a99cd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936865"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525605"
 ---
 # <a name="constraints"></a>Vincoli
 
@@ -35,7 +35,7 @@ Esistono diversi vincoli diversi, che è possibile applicare per limitare i tipi
 |Vincolo di delegato|: delegare&lt;*-parametri-tipo di tupla*, *tipo restituito*&gt;|Il tipo specificato deve essere un tipo delegato che contiene gli argomenti specificati e restituire valore. non destinato all'uso comune.|
 |Vincolo di confronto|: confronto|Il tipo specificato deve supportare il confronto.|
 |Vincolo di uguaglianza|: uguaglianza|Il tipo specificato deve supportare l'uguaglianza.|
-|Vincolo non gestito|: non gestito|Il tipo specificato deve essere un tipo non gestito. Tipi non gestiti sono determinati tipi primitivi (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, o `decimal`), tipi di enumerazione `nativeptr&lt;_&gt;`, o una struttura non generica i cui campi sono tutti i tipi non gestiti.|
+|Vincolo non gestito|: non gestito|Il tipo specificato deve essere un tipo non gestito. Tipi non gestiti sono determinati tipi primitivi (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, o `decimal`), tipi di enumerazione `nativeptr<_>`, o una struttura non generica i cui campi sono tutti i tipi non gestiti.|
 È necessario aggiungere un vincolo quando il codice deve usare una funzionalità che è disponibile per il tipo di vincolo ma non nei tipi in generale. Ad esempio, se si usa il vincolo di tipo per specificare un tipo di classe, è possibile usare uno dei metodi della classe della funzione generica o tipo.
 
 I vincoli è talvolta necessario specificare durante la scrittura di parametri di tipo in modo esplicito, poiché senza un vincolo, il compilatore non ha modo di verificare che le funzionalità che si siano utilizzando sarà disponibile in qualsiasi tipo che può essere fornito in fase di esecuzione per il tipo parametro.
