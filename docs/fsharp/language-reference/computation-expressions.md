@@ -2,12 +2,12 @@
 title: Espressioni di calcolo (F#)
 description: 'Informazioni su come creare una sintassi efficiente per la scrittura di calcoli in F # che possa essere sequenziata e combinati tramite costrutti del flusso di controllo e associazioni.'
 ms.date: 07/27/2018
-ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "36207433"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800917"
 ---
 # <a name="computation-expressions"></a>Espressioni di calcolo
 
@@ -229,8 +229,6 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 Nel codice precedente, le chiamate a `Run` e `Delay` vengono omessi se non sono definiti nella classe del generatore di espressioni di calcolo. Il corpo dell'espressione di calcolo, di seguito è indicato come `{| cexpr |}`, viene convertita in chiamate che riguardano i metodi della classe del generatore per le conversioni descritte nella tabella seguente. L'espressione di calcolo `{| cexpr |}` viene definito in modo ricorsivo in base a queste conversioni in cui `expr` è un'espressione F # e `cexpr` è un'espressione di calcolo.
 
-
-
 |Espressione|Conversione|
 |----------|-----------|
 |<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
@@ -361,7 +359,7 @@ let comp = eventually {
         printfn " x = %d" x
     return 3 + 4 }
 
-// Try the remaining lines in F# interactive to see how this 
+// Try the remaining lines in F# interactive to see how this
 // computation expression works in practice.
 let step x = Eventually.step x
 
@@ -386,9 +384,11 @@ comp |> step |> step |> step |> step |> step |> step |> step |> step
 Un'espressione di calcolo ha un tipo sottostante, che restituisce l'espressione. Il tipo sottostante può rappresentare un risultato calcolato o un calcolo ritardato che può essere eseguito o può fornire un modo per eseguire l'iterazione attraverso un certo tipo di raccolta. Nell'esempio precedente, il tipo sottostante è stata **alla fine**. Per un'espressione di sequenza, il tipo sottostante è <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Per un'espressione di query, il tipo sottostante è <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Per un flusso di lavoro asincrono, il tipo sottostante è [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). Il `Async` oggetto rappresenta il lavoro da eseguire per calcolare il risultato. Ad esempio, si chiama [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) per eseguire un calcolo e restituire il risultato.
 
 ## <a name="custom-operations"></a>Operazioni personalizzate
+
 È possibile definire un'operazione personalizzata su un'espressione di calcolo e usare un'operazione personalizzata come operatore in un'espressione di calcolo. Ad esempio, è possibile includere un operatore di query in un'espressione di query. Quando si definisce un'operazione personalizzata, è necessario definire il risultato e per i metodi dell'espressione di calcolo. Per definire un'operazione personalizzata, inserirlo in una classe del generatore per l'espressione di calcolo e quindi applicare il [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Questo attributo accetta una stringa come argomento, ovvero il nome da usare in un'operazione personalizzata. Questo nome entra nell'ambito all'inizio della parentesi graffa di apertura dell'espressione di calcolo. Pertanto, non è consigliabile utilizzare gli identificatori che hanno lo stesso nome di un'operazione personalizzata in questo blocco. Ad esempio, evitare l'utilizzo di identificatori, ad esempio `all` o `last` nelle espressioni di query.
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>Estensione generatori esistenti con nuove operazioni personalizzato
+
 Se si dispone già di una classe del generatore, delle operazioni personalizzate possono essere estesi all'esterno di questa classe del generatore. Le estensioni devono essere dichiarate nei moduli. Gli spazi dei nomi non possono contenere membri di estensione, ad eccezione dello stesso file e lo stesso gruppo di dichiarazione dello spazio dei nomi in cui è definito il tipo.
 
 L'esempio seguente illustra l'estensione dell'oggetto esistente `Microsoft.FSharp.Linq.QueryBuilder` classe.
@@ -402,10 +402,8 @@ type Microsoft.FSharp.Linq.QueryBuilder with
 ```
 
 ## <a name="see-also"></a>Vedere anche
-[Riferimenti per il linguaggio F#](index.md)
 
-[Flussi di lavoro asincroni](asynchronous-workflows.md)
-
-[Sequenze](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
-
-[Espressioni di query](query-expressions.md)
+- [Riferimenti per il linguaggio F#](index.md)
+- [Flussi di lavoro asincroni](asynchronous-workflows.md)
+- [Sequenze](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [Espressioni di query](query-expressions.md)
