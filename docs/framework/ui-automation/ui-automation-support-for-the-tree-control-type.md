@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: c099d3e367bb037e61912d0c14fac9136985f6c1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537719"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858122"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo Tree
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "43537719"
   
 |Visualizzazione controlli|Visualizzazione contenuto|  
 |------------------|------------------|  
-|Tree<br /><br /> <ul><li>DataItem (0 o più)</li><li>TreeItem (0 o più)<br /><br /> <ul><li>TreeItem (0 o più)•    …</li></ul></li><li>ScrollBar (0, 1, 2)</li></ul>|Tree<br /><br /> <ul><li>DataItem (0 o più)</li><li>TreeItem (0 o più)<br /><br /> <ul><li>TreeItem (0 o più)•    …</li></ul></li></ul>|  
+|Struttura ad albero<br /><br /> <ul><li>DataItem (0 o più)</li><li>TreeItem (0 o più)<br /><br /> <ul><li>TreeItem (0 o più)•    …</li></ul></li><li>ScrollBar (0, 1, 2)</li></ul>|Struttura ad albero<br /><br /> <ul><li>DataItem (0 o più)</li><li>TreeItem (0 o più)<br /><br /> <ul><li>TreeItem (0 o più)•    …</li></ul></li></ul>|  
   
  La visualizzazione controlli dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è costituita da:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "43537719"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Vedere le note.|Il valore di questa proprietà deve essere univoco in tutti i controlli in un'applicazione.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Vedere le note.|Il rettangolo più esterno che contiene l'intero controllo.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Vedere le note.|I controlli Tree dispongono di un punto selezionabile che causa l'impostazione dello stato attivo sull'albero o su uno degli elementi nel contenitore della struttura. Si ottiene un punto selezionabile per una struttura ad albero solo se è possibile fare clic in un punto che non causa la selezione di uno degli elementi oppure lo spostamento dello stato attivo su di essi.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Tree|Questo valore è uguale per tutti i framework dell'interfaccia utente.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Struttura ad albero|Questo valore è uguale per tutti i framework dell'interfaccia utente.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Il controllo Tree viene sempre incluso nella visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Il controllo struttura viene sempre incluso nella visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Vedere le note.|Se il controllo può ricevere lo stato attivo, deve supportare questa proprietà.|  

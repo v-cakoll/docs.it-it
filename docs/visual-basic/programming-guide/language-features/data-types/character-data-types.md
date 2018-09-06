@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
 ms.openlocfilehash: 3b031c6e3dc04637128f95ca8e922d3298981287
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786940"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863203"
 ---
 # <a name="character-data-types-visual-basic"></a>Dati di tipo carattere (Visual Basic)
 Visual Basic fornisce *tipi di dati character* per affrontare i caratteri stampabili e visualizzabili. Mentre entrambi gestiscano i caratteri Unicode `Char` contiene un singolo carattere mentre `String` contiene un numero indefinito di caratteri.  

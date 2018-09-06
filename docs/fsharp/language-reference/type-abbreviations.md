@@ -1,13 +1,13 @@
 ---
 title: Abbreviazioni dei tipi (F#)
-description: 'Informazioni su F # le abbreviazioni di tipo per assegnare un nome più significativo di un tipo per rendere il codice più facile da leggere.'
+description: 'Informazioni su F # le abbreviazioni dei tipi per assegnare un nome più significativo di un tipo per rendere il codice più facile da leggere.'
 ms.date: 05/16/2016
-ms.openlocfilehash: e222caa41a20a64071c94cffea6ea7b2bec8eb22
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058955"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855042"
 ---
 # <a name="type-abbreviations"></a>Abbreviazioni dei tipi
 
@@ -20,23 +20,23 @@ type [accessibility-modifier] type-abbreviation = type-name
 ```
 
 ## <a name="remarks"></a>Note
-È possibile utilizzare le abbreviazioni di tipo per assegnare un tipo di un nome più significativo, per rendere il codice più facile da leggere. È possibile utilizzare tali per creare un nome facile da usare per un tipo che è altrimenti difficili da scrivere. Inoltre, è possibile utilizzare le abbreviazioni di tipo per renderne più semplice modificare un tipo sottostante senza modificare tutto il codice che utilizza il tipo. Di seguito è un'abbreviazione di tipo semplice.
 
-Per impostazione predefinita accessibilità di abbreviazioni dei tipi `public`.
+È possibile utilizzare le abbreviazioni dei tipi per assegnare un tipo di un nome più significativo, per rendere il codice più facile da leggere. È anche possibile utilizzarli per creare un nome facile da usare per un tipo che è altrimenti difficile da scrivere. Inoltre, è possibile utilizzare le abbreviazioni dei tipi per renderne più semplice modificare un tipo sottostante senza dover modificare tutto il codice che usa il tipo. Di seguito è un'abbreviazione di tipo semplice.
+
+Per impostazione predefinita l'accessibilità delle abbreviazioni di tipo `public`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2301.fs)]
 
-Abbreviazioni dei tipi possono includere parametri generici, come illustrato nel codice seguente.
+Abbreviazioni dei tipi possono includere i parametri generici, come nel codice seguente.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2302.fs)]
 
-Nel codice precedente, `Transform` è un'abbreviazione di tipo che rappresenta una funzione che accetta un singolo argomento di qualsiasi tipo e restituisce un singolo valore dello stesso tipo.
+Nel codice precedente, `Transform` è un'abbreviazione di tipo che rappresenta una funzione che accetta un singolo argomento di qualsiasi tipo e che restituisce un singolo valore di quel tipo stesso.
 
-Le abbreviazioni di tipo non vengono mantenute nel codice MSIL di .NET Framework. Pertanto, quando si utilizza un assembly F # da un altro linguaggio .NET Framework, è necessario utilizzare il nome del tipo sottostante di un'abbreviazione di tipo.
+Abbreviazioni dei tipi non vengono mantenute nel codice .NET Framework MSIL. Pertanto, quando si usa un assembly F # da un altro linguaggio .NET Framework, è necessario utilizzare il nome del tipo sottostante per un tipo unitnames.
 
-Le abbreviazioni di tipo consente inoltre alle unità di misura. Per ulteriori informazioni, vedere [unità di misura](units-of-measure.md).
-
+Abbreviazioni dei tipi sono utilizzabili anche in unità di misura. Per altre informazioni, vedere [unità di misura](units-of-measure.md).
 
 ## <a name="see-also"></a>Vedere anche
-[Riferimenti per il linguaggio F#](index.md)
 
+- [Riferimenti per il linguaggio F#](index.md)

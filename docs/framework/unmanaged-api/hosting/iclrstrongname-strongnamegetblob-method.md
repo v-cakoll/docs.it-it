@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81e2c59a538bd436606c226855c002cecd501e33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4621a7d143d401d4cb620ac17c31e4ee5f13837
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433666"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870302"
 ---
 # <a name="iclrstrongnamestrongnamegetblob-method"></a>Metodo ICLRStrongName::StrongNameGetBlob
-Riempie il buffer specificato con la rappresentazione binaria del file eseguibile all'indirizzo specificato.  
+Completa il buffer specificato con la rappresentazione binaria del file eseguibile presente all'indirizzo specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,19 +46,19 @@ HRESULT StrongNameGetBlob (
  [in] Buffer in cui caricare il file eseguibile.  
   
  `pcbBlob`  
- [in, out] La richiesta di dimensione massima, in byte, di `pbBlob`. Al momento della restituzione, le dimensioni effettive, in byte, di `pbBlob`.  
+ [in, out] La massima dimensione, espressa in byte, richiesta del `pbBlob`. Al momento della restituzione, le dimensioni effettive, in byte, di `pbBlob`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` Se il metodo viene completato correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](http://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
+ `S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. H  
   
  **Libreria:** inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo StrongNameGetBlobFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  

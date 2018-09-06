@@ -5,16 +5,16 @@ ms.date: 10/20/2017
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
 ms.assetid: 954b6e40-1246-4185-a018-4061724fcae9
-ms.openlocfilehash: edc611c3ec0eb719bccd8adfb87487751801383d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 402d80184f569f041692d139209a8916bd87c49b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653676"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43805753"
 ---
 # <a name="xml-in-visual-basic"></a>XML in Visual Basic
 
-Visual Basic fornisce il supporto lingua integrato che consente di interagire con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+Visual Basic fornisce il supporto integrato per il linguaggio che consente di interagire con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 
@@ -30,5 +30,5 @@ Visual Basic fornisce il supporto lingua integrato che consente di interagire co
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Xml.Linq>  
  [Valori letterali XML](../../../../visual-basic/language-reference/xml-literals/index.md)  
- [Proprietà Axis XML](../../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
- [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)
+ [Proprietà Axis XML](../../../../visual-basic/language-reference/xml-axis/index.md)  
+ [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)

@@ -3,11 +3,11 @@ title: Limitazioni all'inferenza
 ms.date: 03/30/2017
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
 ms.openlocfilehash: d113df98cdd339300b3e75ceda49a56d4f346d3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724153"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866400"
 ---
 # <a name="inference-limitations"></a>Limitazioni all'inferenza
 Il processo di inferenza di uno schema di un tipo <xref:System.Data.DataSet> da un documento XML può fornire come risultato diversi schemi a seconda degli elementi XML presenti in ogni documento. Si considerino ad esempio i seguenti documenti XML:  

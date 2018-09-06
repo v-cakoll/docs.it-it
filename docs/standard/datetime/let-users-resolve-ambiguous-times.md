@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4083871dd97a36529351aacbdcd39980bdde74a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91e80f44934092007f6f842f0694789d49321446
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572827"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863551"
 ---
 # <a name="how-to-let-users-resolve-ambiguous-times"></a>Procedura: consentire agli utenti di risolvere orari ambigui
 
@@ -23,7 +23,7 @@ Un'ora ambigua è un'ora associata a più ore UTC (Coordinated Universal Time). 
 
 * Fare una supposizione sulla modalità di associazione dell'ora all'ora UTC. Si può, ad esempio, presupporre che un'ora ambigua sia sempre espressa nell'ora solare del fuso orario.
 
-In questo argomento viene illustrato come consentire a un utente di risolvere un'ora ambigua.
+Questo argomento illustra come consentire agli utenti di risolvere orari ambigui.
 
 ### <a name="to-let-a-user-resolve-an-ambiguous-time"></a>Consentire a un utente di risolvere orari ambigui
 
@@ -31,7 +31,7 @@ In questo argomento viene illustrato come consentire a un utente di risolvere un
 
 2. Chiamare il <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> metodo per determinare se l'ora è ambigua.
 
-3. Se l'ora è ambigua, chiamare il <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> metodo per recuperare una matrice di <xref:System.TimeSpan> oggetti. Ogni elemento della matrice contiene una differenza UTC che può eseguire il mapping a ora ambigua.
+3. Se l'ora è ambigua, chiamare il <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> metodo per recuperare una matrice di <xref:System.TimeSpan> oggetti. Ogni elemento nella matrice contiene un offset UTC a cui l'ora ambigua è possibile eseguire il mapping a.
 
 4. Consentire all'utente di selezionare l'offset desiderato.
 
@@ -46,19 +46,19 @@ Nell'esempio seguente si richiede all'utente di immettere una data e l'ora e, se
 [!code-csharp[System.TimeZone2.Concepts#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#11)]
 [!code-vb[System.TimeZone2.Concepts#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#11)]
 
-I componenti di base del codice di esempio utilizza una matrice di <xref:System.TimeSpan> oggetti per indicare i possibili offset dell'ora ambigua rispetto a UTC. Tuttavia, questi offset probabilmente non sono significativi per l'utente. Per chiarire il significato degli offset, il codice indica anche se un offset rappresenta l'ora solare o l'ora legale del fuso orario locale. Il codice determina quali standard e che ora è legale confrontando l'offset con il valore della <xref:System.TimeZoneInfo.BaseUtcOffset%2A> proprietà. Questa proprietà indica la differenza tra l'ora solare del fuso orario corrente e l'ora UTC.
+Il nucleo del codice di esempio Usa una matrice di <xref:System.TimeSpan> oggetti per indicare i possibili offset dell'ora ambigua dall'ora UTC. Tuttavia, questi offset probabilmente non sono significativi per l'utente. Per chiarire il significato degli offset, il codice indica anche se un offset rappresenta l'ora solare o l'ora legale del fuso orario locale. Il codice determina quale ora è standard e che ora è legale confrontando l'offset con il valore della <xref:System.TimeZoneInfo.BaseUtcOffset%2A> proprietà. Questa proprietà indica la differenza tra l'ora solare del fuso orario corrente e l'ora UTC.
 
-In questo esempio, tutti i riferimenti per il fuso orario locale vengono effettuati tramite il <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> proprietà; l'ora locale zona non viene mai assegnata a una variabile oggetto. Si tratta di una procedura consigliata, perché una chiamata al <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> metodo invalida tutti gli oggetti assegnati per il fuso orario locale.
+In questo esempio, tutti i riferimenti al fuso orario locale vengono effettuati tramite il <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> proprietà; l'ora locale zona non viene mai assegnata a una variabile oggetto. Si tratta di una procedura consigliata, perché una chiamata al <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> metodo invalida tutti gli oggetti cui è assegnato il fuso orario locale.
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
 L'esempio presenta i requisiti seguenti:
 
-* Un riferimento a System.Core.dll essere aggiunto al progetto.
+* Aggiungere un riferimento a DLL al progetto.
 
-* Che il <xref:System> dello spazio dei nomi importati con il `using` istruzione (richiesto nel codice c#).
+* Che il <xref:System> dello spazio dei nomi importati con il `using` istruzione (obbligatorio nel codice c#).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
-[procedura: risolvere orari ambigui](../../../docs/standard/datetime/resolve-ambiguous-times.md)
+* [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
+* [Procedura: Risolvere orari ambigui](../../../docs/standard/datetime/resolve-ambiguous-times.md)

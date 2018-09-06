@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a92081a164d15e5150c582b37c6c688cd15e619e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb09b1f087e0a0f726d32d85e06cfb2a9ec741a8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571199"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863134"
 ---
 # <a name="how-to-resolve-ambiguous-times"></a>Procedura: risolvere orari ambigui
 
@@ -38,26 +38,26 @@ In questo argomento viene illustrato come risolvere un'ora ambigua presupponendo
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come convertire un'ora ambigua in UTC, presupponendo che rappresenti l'ora solare del fuso orario locale.
+Nell'esempio seguente viene illustrato come convertire un orario ambiguo in ora UTC, presupponendo che rappresenti l'ora solare del fuso orario locale.
 
 [!code-csharp[System.TimeZone2.Concepts#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#10)]
 [!code-vb[System.TimeZone2.Concepts#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#10)]
 
 L'esempio è costituito da un metodo denominato `ResolveAmbiguousTime` che determina se il <xref:System.DateTime> valore passato è ambiguo. Se il valore è ambiguo, il metodo restituisce un <xref:System.DateTime> valore che rappresenta l'ora UTC corrispondente. Il metodo gestisce questa conversione sottraendo il valore del fuso orario locale <xref:System.TimeZoneInfo.BaseUtcOffset%2A> proprietà dall'ora locale.
 
-In genere, un'ora ambigua è gestita tramite la chiamata di <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> metodo per recuperare una matrice di <xref:System.TimeSpan> offset di oggetti che contengono UTC possibili dell'ora ambigua. Tuttavia, in questo esempio si presuppone che un'ora ambigua deve sempre essere mappata all'ora solare del fuso orario. Il <xref:System.TimeZoneInfo.BaseUtcOffset%2A> proprietà restituisce l'offset tra l'ora UTC e l'ora solare del fuso orario.
+In genere, un'ora ambigua viene gestita chiamando il <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> metodo per recuperare una matrice di <xref:System.TimeSpan> oggetti contenenti UTC possibili dell'ora ambigua viene eseguito l'offset. Tuttavia, in questo esempio si presuppone che un'ora ambigua deve sempre essere mappata all'ora solare del fuso orario. Il <xref:System.TimeZoneInfo.BaseUtcOffset%2A> proprietà restituisce l'offset tra l'ora UTC e l'ora solare del fuso orario.
 
-In questo esempio, tutti i riferimenti per il fuso orario locale vengono effettuati tramite il <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> proprietà; l'ora locale zona non viene mai assegnata a una variabile oggetto. Si tratta di una procedura consigliata, perché una chiamata al <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> metodo invalida tutti gli oggetti assegnati per il fuso orario locale.
+In questo esempio, tutti i riferimenti al fuso orario locale vengono effettuati tramite il <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> proprietà; l'ora locale zona non viene mai assegnata a una variabile oggetto. Si tratta di una procedura consigliata, perché una chiamata al <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> metodo invalida tutti gli oggetti cui è assegnato il fuso orario locale.
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
 L'esempio presenta i requisiti seguenti:
 
-* Un riferimento a System.Core.dll essere aggiunto al progetto.
+* Aggiungere un riferimento a DLL al progetto.
 
-* Che il <xref:System> dello spazio dei nomi importati con il `using` istruzione (richiesto nel codice c#).
+* Che il <xref:System> dello spazio dei nomi importati con il `using` istruzione (obbligatorio nel codice c#).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
-[procedura: consentire agli utenti di risolvere orari ambigui](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)
+* [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
+* [Procedura: Consentire agli utenti di risolvere orari ambigui](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)

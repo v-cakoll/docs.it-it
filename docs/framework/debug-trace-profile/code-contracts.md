@@ -10,11 +10,11 @@ ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425756"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879845"
 ---
 # <a name="code-contracts"></a>Contratti di codice
 I contratti di codice consentono di specificare precondizioni, postcondizioni e invarianti dell'oggetto nel codice. Le precondizioni sono requisiti da soddisfare quando si accede a un metodo o a una proprietà. Le postcondizioni descrivono le aspettative al momento dell'uscita dal codice del metodo o della proprietà. Le invarianti dell'oggetto descrivono lo stato previsto per una classe in stato integro.  

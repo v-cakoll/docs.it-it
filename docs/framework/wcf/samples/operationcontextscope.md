@@ -3,11 +3,11 @@ title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
 ms.openlocfilehash: 09ead071c5d8320452724edbb1c7f7f5e0124421
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43723438"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857969"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 Nell'esempio OperationContextScope viene illustrato come inviare informazioni aggiuntive su una chiamata di Windows Communication Foundation (WCF) con le intestazioni. In questo esempio sia il server che il client sono applicazioni console.  

@@ -3,11 +3,11 @@ title: Filtri avanzati
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
 ms.openlocfilehash: 7022384e8abe93f4276eec48785b3243ed926438
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564200"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43805442"
 ---
 # <a name="advanced-filters"></a>Filtri avanzati
 Questo esempio viene illustrato un servizio di routing di Windows Communication Foundation (WCF). Il servizio di routing è un componente WCF che rende più semplice includere un router basato sul contenuto nell'applicazione. In questo esempio si adatta l'esempio di calcolatrice di WCF standard per comunicare con il servizio di routing. In questo esempio viene illustrato come definire la logica di routing basata sul contenuto tramite l'utilizzo di filtri messaggi e tabelle dei filtri messaggi.  

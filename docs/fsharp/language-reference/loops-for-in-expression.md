@@ -1,18 +1,17 @@
 ---
 title: 'Cicli: espressioni for...in (F#)'
-description: "Vedere come il ciclo for di F #... nell'espressione costrutto di ciclo viene utilizzato per scorrere le corrispondenze di un modello in una raccolta enumerabile."
+description: "Vedere come il ciclo for di F #.. nell'espressione costrutto di ciclo viene utilizzato per scorrere le corrispondenze di un modello in una raccolta enumerabile."
 ms.date: 05/16/2016
-ms.openlocfilehash: 926f0a9940021b3dc0deefc12ea158c35975e949
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564074"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869121"
 ---
 # <a name="loops-forin-expression"></a>Espressione Loops: for...in
 
 Questo costrutto di ciclo viene utilizzato per scorrere le corrispondenze di un modello in una raccolta enumerabile, ad esempio un'espressione di intervallo, sequenza, elenco, matrice o un altro costrutto che supporta l'enumerazione.
-
 
 ## <a name="syntax"></a>Sintassi
 
@@ -22,23 +21,24 @@ for pattern in enumerable-expression do
 ```
 
 ## <a name="remarks"></a>Note
-Il `for...in` espressione può essere confrontata con il `for each` istruzione in altri linguaggi .NET perché è utilizzato per eseguire il ciclo i valori di una raccolta enumerabile. Tuttavia, `for...in` supporta anche i criteri di ricerca della raccolta anziché solo l'iterazione nell'intera raccolta.
 
-L'espressione enumerabile può essere specificata come una raccolta enumerabile o, tramite il `..` (operatore), come un intervallo in un tipo integrale. Raccolte enumerabili includono elenchi, sequenze, matrici, set, mappe e così via. Qualsiasi tipo che implementa `System.Collections.IEnumerable` può essere utilizzato.
+Il `for...in` espressione può essere confrontato con il `for each` istruzione in altri linguaggi .NET perché è usato per eseguire il ciclo nei valori in una raccolta enumerabile. Tuttavia, `for...in` supporta anche criteri di ricerca per la raccolta invece solo l'iterazione nell'intera raccolta.
 
-Quando si esprime un intervallo mediante la `..` operatore, è possibile utilizzare la sintassi seguente.
+L'espressione enumerabile può essere specificata come una raccolta enumerabile o, utilizzando il `..` operatore, sotto forma di intervallo su un tipo integrale. Raccolte enumerabili includono elenchi, sequenze, matrici, set, mappe e così via. Qualsiasi tipo che implementa `System.Collections.IEnumerable` può essere utilizzato.
+
+Quando si esprime un intervallo usando la `..` operatore, è possibile usare la sintassi seguente.
 
 *Avviare* ... *Fine*
 
-È inoltre possibile utilizzare una versione che include un incremento, detto di *ignorare*, come nel codice riportato di seguito.
+È anche possibile usare una versione che include un incremento denominato il *ignorare*, come nel codice seguente.
 
 *Avviare* ... *ignorare* ... *Fine*
 
-Quando si utilizza intervalli integrali e a una variabile contatore semplice come modello, il comportamento tipico consiste nell'incrementare la variabile contatore di 1 a ogni iterazione, ma se l'intervallo include un valore di salto, il contatore viene incrementato invece del valore di salto.
+Quando si usa intervalli integrali e una variabile contatore semplici come un modello, il comportamento tipico è incrementare la variabile contatore da 1 a ogni iterazione, ma se l'intervallo include un valore di omissione, il contatore viene incrementato dal valore skip invece.
 
-I valori corrispondenti nel modello utilizzabile anche nell'espressione del corpo.
+Valori corrispondenti nel modello possono essere usati anche nell'espressione corpo.
 
-Gli esempi di codice seguente viene illustrato l'utilizzo del `for...in` espressione.
+Gli esempi di codice seguenti illustrano l'uso del `for...in` espressione.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5201.fs)]
 
@@ -52,7 +52,7 @@ L'output è indicato di seguito.
 788
 ```
 
-Nell'esempio seguente viene illustrato come eseguire un ciclo in una sequenza e come usare un tupla (modello) anziché una variabile semplice.
+Nell'esempio seguente viene illustrato come eseguire un ciclo su una sequenza e come usare un modello tupla anziché una variabile semplice.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5202.fs)]
 
@@ -75,7 +75,7 @@ Nell'esempio seguente viene illustrato come eseguire un ciclo su un intervallo d
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5203.fs)]
 
-L'output di function1 è come indicato di seguito.
+L'output di funzione1 è come indicato di seguito.
 
 ```
 1 2 3 4 5 6 7 8 9 10
@@ -85,7 +85,7 @@ Nell'esempio seguente viene illustrato come eseguire un ciclo su un intervallo c
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5204.fs)]
 
-L'output di `function2` è indicato di seguito.
+L'output di `function2` è come indicato di seguito.
 
 ```
 1 3 5 7 9
@@ -95,7 +95,7 @@ Nell'esempio seguente viene illustrato come utilizzare un intervallo di caratter
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5205.fs)]
 
-L'output di `function3` è indicato di seguito.
+L'output di `function3` è come indicato di seguito.
 
 ```
 a b c d e f g h i j k l m n o p q r s t u v w x y z
@@ -105,23 +105,23 @@ Nell'esempio seguente viene illustrato come utilizzare un valore negativo skip p
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5208.fs)]
 
-L'output di `function4` è indicato di seguito.
+L'output di `function4` è come indicato di seguito.
 
 ```
 10 9 8 7 6 5 4 3 2 1 ... Lift off!
 ```
 
-Inizio e alla fine dell'intervallo possono anche essere espressioni, ad esempio funzioni, come illustrato nel codice seguente.
+L'inizio e la fine dell'intervallo possono essere anche espressioni, ad esempio funzioni, come nel codice seguente.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5206.fs)]
 
-L'output di `function5` con questo input è indicato di seguito.
+L'output di `function5` con questo input è come indicato di seguito.
 
 ```
 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 ```
 
-Nell'esempio successivo viene illustrato l'utilizzo di un carattere jolly (_) quando l'elemento non è necessario nel ciclo.
+L'esempio seguente mostra l'uso di un carattere jolly (\_) quando l'elemento non è necessaria nel ciclo.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5207.fs)]
 
@@ -131,12 +131,10 @@ L'output è indicato di seguito.
 Number of elements in list1: 5
 ```
 
-`Note` È possibile utilizzare `for...in` in espressioni sequenza e altre espressioni di calcolo, nel qual caso una versione personalizzata del `for...in` viene utilizzata l'espressione. Per ulteriori informazioni, vedere [sequenze](sequences.md), [flussi di lavoro asincroni](asynchronous-workflows.md), e [espressioni di calcolo](computation-expressions.md).
-
+`Note` È possibile usare `for...in` nelle espressioni di sequenza e altre espressioni di calcolo, nel qual caso una versione personalizzata del `for...in` espressione viene usata. Per altre informazioni, vedere [sequenze](sequences.md), [flussi di lavoro asincroni](asynchronous-workflows.md), e [espressioni di calcolo](computation-expressions.md).
 
 ## <a name="see-also"></a>Vedere anche
-[Riferimenti per il linguaggio F#](index.md)
 
-[Cicli: espressione `for...to`](loops-for-to-expression.md)
-
-[Cicli: espressione `while...do`](loops-while-do-expression.md)
+- [Riferimenti per il linguaggio F#](index.md)
+- [Cicli: espressione `for...to`](loops-for-to-expression.md)
+- [Cicli: espressione `while...do`](loops-while-do-expression.md)

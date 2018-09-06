@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
 ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735527"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803330"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Scenari di applicazione (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] supporta un set di scenari di base per l'esposizione e utilizzo dei dati come [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. In questo argomento vengono elencati gli argomenti relativi a questi scenari.  

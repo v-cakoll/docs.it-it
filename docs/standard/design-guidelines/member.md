@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c04b431224a1d4f03e85397b854a52856e114e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1598ac63af38f1ca3e11104bc8e1cd6323d35ed
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571397"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871018"
 ---
 # <a name="member-design-guidelines"></a>Linee guida di progettazione dei membri
-Metodi, proprietà, eventi, costruttori e i campi vengono collettivamente come membri. Infine, i membri sono i mezzi mediante il quale framework funzionalità esposta agli utenti finali di un framework.  
+I metodi, proprietà, eventi, costruttori e i campi vengono collettivamente come membri. I membri sono infine i mezzi mediante il quale framework funzionalità viene esposta agli utenti finali di un framework.  
   
- I membri possono essere virtuale o non virtuali, concreto o astratti, statico o istanza e possono avere diversi ambiti diversi di accessibilità. Tutte le serie di questo fornisce espressività incredibile ma allo stesso tempo richiede attenzione da parte di finestra di progettazione di framework.  
+ I membri possono essere virtuale o non virtuali, concreto o astratti, statico o istanza e possono avere diversi ambiti diversi di accessibilità. Tutto questo varietà fornisce espressività incredibile ma nello stesso momento richiede attenzione da parte la finestra di progettazione di framework.  
   
  In questo capitolo offre linee guida di base da seguire quando si progettano i membri di qualsiasi tipo.  
   
@@ -33,9 +33,10 @@ Metodi, proprietà, eventi, costruttori e i campi vengono collettivamente come m
  [Metodi di estensione](../../../docs/standard/design-guidelines/extension-methods.md)  
  [Overload dell'operatore](../../../docs/standard/design-guidelines/operator-overloads.md)  
  [Progettazione di parametri](../../../docs/standard/design-guidelines/parameter-design.md)  
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)

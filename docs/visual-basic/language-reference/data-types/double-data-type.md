@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
 ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734812"
+ms.locfileid: "43806124"
 ---
 # <a name="double-data-type-visual-basic"></a>Tipo di dati Double (Visual Basic)
 Contiene segno IEEE a 64 bit (8 byte) e con precisione doppia numeri a virgola mobile che intervallo compreso tra - 1, 79769313486231570E + 308 a - fino a 4.94065645841246544-324 per i valori negativi e tra fino a 4.94065645841246544-324 e 1.79769313486231570 e + 308 per valori positivi. Numeri a precisione doppia contengono un'approssimazione di un numero reale.  

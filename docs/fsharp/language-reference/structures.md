@@ -1,13 +1,13 @@
 ---
 title: Strutture (F#)
-description: 'Informazioni su F # struttura, un tipo di oggetto compatto spesso più efficiente rispetto a una classe per i tipi con una piccola quantità di dati e comportamento semplice.'
+description: 'Informazioni sulla struttura F #, un tipo di oggetto compatto spesso più efficiente rispetto a una classe per i tipi con una piccola quantità di dati e comportamento semplice.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 57c4148aec1d6a19237d74aa99824ef475c3632e
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 889d493af3c9c388bdc7969c02bc7b021b82517d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172464"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799671"
 ---
 # <a name="structures"></a>Strutture
 
@@ -29,19 +29,20 @@ type [accessibility-modifier] type-name =
 ```
 
 ## <a name="remarks"></a>Note
-Le strutture sono *i tipi di valore*, il che significa che sono archiviati direttamente sullo stack o, quando vengono utilizzati come campi o tipo di elementi di matrice, inline nell'elemento padre. A differenza di record e classi, le strutture hanno una semantica pass-by-value. Ciò significa che sono utili principalmente per piccole aggregazioni di dati accessibili e copiati di frequente.
+
+Le strutture sono *i tipi di valore*, che indica che essi vengono archiviate direttamente sullo stack o, quando vengono utilizzati come campi o tipo di elementi di matrice, inline nell'elemento padre. A differenza di record e classi, le strutture hanno una semantica pass-by-value. Ciò significa che sono utili principalmente per piccole aggregazioni di dati accessibili e copiati di frequente.
 
 Nella sintassi precedente sono illustrate due forme. La prima non è la sintassi leggera, ma viene comunque usata frequentemente perché, quando si usano la parole chiave `struct` e `end`, è possibile omettere l'attributo `StructAttribute`, che viene visualizzato nella seconda forma. È possibile abbreviare `StructAttribute` in `Struct`.
 
-Il *-definition-elementi-e-i membri dei tipi* nella sintassi precedente rappresenta definizioni e dichiarazioni di membri. Le strutture possono disporre di costruttori e campi modificabili e non modificabili e possono dichiarare i membri e le implementazioni dell'interfaccia. Per ulteriori informazioni, vedere [membri](members/index.md).
+Il *-definition-elementi-e-membri di tipo* nella sintassi precedente rappresenta definizioni e dichiarazioni di membri. Le strutture possono disporre di costruttori e campi modificabili e non modificabili e possono dichiarare i membri e le implementazioni dell'interfaccia. Per altre informazioni, vedere [membri](members/index.md).
 
 Le strutture non possono partecipare all'ereditarietà, non possono contenere associazioni `let` o `do` e non possono contenere in modo ricorsivo campi del proprio tipo (nonostante possano contenere celle di riferimento che facciano riferimento al proprio tipo).
 
 Poiché le strutture non consentono associazioni `let`, è necessario dichiarare i campi nelle strutture usando la parola chiave `val`. La parola chiave `val` definisce un campo e il relativo tipo, ma non consente l'inizializzazione. Al contrario, le dichiarazioni `val` sono inizializzate su zero o null. Per questo motivo, le strutture che hanno un costruttore implicito (ovvero, i parametri forniti immediatamente dopo il nome della struttura nella dichiarazione) richiedono di annotare le dichiarazioni `val` con l'attributo `DefaultValue`. Le strutture che hanno un costruttore definito supportano comunque l'inizializzazione su zero. Quindi, l'attributo `DefaultValue` è una dichiarazione che tale valore zero è valido per il campo. I costruttori impliciti per le strutture non eseguono alcuna azione perché le associazioni `let` e `do` non sono consentite per il tipo, ma i valori di parametro di costruttore implicito passati sono disponibili come campi privati.
 
-I costruttori espliciti potrebbero comportare l'inizializzazione dei valori di campo. Quando si ha una struttura con un costruttore esplicito, è comunque supportata l'inizializzazione su zero. Tuttavia, non usare l'attributo `DefaultValue` sulle dichiarazioni `val` perché è in conflitto con il costruttore esplicito. Per ulteriori informazioni su `val` dichiarazioni, vedere [campi espliciti: il `val` parola chiave](members/explicit-fields-the-val-keyword.md).
+I costruttori espliciti potrebbero comportare l'inizializzazione dei valori di campo. Quando si ha una struttura con un costruttore esplicito, è comunque supportata l'inizializzazione su zero. Tuttavia, non usare l'attributo `DefaultValue` sulle dichiarazioni `val` perché è in conflitto con il costruttore esplicito. Per altre informazioni sulle `val` dichiarazioni, vedere [i campi espliciti: il `val` parola chiave](members/explicit-fields-the-val-keyword.md).
 
-Gli attributi e modificatori di accessibilità sono consentiti nelle strutture e seguono le stesse regole per gli altri tipi. Per ulteriori informazioni, vedere [attributi](attributes.md) e [controllo di accesso](access-control.md).
+Gli attributi e modificatori di accessibilità sono consentiti nelle strutture e seguono le stesse regole per gli altri tipi. Per altre informazioni, vedere [attributi](attributes.md) e [Access Control](access-control.md).
 
 Gli esempi di codice seguenti illustrano le definizioni delle strutture.
 
@@ -49,13 +50,11 @@ Gli esempi di codice seguenti illustrano le definizioni delle strutture.
 
 ## <a name="struct-records-and-discriminated-unions"></a>I record di struct e unioni discriminate
 
-A partire da F # 4.1, è possibile rappresentare [record](records.md) e [unioni discriminate](discriminated-unions.md) come struct con il `[<Struct>]` attributo.  Ogni articolo per altre informazioni, vedere.
-    
+A partire da F # 4.1, è possibile rappresentare [record](records.md) e [unioni discriminate](discriminated-unions.md) come struct con il `[<Struct>]` attributo.  Vedere ogni articolo per altre informazioni.
+
 ## <a name="see-also"></a>Vedere anche
-[Riferimenti per il linguaggio F#](index.md)
 
-[Classi](classes.md)
-
-[Record](records.md)
-
-[Membri](members/index.md)
+- [Riferimenti per il linguaggio F#](index.md)
+- [Classi](classes.md)
+- [Record](records.md)
+- [Membri](members/index.md)

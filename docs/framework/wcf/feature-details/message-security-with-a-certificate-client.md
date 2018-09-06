@@ -8,11 +8,11 @@ ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7aad53e9c6d5708bceca9831264c112f885fb889
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732514"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857362"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Protezione dei messaggi con un client di certificato
 Lo scenario seguente viene illustrato un client Windows Communication Foundation (WCF) e un servizio protetti tramite la modalità sicurezza messaggio. Sia il client che il servizio sono autenticati mediante certificati. Per altre informazioni, vedere [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  

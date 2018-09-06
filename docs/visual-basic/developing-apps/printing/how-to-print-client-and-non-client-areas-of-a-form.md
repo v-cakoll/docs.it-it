@@ -9,11 +9,11 @@ helpviewer_keywords:
 - non-client area [Visual Basic], printing
 ms.assetid: 856bb0e4-dbc3-47e2-81cd-4b376cf07757
 ms.openlocfilehash: 5109993146a8d53d5cbeebcc52c018a6f0f57ed5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43723275"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856738"
 ---
 # <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>Procedura: stampare aree client e non client di un form (Visual Basic)
 Il componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> consente di stampare rapidamente un'immagine di un form così come viene visualizzata sullo schermo senza usare un componente <xref:System.Drawing.Printing.PrintDocument> . La procedura seguente illustra come stampare un form, incluse l'area client e l'area non client. L'area non client include la barra del titolo, i bordi e le barre di scorrimento.  

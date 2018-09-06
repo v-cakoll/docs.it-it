@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f589225dde1ba2aabc4ca32542339a771c3287d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535426"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43859517"
 ---
 # <a name="imetadatatablesgetguid-method"></a>Metodo IMetaDataTables::GetGuid
 Ottiene un GUID della riga in corrispondenza dell'indice specificato.  

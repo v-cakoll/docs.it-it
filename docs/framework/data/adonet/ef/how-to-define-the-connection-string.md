@@ -3,11 +3,11 @@ title: 'Procedura: definire una stringa di connessione'
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
 ms.openlocfilehash: f40b8bc68eda1cb4b64b34d12b2922da69929203
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387754"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43802161"
 ---
 # <a name="how-to-define-the-connection-string"></a>Procedura: definire una stringa di connessione
 In questo argomento viene illustrato come definire la stringa di connessione usata per la connessione a un modello concettuale. In questo argomento si basa sul [Sales di AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) modello concettuale. Il modello Sales di AdventureWorks viene usato in tutti gli argomenti correlati ad attività inclusi nella documentazione di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Questo argomento si presuppone che si è già configurato il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] e definito modello Sales di AdventureWorks. Per altre informazioni, vedere [procedura: definire manualmente file di modello e di Mapping](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a). Le procedure descritte in questo argomento sono incluse anche in [procedura: configurare manualmente un progetto Entity Framework](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  

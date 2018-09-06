@@ -3,11 +3,11 @@ title: Oggetti LOB Oracle
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
 ms.openlocfilehash: 39ff8f1c21fc1161f4f3726548713d384c7d7400
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560217"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863876"
 ---
 # <a name="oracle-lobs"></a>Oggetti LOB Oracle
 Il Provider di dati .NET Framework per Oracle include la <xref:System.Data.OracleClient.OracleLob> (classe), che consente di lavorare con Oracle **LOB** i tipi di dati.  

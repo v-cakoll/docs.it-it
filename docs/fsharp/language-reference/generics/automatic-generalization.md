@@ -1,64 +1,64 @@
 ---
 title: Generalizzazione automatica (F#)
-description: 'Informazioni su come F # generalizzati automaticamente gli argomenti e i tipi di funzioni in modo che funzionino con più tipi quando possibile.'
+description: 'Informazioni su come F # generalizzati automaticamente gli argomenti e i tipi di funzioni in modo che funzionano con più tipi, laddove possibile.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 858c8bab4a1a37f44a700744e70ebfa8a5abf12c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565075"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855777"
 ---
 # <a name="automatic-generalization"></a>Generalizzazione automatica
 
-F # utilizza l'inferenza del tipo per valutare i tipi di espressioni e funzioni. In questo argomento viene descritto come F # generalizzati automaticamente gli argomenti e i tipi di funzioni in modo che funzionino con più tipi quando possibile.
-
+F # Usa l'inferenza del tipo per valutare i tipi di funzioni ed espressioni. In questo argomento viene descritto come F # generalizzati automaticamente gli argomenti e i tipi di funzioni in modo che funzionano con più tipi quando possibile.
 
 ## <a name="automatic-generalization"></a>Generalizzazione automatica
-Il compilatore F # quando si esegue l'inferenza del tipo in una funzione, determina se un determinato parametro può essere generico. Il compilatore esamina ogni parametro e determina se la funzione presenta una dipendenza dal tipo specifico di tale parametro. In caso contrario, viene dedotto il tipo generico.
 
-Esempio di codice seguente viene illustrata una funzione che il compilatore deduce per essere generico.
+Il compilatore F #, quando esegue l'inferenza del tipo in una funzione, determina se un determinato parametro può essere generico. Il compilatore esamina ogni parametro e determina se la funzione ha una dipendenza dal tipo specifico di tale parametro. Se non esiste, il tipo viene dedotto come generici.
+
+Esempio di codice seguente viene illustrata una funzione che il compilatore deduce automaticamente per essere generica.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet101.fs)]
 
-Il tipo viene dedotto da `'a -> 'a -> 'a`.
+Il tipo viene dedotto per essere `'a -> 'a -> 'a`.
 
-Il tipo di indica che si tratta di una funzione che accetta due argomenti dello stesso tipo sconosciuto e restituisce un valore dello stesso tipo. Uno dei motivi per cui la funzione precedente può essere generico è che la maggiore-operatore (`>`) è generico. Maggiore-rispetto a operatore ha la firma `'a -> 'a -> bool`. Non tutti gli operatori sono generici e se il codice in una funzione utilizza un tipo di parametro insieme a una funzione non generico o un operatore, tale tipo di parametro non può essere generalizzato.
+Il tipo indica che si tratta di una funzione che accetta due argomenti dello stesso tipo sconosciuto e restituisce un valore dello stesso tipo. Uno dei motivi per cui la funzione precedente può essere generica è che il maggiore-operatore (`>`) è a sua volta generico. Maggiore-di operatore ha la firma `'a -> 'a -> bool`. Non tutti gli operatori sono generici e se il codice in una funzione Usa un tipo di parametro insieme a una funzione non generico o un operatore, tale tipo di parametro non può essere generalizzato.
 
-Poiché `max` è generico, può essere utilizzato con tipi, ad esempio `int`, `float`e così via, come illustrato negli esempi seguenti.
+In quanto `max` è generico e può essere utilizzato con i tipi, ad esempio `int`, `float`e così via, come illustrato negli esempi seguenti.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet102.fs)]
 
-Tuttavia, i due argomenti devono essere dello stesso tipo. La firma è `'a -> 'a -> 'a`, non `'a -> 'b -> 'a`. Pertanto, il codice seguente genera un errore perché i tipi non corrispondono.
+Tuttavia, i due argomenti devono essere dello stesso tipo. La firma viene `'a -> 'a -> 'a`, non `'a -> 'b -> 'a`. Pertanto, il codice seguente genera un errore perché i tipi non corrispondono.
 
 ```fsharp
 // Error: type mismatch.
 let biggestIntFloat = max 2.0 3
 ```
 
-Il `max` funzione funziona anche con qualsiasi tipo che supporta la maggiore-operatore. Di conseguenza, è possibile usare anche su una stringa, come illustrato nel codice seguente.
+Il `max` funzione funziona anche con qualsiasi tipo che supporta il valore maggiore: operatore di maggioranza. Pertanto, si può anche usarlo in una stringa, come illustrato nel codice seguente.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet104.fs)]
-    
-## <a name="value-restriction"></a>Limitazione valore
-Il compilatore esegue generalizzazione automatica solo definizioni di funzione completa che includono argomenti espliciti e valori semplici non modificabili.
 
-Ciò significa che il compilatore genera un errore se si tenta di compilare il codice che non è sufficientemente vincolato a un tipo specifico, ma anche non generalizzabile. Il messaggio di errore per questo problema si riferisce a questa restrizione sulla generalizzazione automatica per i valori come il *valore restrizione*.
+## <a name="value-restriction"></a>Limitazione dei valori
 
-L'errore di restrizione di valore si verifica in genere, quando si desidera un costrutto generico, ma il compilatore dispone di informazioni insufficienti per generalizzarla o quando si omettono involontariamente sufficienti informazioni sul tipo di un costrutto non generico. La soluzione all'errore di restrizione di valore consiste nel fornire ulteriori informazioni esplicite per vincolare meglio il problema di inferenza del tipo, in uno dei modi seguenti:
+Il compilatore esegue generalizzazione automatica solo nelle definizioni di funzione completa che includono argomenti espliciti e sul semplici valori non modificabili.
 
+Ciò significa che il compilatore genera un errore se si prova a compilare il codice che non è sufficientemente vincolato a un tipo specifico, ma anche non generalizzabile. Il messaggio di errore per questo problema è relativo a questa limitazione per la generalizzazione automatica per i valori come il *limitazione valore*.
 
-- Vincolare un tipo deve essere non generici mediante l'aggiunta di un'annotazione di tipo esplicito per un parametro o valore.
+L'errore di limitazione valore si verifica in genere, quando si desidera un costrutto per essere generico, ma il compilatore dispone di informazioni sufficienti per generalizzarla o quando si omette involontariamente sufficienti informazioni sul tipo in un costrutto non generico. La soluzione per l'errore di limitazione valore consiste nel fornire informazioni più esplicite per comprenderle appieno limitare il problema di inferenza del tipo, in uno dei modi seguenti:
 
-- Se il problema sta usando un costrutto non generalizzabile per definire una funzione generica, ad esempio una composizione di funzione o in modo incompleto applicati gli argomenti della funzione sottoposte a currying, provare a riscrivere la funzione come una definizione di funzione ordinaria.
+- Vincolare un tipo può essere non generica aggiungendo un'annotazione di tipo esplicito a un parametro o valore.
 
-- Se il problema è un'espressione troppo complessa per essere generalizzato, è necessario inserirla in una funzione mediante l'aggiunta di un parametro aggiuntivo e inutilizzato.
+- Se il problema sta usando un costrutto non generalizzabile per definire una funzione generica, ad esempio una composizione di funzione o in modo incompleto applicati gli argomenti della funzione sottoposti a currying, provare a riscrivere la funzione come una definizione di funzione ordinaria.
 
-- Aggiungere parametri di tipo generico espliciti. Questa opzione viene utilizzata raramente.
+- Se il problema è un'espressione troppo complessa per procedere alla generalizzazione, trasformarlo in una funzione mediante l'aggiunta di un parametro aggiuntivo e non usato.
 
-- Gli esempi di codice seguenti illustrano ognuno di questi scenari.
+- Aggiungere parametri di tipo generico esplicita. Questa opzione viene utilizzata raramente.
 
-Caso 1: Espressione troppo complessa. In questo esempio, l'elenco `counter` deve essere `int option ref`, ma non è definito come valore semplice non modificabile.
+- Gli esempi di codice seguente viene illustrato ognuno di questi scenari.
+
+Caso 1: Un'espressione troppo complessa. In questo esempio, nell'elenco `counter` è destinato a essere `int option ref`, ma non è definito come un semplice valore non modificabile.
 
 ```fsharp
 let counter = ref None
@@ -66,7 +66,7 @@ let counter = ref None
 let counter : int option ref = ref None
 ```
 
-Caso 2: Utilizzo di un costrutto non generalizzabile per definire una funzione generica. In questo esempio, il costrutto è non generalizzabile perché implica applicazione parziale degli argomenti della funzione.
+Caso 2: Utilizzo di un costrutto non generalizzabile per definire una funzione generica. In questo esempio, il costrutto è non generalizzabile dal momento che implica l'applicazione parziale degli argomenti della funzione.
 
 ```fsharp
 let maxhash = max << hash
@@ -74,7 +74,7 @@ let maxhash = max << hash
 let maxhash obj = (max << hash) obj
 ```
 
-Caso 3: Aggiunta di un parametro aggiuntivo e inutilizzato. Poiché questa espressione non è abbastanza semplice per la generalizzazione, il compilatore genera l'errore di restrizione di valore.
+Caso 3: Aggiunta di un parametro aggiuntivo e non usato. Poiché questa espressione non è abbastanza semplice per la generalizzazione, il compilatore genera l'errore di limitazione valore.
 
 ```fsharp
 let emptyList10 = Array.create 10 []
@@ -98,11 +98,8 @@ let floatLists = arrayOf10Lists<float>
 ```
 
 ## <a name="see-also"></a>Vedere anche
-[Inferenza di tipi](../type-inference.md)
 
-[Generics](index.md)
-
-[Parametri di tipo risolti staticamente](statically-resolved-type-parameters.md)
-
-[Vincoli](constraints.md)
-
+- [Inferenza di tipi](../type-inference.md)
+- [Generics](index.md)
+- [Parametri di tipo risolti staticamente](statically-resolved-type-parameters.md)
+- [Vincoli](constraints.md)

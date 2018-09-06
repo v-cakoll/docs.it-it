@@ -3,11 +3,11 @@ title: Modello a oggetti per la programmazione HTTP Web di WCF
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
 ms.openlocfilehash: 8400798e4edcad41c4f5336d59646413900347f8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43670639"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861637"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Modello a oggetti per la programmazione HTTP Web di WCF
 Il modello di programmazione HTTP di WCF WEB consente agli sviluppatori di esporre servizi Web Windows Communication Foundation (WCF) tramite richieste HTTP di base senza SOAP. Il modello di programmazione WCF WEB HTTP si basa il modello di estendibilità WCF esistente. Definisce le classi seguenti:  

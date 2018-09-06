@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
 ms.openlocfilehash: bbd914d8b4239bbae1de7031e68b2900cf5ad6a3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478052"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862383"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Tipo di dati Boolean (Visual Basic)
 Contiene i valori che possono essere solo `True` o `False`. Le parole chiave `True` e `False` corrispondono a due stati di `Boolean` variabili.  

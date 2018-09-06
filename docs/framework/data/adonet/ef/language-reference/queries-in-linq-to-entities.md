@@ -3,11 +3,11 @@ title: Query in LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
 ms.openlocfilehash: b6dc38951107b0d3833e1060c23962a43936bf4d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385507"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798885"
 ---
 # <a name="queries-in-linq-to-entities"></a>Query in LINQ to Entities
 Una query è un'espressione che recupera dati da un'origine dati. Le query sono in genere espresse in un linguaggio di query specializzato, ad esempio SQL per i database relazionali e XQuery per XML. Gli sviluppatori hanno dovuto pertanto imparare un nuovo linguaggio di query per ogni tipo di origine dati o formato dati usato per le query. LINQ (Language-Integrated Query) offre un modello più semplice e coerente per l'uso di dati in diversi tipi di origini dati e formati di dati. In una query LINQ vengono sempre usati oggetti di programmazione.  

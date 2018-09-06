@@ -5,11 +5,11 @@ ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 6da641ec5da20c80f4c1034ded8a3be7d036b5a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785544"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868809"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemi di sicurezza per la registrazione dei messaggi
 In questo argomento viene illustrato come evitare che i dati riservati vengano esposti nei log dei messaggi e come proteggere gli eventi generati dalla registrazione dei messaggi.  

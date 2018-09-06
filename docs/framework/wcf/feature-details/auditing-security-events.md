@@ -7,11 +7,11 @@ ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: bad963db8d0e3644204824645f702c7b7b84963d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558384"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864242"
 ---
 # <a name="auditing-security-events"></a>Controllo degli eventi di sicurezza
 Le applicazioni create con Windows Communication Foundation (WCF) è possono registrare gli eventi di sicurezza (esito positivo, errore o entrambi) con la funzionalità di controllo. Gli eventi vengono scritti nel registro eventi del sistema Windows e possono essere esaminati tramite il Visualizzatore eventi.  

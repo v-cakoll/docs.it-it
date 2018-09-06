@@ -3,11 +3,11 @@ title: Modello di conferma automatica
 ms.date: 03/30/2017
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
 ms.openlocfilehash: a032c05743b64fe58b0b187328b5216080ba6e19
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552270"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864055"
 ---
 # <a name="auto-confirm-pattern"></a>Modello di conferma automatica
 Questa esempio è costituito da tre scenari in cui viene eseguita l'illustrazione di un'attività `AutoConfirmScope` personalizzata. Nel primo esempio viene illustrata l'esecuzione riuscita di una sequenza di quattro attività compensabili dove la seconda e la terza sono annidate in un oggetto `AutoConfirmScope`. Nel secondo esempio viene illustrata la stessa sequenza con un'eccezione che si verifica dopo l'esecuzione della quarta attività <xref:System.Activities.Statements.CompensableActivity>. Nel terzo scenario viene illustrata la stessa sequenza con un'eccezione che si verifica in `AutoConfirmScope` dopo il completamento del secondo <xref:System.Activities.Statements.CompensableActivity>.  

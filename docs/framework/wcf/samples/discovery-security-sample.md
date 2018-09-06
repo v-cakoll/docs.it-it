@@ -5,11 +5,11 @@ ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7a8dcd0a835bb669b669d5a510e01142c85ea07a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786544"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867529"
 ---
 # <a name="discovery-security-sample"></a>Esempio di sicurezza di individuazione
 La specifica Discovery non richiede che gli endpoint che partecipano al processo di individuazione siano sicuri. Il potenziamento dei messaggi di individuazione tramite la sicurezza riduce tuttavia la possibilità di vari tipi di attacchi (modifica del messaggio, Denial of Service, replay, spoofing). In questo esempio vengono implementati canali personalizzati che calcolano e verificano le firme dei messaggi usando il formato di firma compatto (descritto nella Sezione 8.2 della specifica WS-Discovery). Questo esempio supporta sia la [specifica Discovery 2005](https://go.microsoft.com/fwlink/?LinkId=177912) e il [versione 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  

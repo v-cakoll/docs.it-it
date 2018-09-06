@@ -4,11 +4,11 @@ ms.date: 10/31/2017
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 313e74d5ce252884f1df2479ef1db8b4b24b5cce
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558754"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43799265"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Stringhe interpolate (riferimenti di Visual Basic)
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0aefcc61a9ce283f1230cd44ffae549725bb15f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3e48d5a088fc6cff3dbdaaa77e6fa561c33f400
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589097"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865521"
 ---
 # <a name="decrypting-data"></a>Decrittografia di dati
 La decrittografia è l'inverso della crittografia. Per la crittografia a chiave privata è necessario conoscere sia la chiave che il valore di inizializzazione usati per crittografare i dati. Per la crittografia a chiave pubblica, è necessario conoscere sia la chiave pubblica (se i dati sono stati crittografati mediante la chiave privata) che la chiave privata (se i dati sono stati crittografati mediante la chiave pubblica).  
@@ -202,7 +202,8 @@ SymmetricKey = RSA.Decrypt( EncryptedSymmetricKey, false);
 SymmetricIV = RSA.Decrypt( EncryptedSymmetricIV , false);  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [Crittografia di dati](../../../docs/standard/security/encrypting-data.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [Crittografia di dati](../../../docs/standard/security/encrypting-data.md)  
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

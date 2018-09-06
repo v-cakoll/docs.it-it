@@ -16,11 +16,11 @@ helpviewer_keywords:
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
 ms.openlocfilehash: aee15d8d40ddd3f928c8bc5396d8bcbff17ba533
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562691"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858912"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Origini dati supportate da Windows Form
 In genere, l'associazione dati è stata utilizzata all'interno delle applicazioni per sfruttare i vantaggi dei dati archiviati nel database. Con data binding in Windows Form, è possibile accedere ai dati dal database, nonché i dati in altre strutture, ad esempio matrici e raccolte, purché siano stati soddisfatti alcuni requisiti minimi.  

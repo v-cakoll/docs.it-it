@@ -3,11 +3,11 @@ title: 'Introduzione a F # in Visual Studio'
 description: 'Informazioni su come utilizzare F # con Visual Studio.'
 ms.date: 07/03/2018
 ms.openlocfilehash: 3dac8466501338873aeb308ceac9274a7934a8a9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563846"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872851"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Introduzione a F # in Visual Studio
 

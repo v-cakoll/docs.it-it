@@ -3,11 +3,11 @@ title: Esecuzione del debug dei flussi di lavoro
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
 ms.openlocfilehash: 17cee1f1b509e777edd3f08c55d473d768b19b55
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43660009"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861383"
 ---
 # <a name="debugging-workflows"></a>Esecuzione del debug dei flussi di lavoro
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] offre diverse opzioni per eseguire il debug dei flussi di lavoro in esecuzione dall'ambiente di sviluppo. Il debug dei flussi di lavoro può essere eseguito nell'utilità di progettazione, in XAML e nel codice.  

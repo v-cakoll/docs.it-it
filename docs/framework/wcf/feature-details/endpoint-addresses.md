@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404567"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855715"
 ---
 # <a name="endpoint-addresses"></a>Indirizzi endpoint
 A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e identificarlo. L'indirizzo è costituito principalmente da un URI (Uniform Resource Identifier) che specifica il percorso dell'endpoint. L'indirizzo dell'endpoint è rappresentato nel modello di programmazione di Windows Communication Foundation (WCF) per il <xref:System.ServiceModel.EndpointAddress> classe, che contiene un facoltativo <xref:System.ServiceModel.EndpointAddress.Identity%2A> proprietà che abilita l'autenticazione dell'endpoint da altri endpoint che scambiare messaggi con esso e un set di facoltativo <xref:System.ServiceModel.EndpointAddress.Headers%2A> proprietà definiscono qualsiasi altra intestazione SOAP richiesta per raggiungere il servizio. Le intestazioni facoltative forniscono dettagli aggiuntivi e più precisi sull'indirizzo per identificare o interagire con l'endpoint del servizio. L'indirizzo di un endpoint è rappresentato in transito come riferimento all'endpoint di WS-Addressing (EPR).  

@@ -3,11 +3,11 @@ title: Utilizzo di comandi per modificare i dati
 ms.date: 03/30/2017
 ms.assetid: f4160389-b9ff-4b74-b655-437c76dcd586
 ms.openlocfilehash: 6388eecb2e96970f47383b61985d672bd0419a1e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773428"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864144"
 ---
 # <a name="using-commands-to-modify-data"></a>Utilizzo di comandi per modificare i dati
 Con un provider di dati .NET Framework è possibile eseguire stored procedure o istruzioni DDL (Data Definition Language), ad esempio CREATE TABLE e ALTER COLUMN, per modificare lo schema di un database o di un catalogo. Questi comandi non restituiscono righe come farebbe una query, in modo che il **comandi** oggetto fornisce un' **ExecuteNonQuery** per elaborarli.  

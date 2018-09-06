@@ -2,12 +2,12 @@
 title: Flussi di lavoro asincroni (F#)
 description: "Informazioni sul supporto in F # linguaggio di programmazione per l'esecuzione di calcoli in modo asincrono, in cui vengono eseguiti senza bloccare l'esecuzione di altre operazioni."
 ms.date: 05/16/2016
-ms.openlocfilehash: 9516a281701b6c431fc950fe6881359f9c8a672b
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143506"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861562"
 ---
 # <a name="asynchronous-workflows"></a>Flussi di lavoro asincroni
 
@@ -67,8 +67,6 @@ Il `runAll` funzione avvia tre flussi di lavoro asincroni in parallelo e attende
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti per il linguaggio F#](index.md)
-
-[Espressioni di calcolo](computation-expressions.md)
-
-[Classe Control. Async](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)
+- [Riferimenti per il linguaggio F#](index.md)
+- [Espressioni di calcolo](computation-expressions.md)
+- [Classe Control. Async](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)

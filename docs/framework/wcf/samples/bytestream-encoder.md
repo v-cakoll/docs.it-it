@@ -3,11 +3,11 @@ title: Codificatore ByteStream
 ms.date: 03/30/2017
 ms.assetid: e674a8ab-f79a-4a93-b984-54b34392dafc
 ms.openlocfilehash: cbd4110ecc04923b79d6b910fcf7ab4ca2012680
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480692"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855452"
 ---
 # <a name="bytestream-encoder"></a>Codificatore ByteStream
 In questo esempio descritto come creare una `ByteStreamHttpBinding`, una <xref:System.ServiceModel.Channels.Binding> che dimostra la funzionalità del codificatore del flusso di byte.  

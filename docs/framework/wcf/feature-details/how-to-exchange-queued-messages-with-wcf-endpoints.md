@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
 ms.openlocfilehash: 185bcb64522115d0c60ae90ee22a73610139c8c3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747262"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865595"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procedura: scambiare messaggi in coda con endpoint WCF
 Le code garantiscono che la messaggistica affidabile può verificarsi tra un client e un servizio Windows Communication Foundation (WCF), anche se il servizio non è disponibile al momento della comunicazione. Le procedure seguenti illustrano come assicurare una comunicazione durevole tra un client e un servizio utilizzando lo standard di associazione in coda quando si implementa il servizio WCF.  

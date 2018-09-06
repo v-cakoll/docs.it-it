@@ -3,11 +3,11 @@ title: '&lt;transport&gt; di &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
 ms.openlocfilehash: 35af47551f742b0e48220611a874605fb752b626
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533378"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857655"
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;transport&gt; di &lt;ws2007HttpBinding&gt;
 Definisce le impostazioni di autenticazione per il trasporto HTTP.  

@@ -1,13 +1,13 @@
 ---
 title: Eventi (F#)
-description: "Informazioni su come gli eventi F # consentono di associare chiamate di funzione alle azioni utente, che sono importanti nella programmazione dell'interfaccia utente grafica."
+description: 'Informazioni su come gli eventi F # consentono di associare chiamate di funzione con le azioni utente, che sono importanti nella programmazione GUI.'
 ms.date: 05/16/2016
-ms.openlocfilehash: e90d3abc5b5222f60c4e08539ee40bf83ac70ec7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce547bc9ec7b5e0ef9a7492c0889bb690e3040c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564783"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871933"
 ---
 # <a name="events"></a>Eventi
 
@@ -17,6 +17,7 @@ I collegamenti di riferimento all'API in questo articolo portano a MSDN.  Il rif
 Gli eventi consentono di associare chiamate di funzione alle azioni utente e sono importanti nella programmazione dell'interfaccia utente grafica. Gli eventi possono essere attivati anche dalle applicazioni o dal sistema operativo.
 
 ## <a name="handling-events"></a>Gestione degli eventi
+
 Quando si utilizza una libreria come Windows Form o Windows Presentation Foundation (WPF), una parte consistente del codice nell'applicazione viene eseguita in risposta a eventi predefiniti dalla libreria. Questi eventi predefiniti sono membri di classi GUI come form e controlli. È possibile aggiungere un comportamento personalizzato a un evento preesistente, ad esempio la selezione di un pulsante, facendo riferimento all'evento denominato specifico di interesse (ad esempio, l'evento `Click` della classe `Form`) e richiamando il metodo `Add`, come illustrato nel codice indicato di seguito. Se si esegue questo codice da F# Interactive, omettere la chiamata a `System.Windows.Forms.Application.Run(System.Windows.Forms.Form)`.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3601.fs)]
@@ -24,9 +25,10 @@ Quando si utilizza una libreria come Windows Form o Windows Presentation Foundat
 Il tipo del metodo `Add` è `('a -> unit) -> unit`. Il metodo del gestore eventi accetta pertanto un parametro, in genere gli argomenti dell'evento, e restituisce `unit`. Nell'esempio precedente viene illustrato il gestore eventi come un'espressione lambda. Il gestore eventi può anche essere un valore di funzione, come nell'esempio di codice seguente. Nell'esempio di codice seguente viene illustrato anche l'utilizzo dei parametri del gestore eventi, che forniscono informazioni specifiche del tipo di evento. Per un evento `MouseMove`, il sistema passa un oggetto `System.Windows.Forms.MouseEventArgs`, che contiene la posizione `X` e `Y` del puntatore.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3602.fs)]
-    
+
 ## <a name="creating-custom-events"></a>Creazione di eventi personalizzati
-Gli eventi F # sono rappresentati da F # [evento](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) classe che implementa il [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interfaccia. `IEvent` è un'interfaccia che combina la funzionalità di altre due interfacce, a sua volta `System.IObservable<'T>` e [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Gli oggetti `Event` dispongono pertanto di funzionalità equivalenti a quelle dei delegati in altri linguaggi, nonché della funzionalità aggiuntiva di `IObservable`, grazie a cui gli eventi F# supportano il filtraggio degli eventi e l'utilizzo delle espressioni lambda e delle funzioni di prima classe F# come gestori eventi. Questa funzionalità viene fornita nel [modulo eventi](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
+
+Gli eventi F # sono rappresentati da F # [evento](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) classe che implementa il [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interfaccia. `IEvent` è un'interfaccia che combina la funzionalità di altre due interfacce, a sua volta `System.IObservable<'T>` e [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Gli oggetti `Event` dispongono pertanto di funzionalità equivalenti a quelle dei delegati in altri linguaggi, nonché della funzionalità aggiuntiva di `IObservable`, grazie a cui gli eventi F# supportano il filtraggio degli eventi e l'utilizzo delle espressioni lambda e delle funzioni di prima classe F# come gestori eventi. Questa funzionalità viene fornita nel [modulo di evento](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
 
 Per creare un evento in una classe che agisca come qualsiasi altro evento .NET Framework, aggiungere alla classe un'associazione `let` che definisce un oggetto `Event` come campo in una classe. È possibile specificare il tipo di argomento dell'evento desiderato come argomento tipo oppure lasciare vuoto il valore affinché il tipo appropriato venga dedotto dal compilatore. È inoltre necessario definire un membro dell'evento che espone l'evento come evento CLI. Il membro deve disporre di [CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) attributo. Viene dichiarato come una proprietà e la relativa implementazione corrisponde a una chiamata per il [pubblica](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) proprietà dell'evento. Gli utenti della classe possono utilizzare il metodo `Add` dell'evento pubblicato per aggiungere un gestore. L'argomento del metodo `Add` può essere un'espressione lambda. È possibile utilizzare la proprietà `Trigger` dell'evento per generare l'evento passando un argomento alla funzione del gestore. Questo aspetto è illustrato nell'esempio di codice seguente. In questo esempio, l'argomento tipo dedotto per l'evento è una tupla, che rappresenta gli argomenti per l'espressione lambda.
 
@@ -50,16 +52,17 @@ Given a value: Event occurred.
 ```
 
 ## <a name="processing-event-streams"></a>Elaborazione di flussi di eventi
-Anziché aggiungere un gestore eventi per un evento utilizzando il [Event.add](https://msdn.microsoft.com/library/10670d3b-8d47-4f6e-b8df-ebc6f64ef4fd) funzione, è possibile utilizzare le funzioni di `Event` modulo per elaborare flussi di eventi in modalità estremamente personalizzate. A tale scopo, utilizzare l'operatore pipe (`|>`) insieme all'evento come primo valore in una serie di chiamate di funzione e le funzioni del modulo `Event` come chiamate di funzione successive.
+
+Anziché aggiungere solo un gestore eventi per un evento usando il [Event. Add](https://msdn.microsoft.com/library/10670d3b-8d47-4f6e-b8df-ebc6f64ef4fd) funzione, è possibile usare le funzioni nel `Event` modulo a elaborare i flussi di eventi in modalità estremamente personalizzate. A tale scopo, utilizzare l'operatore pipe (`|>`) insieme all'evento come primo valore in una serie di chiamate di funzione e le funzioni del modulo `Event` come chiamate di funzione successive.
 
 Nell'esempio di codice seguente viene mostrato come configurare un evento per il quale il gestore viene chiamato solo in determinate condizioni.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3604.fs)]
 
-Il [modulo Observable](https://msdn.microsoft.com/library/16b8610b-b30a-4df7-aa99-d9d352276227) contiene funzioni analoghe che operano su oggetti osservabili. Gli oggetti osservabili sono simili agli eventi, ma sottoscrivono gli eventi in modo attivo solo se vengono anch'essi sottoscritti.
-
+Il [Observable (modulo)](https://msdn.microsoft.com/library/16b8610b-b30a-4df7-aa99-d9d352276227) contiene funzioni analoghe che operano su oggetti osservabili. Gli oggetti osservabili sono simili agli eventi, ma sottoscrivono gli eventi in modo attivo solo se vengono anch'essi sottoscritti.
 
 ## <a name="implementing-an-interface-event"></a>Implementazione di un evento di interfaccia
+
 Quando si sviluppano componenti dell'interfaccia utente, spesso si inizia creando un nuovo form o un nuovo controllo che eredita da un form o un controllo esistente. Gli eventi sono definiti di frequente su un'interfaccia e, in tal caso, è necessario implementare l'interfaccia per implementare l'evento. L'interfaccia `System.ComponentModel.INotifyPropertyChanged` definisce un solo evento `System.ComponentModel.INotifyPropertyChanged.PropertyChanged`. Il codice seguente illustra come implementare l'evento definito da questa interfaccia ereditata:
 
 ```fsharp
@@ -173,14 +176,10 @@ Application.Run(appForm)
 ```
 
 ## <a name="see-also"></a>Vedere anche
-[Membri](index.md)
 
-[Gestione e generazione di eventi](../../../../docs/standard/events/index.md)
-
-[Espressioni lambda: I `fun` (parola chiave)](../functions/lambda-expressions-the-fun-keyword.md)
-
-[Modulo Control. event](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
-
-[Control. event&#60;|&#62; (classe)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
-
-[Control. event&#60;'Delegate' Args&#62; (classe)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)
+- [Membri](index.md)
+- [La gestione e generazione di eventi](../../../../docs/standard/events/index.md)
+- [Espressioni lambda: I `fun` (parola chiave)](../functions/lambda-expressions-the-fun-keyword.md)
+- [Modulo Control. event](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
+- [Control. event&#60;l&#62; classe](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
+- [Control. event&#60;'Delegate' Args&#62; classe](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

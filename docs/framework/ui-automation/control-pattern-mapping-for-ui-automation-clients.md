@@ -9,11 +9,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 02244043d802029364c7a725940f03ecdd21f573
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661791"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864657"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapping dei pattern di controllo per i client di automazione interfaccia utente
 > [!NOTE]
@@ -45,17 +45,17 @@ ms.locfileid: "43661791"
 |DataItem|SelectionItem|ExpandCollapse, GridItem, ScrollItem, Table, Toggle, Value|nessuno|  
 |Document|Testo|Scroll, Value|nessuno|  
 |Edit|nessuno|Text, RangeValue, Value|nessuno|  
-|Gruppo|nessuno|ExpandCollapse|nessuno|  
+|Raggruppa|nessuno|ExpandCollapse|nessuno|  
 |Header|nessuno|Transform|nessuno|  
 |HeaderItem|nessuno|Transform, Invoke|nessuno|  
 |Hyperlink|Invoke|Value|nessuno|  
 |Image|nessuno|GridItem, TableItem|Invoke, SelectionItem|  
-|List|nessuno|Grid, MultipleView, Scroll, Selection|Table|  
+|List|nessuno|Grid, MultipleView, Scroll, Selection|Tabella|  
 |ListItem|SelectionItem|ExpandCollapse, GridItem, Invoke, ScrollItem, Toggle, Value|nessuno|  
 |Menu|nessuno|Nessuna|nessuno|  
 |MenuBar|nessuno|ExpandCollapse, Dock, Transform|nessuno|  
 |MenuItem|nessuno|ExpandCollapse, Invoke, SelectionItem, Toggle|nessuno|  
-|Pane|nessuno|Dock Scroll, Transform|Window|  
+|Pane|nessuno|Dock Scroll, Transform|Finestra|  
 |ProgressBar|nessuno|RangeValue, Value|nessuno|  
 |RadioButton|SelectionItem|nessuno|Toggle|  
 |ScrollBar|nessuno|RangeValue|Scroll|  
@@ -66,7 +66,7 @@ ms.locfileid: "43661791"
 |StatusBar|nessuno|Grid|nessuno|  
 |Scheda|Selection|Scroll|nessuno|  
 |TabItem|SelectionItem|nessuno|Invoke|  
-|Table|Grid, GridItem, Table, TableItem|nessuno|nessuno|  
+|Tabella|Grid, GridItem, Table, TableItem|nessuno|nessuno|  
 |Testo|nessuno|GridItem, TableItem, Text|Valore|  
 |Thumb|Transform|nessuno|nessuno|  
 |TitleBar|nessuno|Nessuna|nessuno|  

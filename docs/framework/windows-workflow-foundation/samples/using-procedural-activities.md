@@ -3,11 +3,11 @@ title: Utilizzo di attività procedurali
 ms.date: 03/30/2017
 ms.assetid: 1c67f739-3878-48ad-806c-b2ce0d6733a0
 ms.openlocfilehash: bd83f1a0fa9f3af7c22cee73fbc4f984a9ebf53c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732040"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804766"
 ---
 # <a name="using-procedural-activities"></a>Utilizzo di attività procedurali
 Nell'esempio vengono usate le attività <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.Assign>, <xref:System.Activities.Statements.If>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.Switch%601>, <xref:System.Activities.Statements.TryCatch>e <xref:System.Activities.Statements.WriteLine> per implementare un gioco per indovinare un numero. Il gioco seleziona un numero casuale e il giocatore deve indovinare il numero. Quando il giocatore invia un numero errato, il flusso di lavoro fornisce un suggerimento che indica di provare a con un numero più alto o più basso. Se il giocatore indovina il numero in meno di 7 tentativi, viene visualizzato all'utente un messaggio di congratulazioni speciali.  

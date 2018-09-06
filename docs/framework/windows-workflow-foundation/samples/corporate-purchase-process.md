@@ -2,12 +2,12 @@
 title: Processo di acquisto aziendale
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 34d9280fb1d4009aa729cb2eba55b817db9fff56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520042"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43802911"
 ---
 # <a name="corporate-purchase-process"></a>Processo di acquisto aziendale
 In questo esempio viene illustrato come creare un semplice processo di acquisto basato su richieste di proposte (RDP) con la selezione automatica della proposta migliore. Vengono combinati gli oggetti <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> e <xref:System.Activities.Statements.ForEach%601>, nonché un'attività personalizzata per creare un flusso di lavoro che rappresenta il processo.  
@@ -43,7 +43,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
@@ -127,7 +127,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 |Form|Descrizione|  
 |-|-|  
 |NewRfp|Crea e invia una nuova richiesta di proposte.|  
-|ShowProposals|Mostra tutte le richieste di proposte attive e completate. **Nota:** potrebbe essere necessario scegliere il **aggiornare** pulsante nell'interfaccia utente per visualizzare le modifiche in tale schermata dopo aver creato o modificato una richiesta di proposta.|  
+|ShowProposals|Mostra tutte le richieste di proposte attive e completate. **Nota:** potrebbe essere necessario scegliere il **Aggiorna** pulsante nell'interfaccia utente per visualizzare le modifiche in tale schermata dopo aver creato o modificato una richiesta di proposta.|  
 |SubmitProposal|Ottiene una proposta da un fornitore in una richiesta di proposte concreta. Questa finestra viene usata solo dai fornitori.|  
 |ViewRfp|Mostra tutte le informazioni relative a una richiesta di proposte (proposte ricevute, date, valori e altre informazioni). Questa finestra viene usata solo dall'autore della richiesta di proposte.|  
   
@@ -145,9 +145,9 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
   
 1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione PurchaseProcess.sln.  
   
-2.  Per eseguire il progetto WebClient, aprire **Esplora** e fare doppio clic su di **Client Web** progetto. Selezionare **imposta come progetto di avvio**.  
+2.  Per eseguire il progetto WebClient, aprire **Esplora soluzioni** e fare doppio clic il **Client Web** progetto. Selezionare **imposta come progetto di avvio**.  
   
-3.  Per eseguire il progetto Winformsclient, aprire **Esplora** e fare doppio clic su di **Winformsclient** progetto. Selezionare **imposta come progetto di avvio**.  
+3.  Per eseguire il progetto Winformsclient, aprire **Esplora soluzioni** e fare doppio clic il **Winformsclient** progetto. Selezionare **imposta come progetto di avvio**.  
   
 4.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
@@ -161,7 +161,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
   
 -   **Visualizzazione**: Mostra il contenuto di una RDP esistente. I fornitori possono inviare le proposte (se invitati o se la RDP non è completata).  
   
--   Visualizza come: L'utente può accedere alla RDP tramite diverse identità selezionando il partecipante desiderato nella **visualizzare come** casella combinata nella griglia di RDP attive.  
+-   Visualizza come: L'utente può accedere alla RDP tramite diverse identità selezionando il partecipante desiderato nella **Visualizza come** casella combinata in griglia di RDP attive.  
   
 ### <a name="winforms-client-options"></a>Opzioni del progetto WinFormsClient  
   
@@ -171,4 +171,4 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
   
 -   **Visualizza RDP**: Mostra il contenuto di una RDP esistente. I fornitori possono inviare le proposte (se invitati o se la RDP non è completata)  
   
--   **Connetti come**: l'utente può accedere alla RDP tramite diverse identità selezionando il partecipante desiderato nella **visualizzare come** casella combinata nella griglia di RDP attive.
+-   **Connetti come**: l'utente può accedere alla RDP tramite diverse identità selezionando il partecipante desiderato nella **visualizzare come** casella combinata in griglia di RDP attive.
