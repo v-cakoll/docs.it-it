@@ -6,37 +6,37 @@ helpviewer_keywords:
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
 ms.openlocfilehash: 047805ad91d87550da80448fd10883ae58647bd6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554754"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881330"
 ---
-# <a name="ltexceptiongt-visual-basic"></a><span data-ttu-id="bc454-102">&lt;eccezione&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc454-102">&lt;exception&gt; (Visual Basic)</span></span>
-<span data-ttu-id="bc454-103">Specifica le eccezioni che possono essere generate.</span><span class="sxs-lookup"><span data-stu-id="bc454-103">Specifies which exceptions can be thrown.</span></span>  
+# <a name="ltexceptiongt-visual-basic"></a><span data-ttu-id="ff470-102">&lt;eccezione&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ff470-102">&lt;exception&gt; (Visual Basic)</span></span>
+<span data-ttu-id="ff470-103">Specifica le eccezioni che possono essere generate.</span><span class="sxs-lookup"><span data-stu-id="ff470-103">Specifies which exceptions can be thrown.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc454-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bc454-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ff470-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ff470-104">Syntax</span></span>  
   
 ```xml  
 <exception cref="member">description</exception>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bc454-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="bc454-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ff470-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ff470-105">Parameters</span></span>  
  `member`  
- <span data-ttu-id="bc454-106">Riferimento ad un'eccezione disponibile dall'ambiente di compilazione corrente.</span><span class="sxs-lookup"><span data-stu-id="bc454-106">A reference to an exception that is available from the current compilation environment.</span></span> <span data-ttu-id="bc454-107">Il compilatore controlla che l'eccezione specificata esista e converte `member` nel nome canonico dell'elemento nel file XML di output.</span><span class="sxs-lookup"><span data-stu-id="bc454-107">The compiler checks that the given exception exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="bc454-108">`member` deve essere racchiuso tra virgolette doppie (" ").</span><span class="sxs-lookup"><span data-stu-id="bc454-108">`member` must appear within double quotation marks (" ").</span></span>  
+ <span data-ttu-id="ff470-106">Riferimento ad un'eccezione disponibile dall'ambiente di compilazione corrente.</span><span class="sxs-lookup"><span data-stu-id="ff470-106">A reference to an exception that is available from the current compilation environment.</span></span> <span data-ttu-id="ff470-107">Il compilatore controlla che l'eccezione specificata esista e converte `member` nel nome canonico dell'elemento nel file XML di output.</span><span class="sxs-lookup"><span data-stu-id="ff470-107">The compiler checks that the given exception exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="ff470-108">`member` deve essere racchiuso tra virgolette doppie (" ").</span><span class="sxs-lookup"><span data-stu-id="ff470-108">`member` must appear within double quotation marks (" ").</span></span>  
   
  `description`  
- <span data-ttu-id="bc454-109">Descrizione.</span><span class="sxs-lookup"><span data-stu-id="bc454-109">A description.</span></span>  
+ <span data-ttu-id="ff470-109">Descrizione.</span><span class="sxs-lookup"><span data-stu-id="ff470-109">A description.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bc454-110">Note</span><span class="sxs-lookup"><span data-stu-id="bc454-110">Remarks</span></span>  
- <span data-ttu-id="bc454-111">Usare il `<exception>` tag per specificare le eccezioni che possono essere generate.</span><span class="sxs-lookup"><span data-stu-id="bc454-111">Use the `<exception>` tag to specify which exceptions can be thrown.</span></span> <span data-ttu-id="bc454-112">Questo tag viene applicato a una definizione di metodo.</span><span class="sxs-lookup"><span data-stu-id="bc454-112">This tag is applied to a method definition.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ff470-110">Note</span><span class="sxs-lookup"><span data-stu-id="ff470-110">Remarks</span></span>  
+ <span data-ttu-id="ff470-111">Usare il `<exception>` tag per specificare le eccezioni che possono essere generate.</span><span class="sxs-lookup"><span data-stu-id="ff470-111">Use the `<exception>` tag to specify which exceptions can be thrown.</span></span> <span data-ttu-id="ff470-112">Questo tag viene applicato a una definizione di metodo.</span><span class="sxs-lookup"><span data-stu-id="ff470-112">This tag is applied to a method definition.</span></span>  
   
- <span data-ttu-id="bc454-113">Compilare con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.</span><span class="sxs-lookup"><span data-stu-id="bc454-113">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="ff470-113">Compilare con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.</span><span class="sxs-lookup"><span data-stu-id="ff470-113">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bc454-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="bc454-114">Example</span></span>  
- <span data-ttu-id="bc454-115">Questo esempio Usa la `<exception>` tag per descrivere un'eccezione che il `IntDivide` funzione può generare.</span><span class="sxs-lookup"><span data-stu-id="bc454-115">This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.</span></span>  
+## <a name="example"></a><span data-ttu-id="ff470-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="ff470-114">Example</span></span>  
+ <span data-ttu-id="ff470-115">Questo esempio Usa la `<exception>` tag per descrivere un'eccezione che il `IntDivide` funzione può generare.</span><span class="sxs-lookup"><span data-stu-id="ff470-115">This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/exception_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="bc454-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bc454-116">See Also</span></span>  
- [<span data-ttu-id="bc454-117">Tag di commento XML</span><span class="sxs-lookup"><span data-stu-id="bc454-117">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="ff470-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ff470-116">See Also</span></span>  
+ [<span data-ttu-id="ff470-117">Tag di commento XML</span><span class="sxs-lookup"><span data-stu-id="ff470-117">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
