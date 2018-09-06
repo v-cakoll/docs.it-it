@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
 ms.openlocfilehash: 043f156f96d6ebc9ac5a6487287ad327928d9bf0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43723209"
+ms.locfileid: "43776301"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Enumerazione di istanze di SQL Server (ADO.NET)
 SQL Server consente alle applicazioni di individuare le istanze di SQL Server all'interno della rete corrente. Mediante la classe <xref:System.Data.Sql.SqlDataSourceEnumerator> queste informazioni vengono esposte allo sviluppatore dell'applicazione che in tal modo dispone di una <xref:System.Data.DataTable> contenente dati relativi a tutti i server visibili. La tabella restituita contiene un elenco di istanze del server disponibile in rete che corrisponde all'elenco fornito quando un utente tenta di creare una nuova connessione ed espande l'elenco a discesa che contiene tutti i server disponibili nel **connessione Proprietà** nella finestra di dialogo. I risultati visualizzati non sono sempre completi.  

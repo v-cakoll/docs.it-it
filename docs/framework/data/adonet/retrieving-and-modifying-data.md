@@ -3,11 +3,11 @@ title: Recupero e modifica di dati in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.openlocfilehash: 5ef5191cf89f22fbaf0bb1bf4fbf47db1d4c06a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562563"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779351"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recupero e modifica di dati in ADO.NET
 La connessione a un'origine dati e il recupero dei dati in essa contenuti sono funzioni fondamentali nelle applicazioni di database. I provider di dati .NET Framework di ADO.NET fungono da ponte tra un'applicazione e un'origine dati, consentendo di eseguire comandi e recuperare i dati utilizzando un **DataReader** o una **DataAdapter** . Una funzione chiave di qualsiasi applicazione di database è la capacità di aggiornare i dati archiviati nel database. In ADO.NET, l'aggiornamento dei dati prevede l'uso di **DataAdapter** e <xref:System.Data.DataSet>, e **comando** degli oggetti può anche comprendere l'utilizzo delle transazioni.  

@@ -3,11 +3,11 @@ title: Estensibilità della griglia delle proprietà
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
 ms.openlocfilehash: b7c3e3dbc3ccd95fc12dffd40927b3e2bbbc8226
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43660256"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779299"
 ---
 # <a name="property-grid-extensibliity"></a>Estensibilità della griglia delle proprietà
 Uno sviluppatore può personalizzare la griglia delle proprietà visualizzata quando un'attività specificata viene selezionata all'interno della finestra di progettazione. Questa operazione può essere eseguita per creare un'esperienza di modifica dettagliata. In questo esempio viene illustrato come procedere.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - painting [WPF], with linear gradients
 ms.assetid: 00e0cd04-48c0-4ec5-850e-d321beb37a34
 ms.openlocfilehash: aee9931fc366131ae492891cc4d0fff70b4a4441
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43731803"
+ms.locfileid: "43779997"
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Procedura: disegnare un'area con una sfumatura lineare
 In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Media.LinearGradientBrush> classe disegnare un'area con una sfumatura lineare. Nell'esempio seguente, il <xref:System.Windows.Shapes.Shape.Fill%2A> di un <xref:System.Windows.Shapes.Rectangle> viene disegnato con una sfumatura lineare diagonale che effettua la transizione da giallo a rosso a blu al verde limone.  

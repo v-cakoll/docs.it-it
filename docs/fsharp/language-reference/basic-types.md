@@ -2,12 +2,12 @@
 title: 'Tipi di base (F #)'
 description: 'Individua i tipi di base fondamentali usati nel linguaggio F #.'
 ms.date: 07/09/2018
-ms.openlocfilehash: fdb5e95e102fcf721569156c7fb3a32604fff1dd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937198"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777207"
 ---
 # <a name="basic-types"></a>Tipi di base
 
@@ -38,4 +38,5 @@ Questo argomento elenca i tipi di base che sono definiti nel linguaggio F #. Que
 È possibile eseguire calcoli con numeri interi troppo grande per il tipo integer a 64 bit utilizzando il [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) tipo. `bigint` non è considerato un tipo di base. è un'abbreviazione per `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Vedere anche
-[Riferimenti per il linguaggio F#](index.md)
+
+- [Riferimenti per il linguaggio F#](index.md)

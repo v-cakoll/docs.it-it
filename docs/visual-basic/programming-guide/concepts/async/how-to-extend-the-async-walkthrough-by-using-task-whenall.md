@@ -3,11 +3,11 @@ title: 'Procedura: estendere la procedura dettagliata asincrona tramite Task. wh
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
 ms.openlocfilehash: 650b96926cf66810a93b003b1ebc09ca16212b00
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535141"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43778217"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Procedura: estendere la procedura dettagliata asincrona tramite Task. whenall (Visual Basic)
 È possibile migliorare le prestazioni della soluzione async in [procedura dettagliata: accesso al Web tramite Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) usando il <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> (metodo). Questo metodo mette in attesa più operazioni asincrone, rappresentate come una raccolta di attività.  

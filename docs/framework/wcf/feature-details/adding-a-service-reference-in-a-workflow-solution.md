@@ -3,11 +3,11 @@ title: Aggiunta di un riferimento al servizio in una soluzione del flusso di lav
 ms.date: 03/30/2017
 ms.assetid: 83574cf3-9803-49bc-837f-432936dc9c76
 ms.openlocfilehash: 9dcbf779d948f6d295c2a23f5a09efc5ac989cdd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407234"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776625"
 ---
 # <a name="adding-a-service-reference-in-a-workflow-solution"></a>Aggiunta di un riferimento al servizio in una soluzione del flusso di lavoro
 

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrInteraction_ResKeyNotCreated1
 ms.assetid: 465ccd53-dfdc-47ec-8b3f-9a65ba739314
 ms.openlocfilehash: 691257f76e18fc1fe24584d589e71f99db8d7463
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671777"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777168"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a>Chiave del Registro di sistema &#39; &lt;keyname&gt; &#39; non è stato possibile creare
 Non è stato possibile creare la chiave del Registro di sistema specificata probabilmente a causa di autorizzazioni di sicurezza insufficienti.  

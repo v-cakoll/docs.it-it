@@ -1,17 +1,17 @@
 ---
 title: 'La parola chiave Fixed (F #)'
-description: "Informazioni su come è possibile 'pin' locale nello stack per impedire la raccolta con F # 'fixed' parola chiave."
+description: "Informazioni su come è possibile 'pin' locale nello stack per impedire la raccolta con F # 'fixed' (parola chiave)."
 ms.date: 04/24/2017
-ms.openlocfilehash: 913ee4d7b0f6b2437793d4788e53556d6be6c4db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563876"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779241"
 ---
 # <a name="the-fixed-keyword"></a>La parola chiave Fixed
 
-F # 4.1 introduce il `fixed` (parola chiave), che consente di "bloccare" locale nello stack per evitare che venga raccolto o spostato durante l'operazione di garbage collection.  Viene usato per gli scenari di programmazione di basso livello.
+F # 4.1 introduce il `fixed` parola chiave, che consente di "aggiungere" una variabile locale nello stack per evitare che vengano raccolti o spostate durante la garbage collection.  Viene usato per gli scenari di programmazione di basso livello.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -21,13 +21,13 @@ use ptr = fixed expression
 
 ## <a name="remarks"></a>Note
 
-Estende la sintassi delle espressioni per consentire l'estrazione di un puntatore e l'associazione a un nome che ha impedito a essere raccolti o spostato durante l'operazione di garbage collection.  
+Estende la sintassi delle espressioni per consentire l'estrazione di un puntatore e associarlo a un nome di cui viene impedito di essere raccolti o spostati durante l'operazione di garbage collection.  
 
-Un puntatore da un'espressione è stato risolto tramite il `fixed` parola chiave è associata a un identificatore tramite il `use` (parola chiave).  La semantica di ciò è simile alla gestione delle risorse tramite il `use` (parola chiave).  È stato risolto il puntatore si trova nell'ambito, mentre una volta rientra nell'ambito, non è corretto.  `fixed` non può essere utilizzata all'esterno del contesto di un `use` associazione.  È necessario associare il puntatore a un nome con `use`.
+Un puntatore da un'espressione è stato risolto tramite il `fixed` parola chiave è associata a un identificatore tramite il `use` (parola chiave).  La semantica di questo oggetto è simile alla gestione delle risorse tramite il `use` (parola chiave).  Mentre si trova nell'ambito e una volta esula dall'ambito, non è non è più fisso, il puntatore è stato risolto.  `fixed` non è possibile usare all'esterno del contesto di un `use` associazione.  È necessario associare il puntatore a un nome con `use`.
 
-Utilizzo di `fixed` devono verificarsi all'interno di un'espressione in una funzione o un metodo.  Non può essere utilizzato in un ambito a livello di script o a livello di modulo.
+Uso di `fixed` deve verificarsi all'interno di un'espressione in una funzione o un metodo.  Non può essere utilizzato in un ambito a livello di script o a livello di modulo.
 
-Ad esempio tutto il codice di puntatore, questo è una funzionalità unsafe e genererà un avviso quando viene utilizzato.
+Simile a tutte le code di puntatore, questa è una funzionalità non sicura e genererà un avviso quando viene utilizzato.
 
 ## <a name="example"></a>Esempio
 
@@ -63,4 +63,4 @@ doPointerWork()
 
 ## <a name="see-also"></a>Vedere anche
 
-[NativePtr (modulo)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+- [NativePtr (modulo)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)

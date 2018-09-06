@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
 ms.openlocfilehash: 05ca122f425f929264669ca4914f87e850154246
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556011"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43778360"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Procedura: creare un controllo ToolStrip di Windows Form di base con elementi standard utilizzando la finestra di progettazione
 La procedura seguente viene illustrato come creare un <xref:System.Windows.Forms.ToolStrip> e aggiungere sette <xref:System.Windows.Forms.ToolStripButton> controlli che rappresentano le attività tipiche.  
