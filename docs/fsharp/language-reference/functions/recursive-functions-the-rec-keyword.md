@@ -1,18 +1,17 @@
 ---
 title: 'Funzioni ricorsive: parola chiave rec (F#)'
-description: "Informazioni su come la parola chiave 'rec' F # viene utilizzata con la parola chiave 'let' per definire una funzione ricorsiva."
+description: "Informazioni su come la parola chiave 'rec' di F # viene usata con la parola chiave 'let'. per definire una funzione ricorsiva."
 ms.date: 05/16/2016
-ms.openlocfilehash: 6039a48eae2b16aa1d82617176460d727a878d87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562921"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879266"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Funzioni ricorsive: parola chiave rec
 
-Il `rec` parola chiave viene utilizzata in combinazione con il `let` (parola chiave) per definire una funzione ricorsiva.
-
+Il `rec` parola chiave viene usata in combinazione con il `let` parola chiave per definire una funzione ricorsiva.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,25 +29,26 @@ function2-body
 ```
 
 ## <a name="remarks"></a>Note
-Funzioni ricorsive, le funzioni che chiamano se stesse, vengono identificate in modo esplicito nel linguaggio F #. Ciò rende disponibile l'identificatore che viene definito nell'ambito della funzione.
 
-Il codice seguente viene illustrata una funzione ricorsiva che calcola il *n*o numero di Fibonacci.
+Funzioni ricorsive, le funzioni che chiamano se stesse, vengono identificate in modo esplicito nel linguaggio F #. Ciò rende disponibili l'identificatore che viene definito nell'ambito della funzione.
+
+Il codice seguente illustra una funzione ricorsiva che calcola la *n*<sup>th</sup> numero di Fibonacci.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
 >[!NOTE]
-In pratica, codice come quello precedente è causano un elevato utilizzo di memoria e tempo processore perché prevede la il ricalcolo di valori calcolati in precedenza.
+In pratica, codice come quello precedente è dispendioso di memoria e tempo processore dal momento che implica il ricalcolo di valori calcolati in precedenza.
 
-
-I metodi sono implicitamente ricorsiva all'interno del tipo; non è necessario aggiungere il `rec` (parola chiave). Associazioni let nelle classi non sono implicitamente ricorsivi.
-
+I metodi sono implicitamente ricorsivo all'interno del tipo; non è necessario aggiungere il `rec` (parola chiave). Associazioni let nelle classi sono implicitamente non ricorsivo.
 
 ## <a name="mutually-recursive-functions"></a>Funzioni ricorsive reciproche
-Talvolta le funzioni sono *ricorsive reciproche*, ovvero le chiamate formano un cerchio, in cui una funzione chiama un'altra che a sua volta chiama la prima, con un numero qualsiasi di chiamate tra. È necessario definire tali funzioni in quella `let` binding, utilizzando il `and` (parola chiave) per collegarle.
 
-Nell'esempio seguente vengono illustrati due reciprocamente funzioni ricorsive.
+Le funzioni sono talvolta *ricorsive reciproche*, vale a dire le chiamate formano un cerchio, in cui una funzione chiama un'altra che a sua volta chiama la prima, con qualsiasi numero di chiamate tra. È necessario definire tali funzioni tra loro in quello `let` binding, utilizzando il `and` parola chiave per collegarli tra loro.
+
+Nell'esempio seguente vengono illustrati due si escludono a vicenda funzioni ricorsive.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
 
 ## <a name="see-also"></a>Vedere anche
-[Funzioni](index.md)
+
+- [Funzioni](index.md)

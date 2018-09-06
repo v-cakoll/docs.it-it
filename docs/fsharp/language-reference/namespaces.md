@@ -1,18 +1,17 @@
 ---
 title: Spazi dei nomi (F#)
-description: 'Informazioni su come uno spazio dei nomi in F # consente di organizzare il codice in aree di funzionalità correlate, consentendo di collegare un nome a un raggruppamento di elementi del programma.'
+description: 'Informazioni su come uno spazio dei nomi in F # consente di organizzare il codice in aree di funzionalità correlate grazie alla possibilità di associare un nome a un raggruppamento di elementi di programma.'
 ms.date: 04/24/2017
-ms.openlocfilehash: 151079864f18fff79dac108889b68b3acf1566a1
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957762"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881889"
 ---
 # <a name="namespaces"></a>Spazi dei nomi
 
 Uno spazio dei nomi consente di organizzare il codice in aree di funzionalità correlate perché consente di collegare un nome a un raggruppamento di elementi di programma.
-
 
 ## <a name="syntax"></a>Sintassi
 
@@ -21,23 +20,24 @@ namespace [parent-namespaces.]identifier
 ```
 
 ## <a name="remarks"></a>Note
+
 Se si desidera inserire il codice in uno spazio dei nomi, la prima dichiarazione nel file deve dichiarare lo spazio dei nomi. Il contenuto dell'intero file diventa quindi parte dello spazio dei nomi.
 
-Spazi dei nomi non può contenere direttamente le funzioni e valori. Invece, funzioni e i valori devono essere inclusi nei moduli e sono inclusi negli spazi dei nomi. Spazi dei nomi può contenere tipi di moduli.
+Gli spazi dei nomi non può contenere direttamente i valori e le funzioni. Al contrario, i valori e le funzioni devono essere inclusi nei moduli e i moduli sono inclusi negli spazi dei nomi. Gli spazi dei nomi può contenere tipi di moduli.
 
-Spazi dei nomi possono essere dichiarate in modo esplicito con la parola chiave dello spazio dei nomi o in modo implicito quando si dichiara un modulo. Per dichiarare uno spazio dei nomi in modo esplicito, utilizzare la parola chiave dello spazio dei nomi seguita dal nome dello spazio dei nomi. Nell'esempio seguente viene illustrato un file di codice che dichiara uno spazio dei nomi widget con un tipo e un modulo incluso nello spazio dei nomi.
+Gli spazi dei nomi possono essere dichiarate in modo esplicito con la parola chiave dello spazio dei nomi o in modo implicito quando si dichiara un modulo. Per dichiarare uno spazio dei nomi in modo esplicito, usare la parola chiave dello spazio dei nomi seguita dal nome dello spazio dei nomi. Nell'esempio seguente viene illustrato un file di codice che dichiara uno spazio dei nomi widget con un tipo e un modulo incluso nello spazio dei nomi.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
-Se l'intero contenuto del file in un modulo, è inoltre possibile dichiarare spazi dei nomi in modo implicito tramite il `module` (parola chiave) e fornendo il nuovo nome dello spazio dei nomi nel nome del modulo completo. Nell'esempio seguente viene illustrato un file di codice che dichiara uno spazio dei nomi `Widgets` e un modulo `WidgetsModule`, che contiene una funzione.
+Se l'intero contenuto del file è in uno dei moduli, è anche possibile dichiarare gli spazi dei nomi in modo implicito usando la `module` (parola chiave) e fornendo il nuovo nome dello spazio dei nomi nel nome completo del modulo. L'esempio seguente illustra un file di codice che dichiara uno spazio dei nomi `Widgets` e un modulo `WidgetsModule`, che contiene una funzione.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6401.fs)]
 
-Il codice seguente equivale a quello precedente, ma il modulo è una dichiarazione di modulo locale. In tal caso, lo spazio dei nomi deve essere presente nella propria riga.
+Il codice seguente è equivalente al codice precedente, ma il modulo è una dichiarazione di modulo locale. In tal caso, lo spazio dei nomi deve essere visualizzato nella riga a sé stante.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/namespaces/snippet6402.fs)]
 
-Se nello stesso file in uno o più spazi, è necessaria più di un modulo, è necessario utilizzare le dichiarazioni di modulo locale. Quando si utilizzano dichiarazioni di modulo locali, è possibile utilizzare lo spazio dei nomi completo nelle dichiarazioni di modulo. Il codice seguente viene illustrato un file con una dichiarazione dello spazio dei nomi e due dichiarazioni di modulo locale. In questo caso, i moduli sono contenuti direttamente nello spazio dei nomi; non vi è alcun modulo creato in modo implicito con lo stesso nome del file. Qualsiasi altro codice nel file, ad esempio un `do` l'associazione, è nello spazio dei nomi ma non nei moduli interni, pertanto è necessario qualificare il membro modulo `widgetFunction` utilizzando il nome del modulo.
+Se nello stesso file in uno o più spazi dei nomi è necessaria più di un modulo, è necessario usare le dichiarazioni di modulo locale. Quando si usano le dichiarazioni di modulo locale, è possibile usare lo spazio dei nomi qualificato nelle dichiarazioni di modulo. Il codice seguente illustra un file con una dichiarazione dello spazio dei nomi e due dichiarazioni di modulo locale. In questo caso, i moduli sono contenuti direttamente nello spazio dei nomi; non è disponibile alcun modulo creato in modo implicito con lo stesso nome del file. Qualsiasi altro codice nel file, ad esempio un `do` binding, è nello spazio dei nomi, ma non in moduli interni, pertanto è necessario qualificare i membri di modulo `widgetFunction` usando il nome del modulo.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6403.fs)]
 
@@ -48,31 +48,33 @@ Module1 10 20
 Module2 5 6
 ```
 
-Per ulteriori informazioni, vedere [moduli](modules.md).
+Per altre informazioni, vedere [moduli](modules.md).
 
 ## <a name="nested-namespaces"></a>Spazi dei nomi annidati
+
 Quando si crea uno spazio dei nomi annidato, è necessario specificarla. In caso contrario, si crea un nuovo spazio dei nomi di primo livello. Rientro viene ignorato nelle dichiarazioni dello spazio dei nomi.
 
 Nell'esempio seguente viene illustrato come dichiarare uno spazio dei nomi annidato.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6404.fs)]
 
-## <a name="namespaces-in-files-and-assemblies"></a>Spazi dei nomi di file e assembly
-Spazi dei nomi può estendersi su più file in un singolo progetto o di una compilazione. Il termine *frammento dello spazio dei nomi* descrive la parte di uno spazio dei nomi che è incluso in un file. Spazi dei nomi può occupare più assembly. Ad esempio, il `System` spazio dei nomi include l'intero .NET Framework, si estende su molti assembly che contiene molti spazi dei nomi annidati.
+## <a name="namespaces-in-files-and-assemblies"></a>Spazi dei nomi nel file e assembly
 
+Gli spazi dei nomi possono estendersi su più file in una compilazione o di singolo progetto. Il termine *frammento dello spazio dei nomi* descrive la parte di uno spazio dei nomi che è incluso in un unico file. Gli spazi dei nomi può anche estendersi su più assembly. Ad esempio, il `System` dello spazio dei nomi include l'intero .NET Framework, si estende su molti assembly che contiene molti spazi dei nomi annidati.
 
-## <a name="global-namespace"></a>Namespace globale
-Lo spazio dei nomi predefiniti `global` per inserire i nomi dello spazio dei nomi principali di .NET.
+## <a name="global-namespace"></a>Global Namespace
+
+Lo spazio dei nomi predefiniti `global` per inserire nomi nello spazio dei nomi di livello superiore di .NET.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6407.fs)]
 
-È possibile inoltre utilizzare globale per fare riferimento il primo livello dello spazio dei nomi .NET, ad esempio, per risolvere i conflitti di nome con altri spazi dei nomi.
+È possibile inoltre utilizzare globali fanno riferimento a spazio dei nomi principale di .NET, ad esempio, per risolvere i conflitti di nome con altri spazi dei nomi.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
 
 ## <a name="recursive-namespaces"></a>Spazi dei nomi ricorsiva
 
-F # 4.1 introduce la nozione di spazi dei nomi che consentono di tutto il codice indipendente reciprocamente sono ricorsivi.  Questa operazione viene eseguita tramite `namespace rec`.  Utilizzo di `namespace rec` possibile tentare di risolvere alcune difficoltà in non è in grado di scrivere codice reciprocamente referenziale tra i tipi e i moduli.  Di seguito è riportato un esempio di questo oggetto:
+F # 4.1 introduce la nozione di spazi dei nomi che consentono di tutto il codice indipendente si escludono a vicenda sono ricorsivi.  Questa operazione viene eseguita tramite `namespace rec`.  Uso di `namespace rec` possibile tentare di risolvere alcune aree problematiche in cui non riesca a scrivere il codice si escludono a vicenda referenziali tra i tipi e i moduli.  Di seguito è riportato un esempio:
 
 ```fsharp
 namespace rec MutualReferences
@@ -113,13 +115,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Si noti che l'eccezione `DontSqueezeTheBananaException` e la classe `Banana` fanno riferimento a altro.  Inoltre, il modulo `BananaHelpers` e la classe `Banana` anche fare riferimento a altro.  Ciò non sarebbe possibile esprimere in F #, se è stato rimosso il `rec` (parola chiave) dal `MutualReferences` dello spazio dei nomi.
+Si noti che l'eccezione `DontSqueezeTheBananaException` e la classe `Banana` entrambe fanno riferimento reciproco.  Inoltre, il modulo `BananaHelpers` e la classe `Banana` riferimento anche a altro.  Ciò non sarebbe possibile esprimere in F # se sono stati rimossi i `rec` parola chiave dal `MutualReferences` dello spazio dei nomi.
 
-Questa funzionalità è anche disponibile per primo livello [moduli](modules.md) in F # 4.1 o versione successiva.
+Questa funzionalità è disponibile anche per primo livello [moduli](modules.md) in F # 4.1 o versione successiva.
 
 ## <a name="see-also"></a>Vedere anche
-[Riferimenti per il linguaggio F#](index.md)
 
-[Moduli](modules.md)
-
-[1009-F # RFC Fi - Consenti moduli e tipi reciprocamente referenziali su maggiori ambiti all'interno dei file](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [Riferimenti per il linguaggio F#](index.md)
+- [Moduli](modules.md)
+- [1009-F # RFC FS - Consenti moduli e tipi referenziali si escludono a vicenda su ambiti più ampi all'interno dei file](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

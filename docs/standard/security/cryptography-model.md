@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ced7ed2cb8d3ae3bb24211c6e7dafd1744fb9559
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d74ce08197ac76a601202da8e35ca6f619207076
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587456"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885747"
 ---
 # <a name="net-framework-cryptography-model"></a>Modello di crittografia di .NET Framework
 .NET Framework fornisce le implementazioni di numerosi algoritmi di crittografia standard. Questi algoritmi sono facili da usare e le loro proprietà predefinite sono il più sicure possibile. Inoltre, il modello di crittografia di .NET Framework di ereditarietà degli oggetti, progettazione tramite flusso e configurazione è estremamente estendibile.  
@@ -50,7 +50,7 @@ ms.locfileid: "33587456"
  Common Language Runtime usa una progettazione orientata al flusso per l'implementazione di algoritmi simmetrici e algoritmi hash. La base di questa progettazione è la classe <xref:System.Security.Cryptography.CryptoStream>, che deriva dalla classe <xref:System.IO.Stream>. Gli oggetti di crittografia basati sul flusso supportano una singola interfaccia standard (`CryptoStream`) per la gestione della porzione di trasferimento di dati dell'oggetto. Poiché tutti gli oggetti sono basati su un'interfaccia standard, è possibile concatenare più oggetti (ad esempio un oggetto hash seguito da un oggetto di crittografia) ed eseguire più operazioni sui dati senza che sia necessaria un'archiviazione intermedia. Il modello di flusso consente inoltre di creare oggetti da oggetti più piccoli. Ad esempio, un algoritmo di crittografia e hash combinato può essere visto come un singolo oggetto flusso, anche se questo oggetto può essere costituito da un set di oggetti flusso.  
   
 ## <a name="cryptographic-configuration"></a>Configurazione della crittografia  
- La configurazione della crittografia consente di risolvere un'implementazione specifica di un algoritmo in un nome di algoritmo, garantendo estendibilità delle classi di crittografia .NET Framework. È possibile aggiungere la propria implementazione hardware o software di un algoritmo e mappare l'implementazione al nome di algoritmo desiderato. Se un algoritmo non è specificato nel file di configurazione, vengono usate le impostazioni predefinite. Per ulteriori informazioni sulla configurazione della crittografia, vedere [configurazione delle classi di crittografia](../../../docs/framework/configure-apps/configure-cryptography-classes.md).  
+ La configurazione della crittografia consente di risolvere un'implementazione specifica di un algoritmo in un nome di algoritmo, garantendo estendibilità delle classi di crittografia .NET Framework. È possibile aggiungere la propria implementazione hardware o software di un algoritmo e mappare l'implementazione al nome di algoritmo desiderato. Se un algoritmo non è specificato nel file di configurazione, vengono usate le impostazioni predefinite. Per altre informazioni sulla configurazione della crittografia, vedere [configurazione di classi di crittografia](../../../docs/framework/configure-apps/configure-cryptography-classes.md).  
   
 ## <a name="choosing-an-algorithm"></a>Scelta di un algoritmo  
  È possibile scegliere un algoritmo per motivi diversi: ad esempio, per l'integrità dei dati, per la privacy dei dati o per generare una chiave. Gli algoritmi simmetrici e hash sono finalizzati alla protezione dei dati per motivi di integrità (proteggere da eventuali modifiche) o di privacy (impedire la visualizzazione). Gli algoritmi hash vengono usati principalmente per l'integrità dei dati.  
@@ -87,6 +87,6 @@ ms.locfileid: "33587456"
   
     -   <xref:System.Security.Cryptography.Rfc2898DeriveBytes>  
   
-## <a name="see-also"></a>Vedere anche  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
- 
+## <a name="see-also"></a>Vedere anche
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  

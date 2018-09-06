@@ -1,17 +1,17 @@
 ---
 title: Celle di riferimento (F#)
-description: 'Informazioni su come le celle di riferimento di F # sono percorsi di archiviazione che consentono di creare valori modificabili con semantica di riferimento.'
+description: 'Informazioni su come le celle di riferimento di F # sono posizioni di archiviazione che consentono di creare valori modificabili con semantica di riferimento.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
-ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
+ms.openlocfilehash: 133aec6b162a13306a05c9afa172f859890565eb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34149062"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892421"
 ---
 # <a name="reference-cells"></a>Celle di riferimento
 
-*Celle di riferimento* sono percorsi di archiviazione che consentono di creare valori modificabili con semantica di riferimento.
+*Fare riferimento alle celle* sono posizioni di archiviazione che consentono di creare valori modificabili con semantica di riferimento.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -20,6 +20,7 @@ ref expression
 ```
 
 ## <a name="remarks"></a>Note
+
 L'operatore `ref` viene utilizzato prima di un valore per creare una nuova cella di riferimento che incapsuli il valore. È quindi possibile modificare il valore sottostante, in quanto è modificabile.
 
 Una cella di riferimento contiene un valore effettivo e non solo un indirizzo. Quando si crea una cella di riferimento utilizzando l'operatore `ref`, si crea una copia del valore sottostante come valore modificabile incapsulato.
@@ -73,21 +74,21 @@ L'output è indicato di seguito.
 
 Il campo `contents` viene fornito per garantire compatibilità con altre versioni di ML e comporta la generazione di un avviso durante la compilazione. Per disabilitare l'avviso, utilizzare l'opzione del compilatore `--mlcompatibility`. Per altre informazioni, vedere [Opzioni del compilatore](compiler-options.md).
 
-Nell'esempio di codice seguente viene illustrato l'utilizzo di celle di riferimento nel passaggio dei parametri. Il tipo di Incrementatore ha un metodo Increment che accetta un parametro che include il tipo di parametro byref. Byref nel tipo di parametro indica che i chiamanti devono passare una cella di riferimento o l'indirizzo di una variabile tipica del tipo specificato, in questo caso int Il codice restante viene illustrato come chiamare Increment con entrambi i tipi di argomenti e viene illustrato come utilizzare l'operatore di riferimento in una variabile per creare una cella di riferimento (ref myDelta1). Viene quindi illustrato l'utilizzo dell'operatore address-of (&amp;) per generare un argomento appropriato. Infine, l'incremento viene chiamato nuovamente utilizzando una cella di riferimento viene dichiarata utilizzando un binding let. L'ultima riga del codice viene illustrato come utilizzare il! operatore per dereferenziare la cella di riferimento per la stampa.
+Nell'esempio di codice seguente viene illustrato l'utilizzo di celle di riferimento nel passaggio dei parametri. Il tipo Incrementatore dispone di un metodo che accetta un parametro che include il tipo di parametro byref incremento. Byref nel tipo di parametro indica che i chiamanti devono passare una cella di riferimento o l'indirizzo di una variabile tipica del tipo specificato, in questo caso tipo int. Il codice rimanente viene illustrato come chiamare incremento con entrambi i tipi di argomenti e viene illustrato l'utilizzo dell'operatore di riferimento su una variabile per creare una cella di riferimento (ref myDelta1). Viene quindi illustrato l'utilizzo dell'operatore address-of (&amp;) per generare un argomento appropriato. Infine, l'incremento viene chiamato nuovamente utilizzando una cella di riferimento che viene dichiarata utilizzando un'associazione "Let". L'ultima riga del codice viene illustrato come utilizzare i! operatore per dereferenziare la cella di riferimento per la stampa.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2204.fs)]
 
-Per ulteriori informazioni su come passare per riferimento, vedere [parametri e argomenti](parameters-and-arguments.md).
+Per altre informazioni su come passare per riferimento, vedere [parametri e argomenti](parameters-and-arguments.md).
 
 >[!NOTE]
-I programmatori c# devono sapere che ref funziona in modo diverso in F # rispetto a quello usato in c#. Ad esempio, l'utilizzo di riferimento quando si passa un argomento non hanno lo stesso effetto in F # a quanto accade in c#.
+I programmatori c# devono conoscere che tale riferimento funziona in modo diverso in F # rispetto a nel linguaggio c#. Ad esempio, l'uso di ref quando si passa un argomento non hanno lo stesso effetto in F # come accade in c#.
 
 >[!NOTE]
-`mutable` le variabili possono essere automaticamente promossa diventando `'a ref` acquisiti da una chiusura; vedere [valori](values/index.md).
+`mutable` le variabili possono essere automaticamente promossa a `'a ref` acquisiti da una chiusura; vedere [valori](values/index.md).
 
 ## <a name="consuming-c-ref-returns"></a>Utilizzo in c# `ref` restituisce
 
-A partire da F # 4.1, è possibile utilizzare `ref` restituisce generato in c#.  Il risultato della chiamata di questo tipo è un `byref<_>` puntatore.
+A partire da F # 4.1, è possibile utilizzare `ref` restituisce generato nel linguaggio c#.  Il risultato di una chiamata di questo tipo è un `byref<_>` puntatore.
 
 Il seguente metodo c#:
 
@@ -112,7 +113,7 @@ namespace RefReturns
 }
 ```
 
-Può essere trasparente chiamato da F # con alcuna sintassi particolare:
+Può essere trasparente chiamato da F # con alcuna sintassi speciale:
 
 ```fsharp
 open RefReturns
@@ -122,19 +123,17 @@ let consumeRefReturn() =
     ()
 ```
 
-È inoltre possibile dichiarare funzioni che richiedono un `ref` restituire come input, ad esempio:
+È anche possibile dichiarare funzioni che richiedono un `ref` restituire come input, ad esempio:
 
 ```fsharp
 let f (x: byref<int>) = &x
 ```
 
-Non è attualmente possibile generare un `ref` restituito in F # che poteva essere usata in c#.
+Non è attualmente possibile generare un `ref` restituito in F # che può essere usato in c#.
 
 ## <a name="see-also"></a>Vedere anche
-[Riferimenti per il linguaggio F#](index.md)
 
-[Parametri e argomenti](parameters-and-arguments.md)
-
-[Riferimenti per simboli e operatori](symbol-and-operator-reference/index.md)
-
-[Valori](values/index.md)
+- [Riferimenti per il linguaggio F#](index.md)
+- [Parametri e argomenti](parameters-and-arguments.md)
+- [Riferimenti per simboli e operatori](symbol-and-operator-reference/index.md)
+- [Valori](values/index.md)

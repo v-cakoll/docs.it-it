@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38f6e16616ad931641539d3ae164381ddd9ad941
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a8f806a1f1f7840f21e82d77d1b639b9318259e7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931725"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885181"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Procedura dettagliata: Prima applicazione desktop WPF
 
@@ -38,7 +38,7 @@ Questa procedura dettagliata include i passaggi seguenti:
 Al termine della procedura dettagliata, verrà creata un'applicazione Windows che consente agli utenti di visualizzare rapporti spese per gli utenti selezionati autonoma. L'applicazione è costituita da diverse pagine WPF ospitate in una finestra di tipo browser.
 
 > [!TIP]
-> Il codice di esempio che viene usato per compilare questa procedura dettagliata è disponibile per Visual Basic e c# al [Introduzione alla creazione di applicazioni WPF](http://go.microsoft.com/fwlink/?LinkID=160008).
+> Il codice di esempio che viene usato per compilare questa procedura dettagliata è disponibile per Visual Basic e c# al [Introduzione alla creazione di applicazioni WPF](https://go.microsoft.com/fwlink/?LinkID=160008).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -326,7 +326,7 @@ La figura seguente mostra i risultati di ciò che appena aggiunto:
 
 1. Aprire *`ExpenseItHome.xaml`*.
 
-2. Aggiungere un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> gestore dell'evento per il <xref:System.Windows.Controls.Button> elemento. Per altre informazioni, vedere [procedura: creare un gestore eventi semplice](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+2. Aggiungere un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> gestore dell'evento per il <xref:System.Windows.Controls.Button> elemento. Per altre informazioni, vedere [procedura: creare un gestore eventi semplice](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -464,7 +464,7 @@ In questa sezione, si aggiornerà l'interfaccia utente per ogni elemento negli e
 
     [!code-xaml[ExpenseIt#30](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#30)]
 
-4. Applica i modelli per la <xref:System.Windows.Controls.DataGrid> colonne che consentono di visualizzare la spesa i dati del report.
+4. Sostituire il <xref:System.Windows.Controls.DataGridTextColumn> elementi con <xref:System.Windows.Controls.DataGridTemplateColumn> sotto il <xref:System.Windows.Controls.DataGrid> elemento e applica i modelli a essi.
 
     [!code-xaml[ExpenseIt#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#32)]
 

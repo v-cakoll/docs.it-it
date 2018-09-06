@@ -1,21 +1,21 @@
 ---
 title: Operatori nullable (F#)
-description: 'Informazioni sugli operatori ammette valori null che sono disponibili in F # linguaggio di programmazione.'
+description: 'Informazioni sugli operatori nullable che sono disponibili nel linguaggio di programmazione F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 63ad7da2d584b96eee8765b57fc671befbcbd38b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566350"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036779"
 ---
 # <a name="nullable-operators"></a>Operatori nullable
 
-Operatori nullable sono operatori di confronto o aritmetici binari compatibili con i tipi aritmetici nullable su uno o entrambi i lati. Tipi nullable si verificano di frequente quando si lavora con dati provenienti da origini come i database che consentono valori null al posto dei valori effettivi. Operatori nullable vengono spesso utilizzati nelle espressioni di query. Oltre agli operatori ammette valori null per le operazioni aritmetiche e di confronto, è possono utilizzare gli operatori di conversione per la conversione tra tipi nullable. Esistono anche versioni nullable di alcuni operatori di query.
-
+Operatori nullable sono operatori di confronto o aritmetici binari che funzionano con i tipi nullable aritmetici in uno o entrambi i lati. Tipi nullable si verificano di frequente quando si lavora con dati provenienti da origini quali i database che ammettono valori null al posto dei valori effettivi. Operatori nullable vengono spesso usati nelle espressioni di query. Oltre agli operatori che ammette valori null per il confronto e aritmetiche, gli operatori di conversione è utilizzabile per eseguire la conversione tra i tipi nullable. Esistono anche versioni nullable di alcuni operatori di query.
 
 ## <a name="table-of-nullable-operators"></a>Tabella degli operatori Nullable
-Nella tabella seguente sono elencati gli operatori che ammette valori Null supportati nel linguaggio F #.
+
+La tabella seguente elenca gli operatori nullable supportati nel linguaggio F #.
 
 |Ammette valori null a sinistra|Ammette valori null a destra|Entrambi i lati ammette valori null|
 |---|---|---|
@@ -32,11 +32,12 @@ Nella tabella seguente sono elencati gli operatori che ammette valori Null suppo
 |[?%](https://msdn.microsoft.com/library/44297bba-1bd9-4ed2-a848-f1e1e598db87)|[%?](https://msdn.microsoft.com/library/a4c178e5-eec4-42e8-847f-90b24fc609fe)|[?%?](https://msdn.microsoft.com/library/dd555f20-1be3-4b8d-81f1-bf1921e62fda)|
 
 ## <a name="remarks"></a>Note
-Operatori nullable sono inclusi nel [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007) modulo nello spazio dei nomi [spazio](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d). Il tipo di dati ammette valori null è `System.Nullable<'T>`.
 
-Nelle espressioni di query, i tipi nullable si verificano quando si selezionano dati da un'origine dati che ammette valori null anziché i valori. In un database di SQL Server, ogni colonna di dati in una tabella dispone di un attributo che indica se sono consentiti valori null. Se sono consentiti valori null, i dati restituiti dal database possono contenere valori null non può essere rappresentato da un tipo di dati primitivi, ad esempio `int`, `float`e così via. Di conseguenza, i dati vengono restituiti come un `System.Nullable<int>` anziché `int`, e `System.Nullable<float>` anziché `float`. Il valore effettivo può essere ottenuto da un `System.Nullable<'T>` oggetto utilizzando il `Value` , proprietà ed è possibile determinare se un `System.Nullable<'T>` oggetto ha un valore chiamando il `HasValue` metodo. Un altro metodo utile è la `System.Nullable<'T>.GetValueOrDefault` metodo, che consente di ottenere il valore o un valore predefinito del tipo appropriato. Il valore predefinito è una forma di valore "zero", ad esempio 0, 0,0, o `false`.
+Gli operatori che ammette valori null sono inclusi nel [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007) modulo nello spazio dei nomi [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d). Il tipo di dati ammette valori null è `System.Nullable<'T>`.
 
-Tipi nullable possono essere convertiti utilizzando gli operatori di conversione di solito, ad esempio i tipi primitivi non nullable `int` o `float`. È anche possibile eseguire la conversione da un tipo che ammette valori null a un altro tipo che ammette valori null, utilizzare gli operatori di conversione per i tipi nullable. Gli operatori di conversione appropriata hanno lo stesso nome di quelle standard, ma sono in un modulo separato, il [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e) modulo il [spazio](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d) dello spazio dei nomi. In genere, si apre questo spazio dei nomi quando si lavora con le espressioni di query. In tal caso, è possibile utilizzare gli operatori di conversione che ammette valori null aggiungendo il prefisso `Nullable.` all'operatore di conversione appropriate, come illustrato nel codice seguente.
+Nelle espressioni di query, tipi nullable si verificano quando si selezionano dati da un'origine dati che ammette valori null anziché i valori. In un database di SQL Server, ogni colonna di dati in una tabella ha un attributo che indica se sono consentiti valori null. Se sono consentiti valori null, i dati restituiti dal database possono contenere valori null che non può essere rappresentato da un tipo di dati primitivi, ad esempio `int`, `float`e così via. Di conseguenza, i dati vengono restituiti come una `System.Nullable<int>` invece di `int`, e `System.Nullable<float>` invece di `float`. Il valore effettivo può essere ottenuto da un `System.Nullable<'T>` oggetto usando il `Value` proprietà ed è possibile determinare se un `System.Nullable<'T>` oggetto ha un valore tramite una chiamata di `HasValue` (metodo). Un'altra utile soluzione consiste di `System.Nullable<'T>.GetValueOrDefault` metodo, che è possibile ottenere il valore o un valore predefinito del tipo appropriato. Il valore predefinito è una forma di valore "zero", ad esempio 0, 0.0, o `false`.
+
+Tipi nullable possono essere convertiti per i tipi primitivi non nullable utilizzando gli operatori di conversione consueto, ad esempio `int` o `float`. È anche possibile convertire da un tipo che ammette valori null in un altro tipo che ammette valori null usando gli operatori di conversione per i tipi nullable. Gli operatori di conversione appropriata hanno lo stesso nome di quelle standard, ma sono in un modulo separato, il [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e) modulo nel [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d) dello spazio dei nomi. In genere, si apre questo spazio dei nomi quando si lavora con le espressioni di query. In tal caso, è possibile usare gli operatori di conversione che ammette valori null aggiungendo il prefisso `Nullable.` per l'operatore di conversione appropriate, come illustrato nel codice seguente.
 
 ```fsharp
 open Microsoft.FSharp.Linq
@@ -52,9 +53,9 @@ printfn "%f" (float nullableFloat)
 
 L'output è `10.000000`.
 
-Query nei campi di dati ammette valori null, ad esempio `sumByNullable`, esiste anche per l'utilizzo nelle espressioni di query. Gli operatori di query per i tipi che non ammette valori null non sono compatibili con tipo con i tipi nullable, è necessario utilizzare la versione dell'operatore di query appropriata che ammette valori null quando si lavora con valori di dati ammette valori null. Per ulteriori informazioni, vedere [espressioni di Query](../query-expressions.md).
+Query degli operatori nei campi di dati ammette valori null, ad esempio `sumByNullable`, esistono anche per l'utilizzo nelle espressioni di query. Gli operatori di query per i tipi non nullable non sono compatibili con tipo con i tipi nullable, pertanto è necessario usare la versione che ammette valori null dell'operatore di query appropriata quando si lavora con valori di dati ammette valori null. Per altre informazioni, vedere [espressioni di Query](../query-expressions.md).
 
-Nell'esempio seguente viene illustrato l'utilizzo degli operatori che ammette valori null in un'espressione di query F #. La prima query viene illustrato come scrivere una query senza un operatore che ammette valori null. la seconda query viene illustrata una query equivalente che utilizza un operatore che ammette valori null. Per il contesto completo, incluso come configurare il database per utilizzare il codice di esempio, vedere [procedura dettagliata: accesso a un Database SQL dal provider di tipi con](../../tutorials/type-providers/accessing-a-sql-database.md).
+Nell'esempio seguente viene illustrato l'utilizzo degli operatori che ammette valori null in un'espressione di query F #. La prima query Mostra come scrivere una query senza un operatore che ammette valori null; la seconda query viene illustrata una query equivalente che usa un operatore che ammette valori null. Per il contesto completo, incluse le procedure configurare il database per usare questo codice di esempio, vedere [procedura dettagliata: accesso a un Database SQL dal provider di tipi utilizzando](../../tutorials/type-providers/accessing-a-sql-database.md).
 
 ```fsharp
 open System
@@ -84,6 +85,5 @@ query {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Provider di tipi](../../tutorials/type-providers/index.md)
-
-[Espressioni di query](../query-expressions.md)
+- [Provider di tipi](../../tutorials/type-providers/index.md)
+- [Espressioni di query](../query-expressions.md)

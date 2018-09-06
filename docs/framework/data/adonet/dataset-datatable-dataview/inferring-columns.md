@@ -3,11 +3,11 @@ title: Deduzione di colonne
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
 ms.openlocfilehash: 56de4b4d6cf704473ec46957625ad1c376f595c2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671410"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891353"
 ---
 # <a name="inferring-columns"></a>Deduzione di colonne
 Una volta che ADO.NET ha determinato quali elementi di un documento XML devono essere inferiti come tabelle per un tipo <xref:System.Data.DataSet>, vengono inferite le colonne di tali tabelle. ADO.NET 2.0 è stato introdotto un nuovo motore di inferenza dello schema che consente di inferire un tipo di dati fortemente tipizzato per ognuno **simpleType** elemento. Nelle versioni precedenti, il tipo di dati di un derivato **simpleType** elemento era sempre **xsd: String**.  

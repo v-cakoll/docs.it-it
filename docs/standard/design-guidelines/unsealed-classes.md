@@ -9,27 +9,28 @@ helpviewer_keywords:
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 672d36c6b888ee9a89a76d5d417a7a7e92dd8f36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef0f1c4c9b2d1928d6f96d62ab12df9786756498
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571661"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891377"
 ---
 # <a name="unsealed-classes"></a>Classi non sealed
-Classi sealed non possono essere ereditate da e impediscono l'estensibilità. Al contrario, le classi che possono essere ereditate da sono dette classi non sealed.  
+Le classi sealed non possono essere ereditate da, e consentirne l'estendibilità. Al contrario, le classi che possono essere ereditate da vengono denominate classi non sealed.  
   
  **✓ CONSIDER** utilizzando classi non sealed con nessuna aggiunti i membri virtuali o protetti come un ottimo modo per fornire a basso costo ancora molto apprezzato estensibilità per un framework.  
   
- Gli sviluppatori spesso necessario ereditare da classi non sealed in modo da aggiungere i membri di praticità, ad esempio l'overload del metodo, nuovi metodi o costruttori personalizzati. Ad esempio, `System.Messaging.MessageQueue` non bloccato e pertanto consente agli utenti di creare code personalizzate tale impostazione predefinita a un percorso di coda specifica o per aggiungere metodi personalizzati che semplificano l'API per scenari specifici.  
+ Gli sviluppatori spesso vogliono ereditare da classi non sealed in modo da aggiungere i membri di praticità, ad esempio costruttori personalizzati, nuovi metodi o gli overload del metodo. Ad esempio, `System.Messaging.MessageQueue` è bloccato e pertanto consente agli utenti di creare code personalizzate che per impostazione predefinita un percorso della coda specifica o per aggiungere metodi personalizzati che consentono di semplificare l'API per scenari specifici.  
   
- Le classi sono non sealed per impostazione predefinita nei linguaggi di programmazione più, e questo è il valore predefinito consigliato per la maggior parte delle classi in Framework. L'estendibilità offerta dal tipi non sealed è molto apprezzato dagli utenti framework e molto costosi da fornire a causa dei costi relativamente basso di test associati a tipi non sealed.  
+ Le classi sono sealed o non sealed per impostazione predefinita nei linguaggi di programmazione più, e questo è anche l'impostazione predefinita consigliata per la maggior parte delle classi nel Framework. L'estendibilità ottenibili da tipi non sealed è molto apprezzato dagli utenti di framework e molto conveniente fornire a causa dei costi relativamente basso di test associati ai tipi non sealed.  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
- [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- [Sealing](../../../docs/standard/design-guidelines/sealing.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Sealing](../../../docs/standard/design-guidelines/sealing.md)

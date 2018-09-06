@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: cbd45580e84a0723d28bab538bc0ffe388899d61
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8cbc22be68aae976e939520383995652e896d529
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724422"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892321"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Procedura: creare un autenticatore del token di sicurezza personalizzato
 In questo argomento viene illustrato come creare un autenticatore del token di sicurezza personalizzato e come integrarlo con un gestore del token di sicurezza personalizzato. Un autenticatore del token di sicurezza codi sicurezzantenuto di un token di sicurezza fornito con un messaggio in ingresso. Se la convalida ha esito positivo, l'autenticatore restituisce una raccolta di istanze <xref:System.IdentityModel.Policy.IAuthorizationPolicy> che, quando valutata, restituisce un set di attestazioni.  
@@ -46,9 +46,9 @@ In questo argomento viene illustrato come creare un autenticatore del token di s
   
 4.  Implementare il metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>. Questo metodo compila un'istanza della classe <xref:System.IdentityModel.Policy.EvaluationContext> (passata come argomento) con attestazioni basate sul contenuto del token di sicurezza in ingresso. Il metodo restituisce `true` al termine della valutazione. Nei casi in cui l'implementazione si basa sulla presenza di altri criteri di autorizzazione che forniscono informazioni aggiuntive al contesto di valutazione, questo metodo può restituire `false` se le informazioni necessarie non sono ancora presenti nel contesto di valutazione. In tal caso, WCF chiamerà il metodo nuovamente dopo la valutazione di tutti gli altri criteri di autorizzazione generati per il messaggio in ingresso se almeno uno di questi criteri di autorizzazione modificato il contesto di valutazione.  
   
-     [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
-     [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
-  
+     [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
+     [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
+
  [Procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) viene descritto come creare credenziali personalizzate e un sicurezza personalizzata gestore del token. Per utilizzare l'autenticatore del token di sicurezza personalizzato qui creato, viene modificata un'implementazione del gestore del token di sicurezza per restituire l'autenticatore personalizzato dal metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>. Il metodo restituisce un autenticatore quando viene passato un requisito di token di sicurezza appropriato.  
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>Per integrare un autenticatore del token di sicurezza personalizzato con un gestore del token di sicurezza personalizzato  
@@ -57,9 +57,9 @@ In questo argomento viene illustrato come creare un autenticatore del token di s
   
 2.  Aggiungere logica al metodo per consentire la restituzione dell'autenticatore del token di sicurezza personalizzato in base al parametro <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>. Nell'esempio seguente viene restituito un autenticatore del token di sicurezza personalizzato se il tipo di token dei requisiti di token è un nome utente (rappresentato dalla proprietà <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A>) e la direzione del messaggio per cui viene richiesto l'autenticatore del token di sicurezza è di input (rappresentata dal campo <xref:System.ServiceModel.Description.MessageDirection.Input>).  
   
-     [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
-     [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
-  
+     [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
+     [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
+ 
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>  
  <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  

@@ -3,11 +3,11 @@ title: Sistema di tipi (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
 ms.openlocfilehash: 270b0981214e674d220025ad52c7c94ee3a66224
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534763"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878221"
 ---
 # <a name="type-system-entity-sql"></a>Sistema di tipi (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta diversi tipi:  

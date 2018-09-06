@@ -17,11 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 79cb7a2a0706cb06cbd444f4a2e1ae87cb701101
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6151bf670a455d4c9862e80fd06314e4e1621080
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881915"
 ---
 # <a name="custom-serialization"></a>Serializzazione personalizzata
 La serializzazione personalizzata è il processo di controllo della serializzazione e deserializzazione di un tipo. Tramite il controllo della serializzazione è possibile garantire la compatibilità della serializzazione stessa, ovvero la possibilità di eseguire la serializzazione e la deserializzazione tra versioni di un tipo senza compromettere la funzionalità principale del tipo stesso. Ad esempio, nella prima versione di un tipo potrebbero essere presenti solo due campi. Nella versione successiva di un tipo, vengono aggiunti molti altri campi. La seconda versione di un'applicazione deve comunque essere in grado di serializzare e deserializzare entrambi i tipi. Nelle seguenti sezioni viene descritto come controllare la serializzazione:
@@ -183,7 +184,8 @@ End Class
   
  Gli oggetti vengono ricostruiti dall'interno all'esterno; durante la deserializzazione, i metodi di chiamata possono avere effetti collaterali indesiderati, poiché i metodi chiamati potrebbero fare riferimento a riferimenti a oggetti che non sono stati deserializzati al momento dell'esecuzione della chiamata. Se la classe in fase di deserializzazione implementa <xref:System.Runtime.Serialization.IDeserializationCallback>, il metodo <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization*> viene chiamato automaticamente dopo la deserializzazione dell'intero oggetto grafico. In questa fase, tutti gli oggetti figlio a cui si fa riferimento sono stati ripristinati pienamente. Una tabella hash è un esempio tipico di una classe difficile da deserializzare senza l'utilizzo del listener di eventi. È facile recuperare le coppie chiave/valore durante la deserializzazione, tuttavia aggiungere nuovamente tali oggetti alla tabella hash può provocare problemi, poiché non c'è nessuna garanzia che le classi derivate dalla tabella hash siano state deserializzate. I metodi di chiamata su una tabella hash in questa fase non sono pertanto consigliabili.  
   
-## <a name="see-also"></a>Vedere anche  
- [Serializzazione binaria](binary-serialization.md)  
- [Serializzazione SOAP e XML](xml-and-soap-serialization.md)  
- [Sicurezza e serializzazione](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Serializzazione binaria](binary-serialization.md)  
+- [Serializzazione SOAP e XML](xml-and-soap-serialization.md)  
+- [Sicurezza e serializzazione](../../../docs/framework/misc/security-and-serialization.md)

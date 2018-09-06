@@ -3,11 +3,11 @@ title: Esempio di estensioni fortemente tipizzate
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
 ms.openlocfilehash: eccb0ce240d01ab8592a44daddcfa7aa3d2023fb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659368"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43880668"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Esempio di estensioni fortemente tipizzate
 Nell'esempio seguente viene utilizzata la classe <xref:System.ServiceModel.Syndication.SyndicationFeed> a scopo esemplificativo. Tuttavia, i modelli illustrati in questo esempio possono essere utilizzati con tutte le classi di diffusione che supportano dati di estensione.  

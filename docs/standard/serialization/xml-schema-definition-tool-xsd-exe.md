@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 71a964831b661e97d3be3853a179849e037d3ff6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3a16e92dab6994de6bfa99c248ff0b13658e22d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592457"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879777"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 Lo strumento XML Schema Definition (Xsd.exe) consente di generare classi Common Language Runtime o XML Schema da file XDR, XML e XSD o da classi di un assembly di runtime.  
@@ -86,7 +86,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  Da classi a XSD  
  Generare uno schema XML da uno o più tipi presenti in un file di assembly di runtime. Lo schema generato definisce il formato XML utilizzato da `System.Xml.Serialization.XmlSerializer`.  
   
- Xsd.exe consente solo di modificare gli schemi XML che seguono il linguaggio XSD (XML Schema Definition) proposto da W3C (World Wide Web Consortium). Per ulteriori informazioni sulla proposta di XML Schema Definition o lo standard XML, vedere http://w3.org.  
+ Xsd.exe consente solo di modificare gli schemi XML che seguono il linguaggio XSD (XML Schema Definition) proposto da W3C (World Wide Web Consortium). Per altre informazioni sulla proposta di XML Schema Definition o lo standard XML, vedere http://w3.org.  
   
 ## <a name="setting-options-with-an-xml-file"></a>Impostazione delle opzioni con un file XML  
  Usando l'opzione `/parameters`, è possibile specificare un singolo file XML che imposta diverse opzioni. Le opzioni che è possibile impostare dipendono dalla modalità di utilizzo dello strumento XSD.exe. È possibile scegliere di generare schemi, file di codice o file di codice con funzionalità `DataSet`. Ad esempio, è possibile impostare l'elemento `<assembly\>` sul nome di un file eseguibile (.exe) o di una libreria di tipi (.dll) durante la generazione di uno schema, ma non durante la generazione di un file di codice. Nel codice XML riportato di seguito viene illustrato come utilizzare l'elemento `<generateSchemas\>` con un determinato file eseguibile:  
@@ -221,11 +221,12 @@ xsd /dataset /language:CS XSDSchemaFile.xsd
 xsd myAssembly.dll    
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Data.DataSet>  
- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
- [Strumenti](../../../docs/framework/tools/index.md)      
- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [Panoramica di LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- [Esecuzione di query su oggetti DataSet tipizzati](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Data.DataSet>  
+- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
+- [Strumenti](../../../docs/framework/tools/index.md)      
+- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+- [Panoramica di LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+- [Esecuzione di query su oggetti DataSet tipizzati](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

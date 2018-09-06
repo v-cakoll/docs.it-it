@@ -2,12 +2,12 @@
 title: Attività NoPersistScope
 ms.date: 03/30/2017
 ms.assetid: 9a0baeb7-a05c-4fac-b905-252758cb71bb
-ms.openlocfilehash: e4779bf28fc2fc1341cce5134a872b108278611c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6543756594b6734aec39bf22c5ab6215605341b1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516439"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038783"
 ---
 # <a name="nopersistscope-activity"></a>Attività NoPersistScope
 In questo esempio viene illustrato come modificare uno stato Non-serializable e Disposable all'interno di un flusso di lavoro. È importante che i flussi di lavoro non tentino di rendere persistente lo stato Non-serializable e che venga eseguita la pulizia degli oggetti eliminabili dopo essere stati usati nel flusso di lavoro.  
@@ -26,9 +26,9 @@ In questo esempio viene illustrato come modificare uno stato Non-serializable e 
   
 1.  Aprire la soluzione NoPersistZone.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Per compilare la soluzione, premere CTRL + MAIUSC + B o scegliere **Compila soluzione** dal **compilare** menu.  
+2.  Per compilare la soluzione, premere CTRL + MAIUSC + B o scegliere **Compila soluzione** dalle **compilazione** menu.  
   
-3.  Una volta completata la compilazione, premere F5 o scegliere **Avvia debug** dal **Debug** menu in alternativa, è possibile premere CTRL + F5 o selezionare **Avvia senza eseguire debug** dal **Debug** menu per l'esecuzione senza debug.  
+3.  Una volta completata la compilazione, premere F5 o selezionare **Avvia debug** dal **Debug** dal menu in alternativa, è possibile premere CTRL+F5 o selezionare **Avvia senza eseguire debug** dal **Debug** menu per l'esecuzione senza debug.  
   
 #### <a name="to-cleanup-optional"></a>Per eseguire la pulizia (facoltativo)  
   
@@ -39,6 +39,6 @@ In questo esempio viene illustrato come modificare uno stato Non-serializable e 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NoPersistScope`

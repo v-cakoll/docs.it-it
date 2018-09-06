@@ -13,12 +13,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: 3be5c08ae2bffcf548fe1d635dd96ba29dcadca9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f26de2dbf8ec200a4b53195ae97bbb174e815166
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592340"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042647"
 ---
 # <a name="version-tolerant-serialization"></a>Serializzazione indipendente dalla versione
 Nelle versioni 1.0 e 1.1 di .NET Framework, la creazione di tipi serializzabili riutilizzabili da una versione di un'applicazione alla versione successiva risultava problematica. Se un tipo veniva modificato aggiungendo campi aggiuntivi, si verificavano i seguenti problemi:  
@@ -257,7 +257,7 @@ End Class
 ```  
   
 ## <a name="serializationbinder"></a>SerializationBinder  
- In alcuni casi potrebbe essere necessario controllare le classi da serializzare e deserializzare ad esempio perché sono richieste versioni diverse della classe sul server e sul client. <xref:System.Runtime.Serialization.SerializationBinder> è una classe astratta usata per controllare i tipi effettivi usati durante la serializzazione e la deserializzazione.  Per utilizzare questa classe, derivare una classe da <xref:System.Runtime.Serialization.SerializationBinder> ed eseguire l'override dei metodi <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> e <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A>, Per altre informazioni, vedere [controllare serializzazione e deserializzazione con SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).  
+ In alcuni casi potrebbe essere necessario controllare le classi da serializzare e deserializzare ad esempio perché sono richieste versioni diverse della classe sul server e sul client. <xref:System.Runtime.Serialization.SerializationBinder> è una classe astratta usata per controllare i tipi effettivi usati durante la serializzazione e la deserializzazione.  Per utilizzare questa classe, derivare una classe da <xref:System.Runtime.Serialization.SerializationBinder> ed eseguire l'override dei metodi <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> e <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A>, Per altre informazioni, vedere [controllo di serializzazione e deserializzazione con SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).  
   
 ## <a name="best-practices"></a>Procedure consigliate  
  Per essere certi del comportamento corretto del controllo della versione, attenersi a queste regole durante la modifica di un tipo da una versione a un'altra:  
@@ -280,16 +280,17 @@ End Class
   
 -   Evitare controlli di versione sottoposti a branching.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.SerializableAttribute>  
- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
- <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>  
- <xref:System.Runtime.Serialization.OptionalFieldAttribute>  
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
- <xref:System.Runtime.Serialization.StreamingContext>  
- <xref:System.NonSerializedAttribute>  
- [Serializzazione binaria](binary-serialization.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.SerializableAttribute>  
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
+- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
+- <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>  
+- <xref:System.Runtime.Serialization.OptionalFieldAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+- <xref:System.Runtime.Serialization.StreamingContext>  
+- <xref:System.NonSerializedAttribute>  
+- [Serializzazione binaria](binary-serialization.md)

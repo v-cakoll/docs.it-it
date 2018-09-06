@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94391471fecd92aeadec4da39cdd5b6f80bb6949
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfcd912fc16aa8d4b89a4f455d65b0294593cead
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581164"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886526"
 ---
 # <a name="replacing-a-principal-object"></a>Sostituzione di oggetti Principal
-Le applicazioni che forniscono servizi di autenticazione devono poter sostituire l'oggetto **Principal** (<xref:System.Security.Principal.IPrincipal>) per un determinato thread. Inoltre, il sistema di sicurezza deve garantire la possibilità di sostituire gli oggetti **Principal** perché un oggetto **Principal** non corretto collegato in modo intenzionalmente dannoso compromette la sicurezza dell'applicazione attestando un identità o un ruolo non true. Pertanto, le applicazioni che richiedono la possibilità di sostituire **principale** oggetti devono essere concesse le <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> oggetto per il controllo dell'entità. Tenere presente che questa autorizzazione non è necessaria per eseguire controlli di sicurezza basata sui ruoli o per creare oggetti **Principal** .  
+Le applicazioni che forniscono servizi di autenticazione devono poter sostituire l'oggetto **Principal** (<xref:System.Security.Principal.IPrincipal>) per un determinato thread. Inoltre, il sistema di sicurezza deve garantire la possibilità di sostituire gli oggetti **Principal** perché un oggetto **Principal** non corretto collegato in modo intenzionalmente dannoso compromette la sicurezza dell'applicazione attestando un identità o un ruolo non true. Di conseguenza, le applicazioni che richiedono la possibilità di sostituire **Principal** gli oggetti devono essere concesse le <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> oggetto per il controllo dell'entità. Tenere presente che questa autorizzazione non è necessaria per eseguire controlli di sicurezza basata sui ruoli o per creare oggetti **Principal** .  
   
  L'oggetto **Principal** corrente può essere sostituito eseguendo le attività seguenti:  
   
@@ -34,6 +34,7 @@ Le applicazioni che forniscono servizi di autenticazione devono poter sostituire
  [!code-csharp[SetCurrentPrincipal#1](../../../samples/snippets/csharp/VS_Snippets_CLR/SetCurrentPrincipal/CS/program.cs#1)]
  [!code-vb[SetCurrentPrincipal#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/SetCurrentPrincipal/VB/program.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>  
- [Oggetti Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>  
+- [Oggetti Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)

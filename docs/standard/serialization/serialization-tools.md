@@ -2,12 +2,12 @@
 title: Strumenti per la serializzazione
 ms.date: 03/30/2017
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
-ms.openlocfilehash: c03edbc7747d680f151c4a3ea1857937314b4c78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af0ed0df0e99245d3dacd31280574c36415d2a1e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581407"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882295"
 ---
 # <a name="serialization-tools"></a>Strumenti per la serializzazione
 In questa sezione vengono fornite informazioni dettagliate sugli strumenti per la serializzazione. È possibile utilizzare tutti gli strumenti dalla riga di comando.  
@@ -22,5 +22,6 @@ In questa sezione vengono fornite informazioni dettagliate sugli strumenti per l
 |[Strumento per la generazione di serializzatori XML (Sgen.exe)](../../../docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md)|Consente di creare un assembly di serializzazione XML per i tipi di un assembly specificato al fine di migliorare le prestazioni di runtime di <xref:System.Xml.Serialization.XmlSerializer>.|  
 |[Strumento XML Schema Definition (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)|Consente di generare schemi XML conformi al linguaggio XSD proposto da W3C (World Wide Web Consortium). Questo strumento genera classi Common Language Runtime e classi <xref:System.Data.DataSet> da un file di schema XSD.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Strumenti](../../../docs/framework/tools/index.md)

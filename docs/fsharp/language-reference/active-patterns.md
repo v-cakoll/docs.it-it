@@ -2,12 +2,12 @@
 title: Modelli attivi (F#)
 description: 'Informazioni su come usare i criteri attivi per definire partizioni denominate che suddividono i dati di input nel linguaggio di programmazione F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 964ae8eb6db0191fab1e5a816e29bd0819605f2c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786497"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881876"
 ---
 # <a name="active-patterns"></a>Criteri attivi
 
@@ -44,7 +44,7 @@ Come indicato di seguito è riportato l'output di questo programma:
 
 Viene utilizzato un altro di criteri attivi per decomporre i tipi di dati in diversi modi, ad esempio quando gli stessi dati sottostanti dispongono di diverse rappresentazioni possibili. Ad esempio, un `Color` oggetto può essere scomposto in una rappresentazione RGB o in una rappresentazione HSB.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
 Come indicato di seguito è riportato l'output del programma precedente:
 
@@ -72,9 +72,9 @@ Le espressioni di corrispondenza risultante abilitare dati da scrivere in un mod
 
 ## <a name="partial-active-patterns"></a>Criteri attivi parziali
 
-In alcuni casi, è necessario partizionare solo una parte dello spazio di input. In tal caso, è scrivere un set di modelli parziali, ognuno dei quali corrisponde a una serie di dati e non agli altri input. Criteri attivi che non producono sempre un valore sono detti *parziali modelli attivi*; hanno un valore restituito che è un tipo di opzione. Per definire un modello attivo parziale, si usa un carattere jolly (_) alla fine dell'elenco di modelli interni banana clip. Il codice seguente illustra l'uso di un modello attivo parziale.
+In alcuni casi, è necessario partizionare solo una parte dello spazio di input. In tal caso, è scrivere un set di modelli parziali, ognuno dei quali corrisponde a una serie di dati e non agli altri input. Criteri attivi che non producono sempre un valore sono detti *parziali modelli attivi*; hanno un valore restituito che è un tipo di opzione. Per definire un modello attivo parziale, si utilizza un carattere jolly (\_) alla fine dell'elenco di modelli interni banana clip. Il codice seguente illustra l'uso di un modello attivo parziale.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
 Come indicato di seguito è riportato l'output dell'esempio precedente:
 
@@ -88,7 +88,7 @@ Something else : Not matched.
 
 Quando si usano i modelli attivi parziali, in alcuni casi le singole scelte possono essere contigui o si escludono a vicenda, ma non è necessario. Nell'esempio seguente, il quadrato di modello e il modello di cubo non sono non contigui, perché alcuni numeri sono entrambi quadrati e cubi, ad esempio 64. Il seguente programma stampa tutti i numeri interi fino a 1000000 quadrati e i cubi.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 L'output è indicato di seguito:
 
@@ -109,7 +109,7 @@ L'output è indicato di seguito:
 
 Criteri attivi hanno sempre almeno un argomento per l'elemento di soddisfazione, ma possono accettare argomenti aggiuntivi, nel qual caso il nome *con parametri (modello attivo)* si applica. Argomenti aggiuntivi consentono un modello generale essere specializzata. Ad esempio, i modelli attivi che usano le espressioni regolari per analizzare le stringhe spesso includono l'espressione regolare come parametro aggiuntivo, come nel codice seguente, che usa anche il modello attivo parziale `Integer` definito nell'esempio di codice precedente. In questo esempio, le stringhe che utilizzano le espressioni regolari per i diversi formati di data vengono fornite per personalizzare l'attivo generale ParseRegex. Consente di convertire le stringhe corrispondenti in numeri interi che possono essere passati al costruttore DateTime (modello attivo) l'intero.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
 Come indicato di seguito è riportato l'output del codice precedente:
 
@@ -119,7 +119,7 @@ Come indicato di seguito è riportato l'output del codice precedente:
 
 Criteri attivi non sono limitati solo a espressioni corrispondente con il criterio, è possibile usare anche nelle ti permettono di associazioni.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
 Come indicato di seguito è riportato l'output del codice precedente:
 

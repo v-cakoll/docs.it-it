@@ -7,11 +7,11 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
 ms.openlocfilehash: 81898e09ff513043b205cde13378ae24ee755226
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539979"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039173"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Cenni preliminari sul controllo SplitContainer (Windows Form)
 Il controllo <xref:System.Windows.Forms.SplitContainer> Windows Form può essere considerato un oggetto composto, poiché è costituito da due pannelli separati da una barra mobile. Quando il puntatore del mouse viene posizionato sopra la barra, assume una forma diversa per indicare che la barra è mobile.  
@@ -46,8 +46,8 @@ Il controllo <xref:System.Windows.Forms.SplitContainer> Windows Form può essere
 |Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina la distanza in pixel dal bordo sinistro o superiore per la barra di divisione mobile.|  
 |Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Determina la distanza minima, in pixel, che la barra di divisione può essere spostato dall'utente.|  
 |Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Determina lo spessore, in pixel, della barra di divisione.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Evento|Si verifica quando la barra di divisione viene spostato.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> Evento|Si verifica quando la barra di divisione viene spostato.|  
+|Evento<xref:System.Windows.Forms.SplitContainer.SplitterMoving> |Si verifica quando la barra di divisione viene spostato.|  
+|Evento<xref:System.Windows.Forms.SplitContainer.SplitterMoved> |Si verifica quando la barra di divisione viene spostato.|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Forms.SplitContainer>  

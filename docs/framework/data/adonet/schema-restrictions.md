@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
 ms.openlocfilehash: 040ecd8a2ce223f89601de735b77ccc81638c7af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563429"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884731"
 ---
 # <a name="schema-restrictions"></a>Restrizione dello schema
 Il secondo parametro facoltativo del **GetSchema** è il metodo le restrizioni che vengono usate per limitare la quantità di informazioni sullo schema restituite e viene passata al **GetSchema** metodo come una matrice di stringhe . La posizione nella matrice determina i valori che è possibile passare ed equivale al numero della restrizione.  
@@ -21,7 +21,7 @@ Il secondo parametro facoltativo del **GetSchema** è il metodo le restrizioni c
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
-|Table|@Name|TABLE_NAME|3|  
+|Tabella|@Name|TABLE_NAME|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
   
 ## <a name="specifying-restriction-values"></a>Impostazione dei valori di restrizione  
@@ -151,7 +151,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
-|Table|@Name|TABLE_NAME|3|  
+|Tabella|@Name|TABLE_NAME|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
   
 ### <a name="columns"></a>Colonne  
@@ -160,7 +160,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
-|Table|@Table|TABLE_NAME|3|  
+|Tabella|@Table|TABLE_NAME|3|  
 |Colonna|@Column|COLUMN_NAME|4|  
   
 ### <a name="structuredtypemembers"></a>StructuredTypeMembers  
@@ -169,7 +169,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
-|Table|@Table|TABLE_NAME|3|  
+|Tabella|@Table|TABLE_NAME|3|  
 |Colonna|@Column|COLUMN_NAME|4|  
   
 ### <a name="views"></a>Visualizzazioni  
@@ -178,7 +178,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
-|Table|@Table|TABLE_NAME|3|  
+|Tabella|@Table|TABLE_NAME|3|  
   
 ### <a name="viewcolumns"></a>ViewColumns  
   
@@ -186,7 +186,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|VIEW_CATALOG|1|  
 |Owner|@Owner|VIEW_SCHEMA|2|  
-|Table|@Table|VIEW_NAME|3|  
+|Tabella|@Table|VIEW_NAME|3|  
 |Colonna|@Column|COLUMN_NAME|4|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
@@ -213,7 +213,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|db_name()|1|  
 |Owner|@Owner|user_name()|2|  
-|Table|@Table|o.name|3|  
+|Tabella|@Table|o.name|3|  
 |ConstraintName|@ConstraintName|x.name|4|  
 |Colonna|@Column|c.name|5|  
   
@@ -223,7 +223,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|db_name()|1|  
 |Owner|@Owner|user_name()|2|  
-|Table|@Table|o.name|3|  
+|Tabella|@Table|o.name|3|  
   
 ### <a name="userdefinedtypes"></a>UserDefinedTypes  
   
@@ -238,7 +238,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|CONSTRAINT_CATALOG|1|  
 |Owner|@Owner|CONSTRAINT_SCHEMA|2|  
-|Table|@Table|TABLE_NAME|3|  
+|Tabella|@Table|TABLE_NAME|3|  
 |nome|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>Restrizioni per gli schemi di SQL Server 2008  
@@ -250,7 +250,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
-|Table|@Table|TABLE_NAME|3|  
+|Tabella|@Table|TABLE_NAME|3|  
   
 ### <a name="allcolumns"></a>AllColumns  
   
@@ -258,7 +258,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
-|Table|@Table|TABLE_NAME|3|  
+|Tabella|@Table|TABLE_NAME|3|  
 |Colonna|@Column|COLUMN_NAME|4|  
   
 ## <a name="see-also"></a>Vedere anche  
