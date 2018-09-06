@@ -3,11 +3,11 @@ title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: 2849d159fbfdb0c0739b76fd288a987d4ce3d02f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560145"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786064"
 ---
 # <a name="datatables"></a>DataTables
 Un tipo <xref:System.Data.DataSet> è composto da una raccolta di tabelle, relazioni e vincoli. In ADO.NET <xref:System.Data.DataTable> gli oggetti vengono utilizzati per rappresentare le tabelle in un **set di dati**. Oggetto **DataTable** rappresenta una tabella di dati relazionali in memoria; i dati sono locali per il. Applicazione basata su rete in cui risiedono, ma possono essere popolato da un'origine dati, ad esempio Microsoft SQL Server usando un **DataAdapter** per altre informazioni, vedere [popolamento di un set di dati da un oggetto DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  

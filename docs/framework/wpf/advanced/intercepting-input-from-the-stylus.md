@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: c012eeb7ef7dad8c52b8b9a5f153582710c1fd73
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43725033"
+ms.locfileid: "43788165"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Intercettazione dell'input dello stilo
 Il <xref:System.Windows.Input.StylusPlugIns> architettura fornisce un meccanismo per l'implementazione del controllo di basso livello tramite <xref:System.Windows.Input.Stylus> input e la creazione di input penna digitale <xref:System.Windows.Ink.Stroke> oggetti. Il <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fornisce un meccanismo per implementare il comportamento personalizzato e applicarlo al flusso di dati provenienti dal dispositivo stilo per prestazioni ottimali.  

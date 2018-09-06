@@ -3,11 +3,11 @@ title: Convalida di relazioni tra attività
 ms.date: 03/30/2017
 ms.assetid: 6f11a34e-ed67-4bce-88ce-7e96bbb4d052
 ms.openlocfilehash: 50f08118fb5ad4d9b8fe809e7ab3cc5d57f28149
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556164"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784812"
 ---
 # <a name="activity-relationships-validation"></a>Convalida di relazioni tra attività
 Il presente esempio è costituito da tre attività, `CreateCity`, `CreateState` e `CreateCountry`. `CreateCity` deve trovarsi all'interno di un'attività `CreateState` e `CreateState` deve trovarsi all'interno di un'attività `CreateCountry`. Ai fini di questo esempio, la logica di convalida è nel codice per l'attività `CreateState` e in XAML per l'attività `CreateCity`. Entrambi i vincoli presentano lo stesso comportamento.  

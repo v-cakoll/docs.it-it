@@ -2,18 +2,19 @@
 title: Operatori bit per bit (F#)
 description: 'Informazioni sugli operatori bit per bit che sono disponibili nel linguaggio di programmazione F #.'
 ms.date: 07/20/2018
-ms.openlocfilehash: abd2778eba422b3ce2a3472efd458446854b3d2f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559556"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784368"
 ---
 # <a name="bitwise-operators"></a>Operatori bit per bit
 
 Questo argomento descrive gli operatori bit per bit sono disponibili nel linguaggio F #.
 
 ## <a name="summary-of-bitwise-operators"></a>Riepilogo degli operatori bit per bit
+
 Nella tabella seguente descrive gli operatori bit per bit supportati per i tipi integrali unboxed nel linguaggio F #.
 
 |Operatore|Note|
@@ -28,9 +29,7 @@ Nella tabella seguente descrive gli operatori bit per bit supportati per i tipi 
 I tipi seguenti possono essere utilizzati con gli operatori bit per bit: `byte`, `sbyte`, `int16`, `uint16`, `int32 (int)`, `uint32`, `int64`, `uint64`, `nativeint`, e `unativeint`.
 
 ## <a name="see-also"></a>Vedere anche
-[Riferimenti per simboli e operatori](index.md)
 
-[Operatori aritmetici](arithmetic-operators.md)
-
-[Operatori booleani](boolean-operators.md)
-
+- [Riferimenti per simboli e operatori](index.md)
+- [Operatori aritmetici](arithmetic-operators.md)
+- [Operatori booleani](boolean-operators.md)

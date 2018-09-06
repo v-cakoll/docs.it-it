@@ -3,11 +3,11 @@ title: Stampa e generazione di rapporti (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 92997b65-0279-4889-8db7-32cb6708be9c
 ms.openlocfilehash: 926526a64cd0b70db4864329454fbc42f3e34b1e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539040"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787128"
 ---
 # <a name="printing-and-reporting-visual-basic"></a>Stampa e generazione di rapporti (Visual Basic)
 Visual Basic offre diverse opzioni per la stampa e i report. Gli argomenti seguenti forniscono informazioni generali e collegamenti alla documentazione pertinente relativa a stampa e creazione di report.  

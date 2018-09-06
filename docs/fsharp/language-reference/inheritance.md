@@ -1,40 +1,40 @@
 ---
 title: Ereditarietà (C#)
-description: "Informazioni su come specificare relazioni di ereditarietà F # utilizzando la parola chiave 'inherit'."
+description: "Informazioni su come specificare relazioni di ereditarietà F # usando la parola chiave 'inherit'."
 ms.date: 05/16/2016
-ms.openlocfilehash: 3d0c0785fc595315a8283979b99d0ec4fc5cbc0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564785"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787571"
 ---
 # <a name="inheritance"></a>Ereditarietà
 
-Ereditarietà viene utilizzata per modellare la relazione "è-a", o definizione di sottotipo, nella programmazione orientata a oggetti.
+Ereditarietà viene usata per modellare la relazione "is-a", o definizione dei sottotipi nella programmazione orientata agli oggetti.
 
+## <a name="specifying-inheritance-relationships"></a>Specifica di relazioni di ereditarietà
 
-## <a name="specifying-inheritance-relationships"></a>Specificare le relazioni di ereditarietà
-Specificare le relazioni di ereditarietà utilizzando il `inherit` parola chiave in una dichiarazione di classe. Il formato di sintassi di base è illustrato nell'esempio seguente.
+Specificare le relazioni di ereditarietà utilizzando la `inherit` parola chiave in una dichiarazione di classe. La forma sintattica di base è illustrata nell'esempio seguente.
 
 ```fsharp
 type MyDerived(...) =
     inherit MyBase(...)
 ```
 
-Una classe può avere al massimo una classe base diretta. Se non si specifica una classe di base utilizzando il `inherit` (parola chiave), la classe eredita in modo implicito da `System.Object`.
-
+Una classe può avere al massimo una classe base diretta. Se non si specifica una classe di base usando la `inherit` parola chiave, la classe eredita in modo implicito da `System.Object`.
 
 ## <a name="inherited-members"></a>Membri ereditati
-Se una classe eredita da un'altra classe, i metodi e membri della classe di base sono disponibili per gli utenti della classe derivata, come se fossero membri diretti della classe derivata.
 
-Le associazioni let e i parametri del costruttore sono privati per una classe e, pertanto, non è possibile accedere dalle classi derivate.
+Se una classe eredita da un'altra classe, i metodi e membri della classe di base sono disponibili per gli utenti della classe derivata come se fossero membri diretti della classe derivata.
 
-La parola chiave `base` è disponibile nelle classi derivate e fa riferimento all'istanza della classe base. Viene utilizzato come identificatore Self-Service.
+Le associazioni let e i parametri del costruttore sono privati per una classe e, pertanto, non sono accessibile dalle classi derivate.
 
+La parola chiave `base` è disponibile nelle classi derivate e fa riferimento all'istanza della classe base. Viene usato come identificatore Self-Service.
 
-## <a name="virtual-methods-and-overrides"></a>Metodi virtuali e override
-Metodi virtuali (e proprietà) funzionano in modo diverso in F # rispetto ai linguaggi .NET. Per dichiarare un nuovo membro virtuale, utilizzare il `abstract` (parola chiave). A tale scopo, indipendentemente dal fatto che venga fornita un'implementazione predefinita per tale metodo. In questo modo una definizione completa di un metodo virtuale in una classe base segue questo modello:
+## <a name="virtual-methods-and-overrides"></a>Le sostituzioni e metodi virtuali
+
+Metodi virtuali (e proprietà) funzionano in modo diverso in F # rispetto a altri linguaggi .NET. Per dichiarare un nuovo membro virtuale, Usa il `abstract` (parola chiave). A tale scopo, indipendentemente dal fatto che è fornire un'implementazione predefinita per il metodo. In questo modo una definizione completa di un metodo virtuale in una classe di base segue questo modello:
 
 ```fsharp
 abstract member [method-name] : [type]
@@ -50,18 +50,19 @@ override [self-identifier].[method-name] [argument-list] = [method-body]
 
 Se si omette l'implementazione predefinita della classe base, la classe di base diventa una classe astratta.
 
-L'esempio di codice seguente illustra la dichiarazione di un nuovo metodo virtuale `function1` in una classe di base e come eseguirne l'override in una classe derivata.
+L'esempio di codice seguente illustra la dichiarazione di un nuovo metodo virtuale `function1` in una classe di base e su come eseguirne l'override in una classe derivata.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2601.fs)]
-    
-## <a name="constructors-and-inheritance"></a>Costruttori ed ereditarietà
-Il costruttore per la classe di base deve essere chiamato nella classe derivata. Gli argomenti del costruttore di classe di base sono visualizzati nell'elenco di argomenti in di `inherit` clausola. I valori utilizzati devono essere determinati in base agli argomenti forniti al costruttore della classe derivata.
 
-Il codice seguente illustra una classe di base e una classe derivata, in cui la classe derivata chiama il costruttore di classe di base nella clausola inherit:
+## <a name="constructors-and-inheritance"></a>Costruttori ed ereditarietà
+
+Il costruttore per la classe di base deve essere chiamato nella classe derivata. Gli argomenti per il costruttore di classe di base vengono visualizzati nell'elenco di argomenti in di `inherit` clausola. I valori utilizzati devono essere determinati dagli argomenti forniti al costruttore della classe derivata.
+
+Il codice seguente illustra una classe di base e una classe derivata, in cui la classe derivata chiama il costruttore di classe di base nella clausola eredita:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
 
-Nel caso di più costruttori, è possibile utilizzare il codice seguente. È la prima riga dei costruttori di classe derivata di `inherit` clausola e i campi vengono visualizzati come campi espliciti dichiarati con la `val` (parola chiave). Per ulteriori informazioni, vedere [campi espliciti: il `val` parola chiave](members/explicit-fields-the-val-keyword.md).
+Nel caso di più costruttori, il codice seguente può essere utilizzato. La prima riga dei costruttori di classe derivata è il `inherit` clausola e i campi vengono visualizzati come campi espliciti che vengono dichiarati con la `val` (parola chiave). Per altre informazioni, vedere [i campi espliciti: il `val` parola chiave](members/explicit-fields-the-val-keyword.md).
 
 ```fsharp
 type BaseClass =
@@ -81,16 +82,16 @@ let obj2 = DerivedClass("A")
 ```
 
 ## <a name="alternatives-to-inheritance"></a>Alternative all'ereditarietà
-Nei casi in cui una piccola modifica di un tipo è obbligatoria, considerare l'uso di un'espressione di oggetto come alternativa all'ereditarietà. Nell'esempio seguente viene illustrato l'utilizzo di un'espressione di oggetto come alternativa alla creazione di un nuovo tipo derivato:
+
+Nei casi in cui è necessaria una modifica secondaria di un tipo, è consigliabile usare un'espressione di oggetto come un'alternativa all'ereditarietà. Nell'esempio seguente viene illustrato l'utilizzo di un'espressione di oggetto come alternativa alla creazione di un nuovo tipo derivato:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2603.fs)]
 
-Per ulteriori informazioni sulle espressioni di oggetto, vedere [espressioni di oggetto](object-expressions.md).
+Per altre informazioni sulle espressioni di oggetto, vedere [espressioni di oggetto](object-expressions.md).
 
-Durante la creazione di gerarchie di oggetti, considerare l'utilizzo di un'unione discriminata invece dell'ereditarietà. Unioni discriminate possono modellare variato comportamenti di oggetti diversi che condividono un tipo globale comune. Una singola unione discriminata consente spesso di eliminare la necessità di un numero di classi derivate che sono alcune piccole variazioni di altra. Per informazioni sulle unioni discriminate, vedere [unioni discriminate](discriminated-unions.md).
-
+Quando si siano creando gerarchie di oggetti, utilizzare un'unione discriminata invece dell'ereditarietà. Le unioni discriminate possono anche comportamento del modello consentono di variare di diversi oggetti che condividono un tipo globale comune. Un'unione discriminata singola spesso possa eliminare la necessità di un numero di classi derivate che si lievi variazioni tra loro. Per informazioni sulle unioni discriminate, vedere [unioni discriminate](discriminated-unions.md).
 
 ## <a name="see-also"></a>Vedere anche
-[Espressioni di oggetto](object-expressions.md)
 
-[Riferimenti per il linguaggio F#](index.md)
+- [Espressioni di oggetto](object-expressions.md)
+- [Riferimenti per il linguaggio F#](index.md)
