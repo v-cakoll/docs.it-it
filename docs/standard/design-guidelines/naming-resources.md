@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7cfda4e6a340d040de02903b9b64f0339751c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5b53fc383e6fc9a5f056bab4eabde9979cd734b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571186"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875109"
 ---
 # <a name="naming-resources"></a>Denominazione di risorse
-Poiché possono fare riferimento a risorse localizzabili mediante determinati oggetti come se fossero proprietà, convenzioni di denominazione per le risorse sono simili alle linee guida di proprietà.  
+Poiché possono fare riferimento a risorse localizzabili tramite determinati oggetti come se fossero proprietà, convenzioni di denominazione per le risorse sono simili alle linee guida per la proprietà.  
   
  **✓ DO** utilizzare il sistema Pascal le chiavi di risorsa.  
   
@@ -31,16 +31,17 @@ Poiché possono fare riferimento a risorse localizzabili mediante determinati og
   
  **✓ DO** utilizzare la seguente convenzione di denominazione per le risorse di messaggio eccezione.  
   
- L'identificatore di risorsa deve essere il nome del tipo di eccezione e un identificatore breve dell'eccezione:  
+ L'identificatore della risorsa deve essere il nome del tipo di eccezione e un identificatore breve dell'eccezione:  
   
  `ArgumentExceptionIllegalCharacters`  
  `ArgumentExceptionInvalidName`  
  `ArgumentExceptionFileNameIsMalformed`  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
- [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)

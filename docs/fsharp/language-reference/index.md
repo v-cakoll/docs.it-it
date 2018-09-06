@@ -2,22 +2,20 @@
 title: Riferimenti per il linguaggio F#
 description: 'Trovare informazioni funzionalità del linguaggio F # da questo riferimento al token delle lingue, i concetti, tipi, le espressioni e gli argomenti supportati dal compilatore costrutto.'
 ms.date: 05/16/2016
-ms.openlocfilehash: e0f0b54ab95e634538fc8511a18aac9d8ee00f26
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937085"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873250"
 ---
 # <a name="f-language-reference"></a>Riferimenti per il linguaggio F#
 
 In questa sezione è un riferimento al linguaggio F #, un linguaggio di programmazione multi-paradigmatico destinato a .NET. Il linguaggio F# supporta modelli di programmazione funzionali, orientati a oggetti e imperativi.
 
-
 ## <a name="f-tokens"></a>Token F#
+
 La tabella seguente illustra gli argomenti di riferimento che includono tabelle di parole chiave, simboli e i valori letterali usati come token in F#.
-
-
 
 |Titolo|Descrizione|
 |-----|-----------|
@@ -26,9 +24,8 @@ La tabella seguente illustra gli argomenti di riferimento che includono tabelle 
 |[Valori letterali](literals.md)|Illustra la sintassi per i valori letterali in F# e come specificare informazioni sul tipo per i valori letterali F#.|
 
 ## <a name="f-language-concepts"></a>Concetti del linguaggio F#
+
 La tabella seguente illustra gli argomenti di riferimento disponibili che descrivono i concetti del linguaggio.
-
-
 
 |Titolo|Descrizione|
 |-----|-----------|
@@ -56,9 +53,8 @@ La tabella seguente illustra gli argomenti di riferimento disponibili che descri
 |[Sintassi dettagliata](verbose-syntax.md)|Descrive la sintassi per i costrutti F# quando la sintassi leggera non è abilitata. La sintassi dettagliata è indicata dalla direttiva `#light "off"` che si trova nella parte superiore del file di codice.|
 
 ## <a name="f-types"></a>Tipi F#
+
 La tabella seguente illustra gli argomenti di riferimento disponibili che descrivono i tipi supportati dal linguaggio F#.
-
-
 
 |Titolo|Descrizione|
 |-----|-----------|
@@ -88,6 +84,7 @@ La tabella seguente illustra gli argomenti di riferimento disponibili che descri
 |[Provider di tipi](../tutorials/type-providers/index.md)|Descrive il tipo e offre collegamenti alle procedure dettagliate sull'uso dei provider di tipo predefinito per accedere ai database e ai servizi Web.|
 
 ## <a name="f-expressions"></a>Espressioni F#
+
 La tabella seguente elenca gli argomenti che descrivono le espressioni F#.
 
 |Titolo|Descrizione|
@@ -105,6 +102,7 @@ La tabella seguente elenca gli argomenti che descrivono le espressioni F#.
 |[Espressioni di query](query-expressions.md)|Descrive le espressioni di query, una funzionalità del linguaggio che implementa LINQ per F# e consente di scrivere query su un'origine dati o una raccolta enumerabile.|
 
 ## <a name="compiler-supported-constructs"></a>Costrutti supportati dal compilatore
+
 La tabella seguente elenca argomenti che descrivono costrutti speciali supportati dal compilatore.
 
 |Argomento|Descrizione|
@@ -114,4 +112,5 @@ La tabella seguente elenca argomenti che descrivono costrutti speciali supportat
 |[Identificatori riga, file e percorso di origine](source-line-file-path-identifiers.md)|Descrive gli identificatori `__LINE__`, `__SOURCE_DIRECTORY__` e `__SOURCE_FILE__`, che sono valori predefiniti che consentono di accedere al numero della riga d'origine, alla directory e al nome file nel codice.|
 
 ## <a name="see-also"></a>Vedere anche
-[Visual F#](../index.md)
+
+- [Visual F#](../index.md)

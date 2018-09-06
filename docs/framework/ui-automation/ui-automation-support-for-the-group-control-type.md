@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: a5bc202c0297eb3f0d4f6fa06b3beca0f9112272
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542336"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875323"
 ---
 # <a name="ui-automation-support-for-the-group-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo Group
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "43542336"
   
 |Visualizzazione controlli|Visualizzazione contenuto|  
 |------------------|------------------|  
-|Gruppo<br /><br /> -0 o molti controlli.|Gruppo<br /><br /> -0 o molti controlli.|  
+|Raggruppa<br /><br /> -0 o molti controlli.|Raggruppa<br /><br /> -0 o molti controlli.|  
   
  In genere presentano i controlli di gruppo le [supporto di automazione interfaccia utente per il tipo di controllo ListItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md), [supporto di automazione interfaccia utente per il tipo di controllo TreeItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md), o [supporto per automazione interfaccia utente di Tipo di controllo DataItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md) tipi sottostanti nel sottoalbero di controllo. Poiché 'Group' è un contenitore generico, è possibile che qualsiasi tipo di controllo si trovi sotto il controllo gruppo all'interno dell'albero.  
   

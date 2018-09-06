@@ -1,6 +1,6 @@
 ---
 title: Funzione EndMethodEnumeration (riferimenti alle API non gestite)
-description: La funzione EndMethodEnumeration termina una sequenza di enumerazione del metodo.
+description: La funzione EndMethodEnumeration termina una sequenza di enumerazione (metodo).
 ms.date: 11/06/2017
 api_name:
 - EndMethodEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d09a2ee278dba7e711891bc6d72043bb3a499dd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 42ee188c2a622d0bed2985e56e49997d2934686f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458490"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873302"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration (funzione)
-Termina una sequenza di enumerazione avviata con una chiamata al [BeginMethodEnumeration funzione](beginmethodenumeration.md).  
+Termina una sequenza di enumerazione avviata con una chiamata per il [BeginMethodEnumeration funzione](beginmethodenumeration.md).  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -43,29 +43,29 @@ HRESULT EndMethodEnumeration (
 [in] Questo parametro è inutilizzato.
 
 `ptr`  
-[in] Un puntatore a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) istanza.
+[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirli come costanti nel codice:
+I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Si è verificato un errore interno. |
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata al [IWbemClassObject::EndMethodEnumeration](https://msdn.microsoft.com/library/aa391441(v=vs.85).aspx) metodo.
+Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) (metodo).
 
-Il chiamante ha inizio la sequenza di enumerazione utilizzando [BeginMethodEnumeration funzione](beginmethodenumeration.md)e quindi chiama il [NextMethod funzione](nextmethod.md )finché il metodo restituisce `WBEM_S_NO_MORE_DATA`. Il chiamante termina, facoltativamente, la sequenza chiamando `EndMethodEnumeration`. Il chiamante può terminare in anticipo l'enumerazione chiamando `EndMethodEnumeration` in qualsiasi momento.
+Il chiamante ha inizio la sequenza di enumerazione utilizzando [funzione BeginMethodEnumeration](beginmethodenumeration.md)e quindi chiama il [NextMethod funzione](nextmethod.md )fino a quando il metodo restituisce `WBEM_S_NO_MORE_DATA`. Il chiamante, facoltativamente, termina la sequenza chiamando `EndMethodEnumeration`. Il chiamante può terminare l'enumerazione all'inizio chiamando `EndMethodEnumeration` in qualsiasi momento.
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
-[WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

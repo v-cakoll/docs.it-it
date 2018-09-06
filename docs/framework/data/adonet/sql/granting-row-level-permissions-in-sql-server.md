@@ -3,11 +3,11 @@ title: Concessione di autorizzazioni a livello di riga in SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
 ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749155"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873705"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Concessione di autorizzazioni a livello di riga in SQL Server
 In alcuni scenari è necessario controllare l'accesso a un livello caratterizzato da una maggior granularità rispetto a quanto consentito dalla semplice concessione, revoca o negazione delle autorizzazioni sui dati. Ad esempio, in un'applicazione di database usata in un ospedale potrebbe essere necessario consentire ai medici di visualizzare solo le informazioni correlate ai propri pazienti. Scenari simili sono presenti in molti ambienti, tra cui quelli delle applicazioni destinate al settore finanziario, legale, statale e militare. Per contribuire a gestire questi scenari, SQL Server 2016 fornisce una funzionalità di [sicurezza a livello di riga](https://msdn.microsoft.com/library/dn765131.aspx) che semplifica e centralizza la logica di accesso a livello di riga in un criterio di sicurezza. Per le versioni precedenti di SQL Server, una funzionalità simile può essere ottenuta usando le visualizzazioni per applicare filtri a livello di riga.  

@@ -3,11 +3,11 @@ title: Contratti di routing
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
 ms.openlocfilehash: 73d303c95a636f5e90f256272726c08c581d6fdf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785992"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873416"
 ---
 # <a name="routing-contracts"></a>Contratti di routing
 I contratti routing definiscono i modelli di messaggio che possono essere elaborati dal servizio di routing.  Ogni contratto è sprovvisto di tipi e consente la ricezione di un messaggio da parte del servizio senza conoscere l'azione o lo schema del messaggio. In questo modo il servizio di routing può indirizzare in modo generico i messaggi senza ulteriore configurazione per le specifiche dei messaggi sottostanti indirizzati.  

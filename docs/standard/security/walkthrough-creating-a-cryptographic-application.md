@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a01da268a8347e93982604520f9dcb1d4e91327d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501615"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873773"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Procedura dettagliata: creazione di un'applicazione di crittografia
 Questa procedura dettagliata illustra come crittografare e decrittografare il contenuto. Gli esempi di codice sono progettati per un'applicazione Windows Forms. Questa applicazione non illustra situazioni del mondo reale, come l'utilizzo di smart card. Al contrario illustra gli aspetti fondamentali della crittografia e decrittografia.  
@@ -210,5 +210,6 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
   
 2.  Fare clic sul pulsante `Decrypt File` e selezionare il file appena crittografato. Questa operazione avrà esito positivo perché si possiede la coppia di chiavi completa per decrittografare.  
   
-## <a name="see-also"></a>Vedere anche  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

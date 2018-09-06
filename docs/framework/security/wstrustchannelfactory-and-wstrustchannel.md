@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998466"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875587"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory e WSTrustChannel
 Se si ha già familiarità con Windows Communication Foundation (WCF), si sa che un client WCF supporta già la federazione. Configurando un client WCF con <xref:System.ServiceModel.WSFederationHttpBinding> o un binding personalizzato simile, è possibile abilitare l'autenticazione federata in un servizio.  
@@ -24,7 +24,7 @@ Se si ha già familiarità con Windows Communication Foundation (WCF), si sa che
   
 -   Possibilità per WIF in un client WCF di inserire un elemento ActAs o OnBehalfOf nel token di sicurezza delle richieste per il servizio token di sicurezza  
   
--   Uso solo di WIF per ottenere un token dal servizio token di sicurezza e quindi consentire a un client WCF di eseguire l'autenticazione con questo token. Per altre informazioni, vedere l'esempio [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406).  
+-   Uso solo di WIF per ottenere un token dal servizio token di sicurezza e quindi consentire a un client WCF di eseguire l'autenticazione con questo token. Per altre informazioni, vedere l'esempio [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406).  
   
  Il primo scenario è ovvio: i client WCF esistenti continueranno a usare i servizi token di sicurezza e le relying party WIF. Questo argomento illustra i due scenari rimanenti.  
   
