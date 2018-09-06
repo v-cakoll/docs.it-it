@@ -4,12 +4,12 @@ description: Distribuzione di un'applicazione .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792426"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562006"
 ---
 # <a name="net-core-application-deployment"></a>Distribuzione di applicazioni .NET Core
 
@@ -21,7 +21,7 @@ ms.locfileid: "37792426"
 
 ## <a name="framework-dependent-deployments-fdd"></a>Distribuzioni dipendenti dal framework
 
-Per una distribuzione dipendente dal framework, viene distribuita solo l'app e le dipendenze di terze parti. Non è necessario distribuire .NET Core, perché l'app userà la versione di .NET Core presente nel sistema di destinazione. Si tratta del modello di distribuzione predefinito per le app .NET Core.
+Per una distribuzione dipendente dal framework, vengono distribuite solo l'app e le dipendenze di terze parti. Non è necessario distribuire .NET Core, perché l'app userà la versione di .NET Core presente nel sistema di destinazione. Si tratta del modello di distribuzione predefinito per le app .NET Core e ASP.NET Core destinate a .NET Core.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>Perché creare una distribuzione dipendente dal framework?
 
@@ -70,9 +70,9 @@ Per esempi dettagliati della distribuzione di app .NET Core con gli strumenti de
 - Distribuzione autonoma
 - Distribuzione autonoma con dipendenze di terze parti
 
-# <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedere anche
 
-[Deploying .NET Core Apps with CLI Tools (Distribuzione di app .NET Core con gli strumenti dell'interfaccia della riga di comando)](deploy-with-cli.md)   
-[Deploying .NET Core Apps with Visual Studio (Distribuzione di app .NET Core con Visual Studio)](deploy-with-vs.md)   
-[Pacchetti, metapacchetti e framework](../packages.md)   
-[Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)
+* [Distribuzione di app .NET Core con strumenti dell'interfaccia della riga di comando](deploy-with-cli.md)
+* [Distribuzione di app .NET Core con Visual Studio](deploy-with-vs.md)
+* [Pacchetti, metapacchetti e framework](../packages.md)
+* [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)

@@ -1,0 +1,2 @@
+> [!IMPORTANT]
+> Poiché i progetti libreria di classi portabile come destinazione solo un subset molto specifico delle implementazioni di .NET, è fortemente sconsigliato l'uso in sviluppo di nuove applicazioni. La sostituzione consigliata è una libreria .NET Standard, che ha come destinazione tutte le implementazioni .NET che supportano una versione specifica di .NET Standard. Per altre informazioni, vedere [.NET Standard](~/docs/standard/net-standard.md).

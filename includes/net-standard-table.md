@@ -11,7 +11,7 @@
 | Windows Phone              | 8.1   | 8.1    | 8.1   |       |       |            |            |            |
 | Silverlight per Windows Phone  | 8.0   |        |       |       |       |            |            |            |
 
-<sup>1 Le versioni elencate per .NET Framework si applicano agli strumenti .NET Core SDK 2.0 e versioni successive. Le versioni precedenti usavano un altro mapping per .NET Standard 1.5 e versioni successive. </sup>
+<sup>1 Le versioni elencate per .NET Framework si applicano agli strumenti .NET Core SDK 2.0 e versioni successive. Le versioni precedenti usavano un altro mapping per .NET Standard 1.5 e versioni successive. È possibile [scaricare gli strumenti di .NET Core per Visual Studio 2015](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) se non è possibile eseguire l'aggiornamento a Visual Studio 2017.</sup>
 
 - Le colonne rappresentano le versioni di .NET Standard. Ogni cella di intestazione è un collegamento a un documento che mostra quali API sono state aggiunte nella specifica versione di .NET Standard.
 - Le righe rappresentano le diverse implementazioni di .NET.
