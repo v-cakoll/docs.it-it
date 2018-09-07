@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 97b878621d5aa1860cd955755d9bbc344b95b993
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44035827"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080595"
 ---
 # <a name="bitmap-effects-overview"></a>Cenni preliminari sugli effetti bitmap
 Gli effetti bitmap consentono a progettisti e agli sviluppatori di applicare effetti visivi al rendering del contenuto Windows Presentation Foundation (WPF). Ad esempio, gli effetti bitmap consentono di applicare facilmente un <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> effetto o un effetto sfocatura a un'immagine o un pulsante.  

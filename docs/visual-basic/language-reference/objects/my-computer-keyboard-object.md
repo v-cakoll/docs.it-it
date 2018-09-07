@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Keyboard object
 ms.assetid: 78dec9be-4e69-4ede-b9be-2ac34bec2b26
 ms.openlocfilehash: a7b3627a22a8e9e5de5ee022836f477fdef00cec
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875668"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081979"
 ---
 # <a name="mycomputerkeyboard-object"></a>Oggetto My.Computer.Keyboard
 Offre proprietà che consentono di accedere allo stato corrente della tastiera, per sapere ad esempio quali tasti vengono attualmente premuti, e un metodo per inviare le sequenze di tasti alla finestra attiva.  

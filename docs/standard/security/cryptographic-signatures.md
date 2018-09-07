@@ -23,11 +23,11 @@ ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3f9d83a0edb6dc2261931e422b0ae4c735d2e0d1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43869993"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086096"
 ---
 # <a name="cryptographic-signatures"></a>Firme di crittografia
 <a name="top"></a> Le firme digitali di crittografia usano algoritmi con chiave pubblica per garantire l'integrità dei dati. Quando viene applicata una firma digitale ai dati, questa può essere verificata da altri e può quindi provare che i dati non sono stati modificati dopo l'applicazione della firma. Per altre informazioni sulle firme digitali, vedere [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).  

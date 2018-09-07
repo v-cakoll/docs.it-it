@@ -9,47 +9,48 @@ helpviewer_keywords:
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2674acf14aae5e892dfb9707a19cca12b4797c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df2ccf3d778e26e16937554304ae847f624cfec0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572983"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085640"
 ---
 # <a name="framework-design-guidelines"></a>Linee guida per la progettazione di Framework
-In questa sezione vengono fornite linee guida per la progettazione di librerie che estendono e interagiscono con .NET Framework. L'obiettivo è garantire agli sviluppatori di librerie coerenza API e la facilità di utilizzo fornendo un modello di programmazione unificato che sia indipendente dal linguaggio di programmazione utilizzato per lo sviluppo. È consigliabile seguire queste linee guida di progettazione durante lo sviluppo di classi e componenti che estendono .NET Framework. Progettazione di librerie incoerente può influire negativamente sulla produttività degli sviluppatori e sconsiglia adozione.  
+In questa sezione vengono fornite linee guida per la progettazione di librerie che ne estendono e interagiscono con .NET Framework. L'obiettivo è garantire agli sviluppatori di librerie API uniformità e semplicità d'uso, fornendo un modello di programmazione unificato che è indipendente dal linguaggio di programmazione usato per lo sviluppo. È consigliabile seguire queste linee guida di progettazione durante lo sviluppo di classi e componenti in grado di estendere .NET Framework. Progettazione di librerie incoerente influisce negativamente sulla produttività degli sviluppatori e, scoraggia l'adozione.  
   
- Le linee guida sono organizzate come indicazioni semplice con le condizioni di prefisso `Do`, `Consider`, `Avoid`, e `Do not`. Queste linee guida servono per consentire agli sviluppatori di librerie di classe di comprendere i compromessi tra diverse soluzioni. Potrebbero esistere situazioni in cui è necessario che violi queste linee guida di progettazione corretta progettazione delle librerie. Casi devono essere rari ed è importante disporre di un motivo esistano valide per la decisione.  
+ Le linee guida sono organizzate come semplici consigli con i termini `Do`, `Consider`, `Avoid`, e `Do not`. Queste indicazioni servono per consentire agli sviluppatori di librerie di classi di comprendere i compromessi tra diverse soluzioni. Potrebbero esserci situazioni in cui progettazione buona libreria richiede che si violano tali linee guida di progettazione. Questi casi devono essere rari, ed è importante avere un motivo chiaro e accattivante per la decisione.  
   
- Queste linee guida sono state estratte dal libro *linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition*, Krzysztof Cwalina e Brad Abrams.  
+ Queste linee guida sono state estratte dal libro *linee guida di progettazione di Framework: convenzioni, linguaggi e modelli per le librerie .NET di riutilizzabile, 2nd Edition*, Krzysztof Cwalina e Brad Abrams.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)  
- Vengono fornite linee guida per la denominazione di assembly, spazi dei nomi, tipi e membri nelle librerie di classi.  
+ Vengono fornite linee guida per la denominazione degli assembly, spazi dei nomi, tipi e membri nelle librerie di classi.  
   
  [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)  
- Vengono fornite linee guida per l'utilizzo di classi statiche e astratte, interfacce, enumerazioni, strutture e altri tipi.  
+ Vengono fornite linee guida per l'uso di classi statiche e astratte, interfacce, enumerazioni, strutture e altri tipi.  
   
  [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)  
  Vengono fornite linee guida per la progettazione e utilizzando le proprietà, metodi, costruttori, campi, eventi, operatori e i parametri.  
   
  [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- Vengono illustrati i meccanismi di estendibilità, ad esempio la creazione di sottoclassi, utilizzando gli eventi, i membri virtuali e i callback e viene spiegato come scegliere i meccanismi che meglio soddisfano i requisiti del framework.  
+ Vengono illustrati i meccanismi di estendibilità, ad esempio la creazione di sottoclassi, usando gli eventi, i membri virtuali e i callback e spiega come scegliere i meccanismi che soddisfano al meglio i requisiti del framework.  
   
  [Linee guida di progettazione delle eccezioni](../../../docs/standard/design-guidelines/exceptions.md)  
- Descrive linee guida di progettazione per la progettazione, generazione e l'intercettazione delle eccezioni.  
+ Descrive linee guida per la progettazione, generando un'eccezione e il rilevamento di eccezioni.  
   
  [Linee guida per l'uso](../../../docs/standard/design-guidelines/usage-guidelines.md)  
- Vengono fornite istruzioni per l'utilizzo di tipi comuni, ad esempio matrici, attributi e raccolte che supportano la serializzazione e l'overload degli operatori di uguaglianza.  
+ Descrive linee guida per l'utilizzo di tipi comuni, ad esempio matrici, gli attributi e le raccolte, che supportano la serializzazione e l'overload degli operatori di uguaglianza.  
   
  [Modelli di progettazione comuni](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- Vengono fornite linee guida per la scelta e l'implementazione delle proprietà di dipendenza e il modello dispose.  
+ Vengono fornite linee guida per la scelta e implementare il modello dispose e le proprietà di dipendenza.  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica](../../../docs/framework/get-started/overview.md)  
- [Guida di orientamento per .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
- [Guida di sviluppo](../../../docs/framework/development-guide.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Panoramica](../../../docs/framework/get-started/overview.md)  
+- [Guida di orientamento a .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+- [Guida di sviluppo](../../../docs/framework/development-guide.md)

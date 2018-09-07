@@ -2,22 +2,20 @@
 title: Sintassi dettagliata (F#)
 description: 'Informazioni sulla differenza tra la sintassi dettagliata e leggera nel linguaggio di programmazione F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b0bed66b4a76c5ab11e6c9e7aaf695f864e74ca0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563784"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063118"
 ---
 # <a name="verbose-syntax"></a>Sintassi dettagliata
 
-Sono disponibili due forme di sintassi per numerosi costrutti di linguaggio F #: *sintassi dettagliata* e *sintassi leggera*. La sintassi dettagliata non viene usata di frequente, ma ha il vantaggio di essere meno sensibile rientro. La sintassi leggera è più breve e utilizza il rientro per segnalare l'inizio e fine dei costrutti, anziché come parole chiave aggiuntive `begin`, `end`, `in`e così via. La sintassi predefinita è la sintassi leggera. In questo argomento viene descritta la sintassi per i costrutti F # quando non è abilitata la sintassi leggera. Sintassi dettagliata è sempre abilitata, pertanto anche se si abilita la sintassi leggera, è comunque possibile usare la sintassi dettagliata per alcuni costrutti. È possibile disabilitare la sintassi leggera utilizzando il `#light "off"` direttiva.
-
+Sono disponibili due forme di sintassi per numerosi costrutti del linguaggio F #: *sintassi dettagliata* e *sintassi leggera*. La sintassi dettagliata non è viene comunemente utilizzata, ma offre il vantaggio di essere meno sensibili alla rientro. La sintassi leggera è più breve e utilizza il rientro per indicare l'inizio e alla fine di costrutti, anziché, ad esempio parole chiave aggiuntive `begin`, `end`, `in`e così via. La sintassi di predefinita è la sintassi leggera. Questo argomento viene descritta la sintassi per i costrutti F # sintassi leggera non è abilitata. Sintassi dettagliata è sempre abilitata, in modo che anche se si abilita la sintassi leggera, è comunque possibile usare la sintassi dettagliata per alcuni costrutti. È possibile disabilitare la sintassi leggera, utilizzando il `#light "off"` direttiva.
 
 ## <a name="table-of-constructs"></a>Tabella dei costrutti
-Nella tabella seguente viene mostrata la sintassi leggera e dettagliata per i costrutti di linguaggio F # in contesti in cui è presente una differenza tra le due forme. In questa tabella, le parentesi acute (&lt;&gt;) racchiudere gli elementi della sintassi fornito dall'utente. Consultare la documentazione per ogni costrutto di linguaggio per informazioni più dettagliate sulla sintassi utilizzata all'interno di questi costrutti.
 
-
+Nella tabella seguente illustra la sintassi leggera e dettagliata per costrutti del linguaggio F # nei contesti in cui è presente una differenza tra le due forme. In questa tabella, le parentesi acute (&lt;&gt;) racchiudere gli elementi della sintassi fornita dall'utente. Vedere la documentazione per ogni costrutto di linguaggio per informazioni più dettagliate sulla sintassi usata all'interno di questi costrutti.
 
 <table>
 <tr>
@@ -343,11 +341,8 @@ module <module-name> =
 </tr>
 </table>
 
-
-
 ## <a name="see-also"></a>Vedere anche
-[Riferimenti per il linguaggio F#](index.md)
 
-[Direttive per il compilatore](compiler-directives.md)
-
-[Linee guida per la formattazione del codice](code-formatting-guidelines.md)
+- [Riferimenti per il linguaggio F#](index.md)
+- [Direttive per il compilatore](compiler-directives.md)
+- [Linee guida per la formattazione del codice](code-formatting-guidelines.md)

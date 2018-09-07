@@ -3,11 +3,11 @@ title: Debug di query di LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
 ms.openlocfilehash: fd10e6c715529ba937ba09732a254d311158b0f1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892665"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086004"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Debug di query di LINQ to DataSet
 In [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] è supportato il debug di codice [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Vi sono tuttavia alcune differenze tra l'esecuzione del debug di codice [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] e di codice gestito non [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. La maggior parte delle funzionalità di debug è compatibile con le istruzioni [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], inclusa l'esecuzione di istruzioni, l'impostazione dei punti di interruzione e la visualizzazione dei risultati nelle finestre del debugger. Posticipata, tuttavia, l'esecuzione in ha alcuni effetti collaterali che è opportuno considerare durante il debug di query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] del codice e sono previste alcune limitazioni all'uso di modifica e continuazione. In questo argomento vengono illustrati gli aspetti del debug che sono univoci per [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] rispetto a non -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] codice gestito.  

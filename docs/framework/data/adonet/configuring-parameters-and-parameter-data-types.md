@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: 7bb68a7d08d983e93119804db6c1f5a01cd047c9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659389"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081275"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurazione dei parametri e tipi di dati dei parametri
 Gli oggetti comando usano i parametri per passare valori a istruzioni o stored procedure SQL, fornendo la verifica e la convalida dei tipi. A differenza del testo dei comandi, l'input dei parametri viene trattato come valore letterale, non come codice eseguibile. In questo modo è possibile difendersi da attacchi SQL injection, in cui l'autore di un attacco inserisce un comando che compromette la sicurezza del server in un'istruzione SQL.  

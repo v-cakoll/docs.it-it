@@ -8,11 +8,11 @@ helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
 ms.openlocfilehash: 7d732f26f3f679d744f86863a13d1ca0d7c88819
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744313"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070134"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Creazione di servizi interoperativi WS-I Basic Profile 1.1
 Per configurare un endpoint del servizio WCF per essere interoperabile con [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] client del servizio Web:  

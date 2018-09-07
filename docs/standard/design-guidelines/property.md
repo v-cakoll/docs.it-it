@@ -9,11 +9,11 @@ ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7e6bc0230afe2dfc03b1aeeae46a3ba54599c8da
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875447"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084934"
 ---
 # <a name="property-design"></a>Progettazione di proprietà
 Anche se le proprietà sono tecnicamente è molto simile ai metodi, essi sono piuttosto diversi in termini relativi scenari di utilizzo. Si dovrebbero essere considerate come campi intelligenti. Con la sintassi per la chiamata di campi e la flessibilità dei metodi.  

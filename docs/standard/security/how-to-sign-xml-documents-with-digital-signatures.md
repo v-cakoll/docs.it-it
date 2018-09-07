@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 829be8663068d4eb492631ccc4194b4e4c3000aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590299"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061676"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Procedura: firmare documenti XML con firme digitali
-È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per firmare un documento XML o parte di esso con una firma digitale.  Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma.  Per ulteriori informazioni sullo standard XMLDSIG, vedere la raccomandazione del World Wide Web Consortium (W3C) [sintassi della firma XML e l'elaborazione](https://www.w3.org/TR/xmldsig-core/).  
+È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per firmare un documento XML o parte di esso con una firma digitale.  Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma.  Per altre informazioni sullo standard XMLDSIG, vedere la raccomandazione del World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
   
  L'esempio di codice in questa procedura illustra come firmare digitalmente un intero documento XML e allegare la firma al documento in un elemento <`Signature`>.  L'esempio crea una chiave di firma RSA, aggiunge la chiave a un contenitore di chiavi sicuro e usa quindi la chiave per firmare digitalmente un documento XML.  La chiave può successivamente essere recuperata per verificare la firma digitale XML oppure può essere usata per firmare un altro documento XML.  
   
@@ -114,10 +114,11 @@ ms.locfileid: "33590299"
 -   Includere gli spazi dei nomi seguenti: <xref:System.Xml>, <xref:System.Security.Cryptography> e <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Non archiviare né trasferire mai in testo non crittografato la chiave privata di una coppia di chiavi asimmetriche.  Per ulteriori informazioni sulle chiavi crittografiche simmetriche e asimmetriche, vedere [generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
+ Non archiviare né trasferire mai in testo non crittografato la chiave privata di una coppia di chiavi asimmetriche.  Per altre informazioni sulle chiavi crittografiche simmetriche e asimmetriche, vedere [generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
   
- Non incorporare mai una chiave privata direttamente nel codice sorgente.  Le chiavi incorporate possono essere lette facilmente da un assembly mediante il [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oppure aprendo l'assembly in un editor di testo quale Blocco note.  
+ Non incorporare mai una chiave privata direttamente nel codice sorgente.  Le chiavi incorporate possono essere lette facilmente da un assembly usando il [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oppure aprendo l'assembly in un editor di testo quale Blocco note.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Security.Cryptography.Xml>  
- [Procedura: Verificare le firme digitali dei documenti XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Procedura: Verificare le firme digitali dei documenti XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

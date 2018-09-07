@@ -2,25 +2,25 @@
 title: Parametri e argomenti (F#)
 description: 'Informazioni sul supporto del linguaggio F # per la definizione dei parametri e passare argomenti a funzioni, metodi e proprietà.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 9744339110314e4e6b3c3cf8d49b1c988bc25e3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471981"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062637"
 ---
 # <a name="parameters-and-arguments"></a>Parametri e argomenti
 
 In questo argomento viene descritto il supporto di language per la definizione dei parametri e passare argomenti a funzioni, metodi e proprietà. Sono incluse informazioni su come passare per riferimento e su come definire e usare i metodi che possono accettare un numero variabile di argomenti.
 
-
 ## <a name="parameters-and-arguments"></a>Parametri e argomenti
+
 Il termine *parametro* viene usato per descrivere i nomi per i valori che dovrebbero essere forniti. Il termine *argomento* viene usato per i valori specificati per ogni parametro.
 
 Parametri possono essere specificati nella tupla o sottoposto a currying o in una combinazione dei due. È possibile passare argomenti usando un nome di parametro espliciti. I parametri dei metodi possono essere specificati come facoltativi e assegnati il valore predefinito.
 
-
 ## <a name="parameter-patterns"></a>Modelli di parametri
+
 I parametri specificati per le funzioni e i metodi disponibili, in generale, modelli separati da spazi. Ciò significa che, in teoria, tutti i modelli descritti in [espressioni di ricerca](match-expressions.md) può essere utilizzato in un elenco di parametri per una funzione o membro.
 
 Metodi usano in genere il formato di tupla del passaggio di argomenti. Ciò consente di ottenere un risultato più chiaro dalla prospettiva di altri linguaggi .NET perché il formato di tupla corrisponde alla modalità di argomenti vengono passati nei metodi .NET.
@@ -90,6 +90,7 @@ In alcuni casi, i modelli che prevedono corrispondenze incomplete sono utili, ad
 Uso di criteri di corrispondenza incompleta è consigliabile riservarla ai creazione rapida di prototipi e altri usi temporanei. Il compilatore genererà un avviso per tale codice. Tali modelli non possono coprire caso generale di tutti i possibili input e pertanto non sono adatti per le API dei componenti.
 
 ## <a name="named-arguments"></a>Argomenti denominati
+
 Argomenti per i metodi possono essere specificati in base alla posizione in un elenco di argomenti delimitati da virgole, o può essere passati in modo esplicito a un metodo, fornendo il nome, seguito da un segno di uguale e il valore deve essere passato. Se specificato, fornendo il nome, possono essere visualizzati in un ordine diverso da quello usato nella dichiarazione.
 
 Gli argomenti denominati possono rendere codice più leggibile e più adattabile a determinati tipi di modifiche nell'API, ad esempio un riordinamento dei parametri del metodo.
@@ -107,6 +108,7 @@ In una chiamata a un costruttore di classe, è possibile impostare i valori dell
 Per altre informazioni, vedere [costruttori (F #)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>Parametri facoltativi
+
 È possibile specificare un parametro facoltativo per un metodo con un punto interrogativo davanti al nome del parametro. I parametri facoltativi vengono interpretati come tipo di opzione F #, pertanto è possibile eseguire le query in modo normale che i tipi di opzione sono sottoposti a query, usando un `match` espressione con `Some` e `None`. I parametri facoltativi sono consentiti solo per i membri, non su funzioni create tramite `let` associazioni.
 
 È anche possibile usare una funzione `defaultArg`, che imposta un valore predefinito di un argomento facoltativo. Il `defaultArg` funzione accetta il parametro facoltativo come primo argomento e il valore predefinito come il secondo.
@@ -124,6 +126,7 @@ Baud Rate: 300 Duplex: Half Parity: true
 ```
 
 ## <a name="passing-by-reference"></a>Il passaggio per riferimento
+
 Passaggio di un valore di F # per riferimento implica la `byref` parola chiave, che specifica che il parametro è effettivamente un puntatore al valore passato per riferimento. Qualsiasi valore passato a un metodo con un `byref` come l'argomento deve essere `mutable`.
 
 Poiché il parametro è un puntatore e il valore è modificabile, qualsiasi modifica del valore viene mantenute dopo l'esecuzione della funzione.
@@ -139,6 +142,7 @@ Gli esempi seguenti illustrano l'uso del `byref` (parola chiave). Si noti che qu
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>Matrici di parametri
+
 In alcuni casi è necessario definire una funzione che accetta un numero arbitrario di parametri di tipo eterogeneo. Non sarebbe pratico creare tutti i possibili metodi di overload per conto di tutti i tipi che può essere usati. Le implementazioni di .NET forniscono supporto per tali metodi tramite la funzionalità di matrice di parametri. Un metodo che accetta una matrice di parametri nella sua firma può essere fornito con un numero arbitrario di parametri. I parametri vengono inseriti in una matrice. Il tipo degli elementi della matrice determina i tipi di parametro che possono essere passati alla funzione. Se si definisce la matrice di parametri con `System.Object` come tipo di elemento, quindi il codice client può passare i valori di qualsiasi tipo.
 
 In F #, matrici di parametri possono essere definite solo nei metodi. Non possono essere usate in funzioni autonome o funzioni definite nei moduli.
@@ -162,4 +166,5 @@ true
 ```
 
 ## <a name="see-also"></a>Vedere anche
-[Membri](members/index.md)
+
+- [Membri](members/index.md)

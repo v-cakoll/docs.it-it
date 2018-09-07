@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d4d334d9809f374442e19807d3b249a17a1d9df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4574dffc3f9dd1b60d655bfde33a4ddc1a81d350
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571085"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44068976"
 ---
 # <a name="protected-members"></a>Membri protetti
-Membri protetti da soli non forniscono alcun estendibilità, ma può rendere più potente di estendibilità tramite la creazione di sottoclassi. Possono essere utilizzati per esporre le opzioni di personalizzazione avanzate senza inutilmente complica l'interfaccia pubblica principale.  
+Membri protetti da soli non forniscono alcun estendibilità, ma estendibilità tramite la creazione di sottoclassi può rendere più potenti. Possono essere utilizzati per esporre le opzioni di personalizzazione avanzate senza complicare inutilmente l'interfaccia pubblica principale.  
   
- Finestre di progettazione Framework necessario prestare attenzione ai membri protetti perché il nome "protetto" può concedere a un falso senso di sicurezza. Chiunque sia in grado di sottoclasse di una classe non sealed e i membri di accesso protetto e pertanto le stesse difensivo procedure di codifica utilizzati per i membri pubblici applicano ai membri protetti.  
+ Le finestre di progettazione di Framework necessario prestare attenzione con i membri protetti perché il nome "protetto" può dare un senso di protezione fasullo. Chiunque sia in grado di sottoclasse di una classe non sealed e protetta con accesso membri e quindi le stesse procedure di codifica difensive utilizzate per i membri pubblici applicano ai membri protetti.  
   
  **✓ CONSIDER** utilizzando membri per la personalizzazione avanzata protetti.  
   
@@ -30,10 +30,11 @@ Membri protetti da soli non forniscono alcun estendibilità, ma può rendere pi�
   
  Chiunque può ereditare da una classe e accedere ai membri protetti.  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
- [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

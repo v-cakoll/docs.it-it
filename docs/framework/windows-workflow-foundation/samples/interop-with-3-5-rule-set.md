@@ -3,11 +3,11 @@ title: Interoperabilità con il set di regole 3.5
 ms.date: 03/30/2017
 ms.assetid: 969f3295-d874-428c-a9c6-623e3d578e51
 ms.openlocfilehash: 5ea5454ef80bfd83611ed20392782d99cd8c0c25
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872631"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44097165"
 ---
 # <a name="interop-with-35-rule-set"></a>Interoperabilità con il set di regole 3.5
 Questo esempio viene illustrato l'utilizzo dei <xref:System.Activities.Statements.Interop> attività per l'integrazione con un'attività personalizzata in [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] usando <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` e regole. Passa i dati all'attività personalizzata associando le variabili di [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] alle proprietà di dipendenza esposte dall'attività personalizzata.  
