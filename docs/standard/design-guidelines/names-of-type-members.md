@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25fe93b63c518f54ee72300f26dfcb3f3ad21d76
-ms.sourcegitcommit: b6baf91310f6867223f0f32d596b451592b917b5
+ms.openlocfilehash: 0541f100f208543c796de7238e68ea6f90c7b299
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "33575349"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44077109"
 ---
 # <a name="names-of-type-members"></a>Nomi di membri dei tipi
 I tipi sono costituiti da membri: metodi, proprietà, eventi, costruttori e campi. Le sezioni seguenti illustrano le linee guida per assegnare nomi ai membri dei tipi.  
@@ -102,6 +102,7 @@ public class Control {
   
  *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
- [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)
