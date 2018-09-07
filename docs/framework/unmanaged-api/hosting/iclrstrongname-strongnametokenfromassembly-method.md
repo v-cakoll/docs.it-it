@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3dd083193fa8fed2abc8a1a498325f7edd89bc96
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886124"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087511"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassembly-method"></a>Metodo ICLRStrongName::StrongNameTokenFromAssembly
 Crea un token con nome sicuro dal file di assembly specificato.  
