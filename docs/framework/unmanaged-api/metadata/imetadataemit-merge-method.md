@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 899f2ca5ef1b987687f5c065ad3e1965e142d103
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743966"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080790"
 ---
-# <a name="imetadataemitmerge-method"></a><span data-ttu-id="a27c6-102">Metodo IMetaDataEmit::Merge</span><span class="sxs-lookup"><span data-stu-id="a27c6-102">IMetaDataEmit::Merge Method</span></span>
-<span data-ttu-id="a27c6-103">Aggiunge l'ambito importato specificato all'elenco di ambiti da unire.</span><span class="sxs-lookup"><span data-stu-id="a27c6-103">Adds the specified imported scope to the list of scopes to be merged.</span></span>  
+# <a name="imetadataemitmerge-method"></a><span data-ttu-id="63f28-102">Metodo IMetaDataEmit::Merge</span><span class="sxs-lookup"><span data-stu-id="63f28-102">IMetaDataEmit::Merge Method</span></span>
+<span data-ttu-id="63f28-103">Aggiunge l'ambito importato specificato all'elenco di ambiti da unire.</span><span class="sxs-lookup"><span data-stu-id="63f28-103">Adds the specified imported scope to the list of scopes to be merged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a27c6-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a27c6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="63f28-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="63f28-104">Syntax</span></span>  
   
 ```  
 HRESULT Merge (   
@@ -37,28 +37,28 @@ HRESULT Merge (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a27c6-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="a27c6-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="63f28-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="63f28-105">Parameters</span></span>  
  `pImport`  
- <span data-ttu-id="a27c6-106">[in] Un puntatore a un [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) oggetto che identifica l'ambito importato da unire.</span><span class="sxs-lookup"><span data-stu-id="a27c6-106">[in] A pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) object that identifies the imported scope to be merged.</span></span>  
+ <span data-ttu-id="63f28-106">[in] Un puntatore a un [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) oggetto che identifica l'ambito importato da unire.</span><span class="sxs-lookup"><span data-stu-id="63f28-106">[in] A pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) object that identifies the imported scope to be merged.</span></span>  
   
  `pIMap`  
- <span data-ttu-id="a27c6-107">[in] Un puntatore a un [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) oggetto che specifica il nuovo mapping dei token.</span><span class="sxs-lookup"><span data-stu-id="a27c6-107">[in] A pointer to an [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) object that specifies the token re-map.</span></span>  
+ <span data-ttu-id="63f28-107">[in] Un puntatore a un [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) oggetto che specifica il nuovo mapping dei token.</span><span class="sxs-lookup"><span data-stu-id="63f28-107">[in] A pointer to an [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) object that specifies the token re-map.</span></span>  
   
  `pHandleer`  
- <span data-ttu-id="a27c6-108">[in] Un puntatore a un [IUnknown](/cpp/atl/iunknown) oggetto che specifica gli errori.</span><span class="sxs-lookup"><span data-stu-id="a27c6-108">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) object that specifies the errors.</span></span>  
+ <span data-ttu-id="63f28-108">[in] Un puntatore a un [IUnknown](/cpp/atl/iunknown) oggetto che specifica gli errori.</span><span class="sxs-lookup"><span data-stu-id="63f28-108">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) object that specifies the errors.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a27c6-109">Note</span><span class="sxs-lookup"><span data-stu-id="a27c6-109">Remarks</span></span>  
- <span data-ttu-id="a27c6-110">Chiamare [MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) per attivare l'unione dei metadati in un singolo ambito.</span><span class="sxs-lookup"><span data-stu-id="a27c6-110">Call [IMetaDataEmit::MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) to trigger the merger of metadata into a single scope.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="63f28-109">Note</span><span class="sxs-lookup"><span data-stu-id="63f28-109">Remarks</span></span>  
+ <span data-ttu-id="63f28-110">Chiamare [MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) per attivare l'unione dei metadati in un singolo ambito.</span><span class="sxs-lookup"><span data-stu-id="63f28-110">Call [IMetaDataEmit::MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) to trigger the merger of metadata into a single scope.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a27c6-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a27c6-111">Requirements</span></span>  
- <span data-ttu-id="a27c6-112">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a27c6-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="63f28-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="63f28-111">Requirements</span></span>  
+ <span data-ttu-id="63f28-112">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="63f28-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a27c6-113">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="a27c6-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="63f28-113">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="63f28-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a27c6-114">**Libreria:** usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="a27c6-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="63f28-114">**Libreria:** usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="63f28-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a27c6-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a27c6-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="63f28-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63f28-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a27c6-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a27c6-116">See Also</span></span>  
- [<span data-ttu-id="a27c6-117">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="a27c6-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="a27c6-118">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="a27c6-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="63f28-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="63f28-116">See Also</span></span>  
+ [<span data-ttu-id="63f28-117">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="63f28-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [<span data-ttu-id="63f28-118">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="63f28-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
