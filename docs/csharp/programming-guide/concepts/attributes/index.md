@@ -1,12 +1,12 @@
 ---
 title: Attributi (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: fe94f0ee778f14581fd7949f705cc22f12058b27
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956072"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892386"
 ---
 # <a name="attributes-c"></a>Attributi (C#)
 
@@ -101,8 +101,8 @@ Nell'esempio seguente viene illustrato come applicare gli attributi a metodi, pa
 
 Di seguito vengono elencati alcuni degli usi comuni degli attributi nel codice:
 
-- Contrassegno dei metodi mediante l'attributo `WebMethod` nei servizi Web per indicare che è possibile chiamare il metodo tramite il protocollo SOAP. Per altre informazioni, vedere <xref:System.Web.Services.WebMethodAttribute>.
-- Descrizione della procedura di marshalling dei parametri del metodo durante l'interazione con il codice nativo. Per altre informazioni, vedere <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+- Contrassegno dei metodi mediante l'attributo `WebMethod` nei servizi Web per indicare che è possibile chiamare il metodo tramite il protocollo SOAP. Per ulteriori informazioni, vedere <xref:System.Web.Services.WebMethodAttribute>.
+- Descrizione della procedura di marshalling dei parametri del metodo durante l'interazione con il codice nativo. Per ulteriori informazioni, vedere <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
 - Descrizione delle proprietà COM per classi, metodi e interfacce.
 - Chiamata al codice non gestito che usa la classe <xref:System.Runtime.InteropServices.DllImportAttribute>.
 - Descrizione dell'assembly con indicazione di titolo, versione, descrizione o marchio.
@@ -125,7 +125,7 @@ Per altre informazioni, vedere:
 
 ## <a name="see-also"></a>Vedere anche
 
- [Guida per programmatori C#](../../index.md)  
- [Reflection (C#)](../reflection.md)  
- [Attributi](../../../../standard/attributes/index.md)  
- [Uso degli attributi in C#](../../../tutorials/attributes.md)  
+- [Guida per programmatori C#](../../index.md)  
+- [Reflection (C#)](../reflection.md)  
+- [Attributi](../../../../standard/attributes/index.md)  
+- [Uso degli attributi in C#](../../../tutorials/attributes.md)  

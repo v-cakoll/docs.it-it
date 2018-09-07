@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-ms.openlocfilehash: 20e8b857759253736d11bc31988fadb4843fa87a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3625f7a108675a3a9ab6be16ef94ae7e7c107612
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334860"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060570"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>File system e Registro di sistema (Guida per programmatori C#)
 Gli argomenti seguenti illustrano come usare C# e .NET Framework per eseguire varie operazioni di base su file e cartelle e nel Registro di sistema.  
@@ -31,7 +31,7 @@ Gli argomenti seguenti illustrano come usare C# e .NET Framework per eseguire va
 |[Procedura: Creare una chiave nel Registro di sistema](../../../csharp/programming-guide/file-system/how-to-create-a-key-in-the-registry.md)|Viene mostrato come scrivere una chiave nel Registro di sistema.|  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [I/O di file e di flussi](https://msdn.microsoft.com/library/k3352a4t)  
+ [I/O di file e di flussi](../../../standard/io/index.md)  
   
  [Procedura: Copiare, eliminare e spostare file e cartelle (Guida per programmatori C#)](../../../csharp/programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md)  
   
