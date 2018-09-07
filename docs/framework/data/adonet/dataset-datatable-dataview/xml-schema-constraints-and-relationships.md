@@ -3,11 +3,11 @@ title: Vincoli e relazioni di XML Schema
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
 ms.openlocfilehash: bcb6e257a40040701612b73768a98e056bccd6c5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785612"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872341"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Vincoli e relazioni di XML Schema
 In uno schema di XML Schema definition language (XSD), è possibile specificare vincoli (univoci, vincoli key e keyref) e le relazioni (mediante la **msdata: Relationship** annotazione). In questo argomento viene spiegato come vengono interpretati i vincoli e le relazioni specificati in XML Schema per generare il tipo <xref:System.Data.DataSet>.  
