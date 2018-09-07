@@ -2,12 +2,12 @@
 title: Celle di riferimento (F#)
 description: 'Informazioni su come le celle di riferimento di F # sono posizioni di archiviazione che consentono di creare valori modificabili con semantica di riferimento.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 133aec6b162a13306a05c9afa172f859890565eb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892421"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079296"
 ---
 # <a name="reference-cells"></a>Celle di riferimento
 
@@ -74,62 +74,9 @@ L'output è indicato di seguito.
 
 Il campo `contents` viene fornito per garantire compatibilità con altre versioni di ML e comporta la generazione di un avviso durante la compilazione. Per disabilitare l'avviso, utilizzare l'opzione del compilatore `--mlcompatibility`. Per altre informazioni, vedere [Opzioni del compilatore](compiler-options.md).
 
-Nell'esempio di codice seguente viene illustrato l'utilizzo di celle di riferimento nel passaggio dei parametri. Il tipo Incrementatore dispone di un metodo che accetta un parametro che include il tipo di parametro byref incremento. Byref nel tipo di parametro indica che i chiamanti devono passare una cella di riferimento o l'indirizzo di una variabile tipica del tipo specificato, in questo caso tipo int. Il codice rimanente viene illustrato come chiamare incremento con entrambi i tipi di argomenti e viene illustrato l'utilizzo dell'operatore di riferimento su una variabile per creare una cella di riferimento (ref myDelta1). Viene quindi illustrato l'utilizzo dell'operatore address-of (&amp;) per generare un argomento appropriato. Infine, l'incremento viene chiamato nuovamente utilizzando una cella di riferimento che viene dichiarata utilizzando un'associazione "Let". L'ultima riga del codice viene illustrato come utilizzare i! operatore per dereferenziare la cella di riferimento per la stampa.
+I programmatori c# devono sapere che `ref` in c# non è la stessa operazione come `ref` in F #. I costrutti equivalenti in F # sono [zkratka](byrefs.md), che sono un concetto diverso dalle celle di riferimento.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2204.fs)]
-
-Per altre informazioni su come passare per riferimento, vedere [parametri e argomenti](parameters-and-arguments.md).
-
->[!NOTE]
-I programmatori c# devono conoscere che tale riferimento funziona in modo diverso in F # rispetto a nel linguaggio c#. Ad esempio, l'uso di ref quando si passa un argomento non hanno lo stesso effetto in F # come accade in c#.
-
->[!NOTE]
-`mutable` le variabili possono essere automaticamente promossa a `'a ref` acquisiti da una chiusura; vedere [valori](values/index.md).
-
-## <a name="consuming-c-ref-returns"></a>Utilizzo in c# `ref` restituisce
-
-A partire da F # 4.1, è possibile utilizzare `ref` restituisce generato nel linguaggio c#.  Il risultato di una chiamata di questo tipo è un `byref<_>` puntatore.
-
-Il seguente metodo c#:
-
-```csharp
-namespace RefReturns
-{
-    public static class RefClass
-    {
-        public static ref int Find(int val, int[] vals)
-        {
-            for (int i = 0; i < vals.Length; i++)
-            {
-                if (vals[i] == val)
-                {
-                    return ref numbers[i]; // Returns the location, not the value
-                }
-            }
-
-            throw new IndexOutOfRangeException($"{nameof(number)} not found");
-        }
-    }
-}
-```
-
-Può essere trasparente chiamato da F # con alcuna sintassi speciale:
-
-```fsharp
-open RefReturns
-
-let consumeRefReturn() =
-    let result = RefClass.Find(3, [| 1; 2; 3; 4; 5 |]) // 'result' is of type 'byref<int>'.
-    ()
-```
-
-È anche possibile dichiarare funzioni che richiedono un `ref` restituire come input, ad esempio:
-
-```fsharp
-let f (x: byref<int>) = &x
-```
-
-Non è attualmente possibile generare un `ref` restituito in F # che può essere usato in c#.
+I valori contrassegnati come `mutable`può essere automaticamente promossa a `'a ref` acquisiti da una chiusura dei tag, vedere [valori](values/index.md).
 
 ## <a name="see-also"></a>Vedere anche
 

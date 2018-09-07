@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
-ms.openlocfilehash: d0fb8f9c411da570f8b2d01aa299e3521a417ead
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 326a62ab8ccc04b93c9304758ff068f35cf3ecf4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582485"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44066467"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>Strumento XML Schema Definition e serializzazione XML
 Lo strumento XML Schema Definition ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) viene installato insieme agli strumenti .NET Framework come parte di Windows® Software Development Kit (SDK). Lo strumento è progettato principalmente per due scopi:  
@@ -23,12 +23,13 @@ Lo strumento XML Schema Definition ([XML Schema Definition Tool (Xsd.exe)](../..
   
  Per altre informazioni su questo e altri strumenti, vedere [Strumenti](../../../docs/framework/tools/index.md). Per informazioni sulle opzioni dello strumento, vedere [Strumento XML Schema Definition (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Data.DataSet>  
- [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [Strumento XML Schema Definition (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
- [Procedura: Usare lo strumento XML Schema Definition per generare classi e documenti XML Schema](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
- [Supporto dell'associazione all'XML Schema in .NET Framework](https://msdn.microsoft.com/library/8f0619dd-f1fc-4895-ae21-6d45d0382cc1)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Data.DataSet>  
+- [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [Strumento XML Schema Definition (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
+- <xref:System.Xml.Serialization.XmlSerializer>  
+- [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [Procedura: Usare lo strumento XML Schema Definition per generare classi e documenti XML Schema](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
+- [Supporto dell'associazione all'XML Schema in .NET Framework](https://msdn.microsoft.com/library/8f0619dd-f1fc-4895-ae21-6d45d0382cc1)

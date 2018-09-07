@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6840a9005aaca4805252298e1ceaf7e51f38971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b1ca4f0809659b3e164623f488a8585a33ea718
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591460"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071726"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Procedura: crittografare gli elementi XML con chiavi asimmetriche
-È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare un elemento all'interno di un documento XML.  La crittografia XML consente di scambiare o archiviare dati XML crittografati in modo standard, garantendo un'adeguata protezione dei dati da letture non autorizzate.  Per ulteriori informazioni sullo standard di crittografia XML, vedere la specifica World Wide Web Consortium (W3C) per la crittografia XML disponibile all'indirizzo http://www.w3.org/TR/xmldsig-core/.  
+È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare un elemento all'interno di un documento XML.  La crittografia XML consente di scambiare o archiviare dati XML crittografati in modo standard, garantendo un'adeguata protezione dei dati da letture non autorizzate.  Per altre informazioni sullo standard della crittografia XML, vedere la specifica World Wide Web Consortium (W3C) per la crittografia XML disponibile all'indirizzo http://www.w3.org/TR/xmldsig-core/.  
   
  È possibile usare la crittografia XML per sostituire qualsiasi elemento o documento XML con un elemento <`EncryptedData`> contenente i dati XML crittografati.  Nell'elemento <`EncryptedData`> possono essere inclusi anche sottoelementi in cui sono incluse informazioni sulle chiavi e sui processi usati durante la crittografia.  La crittografia XML consente a un documento di contenere più elementi crittografati e consente a un elemento di essere crittografato più volte.  Nell'esempio di codice relativo a questa procedura viene illustrato come creare un elemento <`EncryptedData`> insieme a diversi altri sottoelementi utilizzabili in un secondo momento durante la decrittografia.  
   
  Questo esempio crittografa un elemento XML mediante due chiavi.  L'esempio genera una coppia di chiavi pubblica/privata RSA e salva la coppia di chiavi in un contenitore di chiavi protetto.  L'esempio crea quindi una chiave di sessione separata usando l'algoritmo AES (Advanced Encryption Standard), definito anche algoritmo Rijndael.  La chiave di sessione AES viene usata dall'esempio per crittografare il documento XML e la chiave pubblica RSA viene usata per crittografare la chiave di sessione AES.  L'esempio salva infine la chiave di sessione AES crittografata e i dati XML crittografati nel documento XML entro un nuovo elemento <`EncryptedData`>.  
   
- Per decrittografare l'elemento XML, recuperare la chiave privata RSA dal contenitore di chiavi, usarla per decrittografare la chiave di sessione e quindi usare la chiave di sessione per decrittografare il documento.  Per ulteriori informazioni su come decrittografare un elemento XML crittografato mediante questa procedura, vedere [procedura: decrittografare gli elementi XML con chiavi asimmetriche](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
+ Per decrittografare l'elemento XML, recuperare la chiave privata RSA dal contenitore di chiavi, usarla per decrittografare la chiave di sessione e quindi usare la chiave di sessione per decrittografare il documento.  Per altre informazioni su come decrittografare un elemento XML che era stato crittografato mediante questa procedura, vedere [procedura: decrittografare gli elementi XML con chiavi asimmetriche](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
   
  Questo esempio è adatto per situazioni in cui più applicazioni devono condividere dati crittografati o in cui un'applicazione deve salvare dati crittografati tra un'esecuzione e l'altra.  
   
@@ -136,12 +136,13 @@ ms.locfileid: "33591460"
 -   Includere gli spazi dei nomi seguenti: <xref:System.Xml>, <xref:System.Security.Cryptography> e <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Non archiviare mai una chiave crittografica in testo non crittografato e non trasferire mai in testo non crittografato una chiave simmetrica tra computer.  Non archiviare né trasferire mai in testo non crittografato, inoltre, la chiave privata di una coppia di chiavi asimmetriche.  Per ulteriori informazioni sulle chiavi crittografiche simmetriche e asimmetriche, vedere [generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
+ Non archiviare mai una chiave crittografica in testo non crittografato e non trasferire mai in testo non crittografato una chiave simmetrica tra computer.  Non archiviare né trasferire mai in testo non crittografato, inoltre, la chiave privata di una coppia di chiavi asimmetriche.  Per altre informazioni sulle chiavi crittografiche simmetriche e asimmetriche, vedere [generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
   
- Non incorporare mai una chiave direttamente nel codice sorgente.  Le chiavi incorporate possono essere lette facilmente da un assembly mediante il [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oppure aprendo l'assembly in un editor di testo quale Blocco note.  
+ Non incorporare mai una chiave direttamente nel codice sorgente.  Le chiavi incorporate possono essere lette facilmente da un assembly usando il [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oppure aprendo l'assembly in un editor di testo quale Blocco note.  
   
  Dopo avere usato una chiave crittografica, cancellarla dalla memoria impostando ogni byte su zero oppure chiamando il metodo <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> della classe di crittografia gestita.  Le chiavi crittografiche possono essere a volte lette dalla memoria da un debugger oppure possono essere lette da un disco rigido, se viene eseguito il paging su disco della posizione di memoria.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Security.Cryptography.Xml>  
- [Procedura: Decrittografare gli elementi XML con chiavi asimmetriche](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Procedura: Decrittografare gli elementi XML con chiavi asimmetriche](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

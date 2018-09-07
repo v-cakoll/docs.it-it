@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3db4afb00367f719391193ebce4053cc5da16164
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5cd157f89797406fbe87c3d70c415d7b192d1a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588856"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061208"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Procedura: archiviare chiavi asimmetriche in un contenitore di chiavi
 Le chiavi private asimmetriche non devono essere mai archiviate in modalità verbatim o in testo normale nel computer locale. Se è necessario archiviare una chiave privata, è opportuno usare un contenitore di chiavi. Per altre informazioni sui contenitori di chiavi, vedere[Informazioni sui contenitori di chiavi RSA a livello di computer e utente](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
@@ -31,7 +31,7 @@ Le chiavi private asimmetriche non devono essere mai archiviate in modalità ver
   
 1.  Creare una nuova istanza di un <xref:System.Security.Cryptography.CspParameters> classe e passare il nome che si desidera chiamare il contenitore di chiavi per il <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> campo.  
   
-2.  Creare una nuova istanza di una classe che deriva dal <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe (in genere **RSACryptoServiceProvider** o **DSACryptoServiceProvider**) e passare l'oggetto creato in precedenza  **CspParameters** oggetto per il relativo costruttore.  
+2.  Creare una nuova istanza di una classe che deriva dal <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe (in genere **RSACryptoServiceProvider** oppure **DSACryptoServiceProvider**) e passare l'oggetto creato in precedenza  **CspParameters** oggetto al rispettivo costruttore.  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>Per eliminare la chiave da un contenitore di chiavi  
   
@@ -223,8 +223,9 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [Crittografia di dati](../../../docs/standard/security/encrypting-data.md)  
- [Decrittografia di dati](../../../docs/standard/security/decrypting-data.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [Crittografia di dati](../../../docs/standard/security/encrypting-data.md)  
+- [Decrittografia di dati](../../../docs/standard/security/decrypting-data.md)  
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

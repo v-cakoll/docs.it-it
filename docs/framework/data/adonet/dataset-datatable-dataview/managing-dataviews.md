@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
 ms.openlocfilehash: 76cf9eb70094dfe8bb760490c42503e08f4b1649
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885094"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44082269"
 ---
 # <a name="managing-dataviews"></a>Gestione di oggetti DataView
 È possibile usare un tipo <xref:System.Data.DataViewManager> per gestire le impostazioni di visualizzazione per tutte le tabelle di un tipo <xref:System.Data.DataView>. Se si dispone di un controllo che si desidera associare a più tabelle, ad esempio una griglia che consente di passare le relazioni, un **DataViewManager** è ideale.  

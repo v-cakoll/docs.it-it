@@ -9,27 +9,28 @@ helpviewer_keywords:
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2945ead7c22b759ce88f6585e2254e9bc540a7ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ac7e28c3172f2ed68d402e1d04a1664644c7f25
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570402"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44047818"
 ---
 # <a name="arrays"></a>Matrici
 **✓ DO** preferire l'utilizzo di raccolte sulle matrici nelle API pubbliche. Il [raccolte](../../../docs/standard/design-guidelines/guidelines-for-collections.md) sezione vengono fornite informazioni dettagliate su come scegliere tra le raccolte e matrici.  
   
- **X DO NOT** utilizzare campi di matrice di sola lettura. Il campo è di sola lettura e non può essere modificato, ma gli elementi nella matrice possono essere modificati.  
+ **X DO NOT** utilizzare campi di matrice di sola lettura. Il campo stesso è di sola lettura e non può essere modificato, ma gli elementi della matrice possono essere modificati.  
   
  **✓ CONSIDER** utilizzando matrici di matrici anziché le matrici multidimensionali.  
   
- Una matrice di matrici è una matrice con gli elementi che sono anche le matrici. Le matrici che costituiscono gli elementi possono presentare dimensioni diverse, la spazio inutilizzato sarà inferiore per alcuni set di dati (ad esempio, matrice di tipo sparse) rispetto a matrici multidimensionali. Inoltre, CLR consente di ottimizzare operazioni sugli indici su matrici di matrici, in modo che potrebbe presentare migliori prestazioni di runtime in alcuni scenari.  
+ Una matrice di matrici è una matrice con elementi che sono anche le matrici. Le matrici che costituiscono gli elementi possono essere di dimensioni diverse, spazio inutilizzato sarà inferiore per alcuni set di dati (ad esempio, matrice di tipo sparse) rispetto a matrici multidimensionali. Inoltre, CLR ottimizza le operazioni di indice in matrici di matrici, in modo che potrebbe presentare prestazioni di runtime migliori in alcuni scenari.  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Array>  
- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
- [Linee guida per l'uso](../../../docs/standard/design-guidelines/usage-guidelines.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Array>  
+- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Linee guida per l'uso](../../../docs/standard/design-guidelines/usage-guidelines.md)

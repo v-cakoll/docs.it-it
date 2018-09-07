@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f60a2283c01d0dc2665dafaa99ea52000aa3bc47
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0c56f840bc5ebd5070c9b686384751acab3f0203
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784689"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064790"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Nomi di classi, struct e interfacce
 Convenzioni di denominazione che seguono si applicano per la denominazione di tipo generale.  
@@ -101,6 +101,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
- [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -3,11 +3,11 @@ title: Direttiva x:Member
 ms.date: 03/30/2017
 ms.assetid: 4d8394ef-644c-4331-b6c5-be855d392980
 ms.openlocfilehash: dfc08d79bd8206269807d88d2c659f13be487276
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801567"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064699"
 ---
 # <a name="xmember-directive"></a>Direttiva x:Member
 Dichiara un membro XAML nel markup.  

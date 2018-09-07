@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b2cb61f2cc7129153a71398c6fb219c4e3990a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ec813e50bb4dca33c8dda8b41914cfa5d5596c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590650"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067617"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Procedura: verificare le firme digitali dei documenti XML
-È possibile usare le classi nello spazio dei nomi <xref:System.Security.Cryptography.Xml> per verificare i dati XML firmati con una firma digitale.  Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma.  Per ulteriori informazioni sullo standard XMLDSIG, vedere la specifica World Wide Web Consortium (W3C) al http://www.w3.org/TR/xmldsig-core/.  
+È possibile usare le classi nello spazio dei nomi <xref:System.Security.Cryptography.Xml> per verificare i dati XML firmati con una firma digitale.  Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma.  Per altre informazioni sullo standard XMLDSIG, vedere la specifica World Wide Web Consortium (W3C) al http://www.w3.org/TR/xmldsig-core/.  
   
  L'esempio di codice nella procedura mostra come verificare una firma digitale XML contenuta in un elemento <`Signature`>.  L'esempio recupera una chiave pubblica RSA da un contenitore di chiavi, quindi usa la chiave per verificare la firma.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "33590650"
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  
   
 ## <a name="example"></a>Esempio  
- Questo esempio presuppone che sia presente un file denominato `"test.xml"` nella stessa directory del programma compilato  Il `"test.xml"` file deve essere firmato utilizzando le tecniche descritte in [procedura: firmare documenti XML con firme digitali](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
+ Questo esempio presuppone che sia presente un file denominato `"test.xml"` nella stessa directory del programma compilato  Il `"test.xml"` file deve essere firmato usando le tecniche descritte [procedura: firmare documenti XML con firme digitali](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
   
  [!code-csharp[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#1)]  
@@ -80,10 +80,11 @@ ms.locfileid: "33590650"
 -   Includere gli spazi dei nomi seguenti: <xref:System.Xml>, <xref:System.Security.Cryptography> e <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Non archiviare né trasferire mai in testo non crittografato la chiave privata di una coppia di chiavi asimmetriche.  Per ulteriori informazioni sulle chiavi crittografiche simmetriche e asimmetriche, vedere [generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
+ Non archiviare né trasferire mai in testo non crittografato la chiave privata di una coppia di chiavi asimmetriche.  Per altre informazioni sulle chiavi crittografiche simmetriche e asimmetriche, vedere [generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
   
- Non incorporare mai una chiave privata direttamente nel codice sorgente.  Le chiavi incorporate possono essere lette facilmente da un assembly mediante il [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oppure aprendo l'assembly in un editor di testo quale Blocco note.  
+ Non incorporare mai una chiave privata direttamente nel codice sorgente.  Le chiavi incorporate possono essere lette facilmente da un assembly usando il [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oppure aprendo l'assembly in un editor di testo quale Blocco note.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Security.Cryptography.Xml>  
- [Procedura: Firmare documenti XML con firme digitali](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Procedura: Firmare documenti XML con firme digitali](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

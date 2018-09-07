@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 066c43ad84a079b40121bc55244d148679c49e48
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 805a495790266b34ede030b76fbd83e6f172ceaf
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520497"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44046697"
 ---
 # <a name="introducing-xml-serialization"></a>Introduzione alla serializzazione XML
 
@@ -177,13 +177,13 @@ Per un elenco completo dei mapping dei tipi, vedere la proprietà **DataType** p
 
 ## <a name="see-also"></a>Vedere anche
 
-<xref:System.Xml.Serialization.XmlSerializer>  
-<xref:System.Runtime.Serialization.DataContractSerializer>  
-<xref:System.IO.FileStream>  
-[Serializzazione SOAP e XML](xml-and-soap-serialization.md)  
-[Serializzazione binaria](binary-serialization.md)  
-[Serializzazione](index.md)  
-<xref:System.Xml.Serialization.XmlSerializer>  
-[Esempi di serializzazione XML](examples-of-xml-serialization.md)  
-[Procedura: Serializzare un oggetto](how-to-serialize-an-object.md)  
-[Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)  
+- <xref:System.Xml.Serialization.XmlSerializer>
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.IO.FileStream>
+- [Serializzazione SOAP e XML](xml-and-soap-serialization.md)
+- [Serializzazione binaria](binary-serialization.md)
+- [Serializzazione](index.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Esempi di serializzazione XML](examples-of-xml-serialization.md)
+- [Procedura: Serializzare un oggetto](how-to-serialize-an-object.md)
+- [Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: a07955363ea5ca1ca8785c241b0de58149f329ba
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fe820b9d2157c09428903a36427d3ff5e4c0045b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745580"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44069616"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Poiché la chiamata non può essere attesa, l'esecuzione del metodo corrente continua prima del completamento della chiamata
 Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrente continuerà prima del completamento della chiamata. È possibile applicare l'operatore "Await" al risultato della chiamata.  
@@ -117,7 +117,7 @@ Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrent
   
      Una finestra semplice con un pulsante e una casella di testo viene visualizzata nella visualizzazione **Progettazione** di MainWindow.xaml.  
   
-     Per altre informazioni sulla finestra di progettazione XAML, vedere [Creazione di un'interfaccia utente tramite la finestra di progettazione XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Per informazioni su come compilare una semplice interfaccia utente, vedere le sezioni "Per creare un'applicazione WPF" e "Per progettare una finestra WPF MainWindow semplice" nella [Procedura dettagliata: Accesso al Web tramite Async e Await](https://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
+     Per altre informazioni sulla finestra di progettazione XAML, vedere [Creazione di un'interfaccia utente tramite la finestra di progettazione XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Per informazioni su come compilare una semplice interfaccia utente, vedere le sezioni "Per creare un'applicazione WPF" e "Per progettare una finestra WPF MainWindow semplice" nella [Procedura dettagliata: Accesso al Web tramite Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
 4.  Sostituire il codice in MainWindow.xaml.vb con quello riportato di seguito.  
   
@@ -203,6 +203,7 @@ Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrent
   
      L'output previsto viene visualizzato alla fine del codice.  
   
-## <a name="see-also"></a>Vedere anche  
- [Operatore Await](../../../visual-basic/language-reference/operators/await-operator.md)  
- [Programmazione asincrona con Async e Await](../../../visual-basic/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Operatore Await](../../../visual-basic/language-reference/operators/await-operator.md)  
+- [Programmazione asincrona con Async e Await](../../../visual-basic/programming-guide/concepts/async/index.md)

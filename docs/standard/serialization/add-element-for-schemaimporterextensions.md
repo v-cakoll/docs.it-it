@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 3d3c72fd64042032d44c49ebde867d111ce03b94
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 48deb8684e53f583e3ff4a5407fadd112d45f749
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43806186"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44082226"
 ---
 # <a name="ltaddgt-element-for-ltschemaimporterextensionsgt"></a>&lt;aggiungere&gt; (elemento) per &lt;schemaImporterExtensions&gt;
 Aggiunge i tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'esecuzione del mapping dei tipi XSD ai tipi .NET Framework. Per altre informazioni sui file di configurazione, vedere [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -60,7 +60,8 @@ Aggiunge i tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.Serialization.XmlSchemaImporter>  
- [Elemento \<system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)  
- [Elemento \<schemaImporterExtensions>](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Xml.Serialization.XmlSchemaImporter>  
+- [Elemento \<system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+- [Elemento \<schemaImporterExtensions>](../../../docs/standard/serialization/schemaimporterextensions-element.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2cfc93e1c8d3d9e878d96de164b0d646e62c0998
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffb1081c80c31353ad38080ae16ef9f8a74b5481
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583968"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44046775"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Sicurezza e generazione di codice immediata
 Alcune librerie funzionano tramite la generazione e l'esecuzione di codice per eseguire alcune operazioni per il chiamante. Il problema di fondo è costituito dalla generazione di codice per conto di codice meno attendibile e dalla relativa esecuzione con attendibilità superiore e diventa più grave quando il chiamante è in grado di influenzare la generazione di codice, per cui è necessario che venga generato solo codice sicuro.  
@@ -26,5 +26,6 @@ Alcune librerie funzionano tramite la generazione e l'esecuzione di codice per e
   
  Durante la compilazione del codice, stabilire se un programma dannoso è in grado di modificarlo. In un lasso di tempo molto breve, il codice dannoso può modificare il codice sorgente sul disco prima che il compilatore sia in grado di leggerlo o prima che sia possibile caricare nel codice il file DLL. In questo caso è necessario proteggere la directory che contiene file di questo tipo tramite un elenco di controllo di accesso (ACL), se necessario.  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
