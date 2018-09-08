@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfa44187d846c72f0dfd4fb131cacbe41648dd32
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: abb38e4f084575665954bc514584feed760b0666
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33579808"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207642"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Stringhe di formato di data e ora standard
 Una stringa di formato data e ora standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore di data e ora. Qualsiasi stringa di formato data e ora contenente più di un carattere, inclusi gli spazi, viene interpretata come una stringa di formato data e ora personalizzata. Per altre informazioni, vedere [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una stringa di formato standard o personalizzata può essere usata in due modi:  
@@ -413,9 +413,10 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
 ### <a name="datetimeformatinfo-properties"></a>Proprietà DateTimeFormatInfo  
  La formattazione è influenzata dalle proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> corrente, che viene fornito in modo implicito dalle impostazioni cultura del thread correnti o in modo esplicito dal parametro <xref:System.IFormatProvider> del metodo che richiama la formattazione. Per il parametro <xref:System.IFormatProvider> l'applicazione deve specificare un oggetto <xref:System.Globalization.CultureInfo> che rappresenta un tipo di impostazioni cultura o un oggetto <xref:System.Globalization.DateTimeFormatInfo> che rappresenta le convenzioni di formattazione di data e ora di impostazioni cultura particolari. Molti degli identificatori di formato di data e ora standard sono alias di schemi di formattazione definiti dalle proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> corrente. Nell'applicazione può quindi essere modificato il risultato prodotto da alcuni identificatori di formato di data e ora personalizzati standard modificando gli schemi di formato di data e ora corrispondenti della proprietà <xref:System.Globalization.DateTimeFormatInfo> corrispondente.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.DateTime?displayProperty=nameWithType>  
- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Esempio: Utilità di formattazione in .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.DateTime?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
+- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Esempio: Utilità di formattazione in .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
