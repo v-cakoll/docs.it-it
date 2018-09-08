@@ -3,60 +3,60 @@ title: Attività For
 ms.date: 03/30/2017
 ms.assetid: 2ea751b4-36f0-48aa-a115-70a2ab89f6d8
 ms.openlocfilehash: 7a7023abb9057ab4b25552fbf9a81cd2ae2b4e88
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881522"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131750"
 ---
-# <a name="for-activity"></a><span data-ttu-id="93927-102">Attività For</span><span class="sxs-lookup"><span data-stu-id="93927-102">For Activity</span></span>
-<span data-ttu-id="93927-103">Nell'esempio For viene illustrato come compilare un'attività personalizzata che eredita da <xref:System.Activities.NativeActivity> e usarla in un flusso di lavoro per eseguire un esempio reale.</span><span class="sxs-lookup"><span data-stu-id="93927-103">The For sample demonstrates how to build a custom activity that inherits from <xref:System.Activities.NativeActivity>, and use it in a workflow to execute a real world example.</span></span> <span data-ttu-id="93927-104">L'attività personalizzata inclusa in questo esempio funziona come l'istruzione `for` di C#.</span><span class="sxs-lookup"><span data-stu-id="93927-104">The custom activity included in this sample functions like the C# `for` statement.</span></span> <span data-ttu-id="93927-105">T</span><span class="sxs-lookup"><span data-stu-id="93927-105">T</span></span>  
+# <a name="for-activity"></a><span data-ttu-id="fff22-102">Attività For</span><span class="sxs-lookup"><span data-stu-id="fff22-102">For Activity</span></span>
+<span data-ttu-id="fff22-103">Nell'esempio For viene illustrato come compilare un'attività personalizzata che eredita da <xref:System.Activities.NativeActivity> e usarla in un flusso di lavoro per eseguire un esempio reale.</span><span class="sxs-lookup"><span data-stu-id="fff22-103">The For sample demonstrates how to build a custom activity that inherits from <xref:System.Activities.NativeActivity>, and use it in a workflow to execute a real world example.</span></span> <span data-ttu-id="fff22-104">L'attività personalizzata inclusa in questo esempio funziona come l'istruzione `for` di C#.</span><span class="sxs-lookup"><span data-stu-id="fff22-104">The custom activity included in this sample functions like the C# `for` statement.</span></span> <span data-ttu-id="fff22-105">T</span><span class="sxs-lookup"><span data-stu-id="fff22-105">T</span></span>  
   
- <span data-ttu-id="93927-106">L'attività personalizzata `For` dispone di proprietà denominate `InitAction`, `IterationAction`, `Condition` e `Body` che corrispondono rispettivamente all'istruzione dell'inizializzazione, all'istruzione iterativa, alla condizione di continuazione e all'istruzione del corpo disponibili nell'istruzione standard `For` di C#.</span><span class="sxs-lookup"><span data-stu-id="93927-106">The `For` custom activity has properties named `InitAction`, `IterationAction`, `Condition`, and `Body` that correspond to the initialization statement, iterative statement, continuation condition, and body statement respectively found in the standard C# `For` statement.</span></span>  
+ <span data-ttu-id="fff22-106">L'attività personalizzata `For` dispone di proprietà denominate `InitAction`, `IterationAction`, `Condition` e `Body` che corrispondono rispettivamente all'istruzione dell'inizializzazione, all'istruzione iterativa, alla condizione di continuazione e all'istruzione del corpo disponibili nell'istruzione standard `For` di C#.</span><span class="sxs-lookup"><span data-stu-id="fff22-106">The `For` custom activity has properties named `InitAction`, `IterationAction`, `Condition`, and `Body` that correspond to the initialization statement, iterative statement, continuation condition, and body statement respectively found in the standard C# `For` statement.</span></span>  
   
- <span data-ttu-id="93927-107">Nella tabella seguente vengono descritti i file principali dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="93927-107">The following table describes the key files in the sample.</span></span>  
+ <span data-ttu-id="fff22-107">Nella tabella seguente vengono descritti i file principali dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="fff22-107">The following table describes the key files in the sample.</span></span>  
   
-|<span data-ttu-id="93927-108">File</span><span class="sxs-lookup"><span data-stu-id="93927-108">File</span></span>|<span data-ttu-id="93927-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="93927-109">Description</span></span>|  
+|<span data-ttu-id="fff22-108">File</span><span class="sxs-lookup"><span data-stu-id="fff22-108">File</span></span>|<span data-ttu-id="fff22-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fff22-109">Description</span></span>|  
 |----------|-----------------|  
-|<span data-ttu-id="93927-110">For.cs</span><span class="sxs-lookup"><span data-stu-id="93927-110">For.cs</span></span>|<span data-ttu-id="93927-111">Definizione di classe per l'attività personalizzata `For` che estende la classe <xref:System.Activities.NativeActivity> per fornire la funzionalità dell'istruzione `For` di C#.</span><span class="sxs-lookup"><span data-stu-id="93927-111">Class definition for the `For` custom activity, which extends the <xref:System.Activities.NativeActivity> class to provide the functionality of the C# `For` statement.</span></span>|  
-|<span data-ttu-id="93927-112">Program.cs</span><span class="sxs-lookup"><span data-stu-id="93927-112">Program.cs</span></span>|<span data-ttu-id="93927-113">Applicazione client che esegue lavoro iterativo di base in una raccolta usando l'attività `For` personalizzata.</span><span class="sxs-lookup"><span data-stu-id="93927-113">A client application that performs basic iterative work on a collection using the custom `For` activity.</span></span>|  
+|<span data-ttu-id="fff22-110">For.cs</span><span class="sxs-lookup"><span data-stu-id="fff22-110">For.cs</span></span>|<span data-ttu-id="fff22-111">Definizione di classe per l'attività personalizzata `For` che estende la classe <xref:System.Activities.NativeActivity> per fornire la funzionalità dell'istruzione `For` di C#.</span><span class="sxs-lookup"><span data-stu-id="fff22-111">Class definition for the `For` custom activity, which extends the <xref:System.Activities.NativeActivity> class to provide the functionality of the C# `For` statement.</span></span>|  
+|<span data-ttu-id="fff22-112">Program.cs</span><span class="sxs-lookup"><span data-stu-id="fff22-112">Program.cs</span></span>|<span data-ttu-id="fff22-113">Applicazione client che esegue lavoro iterativo di base in una raccolta usando l'attività `For` personalizzata.</span><span class="sxs-lookup"><span data-stu-id="fff22-113">A client application that performs basic iterative work on a collection using the custom `For` activity.</span></span>|  
   
 > [!NOTE]
->  <span data-ttu-id="93927-114">Quando si usa l'attività personalizzata `For`, assicurarsi che venga impostata la proprietà `Condition`. Diversamente si potrebbe verificare un ciclo infinito.</span><span class="sxs-lookup"><span data-stu-id="93927-114">When using the `For` custom activity, ensure that the `Condition` property is set; otherwise an infinite loop could occur.</span></span>  
+>  <span data-ttu-id="fff22-114">Quando si usa l'attività personalizzata `For`, assicurarsi che venga impostata la proprietà `Condition`. Diversamente si potrebbe verificare un ciclo infinito.</span><span class="sxs-lookup"><span data-stu-id="fff22-114">When using the `For` custom activity, ensure that the `Condition` property is set; otherwise an infinite loop could occur.</span></span>  
   
-## <a name="demonstrates"></a><span data-ttu-id="93927-115">Dimostrazione</span><span class="sxs-lookup"><span data-stu-id="93927-115">Demonstrates</span></span>  
- <span data-ttu-id="93927-116">Creare un'attività personalizzata che eredita da <xref:System.Activities.NativeActivity>.</span><span class="sxs-lookup"><span data-stu-id="93927-116">Create a custom activity that inherits from <xref:System.Activities.NativeActivity>.</span></span>  
+## <a name="demonstrates"></a><span data-ttu-id="fff22-115">Dimostrazione</span><span class="sxs-lookup"><span data-stu-id="fff22-115">Demonstrates</span></span>  
+ <span data-ttu-id="fff22-116">Creare un'attività personalizzata che eredita da <xref:System.Activities.NativeActivity>.</span><span class="sxs-lookup"><span data-stu-id="fff22-116">Create a custom activity that inherits from <xref:System.Activities.NativeActivity>.</span></span>  
   
-## <a name="discussion"></a><span data-ttu-id="93927-117">Discussione</span><span class="sxs-lookup"><span data-stu-id="93927-117">Discussion</span></span>  
- <span data-ttu-id="93927-118">Nella tabella seguente sono descritte le proprietà dell'attività inclusa in questo esempio.</span><span class="sxs-lookup"><span data-stu-id="93927-118">The following table describes the properties of the activity included in this sample.</span></span>  
+## <a name="discussion"></a><span data-ttu-id="fff22-117">Discussione</span><span class="sxs-lookup"><span data-stu-id="fff22-117">Discussion</span></span>  
+ <span data-ttu-id="fff22-118">Nella tabella seguente sono descritte le proprietà dell'attività inclusa in questo esempio.</span><span class="sxs-lookup"><span data-stu-id="fff22-118">The following table describes the properties of the activity included in this sample.</span></span>  
   
- <span data-ttu-id="93927-119">InitAction</span><span class="sxs-lookup"><span data-stu-id="93927-119">InitAction</span></span>  
- <span data-ttu-id="93927-120">Istruzione di inizializzazione</span><span class="sxs-lookup"><span data-stu-id="93927-120">Initialization statement</span></span>  
+ <span data-ttu-id="fff22-119">InitAction</span><span class="sxs-lookup"><span data-stu-id="fff22-119">InitAction</span></span>  
+ <span data-ttu-id="fff22-120">Istruzione di inizializzazione</span><span class="sxs-lookup"><span data-stu-id="fff22-120">Initialization statement</span></span>  
   
- <span data-ttu-id="93927-121">IterationAction</span><span class="sxs-lookup"><span data-stu-id="93927-121">IterationAction</span></span>  
- <span data-ttu-id="93927-122">Istruzione iterativa</span><span class="sxs-lookup"><span data-stu-id="93927-122">Iterative statement</span></span>  
+ <span data-ttu-id="fff22-121">IterationAction</span><span class="sxs-lookup"><span data-stu-id="fff22-121">IterationAction</span></span>  
+ <span data-ttu-id="fff22-122">Istruzione iterativa</span><span class="sxs-lookup"><span data-stu-id="fff22-122">Iterative statement</span></span>  
   
- <span data-ttu-id="93927-123">Condizione</span><span class="sxs-lookup"><span data-stu-id="93927-123">Condition</span></span>  
- <span data-ttu-id="93927-124">Istruzione di continuazione</span><span class="sxs-lookup"><span data-stu-id="93927-124">Continuation statement</span></span>  
+ <span data-ttu-id="fff22-123">Condizione</span><span class="sxs-lookup"><span data-stu-id="fff22-123">Condition</span></span>  
+ <span data-ttu-id="fff22-124">Istruzione di continuazione</span><span class="sxs-lookup"><span data-stu-id="fff22-124">Continuation statement</span></span>  
   
- <span data-ttu-id="93927-125">Corpo</span><span class="sxs-lookup"><span data-stu-id="93927-125">Body</span></span>  
- <span data-ttu-id="93927-126">Istruzione del corpo</span><span class="sxs-lookup"><span data-stu-id="93927-126">Body statement</span></span>  
+ <span data-ttu-id="fff22-125">Corpo</span><span class="sxs-lookup"><span data-stu-id="fff22-125">Body</span></span>  
+ <span data-ttu-id="fff22-126">Istruzione del corpo</span><span class="sxs-lookup"><span data-stu-id="fff22-126">Body statement</span></span>  
   
- <span data-ttu-id="93927-127">L'attività eredita da <xref:System.Activities.NativeActivity> per ottenere l'accesso alle funzionalità di runtime, quale la pianificazione di attività aggiuntive da eseguire, usando uno dei metodi `ScheduleActivity` di <xref:System.Activities.NativeActivityContext>.</span><span class="sxs-lookup"><span data-stu-id="93927-127">The activity inherits from <xref:System.Activities.NativeActivity> to gain access to runtime features such as scheduling additional activities to run, using one of the `ScheduleActivity` methods of <xref:System.Activities.NativeActivityContext>.</span></span>  
+ <span data-ttu-id="fff22-127">L'attività eredita da <xref:System.Activities.NativeActivity> per ottenere l'accesso alle funzionalità di runtime, quale la pianificazione di attività aggiuntive da eseguire, usando uno dei metodi `ScheduleActivity` di <xref:System.Activities.NativeActivityContext>.</span><span class="sxs-lookup"><span data-stu-id="fff22-127">The activity inherits from <xref:System.Activities.NativeActivity> to gain access to runtime features such as scheduling additional activities to run, using one of the `ScheduleActivity` methods of <xref:System.Activities.NativeActivityContext>.</span></span>  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="93927-128">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="93927-128">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="fff22-128">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="fff22-128">To use this sample</span></span>  
   
-1.  <span data-ttu-id="93927-129">Tramite [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione For.sln.</span><span class="sxs-lookup"><span data-stu-id="93927-129">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the For.sln solution file.</span></span>  
+1.  <span data-ttu-id="fff22-129">Tramite [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione For.sln.</span><span class="sxs-lookup"><span data-stu-id="fff22-129">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the For.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="93927-130">Premere CTRL+MAIUSC+B per compilare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="93927-130">Build the solution, by pressing CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="fff22-130">Premere CTRL+MAIUSC+B per compilare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="fff22-130">Build the solution, by pressing CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="93927-131">Eseguire la soluzione premendo F5.</span><span class="sxs-lookup"><span data-stu-id="93927-131">Run the solution, by pressing F5.</span></span>  
+3.  <span data-ttu-id="fff22-131">Eseguire la soluzione premendo F5.</span><span class="sxs-lookup"><span data-stu-id="fff22-131">Run the solution, by pressing F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="93927-132">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="93927-132">The samples may already be installed on your machine.</span></span> <span data-ttu-id="93927-133">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="93927-133">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="fff22-132">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="fff22-132">The samples may already be installed on your machine.</span></span> <span data-ttu-id="fff22-133">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="fff22-133">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="93927-134">Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="93927-134">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="93927-135">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="93927-135">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="fff22-134">Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="fff22-134">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="fff22-135">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="fff22-135">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\For`
