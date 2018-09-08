@@ -3,11 +3,11 @@ title: Dataset tipizzati
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 68721bcdbce6bf6d3279d6018ce6bc48d65c55a3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039806"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213355"
 ---
 # <a name="typed-datasets"></a>Dataset tipizzati
 Oltre all'accesso ad associazione tardiva ai valori tramite variabili tipizzate in modo debole, nel tipo <xref:System.Data.DataSet> è disponibile l'accesso ai dati tramite una metafora tipizzata in modo sicuro. Tabelle e colonne che fanno parte del **set di dati** sono accessibili tramite nomi descrittivi e variabili fortemente tipizzate.  

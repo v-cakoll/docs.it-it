@@ -1,6 +1,6 @@
 ---
 title: Contratti di codice
-ms.date: 03/30/2017
+ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080608"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222123"
 ---
 # <a name="code-contracts"></a>Contratti di codice
 I contratti di codice consentono di specificare precondizioni, postcondizioni e invarianti dell'oggetto nel codice. Le precondizioni sono requisiti da soddisfare quando si accede a un metodo o a una proprietà. Le postcondizioni descrivono le aspettative al momento dell'uscita dal codice del metodo o della proprietà. Le invarianti dell'oggetto descrivono lo stato previsto per una classe in stato integro.  
@@ -148,7 +148,7 @@ Contract.Invariant(this.x > this.y);
 }  
 ```  
   
- Le invarianti vengono definite in modo condizionale dal simbolo del preprocessore CONTRACTS_FULL. Durante il controllo in fase di esecuzione, le invarianti vengono controllate alla fine di ogni metodo pubblico. Se un'invariante menziona un metodo pubblico nella stessa classe, il controllo dell'invariante che avverrebbe normalmente alla fine di tale metodo viene disabilitato. Al contrario, il controllo viene eseguito solo alla fine della chiamata al metodo più esterna in quella classe. Ciò avviene anche se la classe viene immessa di nuovo a causa di una chiamata a un metodo in un'altra classe. L'eventuale presenza di finalizzatori di oggetti o di metodi che implementano il metodo <xref:System.IDisposable.Dispose%2A> non viene verificata nelle invarianti.  
+ Le invarianti vengono definite in modo condizionale dal simbolo del preprocessore CONTRACTS_FULL. Durante il controllo in fase di esecuzione, le invarianti vengono controllate alla fine di ogni metodo pubblico. Se un'invariante menziona un metodo pubblico nella stessa classe, il controllo dell'invariante che avverrebbe normalmente alla fine di tale metodo viene disabilitato. Al contrario, il controllo viene eseguito solo alla fine della chiamata al metodo più esterna in quella classe. Ciò avviene anche se la classe viene immessa di nuovo a causa di una chiamata a un metodo in un'altra classe. Gli invarianti non vengono verificati per il finalizzatore di un oggetto e un <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementazione.  
   
 <a name="usage_guidelines"></a>   
 ## <a name="usage-guidelines"></a>Linee guida di utilizzo  

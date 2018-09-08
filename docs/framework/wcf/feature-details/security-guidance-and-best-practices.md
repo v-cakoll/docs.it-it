@@ -7,11 +7,11 @@ ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 95836865bcf8908583e3a5c347bfcef805997fdc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44077080"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210695"
 ---
 # <a name="security-guidance-and-best-practices"></a>Materiale sussidiario di sicurezza e procedure consigliate
 Negli argomenti di questa sezione presentano materiale sussidiario e gli elementi da considerare durante la creazione di proteggere le applicazioni di Windows Communication Foundation (WCF). Per altre informazioni su Windows Server AppFabric e sicurezza, vedere [sicurezza del modello per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

@@ -3,11 +3,11 @@ title: Migrazione dei servizi Web WSE 3.0 a WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 ms.openlocfilehash: 21e36be178bb0dd0c52213d8c4c1387a564a0e5a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137772"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44217269"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migrazione dei servizi Web WSE 3.0 a WCF
 I vantaggi della migrazione di servizi Web WSE 3.0 per Windows Communication Foundation (WCF) includono prestazioni migliori e il supporto di trasporti, scenari di sicurezza aggiuntive e WS-* specifiche. Un servizio Web che viene eseguita la migrazione da WSE 3.0 a WCF può subire fino a un miglioramento delle prestazioni di 200% e 400%. Per altre informazioni sui trasporti supportati da WCF, vedere [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Per un elenco degli scenari supportati da WCF, vedere [scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Per un elenco delle specifiche supportate da WCF, vedere [Web Services protocolli Interoperability Guide](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
