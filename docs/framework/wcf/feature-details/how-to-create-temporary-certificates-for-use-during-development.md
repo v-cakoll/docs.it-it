@@ -5,58 +5,49 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: d3b051c7ea152606721388ea35b6f508eada1c5d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ca495c23b30144013b8efe22b7bf6f3cf38b16cd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524365"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195714"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedura: creare certificati temporanei da usare durante lo sviluppo
-Quando si sviluppa un servizio sicuro o un client che utilizza Windows Communication Foundation (WCF), è spesso necessario fornire un certificato X.509 da usare come credenziali. Il certificato in genere fa parte di una catena di certificati con autorità radice contenuta nell'archivio Autorità di certificazione radice attendibile del computer. La catena di certificati consente di definire l'ambito per un set di certificati quando in genere l'autorità radice è dell'organizzazione o dell'unità aziendale. Per emulare questo comportamento in fase di sviluppo, è possibile creare due certificati per soddisfare i requisiti di sicurezza. Il primo è un certificato autofirmato che si trova nell'archivio Autorità di certificazione radice attendibile, mentre il secondo certificato viene creato dal primo e si trova nell'archivio Personale del computer locale o dell'utente corrente. In questo argomento descrive i passaggi per creare questi due certificati mediante il [Certificate Creation Tool (MakeCert.exe)](https://go.microsoft.com/fwlink/?LinkId=248185), che avviene tramite il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
+Quando si sviluppa un servizio sicuro o un client che utilizza Windows Communication Foundation (WCF), è spesso necessario fornire un certificato X.509 da usare come credenziali. Il certificato in genere fa parte di una catena di certificati con autorità radice contenuta nell'archivio Autorità di certificazione radice attendibile del computer. La catena di certificati consente di definire l'ambito per un set di certificati quando in genere l'autorità radice è dell'organizzazione o dell'unità aziendale. Per emulare questo comportamento in fase di sviluppo, è possibile creare due certificati per soddisfare i requisiti di sicurezza. Il primo è un certificato autofirmato che si trova nell'archivio Autorità di certificazione radice attendibile, mentre il secondo certificato viene creato dal primo e si trova nell'archivio Personale del computer locale o dell'utente corrente. In questo argomento descrive i passaggi per creare questi due certificati mediante Powershell [New-SelfSignedCertificate)](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps) cmdlet.  
   
 > [!IMPORTANT]
->  I certificati generati dallo strumento di creazione certificati sono forniti solo a scopo di test. Quando si distribuisce un servizio o un client, assicurarsi di usare un certificato appropriato rilasciato da un'autorità di certificazione. Tale certificato può essere fornito da un server dei certificati di [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] dell'organizzazione o da terze parti.  
+>  I certificati che il cmdlet New-SelfSignedCertificate genera vengono forniti solo a scopo di test. Quando si distribuisce un servizio o un client, assicurarsi di usare un certificato appropriato rilasciato da un'autorità di certificazione. Ciò potrebbe provenire da un server di certificazione di Windows Server all'interno dell'organizzazione o di terze parti.  
 >   
->  Per impostazione predefinita, il [Makecert.exe (Certificate Creation Tool)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) crea certificati la cui autorità radice è denominata "agenzia radice **."** Poiché l'Agenzia radice non è inclusa nell'archivio Autorità di certificazione radice attendibili, i certificati non sono protetti. La creazione di un certificato autofirmato posizionato nell'archivio di Autorità di certificazione radice attendibili consente di creare un ambiente di sviluppo che simula in modo più accurato l'ambiente di distribuzione.  
+>  Per impostazione predefinita, il [New-SelfSignedCertificate](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps) cmdlet consente di creare certificati autofirmati e questi certificati sono non sicuri. Inserire i certificati autofirmati in Autorità di certificazione radice attendibili store consente di creare un ambiente di sviluppo che simula più da vicino l'ambiente di distribuzione.  
   
  Per altre informazioni sulla creazione e utilizzo dei certificati, vedere [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Per altre informazioni sull'uso di un certificato come credenziale, vedere [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Per un'esercitazione sull'uso della tecnologia Microsoft Authenticode, vedere [Panoramica di Authenticode ed esercitazioni](https://go.microsoft.com/fwlink/?LinkId=88919).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Per creare un certificato dell'autorità radice autofirmato ed esportare la chiave privata  
   
-1.  Usare lo strumento MakeCert.exe con le opzioni seguenti:  
-  
-    1.  `-n` `subjectName`. Specifica il nome del soggetto. La convenzione prevede l'inserimento del prefisso "CN = " per "Nome comune" prima del nome del soggetto.  
-  
-    2.  `-r`. Specifica che il certificato sarà autofirmato.  
-  
-    3.  `-sv` `privateKeyFile`. Specifica il file che contiene il contenitore della chiave privata.  
-  
-     Ad esempio, nel comando seguente viene creato un certificato autofirmato con il nome del soggetto "CN=TempCA".  
-  
-    ```  
-    makecert -n "CN=TempCA" -r -sv TempCA.pvk TempCA.cer  
-    ```  
-  
-     Verrà richiesto di fornire una password per proteggere la chiave privata. Questa password è richiesta quando si crea un certificato firmato mediante questo certificato radice.  
-  
+Il comando seguente crea un certificato autofirmato con un nome soggetto "RootCA" nell'archivio utente corrente personale. 
+```
+PS $rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("1.3.6.1.4.1.311.21.10={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2")
+```
+È necessario esportare il certificato in un file PFX in modo che possa essere importato da dove è necessario in un passaggio successivo. Quando si esporta un certificato con la chiave privata, è necessaria una password per proteggerla. Si salva la password in un `SecureString` e usare il [Export-PfxCertificate](https://docs.microsoft.com/en-us/powershell/module/pkiclient/export-pfxcertificate?view=win10-ps) cmdlet per esportare il certificato con la chiave privata associata a un file PFX. È inoltre salvare solo il certificato pubblico in un file CRT usando il [Export-Certificate](https://docs.microsoft.com/en-us/powershell/module/pkiclient/export-certificate?view=win10-ps) cmdlet.
+```
+PS [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
+PS [String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
+PS Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
+PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
+```
+
 ### <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>Per creare un nuovo certificato firmato mediante un certificato dell'autorità radice  
   
-1.  Usare lo strumento MakeCert.exe con le opzioni seguenti:  
-  
-    1.  `-sk` `subjectKey`. La posizione del contenitore di chiavi del soggetto che contiene la chiave privata. Se non esiste alcun contenitore di chiavi, ne viene creato uno. Per impostazione predefinita, se le opzioni -sk o -sv non vengono usate, viene creato un contenitore di chiavi denominato JoeSoft.  
-  
-    2.  `-n` `subjectName`. Specifica il nome del soggetto. La convenzione prevede l'inserimento del prefisso "CN = " per "Nome comune" prima del nome del soggetto.  
-  
-    3.  `-iv` `issuerKeyFile`. Specifica il file della chiave privata dell'autorità emittente.  
-  
-    4.  `-ic` `issuerCertFile`. Specifica la posizione del certificato dell'autorità emittente.  
-  
-     Ad esempio, nel comando seguente viene creato un certificato firmato mediante il certificato dell'autorità radice `TempCA` con il nome del soggetto `"CN=SignedByCA"` usando la chiave privata dell'autorità emittente.  
-  
-    ```  
-    makecert -sk SignedByCA -iv TempCA.pvk -n "CN=SignedByCA" -ic TempCA.cer SignedByCA.cer -sr currentuser -ss My  
-    ```  
+Il comando seguente crea un certificato firmato mediante il `RootCA` con un nome soggetto "SignedByRootCA" usando la chiave privata dell'autorità emittente.
+```
+PS $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert 
+```
+Allo stesso modo, si salva il certificato firmato con la chiave privata in un file PFX e solo la chiave pubblica in un file CRT.
+```
+PS [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
+PS Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword 
+PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt        
+```
   
 ## <a name="installing-a-certificate-in-the-trusted-root-certification-authorities-store"></a>Installazione di un certificato nell'archivio dell'Autorità di certificazione radice attendibili  
  Se è stato creato un certificato autofirmato, è possibile installarlo nell'archivio Autorità di certificazione radice attendibili. Qualsiasi certificato firmato con il certificato in questa fase viene considerato attendibile dal computer. Per questo motivo, eliminare il certificato dall'archivio quando non è più necessario. Quando si elimina questo certificato dell'autorità radice, tutti gli altri certificati che sono stati firmati mediante tale certificato diventano non autorizzati. I certificati dell'autorità radice sono semplicemente un meccanismo che consente di definire come necessario un gruppo di certificati. Ad esempio, nelle applicazioni peer-to-peer in genere non è necessaria un'autorità radice perché l'identità di un individuo viene ritenuta attendibile semplicemente sulla base del certificato fornito.  

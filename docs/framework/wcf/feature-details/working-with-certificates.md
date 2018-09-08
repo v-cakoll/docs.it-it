@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d0e54aeda1ee51fe7ba87c3ac69c556ea25e320f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870211"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198933"
 ---
 # <a name="working-with-certificates"></a>Utilizzo dei certificati
 Per programmare le funzionalità di sicurezza di Windows Communication Foundation (WCF) in genere si usano i certificati digitali X.509. In particolare, questi certificati vengono usati per autenticare client e server, nonché per crittografare e firmare digitalmente i messaggi. Questo argomento fornisce una breve descrizione delle funzionalità relative ai certificati digitali X.509 e illustra come usarle in WCF. Questo argomento contiene inoltre i collegamenti agli argomenti che trattano questi concetti in modo più dettagliato o che descrivono come eseguire attività comuni tramite l'uso di WCF e dei certificati.  
@@ -85,12 +85,12 @@ Per programmare le funzionalità di sicurezza di Windows Communication Foundatio
   
  Quando si crea un autenticatore personalizzato è fondamentale eseguire l'override del metodo <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Per un esempio di autenticazione personalizzata, vedere l'esempio [Validator del certificato X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md). Per altre informazioni, vedere [Credenziale personalizzata e convalida della credenziale](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
-## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Utilizzo dello strumento Makecert.exe per compilare una catena di certificati  
- Lo strumento di creazione dei certificati Makecert.exe crea certificati X.509 e coppie di chiavi privata/pubblica. La chiave privata può essere salvata su disco e quindi utilizzata per rilasciare e firmare nuovi certificati, simulando in questo modo una gerarchia di certificati concatenati. Questo strumento deve essere utilizzato esclusivamente come risorsa ausiliare durante la fase di sviluppo dei servizi. È pertanto necessario evitare di utilizzarlo per creare i certificati da utilizzare nella distribuzione definitiva. Quando si sviluppa un servizio WCF, attenersi ai passaggi seguenti per compilare una catena di trust tramite lo strumento Makecert.exe.  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Usare il Cmdlet di Powershell New-SelfSignedCertificate per compilare una catena di certificati  
+ Il cmdlet di Powershell New-SelfSignedCertificate crea certificati X.509 e coppie di chiavi pubblica/chiave private. La chiave privata può essere salvata su disco e quindi utilizzata per rilasciare e firmare nuovi certificati, simulando in questo modo una gerarchia di certificati concatenati. Il cmdlet è progettato per l'utilizzo solo come supporto durante lo sviluppo di servizi e non dovrà mai essere usato per creare i certificati per distribuzione vera e propria. Quando si sviluppa un servizio WCF, utilizzare la procedura seguente per compilare una catena di trust con il cmdlet New-SelfSignedCertificate.  
   
-#### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>Per compilare una catena di trust tramite lo strumento Makecert.exe  
+#### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Per compilare una catena di trust con il cmdlet New-SelfSignedCertificate  
   
-1.  Utilizzare lo strumento MakeCert.exe per creare un certificato temporaneo dell'autorità radice (autofirmato). Salvare la chiave privata su disco.  
+1.  Creare un certificato (autofirmato) dell'autorità radice temporanea usando il cmdlet New-SelfSignedCertificate. Salvare la chiave privata su disco.  
   
 2.  Utilizzare il nuovo certificato per rilasciare un altro certificato contenente la chiave pubblica.  
   

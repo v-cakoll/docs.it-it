@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5120823f4e001fc3aff71f267176311e2465597a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 456c19fc8e28517a0662b58e338028e1c75cd8c8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604849"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201231"
 ---
 # <a name="mod-operator-visual-basic"></a>Operatore Mod (Visual Basic)
 Divide due numeri e restituisce solo il resto.  
@@ -38,16 +38,16 @@ number1 Mod number2
  Obbligatorio. Qualsiasi espressione numerica.  
   
 ## <a name="supported-types"></a>Tipi supportati  
- Tutti i tipi numerici. Sono inclusi i tipi senza segno a virgola mobile e `Decimal`.  
+ Tutti i tipi numerici. Inclusi i tipi senza segno e a virgola mobile e `Decimal`.  
   
 ## <a name="result"></a>Risultato
 
-Il risultato è il resto dopo `number1` viene diviso per `number2`. Ad esempio, l'espressione `14 Mod 4` restituisce 2.  
+Il risultato è il resto dopo aver `number1` diviso per `number2`. Ad esempio, l'espressione `14 Mod 4` restituisce 2.  
 
 > [!NOTE]
-> È presente una differenza tra *resto* e *modulus* in matematica, con risultati diversi per i numeri negativi. Il `Mod` operatore in Visual Basic, .NET Framework `op_Modulus` operatore e sottostante [rem]<xref:System.Reflection.Emit.OpCodes.Rem> parte dell'istruzione che eseguire un'operazione di resto.
+> È presente una differenza tra *resto* e *modulus* in matematica, con risultati diversi per i numeri negativi. Il `Mod` operatore in Visual Basic, .NET Framework `op_Modulus` operatore e sottostante [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) istruzione che eseguire un'operazione di resto.
 
-Il risultato di una `Mod` operazione mantiene il segno del dividendo, `number1`, e pertanto può essere positivo o negativo. Il risultato è sempre nell'intervallo (-`number2`, `number2`), esclusivo. Ad esempio:
+Il risultato di una `Mod` operazione consente di mantenere il segno del dividendo, `number1`, e pertanto può essere positivo o negativo. Il risultato è sempre compreso nell'intervallo (-`number2`, `number2`), esclusivo. Ad esempio:
 
 ```vb
 Public Module Example
@@ -66,39 +66,39 @@ End Module
 ```
 
 ## <a name="remarks"></a>Note  
- Se il valore `number1` o `number2` è un valore a virgola mobile, viene restituito il resto della divisione a virgola mobile. Il tipo di dati del risultato è il tipo di dati più piccolo che può contenere tutti i possibili valori risultanti dalla divisione con i tipi di dati di `number1` e `number2`.  
+ Se uno dei due `number1` o `number2` è un valore a virgola mobile, viene restituito il resto della divisione a virgola mobile. Il tipo di dati del risultato è il tipo di dati più piccolo che può contenere tutti i possibili valori risultanti dalla divisione con i tipi di dati di `number1` e `number2`.  
   
- Se `number1` o `number2` restituisce [nulla](../../../visual-basic/language-reference/nothing.md), viene considerato pari a zero.  
+ Se `number1` oppure `number2` restituisca [Nothing](../../../visual-basic/language-reference/nothing.md), viene considerato come zero.  
   
  Gli operatori correlati includono quanto segue:  
   
 -   Il [\ (operatore) (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) restituisce il quoziente di una divisione. Ad esempio, l'espressione `14 \ 4` restituisce 3.  
   
--   Il [/ (operatore) (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) restituisce il quoziente completo, incluso il resto, come numero a virgola mobile. Ad esempio, l'espressione `14 / 4` restituisce 3.5.  
+-   Il [/ operatore (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) restituisce il quoziente completo, incluso il resto, sotto forma di numero a virgola mobile. Ad esempio, l'espressione `14 / 4` 3.5 viene valutata.  
   
 ## <a name="attempted-division-by-zero"></a>Tentativo di divisione per zero  
- Se `number2` restituisce zero, il comportamento del `Mod` operatore dipende dal tipo di dati degli operandi. Una divisione integrale genera un <xref:System.DivideByZeroException> eccezione. Restituisce una divisione a virgola mobile <xref:System.Double.NaN>.  
+ Se `number2` restituisce zero, il comportamento del `Mod` operatore dipende dal tipo dei dati degli operandi. Una divisione integrale genera un <xref:System.DivideByZeroException> eccezione. Restituisce una divisione a virgola mobile <xref:System.Double.NaN>.  
   
 ## <a name="equivalent-formula"></a>Formula equivalente  
- L'espressione `a Mod b` è equivalente a una delle seguenti formule:  
+ L'espressione `a Mod b` è equivalente a una delle formule seguenti:  
   
  `a - (b * (a \ b))`  
   
  `a - (b * Fix(a / b))`  
   
-## <a name="floating-point-imprecision"></a>A virgola mobile imprecisione  
- Quando si lavora con numeri a virgola mobile, tenere presente che è sempre necessario una rappresentazione decimale precisa in memoria. Questo può causare risultati imprevisti da alcune operazioni, ad esempio il confronto di valori e `Mod` operatore. Per ulteriori informazioni, vedere [risoluzione dei problemi dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+## <a name="floating-point-imprecision"></a>A virgola mobile dell'imprecisione  
+ Quando si lavora con numeri a virgola mobile, tenere presente che non sempre hanno una rappresentazione decimale precisa in memoria. Questo può causare risultati imprevisti da determinate operazioni, ad esempio il confronto dei valori e `Mod` operatore. Per altre informazioni, vedere [tipi di dati di risoluzione dei problemi](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Overload  
- Il `Mod` operatore può essere *overload*, il che significa che una classe o struttura ridefinire il relativo comportamento. Se il codice applica `Mod` a un'istanza di una classe o struttura che include un overload di questo tipo, assicurarsi di comprendere il comportamento ridefinito. Per ulteriori informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Il `Mod` operatore può essere *sottoposto a overload*, il che significa che una classe o struttura può ridefinire il relativo comportamento. Se il codice applica `Mod` a un'istanza di una classe o struttura che include un overload di questo tipo, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il `Mod` operatore di divisione tra due numeri e restituire solo il resto. Se il numero è un numero a virgola mobile, il risultato è un numero a virgola mobile che rappresenta il resto.  
+ L'esempio seguente usa il `Mod` operatore divide due numeri e restituisce solo il resto. Se uno dei due numeri sono un numero a virgola mobile, il risultato è un numero a virgola mobile che rappresenta il resto.  
   
  [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente illustra la potenziale imprecisione degli operandi a virgola mobile. Nella prima istruzione, gli operandi sono `Double`, e una frazione binaria ripetuta all'infinito con un valore archiviato di 0,20000000000000001 0,2. Nella seconda istruzione, il valore letterale carattere tipo `D` impone entrambi gli operandi siano `Decimal`, e 0,2 la rappresentazione è precisa.  
+ L'esempio seguente illustra le potenzialità dell'imprecisione di operandi a virgola mobile. Nella prima istruzione, gli operandi sono `Double`, e una frazione binaria ripetuta all'infinito con un valore memorizzato di 0.20000000000000001 0,2. Nella seconda istruzione, di tipo carattere letterale `D` forza di entrambi gli operandi in `Decimal`, e 0.2 la rappresentazione è precisa.  
   
  [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   

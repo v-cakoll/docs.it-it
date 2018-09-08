@@ -6,11 +6,11 @@ ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128956"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204942"
 ---
 # <a name="guidelines-for-collections"></a>Linee guida per le raccolte
 Qualsiasi tipo progettata specificamente per modificare un gruppo di oggetti con alcune caratteristiche comuni può essere considerato come una raccolta. È quasi sempre appropriato per questi tipi implementare <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, pertanto in questa sezione è considerare solo i tipi che implementano una o entrambe queste interfacce a essere raccolte.  

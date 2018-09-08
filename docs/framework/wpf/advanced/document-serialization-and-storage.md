@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: 39466eb528003e36bfa05751f83619d86b78a2a7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135471"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207122"
 ---
 # <a name="document-serialization-and-storage"></a>Serializzazione e archiviazione di documenti
 Microsoft .NET Framework fornisce un ambiente avanzato per la creazione e visualizzazione di documenti di alta qualità.  Funzionalità sofisticate che supportano entrambi documenti statici che dinamici e, advanced controlli di visualizzazione combinati con potenti 2D e funzionalità di grafica 3D eseguire applicazioni .NET Framework a un nuovo livello di qualità ed esperienza utente.  La possibilità di gestire in modo flessibile una rappresentazione in memoria di un documento è una funzionalità chiave di .NET Framework e la possibilità di salvare e caricare i documenti da un archivio dati in modo efficiente è l'esigenza di quasi tutte le applicazioni.  Il processo di conversione di un documento da una rappresentazione in memoria interna a un archivio dati esterno è detto serializzazione.  Il processo inverso di lettura di un archivio dati e di creazione dell'istanza in memoria originale è detto deserializzazione.  

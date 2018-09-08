@@ -3,11 +3,11 @@ title: Interfacce (F#)
 description: 'Informazioni su come le interfacce di F # specificare set di membri correlati implementati da altre classi.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: HT
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44077301"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201517"
 ---
 # <a name="interfaces"></a>Interfacce
 
