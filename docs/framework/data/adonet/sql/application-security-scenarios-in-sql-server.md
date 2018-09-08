@@ -3,11 +3,11 @@ title: Scenari di sicurezza delle applicazioni in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
 ms.openlocfilehash: bf4f4adfd5f49bd210026e40bd5fa4e67da10d75
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892282"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180215"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Scenari di sicurezza delle applicazioni in SQL Server
 Non esiste un singolo modo corretto per creare un'applicazione client SQL Server protetta. Ogni applicazione è univoca in termini di requisiti, ambiente di distribuzione e popolazione di utenti. Anche se un'applicazione può essere ragionevolmente protetta quando viene distribuita inizialmente, può diventare meno sicura nel corso del tempo. È impossibile prevedere con accuratezza quali minacce possano emergere nel futuro.  

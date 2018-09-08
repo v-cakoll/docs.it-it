@@ -11,11 +11,11 @@ ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d1598ac63af38f1ca3e11104bc8e1cd6323d35ed
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871018"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190176"
 ---
 # <a name="member-design-guidelines"></a>Linee guida di progettazione dei membri
 I metodi, proprietà, eventi, costruttori e i campi vengono collettivamente come membri. I membri sono infine i mezzi mediante il quale framework funzionalità viene esposta agli utenti finali di un framework.  

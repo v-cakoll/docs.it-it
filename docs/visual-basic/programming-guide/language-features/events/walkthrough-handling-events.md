@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 3ade8eae67d29e2f3cb42911e42ed8696623db62
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 35680c7476f48ca11ac4ddeda208c46c6b36c724
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507898"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191996"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Procedura dettagliata: gestione di eventi (Visual Basic)
 Questo è il secondo di due argomenti che illustrano come usare gli eventi. Il primo argomento, [procedura dettagliata: dichiarazione e generazione di eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), viene illustrato come dichiarare e generare eventi. Questa sezione Usa il form e classi da tale procedura dettagliata descrive come gestire gli eventi quando si verificano.  
@@ -95,7 +95,7 @@ Questo è il secondo di due argomenti che illustrano come usare gli eventi. Il p
 3.  Scegliere il **annullare** pulsante per arrestare l'attività. Si noti che l'aspetto del **annullare** pulsante non influisce immediatamente quando si fa clic. Il `Click` evento non può essere eseguita finché il `My.Application.DoEvents` istruzione consente l'elaborazione di eventi.  
   
     > [!NOTE]
-    >  Il `My.Application.DoEvents` metodo non elabora gli eventi in esattamente allo stesso modo del form. Ad esempio, in questa procedura dettagliata, è necessario fare clic il **annullare** due volte sul pulsante. Per consentire al modulo gestire gli eventi direttamente, è possibile utilizzare il multithreading. Per altre informazioni, vedere [Threading](https://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+    >  Il `My.Application.DoEvents` metodo non elabora gli eventi in esattamente allo stesso modo del form. Ad esempio, in questa procedura dettagliata, è necessario fare clic il **annullare** due volte sul pulsante. Per consentire al modulo gestire gli eventi direttamente, è possibile utilizzare il multithreading. Per altre informazioni, vedere [Threading](../../../../visual-basic/programming-guide/concepts/threading/index.md).
   
  Può risultare interessante eseguire il programma con F11 e scorrere il codice una riga alla volta. Si può vedere chiaramente come l'esecuzione entra `LongTask`e quindi reimmesso `Form1` ogni volta che il `PercentDone` viene generato l'evento.  
   

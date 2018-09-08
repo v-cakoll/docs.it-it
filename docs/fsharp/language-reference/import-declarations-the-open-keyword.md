@@ -3,11 +3,11 @@ title: 'Dichiarazioni di importazione: parola chiave open (F#)'
 description: 'Informazioni sulle dichiarazioni di importazione di F # e come vengono specificati un modulo o dello spazio dei nomi cui elementi è possibile fare riferimento senza usare un nome completo.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44130185"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191995"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Dichiarazioni di importazione: Il `open` (parola chiave)
 

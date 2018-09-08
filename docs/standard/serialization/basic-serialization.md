@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: faa91d3e72ebd94b2f849f824ca7e47876793109
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb42c265d9057ea4fdb76e72fc9cdb2368309cae
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583266"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181576"
 ---
 # <a name="basic-serialization"></a>Serializzazione di base
 
@@ -94,6 +94,7 @@ public class MyStuff : MyObject
   
  Benché utile, l'utilizzo dell'attributo [Serializable](xref:System.SerializableAttribute) presenta alcune limitazioni, come dimostrato in precedenza. Fare riferimento alle [Linee guida relative alla serializzazione](serialization-guidelines.md) per informazioni sul momento in cui è opportuno contrassegnare una classe per la serializzazione. La serializzazione non può essere aggiunta a una classe dopo essere stata compilata.  
   
-## <a name="see-also"></a>Vedere anche  
- [Serializzazione binaria](binary-serialization.md)  
- [Serializzazione SOAP e XML](xml-and-soap-serialization.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Serializzazione binaria](binary-serialization.md)  
+- [Serializzazione SOAP e XML](xml-and-soap-serialization.md)

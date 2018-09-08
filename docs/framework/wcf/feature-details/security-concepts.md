@@ -5,11 +5,11 @@ ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 32b05766f82059634e6ad808c75fea6cc9e820e5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44127732"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188579"
 ---
 # <a name="security-concepts"></a>Concetti sulla protezione
 In questa sezione illustra brevemente i concetti associati alla protezione di Windows Communication Foundation (WCF).  

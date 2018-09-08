@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879604"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185363"
 ---
 # <a name="visual-basic-language-features"></a>Funzionalità del linguaggio Visual Basic
 Gli argomenti seguenti introducono e illustrano i componenti essenziali di Visual Basic, un linguaggio di programmazione orientata agli oggetti. Dopo aver creato l'interfaccia utente per l'applicazione usando form e controlli, è necessario scrivere il codice per la definizione del comportamento dell'applicazione. Come con qualsiasi linguaggio di programmazione moderno, Visual Basic supporta numerosi costrutti di programmazione comuni e gli elementi del linguaggio.  
@@ -77,8 +77,9 @@ Gli argomenti seguenti introducono e illustrano i componenti essenziali di Visua
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
  Collegamenti ad argomenti che descrivono come usare XML in Visual Basic.  
   
-## <a name="related-sections"></a>Sezioni correlate  
- [Raccolte](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+## <a name="related-sections"></a>Sezioni correlate
+
+ [Raccolte](../../../visual-basic/programming-guide/concepts/collections.md)  
  Descrizione di alcuni dei tipi di raccolte disponibili in .NET Framework. Viene mostrato come usare raccolte semplici e raccolte di coppie chiave/valore.  
   
  [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)  

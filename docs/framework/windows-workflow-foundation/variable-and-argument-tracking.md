@@ -3,11 +3,11 @@ title: Rilevamento di variabili e argomenti
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
 ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064303"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187663"
 ---
 # <a name="variable-and-argument-tracking"></a>Rilevamento di variabili e argomenti
 Quando si rileva l'esecuzione di un flusso di lavoro, spesso è utile estrarre i dati. Tali dati offrono un contesto aggiuntivo quando si accede alla post-esecuzione di un record di rilevamento. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], usando il rilevamento, è possibile estrarre qualsiasi variabile o argomento visibile all'interno dell'ambito di tutte le attività di un flusso di lavoro. I profili di rilevamento semplificano l'estrazione dei dati.  

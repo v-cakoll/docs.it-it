@@ -3,11 +3,11 @@ title: Valori (F#)
 description: 'Informazioni su come i valori in F # sono quantità che hanno un tipo specifico.'
 ms.date: 05/16/2016
 ms.openlocfilehash: f645481ce8395c11ae920aee06cbf07955aeb684
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: HT
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078834"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44186513"
 ---
 # <a name="values"></a>Valori
 

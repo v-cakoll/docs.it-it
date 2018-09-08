@@ -3,11 +3,11 @@ title: Espressioni di query (F#)
 description: 'Informazioni sul supporto di espressione di query LINQ nel linguaggio di programmazione F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080124"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184342"
 ---
 # <a name="query-expressions"></a>Espressioni di query
 

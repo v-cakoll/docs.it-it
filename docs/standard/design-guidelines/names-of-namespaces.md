@@ -11,11 +11,11 @@ ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d68966f60c5039fd67195a03facc1586b9ed154
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097009"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183262"
 ---
 # <a name="names-of-namespaces"></a>Nomi di spazi dei nomi
 Come con altre convenzioni di denominazione, l'obiettivo per la denominazione degli spazi dei nomi consiste nel creare chiarezza sufficiente per il programmatore usando il framework immediatamente sapere che cos'è probabile che il contenuto dello spazio dei nomi. Il modello seguente specifica la regola generale per la denominazione degli spazi dei nomi:  

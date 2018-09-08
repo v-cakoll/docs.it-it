@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871059"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183171"
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilità COM (Visual Basic)
 Il modello COM (Component Object Model) consente a un oggetto di esporre la relativa funzionalità agli altri componenti e alle applicazioni host. La maggior parte del software in uso oggi include oggetti COM. Anche se gli assembly .NET sono la scelta migliore per le nuove applicazioni, in alcuni casi può essere necessario usare oggetti COM. Questa sezione descrive alcuni dei problemi associati alla creazione e utilizzo degli oggetti COM con Visual Basic.  
@@ -50,10 +50,10 @@ Il modello COM (Component Object Model) consente a un oggetto di esporre la rela
  [Interoperabilità con codice non gestito](../../../framework/interop/index.md)  
  Descrive i servizi di interoperabilità forniti da Common Language Runtime.  
   
- [Esposizione di componenti COM a .NET Framework](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [Esposizione di componenti COM a .NET Framework](../../../framework/interop/exposing-com-components.md)  
  Descrive il processo di chiamata dei tipi COM usando l'interoperabilità COM.  
   
- [Esposizione di componenti .NET Framework a COM](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [Esposizione di componenti .NET Framework a COM](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  Descrive la preparazione e l'uso dei tipi gestiti da COM.  
   
  [Applicazione di attributi di interoperabilità](../../../framework/interop/applying-interop-attributes.md)  

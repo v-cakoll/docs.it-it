@@ -12,66 +12,66 @@ helpviewer_keywords:
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 214e3bca811f87f4b8367b459564449d16e7c289
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e06232a4e262b13439516114e65c81c07ba24ab
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572902"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192964"
 ---
 # <a name="how-to-create-time-zones-without-adjustment-rules"></a>Procedura: creare fusi orari senza regole di regolazione
 
-Le informazioni di fuso orario preciso richiesto da un'applicazione potrebbero non essere presente in un determinato sistema per diversi motivi:
+Le informazioni del fuso orario preciso richiesto da un'applicazione potrebbero non essere presente in un sistema specifico per diversi motivi:
 
-* Il fuso orario non è mai stato definito nel Registro di sistema del sistema locale.
+* Il fuso orario non è mai stato definito nel Registro di sistema locale.
 
-* Dati sul fuso orario sono stati modificati o rimossi dal Registro di sistema.
+* I dati sul fuso orario sono stati modificati o rimossi dal Registro di sistema.
 
-* Il fuso orario esiste ma non dispone di informazioni accurate sulle regolazioni del fuso orario per un determinato periodo storico.
+* Il fuso orario esiste ma non dispone di informazioni accurate sulle regolazioni del fuso orario per un determinato periodo cronologico.
 
-In questi casi, è possibile chiamare il <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metodo per definire il fuso orario richiesto dall'applicazione. È possibile utilizzare l'overload di questo metodo per creare un fuso orario con o senza regole di regolazione. Se il fuso orario supporta l'ora legale, è possibile definire le regolazioni con entrambe le regole di regolazione fissa o mobile. (Per le definizioni di questi termini, vedere la sezione "Terminologia fuso orario" in [Panoramica sul fuso orario](../../../docs/standard/datetime/time-zone-overview.md).)
+In questi casi, è possibile chiamare il <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metodo per definire il fuso orario richiesto dall'applicazione. È possibile usare gli overload di questo metodo per creare un fuso orario con o senza regole di regolazione. Se il fuso orario supporta l'ora legale, è possibile definire le regolazioni con entrambe le regole di rettifica fissa o mobile. (Per le definizioni di questi termini, vedere la sezione "Terminologia fuso orario" nella [Panoramica sul fuso orario](../../../docs/standard/datetime/time-zone-overview.md).)
 
 > [!IMPORTANT]
-> Fusi orari personalizzati creati tramite la chiamata di <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (metodo) non vengono aggiunti al Registro di sistema. Ma è possibile accedervi solo tramite il riferimento all'oggetto restituito dal <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> chiamata al metodo.
+> Fusi orari personalizzati creati tramite la chiamata di <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (metodo) non vengono aggiunti al Registro di sistema. Al contrario, è possibile accedervi solo tramite il riferimento all'oggetto restituito dal <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> chiamata al metodo.
 
-In questo argomento viene illustrato come creare un fuso orario senza regole di regolazione. Per creare un fuso orario che supporta le regole di regolazione dell'ora legale, vedere [procedura: creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+In questo argomento viene illustrato come creare un fuso orario senza regole di regolazione. Per creare un fuso orario che supporta regole di regolazione dell'ora legale, vedere [procedura: creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
 
 ### <a name="to-create-a-time-zone-without-adjustment-rules"></a>Per creare un fuso orario senza regole di regolazione
 
 1. Definire nome visualizzato del fuso orario.
 
-   Il nome visualizzato segue un formato pressoché standard in cui l'offset del fuso orario dall'ora Coordinated Universal Time (UTC) è racchiuso tra parentesi ed è seguito da una stringa che identifica il fuso orario, una o più delle città nel fuso orario, o in uno o più di cou Mo o aree del fuso orario.
+   Il nome visualizzato segue un formato piuttosto standard in cui è racchiuso tra parentesi offset del fuso orario dall'ora Coordinated Universal Time (UTC) ed è seguito da una stringa che identifica il fuso orario, una o più delle città nel fuso orario o uno più il cou Mo o aree geografiche nel fuso orario.
 
 2. Definire il nome dell'ora solare del fuso orario. In genere, questa stringa viene utilizzata anche come identificatore del fuso orario.
 
-3. Se si desidera utilizzare un identificatore nome standard del fuso orario diverso, definire l'identificatore del fuso orario.
+3. Se si desidera usare un identificatore differente rispetto al nome del fuso orario standard, definire l'identificatore del fuso orario.
 
-4. Creare un'istanza di un <xref:System.TimeSpan> oggetto che definisce l'offset del fuso orario dall'ora UTC. Fusi orari con ore in avanti rispetto all'ora UTC hanno un offset positivo. Fusi orari con ore precedenti rispetto all'ora UTC hanno un offset negativo.
+4. Creare un'istanza di un <xref:System.TimeSpan> oggetto che definisce l'offset del fuso orario rispetto all'ora UTC. Fusi orari con volte in cui siano successivi rispetto all'ora UTC avere un offset positivi. Fusi orari con ore indietro rispetto all'ora UTC hanno una differenza negativa.
 
 5. Chiamare il <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> metodo per creare un'istanza del nuovo fuso orario.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente definisce un fuso orario personalizzato per Mawson, Antartide senza regole di regolazione.
+L'esempio seguente definisce un fuso orario personalizzato per Mawson, Antartide, che non dispone di alcuna regola di rettifica.
 
 [!code-csharp[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#1)]
 [!code-vb[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#1)]
 
-La stringa assegnata al <xref:System.TimeZoneInfo.DisplayName%2A> proprietà segue un formato standard in cui l'offset del fuso orario dall'ora UTC è seguito da una semplice descrizione del fuso orario.
+La stringa assegnata al <xref:System.TimeZoneInfo.DisplayName%2A> proprietà segue un formato standard in cui l'offset del fuso orario rispetto all'ora UTC è seguito da una semplice descrizione del fuso orario.
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
 L'esempio presenta i requisiti seguenti:
 
-* Un riferimento a System.Core.dll essere aggiunto al progetto.
+* Aggiungere un riferimento a DLL al progetto.
 
-* Che importati spazi dei nomi seguenti:
+* Che siano importati spazi dei nomi seguenti:
 
   [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
   [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
-[Panoramica sul fuso orario](../../../docs/standard/datetime/time-zone-overview.md)
-[procedura: creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)
+* [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
+* [Panoramica sui fusi orari](../../../docs/standard/datetime/time-zone-overview.md)
+* [Procedura: Creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)

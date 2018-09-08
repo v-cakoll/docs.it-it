@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 46ccb140847c63bd1fbdb3b67b86c9d2a7eefd4b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672827"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185824"
 ---
 # <a name="ui-automation-support-for-the-tabitem-control-type"></a>Supporto di automazione interfaccia utente per il tipo di controllo TabItem
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "43672827"
   
 |Visualizzazione controlli|Visualizzazione contenuto|  
 |------------------|------------------|  
-|TabItem<br /><br /> <ul><li>Image (0 o 1)</li><li>Testo</li><li>Riquadro<br /><br /> <ul><li>Vari controlli (0 o più)</li></ul></li></ul>|TabItem<br /><br /> <ul><li>Pane<br /><br /> <ul><li>Vari controlli (0 o più)</li></ul></li></ul>|  
+|TabItem<br /><br /> <ul><li>Image (0 o 1)</li><li>Testo</li><li>Riquadro<br /><br /> <ul><li>Vari controlli (0 o più)</li></ul></li></ul>|TabItem<br /><br /> <ul><li>Riquadro<br /><br /> <ul><li>Vari controlli (0 o più)</li></ul></li></ul>|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Proprietà di automazione interfaccia utente obbligatorie  
