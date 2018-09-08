@@ -12,11 +12,11 @@ ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9dea187b5f3911114e551d640e0bb0aa6fac1143
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891233"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137213"
 ---
 # <a name="enum-design"></a>Progettazione di enum
 Le enumerazioni sono un tipo speciale di tipo di valore. Esistono due tipi di enumerazioni: semplice enumerazioni di flag e le enumerazioni.  

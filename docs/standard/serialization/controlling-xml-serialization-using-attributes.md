@@ -15,12 +15,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: d97798dd44e9661e82a303023e041f5af2f43711
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 28c7ebe1de3adb92e531597027e4b8bb7a63294c
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501778"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135718"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controllo della serializzazione XML mediante attributi
 
@@ -317,10 +317,10 @@ Potrebbero presentarsi delle situazioni in cui un campo o una proprietà pubblic
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi per il controllo della serializzazione XML](attributes-that-control-xml-serialization.md)  
-[Attributi per il controllo della serializzazione SOAP codificata](attributes-that-control-encoded-soap-serialization.md)  
-[Introduzione alla serializzazione XML](introducing-xml-serialization.md)  
-[Esempi di serializzazione XML](examples-of-xml-serialization.md)  
-[Procedura: Specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-[Procedura: Serializzare un oggetto](how-to-serialize-an-object.md)  
-[Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)  
+- [Attributi per il controllo della serializzazione XML](attributes-that-control-xml-serialization.md)  
+- [Attributi per il controllo della serializzazione SOAP codificata](attributes-that-control-encoded-soap-serialization.md)  
+- [Introduzione alla serializzazione XML](introducing-xml-serialization.md)  
+- [Esempi di serializzazione XML](examples-of-xml-serialization.md)  
+- [Procedura: Specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+- [Procedura: Serializzare un oggetto](how-to-serialize-an-object.md)  
+- [Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)  

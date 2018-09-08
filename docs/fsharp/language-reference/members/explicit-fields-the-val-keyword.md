@@ -3,11 +3,11 @@ title: 'Campi espliciti: parola chiave val (F#)'
 description: "Informazioni su F # 'val' parola chiave, che viene usata per dichiarare un percorso per archiviare un valore in un tipo classe o struttura senza inizializzare il tipo."
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43876239"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44132805"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Campi espliciti: parola chiave val
 

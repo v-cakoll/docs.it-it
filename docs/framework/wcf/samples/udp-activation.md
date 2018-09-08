@@ -3,11 +3,11 @@ title: Attivazione UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
 ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788065"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44138357"
 ---
 # <a name="udp-activation"></a>Attivazione UDP
 In questo esempio si basa sul [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio. Estende la [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio per supportare l'attivazione del processo mediante il servizio di attivazione processo Windows (WAS).  

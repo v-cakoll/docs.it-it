@@ -2,12 +2,12 @@
 title: Funzioni (F#)
 description: 'Altre informazioni sulle funzioni in F # e come F # supporta costrutti di programmazione funzionale più comuni.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a5b54b7bcfdeee7018dba38016db6182ef95ff0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803912"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140918"
 ---
 # <a name="functions"></a>Funzioni
 
@@ -112,7 +112,7 @@ Verrà quindi specificato l'argomento aggiuntivo necessario per varie lunghezze 
 
 ## <a name="recursive-functions"></a>Funzioni ricorsive
 
-Le *funzioni ricorsive* sono funzioni che chiamano se stesse. Richiedono di specificare la parola chiave **rec** seguita dalla parola chiave **let**. È possibile richiamare la funzione ricorsiva dall'interno del corpo della funzione esattamente come si richiama qualsiasi chiamata di funzione. La funzione ricorsiva seguente calcola il numero di Fibonacci *n*. La sequenza dei numeri di Fibonacci è nota dall'antichità ed è una sequenza in cui ogni numero successivo è la somma di due numeri precedenti nella sequenza.
+Le *funzioni ricorsive* sono funzioni che chiamano se stesse. Richiedono di specificare la parola chiave **rec** seguita dalla parola chiave **let**. È possibile richiamare la funzione ricorsiva dall'interno del corpo della funzione esattamente come si richiama qualsiasi chiamata di funzione. La funzione ricorsiva seguente calcola la *n*<sup>th</sup> numero di Fibonacci. La sequenza dei numeri di Fibonacci è nota dall'antichità ed è una sequenza in cui ogni numero successivo è la somma di due numeri precedenti nella sequenza.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

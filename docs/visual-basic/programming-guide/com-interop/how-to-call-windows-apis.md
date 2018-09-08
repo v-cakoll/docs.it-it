@@ -7,12 +7,12 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 739516e86917ac24a81cd6387af5576c512ecbc2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 081f4242ef5883a8b25b8819ba3aff835b1e6ac7
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515917"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129695"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Procedura: chiamare API di Windows (Visual Basic)
 In questo esempio definisce e chiama il `MessageBox` funzione in User32. dll e quindi passa una stringa a esso.  
@@ -34,10 +34,11 @@ In questo esempio definisce e chiama il `MessageBox` funzione in User32. dll e q
   
 -   Il tipo contenitore è stato creato in precedenza con `CreateType`. (<xref:System.InvalidOperationException>)  
   
-## <a name="see-also"></a>Vedere anche  
- [Informazioni dettagliate su platform invoke](https://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
- [Esempi di platform invoke](../../../framework/interop/platform-invoke-examples.md)  
- [Utilizzo di funzioni di DLL non gestite](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
- [Definizione di un metodo tramite Reflection Emit](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  
- [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
- [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Informazioni dettagliate su platform invoke](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)  
+- [Esempi di platform invoke](../../../framework/interop/platform-invoke-examples.md)  
+- [Utilizzo di funzioni di DLL non gestite](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
+- [Definizione di un metodo tramite Reflection Emit](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  
+- [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
+- [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 6b4d58f6b5bf23cbce2ace8fb40730d7b73994de
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785492"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133282"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Procedura: qualificare nomi di attributi ed elementi XML
 
@@ -171,11 +171,11 @@ public class Book
 
 ## <a name="see-also"></a>Vedere anche
 
-<xref:System.Xml.Serialization.XmlSerializer>
-[La strumento XML Schema Definition e serializzazione XML](the-xml-schema-definition-tool-and-xml-serialization.md)
-[Introduzione alla serializzazione XML](introducing-xml-serialization.md)
-[classe XmlSerializer](xref:System.Xml.Serialization.XmlSerializer) 
- [Gli attributi che controllano la serializzazione XML](attributes-that-control-xml-serialization.md)
-[procedura: specificare un nome di elemento alternativo per un Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-[procedura: serializzare un oggetto](how-to-serialize-an-object.md) 
- [Procedura: deserializzare un oggetto](how-to-deserialize-an-object.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Strumento XML Schema Definition e serializzazione XML](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [Introduzione alla serializzazione XML](introducing-xml-serialization.md)
+- [Classe XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
+- [Attributi per il controllo della serializzazione XML](attributes-that-control-xml-serialization.md)
+- [Procedura: specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Procedura: Serializzare un oggetto](how-to-serialize-an-object.md)
+- [Procedura: Deserializzare un oggetto](how-to-deserialize-an-object.md)

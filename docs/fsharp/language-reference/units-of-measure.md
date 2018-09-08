@@ -2,17 +2,16 @@
 title: Unità di misura (F#)
 description: 'Informazioni su a virgola mobile come e i valori interi con segno in F # possono essere associate unità di misura, che sono in genere usata per indicare lunghezza, volume e massa.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 6075742ec80d9510be51d4565e3397931c9f68c7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517426"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131260"
 ---
 # <a name="units-of-measure"></a>Unità di misura
 
 Virgola mobile e i valori interi con segno in F # possono essere associate unità di misura, che sono in genere usata per indicare lunghezza, volume, massa, e così via. Con le quantità con unità, è consentire al compilatore di verificare che le relazioni aritmetiche dispongono di unità corretta, che consente di evitare gli errori di programmazione.
-
 
 ## <a name="syntax"></a>Sintassi
 
@@ -21,6 +20,7 @@ Virgola mobile e i valori interi con segno in F # possono essere associate unit�
 ```
 
 ## <a name="remarks"></a>Note
+
 La sintassi precedente definisce *-nome dell'unità* come un'unità di misura. La parte facoltativa consente di definire una nuova misura in termini di unità definita in precedenza. Ad esempio, la riga seguente definisce la misura `cm` (centimetri).
 
 ```fsharp
@@ -72,7 +72,7 @@ Unità di misura possono essere applicate a qualsiasi tipo, non solo tipi a virg
 Nell'esempio seguente viene illustrato l'utilizzo di unità di misura.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
-    
+
 Esempio di codice seguente viene illustrato come convertire un numero a virgola mobile senza un valore a virgola mobile. Sufficiente moltiplicare per 1,0, applicare le dimensioni per la 1.0. È possibile astrarre questo in una funzione, ad esempio `degreesFahrenheit`.
 
 Inoltre, quando si passano valori con dimensioni per le funzioni che si aspettano di numeri a virgola mobile senza dimensioni, è necessario annullare questa operazione le unità o eseguire il cast `float` utilizzando il `float` operatore. In questo esempio, si divide per `1.0<degC>` per gli argomenti `printf` perché `printf` prevede quantità senza dimensioni.
@@ -88,20 +88,23 @@ That temperature in degrees Celsius is    32.22.
 ```
 
 ## <a name="using-generic-units"></a>Utilizzo unità di misura generici
+
 È possibile scrivere funzioni generiche che operano sui dati che sono associata un'unità di misura. Eseguire questa operazione specificando un tipo di insieme a un'unità generica come parametro di tipo, come illustrato nell'esempio di codice seguente.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
-    
+
 ## <a name="creating-aggregate-types-with-generic-units"></a>Creazione di tipi di aggregazione con unità di misura generici
+
 Il codice seguente viene illustrato come creare un tipo di aggregazione che è costituito da singoli valori a virgola mobile con unità di misura generici. In questo modo un solo tipo da creare che funziona con un'ampia gamma di unità. Unità di misura generici conservano anche, indipendenza dai tipi garantendo che un tipo generico che ha un set di unità è un tipo diverso dallo stesso tipo generico con un set diverso di unità. Alla base di questa tecnica è che il `Measure` attributo può essere applicato al parametro di tipo.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
-    
+
 ## <a name="units-at-runtime"></a>Unità in fase di esecuzione
+
 Unità di misura sono usate per il controllo dei tipi statici. Se i valori a virgola mobile vengono compilati, vengono eliminate le unità di misura, in modo che le unità vengono perse in fase di esecuzione. Pertanto, qualsiasi tentativo di implementare funzionalità che dipende dal controllo delle unità in fase di esecuzione non è possibile. Ad esempio possibile implementare un `ToString` funzione per stampare le unità non è possibile.
 
-
 ## <a name="conversions"></a>Conversioni
+
 Per convertire un tipo che dispone di unità (ad esempio, `float<'u>`) a un tipo che non dispone di unità, è possibile usare la funzione di conversione standard. Ad esempio, è possibile usare `float` da convertire in un `float` valore che non dispone di unità, come illustrato nel codice seguente.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
@@ -109,10 +112,11 @@ Per convertire un tipo che dispone di unità (ad esempio, `float<'u>`) a un tipo
 Per convertire un valore senza unità su un valore che dispone di unità, è possibile moltiplicare per valore 1 o 1.0 annotato con le unità appropriate. Tuttavia, per la scrittura di livelli di interoperabilità, esistono anche alcune funzioni esplicite che è possibile utilizzare per convertire i valori senza unità per i valori con le unità. Si tratta nel [LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3) modulo. Ad esempio, per eseguire la conversione da un valore `float` a un `float<cm>`, usare [FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9), come illustrato nel codice seguente.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
-    
+
 ## <a name="units-of-measure-in-the-f-core-library"></a>Unità di misura nella raccolta di base F #
+
 È disponibile in una libreria unit di `FSharp.Data.UnitSystems.SI` dello spazio dei nomi. Include le unità di sistema internazionale di misura in entrambi i form di simboli (, ad esempio `m` contatore) nel `UnitSymbols` sub-spazio dei nomi e il relativo nome completo (, ad esempio `meter` contatore) nel `UnitNames` spazio dei nomi secondario.
 
-
 ## <a name="see-also"></a>Vedere anche
-[Riferimenti per il linguaggio F#](index.md)
+
+- [Riferimenti per il linguaggio F#](index.md)

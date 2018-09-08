@@ -2,19 +2,19 @@
 title: 'Procedura: determinare se un File è un Assembly (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: 84d45cea4a2557350edacd5f05b12c8ffcac4df8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ced41279e7e192d6d5bed53dbce7378395b32e6d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643238"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131620"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Procedura: determinare se un File è un Assembly (Visual Basic)
 Un file è un assembly unicamente nei casi in cui è gestito e include nei metadati una voce assembly. Per altre informazioni sugli assembly e sui metadati, vedere l'argomento [Manifesto dell'assembly](../../../../framework/app-domains/assembly-manifest.md).  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Procedura: Determinare se un file è un assembly in modo manuale  
   
-1.  Avviare il [Disassembler IL (Ildasm.exe)](https://msdn.microsoft.com/library/f7dy01k1).  
+1.  Avviare il [Disassembler IL (Ildasm.exe)](../../../../framework/tools/ildasm-exe-il-disassembler.md).  
   
 2.  Caricare il file che si intende verificare.  
   
@@ -52,7 +52,8 @@ End Module
   
  Il metodo <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> carica il file di test e lo rilascia dopo aver letto le informazioni.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Reflection.AssemblyName>  
- [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)  
- [Assembly e Global Assembly Cache (Visual Basic)](index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Reflection.AssemblyName>  
+- [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)  
+- [Assembly e Global Assembly Cache (Visual Basic)](index.md)
