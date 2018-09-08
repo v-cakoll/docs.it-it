@@ -3,11 +3,11 @@ title: Funzioni data e ora
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
 ms.openlocfilehash: 56ef2f0b0a62f6b2cf6db5fe2c6713c58228ff6f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749541"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084825"
 ---
 # <a name="date-and-time-functions"></a>Funzioni data e ora
 Il provider di dati .NET Framework per SQL Server (SqlClient) fornisce funzioni di data e ora che eseguono operazioni in un valore di input `System.DateTime` e restituiscono un risultato di tipo `string`, `System.DateTime` o numerico. Tali funzioni si trovano nello spazio dei nomi SqlServer, disponibile quando si usa SqlClient. Una proprietà dello spazio dei nomi del provider consente a Entity Framework di individuare il prefisso usato dal provider per costrutti specifici, ad esempio tipi e funzioni. Nella tabella che segue sono illustrate le funzioni di data e ora SqlClient.  

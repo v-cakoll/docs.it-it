@@ -13,41 +13,42 @@ helpviewer_keywords:
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2621aa96cf89b453d5faec3357d0890ca36251d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 3879dc3f0270a56132b44882a74c50d05914ff89
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572736"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067451"
 ---
 # <a name="struct-design"></a>Progettazione di struct
-Il tipo di valore generici è più noto anche come una struttura, la parola chiave c#. In questa sezione vengono fornite linee guida per la progettazione struttura generale.  
+Il tipo di valore per utilizzo generico è più noto anche come uno struct, la parola chiave c#. In questa sezione vengono fornite linee guida per la progettazione di struct generale.  
   
  **X DO NOT** fornisce un costruttore predefinito per uno struct.  
   
- Seguendo questa linea guida gli matrici di strutture possono essere creati senza dover eseguire il costruttore su ogni elemento della matrice. Si noti che in c# non consente strutture possono disporre di costruttori predefiniti.  
+ Attenendosi a questa linea guida consente le matrici di struct da creare senza dover eseguire il costruttore su ogni elemento della matrice. Si noti che in c# non consente strutture possono avere costruttori predefiniti.  
   
  **X DO NOT** definire i tipi di valore modificabile.  
   
- Tipi di valore modificabile hanno vari problemi. Ad esempio, quando una proprietà get restituisce un tipo di valore, il chiamante riceve una copia. Poiché la copia viene creata in modo implicito, gli sviluppatori potrebbero non essere consapevoli che sono la mutazione di copia e non il valore originale. Inoltre, alcuni linguaggi (linguaggi dinamici, in particolare) verificarsi dei problemi con i tipi di valore modificabile perché anche le variabili locali, quando viene dereferenziato, provocare una copia da eseguire.  
+ I tipi di valore modificabile presentano problemi diversi. Ad esempio, quando un getter della proprietà viene restituito un tipo di valore, il chiamante riceve una copia. Poiché la copia viene creata in modo implicito, gli sviluppatori potrebbero non essere consapevoli che essi siano mutazione la copia e non il valore originale. Inoltre, in alcuni linguaggi (linguaggi dinamici, in particolare) sono i problemi usando i tipi di valore modificabile perché anche le variabili locali, quando viene dereferenziato, causare una copia da apportare.  
   
  **✓ DO** garantire che in uno stato in cui tutti i dati dell'istanza è impostato su zero, false o null (se necessario) è valido.  
   
- Ciò impedisce la creazione accidentale di istanze non valide quando viene creata una matrice di strutture.  
+ Questo impedisce la creazione accidentale di istanze non valide quando viene creata una matrice degli struct.  
   
  **✓ DO** implementare <xref:System.IEquatable%601> sui tipi di valore.  
   
- Il <xref:System.Object.Equals%2A?displayProperty=nameWithType> metodo nei tipi di valore determina la conversione boxing e l'implementazione predefinita non è molto efficiente, perché usa la reflection. <xref:System.IEquatable%601.Equals%2A> può avere prestazioni migliori e può essere implementato in modo che non causa la conversione boxing.  
+ Il <xref:System.Object.Equals%2A?displayProperty=nameWithType> metodo sui tipi di valore determina la conversione boxing e l'implementazione predefinita non è molto efficiente, perché usa la reflection. <xref:System.IEquatable%601.Equals%2A> può avere migliori prestazioni e può essere implementata in modo che questo evento non comporta la conversione boxing.  
   
  **X DO NOT** estendere in modo esplicito <xref:System.ValueType>. In effetti, la maggior parte dei linguaggi evitare questo problema.  
   
- In generale, le strutture possono rivelarsi molto utile, ma devono essere utilizzate solo per i valori di piccole dimensioni, single, non modificabili che non essere boxed frequentemente.  
+ In generale, gli struct possono rivelarsi molto utili, ma devono essere utilizzati solo per i valori di piccole dimensioni, single, non modificabili che non essere boxed frequentemente.  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
+ *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)  
- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
- [Scelta tra classi e struct](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)  
+- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Scelta tra classi e struct](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)

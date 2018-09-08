@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe941fff7091fb579e41a3c417dbb2129bcf3e8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c821177ca897e617885425217ac0b6659b5ea6e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580783"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062573"
 ---
 # <a name="securing-state-data"></a>Protezione dei dati di stato
 Nelle applicazioni che consentono la gestione di dati sensibili o decisioni di qualsiasi tipo in materia di sicurezza è necessario mantenere il controllo dei dati e non consentire l'accesso diretto da parte di altro codice potenzialmente dannoso. Il modo migliore per proteggere i dati in memoria è dichiararli come variabili private o interne, ovvero con ambito limitato allo stesso assembly. Anche questi dati sono tuttavia soggetti a un tipo di accesso che è necessario determinare.  
@@ -28,5 +28,6 @@ Nelle applicazioni che consentono la gestione di dati sensibili o decisioni di q
   
  Accertarsi che nessun metodo o proprietà esponga tali valori in modo non intenzionale.  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
