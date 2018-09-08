@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 623700161ae4587daeb2c7348055d413512f7c87
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f5d106dd3b7b9a7a0aeedca86e63a6fccbb1cc27
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805637"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192484"
 ---
 # <a name="handling-and-raising-events"></a>Gestione e generazione di eventi
 Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di delegato segue lo schema progettuale osservatore, che consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider. Un mittente dell'evento esegue il push di una notifica di evento, mentre un ricevitore di eventi riceve la notifica e definisce una risposta. In questo articolo viene descritto come implementare gli eventi nel codice, come usare gli eventi nelle applicazioni e i componenti principali del modello di delegato.  
@@ -87,11 +87,12 @@ Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di de
 |[Modello di progettazione observer](../../../docs/standard/events/observer-design-pattern.md)|Viene descritto lo schema progettuale che consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider.|  
 |[Procedura: Usare eventi in un'applicazione Web Form](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Viene illustrato come gestire un evento generato da un controllo Web Form.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.EventHandler>  
- <xref:System.EventHandler%601>  
- <xref:System.EventArgs>  
- <xref:System.Delegate>  
- [Panoramica degli eventi e degli eventi indirizzati (app UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
- [Eventi (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
- [Eventi (Guida per programmatori C#)](../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.EventHandler>  
+- <xref:System.EventHandler%601>  
+- <xref:System.EventArgs>  
+- <xref:System.Delegate>  
+- [Panoramica degli eventi e degli eventi indirizzati (app UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
+- [Eventi (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- [Eventi (Guida per programmatori C#)](../../csharp/programming-guide/events/index.md)
