@@ -3,11 +3,11 @@ title: 'Funzioni ricorsive: parola chiave rec (F#)'
 description: "Informazioni su come la parola chiave 'rec' di F # viene usata con la parola chiave 'let'. per definire una funzione ricorsiva."
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128254"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227061"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Funzioni ricorsive: parola chiave rec
 

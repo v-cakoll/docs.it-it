@@ -3,11 +3,11 @@ title: Criteri di ricerca personalizzati
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135399"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227246"
 ---
 # <a name="custom-find-criteria"></a>Criteri di ricerca personalizzati
 In questo esempio viene illustrato come creare una corrispondenza degli ambiti personalizzata utilizzando la logica e come implementare un servizio di individuazione personalizzato. I client utilizzano la funzionalità di corrispondenza degli ambiti personalizzata per rifinire ed eseguire l'ulteriore compilazione sulla funzionalità di individuazione fornita dal sistema di WCF Discovery. Lo scenario analizzato in questo esempio è il seguente:  

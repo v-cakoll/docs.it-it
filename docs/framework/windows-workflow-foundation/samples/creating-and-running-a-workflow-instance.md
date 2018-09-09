@@ -3,11 +3,11 @@ title: Creazione ed esecuzione di un'istanza del flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
 ms.openlocfilehash: 571d41194ebc98be81646fb5bfdab060225015ca
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097854"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252369"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>Creazione ed esecuzione di un'istanza del flusso di lavoro
 In questo esempio viene illustrato come eseguire un'istanza del flusso di lavoro, sia in modo sincrono che asincrono.  

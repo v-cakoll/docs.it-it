@@ -3,11 +3,11 @@ title: Code transazionali
 ms.date: 03/30/2017
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
 ms.openlocfilehash: db6a9686334eefb02b9360827a23ca8363127eb5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44048029"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253195"
 ---
 # <a name="transacted-queues"></a>Code transazionali
 In questo esempio viene illustrato come integrare code e transazioni in Windows Workflow Foundation (WF) per creare servizi affidabili e scalabili. Oggetto <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` viene usato nel flusso di lavoro client per inviare messaggi a una coda in una transazione tramite la <xref:System.ServiceModel.NetMsmqBinding>. Un oggetto <xref:System.ServiceModel.Activities.TransactedReceiveScope> viene usato nel server per ricevere messaggi dalla coda e aggiornare lo stato del flusso di lavoro nella stessa transazione.  
