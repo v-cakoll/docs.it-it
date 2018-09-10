@@ -4,48 +4,49 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 3b43e7e3aafda5ee5b6a49f271f725fb8eeeca59
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 22b6cc8fc8c8d9ffd1c2cf4063994ce94cea8e45
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198169"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520843"
 ---
-# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a><span data-ttu-id="e7491-102">Procedura: restituire sottoinsiemi di proprietà degli elementi in una query (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="e7491-102">How to: Return Subsets of Element Properties in a Query (C# Programming Guide)</span></span>
-<span data-ttu-id="e7491-103">Usare un tipo anonimo in un'espressione di query quando si verificano entrambe le condizioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="e7491-103">Use an anonymous type in a query expression when both of these conditions apply:</span></span>  
+# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a><span data-ttu-id="299cc-102">Procedura: restituire sottoinsiemi di proprietà degli elementi in una query (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="299cc-102">How to: Return Subsets of Element Properties in a Query (C# Programming Guide)</span></span>
+<span data-ttu-id="299cc-103">Usare un tipo anonimo in un'espressione di query quando si verificano entrambe le condizioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="299cc-103">Use an anonymous type in a query expression when both of these conditions apply:</span></span>  
   
--   <span data-ttu-id="e7491-104">Si vogliono restituire solo alcune delle proprietà di ogni elemento di origine.</span><span class="sxs-lookup"><span data-stu-id="e7491-104">You want to return only some of the properties of each source element.</span></span>  
+-   <span data-ttu-id="299cc-104">Si vogliono restituire solo alcune delle proprietà di ogni elemento di origine.</span><span class="sxs-lookup"><span data-stu-id="299cc-104">You want to return only some of the properties of each source element.</span></span>  
   
--   <span data-ttu-id="e7491-105">Non è necessario archiviare la query all'esterno dell'ambito del metodo in cui è stata eseguita.</span><span class="sxs-lookup"><span data-stu-id="e7491-105">You do not have to store the query results outside the scope of the method in which the query is executed.</span></span>  
+-   <span data-ttu-id="299cc-105">Non è necessario archiviare la query all'esterno dell'ambito del metodo in cui è stata eseguita.</span><span class="sxs-lookup"><span data-stu-id="299cc-105">You do not have to store the query results outside the scope of the method in which the query is executed.</span></span>  
   
- <span data-ttu-id="e7491-106">Se si vuole restituire solo una proprietà o un campo da ogni elemento di origine, è sufficiente usare l'operatore punto nella clausola `select`.</span><span class="sxs-lookup"><span data-stu-id="e7491-106">If you only want to return one property or field from each source element, then you can just use the dot operator in the `select` clause.</span></span> <span data-ttu-id="e7491-107">Per restituire, ad esempio, solo l'`ID` di ogni `student`, scrivere la clausola `select` come segue:</span><span class="sxs-lookup"><span data-stu-id="e7491-107">For example, to return only the `ID` of each `student`, write the `select` clause as follows:</span></span>  
+ <span data-ttu-id="299cc-106">Se si vuole restituire solo una proprietà o un campo da ogni elemento di origine, è sufficiente usare l'operatore punto nella clausola `select`.</span><span class="sxs-lookup"><span data-stu-id="299cc-106">If you only want to return one property or field from each source element, then you can just use the dot operator in the `select` clause.</span></span> <span data-ttu-id="299cc-107">Per restituire, ad esempio, solo l'`ID` di ogni `student`, scrivere la clausola `select` come segue:</span><span class="sxs-lookup"><span data-stu-id="299cc-107">For example, to return only the `ID` of each `student`, write the `select` clause as follows:</span></span>  
   
 ```  
 select student.ID;  
 ```  
   
-## <a name="example"></a><span data-ttu-id="e7491-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="e7491-108">Example</span></span>  
- <span data-ttu-id="e7491-109">Nell'esempio seguente viene illustrato come usare un tipo anonimo per restituire solo un sottoinsieme delle proprietà di ogni elemento di origine che corrisponde alla condizione specificata.</span><span class="sxs-lookup"><span data-stu-id="e7491-109">The following example shows how to use an anonymous type to return only a subset of the properties of each source element that matches the specified condition.</span></span>  
+## <a name="example"></a><span data-ttu-id="299cc-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="299cc-108">Example</span></span>  
+ <span data-ttu-id="299cc-109">Nell'esempio seguente viene illustrato come usare un tipo anonimo per restituire solo un sottoinsieme delle proprietà di ogni elemento di origine che corrisponde alla condizione specificata.</span><span class="sxs-lookup"><span data-stu-id="299cc-109">The following example shows how to use an anonymous type to return only a subset of the properties of each source element that matches the specified condition.</span></span>  
   
  [!code-csharp[csProgGuideLINQ#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-return-subsets-of-element-properties-in-a-query_1.cs)]  
   
- <span data-ttu-id="e7491-110">Si noti che se per le proprietà non è specificato alcun nome, il tipo anonimo usa i nomi dell'elemento di origine.</span><span class="sxs-lookup"><span data-stu-id="e7491-110">Note that the anonymous type uses the source element's names for its properties if no names are specified.</span></span> <span data-ttu-id="e7491-111">Per assegnare nuovi nomi alle proprietà nel tipo anonimo, scrivere l'istruzione `select` come segue:</span><span class="sxs-lookup"><span data-stu-id="e7491-111">To give new names to the properties in the anonymous type, write the `select` statement as follows:</span></span>  
+ <span data-ttu-id="299cc-110">Si noti che se per le proprietà non è specificato alcun nome, il tipo anonimo usa i nomi dell'elemento di origine.</span><span class="sxs-lookup"><span data-stu-id="299cc-110">Note that the anonymous type uses the source element's names for its properties if no names are specified.</span></span> <span data-ttu-id="299cc-111">Per assegnare nuovi nomi alle proprietà nel tipo anonimo, scrivere l'istruzione `select` come segue:</span><span class="sxs-lookup"><span data-stu-id="299cc-111">To give new names to the properties in the anonymous type, write the `select` statement as follows:</span></span>  
   
 ```  
 select new { First = student.FirstName, Last = student.LastName };  
 ```  
   
- <span data-ttu-id="e7491-112">Se si tenta questa operazione nell'esempio precedente, è necessario modificare anche l'istruzione `Console.WriteLine`:</span><span class="sxs-lookup"><span data-stu-id="e7491-112">If you try this in the previous example, then the `Console.WriteLine` statement must also change:</span></span>  
+ <span data-ttu-id="299cc-112">Se si tenta questa operazione nell'esempio precedente, è necessario modificare anche l'istruzione `Console.WriteLine`:</span><span class="sxs-lookup"><span data-stu-id="299cc-112">If you try this in the previous example, then the `Console.WriteLine` statement must also change:</span></span>  
   
 ```csharp  
 Console.WriteLine(student.First + " " + student.Last);  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="e7491-113">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="e7491-113">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="299cc-113">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="299cc-113">Compiling the Code</span></span>  
   
--   <span data-ttu-id="e7491-114">Per eseguire questo codice, copiare e incollare la classe in un progetto di applicazione console di Visual C# creato in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e7491-114">To run this code, copy and paste the class into a Visual C# console application project that has been created in Visual Studio.</span></span> <span data-ttu-id="e7491-115">Per impostazione predefinita, questo progetto usa la versione 3.5 di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] e contiene un riferimento a System.Core.dll e una direttiva `using` per System.Linq.</span><span class="sxs-lookup"><span data-stu-id="e7491-115">By default, this project targets version 3.5 of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], and it will have a reference to System.Core.dll and a `using` directive for System.Linq.</span></span> <span data-ttu-id="e7491-116">Se uno o più di questi requisiti non sono presenti nel progetto, è possibile aggiungerli manualmente.</span><span class="sxs-lookup"><span data-stu-id="e7491-116">If one or more of these requirements are missing from the project, you can add them manually.</span></span>   
+-   <span data-ttu-id="299cc-114">Per eseguire questo codice, copiare e incollare la classe in un progetto di applicazione console di Visual C# creato in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="299cc-114">To run this code, copy and paste the class into a Visual C# console application project that has been created in Visual Studio.</span></span> <span data-ttu-id="299cc-115">Per impostazione predefinita, questo progetto usa la versione 3.5 di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] e contiene un riferimento a System.Core.dll e una direttiva `using` per System.Linq.</span><span class="sxs-lookup"><span data-stu-id="299cc-115">By default, this project targets version 3.5 of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], and it will have a reference to System.Core.dll and a `using` directive for System.Linq.</span></span> <span data-ttu-id="299cc-116">Se uno o più di questi requisiti non sono presenti nel progetto, è possibile aggiungerli manualmente.</span><span class="sxs-lookup"><span data-stu-id="299cc-116">If one or more of these requirements are missing from the project, you can add them manually.</span></span>   
   
-## <a name="see-also"></a><span data-ttu-id="e7491-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e7491-117">See Also</span></span>  
- [<span data-ttu-id="e7491-118">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="e7491-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="e7491-119">Tipi anonimi</span><span class="sxs-lookup"><span data-stu-id="e7491-119">Anonymous Types</span></span>](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [<span data-ttu-id="e7491-120">Espressioni di query LINQ</span><span class="sxs-lookup"><span data-stu-id="e7491-120">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="299cc-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="299cc-117">See Also</span></span>
+
+- [<span data-ttu-id="299cc-118">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="299cc-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="299cc-119">Tipi anonimi</span><span class="sxs-lookup"><span data-stu-id="299cc-119">Anonymous Types</span></span>](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [<span data-ttu-id="299cc-120">Espressioni di query LINQ</span><span class="sxs-lookup"><span data-stu-id="299cc-120">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)

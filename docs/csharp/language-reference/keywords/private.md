@@ -1,5 +1,5 @@
 ---
-title: private (Riferimenti per C#)
+title: Parola chiave private (Riferimenti per C#)
 ms.date: 07/20/2015
 f1_keywords:
 - private_CSharpKeyword
@@ -7,49 +7,53 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-ms.openlocfilehash: 89bc23e91bf693f0a95b75dffe2399cb7e865b50
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 0c564f38940e993bdfb93af0ec995c684be0eeb7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960807"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481516"
 ---
-# <a name="private-c-reference"></a><span data-ttu-id="1cfd2-102">private (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="1cfd2-102">private (C# Reference)</span></span>
-<span data-ttu-id="1cfd2-103">La parola chiave `private` è un modificatore di accesso ai membri.</span><span class="sxs-lookup"><span data-stu-id="1cfd2-103">The `private` keyword is a member access modifier.</span></span> 
-   
- > <span data-ttu-id="1cfd2-104">Questa pagina illustra l'accesso `private`.</span><span class="sxs-lookup"><span data-stu-id="1cfd2-104">This page covers `private` access.</span></span> <span data-ttu-id="1cfd2-105">La parola chiave `private` fa anche parte del modificatore di accesso [`private protected`](./private-protected.md).</span><span class="sxs-lookup"><span data-stu-id="1cfd2-105">The `private` keyword is also part of the [`private protected`](./private-protected.md) access modifier.</span></span>
-  
-<span data-ttu-id="1cfd2-106">L'accesso privato è il livello di accesso più restrittivo.</span><span class="sxs-lookup"><span data-stu-id="1cfd2-106">Private access is the least permissive access level.</span></span> <span data-ttu-id="1cfd2-107">I membri privati sono accessibili solo all'interno del corpo della classe o dello struct in cui sono stati dichiarati, come nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="1cfd2-107">Private members are accessible only within the body of the class or the struct in which they are declared, as in this example:</span></span>  
-  
-```csharp  
-class Employee  
-{  
-    private int i;  
-    double d;   // private access by default  
-}  
-```  
+# <a name="private-c-reference"></a><span data-ttu-id="3f043-102">private (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="3f043-102">private (C# Reference)</span></span>
 
- <span data-ttu-id="1cfd2-108">Anche i tipi annidati dello stesso corpo possono accedere ai membri privati.</span><span class="sxs-lookup"><span data-stu-id="1cfd2-108">Nested types in the same body can also access those private members.</span></span>  
-  
- <span data-ttu-id="1cfd2-109">Fare riferimento a un membro privato all'esterno della classe o dello struct in cui è stato dichiarato genera un errore in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="1cfd2-109">It is a compile-time error to reference a private member outside the class or the struct in which it is declared.</span></span>  
-  
- <span data-ttu-id="1cfd2-110">Per un confronto di `private` con altri modificatori di accesso, vedere [Livelli di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md) e [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="1cfd2-110">For a comparison of `private` with the other access modifiers, see [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md) and [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="1cfd2-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="1cfd2-111">Example</span></span>  
- <span data-ttu-id="1cfd2-112">In questo esempio la classe `Employee` contiene due membri dati privati, `name` e `salary`.</span><span class="sxs-lookup"><span data-stu-id="1cfd2-112">In this example, the `Employee` class contains two private data members, `name` and `salary`.</span></span> <span data-ttu-id="1cfd2-113">Essendo privati, i membri risulteranno accessibili solo ai metodi di membro.</span><span class="sxs-lookup"><span data-stu-id="1cfd2-113">As private members, they cannot be accessed except by member methods.</span></span> <span data-ttu-id="1cfd2-114">I metodi pubblici `GetName` e `Salary` vengono aggiunti per consentire il controllo dell'accesso ai membri privati.</span><span class="sxs-lookup"><span data-stu-id="1cfd2-114">Public methods named `GetName` and `Salary` are added to allow controlled access to the private members.</span></span> <span data-ttu-id="1cfd2-115">È possibile accedere al membro `name` tramite un metodo pubblico e al membro `salary` tramite una proprietà pubblica di sola lettura.</span><span class="sxs-lookup"><span data-stu-id="1cfd2-115">The `name` member is accessed by way of a public method, and the `salary` member is accessed by way of a public read-only property.</span></span> <span data-ttu-id="1cfd2-116">Per altre informazioni, vedere [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md).</span><span class="sxs-lookup"><span data-stu-id="1cfd2-116">(See [Properties](../../../csharp/programming-guide/classes-and-structs/properties.md) for more information.)</span></span>  
-  
- [!code-csharp[csrefKeywordsModifiers#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/private_1.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="1cfd2-117">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="1cfd2-117">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="1cfd2-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1cfd2-118">See Also</span></span>  
- [<span data-ttu-id="1cfd2-119">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="1cfd2-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="1cfd2-120">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="1cfd2-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="1cfd2-121">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="1cfd2-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="1cfd2-122">Modificatori di accesso</span><span class="sxs-lookup"><span data-stu-id="1cfd2-122">Access Modifiers</span></span>](../../../csharp/language-reference/keywords/access-modifiers.md)  
- [<span data-ttu-id="1cfd2-123">Livelli di accessibilità</span><span class="sxs-lookup"><span data-stu-id="1cfd2-123">Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/accessibility-levels.md)  
- [<span data-ttu-id="1cfd2-124">Modificatori</span><span class="sxs-lookup"><span data-stu-id="1cfd2-124">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
- [<span data-ttu-id="1cfd2-125">public</span><span class="sxs-lookup"><span data-stu-id="1cfd2-125">public</span></span>](../../../csharp/language-reference/keywords/public.md)  
- [<span data-ttu-id="1cfd2-126">protected</span><span class="sxs-lookup"><span data-stu-id="1cfd2-126">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)  
- [<span data-ttu-id="1cfd2-127">internal</span><span class="sxs-lookup"><span data-stu-id="1cfd2-127">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)
+<span data-ttu-id="3f043-103">La parola chiave `private` è un modificatore di accesso ai membri.</span><span class="sxs-lookup"><span data-stu-id="3f043-103">The `private` keyword is a member access modifier.</span></span>
+
+> <span data-ttu-id="3f043-104">Questa pagina illustra l'accesso `private`.</span><span class="sxs-lookup"><span data-stu-id="3f043-104">This page covers `private` access.</span></span> <span data-ttu-id="3f043-105">La parola chiave `private` fa anche parte del modificatore di accesso [`private protected`](./private-protected.md).</span><span class="sxs-lookup"><span data-stu-id="3f043-105">The `private` keyword is also part of the [`private protected`](./private-protected.md) access modifier.</span></span>
+
+<span data-ttu-id="3f043-106">L'accesso privato è il livello di accesso più restrittivo.</span><span class="sxs-lookup"><span data-stu-id="3f043-106">Private access is the least permissive access level.</span></span> <span data-ttu-id="3f043-107">I membri privati sono accessibili solo all'interno del corpo della classe o dello struct in cui sono stati dichiarati, come nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="3f043-107">Private members are accessible only within the body of the class or the struct in which they are declared, as in this example:</span></span>
+
+```csharp
+class Employee
+{
+    private int i;
+    double d;   // private access by default
+}
+```
+
+<span data-ttu-id="3f043-108">Anche i tipi annidati dello stesso corpo possono accedere ai membri privati.</span><span class="sxs-lookup"><span data-stu-id="3f043-108">Nested types in the same body can also access those private members.</span></span>
+
+<span data-ttu-id="3f043-109">Fare riferimento a un membro privato all'esterno della classe o dello struct in cui è stato dichiarato genera un errore in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="3f043-109">It is a compile-time error to reference a private member outside the class or the struct in which it is declared.</span></span>
+
+<span data-ttu-id="3f043-110">Per un confronto di `private` con altri modificatori di accesso, vedere [Livelli di accessibilità](accessibility-levels.md) e [Modificatori di accesso](../../programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="3f043-110">For a comparison of `private` with the other access modifiers, see [Accessibility Levels](accessibility-levels.md) and [Access Modifiers](../../programming-guide/classes-and-structs/access-modifiers.md).</span></span>
+
+## <a name="example"></a><span data-ttu-id="3f043-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="3f043-111">Example</span></span>
+
+<span data-ttu-id="3f043-112">In questo esempio la classe `Employee` contiene due membri dati privati, `name` e `salary`.</span><span class="sxs-lookup"><span data-stu-id="3f043-112">In this example, the `Employee` class contains two private data members, `name` and `salary`.</span></span> <span data-ttu-id="3f043-113">Essendo privati, i membri risulteranno accessibili solo ai metodi di membro.</span><span class="sxs-lookup"><span data-stu-id="3f043-113">As private members, they cannot be accessed except by member methods.</span></span> <span data-ttu-id="3f043-114">I metodi pubblici `GetName` e `Salary` vengono aggiunti per consentire il controllo dell'accesso ai membri privati.</span><span class="sxs-lookup"><span data-stu-id="3f043-114">Public methods named `GetName` and `Salary` are added to allow controlled access to the private members.</span></span> <span data-ttu-id="3f043-115">È possibile accedere al membro `name` tramite un metodo pubblico e al membro `salary` tramite una proprietà pubblica di sola lettura.</span><span class="sxs-lookup"><span data-stu-id="3f043-115">The `name` member is accessed by way of a public method, and the `salary` member is accessed by way of a public read-only property.</span></span> <span data-ttu-id="3f043-116">Per altre informazioni, vedere [Proprietà](../../programming-guide/classes-and-structs/properties.md).</span><span class="sxs-lookup"><span data-stu-id="3f043-116">(See [Properties](../../programming-guide/classes-and-structs/properties.md) for more information.)</span></span>
+
+[!code-csharp[csrefKeywordsModifiers#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#10)]
+
+## <a name="c-language-specification"></a><span data-ttu-id="3f043-117">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="3f043-117">C# language specification</span></span>
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="3f043-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3f043-118">See also</span></span>
+
+- [<span data-ttu-id="3f043-119">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="3f043-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="3f043-120">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="3f043-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="3f043-121">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="3f043-121">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="3f043-122">Modificatori di accesso</span><span class="sxs-lookup"><span data-stu-id="3f043-122">Access Modifiers</span></span>](access-modifiers.md)
+- [<span data-ttu-id="3f043-123">Livelli di accessibilità</span><span class="sxs-lookup"><span data-stu-id="3f043-123">Accessibility Levels</span></span>](accessibility-levels.md)
+- [<span data-ttu-id="3f043-124">Modificatori</span><span class="sxs-lookup"><span data-stu-id="3f043-124">Modifiers</span></span>](modifiers.md)
+- [<span data-ttu-id="3f043-125">public</span><span class="sxs-lookup"><span data-stu-id="3f043-125">public</span></span>](public.md)
+- [<span data-ttu-id="3f043-126">protected</span><span class="sxs-lookup"><span data-stu-id="3f043-126">protected</span></span>](protected.md)
+- [<span data-ttu-id="3f043-127">internal</span><span class="sxs-lookup"><span data-stu-id="3f043-127">internal</span></span>](internal.md)
