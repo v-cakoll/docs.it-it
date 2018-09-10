@@ -5,32 +5,33 @@ ms.technology: dotnet-standard
 ms.assetid: b1f91616-3115-4264-9821-c66589d11d11
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c7eb77689c8f7e447ddfb42ff96de3458d3a3b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5361ef036d91435b674a1637ac8c2a9a757bf8ab
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568589"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261772"
 ---
-# <a name="editing-xml-data-using-xpathnavigator"></a><span data-ttu-id="51756-102">Modifica di dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="51756-102">Editing XML Data using XPathNavigator</span></span>
-<span data-ttu-id="51756-103">La classe <xref:System.Xml.XPath.XPathNavigator> fornisce dei metodi per inserire, modificare e rimuovere nodi e valori da un documento XML contenuto in un oggetto <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="51756-103">The <xref:System.Xml.XPath.XPathNavigator> class provides methods to insert, modify and remove nodes and values from an XML document contained in an <xref:System.Xml.XmlDocument> object.</span></span> <span data-ttu-id="51756-104">Per usare tali metodi, è necessario che l'oggetto <xref:System.Xml.XPath.XPathNavigator> sia modificabile, ovvero che la relativa proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> sia impostata su true.</span><span class="sxs-lookup"><span data-stu-id="51756-104">In order to use any of these methods to insert, modify, and remove nodes and values, the <xref:System.Xml.XPath.XPathNavigator> object must be editable, that is, its <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> property must be true.</span></span>  
+# <a name="editing-xml-data-using-xpathnavigator"></a><span data-ttu-id="d395a-102">Modifica di dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="d395a-102">Editing XML Data using XPathNavigator</span></span>
+<span data-ttu-id="d395a-103">La classe <xref:System.Xml.XPath.XPathNavigator> fornisce dei metodi per inserire, modificare e rimuovere nodi e valori da un documento XML contenuto in un oggetto <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="d395a-103">The <xref:System.Xml.XPath.XPathNavigator> class provides methods to insert, modify and remove nodes and values from an XML document contained in an <xref:System.Xml.XmlDocument> object.</span></span> <span data-ttu-id="d395a-104">Per usare tali metodi, è necessario che l'oggetto <xref:System.Xml.XPath.XPathNavigator> sia modificabile, ovvero che la relativa proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> sia impostata su true.</span><span class="sxs-lookup"><span data-stu-id="d395a-104">In order to use any of these methods to insert, modify, and remove nodes and values, the <xref:System.Xml.XPath.XPathNavigator> object must be editable, that is, its <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> property must be true.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="51756-105">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="51756-105">In This Section</span></span>  
- [<span data-ttu-id="51756-106">Inserire dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="51756-106">Insert XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
- <span data-ttu-id="51756-107">Viene descritto come inserire valori e nodi Attribute, nodi figlio e nodi di pari livello in un oggetto <xref:System.Xml.XmlDocument> usando la classe <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="51756-107">Describes how to insert sibling, child, attribute nodes and values in to an <xref:System.Xml.XmlDocument> object using the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d395a-105">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="d395a-105">In This Section</span></span>  
+ [<span data-ttu-id="d395a-106">Inserire dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="d395a-106">Insert XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
+ <span data-ttu-id="d395a-107">Viene descritto come inserire valori e nodi Attribute, nodi figlio e nodi di pari livello in un oggetto <xref:System.Xml.XmlDocument> usando la classe <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="d395a-107">Describes how to insert sibling, child, attribute nodes and values in to an <xref:System.Xml.XmlDocument> object using the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>  
   
- [<span data-ttu-id="51756-108">Modificare dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="51756-108">Modify XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
- <span data-ttu-id="51756-109">Viene descritto come modificare nodi e valori in un oggetto <xref:System.Xml.XmlDocument> usando la classe <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="51756-109">Describes how to modify nodes and values in an <xref:System.Xml.XmlDocument> object using the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>  
+ [<span data-ttu-id="d395a-108">Modificare dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="d395a-108">Modify XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
+ <span data-ttu-id="d395a-109">Viene descritto come modificare nodi e valori in un oggetto <xref:System.Xml.XmlDocument> usando la classe <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="d395a-109">Describes how to modify nodes and values in an <xref:System.Xml.XmlDocument> object using the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>  
   
- [<span data-ttu-id="51756-110">Rimuovere dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="51756-110">Remove XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)  
- <span data-ttu-id="51756-111">Viene descritto come rimuovere nodi e valori da un oggetto <xref:System.Xml.XmlDocument> usando la classe <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="51756-111">Describes how to remove nodes and values from an <xref:System.Xml.XmlDocument> object using the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>  
+ [<span data-ttu-id="d395a-110">Rimuovere dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="d395a-110">Remove XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)  
+ <span data-ttu-id="d395a-111">Viene descritto come rimuovere nodi e valori da un oggetto <xref:System.Xml.XmlDocument> usando la classe <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="d395a-111">Describes how to remove nodes and values from an <xref:System.Xml.XmlDocument> object using the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="51756-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="51756-112">See Also</span></span>  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [<span data-ttu-id="51756-113">Elaborazione di dati XML con il modello di dati XPath</span><span class="sxs-lookup"><span data-stu-id="51756-113">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [<span data-ttu-id="51756-114">Lettura di dati XML con XPathDocument e XmlDocument</span><span class="sxs-lookup"><span data-stu-id="51756-114">Reading XML Data using XPathDocument and XmlDocument</span></span>](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
- [<span data-ttu-id="51756-115">Selezione, valutazione e corrispondenza di dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="51756-115">Selecting, Evaluating and Matching XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
- [<span data-ttu-id="51756-116">Accesso ai dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="51756-116">Accessing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- [<span data-ttu-id="51756-117">Convalida dello schema con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="51756-117">Schema Validation using XPathNavigator</span></span>](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)
+## <a name="see-also"></a><span data-ttu-id="d395a-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d395a-112">See also</span></span>
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [<span data-ttu-id="d395a-113">Elaborazione di dati XML con il modello di dati XPath</span><span class="sxs-lookup"><span data-stu-id="d395a-113">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [<span data-ttu-id="d395a-114">Lettura di dati XML con XPathDocument e XmlDocument</span><span class="sxs-lookup"><span data-stu-id="d395a-114">Reading XML Data using XPathDocument and XmlDocument</span></span>](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
+- [<span data-ttu-id="d395a-115">Selezione, valutazione e corrispondenza di dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="d395a-115">Selecting, Evaluating and Matching XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
+- [<span data-ttu-id="d395a-116">Accesso ai dati XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="d395a-116">Accessing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+- [<span data-ttu-id="d395a-117">Convalida dello schema con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="d395a-117">Schema Validation using XPathNavigator</span></span>](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)

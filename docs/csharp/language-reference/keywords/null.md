@@ -8,29 +8,29 @@ helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
 ms.openlocfilehash: 67961027c7eab40344251db3d57e4d80ca5e8cdc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43397757"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266800"
 ---
-# <a name="null-c-reference"></a><span data-ttu-id="c7080-102">null (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="c7080-102">null (C# Reference)</span></span>
+# <a name="null-c-reference"></a><span data-ttu-id="c6e86-102">null (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="c6e86-102">null (C# Reference)</span></span>
 
-<span data-ttu-id="c7080-103">La parola chiave `null` è un valore letterale che rappresenta un riferimento Null, ovvero un riferimento che non fa riferimento a un oggetto.</span><span class="sxs-lookup"><span data-stu-id="c7080-103">The `null` keyword is a literal that represents a null reference, one that does not refer to any object.</span></span> <span data-ttu-id="c7080-104">`null` è il valore predefinito delle variabili di tipo riferimento.</span><span class="sxs-lookup"><span data-stu-id="c7080-104">`null` is the default value of reference-type variables.</span></span> <span data-ttu-id="c7080-105">I tipi di valore ordinari non possono essere Null.</span><span class="sxs-lookup"><span data-stu-id="c7080-105">Ordinary value types cannot be null.</span></span> <span data-ttu-id="c7080-106">Tuttavia, in C# 2.0 sono disponibili tipi di valori nullable.</span><span class="sxs-lookup"><span data-stu-id="c7080-106">However, C# 2.0 introduced nullable value types.</span></span> <span data-ttu-id="c7080-107">Vedere [Tipi nullable](../../programming-guide/nullable-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="c7080-107">See [Nullable Types](../../programming-guide/nullable-types/index.md).</span></span>
+<span data-ttu-id="c6e86-103">La parola chiave `null` è un valore letterale che rappresenta un riferimento Null, ovvero un riferimento che non fa riferimento a un oggetto.</span><span class="sxs-lookup"><span data-stu-id="c6e86-103">The `null` keyword is a literal that represents a null reference, one that does not refer to any object.</span></span> <span data-ttu-id="c6e86-104">`null` è il valore predefinito delle variabili di tipo riferimento.</span><span class="sxs-lookup"><span data-stu-id="c6e86-104">`null` is the default value of reference-type variables.</span></span> <span data-ttu-id="c6e86-105">I tipi di valore ordinari non possono essere Null.</span><span class="sxs-lookup"><span data-stu-id="c6e86-105">Ordinary value types cannot be null.</span></span> <span data-ttu-id="c6e86-106">Tuttavia, in C# 2.0 sono disponibili tipi di valori nullable.</span><span class="sxs-lookup"><span data-stu-id="c6e86-106">However, C# 2.0 introduced nullable value types.</span></span> <span data-ttu-id="c6e86-107">Vedere [Tipi nullable](../../programming-guide/nullable-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="c6e86-107">See [Nullable Types](../../programming-guide/nullable-types/index.md).</span></span>
 
-<span data-ttu-id="c7080-108">L'esempio seguente descrive alcuni comportamenti della parola chiave null:</span><span class="sxs-lookup"><span data-stu-id="c7080-108">The following example demonstrates some behaviors of the null keyword:</span></span>
+<span data-ttu-id="c6e86-108">L'esempio seguente descrive alcuni comportamenti della parola chiave null:</span><span class="sxs-lookup"><span data-stu-id="c6e86-108">The following example demonstrates some behaviors of the null keyword:</span></span>
 
 [!code-csharp[csrefKeywordsLiteral#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsLiteral/CS/csrefKeywordsLiteral.cs#1)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="c7080-109">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="c7080-109">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="c6e86-109">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="c6e86-109">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="c7080-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c7080-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6e86-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c6e86-110">See also</span></span>
 
-- [<span data-ttu-id="c7080-111">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="c7080-111">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="c7080-112">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="c7080-112">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="c7080-113">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="c7080-113">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="c7080-114">Parole chiave letterali</span><span class="sxs-lookup"><span data-stu-id="c7080-114">Literal Keywords</span></span>](literal-keywords.md)
-- [<span data-ttu-id="c7080-115">Tabella dei valori predefiniti</span><span class="sxs-lookup"><span data-stu-id="c7080-115">Default Values Table</span></span>](default-values-table.md)
-- [<span data-ttu-id="c7080-116">Nothing</span><span class="sxs-lookup"><span data-stu-id="c7080-116">Nothing</span></span>](../../../visual-basic/language-reference/nothing.md)
+- [<span data-ttu-id="c6e86-111">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="c6e86-111">C# Reference</span></span>](../../language-reference/index.md)
+- [<span data-ttu-id="c6e86-112">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="c6e86-112">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="c6e86-113">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="c6e86-113">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="c6e86-114">Parole chiave letterali</span><span class="sxs-lookup"><span data-stu-id="c6e86-114">Literal Keywords</span></span>](literal-keywords.md)
+- [<span data-ttu-id="c6e86-115">Tabella dei valori predefiniti</span><span class="sxs-lookup"><span data-stu-id="c6e86-115">Default Values Table</span></span>](default-values-table.md)
+- [<span data-ttu-id="c6e86-116">Nothing</span><span class="sxs-lookup"><span data-stu-id="c6e86-116">Nothing</span></span>](../../../visual-basic/language-reference/nothing.md)
