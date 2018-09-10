@@ -3,19 +3,19 @@ title: protected internal (Riferimenti per C#)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 1a305cb84989f12350e2e7cc28dd18f9d0c7ae5e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43387561"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44200210"
 ---
-# <a name="protected-internal-c-reference"></a><span data-ttu-id="1580a-102">protected internal (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="1580a-102">protected internal (C# Reference)</span></span>
+# <a name="protected-internal-c-reference"></a><span data-ttu-id="9a128-102">protected internal (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="9a128-102">protected internal (C# Reference)</span></span>
 
-<span data-ttu-id="1580a-103">La combinazione delle parole chiave `protected internal` è un modificatore di accesso ai membri.</span><span class="sxs-lookup"><span data-stu-id="1580a-103">The `protected internal` keyword combination is a member access modifier.</span></span> <span data-ttu-id="1580a-104">Un membro protected internal è accessibile dall'assembly corrente o dai tipi che derivano dalla classe che li contiene.</span><span class="sxs-lookup"><span data-stu-id="1580a-104">A protected internal member is accessible from the current assembly or from types that are derived from the containing class.</span></span> <span data-ttu-id="1580a-105">Per un confronto di `protected internal` con altri modificatori di accesso, vedere [Livelli di accessibilità](accessibility-levels.md).</span><span class="sxs-lookup"><span data-stu-id="1580a-105">For a comparison of `protected internal` with the other access modifiers, see [Accessibility Levels](accessibility-levels.md).</span></span>
+<span data-ttu-id="9a128-103">La combinazione delle parole chiave `protected internal` è un modificatore di accesso ai membri.</span><span class="sxs-lookup"><span data-stu-id="9a128-103">The `protected internal` keyword combination is a member access modifier.</span></span> <span data-ttu-id="9a128-104">Un membro protected internal è accessibile dall'assembly corrente o dai tipi che derivano dalla classe che li contiene.</span><span class="sxs-lookup"><span data-stu-id="9a128-104">A protected internal member is accessible from the current assembly or from types that are derived from the containing class.</span></span> <span data-ttu-id="9a128-105">Per un confronto di `protected internal` con altri modificatori di accesso, vedere [Livelli di accessibilità](accessibility-levels.md).</span><span class="sxs-lookup"><span data-stu-id="9a128-105">For a comparison of `protected internal` with the other access modifiers, see [Accessibility Levels](accessibility-levels.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="1580a-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="1580a-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="9a128-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="9a128-106">Example</span></span>
 
-<span data-ttu-id="1580a-107">Un membro protected internal di una classe base è accessibile da qualsiasi tipo all'interno dell'assembly che lo contiene.</span><span class="sxs-lookup"><span data-stu-id="1580a-107">A protected internal member of a base class is accessible from any type within its containing assembly.</span></span> <span data-ttu-id="1580a-108">È inoltre accessibile in una classe derivata che si trova in un altro assembly solo se l'accesso viene eseguito tramite una variabile del tipo di classe derivata.</span><span class="sxs-lookup"><span data-stu-id="1580a-108">It is also accessible in a derived class located in another assembly only if the access occurs through a variable of the derived class type.</span></span> <span data-ttu-id="1580a-109">Si consideri il segmento di codice di esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="1580a-109">For example, consider the following code segment:</span></span>
+<span data-ttu-id="9a128-107">Un membro protected internal di una classe base è accessibile da qualsiasi tipo all'interno dell'assembly che lo contiene.</span><span class="sxs-lookup"><span data-stu-id="9a128-107">A protected internal member of a base class is accessible from any type within its containing assembly.</span></span> <span data-ttu-id="9a128-108">È inoltre accessibile in una classe derivata che si trova in un altro assembly solo se l'accesso viene eseguito tramite una variabile del tipo di classe derivata.</span><span class="sxs-lookup"><span data-stu-id="9a128-108">It is also accessible in a derived class located in another assembly only if the access occurs through a variable of the derived class type.</span></span> <span data-ttu-id="9a128-109">Si consideri il segmento di codice di esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="9a128-109">For example, consider the following code segment:</span></span>
 
 ```csharp
 // Assembly1.cs
@@ -54,25 +54,25 @@ class DerivedClass : BaseClass
     }
 }
 ```
-<span data-ttu-id="1580a-110">Questo esempio contiene due file, `Assembly1.cs` e `Assembly2.cs`.</span><span class="sxs-lookup"><span data-stu-id="1580a-110">This example contains two files, `Assembly1.cs` and `Assembly2.cs`.</span></span>
-<span data-ttu-id="1580a-111">Il primo file contiene una classe base pubblica, `BaseClass`, e un'altra classe, `TestAccess`.</span><span class="sxs-lookup"><span data-stu-id="1580a-111">The first file contains a public base class, `BaseClass`, and another class, `TestAccess`.</span></span> <span data-ttu-id="1580a-112">`BaseClass` è proprietario di un membro protected internal, `myValue`, a cui si accede dal tipo `TestAccess`.</span><span class="sxs-lookup"><span data-stu-id="1580a-112">`BaseClass` owns a protected internal member, `myValue`, which is accessed by the `TestAccess` type.</span></span>
-<span data-ttu-id="1580a-113">Nel secondo file un tentativo di accedere a `myValue` tramite un'istanza di `BaseClass` produrrà un errore, mentre l'accesso a questo membro tramite un'istanza di una classe derivata, `DerivedClass`, avrà esito positivo.</span><span class="sxs-lookup"><span data-stu-id="1580a-113">In the second file, an attempt to access `myValue` through an instance of `BaseClass` will produce an error, while an access to this member through an instance of a derived class, `DerivedClass` will succeed.</span></span>
+<span data-ttu-id="9a128-110">Questo esempio contiene due file, `Assembly1.cs` e `Assembly2.cs`.</span><span class="sxs-lookup"><span data-stu-id="9a128-110">This example contains two files, `Assembly1.cs` and `Assembly2.cs`.</span></span>
+<span data-ttu-id="9a128-111">Il primo file contiene una classe base pubblica, `BaseClass`, e un'altra classe, `TestAccess`.</span><span class="sxs-lookup"><span data-stu-id="9a128-111">The first file contains a public base class, `BaseClass`, and another class, `TestAccess`.</span></span> <span data-ttu-id="9a128-112">`BaseClass` è proprietario di un membro protected internal, `myValue`, a cui si accede dal tipo `TestAccess`.</span><span class="sxs-lookup"><span data-stu-id="9a128-112">`BaseClass` owns a protected internal member, `myValue`, which is accessed by the `TestAccess` type.</span></span>
+<span data-ttu-id="9a128-113">Nel secondo file un tentativo di accedere a `myValue` tramite un'istanza di `BaseClass` produrrà un errore, mentre l'accesso a questo membro tramite un'istanza di una classe derivata, `DerivedClass`, avrà esito positivo.</span><span class="sxs-lookup"><span data-stu-id="9a128-113">In the second file, an attempt to access `myValue` through an instance of `BaseClass` will produce an error, while an access to this member through an instance of a derived class, `DerivedClass` will succeed.</span></span>
 
-<span data-ttu-id="1580a-114">I membri struct non possono essere `protected internal` perché struct non può essere ereditato.</span><span class="sxs-lookup"><span data-stu-id="1580a-114">Struct members cannot be `protected internal` because the struct cannot be inherited.</span></span>
+<span data-ttu-id="9a128-114">I membri struct non possono essere `protected internal` perché struct non può essere ereditato.</span><span class="sxs-lookup"><span data-stu-id="9a128-114">Struct members cannot be `protected internal` because the struct cannot be inherited.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="1580a-115">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="1580a-115">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="9a128-115">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="9a128-115">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="1580a-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1580a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a128-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9a128-116">See also</span></span>
 
-- [<span data-ttu-id="1580a-117">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="1580a-117">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="1580a-118">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="1580a-118">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="1580a-119">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="1580a-119">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="1580a-120">Modificatori di accesso</span><span class="sxs-lookup"><span data-stu-id="1580a-120">Access Modifiers</span></span>](access-modifiers.md)
-- [<span data-ttu-id="1580a-121">Livelli di accessibilità</span><span class="sxs-lookup"><span data-stu-id="1580a-121">Accessibility Levels</span></span>](accessibility-levels.md)
-- [<span data-ttu-id="1580a-122">Modificatori</span><span class="sxs-lookup"><span data-stu-id="1580a-122">Modifiers</span></span>](modifiers.md)
-- [<span data-ttu-id="1580a-123">public</span><span class="sxs-lookup"><span data-stu-id="1580a-123">public</span></span>](public.md)
-- [<span data-ttu-id="1580a-124">private</span><span class="sxs-lookup"><span data-stu-id="1580a-124">private</span></span>](private.md)
-- [<span data-ttu-id="1580a-125">internal</span><span class="sxs-lookup"><span data-stu-id="1580a-125">internal</span></span>](internal.md)
-- <span data-ttu-id="1580a-126">[Problemi di sicurezza per le parole chiave virtuali interne](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="1580a-126">[Security concerns for internal virtual keywords](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))</span></span>
+- [<span data-ttu-id="9a128-117">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="9a128-117">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="9a128-118">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="9a128-118">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="9a128-119">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="9a128-119">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="9a128-120">Modificatori di accesso</span><span class="sxs-lookup"><span data-stu-id="9a128-120">Access Modifiers</span></span>](access-modifiers.md)
+- [<span data-ttu-id="9a128-121">Livelli di accessibilità</span><span class="sxs-lookup"><span data-stu-id="9a128-121">Accessibility Levels</span></span>](accessibility-levels.md)
+- [<span data-ttu-id="9a128-122">Modificatori</span><span class="sxs-lookup"><span data-stu-id="9a128-122">Modifiers</span></span>](modifiers.md)
+- [<span data-ttu-id="9a128-123">public</span><span class="sxs-lookup"><span data-stu-id="9a128-123">public</span></span>](public.md)
+- [<span data-ttu-id="9a128-124">private</span><span class="sxs-lookup"><span data-stu-id="9a128-124">private</span></span>](private.md)
+- [<span data-ttu-id="9a128-125">internal</span><span class="sxs-lookup"><span data-stu-id="9a128-125">internal</span></span>](internal.md)
+- <span data-ttu-id="9a128-126">[Problemi di sicurezza per le parole chiave virtuali interne](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="9a128-126">[Security concerns for internal virtual keywords](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))</span></span>
