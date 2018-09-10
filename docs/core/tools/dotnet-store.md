@@ -4,12 +4,12 @@ description: Il comando 'dotnet store' archivia gli assembly specificati nell'ar
 author: bleroy
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: a12738d0cc8edcbb65d5b6fab6e7c8b209b0f4b5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696325"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181063"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -83,4 +83,4 @@ Archiviare i pacchetti specificati nel file di progetto *packages.csproj* senza 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Archivio pacchetti di runtime](../deploying/runtime-store.md)
+* [Archivio pacchetti di runtime](../deploying/runtime-store.md)

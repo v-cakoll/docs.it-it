@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: cf43f9914a05c2745f914a6e36fcab13fb7feffa
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: a5fce347193921305c264df34be99063920af715
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106645"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416497"
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>Uso di database NoSQL come infrastruttura di persistenza
 
@@ -218,7 +218,7 @@ public class Locations
 
 È possibile notare che ci sono alcuni attributi e tipi provenienti dai pacchetti NuGet di MongoDB.
 
-I database NoSQL sono in genere particolarmente adatti per essere usati con i dati gerarchici non relazionali. In questo esempio, vengono usati i tipi MongoDB adatti soprattutto per le geo-localizzazioni come `GeoJson2DGeographicCoordinates`.
+I database NoSQL sono in genere particolarmente adatti per essere usati con i dati gerarchici non relazionali. In questo esempio vengono usati i tipi MongoDB adatti soprattutto per le geo-localizzazioni come `GeoJson2DGeographicCoordinates`.
 
 #### <a name="retrieve-the-database-and-the-collection"></a>Recuperare il database e la raccolta
 

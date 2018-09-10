@@ -2,12 +2,12 @@
 title: Serializzazione di oggetti grafici contenenti oggetti XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: fcbc3951-3cc4-4d0f-9259-e97549ed68f0
-ms.openlocfilehash: f51a026642563e1c1690d9a49220aae462840211
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e82165421d31ec234de4806b59565fa675217ef
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338907"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44186890"
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-c"></a>Serializzazione di oggetti grafici contenenti oggetti XElement (C#)
 In questo argomento viene presentata la funzionalità di serializzazione di oggetti grafici contenenti riferimenti a oggetti di tipo <xref:System.Xml.Linq.XElement>. Per semplificare questo tipo di serializzazione, <xref:System.Xml.Linq.XElement> implementa l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable>.  
@@ -21,5 +21,6 @@ In questo argomento viene presentata la funzionalità di serializzazione di ogge
 |[Procedura: Serializzare tramite XmlSerializer (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|Viene illustrato come eseguire la serializzazione tramite <xref:System.Xml.Serialization.XmlSerializer>.|  
 |[Procedura: Serializzare tramite DataContractSerializer](../../../../csharp/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|Viene illustrato come eseguire la serializzazione tramite <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione LINQ to XML avanzata (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Programmazione LINQ to XML avanzata (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

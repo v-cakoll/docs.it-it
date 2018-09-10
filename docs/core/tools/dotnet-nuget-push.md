@@ -3,13 +3,13 @@ title: Comando dotnet nuget push - Interfaccia della riga di comando di .NET Cor
 description: Il comando dotnet nuget push effettua il push di un pacchetto nel server e lo pubblica.
 author: karann-msft
 ms.author: mairaw
-ms.date: 06/01/2018
-ms.openlocfilehash: 8a64f9cdc11d03bed82a132265c3b4e1de290807
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 09/04/2018
+ms.openlocfilehash: 23d27cef29008955850f9ed9f4a8baed9e7ad982
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728576"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44186462"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -198,7 +198,3 @@ Esegue il push di *foo.nupkg* all'origine push predefinita, specificando un time
 Effettua il push di tutti i file con estensione *nupkg* presenti nella directory corrente all'origine push predefinita:
 
 `dotnet nuget push *.nupkg`
-
-Effettua il push di tutti i file con estensione *nupkg* presenti nella directory corrente all'origine push predefinita, specificando un file di configurazione personalizzato *./config/My.Config*:
-
-`dotnet nuget push *.nupkg --config-file ./config/My.Config`

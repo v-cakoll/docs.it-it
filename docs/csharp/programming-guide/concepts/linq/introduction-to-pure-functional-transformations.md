@@ -2,11 +2,12 @@
 title: Introduzione alle trasformazioni funzionali pure (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: 278b3afc66e4c4f222e27e648274cb8cea814d50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f04189c5ae6fc8f6c827f983357ab0126b2c086d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183184"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Introduzione alle trasformazioni funzionali pure (C#)
 Contenuto della sezione vengono presentate le trasformazioni funzionali, inclusi i concetti sottostanti e i costrutti di linguaggio che le supportano. In particolare viene eseguito il confronto tra la programmazione orientata a oggetti e quella basata sulle trasformazioni funzionali e vengono forniti consigli utili su come effettuare la transizione a quest'ultima. Sebbene le trasformazioni funzionali possano essere usate in molti scenari di programmazione, come esempio concreto viene usata la trasformazione XML.  
@@ -21,5 +22,6 @@ Contenuto della sezione vengono presentate le trasformazioni funzionali, inclusi
 |[Applicabilità della trasformazione funzionale (C#)](../../../../csharp/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|Vengono descritti gli scenari tipici per le trasformazioni funzionali.|  
 |[Trasformazione funzionale di XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|Vengono descritte le trasformazioni funzionali nel contesto della trasformazione di alberi XML.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Trasformazioni funzionali pure di XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Trasformazioni funzionali pure di XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

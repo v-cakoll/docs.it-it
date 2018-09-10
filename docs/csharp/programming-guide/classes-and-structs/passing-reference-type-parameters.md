@@ -5,12 +5,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: ed6c822638c56b3ab95216581f6f39cacb9d06ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d577754e8cb686c40172abd6c0bbd00bc481f737
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326567"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183210"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Passaggio di parametri di tipo di riferimento (Guida per programmatori C#)
 Una variabile di un [tipo riferimento](../../../csharp/language-reference/keywords/reference-types.md) non contiene direttamente i dati, ma solo un riferimento a essi. Quando si passa un parametro di tipo riferimento per valore, è possibile modificare i dati appartenenti all'oggetto di riferimento, ad esempio il valore del membro di una classe. Non è tuttavia possibile modificare il valore del riferimento stesso; ad esempio, non è possibile usare il riferimento per allocare memoria per una nuova classe e fare in modo che sia persistente anche all'esterno del metodo. In questo caso, è necessario passare il parametro usando la parola chiave [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md). Per semplicità, negli esempi seguenti viene usato `ref`.  
@@ -38,11 +38,11 @@ Una variabile di un [tipo riferimento](../../../csharp/language-reference/keywor
   
  Per altre informazioni sulle stringhe, vedere [Stringhe](../../../csharp/language-reference/keywords/string.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Passaggio di parametri](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
- [Passaggio di matrici usando ref e out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)  
- [ref](../../../csharp/language-reference/keywords/ref.md)  
- [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
- [out](../../../csharp/language-reference/keywords/out.md)  
- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Passaggio di parametri](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+- [ref](../../../csharp/language-reference/keywords/ref.md)  
+- [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
+- [out](../../../csharp/language-reference/keywords/out.md)  
+- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)

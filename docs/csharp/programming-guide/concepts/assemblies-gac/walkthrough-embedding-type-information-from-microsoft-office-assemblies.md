@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office in Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3320e866-01f1-4b7f-8932-049a7b2d2a9b
-ms.openlocfilehash: 8e7eb5c797ca87f87950d530112ec64f1327ae0c
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 381173eedc209930e011dfa7f1711167f16d5ef6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198497"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187968"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office in Visual Studio (C#)
 Se si incorporano informazioni sui tipi in un'applicazione che fa riferimento a oggetti COM, è possibile eliminare la necessità di un assembly di interoperabilità primario (PIA). Inoltre, le informazioni sui tipi incorporate consentono di ottenere l'indipendenza dalla versione per l'applicazione. Ovvero, il programma può essere scritto in modo da usare tipi di più versioni di una libreria COM senza richiedere un assembly di interoperabilità primario specifico per ogni versione. Si tratta di uno scenario comune per le applicazioni che usano gli oggetti delle librerie di Microsoft Office. L'incorporamento di informazioni sui tipi consente l'uso della stessa build di un programma con delle diverse versioni di Microsoft Office in computer diversi senza dover ridistribuire il programma o l'assembly di interoperabilità primario per ogni versione di Microsoft Office.  
@@ -116,7 +116,7 @@ Se si incorporano informazioni sui tipi in un'applicazione che fa riferimento a 
   
 1.  Aprire il progetto creato da questa procedura dettagliata in Visual Studio.  
   
-2.  Scegliere **Pubblica CreateExcelWorkbook** nel menu **Compila**. Seguire i passaggi della pubblicazione guidata per creare una versione installabile dell'applicazione. Per altre informazioni, vedere [Pubblicazione guidata (sviluppo per Office in Visual Studio)](https://msdn.microsoft.com/library/bb625071).  
+2.  Scegliere **Pubblica CreateExcelWorkbook** nel menu **Compila**. Seguire i passaggi della pubblicazione guidata per creare una versione installabile dell'applicazione. Per altre informazioni, vedere [Pubblicazione guidata (sviluppo per Office in Visual Studio)](/visualstudio/vsto/publish-wizard-office-development-in-visual-studio).  
   
 3.  Installare l'applicazione in un computer in cui sono installati .NET Framework 4 o versione successiva e una versione diversa di Excel.  
   
@@ -124,6 +124,7 @@ Se si incorporano informazioni sui tipi in un'applicazione che fa riferimento a 
   
 5.  Verificare che sia stata creata una cartella di lavoro di Excel nel percorso specificato nel codice di esempio: C:\SampleFolder\SampleWorkbook.xls.  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
- [/link (opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [/link (opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
