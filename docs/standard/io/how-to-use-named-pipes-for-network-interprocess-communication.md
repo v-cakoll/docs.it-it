@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb8da9ff6df910e1932c593c1f1b882dca12146a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cc481c7370a21c56daf9ce2949247e65fa33bda
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572359"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225529"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Procedura: utilizzare le named pipe per la comunicazione interprocesso in rete
 Le named pipe forniscono la comunicazione interprocesso tra un server pipe e uno o più client pipe. Offrono maggiori funzionalità rispetto alle pipe anonime che forniscono la comunicazione interprocesso in un computer locale. Le named pipe supportano la comunicazione full duplex in una rete e in più istanze server, la comunicazione basata su messaggi e la rappresentazione client che consente ai processi di connessione di utilizzare il proprio set di autorizzazioni nei server remoti.  
@@ -45,8 +45,9 @@ Le named pipe forniscono la comunicazione interprocesso tra un server pipe e uno
 ## <a name="robust-programming"></a>Programmazione efficiente  
  I processi client e server in questo esempio sono in esecuzione nello stesso computer, quindi il nome del server fornito all'oggetto <xref:System.IO.Pipes.NamedPipeClientStream> è `"."`. Se i processi client e server fossero in computer distinti, `"."` verrebbe sostituito dal nome di rete del computer che esegue il processo server.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Security.Principal.TokenImpersonationLevel>  
- <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>  
- [Pipe](../../../docs/standard/io/pipe-operations.md)  
- [Procedura: Usare le unnamed pipe per la comunicazione interprocesso locale](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Security.Principal.TokenImpersonationLevel>  
+- <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>  
+- [Pipe](../../../docs/standard/io/pipe-operations.md)  
+- [Procedura: Usare le unnamed pipe per la comunicazione interprocesso locale](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)

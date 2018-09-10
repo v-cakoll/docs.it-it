@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b6799763b4635632728561eef2820b26820aeed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7021a984f844660c45ae3e2d98569432ab64b657
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570406"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264779"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recupero di informazioni memorizzate negli attributi
 Il recupero di un attributo personalizzato è un processo semplice. Dichiarare prima di tutto un'istanza dell'attributo da recuperare. Usare quindi il metodo <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> per inizializzare il nuovo attributo per il valore dell'attributo da recuperare. Dopo avere inizializzato il nuovo attributo, è sufficiente usarne le proprietà per ottenere i valori.  
@@ -84,8 +84,9 @@ The attribute was not found.
   
  È possibile usare i membri della classe <xref:System.Type> per ottenere i singoli metodi e membri nella classe passata. Questo esempio esegue prima di tutto una query dell'oggetto **Type** per ottenere informazioni sugli attributi per il livello di classe. Usa quindi <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> per inserire le istanze di tutti i metodi in una matrice di oggetti <xref:System.Reflection.MemberInfo?displayProperty=nameWithType> per recuperare informazioni sugli attributi per il livello di metodo. È anche possibile usare il metodo <xref:System.Type.GetProperties%2A?displayProperty=nameWithType> per verificare la presenza di attributi a livello di proprietà o <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType> per verificare la presenza di attributi a livello di costruttore.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Type?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
- [Attributi](../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Type?displayProperty=nameWithType>  
+- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
+- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
+- [Attributi](../../../docs/standard/attributes/index.md)

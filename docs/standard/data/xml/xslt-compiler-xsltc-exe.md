@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aef49f70f3a60151aa053a1a94a06bc71401531e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575440"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262230"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Compilatore XSLT (xsltc.exe)
 Il compilatore XSLT (xsltc.exe) consente di compilare fogli di stile XSLT e di generare un assembly. Il foglio di stile compilato può quindi essere passato direttamente nel metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Non è possibile generare assembly firmati con xsltc.exe.  
@@ -82,7 +82,8 @@ xsltc /settings:DTD+,script+ /out:myTest calc.xsl
 xsltc booksort.xsl output.xsl  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.Xsl.XslCompiledTransform>  
- [Procedura: Eseguire una trasformazione XSLT con un assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Xml.Xsl.XslCompiledTransform>  
+- [Procedura: Eseguire una trasformazione XSLT con un assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
+- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

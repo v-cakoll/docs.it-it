@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3337b3e6b181fd39e305e45f96b792d8051a81a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44b71ed726af585259b015c608e49d8c81e4e22a
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568924"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261577"
 ---
 # <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Procedura: utilizzare ForEach per rimuovere elementi in un oggetto BlockingCollection
 Oltre a estrarre elementi da un oggetto <xref:System.Collections.Concurrent.BlockingCollection%601> usando il metodo <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>, è anche possibile usare [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) ([For Each](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) in Visual Basic) per rimuovere gli elementi finché l'aggiunta viene completata e la raccolta è vuota. Questa operazione viene definita *enumerazione mutante* o *enumerazione di consumo* perché, a differenza di un ciclo `foreach` tipico (`For Each`), questo enumeratore modifica la raccolta di origine rimuovendo elementi.  
@@ -32,6 +32,7 @@ Oltre a estrarre elementi da un oggetto <xref:System.Collections.Concurrent.Bloc
   
  Per enumerare la raccolta senza modificarla, usare `foreach` (`For Each`) senza il metodo <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A>. Tuttavia, è importante tenere presente che questo tipo di enumerazione rappresenta uno snapshot della raccolta in un momento preciso. Se altri thread aggiungono o rimuovono elementi contemporaneamente mentre si esegue il ciclo, il ciclo potrebbe non rappresentare lo stato effettivo della raccolta.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Programmazione parallela](../../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [Programmazione parallela](../../../../docs/standard/parallel-programming/index.md)

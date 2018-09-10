@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6543c2e5ea953887e699ee6f9ca3b70e08e5ae85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1c8bfea5fc55bafbaa30d3b74edf60b674ef75c
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583916"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268812"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Procedura: mettersi in ascolto di richieste di annullamento con handle di attesa
 Se un metodo è bloccato mentre è in attesa che un evento venga segnalato, non può controllare il valore del token di annullamento e rispondere in modo tempestivo. Il primo esempio illustra come risolvere questo problema quando si usano eventi come <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> che non supportano in modo nativo il framework di annullamento unificato. Il secondo esempio illustra un approccio più semplice che usa <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, che supporta l'annullamento unificato.  
@@ -35,5 +35,6 @@ Se un metodo è bloccato mentre è in attesa che un evento venga segnalato, non 
  [!code-csharp[Cancellation#10](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#10)]
  [!code-vb[Cancellation#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#10)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)

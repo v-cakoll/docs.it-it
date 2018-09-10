@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d265d9247d00a20770d401d62fd1e065e2ef1627
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576393"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249166"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regole per l'inferenza di tipi semplici
 Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce il tipo di dati per attributi ed elementi.  
@@ -75,7 +75,8 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
 |`xsi:schemaLocation`|Se rilevato, l'attributo `xsi:schemaLocation` viene ignorato.|  
 |`xsi:noNamespaceSchemaLocation`|Se rilevato, l'attributo `xsi:noNamespaceSchemaLocation` viene ignorato.|  
   
-## <a name="see-also"></a>Vedere anche  
- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Regole per l'inferenza dello schema per tipi di nodo e struttura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+## <a name="see-also"></a>Vedere anche
+
+- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [Regole per l'inferenza dello schema per tipi di nodo e struttura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

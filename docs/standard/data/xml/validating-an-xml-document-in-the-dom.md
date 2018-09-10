@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b77d26a79796a9de87c07e366929cb516169907b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0f5ae64eb1017570a56efab59a4bf1a66d5e02b
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576311"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264389"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Convalida di un documento XML nel DOM
 La classe <xref:System.Xml.XmlDocument> non esegue la convalida del codice XML nel DOM (Document Object Model) in base a uno schema XSD (XML Schema Definition Language) o a una DTD (Document Type Definition) per impostazione predefinita. Viene solo verificata la correttezza del formato XML.  
@@ -82,10 +82,11 @@ La classe <xref:System.Xml.XmlDocument> non esegue la convalida del codice XML n
   
  Per gli esempi che illustrano il tipo <xref:System.Xml.Schema.ValidationEventHandler>, vedere "Convalida di un documento XML durante il caricamento nel DOM" e "Convalida di un documento XML nel DOM" riportati in precedenza.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XmlReader>  
- <xref:System.Xml.Schema.ValidationEventHandler>  
- <xref:System.Xml.XmlReaderSettings>  
- [Elaborare dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
- [Uso di schemi XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XmlReader>  
+- <xref:System.Xml.Schema.ValidationEventHandler>  
+- <xref:System.Xml.XmlReaderSettings>  
+- [Elaborare dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+- [Uso di schemi XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)

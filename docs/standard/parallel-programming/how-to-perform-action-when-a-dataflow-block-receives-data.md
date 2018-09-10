@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a348a83ef0b05ce44b3b3adf8e0031ce350cd37b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5963fee985633d843cc60f521b66000b84e55e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583019"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44217191"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Procedura: eseguire un'azione alla ricezione di dati in un blocco di flussi di dati
 Tramite i tipi di *blocchi di flussi di esecuzione* viene chiamato un delegato fornito dall'utente alla ricezione dei dati. Le classi <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sono tipi di blocchi di flussi di dati di esecuzione. È possibile utilizzare la parola chiave `delegate` (`Sub` in Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> o un'espressione lambda, quando viene fornita una funzione lavoro a un blocco di flussi di dati di esecuzione. In questo documento viene descritto come utilizzare <xref:System.Func%602> e le espressioni lambda per eseguire l'azione nei blocchi di esecuzione.  
@@ -55,5 +55,6 @@ Tramite i tipi di *blocchi di flussi di esecuzione* viene chiamato un delegato f
  [!code-csharp[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#3)]
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

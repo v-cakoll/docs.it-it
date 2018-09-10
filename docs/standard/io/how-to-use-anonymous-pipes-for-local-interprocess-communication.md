@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 846d97871492b89026d50dd89b78a28263863cce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db23b424d4357ad94b8b0de66ca71726b765321e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573179"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264480"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Procedura: utilizzare le unnamed pipe per la comunicazione interprocesso locale
 Le unnamed pipe consentono la comunicazione interprocesso in un computer locale. Offrono meno funzionalità rispetto alle named pipe, ma richiedono anche meno overhead. È possibile usare le unnamed pipe per semplificare la comunicazione interprocesso in un computer locale. Non è possibile usare le unnamed pipe per la comunicazione in rete.  
@@ -45,6 +45,7 @@ Le unnamed pipe consentono la comunicazione interprocesso in un computer locale.
  [!code-csharp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cs/Program.cs#01)]
  [!code-vb[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/vb/program.vb#01)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Pipe](../../../docs/standard/io/pipe-operations.md)  
- [Procedura: Usare le named pipe per la comunicazione interprocesso in rete](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Pipe](../../../docs/standard/io/pipe-operations.md)  
+- [Procedura: Usare le named pipe per la comunicazione interprocesso in rete](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

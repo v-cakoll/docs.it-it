@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6e257ced27812f8383edf9eb9688e9f48cfde02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583747"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266852"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Procedura: mettersi in ascolto di richieste di annullamento tramite polling
 L'esempio seguente illustra un modo in cui il codice utente può eseguire il polling di un token di annullamento a intervalli regolari per verificare se è stato richiesto l'annullamento dal thread chiamante. Questo esempio usa il tipo <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, ma lo stesso modello si applica alle operazioni asincrone create direttamente dal tipo <xref:System.Threading.ThreadPool?displayProperty=nameWithType> o <xref:System.Threading.Thread?displayProperty=nameWithType>.  
@@ -30,5 +30,6 @@ L'esempio seguente illustra un modo in cui il codice utente può eseguire il pol
   
  Se si chiama <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>, è necessario controllare in modo esplicito la proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> solo se ci sono altre attività da eseguire in risposta all'annullamento oltre alla generazione dell'eccezione. In questo esempio è possibile vedere che il codice accede effettivamente alla proprietà due volte: una volta tramite accesso esplicito e di nuovo nel metodo <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>. Poiché tuttavia l'operazione di lettura della proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> comporta solo un'istruzione di lettura volatile per accesso, il doppio accesso non è significativo dal punto di vista delle prestazioni. È preferibile chiamare il metodo invece che generare manualmente l'eccezione <xref:System.OperationCanceledException>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)

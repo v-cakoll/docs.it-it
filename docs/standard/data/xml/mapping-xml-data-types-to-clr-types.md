@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06876b91c72b939768d480e40631a8e85170bc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568544"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264532"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>Mapping dei tipi di dati XML a tipi di dati CLR
 Nella tabella seguente viene descritto il mapping predefinito tra i tipi di dati XML e i tipi CLR (Common Language Runtime).  
@@ -79,5 +79,6 @@ Nella tabella seguente viene descritto il mapping predefinito tra i tipi di dati
 |Nodo commento|<xref:System.Xml.XPath.XPathNavigator>|  
 |Nodo istruzione di elaborazione|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## <a name="see-also"></a>Vedere anche  
- [Supporto di tipi di dati nelle classi System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Supporto di tipi di dati nelle classi System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

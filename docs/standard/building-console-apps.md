@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79005c69e8c125e78573a44f34740632676faf59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 979989c3e1f90f3de47473aa1bd8bc5268520e57
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568810"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261970"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Compilazione di applicazioni console in .NET Framework
 La classe <xref:System.Console?displayProperty=nameWithType> può essere utilizzata dalle applicazioni in .NET Framework per la lettura e scrittura di caratteri nella console. I dati provenienti dalla console vengono letti dal flusso di input standard, mentre i dati inviati alla console vengono scritti nel flusso di output standard e i dati di errori inviati alla console vengono scritti nel flusso di output standard degli errori. I flussi vengono associati automaticamente alla console in fase di avvio dell'applicazione e vengono presentati rispettivamente come proprietà <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> ed <xref:System.Console.Error%2A>.  
@@ -32,6 +32,7 @@ La classe <xref:System.Console?displayProperty=nameWithType> può essere utilizz
   
  La classe **System.Console** include metodi che consentono di leggere singoli caratteri o intere righe dalla console. Altri metodi consentono di convertire dati e formattare stringhe, quindi di scrivere le stringhe formattate nella console. Per altre informazioni sulla formattazione delle stringhe, vedere [Formatting Types](../../docs/standard/base-types/formatting-types.md) (Formattazione dei tipi).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Console?displayProperty=nameWithType>  
- [Formattazione di tipi](../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Console?displayProperty=nameWithType>  
+- [Formattazione di tipi](../../docs/standard/base-types/formatting-types.md)

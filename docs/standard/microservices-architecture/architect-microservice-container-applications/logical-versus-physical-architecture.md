@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ebbae336761c6fa7954862cd41052e8832bf8e77
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.openlocfilehash: bb5f0daf0bcf824d72bb104914de03532bd3f9f7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238416"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213342"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Architettura logica e architettura fisica
 
@@ -17,7 +17,7 @@ A questo punto, è utile fermarsi per esaminare la distinzione tra architettura 
 
 Per iniziare, la creazione di microservizi non richiede l'uso di alcuna tecnologia specifica. Ad esempio, non è obbligatorio usare contenitori Docker per creare un'architettura basata su microservizi. I microservizi possono anche essere eseguiti come processi normali. I microservizi sono un'architettura logica.
 
-Inoltre, anche quando è possibile implementare un microservizio fisicamente come un singolo servizio, processo o contenitore (per semplicità, questo è l'approccio adottato per la versione iniziale di [eShopOnContainers](http://aka.ms/MicroservicesArchitecture)), questa parità tra microservizi aziendali e contenitori o servizi fisici non è necessariamente richiesta in tutti i casi quando si crea un'applicazione complessa di grandi dimensioni costituita da dozzine o centinaia di servizi.
+Inoltre, anche quando è possibile implementare un microservizio fisicamente come un singolo servizio, processo o contenitore (per semplicità, questo è l'approccio adottato per la versione iniziale di [eShopOnContainers](https://aka.ms/MicroservicesArchitecture)), questa parità tra microservizi aziendali e contenitori o servizi fisici non è necessariamente richiesta in tutti i casi quando si crea un'applicazione complessa di grandi dimensioni costituita da dozzine o centinaia di servizi.
 
 Qui sta la differenza tra l'architettura logica e l'architettura fisica di un'applicazione. L'architettura logica e i limiti logici di un sistema non presentano necessariamente un mapping di uno-a-uno rispetto all'architettura di distribuzione o fisica. Può verificarsi, ma spesso non accade.
 

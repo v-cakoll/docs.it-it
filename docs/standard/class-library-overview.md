@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b6730e621a85dc8e656723647f949449241c407
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207456"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216620"
 ---
 # <a name="net-class-library-overview"></a>Panoramica della libreria di classi .NET
 
@@ -110,7 +110,8 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
   
  Per altre informazioni sugli spazi dei nomi, usare il [Browser API .NET](https://docs.microsoft.com/dotnet/api) per esplorare la libreria di classi .NET. La documentazione di riferimento delle API contiene informazioni su ogni spazio dei nomi, sui relativi tipi e membri.  
   
-## <a name="see-also"></a>Vedere anche  
- [Common Type System](../../docs/standard/base-types/common-type-system.md)  
- [Browser API .NET](https://docs.microsoft.com/dotnet/api)  
- [Panoramica](../../docs/framework/get-started/overview.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Common Type System](../../docs/standard/base-types/common-type-system.md)  
+- [Browser API .NET](https://docs.microsoft.com/dotnet/api)  
+- [Panoramica](../../docs/framework/get-started/overview.md)

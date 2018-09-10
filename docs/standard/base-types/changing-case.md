@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f29a92c0d0b8961c178b7a92ea5964a1575a48db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd20db7fcc16f7781e093d59514c4be75705080a
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570536"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262527"
 ---
 # <a name="changing-case-in-net"></a>Modifica della combinazione di maiuscole e minuscole in .NET
 Quando si scrive un'applicazione che accetta input dall'utente non si può conoscere la combinazione di maiuscole e minuscole che verrà usata durante l'immissione dei dati. Spesso è desiderabile che le la combinazione di maiuscole e minuscole nelle stringhe sia coerente, in particolare se le stringhe vengono visualizzate nell'interfaccia utente. La tabella seguente descrive tre metodi per la modifica della combinazione di maiuscole e minuscole. I primi due metodi forniscono un overload che accetta determinate impostazioni cultura.  
@@ -70,6 +70,7 @@ Quando si scrive un'applicazione che accetta input dall'utente non si può conos
   
  Si noti che, sebbene sia dipendente dalle impostazioni cultura, il metodo <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> non fornisce regole sull'uso di maiuscole e minuscole linguisticamente corrette. Ad esempio, nell'esempio precedente, il metodo converte "a tale of two cities" in "A Tale Of Two Cities". Tuttavia, la combinazione linguisticamente corretta per le impostazioni cultura Inglese (Stati Uniti) è "A Tale of Two Cities."  
   
-## <a name="see-also"></a>Vedere anche  
- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)  
- [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

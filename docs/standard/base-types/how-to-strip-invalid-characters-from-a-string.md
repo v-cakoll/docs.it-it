@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66fe5dd1da148e8afd07ae69cec960438b53536a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3bbd25e40607bd316f1bbab974174fe5433770f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567354"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261866"
 ---
 # <a name="how-to-strip-invalid-characters-from-a-string"></a>Procedura: Rimuovere caratteri non validi da una stringa
 L'esempio seguente usa il metodo statico <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> per rimuovere i caratteri non validi da una stringa.  
@@ -36,5 +36,6 @@ L'esempio seguente usa il metodo statico <xref:System.Text.RegularExpressions.Re
   
  Il criterio di espressione regolare `[^\w\.@-]` corrisponde a qualsiasi carattere che non è un carattere alfanumerico, un punto, un simbolo @ o un trattino. Un carattere alfanumerico è qualsiasi lettera, numero decimale o connettore di punteggiatura, ad esempio un carattere di sottolineatura. Qualsiasi carattere che corrisponde a questo criterio viene sostituito da <xref:System.String.Empty?displayProperty=nameWithType>, ovvero la stringa definita dal criterio di sostituzione. Per consentire ulteriori caratteri nell'input dell'utente, aggiungere tali caratteri alla classe di caratteri nel criterio di espressione regolare. Ad esempio, il criterio di espressione regolare `[^\w\.@-\\%]` consente anche un simbolo di percentuale e una barra rovesciata in una stringa di input.  
   
-## <a name="see-also"></a>Vedere anche  
- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)

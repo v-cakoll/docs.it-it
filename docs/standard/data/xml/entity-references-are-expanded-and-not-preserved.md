@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa03532200a89aa164648c1278c9dbafc2aee214
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569532"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266865"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Riferimenti alle entità espansi e non conservati
 Quando il riferimento a un'entità viene espanso e sostituito dal testo che esso rappresenta, il nodo **XmlEntityReference** non viene creato. Invece, la dichiarazione di entità viene analizzata e i nodi creati dal contenuto della dichiarazione vengono copiati al posto di **XmlEntityReference**. Nell'esempio di `&publisher;`, `&publisher;` non viene quindi salvato, ma viene creato un nodo **XmlText**.  
@@ -40,5 +40,6 @@ Struttura ad albero per i riferimenti alle entità espansi
   
  Se si usa un lettore che non riesce a risolvere le entità, il metodo **Load** genera un'eccezione quando incontra un riferimento all'entità.  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

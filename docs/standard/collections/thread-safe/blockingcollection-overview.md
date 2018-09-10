@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67e752b9997301fcb3140539255fc32572bfd6e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 257435516b38d0e4389b7feceba68371bcc8f90e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573620"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262139"
 ---
 # <a name="blockingcollection-overview"></a>Panoramica di BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> è una classe di raccolta thread-safe che offre le funzionalità seguenti:  
@@ -80,7 +80,8 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
 ## <a name="using-many-blockingcollections-as-one"></a>Uso di più oggetti BlockingCollections come uno solo  
  Per gli scenari in cui un Consumer deve rimuovere elementi da più raccolte contemporaneamente, è possibile creare matrici di <xref:System.Collections.Concurrent.BlockingCollection%601> e usare i metodi statici, ad esempio <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> che eseguiranno operazioni di aggiunta o rimozione in qualsiasi raccolta nella matrice. Se una raccolta è bloccata, il metodo ne cerca immediatamente un'altra finché non ne trova una che può eseguire l'operazione. Per altre informazioni, vedere [Procedura: usare matrici di BlockingCollection in una pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Raccolte e strutture di dati](../../../../docs/standard/collections/index.md)  
- [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [Raccolte e strutture di dati](../../../../docs/standard/collections/index.md)  
+- [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)

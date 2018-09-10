@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ad4b5e005ddd7bbd598a9da3032574eb2ba7dd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d0870d23c5606fbdd8b4a2f78c4d8b9f4ddc93e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580884"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259636"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Procedura: utilizzare Parallel.Invoke per eseguire operazioni in parallelo
 Questo esempio mostra come parallelizzare le operazioni usando <xref:System.Threading.Tasks.Parallel.Invoke%2A> in Task Parallel Library. Vengono eseguite tre operazioni in un'origine dati condivisa. Poiché nessuna delle operazioni modifica l'origine, possono essere eseguite in parallelo in modo semplice.  
@@ -36,7 +36,8 @@ Questo esempio mostra come parallelizzare le operazioni usando <xref:System.Thre
   
 -   Copiare e incollare l'esempio completo in un progetto di Microsoft Visual Studio 2010 e premere F5.  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)  
- [Procedura: Annullare un'attività e i relativi figli](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)  
+- [Procedura: Annullare un'attività e i relativi figli](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)  
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

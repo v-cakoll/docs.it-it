@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2415f0c360118389bc7a3ae3aaf74ca8daf24422
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574807"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262273"
 ---
 # <a name="net-architectural-components"></a>Componenti dell'architettura .NET
 
@@ -68,11 +68,11 @@ Per altre informazioni sulla piattaforma UWP, vedere [Introduzione alla piattafo
 ## <a name="net-runtimes"></a>Runtime .NET
 
 Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema operativo è parte dell'ambiente di runtime, ma non del runtime di .NET. Ecco alcuni esempi di runtime di .NET:
- 
- - CRL (Common Language Runtime) per .NET Framework
- - CoreCLR (Core Common Language Runtime) per .NET Core
- - .NET Native per la piattaforma UWP 
- - Runtime di Mono per Xamarin.iOS, Xamarin.Android, Xamarin.Mac e per il framework desktop di Mono
+
+- CRL (Common Language Runtime) per .NET Framework
+- CoreCLR (Core Common Language Runtime) per .NET Core
+- .NET Native per la piattaforma UWP 
+- Runtime di Mono per Xamarin.iOS, Xamarin.Android, Xamarin.Mac e per il framework desktop di Mono
 
 ## <a name="net-tooling-and-common-infrastructure"></a>Strumenti .NET e infrastruttura comune
 
@@ -85,11 +85,11 @@ Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema oper
 - Strumenti open source di orchestrazione della compilazione, ad esempio [CAKE](https://cakebuild.net/) e [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>Vedere anche
-[Scelta di .NET Core o .NET Framework per le app server](choosing-core-framework-server.md)   
-[.NET Standard](net-standard.md)  
-[Guida a .NET Core](../core/index.md)  
-[Guida a .NET Framework](../framework/index.md)  
-[Guida a C#](../csharp/index.md)  
-[Guida a F#](../fsharp/index.md)  
-[Guida a VB.NET](../visual-basic/index.md)  
 
+- [Scelta di .NET Core o .NET Framework per le app server](choosing-core-framework-server.md)   
+- [.NET Standard](net-standard.md)  
+- [Guida a .NET Core](../core/index.md)  
+- [Guida a .NET Framework](../framework/index.md)  
+- [Guida a C#](../csharp/index.md)  
+- [Guida a F#](../fsharp/index.md)  
+- [Guida a VB.NET](../visual-basic/index.md)  

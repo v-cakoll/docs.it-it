@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6262822e0916e142c7c543d2e2546c8540cb73a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f52d1067a8aa907c8f1cf8b550eec82d1133b3f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568576"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261746"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Procedura: Aggiungere funzionalità di delimitazione e blocco a una raccolta
 Questo esempio illustra come aggiungere la funzionalità di delimitazione e blocco a una classe di raccolta personalizzata implementando l'interfaccia <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> nella classe e successivamente usando un'istanza della classe come meccanismo di archiviazione interno per un oggetto <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>. Per altre informazioni su delimitazione e blocco, vedere [Panoramica di BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
@@ -28,5 +28,6 @@ Questo esempio illustra come aggiungere la funzionalità di delimitazione e bloc
   
  Per impostazione predefinita, l'archiviazione per un oggetto <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> è <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)

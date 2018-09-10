@@ -2,12 +2,12 @@
 title: Uso degli spazi dei nomi XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
-ms.openlocfilehash: e00886281fbccd0e10706575483dd174d7d53052
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416241"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269007"
 ---
 # <a name="working-with-xml-namespaces-c"></a>Uso degli spazi dei nomi XML (C#)
 Negli argomenti di questa sezione viene descritto il supporto degli spazi dei nomi in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -22,5 +22,6 @@ Negli argomenti di questa sezione viene descritto il supporto degli spazi dei no
 |[Ambito degli spazi dei nomi predefiniti in C#](../../../../csharp/programming-guide/concepts/linq/scope-of-default-namespaces.md)|Viene descritto il modo appropriato in cui scrivere query per XML nello spazio dei nomi predefinito.|  
 |[Procedura: Scrivere query in XML negli spazi dei nomi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Viene illustrato come specificare spazi dei nomi XML nelle query LINQ to XML in C#.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

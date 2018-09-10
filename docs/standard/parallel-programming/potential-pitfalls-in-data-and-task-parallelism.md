@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d4fd91eccd5e8f3fd6be7c8a63ab1c097002382
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: f6910dfba0889b4eaf601960d13dfe87a3b8c2fa
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073229"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214121"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Problemi potenziali nel parallelismo di dati e attività
 In molti casi, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> possono offrire miglioramenti significativi delle prestazioni nei normali cicli sequenziali. Le operazioni necessarie per parallelizzare il ciclo comportano tuttavia delle complessità che possono determinare problemi che in un codice sequenziale sono meno frequenti o addirittura assenti. In questo argomento sono elencati alcuni suggerimenti da tenere presenti quando si scrivono cicli paralleli.  
@@ -52,10 +52,10 @@ In molti casi, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=name
 >  Per verificare ciò basta inserire nelle query alcune chiamate a <xref:System.Console.WriteLine%2A>. Anche se questo metodo viene utilizzato a scopo dimostrativo negli esempi della documentazione, è consigliabile evitare di utilizzarlo nei cicli paralleli, a meno che non sia necessario.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Tenere presente i problemi di affinità di thread  
- Alcune tecnologie, ad esempio l'interoperabilità COM per i componenti apartment a thread singolo (STA, Single-Threaded Apartment), Windows Form e Windows Presentation Foundation (WPF), impongono restrizioni di affinità di thread che richiedono l'esecuzione del codice in un thread specifico. Ad esempio, sia in Windows Form sia in WPF, l'accesso a un controllo può essere eseguito solo nel thread in cui è stato creato. Ciò significa, ad esempio, che non è possibile aggiornare un controllo elenco da un ciclo parallelo, a meno che non si configuri l'utilità di pianificazione del thread in modo che venga pianificato solo il thread UI. Per ulteriori informazioni, vedere [Procedura: pianificare il lavoro nel thread dell'interfaccia utente](http://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
+ Alcune tecnologie, ad esempio l'interoperabilità COM per i componenti apartment a thread singolo (STA, Single-Threaded Apartment), Windows Form e Windows Presentation Foundation (WPF), impongono restrizioni di affinità di thread che richiedono l'esecuzione del codice in un thread specifico. Ad esempio, sia in Windows Form sia in WPF, l'accesso a un controllo può essere eseguito solo nel thread in cui è stato creato. Ciò significa, ad esempio, che non è possibile aggiornare un controllo elenco da un ciclo parallelo, a meno che non si configuri l'utilità di pianificazione del thread in modo che venga pianificato solo il thread UI. Per ulteriori informazioni, vedere [Procedura: pianificare il lavoro nel thread dell'interfaccia utente](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Prestare attenzione quando si attendono delegati chiamati da Parallel.Invoke  
- In determinate circostanze Task Parallel Library rende inline un'attività, ovvero viene eseguito sull'attività nel thread attualmente in esecuzione. Per ulteriori informazioni, vedere [Task Schedulers](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65). Questa ottimizzazione delle prestazioni può in alcuni casi condurre a un deadlock. Due attività potrebbero ad esempio eseguire lo stesso codice di delegato, che segnala quando si verifica un evento, quindi attende che l'altra attività segnali un evento. Se la seconda attività viene resa inline nello stesso thread del primo, e il primo entra in un ciclo di attesa, la seconda attività non sarà mai in grado di segnalare il rispettivo evento. Per evitare questa situazione, è possibile specificare un timeout sull'operazione di attesa o utilizzare costruttori di thread espliciti per garantire che un'attività non blocchi l'altra.  
+ In determinate circostanze Task Parallel Library rende inline un'attività, ovvero viene eseguito sull'attività nel thread attualmente in esecuzione. Per ulteriori informazioni, vedere [Task Schedulers](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65). Questa ottimizzazione delle prestazioni può in alcuni casi condurre a un deadlock. Due attività potrebbero ad esempio eseguire lo stesso codice di delegato, che segnala quando si verifica un evento, quindi attende che l'altra attività segnali un evento. Se la seconda attività viene resa inline nello stesso thread del primo, e il primo entra in un ciclo di attesa, la seconda attività non sarà mai in grado di segnalare il rispettivo evento. Per evitare questa situazione, è possibile specificare un timeout sull'operazione di attesa o utilizzare costruttori di thread espliciti per garantire che un'attività non blocchi l'altra.  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Non presupporre che le iterazioni di Foreach, For e ForAll vengano eseguite sempre in parallelo  
  È importante tenere presente che le singole iterazioni in un ciclo <xref:System.Threading.Tasks.Parallel.For%2A>, <xref:System.Threading.Tasks.Parallel.ForEach%2A> o <xref:System.Linq.ParallelEnumerable.ForAll%2A> possono non necessariamente essere eseguite in parallelo. È pertanto necessario evitare di scrivere codice la cui correttezza dipenda dall'esecuzione parallela delle iterazioni o dall'esecuzione delle iterazioni in un particolare ordine. Il codice seguente, ad esempio, è molto probabile che conduca a un deadlock:  
@@ -80,7 +80,8 @@ In molti casi, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=name
  [!code-csharp[TPL_Pitfalls#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#03)]
  [!code-vb[TPL_Pitfalls#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#03)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)  
- [Problemi potenziali dell'utilizzo di PLINQ](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
- [Documento contenente una panoramica dei modelli per la programmazione parallela, ovvero come comprendere e applicare modelli paralleli con .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)
+## <a name="see-also"></a>Vedere anche
+
+- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)  
+- [Problemi potenziali dell'utilizzo di PLINQ](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
+- [Documento contenente una panoramica dei modelli per la programmazione parallela, ovvero come comprendere e applicare modelli paralleli con .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)

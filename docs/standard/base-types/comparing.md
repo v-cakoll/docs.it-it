@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c925b734c6d89bfa7240a7946c5bae4d8062a47a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577817"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264675"
 ---
 # <a name="comparing-strings-in-net"></a>Confronto di stringhe in .NET
 .NET offre diversi metodi per confrontare i valori delle stringhe. La tabella seguente elenca e descrive i metodi di confronto di valori.  
@@ -150,6 +150,8 @@ ms.locfileid: "33577817"
   
  Entrambi i metodi sono utili quando vengono usati in combinazione con il metodo **String.Remove** . È possibile usare il metodo **IndexOf** o **LastIndexOf** per recuperare la posizione di un carattere e quindi specificare tale posizione nel metodo **Remove** per rimuovere un carattere o una parola che inizia con tale carattere.  
   
-## <a name="see-also"></a>Vedere anche  
- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)  
- [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921)

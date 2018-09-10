@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 47162a43c942416c5a2b842663288290c9f43f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c8d08d6fd6fb783f5cb8c7e714bffa2b655ffb41
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574722"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214823"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Gestione di spazi dei nomi in un documento XML
 Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e degli elementi di un documento XML a URI personalizzati e predefiniti. Per creare queste associazioni, è possibile definire i prefissi per gli URI dello spazio dei nomi e usare i prefissi in questione per qualificare i nomi degli attributi e degli elementi nei dati XML. Con gli spazi dei nomi è possibile evitare i conflitti tra i nomi degli elementi e degli attributi e consentire la gestione e la convalida degli elementi e degli attributi con lo stesso nome in modi diversi.  
@@ -79,6 +79,7 @@ Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e d
 |Verificare se un prefisso è definito nell'ambito corrente|Metodo <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
 |Ottenere la tabella dei nomi usata per ricercare i prefissi e gli URI|Proprietà <xref:System.Xml.XmlNamespaceManager.NameTable%2A>|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.XmlNamespaceManager>  
- [Documenti e dati XML](../../../../docs/standard/data/xml/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Xml.XmlNamespaceManager>  
+- [Documenti e dati XML](../../../../docs/standard/data/xml/index.md)

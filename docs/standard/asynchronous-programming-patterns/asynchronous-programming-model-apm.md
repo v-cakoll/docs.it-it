@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 992cc1f60ee3f08131b478d2336321bf87d7ef89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cd2fa6219f39a8506d865d85e1ce5f84d22a92f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573789"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269033"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modello di programmazione asincrona (APM)
 L'implementazione di un'operazione asincrona che usa lo schema progettuale <xref:System.IAsyncResult> avviene mediante due metodi, denominati **Begin***Nomeoperazione* e **End***Nomeoperazione*, che rispettivamente avviano e terminano l'operazione asincrona *Nomeoperazione*. La classe <xref:System.IO.FileStream> fornisce ad esempio i metodi <xref:System.IO.FileStream.BeginRead%2A> e <xref:System.IO.FileStream.EndRead%2A> per la lettura asincrona dei byte da un file. Tali metodi implementano la versione asincrona del metodo <xref:System.IO.FileStream.Read%2A> .  
@@ -65,7 +65,8 @@ L'implementazione di un'operazione asincrona che usa lo schema progettuale <xref
   
 -   Usare un delegato <xref:System.AsyncCallback> per specificare il metodo da richiamare quando l'operazione viene completata. Per un esempio relativo all'uso di questa tecnica, vedere [Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)  
- [Chiamata sincrona dei metodi asincroni](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- [Uso di un oggetto di stato e di un delegato AsyncCallback](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)  
+- [Chiamata sincrona dei metodi asincroni](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+- [Uso di un oggetto di stato e di un delegato AsyncCallback](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)

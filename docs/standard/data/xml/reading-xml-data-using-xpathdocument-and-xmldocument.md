@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc8e1b85543fca0281b6433dd5c87c28b37818db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69e22328c39ae68acc4baff12775b49fbac80696
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575466"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252831"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>Lettura di dati XML con XPathDocument e XmlDocument
 Sono disponibili due metodi per leggere un documento XML nello spazio dei nomi <xref:System.Xml.XPath?displayProperty=nameWithType>. Un metodo consiste nel leggere un documento XML usando la classe di sola lettura <xref:System.Xml.XPath.XPathDocument>, l'altro consiste nel leggere un documento XML usando la classe modificabile <xref:System.Xml.XmlDocument> nello spazio dei nomi <xref:System.Xml?displayProperty=nameWithType>.  
@@ -72,11 +72,12 @@ document.Load("books.xml");
 |<xref:System.Xml.XPath.XPathDocument>|`false`|  
 |<xref:System.Xml.XmlDocument>|`true`|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Accesso ai dati XML con XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- [Modifica di dati XML con XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
- [Convalida dello schema con XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [Accesso ai dati XML con XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+- [Modifica di dati XML con XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
+- [Convalida dello schema con XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cdc464234871fc07feeeb8dd02635ebdd151d76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 283b3b1aa0d56b50b6f9e67b66de3e0b68ae2331
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573197"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216542"
 ---
 # <a name="exception-class-and-properties"></a>Classe e proprietà dell'eccezione
 
@@ -41,5 +41,6 @@ La maggior parte delle classi che ereditano da <xref:System.Exception> non imple
 
 Si consiglia di generare e rilevare solo oggetti che derivano da <xref:System.Exception>, ma è possibile generare qualsiasi oggetto che deriva dalla classe <xref:System.Object> come eccezione. Si noti che non tutti i linguaggi supportano la generazione e il rilevamento degli oggetti che non derivano da <xref:System.Exception>.
   
-## <a name="see-also"></a>Vedere anche  
-[Eccezioni](index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Eccezioni](index.md)

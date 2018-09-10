@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b652adb27c3bb075fe86c09d7c9ab33511371279
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241ff40448c3dca2846f9e420dc7df41427dc79d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570449"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266891"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Lettura e scrittura di schemi XML
 È possibile usare l'API del modello SOM (Schema Object Model) per scrivere e leggere gli schemi XSD (XML Schema Definition Language) da file o altre origini e compilare schemi XML in memoria usando le classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType> associato alle strutture definite nella raccomandazione W3C (World Wide Web Consortium) "XML Schema".  
@@ -47,12 +47,13 @@ ms.locfileid: "33570449"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
- [Gestione di spazi dei nomi in un documento XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
+- [Gestione di spazi dei nomi in un documento XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)

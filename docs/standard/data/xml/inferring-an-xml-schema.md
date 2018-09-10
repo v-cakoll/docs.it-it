@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b18e7ffd-3c04-482d-9934-ba2f6a59b2c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 847d25ae760a2ec91c4ad5979f6b2e4de5dbc5cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ed8614e1af3a52b9519c82a4b5c169c2fa3188f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568784"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221636"
 ---
 # <a name="inferring-an-xml-schema"></a>Inferenza di uno schema XML
 Viene descritto come usare la classe <xref:System.Xml.Schema.XmlSchemaInference> SOM (Schema Object Model) per inferire uno schema XSD (XML Schema Definition Language) dalla struttura di un documento XML.  
@@ -27,7 +27,8 @@ Viene descritto come usare la classe <xref:System.Xml.Schema.XmlSchemaInference>
  [Regole per l'inferenza di tipi semplici](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)  
  Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce il tipo di dati per attributi ed elementi.  
   
-## <a name="see-also"></a>Vedere anche  
- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Regole per l'inferenza dello schema per tipi di nodo e struttura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+## <a name="see-also"></a>Vedere anche
+
+- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [Regole per l'inferenza dello schema per tipi di nodo e struttura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

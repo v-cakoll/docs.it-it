@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1c56d69724212b9d1cd6a24204a12460071633f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577099"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268406"
 ---
 # <a name="resolving-external-resources"></a>Risoluzione di risorse esterne
 La proprietà **XmlResolver** di **XmlDocument** viene usata dalla classe **XmlDocument** per individuare le risorse non inline nei dati XML, quali DTD, entità e schemi esterni. Questi elementi possono trovarsi in una rete o in un'unità locale ed essere identificati tramite un URI (Uniform Resource Identifier) . Questo consente a **XmlDocument** di risolvere i nodi **EntityReference** presenti nel documento e convalidare il documento in base allo schema o alla DTD esterna.  
@@ -52,5 +52,6 @@ La proprietà **XmlResolver** di **XmlDocument** viene usata dalla classe **XmlD
   
  Per altre informazioni, vedere la sezione Note della pagina di riferimento <xref:System.Xml.XmlResolver>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

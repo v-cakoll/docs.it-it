@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8bb84f2e26471e004678afde99a1dd725db6832
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755106"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265078"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Procedura: aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary
 In questo esempio viene illustrato come aggiungere, recuperare, aggiornare e rimuovere elementi da un oggetto <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Questa classe di raccolta è un'implementazione thread-safe. È consigliabile usarla ogni volta che più thread tentano di accedere contemporaneamente agli elementi.  
@@ -48,6 +48,7 @@ In questo esempio viene illustrato come aggiungere, recuperare, aggiornare e rim
   
  Non è comunque garantito che i dati restituiti da <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> sono gli stessi dati creati dal delegato valueFactory del thread. Una sequenza di eventi simile può verificarsi quando viene chiamato <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)

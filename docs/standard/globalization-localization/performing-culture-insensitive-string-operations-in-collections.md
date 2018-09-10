@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8972a8e9d73adc60e073a5eab9388260c907b68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e458f45fea8e2207ced930daebf10e653901fa7
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577150"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264987"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura nelle raccolte
 Nello spazio dei nomi <xref:System.Collections> sono disponibili classi e membri che per impostazione predefinita forniscono un comportamento dipendente dalle impostazioni cultura. I costruttori predefiniti per le classi <xref:System.Collections.CaseInsensitiveComparer> e <xref:System.Collections.CaseInsensitiveHashCodeProvider> inizializzano una nuova istanza tramite la proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Per impostazione predefinita, tutti gli overload del metodo <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> creano una nuova istanza della classe <xref:System.Collections.Hashtable> tramite la proprietà `Thread.CurrentCulture`. Per impostazione predefinita, gli overload del metodo <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> consentono di eseguire ordinamenti dipendenti dalle impostazioni cultura tramite `Thread.CurrentCulture`. Ordinamento e ricerca in un <xref:System.Collections.SortedList> possono essere influenzati dal `Thread.CurrentCulture` quando vengono usate stringhe come chiavi. Per ottenere risultati indipendenti dalle impostazioni cultura da queste classi e da questi metodi dello spazio dei nomi `Collections`, attenersi ai consigli sull'utilizzo forniti in questa sezione.  
@@ -133,12 +133,13 @@ internal class InvariantComparer : IComparer
 ## <a name="using-the-arraylistsort-method"></a>Utilizzo del metodo ArrayList.Sort  
  Per impostazione predefinita, gli overload del metodo `ArrayList.Sort` consentono di eseguire ordinamenti dipendenti dalle impostazioni cultura tramite la proprietà `Thread.CurrentCulture`. I risultati possono variare in base alle impostazioni cultura, a causa di diversi criteri di ordinamento. Per eliminare il comportamento dipendente dalle impostazioni cultura, utilizzare gli overload del metodo che accettano un'implementazione di `IComparer`. Per il parametro `comparer`, specificare una classe di operatori di confronto invariabili personalizzati che usi `CultureInfo.InvariantCulture`. Per un esempio di classe di questo tipo, vedere l'argomento [Utilizzo della classe SortedList](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections.CaseInsensitiveComparer>  
- <xref:System.Collections.CaseInsensitiveHashCodeProvider>  
- <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType>  
- <xref:System.Collections.SortedList>  
- <xref:System.Collections.Hashtable>  
- <xref:System.Collections.IComparer>  
- [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
- <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Collections.CaseInsensitiveComparer>  
+- <xref:System.Collections.CaseInsensitiveHashCodeProvider>  
+- <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType>  
+- <xref:System.Collections.SortedList>  
+- <xref:System.Collections.Hashtable>  
+- <xref:System.Collections.IComparer>  
+- [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+- <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType>

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: e6aecd5957ae62e3c147af22c2a1b135a4c32310
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 68b376d00762238b810f6463463aa78c492a1a1f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934838"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268669"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Procedura: usare componenti che supportano il modello asincrono basato su eventi
 Molti componenti consentono di eseguire le attività in modo asincrono. I componenti <xref:System.Media.SoundPlayer> e <xref:System.Windows.Forms.PictureBox>, ad esempio, consentono di caricare suoni e immagini "in background", mentre l'esecuzione del thread principale procede senza interruzioni.  
@@ -60,6 +60,7 @@ Molti componenti consentono di eseguire le attività in modo asincrono. I compon
   
      Man mano che il download dell'immagine procede, è possibile spostare liberamente il modulo, ridurlo e ingrandirlo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Eseguire un'operazione in background](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+## <a name="see-also"></a>Vedere anche
+
+- [Procedura: Eseguire un'operazione in background](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+- [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  

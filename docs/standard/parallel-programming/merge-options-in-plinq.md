@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7df080185db9631e47bb7a886f6e0db894974a6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0652f5f3f3629257f8f67c6b4a0b9551ef547b62
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584633"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221896"
 ---
 # <a name="merge-options-in-plinq"></a>Opzioni di merge in PLINQ
 Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza di origine in modo che più thread possano operare simultaneamente su parti diverse, in genere su thread separati. Se i risultati devono essere utilizzati in un unico thread, ad esempio in un ciclo `foreach` (`For Each` in Visual Basic), i risultati di ogni thread devono essere nuovamente uniti in un'unica sequenza. Il tipo di merge che PLINQ esegue dipende dagli operatori presenti nella query. Ad esempio, gli operatori che impongono un nuovo ordine nei risultati devono memorizzare nel buffer tutti gli elementi da tutti i thread. Dal punto di vista del thread consumer (che è anche quello dell'utente dell'applicazione), una query completamente memorizzata nel buffer potrebbe essere eseguita per un periodo considerevole di tempo prima che produca il primo risultato. Gli altri operatori, per impostazione predefinita, sono parzialmente memorizzati nel buffer e generano i risultati in batch. Un operatore, <xref:System.Linq.ParallelEnumerable.ForAll%2A>, non è memorizzato nel buffer per impostazione predefinita. Genera immediatamente tutti gli elementi di tutti i thread.  
@@ -65,6 +65,7 @@ Quando una query è in esecuzione come parallela, PLINQ partiziona la sequenza d
   
  La possibilità di alcuni operatori di gestire le opzioni di merge dipende dal tipo della sequenza di origine e dal fatto che l'operatore <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> sia stato usato in precedenza nella query. <xref:System.Linq.ParallelEnumerable.ForAll%2A> è sempre <xref:System.Linq.ParallelMergeOptions.NotBuffered>. Genera immediatamente gli elementi. <xref:System.Linq.ParallelEnumerable.OrderBy%2A> è sempre <xref:System.Linq.ParallelMergeOptions.FullyBuffered>. Deve ordinare l'intero elenco prima di generare gli elementi.  
   
-## <a name="see-also"></a>Vedere anche  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Procedura: Specificare le opzioni di merge in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Procedura: Specificare le opzioni di merge in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

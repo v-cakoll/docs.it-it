@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd00c91daf2811ecba01b77d51a74740027ced5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c49f7ad5162c9e2759ec8afed217451b4bcf04ff
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581586"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227623"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Procedura: utilizzare JoinBlock per leggere dati da più origini
 In questo documento viene spiegato come utilizzare la classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> per eseguire un'operazione quando i dati sono disponibili da più origini. Viene inoltre illustrato come utilizzare la modalità non greedy per consentire la condivisione in modo più efficiente di un'origine dati da parte di più blocchi join.
@@ -46,5 +46,6 @@ In questo documento viene spiegato come utilizzare la classe <xref:System.Thread
 ## <a name="robust-programming"></a>Programmazione efficiente  
  L'utilizzo di join non greedy può inoltre aiutare a impedire un deadlock nell'applicazione. In un'applicazione software si verifica un *deadlock* quando due o più processi bloccano ognuno una risorsa e attendono entrambi che un altro processo rilasci altre risorse. Si consideri un'applicazione in cui sono definiti due oggetti <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. I dati dei due blocchi di origine condivisi possono essere letti da entrambi gli oggetti. In modalità greedy, se la prima origine viene letta dal primo blocco e la seconda origine dal secondo blocco, si potrebbe verificare un deadlock dell'applicazione poiché entrambi i blocchi join sono in attesa del completamento dell'altro per liberare la relativa risorsa. In modalità non greedy, la lettura dalle relative origini da parte di ogni blocco join viene eseguita solo quando tutti i dati sono disponibili e, di conseguenza, il rischio di deadlock è eliminato.  
   
-## <a name="see-also"></a>Vedere anche  
- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

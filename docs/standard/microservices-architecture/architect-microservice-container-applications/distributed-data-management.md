@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480665"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268851"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemi e soluzioni per la gestione dei dati distribuiti
 
@@ -79,7 +79,7 @@ Di fatto, se per comunicare, i microservizi interni creano catene di richieste H
 
 Per imporre l'autonomia dei microservizi e ottenere una migliore resilienza, è necessario ridurre al minimo l'uso di catene di comunicazione richiesta/risposta tra microservizi. È consigliabile usare solo l'interazione asincrona per la comunicazione tra microservizi, sia tramite comunicazione asincrona basata su messaggi ed eventi che tramite il polling HTTP indipendentemente dal ciclo originale di richiesta/risposta HTTP.
 
-Per maggiori informazioni sull'uso della comunicazione asincrona, vedere le sezioni [L'integrazione di microservizi asincroni impone l'autonomia del microservizio](#asynchronous-microservice-integration-enforce-microservices-autonomy) e [Comunicazione asincrona basata su messaggi](#asynchronous-message-based-communication) più avanti in questa guida.
+Per maggiori informazioni sull'uso della comunicazione asincrona, vedere le sezioni [L'integrazione di microservizi asincroni impone l'autonomia del microservizio](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy) e [Comunicazione asincrona basata su messaggi](asynchronous-message-based-communication.md) più avanti in questa guida.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

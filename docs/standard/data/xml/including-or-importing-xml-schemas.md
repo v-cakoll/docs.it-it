@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2f83128f47a687e75a7db9bb36c487fa1f5bb6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b26ebfa327d849f75b1ac5295b66600aeb377e1e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573065"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266044"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusione o importazione di schemi XML
 Uno schema XML può contenere elementi `<xs:import />`, `<xs:include />` e `<xs:redefine />`. Questi elementi dello schema fanno riferimento ad altri schemi XML che possono essere usati per integrare la struttura dello schema che li include o importa. Nell'API del modello SOM (Schema Object Model), a questi elementi sono associate le classi <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> e <xref:System.Xml.Schema.XmlSchemaRedefine>.  
@@ -100,10 +100,11 @@ Uno schema XML può contenere elementi `<xs:import />`, `<xs:include />` e `<xs:
   
  Per altre informazioni sugli elementi `<xs:import />`, `<xs:include />` e `<xs:redefine />` e sulle classi <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> e <xref:System.Xml.Schema.XmlSchemaRedefine>, vedere il documento [W3C XML Schema](https://www.w3.org/XML/Schema) e la documentazione di riferimento sulle classi dello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

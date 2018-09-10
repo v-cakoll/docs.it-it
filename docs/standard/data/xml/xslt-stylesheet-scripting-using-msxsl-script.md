@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b1fb13e33f759c44e090a9294548c224e10344e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68c98b3b4effbe7cea1a3c4443d2222e6bbcd43c
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577176"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264844"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Scripting dei fogli di stile XSLT con &lt;msxsl:script&gt;
 La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato mediante l'elemento `script`.  
@@ -229,5 +229,6 @@ public class Sample
 </circles>    
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

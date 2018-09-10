@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5d688041c6a8947b4a30f067d969cb6cb3bbf0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47e4c5d721b37388a4008d100f5212057477c638
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583903"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44211658"
 ---
 # <a name="how-to-create-pre-computed-tasks"></a>Procedura: Creare attività precalcolate
 In questo documento viene descritto come utilizzare il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> per recuperare i risultati di operazioni di download asincrone contenute in una cache. Tramite il metodo <xref:System.Threading.Tasks.Task.FromResult%2A> viene restituito un oggetto <xref:System.Threading.Tasks.Task%601> finito contenente il valore fornito come relativa proprietà <xref:System.Threading.Tasks.Task%601.Result%2A>. Questo metodo è utile quando si esegue un'operazione asincrona che restituisce un oggetto <xref:System.Threading.Tasks.Task%601> e il risultato di tale oggetto <xref:System.Threading.Tasks.Task%601> è già calcolato.  
@@ -41,5 +41,6 @@ In questo documento viene descritto come utilizzare il metodo <xref:System.Threa
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione asincrona basata su attività](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Programmazione asincrona basata su attività](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

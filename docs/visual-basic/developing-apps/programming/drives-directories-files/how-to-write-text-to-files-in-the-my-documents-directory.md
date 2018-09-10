@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-ms.openlocfilehash: 94532e27f38eb0f8b1ca91d424a97aba1b9f5173
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 894458ad6d69b8bb2836518b90723703733208b6
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589670"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264519"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Procedura: scrivere testo in file della directory Documenti in Visual Basic
 L'oggetto `My.Computer.FileSystem.SpecialDirectories` consente di accedere a directory speciali, ad esempio alla directory **Documenti**.  
@@ -41,7 +41,7 @@ L'oggetto `My.Computer.FileSystem.SpecialDirectories` consente di accedere a dir
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Se eseguito in un contesto ad attendibilità parziale, il codice potrebbe generare un'eccezione a causa dell'insufficienza di privilegi. Per altre informazioni, vedere [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  
   
- In questo esempio viene creato un nuovo file. Per poter creare un file in un'applicazione, è necessario che l'applicazione disponga dell'autorizzazione per la creazione della cartella. Le autorizzazioni vengono impostate tramite gli elenchi di controllo di accesso. Se il file è già esistente, l'applicazione necessita solo dell'autorizzazione di scrittura, ossia di un privilegio di livello inferiore. Laddove possibile, è più sicuro creare il file durante la fase di distribuzione e concedere privilegi di lettura a un unico file, anziché concedere privilegi per la creazione di una cartella. È anche più sicuro scrivere i dati nelle cartelle utente anziché nella cartella radice o nella cartella **Programmi**. Per altre informazioni, vedere [Panoramica della tecnologia ACL](http://msdn.microsoft.com/library/06fbf66d-6f02-4378-b863-b2f12e349045).  
+ In questo esempio viene creato un nuovo file. Per poter creare un file in un'applicazione, è necessario che l'applicazione disponga dell'autorizzazione per la creazione della cartella. Le autorizzazioni vengono impostate tramite gli elenchi di controllo di accesso. Se il file è già esistente, l'applicazione necessita solo dell'autorizzazione di scrittura, ossia di un privilegio di livello inferiore. Laddove possibile, è più sicuro creare il file durante la fase di distribuzione e concedere privilegi di lettura a un unico file, anziché concedere privilegi per la creazione di una cartella. È anche più sicuro scrivere i dati nelle cartelle utente anziché nella cartella radice o nella cartella **Programmi**. Per altre informazioni, vedere [Panoramica della tecnologia ACL](https://msdn.microsoft.com/library/06fbf66d-6f02-4378-b863-b2f12e349045).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1cfe07af216da1c35b093a1ca23e4d48c60a7bfe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f2c2fbd58b10af80a2a233cbd4211befe2dbd33
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571235"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216054"
 ---
 # <a name="how-to-copy-directories"></a>Procedura: copiare le directory
 Questo esempio mostra come usare classi di I/O per copiare in modo sincronizzato il contenuto di una directory in un altro percorso. In questo esempio l'utente può specificare se copiare anche le sottodirectory. In caso affermativo, le sottodirectory vengono copiate in modo ricorsivo dal metodo di esempio, che chiama se stesso su ogni successiva sottodirectory finché non ci sono più sottodirectory da copiare.  
@@ -30,10 +30,11 @@ Questo esempio mostra come usare classi di I/O per copiare in modo sincronizzato
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IO.FileInfo>  
- <xref:System.IO.DirectoryInfo>  
- <xref:System.IO.FileStream>  
- [I/O di file e di flussi](../../../docs/standard/io/index.md)  
- [Attività di I/O comuni](../../../docs/standard/io/common-i-o-tasks.md)  
- [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.IO.FileInfo>  
+- <xref:System.IO.DirectoryInfo>  
+- <xref:System.IO.FileStream>  
+- [I/O di file e di flussi](../../../docs/standard/io/index.md)  
+- [Attività di I/O comuni](../../../docs/standard/io/common-i-o-tasks.md)  
+- [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md)

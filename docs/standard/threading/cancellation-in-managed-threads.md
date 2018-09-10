@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a764912e46707b6f10e720f95a7d971ec4fc8e15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 088faaf454d3b188cff681fb7c41f3966b2e93fd
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592171"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44228104"
 ---
 # <a name="cancellation-in-managed-threads"></a>Annullamento in thread gestiti
 A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework usa un modello unificato per l'annullamento cooperativo di operazioni asincrone o di operazioni sincrone a esecuzione prolungata. Questo modello è basato su un oggetto leggero chiamato token di annullamento. L'oggetto che richiama una o più operazioni annullabili, ad esempio tramite la creazione di nuovi thread o attività, passa il token a ogni operazione. Singole operazioni possono a loro volta passare copie del token ad altre operazioni. In un secondo momento, l'oggetto che ha creato il token può usarlo per richiedere che le operazioni arrestino le rispettive attività. Solo l'oggetto richiedente può inviare la richiesta di annullamento e ogni listener è responsabile del rilevamento della richiesta e della relativa risposta in modo appropriato e tempestivo.  
@@ -148,5 +148,6 @@ A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NE
   
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> sono esempi di classi che seguono queste linee guida. Per altre informazioni, vedere [Annullamento delle attività](../../../docs/standard/parallel-programming/task-cancellation.md) e [Procedura: Annullare un query PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Nozioni di base sul threading gestito](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Nozioni di base sul threading gestito](../../../docs/standard/threading/managed-threading-basics.md)

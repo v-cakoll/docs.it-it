@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e72f87bd4a33491df46576629971c60af4630ce3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1e771a95542153dfad0981d3198e6b4c31cdeb9
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571891"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264259"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Utilizzo di gestori eccezioni filtrati dall'utente
 In Visual Basic sono attualmente supportate eccezioni filtrate dall'utente. I gestori di eccezioni filtrati dall'utente intercettano e gestiscono le eccezioni in base a requisiti definiti dall'utente per le singole eccezioni. Tali gestori usano l'istruzione **Catch** con la parola chiave **When**.  
@@ -46,4 +46,5 @@ End Try
 ```  
 
 ## <a name="see-also"></a>Vedere anche
-[Eccezioni](index.md)
+
+- [Eccezioni](index.md)

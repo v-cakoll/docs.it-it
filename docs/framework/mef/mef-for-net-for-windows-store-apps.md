@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26c2c6cd701f15ca950d399cf3074ee229534d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cb7807fbfc1fbaf039fd7aef04331210dfa7cfa
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388859"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227415"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF per .NET per app Windows Store
 <xref:System.Composition?displayProperty=nameWithType> e i relativi spazi dei nomi figlio contengono i tipi per sviluppare app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] estendibili mediante Managed Extensibility Framework (MEF). Questi spazi dei nomi fanno parte del subset [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] per il sistema operativo [!INCLUDE[win8](../../../includes/win8-md.md)].  
@@ -24,9 +24,9 @@ ms.locfileid: "33388859"
   
 -   <xref:System.Composition.Hosting.Core?displayProperty=nameWithType> fornire i tipi MEF usati internamente dal motore di composizione.  
   
- Per altre informazioni su [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e un elenco degli spazi dei nomi e dei tipi contenuti, vedere [Panoramica di .NET per le app di Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=238312) nel Centro sviluppatori Windows.  
+ Per altre informazioni su [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e un elenco degli spazi dei nomi e dei tipi contenuti, vedere [Panoramica di .NET per le app di Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=238312) nel Centro sviluppatori Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di .NET per le app di Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=238312)  
- [.NET per app di Windows Store – API supportate](http://go.microsoft.com/fwlink/p/?LinkID=247912)  
+ [Panoramica di .NET per le app di Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=238312)  
+ [.NET per app di Windows Store – API supportate](https://go.microsoft.com/fwlink/p/?LinkID=247912)  
  [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)

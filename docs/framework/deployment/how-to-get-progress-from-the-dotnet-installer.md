@@ -10,11 +10,11 @@ ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43472046"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268994"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procedura: ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] è un runtime ridistribuibile. Se si sviluppano applicazioni per questa versione di .NET Framework, è possibile includere (a catena) l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] come un componente prerequisito nell'impostazione dell'applicazione. Per offrire un'esperienza d'installazione personalizzata o unificata, si consiglia di avviare l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] in modo invisibile all'utente, tenendone traccia visualizzando lo stato di avanzamento dell'installazione dell'app. Per abilitare la gestione invisibile, l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], che può essere controllata, definisce un protocollo usando un segmento di I/O mappato alla memoria (MMIO) per comunicare con l'installazione, ovvero con il watcher o il chainer. Questo protocollo definisce una modalità per il chainer per ottenere lo stato di avanzamento, i risultati dettagliati, per rispondere ai messaggi e per annullare l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

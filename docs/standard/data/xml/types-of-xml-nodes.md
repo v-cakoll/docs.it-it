@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f62a113865a481276c371f2fce55a5d9486eb00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572210"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261957"
 ---
 # <a name="types-of-xml-nodes"></a>Tipi di nodi XML
 Quando un documento XML viene letto in memoria come un albero di nodi, il tipo dei nodi viene deciso al momento della creazione. Nel DOM (Document Object Model) XML sono presenti diversi tipi di nodi, determinati dal W3C (World Wide Web Consortium) ed elencati nella sezione 1.1.1 The DOM Structure Model. Nella tabella seguente vengono elencati i tipi di nodi, l'oggetto assegnato a quel tipo di nodo e una breve descrizione di ciascuno.  
@@ -39,12 +39,13 @@ Quando un documento XML viene letto in memoria come un albero di nodi, il tipo d
 |<xref:System.Xml.XmlDeclaration>|Rappresenta il nodo della dichiarazione `<?xml version="1.0"…>`.|  
 |<xref:System.Xml.XmlSignificantWhitespace>|Rappresenta gli spazi vuoti significativi, ovvero gli spazi vuoti nel contenuto misto.|  
 |<xref:System.Xml.XmlWhitespace>|Rappresenta gli spazi vuoti nel contenuto di un elemento.|  
-|EndElement|Restituito quando **XmlReader** raggiunge la fine di un elemento.<br /><br /> Esempio di codice XML: **\</item>**<br /><br /> Per altre informazioni, vedere <xref:System.Xml.XmlNodeType>.|  
-|EndEntity|Restituito quando **XmlReader** raggiunge la fine della sostituzione dell'entità come risultato di una chiamata a <xref:System.Xml.XmlReader.ResolveEntity%2A>. Per altre informazioni, vedere <xref:System.Xml.XmlNodeType>.|  
+|EndElement|Restituito quando **XmlReader** raggiunge la fine di un elemento.<br /><br /> Esempio di codice XML: **\</item>**<br /><br /> Per ulteriori informazioni, vedere <xref:System.Xml.XmlNodeType>.|  
+|EndEntity|Restituito quando **XmlReader** raggiunge la fine della sostituzione dell'entità come risultato di una chiamata a <xref:System.Xml.XmlReader.ResolveEntity%2A>. Per ulteriori informazioni, vedere <xref:System.Xml.XmlNodeType>.|  
   
  Per visualizzare un esempio di codice che legge nell'XML e usa un costrutto di maiuscole e minuscole nei tipi di nodo per stampare informazioni sul nodo e sul relativo contenuto, vedere <xref:System.Xml.XmlSignificantWhitespace.NodeType%2A>.  
   
  Per altre informazioni sulla gerarchia di oggetti dei tipi di nodo e il nome di oggetto equivalente, vedere [Gerarchia del modello a oggetti di documenti XML (Document Object Model, DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md). Per altre informazioni sugli oggetti creati nell'albero dei nodi, vedere [Mapping della gerarchia di oggetti in dati XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
