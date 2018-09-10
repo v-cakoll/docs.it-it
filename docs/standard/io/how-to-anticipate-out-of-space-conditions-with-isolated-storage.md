@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b99803970b205e3dbbb1d78c9bdaf0fefa73a04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575580"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207720"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Procedura: Anticipare le condizioni di spazio insufficiente con lo spazio di memorizzazione isolato
 Il codice che usa lo spazio di memorizzazione isolato è vincolato da una [quota](../../../docs/standard/io/isolated-storage.md#quotas) che specifica la dimensione massima per il raggruppamento dati in cui si trovano file e directory dello spazio di memorizzazione isolato. La quota è definita da criteri di sicurezza e può essere configurata dagli amministratori. Se la dimensione massima consentita viene superata quando si prova a scrivere dati, viene generata un'eccezione <xref:System.IO.IsolatedStorage.IsolatedStorageException> e l'operazione non riesce. In questo modo, è possibile impedire attacchi Denial of Service dannosi che possono causare il rifiuto delle richieste da parte dell'applicazione perché l'archivio dati è pieno.  
@@ -45,7 +45,8 @@ Il codice che usa lo spazio di memorizzazione isolato è vincolato da una [quota
  [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]
  [!code-vb[Conceptual.IsolatedStorage#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source7.vb#8)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [Spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md)  
- [Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- [Spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md)  
+- [Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

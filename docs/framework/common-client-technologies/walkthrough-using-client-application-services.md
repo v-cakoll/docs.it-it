@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: 9193dc56a0f92daf486d95666ba820cb09d588d0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745370"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43788928"
 ---
 # <a name="walkthrough-using-client-application-services"></a>Procedura dettagliata: utilizzo di servizi delle applicazioni client
 Questo argomento descrive come creare un'applicazione Windows che usa i servizi delle applicazioni client per autenticare gli utenti e recuperare impostazioni e ruoli utente.  
@@ -69,7 +69,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
  A questo punto l'applicazione è configurata per accedere a tutti e tre i servizi dallo stesso host. Nella sezione successiva verrà creato l'host come semplice applicazione del servizio Web in modo che sia possibile testare la configurazione client.  
   
 ## <a name="creating-the-application-services-host"></a>Creazione dell'host per i servizi delle applicazioni  
- In questa sezione verrà creata una semplice applicazione servizio Web in grado di accedere ai dati dell'utente da un file di database di SQL Server Compact locale. Quindi, il database verrà popolato usando lo [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Questa semplice configurazione consente di testare rapidamente l'applicazione client. In alternativa, è possibile configurare l'host del servizio Web per accedere ai dati dell'utente da un database SQL Server completo o mediante le classi personalizzate <xref:System.Web.Security.MembershipProvider> e <xref:System.Web.Security.RoleProvider> . Per altre informazioni, vedere [Creating and Configuring the Application Services Database for SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
+ In questa sezione verrà creata una semplice applicazione servizio Web in grado di accedere ai dati dell'utente da un file di database di SQL Server Compact locale. Quindi, il database verrà popolato usando lo [ASP.NET Web Site Administration Tool](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Questa semplice configurazione consente di testare rapidamente l'applicazione client. In alternativa, è possibile configurare l'host del servizio Web per accedere ai dati dell'utente da un database SQL Server completo o mediante le classi personalizzate <xref:System.Web.Security.MembershipProvider> e <xref:System.Web.Security.RoleProvider> . Per altre informazioni, vedere [Creazione e configurazione del database dei servizi dell'applicazione per SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
   
  Nella procedura seguente viene creato e configurato il servizio Web di AppServices.  
   
@@ -105,7 +105,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
      Gli elementi `authenticationService`, `profileService`e `roleService` in questo markup abilitano e configurano i servizi delle applicazioni. Ai fini dell'esecuzione del test, l'attributo `requireSSL` dell'elemento `authenticationService` viene impostato su "false". Gli attributi `readAccessProperties` e `writeAccessProperties` dell'elemento `profileService` indicano che la proprietà `WebSettingsTestText` è di lettura/scrittura.  
   
     > [!NOTE]
-    >  Nel codice di produzione è consigliabile accedere al servizio di autenticazione sempre tramite SSL (Secure Sockets Layer) usando il protocollo HTTPS. Per informazioni sulla configurazione di SSL, vedere [Configurazione di SSL (Secure Sockets Layer) nella guida operativa di IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=91844).  
+    >  Nel codice di produzione è consigliabile accedere al servizio di autenticazione sempre tramite SSL (Secure Sockets Layer) usando il protocollo HTTPS. Per informazioni sulla configurazione di SSL, vedere [Configurazione di SSL (Secure Sockets Layer) nella guida operativa di IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=91844).  
   
     ```xml  
     <system.web.extensions>  
@@ -538,6 +538,6 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
  [Servizi applicazioni client](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Cenni preliminari sui servizi delle applicazioni client](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Procedura: Configurare i servizi delle applicazioni client](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [Strumento Amministrazione sito Web di ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
- [Creazione e configurazione del database dei servizi dell'applicazione per SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
- [Procedura dettagliata: utilizzo di servizi delle applicazioni client](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)
+ [Strumento Amministrazione sito Web di ASP.NET](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [Creazione e configurazione del database dei servizi dell'applicazione per SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
+ [Procedura dettagliata: utilizzo di servizi delle applicazioni client](https://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

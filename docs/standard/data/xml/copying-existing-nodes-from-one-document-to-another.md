@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca36ffdd2eb5eb3acfbacbd543eebf17cfffb5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 744c97e8728d0a65bff8e7bb7a7dbb298afe1800
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573926"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44088089"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Copia di nodi esistenti da un documento all'altro
 Il metodo **ImportNode** è il meccanismo con il quale un nodo o un intero sottoalbero di nodi viene copiato da un oggetto **XmlDocument** a un altro. Il nodo restituito dalla chiamata è una copia del nodo dal documento di origine, inclusi i valori degli attributi, il nome del nodo, il tipo di nodo e tutti gli attributi relativi allo spazio dei nomi quali il prefisso, il nome locale e l'URI dello spazio dei nomi. Il documento di origine non viene modificato. Dopo aver importato il nodo, è necessario aggiungerlo all'albero usando uno dei metodi di inserimento dei nodi.  
@@ -40,5 +40,6 @@ Il metodo **ImportNode** è il meccanismo con il quale un nodo o un intero sotto
 > [!NOTE]
 >  Sebbene sia possibile importare nodi DocumentType, un documento può disporre di un unico DocumentType. Pertanto, una volta importato il tipo di documento, prima di inserirlo nell'albero è necessario verificare che non sia presente alcun tipo di documento nel documento stesso. Per informazioni sulla rimozione dei nodi, vedere [Rimozione di nodi, contenuto e valori da un documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

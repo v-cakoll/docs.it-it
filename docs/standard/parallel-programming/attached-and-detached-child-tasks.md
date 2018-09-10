@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f31402e78a15289bb996c63e1e8e3cd98e6aac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590772"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188267"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Attività figlio connesse e disconnesse
 Un'*attività figlio* (o *attività annidata*) è un'istanza <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> creata nel delegato dell'utente di un'altra attività, noto come *attività padre*. Un'attività figlio può essere scollegata o collegata. Un'*attività figlio scollegata* è un'attività eseguita indipendentemente dall'attività padre. Un'*attività figlio collegata* è un'attività annidata creata con l'opzione <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> alla quale l'attività padre non impedisce il collegamento in modo esplicito o per impostazione predefinita. Un'attività può creare un numero qualsiasi di attività figlio collegate e scollegate, limitato solo dalle risorse di sistema.  
@@ -78,6 +78,7 @@ Un'*attività figlio* (o *attività annidata*) è un'istanza <xref:System.Thread
   
  Se l'attività figlio non viene completata in modo tempestivo, è anche possibile impedirne il collegamento all'attività padre. Poiché un'attività padre non viene completata fino al completamento di tutte le attività figlio, un'attività figlio a esecuzione prolungata può influire negativamente sulle prestazioni dell'applicazione. Per un esempio in cui viene spiegato come migliorare le prestazioni dell'applicazione impedendo il collegamento di un'attività all'attività padre, vedere [Procedura: Impedire il collegamento di un'attività figlio all'attività padre](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)  
- [Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)  
+- [Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

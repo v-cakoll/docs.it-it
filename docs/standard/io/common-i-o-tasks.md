@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf0caa0513881d5a1096478d8b29fc708ac3d3ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577655"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210221"
 ---
 # <a name="common-io-tasks"></a>Attività di I/O comuni
 Lo spazio dei nomi <xref:System.IO> fornisce molte classi che consentono di eseguire diverse operazioni, ad esempio la lettura e la scrittura, su file, directory e flussi. Per altre informazioni, vedere [I/O di file e di flussi](../../../docs/standard/io/index.md).  
@@ -53,7 +53,8 @@ Lo spazio dei nomi <xref:System.IO> fornisce molte classi che consentono di eseg
 |Ottenere la dimensione di una directory|Classe <xref:System.IO.Directory?displayProperty=nameWithType>|  
 |Verificare se una directory esiste|Metodo <xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Vedere anche  
- [I/O di file e di flussi](../../../docs/standard/io/index.md)  
- [Composizione dei flussi](../../../docs/standard/io/composing-streams.md)  
- [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md)
+## <a name="see-also"></a>Vedere anche
+
+- [I/O di file e di flussi](../../../docs/standard/io/index.md)  
+- [Composizione dei flussi](../../../docs/standard/io/composing-streams.md)  
+- [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md)

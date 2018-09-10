@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fed73c0a9c9bb4fba2644d76f470a8bdcace2b83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6d4f63dacc09208176b47dbca38783f1e9bc0a1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572928"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194721"
 ---
 # <a name="xpath-namespace-navigation"></a>Navigazione dello spazio dei nomi XPath
 Per usare le query XPath con i documenti XML, è necessario indirizzare correttamente gli spazi dei nomi XML e gli elementi da questi contenuti. Gli spazi dei nomi evitano le ambiguità che si possono verificare quando i nomi vengono usati in più contesti; ad esempio il nome `ID` potrebbe far riferimento a più identificatori associati a diversi elementi di un documento XML. La sintassi dello spazio dei nomi specifica gli URI, i nomi e i prefissi che distinguono gli elementi di un documento XML.  
@@ -70,6 +70,7 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
   
  La precisione assicurata dalla qualifica completa degli spazi dei nomi e dei nomi non è soltanto utile, infatti da un breve esperimento con la definizione di documento e il codice degli esempi precedenti è possibile constatare che la navigazione senza nomi di elementi completi genera eccezioni. Ad esempio la definizione di elemento: `<Search xmlns="http://schemas.microsoft.com/v1/Search">` e la query: stringa `xpath = "/s:Envelope/s:Body/Search";` senza il prefisso dello spazio dei nomi nell'elemento `Search` restituisce `null` invece dell'elemento `Search`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Accesso ai dati XML con XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- [Selezione, valutazione e corrispondenza di dati XML con XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Accesso ai dati XML con XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+- [Selezione, valutazione e corrispondenza di dati XML con XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

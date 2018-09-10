@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 3c6315daf08ce9931263aa5fb27c80a0bf41ef79
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f719dd010f2910a12b22fac10ae92f1a6bfe8438
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43473986"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43741830"
 ---
 # <a name="methods-c-programming-guide"></a>Metodi (Guida per programmatori C#)
 Un metodo è un blocco di codice che contiene una serie di istruzioni. Un programma fa in modo che le istruzioni vengano eseguite chiamando il metodo e specificando gli argomenti del metodo obbligatori. In C#, ogni istruzione eseguita viene attuata nel contesto di un metodo. Il metodo principale è il punto di ingresso per ogni applicazione C# e viene chiamato da Common Language Runtime (CLR) quando viene avviato il programma.  
@@ -150,20 +150,21 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Per altre informazioni, vedere [Iteratori](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Per altre informazioni, vedere [Iteratori](../../../csharp/programming-guide/concepts/iterators.md).  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Classi e struct](index.md)  
- [Modificatori di accesso](access-modifiers.md)  
- [Classi statiche e membri di classi statiche](static-classes-and-static-class-members.md)  
- [Ereditarietà](inheritance.md)  
- [Classi e membri delle classi astratte e sealed](abstract-and-sealed-classes-and-class-members.md)  
- [params](../../../csharp/language-reference/keywords/params.md)  
- [return](../../../csharp/language-reference/keywords/return.md)  
- [out](../../../csharp/language-reference/keywords/out.md)  
- [ref](../../../csharp/language-reference/keywords/ref.md)  
- [Passaggio di parametri](passing-parameters.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Classi e struct](index.md)  
+- [Modificatori di accesso](access-modifiers.md)  
+- [Classi statiche e membri di classi statiche](static-classes-and-static-class-members.md)  
+- [Ereditarietà](inheritance.md)  
+- [Classi e membri delle classi astratte e sealed](abstract-and-sealed-classes-and-class-members.md)  
+- [params](../../../csharp/language-reference/keywords/params.md)  
+- [return](../../../csharp/language-reference/keywords/return.md)  
+- [out](../../../csharp/language-reference/keywords/out.md)  
+- [ref](../../../csharp/language-reference/keywords/ref.md)  
+- [Passaggio di parametri](passing-parameters.md)

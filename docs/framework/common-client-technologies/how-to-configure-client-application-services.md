@@ -5,11 +5,11 @@ helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
 ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43399238"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861624"
 ---
 # <a name="how-to-configure-client-application-services"></a>Procedura: configurare i servizi delle applicazioni client
 In questo argomento viene descritto come usare **Creazione progetti** di Visual Studio per abilitare e configurare i servizi delle applicazioni client. È possibile usare i servizi delle applicazioni client per convalidare gli utenti e recuperare i ruoli utente e le impostazioni da un servizio dell'applicazione [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] esistente. Dopo la configurazione, è possibile accedere ai servizi abilitati nel codice dell'applicazione come descritto in [Cenni preliminari sui servizi delle applicazioni client](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Per altre informazioni sui servizi delle applicazioni [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], vedere l'argomento relativo ai [Panoramica sui servizi delle applicazioni ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  

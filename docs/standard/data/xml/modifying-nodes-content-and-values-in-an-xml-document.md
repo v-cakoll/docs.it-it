@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 716270450a5f0ede545ffcbd906b0a42f547c20f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571436"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208582"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modifica di nodi, contenuto e valori in un documento XML
 Sono disponibili molti modi per modificare i nodi e il contenuto in un documento. È possibile:  
@@ -46,5 +46,6 @@ Sono disponibili molti modi per modificare i nodi e il contenuto in un documento
   
  L'aggiunta o la rimozione di un figlio in sola lettura da un nodo che può essere modificato è un'operazione valida. Ma se si tenta di modificare il nodo in sola lettura, viene generato un tipo <xref:System.InvalidOperationException>. Un esempio di questa situazione è la modifica dei nodi figlio di un nodo <xref:System.Xml.XmlEntityReference>. Poiché i nodi figlio sono in sola lettura, non possono essere modificati e se si tenta di modificarli, viene generato un tipo <xref:System.InvalidOperationException>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

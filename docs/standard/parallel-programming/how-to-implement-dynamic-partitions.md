@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bffc25cb5c3ae3671fdf6018158b81549c360e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2d46264113cb4c961f6c4b971b5986bdd9eb6a7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580432"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180972"
 ---
 # <a name="how-to-implement-dynamic-partitions"></a>Procedura: implementare partizioni dinamiche
 L'esempio seguente mostra come implementare un oggetto <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> personalizzato che implementa il partizionamento dinamico e che può essere usato da determinati overload <xref:System.Threading.Tasks.Parallel.ForEach%2A> e da PLINQ.  
@@ -28,6 +28,7 @@ L'esempio seguente mostra come implementare un oggetto <xref:System.Collections.
   
  Questo è un esempio di partizionamento in blocchi, con ogni blocco costituito da un elemento. Fornendo più elementi per volta, è possibile ridurre il conflitto sul blocco e ottenere in teoria prestazioni più veloci. A un certo punto, tuttavia, blocchi più grandi potrebbero richiedere logica di bilanciamento del carico aggiuntiva per mantenere occupati tutti i thread fino al completamento del lavoro.  
   
-## <a name="see-also"></a>Vedere anche  
- [Partitioner personalizzati per PLINQ e TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)  
- [Procedura: Implementare un partitioner per il partizionamento statico](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Partitioner personalizzati per PLINQ e TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)  
+- [Procedura: Implementare un partitioner per il partizionamento statico](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

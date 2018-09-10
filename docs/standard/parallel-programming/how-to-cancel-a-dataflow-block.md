@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2684473f82eb156bf8762c9797503324f318632d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa37909c76da804112464daacea6244f1c321516
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584905"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085199"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Procedura: annullare un blocco di flussi di dati
 In questo documento viene dimostrato come abilitare l'annullamento nell'applicazione. In questo esempio Windows Form viene usato per mostrare dove gli elementi di lavoro sono attivi in una pipeline del flusso di dati, nonché gli effetti dell'annullamento.  
@@ -96,5 +96,6 @@ In questo documento viene dimostrato come abilitare l'annullamento nell'applicaz
   
  ![The Windows Forms Application](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
-## <a name="see-also"></a>Vedere anche  
- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 758ce84390c9ba47e3eb56e1feb293a4cf0408a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570565"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188143"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Rimozione di attributi da un nodo di elemento nel DOM
 Sono disponibili numerosi metodi per rimuovere gli attributi. Una tecnica consiste nel rimuoverli dalla raccolta di attributi. Per eseguire questa operazione, attenersi alla procedura seguente:  
@@ -39,5 +39,6 @@ Sono disponibili numerosi metodi per rimuovere gli attributi. Una tecnica consis
   
  Quando viene chiamato con <xref:System.Xml.XmlAttribute>, il metodo <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> imposta il valore dell'attributo su String.Empty, in quanto un attributo non può esistere senza un valore.  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

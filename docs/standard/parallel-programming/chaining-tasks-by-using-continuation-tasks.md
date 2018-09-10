@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5c5cd2fd4d9c334d45a52e23bb0d320abd13cb5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 308b834a133798104dcc47a16f8adc068ed937ec
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389503"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188345"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Concatenamento di attività tramite attività di continuazione
 Nella programmazione asincrona è molto comune che un'operazione asincrona, al completamento, richiami una seconda operazione e vi passi i dati. Tradizionalmente, a questo scopo vengono usati metodi callback. In Task Parallel Library la stessa funzionalità viene resa possibile dalle *attività di continuazione*. Un'attivazione di continuazione, chiamata anche semplicemente continuazione, è un'attività asincrona richiamata da un'altra attività, denominata *attività precedente*, al termine di quest'ultima.  
@@ -149,5 +149,6 @@ Nella programmazione asincrona è molto comune che un'operazione asincrona, al c
   
 -   Se la continuazione è un'attività figlio collegata creata usando l'opzione <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>, le eccezioni verranno propagate dall'attività padre di nuovo al thread di chiamata, come nel caso di qualsiasi altra attività figlio collegata. Per altre informazioni, vedere [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md) (Attività figlio connesse e disconnesse).  
   
-## <a name="see-also"></a>Vedere anche  
- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b224e758eb5b0e07c76f055f22bfe827789f07ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574839"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209958"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Quando utilizzare una raccolta thread-safe
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduce cinque nuovi tipi di raccolta creati specificamente per il supporto di operazioni di aggiunta e rimozione multithread. Per ottenere la thread safety, questi nuovi tipi usano vari nuovi meccanismi di sincronizzazione, sia di blocco che senza blocco. La sincronizzazione aggiunge sovraccarico a un'operazione. La quantità di sovraccarico dipende dal tipo di sincronizzazione usato, dal tipo di operazioni eseguite e da altri fattori, quali il numero di thread che provano ad accedere contemporaneamente alla raccolta.  
@@ -62,7 +62,8 @@ ms.locfileid: "33574839"
 ## <a name="blockingcollection"></a>BlockingCollection  
  Quando è necessaria la semantica di delimitazione e blocco, è probabile che l'esecuzione di <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> risulti più rapida di quella di qualsiasi implementazione personalizzata. Supporta anche funzionalità complete di annullamento, enumerazione e gestione eccezioni.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)  
- [Programmazione parallela](../../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)  
+- [Programmazione parallela](../../../../docs/standard/parallel-programming/index.md)

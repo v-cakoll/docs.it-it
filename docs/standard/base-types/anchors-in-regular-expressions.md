@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948589"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085186"
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancoraggi in espressioni regolari
 <a name="top"></a> Gli ancoraggi, o asserzioni atomiche di larghezza zero, specificano una posizione della stringa in cui deve verificarsi una corrispondenza. Quando si usa un ancoraggio nell'espressione di ricerca, il motore delle espressioni regolari non avanza nella stringa né utilizza caratteri, ma cerca una corrispondenza solo nella posizione specificata. Ad esempio, `^` specifica che la corrispondenza deve iniziare all'inizio di una riga o stringa. Di conseguenza, l'espressione regolare `^http:` considera la corrispondenza "http:" solo quando si verifica all'inizio di una riga. La tabella seguente contiene gli ancoraggi supportati dalle espressioni regolari in .NET.  
@@ -174,6 +174,7 @@ ms.locfileid: "36948589"
 |`qu`|Trova la sottostringa "qu".|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 8c71acf2-2c18-4f4d-8cdb-0728639265fd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f829fc0b399f5cfd10d98f6b7439de757674f11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8be9b4eef30333fbbdc26915635d17157176d6fc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586373"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208179"
 ---
 # <a name="reader-writer-locks"></a>Blocchi in lettura/scrittura
 La classe <xref:System.Threading.ReaderWriterLockSlim> consente a più thread di leggere una risorsa contemporaneamente, ma richiede a un thread di rimanere in attesa di un blocco esclusivo per poter scrivere nella risorsa.  
@@ -27,8 +27,9 @@ La classe <xref:System.Threading.ReaderWriterLockSlim> consente a più thread di
 > [!NOTE]
 >  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] include due blocchi in lettura/scrittura, ovvero <xref:System.Threading.ReaderWriterLockSlim> e <xref:System.Threading.ReaderWriterLock>. <xref:System.Threading.ReaderWriterLockSlim> è consigliato per tutte le nuove fasi di sviluppo. <xref:System.Threading.ReaderWriterLockSlim> è simile a <xref:System.Threading.ReaderWriterLock>, ma include regole semplificate per la ricorsione e per l'aggiornamento e il downgrade dello stato del blocco. <xref:System.Threading.ReaderWriterLockSlim> evita molti casi di deadlock potenziale. Inoltre, le prestazioni di <xref:System.Threading.ReaderWriterLockSlim> sono significativamente migliori di <xref:System.Threading.ReaderWriterLock>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.ReaderWriterLockSlim>  
- <xref:System.Threading.ReaderWriterLock>  
- [Threading](../../../docs/standard/threading/index.md)  
- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Threading.ReaderWriterLockSlim>  
+- <xref:System.Threading.ReaderWriterLock>  
+- [Threading](../../../docs/standard/threading/index.md)  
+- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)

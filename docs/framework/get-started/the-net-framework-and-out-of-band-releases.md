@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c0ea6590a53748c9ed85a6d13f67b260ce23af5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e0572d2f4afb2b8637d2411102e466b25b2b703
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390286"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856816"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework e rilascio fuori programma
 L'evoluzione di .NET Framework includerà diverse piattaforme, tra cui app Windows Phone e Windows Store, nonché app desktop e Web tradizionali, e consentirà di ottimizzare il riutilizzo del codice. Oltre ai regolari rilasci di .NET Framework, verranno rese disponibili nuove funzionalità fuori banda per migliorare lo sviluppo per più piattaforme o introdurre alcune novità. In questo argomento verrà illustrato l'orientamento futuro di .NET Framework e dei rilasci fuori banda.  
@@ -48,7 +48,7 @@ I rilasci fuori banda per i componenti principali di Common Language Runtime (CL
  Come accennato in precedenza, quando si distribuisce un'app che utilizza un pacchetto fuori banda, all'interno di quest'ultimo verranno forniti gli assembly fuori banda.  
   
 ## <a name="types-of-oob-releases"></a>Tipi di rilasci fuori banda  
- In genere, un pacchetto fuori banda contiene una o più versioni preliminari e una versione stabile. La licenza fornita con una versione preliminare non consente in genere la ridistribuzione, ma permette di provare un pacchetto e fornire feedback. Il feedback è incorporato in qualsiasi aggiornamento apportato al pacchetto. Una versione finale viene distribuita come pacchetto stabile con NuGet e include una licenza che consente di ridistribuire il pacchetto NuGet con l'app. I pacchetti stabili sono supportati da Microsoft. Microsoft fornisce il supporto IntelliSense insieme ad altri tipi di documentazione come i post di blog e le risposte dei forum per tutti i pacchetti. Inoltre, il codice sorgente può essere disponibile solo con alcuni pacchetti. Per ricevere annunci relativi ai pacchetti nuovi e aggiornati, è possibile sottoscrivere il [blog di .NET Framework](http://blogs.msdn.com/b/dotnet/).  
+ In genere, un pacchetto fuori banda contiene una o più versioni preliminari e una versione stabile. La licenza fornita con una versione preliminare non consente in genere la ridistribuzione, ma permette di provare un pacchetto e fornire feedback. Il feedback è incorporato in qualsiasi aggiornamento apportato al pacchetto. Una versione finale viene distribuita come pacchetto stabile con NuGet e include una licenza che consente di ridistribuire il pacchetto NuGet con l'app. I pacchetti stabili sono supportati da Microsoft. Microsoft fornisce il supporto IntelliSense insieme ad altri tipi di documentazione come i post di blog e le risposte dei forum per tutti i pacchetti. Inoltre, il codice sorgente può essere disponibile solo con alcuni pacchetti. Per ricevere annunci relativi ai pacchetti nuovi e aggiornati, è possibile sottoscrivere il [blog di .NET Framework](https://blogs.msdn.com/b/dotnet/).  
   
  Per trovare sia i pacchetti provvisori che quelli stabili, scegliere **Includi versione provvisoria** in Gestisci pacchetti NuGet.  
   

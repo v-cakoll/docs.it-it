@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c3cfa371394e76aab832c3dd4b065eb811413322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568625"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209987"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Recupero di nodi ordinati in base all'indice
 Il DOM (Document Object Model) XML W3C (World Wide Web Consortium) descrive anche un oggetto NodeList, che ha la capacità di gestire un elenco ordinato di nodi, mentre i set non ordinati sono gestiti da **XmlNamedNodeMap**. L'oggetto NodeList in Microsoft .NET Framework è denominato **XmlNodeList**. I metodi e le proprietà che restituiscono un oggetto **XmlNodeList** sono:  
@@ -94,5 +94,6 @@ End While
   
  Per altre informazioni sui metodi e sulle proprietà disponibili per **XmlNodeList**, vedere <xref:System.Xml.XmlNodeList>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

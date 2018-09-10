@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1907841694cde82cebada4a9e73b8ce703208611
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576129"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206062"
 ---
 # <a name="localizability-review"></a>Revisione della localizzabilità
 La revisione della localizzabilità è un passaggio intermedio nello sviluppo di un'applicazione internazionale. Viene verificato che un'applicazione globalizzata sia pronta per la localizzazione e viene identificato qualsiasi codice o aspetto dell'interfaccia utente per cui è richiesta una gestione speciale. Questo passaggio consente di garantire che durante il processo di localizzazione non verranno introdotti difetti funzionali nell'applicazione. Quando tutti i problemi generati dall'analisi della localizzazione vengono risolti, l'applicazione è pronta per la localizzazione. Se la revisione della localizzabilità è completa, non è necessario modificare nessun codice sorgente durante il processo di localizzazione.  
@@ -73,8 +73,9 @@ La revisione della localizzabilità è un passaggio intermedio nello sviluppo di
   
  Se durante lo sviluppo dell'applicazione sono stati seguiti i consigli per la globalizzazione, le funzionalità dipendenti dalle impostazioni cultura sono state gestite correttamente e i problemi di localizzazione riscontrati durante i test sono stati identificati e risolti, è possibile procedere al passaggio successivo, [Localizzazione](../../../docs/standard/globalization-localization/localization.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  
- [Localizzazione](../../../docs/standard/globalization-localization/localization.md)  
- [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)  
- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  
+- [Localizzazione](../../../docs/standard/globalization-localization/localization.md)  
+- [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)  
+- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)

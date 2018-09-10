@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ce3b59db027ffebf616a035b018629cb7aed30c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3cc6e4d96378cfd8c065a3b04aab865f9b787438
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569772"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086722"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Procedura: aggiungere zeri iniziali a un numero
 È possibile aggiungere degli zeri iniziali a un numero intero usando la [stringa di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md) "D" con un identificatore di precisione. È possibile aggiungere zeri iniziali sia ai numeri interi che ai numeri a virgola mobile usando una [stringa di formato numerico personalizzata](../../../docs/standard/base-types/custom-numeric-format-strings.md). In questo argomento viene illustrato come usare entrambi i metodi per aggiungere un numero con gli zeri iniziali.  
@@ -46,7 +46,7 @@ ms.locfileid: "33569772"
   
 2.  Determinare se si vuole visualizzare il valore di tipo Integer come valore decimale o esadecimale. Se si formatta come valore decimale, è necessario usare l'identificatore di formato standard "D", mentre come valore esadecimale è necessario usare l'identificatore di formato "X".  
   
-3.  Determinare la lunghezza della stringa numerica non aggiunta chiamando il metodo `ToString("D").Length` o `ToString("X").Length` del valore di tipo Integer.  
+3.  Determine la lunghezza della stringa numerica non aggiunta chiamando il metodo `ToString("D").Length` o `ToString("X").Length` del valore di tipo Integer.  
   
 4.  Aggiungere il numero di zeri iniziali da includere nella stringa formattata nella lunghezza della stringa numerica non aggiunta. In questo modo si definisce la lunghezza totale della stringa aggiunta.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "33569772"
   
 1.  Determinare il numero di zeri iniziali che deve avere il valore numerico.  
   
-2.  Determinare il numero di cifre alla sinistra del decimale nella stringa numerica non aggiunta. Per eseguire questa operazione:  
+2.  Determine il numero di cifre alla sinistra del decimale nella stringa numerica non aggiunta. Per eseguire questa operazione:  
   
     1.  Determinare se la rappresentazione della stringa di un numero include un simbolo di separatore decimale.  
   
@@ -93,7 +93,8 @@ ms.locfileid: "33569772"
  [!code-csharp[Formatting.HowTo.PadNumber#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#4)]
  [!code-vb[Formatting.HowTo.PadNumber#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#4)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md)

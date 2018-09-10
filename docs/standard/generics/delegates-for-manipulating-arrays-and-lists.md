@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 566a2e5e8587dc6d6d2259a5f79f5c59c2e60c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8266db66abb46ffc9503bdaeaf4ec4078177760
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576295"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44174991"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Delegati generici per la modifica di matrici ed elenchi
 Questo argomento offre una panoramica dei delegati generici per conversioni, predicati di ricerca e azioni da eseguire sugli elementi di una matrice o di una raccolta.  
@@ -41,10 +41,11 @@ Questo argomento offre una panoramica dei delegati generici per conversioni, pre
 ### <a name="chaining-delegates"></a>Concatenamento di delegati  
  Molti dei metodi che usano i delegati restituiscono una matrice o un elenco che è possibile passare a un altro metodo. Se ad esempio si desidera selezionare alcuni elementi di una matrice, convertirli in un nuovo tipo e salvarli in una nuova matrice, è possibile passare la matrice restituita dal metodo generico <xref:System.Array.FindAll%2A> al metodo generico <xref:System.Array.ConvertAll%2A>. Se il nuovo tipo di elemento è privo di un ordinamento naturale, è possibile passare la matrice restituita dal metodo generico <xref:System.Array.ConvertAll%2A> al metodo generico <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [Generics](../../../docs/standard/generics/index.md)  
- [Raccolte generiche in .NET Framework](../../../docs/standard/generics/collections.md)  
- [Interfacce generiche](../../../docs/standard/generics/interfaces.md)  
- [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [Generics](../../../docs/standard/generics/index.md)  
+- [Raccolte generiche in .NET Framework](../../../docs/standard/generics/collections.md)  
+- [Interfacce generiche](../../../docs/standard/generics/interfaces.md)  
+- [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md)

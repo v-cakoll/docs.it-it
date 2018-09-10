@@ -21,11 +21,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 29077a1c0f2b803270adb730e0d810143095e709
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484980"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526542"
 ---
 # <a name="managing-connections"></a>Gestione di connessioni
 Le applicazioni che usano HTTP per connettersi alle risorse di dati possono usare le classi <xref:System.Net.ServicePoint> e <xref:System.Net.ServicePointManager> di .NET Framework per gestire le connessioni a Internet e ottenere prestazioni e scalabilità ottimali.  

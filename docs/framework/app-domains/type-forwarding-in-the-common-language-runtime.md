@@ -10,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9945b66f9d9fcdfb075bd48f5f56f30f2fdf7712
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d25bac953ff68422a1dddc54bdb01b4b4f241cbb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192106"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Inoltro dei tipi in Common Language Runtime
 L'inoltro dei tipi consente di spostare un tipo in un altro assembly senza dover ricompilare le applicazioni in cui viene utilizzato l'assembly originale.  
@@ -43,9 +44,9 @@ L'inoltro dei tipi consente di spostare un tipo in un altro assembly senza dover
   
 3.  Compilare l'assembly in cui è ora contenuto il tipo.  
   
-4.  Ricompilare l'assembly originale del tipo, con un riferimento all'assembly in cui è ora contenuto il tipo. Se ad esempio si compila un file C# dalla riga di comando, utilizzare l'opzione [/reference (C# Compiler Options)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) per specificare l'assembly contenente il tipo. In C++ utilizzare la direttiva [#using](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) nel file di origine per specificare l'assembly contenente il tipo.  
+4.  Ricompilare l'assembly originale del tipo, con un riferimento all'assembly in cui è ora contenuto il tipo. Se ad esempio si compila un file C# dalla riga di comando, utilizzare l'opzione [/reference (C# Compiler Options)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) per specificare l'assembly contenente il tipo. In C++ utilizzare la direttiva [#using](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) nel file di origine per specificare l'assembly contenente il tipo.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
  [Inoltro del tipo (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
- [Direttiva #using](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)
+ [Direttiva #using](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)

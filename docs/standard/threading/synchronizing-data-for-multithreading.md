@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 998e159cceded6da2e9c3068680c45bc1c9345a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591531"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180137"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizzazione dei dati per il multithreading
 Se più thread sono in grado di effettuare chiamate alle proprietà e ai metodi di un singolo oggetto, è essenziale che tali chiamate siano sincronizzate. In caso contrario un thread potrebbe interrompere le operazioni eseguite da un altro thread e l'oggetto potrebbe rimanere in uno stato non valido. Una classe i cui membri sono protetti da tali interruzioni è detta thread-safe.  
@@ -67,9 +67,10 @@ Se più thread sono in grado di effettuare chiamate alle proprietà e ai metodi 
 ## <a name="synchronized-context"></a>Contesto sincronizzato  
  È possibile usare **SynchronizationAttribute** per qualsiasi **ContextBoundObject** per sincronizzare tutti i campi e i metodi di istanza. Tutti gli oggetti nello stesso dominio di contesto condividono lo stesso blocco. Più thread possono accedere ai metodi e ai campi, ma è consentito un singolo thread alla volta.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)  
- [Panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
- [Istruzione SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
- [Istruzione lock](~/docs/csharp/language-reference/keywords/lock-statement.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
+- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)  
+- [Panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
+- [Istruzione SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- [Istruzione lock](~/docs/csharp/language-reference/keywords/lock-statement.md)

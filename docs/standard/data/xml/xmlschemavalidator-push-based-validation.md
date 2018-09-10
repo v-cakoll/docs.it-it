@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 36d91d4bd479c1592ae0b3f98d227947686188d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4d1d5602ff224c1c8f3e0948fc93c9200b9661e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579600"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44189076"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Convalida basata sul metodo push di XmlSchemaValidator
 La classe <xref:System.Xml.Schema.XmlSchemaValidator> fornisce un meccanismo efficiente e a elevate prestazioni per la convalida basata sul metodo push di dati XML in base a schemi XML. Ad esempio, la classe <xref:System.Xml.Schema.XmlSchemaValidator> consente di convalidare un infoset XML sul posto senza la necessità di serializzarlo come documento XML e di eseguire nuovamente l'analisi del documento mediante un lettore XML di convalida.  
@@ -477,5 +477,6 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 > [!NOTE]
 >  La chiamata dei metodi descritti nella tabella precedente non influisce sul valore restituito dalle diverse proprietà della classe <xref:System.Xml.Schema.XmlSchemaValidator>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.Schema.XmlSchemaValidator>
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Xml.Schema.XmlSchemaValidator>

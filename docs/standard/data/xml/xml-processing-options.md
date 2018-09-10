@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 902c82f77240c957cc6070c9437b95d0c89fca53
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4e0d0a2a8d8c7fd75da7f2109619d588eac7b4a6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105349"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863020"
 ---
 # <a name="xml-processing-options"></a>Opzioni di elaborazione XML
 Per un elenco di tecnologie Microsoft usabili per l'elaborazione dei dati XML, vedere le tabelle riportate di seguito.  
@@ -33,7 +33,8 @@ Per un elenco di tecnologie Microsoft usabili per l'elaborazione dei dati XML, v
 |[XmlLite](https://msdn.microsoft.com/library/ms752872.aspx)|- Parser XML rapido, sicuro, che non supporta la memorizzazione nella cache, di tipo forward-only con cui è possibile compilare applicazioni XML a elevate prestazioni.<br />- È compatibile con qualsiasi linguaggio che usa DLL. Se ne consiglia l'uso con C++.|  
 |[MSXML](https://msdn.microsoft.com/library/ms763742.aspx)|- Tecnologia basata su COM per l'elaborazione di codice XML inclusa nel sistema operativo Windows.<br />- Fornisce un'implementazione nativa di DOM con supporto per XPath e XSLT.<br />- Contiene il parser SAX2 basato su eventi.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Elaborare dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
- [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Compilatore XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Elaborare dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+- [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [Compilatore XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

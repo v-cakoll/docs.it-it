@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8f29b1274e6e8436aed0dfb698ede4864a15417
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef0d47ae18b8bdd3f1d49a20937b65e9872ab551
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569503"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201751"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Procedura: eseguire una trasformazione XSLT utilizzando un assembly
 Il compilatore XSLT (xsltc.exe) consente di compilare fogli di stile XSLT e di generare un assembly. L'assembly può essere passato direttamente nel metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
@@ -181,8 +181,9 @@ xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))
   
  nell'esempio precedente. Per altre informazioni sul metodo Assembly.Load, vedere <xref:System.Reflection.Assembly.Load%2A>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.Xsl.XslCompiledTransform>  
- [Compilatore XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Compilazione dalla riga di comando con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Xml.Xsl.XslCompiledTransform>  
+- [Compilatore XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
+- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [Compilazione dalla riga di comando con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

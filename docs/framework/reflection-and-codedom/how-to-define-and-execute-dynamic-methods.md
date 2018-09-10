@@ -12,11 +12,11 @@ ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 865d9aa6806e00bb9cf7b3991b4f323d361cbb63
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43487458"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43785300"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Procedura: definire ed eseguire metodi dinamici
 Le procedure seguenti illustrano come definire ed eseguire un metodo dinamico semplice e un metodo dinamico associato a un'istanza di una classe. Per altre informazioni sui metodi dinamici, vedere la classe <xref:System.Reflection.Emit.DynamicMethod> e [Scenari relativi a metodi dinamici della reflection emit](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e).  

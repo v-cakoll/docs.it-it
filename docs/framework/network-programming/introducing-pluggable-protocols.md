@@ -25,12 +25,12 @@ ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ef674855d1b9d6538e08ea2bb95f1f63e602d61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aad12f48409216e8833b9cb6bffbd35b84f40091
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396390"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513772"
 ---
 # <a name="introducing-pluggable-protocols"></a>Introduzione ai protocolli di collegamento
 Microsoft .NET Framework offre un'implementazione a livelli, estendibile e gestita di servizi Internet che possono essere integrati rapidamente e facilmente nelle applicazioni. Le classi di accesso a Internet negli spazi dei nomi <xref:System.Net> e <xref:System.Net.Sockets> possono essere usate per implementare applicazioni basate sul Web e basate su Internet.  
@@ -73,4 +73,4 @@ Microsoft .NET Framework offre un'implementazione a livelli, estendibile e gesti
  [Programmazione di protocolli di collegamento](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)  
  [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Esempi di rete per .NET in MSDN Code Gallery](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [Esempi di rete per .NET in MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

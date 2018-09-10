@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d51f6c8e7dc03edb2823f61ab638fc669847dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574933"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211814"
 ---
 # <a name="selecting-a-collection-class"></a>Selezione di una classe Collection
 Assicurarsi di scegliere con attenzione la classe Collection, poiché l'uso del tipo errato può limitare l'uso della raccolta. In generale, evitare di usare i tipi nello spazio dei nomi <xref:System.Collections> a meno che la destinazione specifica non sia .NET Framework versione 1.1. È preferibile usare le versioni generiche e simultanee delle raccolte per via di una maggiore indipendenza dai tipi e di altri miglioramenti.  
@@ -79,8 +79,9 @@ Assicurarsi di scegliere con attenzione la classe Collection, poiché l'uso del 
   
  PLINQ fornisce un'implementazione parallela di LINQ to Objects in grado di offrire un'esecuzione più rapida delle query in molti scenari, grazie a un uso più efficiente dei computer multicore. Per altre informazioni, vedere [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections>  
- <xref:System.Collections.Specialized>  
- <xref:System.Collections.Generic>  
- [Raccolte thread-safe](../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Collections>  
+- <xref:System.Collections.Specialized>  
+- <xref:System.Collections.Generic>  
+- [Raccolte thread-safe](../../../docs/standard/collections/thread-safe/index.md)

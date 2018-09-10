@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 919dc097d32451c6123e68f8bf4b8f41808f89da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49935c471d10e438763e41b07944047b0924af09
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591677"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864670"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms
 Questo documento illustra come creare una rete di blocchi di flussi di dati tramite cui viene eseguita l'elaborazione di immagini in una Windows Forms Application.  
@@ -131,5 +131,6 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
  ![Windows Forms Application](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_Cancellation")  
 
-## <a name="see-also"></a>Vedere anche  
- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

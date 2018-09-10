@@ -7,12 +7,12 @@ ms.assetid: 9b43f8b4-89d7-46a7-89fc-71aca916dd32
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e491754b1c6c96e6afa9b172200cfb564307a8a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5dc6ee0f2c832e3274a1e58808acfdb56ae804c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395074"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862978"
 ---
 # <a name="ftp"></a>FTP
 .NET Framework offre supporto completo per il protocollo FTP con le classi <xref:System.Net.FtpWebRequest> e <xref:System.Net.FtpWebResponse>. Queste classi sono derivate da <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse>. Nella maggior parte dei casi, le classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> rendono disponibile tutto ciò che serve per eseguire la richiesta. Se tuttavia è necessario accedere alle funzionalità specifiche di FTP esposte come proprietà, è possibile eseguire il cast di tipo di queste classi a <xref:System.Net.FtpWebRequest> o <xref:System.Net.FtpWebResponse>.  
@@ -26,6 +26,6 @@ ms.locfileid: "33395074"
 ## <a name="see-also"></a>Vedere anche  
  [Accesso a Internet con un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
  [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)  
- [FTP Client Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179557) (Esempio di tecnologia client FTP)  
- [FTP Explorer Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179569) (Esempio di tecnologia esplora risorse FTP)  
+ [FTP Client Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179557) (Esempio di tecnologia client FTP)  
+ [FTP Explorer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179569) (Esempio di tecnologia esplora risorse FTP)  
  [Uso di protocolli applicativi](../../../docs/framework/network-programming/using-application-protocols.md)

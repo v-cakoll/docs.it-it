@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b3c36f040b506c23315d40d76642b09c0f362b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591573"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865179"
 ---
 # <a name="exceptions-in-managed-threads"></a>Eccezioni in thread gestiti
 A partire da .NET Framework versione 2.0, Common Language Runtime consente alla maggior parte delle eccezioni non gestite nei thread di proseguire normalmente. Nella maggior parte dei casi questo significa che l'eccezione non gestita provoca l'interruzione dell'applicazione.  
@@ -78,5 +78,6 @@ A partire da .NET Framework versione 2.0, Common Language Runtime consente alla 
 ## <a name="host-override"></a>Override dell'host  
  In .NET Framework versione 2.0 un host non gestito può sfruttare l'interfaccia [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) nell'API di hosting per eseguire l'override del criterio predefinito dell'eccezione non gestita di Common Language Runtime. La funzione [ICLRPolicyManager:: SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) viene usata per impostare il criterio per le eccezioni non gestite.  
   
-## <a name="see-also"></a>Vedere anche  
- [Nozioni di base sul threading gestito](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Nozioni di base sul threading gestito](../../../docs/standard/threading/managed-threading-basics.md)

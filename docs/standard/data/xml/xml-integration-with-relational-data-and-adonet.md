@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e9bdb9b88d51e5435609bbab8bbe21a985505a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d86c590f2d5fe6bc970c2f8ac6de43d3e8485650
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575701"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183145"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Integrazione di XML con dati relazionali e ADO.NET
 La classe **XmlDataDocument** è una classe derivata di **XmlDocument** e contiene dati XML. Il principale vantaggio è costituito dal fatto che **XmlDataDocument** fornisce un collegamento tra i dati relazionali e quelli gerarchici. Si tratta infatti di un elemento di **XmlDocument** che può essere associato a un **DataSet** ed entrambe le classi sono in grado di sincronizzare le modifiche apportate ai dati in esse contenuti. Usando un elemento di **XmlDocument** associato a un **DataSet** è possibile integrare l'XML con i dati relazionali senza dover rappresentare i dati in formato relazionale o XML. È possibile usare entrambe le rappresentazioni di dati, senza essere costretti a usarne una sola.  
@@ -47,5 +47,6 @@ La classe **XmlDataDocument** è una classe derivata di **XmlDocument** e contie
   
  Per informazioni sul caricamento di un **DataSet** da una classe **XmlDataDocument**, vedere [Sincronizzazione di un Dataset con un documento XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di XML in un set di dati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Uso di XML in un set di dati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b169353752f6e6483a056cdc9dd8c3227b9ebeb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 852df5cb3eeea2ee5fa44ddce2f97e9c4f8d8b5a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571451"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185204"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Come usare il blocco try/catch per rilevare le eccezioni
 
@@ -36,5 +36,6 @@ Common Language Runtime rileva le eccezioni non rilevate da un blocco catch. A s
 > [!NOTE] 
 > Quasi tutte le righe di codice possono causare un'eccezione, in particolare eccezioni generate da Common Language Runtime, ad esempio <xref:System.OutOfMemoryException>. Sebbene nella maggior parte delle applicazioni non sia necessario gestire queste eccezioni, considerare questa eventualità quando si creano librerie che devono essere usate da altri utenti. Per suggerimenti su quando impostare il codice di un blocco Try, vedere [Procedure consigliate per le eccezioni](best-practices-for-exceptions.md).
 
-## <a name="see-also"></a>Vedere anche  
-[Eccezioni](index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Eccezioni](index.md)

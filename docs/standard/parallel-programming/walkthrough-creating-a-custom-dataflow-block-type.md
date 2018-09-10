@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fbc81729e8280f3a062cfa8290b102349e80e7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f07f1a2a7c393d70befc42a2c5b090c2c27320c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592147"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868617"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Procedura dettagliata: creazione di un tipo di blocco di flussi di dati personalizzato
 Anche se la libreria di flussi di dati TPL rende disponibili diversi tipi di blocchi di flussi di dati che offrono varie funzionalità, è anche possibile creare tipi di blocchi personalizzati. Questo documento descrive come creare un tipo di blocco di flussi di dati che implementi un comportamento personalizzato.  
@@ -63,5 +63,6 @@ Anche se la libreria di flussi di dati TPL rende disponibili diversi tipi di blo
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**  
 
-## <a name="see-also"></a>Vedere anche  
- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

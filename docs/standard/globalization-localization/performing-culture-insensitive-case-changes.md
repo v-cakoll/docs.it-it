@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f560e3b080f6355d4e0c433c2a2218fbcbc6d72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 844b0edb93b93704c4886495c673dc0496f7ba71
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574660"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192977"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Esecuzione di modifiche di maiuscole e minuscole indipendenti dalle impostazioni cultura
 I metodi <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, e <xref:System.Char.ToLower%2A?displayProperty=nameWithType> forniscono overload che non accettano parametri. Per impostazione predefinita, questi overload senza parametri eseguono modifiche di maiuscole e minuscole in base al valore di <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Ciò produce risultati con distinzione tra maiuscole e minuscole che possono variare in base alle impostazioni cultura. Per definire modifiche di maiuscole e minuscole dipendenti o meno dalle impostazioni cultura, è consigliabile usare gli overload di questi metodi che richiedono di specificare in modo esplicito un parametro `culture`. Per definire modifiche di maiuscole e minuscole dipendenti dalle impostazioni cultura, specificare `CultureInfo.CurrentCulture` per il parametro `culture`. Per definire modifiche indipendenti dalle impostazioni cultura, specificare `CultureInfo.InvariantCulture` per il parametro `culture`.  
@@ -65,11 +65,12 @@ static object LookupKey(string key)
 ```  
   
 ## <a name="using-the-chartoupper-and-chartolower-methods"></a>Uso dei metodi Char.ToUpper e Char.ToLower  
- Sebbene i metodi `Char.ToUpper` e `Char.ToLower` abbiano le stesse caratteristiche dei metodi `String.ToUpper` e `String.ToLower`, le uniche impostazioni cultura su cui hanno effetto sono Turco (Turchia) e Azero (alfabeto latino, Azerbaigian). Queste sono le uniche due impostazioni cultura con differenze di maiuscole e minuscole a carattere singolo. Per informazioni dettagliate su questo mapping di maiuscole e minuscole univoco, vedere la sezione "Maiuscole e minuscole" dell'argomento della classe <xref:System.String>. Per maggiore chiarezza del codice e per garantire risultati coerenti, è consigliabile usare sempre gli overload di questi metodi che consentono di specificare in modo esplicito un parametro `culture`.  
+ Sebbene i metodi `Char.ToUpper` e `Char.ToLower` abbiano le stesse caratteristiche dei metodi `String.ToUpper` e `String.ToLower`, le uniche impostazioni cultura su cui hanno effetto sono Turco (Turchia) e Azerbaigiano (alfabeto latino, Azerbaigian). Queste sono le uniche due impostazioni cultura con differenze di maiuscole e minuscole a carattere singolo. Per informazioni dettagliate su questo mapping di maiuscole e minuscole univoco, vedere la sezione "Maiuscole e minuscole" dell'argomento della classe <xref:System.String>. Per maggiore chiarezza del codice e per garantire risultati coerenti, è consigliabile usare sempre gli overload di questi metodi che consentono di specificare in modo esplicito un parametro `culture`.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
- [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
+- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
+- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
+- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
+- [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

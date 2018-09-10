@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 099e2de40458e42c9df34e74dee8d9fc7c425dea
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072956"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44197314"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Uso della classe StringBuilder in .NET
 L'oggetto <xref:System.String> non è modificabile. Ogni volta che si usa uno dei metodi nella classe <xref:System.String?displayProperty=nameWithType>, si crea un nuovo oggetto stringa in memoria che richiede una nuova allocazione di spazio. In situazioni in cui è necessario modificare ripetutamente una stringa, il sovraccarico associato alla creazione di un nuovo oggetto <xref:System.String> può essere dispendioso. La classe <xref:System.Text.StringBuilder?displayProperty=nameWithType> può essere usata per modificare una stringa senza creare un nuovo oggetto. Ad esempio, l'uso della classe <xref:System.Text.StringBuilder> può migliorare le prestazioni quando si concatenano più stringhe in un ciclo.  
@@ -111,7 +111,8 @@ L'oggetto <xref:System.String> non è modificabile. Ogni volta che si usa uno de
  [!code-csharp[Conceptual.StringBuilder#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/tostringexample1.cs#10)]
  [!code-vb[Conceptual.StringBuilder#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/tostringexample1.vb#10)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)  
- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
+- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)

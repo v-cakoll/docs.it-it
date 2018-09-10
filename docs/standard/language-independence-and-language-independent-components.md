@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf18fb7238eb35b5ceb1624c14b83486485ddc1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90b3e7246046a979f3ee02e332fbb6a843ea9e8c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579626"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864787"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indipendenza del linguaggio e componenti indipendenti dal linguaggio
 .NET Framework è indipendente dal linguaggio. In qualità di sviluppatore, è pertanto possibile usare uno dei numerosi linguaggi destinati a .NET Framework, ad esempio C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL e Windows PowerShell. È possibile accedere a tipi e membri di librerie di classi sviluppate per .NET Framework senza dover conoscere il linguaggio in cui sono stati originariamente scritti e senza dover seguire nessuna delle convenzioni del linguaggio originale. Se si è uno sviluppatore di componenti, l'accesso al componente può essere eseguito da qualsiasi applicazione .NET Framework, indipendentemente dal linguaggio.  
@@ -585,5 +585,6 @@ vbc example.vb /r:UtilityLib.dll
 csc example.cs /r:UtilityLib.dll  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.CLSCompliantAttribute>
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.CLSCompliantAttribute>

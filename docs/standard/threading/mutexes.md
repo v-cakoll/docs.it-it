@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1f3df40a468c7c0f7da0b559ea9b01703cd200a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80379e46c6482a3e052c1283fb4aaba2c7df282e
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590026"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44079175"
 ---
 # <a name="mutexes"></a>Mutex
 È possibile usare un oggetto <xref:System.Threading.Mutex> per fornire l'accesso esclusivo a una risorsa. La classe <xref:System.Threading.Mutex> usa più risorse di sistema della classe <xref:System.Threading.Monitor>, ma è possibile eseguirne il marshalling fra i limiti del dominio dell'applicazione, può essere usata con più condizioni di attesa e può essere usata per sincronizzare i thread in processi diversi. Per un confronto dei meccanismi di sincronizzazione gestiti, vedere [Panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -49,12 +49,13 @@ ms.locfileid: "33590026"
   
  Per informazioni sulla sicurezza del controllo di accesso per i mutex, vedere le classi <xref:System.Security.AccessControl.MutexSecurity> e <xref:System.Security.AccessControl.MutexAccessRule>, l'enumerazione <xref:System.Security.AccessControl.MutexRights>, i metodi <xref:System.Threading.Mutex.GetAccessControl%2A>, <xref:System.Threading.Mutex.SetAccessControl%2A> e <xref:System.Threading.Mutex.OpenExisting%2A> della classe <xref:System.Threading.Mutex> e il costruttore <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.Mutex>  
- <xref:System.Threading.Mutex.%23ctor%2A>  
- <xref:System.Security.AccessControl.MutexSecurity>  
- <xref:System.Security.AccessControl.MutexAccessRule>  
- [Threading](../../../docs/standard/threading/index.md)  
- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)  
- [Monitoraggi](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Threading.Mutex>  
+- <xref:System.Threading.Mutex.%23ctor%2A>  
+- <xref:System.Security.AccessControl.MutexSecurity>  
+- <xref:System.Security.AccessControl.MutexAccessRule>  
+- [Threading](../../../docs/standard/threading/index.md)  
+- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)  
+- [Monitoraggi](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)

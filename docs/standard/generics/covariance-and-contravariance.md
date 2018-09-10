@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80c3a772ae4dfba53982ed28c0bd54f500c50b08
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43466054"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038744"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza e controvarianza nei generics
 <a name="top"></a> La covarianza e la controvarianza sono termini che fanno riferimento alla possibilità di usare un tipo più derivato (più specifico) o un tipo meno derivato (meno specifico) di quanto specificato in origine. I parametri di tipo generico supportano la covarianza e la controvarianza per offrire la massima flessibilità nell'assegnazione e nell'utilizzo dei tipi generici. Quando si fa riferimento a un sistema di tipi, la covarianza, la controvarianza e l'invarianza hanno le seguenti definizioni. Negli esempi si presuppone una classe di base denominata `Base` e una classe derivata denominata `Derived`.  
@@ -188,7 +188,8 @@ ms.locfileid: "43466054"
 |<xref:System.Linq.IOrderedQueryable%601>|Yes||  
 |<xref:System.Linq.IQueryable%601>|Yes||  
   
-## <a name="see-also"></a>Vedere anche  
- [Covarianza e controvarianza (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
- [Covarianza e controvarianza (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
- [Varianza nei delegati](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+## <a name="see-also"></a>Vedere anche
+
+- [Covarianza e controvarianza (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
+- [Covarianza e controvarianza (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
+- [Varianza nei delegati](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

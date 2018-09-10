@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c093f22f77284d15e56c8f1d4a95afbeb75202d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d10384955e07198a4b5ea7202722bea4b831e02
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576103"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207616"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analisi di stringhe di data e ora in .NET
 
@@ -87,9 +87,10 @@ Nell'esempio seguente, al metodo <xref:System.DateTime.ParseExact%2A?displayProp
 
 Ogni overload dei metodi <xref:System.DateTime.Parse%2A> e <xref:System.DateTime.ParseExact%2A> usa anche un parametro <xref:System.IFormatProvider> che indica informazioni specifiche delle impostazioni cultura sulla formattazione della stringa. Questo oggetto <xref:System.IFormatProvider> è un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura standard o un oggetto <xref:System.Globalization.DateTimeFormatInfo> restituito dalla proprietà <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  <xref:System.DateTime.ParseExact%2A> usa anche un argomento stringa o matrice di stringhe aggiuntivo che definisce uno o più formati di data e ora personalizzati.  
 
-## <a name="see-also"></a>Vedere anche  
- [Analisi di stringhe](parsing-strings.md)  
- [Formattazione di tipi](formatting-types.md)  
- [Conversione di tipi in .NET](type-conversion.md)  
- [Formati di data e ora standard](standard-date-and-time-format-strings.md)  
- [Stringhe di formato di data e ora personalizzato](custom-date-and-time-format-strings.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Analisi di stringhe](parsing-strings.md)  
+- [Formattazione di tipi](formatting-types.md)  
+- [Conversione di tipi in .NET](type-conversion.md)  
+- [Formati di data e ora standard](standard-date-and-time-format-strings.md)  
+- [Stringhe di formato di data e ora personalizzato](custom-date-and-time-format-strings.md)

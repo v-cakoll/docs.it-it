@@ -5,12 +5,12 @@ ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 85c190756821ee14fffad600ce7b44029c314ec1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a8230d382cfcf3709a2e4df42758470f3caea4e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397468"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187390"
 ---
 # <a name="network-programming-samples"></a>Esempi di programmazione di rete
 Questa sezione contiene descrizioni e collegamenti per esempi di programmazione di rete scaricabili, che usano le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> e negli spazi dei nomi correlati. 
@@ -28,7 +28,7 @@ Questa sezione contiene descrizioni e collegamenti per esempi di programmazione 
  [HttpListener Technology Sample](https://msdn.microsoft.com/en-us/library/y7cbb2y2(v=vs.85).aspx) (Esempio di tecnologia HttpListener)  
  Mostra come elaborare le richieste HTTP da un'applicazione.  
  
- [HttpListener ASPX Host Application Sample](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))  (Esempio di applicazione host ASPX HttpListener)  
+ [HttpListener ASPX Host Application Sample](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))  (Esempio di applicazione host ASPX HttpListener)  
  Dimostra come usare le funzionalità della classe <xref:System.Net.HttpListener?displayProperty=nameWithType> per creare un server HTTP che instrada le chiamate a un'applicazione ASP.NET ospitata.
   
  [Mailer Technology Sample](https://msdn.microsoft.com/en-us/library/whw7xbk2(v=vs.85).aspx) (Esempio di tecnologia mailer)  

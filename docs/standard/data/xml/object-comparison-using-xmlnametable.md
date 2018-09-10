@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09f717cb4c09c1e35b9472b7b549f1d3edf0dd15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 814f5434dd0473b3b1dd613a2eba14a828c464d9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569278"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862781"
 ---
 # <a name="object-comparison-using-xmlnametable"></a>Confronto di oggetti con XmlNameTable
 Al momento della creazione, ogni **XmlDocument** ha una tabella dei nomi creata specificamente per quel documento. Quando il codice XML viene caricato nel documento o vengono creati nuovi elementi o attributi, i nomi di attributi ed elementi vengono inseriti nella **XmlNameTable**. È anche possibile creare un **XmlDocument** usando una **NameTable** esistente di un altro documento. Quando gli **XmlDocument** vengono creati con il costruttore che accetta un parametro **XmlNameTable**, il documento ha accesso ai nomi dei nodi, agli spazi dei nomi e ai prefissi già archiviati nella **XmlNameTable**. Indipendentemente da come viene caricata la tabella dei nomi, una volta che i nomi vengono archiviati nella tabella, potranno essere confrontati rapidamente, usando il confronto degli oggetti invece del confronto delle stringhe. È anche possibile aggiungere stringhe alla tabella dei nomi usando <xref:System.Xml.NameTable.Add%2A>. L'esempio di codice seguente illustra la creazione di una tabella dei nomi e l'aggiunta alla tabella della stringa **MyString**. Successivamente viene creato un **XmlDocument** usando quella tabella e i nomi degli elementi e degli attributi contenuti in **Myfile.xml** vengono aggiunti alla tabella dei nomi esistente.  
@@ -53,5 +53,6 @@ if (((object)node1.Name) == ((object)node2.Name))
   
  In genere, il passaggio di una tabella dei nomi tra due documenti si verifica quando lo stesso tipo di documento viene elaborato ripetutamente, come nel caso di documenti d'ordine in un sito Web di e-commerce, in modo conforme a uno schema XSD (XML Schema Definition Language) o a una DTD (Document Type Definition), dove si ripetono le stesse stringhe. Usando la stessa tabella dei nomi si ottengono migliori prestazioni in quanto lo stesso nome di elemento ricorre in più documenti.  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

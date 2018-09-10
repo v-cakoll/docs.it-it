@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579574"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221909"
 ---
 # <a name="globalization"></a>Globalizzazione
 La globalizzazione comporta la progettazione e lo sviluppo di un'app internazionalizzata che supporti interfacce localizzate e dati locali per utenti in più impostazioni cultura. Prima di iniziare la fase di progettazione, è necessario determinare quali impostazioni cultura verranno supportate dall'app. Sebbene un'app sia destinata per impostazione predefinita a singole impostazioni cultura o a una singola area, è possibile progettarla e scriverla in modo che possa essere facilmente estesa agli utenti di altre impostazioni cultura o aree.  
@@ -116,7 +116,7 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
   
  I confronti di uguaglianza talvolta comportano ricerche o confronti delle sottostringhe anziché chiamate al metodo <xref:System.String.Equals%2A?displayProperty=nameWithType>. In alcuni casi, si potrebbe usare la ricerca di una sottostringa per determinare se la sottostringa è uguale a un'altra stringa. Se lo scopo di questo confronto non è linguistico, anche la ricerca deve essere ordinale anziché dipendente dalle impostazioni cultura.  
   
- Nell'esempio seguente viene illustrato il rischio di una ricerca dipendente dalle impostazioni cultura su dati non linguistici. Il metodo `AccessesFileSystem` è progettato per impedire l'accesso al file system agli URI che iniziano con la sottostringa "FILE". A tale scopo, esegue un confronto dipendente dalle impostazioni cultura, con distinzione tra maiuscole e minuscole, dell'inizio dell'URI con la stringa "FILE". Poiché un'URI che accede al file system può iniziare con "FILE:" o "file:", il presupposto implicito è che la "i" (U+0069) è sempre l'equivalente minuscolo di "I" (U+0049). Tuttavia, in turco e azero, la versione maiuscola della "i" è "İ" (U+0130). A causa di questa discrepanza, il confronto dipendente dalle impostazioni cultura consente l'accesso al file system anche se non dovesse essere consentito.  
+ Nell'esempio seguente viene illustrato il rischio di una ricerca dipendente dalle impostazioni cultura su dati non linguistici. Il metodo `AccessesFileSystem` è progettato per impedire l'accesso al file system agli URI che iniziano con la sottostringa "FILE". A tale scopo, esegue un confronto dipendente dalle impostazioni cultura, con distinzione tra maiuscole e minuscole, dell'inizio dell'URI con la stringa "FILE". Poiché un'URI che accede al file system può iniziare con "FILE:" o "file:", il presupposto implicito è che la "i" (U+0069) è sempre l'equivalente minuscolo di "I" (U+0049). Tuttavia, in turco e in azerbaigiano, la versione in maiuscolo di "i" è "İ" (U+0130). A causa di questa discrepanza, il confronto dipendente dalle impostazioni cultura consente l'accesso al file system anche se non dovesse essere consentito.  
   
  [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
  [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]  
@@ -369,6 +369,7 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
   
 -   L'utente può personalizzare le impostazioni specifiche di una cultura usando l'app **Area e lingua** nel Pannello di controllo. Quando viene creata un'istanza di un oggetto <xref:System.Globalization.CultureInfo>, è possibile determinare se rifletta le personalizzazioni dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. In genere, per le app degli utenti finali, è necessario rispettare le preferenze dell'utente in modo da offrirgli i dati in un formato che l'utente si aspetta.  
   
-## <a name="see-also"></a>Vedere anche  
- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  
- [Procedure consigliate per l'uso delle stringhe](../../../docs/standard/base-types/best-practices-strings.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  
+- [Procedure consigliate per l'uso delle stringhe](../../../docs/standard/base-types/best-practices-strings.md)

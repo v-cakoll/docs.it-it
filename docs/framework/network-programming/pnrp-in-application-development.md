@@ -5,12 +5,12 @@ ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b085604d7d20eb9222507b4820be219ffeae4726
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55716e7baa382bffbb37dc9248ec1cbd15065ac1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395736"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504618"
 ---
 # <a name="pnrp-in-application-development"></a>PNRP nello sviluppo di applicazioni
 In Windows Vista, le applicazioni di rete possono accedere alle funzioni di risoluzione e pubblicazione dei nomi tramite un'API PNRP semplificata.  
@@ -20,7 +20,7 @@ In Windows Vista, le applicazioni di rete possono accedere alle funzioni di riso
   
  Per semplificare notevolmente la risoluzione dei nomi PNRP in Windows Vista, ora i nomi PNRP possono essere integrati nella funzione getaddrinfo() di Windows Sockets. Per usare PNRP per la risoluzione di un nome in un indirizzo IPv6, le applicazioni possono servirsi della funzione getaddrinfo() per risolvere il nome di dominio completo (FQDN) name.prnp.net, in cui name rappresenta il nome di peer risolto. Il dominio pnrp.net in Windows Vista è un dominio riservato per la risoluzione dei nomi PNRP.  
   
- Il passaggio di messaggi tra le applicazioni PeerToPeer viene ancora gestito da architetture sottostanti, ad esempio PeerChannel e [Dati di grandi dimensioni e flussi](http://go.microsoft.com/fwlink/?LinkID=179652) WCF.  
+ Il passaggio di messaggi tra le applicazioni PeerToPeer viene ancora gestito da architetture sottostanti, ad esempio PeerChannel e [Dati di grandi dimensioni e flussi](https://go.microsoft.com/fwlink/?LinkID=179652) WCF.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Net.PeerToPeer>

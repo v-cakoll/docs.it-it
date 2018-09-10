@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa1049528458d558409ac1ace215c7d5b10f520e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572096"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183486"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Opzioni di output nella classe XslCompiledTransform
 In questo argomento vengono illustrate le opzioni disponibili per l'output di XSLT. È possibile specificare le opzioni di output nel foglio di stile oppure nel metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
@@ -57,5 +57,6 @@ In questo argomento vengono illustrate le opzioni disponibili per l'output di XS
   
 -   Quando si scrivono tag vuoti, viene scritto uno spazio tra l'ultimo carattere del nome dell'elemento e la barra rovesciata, ad esempio `<myElement />`. Questo consente ai browser meno recenti di visualizzare correttamente le pagine HTML generate.  
   
-## <a name="see-also"></a>Vedere anche  
- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

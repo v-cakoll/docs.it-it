@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7834df6c987e94e59357c7c60db2627d107bffc3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43390613"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864550"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gestito e non gestito in Windows
 La gestione di tutti i thread viene eseguita tramite la classe <xref:System.Threading.Thread> , inclusi i thread creati da Common Language Runtime e quelli creati all'esterno dell'ambiente di esecuzione che accedono all'ambiente gestito per eseguire il codice. L'ambiente di esecuzione monitora tutti i thread nei relativi processi che abbiano eseguito codice nell'ambiente di esecuzione gestito. Non tiene traccia di altri thread. I thread possono accedere all'ambiente di esecuzione gestito tramite l'interoperabilità COM (perché il runtime espone gli oggetti gestiti come oggetti COM all'ambiente non gestito), la funzione [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) COM e la funzionalità platform invoke.  
@@ -63,9 +63,10 @@ La gestione di tutti i thread viene eseguita tramite la classe <xref:System.Thre
 ## <a name="blocking-issues"></a>Problemi di blocco  
  Se un thread effettua una chiamata non gestita all'interno del sistema operativo che ha bloccato il thread nel codice non gestito, l'ambiente di esecuzione non ne assumerà il controllo per <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> o <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Nel caso di <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, il runtime contrassegna il thread per **Abort** e ne assume il controllo al rientro nel codice gestito. È preferibile usare il blocco gestito anziché quello non gestito. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> e così via sono tutti reattivi rispetto a <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Inoltre, se il thread è incluso in un apartment a thread singolo, tutte queste operazioni di blocco gestite eseguiranno correttamente il pumping dei messaggi nell'apartment fintanto che il thread è bloccato.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
- <xref:System.Threading.ThreadState>  
- <xref:System.EnterpriseServices.ServicedComponent>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.Monitor>
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.ThreadState>  
+- <xref:System.EnterpriseServices.ServicedComponent>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Monitor>

@@ -16,11 +16,11 @@ ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84b1c10b655fefcd420a0c3cf038dba00e688d3e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461657"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084374"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura
 Per impostazione predefinita, il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> consente di eseguire confronti dipendenti dalle impostazioni cultura e con distinzione tra maiuscole e minuscole. Questo metodo include anche molti overload che forniscono il parametro `culture` che consente di specificare le impostazioni cultura da usare e il parametro `comparisonType` che consente di specificare le regole di confronto da usare. La chiamata di questi metodi invece dell'overload predefinito rimuove qualsiasi ambiguità sulle regole usate in una particolare chiamata al metodo e chiarisce se un particolare confronto dipende o meno dalle impostazioni cultura.  

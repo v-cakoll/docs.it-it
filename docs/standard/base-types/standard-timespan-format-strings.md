@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82774ffaf03b7eaad6240a0361bede076053de0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52da538ba9cf348062905b66a87d13db82a214a0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578307"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085266"
 ---
 # <a name="standard-timespan-format-strings"></a>Stringhe di formato TimeSpan standard
 <a name="Top"></a> Una stringa di formato <xref:System.TimeSpan> standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore <xref:System.TimeSpan> che risulta da un'operazione di formattazione. Le stringhe di formato contenenti più caratteri alfabetici, inclusi gli spazi vuoti, vengono interpretate come stringhe di formato <xref:System.TimeSpan> personalizzato. Per altre informazioni, vedere [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
@@ -130,7 +130,8 @@ ms.locfileid: "33578307"
   
  [Torna alla tabella](#Top)  
   
-## <a name="see-also"></a>Vedere anche  
- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
- [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
+- [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)

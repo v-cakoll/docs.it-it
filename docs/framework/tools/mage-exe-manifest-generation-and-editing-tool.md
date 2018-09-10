@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: d3922d9a81e350fd9ce95ffaa51dc3534873fb97
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754992"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856179"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Strumento per la generazione e la modifica di manifesti)
 
@@ -63,7 +63,7 @@ La tabella seguente illustra le opzioni supportate dai comandi `-New` e `-Update
 |**-pu,** **-ProviderURL** `url`||Manifesti di distribuzione.|Specifica l'URL che verrà esaminato da ClickOnce per verificare la disponibilità di aggiornamenti dell'applicazione.|
 |**-pub, -Publisher** `publisherName`||Manifesti di applicazione.<br /><br /> Manifesti di distribuzione.|Aggiunge il nome dell'editore all'elemento di descrizione del manifesto di distribuzione o del manifesto dell'applicazione. Se usata sul manifesto di un'applicazione, l'opzione **-UseManifestForTrust** deve essere specificata anche con il valore "true" (o "t"). In caso contrario, il parametro genererà un errore.|
 |**-s, -SupportURL**  `url`||Manifesti di applicazione.<br /><br /> Manifesti di distribuzione.|Specifica il collegamento visualizzato per l'applicazione ClickOnce in Installazione applicazioni.|
-|**-ti, -TimestampUri** `uri`||Manifesti di applicazione.<br /><br /> Manifesti di distribuzione.|URL di un servizio di aggiunta di timestamp digitale. L'aggiunta di timestamp nei manifesti evita la necessità di firmarli nuovamente in caso di scadenza del certificato digitale prima della distribuzione della versione successiva dell'applicazione. Per altre informazioni, vedere [Windows root certificate program members](http://go.microsoft.com/fwlink/?LinkId=159000)(Membri del programma Windows Root Certificate).|
+|**-ti, -TimestampUri** `uri`||Manifesti di applicazione.<br /><br /> Manifesti di distribuzione.|URL di un servizio di aggiunta di timestamp digitale. L'aggiunta di timestamp nei manifesti evita la necessità di firmarli nuovamente in caso di scadenza del certificato digitale prima della distribuzione della versione successiva dell'applicazione. Per altre informazioni, vedere [Windows root certificate program members](https://go.microsoft.com/fwlink/?LinkId=159000)(Membri del programma Windows Root Certificate).|
 |**-t, -ToFile** `filePath`|-   Nuovo:<br />-   Distribuzione: deploy.application<br />-   Applicazione: application.exe.manifest<br />-   Aggiornamento:<br />-   File di input.|Tutti i tipi di file.|Specifica il percorso di output del file creato o modificato.<br /><br /> Se non si specifica **-ToFile** quando si usa **-New**, l'output viene scritto nella directory di lavoro corrente. Se non si specifica **-ToFile** quando si usa **-Update**, *Mage.exe* riscrive il file nel file di input.|
 |**-tr, -TrustLevel** `level`|Basato sulla zona in cui risiede l'URL dell'applicazione.|Manifesti di applicazione.|Livello di attendibilità da concedere all'applicazione nei computer client. I valori possibili sono "Internet","Intranet" e "FullTrust".|
 |**-um, -UseManifestForTrust** `willUseForTrust`|False|Manifesti di applicazione.|Specifica se la firma digitale del manifesto dell'applicazione verrà utilizzata per prendere decisioni di attendibilità quando l'applicazione è in esecuzione sul client. Se il valore è impostato su "true" (o "t"), il manifesto dell'applicazione viene utilizzato per prendere decisioni di attendibilità. Se il valore è impostato su "false" (o "f"), verrà utilizzata la firma del manifesto di distribuzione.|

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 913a5d6ab28d375dbfdd99dec6fd153bc94efee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3440e0869bfd131f8a57a74af6105716d4b72935
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573900"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883722"
 ---
 # <a name="latency-modes"></a>Modalità di latenza
 Per recuperare oggetti, tramite il Garbage Collector devono essere arrestati tutti i thread in esecuzione in un'applicazione. In alcune situazioni, ad esempio quando un'applicazione recupera dati o visualizza contenuto, un'operazione completa di Garbage Collection può verificarsi in un momento critico e può ostacolare le prestazioni. È possibile rettificare l'ingerenza del Garbage Collector impostando la proprietà <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> su uno dei valori <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
@@ -54,7 +54,8 @@ Per recuperare oggetti, tramite il Garbage Collector devono essere arrestati tut
   
 -   È possibile forzare le operazioni di Garbage Collection di generazione 2 durante un periodo di bassa latenza chiamando il metodo <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.GC?displayProperty=nameWithType>  
- [Raccolte indotte](../../../docs/standard/garbage-collection/induced.md)  
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.GC?displayProperty=nameWithType>  
+- [Raccolte indotte](../../../docs/standard/garbage-collection/induced.md)  
+- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)

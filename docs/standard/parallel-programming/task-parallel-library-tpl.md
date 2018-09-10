@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1c261928981399722373d826bcc60726ec3f8ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b08154d1be7a8a5699682b3cee3faad4e384269
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581931"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44196842"
 ---
 # <a name="task-parallel-library-tpl"></a>Task Parallel Library (TPL)
 La libreria Task Parallel Library (TPL) è un set di tipi e API pubblici negli spazi dei nomi <xref:System.Threading?displayProperty=nameWithType> e <xref:System.Threading.Tasks?displayProperty=nameWithType>. Lo scopo di TPL è di rendere gli sviluppatori più produttivi mediante la semplificazione del processo di aggiunta di parallelismo e concorrenza alle applicazioni. La libreria TPL ridimensiona il grado di concorrenza dinamicamente per utilizzare in modo efficace tutti i processori disponibili. La libreria TPL gestisce inoltre il partizionamento del lavoro, la pianificazione dei thread in <xref:System.Threading.ThreadPool>, il supporto per l'annullamento, la gestione dello stato e altri dettagli di basso livello. Quando si utilizza TPL, è possibile ottimizzare le prestazioni del codice concentrandosi sulle operazioni per cui il programma è stato progettato.  
@@ -33,5 +33,6 @@ La libreria Task Parallel Library (TPL) è un set di tipi e API pubblici negli s
 |[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|Viene descritto come realizzare il parallelismo dei dati con le query LINQ.|  
 |[Programmazione parallela](../../../docs/standard/parallel-programming/index.md)|Nodo di livello superiore per la programmazione parallela di .NET.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempi di programmazione parallela con .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+## <a name="see-also"></a>Vedere anche
+
+- [Esempi di programmazione parallela con .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

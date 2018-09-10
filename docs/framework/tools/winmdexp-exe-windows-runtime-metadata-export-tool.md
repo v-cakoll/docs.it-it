@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7181f6f28d576c5ddbbbe57d27e1d41e412cef6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a228513bd29e35e8793124846de16f1c8bf4c10
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408099"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208530"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Runtime Metadata Export Tool)
 Lo strumento di esportazione dei metadati di [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) trasforma un modulo .NET Framework in un file che contiene metadati di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Anche se gli assembly .NET Framework e i file di metadati di [!INCLUDE[wrt](../../../includes/wrt-md.md)] utilizzano lo stesso formato fisico, esistono differenze nel contenuto delle tabelle dei metadati, con la conseguenza che gli assembly .NET Framework non sono automaticamente utilizzabili come componenti di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Il processo di trasformazione di un modulo .NET Framework in un componente di [!INCLUDE[wrt](../../../includes/wrt-md.md)] è denominato *esportazione*. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] il file di metadati di Windows (.winmd) risultante contiene sia i metadati che l'implementazione.  
@@ -46,12 +46,12 @@ winmdexp [options] winmdmodule
 |**@** `responsefile`|Specifica un file di risposta (.rsp) contenente le opzioni (e facoltativamente `winmdmodule`). Ogni riga in `responsefile` deve contenere un solo argomento o opzione.|  
   
 ## <a name="remarks"></a>Note  
- Winmdexp.exe non è progettato per convertire un assembly .NET Framework arbitrario in un file .winmd. Richiede un modulo compilato con l'opzione `/target:winmdobj` e prevede delle restrizioni aggiuntive. La più importante di queste restrizioni è che tutti i tipi esposti nella superficie dell'API dell'assembly devono essere tipi di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Per altre informazioni, vedere la sezione "Dichiarazioni di tipi nei componenti Windows Runtime" nell'articolo [Creazione di componenti Windows Runtime in C# e Visual Basic in Windows Dev Center](http://go.microsoft.com/fwlink/p/?LinkID=238313).  
+ Winmdexp.exe non è progettato per convertire un assembly .NET Framework arbitrario in un file .winmd. Richiede un modulo compilato con l'opzione `/target:winmdobj` e prevede delle restrizioni aggiuntive. La più importante di queste restrizioni è che tutti i tipi esposti nella superficie dell'API dell'assembly devono essere tipi di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Per altre informazioni, vedere la sezione "Dichiarazioni di tipi nei componenti Windows Runtime" nell'articolo [Creazione di componenti Windows Runtime in C# e Visual Basic in Windows Dev Center](https://go.microsoft.com/fwlink/p/?LinkID=238313).  
   
- Quando si scrive un'app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] o un componente di [!INCLUDE[wrt](../../../includes/wrt-md.md)] con C# o Visual Basic, .NET Framework fornisce supporto per rendere la programmazione con [!INCLUDE[wrt](../../../includes/wrt-md.md)] più naturale. Questo argomento viene illustrato nell'articolo [Supporto .NET Framework per applicazioni Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). Nel processo, alcuni tipi di uso comune di [!INCLUDE[wrt](../../../includes/wrt-md.md)] vengono mappati ai tipi .NET Framework. Winmdexp.exe inverte questo processo e produce una superficie API che utilizza i tipi di [!INCLUDE[wrt](../../../includes/wrt-md.md)] corrispondenti. Ad esempio, per i tipi che vengono costruiti dall'interfaccia <xref:System.Collections.Generic.IList%601> viene effettuato il mapping ai tipi costruiti dall'interfaccia [IVector\<T>](http://go.microsoft.com/fwlink/p/?LinkId=251132) di [!INCLUDE[wrt](../../../includes/wrt-md.md)].  
+ Quando si scrive un'app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] o un componente di [!INCLUDE[wrt](../../../includes/wrt-md.md)] con C# o Visual Basic, .NET Framework fornisce supporto per rendere la programmazione con [!INCLUDE[wrt](../../../includes/wrt-md.md)] più naturale. Questo argomento viene illustrato nell'articolo [Supporto .NET Framework per applicazioni Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). Nel processo, alcuni tipi di uso comune di [!INCLUDE[wrt](../../../includes/wrt-md.md)] vengono mappati ai tipi .NET Framework. Winmdexp.exe inverte questo processo e produce una superficie API che utilizza i tipi di [!INCLUDE[wrt](../../../includes/wrt-md.md)] corrispondenti. Ad esempio, per i tipi che vengono costruiti dall'interfaccia <xref:System.Collections.Generic.IList%601> viene effettuato il mapping ai tipi costruiti dall'interfaccia [IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) di [!INCLUDE[wrt](../../../includes/wrt-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [.NET Framework Support for Windows Store Apps and Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) (Supporto di .NET Framework per le app di Windows Store e Windows Runtime)  
- [Creazione di componenti Windows Runtime in C# e Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=238313)  
+ [Creazione di componenti Windows Runtime in C# e Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313)  
  [Winmdexp.exe Error Messages](../../../docs/framework/tools/winmdexp-exe-error-messages.md)  
- [Strumenti di compilazione, distribuzione e configurazione (.NET Framework)](http://msdn.microsoft.com/library/b8c921be-6012-4181-b8d4-ab15813fc9a7)
+ [Strumenti di compilazione, distribuzione e configurazione (.NET Framework)](https://msdn.microsoft.com/library/b8c921be-6012-4181-b8d4-ab15813fc9a7)

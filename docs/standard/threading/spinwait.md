@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5bb6262b32201207853ef702ae38002c2ded252
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ff8b5b75d1d69d3d8c88810de1311540a239c52
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585411"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210000"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> è un tipo di sincronizzazione leggera che è possibile usare in scenari di basso livello per evitare i cambi di contesto dispendiosi e le transizioni del kernel necessarie per gli eventi del kernel. Nei computer multicore, quando non si prevede che una risorsa venga bloccata per lunghi periodi di tempo, per un thread in attesa potrebbe essere più efficiente ruotare in modalità utente per alcune decine o centinaia di cicli e quindi ritentare di acquisire la risorsa. Se la risorsa è disponibile dopo la rotazione, vengono risparmiate diverse migliaia di cicli. Se la risorsa continua a non essere disponibile, sono stati usati solo alcuni cicli ed è possibile attivare un'attesa basata sul kernel. Questa combinazione di rotazione-attesa è talvolta detta un *operazione di attesa a due fasi*.  
@@ -29,6 +29,7 @@ ms.locfileid: "33585411"
  [!code-csharp[CDS_SpinWait#05](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait.cs#05)]
  [!code-vb[CDS_SpinWait#05](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinwait/vb/cds_spinwait1.vb#05)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.Thread.SpinWait%2A>  
- [Oggetti e funzionalità del threading](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Threading.Thread.SpinWait%2A>  
+- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)

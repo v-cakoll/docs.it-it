@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a1cafc7ed6e497e5aab9cd33654f3aa3d4d98c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573186"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193263"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Procedura: Eseguire il round trip dei valori di data e ora
 In molte applicazioni un valore di data e ora deve identificare una data e un'ora singole in modo non ambiguo. Questo argomento illustra come salvare e ripristinare un valore <xref:System.DateTime>, un valore <xref:System.DateTimeOffset> e un valore di data e ora con informazioni sul fuso orario, in modo che il valore ripristinato identifichi la stessa ora del valore salvato.  
@@ -99,7 +99,8 @@ In molte applicazioni un valore di data e ora deve identificare una data e un'or
   
 -   Ogni esempio di codice, ad eccezione della classe `DateInTimeZone`, deve essere incluso in una classe o un modulo di Visual Basic, ne deve essere eseguito il wrapping nei metodi e deve essere chiamato dal metodo `Main`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)  
- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

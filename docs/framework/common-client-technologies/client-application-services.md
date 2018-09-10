@@ -18,11 +18,11 @@ helpviewer_keywords:
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
 ms.openlocfilehash: d58510240593f73ff761aa669035f28598006c10
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401583"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522000"
 ---
 # <a name="client-application-services"></a>Servizi applicazioni client
 I servizi delle applicazioni client semplificano la creazione di applicazioni basate su Windows che usano servizi dell'applicazione di accesso, ruoli e profilo di [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] inclusi in Microsoft ASP.NET 2.0 AJAX Extensions. Questi servizi consentono a più applicazioni Web e applicazioni basate su Windows di condividere informazioni utente e funzionalità di gestione degli utenti da un singolo server. Ad esempio, è possibile usare questi servizi per eseguire le seguenti attività:  

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b02fd72c705d264394b83b89fc7ec802be7e502a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575362"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198257"
 ---
 # <a name="traversing-xml-schemas"></a>Attraversamento di schemi XML
 L'attraversamento di uno schema XML mediante l'API del modello SOM (Schema Object Model) consente di accedere a elementi, attributi e tipi archiviati nel modello SOM. Tale attraversamento rappresenta inoltre il primo passaggio per la modifica di uno schema XML tramite l'API del modello SOM.  
@@ -67,11 +67,12 @@ L'attraversamento di uno schema XML mediante l'API del modello SOM (Schema Objec
   
  Nell'esempio di codice dell'argomento [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md) è stata usata la raccolta <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> per aggiungere l'attributo `CustomerId` all'elemento `Customer`. Questa è una proprietà precedente alla compilazione dello schema. La proprietà PSCI corrispondente è la raccolta <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, che contiene tutti gli attributi del tipo complesso, inclusi quelli ereditati tramite una derivazione del tipo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

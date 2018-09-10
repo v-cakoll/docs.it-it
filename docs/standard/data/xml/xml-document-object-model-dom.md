@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23be7e47dbe54d95eb29ef3b3cb169caeee3eff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b98aa5b62718a2ff19cb50a09de1a0ddf55ddb91
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579366"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087192"
 ---
 # <a name="xml-document-object-model-dom"></a>XML DOM (Document Object Model)
 La classe DOM (Document Object Model) XML è una rappresentazione in memoria di un documento XML. Il modello DOM consente di leggere e modificare un documento XML a livello di codice. Anche la classe **XmlReader** è in grado di leggere un documento XML, tuttavia essa fornisce un accesso non memorizzato nella cache, di tipo forward-only e di sola lettura. Questo significa che con **XmlReader** non sono disponibili funzionalità per la modifica dei valori di un attributo o del contenuto di un elemento, né per l'inserimento e la rimozione di nodi. La modifica è la funzione primaria del DOM. È il modo comune e strutturato in cui i dati XML vengono rappresentati nella memoria, sebbene i dati XML effettivi siano archiviati in modo lineare all'interno di un file o quando provengono da un altro oggetto. Di seguito sono riportati i dati XML.  
@@ -76,6 +76,7 @@ Struttura del documento XML
   
  Il DOM è particolarmente utile per la lettura dei dati XML in memoria per modificarne la struttura, per aggiungere o rimuovere nodi o per modificare i dati appartenenti a un nodo come nel testo contenuto da un elemento. Tuttavia, sono disponibili altre classi che sono più rapide del DOM in altri scenari. Per ottenere accesso al flusso XML di tipo forward-only e non memorizzato nella cache, usare **XmlReader** e **XmlWriter**. Se invece è necessario un accesso casuale con un modello a cursore e **XPath**, usare la classe **XPathNavigator**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di nodi XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
- [Mapping della gerarchia di oggetti in dati XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Tipi di nodi XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [Mapping della gerarchia di oggetti in dati XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

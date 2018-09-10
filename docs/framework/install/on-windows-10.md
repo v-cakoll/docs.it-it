@@ -5,16 +5,16 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: cf374f9d1fd7e343e5eba868d3f686784428a2d0
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: b7c7b8d16463cd66eb8a0a5e383dd3763af323d8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270448"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857193"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Installare .NET Framework in Windows 10 e Windows Server 2016
 
-.NET Framework è necessario per l'esecuzione di diverse applicazioni in Windows. Le istruzioni contenute in questo articolo consentono di installare le versioni di .NET Framework necessarie. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) è la versione più recente disponibile.
+.NET Framework è necessario per l'esecuzione di diverse applicazioni in Windows. Le istruzioni contenute in questo articolo consentono di installare le versioni di .NET Framework necessarie. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) è la versione più recente disponibile.
 
 È possibile che si sia arrivati a questa pagina dopo avere provato a eseguire un'applicazione e avere visualizzato sul computer una finestra di dialogo simile a quella seguente:
 
@@ -29,9 +29,9 @@ ms.locfileid: "36270448"
 > [!div class="button"]
 [Scaricare .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) può essere usato per eseguire le applicazioni create per le versioni di .NET Framework da 4.0 a 4.7.1.
+[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) può essere usato per eseguire le applicazioni create per le versioni di .NET Framework da 4.0 a 4.7.1.
 
-È possibile installare [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) in:
+È possibile installare [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) in:
 
 * Windows 10 Fall Creators Update (versione 1709)
 * Windows 10 Creators Update (versione 1703)

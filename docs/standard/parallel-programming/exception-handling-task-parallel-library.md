@@ -10,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3deaba0c8589eaa0ba24bc66669f5a76e60467f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877807"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Gestione delle eccezioni (Task Parallel Library)
 Salvo in determinati scenari descritti più avanti in questo argomento, le eccezioni non gestite generate da codice utente in esecuzione in un'attività vengono propagate nel thread di unione. Le eccezioni vengono propagate quando si usa uno dei metodi <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> o <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` statici o di istanza e li si gestisce includendo la chiamata in un'istruzione `try`/`catch`. Se un'attività è il padre di attività figlio connesse o se si è in attesa di più attività, potrebbero essere generate più eccezioni.  
@@ -90,5 +91,6 @@ Salvo in determinati scenari descritti più avanti in questo argomento, le eccez
 ## <a name="unobservedtaskexception-event"></a>Evento UnobservedTaskException  
  In alcuni scenari, ad esempio durante l'hosting di plug-in non attendibili, le eccezioni benigne potrebbero essere comuni e potrebbe risultare troppo difficile osservarle tutte manualmente. In questi casi è possibile gestire l'evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType>. L'istanza di <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> passata al gestore può essere usata per evitare la propagazione dell'eccezione non osservata al thread di unione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - validation [.NET Framework], client application services
 - client application services, authenticate users
 ms.assetid: 5431a671-eb02-4e18-a651-24764fccec9a
-ms.openlocfilehash: 1b1c5bebb5bd94f0a56dc6da303ef2503ab6dd4f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a878b12620faf9a6e9fecbd2e76644aea3d80611
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743810"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504796"
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>Procedura: implementare l'accesso utente con i servizi dell'applicazione client
-È possibile usare i servizi delle applicazioni client per convalidare gli utenti tramite un servizio profili [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] esistente. Per informazioni su come configurare il servizio di profili [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], vedere l'argomento relativo all[Uso dell'autenticazione basata su modulo con Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
+È possibile usare i servizi delle applicazioni client per convalidare gli utenti tramite un servizio profili [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] esistente. Per informazioni su come configurare il servizio di profili [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], vedere l'argomento relativo all[Uso dell'autenticazione basata su modulo con Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
   
  Le procedure seguenti descrivono come convalidare gli utenti tramite il servizio di autenticazione quando l'applicazione è configurata per usare uno dei provider di servizi di autenticazione client. Per altre informazioni, vedere [Procedura: Configurare i servizi delle applicazioni client](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
@@ -59,4 +59,4 @@ ms.locfileid: "32743810"
  [Cenni preliminari sui servizi delle applicazioni client](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Procedura: Configurare i servizi delle applicazioni client](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
  [Procedura dettagliata: uso di servizi delle applicazioni client](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
- [Uso dell'autenticazione basata su form con Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)
+ [Uso dell'autenticazione basata su form con Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)

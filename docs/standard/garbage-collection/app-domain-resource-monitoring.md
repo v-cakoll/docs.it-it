@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45b0f8293b41d42114b189c3ebe917a4f64c4f27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578330"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208757"
 ---
 # <a name="application-domain-resource-monitoring"></a>Monitoraggio delle risorse del dominio applicazione
 Il monitoraggio delle risorse del dominio applicazione permette agli host di monitorare l'utilizzo di CPU e memoria da parte del dominio applicazione. Ciò risulta utile per gli host, come ASP.NET, che usano molti domini applicazione in un processo a esecuzione prolungata. L'host può scaricare il dominio applicazione di un'applicazione che influisce negativamente sulle prestazioni dell'intero processo, ma solo se è in grado di identificare l'applicazione problematica. Il monitoraggio delle risorse del dominio applicazione fornisce informazioni che possono essere usate per prendere questo tipo di decisioni.  
@@ -83,8 +83,9 @@ Il monitoraggio delle risorse del dominio applicazione permette agli host di mon
 #### <a name="hosting-api"></a>API di hosting  
  Se si usa l'API di hosting non gestita, l'host deve passare a CLR un'implementazione dell'interfaccia [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md). CLR chiama il metodo [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) quando riprende l'esecuzione di thread sospesi durante l'esecuzione di una Garbage Collection. CLR passa la generazione della raccolta completata come parametro del metodo, in modo che l'host possa determinare se la raccolta è stata completa o parziale. L'implementazione personalizzata del metodo [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) può eseguire una query per ottenere la memoria esclusa, per assicurarsi che i conteggi vengono recuperati non appena vengono aggiornati.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
- [Interfaccia ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+- [Interfaccia ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)

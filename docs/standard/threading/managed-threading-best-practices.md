@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15261291f40b6a41e0d6033fb92e1b23b4042019
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592470"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204981"
 ---
 # <a name="managed-threading-best-practices"></a>Suggerimenti per l'utilizzo del threading gestito
 Il multithreading richiede un'attenta programmazione. È possibile ridurre la complessità della maggior parte delle attività accodando le richieste di esecuzione tramite thread di pool di thread. In questo argomento vengono analizzate situazioni più complesse, come il coordinamento del lavoro di più thread o la gestione di thread che effettuano un blocco.  
@@ -196,6 +196,7 @@ else {
   
 -   Evitare di specificare metodi statici che modificano lo stato statico. Negli scenari server comuni, lo stato statico viene condiviso tra le richieste e, pertanto, più thread possono eseguire contemporaneamente tale codice. In questo modo è possibile che si verifichino bug dei thread. È consigliabile provare a usare un modello di progettazione che incapsula i dati nelle istanze che non sono condivise tra le richieste. Se si sincronizzano i dati statici, inoltre, le chiamate tra i metodi statici che modificano lo stato possono determinare deadlock o sincronizzazione ridondante e influire negativamente sulle prestazioni.  
   
-## <a name="see-also"></a>Vedere anche  
- [Threading](../../../docs/standard/threading/index.md)  
- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)
+## <a name="see-also"></a>Vedere anche
+
+- [Threading](../../../docs/standard/threading/index.md)  
+- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)

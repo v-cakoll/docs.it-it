@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb1a337c2795627b82125c8c29335c52b5fb332c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570383"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071439"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Creazione di nuovi attributi per gli elementi nel DOM
 La creazione di nuovi attributi è diversa dalla creazione di altri tipi di nodi, perché gli attributi non sono nodi, ma proprietà di un nodo di elemento e sono contenuti in una classe **XmlAttributeCollection** associata all'elemento. Sono disponibili diversi modi per creare un attributo e associarlo a un elemento:  
@@ -124,5 +124,6 @@ doc.DocumentElement.SetAttributeNode(attr);
 ## <a name="attribute-child-nodes"></a>Nodi figlio degli attributi  
  Il valore del nodo di un attributo diviene i nodi figlio dell'attributo stesso. Esistono solo due tipi di nodi figlio validi: i nodi **XmlText** e i nodi **XmlEntityReference**. Si tratta di nodi figlio perché vengono elaborati come tali da metodi come **FirstChild** e **LastChild**. Questa distinzione di un attributo con nodi figlio è importante quando si tenta di rimuovere attributi o nodi figlio degli attributi. Per altre informazioni, vedere [Rimozione di attributi da un nodo di elemento nel DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

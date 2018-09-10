@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476dc75a569224db405eb7498ecb35eb6bda24d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcedd478ee1eb89c11dc9535b1d2ffe843d0f658
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583074"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081329"
 ---
 # <a name="foreground-and-background-threads"></a>Thread in primo piano e in background
 Un thread gestito è un thread in background o un thread in primo piano. I thread in background sono identici ai thread in primo piano con un'unica eccezione: un thread in background non mantiene in esecuzione l'ambiente di esecuzione gestito. Dopo che tutti i thread in primo piano sono stati arrestati in un processo gestito (in cui il file EXE è un assembly gestito), il sistema arresta tutti i thread in background e si arresta.  
@@ -32,7 +32,8 @@ Un thread gestito è un thread in background o un thread in primo piano. I threa
   
  Se si usa un thread per monitorare un'attività, ad esempio una connessione socket, impostarne la proprietà <xref:System.Threading.Thread.IsBackground%2A> su `true` in modo che il thread non impedisca la terminazione del processo.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadAbortException>
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadAbortException>

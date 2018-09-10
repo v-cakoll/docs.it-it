@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3470ebdd55adc97a60f07228c441cb7c94a53e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579158"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084949"
 ---
 # <a name="garbage-collection-notifications"></a>Notifiche di Garbage Collection
 In alcune situazioni un'operazione completa di Garbage Collection (cioè di generazione 2) eseguita da Common Language Runtime può influire negativamente sulle prestazioni. Può essere un problema soprattutto con i server che elaborano grandi volumi di richieste. In questo caso, una lunga procedura di Garbage Collection può provocare un timeout delle richieste. Per evitare che venga eseguita una raccolta completa durante un periodo critico, è possibile essere informati che sta per iniziare una Garbage Collection completa e quindi intraprendere un'azione per reindirizzare il carico di lavoro a un'altra istanza del server. È anche possibile indurre manualmente una raccolta, a condizione che l'istanza del server corrente non sia necessaria per elaborare le richieste.  
@@ -122,5 +122,6 @@ In alcune situazioni un'operazione completa di Garbage Collection (cioè di gene
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)

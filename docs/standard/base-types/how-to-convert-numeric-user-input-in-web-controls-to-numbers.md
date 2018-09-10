@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24016ea68e17aa66432928c43d1de970fc13a55b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571914"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204955"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Procedura: convertire in numeri l'input numerico dell'utente nei controlli Web
 Poiché una pagina Web può essere visualizzata ovunque nel mondo, gli utenti possono immettere dati numerici in un controllo <xref:System.Web.UI.WebControls.TextBox> in un numero praticamente illimitato di formati. Di conseguenza, è molto importante determinare le impostazioni locali e le impostazioni cultura dell'utente della pagina Web. Quando si analizza l'input dell'utente, è quindi possibile applicare le convenzioni di formattazione definite dalle impostazioni locali e dalle impostazioni cultura dell'utente.  
@@ -71,6 +71,7 @@ Poiché una pagina Web può essere visualizzata ovunque nel mondo, gli utenti po
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Per impedire a un utente di inserire script nel flusso HTML, l'input dell'utente non deve essere mai restituito direttamente nella risposta del server. Al contrario, deve essere codificato tramite il metodo <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Analisi di stringhe numeriche](../../../docs/standard/base-types/parsing-numeric.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Analisi di stringhe numeriche](../../../docs/standard/base-types/parsing-numeric.md)

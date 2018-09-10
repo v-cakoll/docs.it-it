@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38519ee90578d0bc13689216fb5674653ead4c19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc8df722acd5c9547833cb4fe3051e1590c6c627
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577215"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087673"
 ---
 # <a name="editing-xml-schemas"></a>Modifica di schemi XML
 La modifica di uno schema XML rappresenta una delle funzionalità più importanti del modello SOM (Schema Object Model). È possibile usare tutte le proprietà del modello SOM precedenti alla compilazione dello schema per modificare i valori esistenti in uno schema XML. Sarà quindi possibile ricompilare lo schema XML per riflettere le modifiche.  
@@ -135,11 +135,12 @@ La modifica di uno schema XML rappresenta una delle funzionalità più important
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

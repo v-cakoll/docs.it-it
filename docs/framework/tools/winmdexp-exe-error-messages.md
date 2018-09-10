@@ -160,11 +160,11 @@ ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43465499"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075457"
 ---
 # <a name="winmdexpexe-error-messages"></a>Messaggi di errore Winmdexp.exe
 Il processo di compilazione chiama [Winmdexp.exe (Strumento di esportazione di metadati di Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) quando si usa il modello **[!INCLUDE[wrt](../../../includes/wrt-md.md)]Componente** in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], pertanto i messaggi di errore di Winmdexp.exe vengono visualizzati in **Elenco errori**. Winmdexp.exe viene utilizzato in un modulo compilato con l'opzione `/target:winmdobj`. Poiché viene richiesto come input un modulo compilato, i messaggi di errore vengono visualizzati solo se la compilazione viene eseguita correttamente.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0830ec4022ca789d9aac0d1ae2c10ae6f76cc75e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579821"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041600"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Costrutti di raggruppamento nelle espressioni regolari
 I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e acquisiscono sottostringhe di una stringa di input. È possibile usare i costrutti di raggruppamento per effettuare le operazioni seguenti:  
@@ -167,8 +167,8 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |Modello|Descrizione|  
 |-------------|-----------------|  
 |`\D+`|Corrisponde a una o più cifre non decimali.|  
-|`(?<digit>\d+)`|Corrisponde a una o più cifre decimali. Assegna la corrispondenza al gruppo denominato `digit` .|  
-|\D+|Corrisponde a una o più cifre non decimali.|  
+|`(?<digit>\d+)`|Corrisponde a una o più cifre decimali. Assegna la corrispondenza al gruppo denominato `digit`.|  
+|`\D+`|Corrisponde a una o più cifre non decimali.|  
 |`(?<digit>\d+)?`|Corrisponde a zero o a un'occorrenza di una o più cifre decimali. Assegna la corrispondenza al gruppo denominato `digit` .|  
   
 <a name="balancing_group_definition"></a>   
@@ -470,6 +470,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Il primo gruppo di acquisizione trova la corrispondenza per ogni parola della frase. Il secondo gruppo di acquisizione trova la corrispondenza per ogni parola insieme alla punteggiatura e allo spazio vuoto che seguono la parola. L'oggetto <xref:System.Text.RegularExpressions.Group> il cui indice è 2 fornisce informazioni sul testo corrispondente in base al secondo gruppo di acquisizione. Il set completo di parole acquisite dal gruppo di acquisizione è disponibile tramite l'oggetto <xref:System.Text.RegularExpressions.CaptureCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

@@ -4,12 +4,12 @@ description: Guida alla scelta dell'implementazione di .NET da prendere in consi
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 541bcdf69d658fd37271169c028fb64611a35655
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934533"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864962"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Scelta di .NET Core o .NET Framework per le app server
 
@@ -103,8 +103,10 @@ Alcune piattaforme Microsoft o di terze parti non supportano .NET Core. Alcuni s
 
 ## <a name="see-also"></a>Vedere anche
 
- [Scegliere tra ASP.NET e ASP.NET Core](/aspnet/core/choose-aspnet-framework) [Framework di destinazione](frameworks.md) [Guida a .NET Core](../core/index.md)  
- [Porting from .NET Framework to .NET Core](../core/porting/index.md) (Portabilità da .NET Framework a .NET Core)  
- [.NET Framework on Docker Guide](../framework/docker/index.md) (Guida a .NET Framework su Docker)  
- [.NET Components Overview](components.md) (Panoramica dei componenti .NET)  
- [.NET Microservices. Architecture for Containerized .NET Applications](microservices-architecture/index.md) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori)
+* [Choose between ASP.NET and ASP.NET Core](/aspnet/core/choose-aspnet-framework) (Scegliere tra ASP.NET e ASP.NET Core)
+* [Framework di destinazione](frameworks.md)
+* [Guida a .NET Core](../core/index.md)  
+* [Porting from .NET Framework to .NET Core](../core/porting/index.md) (Portabilità da .NET Framework a .NET Core)  
+* [.NET Framework on Docker Guide](../framework/docker/index.md) (Guida a .NET Framework su Docker)  
+* [.NET Components Overview](components.md) (Panoramica dei componenti .NET)  
+* [.NET Microservices. Architecture for Containerized .NET Applications](microservices-architecture/index.md) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori)

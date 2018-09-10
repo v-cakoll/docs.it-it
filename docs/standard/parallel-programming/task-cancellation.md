@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b9a9331f62ba9655c20a2e27b3a94dac1903472
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79350178300dde2896f6b22c68d6062bbb57f700
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582688"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865631"
 ---
 # <a name="task-cancellation"></a>Annullamento delle attività
 Le classi <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> supportano l'annullamento tramite l'utilizzo dei token di annullamento in .NET Framework. Per altre informazioni, vedere [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md). Nelle classi Task l'annullamento comporta la cooperazione tra il delegato dell'utente, che rappresenta un'operazione annullabile, e il codice che ha richiesto l'annullamento.  Un annullamento riuscito prevede una chiamata al metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> da parte del codice richiedente, nonché l'interruzione tempestiva dell'operazione da parte del delegato dell'utente. L'operazione può essere interrotta tramite una di queste opzioni:  
@@ -40,6 +40,7 @@ Le classi <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xre
   
  È possibile che un'attività continui a elaborare alcuni elementi dopo la richiesta di annullamento.  
   
-## <a name="see-also"></a>Vedere anche  
- [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- [Procedura: Annullare un'attività e i relativi figli](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
+- [Procedura: Annullare un'attività e i relativi figli](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

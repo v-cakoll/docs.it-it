@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b295c94fda22d4a17fb485add13ec67f1e9ae8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aeb0a8e80a023568f192e832b1e4a3244fc87455
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572021"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085121"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>Accesso agli attributi nel DOM
 Gli attributi sono proprietà dell'elemento, non elementi figlio dell'elemento. Questa distinzione è importante, a causa dei metodi usati per navigare all'interno dei nodi di pari livello, dei nodi padre e dei nodi figlio nel DOM (Document Object Model) XML. Ad esempio, per navigare da un elemento a un attributo o tra più attributi non vengono usati i metodi **PreviousSibling** e **NextSibling**. Un attributo è una proprietà di un elemento e appartiene a tale elemento. Presenta infatti una proprietà **OwnerElement** e non una proprietà **parentNode** e dispone di metodi di navigazione diversi.  
@@ -260,5 +260,6 @@ using System.Xml;
 XmlAttribute attr = doc.DocumentElement.Attributes[0];  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

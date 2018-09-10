@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a601c8f1fed04c839c2a413e4b0e44a75f4195b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29da081784c06d8cd467f0566f9d4db92a130b53
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586143"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087274"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Procedura: scrivere un ciclo Parallel.For semplice
 Questo argomento contiene due esempi che mostrano il metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Il primo usa l'overload del metodo <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType>, mentre il secondo usa l'overload <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, ovvero i due overload più semplici del metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. È possibile usare questi due overload del metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> quando non è necessario annullare il ciclo, interrompere le iterazioni del ciclo o mantenere qualsiasi stato locale dei thread.  
@@ -63,8 +63,9 @@ Questo argomento contiene due esempi che mostrano il metodo <xref:System.Threadi
   
 -   Copiare e incollare questo codice in un progetto di Visual Studio 2010.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.Tasks.Parallel.For%2A>  
- <xref:System.Threading.Tasks.Parallel.ForEach%2A>  
- [Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Threading.Tasks.Parallel.For%2A>  
+- <xref:System.Threading.Tasks.Parallel.ForEach%2A>  
+- [Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)

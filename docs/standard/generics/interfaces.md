@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9d1323918d42884f5e2fdf8a5905d13283c74c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575973"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198478"
 ---
 # <a name="generic-interfaces"></a>Interfacce generiche
 Questo argomento fornisce una panoramica delle interfacce generiche che forniscono funzionalità comuni a famiglie di tipi generici.  
@@ -42,10 +42,11 @@ Questo argomento fornisce una panoramica delle interfacce generiche che fornisco
   
  L'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601> fornisce una struttura di enumeratori generici. L'interfaccia generica <xref:System.Collections.Generic.IEnumerator%601> implementata dagli enumeratori generici eredita l'interfaccia <xref:System.Collections.IEnumerator> non generica e i membri <xref:System.Collections.IEnumerator.MoveNext%2A> e <xref:System.Collections.IEnumerator.Reset%2A>, che non dipendono dal parametro di tipo `T`, vengono visualizzati solo sull'interfaccia non generica. Di conseguenza, qualsiasi consumer dell'interfaccia non generica può usare anche l'interfaccia generica.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [Generics](../../../docs/standard/generics/index.md)  
- [Raccolte generiche in .NET Framework](../../../docs/standard/generics/collections.md)  
- [Delegati generici per la modifica di matrici ed elenchi](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
- [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [Generics](../../../docs/standard/generics/index.md)  
+- [Raccolte generiche in .NET Framework](../../../docs/standard/generics/collections.md)  
+- [Delegati generici per la modifica di matrici ed elenchi](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md)

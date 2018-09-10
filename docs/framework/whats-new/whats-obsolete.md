@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6835d159c9c30d09892bad8cc1d20753fe6f21c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514450"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855335"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Elementi obsoleti nella libreria di classi .NET Framework
 .NET Framework cambia nel corso del tempo. In ogni nuova versione vengono aggiunti nuovi tipi e membri dei tipi che forniscono nuove funzionalità. Anche i tipi esistenti e i relativi membri cambiano nel tempo. Alcuni tipi, ad esempio, perdono di importanza in quanto la tecnologia che supportano viene sostituita da una nuova tecnologia, e alcuni metodi vengono sostituiti da altri più nuovi che sono più adatti o più completi in termini di funzionalità.  
@@ -73,13 +73,13 @@ ms.locfileid: "33514450"
  [Membri obsoleti](../../../docs/framework/whats-new/obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>Elenchi di elementi obsoleti per le versioni precedenti  
- [Tipi obsoleti in .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224224)  
+ [Tipi obsoleti in .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
   
- [Membri obsoleti in .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224227)  
+ [Membri obsoleti in .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224227)  
   
- [Elenco degli elementi obsoleti di .NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkId=163710)  
+ [Elenco degli elementi obsoleti di .NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkId=163710)  
   
- [Elenco degli elementi obsoleti di .NET Framework 2.0](http://go.microsoft.com/fwlink/?LinkID=125264)  
+ [Elenco degli elementi obsoleti di .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

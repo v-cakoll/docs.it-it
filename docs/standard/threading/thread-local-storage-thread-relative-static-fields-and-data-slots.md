@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a17bc509c8c82bfb30811ec3511207ca2d823e5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bea5dfd7c53b5b5f53ddab5d4d07ec6a603b14e8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589854"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042231"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Archiviazione locale del thread: slot di dati e campi statici relativi ai thread
 È possibile usare l'archiviazione locale dei thread gestiti per archiviare dati univoci relativi a un thread e un dominio dell'applicazione. In .NET Framework sono disponibili due strumenti per usare l'archiviazione locale dei thread gestiti: i campi statici relativi ai thread e gli slot di dati.  
@@ -57,9 +57,10 @@ ms.locfileid: "33589854"
   
  Gli slot con nome offrono la comodità di poter essere recuperati in qualsiasi momento passandone il nome al metodo <xref:System.Threading.Thread.GetNamedDataSlot%2A>, anziché mantenere un riferimento a uno slot senza nome. Se, tuttavia, un altro componente usa lo stesso nome per la risorsa di archiviazione relativa ai thread e un thread esegue codice sia dal componente in uso che dall'altro componente, i due componenti possono danneggiare l'uno i dati dell'altro. Questo scenario presuppone che entrambi i componenti siano in esecuzione nello stesso dominio dell'applicazione e che non siano progettati per condividere gli stessi dati.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ContextStaticAttribute>  
- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
- <xref:System.ThreadStaticAttribute>  
- <xref:System.Runtime.Remoting.Messaging.CallContext>  
- [Threading](../../../docs/standard/threading/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.ContextStaticAttribute>  
+- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
+- <xref:System.ThreadStaticAttribute>  
+- <xref:System.Runtime.Remoting.Messaging.CallContext>  
+- [Threading](../../../docs/standard/threading/index.md)

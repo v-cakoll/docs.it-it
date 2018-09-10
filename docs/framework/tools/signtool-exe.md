@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1728dee4d0d8d90b8a1e2b2a3f92fc256c6267c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409815"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197459"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (strumento per la firma)
 Lo strumento Firma è uno strumento da riga di comando per la firma digitale dei file, la verifica delle firme e l'aggiunta di timestamp nei file.  
@@ -97,7 +97,7 @@ signtool [command] [options] [file_name | ...]
 |`/u`  *Utilizzo*|Specifica l'utilizzo chiavi avanzato (EKU) che deve essere presente nel certificato di firma. Il valore di utilizzo può essere specificato tramite OID o stringa. L'utilizzo predefinito è "Firma codice" (1.3.6.1.5.5.7.3.3).|  
 |`/uw`|Specifica l'utilizzo di "Verifica dei componenti di sistema Windows" (1.3.6.1.4.1.311.10.3.6).|  
   
- Per esempi di utilizzo, vedere [Using SignTool to Sign a File](http://msdn.microsoft.com/library/windows/desktop/aa388170.aspx) (Uso di SignTool per firmare un file).  
+ Per esempi di utilizzo, vedere [Using SignTool to Sign a File](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file) (Uso di SignTool per firmare un file).  
   
 <a name="TimeStamp"></a>   
 ## <a name="timestamp-command-options"></a>Opzioni del comando TimeStamp  
@@ -111,7 +111,7 @@ signtool [command] [options] [file_name | ...]
 |`/tp` *indice*|Aggiunge un timestamp alla firma in corrispondenza di *indice*.|  
 |`/tr`  *URL*|Specifica l'URL del server di timestamp RFC 3161. È necessario che il file a cui viene aggiunto il timestamp sia stato precedentemente firmato. È richiesta l'opzione `/tr` o `/t`.|  
   
- Per un esempio di utilizzo, vedere [Adding Time Stamps to Previously Signed Files](http://msdn.microsoft.com/library/windows/desktop/aa375542.aspx) (Aggiunta di timestamp ai file firmati precedentemente).  
+ Per un esempio di utilizzo, vedere [Adding Time Stamps to Previously Signed Files](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files) (Aggiunta di timestamp ai file firmati precedentemente).  
   
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>Opzioni del comando Verify  
@@ -128,7 +128,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds`  *Indice*|Verifica la firma in una posizione specificata.|  
 |`/hash` (`SHA1`&#124;`SHA256`)|Specifica un algoritmo hash facoltativo da usare quando si cerca un file in un catalogo.|  
 |`/kp`|Specifica che la verifica deve essere eseguita con i criteri di firma del driver in modalità kernel.|  
-|`/ms`|Usa semantica di verifica multipla. Questo è il comportamento predefinito di una chiamata [WinVerifyTrust](http://msdn.microsoft.com/library/windows/desktop/aa388208.aspx) in [!INCLUDE[win8](../../../includes/win8-md.md)] e versioni successive.|  
+|`/ms`|Usa semantica di verifica multipla. Questo è il comportamento predefinito di una chiamata [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) in [!INCLUDE[win8](../../../includes/win8-md.md)] e versioni successive.|  
 |`/o` *Versione*|Verifica il file in base alla versione del sistema operativo. *Versione* ha il formato seguente: *IDPiattaforma*:*VersionePrincipale*.*VersioneSecondaria*.*NumeroBuild*. *IDPiattaforma* rappresenta il valore sottostante di un membro dell'enumerazione <xref:System.PlatformID>. **Importante:**  è consigliabile l'uso dell'opzione `/o`. Se `/o` non è specificata, è possibile che vengano restituiti risultati imprevisti. Ad esempio, se non si include l'opzione `/o`, i cataloghi di sistema che vengono convalidati correttamente in un sistema operativo precedente potrebbero non essere convalidati correttamente in un sistema operativo più nuovo.|  
 |`/p7`|Verifica i file PKCS #7. Non viene usato alcun criterio esistente per la convalida PKCS #7. La firma viene controllata e viene creata una catena per il certificato di firma.|  
 |`/pa`|Specifica che devono essere usati i criteri di verifica Authenticode predefiniti. Se l'opzione `/pa` non è specificata, vengono usati i criteri di verifica dei driver di Windows. Non è possibile usare questa opzione con le opzioni `catdb`.|  
@@ -137,7 +137,7 @@ signtool [command] [options] [file_name | ...]
 |`/r` *NomeSoggettoRadice*|Specifica il nome del soggetto del certificato radice cui deve essere concatenato il certificato di firma. Questo valore può essere una sottostringa dell'intero nome del soggetto del certificato radice.|  
 |`/tw`|Specifica che, se la firma non contiene un timestamp, deve essere generato un avviso.|  
   
- Per esempi di utilizzo, vedere [Using SignTool to Verify a File Signature](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx) (Uso di SignTool per verificare un firma di file).  
+ Per esempi di utilizzo, vedere [Using SignTool to Verify a File Signature](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature) (Uso di SignTool per verificare un firma di file).  
   
 ## <a name="return-value"></a>Valore restituito  
  Lo strumento Firma restituisce uno dei seguenti codici di uscita quando termina.  

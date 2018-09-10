@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f682ba370e364629d6b79c5cedd28b4af834e58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4dde57e03e26085d19099e749afd50ba14874a5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568885"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195374"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Tipi di Collection Hashtable e Dictionary
 La classe <xref:System.Collections.Hashtable?displayProperty=nameWithType> e le classi generiche <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> implementano l'interfaccia <xref:System.Collections.IDictionary?displayProperty=nameWithType>. La classe generica <xref:System.Collections.Generic.Dictionary%602> implementa inoltre l'interfaccia generica <xref:System.Collections.Generic.IDictionary%602>. Ogni elemento di queste raccolte è pertanto una coppia chiave-valore.  
@@ -36,11 +36,12 @@ La classe <xref:System.Collections.Hashtable?displayProperty=nameWithType> e le 
   
  Le classi <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602> hanno la stessa funzionalità della classe <xref:System.Collections.Hashtable>. Un oggetto <xref:System.Collections.Generic.Dictionary%602> di un tipo specifico (diverso da <xref:System.Object>) offre prestazioni migliori rispetto a un oggetto <xref:System.Collections.Hashtable> per i tipi di valore, in quanto gli elementi di <xref:System.Collections.Hashtable> sono di tipo <xref:System.Object>. Le conversioni boxing e unboxing vengono in genere eseguite quando si archivia o si recupera un tipo di valore. La classe <xref:System.Collections.Concurrent.ConcurrentDictionary%602> deve essere usata quando più thread potrebbero accedere contemporaneamente alla raccolta.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections.Hashtable>  
- <xref:System.Collections.IDictionary>  
- <xref:System.Collections.IHashCodeProvider>  
- <xref:System.Collections.Generic.Dictionary%602>  
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
- [Tipi di raccolte comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Collections.Hashtable>  
+- <xref:System.Collections.IDictionary>  
+- <xref:System.Collections.IHashCodeProvider>  
+- <xref:System.Collections.Generic.Dictionary%602>  
+- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
+- [Tipi di raccolte comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)

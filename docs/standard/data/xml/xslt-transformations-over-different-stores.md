@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5757a3a0175fc1ba65f0d2e29b3b24714e460ab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b5ff264f9a781c95ccf9bdbabf4b29806016362
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570425"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890841"
 ---
 # <a name="xslt-transformations-over-different-stores"></a>Trasformazioni XSLT su diversi archivi
 > [!NOTE]
@@ -20,5 +20,6 @@ ms.locfileid: "33570425"
   
  Il DOM XML fornisce l'accesso ai dati nei documenti XML e nelle classi aggiuntive per scrivere, leggere e spostarsi all'interno dei documenti XML. Queste classi sono supportate nello spazio dei nomi <xref:System.Xml>, che unifica inoltre il DOM XML con i servizi di accesso ai dati forniti da ADO.NET. L'oggetto <xref:System.Xml.XmlDataDocument> fornisce l'accesso relazionale ai dati. Il tipo <xref:System.Xml.XmlDataDocument> associa il codice XML ai dati relazionali in un <xref:System.Data.DataSet> di ADO.NET. In qualsiasi applicazione basata su [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] vengono usate le classi nello spazio dei nomi <xref:System.Xml> per accedere e modificare i documenti XML e i dati relazionali nel tipo <xref:System.Xml.XmlDataDocument>. Questa implementazione supporta le architetture a più livelli per la raccolta e la distribuzione dei dati. Per altre informazioni, vedere [Integrazione di XML con dati relazionali e ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

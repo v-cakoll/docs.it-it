@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63775d48ca2e11cfa121f3b7aeaff708d86e50de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578157"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085225"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procedura: visualizzare le informazioni su data e ora localizzate agli utenti del Web
 Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni di analisi e formattazione di valori di data e ora non devono essere basate su un formato predefinito, che molto spesso corrisponde al formato delle impostazioni cultura locali del server Web, durante l'interazione con l'utente. Al contrario, i Web Form che gestiscono stringhe di data e ora immesse dall'utente devono analizzare le stringhe tramite le impostazioni cultura preferite dell'utente. Analogamente, i dati di data e ora devono essere visualizzati all'utente in un formato conforme alle impostazioni cultura dell'utente stesso. In questo argomento viene illustrato come eseguire questa operazione.  
@@ -108,8 +108,9 @@ Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Per impedire a un utente di inserire script nel flusso HTML, l'input dell'utente non deve essere mai restituito direttamente nella risposta del server. Al contrario, deve essere codificato tramite il metodo <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Analisi di stringhe di data e ora](../../../docs/standard/base-types/parsing-datetime.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Analisi di stringhe di data e ora](../../../docs/standard/base-types/parsing-datetime.md)

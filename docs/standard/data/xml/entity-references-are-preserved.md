@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 652a044bf1b5293bc9c36477a46a78d9851f1810
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1c48e42e55025aff0ce1a24a3ef45ddf8005eab
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568485"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44204321"
 ---
 # <a name="entity-references-are-preserved"></a>Riferimenti alle entità conservati
 Se il riferimento all'entità non viene espanso, ma conservato, il modello DOM (Document Object Model) XML compila un nodo **XmlEntityReference** quando rileva un riferimento all'entità.  
@@ -34,5 +34,6 @@ Struttura ad albero per i riferimenti alle entità conservati
   
  Per impostazione predefinita, le entità generali, ad esempio `&abc;`, vengono conservate e vengono sempre creati nodi **XmlEntityReference**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

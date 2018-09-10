@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a2dc5e650a479e782a6739a82e247c25e196fda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16dc60fa9cd8782efbe1b6028413138b5991839e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583153"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44194494"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>Procedura: sincronizzare operazioni simultanee con una barriera
 L'esempio seguente mostra come sincronizzare le attività simultanee con un oggetto <xref:System.Threading.Barrier>.  
@@ -28,5 +28,6 @@ L'esempio seguente mostra come sincronizzare le attività simultanee con un ogge
   
  Un oggetto <xref:System.Threading.Barrier> è un oggetto che impedisce alle singole attività in un'operazione parallela di continuare fino a quando tutte le attività non raggiungono la barriera. È utile quando un'operazione parallela avviene in fasi e ogni fase richiede la sincronizzazione tra le attività. In questo esempio l'operazione include due fasi. Nella prima fase ogni attività riempie la propria sezione del buffer con dati. Quando ogni attività finisce di riempire la propria sezione, segnala alla barriera che è pronta per continuare e quindi attende. Quando tutte le attività hanno segnalato il completamento alla barriera, vengono sbloccate e inizia la seconda fase. La barriera è necessaria perché la seconda fase richiede che ogni attività abbia accesso a tutti i dati che sono stati generati fino a questo punto. Senza la barriera, le prime attività potrebbero cercare di leggere da buffer che non sono ancora stati riempiti da altre attività. In questo modo, è possibile sincronizzare un numero qualsiasi di fasi.  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture di dati per la programmazione in parallelo](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Strutture di dati per la programmazione in parallelo](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)

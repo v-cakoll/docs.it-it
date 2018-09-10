@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e702233c90155957d1de1a5a306d44d8faa41929
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34ad5b9cc0014db05bc6e7483e389488e145beb3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576347"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087326"
 ---
 # <a name="how-to-implement-a-provider"></a>Procedura: Implementare un provider
 Lo schema progettuale degli observer richiede una divisione tra un provider, che monitora i dati e invia le notifiche, e uno o più observer, che ricevono le notifiche (callback) dal provider. Questo argomento mostra come creare un provider. Un argomento correlato, [Procedura: Implementare un observer](../../../docs/standard/events/how-to-implement-an-observer.md), descrive come creare un observer.  
@@ -60,8 +60,9 @@ Lo schema progettuale degli observer richiede una divisione tra un provider, che
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#7)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IObservable%601>  
- [Modello di progettazione observer](../../../docs/standard/events/observer-design-pattern.md)  
- [Procedura: Implementare un elemento Observer](../../../docs/standard/events/how-to-implement-an-observer.md)  
- [Procedure consigliate per un modello di progettazione observer](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.IObservable%601>  
+- [Modello di progettazione observer](../../../docs/standard/events/observer-design-pattern.md)  
+- [Procedura: Implementare un elemento Observer](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [Procedure consigliate per un modello di progettazione observer](../../../docs/standard/events/observer-design-pattern-best-practices.md)

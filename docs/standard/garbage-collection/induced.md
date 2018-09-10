@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 436953782049800e89298932278af4e450fc10de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575863"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192548"
 ---
 # <a name="induced-collections"></a>Raccolte indotte
 Nella maggior parte dei casi, tramite il Garbage Collector è possibile determinare il momento migliore per eseguire una raccolta ed è consigliabile consentire l'esecuzione in modo indipendente. In rari casi una raccolta forzata può migliorare le prestazioni dell'applicazione. In questi casi, è possibile indurre un'operazione di Garbage Collection usando il metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType> per forzarla.  
@@ -36,6 +36,7 @@ Nella maggior parte dei casi, tramite il Garbage Collector è possibile determin
 |<xref:System.GCCollectionMode.Forced> o <xref:System.GCCollectionMode.Default>|Viene eseguita una raccolta di blocco il prima possibile. Se è in corso una raccolta in background e il valore di generation è 0 o 1, il metodo <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> attiva immediatamente una raccolta di blocco e restituisce un risultato al termine della raccolta. Se è in corso una raccolta in background e il parametro `generation` è 2, il metodo attende fino a quando la raccolta in background non viene completata, attiva una raccolta di blocco di generazione 2 e quindi restituisce il risultato.|Viene eseguita una raccolta il prima possibile. Il metodo <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> richiede una raccolta in background, la cui esecuzione non è comunque garantita. A seconda della situazione, può venire comunque eseguita una raccolta di blocco. Se è già in corso una raccolta in background, il metodo viene restituito immediatamente.|  
 |<xref:System.GCCollectionMode.Optimized>|Può venire eseguita una raccolta di blocco, a seconda dello stato del Garbage Collector e del parametro `generation`. Il Garbage Collector tenta di garantire prestazioni ottimali.|È possibile eseguire una raccolta, a seconda dello stato del Garbage Collector. Il metodo <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> richiede una raccolta in background, la cui esecuzione non è comunque garantita. A seconda della situazione, può venire comunque eseguita una raccolta di blocco. Il Garbage Collector tenta di garantire prestazioni ottimali. Se è già in corso una raccolta in background, il metodo viene restituito immediatamente.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Modalità di latenza](../../../docs/standard/garbage-collection/latency.md)  
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modalità di latenza](../../../docs/standard/garbage-collection/latency.md)  
+- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)

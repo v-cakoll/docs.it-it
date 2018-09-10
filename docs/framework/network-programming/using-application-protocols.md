@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 158a68d97a52bb5a72985d260a3dd5c6bfd0bd41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43408487"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084611"
 ---
 # <a name="using-application-protocols"></a>Uso di protocolli applicativi
 .NET Framework supporta i protocolli applicativi Internet di uso comune. Questa sezione include informazioni sull'uso dei protocolli [HTTP](../../../docs/framework/network-programming/http.md), "TCP" e "UDP", nonché informazioni sull'uso dell'interfaccia [Windows Sockets](../../../docs/framework/network-programming/sockets.md) per implementare protocolli personalizzati.  

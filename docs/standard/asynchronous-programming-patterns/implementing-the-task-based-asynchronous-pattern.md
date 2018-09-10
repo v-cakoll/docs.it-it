@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ed73e8d7279d5371c305e7bd29c08ac00f6a329
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 639a7ae4eb20cfc95f4d01dd0c7035f17656e3e1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576517"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207343"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementazione del modello asincrono basato su attività
 È possibile implementare il modello asincrono basato su attività (TAP) in i tre modi: con i compilatori C# e Visual Basic in Visual Studio, manualmente oppure con una combinazione dei primi due. Le sezioni seguenti illustrano in dettaglio ogni metodo. È possibile usare il modello TAP per implementare operazioni asincrone di calcolo e di I/O. La sezione [Carichi di lavoro](#workloads) illustra ogni tipo di operazione.
@@ -102,6 +102,7 @@ I metodi asincroni non sono limitati solo a operazioni associate a calcolo o I/O
 In questo esempio viene illustrato come un unico token di annullamento può essere multithreading con più operazioni asincrone. Per altre informazioni, vedere la sezione relativa all'annullamento in [Utilizzo del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Modello asincrono basato su attività (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
- [Utilizzo del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)  
- [Interoperabilità con altri tipi e modelli asincroni](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)  
+
+- [Modello asincrono basato su attività (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+- [Utilizzo del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)  
+- [Interoperabilità con altri tipi e modelli asincroni](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4901a81e318efe8371dc72cd9c1d511d55b0c65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33c498e8379d68287bfe4a2e781d6797fd6b4c10
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578976"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192593"
 ---
 # <a name="managed-execution-process"></a>processo di esecuzione gestita
 <a name="introduction"></a> Il processo di esecuzione gestita include i passaggi seguenti, descritti in modo dettagliato più avanti in questo argomento:  
@@ -107,13 +107,14 @@ ms.locfileid: "33578976"
   
  [Torna all'inizio](#introduction)  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica](../../docs/framework/get-started/overview.md)  
- [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../docs/standard/language-independence-and-language-independent-components.md)  
- [Metadati e componenti auto-descrittivi](../../docs/standard/metadata-and-self-describing-components.md)  
- [Ilasm.exe (Assembler IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
- [Sicurezza](../../docs/standard/security/index.md)  
- [Interoperabilità con codice non gestito](../../docs/framework/interop/index.md)  
- [Distribuzione](../../docs/framework/deployment/net-framework-applications.md)  
- [Assembly in Common Language Runtime](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Domini dell'applicazione](../../docs/framework/app-domains/application-domains.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Panoramica](../../docs/framework/get-started/overview.md)  
+- [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../docs/standard/language-independence-and-language-independent-components.md)  
+- [Metadati e componenti auto-descrittivi](../../docs/standard/metadata-and-self-describing-components.md)  
+- [Ilasm.exe (Assembler IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
+- [Sicurezza](../../docs/standard/security/index.md)  
+- [Interoperabilità con codice non gestito](../../docs/framework/interop/index.md)  
+- [Distribuzione](../../docs/framework/deployment/net-framework-applications.md)  
+- [Assembly in Common Language Runtime](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Domini dell'applicazione](../../docs/framework/app-domains/application-domains.md)

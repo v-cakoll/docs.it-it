@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d2d6f2932e1afeb7369c32a43ca48f55fade2e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51066ab6fb0fa4749befdd0f94790fa45a7ab5cf
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571410"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44191066"
 ---
 # <a name="xml-type-support-implementation-notes"></a>Note sull'implementazione del supporto per il tipo XML
 In questo argomento vengono descritti alcuni dettagli sull'implementazione di cui è consigliabile essere a conoscenza.  
@@ -47,5 +47,6 @@ In questo argomento vengono descritti alcuni dettagli sull'implementazione di cu
 ### <a name="xsanyuri-and-systemuri"></a>xs:anyURI e System.Uri  
  Quando un'istanza di `xs:anyURI` che rappresenta un URI relativo viene associata a un tipo <xref:System.Uri>, l'oggetto <xref:System.Uri> non dispone di un URI di base.  
   
-## <a name="see-also"></a>Vedere anche  
- [Supporto di tipi di dati nelle classi System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Supporto di tipi di dati nelle classi System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd25cf94a8a57f20b42f5e14c92b3b43e3378844
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab7f3075d46ef0e8b98af471ae3943f7500128e5
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572109"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080046"
 ---
 # <a name="xml-schema-object-model-overview"></a>Cenni preliminari sul modello SOM XML
 Il modello SOM (Schema Object Model) in Microsoft .NET Framework è un'API completa che consente di creare, modificare e convalidare schemi a livello di programmazione. L'API del modello SOM agisce sui documenti di schema XML in modo simile a come il DOM agisce sui documenti XML. I documenti di schema XML sono file XML validi che, una volta caricati nell'API del modello SOM, contengono informazioni sulla struttura e la validità di altri documenti XML conformi allo schema.  
@@ -38,11 +38,12 @@ Il modello SOM (Schema Object Model) in Microsoft .NET Framework è un'API compl
   
  Per altre informazioni su ogni classe nello spazio dei nomi <xref:System.Xml.Schema>, vedere la documentazione di riferimento relativa allo spazio dei nomi <xref:System.Xml.Schema> nella libreria di classi di .NET Framework.  
   
-## <a name="see-also"></a>Vedere anche  
- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

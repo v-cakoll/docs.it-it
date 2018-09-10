@@ -12,11 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f9c6df23ae1a142d208672a03ffeb74709a0a05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44199765"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore e SemaphoreSlim
 La classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> rappresenta un semaforo denominato (systemwide) o locale. È un semplice wrapper per l'oggetto semaforo Win32. I semafori Win32 sono semafori di conteggio che possono essere usati per controllare l'accesso a un pool di risorse.  
@@ -45,7 +46,8 @@ La classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> rappres
   
  Usare il controllo degli accessi per proteggere un oggetto <xref:System.Threading.Semaphore> che rappresenta un semaforo denominato, preferibilmente usando un costruttore che specifichi un oggetto <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType>. È anche possibile applicare la sicurezza del controllo degli accessi usando il metodo <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType>, ma in tal modo verrà creata una finestra di vulnerabilità tra l'ora di creazione del semaforo e l'ora in cui viene protetto. La protezione dei semafori con la sicurezza del controllo degli accessi aiuta a impedire gli attacchi dannosi, ma non risolve il problema dei conflitti di nomi non intenzionali.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.Semaphore>  
- <xref:System.Threading.SemaphoreSlim>  
- [Oggetti e funzionalità del threading](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Threading.Semaphore>  
+- <xref:System.Threading.SemaphoreSlim>  
+- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)

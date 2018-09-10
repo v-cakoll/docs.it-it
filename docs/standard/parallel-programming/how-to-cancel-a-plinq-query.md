@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074371a929d5dd2cf0efb763ec45395a8dfd0432
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5008ede5054e8e6970bcb6f804fa1888244238f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584281"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210773"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Procedura: annullare una query PLINQ
 Gli esempi seguenti descrivono due modi per annullare una query PLINQ. Il primo esempio descrive come annullare una query costituita principalmente da attraversamento di dati. Il secondo esempio descrive come annullare una query che contiene una funzione utente onerosa dal punto di vista delle risorse di calcolo.  
@@ -50,7 +50,8 @@ Gli esempi seguenti descrivono due modi per annullare una query PLINQ. Il primo 
   
  Quando viene eliminato un enumeratore, ad esempio quando il codice esce da un ciclo foreach (For Each in Visual Basic) che esegue l'iterazione sui risultati della query, la query viene annullata, ma senza generare eccezioni.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq.ParallelEnumerable>  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)

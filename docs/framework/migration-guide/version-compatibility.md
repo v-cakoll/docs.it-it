@@ -9,11 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44198504"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilità tra le versioni in .NET Framework
 Per compatibilità con le versioni precedenti si intende che un'app sviluppata per una particolare versione di una piattaforma sarà eseguita su versioni successive di quella piattaforma. .NET Framework tenta di ottimizzare la compatibilità con le versioni precedenti: il codice sorgente scritto per una versione di .NET Framework deve essere compilato su versioni successive di .NET Framework e i file binari in esecuzione su una versione di .NET Framework devono comportarsi in modo analogo nelle versioni successive di .NET Framework.  
@@ -51,9 +52,9 @@ Per compatibilità con le versioni precedenti si intende che un'app sviluppata p
 
 - Se si dispone di un'app .NET Framework 3.5, vedere anche [Problemi di migrazione di .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md).
 
-- Se si dispone di un'app .NET Framework 2.0, vedere anche [Modifiche in .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkId=186989).
+- Se si dispone di un'app .NET Framework 2.0, vedere anche [Modifiche in .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=186989).
 
-- Se si dispone di un'app .NET Framework 1.1, vedere anche [Modifiche in .NET Framework 2.0](http://go.microsoft.com/fwlink/?LinkID=125263).  
+- Se si dispone di un'app .NET Framework 1.1, vedere anche [Modifiche in .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125263).  
   
 -   Se si esegue la ricompilazione del codice sorgente esistente per l'esecuzione in .NET Framework 4.5 o nelle relative versioni intermedie oppure si sviluppa una nuova versione di un'app o di un componente destinato a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o alle relative versioni intermedie da una codebase sorgente esistente, vedere [Elementi obsoleti in .NET Framework](../../../docs/framework/whats-new/whats-obsolete.md) per i tipi e i membri obsoleti e applicare la soluzione alternativa descritta. (Il codice compilato precedentemente continuerà a essere in esecuzione sui tipi e i membri contrassegnati come obsoleti).  
   
@@ -68,5 +69,5 @@ Per compatibilità con le versioni precedenti si intende che un'app sviluppata p
  [Novità](../../../docs/framework/whats-new/index.md)  
  [Elementi obsoleti nella libreria di classi](../../../docs/framework/whats-new/whats-obsolete.md)  
  [Compatibilità delle applicazioni](../../../docs/framework/migration-guide/application-compatibility.md)  
- [Criteri relativi al ciclo di vita del supporto di Microsoft .NET Framework](http://go.microsoft.com/fwlink/p/?LinkId=248212)  
+ [Criteri relativi al ciclo di vita del supporto di Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)  
  [Problemi di migrazione di .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e91ce2b36462780925dcaef701583a966c5f59b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569451"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208770"
 ---
 # <a name="namespace-support-in-the-dom"></a>Supporto dello spazio dei nomi nel DOM
 Il modello DOM XML supporta pienamente lo spazio dei nomi. Sono supportati solo i documenti XML che supportano lo spazio dei nomi. Il W3C (World Wide Web Consortium) specifica che lo spazio dei nomi può non essere supportato da applicazioni DOM che implementano il Livello 1, ma che è supportato dalle funzionalità di Livello 2 del DOM. Tutte le funzionalità nel DOM XML, tuttavia, supportano lo spazio dei nomi indipendentemente dal fatto che il metodo sia regolato dalla raccomandazione DOM di Livello 1 o di Livello 2.  
@@ -25,5 +25,6 @@ Il modello DOM XML supporta pienamente lo spazio dei nomi. Sono supportati solo 
   
 -   Se viene rilevato un carattere di due punti, il nome viene diviso in due parti, in base alla posizione del primo carattere di due punti. Il prefisso è impostato sulla stringa prima dei due punti e il nome locale è impostato sulla stringa dopo i due punti. Per i metodi che non accettano un valore NamespaceURI, quest'ultimo non è risolto e rimane impostato su una stringa vuota. In caso contrario, il NamespaceURI viene impostato sulla stringa passata al metodo. Se il prefisso non è definito, il metodo **Save** e le proprietà **InnerXml** e **OuterXml** danno origine a un errore.  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

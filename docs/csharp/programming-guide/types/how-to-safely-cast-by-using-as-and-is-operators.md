@@ -6,12 +6,12 @@ helpviewer_keywords:
 - as operator [C#]
 - is operator [C#]
 ms.assetid: c1176cea-1426-4a44-8570-3eadafa58863
-ms.openlocfilehash: de59fb49ca5dbe1282cd828f7d6995dda449d31b
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 8e0b17122bd23a7de82ca1c210a559fe09ad7fee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257301"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508118"
 ---
 # <a name="how-to-safely-cast-by-using-as-and-is-operators-c-programming-guide"></a>Procedura: eseguire il cast sicuro tramite gli operatori as e is (Guida per programmatori C#)
 Poiché gli oggetti sono polimorfici, è possibile che una variabile di un tipo di classe di base contenga un tipo derivato. Per accedere ai metodi dell'istanza del tipo derivato, è necessario eseguire nuovamente il cast del valore al tipo derivato. Tentare un cast semplice in questi casi comporta tuttavia il rischio di generare un'eccezione <xref:System.InvalidCastException>. Per questo motivo C# fornisce gli operatori [is](../../../csharp/language-reference/keywords/is.md) e [as](../../../csharp/language-reference/keywords/as.md). È possibile usare questi operatori per verificare se un cast riuscirà senza provocare la generazione di un'eccezione. In generale, l'operatore `as` è più efficiente perché, se è possibile effettuare il cast, ne restituisce il valore. L'operatore `is` restituisce solo un valore booleano. Si può quindi usare quando si vuole solo determinare il tipo di un oggetto ma non si deve realmente eseguirne il cast.  
@@ -21,7 +21,8 @@ Poiché gli oggetti sono polimorfici, è possibile che una variabile di un tipo 
   
  [!code-csharp[csProgGuideTypes#40](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-safely-cast-by-using-as-and-is-operators_1.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi](../../../csharp/programming-guide/types/index.md)  
- [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Tipi](../../../csharp/programming-guide/types/index.md)  
+- [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md)

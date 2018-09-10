@@ -3,11 +3,11 @@ title: Informazioni generali sulle modifiche e sull'inerzia
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
 ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401225"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521239"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Informazioni generali sulle modifiche e sull'inerzia
 Le *modifiche* consentono agli utenti di spostare, ruotare e ridimensionare elementi dell'interfaccia utente tramite *modificatori*. Un manipolatore può essere un mouse, uno stilo (in uno scenario abilitato per il tocco) o un dito.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a0151f6cc3ce25ca0c52a25be328ece8cb4434
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d28da0c788d40222ccd689807d6e51f66b4ce78
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567367"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44193718"
 ---
 # <a name="applying-attributes"></a>Applicazione di attributi
 Usare il processo seguente per applicare un attributo a un elemento del codice.  
@@ -52,8 +52,9 @@ Usare il processo seguente per applicare un attributo a un elemento del codice.
   
  Quando viene applicato questo attributo, la stringa `"My Assembly"` viene inserita nel manifesto dell'assembly nella porzione di metadati del file. È possibile visualizzare l'attributo tramite [Disassembler MSIL (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) o creando un programma personalizzato per recuperare l'attributo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Attributi](../../../docs/standard/attributes/index.md)  
- [Recupero di informazioni memorizzate negli attributi](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
- [Concetti](/cpp/windows/attributed-programming-concepts)  
- [Attributi](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+## <a name="see-also"></a>Vedere anche
+
+- [Attributi](../../../docs/standard/attributes/index.md)  
+- [Recupero di informazioni memorizzate negli attributi](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [Concetti](/cpp/windows/attributed-programming-concepts)  
+- [Attributi](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)

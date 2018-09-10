@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 955b42a4bb9955a401265cf9537418bbfe8dd7c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 958699b8e3a00cfe3f8fd8ac4bb96914dcd0598c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569759"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44185126"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>Risoluzione delle risorse esterne durante l'elaborazione XSLT
 Durante una trasformazione XSLT si presentano vari casi in cui può essere necessario risolvere le risorse esterne.  
@@ -44,7 +44,8 @@ Durante una trasformazione XSLT si presentano vari casi in cui può essere neces
  [!code-csharp[XslCompiledTransform.Load#11](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#11)]
  [!code-vb[XslCompiledTransform.Load#11](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Load/VB/Xslt_Load_v2.vb#11)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.Xsl.XslCompiledTransform>  
- <xref:System.Xml.Xsl.XsltSettings>  
- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Xml.Xsl.XslCompiledTransform>  
+- <xref:System.Xml.Xsl.XsltSettings>  
+- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

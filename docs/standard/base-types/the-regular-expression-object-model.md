@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14402b56a765fc8fe57f40e9c5c44f500267e266
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579860"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192847"
 ---
 # <a name="the-regular-expression-object-model"></a>Modello a oggetti delle espressioni regolari
 <a name="introduction"></a> In questo argomento viene illustrato il modello a oggetti usato con le espressioni regolari di .NET. Include le sezioni seguenti:  
@@ -169,7 +169,7 @@ ms.locfileid: "33579860"
 ### <a name="the-match-collection"></a>Raccolta Match  
  Il metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> restituisce un oggetto <xref:System.Text.RegularExpressions.MatchCollection> contenente gli oggetti <xref:System.Text.RegularExpressions.Match> che rappresentano tutte le corrispondenze rilevate dal motore delle espressioni regolari, in base all'ordine in cui si trovano nella stringa di input. Se non sono rilevate corrispondenze, il metodo restituisce un oggetto <xref:System.Text.RegularExpressions.MatchCollection> senza membri. La proprietà <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> permette di accedere a singoli membri della raccolta in base all'indice, da zero al valore della proprietà <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> meno uno. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> è l'indicizzatore della raccolta (in C#) e la proprietà predefinita (in Visual Basic).  
   
- Per impostazione predefinita, la chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> usa la valutazione lenta per il popolamento dell'oggetto <xref:System.Text.RegularExpressions.MatchCollection>. L'accesso alle proprietà che necessitano di una raccolta completamente popolata, ad esempio le proprietà <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>, potrebbe comportare gravi conseguenze per le prestazioni. È quindi consigliabile accedere alla raccolta usando l'oggetto <xref:System.Collections.IEnumerator> restituito dal metodo <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>. I singoli linguaggi forniscono i costrutti, ad esempio `For``Each` in Visual Basic e `foreach` in C#, che eseguono il wrapping dell'interfaccia <xref:System.Collections.IEnumerator> della raccolta.  
+ Per impostazione predefinita, la chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> usa la valutazione lenta per il popolamento dell'oggetto <xref:System.Text.RegularExpressions.MatchCollection>. L'accesso alle proprietà che necessitano di una raccolta completamente popolata, ad esempio le proprietà <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>, potrebbe comportare gravi conseguenze per le prestazioni. È quindi consigliabile accedere alla raccolta usando l'oggetto <xref:System.Collections.IEnumerator> restituito dal metodo <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>. I singoli linguaggi forniscono i costrutti, ad esempio `For Each` in Visual Basic e `foreach` in C#, che eseguono il wrapping dell'interfaccia <xref:System.Collections.IEnumerator> della raccolta.  
   
  L'esempio seguente usa il metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> per popolare un oggetto <xref:System.Text.RegularExpressions.MatchCollection> con tutte le corrispondenze rilevate in una stringa di input. L'esempio enumera la raccolta, copia le corrispondenze a una matrice di stringhe e registra le posizioni dei caratteri in una matrice di valori di tipo Integer.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "33579860"
   
 <a name="the_captured_group"></a>   
 ## <a name="the-captured-group"></a>Gruppo Captured  
- La classe <xref:System.Text.RegularExpressions.Group> rappresenta il risultato di un singolo gruppo di acquisizione. Gli oggetti di gruppo che rappresentano i gruppi di acquisizione definiti in un'espressione regolare sono restituiti dalla proprietà <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> dell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. La proprietà <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> è l'indicizzatore (in C#) e la proprietà predefinita (in Visual Basic) della classe <xref:System.Text.RegularExpressions.Group>. È anche possibile recuperare i singoli membri eseguendo l'iterazione della raccolta mediante il costrutto `foreach` o `For``Each`. Per un esempio, vedere la sezione precedente.  
+ La classe <xref:System.Text.RegularExpressions.Group> rappresenta il risultato di un singolo gruppo di acquisizione. Gli oggetti di gruppo che rappresentano i gruppi di acquisizione definiti in un'espressione regolare sono restituiti dalla proprietà <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> dell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. La proprietà <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> è l'indicizzatore (in C#) e la proprietà predefinita (in Visual Basic) della classe <xref:System.Text.RegularExpressions.Group>. È anche possibile recuperare i singoli membri eseguendo l'iterazione della raccolta mediante il costrutto `foreach` o `For Each`. Per un esempio, vedere la sezione precedente.  
   
  L'esempio seguente usa i costrutti di raggruppamento annidati per acquisire le sottostringhe nei gruppi. Il criterio di espressione regolare `(a(b))c` corrisponde alla stringa "abc". Assegna la sottostringa "ab" al primo gruppo di acquisizione e la sottostringa "b" al secondo gruppo di acquisizione.  
   
@@ -312,7 +312,7 @@ ms.locfileid: "33579860"
 ## <a name="the-capture-collection"></a>Raccolta Capture  
  L'oggetto <xref:System.Text.RegularExpressions.Group> include informazioni solo sull'ultima acquisizione. L'intero set di acquisizioni eseguite da un gruppo di acquisizione è tuttavia ancora disponibile tramite l'oggetto <xref:System.Text.RegularExpressions.CaptureCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>. Ogni membro della raccolta è un oggetto <xref:System.Text.RegularExpressions.Capture> che rappresenta un'acquisizione eseguita da quel gruppo di acquisizione, in base all'ordine di acquisizione e quindi in base all'ordine in cui sono state rilevate corrispondenze per le stringhe acquisite da sinistra a destra nella stringa di input. È possibile recuperare singoli oggetti <xref:System.Text.RegularExpressions.Capture> dalla raccolta in uno dei due modi seguenti:  
   
--   Eseguendo un'iterazione nella raccolta tramite un costrutto, ad esempio `foreach` (in C#) o `For``Each` (in Visual Basic).  
+-   Eseguendo un'iterazione nella raccolta tramite un costrutto, ad esempio `foreach` (in C#) o `For Each` (in Visual Basic).  
   
 -   Usando la proprietà <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A?displayProperty=nameWithType> per recuperare un oggetto specifico in base all'indice. La proprietà <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A> è la proprietà predefinita (in Visual Basic) o l'indicizzatore (in C#) dell'oggetto <xref:System.Text.RegularExpressions.CaptureCollection>.  
   
@@ -351,7 +351,8 @@ ms.locfileid: "33579860"
 |`;`|Trova la corrispondenza con un punto e virgola.|  
 |`((\w+(\s\w+)*),(\d+);)+`|Trova la corrispondenza con modello di una parola seguita da parole aggiuntive seguite da una virgola, una o più cifre e un punto e virgola, una o più volte. Equivale al primo gruppo di acquisizione.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Text.RegularExpressions>  
- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)  
- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Text.RegularExpressions>  
+- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)  
+- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

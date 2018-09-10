@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fc995843c1e2f5977acbfe2158457d30ac355ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee7de15130644e63b17a6d067c5cce9088d199a0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573913"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185053"
 ---
 # <a name="localization"></a>Localizzazione
 La localizzazione è il processo di conversione delle risorse di un'applicazione nelle versioni localizzate per tutte le impostazioni cultura supportate dall'applicazione. È consigliabile passare alla fase di localizzazione solo dopo aver completato il passaggio di [revisione della localizzabilità](../../../docs/standard/globalization-localization/localizability-review.md), per verificare che l'applicazione globalizzata sia pronta per la localizzazione.  
@@ -32,8 +32,9 @@ La localizzazione è il processo di conversione delle risorse di un'applicazione
   
  [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] fornisce l'editor di risorse di Windows Form (Winres.exe) che consente di localizzare rapidamente le risorse Windows Form per le impostazioni cultura di destinazione. Per informazioni sull'uso di questo strumento, vedere [Winres.exe (editor di risorse di Windows Form)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  
- [Revisione della localizzabilità](../../../docs/standard/globalization-localization/localizability-review.md)  
- [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)  
- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  
+- [Revisione della localizzabilità](../../../docs/standard/globalization-localization/localizability-review.md)  
+- [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)  
+- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)

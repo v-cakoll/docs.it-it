@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 804f92ddd564f057157598c3cf62106d1a7d5318
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35b8e062c9f207eba19bcee5593425095de2e267
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578203"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041470"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Suggerimenti per lo sviluppo di applicazioni internazionali
 In questa sezione vengono forniti alcuni suggerimenti da seguire per lo sviluppo di applicazioni internazionali.  
@@ -100,6 +100,7 @@ In questa sezione vengono forniti alcuni suggerimenti da seguire per lo sviluppo
   
 5.  Si noti che il valore di uiCulture può essere impostato sulla lingua del browser.  
   
-## <a name="see-also"></a>Vedere anche  
- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  
- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  
+- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8df4c73af81580d1b242ce0ede8f8bcb4cad4fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2d61ba254a76235a12ca5dda23fdecb8838ae75
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583292"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863582"
 ---
 # <a name="how-to-register-callbacks-for-cancellation-requests"></a>Procedura: registrare i callback per le richieste di annullamento
 L'esempio seguente mostra come registrare un delegato che verrà richiamato quando una proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> diventa true in seguito a una chiamata a <xref:System.Threading.CancellationTokenSource.Cancel%2A> sull'oggetto che ha creato il token. Usare questa tecnica per annullare le operazioni asincrone che non supportano in modo nativo il framework di annullamento unificato e per sbloccare i metodi che potrebbero essere in attesa del completamento di un'operazione asincrona.  
@@ -31,5 +31,6 @@ L'esempio seguente mostra come registrare un delegato che verrà richiamato quan
   
  Se l'annullamento è già stato richiesto quando il callback viene registrato, è tuttavia garantito che il callback verrà chiamato. In questo caso particolare, il metodo <xref:System.Net.WebClient.CancelAsync%2A> non eseguirà alcuna operazione se nessuna operazione asincrona è in corso, quindi la chiamata al metodo è sempre sicura.  
   
-## <a name="see-also"></a>Vedere anche  
- [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)

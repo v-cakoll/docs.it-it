@@ -4,12 +4,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: c9fb03560e30bab3cc71a6171c731d887e859f6c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bc31ae202ccbfee467dc0f6fa2cf515c751825ed
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43423582"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201309"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modificatore del parametro out (Riferimenti per C#)
 La parola chiave `out` fa sì che gli argomenti vengono passati per riferimento. È come la parola chiave [ref](ref.md), con la differenza che `ref` richiede l'inizializzazione della variabile prima di essere passato. È anche come la parola chiave [in](in-parameter-modifier.md), con la differenza che `in` non consente al metodo chiamato di modificare il valore dell'argomento. Per usare un parametro `out`, la definizione del metodo e il metodo chiamante devono usare in modo esplicito la parola chiave `out`. Ad esempio:  
@@ -41,9 +41,7 @@ Il compilatore sceglie il miglior overload creando una corrispondenza tra i modi
  
 Le proprietà non sono variabili e quindi non possono essere passate come parametri `out`.
   
- Per informazioni sul passaggio di matrici, vedere [Passaggio di matrici mediante ref e out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
-  
- Non è possibile usare le parole chiave `in`, `ref` e `out` per i seguenti tipi di metodi:  
+Non è possibile usare le parole chiave `in`, `ref` e `out` per i seguenti tipi di metodi:  
   
 -   Metodi asincroni definiti usando il modificatore [async](../../../csharp/language-reference/keywords/async.md).  
   

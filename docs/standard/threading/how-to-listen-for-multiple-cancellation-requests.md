@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afa22ed1fe1986712493c2aaa844d7f2c6ffd5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16ba8000544d0b7d35a818d41a75f38e6fd0293d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583130"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44178566"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>Procedura: Ascolto di più richieste di annullamento
 Questo esempio illustra come essere in ascolto di due token di annullamento contemporaneamente, in modo da annullare un'operazione se uno dei due token lo richiede.  
@@ -34,5 +34,6 @@ Questo esempio illustra come essere in ascolto di due token di annullamento cont
   
  In questo esempio l'eccezione <xref:System.AggregateException> non deve essere mai generata, ma qui viene intercettata perché in scenari reali per le eccezioni diverse da <xref:System.OperationCanceledException> generate da un delegato dell'attività viene eseguito il wrapping in un oggetto <xref:System.OperationCanceledException>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)

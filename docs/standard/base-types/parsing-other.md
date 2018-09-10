@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7becf993db866e24381fe9013c82d74dd91ee9a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85bb6dcdaa198b6b038cc80e1e38fa7d11123678
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568030"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086381"
 ---
 # <a name="parsing-other-strings-in-net"></a>Analisi di altre stringhe in .NET
 Oltre alle stringhe numeriche e<xref:System.DateTime> è possibile analizzare le stringhe che rappresentano i tipi <xref:System.Char>, <xref:System.Boolean> ed <xref:System.Enum> in tipi di dati.  
@@ -50,7 +50,8 @@ Oltre alle stringhe numeriche e<xref:System.DateTime> è possibile analizzare le
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]
  [!code-vb[Conceptual.String.Parse#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#4)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
- [Conversione di tipi in .NET](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
+- [Conversione di tipi in .NET](../../../docs/standard/base-types/type-conversion.md)

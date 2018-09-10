@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c844a81da036c5e96c2c619e3a3aae85f70f8ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 255c7e068cc83b7dcb9489eeeda5ce33be983c81
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397858"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522091"
 ---
 # <a name="overview-of-the-net-framework"></a>Panoramica di .NET Framework
 
@@ -87,7 +87,7 @@ Come ci si aspetta da una libreria di classi orientata agli oggetti, i tipi .NET
 
 - App orientate ai servizi che usano Windows Communication Foundation (WCF). Vedere [Applicazioni orientate ai servizi con WCF](../../../docs/framework/wcf/index.md).
 
-- App basate sul flusso di lavoro che usano Windows Workflow Foundation (WF). Vedere [Compilazione di flussi di lavoro in .NET Framework](http://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
+- App basate sul flusso di lavoro che usano Windows Workflow Foundation (WF). Vedere [Compilazione di flussi di lavoro in .NET Framework](https://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
 
 Le classi Windows Form sono un insieme completo di tipi riusabili che semplifica notevolmente lo sviluppo di GUI Windows. Se si scrive un'app Web Form ASP.NET è possibile usare le classi Web Form.
 
@@ -97,5 +97,5 @@ Le classi Windows Form sono un insieme completo di tipi riusabili che semplifica
 [Guida all'installazione](../../../docs/framework/install/index.md)   
 [Guida di sviluppo](../../../docs/framework/development-guide.md)   
 [Strumenti](../../../docs/framework/tools/index.md)   
-[Esempi di .NET Framework](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
-[Libreria di classi .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)
+[Esempi di .NET Framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
+[Libreria di classi .NET Framework](https://go.microsoft.com/fwlink/?LinkID=227195)

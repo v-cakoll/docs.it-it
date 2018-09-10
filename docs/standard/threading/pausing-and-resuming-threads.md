@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77dcdc95e0ca9d570c896fb036e0577f0475e164
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: b66881a8a42c0c34b5c2119f7404fe7787c8f3f2
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753812"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137525"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Sospensione e interruzione di thread
 
@@ -49,10 +49,11 @@ Le tecniche più comuni per sincronizzare le attività dei thread consistono nel
   
 -   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> fa uscire un thread da qualsiasi attesa e genera un'eccezione <xref:System.Threading.ThreadAbortException> nel thread. Per informazioni dettagliate, vedere [Eliminazione definitiva di thread](../../../docs/standard/threading/destroying-threads.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadInterruptedException>  
- <xref:System.Threading.ThreadAbortException>  
- [Threading](../../../docs/standard/threading/index.md)  
- [Utilizzo di thread e threading](../../../docs/standard/threading/using-threads-and-threading.md)  
- [Panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadInterruptedException>  
+- <xref:System.Threading.ThreadAbortException>  
+- [Threading](../../../docs/standard/threading/index.md)  
+- [Utilizzo di thread e threading](../../../docs/standard/threading/using-threads-and-threading.md)  
+- [Panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)

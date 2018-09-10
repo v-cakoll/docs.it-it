@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948605"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041616"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguaggio di espressioni regolari - Riferimento rapido
 <a name="top"></a> Un'espressione regolare è un modello per cui il motore delle espressioni regolari tenta di trovare una corrispondenza nel testo di input. Un modello è costituito da uno o più i valori letterali carattere, operatori o costrutti.  Per una breve introduzione, vedere [Espressioni regolari di .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -216,11 +216,12 @@ ms.locfileid: "36948605"
 |`(?#` *commento* `)`|Commento inline. Il commento termina in corrispondenza della prima parentesi chiusa.|`\bA(?#Matches words starting with A)\w+\b`|  
 |`#` [fino alla fine della riga]|Commento in modalità X. Il commento inizia da un carattere `#` senza codice di escape e continua fino alla fine della riga.|`(?x)\bA\w+\b#Matches words starting with A`|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
- <xref:System.Text.RegularExpressions.Regex>  
- [Espressioni regolari](regular-expressions.md)  
- [Classi di espressioni regolari](the-regular-expression-object-model.md)  
- [Esempi di espressioni regolari](regular-expression-examples.md)  
- [Espressioni regolari - Guida di riferimento rapido (download in formato Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Espressioni regolari - Guida di riferimento rapido (download in formato PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
+- <xref:System.Text.RegularExpressions.Regex>  
+- [Espressioni regolari](regular-expressions.md)  
+- [Classi di espressioni regolari](the-regular-expression-object-model.md)  
+- [Esempi di espressioni regolari](regular-expression-examples.md)  
+- [Espressioni regolari - Guida di riferimento rapido (download in formato Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+- [Espressioni regolari - Guida di riferimento rapido (download in formato PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

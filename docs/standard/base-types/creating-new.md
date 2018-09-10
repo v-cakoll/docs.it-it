@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9f0c487d3d04af998fb1c3339d736e9bb043374
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 477791a0d62186b6cb88d0fae3aa9b4e38b3ef35
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567819"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870110"
 ---
 # <a name="creating-new-strings-in-net"></a>Creazione di nuove stringhe in .NET
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] consente di creare stringhe usando una semplice assegnazione, oltre a eseguire l'overload del costruttore di classe per supportare la creazione di stringhe tramite una serie di parametri diversi. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornisce diversi metodi nella classe <xref:System.String?displayProperty=nameWithType> per creare nuovi oggetti stringa combinando più stringhe, matrici di stringhe o oggetti.  
@@ -80,6 +80,7 @@ ms.locfileid: "33567819"
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)  
- [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ed02680831302880e2bfc02b21ea61303b92a3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10b2471d13d410826cec3404725117649442297b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576822"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197342"
 ---
 # <a name="building-xml-schemas"></a>Compilazione di XML Schema
 Le classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType> sono associate alle strutture definite nella raccomandazione W3C (World Wide Web Consortium) XML Schema e possono essere usate per compilare schemi XML in memoria.  
@@ -88,11 +88,12 @@ Le classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWith
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: eea2bb524496a3db22146586df323437d9f84242
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 619b9167b9b96be2908d833403379e4c2fe78ba5
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396731"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43746918"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Proprietà dell'interfaccia (Guida per programmatori C#)
 Le proprietà possono essere dichiarate su una [interfaccia](../../../csharp/language-reference/keywords/interface.md). Nell'esempio seguente viene illustrata la funzione di accesso di una proprietà di interfaccia:  
@@ -50,10 +50,11 @@ Le proprietà possono essere dichiarate su una [interfaccia](../../../csharp/lan
   
  `Employee name: Hazem Abolrous`  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Uso delle proprietà](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
- [Confronto tra proprietà e indicizzatori](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
- [Interfacce](../../../csharp/programming-guide/interfaces/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Uso delle proprietà](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Confronto tra proprietà e indicizzatori](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
+- [Interfacce](../../../csharp/programming-guide/interfaces/index.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3da8a524af872a724ee6cbe206912572d6338624
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574748"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079461"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Procedura: Visualizzare le date in calendari non gregoriani
 I tipi <xref:System.DateTime> e <xref:System.DateTimeOffset> e usano il calendario gregoriano come calendario predefinito. Ciò significa che la chiamata al metodo `ToString` di un valore di data e ora visualizza la rappresentazione di stringa di tale data e ora nel calendario gregoriano, anche se la data e l'ora sono state create usando un altro calendario. Questo processo viene mostrato nell'esempio seguente, che usa due modi diversi per creare un valore di data e ora con il calendario persiano, continuando a visualizzare questi valori di data e ora nel calendario gregoriano quando viene chiamato il metodo <xref:System.DateTime.ToString%2A>. L'esempio riflette due tecniche comuni ma non corrette per la visualizzazione della data in un determinato calendario.  
@@ -90,5 +90,6 @@ I tipi <xref:System.DateTime> e <xref:System.DateTimeOffset> e usano il calendar
   
  Compilare il codice nella riga di comando usando csc.exe o vbc.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
-## <a name="see-also"></a>Vedere anche  
- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)

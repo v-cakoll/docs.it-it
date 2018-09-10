@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e79c6cf8bfce4fa1ce37f7253e8583a67afe2f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07ad8b278f6a44fce78bccc980acdc0dc93b1a7a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576183"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193250"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analisi di stringhe numeriche in .NET
 Tutti i tipi numerici hanno due metodi di analisi statici, `Parse` e `TryParse`, che è possibile usare per convertire la rappresentazione di stringa di un numero in un tipo numerico. Tali metodi consentono di analizzare le stringhe generate usando le stringhe di formato documentate in [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md) e [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md). Per impostazione predefinita, i metodi `Parse` e `TryParse` consentono di convertire correttamente le stringhe contenenti cifre decimali integrali solo in valori integer. Consentono di convertire correttamente le stringhe che contengono cifre decimali integrali e frazionarie, separatori di gruppi e un separatore decimale in valori a virgola mobile. Il metodo `Parse` genera un'eccezione se l'operazione ha esito negativo, mentre il metodo `TryParse` restituisce `false`.  
@@ -83,7 +83,8 @@ Tutti i tipi numerici hanno due metodi di analisi statici, `Parse` e `TryParse`,
  [!code-csharp[Parsing.Numbers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/unicode1.cs#3)]
  [!code-vb[Parsing.Numbers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/unicode1.vb#3)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Globalization.NumberStyles>  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Globalization.NumberStyles>  
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4380c509a08ebe59f9561a9e6fc596458768917f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef464b0d4c22d04d42f9b6f953abefe7582b4957
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592184"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188540"
 ---
 # <a name="threads-and-threading"></a>Thread e threading
 I sistemi operativi si avvalgono di processi per separare le diverse applicazioni eseguite. I thread rappresentano l'unità di base a cui un sistema operativo assegna il tempo del processore ed è possibile che più di un thread esegua porzioni di codice all'interno del processo. Ogni thread gestisce gestori di eccezioni, una priorità di pianificazione e un insieme di strutture usate dal sistema per salvare il contesto del thread fino a quando viene pianificato. Nel contesto del thread sono presenti tutte le informazioni necessarie per riprendere senza problemi l'esecuzione nello spazio degli indirizzi del processo host del thread, incluso l'insieme di registri della CPU e lo stack.  
@@ -89,8 +89,9 @@ I sistemi operativi si avvalgono di processi per separare le diverse applicazion
 > [!NOTE]
 >  In .NET Framework versioni 1.0 e 1.1, Common Language Runtime intercetta automaticamente alcune eccezioni, ad esempio nei thread di un pool. Questo comportamento può danneggiare lo stato dell'applicazione e determinare il blocco delle applicazioni, rendendo particolarmente difficile il debug.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.ThreadPool>  
- <xref:System.ComponentModel.BackgroundWorker>  
- [Sincronizzazione dei dati per il multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [Pool di thread gestiti](../../../docs/standard/threading/the-managed-thread-pool.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Threading.ThreadPool>  
+- <xref:System.ComponentModel.BackgroundWorker>  
+- [Sincronizzazione dei dati per il multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+- [Pool di thread gestiti](../../../docs/standard/threading/the-managed-thread-pool.md)
